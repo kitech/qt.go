@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,42 +24,11 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
@@ -86,7 +63,7 @@ func (*QSGRectangleNode) NewFromPointer(cthis unsafe.Pointer) *QSGRectangleNode 
 func DeleteQSGRectangleNode(this *QSGRectangleNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 144)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -97,7 +74,7 @@ func DeleteQSGRectangleNode(this *QSGRectangleNode) {
 func (this *QSGRectangleNode) SetRect(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNode7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgrectanglenode.h:53
@@ -106,7 +83,7 @@ func (this *QSGRectangleNode) SetRect(rect *qtcore.QRectF) {
 // [-2] void setRect(qreal, qreal, qreal, qreal)
 func (this *QSGRectangleNode) SetRect_1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgrectanglenode.h:54
@@ -115,7 +92,7 @@ func (this *QSGRectangleNode) SetRect_1(x float64, y float64, w float64, h float
 // [32] QRectF rect()
 func (this *QSGRectangleNode) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGRectangleNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -128,7 +105,7 @@ func (this *QSGRectangleNode) Rect() *qtcore.QRectF /*123*/ {
 func (this *QSGRectangleNode) SetColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNode8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgrectanglenode.h:57
@@ -137,10 +114,41 @@ func (this *QSGRectangleNode) SetColor(color *qtgui.QColor) {
 // [16] QColor color()
 func (this *QSGRectangleNode) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGRectangleNode5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void setViewportMargins(int, int, int, int)
 func (this *QAbstractScrollArea) InheritSetViewportMargins(f func(left int, top int, right int, bottom int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setViewportMargins", f)
@@ -176,7 +160,7 @@ func (*QAbstractScrollArea) NewFromPointer(cthis unsafe.Pointer) *QAbstractScrol
 // [8] const QMetaObject * metaObject()
 func (this *QAbstractScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -187,7 +171,7 @@ func (this *QAbstractScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QM
 func NewQAbstractScrollArea(parent *QWidget /*777 QWidget **/) *QAbstractScrollArea {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollAreaC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractScrollAreaFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -199,7 +183,7 @@ func NewQAbstractScrollArea(parent *QWidget /*777 QWidget **/) *QAbstractScrollA
 func DeleteQAbstractScrollArea(this *QAbstractScrollArea) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollAreaD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -209,7 +193,7 @@ func DeleteQAbstractScrollArea(this *QAbstractScrollArea) {
 // [4] Qt::ScrollBarPolicy verticalScrollBarPolicy()
 func (this *QAbstractScrollArea) VerticalScrollBarPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea23verticalScrollBarPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -219,7 +203,7 @@ func (this *QAbstractScrollArea) VerticalScrollBarPolicy() int {
 // [-2] void setVerticalScrollBarPolicy(Qt::ScrollBarPolicy)
 func (this *QAbstractScrollArea) SetVerticalScrollBarPolicy(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea26setVerticalScrollBarPolicyEN2Qt15ScrollBarPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:76
@@ -228,7 +212,7 @@ func (this *QAbstractScrollArea) SetVerticalScrollBarPolicy(arg0 int) {
 // [8] QScrollBar * verticalScrollBar()
 func (this *QAbstractScrollArea) VerticalScrollBar() *QScrollBar /*777 QScrollBar **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea17verticalScrollBarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQScrollBarFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -239,7 +223,7 @@ func (this *QAbstractScrollArea) VerticalScrollBar() *QScrollBar /*777 QScrollBa
 func (this *QAbstractScrollArea) SetVerticalScrollBar(scrollbar *QScrollBar /*777 QScrollBar **/) {
 	var convArg0 = scrollbar.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:79
@@ -248,7 +232,7 @@ func (this *QAbstractScrollArea) SetVerticalScrollBar(scrollbar *QScrollBar /*77
 // [4] Qt::ScrollBarPolicy horizontalScrollBarPolicy()
 func (this *QAbstractScrollArea) HorizontalScrollBarPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea25horizontalScrollBarPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -258,7 +242,7 @@ func (this *QAbstractScrollArea) HorizontalScrollBarPolicy() int {
 // [-2] void setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy)
 func (this *QAbstractScrollArea) SetHorizontalScrollBarPolicy(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea28setHorizontalScrollBarPolicyEN2Qt15ScrollBarPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:81
@@ -267,7 +251,7 @@ func (this *QAbstractScrollArea) SetHorizontalScrollBarPolicy(arg0 int) {
 // [8] QScrollBar * horizontalScrollBar()
 func (this *QAbstractScrollArea) HorizontalScrollBar() *QScrollBar /*777 QScrollBar **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea19horizontalScrollBarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQScrollBarFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -278,7 +262,7 @@ func (this *QAbstractScrollArea) HorizontalScrollBar() *QScrollBar /*777 QScroll
 func (this *QAbstractScrollArea) SetHorizontalScrollBar(scrollbar *QScrollBar /*777 QScrollBar **/) {
 	var convArg0 = scrollbar.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea22setHorizontalScrollBarEP10QScrollBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:84
@@ -287,7 +271,7 @@ func (this *QAbstractScrollArea) SetHorizontalScrollBar(scrollbar *QScrollBar /*
 // [8] QWidget * cornerWidget()
 func (this *QAbstractScrollArea) CornerWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea12cornerWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -298,7 +282,7 @@ func (this *QAbstractScrollArea) CornerWidget() *QWidget /*777 QWidget **/ {
 func (this *QAbstractScrollArea) SetCornerWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:87
@@ -308,7 +292,7 @@ func (this *QAbstractScrollArea) SetCornerWidget(widget *QWidget /*777 QWidget *
 func (this *QAbstractScrollArea) AddScrollBarWidget(widget *QWidget /*777 QWidget **/, alignment int) {
 	var convArg0 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea18addScrollBarWidgetEP7QWidget6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:88
@@ -317,7 +301,7 @@ func (this *QAbstractScrollArea) AddScrollBarWidget(widget *QWidget /*777 QWidge
 // [-2] QWidgetList scrollBarWidgets(Qt::Alignment)
 func (this *QAbstractScrollArea) ScrollBarWidgets(alignment int) *QWidgetList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea16scrollBarWidgetsE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := NewQWidgetListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -328,7 +312,7 @@ func (this *QAbstractScrollArea) ScrollBarWidgets(alignment int) *QWidgetList /*
 // [8] QWidget * viewport()
 func (this *QAbstractScrollArea) Viewport() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea8viewportEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -339,7 +323,7 @@ func (this *QAbstractScrollArea) Viewport() *QWidget /*777 QWidget **/ {
 func (this *QAbstractScrollArea) SetViewport(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea11setViewportEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:92
@@ -348,7 +332,7 @@ func (this *QAbstractScrollArea) SetViewport(widget *QWidget /*777 QWidget **/) 
 // [8] QSize maximumViewportSize()
 func (this *QAbstractScrollArea) MaximumViewportSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea19maximumViewportSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -360,7 +344,7 @@ func (this *QAbstractScrollArea) MaximumViewportSize() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSizeHint()
 func (this *QAbstractScrollArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -372,7 +356,7 @@ func (this *QAbstractScrollArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize sizeHint()
 func (this *QAbstractScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -385,7 +369,7 @@ func (this *QAbstractScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QAbstractScrollArea) SetupViewport(viewport *QWidget /*777 QWidget **/) {
 	var convArg0 = viewport.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea13setupViewportEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:100
@@ -394,7 +378,7 @@ func (this *QAbstractScrollArea) SetupViewport(viewport *QWidget /*777 QWidget *
 // [4] QAbstractScrollArea::SizeAdjustPolicy sizeAdjustPolicy()
 func (this *QAbstractScrollArea) SizeAdjustPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea16sizeAdjustPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -404,7 +388,7 @@ func (this *QAbstractScrollArea) SizeAdjustPolicy() int {
 // [-2] void setSizeAdjustPolicy(enum QAbstractScrollArea::SizeAdjustPolicy)
 func (this *QAbstractScrollArea) SetSizeAdjustPolicy(policy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea19setSizeAdjustPolicyENS_16SizeAdjustPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:105
@@ -413,7 +397,7 @@ func (this *QAbstractScrollArea) SetSizeAdjustPolicy(policy int) {
 // [-2] void setViewportMargins(int, int, int, int)
 func (this *QAbstractScrollArea) SetViewportMargins(left int, top int, right int, bottom int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea18setViewportMarginsEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:106
@@ -423,7 +407,7 @@ func (this *QAbstractScrollArea) SetViewportMargins(left int, top int, right int
 func (this *QAbstractScrollArea) SetViewportMargins_1(margins *qtcore.QMargins) {
 	var convArg0 = margins.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea18setViewportMarginsERK8QMargins", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:107
@@ -432,7 +416,7 @@ func (this *QAbstractScrollArea) SetViewportMargins_1(margins *qtcore.QMargins) 
 // [16] QMargins viewportMargins()
 func (this *QAbstractScrollArea) ViewportMargins() *qtcore.QMargins /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea15viewportMarginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQMargins)
 	return rv2
@@ -446,7 +430,7 @@ func (this *QAbstractScrollArea) EventFilter(arg0 *qtcore.QObject /*777 QObject 
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -457,7 +441,7 @@ func (this *QAbstractScrollArea) EventFilter(arg0 *qtcore.QObject /*777 QObject 
 func (this *QAbstractScrollArea) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -468,7 +452,7 @@ func (this *QAbstractScrollArea) Event(arg0 *qtcore.QEvent /*777 QEvent **/) boo
 func (this *QAbstractScrollArea) ViewportEvent(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea13viewportEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -479,7 +463,7 @@ func (this *QAbstractScrollArea) ViewportEvent(arg0 *qtcore.QEvent /*777 QEvent 
 func (this *QAbstractScrollArea) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:114
@@ -489,7 +473,7 @@ func (this *QAbstractScrollArea) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QRes
 func (this *QAbstractScrollArea) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:115
@@ -499,7 +483,7 @@ func (this *QAbstractScrollArea) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaint
 func (this *QAbstractScrollArea) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:116
@@ -509,7 +493,7 @@ func (this *QAbstractScrollArea) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 Q
 func (this *QAbstractScrollArea) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:117
@@ -519,7 +503,7 @@ func (this *QAbstractScrollArea) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777
 func (this *QAbstractScrollArea) MouseDoubleClickEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea21mouseDoubleClickEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:118
@@ -529,7 +513,7 @@ func (this *QAbstractScrollArea) MouseDoubleClickEvent(arg0 *qtgui.QMouseEvent /
 func (this *QAbstractScrollArea) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:120
@@ -539,7 +523,7 @@ func (this *QAbstractScrollArea) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QM
 func (this *QAbstractScrollArea) WheelEvent(arg0 *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:123
@@ -549,7 +533,7 @@ func (this *QAbstractScrollArea) WheelEvent(arg0 *qtgui.QWheelEvent /*777 QWheel
 func (this *QAbstractScrollArea) ContextMenuEvent(arg0 *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:126
@@ -559,7 +543,7 @@ func (this *QAbstractScrollArea) ContextMenuEvent(arg0 *qtgui.QContextMenuEvent 
 func (this *QAbstractScrollArea) DragEnterEvent(arg0 *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea14dragEnterEventEP15QDragEnterEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:127
@@ -569,7 +553,7 @@ func (this *QAbstractScrollArea) DragEnterEvent(arg0 *qtgui.QDragEnterEvent /*77
 func (this *QAbstractScrollArea) DragMoveEvent(arg0 *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea13dragMoveEventEP14QDragMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:128
@@ -579,7 +563,7 @@ func (this *QAbstractScrollArea) DragMoveEvent(arg0 *qtgui.QDragMoveEvent /*777 
 func (this *QAbstractScrollArea) DragLeaveEvent(arg0 *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea14dragLeaveEventEP15QDragLeaveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:129
@@ -589,7 +573,7 @@ func (this *QAbstractScrollArea) DragLeaveEvent(arg0 *qtgui.QDragLeaveEvent /*77
 func (this *QAbstractScrollArea) DropEvent(arg0 *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:132
@@ -599,7 +583,7 @@ func (this *QAbstractScrollArea) DropEvent(arg0 *qtgui.QDropEvent /*777 QDropEve
 func (this *QAbstractScrollArea) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:134
@@ -608,7 +592,7 @@ func (this *QAbstractScrollArea) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyE
 // [-2] void scrollContentsBy(int, int)
 func (this *QAbstractScrollArea) ScrollContentsBy(dx int, dy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea16scrollContentsByEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:136
@@ -617,7 +601,7 @@ func (this *QAbstractScrollArea) ScrollContentsBy(dx int, dy int) {
 // [8] QSize viewportSizeHint()
 func (this *QAbstractScrollArea) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -630,3 +614,28 @@ const QAbstractScrollArea__AdjustToContentsOnFirstShow QAbstractScrollArea__Size
 const QAbstractScrollArea__AdjustToContents QAbstractScrollArea__SizeAdjustPolicy = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

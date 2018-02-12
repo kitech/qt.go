@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QDataStream) NewFromPointer(cthis unsafe.Pointer) *QDataStream {
 // [-2] void QDataStream()
 func NewQDataStream() *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDataStream)
 	return gothis
@@ -85,7 +74,7 @@ func NewQDataStream() *QDataStream {
 func NewQDataStream_1(arg0 *QIODevice /*777 QIODevice **/) *QDataStream {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamC2EP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDataStream)
 	return gothis
@@ -98,7 +87,7 @@ func NewQDataStream_1(arg0 *QIODevice /*777 QIODevice **/) *QDataStream {
 func NewQDataStream_2(arg0 *QByteArray /*777 QByteArray **/, flags int) *QDataStream {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamC2EP10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDataStream)
 	return gothis
@@ -111,7 +100,7 @@ func NewQDataStream_2(arg0 *QByteArray /*777 QByteArray **/, flags int) *QDataSt
 func NewQDataStream_3(arg0 *QByteArray) *QDataStream {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDataStream)
 	return gothis
@@ -124,7 +113,7 @@ func NewQDataStream_3(arg0 *QByteArray) *QDataStream {
 func DeleteQDataStream(this *QDataStream) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -134,7 +123,7 @@ func DeleteQDataStream(this *QDataStream) {
 // [8] QIODevice * device()
 func (this *QDataStream) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -145,7 +134,7 @@ func (this *QDataStream) Device() *QIODevice /*777 QIODevice **/ {
 func (this *QDataStream) SetDevice(arg0 *QIODevice /*777 QIODevice **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:131
@@ -154,7 +143,7 @@ func (this *QDataStream) SetDevice(arg0 *QIODevice /*777 QIODevice **/) {
 // [-2] void unsetDevice()
 func (this *QDataStream) UnsetDevice() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream11unsetDeviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:133
@@ -163,7 +152,7 @@ func (this *QDataStream) UnsetDevice() {
 // [1] bool atEnd()
 func (this *QDataStream) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -173,7 +162,7 @@ func (this *QDataStream) AtEnd() bool {
 // [4] QDataStream::Status status()
 func (this *QDataStream) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -183,7 +172,7 @@ func (this *QDataStream) Status() int {
 // [-2] void setStatus(enum QDataStream::Status)
 func (this *QDataStream) SetStatus(status int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream9setStatusENS_6StatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), status)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:137
@@ -192,7 +181,7 @@ func (this *QDataStream) SetStatus(status int) {
 // [-2] void resetStatus()
 func (this *QDataStream) ResetStatus() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream11resetStatusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:139
@@ -201,7 +190,7 @@ func (this *QDataStream) ResetStatus() {
 // [4] QDataStream::FloatingPointPrecision floatingPointPrecision()
 func (this *QDataStream) FloatingPointPrecision() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream22floatingPointPrecisionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -211,7 +200,7 @@ func (this *QDataStream) FloatingPointPrecision() int {
 // [-2] void setFloatingPointPrecision(enum QDataStream::FloatingPointPrecision)
 func (this *QDataStream) SetFloatingPointPrecision(precision int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream25setFloatingPointPrecisionENS_22FloatingPointPrecisionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), precision)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:142
@@ -220,7 +209,7 @@ func (this *QDataStream) SetFloatingPointPrecision(precision int) {
 // [4] QDataStream::ByteOrder byteOrder()
 func (this *QDataStream) ByteOrder() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream9byteOrderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -230,7 +219,7 @@ func (this *QDataStream) ByteOrder() int {
 // [-2] void setByteOrder(enum QDataStream::ByteOrder)
 func (this *QDataStream) SetByteOrder(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream12setByteOrderENS_9ByteOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:145
@@ -239,7 +228,7 @@ func (this *QDataStream) SetByteOrder(arg0 int) {
 // [4] int version()
 func (this *QDataStream) Version() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream7versionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -249,7 +238,7 @@ func (this *QDataStream) Version() int {
 // [-2] void setVersion(int)
 func (this *QDataStream) SetVersion(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream10setVersionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:179
@@ -258,7 +247,7 @@ func (this *QDataStream) SetVersion(arg0 int) {
 // [32] QDataStream & readBytes(char *&, uint &)
 func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len uint) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream9readBytesERPcRj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, &len)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
 	return rv2
@@ -272,7 +261,7 @@ func (this *QDataStream) ReadRawData(arg0 string, len int) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream11readRawDataEPci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -284,7 +273,7 @@ func (this *QDataStream) WriteBytes(arg0 string, len uint) *QDataStream {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream10writeBytesEPKcj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
 	return rv2
@@ -298,7 +287,7 @@ func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream12writeRawDataEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -308,7 +297,7 @@ func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 // [4] int skipRawData(int)
 func (this *QDataStream) SkipRawData(len int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream11skipRawDataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -318,7 +307,7 @@ func (this *QDataStream) SkipRawData(len int) int {
 // [-2] void startTransaction()
 func (this *QDataStream) StartTransaction() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream16startTransactionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:188
@@ -327,7 +316,7 @@ func (this *QDataStream) StartTransaction() {
 // [1] bool commitTransaction()
 func (this *QDataStream) CommitTransaction() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream17commitTransactionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -337,7 +326,7 @@ func (this *QDataStream) CommitTransaction() bool {
 // [-2] void rollbackTransaction()
 func (this *QDataStream) RollbackTransaction() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream19rollbackTransactionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:190
@@ -346,7 +335,7 @@ func (this *QDataStream) RollbackTransaction() {
 // [-2] void abortTransaction()
 func (this *QDataStream) AbortTransaction() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream16abortTransactionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QDataStream__Version = int
@@ -398,3 +387,22 @@ const QDataStream__SinglePrecision QDataStream__FloatingPointPrecision = 0
 const QDataStream__DoublePrecision QDataStream__FloatingPointPrecision = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

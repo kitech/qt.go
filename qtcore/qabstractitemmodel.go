@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // void resetInternalData()
 func (this *QAbstractItemModel) InheritResetInternalData(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resetInternalData", f)
@@ -163,7 +153,7 @@ func (*QAbstractItemModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractItemMo
 // [8] const QMetaObject * metaObject()
 func (this *QAbstractItemModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -174,7 +164,7 @@ func (this *QAbstractItemModel) MetaObject() *QMetaObject /*777 const QMetaObjec
 func NewQAbstractItemModel(parent *QObject /*777 QObject **/) *QAbstractItemModel {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -186,7 +176,7 @@ func NewQAbstractItemModel(parent *QObject /*777 QObject **/) *QAbstractItemMode
 func DeleteQAbstractItemModel(this *QAbstractItemModel) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModelD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -197,7 +187,7 @@ func DeleteQAbstractItemModel(this *QAbstractItemModel) {
 func (this *QAbstractItemModel) HasIndex(row int, column int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -208,7 +198,7 @@ func (this *QAbstractItemModel) HasIndex(row int, column int, parent *QModelInde
 func (this *QAbstractItemModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -221,7 +211,7 @@ func (this *QAbstractItemModel) Index(row int, column int, parent *QModelIndex) 
 func (this *QAbstractItemModel) Parent(child *QModelIndex) *QModelIndex /*123*/ {
 	var convArg0 = child.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel6parentERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -234,7 +224,7 @@ func (this *QAbstractItemModel) Parent(child *QModelIndex) *QModelIndex /*123*/ 
 func (this *QAbstractItemModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
 	var convArg2 = idx.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel7siblingEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -247,7 +237,7 @@ func (this *QAbstractItemModel) Sibling(row int, column int, idx *QModelIndex) *
 func (this *QAbstractItemModel) RowCount(parent *QModelIndex) int {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -258,7 +248,7 @@ func (this *QAbstractItemModel) RowCount(parent *QModelIndex) int {
 func (this *QAbstractItemModel) ColumnCount(parent *QModelIndex) int {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -269,7 +259,7 @@ func (this *QAbstractItemModel) ColumnCount(parent *QModelIndex) int {
 func (this *QAbstractItemModel) HasChildren(parent *QModelIndex) bool {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -280,7 +270,7 @@ func (this *QAbstractItemModel) HasChildren(parent *QModelIndex) bool {
 func (this *QAbstractItemModel) Data(index *QModelIndex, role int) *QVariant /*123*/ {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel4dataERK11QModelIndexi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -294,7 +284,7 @@ func (this *QAbstractItemModel) SetData(index *QModelIndex, value *QVariant, rol
 	var convArg0 = index.GetCthis()
 	var convArg1 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -304,7 +294,7 @@ func (this *QAbstractItemModel) SetData(index *QModelIndex, value *QVariant, rol
 // [16] QVariant headerData(int, Qt::Orientation, int)
 func (this *QAbstractItemModel) HeaderData(section int, orientation int, role int) *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -317,7 +307,7 @@ func (this *QAbstractItemModel) HeaderData(section int, orientation int, role in
 func (this *QAbstractItemModel) SetHeaderData(section int, orientation int, value *QVariant, role int) bool {
 	var convArg2 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, convArg2, role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -327,7 +317,7 @@ func (this *QAbstractItemModel) SetHeaderData(section int, orientation int, valu
 // [8] QStringList mimeTypes()
 func (this *QAbstractItemModel) MimeTypes() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -341,7 +331,7 @@ func (this *QAbstractItemModel) CanDropMimeData(data *QMimeData /*777 const QMim
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel15canDropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -353,7 +343,7 @@ func (this *QAbstractItemModel) DropMimeData(data *QMimeData /*777 const QMimeDa
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -363,7 +353,7 @@ func (this *QAbstractItemModel) DropMimeData(data *QMimeData /*777 const QMimeDa
 // [4] Qt::DropActions supportedDropActions()
 func (this *QAbstractItemModel) SupportedDropActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel20supportedDropActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -373,7 +363,7 @@ func (this *QAbstractItemModel) SupportedDropActions() int {
 // [4] Qt::DropActions supportedDragActions()
 func (this *QAbstractItemModel) SupportedDragActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel20supportedDragActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -384,7 +374,7 @@ func (this *QAbstractItemModel) SupportedDragActions() int {
 func (this *QAbstractItemModel) InsertRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -395,7 +385,7 @@ func (this *QAbstractItemModel) InsertRows(row int, count int, parent *QModelInd
 func (this *QAbstractItemModel) InsertColumns(column int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel13insertColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -406,7 +396,7 @@ func (this *QAbstractItemModel) InsertColumns(column int, count int, parent *QMo
 func (this *QAbstractItemModel) RemoveRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -417,7 +407,7 @@ func (this *QAbstractItemModel) RemoveRows(row int, count int, parent *QModelInd
 func (this *QAbstractItemModel) RemoveColumns(column int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -429,7 +419,7 @@ func (this *QAbstractItemModel) MoveRows(sourceParent *QModelIndex, sourceRow in
 	var convArg0 = sourceParent.GetCthis()
 	var convArg3 = destinationParent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel8moveRowsERK11QModelIndexiiS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, sourceRow, count, convArg3, destinationChild)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -441,7 +431,7 @@ func (this *QAbstractItemModel) MoveColumns(sourceParent *QModelIndex, sourceCol
 	var convArg0 = sourceParent.GetCthis()
 	var convArg3 = destinationParent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel11moveColumnsERK11QModelIndexiiS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, sourceColumn, count, convArg3, destinationChild)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -452,7 +442,7 @@ func (this *QAbstractItemModel) MoveColumns(sourceParent *QModelIndex, sourceCol
 func (this *QAbstractItemModel) InsertRow(row int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel9insertRowEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -463,7 +453,7 @@ func (this *QAbstractItemModel) InsertRow(row int, parent *QModelIndex) bool {
 func (this *QAbstractItemModel) InsertColumn(column int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -474,7 +464,7 @@ func (this *QAbstractItemModel) InsertColumn(column int, parent *QModelIndex) bo
 func (this *QAbstractItemModel) RemoveRow(row int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel9removeRowEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -485,7 +475,7 @@ func (this *QAbstractItemModel) RemoveRow(row int, parent *QModelIndex) bool {
 func (this *QAbstractItemModel) RemoveColumn(column int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -497,7 +487,7 @@ func (this *QAbstractItemModel) MoveRow(sourceParent *QModelIndex, sourceRow int
 	var convArg0 = sourceParent.GetCthis()
 	var convArg2 = destinationParent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel7moveRowERK11QModelIndexiS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, sourceRow, convArg2, destinationChild)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -509,7 +499,7 @@ func (this *QAbstractItemModel) MoveColumn(sourceParent *QModelIndex, sourceColu
 	var convArg0 = sourceParent.GetCthis()
 	var convArg2 = destinationParent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, sourceColumn, convArg2, destinationChild)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -520,7 +510,7 @@ func (this *QAbstractItemModel) MoveColumn(sourceParent *QModelIndex, sourceColu
 func (this *QAbstractItemModel) FetchMore(parent *QModelIndex) {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel9fetchMoreERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:231
@@ -530,7 +520,7 @@ func (this *QAbstractItemModel) FetchMore(parent *QModelIndex) {
 func (this *QAbstractItemModel) CanFetchMore(parent *QModelIndex) bool {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -541,7 +531,7 @@ func (this *QAbstractItemModel) CanFetchMore(parent *QModelIndex) bool {
 func (this *QAbstractItemModel) Flags(index *QModelIndex) int {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel5flagsERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -551,7 +541,7 @@ func (this *QAbstractItemModel) Flags(index *QModelIndex) int {
 // [-2] void sort(int, Qt::SortOrder)
 func (this *QAbstractItemModel) Sort(column int, order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:234
@@ -561,7 +551,7 @@ func (this *QAbstractItemModel) Sort(column int, order int) {
 func (this *QAbstractItemModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel5buddyERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -575,7 +565,7 @@ func (this *QAbstractItemModel) Match(start *QModelIndex, role int, value *QVari
 	var convArg0 = start.GetCthis()
 	var convArg2 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -587,7 +577,7 @@ func (this *QAbstractItemModel) Match(start *QModelIndex, role int, value *QVari
 func (this *QAbstractItemModel) Span(index *QModelIndex) *QSize /*123*/ {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel4spanERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
@@ -599,7 +589,7 @@ func (this *QAbstractItemModel) Span(index *QModelIndex) *QSize /*123*/ {
 // [-2] void headerDataChanged(Qt::Orientation, int, int)
 func (this *QAbstractItemModel) HeaderDataChanged(orientation int, first int, last int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel17headerDataChangedEN2Qt11OrientationEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation, first, last)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:281
@@ -608,7 +598,7 @@ func (this *QAbstractItemModel) HeaderDataChanged(orientation int, first int, la
 // [1] bool submit()
 func (this *QAbstractItemModel) Submit() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel6submitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -618,7 +608,7 @@ func (this *QAbstractItemModel) Submit() bool {
 // [-2] void revert()
 func (this *QAbstractItemModel) Revert() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel6revertEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:286
@@ -627,7 +617,7 @@ func (this *QAbstractItemModel) Revert() {
 // [-2] void resetInternalData()
 func (this *QAbstractItemModel) ResetInternalData() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel17resetInternalDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:291
@@ -636,7 +626,7 @@ func (this *QAbstractItemModel) ResetInternalData() {
 // [24] QModelIndex createIndex(int, int, void *)
 func (this *QAbstractItemModel) CreateIndex(row int, column int, data unsafe.Pointer /*666*/) *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel11createIndexEiiPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, data)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -648,7 +638,7 @@ func (this *QAbstractItemModel) CreateIndex(row int, column int, data unsafe.Poi
 // [24] QModelIndex createIndex(int, int, quintptr)
 func (this *QAbstractItemModel) CreateIndex_1(row int, column int, id uint64) *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel11createIndexEiiy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, id)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -662,7 +652,7 @@ func (this *QAbstractItemModel) DecodeData(row int, column int, parent *QModelIn
 	var convArg2 = parent.GetCthis()
 	var convArg3 = stream.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel10decodeDataEiiRK11QModelIndexR11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -673,7 +663,7 @@ func (this *QAbstractItemModel) DecodeData(row int, column int, parent *QModelIn
 func (this *QAbstractItemModel) BeginInsertRows(parent *QModelIndex, first int, last int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel15beginInsertRowsERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, first, last)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:298
@@ -682,7 +672,7 @@ func (this *QAbstractItemModel) BeginInsertRows(parent *QModelIndex, first int, 
 // [-2] void endInsertRows()
 func (this *QAbstractItemModel) EndInsertRows() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel13endInsertRowsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:300
@@ -692,7 +682,7 @@ func (this *QAbstractItemModel) EndInsertRows() {
 func (this *QAbstractItemModel) BeginRemoveRows(parent *QModelIndex, first int, last int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel15beginRemoveRowsERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, first, last)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:301
@@ -701,7 +691,7 @@ func (this *QAbstractItemModel) BeginRemoveRows(parent *QModelIndex, first int, 
 // [-2] void endRemoveRows()
 func (this *QAbstractItemModel) EndRemoveRows() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel13endRemoveRowsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:303
@@ -712,7 +702,7 @@ func (this *QAbstractItemModel) BeginMoveRows(sourceParent *QModelIndex, sourceF
 	var convArg0 = sourceParent.GetCthis()
 	var convArg3 = destinationParent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel13beginMoveRowsERK11QModelIndexiiS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, sourceFirst, sourceLast, convArg3, destinationRow)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -722,7 +712,7 @@ func (this *QAbstractItemModel) BeginMoveRows(sourceParent *QModelIndex, sourceF
 // [-2] void endMoveRows()
 func (this *QAbstractItemModel) EndMoveRows() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel11endMoveRowsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:306
@@ -732,7 +722,7 @@ func (this *QAbstractItemModel) EndMoveRows() {
 func (this *QAbstractItemModel) BeginInsertColumns(parent *QModelIndex, first int, last int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel18beginInsertColumnsERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, first, last)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:307
@@ -741,7 +731,7 @@ func (this *QAbstractItemModel) BeginInsertColumns(parent *QModelIndex, first in
 // [-2] void endInsertColumns()
 func (this *QAbstractItemModel) EndInsertColumns() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel16endInsertColumnsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:309
@@ -751,7 +741,7 @@ func (this *QAbstractItemModel) EndInsertColumns() {
 func (this *QAbstractItemModel) BeginRemoveColumns(parent *QModelIndex, first int, last int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel18beginRemoveColumnsERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, first, last)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:310
@@ -760,7 +750,7 @@ func (this *QAbstractItemModel) BeginRemoveColumns(parent *QModelIndex, first in
 // [-2] void endRemoveColumns()
 func (this *QAbstractItemModel) EndRemoveColumns() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel16endRemoveColumnsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:312
@@ -771,7 +761,7 @@ func (this *QAbstractItemModel) BeginMoveColumns(sourceParent *QModelIndex, sour
 	var convArg0 = sourceParent.GetCthis()
 	var convArg3 = destinationParent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel16beginMoveColumnsERK11QModelIndexiiS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, sourceFirst, sourceLast, convArg3, destinationColumn)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -781,7 +771,7 @@ func (this *QAbstractItemModel) BeginMoveColumns(sourceParent *QModelIndex, sour
 // [-2] void endMoveColumns()
 func (this *QAbstractItemModel) EndMoveColumns() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel14endMoveColumnsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:324
@@ -790,7 +780,7 @@ func (this *QAbstractItemModel) EndMoveColumns() {
 // [-2] void beginResetModel()
 func (this *QAbstractItemModel) BeginResetModel() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel15beginResetModelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:325
@@ -799,7 +789,7 @@ func (this *QAbstractItemModel) BeginResetModel() {
 // [-2] void endResetModel()
 func (this *QAbstractItemModel) EndResetModel() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel13endResetModelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:327
@@ -810,7 +800,7 @@ func (this *QAbstractItemModel) ChangePersistentIndex(from *QModelIndex, to *QMo
 	var convArg0 = from.GetCthis()
 	var convArg1 = to.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel21changePersistentIndexERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:329
@@ -819,7 +809,7 @@ func (this *QAbstractItemModel) ChangePersistentIndex(from *QModelIndex, to *QMo
 // [8] QModelIndexList persistentIndexList()
 func (this *QAbstractItemModel) PersistentIndexList() *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel19persistentIndexListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -831,3 +821,22 @@ const QAbstractItemModel__VerticalSortHint QAbstractItemModel__LayoutChangeHint 
 const QAbstractItemModel__HorizontalSortHint QAbstractItemModel__LayoutChangeHint = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

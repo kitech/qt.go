@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,42 +24,11 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
@@ -85,7 +62,7 @@ func (*QSGClipNode) NewFromPointer(cthis unsafe.Pointer) *QSGClipNode {
 // [-2] void QSGClipNode()
 func NewQSGClipNode() *QSGClipNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGClipNodeC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGClipNodeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSGClipNode)
 	return gothis
@@ -98,7 +75,7 @@ func NewQSGClipNode() *QSGClipNode {
 func DeleteQSGClipNode(this *QSGClipNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGClipNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 152)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -108,7 +85,7 @@ func DeleteQSGClipNode(this *QSGClipNode) {
 // [-2] void setIsRectangular(_Bool)
 func (this *QSGClipNode) SetIsRectangular(rectHint bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGClipNode16setIsRectangularEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rectHint)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:268
@@ -117,7 +94,7 @@ func (this *QSGClipNode) SetIsRectangular(rectHint bool) {
 // [1] bool isRectangular()
 func (this *QSGClipNode) IsRectangular() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGClipNode13isRectangularEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -128,7 +105,7 @@ func (this *QSGClipNode) IsRectangular() bool {
 func (this *QSGClipNode) SetClipRect(arg0 *qtcore.QRectF) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGClipNode11setClipRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:271
@@ -137,10 +114,41 @@ func (this *QSGClipNode) SetClipRect(arg0 *qtcore.QRectF) {
 // [32] QRectF clipRect()
 func (this *QSGClipNode) ClipRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGClipNode8clipRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

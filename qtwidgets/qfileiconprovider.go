@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QFileIconProvider) NewFromPointer(cthis unsafe.Pointer) *QFileIconProvide
 // [-2] void QFileIconProvider()
 func NewQFileIconProvider() *QFileIconProvider {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QFileIconProviderC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileIconProviderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFileIconProvider)
 	return gothis
@@ -93,7 +76,7 @@ func NewQFileIconProvider() *QFileIconProvider {
 func DeleteQFileIconProvider(this *QFileIconProvider) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QFileIconProviderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -103,7 +86,7 @@ func DeleteQFileIconProvider(this *QFileIconProvider) {
 // [8] QIcon icon(enum QFileIconProvider::IconType)
 func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconENS_8IconTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
@@ -116,7 +99,7 @@ func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 func (this *QFileIconProvider) Icon_1(info *qtcore.QFileInfo) *qtgui.QIcon /*123*/ {
 	var convArg0 = info.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconERK9QFileInfo", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
@@ -129,7 +112,7 @@ func (this *QFileIconProvider) Icon_1(info *qtcore.QFileInfo) *qtgui.QIcon /*123
 func (this *QFileIconProvider) Type(info *qtcore.QFileInfo) string {
 	var convArg0 = info.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFileIconProvider4typeERK9QFileInfo", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -142,7 +125,7 @@ func (this *QFileIconProvider) Type(info *qtcore.QFileInfo) string {
 // [-2] void setOptions(QFileIconProvider::Options)
 func (this *QFileIconProvider) SetOptions(options int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QFileIconProvider10setOptionsE6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:70
@@ -151,7 +134,7 @@ func (this *QFileIconProvider) SetOptions(options int) {
 // [4] QFileIconProvider::Options options()
 func (this *QFileIconProvider) Options() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFileIconProvider7optionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -170,3 +153,28 @@ type QFileIconProvider__Option = int
 const QFileIconProvider__DontUseCustomDirectoryIcons QFileIconProvider__Option = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

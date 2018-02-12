@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void paintEvent(class QPaintEvent *)
 func (this *QSlider) InheritPaintEvent(f func(ev *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
@@ -101,7 +85,7 @@ func (*QSlider) NewFromPointer(cthis unsafe.Pointer) *QSlider {
 // [8] const QMetaObject * metaObject()
 func (this *QSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -112,7 +96,7 @@ func (this *QSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 func NewQSlider(parent *QWidget /*777 QWidget **/) *QSlider {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSliderFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -124,7 +108,7 @@ func NewQSlider(parent *QWidget /*777 QWidget **/) *QSlider {
 func NewQSlider_1(orientation int, parent *QWidget /*777 QWidget **/) *QSlider {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSliderFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -136,7 +120,7 @@ func NewQSlider_1(orientation int, parent *QWidget /*777 QWidget **/) *QSlider {
 func DeleteQSlider(this *QSlider) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -146,7 +130,7 @@ func DeleteQSlider(this *QSlider) {
 // [8] QSize sizeHint()
 func (this *QSlider) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -158,7 +142,7 @@ func (this *QSlider) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSizeHint()
 func (this *QSlider) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -170,7 +154,7 @@ func (this *QSlider) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // [-2] void setTickPosition(enum QSlider::TickPosition)
 func (this *QSlider) SetTickPosition(position int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSlider15setTickPositionENS_12TickPositionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qslider.h:80
@@ -179,7 +163,7 @@ func (this *QSlider) SetTickPosition(position int) {
 // [4] QSlider::TickPosition tickPosition()
 func (this *QSlider) TickPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider12tickPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -189,7 +173,7 @@ func (this *QSlider) TickPosition() int {
 // [-2] void setTickInterval(int)
 func (this *QSlider) SetTickInterval(ti int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSlider15setTickIntervalEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ti)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qslider.h:83
@@ -198,7 +182,7 @@ func (this *QSlider) SetTickInterval(ti int) {
 // [4] int tickInterval()
 func (this *QSlider) TickInterval() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider12tickIntervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -209,7 +193,7 @@ func (this *QSlider) TickInterval() int {
 func (this *QSlider) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSlider5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -220,7 +204,7 @@ func (this *QSlider) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 func (this *QSlider) PaintEvent(ev *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSlider10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qslider.h:89
@@ -230,7 +214,7 @@ func (this *QSlider) PaintEvent(ev *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 func (this *QSlider) MousePressEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSlider15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qslider.h:90
@@ -240,7 +224,7 @@ func (this *QSlider) MousePressEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/
 func (this *QSlider) MouseReleaseEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSlider17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qslider.h:91
@@ -250,7 +234,7 @@ func (this *QSlider) MouseReleaseEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent *
 func (this *QSlider) MouseMoveEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSlider14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qslider.h:92
@@ -260,7 +244,7 @@ func (this *QSlider) MouseMoveEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/)
 func (this *QSlider) InitStyleOption(option *QStyleOptionSlider /*777 QStyleOptionSlider **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider15initStyleOptionEP18QStyleOptionSlider", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QSlider__TickPosition = int
@@ -273,3 +257,28 @@ const QSlider__TicksRight QSlider__TickPosition = 2
 const QSlider__TicksBothSides QSlider__TickPosition = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

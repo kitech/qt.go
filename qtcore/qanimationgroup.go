@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QAnimationGroup) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -73,7 +63,7 @@ func (*QAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QAnimationGroup {
 // [8] const QMetaObject * metaObject()
 func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -84,7 +74,7 @@ func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject *
 func NewQAnimationGroup(parent *QObject /*777 QObject **/) *QAnimationGroup {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -96,7 +86,7 @@ func NewQAnimationGroup(parent *QObject /*777 QObject **/) *QAnimationGroup {
 func DeleteQAnimationGroup(this *QAnimationGroup) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -106,7 +96,7 @@ func DeleteQAnimationGroup(this *QAnimationGroup) {
 // [8] QAbstractAnimation * animationAt(int)
 func (this *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation /*777 QAbstractAnimation **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup11animationAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -116,7 +106,7 @@ func (this *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation /*777 QA
 // [4] int animationCount()
 func (this *QAnimationGroup) AnimationCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup14animationCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -127,7 +117,7 @@ func (this *QAnimationGroup) AnimationCount() int {
 func (this *QAnimationGroup) IndexOfAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) int {
 	var convArg0 = animation.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -138,7 +128,7 @@ func (this *QAnimationGroup) IndexOfAnimation(animation *QAbstractAnimation /*77
 func (this *QAnimationGroup) AddAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = animation.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qanimationgroup.h:63
@@ -148,7 +138,7 @@ func (this *QAnimationGroup) AddAnimation(animation *QAbstractAnimation /*777 QA
 func (this *QAnimationGroup) InsertAnimation(index int, animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg1 = animation.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qanimationgroup.h:64
@@ -158,7 +148,7 @@ func (this *QAnimationGroup) InsertAnimation(index int, animation *QAbstractAnim
 func (this *QAnimationGroup) RemoveAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = animation.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qanimationgroup.h:65
@@ -167,7 +157,7 @@ func (this *QAnimationGroup) RemoveAnimation(animation *QAbstractAnimation /*777
 // [8] QAbstractAnimation * takeAnimation(int)
 func (this *QAnimationGroup) TakeAnimation(index int) *QAbstractAnimation /*777 QAbstractAnimation **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup13takeAnimationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -177,7 +167,7 @@ func (this *QAnimationGroup) TakeAnimation(index int) *QAbstractAnimation /*777 
 // [-2] void clear()
 func (this *QAnimationGroup) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qanimationgroup.h:70
@@ -187,8 +177,27 @@ func (this *QAnimationGroup) Clear() {
 func (this *QAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

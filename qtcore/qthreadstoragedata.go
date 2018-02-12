@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -73,7 +62,7 @@ func (*QThreadStorageData) NewFromPointer(cthis unsafe.Pointer) *QThreadStorageD
 func DeleteQThreadStorageData(this *QThreadStorageData) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QThreadStorageDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -83,7 +72,7 @@ func DeleteQThreadStorageData(this *QThreadStorageData) {
 // [8] void ** get()
 func (this *QThreadStorageData) Get() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -93,7 +82,7 @@ func (this *QThreadStorageData) Get() unsafe.Pointer /*666*/ {
 // [8] void ** set(void *)
 func (this *QThreadStorageData) Set(p unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QThreadStorageData3setEPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), p)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -103,7 +92,7 @@ func (this *QThreadStorageData) Set(p unsafe.Pointer /*666*/) unsafe.Pointer /*6
 // [-2] void finish(void **)
 func (this *QThreadStorageData) Finish(arg0 unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QThreadStorageData6finishEPPv", qtrt.FFI_TYPE_POINTER, arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QThreadStorageData_Finish(arg0 unsafe.Pointer /*666*/) {
 	var nilthis *QThreadStorageData
@@ -111,3 +100,22 @@ func QThreadStorageData_Finish(arg0 unsafe.Pointer /*666*/) {
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

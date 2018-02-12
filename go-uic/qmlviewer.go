@@ -1,7 +1,6 @@
 package main
 
 import (
-	"gopp"
 	"io/ioutil"
 	"log"
 	"os"
@@ -9,10 +8,11 @@ import (
 
 	funk "github.com/thoas/go-funk"
 
-	"qt.go/qtcore"
-	"qt.go/qtqml"
-	"qt.go/qtquickwidgets"
-	"qt.go/qtwidgets"
+	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtqml"
+	"github.com/kitech/qt.go/qtquickwidgets"
+	"github.com/kitech/qt.go/qtrt"
+	"github.com/kitech/qt.go/qtwidgets"
 )
 
 func main() {
@@ -22,7 +22,7 @@ func main() {
 	}
 
 	bcc, err := ioutil.ReadFile(file)
-	gopp.ErrPrint(err, file)
+	qtrt.ErrPrint(err, file)
 	if err != nil {
 		os.Exit(1)
 	}

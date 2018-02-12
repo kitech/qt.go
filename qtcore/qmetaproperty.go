@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QMetaProperty) NewFromPointer(cthis unsafe.Pointer) *QMetaProperty {
 // [-2] void QMetaProperty()
 func NewQMetaProperty() *QMetaProperty {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMetaPropertyC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMetaPropertyFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMetaProperty)
 	return gothis
@@ -84,7 +73,7 @@ func NewQMetaProperty() *QMetaProperty {
 // [8] const char * name()
 func (this *QMetaProperty) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -94,7 +83,7 @@ func (this *QMetaProperty) Name() string {
 // [8] const char * typeName()
 func (this *QMetaProperty) TypeName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty8typeNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -104,7 +93,7 @@ func (this *QMetaProperty) TypeName() string {
 // [4] QVariant::Type type()
 func (this *QMetaProperty) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -114,7 +103,7 @@ func (this *QMetaProperty) Type() int {
 // [4] int userType()
 func (this *QMetaProperty) UserType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty8userTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -124,7 +113,7 @@ func (this *QMetaProperty) UserType() int {
 // [4] int propertyIndex()
 func (this *QMetaProperty) PropertyIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty13propertyIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -134,7 +123,7 @@ func (this *QMetaProperty) PropertyIndex() int {
 // [1] bool isReadable()
 func (this *QMetaProperty) IsReadable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty10isReadableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -144,7 +133,7 @@ func (this *QMetaProperty) IsReadable() bool {
 // [1] bool isWritable()
 func (this *QMetaProperty) IsWritable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty10isWritableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -154,7 +143,7 @@ func (this *QMetaProperty) IsWritable() bool {
 // [1] bool isResettable()
 func (this *QMetaProperty) IsResettable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty12isResettableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -165,7 +154,7 @@ func (this *QMetaProperty) IsResettable() bool {
 func (this *QMetaProperty) IsDesignable(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty12isDesignableEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -176,7 +165,7 @@ func (this *QMetaProperty) IsDesignable(obj *QObject /*777 const QObject **/) bo
 func (this *QMetaProperty) IsScriptable(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty12isScriptableEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -187,7 +176,7 @@ func (this *QMetaProperty) IsScriptable(obj *QObject /*777 const QObject **/) bo
 func (this *QMetaProperty) IsStored(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty8isStoredEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -198,7 +187,7 @@ func (this *QMetaProperty) IsStored(obj *QObject /*777 const QObject **/) bool {
 func (this *QMetaProperty) IsEditable(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty10isEditableEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -209,7 +198,7 @@ func (this *QMetaProperty) IsEditable(obj *QObject /*777 const QObject **/) bool
 func (this *QMetaProperty) IsUser(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty6isUserEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -219,7 +208,7 @@ func (this *QMetaProperty) IsUser(obj *QObject /*777 const QObject **/) bool {
 // [1] bool isConstant()
 func (this *QMetaProperty) IsConstant() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty10isConstantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -229,7 +218,7 @@ func (this *QMetaProperty) IsConstant() bool {
 // [1] bool isFinal()
 func (this *QMetaProperty) IsFinal() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty7isFinalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -239,7 +228,7 @@ func (this *QMetaProperty) IsFinal() bool {
 // [1] bool isFlagType()
 func (this *QMetaProperty) IsFlagType() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty10isFlagTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -249,7 +238,7 @@ func (this *QMetaProperty) IsFlagType() bool {
 // [1] bool isEnumType()
 func (this *QMetaProperty) IsEnumType() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty10isEnumTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -259,7 +248,7 @@ func (this *QMetaProperty) IsEnumType() bool {
 // [16] QMetaEnum enumerator()
 func (this *QMetaProperty) Enumerator() *QMetaEnum /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty10enumeratorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMetaEnumFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaEnum)
 	return rv2
@@ -271,7 +260,7 @@ func (this *QMetaProperty) Enumerator() *QMetaEnum /*123*/ {
 // [1] bool hasNotifySignal()
 func (this *QMetaProperty) HasNotifySignal() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty15hasNotifySignalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -281,7 +270,7 @@ func (this *QMetaProperty) HasNotifySignal() bool {
 // [16] QMetaMethod notifySignal()
 func (this *QMetaProperty) NotifySignal() *QMetaMethod /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty12notifySignalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaMethod)
 	return rv2
@@ -293,7 +282,7 @@ func (this *QMetaProperty) NotifySignal() *QMetaMethod /*123*/ {
 // [4] int notifySignalIndex()
 func (this *QMetaProperty) NotifySignalIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty17notifySignalIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -303,7 +292,7 @@ func (this *QMetaProperty) NotifySignalIndex() int {
 // [4] int revision()
 func (this *QMetaProperty) Revision() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty8revisionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -314,7 +303,7 @@ func (this *QMetaProperty) Revision() int {
 func (this *QMetaProperty) Read(obj *QObject /*777 const QObject **/) *QVariant /*123*/ {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty4readEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -328,7 +317,7 @@ func (this *QMetaProperty) Write(obj *QObject /*777 QObject **/, value *QVariant
 	var convArg0 = obj.GetCthis()
 	var convArg1 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty5writeEP7QObjectRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -339,7 +328,7 @@ func (this *QMetaProperty) Write(obj *QObject /*777 QObject **/, value *QVariant
 func (this *QMetaProperty) Reset(obj *QObject /*777 QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty5resetEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -349,7 +338,7 @@ func (this *QMetaProperty) Reset(obj *QObject /*777 QObject **/) bool {
 // [16] QVariant readOnGadget(const void *)
 func (this *QMetaProperty) ReadOnGadget(gadget unsafe.Pointer /*666*/) *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty12readOnGadgetEPKv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), gadget)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -362,7 +351,7 @@ func (this *QMetaProperty) ReadOnGadget(gadget unsafe.Pointer /*666*/) *QVariant
 func (this *QMetaProperty) WriteOnGadget(gadget unsafe.Pointer /*666*/, value *QVariant) bool {
 	var convArg1 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty13writeOnGadgetEPvRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), gadget, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -372,7 +361,7 @@ func (this *QMetaProperty) WriteOnGadget(gadget unsafe.Pointer /*666*/, value *Q
 // [1] bool resetOnGadget(void *)
 func (this *QMetaProperty) ResetOnGadget(gadget unsafe.Pointer /*666*/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty13resetOnGadgetEPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), gadget)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -382,7 +371,7 @@ func (this *QMetaProperty) ResetOnGadget(gadget unsafe.Pointer /*666*/) bool {
 // [1] bool hasStdCppSet()
 func (this *QMetaProperty) HasStdCppSet() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty12hasStdCppSetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -392,7 +381,7 @@ func (this *QMetaProperty) HasStdCppSet() bool {
 // [1] bool isValid()
 func (this *QMetaProperty) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -402,14 +391,33 @@ func (this *QMetaProperty) IsValid() bool {
 // [8] const QMetaObject * enclosingMetaObject()
 func (this *QMetaProperty) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty19enclosingMetaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 func DeleteQMetaProperty(this *QMetaProperty) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMetaPropertyD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

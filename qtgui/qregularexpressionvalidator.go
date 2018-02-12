@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QRegularExpressionValidator) NewFromPointer(cthis unsafe.Pointer) *QRegul
 // [8] const QMetaObject * metaObject()
 func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -84,7 +70,7 @@ func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*777 
 func NewQRegularExpressionValidator(parent *qtcore.QObject /*777 QObject **/) *QRegularExpressionValidator {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -97,7 +83,7 @@ func NewQRegularExpressionValidator_1(re *qtcore.QRegularExpression, parent *qtc
 	var convArg0 = re.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2ERK18QRegularExpressionP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -109,7 +95,7 @@ func NewQRegularExpressionValidator_1(re *qtcore.QRegularExpression, parent *qtc
 func DeleteQRegularExpressionValidator(this *QRegularExpressionValidator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -121,7 +107,7 @@ func (this *QRegularExpressionValidator) Validate(input string, pos int) int {
 	var tmpArg0 = qtcore.NewQString_5(input)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -131,7 +117,7 @@ func (this *QRegularExpressionValidator) Validate(input string, pos int) int {
 // [8] QRegularExpression regularExpression()
 func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExpression /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator17regularExpressionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRegularExpression)
 	return rv2
@@ -144,7 +130,7 @@ func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExp
 func (this *QRegularExpressionValidator) SetRegularExpression(re *qtcore.QRegularExpression) {
 	var convArg0 = re.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:219
@@ -154,7 +140,29 @@ func (this *QRegularExpressionValidator) SetRegularExpression(re *qtcore.QRegula
 func (this *QRegularExpressionValidator) RegularExpressionChanged(re *qtcore.QRegularExpression) {
 	var convArg0 = re.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

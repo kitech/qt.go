@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -77,7 +63,7 @@ func (*QSurface) NewFromPointer(cthis unsafe.Pointer) *QSurface {
 func DeleteQSurface(this *QSurface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSurfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -87,7 +73,7 @@ func DeleteQSurface(this *QSurface) {
 // [4] QSurface::SurfaceClass surfaceClass()
 func (this *QSurface) SurfaceClass() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface12surfaceClassEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -97,7 +83,7 @@ func (this *QSurface) SurfaceClass() int {
 // [8] QSurfaceFormat format()
 func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSurfaceFormat)
 	return rv2
@@ -109,7 +95,7 @@ func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
 // [4] QSurface::SurfaceType surfaceType()
 func (this *QSurface) SurfaceType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface11surfaceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -119,7 +105,7 @@ func (this *QSurface) SurfaceType() int {
 // [1] bool supportsOpenGL()
 func (this *QSurface) SupportsOpenGL() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface14supportsOpenGLEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -129,7 +115,7 @@ func (this *QSurface) SupportsOpenGL() bool {
 // [8] QSize size()
 func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -141,7 +127,7 @@ func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 // [-2] void QSurface(enum QSurface::SurfaceClass)
 func NewQSurface(type_ int) *QSurface {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSurfaceC2ENS_12SurfaceClassE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSurfaceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSurface)
 	return gothis
@@ -161,3 +147,25 @@ const QSurface__OpenVGSurface QSurface__SurfaceType = 3
 const QSurface__VulkanSurface QSurface__SurfaceType = 4
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

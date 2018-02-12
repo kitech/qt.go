@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void draw(class QPainter *)
 func (this *QGraphicsColorizeEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "draw", f)
@@ -81,7 +65,7 @@ func (*QGraphicsColorizeEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsC
 // [8] const QMetaObject * metaObject()
 func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -92,7 +76,7 @@ func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*777 cons
 func NewQGraphicsColorizeEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsColorizeEffect {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsColorizeEffectFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -104,7 +88,7 @@ func NewQGraphicsColorizeEffect(parent *qtcore.QObject /*777 QObject **/) *QGrap
 func DeleteQGraphicsColorizeEffect(this *QGraphicsColorizeEffect) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -114,7 +98,7 @@ func DeleteQGraphicsColorizeEffect(this *QGraphicsColorizeEffect) {
 // [16] QColor color()
 func (this *QGraphicsColorizeEffect) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -126,7 +110,7 @@ func (this *QGraphicsColorizeEffect) Color() *qtgui.QColor /*123*/ {
 // [8] qreal strength()
 func (this *QGraphicsColorizeEffect) Strength() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect8strengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -137,7 +121,7 @@ func (this *QGraphicsColorizeEffect) Strength() float64 {
 func (this *QGraphicsColorizeEffect) SetColor(c *qtgui.QColor) {
 	var convArg0 = c.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:140
@@ -146,7 +130,7 @@ func (this *QGraphicsColorizeEffect) SetColor(c *qtgui.QColor) {
 // [-2] void setStrength(qreal)
 func (this *QGraphicsColorizeEffect) SetStrength(strength float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect11setStrengthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), strength)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:143
@@ -156,7 +140,7 @@ func (this *QGraphicsColorizeEffect) SetStrength(strength float64) {
 func (this *QGraphicsColorizeEffect) ColorChanged(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect12colorChangedERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:144
@@ -165,7 +149,7 @@ func (this *QGraphicsColorizeEffect) ColorChanged(color *qtgui.QColor) {
 // [-2] void strengthChanged(qreal)
 func (this *QGraphicsColorizeEffect) StrengthChanged(strength float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect15strengthChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), strength)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:147
@@ -175,7 +159,32 @@ func (this *QGraphicsColorizeEffect) StrengthChanged(strength float64) {
 func (this *QGraphicsColorizeEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect4drawEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

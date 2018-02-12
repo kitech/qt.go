@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -75,7 +61,7 @@ func NewQMoveEvent(pos *qtcore.QPoint, oldPos *qtcore.QPoint) *QMoveEvent {
 	var convArg0 = pos.GetCthis()
 	var convArg1 = oldPos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMoveEventC2ERK6QPointS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMoveEvent)
 	return gothis
@@ -88,7 +74,7 @@ func NewQMoveEvent(pos *qtcore.QPoint, oldPos *qtcore.QPoint) *QMoveEvent {
 func DeleteQMoveEvent(this *QMoveEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMoveEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -98,7 +84,7 @@ func DeleteQMoveEvent(this *QMoveEvent) {
 // [8] const QPoint & pos()
 func (this *QMoveEvent) Pos() *qtcore.QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -110,10 +96,32 @@ func (this *QMoveEvent) Pos() *qtcore.QPoint {
 // [8] const QPoint & oldPos()
 func (this *QMoveEvent) OldPos() *qtcore.QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

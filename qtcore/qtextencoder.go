@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -73,7 +62,7 @@ func (*QTextEncoder) NewFromPointer(cthis unsafe.Pointer) *QTextEncoder {
 func NewQTextEncoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextEncoder {
 	var convArg0 = codec.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoderC2EPK10QTextCodec", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextEncoderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextEncoder)
 	return gothis
@@ -86,7 +75,7 @@ func NewQTextEncoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextEncoder
 func NewQTextEncoder_1(codec *QTextCodec /*777 const QTextCodec **/, flags int) *QTextEncoder {
 	var convArg0 = codec.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoderC2EPK10QTextCodec6QFlagsINS0_14ConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextEncoderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextEncoder)
 	return gothis
@@ -99,7 +88,7 @@ func NewQTextEncoder_1(codec *QTextCodec /*777 const QTextCodec **/, flags int) 
 func DeleteQTextEncoder(this *QTextEncoder) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -111,7 +100,7 @@ func (this *QTextEncoder) FromUnicode(str string) *QByteArray /*123*/ {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -124,7 +113,7 @@ func (this *QTextEncoder) FromUnicode(str string) *QByteArray /*123*/ {
 func (this *QTextEncoder) FromUnicode_1(str *QStringView /*123*/) *QByteArray /*123*/ {
 	var convArg0 = str.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -137,7 +126,7 @@ func (this *QTextEncoder) FromUnicode_1(str *QStringView /*123*/) *QByteArray /*
 func (this *QTextEncoder) FromUnicode_2(uc *QChar /*777 const QChar **/, len int) *QByteArray /*123*/ {
 	var convArg0 = uc.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeEPK5QChari", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -149,8 +138,27 @@ func (this *QTextEncoder) FromUnicode_2(uc *QChar /*777 const QChar **/, len int
 // [1] bool hasFailure()
 func (this *QTextEncoder) HasFailure() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextEncoder10hasFailureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

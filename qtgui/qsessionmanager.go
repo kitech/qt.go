@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QSessionManager) NewFromPointer(cthis unsafe.Pointer) *QSessionManager {
 // [8] const QMetaObject * metaObject()
 func (this *QSessionManager) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -83,7 +69,7 @@ func (this *QSessionManager) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // [8] QString sessionId()
 func (this *QSessionManager) SessionId() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager9sessionIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -96,7 +82,7 @@ func (this *QSessionManager) SessionId() string {
 // [8] QString sessionKey()
 func (this *QSessionManager) SessionKey() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager10sessionKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -109,7 +95,7 @@ func (this *QSessionManager) SessionKey() string {
 // [1] bool allowsInteraction()
 func (this *QSessionManager) AllowsInteraction() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager17allowsInteractionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -119,7 +105,7 @@ func (this *QSessionManager) AllowsInteraction() bool {
 // [1] bool allowsErrorInteraction()
 func (this *QSessionManager) AllowsErrorInteraction() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager22allowsErrorInteractionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -129,7 +115,7 @@ func (this *QSessionManager) AllowsErrorInteraction() bool {
 // [-2] void release()
 func (this *QSessionManager) Release() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager7releaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:72
@@ -138,7 +124,7 @@ func (this *QSessionManager) Release() {
 // [-2] void cancel()
 func (this *QSessionManager) Cancel() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager6cancelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:80
@@ -147,7 +133,7 @@ func (this *QSessionManager) Cancel() {
 // [-2] void setRestartHint(enum QSessionManager::RestartHint)
 func (this *QSessionManager) SetRestartHint(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager14setRestartHintENS_11RestartHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:81
@@ -156,7 +142,7 @@ func (this *QSessionManager) SetRestartHint(arg0 int) {
 // [4] QSessionManager::RestartHint restartHint()
 func (this *QSessionManager) RestartHint() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager11restartHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -167,7 +153,7 @@ func (this *QSessionManager) RestartHint() int {
 func (this *QSessionManager) SetRestartCommand(arg0 *qtcore.QStringList) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager17setRestartCommandERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:84
@@ -176,7 +162,7 @@ func (this *QSessionManager) SetRestartCommand(arg0 *qtcore.QStringList) {
 // [8] QStringList restartCommand()
 func (this *QSessionManager) RestartCommand() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager14restartCommandEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -189,7 +175,7 @@ func (this *QSessionManager) RestartCommand() *qtcore.QStringList /*123*/ {
 func (this *QSessionManager) SetDiscardCommand(arg0 *qtcore.QStringList) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager17setDiscardCommandERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:86
@@ -198,7 +184,7 @@ func (this *QSessionManager) SetDiscardCommand(arg0 *qtcore.QStringList) {
 // [8] QStringList discardCommand()
 func (this *QSessionManager) DiscardCommand() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager14discardCommandEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -214,7 +200,7 @@ func (this *QSessionManager) SetManagerProperty(name string, value string) {
 	var tmpArg1 = qtcore.NewQString_5(value)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager18setManagerPropertyERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:89
@@ -226,7 +212,7 @@ func (this *QSessionManager) SetManagerProperty_1(name string, value *qtcore.QSt
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:91
@@ -235,7 +221,7 @@ func (this *QSessionManager) SetManagerProperty_1(name string, value *qtcore.QSt
 // [1] bool isPhase2()
 func (this *QSessionManager) IsPhase2() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager8isPhase2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -245,12 +231,12 @@ func (this *QSessionManager) IsPhase2() bool {
 // [-2] void requestPhase2()
 func (this *QSessionManager) RequestPhase2() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager13requestPhase2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 func DeleteQSessionManager(this *QSessionManager) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManagerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -262,3 +248,25 @@ const QSessionManager__RestartImmediately QSessionManager__RestartHint = 2
 const QSessionManager__RestartNever QSessionManager__RestartHint = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

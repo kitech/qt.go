@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QMessageLogContext) NewFromPointer(cthis unsafe.Pointer) *QMessageLogCont
 // [-2] void QMessageLogContext()
 func NewQMessageLogContext() *QMessageLogContext {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContextC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMessageLogContextFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMessageLogContext)
 	return gothis
@@ -90,7 +79,7 @@ func NewQMessageLogContext_1(fileName string, lineNumber int, functionName strin
 	var convArg3 = qtrt.CString(categoryName)
 	defer qtrt.FreeMem(convArg3)
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContextC2EPKciS1_S1_", qtrt.FFI_TYPE_POINTER, convArg0, lineNumber, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMessageLogContextFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMessageLogContext)
 	return gothis
@@ -103,13 +92,32 @@ func NewQMessageLogContext_1(fileName string, lineNumber int, functionName strin
 func (this *QMessageLogContext) Copy(logContext *QMessageLogContext) {
 	var convArg0 = logContext.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContext4copyERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 func DeleteQMessageLogContext(this *QMessageLogContext) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContextD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

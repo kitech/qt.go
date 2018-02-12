@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -78,7 +64,7 @@ func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, positi
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextUpdateEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextUpdateEvent)
 	return gothis
@@ -95,7 +81,7 @@ func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessib
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextUpdateEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextUpdateEvent)
 	return gothis
@@ -108,7 +94,7 @@ func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessib
 func DeleteQAccessibleTextUpdateEvent(this *QAccessibleTextUpdateEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -118,7 +104,7 @@ func DeleteQAccessibleTextUpdateEvent(this *QAccessibleTextUpdateEvent) {
 // [8] QString textRemoved()
 func (this *QAccessibleTextUpdateEvent) TextRemoved() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent11textRemovedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -131,7 +117,7 @@ func (this *QAccessibleTextUpdateEvent) TextRemoved() string {
 // [8] QString textInserted()
 func (this *QAccessibleTextUpdateEvent) TextInserted() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent12textInsertedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -144,8 +130,30 @@ func (this *QAccessibleTextUpdateEvent) TextInserted() string {
 // [4] int changePosition()
 func (this *QAccessibleTextUpdateEvent) ChangePosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent14changePositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,46 +24,16 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
 //  body block begin
+
 // void setShaderSourceFile(class QOpenGLShader::ShaderType, const class QString &)
 func (this *QSGMaterialShader) InheritSetShaderSourceFile(f func(type_ int, sourceFile string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setShaderSourceFile", f)
@@ -117,7 +95,7 @@ func (*QSGMaterialShader) NewFromPointer(cthis unsafe.Pointer) *QSGMaterialShade
 // [-2] void QSGMaterialShader()
 func NewQSGMaterialShader() *QSGMaterialShader {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShaderC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGMaterialShaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSGMaterialShader)
 	return gothis
@@ -130,7 +108,7 @@ func NewQSGMaterialShader() *QSGMaterialShader {
 func DeleteQSGMaterialShader(this *QSGMaterialShader) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShaderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -140,7 +118,7 @@ func DeleteQSGMaterialShader(this *QSGMaterialShader) {
 // [-2] void activate()
 func (this *QSGMaterialShader) Activate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader8activateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgmaterial.h:100
@@ -149,7 +127,7 @@ func (this *QSGMaterialShader) Activate() {
 // [-2] void deactivate()
 func (this *QSGMaterialShader) Deactivate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader10deactivateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgmaterial.h:103
@@ -158,7 +136,7 @@ func (this *QSGMaterialShader) Deactivate() {
 // [8] const char *const * attributeNames()
 func (this *QSGMaterialShader) AttributeNames() []string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader14attributeNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.CCharPPToStringSlice(unsafe.Pointer(uintptr(rv)))
 }
 
@@ -170,7 +148,7 @@ func (this *QSGMaterialShader) SetShaderSourceFile(type_ int, sourceFile string)
 	var tmpArg1 = qtcore.NewQString_5(sourceFile)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader19setShaderSourceFileE6QFlagsIN13QOpenGLShader13ShaderTypeBitEERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgmaterial.h:115
@@ -180,7 +158,7 @@ func (this *QSGMaterialShader) SetShaderSourceFile(type_ int, sourceFile string)
 func (this *QSGMaterialShader) SetShaderSourceFiles(type_ int, sourceFiles *qtcore.QStringList) {
 	var convArg1 = sourceFiles.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader20setShaderSourceFilesE6QFlagsIN13QOpenGLShader13ShaderTypeBitEERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgmaterial.h:117
@@ -189,7 +167,7 @@ func (this *QSGMaterialShader) SetShaderSourceFiles(type_ int, sourceFiles *qtco
 // [-2] void compile()
 func (this *QSGMaterialShader) Compile() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader7compileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgmaterial.h:119
@@ -198,7 +176,7 @@ func (this *QSGMaterialShader) Compile() {
 // [-2] void initialize()
 func (this *QSGMaterialShader) Initialize() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader10initializeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgmaterial.h:121
@@ -207,7 +185,7 @@ func (this *QSGMaterialShader) Initialize() {
 // [8] const char * vertexShader()
 func (this *QSGMaterialShader) VertexShader() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader12vertexShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -217,8 +195,39 @@ func (this *QSGMaterialShader) VertexShader() string {
 // [8] const char * fragmentShader()
 func (this *QSGMaterialShader) FragmentShader() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader14fragmentShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QTextFrame) NewFromPointer(cthis unsafe.Pointer) *QTextFrame {
 // [8] const QMetaObject * metaObject()
 func (this *QTextFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -84,7 +70,7 @@ func (this *QTextFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 func NewQTextFrame(doc *QTextDocument /*777 QTextDocument **/) *QTextFrame {
 	var convArg0 = doc.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextFrameC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextFrameFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -96,7 +82,7 @@ func NewQTextFrame(doc *QTextDocument /*777 QTextDocument **/) *QTextFrame {
 func DeleteQTextFrame(this *QTextFrame) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextFrameD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -107,7 +93,7 @@ func DeleteQTextFrame(this *QTextFrame) {
 func (this *QTextFrame) SetFrameFormat(format *QTextFrameFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:127
@@ -116,7 +102,7 @@ func (this *QTextFrame) SetFrameFormat(format *QTextFrameFormat) {
 // [16] QTextFrameFormat frameFormat()
 func (this *QTextFrame) FrameFormat() *QTextFrameFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame11frameFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextFrameFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFrameFormat)
 	return rv2
@@ -128,7 +114,7 @@ func (this *QTextFrame) FrameFormat() *QTextFrameFormat /*123*/ {
 // [8] QTextCursor firstCursorPosition()
 func (this *QTextFrame) FirstCursorPosition() *QTextCursor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame19firstCursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
@@ -140,7 +126,7 @@ func (this *QTextFrame) FirstCursorPosition() *QTextCursor /*123*/ {
 // [8] QTextCursor lastCursorPosition()
 func (this *QTextFrame) LastCursorPosition() *QTextCursor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame18lastCursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
@@ -152,7 +138,7 @@ func (this *QTextFrame) LastCursorPosition() *QTextCursor /*123*/ {
 // [4] int firstPosition()
 func (this *QTextFrame) FirstPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame13firstPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -162,7 +148,7 @@ func (this *QTextFrame) FirstPosition() int {
 // [4] int lastPosition()
 func (this *QTextFrame) LastPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame12lastPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -172,7 +158,7 @@ func (this *QTextFrame) LastPosition() int {
 // [8] QTextFrameLayoutData * layoutData()
 func (this *QTextFrame) LayoutData() *QTextFrameLayoutData /*777 QTextFrameLayoutData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame10layoutDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextFrameLayoutDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -183,7 +169,7 @@ func (this *QTextFrame) LayoutData() *QTextFrameLayoutData /*777 QTextFrameLayou
 func (this *QTextFrame) SetLayoutData(data *QTextFrameLayoutData /*777 QTextFrameLayoutData **/) {
 	var convArg0 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:138
@@ -192,7 +178,7 @@ func (this *QTextFrame) SetLayoutData(data *QTextFrameLayoutData /*777 QTextFram
 // [8] QTextFrame * parentFrame()
 func (this *QTextFrame) ParentFrame() *QTextFrame /*777 QTextFrame **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame11parentFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextFrameFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -202,7 +188,7 @@ func (this *QTextFrame) ParentFrame() *QTextFrame /*777 QTextFrame **/ {
 // [32] QTextFrame::iterator begin()
 func (this *QTextFrame) Begin() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -212,8 +198,30 @@ func (this *QTextFrame) Begin() unsafe.Pointer /*444*/ {
 // [32] QTextFrame::iterator end()
 func (this *QTextFrame) End() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QStorageInfo) NewFromPointer(cthis unsafe.Pointer) *QStorageInfo {
 // [-2] void QStorageInfo()
 func NewQStorageInfo() *QStorageInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfoC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStorageInfoFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStorageInfo)
 	return gothis
@@ -86,7 +75,7 @@ func NewQStorageInfo_1(path string) *QStorageInfo {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfoC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStorageInfoFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStorageInfo)
 	return gothis
@@ -99,7 +88,7 @@ func NewQStorageInfo_1(path string) *QStorageInfo {
 func NewQStorageInfo_2(dir *QDir) *QStorageInfo {
 	var convArg0 = dir.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfoC2ERK4QDir", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStorageInfoFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStorageInfo)
 	return gothis
@@ -112,7 +101,7 @@ func NewQStorageInfo_2(dir *QDir) *QStorageInfo {
 func DeleteQStorageInfo(this *QStorageInfo) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfoD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -123,7 +112,7 @@ func DeleteQStorageInfo(this *QStorageInfo) {
 func (this *QStorageInfo) Swap(other *QStorageInfo) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfo4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:72
@@ -134,7 +123,7 @@ func (this *QStorageInfo) SetPath(path string) {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfo7setPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:74
@@ -143,7 +132,7 @@ func (this *QStorageInfo) SetPath(path string) {
 // [8] QString rootPath()
 func (this *QStorageInfo) RootPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo8rootPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -156,7 +145,7 @@ func (this *QStorageInfo) RootPath() string {
 // [8] QByteArray device()
 func (this *QStorageInfo) Device() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -168,7 +157,7 @@ func (this *QStorageInfo) Device() *QByteArray /*123*/ {
 // [8] QByteArray subvolume()
 func (this *QStorageInfo) Subvolume() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo9subvolumeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -180,7 +169,7 @@ func (this *QStorageInfo) Subvolume() *QByteArray /*123*/ {
 // [8] QByteArray fileSystemType()
 func (this *QStorageInfo) FileSystemType() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo14fileSystemTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -192,7 +181,7 @@ func (this *QStorageInfo) FileSystemType() *QByteArray /*123*/ {
 // [8] QString name()
 func (this *QStorageInfo) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -205,7 +194,7 @@ func (this *QStorageInfo) Name() string {
 // [8] QString displayName()
 func (this *QStorageInfo) DisplayName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo11displayNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -218,7 +207,7 @@ func (this *QStorageInfo) DisplayName() string {
 // [8] qint64 bytesTotal()
 func (this *QStorageInfo) BytesTotal() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo10bytesTotalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -228,7 +217,7 @@ func (this *QStorageInfo) BytesTotal() int64 {
 // [8] qint64 bytesFree()
 func (this *QStorageInfo) BytesFree() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo9bytesFreeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -238,7 +227,7 @@ func (this *QStorageInfo) BytesFree() int64 {
 // [8] qint64 bytesAvailable()
 func (this *QStorageInfo) BytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo14bytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -248,7 +237,7 @@ func (this *QStorageInfo) BytesAvailable() int64 {
 // [4] int blockSize()
 func (this *QStorageInfo) BlockSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo9blockSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -258,7 +247,7 @@ func (this *QStorageInfo) BlockSize() int {
 // [1] bool isRoot()
 func (this *QStorageInfo) IsRoot() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo6isRootEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -268,7 +257,7 @@ func (this *QStorageInfo) IsRoot() bool {
 // [1] bool isReadOnly()
 func (this *QStorageInfo) IsReadOnly() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo10isReadOnlyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -278,7 +267,7 @@ func (this *QStorageInfo) IsReadOnly() bool {
 // [1] bool isReady()
 func (this *QStorageInfo) IsReady() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo7isReadyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -288,7 +277,7 @@ func (this *QStorageInfo) IsReady() bool {
 // [1] bool isValid()
 func (this *QStorageInfo) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -298,7 +287,7 @@ func (this *QStorageInfo) IsValid() bool {
 // [-2] void refresh()
 func (this *QStorageInfo) Refresh() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfo7refreshEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:94
@@ -307,7 +296,7 @@ func (this *QStorageInfo) Refresh() {
 // [8] QStorageInfo root()
 func (this *QStorageInfo) Root() *QStorageInfo /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfo4rootEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStorageInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStorageInfo)
 	return rv2
@@ -319,3 +308,22 @@ func QStorageInfo_Root() *QStorageInfo /*123*/ {
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

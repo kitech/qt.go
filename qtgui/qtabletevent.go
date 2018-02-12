@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -75,7 +61,7 @@ func NewQTabletEvent(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, devi
 	var convArg1 = pos.GetCthis()
 	var convArg2 = globalPos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEEx", qtrt.FFI_TYPE_POINTER, t, convArg1, convArg2, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTabletEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTabletEvent)
 	return gothis
@@ -89,7 +75,7 @@ func NewQTabletEvent_1(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, de
 	var convArg1 = pos.GetCthis()
 	var convArg2 = globalPos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEExNS6_11MouseButtonES5_IS9_E", qtrt.FFI_TYPE_POINTER, t, convArg1, convArg2, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID, button, buttons)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTabletEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTabletEvent)
 	return gothis
@@ -102,7 +88,7 @@ func NewQTabletEvent_1(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, de
 func DeleteQTabletEvent(this *QTabletEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTabletEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 128)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -112,7 +98,7 @@ func DeleteQTabletEvent(this *QTabletEvent) {
 // [8] QPoint pos()
 func (this *QTabletEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -124,7 +110,7 @@ func (this *QTabletEvent) Pos() *qtcore.QPoint /*123*/ {
 // [8] QPoint globalPos()
 func (this *QTabletEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent9globalPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -136,7 +122,7 @@ func (this *QTabletEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 // [16] const QPointF & posF()
 func (this *QTabletEvent) PosF() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent4posFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -148,7 +134,7 @@ func (this *QTabletEvent) PosF() *qtcore.QPointF {
 // [16] const QPointF & globalPosF()
 func (this *QTabletEvent) GlobalPosF() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent10globalPosFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -160,7 +146,7 @@ func (this *QTabletEvent) GlobalPosF() *qtcore.QPointF {
 // [4] int x()
 func (this *QTabletEvent) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -170,7 +156,7 @@ func (this *QTabletEvent) X() int {
 // [4] int y()
 func (this *QTabletEvent) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -180,7 +166,7 @@ func (this *QTabletEvent) Y() int {
 // [4] int globalX()
 func (this *QTabletEvent) GlobalX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent7globalXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -190,7 +176,7 @@ func (this *QTabletEvent) GlobalX() int {
 // [4] int globalY()
 func (this *QTabletEvent) GlobalY() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent7globalYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -200,7 +186,7 @@ func (this *QTabletEvent) GlobalY() int {
 // [8] qreal hiResGlobalX()
 func (this *QTabletEvent) HiResGlobalX() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalXEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -210,7 +196,7 @@ func (this *QTabletEvent) HiResGlobalX() float64 {
 // [8] qreal hiResGlobalY()
 func (this *QTabletEvent) HiResGlobalY() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalYEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -220,7 +206,7 @@ func (this *QTabletEvent) HiResGlobalY() float64 {
 // [4] QTabletEvent::TabletDevice device()
 func (this *QTabletEvent) Device() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -230,7 +216,7 @@ func (this *QTabletEvent) Device() int {
 // [4] QTabletEvent::PointerType pointerType()
 func (this *QTabletEvent) PointerType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent11pointerTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -240,7 +226,7 @@ func (this *QTabletEvent) PointerType() int {
 // [8] qint64 uniqueId()
 func (this *QTabletEvent) UniqueId() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent8uniqueIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -250,7 +236,7 @@ func (this *QTabletEvent) UniqueId() int64 {
 // [8] qreal pressure()
 func (this *QTabletEvent) Pressure() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent8pressureEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -260,7 +246,7 @@ func (this *QTabletEvent) Pressure() float64 {
 // [4] int z()
 func (this *QTabletEvent) Z() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent1zEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -270,7 +256,7 @@ func (this *QTabletEvent) Z() int {
 // [8] qreal tangentialPressure()
 func (this *QTabletEvent) TangentialPressure() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent18tangentialPressureEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -280,7 +266,7 @@ func (this *QTabletEvent) TangentialPressure() float64 {
 // [8] qreal rotation()
 func (this *QTabletEvent) Rotation() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent8rotationEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -290,7 +276,7 @@ func (this *QTabletEvent) Rotation() float64 {
 // [4] int xTilt()
 func (this *QTabletEvent) XTilt() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent5xTiltEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -300,7 +286,7 @@ func (this *QTabletEvent) XTilt() int {
 // [4] int yTilt()
 func (this *QTabletEvent) YTilt() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent5yTiltEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -310,7 +296,7 @@ func (this *QTabletEvent) YTilt() int {
 // [4] Qt::MouseButton button()
 func (this *QTabletEvent) Button() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent6buttonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -320,7 +306,7 @@ func (this *QTabletEvent) Button() int {
 // [4] Qt::MouseButtons buttons()
 func (this *QTabletEvent) Buttons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent7buttonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -342,3 +328,25 @@ const QTabletEvent__Cursor QTabletEvent__PointerType = 2
 const QTabletEvent__Eraser QTabletEvent__PointerType = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

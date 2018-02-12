@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QSocketNotifier) InheritEvent(f func(arg0 *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -73,7 +63,7 @@ func (*QSocketNotifier) NewFromPointer(cthis unsafe.Pointer) *QSocketNotifier {
 // [8] const QMetaObject * metaObject()
 func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -84,7 +74,7 @@ func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject *
 func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*777 QObject **/) *QSocketNotifier {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifierC2ExNS_4TypeEP7QObject", qtrt.FFI_TYPE_POINTER, socket, arg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSocketNotifierFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -96,7 +86,7 @@ func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*777 QObject **
 func DeleteQSocketNotifier(this *QSocketNotifier) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifierD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -106,7 +96,7 @@ func DeleteQSocketNotifier(this *QSocketNotifier) {
 // [8] qintptr socket()
 func (this *QSocketNotifier) Socket() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier6socketEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -116,7 +106,7 @@ func (this *QSocketNotifier) Socket() int64 {
 // [4] QSocketNotifier::Type type()
 func (this *QSocketNotifier) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -126,7 +116,7 @@ func (this *QSocketNotifier) Type() int {
 // [1] bool isEnabled()
 func (this *QSocketNotifier) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -136,7 +126,7 @@ func (this *QSocketNotifier) IsEnabled() bool {
 // [-2] void setEnabled(_Bool)
 func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifier10setEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:71
@@ -146,7 +136,7 @@ func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 func (this *QSocketNotifier) Event(arg0 *QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifier5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -157,3 +147,22 @@ const QSocketNotifier__Write QSocketNotifier__Type = 1
 const QSocketNotifier__Exception QSocketNotifier__Type = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,42 +24,11 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
@@ -85,7 +62,7 @@ func (*QSGTextureMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGTextureMater
 // [8] QSGMaterialType * type()
 func (this *QSGTextureMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSGTextureMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGMaterialTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -95,14 +72,45 @@ func (this *QSGTextureMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **
 // [8] QSGMaterialShader * createShader()
 func (this *QSGTextureMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSGTextureMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGMaterialShaderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 func DeleteQSGTextureMaterial(this *QSGTextureMaterial) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSGTextureMaterialD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

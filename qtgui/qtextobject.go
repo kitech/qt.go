@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,13 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
 //  body block begin
+
 // void setFormat(const class QTextFormat &)
 func (this *QTextObject) InheritSetFormat(f func(format *QTextFormat) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setFormat", f)
@@ -77,7 +64,7 @@ func (*QTextObject) NewFromPointer(cthis unsafe.Pointer) *QTextObject {
 // [8] const QMetaObject * metaObject()
 func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -88,7 +75,7 @@ func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 func NewQTextObject(doc *QTextDocument /*777 QTextDocument **/) *QTextObject {
 	var convArg0 = doc.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextObjectC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextObjectFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -100,7 +87,7 @@ func NewQTextObject(doc *QTextDocument /*777 QTextDocument **/) *QTextObject {
 func DeleteQTextObject(this *QTextObject) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextObjectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -111,7 +98,7 @@ func DeleteQTextObject(this *QTextObject) {
 func (this *QTextObject) SetFormat(format *QTextFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextObject9setFormatERK11QTextFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:71
@@ -120,7 +107,7 @@ func (this *QTextObject) SetFormat(format *QTextFormat) {
 // [16] QTextFormat format()
 func (this *QTextObject) Format() *QTextFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFormat)
 	return rv2
@@ -132,7 +119,7 @@ func (this *QTextObject) Format() *QTextFormat /*123*/ {
 // [4] int formatIndex()
 func (this *QTextObject) FormatIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject11formatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -142,7 +129,7 @@ func (this *QTextObject) FormatIndex() int {
 // [8] QTextDocument * document()
 func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject8documentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -152,8 +139,30 @@ func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 // [4] int objectIndex()
 func (this *QTextObject) ObjectIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject11objectIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

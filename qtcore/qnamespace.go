@@ -1818,3 +1818,7 @@ const Qt__Granted Qt__PermissionResult = 0
 const Qt__Denied Qt__PermissionResult = 1
 
 //  body block end
+
+//  keep block begin
+
+//  keep block end

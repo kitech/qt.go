@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -75,7 +61,7 @@ func NewQKeyEvent(type_ int, key int, modifiers int, text string, autorep bool, 
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt", qtrt.FFI_TYPE_POINTER, type_, key, modifiers, convArg3, autorep, count)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQKeyEvent)
 	return gothis
@@ -89,7 +75,7 @@ func NewQKeyEvent_1(type_ int, key int, modifiers int, nativeScanCode uint, nati
 	var tmpArg6 = qtcore.NewQString_5(text)
 	var convArg6 = tmpArg6.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEEjjjRK7QStringbt", qtrt.FFI_TYPE_POINTER, type_, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, convArg6, autorep, count)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQKeyEvent)
 	return gothis
@@ -102,7 +88,7 @@ func NewQKeyEvent_1(type_ int, key int, modifiers int, nativeScanCode uint, nati
 func DeleteQKeyEvent(this *QKeyEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QKeyEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 64)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -112,7 +98,7 @@ func DeleteQKeyEvent(this *QKeyEvent) {
 // [4] int key()
 func (this *QKeyEvent) Key() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -122,7 +108,7 @@ func (this *QKeyEvent) Key() int {
 // [1] bool matches(QKeySequence::StandardKey)
 func (this *QKeyEvent) Matches(key int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent7matchesEN12QKeySequence11StandardKeyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), key)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -132,7 +118,7 @@ func (this *QKeyEvent) Matches(key int) bool {
 // [4] Qt::KeyboardModifiers modifiers()
 func (this *QKeyEvent) Modifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent9modifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -142,7 +128,7 @@ func (this *QKeyEvent) Modifiers() int {
 // [8] QString text()
 func (this *QKeyEvent) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -155,7 +141,7 @@ func (this *QKeyEvent) Text() string {
 // [1] bool isAutoRepeat()
 func (this *QKeyEvent) IsAutoRepeat() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent12isAutoRepeatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -165,7 +151,7 @@ func (this *QKeyEvent) IsAutoRepeat() bool {
 // [4] int count()
 func (this *QKeyEvent) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -175,7 +161,7 @@ func (this *QKeyEvent) Count() int {
 // [4] quint32 nativeScanCode()
 func (this *QKeyEvent) NativeScanCode() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent14nativeScanCodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -185,7 +171,7 @@ func (this *QKeyEvent) NativeScanCode() uint {
 // [4] quint32 nativeVirtualKey()
 func (this *QKeyEvent) NativeVirtualKey() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent16nativeVirtualKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -195,8 +181,30 @@ func (this *QKeyEvent) NativeVirtualKey() uint {
 // [4] quint32 nativeModifiers()
 func (this *QKeyEvent) NativeModifiers() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent15nativeModifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

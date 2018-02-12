@@ -7,10 +7,9 @@ package qtqml
 */
 import "C"
 import (
-	"gopp"
 	"unsafe"
 
-	"qt.go/qtrt"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 func KeepMe() {}
@@ -43,13 +42,13 @@ func (*QJSValueListx) NewFromPointer(cthis unsafe.Pointer) *QJSValueListx {
 
 func (this *QJSValueListx) At(i int) *QJSValue {
 	rv, err := qtrt.InvokeQtFunc6("C_QJSValueList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QJSValueListx) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QJSValueList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 

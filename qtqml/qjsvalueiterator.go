@@ -6,6 +6,14 @@ package qtqml
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
 
 //  ext block end
 
@@ -81,7 +64,7 @@ func (*QJSValueIterator) NewFromPointer(cthis unsafe.Pointer) *QJSValueIterator 
 func NewQJSValueIterator(value *QJSValue) *QJSValueIterator {
 	var convArg0 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QJSValueIteratorC2ERK8QJSValue", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSValueIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQJSValueIterator)
 	return gothis
@@ -94,7 +77,7 @@ func NewQJSValueIterator(value *QJSValue) *QJSValueIterator {
 func DeleteQJSValueIterator(this *QJSValueIterator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QJSValueIteratorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -104,7 +87,7 @@ func DeleteQJSValueIterator(this *QJSValueIterator) {
 // [1] bool hasNext()
 func (this *QJSValueIterator) HasNext() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QJSValueIterator7hasNextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -114,7 +97,7 @@ func (this *QJSValueIterator) HasNext() bool {
 // [1] bool next()
 func (this *QJSValueIterator) Next() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QJSValueIterator4nextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -124,7 +107,7 @@ func (this *QJSValueIterator) Next() bool {
 // [8] QString name()
 func (this *QJSValueIterator) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QJSValueIterator4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -137,10 +120,35 @@ func (this *QJSValueIterator) Name() string {
 // [8] QJSValue value()
 func (this *QJSValueIterator) Value() *QJSValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QJSValueIterator5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+}
+
+//  keep block end

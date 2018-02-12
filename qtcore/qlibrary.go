@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -69,7 +58,7 @@ func (*QLibrary) NewFromPointer(cthis unsafe.Pointer) *QLibrary {
 // [8] const QMetaObject * metaObject()
 func (this *QLibrary) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QLibrary10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -80,7 +69,7 @@ func (this *QLibrary) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 func NewQLibrary(parent *QObject /*777 QObject **/) *QLibrary {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -94,7 +83,7 @@ func NewQLibrary_1(fileName string, parent *QObject /*777 QObject **/) *QLibrary
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -108,7 +97,7 @@ func NewQLibrary_2(fileName string, verNum int, parent *QObject /*777 QObject **
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringiP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, verNum, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -124,7 +113,7 @@ func NewQLibrary_3(fileName string, version string, parent *QObject /*777 QObjec
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringS2_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -136,7 +125,7 @@ func NewQLibrary_3(fileName string, version string, parent *QObject /*777 QObjec
 func DeleteQLibrary(this *QLibrary) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -148,7 +137,7 @@ func (this *QLibrary) Resolve(symbol string) unsafe.Pointer /*666*/ {
 	var convArg0 = qtrt.CString(symbol)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary7resolveEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -162,7 +151,7 @@ func (this *QLibrary) Resolve_1(fileName string, symbol string) unsafe.Pointer /
 	var convArg1 = qtrt.CString(symbol)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 func QLibrary_Resolve_1(fileName string, symbol string) unsafe.Pointer /*666*/ {
@@ -181,7 +170,7 @@ func (this *QLibrary) Resolve_2(fileName string, verNum int, symbol string) unsa
 	var convArg2 = qtrt.CString(symbol)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringiPKc", qtrt.FFI_TYPE_POINTER, convArg0, verNum, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 func QLibrary_Resolve_2(fileName string, verNum int, symbol string) unsafe.Pointer /*666*/ {
@@ -202,7 +191,7 @@ func (this *QLibrary) Resolve_3(fileName string, version string, symbol string) 
 	var convArg2 = qtrt.CString(symbol)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringS2_PKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 func QLibrary_Resolve_3(fileName string, version string, symbol string) unsafe.Pointer /*666*/ {
@@ -217,7 +206,7 @@ func QLibrary_Resolve_3(fileName string, version string, symbol string) unsafe.P
 // [1] bool load()
 func (this *QLibrary) Load() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary4loadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -227,7 +216,7 @@ func (this *QLibrary) Load() bool {
 // [1] bool unload()
 func (this *QLibrary) Unload() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary6unloadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -237,7 +226,7 @@ func (this *QLibrary) Unload() bool {
 // [1] bool isLoaded()
 func (this *QLibrary) IsLoaded() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QLibrary8isLoadedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -249,7 +238,7 @@ func (this *QLibrary) IsLibrary(fileName string) bool {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary9isLibraryERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QLibrary_IsLibrary(fileName string) bool {
@@ -266,7 +255,7 @@ func (this *QLibrary) SetFileName(fileName string) {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qlibrary.h:86
@@ -275,7 +264,7 @@ func (this *QLibrary) SetFileName(fileName string) {
 // [8] QString fileName()
 func (this *QLibrary) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QLibrary8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -290,7 +279,7 @@ func (this *QLibrary) SetFileNameAndVersion(fileName string, verNum int) {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary21setFileNameAndVersionERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, verNum)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qlibrary.h:89
@@ -303,7 +292,7 @@ func (this *QLibrary) SetFileNameAndVersion_1(fileName string, version string) {
 	var tmpArg1 = NewQString_5(version)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary21setFileNameAndVersionERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qlibrary.h:90
@@ -312,7 +301,7 @@ func (this *QLibrary) SetFileNameAndVersion_1(fileName string, version string) {
 // [8] QString errorString()
 func (this *QLibrary) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QLibrary11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -325,7 +314,7 @@ func (this *QLibrary) ErrorString() string {
 // [-2] void setLoadHints(QLibrary::LoadHints)
 func (this *QLibrary) SetLoadHints(hints int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary12setLoadHintsE6QFlagsINS_8LoadHintEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hints)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qlibrary.h:93
@@ -334,7 +323,7 @@ func (this *QLibrary) SetLoadHints(hints int) {
 // [4] QLibrary::LoadHints loadHints()
 func (this *QLibrary) LoadHints() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QLibrary9loadHintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -347,3 +336,22 @@ const QLibrary__PreventUnloadHint QLibrary__LoadHint = 8
 const QLibrary__DeepBindHint QLibrary__LoadHint = 16
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

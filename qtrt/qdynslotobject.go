@@ -6,12 +6,11 @@ extern void callbackAllQDynSlotObject(void*, int, int, void**, char*, int, int*,
 import "C"
 import (
 	"errors"
-	"gopp"
 	"log"
 	"strings"
 	"unsafe"
 
-	"github.com/therecipe/qt"
+	qt "github.com/kitech/qt.go/qtqt"
 )
 
 // usage: ffiqt.Connect()
@@ -42,7 +41,7 @@ func NewQDynSlotObject(signalName string, argc int) *QDynSlotObject {
 
 	rv, err := InvokeQtFunc6("QDynSlotObject_new", FFI_TYPE_POINTER,
 		fnptr_, name_, argc_, argtys_, cbptr_)
-	gopp.ErrPrint(err, rv)
+	ErrPrint(err, rv)
 
 	this.cthis = unsafe.Pointer(uintptr(rv))
 	SetFinalizer(this, DeleteQDynSlotObject)
@@ -51,7 +50,7 @@ func NewQDynSlotObject(signalName string, argc int) *QDynSlotObject {
 
 func DeleteQDynSlotObject(o *QDynSlotObject) {
 	rv, err := InvokeQtFunc6("QDynSlotObject_delete", FFI_TYPE_VOID, o.cthis)
-	gopp.ErrPrint(err, rv)
+	ErrPrint(err, rv)
 }
 
 type CObjectIF interface {
@@ -66,13 +65,13 @@ func Connect(cobj CObjectIF, signame string, f interface{}) {
 
 func (*QDynSlotObject) _Connect(cobj CObjectIF, signame string, f interface{}) {
 	cptr := cobj.GetCthis()
-	gopp.NilPrint(cptr, "cptr nil")
+	NilPrint(cptr, "cptr nil")
 
 	if cptr != nil {
 		if !strings.Contains(signame, "(") {
 			s, err := QObjectGetSignatureByName(cobj, signame)
-			gopp.ErrPrint(err)
-			signame = gopp.IfElseStr(err == nil, s, signame)
+			ErrPrint(err)
+			signame = IfElseStr(err == nil, s, signame)
 		}
 
 		// 相当于初始化信号开关
@@ -126,11 +125,11 @@ func (*QDynSlotObject) _ConnectSwitch(src unsafe.Pointer, signame string, on boo
 	if on {
 		rv, err := InvokeQtFunc6("QDynSlotObject_connect_switch", FFI_TYPE_VOID,
 			src, signame_, subDynSlot.cthis, int(1))
-		gopp.ErrPrint(err, rv)
+		ErrPrint(err, rv)
 	} else {
 		rv, err := InvokeQtFunc6("QDynSlotObject_connect_switch", FFI_TYPE_VOID,
 			src, signame_, subDynSlot.cthis, int(0))
-		gopp.ErrPrint(err, rv)
+		ErrPrint(err, rv)
 	}
 }
 
@@ -143,13 +142,13 @@ func Disconnect(cobj CObjectIF, signame string) {
 func ConnectSignal(sender CObjectIF, signal string, receiver CObjectIF, member string) {
 	if !strings.Contains(signal, "(") {
 		s, err := QObjectGetSignatureByName(sender, signal)
-		gopp.ErrPrint(err)
-		signal = gopp.IfElseStr(err == nil, s, signal)
+		ErrPrint(err)
+		signal = IfElseStr(err == nil, s, signal)
 	}
 	if !strings.Contains(member, "(") {
 		s, err := QObjectGetSignatureByName(receiver, member)
-		gopp.ErrPrint(err)
-		member = gopp.IfElseStr(err == nil, s, member)
+		ErrPrint(err)
+		member = IfElseStr(err == nil, s, member)
 	}
 
 	var convArg0 = sender.GetCthis()
@@ -160,7 +159,7 @@ func ConnectSignal(sender CObjectIF, signal string, receiver CObjectIF, member s
 	defer FreeMem(convArg3)
 	var arg4 int = 2 // Qt::QueuedConnection	2
 	rv, err := InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
-	gopp.ErrPrint(err, rv)
+	ErrPrint(err, rv)
 	// return int(rv)
 }
 
@@ -169,7 +168,7 @@ func QObjectGetSignatureByName(qobj CObjectIF, name string) (string, error) {
 	var convArg1 = CString(name)
 	defer FreeMem(convArg1)
 	rv, err := InvokeQtFunc6("QObject_get_meta_signature_by_name", FFI_TYPE_POINTER, qobj.GetCthis(), convArg1)
-	gopp.ErrPrint(err, rv)
+	ErrPrint(err, rv)
 	switch rv {
 	case 0:
 		return "", errors.New("not found")
@@ -185,16 +184,16 @@ var debugDynSlot bool = false
 
 func SetDebugDynSlot(on bool) {
 	debugDynSlot = on
-	InvokeQtFunc6("QDynSlotObject_set_debug", FFI_TYPE_VOID, gopp.IfElseInt(on, 1, 0))
+	InvokeQtFunc6("QDynSlotObject_set_debug", FFI_TYPE_VOID, IfElseInt(on, 1, 0))
 }
 
 // test
 func (this *QDynSlotObject) Connect_test(to *QDynSlotObject) {
 	rv, err := InvokeQtFunc6("QDynSlotObject_connect_test", FFI_TYPE_VOID, this.cthis, to.cthis)
-	gopp.ErrPrint(err, rv)
+	ErrPrint(err, rv)
 }
 
 func (this *QDynSlotObject) Trigger_test() {
 	rv, err := InvokeQtFunc6("QDynSlotObject_trigger_test", FFI_TYPE_VOID, this.cthis)
-	gopp.ErrPrint(err, rv)
+	ErrPrint(err, rv)
 }

@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QDnsHostAddressRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsHostAddr
 // [-2] void QDnsHostAddressRecord()
 func NewQDnsHostAddressRecord() *QDnsHostAddressRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QDnsHostAddressRecordC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsHostAddressRecordFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDnsHostAddressRecord)
 	return gothis
@@ -89,7 +75,7 @@ func NewQDnsHostAddressRecord() *QDnsHostAddressRecord {
 func DeleteQDnsHostAddressRecord(this *QDnsHostAddressRecord) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QDnsHostAddressRecordD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +86,7 @@ func DeleteQDnsHostAddressRecord(this *QDnsHostAddressRecord) {
 func (this *QDnsHostAddressRecord) Swap(other *QDnsHostAddressRecord) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QDnsHostAddressRecord4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:97
@@ -109,7 +95,7 @@ func (this *QDnsHostAddressRecord) Swap(other *QDnsHostAddressRecord) {
 // [8] QString name()
 func (this *QDnsHostAddressRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QDnsHostAddressRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -122,7 +108,7 @@ func (this *QDnsHostAddressRecord) Name() string {
 // [4] quint32 timeToLive()
 func (this *QDnsHostAddressRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QDnsHostAddressRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -132,10 +118,32 @@ func (this *QDnsHostAddressRecord) TimeToLive() uint {
 // [8] QHostAddress value()
 func (this *QDnsHostAddressRecord) Value() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QDnsHostAddressRecord5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostAddress)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

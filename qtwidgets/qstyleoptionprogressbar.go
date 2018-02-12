@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QStyleOptionProgressBar) NewFromPointer(cthis unsafe.Pointer) *QStyleOpti
 // [-2] void QStyleOptionProgressBar()
 func NewQStyleOptionProgressBar() *QStyleOptionProgressBar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionProgressBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionProgressBar)
 	return gothis
@@ -89,7 +72,7 @@ func NewQStyleOptionProgressBar() *QStyleOptionProgressBar {
 // [-2] void QStyleOptionProgressBar(int)
 func NewQStyleOptionProgressBar_1(version int) *QStyleOptionProgressBar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionProgressBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionProgressBar)
 	return gothis
@@ -97,7 +80,7 @@ func NewQStyleOptionProgressBar_1(version int) *QStyleOptionProgressBar {
 
 func DeleteQStyleOptionProgressBar(this *QStyleOptionProgressBar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -110,3 +93,28 @@ type QStyleOptionProgressBar__StyleOptionVersion = int
 const QStyleOptionProgressBar__Version QStyleOptionProgressBar__StyleOptionVersion = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

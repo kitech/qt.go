@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"gopp"
 	"io/ioutil"
 	"log"
 	"os"
 	"strings"
+
+	"github.com/kitech/qt.go/qtrt"
 )
 
 var cpplines = make([]string, 0)
@@ -26,7 +27,7 @@ func main() {
 	log.Println(file, filep)
 
 	bcc, err := ioutil.ReadFile(file)
-	gopp.ErrPrint(err, file)
+	qtrt.ErrPrint(err, file)
 	lines := strings.Split(string(bcc), "\n")
 	log.Println(len(lines))
 

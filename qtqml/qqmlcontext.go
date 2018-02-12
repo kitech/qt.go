@@ -6,6 +6,14 @@ package qtqml
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QQmlContext) NewFromPointer(cthis unsafe.Pointer) *QQmlContext {
 // [8] const QMetaObject * metaObject()
 func (this *QQmlContext) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -89,7 +72,7 @@ func NewQQmlContext(parent *QQmlEngine /*777 QQmlEngine **/, objParent *qtcore.Q
 	var convArg0 = parent.GetCthis()
 	var convArg1 = objParent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContextC2EP10QQmlEngineP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -102,7 +85,7 @@ func NewQQmlContext_1(parent *QQmlContext /*777 QQmlContext **/, objParent *qtco
 	var convArg0 = parent.GetCthis()
 	var convArg1 = objParent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContextC2EPS_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -114,7 +97,7 @@ func NewQQmlContext_1(parent *QQmlContext /*777 QQmlContext **/, objParent *qtco
 func DeleteQQmlContext(this *QQmlContext) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContextD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -124,7 +107,7 @@ func DeleteQQmlContext(this *QQmlContext) {
 // [1] bool isValid()
 func (this *QQmlContext) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -134,7 +117,7 @@ func (this *QQmlContext) IsValid() bool {
 // [8] QQmlEngine * engine()
 func (this *QQmlContext) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -144,7 +127,7 @@ func (this *QQmlContext) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 // [8] QQmlContext * parentContext()
 func (this *QQmlContext) ParentContext() *QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext13parentContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -154,7 +137,7 @@ func (this *QQmlContext) ParentContext() *QQmlContext /*777 QQmlContext **/ {
 // [8] QObject * contextObject()
 func (this *QQmlContext) ContextObject() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext13contextObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -165,7 +148,7 @@ func (this *QQmlContext) ContextObject() *qtcore.QObject /*777 QObject **/ {
 func (this *QQmlContext) SetContextObject(arg0 *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContext16setContextObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlcontext.h:77
@@ -176,7 +159,7 @@ func (this *QQmlContext) ContextProperty(arg0 string) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext15contextPropertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -191,7 +174,7 @@ func (this *QQmlContext) SetContextProperty(arg0 string, arg1 *qtcore.QObject /*
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContext18setContextPropertyERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlcontext.h:79
@@ -203,7 +186,7 @@ func (this *QQmlContext) SetContextProperty_1(arg0 string, arg1 *qtcore.QVariant
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContext18setContextPropertyERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlcontext.h:82
@@ -213,7 +196,7 @@ func (this *QQmlContext) SetContextProperty_1(arg0 string, arg1 *qtcore.QVariant
 func (this *QQmlContext) NameForObject(arg0 *qtcore.QObject /*777 QObject **/) string {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext13nameForObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -227,7 +210,7 @@ func (this *QQmlContext) NameForObject(arg0 *qtcore.QObject /*777 QObject **/) s
 func (this *QQmlContext) ResolvedUrl(arg0 *qtcore.QUrl) *qtcore.QUrl /*123*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContext11resolvedUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
@@ -240,7 +223,7 @@ func (this *QQmlContext) ResolvedUrl(arg0 *qtcore.QUrl) *qtcore.QUrl /*123*/ {
 func (this *QQmlContext) SetBaseUrl(arg0 *qtcore.QUrl) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContext10setBaseUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlcontext.h:87
@@ -249,10 +232,35 @@ func (this *QQmlContext) SetBaseUrl(arg0 *qtcore.QUrl) {
 // [8] QUrl baseUrl()
 func (this *QQmlContext) BaseUrl() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext7baseUrlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+}
+
+//  keep block end

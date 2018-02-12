@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QTextItem) NewFromPointer(cthis unsafe.Pointer) *QTextItem {
 // [8] qreal descent()
 func (this *QTextItem) Descent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem7descentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -86,7 +72,7 @@ func (this *QTextItem) Descent() float64 {
 // [8] qreal ascent()
 func (this *QTextItem) Ascent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem6ascentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -96,7 +82,7 @@ func (this *QTextItem) Ascent() float64 {
 // [8] qreal width()
 func (this *QTextItem) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -106,7 +92,7 @@ func (this *QTextItem) Width() float64 {
 // [4] QTextItem::RenderFlags renderFlags()
 func (this *QTextItem) RenderFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem11renderFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -116,7 +102,7 @@ func (this *QTextItem) RenderFlags() int {
 // [8] QString text()
 func (this *QTextItem) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -129,7 +115,7 @@ func (this *QTextItem) Text() string {
 // [16] QFont font()
 func (this *QTextItem) Font() *QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
@@ -137,7 +123,7 @@ func (this *QTextItem) Font() *QFont /*123*/ {
 
 func DeleteQTextItem(this *QTextItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -150,3 +136,25 @@ const QTextItem__StrikeOut QTextItem__RenderFlag = 64
 const QTextItem__Dummy QTextItem__RenderFlag = -1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QHashData) NewFromPointer(cthis unsafe.Pointer) *QHashData {
 // [8] void * allocateNode(int)
 func (this *QHashData) AllocateNode(nodeAlign int) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData12allocateNodeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nodeAlign)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -82,7 +71,7 @@ func (this *QHashData) AllocateNode(nodeAlign int) unsafe.Pointer /*666*/ {
 // [-2] void freeNode(void *)
 func (this *QHashData) FreeNode(node unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData8freeNodeEPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), node)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qhash.h:86
@@ -91,7 +80,7 @@ func (this *QHashData) FreeNode(node unsafe.Pointer /*666*/) {
 // [8] QHashData * detach_helper(void (*)(struct QHashData::Node *, void *), void (*)(struct QHashData::Node *), int, int)
 func (this *QHashData) Detach_helper(node_duplicate unsafe.Pointer /*666*/, node_delete unsafe.Pointer /*666*/, nodeSize int, nodeAlign int) *QHashData /*777 QHashData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData13detach_helperEPFvPNS_4NodeEPvEPFvS1_Eii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), node_duplicate, node_delete, nodeSize, nodeAlign)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQHashDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -101,7 +90,7 @@ func (this *QHashData) Detach_helper(node_duplicate unsafe.Pointer /*666*/, node
 // [1] bool willGrow()
 func (this *QHashData) WillGrow() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData8willGrowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -111,7 +100,7 @@ func (this *QHashData) WillGrow() bool {
 // [-2] void hasShrunk()
 func (this *QHashData) HasShrunk() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData9hasShrunkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qhash.h:90
@@ -120,7 +109,7 @@ func (this *QHashData) HasShrunk() {
 // [-2] void rehash(int)
 func (this *QHashData) Rehash(hint int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData6rehashEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qhash.h:91
@@ -129,7 +118,7 @@ func (this *QHashData) Rehash(hint int) {
 // [-2] void free_helper(void (*)(struct QHashData::Node *))
 func (this *QHashData) Free_helper(node_delete unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData11free_helperEPFvPNS_4NodeEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), node_delete)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qhash.h:92
@@ -138,14 +127,33 @@ func (this *QHashData) Free_helper(node_delete unsafe.Pointer /*666*/) {
 // [8] QHashData::Node * firstNode()
 func (this *QHashData) FirstNode() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData9firstNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
 func DeleteQHashData(this *QHashData) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QKeySequence) NewFromPointer(cthis unsafe.Pointer) *QKeySequence {
 // [-2] void QKeySequence()
 func NewQKeySequence() *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQKeySequence)
 	return gothis
@@ -90,7 +76,7 @@ func NewQKeySequence_1(key string, format int) *QKeySequence {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2ERK7QStringNS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQKeySequence)
 	return gothis
@@ -102,7 +88,7 @@ func NewQKeySequence_1(key string, format int) *QKeySequence {
 // [-2] void QKeySequence(int, int, int, int)
 func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQKeySequence)
 	return gothis
@@ -114,7 +100,7 @@ func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 // [-2] void QKeySequence(enum QKeySequence::StandardKey)
 func NewQKeySequence_3(key int) *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2ENS_11StandardKeyE", qtrt.FFI_TYPE_POINTER, key)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQKeySequence)
 	return gothis
@@ -127,7 +113,7 @@ func NewQKeySequence_3(key int) *QKeySequence {
 func DeleteQKeySequence(this *QKeySequence) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -137,7 +123,7 @@ func DeleteQKeySequence(this *QKeySequence) {
 // [4] int count()
 func (this *QKeySequence) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -147,7 +133,7 @@ func (this *QKeySequence) Count() int {
 // [1] bool isEmpty()
 func (this *QKeySequence) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -157,7 +143,7 @@ func (this *QKeySequence) IsEmpty() bool {
 // [8] QString toString(enum QKeySequence::SequenceFormat)
 func (this *QKeySequence) ToString(format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence8toStringENS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -172,7 +158,7 @@ func (this *QKeySequence) FromString(str string, format int) *QKeySequence /*123
 	var tmpArg0 = qtcore.NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequence10fromStringERK7QStringNS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQKeySequence)
 	return rv2
@@ -190,7 +176,7 @@ func QKeySequence_FromString(str string, format int) *QKeySequence /*123*/ {
 func (this *QKeySequence) Matches(seq *QKeySequence) int {
 	var convArg0 = seq.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence7matchesERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -202,7 +188,7 @@ func (this *QKeySequence) Mnemonic(text string) *QKeySequence /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequence8mnemonicERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQKeySequence)
 	return rv2
@@ -220,7 +206,7 @@ func QKeySequence_Mnemonic(text string) *QKeySequence /*123*/ {
 func (this *QKeySequence) Swap(other *QKeySequence) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequence4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qkeysequence.h:205
@@ -229,7 +215,7 @@ func (this *QKeySequence) Swap(other *QKeySequence) {
 // [1] bool isDetached()
 func (this *QKeySequence) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -319,3 +305,25 @@ const QKeySequence__PartialMatch QKeySequence__SequenceMatch = 1
 const QKeySequence__ExactMatch QKeySequence__SequenceMatch = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

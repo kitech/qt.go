@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -74,7 +60,7 @@ func (*QAccessibleTextCursorEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 func NewQAccessibleTextCursorEvent(obj *qtcore.QObject /*777 QObject **/, cursorPos int) *QAccessibleTextCursorEvent {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, cursorPos)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextCursorEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextCursorEvent)
 	return gothis
@@ -87,7 +73,7 @@ func NewQAccessibleTextCursorEvent(obj *qtcore.QObject /*777 QObject **/, cursor
 func NewQAccessibleTextCursorEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
 	var convArg0 = iface.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei", qtrt.FFI_TYPE_POINTER, convArg0, cursorPos)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextCursorEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextCursorEvent)
 	return gothis
@@ -100,7 +86,7 @@ func NewQAccessibleTextCursorEvent_1(iface *QAccessibleInterface /*777 QAccessib
 func DeleteQAccessibleTextCursorEvent(this *QAccessibleTextCursorEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -110,7 +96,7 @@ func DeleteQAccessibleTextCursorEvent(this *QAccessibleTextCursorEvent) {
 // [-2] void setCursorPosition(int)
 func (this *QAccessibleTextCursorEvent) SetCursorPosition(position int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEvent17setCursorPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:763
@@ -119,8 +105,30 @@ func (this *QAccessibleTextCursorEvent) SetCursorPosition(position int) {
 // [4] int cursorPosition()
 func (this *QAccessibleTextCursorEvent) CursorPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextCursorEvent14cursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

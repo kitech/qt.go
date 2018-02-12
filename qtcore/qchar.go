@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QChar) NewFromPointer(cthis unsafe.Pointer) *QChar {
 // [-2] void QChar()
 func NewQChar() *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
@@ -84,7 +73,7 @@ func NewQChar() *QChar {
 // [-2] void QChar(ushort)
 func NewQChar_1(rc uint16) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Et", qtrt.FFI_TYPE_POINTER, rc)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
@@ -96,7 +85,7 @@ func NewQChar_1(rc uint16) *QChar {
 // [-2] void QChar(uchar, uchar)
 func NewQChar_2(c byte, r byte) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ehh", qtrt.FFI_TYPE_POINTER, c, r)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
@@ -108,7 +97,7 @@ func NewQChar_2(c byte, r byte) *QChar {
 // [-2] void QChar(short)
 func NewQChar_3(rc int16) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Es", qtrt.FFI_TYPE_POINTER, rc)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
@@ -120,7 +109,7 @@ func NewQChar_3(rc int16) *QChar {
 // [-2] void QChar(uint)
 func NewQChar_4(rc uint) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ej", qtrt.FFI_TYPE_POINTER, rc)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
@@ -132,7 +121,7 @@ func NewQChar_4(rc uint) *QChar {
 // [-2] void QChar(int)
 func NewQChar_5(rc int) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ei", qtrt.FFI_TYPE_POINTER, rc)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
@@ -144,7 +133,7 @@ func NewQChar_5(rc int) *QChar {
 // [-2] void QChar(enum QChar::SpecialCharacter)
 func NewQChar_6(s int) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2ENS_16SpecialCharacterE", qtrt.FFI_TYPE_POINTER, s)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
@@ -156,7 +145,7 @@ func NewQChar_6(s int) *QChar {
 // [-2] void QChar(char16_t)
 func NewQChar_7(ch int16) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2EDs", qtrt.FFI_TYPE_POINTER, ch)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
@@ -168,7 +157,7 @@ func NewQChar_7(ch int16) *QChar {
 // [-2] void QChar(char)
 func NewQChar_8(c byte) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ec", qtrt.FFI_TYPE_POINTER, c)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
@@ -180,7 +169,7 @@ func NewQChar_8(c byte) *QChar {
 // [-2] void QChar(uchar)
 func NewQChar_9(c byte) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Eh", qtrt.FFI_TYPE_POINTER, c)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
@@ -192,7 +181,7 @@ func NewQChar_9(c byte) *QChar {
 // [4] QChar::Category category()
 func (this *QChar) Category() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar8categoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -202,7 +191,7 @@ func (this *QChar) Category() int {
 // [4] QChar::Category category(uint)
 func (this *QChar) Category_1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar8categoryEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QChar_Category_1(ucs4 uint) int {
@@ -217,7 +206,7 @@ func QChar_Category_1(ucs4 uint) int {
 // [4] QChar::Direction direction()
 func (this *QChar) Direction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar9directionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -227,7 +216,7 @@ func (this *QChar) Direction() int {
 // [4] QChar::Direction direction(uint)
 func (this *QChar) Direction_1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar9directionEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QChar_Direction_1(ucs4 uint) int {
@@ -242,7 +231,7 @@ func QChar_Direction_1(ucs4 uint) int {
 // [4] QChar::JoiningType joiningType()
 func (this *QChar) JoiningType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar11joiningTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -252,7 +241,7 @@ func (this *QChar) JoiningType() int {
 // [4] QChar::JoiningType joiningType(uint)
 func (this *QChar) JoiningType_1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11joiningTypeEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QChar_JoiningType_1(ucs4 uint) int {
@@ -267,7 +256,7 @@ func QChar_JoiningType_1(ucs4 uint) int {
 // [4] QChar::Joining joining()
 func (this *QChar) Joining() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7joiningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -277,7 +266,7 @@ func (this *QChar) Joining() int {
 // [4] QChar::Joining joining(uint)
 func (this *QChar) Joining_1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7joiningEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QChar_Joining_1(ucs4 uint) int {
@@ -292,7 +281,7 @@ func QChar_Joining_1(ucs4 uint) int {
 // [1] unsigned char combiningClass()
 func (this *QChar) CombiningClass() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar14combiningClassEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
@@ -302,7 +291,7 @@ func (this *QChar) CombiningClass() byte {
 // [1] unsigned char combiningClass(uint)
 func (this *QChar) CombiningClass_1(ucs4 uint) byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar14combiningClassEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 func QChar_CombiningClass_1(ucs4 uint) byte {
@@ -317,7 +306,7 @@ func QChar_CombiningClass_1(ucs4 uint) byte {
 // [2] QChar mirroredChar()
 func (this *QChar) MirroredChar() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar12mirroredCharEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -329,7 +318,7 @@ func (this *QChar) MirroredChar() *QChar /*123*/ {
 // [4] uint mirroredChar(uint)
 func (this *QChar) MirroredChar_1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar12mirroredCharEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 func QChar_MirroredChar_1(ucs4 uint) uint {
@@ -344,7 +333,7 @@ func QChar_MirroredChar_1(ucs4 uint) uint {
 // [1] bool hasMirrored()
 func (this *QChar) HasMirrored() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar11hasMirroredEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -354,7 +343,7 @@ func (this *QChar) HasMirrored() bool {
 // [1] bool hasMirrored(uint)
 func (this *QChar) HasMirrored_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11hasMirroredEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_HasMirrored_1(ucs4 uint) bool {
@@ -369,7 +358,7 @@ func QChar_HasMirrored_1(ucs4 uint) bool {
 // [8] QString decomposition()
 func (this *QChar) Decomposition() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar13decompositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -382,7 +371,7 @@ func (this *QChar) Decomposition() string {
 // [8] QString decomposition(uint)
 func (this *QChar) Decomposition_1(ucs4 uint) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar13decompositionEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -400,7 +389,7 @@ func QChar_Decomposition_1(ucs4 uint) string {
 // [4] QChar::Decomposition decompositionTag()
 func (this *QChar) DecompositionTag() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar16decompositionTagEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -410,7 +399,7 @@ func (this *QChar) DecompositionTag() int {
 // [4] QChar::Decomposition decompositionTag(uint)
 func (this *QChar) DecompositionTag_1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar16decompositionTagEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QChar_DecompositionTag_1(ucs4 uint) int {
@@ -425,7 +414,7 @@ func QChar_DecompositionTag_1(ucs4 uint) int {
 // [4] int digitValue()
 func (this *QChar) DigitValue() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar10digitValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -435,7 +424,7 @@ func (this *QChar) DigitValue() int {
 // [4] int digitValue(uint)
 func (this *QChar) DigitValue_1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar10digitValueEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QChar_DigitValue_1(ucs4 uint) int {
@@ -450,7 +439,7 @@ func QChar_DigitValue_1(ucs4 uint) int {
 // [2] QChar toLower()
 func (this *QChar) ToLower() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7toLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -462,7 +451,7 @@ func (this *QChar) ToLower() *QChar /*123*/ {
 // [4] uint toLower(uint)
 func (this *QChar) ToLower_1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7toLowerEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 func QChar_ToLower_1(ucs4 uint) uint {
@@ -477,7 +466,7 @@ func QChar_ToLower_1(ucs4 uint) uint {
 // [2] QChar toUpper()
 func (this *QChar) ToUpper() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7toUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -489,7 +478,7 @@ func (this *QChar) ToUpper() *QChar /*123*/ {
 // [4] uint toUpper(uint)
 func (this *QChar) ToUpper_1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7toUpperEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 func QChar_ToUpper_1(ucs4 uint) uint {
@@ -504,7 +493,7 @@ func QChar_ToUpper_1(ucs4 uint) uint {
 // [2] QChar toTitleCase()
 func (this *QChar) ToTitleCase() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar11toTitleCaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -516,7 +505,7 @@ func (this *QChar) ToTitleCase() *QChar /*123*/ {
 // [4] uint toTitleCase(uint)
 func (this *QChar) ToTitleCase_1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11toTitleCaseEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 func QChar_ToTitleCase_1(ucs4 uint) uint {
@@ -531,7 +520,7 @@ func QChar_ToTitleCase_1(ucs4 uint) uint {
 // [2] QChar toCaseFolded()
 func (this *QChar) ToCaseFolded() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar12toCaseFoldedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -543,7 +532,7 @@ func (this *QChar) ToCaseFolded() *QChar /*123*/ {
 // [4] uint toCaseFolded(uint)
 func (this *QChar) ToCaseFolded_1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar12toCaseFoldedEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 func QChar_ToCaseFolded_1(ucs4 uint) uint {
@@ -558,7 +547,7 @@ func QChar_ToCaseFolded_1(ucs4 uint) uint {
 // [4] QChar::Script script()
 func (this *QChar) Script() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar6scriptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -568,7 +557,7 @@ func (this *QChar) Script() int {
 // [4] QChar::Script script(uint)
 func (this *QChar) Script_1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar6scriptEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QChar_Script_1(ucs4 uint) int {
@@ -583,7 +572,7 @@ func QChar_Script_1(ucs4 uint) int {
 // [4] QChar::UnicodeVersion unicodeVersion()
 func (this *QChar) UnicodeVersion() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar14unicodeVersionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -593,7 +582,7 @@ func (this *QChar) UnicodeVersion() int {
 // [4] QChar::UnicodeVersion unicodeVersion(uint)
 func (this *QChar) UnicodeVersion_1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar14unicodeVersionEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QChar_UnicodeVersion_1(ucs4 uint) int {
@@ -608,7 +597,7 @@ func QChar_UnicodeVersion_1(ucs4 uint) int {
 // [1] char toLatin1()
 func (this *QChar) ToLatin1() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
@@ -618,7 +607,7 @@ func (this *QChar) ToLatin1() byte {
 // [2] ushort unicode()
 func (this *QChar) Unicode() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 
@@ -628,7 +617,7 @@ func (this *QChar) Unicode() uint16 {
 // [2] ushort & unicode()
 func (this *QChar) Unicode_1() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv)
 }
 
@@ -638,7 +627,7 @@ func (this *QChar) Unicode_1() uint16 {
 // [2] QChar fromLatin1(char)
 func (this *QChar) FromLatin1(c byte) *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar10fromLatin1Ec", qtrt.FFI_TYPE_POINTER, c)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -655,7 +644,7 @@ func QChar_FromLatin1(c byte) *QChar /*123*/ {
 // [1] bool isNull()
 func (this *QChar) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -665,7 +654,7 @@ func (this *QChar) IsNull() bool {
 // [1] bool isPrint()
 func (this *QChar) IsPrint() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7isPrintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -675,7 +664,7 @@ func (this *QChar) IsPrint() bool {
 // [1] bool isPrint(uint)
 func (this *QChar) IsPrint_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isPrintEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsPrint_1(ucs4 uint) bool {
@@ -690,7 +679,7 @@ func QChar_IsPrint_1(ucs4 uint) bool {
 // [1] bool isSpace()
 func (this *QChar) IsSpace() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7isSpaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -700,7 +689,7 @@ func (this *QChar) IsSpace() bool {
 // [1] bool isSpace(uint)
 func (this *QChar) IsSpace_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isSpaceEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsSpace_1(ucs4 uint) bool {
@@ -715,7 +704,7 @@ func QChar_IsSpace_1(ucs4 uint) bool {
 // [1] bool isMark()
 func (this *QChar) IsMark() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar6isMarkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -725,7 +714,7 @@ func (this *QChar) IsMark() bool {
 // [1] bool isMark(uint)
 func (this *QChar) IsMark_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar6isMarkEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsMark_1(ucs4 uint) bool {
@@ -740,7 +729,7 @@ func QChar_IsMark_1(ucs4 uint) bool {
 // [1] bool isPunct()
 func (this *QChar) IsPunct() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7isPunctEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -750,7 +739,7 @@ func (this *QChar) IsPunct() bool {
 // [1] bool isPunct(uint)
 func (this *QChar) IsPunct_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isPunctEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsPunct_1(ucs4 uint) bool {
@@ -765,7 +754,7 @@ func QChar_IsPunct_1(ucs4 uint) bool {
 // [1] bool isSymbol()
 func (this *QChar) IsSymbol() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar8isSymbolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -775,7 +764,7 @@ func (this *QChar) IsSymbol() bool {
 // [1] bool isSymbol(uint)
 func (this *QChar) IsSymbol_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar8isSymbolEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsSymbol_1(ucs4 uint) bool {
@@ -790,7 +779,7 @@ func QChar_IsSymbol_1(ucs4 uint) bool {
 // [1] bool isLetter()
 func (this *QChar) IsLetter() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar8isLetterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -800,7 +789,7 @@ func (this *QChar) IsLetter() bool {
 // [1] bool isLetter(uint)
 func (this *QChar) IsLetter_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar8isLetterEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsLetter_1(ucs4 uint) bool {
@@ -815,7 +804,7 @@ func QChar_IsLetter_1(ucs4 uint) bool {
 // [1] bool isNumber()
 func (this *QChar) IsNumber() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar8isNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -825,7 +814,7 @@ func (this *QChar) IsNumber() bool {
 // [1] bool isNumber(uint)
 func (this *QChar) IsNumber_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar8isNumberEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsNumber_1(ucs4 uint) bool {
@@ -840,7 +829,7 @@ func QChar_IsNumber_1(ucs4 uint) bool {
 // [1] bool isLetterOrNumber()
 func (this *QChar) IsLetterOrNumber() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar16isLetterOrNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -850,7 +839,7 @@ func (this *QChar) IsLetterOrNumber() bool {
 // [1] bool isLetterOrNumber(uint)
 func (this *QChar) IsLetterOrNumber_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar16isLetterOrNumberEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsLetterOrNumber_1(ucs4 uint) bool {
@@ -865,7 +854,7 @@ func QChar_IsLetterOrNumber_1(ucs4 uint) bool {
 // [1] bool isDigit()
 func (this *QChar) IsDigit() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7isDigitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -875,7 +864,7 @@ func (this *QChar) IsDigit() bool {
 // [1] bool isDigit(uint)
 func (this *QChar) IsDigit_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isDigitEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsDigit_1(ucs4 uint) bool {
@@ -890,7 +879,7 @@ func QChar_IsDigit_1(ucs4 uint) bool {
 // [1] bool isLower()
 func (this *QChar) IsLower() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7isLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -900,7 +889,7 @@ func (this *QChar) IsLower() bool {
 // [1] bool isLower(uint)
 func (this *QChar) IsLower_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isLowerEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsLower_1(ucs4 uint) bool {
@@ -915,7 +904,7 @@ func QChar_IsLower_1(ucs4 uint) bool {
 // [1] bool isUpper()
 func (this *QChar) IsUpper() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7isUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -925,7 +914,7 @@ func (this *QChar) IsUpper() bool {
 // [1] bool isUpper(uint)
 func (this *QChar) IsUpper_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isUpperEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsUpper_1(ucs4 uint) bool {
@@ -940,7 +929,7 @@ func QChar_IsUpper_1(ucs4 uint) bool {
 // [1] bool isTitleCase()
 func (this *QChar) IsTitleCase() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar11isTitleCaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -950,7 +939,7 @@ func (this *QChar) IsTitleCase() bool {
 // [1] bool isTitleCase(uint)
 func (this *QChar) IsTitleCase_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11isTitleCaseEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsTitleCase_1(ucs4 uint) bool {
@@ -965,7 +954,7 @@ func QChar_IsTitleCase_1(ucs4 uint) bool {
 // [1] bool isNonCharacter()
 func (this *QChar) IsNonCharacter() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar14isNonCharacterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -975,7 +964,7 @@ func (this *QChar) IsNonCharacter() bool {
 // [1] bool isNonCharacter(uint)
 func (this *QChar) IsNonCharacter_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar14isNonCharacterEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsNonCharacter_1(ucs4 uint) bool {
@@ -990,7 +979,7 @@ func QChar_IsNonCharacter_1(ucs4 uint) bool {
 // [1] bool isHighSurrogate()
 func (this *QChar) IsHighSurrogate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar15isHighSurrogateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -1000,7 +989,7 @@ func (this *QChar) IsHighSurrogate() bool {
 // [1] bool isHighSurrogate(uint)
 func (this *QChar) IsHighSurrogate_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar15isHighSurrogateEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsHighSurrogate_1(ucs4 uint) bool {
@@ -1015,7 +1004,7 @@ func QChar_IsHighSurrogate_1(ucs4 uint) bool {
 // [1] bool isLowSurrogate()
 func (this *QChar) IsLowSurrogate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar14isLowSurrogateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -1025,7 +1014,7 @@ func (this *QChar) IsLowSurrogate() bool {
 // [1] bool isLowSurrogate(uint)
 func (this *QChar) IsLowSurrogate_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar14isLowSurrogateEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsLowSurrogate_1(ucs4 uint) bool {
@@ -1040,7 +1029,7 @@ func QChar_IsLowSurrogate_1(ucs4 uint) bool {
 // [1] bool isSurrogate()
 func (this *QChar) IsSurrogate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar11isSurrogateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -1050,7 +1039,7 @@ func (this *QChar) IsSurrogate() bool {
 // [1] bool isSurrogate(uint)
 func (this *QChar) IsSurrogate_1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11isSurrogateEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_IsSurrogate_1(ucs4 uint) bool {
@@ -1065,7 +1054,7 @@ func QChar_IsSurrogate_1(ucs4 uint) bool {
 // [1] uchar cell()
 func (this *QChar) Cell() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar4cellEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
 }
 
@@ -1075,7 +1064,7 @@ func (this *QChar) Cell() byte {
 // [1] uchar row()
 func (this *QChar) Row() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar3rowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
 }
 
@@ -1085,7 +1074,7 @@ func (this *QChar) Row() byte {
 // [-2] void setCell(uchar)
 func (this *QChar) SetCell(acell byte) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7setCellEh", qtrt.FFI_TYPE_POINTER, this.GetCthis(), acell)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qchar.h:465
@@ -1094,7 +1083,7 @@ func (this *QChar) SetCell(acell byte) {
 // [-2] void setRow(uchar)
 func (this *QChar) SetRow(arow byte) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar6setRowEh", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arow)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qchar.h:483
@@ -1103,7 +1092,7 @@ func (this *QChar) SetRow(arow byte) {
 // [1] bool requiresSurrogates(uint)
 func (this *QChar) RequiresSurrogates(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar18requiresSurrogatesEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QChar_RequiresSurrogates(ucs4 uint) bool {
@@ -1118,7 +1107,7 @@ func QChar_RequiresSurrogates(ucs4 uint) bool {
 // [4] uint surrogateToUcs4(ushort, ushort)
 func (this *QChar) SurrogateToUcs4(high uint16, low uint16) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4Ett", qtrt.FFI_TYPE_POINTER, high, low)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 func QChar_SurrogateToUcs4(high uint16, low uint16) uint {
@@ -1135,7 +1124,7 @@ func (this *QChar) SurrogateToUcs4_1(high *QChar /*123*/, low *QChar /*123*/) ui
 	var convArg0 = high.GetCthis()
 	var convArg1 = low.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4ES_S_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 func QChar_SurrogateToUcs4_1(high *QChar /*123*/, low *QChar /*123*/) uint {
@@ -1150,7 +1139,7 @@ func QChar_SurrogateToUcs4_1(high *QChar /*123*/, low *QChar /*123*/) uint {
 // [2] ushort highSurrogate(uint)
 func (this *QChar) HighSurrogate(ucs4 uint) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar13highSurrogateEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 func QChar_HighSurrogate(ucs4 uint) uint16 {
@@ -1165,7 +1154,7 @@ func QChar_HighSurrogate(ucs4 uint) uint16 {
 // [2] ushort lowSurrogate(uint)
 func (this *QChar) LowSurrogate(ucs4 uint) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar12lowSurrogateEj", qtrt.FFI_TYPE_POINTER, ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 func QChar_LowSurrogate(ucs4 uint) uint16 {
@@ -1180,7 +1169,7 @@ func QChar_LowSurrogate(ucs4 uint) uint16 {
 // [4] QChar::UnicodeVersion currentUnicodeVersion()
 func (this *QChar) CurrentUnicodeVersion() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar21currentUnicodeVersionEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QChar_CurrentUnicodeVersion() int {
@@ -1191,7 +1180,7 @@ func QChar_CurrentUnicodeVersion() int {
 
 func DeleteQChar(this *QChar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -1488,3 +1477,22 @@ const QChar__Unicode_7_0 QChar__UnicodeVersion = 16
 const QChar__Unicode_8_0 QChar__UnicodeVersion = 17
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

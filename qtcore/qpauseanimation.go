@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QPauseAnimation) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -78,7 +68,7 @@ func (*QPauseAnimation) NewFromPointer(cthis unsafe.Pointer) *QPauseAnimation {
 // [8] const QMetaObject * metaObject()
 func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QPauseAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -89,7 +79,7 @@ func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject *
 func NewQPauseAnimation(parent *QObject /*777 QObject **/) *QPauseAnimation {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -101,7 +91,7 @@ func NewQPauseAnimation(parent *QObject /*777 QObject **/) *QPauseAnimation {
 func NewQPauseAnimation_1(msecs int, parent *QObject /*777 QObject **/) *QPauseAnimation {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", qtrt.FFI_TYPE_POINTER, msecs, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -113,7 +103,7 @@ func NewQPauseAnimation_1(msecs int, parent *QObject /*777 QObject **/) *QPauseA
 func DeleteQPauseAnimation(this *QPauseAnimation) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -123,7 +113,7 @@ func DeleteQPauseAnimation(this *QPauseAnimation) {
 // [4] int duration()
 func (this *QPauseAnimation) Duration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QPauseAnimation8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -133,7 +123,7 @@ func (this *QPauseAnimation) Duration() int {
 // [-2] void setDuration(int)
 func (this *QPauseAnimation) SetDuration(msecs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimation11setDurationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qpauseanimation.h:65
@@ -143,7 +133,7 @@ func (this *QPauseAnimation) SetDuration(msecs int) {
 func (this *QPauseAnimation) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimation5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -153,7 +143,26 @@ func (this *QPauseAnimation) Event(e *QEvent /*777 QEvent **/) bool {
 // [-2] void updateCurrentTime(int)
 func (this *QPauseAnimation) UpdateCurrentTime(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimation17updateCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

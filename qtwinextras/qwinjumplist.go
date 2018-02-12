@@ -6,6 +6,14 @@ package qtwinextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwinextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QWinJumpList) NewFromPointer(cthis unsafe.Pointer) *QWinJumpList {
 // [8] const QMetaObject * metaObject()
 func (this *QWinJumpList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QWinJumpList10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -88,7 +71,7 @@ func (this *QWinJumpList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 func NewQWinJumpList(parent *qtcore.QObject /*777 QObject **/) *QWinJumpList {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpListC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinJumpListFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -100,7 +83,7 @@ func NewQWinJumpList(parent *qtcore.QObject /*777 QObject **/) *QWinJumpList {
 func DeleteQWinJumpList(this *QWinJumpList) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpListD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -110,7 +93,7 @@ func DeleteQWinJumpList(this *QWinJumpList) {
 // [8] QString identifier()
 func (this *QWinJumpList) Identifier() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QWinJumpList10identifierEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -125,7 +108,7 @@ func (this *QWinJumpList) SetIdentifier(identifier string) {
 	var tmpArg0 = qtcore.NewQString_5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpList13setIdentifierERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplist.h:67
@@ -134,7 +117,7 @@ func (this *QWinJumpList) SetIdentifier(identifier string) {
 // [8] QWinJumpListCategory * recent()
 func (this *QWinJumpList) Recent() *QWinJumpListCategory /*777 QWinJumpListCategory **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QWinJumpList6recentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWinJumpListCategoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -144,7 +127,7 @@ func (this *QWinJumpList) Recent() *QWinJumpListCategory /*777 QWinJumpListCateg
 // [8] QWinJumpListCategory * frequent()
 func (this *QWinJumpList) Frequent() *QWinJumpListCategory /*777 QWinJumpListCategory **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QWinJumpList8frequentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWinJumpListCategoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -154,7 +137,7 @@ func (this *QWinJumpList) Frequent() *QWinJumpListCategory /*777 QWinJumpListCat
 // [8] QWinJumpListCategory * tasks()
 func (this *QWinJumpList) Tasks() *QWinJumpListCategory /*777 QWinJumpListCategory **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QWinJumpList5tasksEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWinJumpListCategoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -165,7 +148,7 @@ func (this *QWinJumpList) Tasks() *QWinJumpListCategory /*777 QWinJumpListCatego
 func (this *QWinJumpList) AddCategory(category *QWinJumpListCategory /*777 QWinJumpListCategory **/) {
 	var convArg0 = category.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpList11addCategoryEP20QWinJumpListCategory", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplist.h:76
@@ -174,7 +157,32 @@ func (this *QWinJumpList) AddCategory(category *QWinJumpListCategory /*777 QWinJ
 // [-2] void clear()
 func (this *QWinJumpList) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpList5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

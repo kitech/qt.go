@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,13 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
 //  body block begin
+
 // QPageLayout devicePageLayout()
 func (this *QPagedPaintDevice) InheritDevicePageLayout(f func() unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "devicePageLayout", f)
@@ -77,7 +64,7 @@ func (*QPagedPaintDevice) NewFromPointer(cthis unsafe.Pointer) *QPagedPaintDevic
 // [-2] void QPagedPaintDevice()
 func NewQPagedPaintDevice() *QPagedPaintDevice {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDeviceC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPagedPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPagedPaintDevice)
 	return gothis
@@ -90,7 +77,7 @@ func NewQPagedPaintDevice() *QPagedPaintDevice {
 func DeleteQPagedPaintDevice(this *QPagedPaintDevice) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDeviceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +87,7 @@ func DeleteQPagedPaintDevice(this *QPagedPaintDevice) {
 // [1] bool newPage()
 func (this *QPagedPaintDevice) NewPage() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice7newPageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -111,7 +98,7 @@ func (this *QPagedPaintDevice) NewPage() bool {
 func (this *QPagedPaintDevice) SetPageLayout(pageLayout *QPageLayout) bool {
 	var convArg0 = pageLayout.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -122,7 +109,7 @@ func (this *QPagedPaintDevice) SetPageLayout(pageLayout *QPageLayout) bool {
 func (this *QPagedPaintDevice) SetPageSize(pageSize *QPageSize) bool {
 	var convArg0 = pageSize.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -132,7 +119,7 @@ func (this *QPagedPaintDevice) SetPageSize(pageSize *QPageSize) bool {
 // [-2] void setPageSize(enum QPagedPaintDevice::PageSize)
 func (this *QPagedPaintDevice) SetPageSize_1(size int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeENS_8PageSizeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:221
@@ -141,7 +128,7 @@ func (this *QPagedPaintDevice) SetPageSize_1(size int) {
 // [1] bool setPageOrientation(QPageLayout::Orientation)
 func (this *QPagedPaintDevice) SetPageOrientation(orientation int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice18setPageOrientationEN11QPageLayout11OrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -152,7 +139,7 @@ func (this *QPagedPaintDevice) SetPageOrientation(orientation int) bool {
 func (this *QPagedPaintDevice) SetPageMargins(margins *qtcore.QMarginsF) bool {
 	var convArg0 = margins.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -163,7 +150,7 @@ func (this *QPagedPaintDevice) SetPageMargins(margins *qtcore.QMarginsF) bool {
 func (this *QPagedPaintDevice) SetPageMargins_1(margins *qtcore.QMarginsF, units int) bool {
 	var convArg0 = margins.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsFN11QPageLayout4UnitE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, units)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -173,7 +160,7 @@ func (this *QPagedPaintDevice) SetPageMargins_1(margins *qtcore.QMarginsF, units
 // [8] QPageLayout pageLayout()
 func (this *QPagedPaintDevice) PageLayout() *QPageLayout /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPageLayout)
 	return rv2
@@ -185,7 +172,7 @@ func (this *QPagedPaintDevice) PageLayout() *QPageLayout /*123*/ {
 // [4] QPagedPaintDevice::PageSize pageSize()
 func (this *QPagedPaintDevice) PageSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice8pageSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -196,7 +183,7 @@ func (this *QPagedPaintDevice) PageSize() int {
 func (this *QPagedPaintDevice) SetPageSizeMM(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:230
@@ -205,7 +192,7 @@ func (this *QPagedPaintDevice) SetPageSizeMM(size *qtcore.QSizeF) {
 // [16] QSizeF pageSizeMM()
 func (this *QPagedPaintDevice) PageSizeMM() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageSizeMMEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
@@ -217,7 +204,7 @@ func (this *QPagedPaintDevice) PageSizeMM() *qtcore.QSizeF /*123*/ {
 // [32] QPagedPaintDevice::Margins margins()
 func (this *QPagedPaintDevice) Margins() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice7marginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -227,7 +214,7 @@ func (this *QPagedPaintDevice) Margins() unsafe.Pointer /*444*/ {
 // [8] QPageLayout devicePageLayout()
 func (this *QPagedPaintDevice) DevicePageLayout() *QPageLayout /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice16devicePageLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPageLayout)
 	return rv2
@@ -239,7 +226,7 @@ func (this *QPagedPaintDevice) DevicePageLayout() *QPageLayout /*123*/ {
 // [8] QPageLayout & devicePageLayout()
 func (this *QPagedPaintDevice) DevicePageLayout_1() *QPageLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice16devicePageLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPageLayout)
 	return rv2
@@ -381,3 +368,25 @@ const QPagedPaintDevice__PdfVersion_1_4 QPagedPaintDevice__PdfVersion = 0
 const QPagedPaintDevice__PdfVersion_A1b QPagedPaintDevice__PdfVersion = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

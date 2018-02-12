@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void setField(const class QString &, const class QVariant &)
 func (this *QWizardPage) InheritSetField(f func(name string, value *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setField", f)
@@ -96,7 +80,7 @@ func (*QWizardPage) NewFromPointer(cthis unsafe.Pointer) *QWizardPage {
 // [8] const QMetaObject * metaObject()
 func (this *QWizardPage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -107,7 +91,7 @@ func (this *QWizardPage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 func NewQWizardPage(parent *QWidget /*777 QWidget **/) *QWizardPage {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPageC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQWizardPageFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -119,7 +103,7 @@ func NewQWizardPage(parent *QWidget /*777 QWidget **/) *QWizardPage {
 func DeleteQWizardPage(this *QWizardPage) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPageD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -131,7 +115,7 @@ func (this *QWizardPage) SetTitle(title string) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:222
@@ -140,7 +124,7 @@ func (this *QWizardPage) SetTitle(title string) {
 // [8] QString title()
 func (this *QWizardPage) Title() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage5titleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -155,7 +139,7 @@ func (this *QWizardPage) SetSubTitle(subTitle string) {
 	var tmpArg0 = qtcore.NewQString_5(subTitle)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage11setSubTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:224
@@ -164,7 +148,7 @@ func (this *QWizardPage) SetSubTitle(subTitle string) {
 // [8] QString subTitle()
 func (this *QWizardPage) SubTitle() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage8subTitleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -178,7 +162,7 @@ func (this *QWizardPage) SubTitle() string {
 func (this *QWizardPage) SetPixmap(which int, pixmap *qtgui.QPixmap) {
 	var convArg1 = pixmap.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage9setPixmapEN7QWizard12WizardPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:226
@@ -187,7 +171,7 @@ func (this *QWizardPage) SetPixmap(which int, pixmap *qtgui.QPixmap) {
 // [32] QPixmap pixmap(QWizard::WizardPixmap)
 func (this *QWizardPage) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage6pixmapEN7QWizard12WizardPixmapE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
@@ -199,7 +183,7 @@ func (this *QWizardPage) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 // [-2] void setFinalPage(_Bool)
 func (this *QWizardPage) SetFinalPage(finalPage bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage12setFinalPageEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), finalPage)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:228
@@ -208,7 +192,7 @@ func (this *QWizardPage) SetFinalPage(finalPage bool) {
 // [1] bool isFinalPage()
 func (this *QWizardPage) IsFinalPage() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage11isFinalPageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -218,7 +202,7 @@ func (this *QWizardPage) IsFinalPage() bool {
 // [-2] void setCommitPage(_Bool)
 func (this *QWizardPage) SetCommitPage(commitPage bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage13setCommitPageEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), commitPage)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:230
@@ -227,7 +211,7 @@ func (this *QWizardPage) SetCommitPage(commitPage bool) {
 // [1] bool isCommitPage()
 func (this *QWizardPage) IsCommitPage() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage12isCommitPageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -239,7 +223,7 @@ func (this *QWizardPage) SetButtonText(which int, text string) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage13setButtonTextEN7QWizard12WizardButtonERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:232
@@ -248,7 +232,7 @@ func (this *QWizardPage) SetButtonText(which int, text string) {
 // [8] QString buttonText(QWizard::WizardButton)
 func (this *QWizardPage) ButtonText(which int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage10buttonTextEN7QWizard12WizardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -261,7 +245,7 @@ func (this *QWizardPage) ButtonText(which int) string {
 // [-2] void initializePage()
 func (this *QWizardPage) InitializePage() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage14initializePageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:235
@@ -270,7 +254,7 @@ func (this *QWizardPage) InitializePage() {
 // [-2] void cleanupPage()
 func (this *QWizardPage) CleanupPage() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage11cleanupPageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:236
@@ -279,7 +263,7 @@ func (this *QWizardPage) CleanupPage() {
 // [1] bool validatePage()
 func (this *QWizardPage) ValidatePage() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage12validatePageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -289,7 +273,7 @@ func (this *QWizardPage) ValidatePage() bool {
 // [1] bool isComplete()
 func (this *QWizardPage) IsComplete() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage10isCompleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -299,7 +283,7 @@ func (this *QWizardPage) IsComplete() bool {
 // [4] int nextId()
 func (this *QWizardPage) NextId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage6nextIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -309,7 +293,7 @@ func (this *QWizardPage) NextId() int {
 // [-2] void completeChanged()
 func (this *QWizardPage) CompleteChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage15completeChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:244
@@ -321,7 +305,7 @@ func (this *QWizardPage) SetField(name string, value *qtcore.QVariant) {
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage8setFieldERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:245
@@ -332,7 +316,7 @@ func (this *QWizardPage) Field(name string) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage5fieldERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -351,7 +335,7 @@ func (this *QWizardPage) RegisterField(name string, widget *QWidget /*777 QWidge
 	var convArg3 = qtrt.CString(changedSignal)
 	defer qtrt.FreeMem(convArg3)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage13registerFieldERK7QStringP7QWidgetPKcS6_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:248
@@ -360,8 +344,33 @@ func (this *QWizardPage) RegisterField(name string, widget *QWidget /*777 QWidge
 // [8] QWizard * wizard()
 func (this *QWizardPage) Wizard() *QWizard /*777 QWizard **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage6wizardEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWizardFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

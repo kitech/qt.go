@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"qt.go/qtwidgets"
+	"github.com/kitech/qt.go/qtwidgets"
 )
 
 func logp(args ...interface{}) { log.Println(args...) }

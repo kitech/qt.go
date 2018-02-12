@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QPoint) NewFromPointer(cthis unsafe.Pointer) *QPoint {
 // [-2] void QPoint()
 func NewQPoint() *QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPointFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPoint)
 	return gothis
@@ -84,7 +73,7 @@ func NewQPoint() *QPoint {
 // [-2] void QPoint(int, int)
 func NewQPoint_1(xpos int, ypos int) *QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointC2Eii", qtrt.FFI_TYPE_POINTER, xpos, ypos)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPointFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPoint)
 	return gothis
@@ -96,7 +85,7 @@ func NewQPoint_1(xpos int, ypos int) *QPoint {
 // [1] bool isNull()
 func (this *QPoint) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -106,7 +95,7 @@ func (this *QPoint) IsNull() bool {
 // [4] int x()
 func (this *QPoint) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -116,7 +105,7 @@ func (this *QPoint) X() int {
 // [4] int y()
 func (this *QPoint) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -126,7 +115,7 @@ func (this *QPoint) Y() int {
 // [-2] void setX(int)
 func (this *QPoint) SetX(x int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPoint4setXEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qpoint.h:63
@@ -135,7 +124,7 @@ func (this *QPoint) SetX(x int) {
 // [-2] void setY(int)
 func (this *QPoint) SetY(y int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPoint4setYEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), y)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qpoint.h:65
@@ -144,7 +133,7 @@ func (this *QPoint) SetY(y int) {
 // [4] int manhattanLength()
 func (this *QPoint) ManhattanLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint15manhattanLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -154,7 +143,7 @@ func (this *QPoint) ManhattanLength() int {
 // [4] int & rx()
 func (this *QPoint) Rx() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPoint2rxEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
@@ -164,7 +153,7 @@ func (this *QPoint) Rx() int {
 // [4] int & ry()
 func (this *QPoint) Ry() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPoint2ryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
@@ -176,7 +165,7 @@ func (this *QPoint) DotProduct(p1 *QPoint, p2 *QPoint) int {
 	var convArg0 = p1.GetCthis()
 	var convArg1 = p2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPoint10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QPoint_DotProduct(p1 *QPoint, p2 *QPoint) int {
@@ -187,8 +176,27 @@ func QPoint_DotProduct(p1 *QPoint, p2 *QPoint) int {
 
 func DeleteQPoint(this *QPoint) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

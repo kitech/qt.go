@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QMovie) NewFromPointer(cthis unsafe.Pointer) *QMovie {
 // [8] const QMetaObject * metaObject()
 func (this *QMovie) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -84,7 +70,7 @@ func (this *QMovie) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 func NewQMovie(parent *qtcore.QObject /*777 QObject **/) *QMovie {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMovieFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -98,7 +84,7 @@ func NewQMovie_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QB
 	var convArg1 = format.GetCthis()
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMovieFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -113,7 +99,7 @@ func NewQMovie_2(fileName string, format *qtcore.QByteArray, parent *qtcore.QObj
 	var convArg1 = format.GetCthis()
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMovieFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -125,7 +111,7 @@ func NewQMovie_2(fileName string, format *qtcore.QByteArray, parent *qtcore.QObj
 func DeleteQMovie(this *QMovie) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -136,7 +122,7 @@ func DeleteQMovie(this *QMovie) {
 func (this *QMovie) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:90
@@ -145,7 +131,7 @@ func (this *QMovie) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 // [8] QIODevice * device()
 func (this *QMovie) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -157,7 +143,7 @@ func (this *QMovie) SetFileName(fileName string) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:93
@@ -166,7 +152,7 @@ func (this *QMovie) SetFileName(fileName string) {
 // [8] QString fileName()
 func (this *QMovie) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -180,7 +166,7 @@ func (this *QMovie) FileName() string {
 func (this *QMovie) SetFormat(format *qtcore.QByteArray) {
 	var convArg0 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:96
@@ -189,7 +175,7 @@ func (this *QMovie) SetFormat(format *qtcore.QByteArray) {
 // [8] QByteArray format()
 func (this *QMovie) Format() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
@@ -202,7 +188,7 @@ func (this *QMovie) Format() *qtcore.QByteArray /*123*/ {
 func (this *QMovie) SetBackgroundColor(color *QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie18setBackgroundColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:99
@@ -211,7 +197,7 @@ func (this *QMovie) SetBackgroundColor(color *QColor) {
 // [16] QColor backgroundColor()
 func (this *QMovie) BackgroundColor() *QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie15backgroundColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
 	return rv2
@@ -223,7 +209,7 @@ func (this *QMovie) BackgroundColor() *QColor /*123*/ {
 // [4] QMovie::MovieState state()
 func (this *QMovie) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -233,7 +219,7 @@ func (this *QMovie) State() int {
 // [16] QRect frameRect()
 func (this *QMovie) FrameRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie9frameRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -245,7 +231,7 @@ func (this *QMovie) FrameRect() *qtcore.QRect /*123*/ {
 // [32] QImage currentImage()
 func (this *QMovie) CurrentImage() *QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie12currentImageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQImage)
 	return rv2
@@ -257,7 +243,7 @@ func (this *QMovie) CurrentImage() *QImage /*123*/ {
 // [32] QPixmap currentPixmap()
 func (this *QMovie) CurrentPixmap() *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie13currentPixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPixmap)
 	return rv2
@@ -269,7 +255,7 @@ func (this *QMovie) CurrentPixmap() *QPixmap /*123*/ {
 // [1] bool isValid()
 func (this *QMovie) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -279,7 +265,7 @@ func (this *QMovie) IsValid() bool {
 // [4] QImageReader::ImageReaderError lastError()
 func (this *QMovie) LastError() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie9lastErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -289,7 +275,7 @@ func (this *QMovie) LastError() int {
 // [8] QString lastErrorString()
 func (this *QMovie) LastErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie15lastErrorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -302,7 +288,7 @@ func (this *QMovie) LastErrorString() string {
 // [1] bool jumpToFrame(int)
 func (this *QMovie) JumpToFrame(frameNumber int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie11jumpToFrameEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), frameNumber)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -312,7 +298,7 @@ func (this *QMovie) JumpToFrame(frameNumber int) bool {
 // [4] int loopCount()
 func (this *QMovie) LoopCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie9loopCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -322,7 +308,7 @@ func (this *QMovie) LoopCount() int {
 // [4] int frameCount()
 func (this *QMovie) FrameCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie10frameCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -332,7 +318,7 @@ func (this *QMovie) FrameCount() int {
 // [4] int nextFrameDelay()
 func (this *QMovie) NextFrameDelay() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie14nextFrameDelayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -342,7 +328,7 @@ func (this *QMovie) NextFrameDelay() int {
 // [4] int currentFrameNumber()
 func (this *QMovie) CurrentFrameNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie18currentFrameNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -352,7 +338,7 @@ func (this *QMovie) CurrentFrameNumber() int {
 // [4] int speed()
 func (this *QMovie) Speed() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie5speedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -362,7 +348,7 @@ func (this *QMovie) Speed() int {
 // [8] QSize scaledSize()
 func (this *QMovie) ScaledSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie10scaledSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -375,7 +361,7 @@ func (this *QMovie) ScaledSize() *qtcore.QSize /*123*/ {
 func (this *QMovie) SetScaledSize(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie13setScaledSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:122
@@ -384,7 +370,7 @@ func (this *QMovie) SetScaledSize(size *qtcore.QSize) {
 // [4] QMovie::CacheMode cacheMode()
 func (this *QMovie) CacheMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie9cacheModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -394,7 +380,7 @@ func (this *QMovie) CacheMode() int {
 // [-2] void setCacheMode(enum QMovie::CacheMode)
 func (this *QMovie) SetCacheMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie12setCacheModeENS_9CacheModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:126
@@ -403,7 +389,7 @@ func (this *QMovie) SetCacheMode(mode int) {
 // [-2] void started()
 func (this *QMovie) Started() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie7startedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:127
@@ -413,7 +399,7 @@ func (this *QMovie) Started() {
 func (this *QMovie) Resized(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie7resizedERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:128
@@ -423,7 +409,7 @@ func (this *QMovie) Resized(size *qtcore.QSize) {
 func (this *QMovie) Updated(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie7updatedERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:129
@@ -432,7 +418,7 @@ func (this *QMovie) Updated(rect *qtcore.QRect) {
 // [-2] void stateChanged(QMovie::MovieState)
 func (this *QMovie) StateChanged(state int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie12stateChangedENS_10MovieStateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), state)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:130
@@ -441,7 +427,7 @@ func (this *QMovie) StateChanged(state int) {
 // [-2] void error(QImageReader::ImageReaderError)
 func (this *QMovie) Error(error int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie5errorEN12QImageReader16ImageReaderErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:131
@@ -450,7 +436,7 @@ func (this *QMovie) Error(error int) {
 // [-2] void finished()
 func (this *QMovie) Finished() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie8finishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:132
@@ -459,7 +445,7 @@ func (this *QMovie) Finished() {
 // [-2] void frameChanged(int)
 func (this *QMovie) FrameChanged(frameNumber int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie12frameChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), frameNumber)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:135
@@ -468,7 +454,7 @@ func (this *QMovie) FrameChanged(frameNumber int) {
 // [-2] void start()
 func (this *QMovie) Start() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:136
@@ -477,7 +463,7 @@ func (this *QMovie) Start() {
 // [1] bool jumpToNextFrame()
 func (this *QMovie) JumpToNextFrame() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie15jumpToNextFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -487,7 +473,7 @@ func (this *QMovie) JumpToNextFrame() bool {
 // [-2] void setPaused(_Bool)
 func (this *QMovie) SetPaused(paused bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie9setPausedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), paused)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:138
@@ -496,7 +482,7 @@ func (this *QMovie) SetPaused(paused bool) {
 // [-2] void stop()
 func (this *QMovie) Stop() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie4stopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:139
@@ -505,7 +491,7 @@ func (this *QMovie) Stop() {
 // [-2] void setSpeed(int)
 func (this *QMovie) SetSpeed(percentSpeed int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie8setSpeedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), percentSpeed)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QMovie__MovieState = int
@@ -520,3 +506,25 @@ const QMovie__CacheNone QMovie__CacheMode = 0
 const QMovie__CacheAll QMovie__CacheMode = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

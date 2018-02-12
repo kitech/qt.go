@@ -6,6 +6,14 @@ package qtandroidextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QAndroidJniEnvironment) NewFromPointer(cthis unsafe.Pointer) *QAndroidJni
 // [-2] void QAndroidJniEnvironment()
 func NewQAndroidJniEnvironment() *QAndroidJniEnvironment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironmentC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidJniEnvironmentFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidJniEnvironment)
 	return gothis
@@ -89,7 +75,7 @@ func NewQAndroidJniEnvironment() *QAndroidJniEnvironment {
 func DeleteQAndroidJniEnvironment(this *QAndroidJniEnvironment) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironmentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -99,7 +85,7 @@ func DeleteQAndroidJniEnvironment(this *QAndroidJniEnvironment) {
 // [8] int * javaVM()
 func (this *QAndroidJniEnvironment) JavaVM() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironment6javaVMEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 func QAndroidJniEnvironment_JavaVM() unsafe.Pointer /*666*/ {
@@ -109,3 +95,25 @@ func QAndroidJniEnvironment_JavaVM() unsafe.Pointer /*666*/ {
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

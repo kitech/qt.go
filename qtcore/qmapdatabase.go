@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QMapDataBase) NewFromPointer(cthis unsafe.Pointer) *QMapDataBase {
 // [-2] void recalcMostLeftNode()
 func (this *QMapDataBase) RecalcMostLeftNode() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapDataBase18recalcMostLeftNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmap.h:201
@@ -81,7 +70,7 @@ func (this *QMapDataBase) RecalcMostLeftNode() {
 // [8] QMapDataBase * createData()
 func (this *QMapDataBase) CreateData() *QMapDataBase /*777 QMapDataBase **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapDataBase10createDataEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMapDataBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QMapDataBase_CreateData() *QMapDataBase /*777 QMapDataBase **/ {
@@ -92,8 +81,27 @@ func QMapDataBase_CreateData() *QMapDataBase /*777 QMapDataBase **/ {
 
 func DeleteQMapDataBase(this *QMapDataBase) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapDataBaseD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

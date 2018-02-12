@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // void advanceAnimation(qint64)
 func (this *QAnimationDriver) InheritAdvanceAnimation(f func(timeStep int64) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "advanceAnimation", f)
@@ -83,7 +73,7 @@ func (*QAnimationDriver) NewFromPointer(cthis unsafe.Pointer) *QAnimationDriver 
 // [8] const QMetaObject * metaObject()
 func (this *QAnimationDriver) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -94,7 +84,7 @@ func (this *QAnimationDriver) MetaObject() *QMetaObject /*777 const QMetaObject 
 func NewQAnimationDriver(parent *QObject /*777 QObject **/) *QAnimationDriver {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriverC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAnimationDriverFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -106,7 +96,7 @@ func NewQAnimationDriver(parent *QObject /*777 QObject **/) *QAnimationDriver {
 func DeleteQAnimationDriver(this *QAnimationDriver) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriverD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -116,7 +106,7 @@ func DeleteQAnimationDriver(this *QAnimationDriver) {
 // [-2] void advance()
 func (this *QAnimationDriver) Advance() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver7advanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:144
@@ -125,7 +115,7 @@ func (this *QAnimationDriver) Advance() {
 // [-2] void install()
 func (this *QAnimationDriver) Install() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver7installEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:145
@@ -134,7 +124,7 @@ func (this *QAnimationDriver) Install() {
 // [-2] void uninstall()
 func (this *QAnimationDriver) Uninstall() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver9uninstallEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:147
@@ -143,7 +133,7 @@ func (this *QAnimationDriver) Uninstall() {
 // [1] bool isRunning()
 func (this *QAnimationDriver) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -153,7 +143,7 @@ func (this *QAnimationDriver) IsRunning() bool {
 // [8] qint64 elapsed()
 func (this *QAnimationDriver) Elapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -163,7 +153,7 @@ func (this *QAnimationDriver) Elapsed() int64 {
 // [-2] void setStartTime(qint64)
 func (this *QAnimationDriver) SetStartTime(startTime int64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver12setStartTimeEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startTime)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:153
@@ -172,7 +162,7 @@ func (this *QAnimationDriver) SetStartTime(startTime int64) {
 // [8] qint64 startTime()
 func (this *QAnimationDriver) StartTime() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver9startTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -182,7 +172,7 @@ func (this *QAnimationDriver) StartTime() int64 {
 // [-2] void started()
 func (this *QAnimationDriver) Started() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver7startedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:157
@@ -191,7 +181,7 @@ func (this *QAnimationDriver) Started() {
 // [-2] void stopped()
 func (this *QAnimationDriver) Stopped() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver7stoppedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:161
@@ -200,7 +190,7 @@ func (this *QAnimationDriver) Stopped() {
 // [-2] void advanceAnimation(qint64)
 func (this *QAnimationDriver) AdvanceAnimation(timeStep int64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeStep)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:162
@@ -209,7 +199,7 @@ func (this *QAnimationDriver) AdvanceAnimation(timeStep int64) {
 // [-2] void start()
 func (this *QAnimationDriver) Start() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:163
@@ -218,7 +208,26 @@ func (this *QAnimationDriver) Start() {
 // [-2] void stop()
 func (this *QAnimationDriver) Stop() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver4stopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

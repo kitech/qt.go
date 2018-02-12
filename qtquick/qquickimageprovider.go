@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,42 +24,11 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
@@ -88,7 +65,7 @@ func (*QQuickImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickImagePro
 // [-2] void QQuickImageProvider(enum QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
 func NewQQuickImageProvider(type_ int, flags int) *QQuickImageProvider {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProviderC2EN21QQmlImageProviderBase9ImageTypeE6QFlagsINS0_4FlagEE", qtrt.FFI_TYPE_POINTER, type_, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickImageProviderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQuickImageProvider)
 	return gothis
@@ -101,7 +78,7 @@ func NewQQuickImageProvider(type_ int, flags int) *QQuickImageProvider {
 func DeleteQQuickImageProvider(this *QQuickImageProvider) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProviderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -111,7 +88,7 @@ func DeleteQQuickImageProvider(this *QQuickImageProvider) {
 // [4] QQmlImageProviderBase::ImageType imageType()
 func (this *QQuickImageProvider) ImageType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickImageProvider9imageTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -121,7 +98,7 @@ func (this *QQuickImageProvider) ImageType() int {
 // [4] QQmlImageProviderBase::Flags flags()
 func (this *QQuickImageProvider) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickImageProvider5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -135,7 +112,7 @@ func (this *QQuickImageProvider) RequestImage(id string, size *qtcore.QSize /*77
 	var convArg1 = size.GetCthis()
 	var convArg2 = requestedSize.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProvider12requestImageERK7QStringP5QSizeRKS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQImage)
 	return rv2
@@ -151,7 +128,7 @@ func (this *QQuickImageProvider) RequestPixmap(id string, size *qtcore.QSize /*7
 	var convArg1 = size.GetCthis()
 	var convArg2 = requestedSize.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProvider13requestPixmapERK7QStringP5QSizeRKS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
@@ -167,8 +144,39 @@ func (this *QQuickImageProvider) RequestTexture(id string, size *qtcore.QSize /*
 	var convArg1 = size.GetCthis()
 	var convArg2 = requestedSize.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProvider14requestTextureERK7QStringP5QSizeRKS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

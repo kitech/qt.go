@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -74,7 +63,7 @@ func NewQLockFile(fileName string) *QLockFile {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLockFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLockFile)
 	return gothis
@@ -87,7 +76,7 @@ func NewQLockFile(fileName string) *QLockFile {
 func DeleteQLockFile(this *QLockFile) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFileD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -97,7 +86,7 @@ func DeleteQLockFile(this *QLockFile) {
 // [1] bool lock()
 func (this *QLockFile) Lock() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile4lockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -107,7 +96,7 @@ func (this *QLockFile) Lock() bool {
 // [1] bool tryLock(int)
 func (this *QLockFile) TryLock(timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -117,7 +106,7 @@ func (this *QLockFile) TryLock(timeout int) bool {
 // [-2] void unlock()
 func (this *QLockFile) Unlock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile6unlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:60
@@ -126,7 +115,7 @@ func (this *QLockFile) Unlock() {
 // [-2] void setStaleLockTime(int)
 func (this *QLockFile) SetStaleLockTime(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile16setStaleLockTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:61
@@ -135,7 +124,7 @@ func (this *QLockFile) SetStaleLockTime(arg0 int) {
 // [4] int staleLockTime()
 func (this *QLockFile) StaleLockTime() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile13staleLockTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -145,7 +134,7 @@ func (this *QLockFile) StaleLockTime() int {
 // [1] bool isLocked()
 func (this *QLockFile) IsLocked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile8isLockedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -159,7 +148,7 @@ func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname string, 
 	var tmpArg2 = NewQString_5(appname)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &pid, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -169,7 +158,7 @@ func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname string, 
 // [1] bool removeStaleLockFile()
 func (this *QLockFile) RemoveStaleLockFile() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile19removeStaleLockFileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -179,7 +168,7 @@ func (this *QLockFile) RemoveStaleLockFile() bool {
 // [4] QLockFile::LockError error()
 func (this *QLockFile) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -191,3 +180,22 @@ const QLockFile__PermissionError QLockFile__LockError = 2
 const QLockFile__UnknownError QLockFile__LockError = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

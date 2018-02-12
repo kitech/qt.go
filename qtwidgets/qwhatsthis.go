@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QWhatsThis) NewFromPointer(cthis unsafe.Pointer) *QWhatsThis {
 // [-2] void enterWhatsThisMode()
 func (this *QWhatsThis) EnterWhatsThisMode() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis18enterWhatsThisModeEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QWhatsThis_EnterWhatsThisMode() {
 	var nilthis *QWhatsThis
@@ -93,7 +76,7 @@ func QWhatsThis_EnterWhatsThisMode() {
 // [1] bool inWhatsThisMode()
 func (this *QWhatsThis) InWhatsThisMode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis15inWhatsThisModeEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QWhatsThis_InWhatsThisMode() bool {
@@ -108,7 +91,7 @@ func QWhatsThis_InWhatsThisMode() bool {
 // [-2] void leaveWhatsThisMode()
 func (this *QWhatsThis) LeaveWhatsThisMode() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis18leaveWhatsThisModeEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QWhatsThis_LeaveWhatsThisMode() {
 	var nilthis *QWhatsThis
@@ -125,7 +108,7 @@ func (this *QWhatsThis) ShowText(pos *qtcore.QPoint, text string, w *QWidget /*7
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = w.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QWhatsThis_ShowText(pos *qtcore.QPoint, text string, w *QWidget /*777 QWidget **/) {
 	var nilthis *QWhatsThis
@@ -138,7 +121,7 @@ func QWhatsThis_ShowText(pos *qtcore.QPoint, text string, w *QWidget /*777 QWidg
 // [-2] void hideText()
 func (this *QWhatsThis) HideText() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis8hideTextEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QWhatsThis_HideText() {
 	var nilthis *QWhatsThis
@@ -152,7 +135,7 @@ func QWhatsThis_HideText() {
 func (this *QWhatsThis) CreateAction(parent *qtcore.QObject /*777 QObject **/) *QAction /*777 QAction **/ {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QWhatsThis_CreateAction(parent *qtcore.QObject /*777 QObject **/) *QAction /*777 QAction **/ {
@@ -163,8 +146,33 @@ func QWhatsThis_CreateAction(parent *qtcore.QObject /*777 QObject **/) *QAction 
 
 func DeleteQWhatsThis(this *QWhatsThis) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThisD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

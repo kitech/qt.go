@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QTextTableCellFormat) NewFromPointer(cthis unsafe.Pointer) *QTextTableCel
 // [-2] void QTextTableCellFormat()
 func NewQTextTableCellFormat() *QTextTableCellFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextTableCellFormatC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextTableCellFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextTableCellFormat)
 	return gothis
@@ -86,7 +72,7 @@ func NewQTextTableCellFormat() *QTextTableCellFormat {
 func NewQTextTableCellFormat_1(fmt *QTextFormat) *QTextTableCellFormat {
 	var convArg0 = fmt.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextTableCellFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextTableCellFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextTableCellFormat)
 	return gothis
@@ -98,7 +84,7 @@ func NewQTextTableCellFormat_1(fmt *QTextFormat) *QTextTableCellFormat {
 // [1] bool isValid()
 func (this *QTextTableCellFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -108,7 +94,7 @@ func (this *QTextTableCellFormat) IsValid() bool {
 // [-2] void setTopPadding(qreal)
 func (this *QTextTableCellFormat) SetTopPadding(padding float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextTableCellFormat13setTopPaddingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), padding)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:950
@@ -117,7 +103,7 @@ func (this *QTextTableCellFormat) SetTopPadding(padding float64) {
 // [8] qreal topPadding()
 func (this *QTextTableCellFormat) TopPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat10topPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -127,7 +113,7 @@ func (this *QTextTableCellFormat) TopPadding() float64 {
 // [-2] void setBottomPadding(qreal)
 func (this *QTextTableCellFormat) SetBottomPadding(padding float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextTableCellFormat16setBottomPaddingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), padding)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:953
@@ -136,7 +122,7 @@ func (this *QTextTableCellFormat) SetBottomPadding(padding float64) {
 // [8] qreal bottomPadding()
 func (this *QTextTableCellFormat) BottomPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat13bottomPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -146,7 +132,7 @@ func (this *QTextTableCellFormat) BottomPadding() float64 {
 // [-2] void setLeftPadding(qreal)
 func (this *QTextTableCellFormat) SetLeftPadding(padding float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextTableCellFormat14setLeftPaddingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), padding)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:956
@@ -155,7 +141,7 @@ func (this *QTextTableCellFormat) SetLeftPadding(padding float64) {
 // [8] qreal leftPadding()
 func (this *QTextTableCellFormat) LeftPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat11leftPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -165,7 +151,7 @@ func (this *QTextTableCellFormat) LeftPadding() float64 {
 // [-2] void setRightPadding(qreal)
 func (this *QTextTableCellFormat) SetRightPadding(padding float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextTableCellFormat15setRightPaddingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), padding)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:959
@@ -174,7 +160,7 @@ func (this *QTextTableCellFormat) SetRightPadding(padding float64) {
 // [8] qreal rightPadding()
 func (this *QTextTableCellFormat) RightPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat12rightPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -184,13 +170,35 @@ func (this *QTextTableCellFormat) RightPadding() float64 {
 // [-2] void setPadding(qreal)
 func (this *QTextTableCellFormat) SetPadding(padding float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextTableCellFormat10setPaddingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), padding)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 func DeleteQTextTableCellFormat(this *QTextTableCellFormat) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextTableCellFormatD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

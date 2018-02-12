@@ -1,10 +1,9 @@
 package qtwidgets
 
 import "unsafe"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 func init() {
 	if false {
@@ -15,9 +14,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
 	}
 	if false {
 		qtcore.KeepMe()
@@ -37,7 +33,7 @@ func init() {
 func QHash_43(key *QSizePolicy /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash11QSizePolicyj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -54,7 +50,7 @@ func QDrawBorderPixmap(painter *qtgui.QPainter /*777 QPainter **/, targetRect *q
 	var convArg5 = sourceMargins.GetCthis()
 	var convArg6 = rules.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z17qDrawBorderPixmapP8QPainterRK5QRectRK8QMarginsRK7QPixmapS3_S6_RK10QTileRules6QFlagsIN17QDrawBorderPixmap11DrawingHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, hints)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:159
@@ -67,7 +63,7 @@ func QDrawBorderPixmap_1(painter *qtgui.QPainter /*777 QPainter **/, target *qtc
 	var convArg2 = margins.GetCthis()
 	var convArg3 = pixmap.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z17qDrawBorderPixmapP8QPainterRK5QRectRK8QMarginsRK7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:80
@@ -79,7 +75,7 @@ func QDrawShadePanel(p *qtgui.QPainter /*777 QPainter **/, x int, y int, w int, 
 	var convArg5 = pal.GetCthis()
 	var convArg8 = fill.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z15qDrawShadePanelP8QPainteriiiiRK8QPalettebiPK6QBrush", qtrt.FFI_TYPE_POINTER, convArg0, x, y, w, h, convArg5, sunken, lineWidth, convArg8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:84
@@ -92,7 +88,7 @@ func QDrawShadePanel_1(p *qtgui.QPainter /*777 QPainter **/, r *qtcore.QRect, pa
 	var convArg2 = pal.GetCthis()
 	var convArg5 = fill.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z15qDrawShadePanelP8QPainterRK5QRectRK8QPalettebiPK6QBrush", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, sunken, lineWidth, convArg5)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:88
@@ -104,7 +100,7 @@ func QDrawWinButton(p *qtgui.QPainter /*777 QPainter **/, x int, y int, w int, h
 	var convArg5 = pal.GetCthis()
 	var convArg7 = fill.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z14qDrawWinButtonP8QPainteriiiiRK8QPalettebPK6QBrush", qtrt.FFI_TYPE_POINTER, convArg0, x, y, w, h, convArg5, sunken, convArg7)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:92
@@ -117,7 +113,7 @@ func QDrawWinButton_1(p *qtgui.QPainter /*777 QPainter **/, r *qtcore.QRect, pal
 	var convArg2 = pal.GetCthis()
 	var convArg4 = fill.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z14qDrawWinButtonP8QPainterRK5QRectRK8QPalettebPK6QBrush", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, sunken, convArg4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:70
@@ -129,7 +125,7 @@ func QDrawShadeRect(p *qtgui.QPainter /*777 QPainter **/, x int, y int, w int, h
 	var convArg5 = pal.GetCthis()
 	var convArg9 = fill.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z14qDrawShadeRectP8QPainteriiiiRK8QPalettebiiPK6QBrush", qtrt.FFI_TYPE_POINTER, convArg0, x, y, w, h, convArg5, sunken, lineWidth, midLineWidth, convArg9)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:75
@@ -142,7 +138,7 @@ func QDrawShadeRect_1(p *qtgui.QPainter /*777 QPainter **/, r *qtcore.QRect, pal
 	var convArg2 = pal.GetCthis()
 	var convArg6 = fill.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z14qDrawShadeRectP8QPainterRK5QRectRK8QPalettebiiPK6QBrush", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, sunken, lineWidth, midLineWidth, convArg6)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:62
@@ -153,7 +149,7 @@ func QDrawShadeLine(p *qtgui.QPainter /*777 QPainter **/, x1 int, y1 int, x2 int
 	var convArg0 = p.GetCthis()
 	var convArg5 = pal.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z14qDrawShadeLineP8QPainteriiiiRK8QPalettebii", qtrt.FFI_TYPE_POINTER, convArg0, x1, y1, x2, y2, convArg5, sunken, lineWidth, midLineWidth)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:66
@@ -166,7 +162,7 @@ func QDrawShadeLine_1(p *qtgui.QPainter /*777 QPainter **/, p1 *qtcore.QPoint, p
 	var convArg2 = p2.GetCthis()
 	var convArg3 = pal.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z14qDrawShadeLineP8QPainterRK6QPointS3_RK8QPalettebii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, sunken, lineWidth, midLineWidth)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:104
@@ -178,7 +174,7 @@ func QDrawPlainRect(p *qtgui.QPainter /*777 QPainter **/, x int, y int, w int, h
 	var convArg5 = arg5.GetCthis()
 	var convArg7 = fill.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z14qDrawPlainRectP8QPainteriiiiRK6QColoriPK6QBrush", qtrt.FFI_TYPE_POINTER, convArg0, x, y, w, h, convArg5, lineWidth, convArg7)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:107
@@ -191,7 +187,7 @@ func QDrawPlainRect_1(p *qtgui.QPainter /*777 QPainter **/, r *qtcore.QRect, arg
 	var convArg2 = arg2.GetCthis()
 	var convArg4 = fill.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z14qDrawPlainRectP8QPainterRK5QRectRK6QColoriPK6QBrush", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, lineWidth, convArg4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:96
@@ -203,7 +199,7 @@ func QDrawWinPanel(p *qtgui.QPainter /*777 QPainter **/, x int, y int, w int, h 
 	var convArg5 = pal.GetCthis()
 	var convArg7 = fill.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z13qDrawWinPanelP8QPainteriiiiRK8QPalettebPK6QBrush", qtrt.FFI_TYPE_POINTER, convArg0, x, y, w, h, convArg5, sunken, convArg7)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:100
@@ -216,7 +212,7 @@ func QDrawWinPanel_1(p *qtgui.QPainter /*777 QPainter **/, r *qtcore.QRect, pal 
 	var convArg2 = pal.GetCthis()
 	var convArg4 = fill.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z13qDrawWinPanelP8QPainterRK5QRectRK8QPalettebPK6QBrush", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, sunken, convArg4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end

@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -78,7 +61,7 @@ func (*QWidgetItemV2) NewFromPointer(cthis unsafe.Pointer) *QWidgetItemV2 {
 func NewQWidgetItemV2(widget *QWidget /*777 QWidget **/) *QWidgetItemV2 {
 	var convArg0 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetItemV2C2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQWidgetItemV2FromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQWidgetItemV2)
 	return gothis
@@ -91,7 +74,7 @@ func NewQWidgetItemV2(widget *QWidget /*777 QWidget **/) *QWidgetItemV2 {
 func DeleteQWidgetItemV2(this *QWidgetItemV2) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetItemV2D2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 88)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -101,7 +84,7 @@ func DeleteQWidgetItemV2(this *QWidgetItemV2) {
 // [8] QSize sizeHint()
 func (this *QWidgetItemV2) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV28sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -113,7 +96,7 @@ func (this *QWidgetItemV2) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSize()
 func (this *QWidgetItemV2) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV211minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -125,7 +108,7 @@ func (this *QWidgetItemV2) MinimumSize() *qtcore.QSize /*123*/ {
 // [8] QSize maximumSize()
 func (this *QWidgetItemV2) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV211maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -137,7 +120,7 @@ func (this *QWidgetItemV2) MaximumSize() *qtcore.QSize /*123*/ {
 // [4] int heightForWidth(int)
 func (this *QWidgetItemV2) HeightForWidth(width int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV214heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -147,3 +130,28 @@ const QWidgetItemV2__Dirty QWidgetItemV2__ = -123
 const QWidgetItemV2__HfwCacheMaxSize QWidgetItemV2__ = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

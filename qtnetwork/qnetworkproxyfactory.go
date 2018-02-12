@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QNetworkProxyFactory) NewFromPointer(cthis unsafe.Pointer) *QNetworkProxy
 // [-2] void QNetworkProxyFactory()
 func NewQNetworkProxyFactory() *QNetworkProxyFactory {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkProxyFactoryFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQNetworkProxyFactory)
 	return gothis
@@ -89,7 +75,7 @@ func NewQNetworkProxyFactory() *QNetworkProxyFactory {
 func DeleteQNetworkProxyFactory(this *QNetworkProxyFactory) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -99,7 +85,7 @@ func DeleteQNetworkProxyFactory(this *QNetworkProxyFactory) {
 // [1] bool usesSystemConfiguration()
 func (this *QNetworkProxyFactory) UsesSystemConfiguration() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactory23usesSystemConfigurationEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QNetworkProxyFactory_UsesSystemConfiguration() bool {
@@ -114,7 +100,7 @@ func QNetworkProxyFactory_UsesSystemConfiguration() bool {
 // [-2] void setUseSystemConfiguration(_Bool)
 func (this *QNetworkProxyFactory) SetUseSystemConfiguration(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactory25setUseSystemConfigurationEb", qtrt.FFI_TYPE_POINTER, enable)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QNetworkProxyFactory_SetUseSystemConfiguration(enable bool) {
 	var nilthis *QNetworkProxyFactory
@@ -128,7 +114,7 @@ func QNetworkProxyFactory_SetUseSystemConfiguration(enable bool) {
 func (this *QNetworkProxyFactory) SetApplicationProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {
 	var convArg0 = factory.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactory26setApplicationProxyFactoryEPS_", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QNetworkProxyFactory_SetApplicationProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {
 	var nilthis *QNetworkProxyFactory
@@ -136,3 +122,25 @@ func QNetworkProxyFactory_SetApplicationProxyFactory(factory *QNetworkProxyFacto
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

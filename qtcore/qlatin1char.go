@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QLatin1Char) NewFromPointer(cthis unsafe.Pointer) *QLatin1Char {
 // [-2] void QLatin1Char(char)
 func NewQLatin1Char(c byte) *QLatin1Char {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QLatin1CharC2Ec", qtrt.FFI_TYPE_POINTER, c)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLatin1Char)
 	return gothis
@@ -84,7 +73,7 @@ func NewQLatin1Char(c byte) *QLatin1Char {
 // [1] char toLatin1()
 func (this *QLatin1Char) ToLatin1() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
@@ -94,14 +83,33 @@ func (this *QLatin1Char) ToLatin1() byte {
 // [2] ushort unicode()
 func (this *QLatin1Char) Unicode() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 
 func DeleteQLatin1Char(this *QLatin1Char) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QLatin1CharD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

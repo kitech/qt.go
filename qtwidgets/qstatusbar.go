@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void showEvent(class QShowEvent *)
 func (this *QStatusBar) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
@@ -106,7 +90,7 @@ func (*QStatusBar) NewFromPointer(cthis unsafe.Pointer) *QStatusBar {
 // [8] const QMetaObject * metaObject()
 func (this *QStatusBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStatusBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -117,7 +101,7 @@ func (this *QStatusBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 func NewQStatusBar(parent *QWidget /*777 QWidget **/) *QStatusBar {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStatusBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -129,7 +113,7 @@ func NewQStatusBar(parent *QWidget /*777 QWidget **/) *QStatusBar {
 func DeleteQStatusBar(this *QStatusBar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -140,7 +124,7 @@ func DeleteQStatusBar(this *QStatusBar) {
 func (this *QStatusBar) AddWidget(widget *QWidget /*777 QWidget **/, stretch int) {
 	var convArg0 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar9addWidgetEP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:63
@@ -150,7 +134,7 @@ func (this *QStatusBar) AddWidget(widget *QWidget /*777 QWidget **/, stretch int
 func (this *QStatusBar) InsertWidget(index int, widget *QWidget /*777 QWidget **/, stretch int) int {
 	var convArg1 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar12insertWidgetEiP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -161,7 +145,7 @@ func (this *QStatusBar) InsertWidget(index int, widget *QWidget /*777 QWidget **
 func (this *QStatusBar) AddPermanentWidget(widget *QWidget /*777 QWidget **/, stretch int) {
 	var convArg0 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:65
@@ -171,7 +155,7 @@ func (this *QStatusBar) AddPermanentWidget(widget *QWidget /*777 QWidget **/, st
 func (this *QStatusBar) InsertPermanentWidget(index int, widget *QWidget /*777 QWidget **/, stretch int) int {
 	var convArg1 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -182,7 +166,7 @@ func (this *QStatusBar) InsertPermanentWidget(index int, widget *QWidget /*777 Q
 func (this *QStatusBar) RemoveWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar12removeWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:68
@@ -191,7 +175,7 @@ func (this *QStatusBar) RemoveWidget(widget *QWidget /*777 QWidget **/) {
 // [-2] void setSizeGripEnabled(_Bool)
 func (this *QStatusBar) SetSizeGripEnabled(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar18setSizeGripEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:69
@@ -200,7 +184,7 @@ func (this *QStatusBar) SetSizeGripEnabled(arg0 bool) {
 // [1] bool isSizeGripEnabled()
 func (this *QStatusBar) IsSizeGripEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStatusBar17isSizeGripEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -210,7 +194,7 @@ func (this *QStatusBar) IsSizeGripEnabled() bool {
 // [8] QString currentMessage()
 func (this *QStatusBar) CurrentMessage() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStatusBar14currentMessageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -225,7 +209,7 @@ func (this *QStatusBar) ShowMessage(text string, timeout int) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar11showMessageERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, timeout)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:75
@@ -234,7 +218,7 @@ func (this *QStatusBar) ShowMessage(text string, timeout int) {
 // [-2] void clearMessage()
 func (this *QStatusBar) ClearMessage() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar12clearMessageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:79
@@ -245,7 +229,7 @@ func (this *QStatusBar) MessageChanged(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar14messageChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:82
@@ -255,7 +239,7 @@ func (this *QStatusBar) MessageChanged(text string) {
 func (this *QStatusBar) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:83
@@ -265,7 +249,7 @@ func (this *QStatusBar) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 func (this *QStatusBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:84
@@ -275,7 +259,7 @@ func (this *QStatusBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/
 func (this *QStatusBar) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:87
@@ -284,7 +268,7 @@ func (this *QStatusBar) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent 
 // [-2] void reformat()
 func (this *QStatusBar) Reformat() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar8reformatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:88
@@ -293,7 +277,7 @@ func (this *QStatusBar) Reformat() {
 // [-2] void hideOrShow()
 func (this *QStatusBar) HideOrShow() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar10hideOrShowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:89
@@ -303,8 +287,33 @@ func (this *QStatusBar) HideOrShow() {
 func (this *QStatusBar) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

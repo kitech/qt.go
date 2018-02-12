@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QTextListFormat) NewFromPointer(cthis unsafe.Pointer) *QTextListFormat {
 // [-2] void QTextListFormat()
 func NewQTextListFormat() *QTextListFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormatC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextListFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextListFormat)
 	return gothis
@@ -86,7 +72,7 @@ func NewQTextListFormat() *QTextListFormat {
 func NewQTextListFormat_1(fmt *QTextFormat) *QTextListFormat {
 	var convArg0 = fmt.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextListFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextListFormat)
 	return gothis
@@ -98,7 +84,7 @@ func NewQTextListFormat_1(fmt *QTextFormat) *QTextListFormat {
 // [1] bool isValid()
 func (this *QTextListFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextListFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -108,7 +94,7 @@ func (this *QTextListFormat) IsValid() bool {
 // [-2] void setStyle(enum QTextListFormat::Style)
 func (this *QTextListFormat) SetStyle(style int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormat8setStyleENS_5StyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), style)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:698
@@ -117,7 +103,7 @@ func (this *QTextListFormat) SetStyle(style int) {
 // [4] QTextListFormat::Style style()
 func (this *QTextListFormat) Style() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextListFormat5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -127,7 +113,7 @@ func (this *QTextListFormat) Style() int {
 // [-2] void setIndent(int)
 func (this *QTextListFormat) SetIndent(indent int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormat9setIndentEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), indent)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:702
@@ -136,7 +122,7 @@ func (this *QTextListFormat) SetIndent(indent int) {
 // [4] int indent()
 func (this *QTextListFormat) Indent() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextListFormat6indentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -148,7 +134,7 @@ func (this *QTextListFormat) SetNumberPrefix(numberPrefix string) {
 	var tmpArg0 = qtcore.NewQString_5(numberPrefix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormat15setNumberPrefixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:706
@@ -157,7 +143,7 @@ func (this *QTextListFormat) SetNumberPrefix(numberPrefix string) {
 // [8] QString numberPrefix()
 func (this *QTextListFormat) NumberPrefix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextListFormat12numberPrefixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -172,7 +158,7 @@ func (this *QTextListFormat) SetNumberSuffix(numberSuffix string) {
 	var tmpArg0 = qtcore.NewQString_5(numberSuffix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormat15setNumberSuffixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:710
@@ -181,7 +167,7 @@ func (this *QTextListFormat) SetNumberSuffix(numberSuffix string) {
 // [8] QString numberSuffix()
 func (this *QTextListFormat) NumberSuffix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextListFormat12numberSuffixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -190,7 +176,7 @@ func (this *QTextListFormat) NumberSuffix() string {
 
 func DeleteQTextListFormat(this *QTextListFormat) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormatD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -207,3 +193,25 @@ const QTextListFormat__ListUpperRoman QTextListFormat__Style = -8
 const QTextListFormat__ListStyleUndefined QTextListFormat__Style = 0
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

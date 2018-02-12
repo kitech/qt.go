@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QXmlStreamEntityDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXmlSt
 // [-2] void QXmlStreamEntityDeclaration()
 func NewQXmlStreamEntityDeclaration() *QXmlStreamEntityDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamEntityDeclarationFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamEntityDeclaration)
 	return gothis
@@ -85,7 +74,7 @@ func NewQXmlStreamEntityDeclaration() *QXmlStreamEntityDeclaration {
 func DeleteQXmlStreamEntityDeclaration(this *QXmlStreamEntityDeclaration) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 88)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -95,7 +84,7 @@ func DeleteQXmlStreamEntityDeclaration(this *QXmlStreamEntityDeclaration) {
 // [16] QStringRef name()
 func (this *QXmlStreamEntityDeclaration) Name() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -107,7 +96,7 @@ func (this *QXmlStreamEntityDeclaration) Name() *QStringRef /*123*/ {
 // [16] QStringRef notationName()
 func (this *QXmlStreamEntityDeclaration) NotationName() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration12notationNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -119,7 +108,7 @@ func (this *QXmlStreamEntityDeclaration) NotationName() *QStringRef /*123*/ {
 // [16] QStringRef systemId()
 func (this *QXmlStreamEntityDeclaration) SystemId() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8systemIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -131,7 +120,7 @@ func (this *QXmlStreamEntityDeclaration) SystemId() *QStringRef /*123*/ {
 // [16] QStringRef publicId()
 func (this *QXmlStreamEntityDeclaration) PublicId() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8publicIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -143,10 +132,29 @@ func (this *QXmlStreamEntityDeclaration) PublicId() *QStringRef /*123*/ {
 // [16] QStringRef value()
 func (this *QXmlStreamEntityDeclaration) Value() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtwinextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwinextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QWinThumbnailToolBar) NewFromPointer(cthis unsafe.Pointer) *QWinThumbnail
 // [8] const QMetaObject * metaObject()
 func (this *QWinThumbnailToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -88,7 +71,7 @@ func (this *QWinThumbnailToolBar) MetaObject() *qtcore.QMetaObject /*777 const Q
 func NewQWinThumbnailToolBar(parent *qtcore.QObject /*777 QObject **/) *QWinThumbnailToolBar {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinThumbnailToolBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -100,7 +83,7 @@ func NewQWinThumbnailToolBar(parent *qtcore.QObject /*777 QObject **/) *QWinThum
 func DeleteQWinThumbnailToolBar(this *QWinThumbnailToolBar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -111,7 +94,7 @@ func DeleteQWinThumbnailToolBar(this *QWinThumbnailToolBar) {
 func (this *QWinThumbnailToolBar) SetWindow(window *qtgui.QWindow /*777 QWindow **/) {
 	var convArg0 = window.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar9setWindowEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbar.h:68
@@ -120,7 +103,7 @@ func (this *QWinThumbnailToolBar) SetWindow(window *qtgui.QWindow /*777 QWindow 
 // [8] QWindow * window()
 func (this *QWinThumbnailToolBar) Window() *qtgui.QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtgui.NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -131,7 +114,7 @@ func (this *QWinThumbnailToolBar) Window() *qtgui.QWindow /*777 QWindow **/ {
 func (this *QWinThumbnailToolBar) AddButton(button *QWinThumbnailToolButton /*777 QWinThumbnailToolButton **/) {
 	var convArg0 = button.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar9addButtonEP23QWinThumbnailToolButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbar.h:71
@@ -141,7 +124,7 @@ func (this *QWinThumbnailToolBar) AddButton(button *QWinThumbnailToolButton /*77
 func (this *QWinThumbnailToolBar) RemoveButton(button *QWinThumbnailToolButton /*777 QWinThumbnailToolButton **/) {
 	var convArg0 = button.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar12removeButtonEP23QWinThumbnailToolButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbar.h:74
@@ -150,7 +133,7 @@ func (this *QWinThumbnailToolBar) RemoveButton(button *QWinThumbnailToolButton /
 // [4] int count()
 func (this *QWinThumbnailToolBar) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -160,7 +143,7 @@ func (this *QWinThumbnailToolBar) Count() int {
 // [1] bool iconicPixmapNotificationsEnabled()
 func (this *QWinThumbnailToolBar) IconicPixmapNotificationsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar32iconicPixmapNotificationsEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -170,7 +153,7 @@ func (this *QWinThumbnailToolBar) IconicPixmapNotificationsEnabled() bool {
 // [-2] void setIconicPixmapNotificationsEnabled(_Bool)
 func (this *QWinThumbnailToolBar) SetIconicPixmapNotificationsEnabled(enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar35setIconicPixmapNotificationsEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbar.h:79
@@ -179,7 +162,7 @@ func (this *QWinThumbnailToolBar) SetIconicPixmapNotificationsEnabled(enabled bo
 // [32] QPixmap iconicThumbnailPixmap()
 func (this *QWinThumbnailToolBar) IconicThumbnailPixmap() *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar21iconicThumbnailPixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
@@ -191,7 +174,7 @@ func (this *QWinThumbnailToolBar) IconicThumbnailPixmap() *qtgui.QPixmap /*123*/
 // [32] QPixmap iconicLivePreviewPixmap()
 func (this *QWinThumbnailToolBar) IconicLivePreviewPixmap() *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar23iconicLivePreviewPixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
@@ -203,7 +186,7 @@ func (this *QWinThumbnailToolBar) IconicLivePreviewPixmap() *qtgui.QPixmap /*123
 // [-2] void clear()
 func (this *QWinThumbnailToolBar) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbar.h:84
@@ -213,7 +196,7 @@ func (this *QWinThumbnailToolBar) Clear() {
 func (this *QWinThumbnailToolBar) SetIconicThumbnailPixmap(arg0 *qtgui.QPixmap) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar24setIconicThumbnailPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbar.h:85
@@ -223,7 +206,7 @@ func (this *QWinThumbnailToolBar) SetIconicThumbnailPixmap(arg0 *qtgui.QPixmap) 
 func (this *QWinThumbnailToolBar) SetIconicLivePreviewPixmap(arg0 *qtgui.QPixmap) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar26setIconicLivePreviewPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbar.h:88
@@ -232,7 +215,7 @@ func (this *QWinThumbnailToolBar) SetIconicLivePreviewPixmap(arg0 *qtgui.QPixmap
 // [-2] void iconicThumbnailPixmapRequested()
 func (this *QWinThumbnailToolBar) IconicThumbnailPixmapRequested() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar30iconicThumbnailPixmapRequestedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbar.h:89
@@ -241,7 +224,32 @@ func (this *QWinThumbnailToolBar) IconicThumbnailPixmapRequested() {
 // [-2] void iconicLivePreviewPixmapRequested()
 func (this *QWinThumbnailToolBar) IconicLivePreviewPixmapRequested() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar32iconicLivePreviewPixmapRequestedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

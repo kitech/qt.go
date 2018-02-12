@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // bool eventTest(class QEvent *)
 func (this *QEventTransition) InheritEventTest(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventTest", f)
@@ -83,7 +73,7 @@ func (*QEventTransition) NewFromPointer(cthis unsafe.Pointer) *QEventTransition 
 // [8] const QMetaObject * metaObject()
 func (this *QEventTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QEventTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -94,7 +84,7 @@ func (this *QEventTransition) MetaObject() *QMetaObject /*777 const QMetaObject 
 func NewQEventTransition(sourceState *QState /*777 QState **/) *QEventTransition {
 	var convArg0 = sourceState.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -107,7 +97,7 @@ func NewQEventTransition_1(object *QObject /*777 QObject **/, type_ int, sourceS
 	var convArg0 = object.GetCthis()
 	var convArg2 = sourceState.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionC2EP7QObjectN6QEvent4TypeEP6QState", qtrt.FFI_TYPE_POINTER, convArg0, type_, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -119,7 +109,7 @@ func NewQEventTransition_1(object *QObject /*777 QObject **/, type_ int, sourceS
 func DeleteQEventTransition(this *QEventTransition) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -129,7 +119,7 @@ func DeleteQEventTransition(this *QEventTransition) {
 // [8] QObject * eventSource()
 func (this *QEventTransition) EventSource() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QEventTransition11eventSourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -140,7 +130,7 @@ func (this *QEventTransition) EventSource() *QObject /*777 QObject **/ {
 func (this *QEventTransition) SetEventSource(object *QObject /*777 QObject **/) {
 	var convArg0 = object.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransition14setEventSourceEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qeventtransition.h:64
@@ -149,7 +139,7 @@ func (this *QEventTransition) SetEventSource(object *QObject /*777 QObject **/) 
 // [4] QEvent::Type eventType()
 func (this *QEventTransition) EventType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QEventTransition9eventTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -159,7 +149,7 @@ func (this *QEventTransition) EventType() int {
 // [-2] void setEventType(QEvent::Type)
 func (this *QEventTransition) SetEventType(type_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransition12setEventTypeEN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qeventtransition.h:68
@@ -169,7 +159,7 @@ func (this *QEventTransition) SetEventType(type_ int) {
 func (this *QEventTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransition9eventTestEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -180,7 +170,7 @@ func (this *QEventTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 func (this *QEventTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransition12onTransitionEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qeventtransition.h:71
@@ -190,8 +180,27 @@ func (this *QEventTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 func (this *QEventTransition) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransition5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

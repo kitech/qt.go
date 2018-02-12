@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,42 +24,11 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
@@ -86,7 +63,7 @@ func (*QSGImageNode) NewFromPointer(cthis unsafe.Pointer) *QSGImageNode {
 func DeleteQSGImageNode(this *QSGImageNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 144)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -97,7 +74,7 @@ func DeleteQSGImageNode(this *QSGImageNode) {
 func (this *QSGImageNode) SetRect(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgimagenode.h:54
@@ -106,7 +83,7 @@ func (this *QSGImageNode) SetRect(rect *qtcore.QRectF) {
 // [-2] void setRect(qreal, qreal, qreal, qreal)
 func (this *QSGImageNode) SetRect_1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgimagenode.h:55
@@ -115,7 +92,7 @@ func (this *QSGImageNode) SetRect_1(x float64, y float64, w float64, h float64) 
 // [32] QRectF rect()
 func (this *QSGImageNode) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -128,7 +105,7 @@ func (this *QSGImageNode) Rect() *qtcore.QRectF /*123*/ {
 func (this *QSGImageNode) SetSourceRect(r *qtcore.QRectF) {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode13setSourceRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgimagenode.h:58
@@ -137,7 +114,7 @@ func (this *QSGImageNode) SetSourceRect(r *qtcore.QRectF) {
 // [-2] void setSourceRect(qreal, qreal, qreal, qreal)
 func (this *QSGImageNode) SetSourceRect_1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode13setSourceRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgimagenode.h:59
@@ -146,7 +123,7 @@ func (this *QSGImageNode) SetSourceRect_1(x float64, y float64, w float64, h flo
 // [32] QRectF sourceRect()
 func (this *QSGImageNode) SourceRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode10sourceRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -159,7 +136,7 @@ func (this *QSGImageNode) SourceRect() *qtcore.QRectF /*123*/ {
 func (this *QSGImageNode) SetTexture(texture *QSGTexture /*777 QSGTexture **/) {
 	var convArg0 = texture.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode10setTextureEP10QSGTexture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgimagenode.h:62
@@ -168,7 +145,7 @@ func (this *QSGImageNode) SetTexture(texture *QSGTexture /*777 QSGTexture **/) {
 // [8] QSGTexture * texture()
 func (this *QSGImageNode) Texture() *QSGTexture /*777 QSGTexture **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode7textureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -178,7 +155,7 @@ func (this *QSGImageNode) Texture() *QSGTexture /*777 QSGTexture **/ {
 // [-2] void setFiltering(QSGTexture::Filtering)
 func (this *QSGImageNode) SetFiltering(filtering int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode12setFilteringEN10QSGTexture9FilteringE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filtering)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgimagenode.h:65
@@ -187,7 +164,7 @@ func (this *QSGImageNode) SetFiltering(filtering int) {
 // [4] QSGTexture::Filtering filtering()
 func (this *QSGImageNode) Filtering() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode9filteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -197,7 +174,7 @@ func (this *QSGImageNode) Filtering() int {
 // [-2] void setMipmapFiltering(QSGTexture::Filtering)
 func (this *QSGImageNode) SetMipmapFiltering(filtering int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode18setMipmapFilteringEN10QSGTexture9FilteringE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filtering)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgimagenode.h:68
@@ -206,7 +183,7 @@ func (this *QSGImageNode) SetMipmapFiltering(filtering int) {
 // [4] QSGTexture::Filtering mipmapFiltering()
 func (this *QSGImageNode) MipmapFiltering() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode15mipmapFilteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -216,7 +193,7 @@ func (this *QSGImageNode) MipmapFiltering() int {
 // [-2] void setTextureCoordinatesTransform(QSGImageNode::TextureCoordinatesTransformMode)
 func (this *QSGImageNode) SetTextureCoordinatesTransform(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode30setTextureCoordinatesTransformE6QFlagsINS_31TextureCoordinatesTransformFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgimagenode.h:80
@@ -225,7 +202,7 @@ func (this *QSGImageNode) SetTextureCoordinatesTransform(mode int) {
 // [4] QSGImageNode::TextureCoordinatesTransformMode textureCoordinatesTransform()
 func (this *QSGImageNode) TextureCoordinatesTransform() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode27textureCoordinatesTransformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -235,7 +212,7 @@ func (this *QSGImageNode) TextureCoordinatesTransform() int {
 // [-2] void setOwnsTexture(_Bool)
 func (this *QSGImageNode) SetOwnsTexture(owns bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode14setOwnsTextureEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), owns)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgimagenode.h:83
@@ -244,7 +221,7 @@ func (this *QSGImageNode) SetOwnsTexture(owns bool) {
 // [1] bool ownsTexture()
 func (this *QSGImageNode) OwnsTexture() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode11ownsTextureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -258,7 +235,7 @@ func (this *QSGImageNode) RebuildGeometry(g *QSGGeometry /*777 QSGGeometry **/, 
 	var convArg2 = rect.GetCthis()
 	var convArg3 = sourceRect.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode15rebuildGeometryEP11QSGGeometryP10QSGTextureRK6QRectFS4_6QFlagsINS_31TextureCoordinatesTransformFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, texCoordMode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QSGImageNode_RebuildGeometry(g *QSGGeometry /*777 QSGGeometry **/, texture *QSGTexture /*777 QSGTexture **/, rect *qtcore.QRectF, sourceRect *qtcore.QRectF /*123*/, texCoordMode int) {
 	var nilthis *QSGImageNode
@@ -272,3 +249,34 @@ const QSGImageNode__MirrorHorizontally QSGImageNode__TextureCoordinatesTransform
 const QSGImageNode__MirrorVertically QSGImageNode__TextureCoordinatesTransformFlag = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

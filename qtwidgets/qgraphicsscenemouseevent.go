@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QGraphicsSceneMouseEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 // [-2] void QGraphicsSceneMouseEvent(enum QEvent::Type)
 func NewQGraphicsSceneMouseEvent(type_ int) *QGraphicsSceneMouseEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsSceneMouseEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGraphicsSceneMouseEvent)
 	return gothis
@@ -90,7 +73,7 @@ func NewQGraphicsSceneMouseEvent(type_ int) *QGraphicsSceneMouseEvent {
 func DeleteQGraphicsSceneMouseEvent(this *QGraphicsSceneMouseEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +83,7 @@ func DeleteQGraphicsSceneMouseEvent(this *QGraphicsSceneMouseEvent) {
 // [16] QPointF pos()
 func (this *QGraphicsSceneMouseEvent) Pos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -113,7 +96,7 @@ func (this *QGraphicsSceneMouseEvent) Pos() *qtcore.QPointF /*123*/ {
 func (this *QGraphicsSceneMouseEvent) SetPos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:91
@@ -122,7 +105,7 @@ func (this *QGraphicsSceneMouseEvent) SetPos(pos *qtcore.QPointF) {
 // [16] QPointF scenePos()
 func (this *QGraphicsSceneMouseEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent8scenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -135,7 +118,7 @@ func (this *QGraphicsSceneMouseEvent) ScenePos() *qtcore.QPointF /*123*/ {
 func (this *QGraphicsSceneMouseEvent) SetScenePos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:94
@@ -144,7 +127,7 @@ func (this *QGraphicsSceneMouseEvent) SetScenePos(pos *qtcore.QPointF) {
 // [8] QPoint screenPos()
 func (this *QGraphicsSceneMouseEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -157,7 +140,7 @@ func (this *QGraphicsSceneMouseEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 func (this *QGraphicsSceneMouseEvent) SetScreenPos(pos *qtcore.QPoint) {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:97
@@ -166,7 +149,7 @@ func (this *QGraphicsSceneMouseEvent) SetScreenPos(pos *qtcore.QPoint) {
 // [16] QPointF buttonDownPos(Qt::MouseButton)
 func (this *QGraphicsSceneMouseEvent) ButtonDownPos(button int) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent13buttonDownPosEN2Qt11MouseButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -179,7 +162,7 @@ func (this *QGraphicsSceneMouseEvent) ButtonDownPos(button int) *qtcore.QPointF 
 func (this *QGraphicsSceneMouseEvent) SetButtonDownPos(button int, pos *qtcore.QPointF) {
 	var convArg1 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent16setButtonDownPosEN2Qt11MouseButtonERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:100
@@ -188,7 +171,7 @@ func (this *QGraphicsSceneMouseEvent) SetButtonDownPos(button int, pos *qtcore.Q
 // [16] QPointF buttonDownScenePos(Qt::MouseButton)
 func (this *QGraphicsSceneMouseEvent) ButtonDownScenePos(button int) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent18buttonDownScenePosEN2Qt11MouseButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -201,7 +184,7 @@ func (this *QGraphicsSceneMouseEvent) ButtonDownScenePos(button int) *qtcore.QPo
 func (this *QGraphicsSceneMouseEvent) SetButtonDownScenePos(button int, pos *qtcore.QPointF) {
 	var convArg1 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent21setButtonDownScenePosEN2Qt11MouseButtonERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:103
@@ -210,7 +193,7 @@ func (this *QGraphicsSceneMouseEvent) SetButtonDownScenePos(button int, pos *qtc
 // [8] QPoint buttonDownScreenPos(Qt::MouseButton)
 func (this *QGraphicsSceneMouseEvent) ButtonDownScreenPos(button int) *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent19buttonDownScreenPosEN2Qt11MouseButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -223,7 +206,7 @@ func (this *QGraphicsSceneMouseEvent) ButtonDownScreenPos(button int) *qtcore.QP
 func (this *QGraphicsSceneMouseEvent) SetButtonDownScreenPos(button int, pos *qtcore.QPoint) {
 	var convArg1 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent22setButtonDownScreenPosEN2Qt11MouseButtonERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:106
@@ -232,7 +215,7 @@ func (this *QGraphicsSceneMouseEvent) SetButtonDownScreenPos(button int, pos *qt
 // [16] QPointF lastPos()
 func (this *QGraphicsSceneMouseEvent) LastPos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent7lastPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -245,7 +228,7 @@ func (this *QGraphicsSceneMouseEvent) LastPos() *qtcore.QPointF /*123*/ {
 func (this *QGraphicsSceneMouseEvent) SetLastPos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:109
@@ -254,7 +237,7 @@ func (this *QGraphicsSceneMouseEvent) SetLastPos(pos *qtcore.QPointF) {
 // [16] QPointF lastScenePos()
 func (this *QGraphicsSceneMouseEvent) LastScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent12lastScenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -267,7 +250,7 @@ func (this *QGraphicsSceneMouseEvent) LastScenePos() *qtcore.QPointF /*123*/ {
 func (this *QGraphicsSceneMouseEvent) SetLastScenePos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:112
@@ -276,7 +259,7 @@ func (this *QGraphicsSceneMouseEvent) SetLastScenePos(pos *qtcore.QPointF) {
 // [8] QPoint lastScreenPos()
 func (this *QGraphicsSceneMouseEvent) LastScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -289,7 +272,7 @@ func (this *QGraphicsSceneMouseEvent) LastScreenPos() *qtcore.QPoint /*123*/ {
 func (this *QGraphicsSceneMouseEvent) SetLastScreenPos(pos *qtcore.QPoint) {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:115
@@ -298,7 +281,7 @@ func (this *QGraphicsSceneMouseEvent) SetLastScreenPos(pos *qtcore.QPoint) {
 // [4] Qt::MouseButtons buttons()
 func (this *QGraphicsSceneMouseEvent) Buttons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent7buttonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -308,7 +291,7 @@ func (this *QGraphicsSceneMouseEvent) Buttons() int {
 // [-2] void setButtons(Qt::MouseButtons)
 func (this *QGraphicsSceneMouseEvent) SetButtons(buttons int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent10setButtonsE6QFlagsIN2Qt11MouseButtonEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:118
@@ -317,7 +300,7 @@ func (this *QGraphicsSceneMouseEvent) SetButtons(buttons int) {
 // [4] Qt::MouseButton button()
 func (this *QGraphicsSceneMouseEvent) Button() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent6buttonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -327,7 +310,7 @@ func (this *QGraphicsSceneMouseEvent) Button() int {
 // [-2] void setButton(Qt::MouseButton)
 func (this *QGraphicsSceneMouseEvent) SetButton(button int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent9setButtonEN2Qt11MouseButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:121
@@ -336,7 +319,7 @@ func (this *QGraphicsSceneMouseEvent) SetButton(button int) {
 // [4] Qt::KeyboardModifiers modifiers()
 func (this *QGraphicsSceneMouseEvent) Modifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent9modifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -346,7 +329,7 @@ func (this *QGraphicsSceneMouseEvent) Modifiers() int {
 // [-2] void setModifiers(Qt::KeyboardModifiers)
 func (this *QGraphicsSceneMouseEvent) SetModifiers(modifiers int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:124
@@ -355,7 +338,7 @@ func (this *QGraphicsSceneMouseEvent) SetModifiers(modifiers int) {
 // [4] Qt::MouseEventSource source()
 func (this *QGraphicsSceneMouseEvent) Source() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -365,7 +348,7 @@ func (this *QGraphicsSceneMouseEvent) Source() int {
 // [-2] void setSource(Qt::MouseEventSource)
 func (this *QGraphicsSceneMouseEvent) SetSource(source int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent9setSourceEN2Qt16MouseEventSourceE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), source)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:127
@@ -374,7 +357,7 @@ func (this *QGraphicsSceneMouseEvent) SetSource(source int) {
 // [4] Qt::MouseEventFlags flags()
 func (this *QGraphicsSceneMouseEvent) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneMouseEvent5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -384,7 +367,32 @@ func (this *QGraphicsSceneMouseEvent) Flags() int {
 // [-2] void setFlags(Qt::MouseEventFlags)
 func (this *QGraphicsSceneMouseEvent) SetFlags(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent8setFlagsE6QFlagsIN2Qt14MouseEventFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

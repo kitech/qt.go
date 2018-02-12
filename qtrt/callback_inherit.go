@@ -10,14 +10,13 @@ extern uint64_t callbackAllInherits(void* cbobj, char* iname, int*handled, int a
 import "C"
 import (
 	"fmt"
-	"gopp"
 	"log"
 	"reflect"
 	"regexp"
 	"strings"
 	"unsafe"
 
-	"github.com/therecipe/qt"
+	qt "github.com/kitech/qt.go/qtqt"
 )
 
 /*
@@ -53,7 +52,7 @@ func CallbackAllInherits(cbobj unsafe.Pointer, name string, args ...interface{})
 	if signal := qt.GetSignal(cbobj, name); signal != nil {
 		return signal.(func(...interface{}) interface{})(args...)
 	} else {
-		// gopp.NilPrint(nil, "not found sigobj:", cbobj, name, args)
+		// NilPrint(nil, "not found sigobj:", cbobj, name, args)
 	}
 
 	return nil
@@ -103,7 +102,7 @@ func callbackInheritInvoke(f interface{}, args ...interface{}) interface{} {
 	if len(in) != fv.Type().NumIn() {
 		log.Println("can not fill enough parameters,", len(in), fv.Type().NumIn())
 	}
-	gopp.Assert(len(in) == fv.Type().NumIn(), "no engouth parameters")
+	Assert(len(in) == fv.Type().NumIn(), "no engouth parameters")
 	if true {
 		out := fv.Call(in)
 		if debugDynSlot {
@@ -157,7 +156,7 @@ func callbackAllInheritsGo(cbobj unsafe.Pointer, name string, handled *int, argc
 			reflect.Int32, reflect.Uint32, reflect.Int8, reflect.Uint8:
 			return retv.Convert(reflect.TypeOf(uint64(0))).Interface().(uint64)
 		case reflect.Bool:
-			return uint64(gopp.IfElseInt(rv.(bool), 1, 0))
+			return uint64(IfElseInt(rv.(bool), 1, 0))
 		case reflect.Float64: // NOTE: need caller copy out
 			return Float64AsInt(rv.(float64))
 		case reflect.Float32:
@@ -176,7 +175,7 @@ func callbackAllInheritsGo(cbobj unsafe.Pointer, name string, handled *int, argc
 		}
 	} else {
 		// 这个函数还是比较可靠的，没有找到那一定是没有了
-		// gopp.NilPrint(nil, "not found sigobj:", cbobj, name, pargs)
+		// NilPrint(nil, "not found sigobj:", cbobj, name, pargs)
 	}
 
 	return 0
@@ -230,7 +229,7 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 	if len(in) != fv.Type().NumIn() {
 		log.Println("can not fill enough parameters,", len(in), fv.Type().NumIn())
 	}
-	gopp.Assert(len(in) == fv.Type().NumIn(), "no engouth parameters")
+	Assert(len(in) == fv.Type().NumIn(), "no engouth parameters")
 	if true {
 		out := fv.Call(in)
 		if debugDynSlot {

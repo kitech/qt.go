@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,42 +24,11 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
@@ -85,7 +62,7 @@ func (*QSGFlatColorMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGFlatColorM
 // [-2] void QSGFlatColorMaterial()
 func NewQSGFlatColorMaterial() *QSGFlatColorMaterial {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGFlatColorMaterialC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGFlatColorMaterialFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSGFlatColorMaterial)
 	return gothis
@@ -97,7 +74,7 @@ func NewQSGFlatColorMaterial() *QSGFlatColorMaterial {
 // [8] QSGMaterialType * type()
 func (this *QSGFlatColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGMaterialTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -107,7 +84,7 @@ func (this *QSGFlatColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialType 
 // [8] QSGMaterialShader * createShader()
 func (this *QSGFlatColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGMaterialShaderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -118,7 +95,7 @@ func (this *QSGFlatColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMat
 func (this *QSGFlatColorMaterial) SetColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGFlatColorMaterial8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgflatcolormaterial.h:56
@@ -127,7 +104,7 @@ func (this *QSGFlatColorMaterial) SetColor(color *qtgui.QColor) {
 // [16] const QColor & color()
 func (this *QSGFlatColorMaterial) Color() *qtgui.QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -140,14 +117,45 @@ func (this *QSGFlatColorMaterial) Color() *qtgui.QColor {
 func (this *QSGFlatColorMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/) int {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial7compareEPK11QSGMaterial", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 func DeleteQSGFlatColorMaterial(this *QSGFlatColorMaterial) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGFlatColorMaterialD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

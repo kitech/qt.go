@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QLocale) NewFromPointer(cthis unsafe.Pointer) *QLocale {
 // [-2] void QLocale()
 func NewQLocale() *QLocale {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLocale)
 	return gothis
@@ -86,7 +75,7 @@ func NewQLocale_1(name string) *QLocale {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLocale)
 	return gothis
@@ -98,7 +87,7 @@ func NewQLocale_1(name string) *QLocale {
 // [-2] void QLocale(enum QLocale::Language, enum QLocale::Country)
 func NewQLocale_2(language int, country int) *QLocale {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", qtrt.FFI_TYPE_POINTER, language, country)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLocale)
 	return gothis
@@ -110,7 +99,7 @@ func NewQLocale_2(language int, country int) *QLocale {
 // [-2] void QLocale(enum QLocale::Language, enum QLocale::Script, enum QLocale::Country)
 func NewQLocale_3(language int, script int, country int) *QLocale {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_6ScriptENS_7CountryE", qtrt.FFI_TYPE_POINTER, language, script, country)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLocale)
 	return gothis
@@ -123,7 +112,7 @@ func NewQLocale_3(language int, script int, country int) *QLocale {
 func DeleteQLocale(this *QLocale) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -134,7 +123,7 @@ func DeleteQLocale(this *QLocale) {
 func (this *QLocale) Swap(other *QLocale) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qlocale.h:942
@@ -143,7 +132,7 @@ func (this *QLocale) Swap(other *QLocale) {
 // [4] QLocale::Language language()
 func (this *QLocale) Language() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8languageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -153,7 +142,7 @@ func (this *QLocale) Language() int {
 // [4] QLocale::Script script()
 func (this *QLocale) Script() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6scriptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -163,7 +152,7 @@ func (this *QLocale) Script() int {
 // [4] QLocale::Country country()
 func (this *QLocale) Country() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7countryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -173,7 +162,7 @@ func (this *QLocale) Country() int {
 // [8] QString name()
 func (this *QLocale) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -186,7 +175,7 @@ func (this *QLocale) Name() string {
 // [8] QString bcp47Name()
 func (this *QLocale) Bcp47Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale9bcp47NameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -199,7 +188,7 @@ func (this *QLocale) Bcp47Name() string {
 // [8] QString nativeLanguageName()
 func (this *QLocale) NativeLanguageName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale18nativeLanguageNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -212,7 +201,7 @@ func (this *QLocale) NativeLanguageName() string {
 // [8] QString nativeCountryName()
 func (this *QLocale) NativeCountryName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale17nativeCountryNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -227,7 +216,7 @@ func (this *QLocale) ToShort(s string, ok unsafe.Pointer /*666*/) int16 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toShortERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
@@ -238,7 +227,7 @@ func (this *QLocale) ToShort(s string, ok unsafe.Pointer /*666*/) int16 {
 func (this *QLocale) ToShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) int16 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toShortERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
@@ -249,7 +238,7 @@ func (this *QLocale) ToShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) int16 {
 func (this *QLocale) ToShort_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) int16 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toShortE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
@@ -261,7 +250,7 @@ func (this *QLocale) ToUShort(s string, ok unsafe.Pointer /*666*/) uint16 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 
@@ -272,7 +261,7 @@ func (this *QLocale) ToUShort(s string, ok unsafe.Pointer /*666*/) uint16 {
 func (this *QLocale) ToUShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint16 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 
@@ -283,7 +272,7 @@ func (this *QLocale) ToUShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint16
 func (this *QLocale) ToUShort_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) uint16 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 
@@ -295,7 +284,7 @@ func (this *QLocale) ToInt(s string, ok unsafe.Pointer /*666*/) int {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale5toIntERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -306,7 +295,7 @@ func (this *QLocale) ToInt(s string, ok unsafe.Pointer /*666*/) int {
 func (this *QLocale) ToInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale5toIntERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -317,7 +306,7 @@ func (this *QLocale) ToInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) int {
 func (this *QLocale) ToInt_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale5toIntE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -329,7 +318,7 @@ func (this *QLocale) ToUInt(s string, ok unsafe.Pointer /*666*/) uint {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -340,7 +329,7 @@ func (this *QLocale) ToUInt(s string, ok unsafe.Pointer /*666*/) uint {
 func (this *QLocale) ToUInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -351,7 +340,7 @@ func (this *QLocale) ToUInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint {
 func (this *QLocale) ToUInt_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) uint {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -363,7 +352,7 @@ func (this *QLocale) ToLongLong(s string, ok unsafe.Pointer /*666*/) int64 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -374,7 +363,7 @@ func (this *QLocale) ToLongLong(s string, ok unsafe.Pointer /*666*/) int64 {
 func (this *QLocale) ToLongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) int64 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -385,7 +374,7 @@ func (this *QLocale) ToLongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) int6
 func (this *QLocale) ToLongLong_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) int64 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -397,7 +386,7 @@ func (this *QLocale) ToULongLong(s string, ok unsafe.Pointer /*666*/) uint64 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
 }
 
@@ -408,7 +397,7 @@ func (this *QLocale) ToULongLong(s string, ok unsafe.Pointer /*666*/) uint64 {
 func (this *QLocale) ToULongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint64 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
 }
 
@@ -419,7 +408,7 @@ func (this *QLocale) ToULongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) uin
 func (this *QLocale) ToULongLong_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) uint64 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
 }
 
@@ -431,7 +420,7 @@ func (this *QLocale) ToFloat(s string, ok unsafe.Pointer /*666*/) float32 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK7QStringPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -442,7 +431,7 @@ func (this *QLocale) ToFloat(s string, ok unsafe.Pointer /*666*/) float32 {
 func (this *QLocale) ToFloat_1(s *QStringRef, ok unsafe.Pointer /*666*/) float32 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK10QStringRefPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -453,7 +442,7 @@ func (this *QLocale) ToFloat_1(s *QStringRef, ok unsafe.Pointer /*666*/) float32
 func (this *QLocale) ToFloat_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) float32 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toFloatE11QStringViewPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -465,7 +454,7 @@ func (this *QLocale) ToDouble(s string, ok unsafe.Pointer /*666*/) float64 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK7QStringPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -476,7 +465,7 @@ func (this *QLocale) ToDouble(s string, ok unsafe.Pointer /*666*/) float64 {
 func (this *QLocale) ToDouble_1(s *QStringRef, ok unsafe.Pointer /*666*/) float64 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK10QStringRefPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -487,7 +476,7 @@ func (this *QLocale) ToDouble_1(s *QStringRef, ok unsafe.Pointer /*666*/) float6
 func (this *QLocale) ToDouble_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) float64 {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toDoubleE11QStringViewPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -497,7 +486,7 @@ func (this *QLocale) ToDouble_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*
 // [8] QString toString(qlonglong)
 func (this *QLocale) ToString(i int64) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -510,7 +499,7 @@ func (this *QLocale) ToString(i int64) string {
 // [8] QString toString(qulonglong)
 func (this *QLocale) ToString_1(i uint64) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -523,7 +512,7 @@ func (this *QLocale) ToString_1(i uint64) string {
 // [8] QString toString(short)
 func (this *QLocale) ToString_2(i int16) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -536,7 +525,7 @@ func (this *QLocale) ToString_2(i int16) string {
 // [8] QString toString(ushort)
 func (this *QLocale) ToString_3(i uint16) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -549,7 +538,7 @@ func (this *QLocale) ToString_3(i uint16) string {
 // [8] QString toString(int)
 func (this *QLocale) ToString_4(i int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -562,7 +551,7 @@ func (this *QLocale) ToString_4(i int) string {
 // [8] QString toString(uint)
 func (this *QLocale) ToString_5(i uint) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -575,7 +564,7 @@ func (this *QLocale) ToString_5(i uint) string {
 // [8] QString toString(double, char, int)
 func (this *QLocale) ToString_6(i float64, f byte, prec int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -588,7 +577,7 @@ func (this *QLocale) ToString_6(i float64, f byte, prec int) string {
 // [8] QString toString(float, char, int)
 func (this *QLocale) ToString_7(i float32, f byte, prec int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -604,7 +593,7 @@ func (this *QLocale) ToString_8(date *QDate, formatStr string) string {
 	var tmpArg1 = NewQString_5(formatStr)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -620,7 +609,7 @@ func (this *QLocale) ToString_9(time *QTime, formatStr string) string {
 	var tmpArg1 = NewQString_5(formatStr)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -636,7 +625,7 @@ func (this *QLocale) ToString_10(dateTime *QDateTime, format string) string {
 	var tmpArg1 = NewQString_5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -651,7 +640,7 @@ func (this *QLocale) ToString_11(date *QDate, formatStr *QStringView /*123*/) st
 	var convArg0 = date.GetCthis()
 	var convArg1 = formatStr.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDate11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -666,7 +655,7 @@ func (this *QLocale) ToString_12(time *QTime, formatStr *QStringView /*123*/) st
 	var convArg0 = time.GetCthis()
 	var convArg1 = formatStr.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTime11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -681,7 +670,7 @@ func (this *QLocale) ToString_13(dateTime *QDateTime, format *QStringView /*123*
 	var convArg0 = dateTime.GetCthis()
 	var convArg1 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTime11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -695,7 +684,7 @@ func (this *QLocale) ToString_13(dateTime *QDateTime, format *QStringView /*123*
 func (this *QLocale) ToString_14(date *QDate, format int) string {
 	var convArg0 = date.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -709,7 +698,7 @@ func (this *QLocale) ToString_14(date *QDate, format int) string {
 func (this *QLocale) ToString_15(time *QTime, format int) string {
 	var convArg0 = time.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -723,7 +712,7 @@ func (this *QLocale) ToString_15(time *QTime, format int) string {
 func (this *QLocale) ToString_16(dateTime *QDateTime, format int) string {
 	var convArg0 = dateTime.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -736,7 +725,7 @@ func (this *QLocale) ToString_16(dateTime *QDateTime, format int) string {
 // [8] QString dateFormat(enum QLocale::FormatType)
 func (this *QLocale) DateFormat(format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10dateFormatENS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -749,7 +738,7 @@ func (this *QLocale) DateFormat(format int) string {
 // [8] QString timeFormat(enum QLocale::FormatType)
 func (this *QLocale) TimeFormat(format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10timeFormatENS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -762,7 +751,7 @@ func (this *QLocale) TimeFormat(format int) string {
 // [8] QString dateTimeFormat(enum QLocale::FormatType)
 func (this *QLocale) DateTimeFormat(format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale14dateTimeFormatENS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -777,7 +766,7 @@ func (this *QLocale) ToDate(string string, arg1 int) *QDate /*123*/ {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
@@ -793,7 +782,7 @@ func (this *QLocale) ToDate_1(string string, format string) *QDate /*123*/ {
 	var tmpArg1 = NewQString_5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
@@ -807,7 +796,7 @@ func (this *QLocale) ToTime(string string, arg1 int) *QTime /*123*/ {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTime)
 	return rv2
@@ -823,7 +812,7 @@ func (this *QLocale) ToTime_1(string string, format string) *QTime /*123*/ {
 	var tmpArg1 = NewQString_5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTime)
 	return rv2
@@ -837,7 +826,7 @@ func (this *QLocale) ToDateTime(string string, format int) *QDateTime /*123*/ {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
@@ -853,7 +842,7 @@ func (this *QLocale) ToDateTime_1(string string, format string) *QDateTime /*123
 	var tmpArg1 = NewQString_5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
@@ -865,7 +854,7 @@ func (this *QLocale) ToDateTime_1(string string, format string) *QDateTime /*123
 // [2] QChar decimalPoint()
 func (this *QLocale) DecimalPoint() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale12decimalPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -877,7 +866,7 @@ func (this *QLocale) DecimalPoint() *QChar /*123*/ {
 // [2] QChar groupSeparator()
 func (this *QLocale) GroupSeparator() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale14groupSeparatorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -889,7 +878,7 @@ func (this *QLocale) GroupSeparator() *QChar /*123*/ {
 // [2] QChar percent()
 func (this *QLocale) Percent() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7percentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -901,7 +890,7 @@ func (this *QLocale) Percent() *QChar /*123*/ {
 // [2] QChar zeroDigit()
 func (this *QLocale) ZeroDigit() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale9zeroDigitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -913,7 +902,7 @@ func (this *QLocale) ZeroDigit() *QChar /*123*/ {
 // [2] QChar negativeSign()
 func (this *QLocale) NegativeSign() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale12negativeSignEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -925,7 +914,7 @@ func (this *QLocale) NegativeSign() *QChar /*123*/ {
 // [2] QChar positiveSign()
 func (this *QLocale) PositiveSign() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale12positiveSignEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -937,7 +926,7 @@ func (this *QLocale) PositiveSign() *QChar /*123*/ {
 // [2] QChar exponential()
 func (this *QLocale) Exponential() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11exponentialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -949,7 +938,7 @@ func (this *QLocale) Exponential() *QChar /*123*/ {
 // [8] QString monthName(int, enum QLocale::FormatType)
 func (this *QLocale) MonthName(arg0 int, format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale9monthNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -962,7 +951,7 @@ func (this *QLocale) MonthName(arg0 int, format int) string {
 // [8] QString standaloneMonthName(int, enum QLocale::FormatType)
 func (this *QLocale) StandaloneMonthName(arg0 int, format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale19standaloneMonthNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -975,7 +964,7 @@ func (this *QLocale) StandaloneMonthName(arg0 int, format int) string {
 // [8] QString dayName(int, enum QLocale::FormatType)
 func (this *QLocale) DayName(arg0 int, format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7dayNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -988,7 +977,7 @@ func (this *QLocale) DayName(arg0 int, format int) string {
 // [8] QString standaloneDayName(int, enum QLocale::FormatType)
 func (this *QLocale) StandaloneDayName(arg0 int, format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale17standaloneDayNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1001,7 +990,7 @@ func (this *QLocale) StandaloneDayName(arg0 int, format int) string {
 // [4] Qt::DayOfWeek firstDayOfWeek()
 func (this *QLocale) FirstDayOfWeek() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale14firstDayOfWeekEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -1011,7 +1000,7 @@ func (this *QLocale) FirstDayOfWeek() int {
 // [8] QString amText()
 func (this *QLocale) AmText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6amTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1024,7 +1013,7 @@ func (this *QLocale) AmText() string {
 // [8] QString pmText()
 func (this *QLocale) PmText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6pmTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1037,7 +1026,7 @@ func (this *QLocale) PmText() string {
 // [4] QLocale::MeasurementSystem measurementSystem()
 func (this *QLocale) MeasurementSystem() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale17measurementSystemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -1047,7 +1036,7 @@ func (this *QLocale) MeasurementSystem() int {
 // [4] Qt::LayoutDirection textDirection()
 func (this *QLocale) TextDirection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale13textDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -1059,7 +1048,7 @@ func (this *QLocale) ToUpper(str string) string {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toUpperERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1074,7 +1063,7 @@ func (this *QLocale) ToLower(str string) string {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toLowerERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1087,7 +1076,7 @@ func (this *QLocale) ToLower(str string) string {
 // [8] QString currencySymbol(enum QLocale::CurrencySymbolFormat)
 func (this *QLocale) CurrencySymbol(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale14currencySymbolENS_20CurrencySymbolFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1102,7 +1091,7 @@ func (this *QLocale) ToCurrencyString(arg0 int64, symbol string) string {
 	var tmpArg1 = NewQString_5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringExRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1117,7 +1106,7 @@ func (this *QLocale) ToCurrencyString_1(arg0 uint64, symbol string) string {
 	var tmpArg1 = NewQString_5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEyRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1132,7 +1121,7 @@ func (this *QLocale) ToCurrencyString_2(arg0 int16, symbol string) string {
 	var tmpArg1 = NewQString_5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEsRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1147,7 +1136,7 @@ func (this *QLocale) ToCurrencyString_3(arg0 uint16, symbol string) string {
 	var tmpArg1 = NewQString_5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEtRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1162,7 +1151,7 @@ func (this *QLocale) ToCurrencyString_4(arg0 int, symbol string) string {
 	var tmpArg1 = NewQString_5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1177,7 +1166,7 @@ func (this *QLocale) ToCurrencyString_5(arg0 uint, symbol string) string {
 	var tmpArg1 = NewQString_5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEjRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1192,7 +1181,7 @@ func (this *QLocale) ToCurrencyString_6(arg0 float64, symbol string) string {
 	var tmpArg1 = NewQString_5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1207,7 +1196,7 @@ func (this *QLocale) ToCurrencyString_7(arg0 float64, symbol string, precision i
 	var tmpArg1 = NewQString_5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1, precision)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1222,7 +1211,7 @@ func (this *QLocale) ToCurrencyString_8(i float32, symbol string) string {
 	var tmpArg1 = NewQString_5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1237,7 +1226,7 @@ func (this *QLocale) ToCurrencyString_9(i float32, symbol string, precision int)
 	var tmpArg1 = NewQString_5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, convArg1, precision)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1250,7 +1239,7 @@ func (this *QLocale) ToCurrencyString_9(i float32, symbol string, precision int)
 // [8] QString formattedDataSize(qint64, int, QLocale::DataSizeFormats)
 func (this *QLocale) FormattedDataSize(bytes int64, precision int, format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bytes, precision, format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1263,7 +1252,7 @@ func (this *QLocale) FormattedDataSize(bytes int64, precision int, format int) s
 // [8] QStringList uiLanguages()
 func (this *QLocale) UiLanguages() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11uiLanguagesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -1275,7 +1264,7 @@ func (this *QLocale) UiLanguages() *QStringList /*123*/ {
 // [8] QString languageToString(enum QLocale::Language)
 func (this *QLocale) LanguageToString(language int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale16languageToStringENS_8LanguageE", qtrt.FFI_TYPE_POINTER, language)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1293,7 +1282,7 @@ func QLocale_LanguageToString(language int) string {
 // [8] QString countryToString(enum QLocale::Country)
 func (this *QLocale) CountryToString(country int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale15countryToStringENS_7CountryE", qtrt.FFI_TYPE_POINTER, country)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1311,7 +1300,7 @@ func QLocale_CountryToString(country int) string {
 // [8] QString scriptToString(enum QLocale::Script)
 func (this *QLocale) ScriptToString(script int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale14scriptToStringENS_6ScriptE", qtrt.FFI_TYPE_POINTER, script)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1330,7 +1319,7 @@ func QLocale_ScriptToString(script int) string {
 func (this *QLocale) SetDefault(locale *QLocale) {
 	var convArg0 = locale.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale10setDefaultERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QLocale_SetDefault(locale *QLocale) {
 	var nilthis *QLocale
@@ -1343,7 +1332,7 @@ func QLocale_SetDefault(locale *QLocale) {
 // [8] QLocale c()
 func (this *QLocale) C() *QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale1cEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLocale)
 	return rv2
@@ -1360,7 +1349,7 @@ func QLocale_C() *QLocale /*123*/ {
 // [8] QLocale system()
 func (this *QLocale) System() *QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale6systemEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLocale)
 	return rv2
@@ -1377,7 +1366,7 @@ func QLocale_System() *QLocale /*123*/ {
 // [-2] void setNumberOptions(QLocale::NumberOptions)
 func (this *QLocale) SetNumberOptions(options int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale16setNumberOptionsE6QFlagsINS_12NumberOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1080
@@ -1386,7 +1375,7 @@ func (this *QLocale) SetNumberOptions(options int) {
 // [4] QLocale::NumberOptions numberOptions()
 func (this *QLocale) NumberOptions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale13numberOptionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -1398,7 +1387,7 @@ func (this *QLocale) QuoteString(str string, style int) string {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK7QStringNS_14QuotationStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, style)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1412,7 +1401,7 @@ func (this *QLocale) QuoteString(str string, style int) string {
 func (this *QLocale) QuoteString_1(str *QStringRef, style int) string {
 	var convArg0 = str.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK10QStringRefNS_14QuotationStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, style)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -1426,7 +1415,7 @@ func (this *QLocale) QuoteString_1(str *QStringRef, style int) string {
 func (this *QLocale) CreateSeparatedList(strl *QStringList) string {
 	var convArg0 = strl.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale19createSeparatedListERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -2278,3 +2267,22 @@ const QLocale__StandardQuotation QLocale__QuotationStyle = 0
 const QLocale__AlternateQuotation QLocale__QuotationStyle = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

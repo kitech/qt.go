@@ -12,6 +12,7 @@ realall: rts bases qmls extras tools
 
 rts: qtrt- mock-
 qtrt-:
+	CC=clang CXX=clang++ go install -v -x ./qtqt
 	CC=clang CXX=clang++ go install -v -x ./qtrt
 mock-:
 	CC=clang CXX=clang++ go install -v -x ./qtmock
@@ -27,12 +28,13 @@ widgets-:
 network-:
 	CC=clang CXX=clang++ go install -v -x ./qtnetwork
 
-qmls: qml- quick- quicktmpl- quickctrl- quickwgt-
+qmls: qml- quick- quickctrl- quickwgt-
 qml-:
 	CC=clang CXX=clang++ go install -v -x ./qtqml
 quick-:
 	CC=clang CXX=clang++ go install -v -x ./qtquick
 quickctrl-:
+	CC=clang CXX=clang++ go install -v -x ./qtquicktemplates2
 	CC=clang CXX=clang++ go install -v -x ./qtquickcontrols2
 quickwgt-:
 	CC=clang CXX=clang++ go install -v -x ./qtquickwidgets

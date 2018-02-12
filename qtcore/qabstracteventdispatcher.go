@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -69,7 +58,7 @@ func (*QAbstractEventDispatcher) NewFromPointer(cthis unsafe.Pointer) *QAbstract
 // [8] const QMetaObject * metaObject()
 func (this *QAbstractEventDispatcher) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAbstractEventDispatcher10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -80,7 +69,7 @@ func (this *QAbstractEventDispatcher) MetaObject() *QMetaObject /*777 const QMet
 func NewQAbstractEventDispatcher(parent *QObject /*777 QObject **/) *QAbstractEventDispatcher {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -92,7 +81,7 @@ func NewQAbstractEventDispatcher(parent *QObject /*777 QObject **/) *QAbstractEv
 func DeleteQAbstractEventDispatcher(this *QAbstractEventDispatcher) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -103,7 +92,7 @@ func DeleteQAbstractEventDispatcher(this *QAbstractEventDispatcher) {
 func (this *QAbstractEventDispatcher) Instance(thread *QThread /*777 QThread **/) *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
 	var convArg0 = thread.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher8instanceEP7QThread", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QAbstractEventDispatcher_Instance(thread *QThread /*777 QThread **/) *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
@@ -118,7 +107,7 @@ func QAbstractEventDispatcher_Instance(thread *QThread /*777 QThread **/) *QAbst
 // [1] bool processEvents(QEventLoop::ProcessEventsFlags)
 func (this *QAbstractEventDispatcher) ProcessEvents(flags int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -128,7 +117,7 @@ func (this *QAbstractEventDispatcher) ProcessEvents(flags int) bool {
 // [1] bool hasPendingEvents()
 func (this *QAbstractEventDispatcher) HasPendingEvents() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher16hasPendingEventsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -139,7 +128,7 @@ func (this *QAbstractEventDispatcher) HasPendingEvents() bool {
 func (this *QAbstractEventDispatcher) RegisterSocketNotifier(notifier *QSocketNotifier /*777 QSocketNotifier **/) {
 	var convArg0 = notifier.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher22registerSocketNotifierEP15QSocketNotifier", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:82
@@ -149,7 +138,7 @@ func (this *QAbstractEventDispatcher) RegisterSocketNotifier(notifier *QSocketNo
 func (this *QAbstractEventDispatcher) UnregisterSocketNotifier(notifier *QSocketNotifier /*777 QSocketNotifier **/) {
 	var convArg0 = notifier.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher24unregisterSocketNotifierEP15QSocketNotifier", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:90
@@ -159,7 +148,7 @@ func (this *QAbstractEventDispatcher) UnregisterSocketNotifier(notifier *QSocket
 func (this *QAbstractEventDispatcher) RegisterTimer(interval int, timerType int, object *QObject /*777 QObject **/) int {
 	var convArg2 = object.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiN2Qt9TimerTypeEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), interval, timerType, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -170,7 +159,7 @@ func (this *QAbstractEventDispatcher) RegisterTimer(interval int, timerType int,
 func (this *QAbstractEventDispatcher) RegisterTimer_1(timerId int, interval int, timerType int, object *QObject /*777 QObject **/) {
 	var convArg3 = object.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiiN2Qt9TimerTypeEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timerId, interval, timerType, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:92
@@ -179,7 +168,7 @@ func (this *QAbstractEventDispatcher) RegisterTimer_1(timerId int, interval int,
 // [1] bool unregisterTimer(int)
 func (this *QAbstractEventDispatcher) UnregisterTimer(timerId int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher15unregisterTimerEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timerId)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -190,7 +179,7 @@ func (this *QAbstractEventDispatcher) UnregisterTimer(timerId int) bool {
 func (this *QAbstractEventDispatcher) UnregisterTimers(object *QObject /*777 QObject **/) bool {
 	var convArg0 = object.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher16unregisterTimersEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -200,7 +189,7 @@ func (this *QAbstractEventDispatcher) UnregisterTimers(object *QObject /*777 QOb
 // [4] int remainingTime(int)
 func (this *QAbstractEventDispatcher) RemainingTime(timerId int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13remainingTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timerId)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -210,7 +199,7 @@ func (this *QAbstractEventDispatcher) RemainingTime(timerId int) int {
 // [-2] void wakeUp()
 func (this *QAbstractEventDispatcher) WakeUp() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher6wakeUpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:104
@@ -219,7 +208,7 @@ func (this *QAbstractEventDispatcher) WakeUp() {
 // [-2] void interrupt()
 func (this *QAbstractEventDispatcher) Interrupt() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher9interruptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:105
@@ -228,7 +217,7 @@ func (this *QAbstractEventDispatcher) Interrupt() {
 // [-2] void flush()
 func (this *QAbstractEventDispatcher) Flush() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher5flushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:107
@@ -237,7 +226,7 @@ func (this *QAbstractEventDispatcher) Flush() {
 // [-2] void startingUp()
 func (this *QAbstractEventDispatcher) StartingUp() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher10startingUpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:108
@@ -246,7 +235,7 @@ func (this *QAbstractEventDispatcher) StartingUp() {
 // [-2] void closingDown()
 func (this *QAbstractEventDispatcher) ClosingDown() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher11closingDownEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:110
@@ -256,7 +245,7 @@ func (this *QAbstractEventDispatcher) ClosingDown() {
 func (this *QAbstractEventDispatcher) InstallNativeEventFilter(filterObj *QAbstractNativeEventFilter /*777 QAbstractNativeEventFilter **/) {
 	var convArg0 = filterObj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:111
@@ -266,7 +255,7 @@ func (this *QAbstractEventDispatcher) InstallNativeEventFilter(filterObj *QAbstr
 func (this *QAbstractEventDispatcher) RemoveNativeEventFilter(filterObj *QAbstractNativeEventFilter /*777 QAbstractNativeEventFilter **/) {
 	var convArg0 = filterObj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:112
@@ -276,7 +265,7 @@ func (this *QAbstractEventDispatcher) RemoveNativeEventFilter(filterObj *QAbstra
 func (this *QAbstractEventDispatcher) FilterNativeEvent(eventType *QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
 	var convArg0 = eventType.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, &result)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -286,7 +275,7 @@ func (this *QAbstractEventDispatcher) FilterNativeEvent(eventType *QByteArray, m
 // [-2] void aboutToBlock()
 func (this *QAbstractEventDispatcher) AboutToBlock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher12aboutToBlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:120
@@ -295,7 +284,26 @@ func (this *QAbstractEventDispatcher) AboutToBlock() {
 // [-2] void awake()
 func (this *QAbstractEventDispatcher) Awake() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher5awakeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

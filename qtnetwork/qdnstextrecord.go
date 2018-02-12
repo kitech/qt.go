@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QDnsTextRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsTextRecord {
 // [-2] void QDnsTextRecord()
 func NewQDnsTextRecord() *QDnsTextRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDnsTextRecordC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsTextRecordFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDnsTextRecord)
 	return gothis
@@ -89,7 +75,7 @@ func NewQDnsTextRecord() *QDnsTextRecord {
 func DeleteQDnsTextRecord(this *QDnsTextRecord) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDnsTextRecordD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +86,7 @@ func DeleteQDnsTextRecord(this *QDnsTextRecord) {
 func (this *QDnsTextRecord) Swap(other *QDnsTextRecord) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDnsTextRecord4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:173
@@ -109,7 +95,7 @@ func (this *QDnsTextRecord) Swap(other *QDnsTextRecord) {
 // [8] QString name()
 func (this *QDnsTextRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDnsTextRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -122,8 +108,30 @@ func (this *QDnsTextRecord) Name() string {
 // [4] quint32 timeToLive()
 func (this *QDnsTextRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDnsTextRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

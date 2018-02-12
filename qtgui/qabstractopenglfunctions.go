@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,13 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
 //  body block begin
+
 // bool isInitialized()
 func (this *QAbstractOpenGLFunctions) InheritIsInitialized(f func() bool) {
 	qtrt.SetAllInheritCallback(this, "isInitialized", f)
@@ -81,7 +68,7 @@ func (*QAbstractOpenGLFunctions) NewFromPointer(cthis unsafe.Pointer) *QAbstract
 func DeleteQAbstractOpenGLFunctions(this *QAbstractOpenGLFunctions) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -91,7 +78,7 @@ func DeleteQAbstractOpenGLFunctions(this *QAbstractOpenGLFunctions) {
 // [1] bool initializeOpenGLFunctions()
 func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -101,7 +88,7 @@ func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() bool {
 // [-2] void QAbstractOpenGLFunctions()
 func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractOpenGLFunctionsFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAbstractOpenGLFunctions)
 	return gothis
@@ -113,8 +100,30 @@ func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
 // [1] bool isInitialized()
 func (this *QAbstractOpenGLFunctions) IsInitialized() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13isInitializedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

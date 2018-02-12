@@ -6,6 +6,14 @@ package qtqml
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QQmlComponent) NewFromPointer(cthis unsafe.Pointer) *QQmlComponent {
 // [8] const QMetaObject * metaObject()
 func (this *QQmlComponent) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -88,7 +71,7 @@ func (this *QQmlComponent) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 func NewQQmlComponent(parent *qtcore.QObject /*777 QObject **/) *QQmlComponent {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlComponentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -101,7 +84,7 @@ func NewQQmlComponent_1(arg0 *QQmlEngine /*777 QQmlEngine **/, parent *qtcore.QO
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP10QQmlEngineP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlComponentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -116,7 +99,7 @@ func NewQQmlComponent_2(arg0 *QQmlEngine /*777 QQmlEngine **/, fileName string, 
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP10QQmlEngineRK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlComponentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -131,7 +114,7 @@ func NewQQmlComponent_3(arg0 *QQmlEngine /*777 QQmlEngine **/, fileName string, 
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg3 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP10QQmlEngineRK7QStringNS_15CompilationModeEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, mode, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlComponentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -145,7 +128,7 @@ func NewQQmlComponent_4(arg0 *QQmlEngine /*777 QQmlEngine **/, url *qtcore.QUrl,
 	var convArg1 = url.GetCthis()
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP10QQmlEngineRK4QUrlP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlComponentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -159,7 +142,7 @@ func NewQQmlComponent_5(arg0 *QQmlEngine /*777 QQmlEngine **/, url *qtcore.QUrl,
 	var convArg1 = url.GetCthis()
 	var convArg3 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP10QQmlEngineRK4QUrlNS_15CompilationModeEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, mode, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlComponentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -171,7 +154,7 @@ func NewQQmlComponent_5(arg0 *QQmlEngine /*777 QQmlEngine **/, url *qtcore.QUrl,
 func DeleteQQmlComponent(this *QQmlComponent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -181,7 +164,7 @@ func DeleteQQmlComponent(this *QQmlComponent) {
 // [4] QQmlComponent::Status status()
 func (this *QQmlComponent) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -191,7 +174,7 @@ func (this *QQmlComponent) Status() int {
 // [1] bool isNull()
 func (this *QQmlComponent) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -201,7 +184,7 @@ func (this *QQmlComponent) IsNull() bool {
 // [1] bool isReady()
 func (this *QQmlComponent) IsReady() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent7isReadyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -211,7 +194,7 @@ func (this *QQmlComponent) IsReady() bool {
 // [1] bool isError()
 func (this *QQmlComponent) IsError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent7isErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -221,7 +204,7 @@ func (this *QQmlComponent) IsError() bool {
 // [1] bool isLoading()
 func (this *QQmlComponent) IsLoading() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent9isLoadingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -231,7 +214,7 @@ func (this *QQmlComponent) IsLoading() bool {
 // [8] QString errorString()
 func (this *QQmlComponent) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -244,7 +227,7 @@ func (this *QQmlComponent) ErrorString() string {
 // [8] qreal progress()
 func (this *QQmlComponent) Progress() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent8progressEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -254,7 +237,7 @@ func (this *QQmlComponent) Progress() float64 {
 // [8] QUrl url()
 func (this *QQmlComponent) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
@@ -267,7 +250,7 @@ func (this *QQmlComponent) Url() *qtcore.QUrl /*123*/ {
 func (this *QQmlComponent) Create(context *QQmlContext /*777 QQmlContext **/) *qtcore.QObject /*777 QObject **/ {
 	var convArg0 = context.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent6createEP11QQmlContext", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -280,7 +263,7 @@ func (this *QQmlComponent) Create_1(arg0 *QQmlIncubator, context *QQmlContext /*
 	var convArg1 = context.GetCthis()
 	var convArg2 = forContext.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent6createER13QQmlIncubatorP11QQmlContextS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlcomponent.h:105
@@ -290,7 +273,7 @@ func (this *QQmlComponent) Create_1(arg0 *QQmlIncubator, context *QQmlContext /*
 func (this *QQmlComponent) BeginCreate(arg0 *QQmlContext /*777 QQmlContext **/) *qtcore.QObject /*777 QObject **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent11beginCreateEP11QQmlContext", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -300,7 +283,7 @@ func (this *QQmlComponent) BeginCreate(arg0 *QQmlContext /*777 QQmlContext **/) 
 // [-2] void completeCreate()
 func (this *QQmlComponent) CompleteCreate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent14completeCreateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlcomponent.h:111
@@ -309,7 +292,7 @@ func (this *QQmlComponent) CompleteCreate() {
 // [8] QQmlContext * creationContext()
 func (this *QQmlComponent) CreationContext() *QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent15creationContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -320,7 +303,7 @@ func (this *QQmlComponent) CreationContext() *QQmlContext /*777 QQmlContext **/ 
 func (this *QQmlComponent) QmlAttachedProperties(arg0 *qtcore.QObject /*777 QObject **/) unsafe.Pointer /*666*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent21qmlAttachedPropertiesEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 func QQmlComponent_QmlAttachedProperties(arg0 *qtcore.QObject /*777 QObject **/) unsafe.Pointer /*666*/ {
@@ -336,7 +319,7 @@ func QQmlComponent_QmlAttachedProperties(arg0 *qtcore.QObject /*777 QObject **/)
 func (this *QQmlComponent) LoadUrl(url *qtcore.QUrl) {
 	var convArg0 = url.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent7loadUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlcomponent.h:117
@@ -346,7 +329,7 @@ func (this *QQmlComponent) LoadUrl(url *qtcore.QUrl) {
 func (this *QQmlComponent) LoadUrl_1(url *qtcore.QUrl, mode int) {
 	var convArg0 = url.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent7loadUrlERK4QUrlNS_15CompilationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlcomponent.h:118
@@ -357,7 +340,7 @@ func (this *QQmlComponent) SetData(arg0 *qtcore.QByteArray, baseUrl *qtcore.QUrl
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = baseUrl.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent7setDataERK10QByteArrayRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlcomponent.h:121
@@ -366,7 +349,7 @@ func (this *QQmlComponent) SetData(arg0 *qtcore.QByteArray, baseUrl *qtcore.QUrl
 // [-2] void statusChanged(QQmlComponent::Status)
 func (this *QQmlComponent) StatusChanged(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent13statusChangedENS_6StatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlcomponent.h:122
@@ -375,7 +358,7 @@ func (this *QQmlComponent) StatusChanged(arg0 int) {
 // [-2] void progressChanged(qreal)
 func (this *QQmlComponent) ProgressChanged(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent15progressChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QQmlComponent__CompilationMode = int
@@ -391,3 +374,28 @@ const QQmlComponent__Loading QQmlComponent__Status = 2
 const QQmlComponent__Error QQmlComponent__Status = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+}
+
+//  keep block end

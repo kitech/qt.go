@@ -6,6 +6,14 @@ package qtqml
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QQmlError) NewFromPointer(cthis unsafe.Pointer) *QQmlError {
 // [-2] void QQmlError()
 func NewQQmlError() *QQmlError {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlErrorC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlErrorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlError)
 	return gothis
@@ -93,7 +76,7 @@ func NewQQmlError() *QQmlError {
 func DeleteQQmlError(this *QQmlError) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlErrorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -103,7 +86,7 @@ func DeleteQQmlError(this *QQmlError) {
 // [1] bool isValid()
 func (this *QQmlError) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -113,7 +96,7 @@ func (this *QQmlError) IsValid() bool {
 // [8] QUrl url()
 func (this *QQmlError) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
@@ -126,7 +109,7 @@ func (this *QQmlError) Url() *qtcore.QUrl /*123*/ {
 func (this *QQmlError) SetUrl(arg0 *qtcore.QUrl) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError6setUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlerror.h:65
@@ -135,7 +118,7 @@ func (this *QQmlError) SetUrl(arg0 *qtcore.QUrl) {
 // [8] QString description()
 func (this *QQmlError) Description() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -150,7 +133,7 @@ func (this *QQmlError) SetDescription(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlerror.h:67
@@ -159,7 +142,7 @@ func (this *QQmlError) SetDescription(arg0 string) {
 // [4] int line()
 func (this *QQmlError) Line() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError4lineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -169,7 +152,7 @@ func (this *QQmlError) Line() int {
 // [-2] void setLine(int)
 func (this *QQmlError) SetLine(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError7setLineEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlerror.h:69
@@ -178,7 +161,7 @@ func (this *QQmlError) SetLine(arg0 int) {
 // [4] int column()
 func (this *QQmlError) Column() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError6columnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -188,7 +171,7 @@ func (this *QQmlError) Column() int {
 // [-2] void setColumn(int)
 func (this *QQmlError) SetColumn(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError9setColumnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlerror.h:71
@@ -197,7 +180,7 @@ func (this *QQmlError) SetColumn(arg0 int) {
 // [8] QObject * object()
 func (this *QQmlError) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -208,7 +191,7 @@ func (this *QQmlError) Object() *qtcore.QObject /*777 QObject **/ {
 func (this *QQmlError) SetObject(arg0 *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError9setObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlerror.h:73
@@ -217,7 +200,7 @@ func (this *QQmlError) SetObject(arg0 *qtcore.QObject /*777 QObject **/) {
 // [4] QtMsgType messageType()
 func (this *QQmlError) MessageType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError11messageTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -227,7 +210,7 @@ func (this *QQmlError) MessageType() int {
 // [-2] void setMessageType(enum QtMsgType)
 func (this *QQmlError) SetMessageType(messageType int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError14setMessageTypeE9QtMsgType", qtrt.FFI_TYPE_POINTER, this.GetCthis(), messageType)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlerror.h:76
@@ -236,7 +219,7 @@ func (this *QQmlError) SetMessageType(messageType int) {
 // [8] QString toString()
 func (this *QQmlError) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -244,3 +227,28 @@ func (this *QQmlError) ToString() string {
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+}
+
+//  keep block end

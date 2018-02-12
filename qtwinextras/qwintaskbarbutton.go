@@ -6,6 +6,14 @@ package qtwinextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwinextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QWinTaskbarButton) NewFromPointer(cthis unsafe.Pointer) *QWinTaskbarButto
 // [8] const QMetaObject * metaObject()
 func (this *QWinTaskbarButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -88,7 +71,7 @@ func (this *QWinTaskbarButton) MetaObject() *qtcore.QMetaObject /*777 const QMet
 func NewQWinTaskbarButton(parent *qtcore.QObject /*777 QObject **/) *QWinTaskbarButton {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButtonC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinTaskbarButtonFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -100,7 +83,7 @@ func NewQWinTaskbarButton(parent *qtcore.QObject /*777 QObject **/) *QWinTaskbar
 func DeleteQWinTaskbarButton(this *QWinTaskbarButton) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButtonD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -111,7 +94,7 @@ func DeleteQWinTaskbarButton(this *QWinTaskbarButton) {
 func (this *QWinTaskbarButton) SetWindow(window *qtgui.QWindow /*777 QWindow **/) {
 	var convArg0 = window.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton9setWindowEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarbutton.h:66
@@ -120,7 +103,7 @@ func (this *QWinTaskbarButton) SetWindow(window *qtgui.QWindow /*777 QWindow **/
 // [8] QWindow * window()
 func (this *QWinTaskbarButton) Window() *qtgui.QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtgui.NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -130,7 +113,7 @@ func (this *QWinTaskbarButton) Window() *qtgui.QWindow /*777 QWindow **/ {
 // [8] QIcon overlayIcon()
 func (this *QWinTaskbarButton) OverlayIcon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton11overlayIconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
@@ -142,7 +125,7 @@ func (this *QWinTaskbarButton) OverlayIcon() *qtgui.QIcon /*123*/ {
 // [8] QString overlayAccessibleDescription()
 func (this *QWinTaskbarButton) OverlayAccessibleDescription() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton28overlayAccessibleDescriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -155,7 +138,7 @@ func (this *QWinTaskbarButton) OverlayAccessibleDescription() string {
 // [8] QWinTaskbarProgress * progress()
 func (this *QWinTaskbarButton) Progress() *QWinTaskbarProgress /*777 QWinTaskbarProgress **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton8progressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWinTaskbarProgressFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -167,7 +150,7 @@ func (this *QWinTaskbarButton) EventFilter(arg0 *qtcore.QObject /*777 QObject **
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -178,7 +161,7 @@ func (this *QWinTaskbarButton) EventFilter(arg0 *qtcore.QObject /*777 QObject **
 func (this *QWinTaskbarButton) SetOverlayIcon(icon *qtgui.QIcon) {
 	var convArg0 = icon.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton14setOverlayIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarbutton.h:77
@@ -189,7 +172,7 @@ func (this *QWinTaskbarButton) SetOverlayAccessibleDescription(description strin
 	var tmpArg0 = qtcore.NewQString_5(description)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton31setOverlayAccessibleDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarbutton.h:79
@@ -198,7 +181,32 @@ func (this *QWinTaskbarButton) SetOverlayAccessibleDescription(description strin
 // [-2] void clearOverlayIcon()
 func (this *QWinTaskbarButton) ClearOverlayIcon() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton16clearOverlayIconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

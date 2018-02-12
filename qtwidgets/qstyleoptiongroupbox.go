@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QStyleOptionGroupBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionG
 // [-2] void QStyleOptionGroupBox()
 func NewQStyleOptionGroupBox() *QStyleOptionGroupBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionGroupBox)
 	return gothis
@@ -89,7 +72,7 @@ func NewQStyleOptionGroupBox() *QStyleOptionGroupBox {
 // [-2] void QStyleOptionGroupBox(int)
 func NewQStyleOptionGroupBox_1(version int) *QStyleOptionGroupBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionGroupBox)
 	return gothis
@@ -97,7 +80,7 @@ func NewQStyleOptionGroupBox_1(version int) *QStyleOptionGroupBox {
 
 func DeleteQStyleOptionGroupBox(this *QStyleOptionGroupBox) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -110,3 +93,28 @@ type QStyleOptionGroupBox__StyleOptionVersion = int
 const QStyleOptionGroupBox__Version QStyleOptionGroupBox__StyleOptionVersion = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

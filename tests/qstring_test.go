@@ -1,9 +1,9 @@
 package main
 
 import "testing"
-import "qt5"
 import "reflect"
 import "unsafe"
+import "github.com/kitech/qt5"
 
 func init() {
 	if false {

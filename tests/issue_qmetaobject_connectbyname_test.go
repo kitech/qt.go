@@ -1,13 +1,12 @@
 package main
 
 import (
-	"gopp"
 	"log"
 	"os"
 	"testing"
 
-	ffiqt "qt.go/cffiqt"
-	"qt.go/qtcore"
+	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 func Test0(t *testing.T) {
@@ -15,8 +14,8 @@ func Test0(t *testing.T) {
 	log.Println(app)
 
 	{ // ok
-		rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject18connectSlotsByNameEP7QObject", ffiqt.FFI_TYPE_POINTER, app.GetCthis())
-		gopp.ErrPrint(err, rv)
+		rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject18connectSlotsByNameEP7QObject", qtrt.FFI_TYPE_POINTER, app.GetCthis())
+		qtrt.ErrPrint(err, rv)
 	}
 	{
 		var nilthis *qtcore.QMetaObject

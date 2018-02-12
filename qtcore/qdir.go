@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -74,7 +63,7 @@ func NewQDir(path string) *QDir {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDirFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDir)
 	return gothis
@@ -90,7 +79,7 @@ func NewQDir_1(path string, nameFilter string, sort int, filter int) *QDir {
 	var tmpArg1 = NewQString_5(nameFilter)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QStringS2_6QFlagsINS_8SortFlagEES3_INS_6FilterEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, sort, filter)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDirFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDir)
 	return gothis
@@ -103,7 +92,7 @@ func NewQDir_1(path string, nameFilter string, sort int, filter int) *QDir {
 func DeleteQDir(this *QDir) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -114,7 +103,7 @@ func DeleteQDir(this *QDir) {
 func (this *QDir) Swap(other *QDir) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdir.h:116
@@ -125,7 +114,7 @@ func (this *QDir) SetPath(path string) {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir7setPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdir.h:117
@@ -134,7 +123,7 @@ func (this *QDir) SetPath(path string) {
 // [8] QString path()
 func (this *QDir) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir4pathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -147,7 +136,7 @@ func (this *QDir) Path() string {
 // [8] QString absolutePath()
 func (this *QDir) AbsolutePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir12absolutePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -160,7 +149,7 @@ func (this *QDir) AbsolutePath() string {
 // [8] QString canonicalPath()
 func (this *QDir) CanonicalPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13canonicalPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -175,7 +164,7 @@ func (this *QDir) AddResourceSearchPath(path string) {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir21addResourceSearchPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QDir_AddResourceSearchPath(path string) {
 	var nilthis *QDir
@@ -191,7 +180,7 @@ func (this *QDir) SetSearchPaths(prefix string, searchPaths *QStringList) {
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = searchPaths.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir14setSearchPathsERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QDir_SetSearchPaths(prefix string, searchPaths *QStringList) {
 	var nilthis *QDir
@@ -208,7 +197,7 @@ func (this *QDir) AddSearchPath(prefix string, path string) {
 	var tmpArg1 = NewQString_5(path)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir13addSearchPathERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QDir_AddSearchPath(prefix string, path string) {
 	var nilthis *QDir
@@ -223,7 +212,7 @@ func (this *QDir) SearchPaths(prefix string) *QStringList /*123*/ {
 	var tmpArg0 = NewQString_5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir11searchPathsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -240,7 +229,7 @@ func QDir_SearchPaths(prefix string) *QStringList /*123*/ {
 // [8] QString dirName()
 func (this *QDir) DirName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7dirNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -255,7 +244,7 @@ func (this *QDir) FilePath(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir8filePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -270,7 +259,7 @@ func (this *QDir) AbsoluteFilePath(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir16absoluteFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -285,7 +274,7 @@ func (this *QDir) RelativeFilePath(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir16relativeFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -300,7 +289,7 @@ func (this *QDir) ToNativeSeparators(pathName string) string {
 	var tmpArg0 = NewQString_5(pathName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir18toNativeSeparatorsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -320,7 +309,7 @@ func (this *QDir) FromNativeSeparators(pathName string) string {
 	var tmpArg0 = NewQString_5(pathName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir20fromNativeSeparatorsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -340,7 +329,7 @@ func (this *QDir) Cd(dirName string) bool {
 	var tmpArg0 = NewQString_5(dirName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir2cdERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -350,7 +339,7 @@ func (this *QDir) Cd(dirName string) bool {
 // [1] bool cdUp()
 func (this *QDir) CdUp() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir4cdUpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -360,7 +349,7 @@ func (this *QDir) CdUp() bool {
 // [8] QStringList nameFilters()
 func (this *QDir) NameFilters() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir11nameFiltersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -373,7 +362,7 @@ func (this *QDir) NameFilters() *QStringList /*123*/ {
 func (this *QDir) SetNameFilters(nameFilters *QStringList) {
 	var convArg0 = nameFilters.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir14setNameFiltersERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdir.h:141
@@ -382,7 +371,7 @@ func (this *QDir) SetNameFilters(nameFilters *QStringList) {
 // [4] QDir::Filters filter()
 func (this *QDir) Filter() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6filterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -392,7 +381,7 @@ func (this *QDir) Filter() int {
 // [-2] void setFilter(QDir::Filters)
 func (this *QDir) SetFilter(filter int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir9setFilterE6QFlagsINS_6FilterEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filter)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdir.h:143
@@ -401,7 +390,7 @@ func (this *QDir) SetFilter(filter int) {
 // [4] QDir::SortFlags sorting()
 func (this *QDir) Sorting() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7sortingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -411,7 +400,7 @@ func (this *QDir) Sorting() int {
 // [-2] void setSorting(QDir::SortFlags)
 func (this *QDir) SetSorting(sort int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir10setSortingE6QFlagsINS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), sort)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdir.h:146
@@ -420,7 +409,7 @@ func (this *QDir) SetSorting(sort int) {
 // [4] uint count()
 func (this *QDir) Count() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -430,7 +419,7 @@ func (this *QDir) Count() uint {
 // [1] bool isEmpty(QDir::Filters)
 func (this *QDir) IsEmpty(filters int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7isEmptyE6QFlagsINS_6FilterEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -442,7 +431,7 @@ func (this *QDir) NameFiltersFromString(nameFilter string) *QStringList /*123*/ 
 	var tmpArg0 = NewQString_5(nameFilter)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir21nameFiltersFromStringERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -459,7 +448,7 @@ func QDir_NameFiltersFromString(nameFilter string) *QStringList /*123*/ {
 // [8] QStringList entryList(QDir::Filters, QDir::SortFlags)
 func (this *QDir) EntryList(filters int, sort int) *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -472,7 +461,7 @@ func (this *QDir) EntryList(filters int, sort int) *QStringList /*123*/ {
 func (this *QDir) EntryList_1(nameFilters *QStringList, filters int, sort int) *QStringList /*123*/ {
 	var convArg0 = nameFilters.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListERK11QStringList6QFlagsINS_6FilterEES3_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, filters, sort)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -484,7 +473,7 @@ func (this *QDir) EntryList_1(nameFilters *QStringList, filters int, sort int) *
 // [-2] QFileInfoList entryInfoList(QDir::Filters, QDir::SortFlags)
 func (this *QDir) EntryInfoList(filters int, sort int) *QFileInfoList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFileInfoListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -496,7 +485,7 @@ func (this *QDir) EntryInfoList(filters int, sort int) *QFileInfoList /*667*/ {
 func (this *QDir) EntryInfoList_1(nameFilters *QStringList, filters int, sort int) *QFileInfoList /*667*/ {
 	var convArg0 = nameFilters.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListERK11QStringList6QFlagsINS_6FilterEES3_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, filters, sort)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFileInfoListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -509,7 +498,7 @@ func (this *QDir) Mkdir(dirName string) bool {
 	var tmpArg0 = NewQString_5(dirName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir5mkdirERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -521,7 +510,7 @@ func (this *QDir) Rmdir(dirName string) bool {
 	var tmpArg0 = NewQString_5(dirName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir5rmdirERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -533,7 +522,7 @@ func (this *QDir) Mkpath(dirPath string) bool {
 	var tmpArg0 = NewQString_5(dirPath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6mkpathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -545,7 +534,7 @@ func (this *QDir) Rmpath(dirPath string) bool {
 	var tmpArg0 = NewQString_5(dirPath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6rmpathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -555,7 +544,7 @@ func (this *QDir) Rmpath(dirPath string) bool {
 // [1] bool removeRecursively()
 func (this *QDir) RemoveRecursively() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir17removeRecursivelyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -565,7 +554,7 @@ func (this *QDir) RemoveRecursively() bool {
 // [1] bool isReadable()
 func (this *QDir) IsReadable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir10isReadableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -575,7 +564,7 @@ func (this *QDir) IsReadable() bool {
 // [1] bool exists()
 func (this *QDir) Exists() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6existsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -587,7 +576,7 @@ func (this *QDir) Exists_1(name string) bool {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6existsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -597,7 +586,7 @@ func (this *QDir) Exists_1(name string) bool {
 // [1] bool isRoot()
 func (this *QDir) IsRoot() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6isRootEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -609,7 +598,7 @@ func (this *QDir) IsRelativePath(path string) bool {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir14isRelativePathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QDir_IsRelativePath(path string) bool {
@@ -626,7 +615,7 @@ func (this *QDir) IsAbsolutePath(path string) bool {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir14isAbsolutePathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QDir_IsAbsolutePath(path string) bool {
@@ -641,7 +630,7 @@ func QDir_IsAbsolutePath(path string) bool {
 // [1] bool isRelative()
 func (this *QDir) IsRelative() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir10isRelativeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -651,7 +640,7 @@ func (this *QDir) IsRelative() bool {
 // [1] bool isAbsolute()
 func (this *QDir) IsAbsolute() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir10isAbsoluteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -661,7 +650,7 @@ func (this *QDir) IsAbsolute() bool {
 // [1] bool makeAbsolute()
 func (this *QDir) MakeAbsolute() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir12makeAbsoluteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -673,7 +662,7 @@ func (this *QDir) Remove(fileName string) bool {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir6removeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -687,7 +676,7 @@ func (this *QDir) Rename(oldName string, newName string) bool {
 	var tmpArg1 = NewQString_5(newName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir6renameERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -697,7 +686,7 @@ func (this *QDir) Rename(oldName string, newName string) bool {
 // [-2] QFileInfoList drives()
 func (this *QDir) Drives() *QFileInfoList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir6drivesEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFileInfoListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -713,7 +702,7 @@ func QDir_Drives() *QFileInfoList /*667*/ {
 // [2] QChar listSeparator()
 func (this *QDir) ListSeparator() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir13listSeparatorEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -730,7 +719,7 @@ func QDir_ListSeparator() *QChar /*123*/ {
 // [2] QChar separator()
 func (this *QDir) Separator() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir9separatorEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -749,7 +738,7 @@ func (this *QDir) SetCurrent(path string) bool {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir10setCurrentERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QDir_SetCurrent(path string) bool {
@@ -764,7 +753,7 @@ func QDir_SetCurrent(path string) bool {
 // [8] QDir current()
 func (this *QDir) Current() *QDir /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir7currentEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDir)
 	return rv2
@@ -781,7 +770,7 @@ func QDir_Current() *QDir /*123*/ {
 // [8] QString currentPath()
 func (this *QDir) CurrentPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir11currentPathEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -799,7 +788,7 @@ func QDir_CurrentPath() string {
 // [8] QDir home()
 func (this *QDir) Home() *QDir /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir4homeEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDir)
 	return rv2
@@ -816,7 +805,7 @@ func QDir_Home() *QDir /*123*/ {
 // [8] QString homePath()
 func (this *QDir) HomePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir8homePathEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -834,7 +823,7 @@ func QDir_HomePath() string {
 // [8] QDir root()
 func (this *QDir) Root() *QDir /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir4rootEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDir)
 	return rv2
@@ -851,7 +840,7 @@ func QDir_Root() *QDir /*123*/ {
 // [8] QString rootPath()
 func (this *QDir) RootPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir8rootPathEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -869,7 +858,7 @@ func QDir_RootPath() string {
 // [8] QDir temp()
 func (this *QDir) Temp() *QDir /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir4tempEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDir)
 	return rv2
@@ -886,7 +875,7 @@ func QDir_Temp() *QDir /*123*/ {
 // [8] QString tempPath()
 func (this *QDir) TempPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir8tempPathEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -907,7 +896,7 @@ func (this *QDir) Match(filters *QStringList, fileName string) bool {
 	var tmpArg1 = NewQString_5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir5matchERK11QStringListRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QDir_Match(filters *QStringList, fileName string) bool {
@@ -926,7 +915,7 @@ func (this *QDir) Match_1(filter string, fileName string) bool {
 	var tmpArg1 = NewQString_5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir5matchERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QDir_Match_1(filter string, fileName string) bool {
@@ -943,7 +932,7 @@ func (this *QDir) CleanPath(path string) string {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir9cleanPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -961,7 +950,7 @@ func QDir_CleanPath(path string) string {
 // [-2] void refresh()
 func (this *QDir) Refresh() {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7refreshEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QDir__Filter = int
@@ -1003,3 +992,22 @@ const QDir__Type QDir__SortFlag = 128
 const QDir__NoSort QDir__SortFlag = -1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

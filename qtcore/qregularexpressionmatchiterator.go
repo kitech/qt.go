@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QRegularExpressionMatchIterator) NewFromPointer(cthis unsafe.Pointer) *QR
 // [-2] void QRegularExpressionMatchIterator()
 func NewQRegularExpressionMatchIterator() *QRegularExpressionMatchIterator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratorC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionMatchIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRegularExpressionMatchIterator)
 	return gothis
@@ -85,7 +74,7 @@ func NewQRegularExpressionMatchIterator() *QRegularExpressionMatchIterator {
 func DeleteQRegularExpressionMatchIterator(this *QRegularExpressionMatchIterator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -96,7 +85,7 @@ func DeleteQRegularExpressionMatchIterator(this *QRegularExpressionMatchIterator
 func (this *QRegularExpressionMatchIterator) Swap(other *QRegularExpressionMatchIterator) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIterator4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:259
@@ -105,7 +94,7 @@ func (this *QRegularExpressionMatchIterator) Swap(other *QRegularExpressionMatch
 // [1] bool isValid()
 func (this *QRegularExpressionMatchIterator) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -115,7 +104,7 @@ func (this *QRegularExpressionMatchIterator) IsValid() bool {
 // [1] bool hasNext()
 func (this *QRegularExpressionMatchIterator) HasNext() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator7hasNextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -125,7 +114,7 @@ func (this *QRegularExpressionMatchIterator) HasNext() bool {
 // [8] QRegularExpressionMatch next()
 func (this *QRegularExpressionMatchIterator) Next() *QRegularExpressionMatch /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIterator4nextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpressionMatch)
 	return rv2
@@ -137,7 +126,7 @@ func (this *QRegularExpressionMatchIterator) Next() *QRegularExpressionMatch /*1
 // [8] QRegularExpressionMatch peekNext()
 func (this *QRegularExpressionMatchIterator) PeekNext() *QRegularExpressionMatch /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator8peekNextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpressionMatch)
 	return rv2
@@ -149,7 +138,7 @@ func (this *QRegularExpressionMatchIterator) PeekNext() *QRegularExpressionMatch
 // [8] QRegularExpression regularExpression()
 func (this *QRegularExpressionMatchIterator) RegularExpression() *QRegularExpression /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator17regularExpressionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpression)
 	return rv2
@@ -161,7 +150,7 @@ func (this *QRegularExpressionMatchIterator) RegularExpression() *QRegularExpres
 // [4] QRegularExpression::MatchType matchType()
 func (this *QRegularExpressionMatchIterator) MatchType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator9matchTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -171,8 +160,27 @@ func (this *QRegularExpressionMatchIterator) MatchType() int {
 // [4] QRegularExpression::MatchOptions matchOptions()
 func (this *QRegularExpressionMatchIterator) MatchOptions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator12matchOptionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

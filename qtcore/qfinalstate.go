@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // void onEntry(class QEvent *)
 func (this *QFinalState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onEntry", f)
@@ -83,7 +73,7 @@ func (*QFinalState) NewFromPointer(cthis unsafe.Pointer) *QFinalState {
 // [8] const QMetaObject * metaObject()
 func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFinalState10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -94,7 +84,7 @@ func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 func NewQFinalState(parent *QState /*777 QState **/) *QFinalState {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFinalStateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -106,7 +96,7 @@ func NewQFinalState(parent *QState /*777 QState **/) *QFinalState {
 func DeleteQFinalState(this *QFinalState) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalStateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -117,7 +107,7 @@ func DeleteQFinalState(this *QFinalState) {
 func (this *QFinalState) OnEntry(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qfinalstate.h:59
@@ -127,7 +117,7 @@ func (this *QFinalState) OnEntry(event *QEvent /*777 QEvent **/) {
 func (this *QFinalState) OnExit(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qfinalstate.h:61
@@ -137,8 +127,27 @@ func (this *QFinalState) OnExit(event *QEvent /*777 QEvent **/) {
 func (this *QFinalState) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

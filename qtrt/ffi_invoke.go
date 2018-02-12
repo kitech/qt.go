@@ -80,7 +80,6 @@ import "C"
 
 import (
 	"fmt"
-	"gopp"
 	"log"
 	"reflect"
 	"regexp"
@@ -164,7 +163,7 @@ func init_invoke() {
 		var err error
 		var lib ffi.Library
 		lib, err = ffi.NewLibrary(libpath)
-		gopp.ErrPrint(err, lib)
+		ErrPrint(err, lib)
 		// log.Println(lib)
 		if err == nil {
 			libs[modname] = lib
@@ -177,7 +176,7 @@ func init_invoke() {
 	case "android":
 		for i := 1; i < 9; i++ {
 			d := fmt.Sprintf("/data/app/org.qtproject.example.go-%d/lib/arm", i)
-			if gopp.FileExist(d) {
+			if FileExist(d) {
 				dirp = d
 				break
 			}
@@ -189,7 +188,7 @@ func init_invoke() {
 		loadModule(libpath, modname)
 	}
 
-	loadModule("./tsym.so", "tsym")
+	// loadModule("./tsym.so", "tsym")
 }
 
 func deinit() {}
@@ -198,7 +197,7 @@ func InvokeQtFunc(symname string, retype byte, types []byte, args ...interface{}
 
 	for modname, lib := range libs {
 		addr, err := lib.Symbol(symname)
-		gopp.ErrPrint(err)
+		ErrPrint(err)
 		if err != nil {
 			continue
 		}
@@ -261,7 +260,7 @@ func isUndefinedSymbolErr(err error) bool {
 var UseWrapSymbols bool = true // see also qtrt.UseCppSymbols TODO merge
 
 func refmtSymbolName(symname string) string {
-	return gopp.IfElseStr(UseWrapSymbols && strings.HasPrefix(symname, "_Z"), "C"+symname, symname)
+	return IfElseStr(UseWrapSymbols && strings.HasPrefix(symname, "_Z"), "C"+symname, symname)
 }
 
 func GetQtSymAddr(symname string) unsafe.Pointer {
@@ -269,7 +268,7 @@ func GetQtSymAddr(symname string) unsafe.Pointer {
 	for _, lib := range libs {
 		addr, err := lib.Symbol(symname)
 		if !isUndefinedSymbolErr(err) {
-			gopp.ErrPrint(err, "")
+			ErrPrint(err, "")
 		}
 		if err != nil {
 			continue
@@ -317,7 +316,7 @@ func convArg(argx interface{}) (argty byte, argval uint64) {
 		argval = uint64(argx.(uint))
 	case reflect.Bool:
 		argty = FFI_TYPE_INT
-		argval = uint64(gopp.IfElseInt(argx.(bool), 1, 0))
+		argval = uint64(IfElseInt(argx.(bool), 1, 0))
 	case reflect.Ptr:
 		argty = FFI_TYPE_POINTER
 		argval = uint64(av.Pointer())
@@ -341,9 +340,9 @@ func convRetval(retype byte, retval interface{}) interface{} {
 	switch retype {
 	case FFI_TYPE_VOID:
 	case FFI_TYPE_INT:
-		return refv.Convert(gopp.IntTy).Interface()
+		return refv.Convert(IntTy).Interface()
 	case FFI_TYPE_UINT8:
-		return refv.Convert(gopp.Uint8Ty).Interface()
+		return refv.Convert(Uint8Ty).Interface()
 	default:
 		log.Println("Unknown type:", refv.Type().String())
 	}

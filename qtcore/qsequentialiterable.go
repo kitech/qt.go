@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QSequentialIterable) NewFromPointer(cthis unsafe.Pointer) *QSequentialIte
 // [112] QSequentialIterable::const_iterator begin()
 func (this *QSequentialIterable) Begin() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -82,7 +71,7 @@ func (this *QSequentialIterable) Begin() unsafe.Pointer /*444*/ {
 // [112] QSequentialIterable::const_iterator end()
 func (this *QSequentialIterable) End() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -92,7 +81,7 @@ func (this *QSequentialIterable) End() unsafe.Pointer /*444*/ {
 // [16] QVariant at(int)
 func (this *QSequentialIterable) At(idx int) *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), idx)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -104,7 +93,7 @@ func (this *QSequentialIterable) At(idx int) *QVariant /*123*/ {
 // [4] int size()
 func (this *QSequentialIterable) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -114,14 +103,33 @@ func (this *QSequentialIterable) Size() int {
 // [1] bool canReverseIterate()
 func (this *QSequentialIterable) CanReverseIterate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable17canReverseIterateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 func DeleteQSequentialIterable(this *QSequentialIterable) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSequentialIterableD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

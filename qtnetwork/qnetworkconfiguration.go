@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QNetworkConfiguration) NewFromPointer(cthis unsafe.Pointer) *QNetworkConf
 // [-2] void QNetworkConfiguration()
 func NewQNetworkConfiguration() *QNetworkConfiguration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkConfigurationC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkConfigurationFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQNetworkConfiguration)
 	return gothis
@@ -89,7 +75,7 @@ func NewQNetworkConfiguration() *QNetworkConfiguration {
 func DeleteQNetworkConfiguration(this *QNetworkConfiguration) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkConfigurationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +86,7 @@ func DeleteQNetworkConfiguration(this *QNetworkConfiguration) {
 func (this *QNetworkConfiguration) Swap(other *QNetworkConfiguration) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkConfiguration4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:108
@@ -109,7 +95,7 @@ func (this *QNetworkConfiguration) Swap(other *QNetworkConfiguration) {
 // [4] QNetworkConfiguration::StateFlags state()
 func (this *QNetworkConfiguration) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -119,7 +105,7 @@ func (this *QNetworkConfiguration) State() int {
 // [4] QNetworkConfiguration::Type type()
 func (this *QNetworkConfiguration) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -129,7 +115,7 @@ func (this *QNetworkConfiguration) Type() int {
 // [4] QNetworkConfiguration::Purpose purpose()
 func (this *QNetworkConfiguration) Purpose() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration7purposeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -139,7 +125,7 @@ func (this *QNetworkConfiguration) Purpose() int {
 // [4] QNetworkConfiguration::BearerType bearerType()
 func (this *QNetworkConfiguration) BearerType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration10bearerTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -149,7 +135,7 @@ func (this *QNetworkConfiguration) BearerType() int {
 // [4] QNetworkConfiguration::BearerType bearerTypeFamily()
 func (this *QNetworkConfiguration) BearerTypeFamily() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration16bearerTypeFamilyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -159,7 +145,7 @@ func (this *QNetworkConfiguration) BearerTypeFamily() int {
 // [8] QString bearerTypeName()
 func (this *QNetworkConfiguration) BearerTypeName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration14bearerTypeNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -172,7 +158,7 @@ func (this *QNetworkConfiguration) BearerTypeName() string {
 // [8] QString identifier()
 func (this *QNetworkConfiguration) Identifier() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration10identifierEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -185,7 +171,7 @@ func (this *QNetworkConfiguration) Identifier() string {
 // [1] bool isRoamingAvailable()
 func (this *QNetworkConfiguration) IsRoamingAvailable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration18isRoamingAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -195,7 +181,7 @@ func (this *QNetworkConfiguration) IsRoamingAvailable() bool {
 // [8] QString name()
 func (this *QNetworkConfiguration) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -208,7 +194,7 @@ func (this *QNetworkConfiguration) Name() string {
 // [1] bool isValid()
 func (this *QNetworkConfiguration) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -218,7 +204,7 @@ func (this *QNetworkConfiguration) IsValid() bool {
 // [4] int connectTimeout()
 func (this *QNetworkConfiguration) ConnectTimeout() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration14connectTimeoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -228,7 +214,7 @@ func (this *QNetworkConfiguration) ConnectTimeout() int {
 // [1] bool setConnectTimeout(int)
 func (this *QNetworkConfiguration) SetConnectTimeout(timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkConfiguration17setConnectTimeoutEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -270,3 +256,25 @@ const QNetworkConfiguration__Bearer3G QNetworkConfiguration__BearerType = 11
 const QNetworkConfiguration__Bearer4G QNetworkConfiguration__BearerType = 12
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

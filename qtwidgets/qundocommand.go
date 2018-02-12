@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -81,7 +64,7 @@ func (*QUndoCommand) NewFromPointer(cthis unsafe.Pointer) *QUndoCommand {
 func NewQUndoCommand(parent *QUndoCommand /*777 QUndoCommand **/) *QUndoCommand {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQUndoCommand)
 	return gothis
@@ -96,7 +79,7 @@ func NewQUndoCommand_1(text string, parent *QUndoCommand /*777 QUndoCommand **/)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandC2ERK7QStringPS_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQUndoCommand)
 	return gothis
@@ -109,7 +92,7 @@ func NewQUndoCommand_1(text string, parent *QUndoCommand /*777 QUndoCommand **/)
 func DeleteQUndoCommand(this *QUndoCommand) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -119,7 +102,7 @@ func DeleteQUndoCommand(this *QUndoCommand) {
 // [-2] void undo()
 func (this *QUndoCommand) Undo() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand4undoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:65
@@ -128,7 +111,7 @@ func (this *QUndoCommand) Undo() {
 // [-2] void redo()
 func (this *QUndoCommand) Redo() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand4redoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:67
@@ -137,7 +120,7 @@ func (this *QUndoCommand) Redo() {
 // [8] QString text()
 func (this *QUndoCommand) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -150,7 +133,7 @@ func (this *QUndoCommand) Text() string {
 // [8] QString actionText()
 func (this *QUndoCommand) ActionText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand10actionTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -165,7 +148,7 @@ func (this *QUndoCommand) SetText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:71
@@ -174,7 +157,7 @@ func (this *QUndoCommand) SetText(text string) {
 // [1] bool isObsolete()
 func (this *QUndoCommand) IsObsolete() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand10isObsoleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -184,7 +167,7 @@ func (this *QUndoCommand) IsObsolete() bool {
 // [-2] void setObsolete(_Bool)
 func (this *QUndoCommand) SetObsolete(obsolete bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand11setObsoleteEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), obsolete)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:74
@@ -193,7 +176,7 @@ func (this *QUndoCommand) SetObsolete(obsolete bool) {
 // [4] int id()
 func (this *QUndoCommand) Id() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand2idEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -204,7 +187,7 @@ func (this *QUndoCommand) Id() int {
 func (this *QUndoCommand) MergeWith(other *QUndoCommand /*777 const QUndoCommand **/) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand9mergeWithEPKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -214,7 +197,7 @@ func (this *QUndoCommand) MergeWith(other *QUndoCommand /*777 const QUndoCommand
 // [4] int childCount()
 func (this *QUndoCommand) ChildCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand10childCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -224,8 +207,33 @@ func (this *QUndoCommand) ChildCount() int {
 // [8] const QUndoCommand * child(int)
 func (this *QUndoCommand) Child(index int) *QUndoCommand /*777 const QUndoCommand **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand5childEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QStyleOption) NewFromPointer(cthis unsafe.Pointer) *QStyleOption {
 // [-2] void QStyleOption(int, int)
 func NewQStyleOption(version int, type_ int) *QStyleOption {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOption)
 	return gothis
@@ -93,7 +76,7 @@ func NewQStyleOption(version int, type_ int) *QStyleOption {
 func DeleteQStyleOption(this *QStyleOption) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOptionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 64)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -104,7 +87,7 @@ func DeleteQStyleOption(this *QStyleOption) {
 func (this *QStyleOption) Init(w *QWidget /*777 const QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOption4initEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:107
@@ -114,7 +97,7 @@ func (this *QStyleOption) Init(w *QWidget /*777 const QWidget **/) {
 func (this *QStyleOption) InitFrom(w *QWidget /*777 const QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOption8initFromEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QStyleOption__OptionType = int
@@ -155,3 +138,28 @@ type QStyleOption__StyleOptionVersion = int
 const QStyleOption__Version QStyleOption__StyleOptionVersion = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

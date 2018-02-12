@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QGroupBox) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -126,7 +110,7 @@ func (*QGroupBox) NewFromPointer(cthis unsafe.Pointer) *QGroupBox {
 // [8] const QMetaObject * metaObject()
 func (this *QGroupBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -137,7 +121,7 @@ func (this *QGroupBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 func NewQGroupBox(parent *QWidget /*777 QWidget **/) *QGroupBox {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -151,7 +135,7 @@ func NewQGroupBox_1(title string, parent *QWidget /*777 QWidget **/) *QGroupBox 
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBoxC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -163,7 +147,7 @@ func NewQGroupBox_1(title string, parent *QWidget /*777 QWidget **/) *QGroupBox 
 func DeleteQGroupBox(this *QGroupBox) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -173,7 +157,7 @@ func DeleteQGroupBox(this *QGroupBox) {
 // [8] QString title()
 func (this *QGroupBox) Title() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox5titleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -188,7 +172,7 @@ func (this *QGroupBox) SetTitle(title string) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:69
@@ -197,7 +181,7 @@ func (this *QGroupBox) SetTitle(title string) {
 // [4] Qt::Alignment alignment()
 func (this *QGroupBox) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -207,7 +191,7 @@ func (this *QGroupBox) Alignment() int {
 // [-2] void setAlignment(int)
 func (this *QGroupBox) SetAlignment(alignment int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox12setAlignmentEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:72
@@ -216,7 +200,7 @@ func (this *QGroupBox) SetAlignment(alignment int) {
 // [8] QSize minimumSizeHint()
 func (this *QGroupBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -228,7 +212,7 @@ func (this *QGroupBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // [1] bool isFlat()
 func (this *QGroupBox) IsFlat() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox6isFlatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -238,7 +222,7 @@ func (this *QGroupBox) IsFlat() bool {
 // [-2] void setFlat(_Bool)
 func (this *QGroupBox) SetFlat(flat bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox7setFlatEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flat)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:76
@@ -247,7 +231,7 @@ func (this *QGroupBox) SetFlat(flat bool) {
 // [1] bool isCheckable()
 func (this *QGroupBox) IsCheckable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox11isCheckableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -257,7 +241,7 @@ func (this *QGroupBox) IsCheckable() bool {
 // [-2] void setCheckable(_Bool)
 func (this *QGroupBox) SetCheckable(checkable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox12setCheckableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checkable)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:78
@@ -266,7 +250,7 @@ func (this *QGroupBox) SetCheckable(checkable bool) {
 // [1] bool isChecked()
 func (this *QGroupBox) IsChecked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox9isCheckedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -276,7 +260,7 @@ func (this *QGroupBox) IsChecked() bool {
 // [-2] void setChecked(_Bool)
 func (this *QGroupBox) SetChecked(checked bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox10setCheckedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checked)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:84
@@ -285,7 +269,7 @@ func (this *QGroupBox) SetChecked(checked bool) {
 // [-2] void clicked(_Bool)
 func (this *QGroupBox) Clicked(checked bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox7clickedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checked)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:85
@@ -294,7 +278,7 @@ func (this *QGroupBox) Clicked(checked bool) {
 // [-2] void toggled(_Bool)
 func (this *QGroupBox) Toggled(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox7toggledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:88
@@ -304,7 +288,7 @@ func (this *QGroupBox) Toggled(arg0 bool) {
 func (this *QGroupBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -315,7 +299,7 @@ func (this *QGroupBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 func (this *QGroupBox) ChildEvent(event *qtcore.QChildEvent /*777 QChildEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox10childEventEP11QChildEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:90
@@ -325,7 +309,7 @@ func (this *QGroupBox) ChildEvent(event *qtcore.QChildEvent /*777 QChildEvent **
 func (this *QGroupBox) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:91
@@ -335,7 +319,7 @@ func (this *QGroupBox) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent 
 func (this *QGroupBox) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:92
@@ -345,7 +329,7 @@ func (this *QGroupBox) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/
 func (this *QGroupBox) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:93
@@ -355,7 +339,7 @@ func (this *QGroupBox) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent *
 func (this *QGroupBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:94
@@ -365,7 +349,7 @@ func (this *QGroupBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 func (this *QGroupBox) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:95
@@ -375,7 +359,7 @@ func (this *QGroupBox) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEven
 func (this *QGroupBox) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:96
@@ -385,7 +369,7 @@ func (this *QGroupBox) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent
 func (this *QGroupBox) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:97
@@ -395,7 +379,32 @@ func (this *QGroupBox) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEv
 func (this *QGroupBox) InitStyleOption(option *QStyleOptionGroupBox /*777 QStyleOptionGroupBox **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox15initStyleOptionEP20QStyleOptionGroupBox", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

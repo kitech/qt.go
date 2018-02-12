@@ -6,6 +6,14 @@ package qtandroidextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QAndroidJniExceptionCleaner) NewFromPointer(cthis unsafe.Pointer) *QAndro
 // [-2] void QAndroidJniExceptionCleaner(enum QAndroidJniExceptionCleaner::OutputMode)
 func NewQAndroidJniExceptionCleaner(outputMode int) *QAndroidJniExceptionCleaner {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAndroidJniExceptionCleanerC2ENS_10OutputModeE", qtrt.FFI_TYPE_POINTER, outputMode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidJniExceptionCleanerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidJniExceptionCleaner)
 	return gothis
@@ -89,7 +75,7 @@ func NewQAndroidJniExceptionCleaner(outputMode int) *QAndroidJniExceptionCleaner
 func DeleteQAndroidJniExceptionCleaner(this *QAndroidJniExceptionCleaner) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAndroidJniExceptionCleanerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -99,7 +85,7 @@ func DeleteQAndroidJniExceptionCleaner(this *QAndroidJniExceptionCleaner) {
 // [-2] void clean()
 func (this *QAndroidJniExceptionCleaner) Clean() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAndroidJniExceptionCleaner5cleanEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QAndroidJniExceptionCleaner__OutputMode = int
@@ -108,3 +94,25 @@ const QAndroidJniExceptionCleaner__Silent QAndroidJniExceptionCleaner__OutputMod
 const QAndroidJniExceptionCleaner__Verbose QAndroidJniExceptionCleaner__OutputMode = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

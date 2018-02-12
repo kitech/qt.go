@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -77,7 +63,7 @@ func (*QBackingStore) NewFromPointer(cthis unsafe.Pointer) *QBackingStore {
 func NewQBackingStore(window *QWindow /*777 QWindow **/) *QBackingStore {
 	var convArg0 = window.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStoreC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQBackingStoreFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBackingStore)
 	return gothis
@@ -90,7 +76,7 @@ func NewQBackingStore(window *QWindow /*777 QWindow **/) *QBackingStore {
 func DeleteQBackingStore(this *QBackingStore) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStoreD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +86,7 @@ func DeleteQBackingStore(this *QBackingStore) {
 // [8] QWindow * window()
 func (this *QBackingStore) Window() *QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -110,7 +96,7 @@ func (this *QBackingStore) Window() *QWindow /*777 QWindow **/ {
 // [8] QPaintDevice * paintDevice()
 func (this *QBackingStore) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore11paintDeviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -123,7 +109,7 @@ func (this *QBackingStore) Flush(region *QRegion, window *QWindow /*777 QWindow 
 	var convArg1 = window.GetCthis()
 	var convArg2 = offset.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qbackingstore.h:71
@@ -133,7 +119,7 @@ func (this *QBackingStore) Flush(region *QRegion, window *QWindow /*777 QWindow 
 func (this *QBackingStore) Resize(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore6resizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qbackingstore.h:72
@@ -142,7 +128,7 @@ func (this *QBackingStore) Resize(size *qtcore.QSize) {
 // [8] QSize size()
 func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -155,7 +141,7 @@ func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 func (this *QBackingStore) Scroll(area *QRegion, dx int, dy int) bool {
 	var convArg0 = area.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore6scrollERK7QRegionii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, dx, dy)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -166,7 +152,7 @@ func (this *QBackingStore) Scroll(area *QRegion, dx int, dy int) bool {
 func (this *QBackingStore) BeginPaint(arg0 *QRegion) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore10beginPaintERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qbackingstore.h:77
@@ -175,7 +161,7 @@ func (this *QBackingStore) BeginPaint(arg0 *QRegion) {
 // [-2] void endPaint()
 func (this *QBackingStore) EndPaint() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore8endPaintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qbackingstore.h:79
@@ -185,7 +171,7 @@ func (this *QBackingStore) EndPaint() {
 func (this *QBackingStore) SetStaticContents(region *QRegion) {
 	var convArg0 = region.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore17setStaticContentsERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qbackingstore.h:80
@@ -194,7 +180,7 @@ func (this *QBackingStore) SetStaticContents(region *QRegion) {
 // [8] QRegion staticContents()
 func (this *QBackingStore) StaticContents() *QRegion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore14staticContentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
@@ -206,8 +192,30 @@ func (this *QBackingStore) StaticContents() *QRegion /*123*/ {
 // [1] bool hasStaticContents()
 func (this *QBackingStore) HasStaticContents() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore17hasStaticContentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

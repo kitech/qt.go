@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QMetaObject) NewFromPointer(cthis unsafe.Pointer) *QMetaObject {
 // [8] const char * className()
 func (this *QMetaObject) ClassName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject9classNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -82,7 +71,7 @@ func (this *QMetaObject) ClassName() string {
 // [8] const QMetaObject * superClass()
 func (this *QMetaObject) SuperClass() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject10superClassEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -93,7 +82,7 @@ func (this *QMetaObject) SuperClass() *QMetaObject /*777 const QMetaObject **/ {
 func (this *QMetaObject) Cast(obj *QObject /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject4castEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -104,7 +93,7 @@ func (this *QMetaObject) Cast(obj *QObject /*777 QObject **/) *QObject /*777 QOb
 func (this *QMetaObject) Cast_1(obj *QObject /*777 const QObject **/) *QObject /*777 const QObject **/ {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject4castEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -114,7 +103,7 @@ func (this *QMetaObject) Cast_1(obj *QObject /*777 const QObject **/) *QObject /
 // [4] int methodOffset()
 func (this *QMetaObject) MethodOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject12methodOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -124,7 +113,7 @@ func (this *QMetaObject) MethodOffset() int {
 // [4] int enumeratorOffset()
 func (this *QMetaObject) EnumeratorOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject16enumeratorOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -134,7 +123,7 @@ func (this *QMetaObject) EnumeratorOffset() int {
 // [4] int propertyOffset()
 func (this *QMetaObject) PropertyOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject14propertyOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -144,7 +133,7 @@ func (this *QMetaObject) PropertyOffset() int {
 // [4] int classInfoOffset()
 func (this *QMetaObject) ClassInfoOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject15classInfoOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -154,7 +143,7 @@ func (this *QMetaObject) ClassInfoOffset() int {
 // [4] int constructorCount()
 func (this *QMetaObject) ConstructorCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject16constructorCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -164,7 +153,7 @@ func (this *QMetaObject) ConstructorCount() int {
 // [4] int methodCount()
 func (this *QMetaObject) MethodCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11methodCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -174,7 +163,7 @@ func (this *QMetaObject) MethodCount() int {
 // [4] int enumeratorCount()
 func (this *QMetaObject) EnumeratorCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject15enumeratorCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -184,7 +173,7 @@ func (this *QMetaObject) EnumeratorCount() int {
 // [4] int propertyCount()
 func (this *QMetaObject) PropertyCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject13propertyCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -194,7 +183,7 @@ func (this *QMetaObject) PropertyCount() int {
 // [4] int classInfoCount()
 func (this *QMetaObject) ClassInfoCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject14classInfoCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -206,7 +195,7 @@ func (this *QMetaObject) IndexOfConstructor(constructor string) int {
 	var convArg0 = qtrt.CString(constructor)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject18indexOfConstructorEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -218,7 +207,7 @@ func (this *QMetaObject) IndexOfMethod(method string) int {
 	var convArg0 = qtrt.CString(method)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject13indexOfMethodEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -230,7 +219,7 @@ func (this *QMetaObject) IndexOfSignal(signal string) int {
 	var convArg0 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject13indexOfSignalEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -242,7 +231,7 @@ func (this *QMetaObject) IndexOfSlot(slot string) int {
 	var convArg0 = qtrt.CString(slot)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11indexOfSlotEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -254,7 +243,7 @@ func (this *QMetaObject) IndexOfEnumerator(name string) int {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject17indexOfEnumeratorEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -266,7 +255,7 @@ func (this *QMetaObject) IndexOfProperty(name string) int {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject15indexOfPropertyEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -278,7 +267,7 @@ func (this *QMetaObject) IndexOfClassInfo(name string) int {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject16indexOfClassInfoEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -288,7 +277,7 @@ func (this *QMetaObject) IndexOfClassInfo(name string) int {
 // [16] QMetaMethod constructor(int)
 func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11constructorEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaMethod)
 	return rv2
@@ -300,7 +289,7 @@ func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
 // [16] QMetaMethod method(int)
 func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject6methodEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaMethod)
 	return rv2
@@ -312,7 +301,7 @@ func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
 // [16] QMetaEnum enumerator(int)
 func (this *QMetaObject) Enumerator(index int) *QMetaEnum /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject10enumeratorEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMetaEnumFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaEnum)
 	return rv2
@@ -324,7 +313,7 @@ func (this *QMetaObject) Enumerator(index int) *QMetaEnum /*123*/ {
 // [32] QMetaProperty property(int)
 func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject8propertyEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMetaPropertyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaProperty)
 	return rv2
@@ -336,7 +325,7 @@ func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
 // [16] QMetaClassInfo classInfo(int)
 func (this *QMetaObject) ClassInfo(index int) *QMetaClassInfo /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject9classInfoEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMetaClassInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaClassInfo)
 	return rv2
@@ -348,7 +337,7 @@ func (this *QMetaObject) ClassInfo(index int) *QMetaClassInfo /*123*/ {
 // [32] QMetaProperty userProperty()
 func (this *QMetaObject) UserProperty() *QMetaProperty /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject12userPropertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMetaPropertyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaProperty)
 	return rv2
@@ -364,7 +353,7 @@ func (this *QMetaObject) CheckConnectArgs(signal string, method string) bool {
 	var convArg1 = qtrt.CString(method)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject16checkConnectArgsEPKcS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QMetaObject_CheckConnectArgs(signal string, method string) bool {
@@ -381,7 +370,7 @@ func (this *QMetaObject) CheckConnectArgs_1(signal *QMetaMethod, method *QMetaMe
 	var convArg0 = signal.GetCthis()
 	var convArg1 = method.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject16checkConnectArgsERK11QMetaMethodS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QMetaObject_CheckConnectArgs_1(signal *QMetaMethod, method *QMetaMethod) bool {
@@ -398,7 +387,7 @@ func (this *QMetaObject) NormalizedSignature(method string) *QByteArray /*123*/ 
 	var convArg0 = qtrt.CString(method)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject19normalizedSignatureEPKc", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -417,7 +406,7 @@ func (this *QMetaObject) NormalizedType(type_ string) *QByteArray /*123*/ {
 	var convArg0 = qtrt.CString(type_)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject14normalizedTypeEPKc", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -436,7 +425,7 @@ func (this *QMetaObject) Connect(sender *QObject /*777 const QObject **/, signal
 	var convArg0 = sender.GetCthis()
 	var convArg2 = receiver.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject7connectEPK7QObjectiS2_iiPi", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, convArg2, method_index, type_, &types)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 func QMetaObject_Connect(sender *QObject /*777 const QObject **/, signal_index int, receiver *QObject /*777 const QObject **/, method_index int, type_ int, types unsafe.Pointer /*666*/) unsafe.Pointer /*444*/ {
@@ -453,7 +442,7 @@ func (this *QMetaObject) Disconnect(sender *QObject /*777 const QObject **/, sig
 	var convArg0 = sender.GetCthis()
 	var convArg2 = receiver.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject10disconnectEPK7QObjectiS2_i", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, convArg2, method_index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QMetaObject_Disconnect(sender *QObject /*777 const QObject **/, signal_index int, receiver *QObject /*777 const QObject **/, method_index int) bool {
@@ -470,7 +459,7 @@ func (this *QMetaObject) DisconnectOne(sender *QObject /*777 const QObject **/, 
 	var convArg0 = sender.GetCthis()
 	var convArg2 = receiver.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject13disconnectOneEPK7QObjectiS2_i", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, convArg2, method_index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QMetaObject_DisconnectOne(sender *QObject /*777 const QObject **/, signal_index int, receiver *QObject /*777 const QObject **/, method_index int) bool {
@@ -486,7 +475,7 @@ func QMetaObject_DisconnectOne(sender *QObject /*777 const QObject **/, signal_i
 func (this *QMetaObject) ConnectSlotsByName(o *QObject /*777 QObject **/) {
 	var convArg0 = o.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject18connectSlotsByNameEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QMetaObject_ConnectSlotsByName(o *QObject /*777 QObject **/) {
 	var nilthis *QMetaObject
@@ -500,7 +489,7 @@ func QMetaObject_ConnectSlotsByName(o *QObject /*777 QObject **/) {
 func (this *QMetaObject) Activate(sender *QObject /*777 QObject **/, signal_index int, argv unsafe.Pointer /*666*/) {
 	var convArg0 = sender.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject8activateEP7QObjectiPPv", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, argv)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QMetaObject_Activate(sender *QObject /*777 QObject **/, signal_index int, argv unsafe.Pointer /*666*/) {
 	var nilthis *QMetaObject
@@ -514,7 +503,7 @@ func QMetaObject_Activate(sender *QObject /*777 QObject **/, signal_index int, a
 func (this *QMetaObject) Activate_1(sender *QObject /*777 QObject **/, signal_offset int, local_signal_index int, argv unsafe.Pointer /*666*/) {
 	var convArg0 = sender.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject8activateEP7QObjectiiPPv", qtrt.FFI_TYPE_POINTER, convArg0, signal_offset, local_signal_index, argv)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QMetaObject_Activate_1(sender *QObject /*777 QObject **/, signal_offset int, local_signal_index int, argv unsafe.Pointer /*666*/) {
 	var nilthis *QMetaObject
@@ -541,7 +530,7 @@ func (this *QMetaObject) InvokeMethod(obj *QObject /*777 QObject **/, member str
 	var convArg12 = val8.GetCthis()
 	var convArg13 = val9.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QMetaObject_InvokeMethod(obj *QObject /*777 QObject **/, member string, arg2 int, ret *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
@@ -570,7 +559,7 @@ func (this *QMetaObject) InvokeMethod_1(obj *QObject /*777 QObject **/, member s
 	var convArg11 = val8.GetCthis()
 	var convArg12 = val9.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QMetaObject_InvokeMethod_1(obj *QObject /*777 QObject **/, member string, ret *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
@@ -598,7 +587,7 @@ func (this *QMetaObject) InvokeMethod_2(obj *QObject /*777 QObject **/, member s
 	var convArg11 = val8.GetCthis()
 	var convArg12 = val9.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QMetaObject_InvokeMethod_2(obj *QObject /*777 QObject **/, member string, type_ int, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
@@ -626,7 +615,7 @@ func (this *QMetaObject) InvokeMethod_3(obj *QObject /*777 QObject **/, member s
 	var convArg10 = val8.GetCthis()
 	var convArg11 = val9.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QMetaObject_InvokeMethod_3(obj *QObject /*777 QObject **/, member string, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
@@ -651,7 +640,7 @@ func (this *QMetaObject) NewInstance(val0 *QGenericArgument /*123*/, val1 *QGene
 	var convArg8 = val8.GetCthis()
 	var convArg9 = val9.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -661,7 +650,7 @@ func (this *QMetaObject) NewInstance(val0 *QGenericArgument /*123*/, val1 *QGene
 // [4] int static_metacall(enum QMetaObject::Call, int, void **)
 func (this *QMetaObject) Static_metacall(arg0 int, arg1 int, arg2 unsafe.Pointer /*666*/) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject15static_metacallENS_4CallEiPPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1, arg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -672,7 +661,7 @@ func (this *QMetaObject) Static_metacall(arg0 int, arg1 int, arg2 unsafe.Pointer
 func (this *QMetaObject) Metacall(arg0 *QObject /*777 QObject **/, arg1 int, arg2 int, arg3 unsafe.Pointer /*666*/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject8metacallEP7QObjectNS_4CallEiPPv", qtrt.FFI_TYPE_POINTER, convArg0, arg1, arg2, arg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMetaObject_Metacall(arg0 *QObject /*777 QObject **/, arg1 int, arg2 int, arg3 unsafe.Pointer /*666*/) int {
@@ -683,7 +672,7 @@ func QMetaObject_Metacall(arg0 *QObject /*777 QObject **/, arg1 int, arg2 int, a
 
 func DeleteQMetaObject(this *QMetaObject) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObjectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -704,3 +693,22 @@ const QMetaObject__RegisterPropertyMetaType QMetaObject__Call = 11
 const QMetaObject__RegisterMethodArgumentMetaType QMetaObject__Call = 12
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

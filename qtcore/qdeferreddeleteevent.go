@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -69,7 +58,7 @@ func (*QDeferredDeleteEvent) NewFromPointer(cthis unsafe.Pointer) *QDeferredDele
 // [-2] void QDeferredDeleteEvent()
 func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDeferredDeleteEventC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDeferredDeleteEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDeferredDeleteEvent)
 	return gothis
@@ -82,7 +71,7 @@ func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
 func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDeferredDeleteEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -92,8 +81,27 @@ func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
 // [4] int loopLevel()
 func (this *QDeferredDeleteEvent) LoopLevel() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

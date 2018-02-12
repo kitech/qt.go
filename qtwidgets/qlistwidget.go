@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QListWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -106,7 +90,7 @@ func (*QListWidget) NewFromPointer(cthis unsafe.Pointer) *QListWidget {
 // [8] const QMetaObject * metaObject()
 func (this *QListWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -117,7 +101,7 @@ func (this *QListWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 func NewQListWidget(parent *QWidget /*777 QWidget **/) *QListWidget {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQListWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -129,7 +113,7 @@ func NewQListWidget(parent *QWidget /*777 QWidget **/) *QListWidget {
 func DeleteQListWidget(this *QListWidget) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidgetD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -140,7 +124,7 @@ func DeleteQListWidget(this *QListWidget) {
 func (this *QListWidget) SetSelectionModel(selectionModel *qtcore.QItemSelectionModel /*777 QItemSelectionModel **/) {
 	var convArg0 = selectionModel.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget17setSelectionModelEP19QItemSelectionModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:212
@@ -149,7 +133,7 @@ func (this *QListWidget) SetSelectionModel(selectionModel *qtcore.QItemSelection
 // [8] QListWidgetItem * item(int)
 func (this *QListWidget) Item(row int) *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget4itemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -160,7 +144,7 @@ func (this *QListWidget) Item(row int) *QListWidgetItem /*777 QListWidgetItem **
 func (this *QListWidget) Row(item *QListWidgetItem /*777 const QListWidgetItem **/) int {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget3rowEPK15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -171,7 +155,7 @@ func (this *QListWidget) Row(item *QListWidgetItem /*777 const QListWidgetItem *
 func (this *QListWidget) InsertItem(row int, item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg1 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget10insertItemEiP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:215
@@ -182,7 +166,7 @@ func (this *QListWidget) InsertItem_1(row int, label string) {
 	var tmpArg1 = qtcore.NewQString_5(label)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget10insertItemEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:216
@@ -192,7 +176,7 @@ func (this *QListWidget) InsertItem_1(row int, label string) {
 func (this *QListWidget) InsertItems(row int, labels *qtcore.QStringList) {
 	var convArg1 = labels.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget11insertItemsEiRK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:217
@@ -203,7 +187,7 @@ func (this *QListWidget) AddItem(label string) {
 	var tmpArg0 = qtcore.NewQString_5(label)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget7addItemERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:218
@@ -213,7 +197,7 @@ func (this *QListWidget) AddItem(label string) {
 func (this *QListWidget) AddItem_1(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget7addItemEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:219
@@ -223,7 +207,7 @@ func (this *QListWidget) AddItem_1(item *QListWidgetItem /*777 QListWidgetItem *
 func (this *QListWidget) AddItems(labels *qtcore.QStringList) {
 	var convArg0 = labels.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget8addItemsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:220
@@ -232,7 +216,7 @@ func (this *QListWidget) AddItems(labels *qtcore.QStringList) {
 // [8] QListWidgetItem * takeItem(int)
 func (this *QListWidget) TakeItem(row int) *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget8takeItemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -242,7 +226,7 @@ func (this *QListWidget) TakeItem(row int) *QListWidgetItem /*777 QListWidgetIte
 // [4] int count()
 func (this *QListWidget) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -252,7 +236,7 @@ func (this *QListWidget) Count() int {
 // [8] QListWidgetItem * currentItem()
 func (this *QListWidget) CurrentItem() *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget11currentItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -263,7 +247,7 @@ func (this *QListWidget) CurrentItem() *QListWidgetItem /*777 QListWidgetItem **
 func (this *QListWidget) SetCurrentItem(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget14setCurrentItemEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:225
@@ -273,7 +257,7 @@ func (this *QListWidget) SetCurrentItem(item *QListWidgetItem /*777 QListWidgetI
 func (this *QListWidget) SetCurrentItem_1(item *QListWidgetItem /*777 QListWidgetItem **/, command int) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget14setCurrentItemEP15QListWidgetItem6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:227
@@ -282,7 +266,7 @@ func (this *QListWidget) SetCurrentItem_1(item *QListWidgetItem /*777 QListWidge
 // [4] int currentRow()
 func (this *QListWidget) CurrentRow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget10currentRowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -292,7 +276,7 @@ func (this *QListWidget) CurrentRow() int {
 // [-2] void setCurrentRow(int)
 func (this *QListWidget) SetCurrentRow(row int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget13setCurrentRowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:229
@@ -301,7 +285,7 @@ func (this *QListWidget) SetCurrentRow(row int) {
 // [-2] void setCurrentRow(int, QItemSelectionModel::SelectionFlags)
 func (this *QListWidget) SetCurrentRow_1(row int, command int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget13setCurrentRowEi6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, command)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:231
@@ -311,7 +295,7 @@ func (this *QListWidget) SetCurrentRow_1(row int, command int) {
 func (this *QListWidget) ItemAt(p *qtcore.QPoint) *QListWidgetItem /*777 QListWidgetItem **/ {
 	var convArg0 = p.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget6itemAtERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -321,7 +305,7 @@ func (this *QListWidget) ItemAt(p *qtcore.QPoint) *QListWidgetItem /*777 QListWi
 // [8] QListWidgetItem * itemAt(int, int)
 func (this *QListWidget) ItemAt_1(x int, y int) *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget6itemAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -332,7 +316,7 @@ func (this *QListWidget) ItemAt_1(x int, y int) *QListWidgetItem /*777 QListWidg
 func (this *QListWidget) VisualItemRect(item *QListWidgetItem /*777 const QListWidgetItem **/) *qtcore.QRect /*123*/ {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget14visualItemRectEPK15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -344,7 +328,7 @@ func (this *QListWidget) VisualItemRect(item *QListWidgetItem /*777 const QListW
 // [-2] void sortItems(Qt::SortOrder)
 func (this *QListWidget) SortItems(order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget9sortItemsEN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), order)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:236
@@ -353,7 +337,7 @@ func (this *QListWidget) SortItems(order int) {
 // [-2] void setSortingEnabled(_Bool)
 func (this *QListWidget) SetSortingEnabled(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget17setSortingEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:237
@@ -362,7 +346,7 @@ func (this *QListWidget) SetSortingEnabled(enable bool) {
 // [1] bool isSortingEnabled()
 func (this *QListWidget) IsSortingEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget16isSortingEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -373,7 +357,7 @@ func (this *QListWidget) IsSortingEnabled() bool {
 func (this *QListWidget) EditItem(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget8editItemEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:240
@@ -383,7 +367,7 @@ func (this *QListWidget) EditItem(item *QListWidgetItem /*777 QListWidgetItem **
 func (this *QListWidget) OpenPersistentEditor(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget20openPersistentEditorEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:241
@@ -393,7 +377,7 @@ func (this *QListWidget) OpenPersistentEditor(item *QListWidgetItem /*777 QListW
 func (this *QListWidget) ClosePersistentEditor(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget21closePersistentEditorEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:243
@@ -403,7 +387,7 @@ func (this *QListWidget) ClosePersistentEditor(item *QListWidgetItem /*777 QList
 func (this *QListWidget) IsPersistentEditorOpen(item *QListWidgetItem /*777 QListWidgetItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget22isPersistentEditorOpenEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -414,7 +398,7 @@ func (this *QListWidget) IsPersistentEditorOpen(item *QListWidgetItem /*777 QLis
 func (this *QListWidget) ItemWidget(item *QListWidgetItem /*777 QListWidgetItem **/) *QWidget /*777 QWidget **/ {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget10itemWidgetEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -426,7 +410,7 @@ func (this *QListWidget) SetItemWidget(item *QListWidgetItem /*777 QListWidgetIt
 	var convArg0 = item.GetCthis()
 	var convArg1 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget13setItemWidgetEP15QListWidgetItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:247
@@ -436,7 +420,7 @@ func (this *QListWidget) SetItemWidget(item *QListWidgetItem /*777 QListWidgetIt
 func (this *QListWidget) RemoveItemWidget(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget16removeItemWidgetEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:249
@@ -446,7 +430,7 @@ func (this *QListWidget) RemoveItemWidget(item *QListWidgetItem /*777 QListWidge
 func (this *QListWidget) IsItemSelected(item *QListWidgetItem /*777 const QListWidgetItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -457,7 +441,7 @@ func (this *QListWidget) IsItemSelected(item *QListWidgetItem /*777 const QListW
 func (this *QListWidget) SetItemSelected(item *QListWidgetItem /*777 const QListWidgetItem **/, select_ bool) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget15setItemSelectedEPK15QListWidgetItemb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, select_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:254
@@ -467,7 +451,7 @@ func (this *QListWidget) SetItemSelected(item *QListWidgetItem /*777 const QList
 func (this *QListWidget) IsItemHidden(item *QListWidgetItem /*777 const QListWidgetItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -478,7 +462,7 @@ func (this *QListWidget) IsItemHidden(item *QListWidgetItem /*777 const QListWid
 func (this *QListWidget) SetItemHidden(item *QListWidgetItem /*777 const QListWidgetItem **/, hide bool) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget13setItemHiddenEPK15QListWidgetItemb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hide)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:260
@@ -488,7 +472,7 @@ func (this *QListWidget) SetItemHidden(item *QListWidgetItem /*777 const QListWi
 func (this *QListWidget) DropEvent(event *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:263
@@ -498,7 +482,7 @@ func (this *QListWidget) DropEvent(event *qtgui.QDropEvent /*777 QDropEvent **/)
 func (this *QListWidget) ScrollToItem(item *QListWidgetItem /*777 const QListWidgetItem **/, hint int) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget12scrollToItemEPK15QListWidgetItemN17QAbstractItemView10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:264
@@ -507,7 +491,7 @@ func (this *QListWidget) ScrollToItem(item *QListWidgetItem /*777 const QListWid
 // [-2] void clear()
 func (this *QListWidget) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:267
@@ -517,7 +501,7 @@ func (this *QListWidget) Clear() {
 func (this *QListWidget) ItemPressed(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget11itemPressedEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:268
@@ -527,7 +511,7 @@ func (this *QListWidget) ItemPressed(item *QListWidgetItem /*777 QListWidgetItem
 func (this *QListWidget) ItemClicked(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget11itemClickedEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:269
@@ -537,7 +521,7 @@ func (this *QListWidget) ItemClicked(item *QListWidgetItem /*777 QListWidgetItem
 func (this *QListWidget) ItemDoubleClicked(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget17itemDoubleClickedEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:270
@@ -547,7 +531,7 @@ func (this *QListWidget) ItemDoubleClicked(item *QListWidgetItem /*777 QListWidg
 func (this *QListWidget) ItemActivated(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget13itemActivatedEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:271
@@ -557,7 +541,7 @@ func (this *QListWidget) ItemActivated(item *QListWidgetItem /*777 QListWidgetIt
 func (this *QListWidget) ItemEntered(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget11itemEnteredEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:272
@@ -567,7 +551,7 @@ func (this *QListWidget) ItemEntered(item *QListWidgetItem /*777 QListWidgetItem
 func (this *QListWidget) ItemChanged(item *QListWidgetItem /*777 QListWidgetItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget11itemChangedEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:274
@@ -578,7 +562,7 @@ func (this *QListWidget) CurrentItemChanged(current *QListWidgetItem /*777 QList
 	var convArg0 = current.GetCthis()
 	var convArg1 = previous.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget18currentItemChangedEP15QListWidgetItemS1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:275
@@ -589,7 +573,7 @@ func (this *QListWidget) CurrentTextChanged(currentText string) {
 	var tmpArg0 = qtcore.NewQString_5(currentText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget18currentTextChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:276
@@ -598,7 +582,7 @@ func (this *QListWidget) CurrentTextChanged(currentText string) {
 // [-2] void currentRowChanged(int)
 func (this *QListWidget) CurrentRowChanged(currentRow int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget17currentRowChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), currentRow)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:278
@@ -607,7 +591,7 @@ func (this *QListWidget) CurrentRowChanged(currentRow int) {
 // [-2] void itemSelectionChanged()
 func (this *QListWidget) ItemSelectionChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget20itemSelectionChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:281
@@ -617,7 +601,7 @@ func (this *QListWidget) ItemSelectionChanged() {
 func (this *QListWidget) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -627,7 +611,7 @@ func (this *QListWidget) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // [8] QStringList mimeTypes()
 func (this *QListWidget) MimeTypes() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -640,7 +624,7 @@ func (this *QListWidget) MimeTypes() *qtcore.QStringList /*123*/ {
 func (this *QListWidget) DropMimeData(index int, data *qtcore.QMimeData /*777 const QMimeData **/, action int) bool {
 	var convArg1 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget12dropMimeDataEiPK9QMimeDataN2Qt10DropActionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, action)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -650,7 +634,7 @@ func (this *QListWidget) DropMimeData(index int, data *qtcore.QMimeData /*777 co
 // [4] Qt::DropActions supportedDropActions()
 func (this *QListWidget) SupportedDropActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget20supportedDropActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -661,7 +645,7 @@ func (this *QListWidget) SupportedDropActions() int {
 func (this *QListWidget) IndexFromItem(item *QListWidgetItem /*777 QListWidgetItem **/) *qtcore.QModelIndex /*123*/ {
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget13indexFromItemEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -674,8 +658,33 @@ func (this *QListWidget) IndexFromItem(item *QListWidgetItem /*777 QListWidgetIt
 func (this *QListWidget) ItemFromIndex(index *qtcore.QModelIndex) *QListWidgetItem /*777 QListWidgetItem **/ {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget13itemFromIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

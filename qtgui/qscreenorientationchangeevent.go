@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -74,7 +60,7 @@ func (*QScreenOrientationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QScr
 func NewQScreenOrientationChangeEvent(screen *QScreen /*777 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
 	var convArg0 = screen.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", qtrt.FFI_TYPE_POINTER, convArg0, orientation)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQScreenOrientationChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQScreenOrientationChangeEvent)
 	return gothis
@@ -87,7 +73,7 @@ func NewQScreenOrientationChangeEvent(screen *QScreen /*777 QScreen **/, orienta
 func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -97,7 +83,7 @@ func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
 // [8] QScreen * screen()
 func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*777 QScreen **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent6screenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -107,8 +93,30 @@ func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*777 QScreen **/ {
 // [4] Qt::ScreenOrientation orientation()
 func (this *QScreenOrientationChangeEvent) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

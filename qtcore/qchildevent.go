@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -70,7 +59,7 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
 	var convArg1 = child.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQChildEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChildEvent)
 	return gothis
@@ -83,7 +72,7 @@ func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
 func DeleteQChildEvent(this *QChildEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QChildEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -93,7 +82,7 @@ func DeleteQChildEvent(this *QChildEvent) {
 // [8] QObject * child()
 func (this *QChildEvent) Child() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -103,7 +92,7 @@ func (this *QChildEvent) Child() *QObject /*777 QObject **/ {
 // [1] bool added()
 func (this *QChildEvent) Added() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent5addedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -113,7 +102,7 @@ func (this *QChildEvent) Added() bool {
 // [1] bool polished()
 func (this *QChildEvent) Polished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent8polishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -123,8 +112,27 @@ func (this *QChildEvent) Polished() bool {
 // [1] bool removed()
 func (this *QChildEvent) Removed() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent7removedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

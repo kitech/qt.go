@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QPictureIO) NewFromPointer(cthis unsafe.Pointer) *QPictureIO {
 // [-2] void QPictureIO()
 func NewQPictureIO() *QPictureIO {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIOC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPictureIOFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPictureIO)
 	return gothis
@@ -91,7 +77,7 @@ func NewQPictureIO_1(ioDevice *qtcore.QIODevice /*777 QIODevice **/, format stri
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIOC2EP9QIODevicePKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPictureIOFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPictureIO)
 	return gothis
@@ -107,7 +93,7 @@ func NewQPictureIO_2(fileName string, format string) *QPictureIO {
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIOC2ERK7QStringPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPictureIOFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPictureIO)
 	return gothis
@@ -120,7 +106,7 @@ func NewQPictureIO_2(fileName string, format string) *QPictureIO {
 func DeleteQPictureIO(this *QPictureIO) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIOD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -130,7 +116,7 @@ func DeleteQPictureIO(this *QPictureIO) {
 // [32] const QPicture & picture()
 func (this *QPictureIO) Picture() *QPicture {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QPictureIO7pictureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPictureFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPicture)
 	return rv2
@@ -142,7 +128,7 @@ func (this *QPictureIO) Picture() *QPicture {
 // [4] int status()
 func (this *QPictureIO) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QPictureIO6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -152,7 +138,7 @@ func (this *QPictureIO) Status() int {
 // [8] const char * format()
 func (this *QPictureIO) Format() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QPictureIO6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -162,7 +148,7 @@ func (this *QPictureIO) Format() string {
 // [8] QIODevice * ioDevice()
 func (this *QPictureIO) IoDevice() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QPictureIO8ioDeviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -172,7 +158,7 @@ func (this *QPictureIO) IoDevice() *qtcore.QIODevice /*777 QIODevice **/ {
 // [8] QString fileName()
 func (this *QPictureIO) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QPictureIO8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -185,7 +171,7 @@ func (this *QPictureIO) FileName() string {
 // [4] int quality()
 func (this *QPictureIO) Quality() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QPictureIO7qualityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -195,7 +181,7 @@ func (this *QPictureIO) Quality() int {
 // [8] QString description()
 func (this *QPictureIO) Description() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QPictureIO11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -208,7 +194,7 @@ func (this *QPictureIO) Description() string {
 // [8] const char * parameters()
 func (this *QPictureIO) Parameters() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QPictureIO10parametersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -218,7 +204,7 @@ func (this *QPictureIO) Parameters() string {
 // [4] float gamma()
 func (this *QPictureIO) Gamma() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QPictureIO5gammaEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -229,7 +215,7 @@ func (this *QPictureIO) Gamma() float32 {
 func (this *QPictureIO) SetPicture(arg0 *QPicture) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO10setPictureERK8QPicture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:150
@@ -238,7 +224,7 @@ func (this *QPictureIO) SetPicture(arg0 *QPicture) {
 // [-2] void setStatus(int)
 func (this *QPictureIO) SetStatus(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO9setStatusEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:151
@@ -249,7 +235,7 @@ func (this *QPictureIO) SetFormat(arg0 string) {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO9setFormatEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:152
@@ -259,7 +245,7 @@ func (this *QPictureIO) SetFormat(arg0 string) {
 func (this *QPictureIO) SetIODevice(arg0 *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO11setIODeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:153
@@ -270,7 +256,7 @@ func (this *QPictureIO) SetFileName(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:154
@@ -279,7 +265,7 @@ func (this *QPictureIO) SetFileName(arg0 string) {
 // [-2] void setQuality(int)
 func (this *QPictureIO) SetQuality(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO10setQualityEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:155
@@ -290,7 +276,7 @@ func (this *QPictureIO) SetDescription(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:156
@@ -301,7 +287,7 @@ func (this *QPictureIO) SetParameters(arg0 string) {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO13setParametersEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:157
@@ -310,7 +296,7 @@ func (this *QPictureIO) SetParameters(arg0 string) {
 // [-2] void setGamma(float)
 func (this *QPictureIO) SetGamma(arg0 float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO8setGammaEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:159
@@ -319,7 +305,7 @@ func (this *QPictureIO) SetGamma(arg0 float32) {
 // [1] bool read()
 func (this *QPictureIO) Read() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO4readEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -329,7 +315,7 @@ func (this *QPictureIO) Read() bool {
 // [1] bool write()
 func (this *QPictureIO) Write() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO5writeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -341,7 +327,7 @@ func (this *QPictureIO) PictureFormat(fileName string) *qtcore.QByteArray /*123*
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO13pictureFormatERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
@@ -359,7 +345,7 @@ func QPictureIO_PictureFormat(fileName string) *qtcore.QByteArray /*123*/ {
 func (this *QPictureIO) PictureFormat_1(arg0 *qtcore.QIODevice /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO13pictureFormatEP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
@@ -371,3 +357,25 @@ func QPictureIO_PictureFormat_1(arg0 *qtcore.QIODevice /*777 QIODevice **/) *qtc
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

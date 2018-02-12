@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,42 +24,11 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
@@ -86,7 +63,7 @@ func (*QSGBasicGeometryNode) NewFromPointer(cthis unsafe.Pointer) *QSGBasicGeome
 func DeleteQSGBasicGeometryNode(this *QSGBasicGeometryNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 112)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -97,7 +74,7 @@ func DeleteQSGBasicGeometryNode(this *QSGBasicGeometryNode) {
 func (this *QSGBasicGeometryNode) SetGeometry(geometry *QSGGeometry /*777 QSGGeometry **/) {
 	var convArg0 = geometry.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode11setGeometryEP11QSGGeometry", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:201
@@ -106,7 +83,7 @@ func (this *QSGBasicGeometryNode) SetGeometry(geometry *QSGGeometry /*777 QSGGeo
 // [8] const QSGGeometry * geometry()
 func (this *QSGBasicGeometryNode) Geometry() *QSGGeometry /*777 const QSGGeometry **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGGeometryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -116,7 +93,7 @@ func (this *QSGBasicGeometryNode) Geometry() *QSGGeometry /*777 const QSGGeometr
 // [8] QSGGeometry * geometry()
 func (this *QSGBasicGeometryNode) Geometry_1() *QSGGeometry /*777 QSGGeometry **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGGeometryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -126,7 +103,7 @@ func (this *QSGBasicGeometryNode) Geometry_1() *QSGGeometry /*777 QSGGeometry **
 // [8] const QMatrix4x4 * matrix()
 func (this *QSGBasicGeometryNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtgui.NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -136,7 +113,7 @@ func (this *QSGBasicGeometryNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix
 // [8] const QSGClipNode * clipList()
 func (this *QSGBasicGeometryNode) ClipList() *QSGClipNode /*777 const QSGClipNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode8clipListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGClipNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -147,7 +124,7 @@ func (this *QSGBasicGeometryNode) ClipList() *QSGClipNode /*777 const QSGClipNod
 func (this *QSGBasicGeometryNode) SetRendererMatrix(m *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/) {
 	var convArg0 = m.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode17setRendererMatrixEPK10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:208
@@ -157,7 +134,7 @@ func (this *QSGBasicGeometryNode) SetRendererMatrix(m *qtgui.QMatrix4x4 /*777 co
 func (this *QSGBasicGeometryNode) SetRendererClipList(c *QSGClipNode /*777 const QSGClipNode **/) {
 	var convArg0 = c.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode19setRendererClipListEPK11QSGClipNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:211
@@ -166,10 +143,41 @@ func (this *QSGBasicGeometryNode) SetRendererClipList(c *QSGClipNode /*777 const
 // [-2] void QSGBasicGeometryNode(enum QSGNode::NodeType)
 func NewQSGBasicGeometryNode(type_ int) *QSGBasicGeometryNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNodeC2EN7QSGNode8NodeTypeE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGBasicGeometryNodeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSGBasicGeometryNode)
 	return gothis
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QToolBarChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QToolBarChange
 // [-2] void QToolBarChangeEvent(_Bool)
 func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", qtrt.FFI_TYPE_POINTER, t)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQToolBarChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQToolBarChangeEvent)
 	return gothis
@@ -86,7 +72,7 @@ func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QToolBarChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -96,8 +82,30 @@ func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 // [1] bool toggle()
 func (this *QToolBarChangeEvent) Toggle() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

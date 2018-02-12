@@ -6,6 +6,14 @@ package qtmacextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtmacextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QMacPasteboardMime) NewFromPointer(cthis unsafe.Pointer) *QMacPasteboardM
 // [-2] void QMacPasteboardMime(char)
 func NewQMacPasteboardMime(arg0 byte) *QMacPasteboardMime {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMimeC2Ec", qtrt.FFI_TYPE_POINTER, arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMacPasteboardMimeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMacPasteboardMime)
 	return gothis
@@ -93,7 +76,7 @@ func NewQMacPasteboardMime(arg0 byte) *QMacPasteboardMime {
 func DeleteQMacPasteboardMime(this *QMacPasteboardMime) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMimeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -103,7 +86,7 @@ func DeleteQMacPasteboardMime(this *QMacPasteboardMime) {
 // [8] QString convertorName()
 func (this *QMacPasteboardMime) ConvertorName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime13convertorNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -120,7 +103,7 @@ func (this *QMacPasteboardMime) CanConvert(mime string, flav string) bool {
 	var tmpArg1 = qtcore.NewQString_5(flav)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime10canConvertERK7QStringS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -132,7 +115,7 @@ func (this *QMacPasteboardMime) MimeFor(flav string) string {
 	var tmpArg0 = qtcore.NewQString_5(flav)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime7mimeForE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -147,7 +130,7 @@ func (this *QMacPasteboardMime) FlavorFor(mime string) string {
 	var tmpArg0 = qtcore.NewQString_5(mime)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime9flavorForERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -161,7 +144,7 @@ func (this *QMacPasteboardMime) FlavorFor(mime string) string {
 func (this *QMacPasteboardMime) Count(mimeData *qtcore.QMimeData /*777 QMimeData **/) int {
 	var convArg0 = mimeData.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime5countEP9QMimeData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -174,3 +157,28 @@ const QMacPasteboardMime__MIME_QT3_CONVERTOR QMacPasteboardMime__QMacPasteboardM
 const QMacPasteboardMime__MIME_ALL QMacPasteboardMime__QMacPasteboardMimeType = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

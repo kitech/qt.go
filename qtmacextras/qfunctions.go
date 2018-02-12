@@ -1,10 +1,9 @@
 package qtmacextras
 
 import "unsafe"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 func init() {
 	if false {
@@ -15,9 +14,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
 	}
 	if false {
 		qtcore.KeepMe()
@@ -37,7 +33,7 @@ func init() {
 func QRegisterDraggedTypes(types *qtcore.QStringList) {
 	var convArg0 = types.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z21qRegisterDraggedTypesRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end

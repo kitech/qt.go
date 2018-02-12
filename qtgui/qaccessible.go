@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -77,7 +63,7 @@ func (*QAccessible) NewFromPointer(cthis unsafe.Pointer) *QAccessible {
 func (this *QAccessible) QueryAccessibleInterface(arg0 *qtcore.QObject /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible24queryAccessibleInterfaceEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QAccessible_QueryAccessibleInterface(arg0 *qtcore.QObject /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
@@ -93,7 +79,7 @@ func QAccessible_QueryAccessibleInterface(arg0 *qtcore.QObject /*777 QObject **/
 func (this *QAccessible) UniqueId(iface *QAccessibleInterface /*777 QAccessibleInterface **/) uint {
 	var convArg0 = iface.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible8uniqueIdEP20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 func QAccessible_UniqueId(iface *QAccessibleInterface /*777 QAccessibleInterface **/) uint {
@@ -108,7 +94,7 @@ func QAccessible_UniqueId(iface *QAccessibleInterface /*777 QAccessibleInterface
 // [8] QAccessibleInterface * accessibleInterface(QAccessible::Id)
 func (this *QAccessible) AccessibleInterface(uniqueId uint) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible19accessibleInterfaceEj", qtrt.FFI_TYPE_POINTER, uniqueId)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QAccessible_AccessibleInterface(uniqueId uint) *QAccessibleInterface /*777 QAccessibleInterface **/ {
@@ -124,7 +110,7 @@ func QAccessible_AccessibleInterface(uniqueId uint) *QAccessibleInterface /*777 
 func (this *QAccessible) RegisterAccessibleInterface(iface *QAccessibleInterface /*777 QAccessibleInterface **/) uint {
 	var convArg0 = iface.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 func QAccessible_RegisterAccessibleInterface(iface *QAccessibleInterface /*777 QAccessibleInterface **/) uint {
@@ -139,7 +125,7 @@ func QAccessible_RegisterAccessibleInterface(iface *QAccessibleInterface /*777 Q
 // [-2] void deleteAccessibleInterface(QAccessible::Id)
 func (this *QAccessible) DeleteAccessibleInterface(uniqueId uint) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible25deleteAccessibleInterfaceEj", qtrt.FFI_TYPE_POINTER, uniqueId)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QAccessible_DeleteAccessibleInterface(uniqueId uint) {
 	var nilthis *QAccessible
@@ -153,7 +139,7 @@ func QAccessible_DeleteAccessibleInterface(uniqueId uint) {
 func (this *QAccessible) UpdateAccessibility(event *QAccessibleEvent /*777 QAccessibleEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible19updateAccessibilityEP16QAccessibleEvent", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QAccessible_UpdateAccessibility(event *QAccessibleEvent /*777 QAccessibleEvent **/) {
 	var nilthis *QAccessible
@@ -166,7 +152,7 @@ func QAccessible_UpdateAccessibility(event *QAccessibleEvent /*777 QAccessibleEv
 // [1] bool isActive()
 func (this *QAccessible) IsActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible8isActiveEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QAccessible_IsActive() bool {
@@ -181,7 +167,7 @@ func QAccessible_IsActive() bool {
 // [-2] void setActive(_Bool)
 func (this *QAccessible) SetActive(active bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible9setActiveEb", qtrt.FFI_TYPE_POINTER, active)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QAccessible_SetActive(active bool) {
 	var nilthis *QAccessible
@@ -195,7 +181,7 @@ func QAccessible_SetActive(active bool) {
 func (this *QAccessible) SetRootObject(object *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = object.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible13setRootObjectEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QAccessible_SetRootObject(object *qtcore.QObject /*777 QObject **/) {
 	var nilthis *QAccessible
@@ -208,7 +194,7 @@ func QAccessible_SetRootObject(object *qtcore.QObject /*777 QObject **/) {
 // [-2] void cleanup()
 func (this *QAccessible) Cleanup() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible7cleanupEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QAccessible_Cleanup() {
 	var nilthis *QAccessible
@@ -217,7 +203,7 @@ func QAccessible_Cleanup() {
 
 func DeleteQAccessible(this *QAccessible) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessibleD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -410,3 +396,25 @@ const QAccessible__LineBoundary QAccessible__TextBoundaryType = 4
 const QAccessible__NoBoundary QAccessible__TextBoundaryType = 5
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

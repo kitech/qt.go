@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QDnsServiceRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsServiceRecor
 // [-2] void QDnsServiceRecord()
 func NewQDnsServiceRecord() *QDnsServiceRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QDnsServiceRecordC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsServiceRecordFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDnsServiceRecord)
 	return gothis
@@ -89,7 +75,7 @@ func NewQDnsServiceRecord() *QDnsServiceRecord {
 func DeleteQDnsServiceRecord(this *QDnsServiceRecord) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QDnsServiceRecordD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +86,7 @@ func DeleteQDnsServiceRecord(this *QDnsServiceRecord) {
 func (this *QDnsServiceRecord) Swap(other *QDnsServiceRecord) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QDnsServiceRecord4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:146
@@ -109,7 +95,7 @@ func (this *QDnsServiceRecord) Swap(other *QDnsServiceRecord) {
 // [8] QString name()
 func (this *QDnsServiceRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -122,7 +108,7 @@ func (this *QDnsServiceRecord) Name() string {
 // [2] quint16 port()
 func (this *QDnsServiceRecord) Port() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord4portEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 
@@ -132,7 +118,7 @@ func (this *QDnsServiceRecord) Port() uint16 {
 // [2] quint16 priority()
 func (this *QDnsServiceRecord) Priority() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord8priorityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 
@@ -142,7 +128,7 @@ func (this *QDnsServiceRecord) Priority() uint16 {
 // [8] QString target()
 func (this *QDnsServiceRecord) Target() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord6targetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -155,7 +141,7 @@ func (this *QDnsServiceRecord) Target() string {
 // [4] quint32 timeToLive()
 func (this *QDnsServiceRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -165,8 +151,30 @@ func (this *QDnsServiceRecord) TimeToLive() uint {
 // [2] quint16 weight()
 func (this *QDnsServiceRecord) Weight() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord6weightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtandroidextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -74,7 +60,7 @@ func (*QAndroidService) NewFromPointer(cthis unsafe.Pointer) *QAndroidService {
 func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidServiceC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidServiceFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -86,7 +72,7 @@ func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 func DeleteQAndroidService(this *QAndroidService) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidServiceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -97,8 +83,30 @@ func DeleteQAndroidService(this *QAndroidService) {
 func (this *QAndroidService) OnBind(intent *QAndroidIntent) *QAndroidBinder /*777 QAndroidBinder **/ {
 	var convArg0 = intent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidService6onBindERK14QAndroidIntent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAndroidBinderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

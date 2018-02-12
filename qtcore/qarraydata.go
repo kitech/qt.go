@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QArrayData) NewFromPointer(cthis unsafe.Pointer) *QArrayData {
 // [8] void * data()
 func (this *QArrayData) Data() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QArrayData4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -82,7 +71,7 @@ func (this *QArrayData) Data() unsafe.Pointer /*666*/ {
 // [8] const void * data()
 func (this *QArrayData) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -92,7 +81,7 @@ func (this *QArrayData) Data_1() unsafe.Pointer /*666*/ {
 // [1] bool isMutable()
 func (this *QArrayData) IsMutable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData9isMutableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -102,7 +91,7 @@ func (this *QArrayData) IsMutable() bool {
 // [8] size_t detachCapacity(size_t)
 func (this *QArrayData) DetachCapacity(newSize uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData14detachCapacityEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newSize)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -112,7 +101,7 @@ func (this *QArrayData) DetachCapacity(newSize uint) uint {
 // [4] QArrayData::AllocationOptions detachFlags()
 func (this *QArrayData) DetachFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData11detachFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -122,7 +111,7 @@ func (this *QArrayData) DetachFlags() int {
 // [4] QArrayData::AllocationOptions cloneFlags()
 func (this *QArrayData) CloneFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData10cloneFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -132,7 +121,7 @@ func (this *QArrayData) CloneFlags() int {
 // [8] QArrayData * allocate(size_t, size_t, size_t, QArrayData::AllocationOptions)
 func (this *QArrayData) Allocate(objectSize uint, alignment uint, capacity uint, options int) *QArrayData /*777 QArrayData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QArrayData8allocateEmmm6QFlagsINS_16AllocationOptionEE", qtrt.FFI_TYPE_POINTER, objectSize, alignment, capacity, options)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQArrayDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QArrayData_Allocate(objectSize uint, alignment uint, capacity uint, options int) *QArrayData /*777 QArrayData **/ {
@@ -147,7 +136,7 @@ func QArrayData_Allocate(objectSize uint, alignment uint, capacity uint, options
 // [8] QArrayData * sharedNull()
 func (this *QArrayData) SharedNull() *QArrayData /*777 QArrayData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QArrayData10sharedNullEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQArrayDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QArrayData_SharedNull() *QArrayData /*777 QArrayData **/ {
@@ -158,7 +147,7 @@ func QArrayData_SharedNull() *QArrayData /*777 QArrayData **/ {
 
 func DeleteQArrayData(this *QArrayData) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QArrayDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -171,3 +160,22 @@ const QArrayData__Grow QArrayData__AllocationOption = 8
 const QArrayData__Default QArrayData__AllocationOption = 0
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

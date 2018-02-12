@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -73,7 +62,7 @@ func (*QReadLocker) NewFromPointer(cthis unsafe.Pointer) *QReadLocker {
 func NewQReadLocker(readWriteLock *QReadWriteLock /*777 QReadWriteLock **/) *QReadLocker {
 	var convArg0 = readWriteLock.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QReadLockerC2EP14QReadWriteLock", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQReadLockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQReadLocker)
 	return gothis
@@ -86,7 +75,7 @@ func NewQReadLocker(readWriteLock *QReadWriteLock /*777 QReadWriteLock **/) *QRe
 func DeleteQReadLocker(this *QReadLocker) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QReadLockerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -96,7 +85,7 @@ func DeleteQReadLocker(this *QReadLocker) {
 // [-2] void unlock()
 func (this *QReadLocker) Unlock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QReadLocker6unlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:102
@@ -105,7 +94,7 @@ func (this *QReadLocker) Unlock() {
 // [-2] void relock()
 func (this *QReadLocker) Relock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QReadLocker6relockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:112
@@ -114,8 +103,27 @@ func (this *QReadLocker) Relock() {
 // [8] QReadWriteLock * readWriteLock()
 func (this *QReadLocker) ReadWriteLock() *QReadWriteLock /*777 QReadWriteLock **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QReadLocker13readWriteLockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQReadWriteLockFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

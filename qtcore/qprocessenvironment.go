@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QProcessEnvironment) NewFromPointer(cthis unsafe.Pointer) *QProcessEnviro
 // [-2] void QProcessEnvironment()
 func NewQProcessEnvironment() *QProcessEnvironment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironmentC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQProcessEnvironmentFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQProcessEnvironment)
 	return gothis
@@ -85,7 +74,7 @@ func NewQProcessEnvironment() *QProcessEnvironment {
 func DeleteQProcessEnvironment(this *QProcessEnvironment) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironmentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -96,7 +85,7 @@ func DeleteQProcessEnvironment(this *QProcessEnvironment) {
 func (this *QProcessEnvironment) Swap(other *QProcessEnvironment) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qprocess.h:84
@@ -105,7 +94,7 @@ func (this *QProcessEnvironment) Swap(other *QProcessEnvironment) {
 // [1] bool isEmpty()
 func (this *QProcessEnvironment) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -115,7 +104,7 @@ func (this *QProcessEnvironment) IsEmpty() bool {
 // [-2] void clear()
 func (this *QProcessEnvironment) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qprocess.h:87
@@ -126,7 +115,7 @@ func (this *QProcessEnvironment) Contains(name string) bool {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment8containsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -138,7 +127,7 @@ func (this *QProcessEnvironment) Remove(name string) {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment6removeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qprocess.h:90
@@ -151,7 +140,7 @@ func (this *QProcessEnvironment) Value(name string, defaultValue string) string 
 	var tmpArg1 = NewQString_5(defaultValue)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment5valueERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -164,7 +153,7 @@ func (this *QProcessEnvironment) Value(name string, defaultValue string) string 
 // [8] QStringList toStringList()
 func (this *QProcessEnvironment) ToStringList() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment12toStringListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -176,7 +165,7 @@ func (this *QProcessEnvironment) ToStringList() *QStringList /*123*/ {
 // [8] QStringList keys()
 func (this *QProcessEnvironment) Keys() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment4keysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -188,7 +177,7 @@ func (this *QProcessEnvironment) Keys() *QStringList /*123*/ {
 // [8] QProcessEnvironment systemEnvironment()
 func (this *QProcessEnvironment) SystemEnvironment() *QProcessEnvironment /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment17systemEnvironmentEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQProcessEnvironmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQProcessEnvironment)
 	return rv2
@@ -200,3 +189,22 @@ func QProcessEnvironment_SystemEnvironment() *QProcessEnvironment /*123*/ {
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

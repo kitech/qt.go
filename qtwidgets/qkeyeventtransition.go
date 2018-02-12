@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void onTransition(class QEvent *)
 func (this *QKeyEventTransition) InheritOnTransition(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onTransition", f)
@@ -86,7 +70,7 @@ func (*QKeyEventTransition) NewFromPointer(cthis unsafe.Pointer) *QKeyEventTrans
 // [8] const QMetaObject * metaObject()
 func (this *QKeyEventTransition) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QKeyEventTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -97,7 +81,7 @@ func (this *QKeyEventTransition) MetaObject() *qtcore.QMetaObject /*777 const QM
 func NewQKeyEventTransition(sourceState *qtcore.QState /*777 QState **/) *QKeyEventTransition {
 	var convArg0 = sourceState.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -110,7 +94,7 @@ func NewQKeyEventTransition_1(object *qtcore.QObject /*777 QObject **/, type_ in
 	var convArg0 = object.GetCthis()
 	var convArg3 = sourceState.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP7QObjectN6QEvent4TypeEiP6QState", qtrt.FFI_TYPE_POINTER, convArg0, type_, key, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -122,7 +106,7 @@ func NewQKeyEventTransition_1(object *qtcore.QObject /*777 QObject **/, type_ in
 func DeleteQKeyEventTransition(this *QKeyEventTransition) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransitionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -132,7 +116,7 @@ func DeleteQKeyEventTransition(this *QKeyEventTransition) {
 // [4] int key()
 func (this *QKeyEventTransition) Key() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QKeyEventTransition3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -142,7 +126,7 @@ func (this *QKeyEventTransition) Key() int {
 // [-2] void setKey(int)
 func (this *QKeyEventTransition) SetKey(key int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransition6setKeyEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), key)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:65
@@ -151,7 +135,7 @@ func (this *QKeyEventTransition) SetKey(key int) {
 // [4] Qt::KeyboardModifiers modifierMask()
 func (this *QKeyEventTransition) ModifierMask() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QKeyEventTransition12modifierMaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -161,7 +145,7 @@ func (this *QKeyEventTransition) ModifierMask() int {
 // [-2] void setModifierMask(Qt::KeyboardModifiers)
 func (this *QKeyEventTransition) SetModifierMask(modifiers int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransition15setModifierMaskE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:69
@@ -171,7 +155,7 @@ func (this *QKeyEventTransition) SetModifierMask(modifiers int) {
 func (this *QKeyEventTransition) OnTransition(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransition12onTransitionEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:70
@@ -181,8 +165,33 @@ func (this *QKeyEventTransition) OnTransition(event *qtcore.QEvent /*777 QEvent 
 func (this *QKeyEventTransition) EventTest(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransition9eventTestEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -70,7 +59,7 @@ func (*QDynamicPropertyChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QDynam
 func NewQDynamicPropertyChangeEvent(name *QByteArray) *QDynamicPropertyChangeEvent {
 	var convArg0 = name.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDynamicPropertyChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDynamicPropertyChangeEvent)
 	return gothis
@@ -83,7 +72,7 @@ func NewQDynamicPropertyChangeEvent(name *QByteArray) *QDynamicPropertyChangeEve
 func DeleteQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -93,10 +82,29 @@ func DeleteQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
 // [8] QByteArray propertyName()
 func (this *QDynamicPropertyChangeEvent) PropertyName() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

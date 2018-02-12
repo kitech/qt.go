@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -74,7 +60,7 @@ func (*QTouchEvent) NewFromPointer(cthis unsafe.Pointer) *QTouchEvent {
 func DeleteQTouchEvent(this *QTouchEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 72)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -84,7 +70,7 @@ func DeleteQTouchEvent(this *QTouchEvent) {
 // [8] QWindow * window()
 func (this *QTouchEvent) Window() *QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -94,7 +80,7 @@ func (this *QTouchEvent) Window() *QWindow /*777 QWindow **/ {
 // [8] QObject * target()
 func (this *QTouchEvent) Target() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent6targetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -104,7 +90,7 @@ func (this *QTouchEvent) Target() *qtcore.QObject /*777 QObject **/ {
 // [4] Qt::TouchPointStates touchPointStates()
 func (this *QTouchEvent) TouchPointStates() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent16touchPointStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -114,7 +100,7 @@ func (this *QTouchEvent) TouchPointStates() int {
 // [8] const QList<QTouchEvent::TouchPoint> & touchPoints()
 func (this *QTouchEvent) TouchPoints() unsafe.Pointer /*555*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent11touchPointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -124,7 +110,7 @@ func (this *QTouchEvent) TouchPoints() unsafe.Pointer /*555*/ {
 // [8] QTouchDevice * device()
 func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTouchDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -135,7 +121,7 @@ func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
 	var convArg0 = awindow.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setWindowEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:960
@@ -145,7 +131,7 @@ func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
 func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = atarget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setTargetEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:961
@@ -154,7 +140,7 @@ func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
 // [-2] void setTouchPointStates(Qt::TouchPointStates)
 func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent19setTouchPointStatesE6QFlagsIN2Qt15TouchPointStateEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), aTouchPointStates)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:963
@@ -164,7 +150,29 @@ func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
 func (this *QTouchEvent) SetDevice(adevice *QTouchDevice /*777 QTouchDevice **/) {
 	var convArg0 = adevice.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setDeviceEP12QTouchDevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

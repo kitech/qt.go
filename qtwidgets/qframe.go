@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QFrame) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -101,7 +85,7 @@ func (*QFrame) NewFromPointer(cthis unsafe.Pointer) *QFrame {
 // [8] const QMetaObject * metaObject()
 func (this *QFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -112,7 +96,7 @@ func (this *QFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 func NewQFrame(parent *QWidget /*777 QWidget **/, f int) *QFrame {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrameC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFrameFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -124,7 +108,7 @@ func NewQFrame(parent *QWidget /*777 QWidget **/, f int) *QFrame {
 func DeleteQFrame(this *QFrame) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrameD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -134,7 +118,7 @@ func DeleteQFrame(this *QFrame) {
 // [4] int frameStyle()
 func (this *QFrame) FrameStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame10frameStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -144,7 +128,7 @@ func (this *QFrame) FrameStyle() int {
 // [-2] void setFrameStyle(int)
 func (this *QFrame) SetFrameStyle(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame13setFrameStyleEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:70
@@ -153,7 +137,7 @@ func (this *QFrame) SetFrameStyle(arg0 int) {
 // [4] int frameWidth()
 func (this *QFrame) FrameWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame10frameWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -163,7 +147,7 @@ func (this *QFrame) FrameWidth() int {
 // [8] QSize sizeHint()
 func (this *QFrame) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -175,7 +159,7 @@ func (this *QFrame) SizeHint() *qtcore.QSize /*123*/ {
 // [4] QFrame::Shape frameShape()
 func (this *QFrame) FrameShape() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame10frameShapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -185,7 +169,7 @@ func (this *QFrame) FrameShape() int {
 // [-2] void setFrameShape(enum QFrame::Shape)
 func (this *QFrame) SetFrameShape(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame13setFrameShapeENS_5ShapeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:98
@@ -194,7 +178,7 @@ func (this *QFrame) SetFrameShape(arg0 int) {
 // [4] QFrame::Shadow frameShadow()
 func (this *QFrame) FrameShadow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame11frameShadowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -204,7 +188,7 @@ func (this *QFrame) FrameShadow() int {
 // [-2] void setFrameShadow(enum QFrame::Shadow)
 func (this *QFrame) SetFrameShadow(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame14setFrameShadowENS_6ShadowE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:101
@@ -213,7 +197,7 @@ func (this *QFrame) SetFrameShadow(arg0 int) {
 // [4] int lineWidth()
 func (this *QFrame) LineWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame9lineWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -223,7 +207,7 @@ func (this *QFrame) LineWidth() int {
 // [-2] void setLineWidth(int)
 func (this *QFrame) SetLineWidth(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame12setLineWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:104
@@ -232,7 +216,7 @@ func (this *QFrame) SetLineWidth(arg0 int) {
 // [4] int midLineWidth()
 func (this *QFrame) MidLineWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame12midLineWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -242,7 +226,7 @@ func (this *QFrame) MidLineWidth() int {
 // [-2] void setMidLineWidth(int)
 func (this *QFrame) SetMidLineWidth(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame15setMidLineWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:107
@@ -251,7 +235,7 @@ func (this *QFrame) SetMidLineWidth(arg0 int) {
 // [16] QRect frameRect()
 func (this *QFrame) FrameRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame9frameRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -264,7 +248,7 @@ func (this *QFrame) FrameRect() *qtcore.QRect /*123*/ {
 func (this *QFrame) SetFrameRect(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame12setFrameRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:111
@@ -274,7 +258,7 @@ func (this *QFrame) SetFrameRect(arg0 *qtcore.QRect) {
 func (this *QFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -285,7 +269,7 @@ func (this *QFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 func (this *QFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:113
@@ -295,7 +279,7 @@ func (this *QFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 func (this *QFrame) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:114
@@ -305,7 +289,7 @@ func (this *QFrame) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 func (this *QFrame) DrawFrame(arg0 *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame9drawFrameEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:119
@@ -315,7 +299,7 @@ func (this *QFrame) DrawFrame(arg0 *qtgui.QPainter /*777 QPainter **/) {
 func (this *QFrame) InitStyleOption(option *QStyleOptionFrame /*777 QStyleOptionFrame **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame15initStyleOptionEP17QStyleOptionFrame", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QFrame__Shape = int
@@ -340,3 +324,28 @@ const QFrame__Shadow_Mask QFrame__StyleMask = 240
 const QFrame__Shape_Mask QFrame__StyleMask = 15
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

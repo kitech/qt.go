@@ -6,6 +6,14 @@ package qtandroidextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QAndroidServiceConnection) NewFromPointer(cthis unsafe.Pointer) *QAndroid
 // [-2] void QAndroidServiceConnection()
 func NewQAndroidServiceConnection() *QAndroidServiceConnection {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnectionC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidServiceConnectionFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidServiceConnection)
 	return gothis
@@ -89,7 +75,7 @@ func NewQAndroidServiceConnection() *QAndroidServiceConnection {
 func NewQAndroidServiceConnection_1(serviceConnection *QAndroidJniObject) *QAndroidServiceConnection {
 	var convArg0 = serviceConnection.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnectionC2ERK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidServiceConnectionFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidServiceConnection)
 	return gothis
@@ -102,7 +88,7 @@ func NewQAndroidServiceConnection_1(serviceConnection *QAndroidJniObject) *QAndr
 func DeleteQAndroidServiceConnection(this *QAndroidServiceConnection) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnectionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -115,7 +101,7 @@ func (this *QAndroidServiceConnection) OnServiceConnected(name string, serviceBi
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = serviceBinder.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnection18onServiceConnectedERK7QStringRK14QAndroidBinder", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidserviceconnection.h:56
@@ -126,7 +112,7 @@ func (this *QAndroidServiceConnection) OnServiceDisconnected(name string) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnection21onServiceDisconnectedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidserviceconnection.h:58
@@ -135,10 +121,32 @@ func (this *QAndroidServiceConnection) OnServiceDisconnected(name string) {
 // [1] QAndroidJniObject handle()
 func (this *QAndroidServiceConnection) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAndroidServiceConnection6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

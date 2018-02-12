@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -69,7 +58,7 @@ func (*QRandomGenerator64) NewFromPointer(cthis unsafe.Pointer) *QRandomGenerato
 // [8] quint64 generate()
 func (this *QRandomGenerator64) Generate() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator648generateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
 }
 
@@ -79,7 +68,7 @@ func (this *QRandomGenerator64) Generate() uint64 {
 // [-2] void QRandomGenerator64(quint32)
 func NewQRandomGenerator64(seedValue uint) *QRandomGenerator64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2Ej", qtrt.FFI_TYPE_POINTER, seedValue)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
 	return gothis
@@ -91,7 +80,7 @@ func NewQRandomGenerator64(seedValue uint) *QRandomGenerator64 {
 // [-2] void QRandomGenerator64(const quint32 *, qsizetype)
 func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRandomGenerator64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", qtrt.FFI_TYPE_POINTER, &seedBuffer, len)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
 	return gothis
@@ -103,7 +92,7 @@ func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRan
 // [-2] void QRandomGenerator64(const quint32 *, const quint32 *)
 func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", qtrt.FFI_TYPE_POINTER, &begin, &end)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
 	return gothis
@@ -116,7 +105,7 @@ func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*
 func NewQRandomGenerator64_3(other *QRandomGenerator) *QRandomGenerator64 {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2ERK16QRandomGenerator", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
 	return gothis
@@ -128,7 +117,7 @@ func NewQRandomGenerator64_3(other *QRandomGenerator) *QRandomGenerator64 {
 // [-2] void discard(unsigned long long)
 func (this *QRandomGenerator64) Discard(z uint64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator647discardEy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), z)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qrandom.h:239
@@ -137,7 +126,7 @@ func (this *QRandomGenerator64) Discard(z uint64) {
 // [8] QRandomGenerator64::result_type min()
 func (this *QRandomGenerator64) Min() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator643minEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
 }
 func QRandomGenerator64_Min() uint64 {
@@ -152,7 +141,7 @@ func QRandomGenerator64_Min() uint64 {
 // [8] QRandomGenerator64::result_type max()
 func (this *QRandomGenerator64) Max() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator643maxEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
 }
 func QRandomGenerator64_Max() uint64 {
@@ -167,7 +156,7 @@ func QRandomGenerator64_Max() uint64 {
 // [8] QRandomGenerator64 * system()
 func (this *QRandomGenerator64) System() *QRandomGenerator64 /*777 QRandomGenerator64 **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator646systemEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QRandomGenerator64_System() *QRandomGenerator64 /*777 QRandomGenerator64 **/ {
@@ -182,7 +171,7 @@ func QRandomGenerator64_System() *QRandomGenerator64 /*777 QRandomGenerator64 **
 // [8] QRandomGenerator64 * global()
 func (this *QRandomGenerator64) Global() *QRandomGenerator64 /*777 QRandomGenerator64 **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator646globalEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QRandomGenerator64_Global() *QRandomGenerator64 /*777 QRandomGenerator64 **/ {
@@ -197,7 +186,7 @@ func QRandomGenerator64_Global() *QRandomGenerator64 /*777 QRandomGenerator64 **
 // [2512] QRandomGenerator64 securelySeeded()
 func (this *QRandomGenerator64) SecurelySeeded() *QRandomGenerator64 /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator6414securelySeededEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRandomGenerator64)
 	return rv2
@@ -210,8 +199,27 @@ func QRandomGenerator64_SecurelySeeded() *QRandomGenerator64 /*123*/ {
 
 func DeleteQRandomGenerator64(this *QRandomGenerator64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64D2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

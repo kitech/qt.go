@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QPlatformSurfaceEvent) NewFromPointer(cthis unsafe.Pointer) *QPlatformSur
 // [-2] void QPlatformSurfaceEvent(enum QPlatformSurfaceEvent::SurfaceEventType)
 func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", qtrt.FFI_TYPE_POINTER, surfaceEventType)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPlatformSurfaceEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPlatformSurfaceEvent)
 	return gothis
@@ -86,7 +72,7 @@ func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 func DeleteQPlatformSurfaceEvent(this *QPlatformSurfaceEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -96,7 +82,7 @@ func DeleteQPlatformSurfaceEvent(this *QPlatformSurfaceEvent) {
 // [4] QPlatformSurfaceEvent::SurfaceEventType surfaceEventType()
 func (this *QPlatformSurfaceEvent) SurfaceEventType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -106,3 +92,25 @@ const QPlatformSurfaceEvent__SurfaceCreated QPlatformSurfaceEvent__SurfaceEventT
 const QPlatformSurfaceEvent__SurfaceAboutToBeDestroyed QPlatformSurfaceEvent__SurfaceEventType = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

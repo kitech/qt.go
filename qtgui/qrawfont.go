@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QRawFont) NewFromPointer(cthis unsafe.Pointer) *QRawFont {
 // [-2] void QRawFont()
 func NewQRawFont() *QRawFont {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFontC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRawFont)
 	return gothis
@@ -90,7 +76,7 @@ func NewQRawFont_1(fileName string, pixelSize float64, hintingPreference int) *Q
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFontC2ERK7QStringdN5QFont17HintingPreferenceE", qtrt.FFI_TYPE_POINTER, convArg0, pixelSize, hintingPreference)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRawFont)
 	return gothis
@@ -103,7 +89,7 @@ func NewQRawFont_1(fileName string, pixelSize float64, hintingPreference int) *Q
 func NewQRawFont_2(fontData *qtcore.QByteArray, pixelSize float64, hintingPreference int) *QRawFont {
 	var convArg0 = fontData.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFontC2ERK10QByteArraydN5QFont17HintingPreferenceE", qtrt.FFI_TYPE_POINTER, convArg0, pixelSize, hintingPreference)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRawFont)
 	return gothis
@@ -116,7 +102,7 @@ func NewQRawFont_2(fontData *qtcore.QByteArray, pixelSize float64, hintingPrefer
 func DeleteQRawFont(this *QRawFont) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFontD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -127,7 +113,7 @@ func DeleteQRawFont(this *QRawFont) {
 func (this *QRawFont) Swap(other *QRawFont) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFont4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qrawfont.h:90
@@ -136,7 +122,7 @@ func (this *QRawFont) Swap(other *QRawFont) {
 // [1] bool isValid()
 func (this *QRawFont) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -146,7 +132,7 @@ func (this *QRawFont) IsValid() bool {
 // [8] QString familyName()
 func (this *QRawFont) FamilyName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont10familyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -159,7 +145,7 @@ func (this *QRawFont) FamilyName() string {
 // [8] QString styleName()
 func (this *QRawFont) StyleName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont9styleNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -172,7 +158,7 @@ func (this *QRawFont) StyleName() string {
 // [4] QFont::Style style()
 func (this *QRawFont) Style() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -182,7 +168,7 @@ func (this *QRawFont) Style() int {
 // [4] int weight()
 func (this *QRawFont) Weight() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont6weightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -193,7 +179,7 @@ func (this *QRawFont) Weight() int {
 func (this *QRawFont) GlyphIndexesForChars(chars *qtcore.QChar /*777 const QChar **/, numChars int, glyphIndexes unsafe.Pointer /*666*/, numGlyphs unsafe.Pointer /*666*/) bool {
 	var convArg0 = chars.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, numChars, &glyphIndexes, &numGlyphs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -204,7 +190,7 @@ func (this *QRawFont) GlyphIndexesForChars(chars *qtcore.QChar /*777 const QChar
 func (this *QRawFont) AdvancesForGlyphIndexes(glyphIndexes unsafe.Pointer /*666*/, advances *qtcore.QPointF /*777 QPointF **/, numGlyphs int) bool {
 	var convArg1 = advances.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &glyphIndexes, convArg1, numGlyphs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -215,7 +201,7 @@ func (this *QRawFont) AdvancesForGlyphIndexes(glyphIndexes unsafe.Pointer /*666*
 func (this *QRawFont) AdvancesForGlyphIndexes_1(glyphIndexes unsafe.Pointer /*666*/, advances *qtcore.QPointF /*777 QPointF **/, numGlyphs int, layoutFlags int) bool {
 	var convArg1 = advances.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi6QFlagsINS_10LayoutFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &glyphIndexes, convArg1, numGlyphs, layoutFlags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -226,7 +212,7 @@ func (this *QRawFont) AdvancesForGlyphIndexes_1(glyphIndexes unsafe.Pointer /*66
 func (this *QRawFont) AlphaMapForGlyph(glyphIndex uint, antialiasingType int, transform *QTransform) *QImage /*123*/ {
 	var convArg2 = transform.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont16alphaMapForGlyphEjNS_16AntialiasingTypeERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), glyphIndex, antialiasingType, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQImage)
 	return rv2
@@ -238,7 +224,7 @@ func (this *QRawFont) AlphaMapForGlyph(glyphIndex uint, antialiasingType int, tr
 // [8] QPainterPath pathForGlyph(quint32)
 func (this *QRawFont) PathForGlyph(glyphIndex uint) *QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont12pathForGlyphEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), glyphIndex)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
@@ -250,7 +236,7 @@ func (this *QRawFont) PathForGlyph(glyphIndex uint) *QPainterPath /*123*/ {
 // [32] QRectF boundingRect(quint32)
 func (this *QRawFont) BoundingRect(glyphIndex uint) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont12boundingRectEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), glyphIndex)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -262,7 +248,7 @@ func (this *QRawFont) BoundingRect(glyphIndex uint) *qtcore.QRectF /*123*/ {
 // [-2] void setPixelSize(qreal)
 func (this *QRawFont) SetPixelSize(pixelSize float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFont12setPixelSizeEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pixelSize)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qrawfont.h:116
@@ -271,7 +257,7 @@ func (this *QRawFont) SetPixelSize(pixelSize float64) {
 // [8] qreal pixelSize()
 func (this *QRawFont) PixelSize() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont9pixelSizeEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -281,7 +267,7 @@ func (this *QRawFont) PixelSize() float64 {
 // [4] QFont::HintingPreference hintingPreference()
 func (this *QRawFont) HintingPreference() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont17hintingPreferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -291,7 +277,7 @@ func (this *QRawFont) HintingPreference() int {
 // [8] qreal ascent()
 func (this *QRawFont) Ascent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont6ascentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -301,7 +287,7 @@ func (this *QRawFont) Ascent() float64 {
 // [8] qreal capHeight()
 func (this *QRawFont) CapHeight() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont9capHeightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -311,7 +297,7 @@ func (this *QRawFont) CapHeight() float64 {
 // [8] qreal descent()
 func (this *QRawFont) Descent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont7descentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -321,7 +307,7 @@ func (this *QRawFont) Descent() float64 {
 // [8] qreal leading()
 func (this *QRawFont) Leading() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont7leadingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -331,7 +317,7 @@ func (this *QRawFont) Leading() float64 {
 // [8] qreal xHeight()
 func (this *QRawFont) XHeight() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont7xHeightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -341,7 +327,7 @@ func (this *QRawFont) XHeight() float64 {
 // [8] qreal averageCharWidth()
 func (this *QRawFont) AverageCharWidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont16averageCharWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -351,7 +337,7 @@ func (this *QRawFont) AverageCharWidth() float64 {
 // [8] qreal maxCharWidth()
 func (this *QRawFont) MaxCharWidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont12maxCharWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -361,7 +347,7 @@ func (this *QRawFont) MaxCharWidth() float64 {
 // [8] qreal lineThickness()
 func (this *QRawFont) LineThickness() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont13lineThicknessEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -371,7 +357,7 @@ func (this *QRawFont) LineThickness() float64 {
 // [8] qreal underlinePosition()
 func (this *QRawFont) UnderlinePosition() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont17underlinePositionEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -381,7 +367,7 @@ func (this *QRawFont) UnderlinePosition() float64 {
 // [8] qreal unitsPerEm()
 func (this *QRawFont) UnitsPerEm() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont10unitsPerEmEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -393,7 +379,7 @@ func (this *QRawFont) LoadFromFile(fileName string, pixelSize float64, hintingPr
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFont12loadFromFileERK7QStringdN5QFont17HintingPreferenceE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pixelSize, hintingPreference)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qrawfont.h:136
@@ -403,7 +389,7 @@ func (this *QRawFont) LoadFromFile(fileName string, pixelSize float64, hintingPr
 func (this *QRawFont) LoadFromData(fontData *qtcore.QByteArray, pixelSize float64, hintingPreference int) {
 	var convArg0 = fontData.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFont12loadFromDataERK10QByteArraydN5QFont17HintingPreferenceE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pixelSize, hintingPreference)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qrawfont.h:140
@@ -412,7 +398,7 @@ func (this *QRawFont) LoadFromData(fontData *qtcore.QByteArray, pixelSize float6
 // [1] bool supportsCharacter(uint)
 func (this *QRawFont) SupportsCharacter(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont17supportsCharacterEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ucs4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -423,7 +409,7 @@ func (this *QRawFont) SupportsCharacter(ucs4 uint) bool {
 func (this *QRawFont) SupportsCharacter_1(character *qtcore.QChar /*123*/) bool {
 	var convArg0 = character.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont17supportsCharacterE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -435,7 +421,7 @@ func (this *QRawFont) FontTable(tagName string) *qtcore.QByteArray /*123*/ {
 	var convArg0 = qtrt.CString(tagName)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont9fontTableEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
@@ -448,7 +434,7 @@ func (this *QRawFont) FontTable(tagName string) *qtcore.QByteArray /*123*/ {
 func (this *QRawFont) FromFont(font *QFont, writingSystem int) *QRawFont /*123*/ {
 	var convArg0 = font.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFont8fromFontERK5QFontN13QFontDatabase13WritingSystemE", qtrt.FFI_TYPE_POINTER, convArg0, writingSystem)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRawFont)
 	return rv2
@@ -471,3 +457,25 @@ const QRawFont__KernedAdvances QRawFont__LayoutFlag = 1
 const QRawFont__UseDesignMetrics QRawFont__LayoutFlag = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

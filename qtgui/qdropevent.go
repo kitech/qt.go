@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -75,7 +61,7 @@ func NewQDropEvent(pos *qtcore.QPointF, actions int, data *qtcore.QMimeData /*77
 	var convArg0 = pos.GetCthis()
 	var convArg2 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDropEventC2ERK7QPointF6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDropEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDropEvent)
 	return gothis
@@ -88,7 +74,7 @@ func NewQDropEvent(pos *qtcore.QPointF, actions int, data *qtcore.QMimeData /*77
 func DeleteQDropEvent(this *QDropEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDropEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 72)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -98,7 +84,7 @@ func DeleteQDropEvent(this *QDropEvent) {
 // [8] QPoint pos()
 func (this *QDropEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -110,7 +96,7 @@ func (this *QDropEvent) Pos() *qtcore.QPoint /*123*/ {
 // [16] const QPointF & posF()
 func (this *QDropEvent) PosF() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent4posFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -122,7 +108,7 @@ func (this *QDropEvent) PosF() *qtcore.QPointF {
 // [4] Qt::MouseButtons mouseButtons()
 func (this *QDropEvent) MouseButtons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent12mouseButtonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -132,7 +118,7 @@ func (this *QDropEvent) MouseButtons() int {
 // [4] Qt::KeyboardModifiers keyboardModifiers()
 func (this *QDropEvent) KeyboardModifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent17keyboardModifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -142,7 +128,7 @@ func (this *QDropEvent) KeyboardModifiers() int {
 // [4] Qt::DropActions possibleActions()
 func (this *QDropEvent) PossibleActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent15possibleActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -152,7 +138,7 @@ func (this *QDropEvent) PossibleActions() int {
 // [4] Qt::DropAction proposedAction()
 func (this *QDropEvent) ProposedAction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent14proposedActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -162,7 +148,7 @@ func (this *QDropEvent) ProposedAction() int {
 // [-2] void acceptProposedAction()
 func (this *QDropEvent) AcceptProposedAction() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDropEvent20acceptProposedActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:621
@@ -171,7 +157,7 @@ func (this *QDropEvent) AcceptProposedAction() {
 // [4] Qt::DropAction dropAction()
 func (this *QDropEvent) DropAction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent10dropActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -181,7 +167,7 @@ func (this *QDropEvent) DropAction() int {
 // [-2] void setDropAction(Qt::DropAction)
 func (this *QDropEvent) SetDropAction(action int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDropEvent13setDropActionEN2Qt10DropActionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:624
@@ -190,7 +176,7 @@ func (this *QDropEvent) SetDropAction(action int) {
 // [8] QObject * source()
 func (this *QDropEvent) Source() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -200,8 +186,30 @@ func (this *QDropEvent) Source() *qtcore.QObject /*777 QObject **/ {
 // [8] const QMimeData * mimeData()
 func (this *QDropEvent) MimeData() *qtcore.QMimeData /*777 const QMimeData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent8mimeDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMimeDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

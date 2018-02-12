@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // void emitSelectionChanged(const class QItemSelection &, const class QItemSelection &)
 func (this *QItemSelectionModel) InheritEmitSelectionChanged(f func(newSelection *QItemSelection, oldSelection *QItemSelection) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "emitSelectionChanged", f)
@@ -73,7 +63,7 @@ func (*QItemSelectionModel) NewFromPointer(cthis unsafe.Pointer) *QItemSelection
 // [8] const QMetaObject * metaObject()
 func (this *QItemSelectionModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -84,7 +74,7 @@ func (this *QItemSelectionModel) MetaObject() *QMetaObject /*777 const QMetaObje
 func NewQItemSelectionModel(model *QAbstractItemModel /*777 QAbstractItemModel **/) *QItemSelectionModel {
 	var convArg0 = model.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModelC2EP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQItemSelectionModelFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -97,7 +87,7 @@ func NewQItemSelectionModel_1(model *QAbstractItemModel /*777 QAbstractItemModel
 	var convArg0 = model.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModelC2EP18QAbstractItemModelP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQItemSelectionModelFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -109,7 +99,7 @@ func NewQItemSelectionModel_1(model *QAbstractItemModel /*777 QAbstractItemModel
 func DeleteQItemSelectionModel(this *QItemSelectionModel) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModelD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -119,7 +109,7 @@ func DeleteQItemSelectionModel(this *QItemSelectionModel) {
 // [24] QModelIndex currentIndex()
 func (this *QItemSelectionModel) CurrentIndex() *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12currentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -132,7 +122,7 @@ func (this *QItemSelectionModel) CurrentIndex() *QModelIndex /*123*/ {
 func (this *QItemSelectionModel) IsSelected(index *QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel10isSelectedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -143,7 +133,7 @@ func (this *QItemSelectionModel) IsSelected(index *QModelIndex) bool {
 func (this *QItemSelectionModel) IsRowSelected(row int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -154,7 +144,7 @@ func (this *QItemSelectionModel) IsRowSelected(row int, parent *QModelIndex) boo
 func (this *QItemSelectionModel) IsColumnSelected(column int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -165,7 +155,7 @@ func (this *QItemSelectionModel) IsColumnSelected(column int, parent *QModelInde
 func (this *QItemSelectionModel) RowIntersectsSelection(row int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -176,7 +166,7 @@ func (this *QItemSelectionModel) RowIntersectsSelection(row int, parent *QModelI
 func (this *QItemSelectionModel) ColumnIntersectsSelection(column int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -186,7 +176,7 @@ func (this *QItemSelectionModel) ColumnIntersectsSelection(column int, parent *Q
 // [1] bool hasSelection()
 func (this *QItemSelectionModel) HasSelection() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12hasSelectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -196,7 +186,7 @@ func (this *QItemSelectionModel) HasSelection() bool {
 // [8] QModelIndexList selectedIndexes()
 func (this *QItemSelectionModel) SelectedIndexes() *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedIndexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -207,7 +197,7 @@ func (this *QItemSelectionModel) SelectedIndexes() *QModelIndexList /*667*/ {
 // [8] QModelIndexList selectedRows(int)
 func (this *QItemSelectionModel) SelectedRows(column int) *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12selectedRowsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -218,7 +208,7 @@ func (this *QItemSelectionModel) SelectedRows(column int) *QModelIndexList /*667
 // [8] QModelIndexList selectedColumns(int)
 func (this *QItemSelectionModel) SelectedColumns(row int) *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedColumnsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -229,7 +219,7 @@ func (this *QItemSelectionModel) SelectedColumns(row int) *QModelIndexList /*667
 // [8] const QItemSelection selection()
 func (this *QItemSelectionModel) Selection() *QItemSelection /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel9selectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelection)
 	return rv2
@@ -241,7 +231,7 @@ func (this *QItemSelectionModel) Selection() *QItemSelection /*123*/ {
 // [8] const QAbstractItemModel * model()
 func (this *QItemSelectionModel) Model() *QAbstractItemModel /*777 const QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -251,7 +241,7 @@ func (this *QItemSelectionModel) Model() *QAbstractItemModel /*777 const QAbstra
 // [8] QAbstractItemModel * model()
 func (this *QItemSelectionModel) Model_1() *QAbstractItemModel /*777 QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -262,7 +252,7 @@ func (this *QItemSelectionModel) Model_1() *QAbstractItemModel /*777 QAbstractIt
 func (this *QItemSelectionModel) SetModel(model *QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel8setModelEP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:194
@@ -272,7 +262,7 @@ func (this *QItemSelectionModel) SetModel(model *QAbstractItemModel /*777 QAbstr
 func (this *QItemSelectionModel) SetCurrentIndex(index *QModelIndex, command int) {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel15setCurrentIndexERK11QModelIndex6QFlagsINS_13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:195
@@ -282,7 +272,7 @@ func (this *QItemSelectionModel) SetCurrentIndex(index *QModelIndex, command int
 func (this *QItemSelectionModel) Select(index *QModelIndex, command int) {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel6selectERK11QModelIndex6QFlagsINS_13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:196
@@ -292,7 +282,7 @@ func (this *QItemSelectionModel) Select(index *QModelIndex, command int) {
 func (this *QItemSelectionModel) Select_1(selection *QItemSelection, command int) {
 	var convArg0 = selection.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel6selectERK14QItemSelection6QFlagsINS_13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:197
@@ -301,7 +291,7 @@ func (this *QItemSelectionModel) Select_1(selection *QItemSelection, command int
 // [-2] void clear()
 func (this *QItemSelectionModel) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:198
@@ -310,7 +300,7 @@ func (this *QItemSelectionModel) Clear() {
 // [-2] void reset()
 func (this *QItemSelectionModel) Reset() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:200
@@ -319,7 +309,7 @@ func (this *QItemSelectionModel) Reset() {
 // [-2] void clearSelection()
 func (this *QItemSelectionModel) ClearSelection() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel14clearSelectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:201
@@ -328,7 +318,7 @@ func (this *QItemSelectionModel) ClearSelection() {
 // [-2] void clearCurrentIndex()
 func (this *QItemSelectionModel) ClearCurrentIndex() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel17clearCurrentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:204
@@ -339,7 +329,7 @@ func (this *QItemSelectionModel) SelectionChanged(selected *QItemSelection, dese
 	var convArg0 = selected.GetCthis()
 	var convArg1 = deselected.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel16selectionChangedERK14QItemSelectionS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:205
@@ -350,7 +340,7 @@ func (this *QItemSelectionModel) CurrentChanged(current *QModelIndex, previous *
 	var convArg0 = current.GetCthis()
 	var convArg1 = previous.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel14currentChangedERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:206
@@ -361,7 +351,7 @@ func (this *QItemSelectionModel) CurrentRowChanged(current *QModelIndex, previou
 	var convArg0 = current.GetCthis()
 	var convArg1 = previous.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel17currentRowChangedERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:207
@@ -372,7 +362,7 @@ func (this *QItemSelectionModel) CurrentColumnChanged(current *QModelIndex, prev
 	var convArg0 = current.GetCthis()
 	var convArg1 = previous.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel20currentColumnChangedERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:208
@@ -382,7 +372,7 @@ func (this *QItemSelectionModel) CurrentColumnChanged(current *QModelIndex, prev
 func (this *QItemSelectionModel) ModelChanged(model *QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel12modelChangedEP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:212
@@ -393,7 +383,7 @@ func (this *QItemSelectionModel) EmitSelectionChanged(newSelection *QItemSelecti
 	var convArg0 = newSelection.GetCthis()
 	var convArg1 = oldSelection.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel20emitSelectionChangedERK14QItemSelectionS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QItemSelectionModel__SelectionFlag = int
@@ -411,3 +401,22 @@ const QItemSelectionModel__ToggleCurrent QItemSelectionModel__SelectionFlag = 24
 const QItemSelectionModel__ClearAndSelect QItemSelectionModel__SelectionFlag = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -69,7 +58,7 @@ func (*QFileSystemWatcher) NewFromPointer(cthis unsafe.Pointer) *QFileSystemWatc
 // [8] const QMetaObject * metaObject()
 func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -80,7 +69,7 @@ func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObjec
 func NewQFileSystemWatcher(parent *QObject /*777 QObject **/) *QFileSystemWatcher {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileSystemWatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -93,7 +82,7 @@ func NewQFileSystemWatcher_1(paths *QStringList, parent *QObject /*777 QObject *
 	var convArg0 = paths.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileSystemWatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -105,7 +94,7 @@ func NewQFileSystemWatcher_1(paths *QStringList, parent *QObject /*777 QObject *
 func DeleteQFileSystemWatcher(this *QFileSystemWatcher) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -117,7 +106,7 @@ func (this *QFileSystemWatcher) AddPath(file string) bool {
 	var tmpArg0 = NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher7addPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -128,7 +117,7 @@ func (this *QFileSystemWatcher) AddPath(file string) bool {
 func (this *QFileSystemWatcher) AddPaths(files *QStringList) *QStringList /*123*/ {
 	var convArg0 = files.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher8addPathsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -142,7 +131,7 @@ func (this *QFileSystemWatcher) RemovePath(file string) bool {
 	var tmpArg0 = NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher10removePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -153,7 +142,7 @@ func (this *QFileSystemWatcher) RemovePath(file string) bool {
 func (this *QFileSystemWatcher) RemovePaths(files *QStringList) *QStringList /*123*/ {
 	var convArg0 = files.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher11removePathsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -165,7 +154,7 @@ func (this *QFileSystemWatcher) RemovePaths(files *QStringList) *QStringList /*1
 // [8] QStringList files()
 func (this *QFileSystemWatcher) Files() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher5filesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -177,10 +166,29 @@ func (this *QFileSystemWatcher) Files() *QStringList /*123*/ {
 // [8] QStringList directories()
 func (this *QFileSystemWatcher) Directories() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher11directoriesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

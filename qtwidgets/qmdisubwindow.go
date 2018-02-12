@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // bool eventFilter(class QObject *, class QEvent *)
 func (this *QMdiSubWindow) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
@@ -176,7 +160,7 @@ func (*QMdiSubWindow) NewFromPointer(cthis unsafe.Pointer) *QMdiSubWindow {
 // [8] const QMetaObject * metaObject()
 func (this *QMdiSubWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -187,7 +171,7 @@ func (this *QMdiSubWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 func NewQMdiSubWindow(parent *QWidget /*777 QWidget **/, flags int) *QMdiSubWindow {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMdiSubWindowFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -199,7 +183,7 @@ func NewQMdiSubWindow(parent *QWidget /*777 QWidget **/, flags int) *QMdiSubWind
 func DeleteQMdiSubWindow(this *QMdiSubWindow) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindowD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -209,7 +193,7 @@ func DeleteQMdiSubWindow(this *QMdiSubWindow) {
 // [8] QSize sizeHint()
 func (this *QMdiSubWindow) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -221,7 +205,7 @@ func (this *QMdiSubWindow) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSizeHint()
 func (this *QMdiSubWindow) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -234,7 +218,7 @@ func (this *QMdiSubWindow) MinimumSizeHint() *qtcore.QSize /*123*/ {
 func (this *QMdiSubWindow) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow9setWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:76
@@ -243,7 +227,7 @@ func (this *QMdiSubWindow) SetWidget(widget *QWidget /*777 QWidget **/) {
 // [8] QWidget * widget()
 func (this *QMdiSubWindow) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -253,7 +237,7 @@ func (this *QMdiSubWindow) Widget() *QWidget /*777 QWidget **/ {
 // [8] QWidget * maximizedButtonsWidget()
 func (this *QMdiSubWindow) MaximizedButtonsWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -263,7 +247,7 @@ func (this *QMdiSubWindow) MaximizedButtonsWidget() *QWidget /*777 QWidget **/ {
 // [8] QWidget * maximizedSystemMenuIconWidget()
 func (this *QMdiSubWindow) MaximizedSystemMenuIconWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -273,7 +257,7 @@ func (this *QMdiSubWindow) MaximizedSystemMenuIconWidget() *QWidget /*777 QWidge
 // [1] bool isShaded()
 func (this *QMdiSubWindow) IsShaded() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow8isShadedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -283,7 +267,7 @@ func (this *QMdiSubWindow) IsShaded() bool {
 // [-2] void setOption(enum QMdiSubWindow::SubWindowOption, _Bool)
 func (this *QMdiSubWindow) SetOption(option int, on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow9setOptionENS_15SubWindowOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:84
@@ -292,7 +276,7 @@ func (this *QMdiSubWindow) SetOption(option int, on bool) {
 // [1] bool testOption(enum QMdiSubWindow::SubWindowOption)
 func (this *QMdiSubWindow) TestOption(arg0 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow10testOptionENS_15SubWindowOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -302,7 +286,7 @@ func (this *QMdiSubWindow) TestOption(arg0 int) bool {
 // [-2] void setKeyboardSingleStep(int)
 func (this *QMdiSubWindow) SetKeyboardSingleStep(step int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow21setKeyboardSingleStepEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:87
@@ -311,7 +295,7 @@ func (this *QMdiSubWindow) SetKeyboardSingleStep(step int) {
 // [4] int keyboardSingleStep()
 func (this *QMdiSubWindow) KeyboardSingleStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow18keyboardSingleStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -321,7 +305,7 @@ func (this *QMdiSubWindow) KeyboardSingleStep() int {
 // [-2] void setKeyboardPageStep(int)
 func (this *QMdiSubWindow) SetKeyboardPageStep(step int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow19setKeyboardPageStepEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:90
@@ -330,7 +314,7 @@ func (this *QMdiSubWindow) SetKeyboardPageStep(step int) {
 // [4] int keyboardPageStep()
 func (this *QMdiSubWindow) KeyboardPageStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow16keyboardPageStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -341,7 +325,7 @@ func (this *QMdiSubWindow) KeyboardPageStep() int {
 func (this *QMdiSubWindow) SetSystemMenu(systemMenu *QMenu /*777 QMenu **/) {
 	var convArg0 = systemMenu.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow13setSystemMenuEP5QMenu", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:94
@@ -350,7 +334,7 @@ func (this *QMdiSubWindow) SetSystemMenu(systemMenu *QMenu /*777 QMenu **/) {
 // [8] QMenu * systemMenu()
 func (this *QMdiSubWindow) SystemMenu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow10systemMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -360,7 +344,7 @@ func (this *QMdiSubWindow) SystemMenu() *QMenu /*777 QMenu **/ {
 // [8] QMdiArea * mdiArea()
 func (this *QMdiSubWindow) MdiArea() *QMdiArea /*777 QMdiArea **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow7mdiAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMdiAreaFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -370,7 +354,7 @@ func (this *QMdiSubWindow) MdiArea() *QMdiArea /*777 QMdiArea **/ {
 // [-2] void windowStateChanged(Qt::WindowStates, Qt::WindowStates)
 func (this *QMdiSubWindow) WindowStateChanged(oldState int, newState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow18windowStateChangedE6QFlagsIN2Qt11WindowStateEES3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), oldState, newState)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:101
@@ -379,7 +363,7 @@ func (this *QMdiSubWindow) WindowStateChanged(oldState int, newState int) {
 // [-2] void aboutToActivate()
 func (this *QMdiSubWindow) AboutToActivate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow15aboutToActivateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:105
@@ -388,7 +372,7 @@ func (this *QMdiSubWindow) AboutToActivate() {
 // [-2] void showSystemMenu()
 func (this *QMdiSubWindow) ShowSystemMenu() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow14showSystemMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:107
@@ -397,7 +381,7 @@ func (this *QMdiSubWindow) ShowSystemMenu() {
 // [-2] void showShaded()
 func (this *QMdiSubWindow) ShowShaded() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow10showShadedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:110
@@ -408,7 +392,7 @@ func (this *QMdiSubWindow) EventFilter(object *qtcore.QObject /*777 QObject **/,
 	var convArg0 = object.GetCthis()
 	var convArg1 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -419,7 +403,7 @@ func (this *QMdiSubWindow) EventFilter(object *qtcore.QObject /*777 QObject **/,
 func (this *QMdiSubWindow) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -430,7 +414,7 @@ func (this *QMdiSubWindow) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 func (this *QMdiSubWindow) ShowEvent(showEvent *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = showEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:113
@@ -440,7 +424,7 @@ func (this *QMdiSubWindow) ShowEvent(showEvent *qtgui.QShowEvent /*777 QShowEven
 func (this *QMdiSubWindow) HideEvent(hideEvent *qtgui.QHideEvent /*777 QHideEvent **/) {
 	var convArg0 = hideEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow9hideEventEP10QHideEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:114
@@ -450,7 +434,7 @@ func (this *QMdiSubWindow) HideEvent(hideEvent *qtgui.QHideEvent /*777 QHideEven
 func (this *QMdiSubWindow) ChangeEvent(changeEvent *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = changeEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:115
@@ -460,7 +444,7 @@ func (this *QMdiSubWindow) ChangeEvent(changeEvent *qtcore.QEvent /*777 QEvent *
 func (this *QMdiSubWindow) CloseEvent(closeEvent *qtgui.QCloseEvent /*777 QCloseEvent **/) {
 	var convArg0 = closeEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow10closeEventEP11QCloseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:116
@@ -470,7 +454,7 @@ func (this *QMdiSubWindow) CloseEvent(closeEvent *qtgui.QCloseEvent /*777 QClose
 func (this *QMdiSubWindow) LeaveEvent(leaveEvent *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = leaveEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow10leaveEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:117
@@ -480,7 +464,7 @@ func (this *QMdiSubWindow) LeaveEvent(leaveEvent *qtcore.QEvent /*777 QEvent **/
 func (this *QMdiSubWindow) ResizeEvent(resizeEvent *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = resizeEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:118
@@ -490,7 +474,7 @@ func (this *QMdiSubWindow) ResizeEvent(resizeEvent *qtgui.QResizeEvent /*777 QRe
 func (this *QMdiSubWindow) TimerEvent(timerEvent *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = timerEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:119
@@ -500,7 +484,7 @@ func (this *QMdiSubWindow) TimerEvent(timerEvent *qtcore.QTimerEvent /*777 QTime
 func (this *QMdiSubWindow) MoveEvent(moveEvent *qtgui.QMoveEvent /*777 QMoveEvent **/) {
 	var convArg0 = moveEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow9moveEventEP10QMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:120
@@ -510,7 +494,7 @@ func (this *QMdiSubWindow) MoveEvent(moveEvent *qtgui.QMoveEvent /*777 QMoveEven
 func (this *QMdiSubWindow) PaintEvent(paintEvent *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = paintEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:121
@@ -520,7 +504,7 @@ func (this *QMdiSubWindow) PaintEvent(paintEvent *qtgui.QPaintEvent /*777 QPaint
 func (this *QMdiSubWindow) MousePressEvent(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = mouseEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:122
@@ -530,7 +514,7 @@ func (this *QMdiSubWindow) MousePressEvent(mouseEvent *qtgui.QMouseEvent /*777 Q
 func (this *QMdiSubWindow) MouseDoubleClickEvent(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = mouseEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow21mouseDoubleClickEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:123
@@ -540,7 +524,7 @@ func (this *QMdiSubWindow) MouseDoubleClickEvent(mouseEvent *qtgui.QMouseEvent /
 func (this *QMdiSubWindow) MouseReleaseEvent(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = mouseEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:124
@@ -550,7 +534,7 @@ func (this *QMdiSubWindow) MouseReleaseEvent(mouseEvent *qtgui.QMouseEvent /*777
 func (this *QMdiSubWindow) MouseMoveEvent(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = mouseEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:125
@@ -560,7 +544,7 @@ func (this *QMdiSubWindow) MouseMoveEvent(mouseEvent *qtgui.QMouseEvent /*777 QM
 func (this *QMdiSubWindow) KeyPressEvent(keyEvent *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = keyEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:127
@@ -570,7 +554,7 @@ func (this *QMdiSubWindow) KeyPressEvent(keyEvent *qtgui.QKeyEvent /*777 QKeyEve
 func (this *QMdiSubWindow) ContextMenuEvent(contextMenuEvent *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
 	var convArg0 = contextMenuEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:129
@@ -580,7 +564,7 @@ func (this *QMdiSubWindow) ContextMenuEvent(contextMenuEvent *qtgui.QContextMenu
 func (this *QMdiSubWindow) FocusInEvent(focusInEvent *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = focusInEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:130
@@ -590,7 +574,7 @@ func (this *QMdiSubWindow) FocusInEvent(focusInEvent *qtgui.QFocusEvent /*777 QF
 func (this *QMdiSubWindow) FocusOutEvent(focusOutEvent *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = focusOutEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:131
@@ -600,7 +584,7 @@ func (this *QMdiSubWindow) FocusOutEvent(focusOutEvent *qtgui.QFocusEvent /*777 
 func (this *QMdiSubWindow) ChildEvent(childEvent *qtcore.QChildEvent /*777 QChildEvent **/) {
 	var convArg0 = childEvent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow10childEventEP11QChildEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QMdiSubWindow__SubWindowOption = int
@@ -611,3 +595,28 @@ const QMdiSubWindow__RubberBandResize QMdiSubWindow__SubWindowOption = 4
 const QMdiSubWindow__RubberBandMove QMdiSubWindow__SubWindowOption = 8
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

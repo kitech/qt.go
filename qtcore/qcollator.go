@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -73,7 +62,7 @@ func (*QCollator) NewFromPointer(cthis unsafe.Pointer) *QCollator {
 func NewQCollator(locale *QLocale) *QCollator {
 	var convArg0 = locale.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollatorC2ERK7QLocale", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCollatorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQCollator)
 	return gothis
@@ -86,7 +75,7 @@ func NewQCollator(locale *QLocale) *QCollator {
 func DeleteQCollator(this *QCollator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -97,7 +86,7 @@ func DeleteQCollator(this *QCollator) {
 func (this *QCollator) Swap(other *QCollator) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollator4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcollator.h:100
@@ -107,7 +96,7 @@ func (this *QCollator) Swap(other *QCollator) {
 func (this *QCollator) SetLocale(locale *QLocale) {
 	var convArg0 = locale.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollator9setLocaleERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcollator.h:101
@@ -116,7 +105,7 @@ func (this *QCollator) SetLocale(locale *QLocale) {
 // [8] QLocale locale()
 func (this *QCollator) Locale() *QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator6localeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLocale)
 	return rv2
@@ -128,7 +117,7 @@ func (this *QCollator) Locale() *QLocale /*123*/ {
 // [4] Qt::CaseSensitivity caseSensitivity()
 func (this *QCollator) CaseSensitivity() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator15caseSensitivityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -138,7 +127,7 @@ func (this *QCollator) CaseSensitivity() int {
 // [-2] void setCaseSensitivity(Qt::CaseSensitivity)
 func (this *QCollator) SetCaseSensitivity(cs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollator18setCaseSensitivityEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcollator.h:106
@@ -147,7 +136,7 @@ func (this *QCollator) SetCaseSensitivity(cs int) {
 // [-2] void setNumericMode(_Bool)
 func (this *QCollator) SetNumericMode(on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollator14setNumericModeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcollator.h:107
@@ -156,7 +145,7 @@ func (this *QCollator) SetNumericMode(on bool) {
 // [1] bool numericMode()
 func (this *QCollator) NumericMode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator11numericModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -166,7 +155,7 @@ func (this *QCollator) NumericMode() bool {
 // [-2] void setIgnorePunctuation(_Bool)
 func (this *QCollator) SetIgnorePunctuation(on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollator20setIgnorePunctuationEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcollator.h:110
@@ -175,7 +164,7 @@ func (this *QCollator) SetIgnorePunctuation(on bool) {
 // [1] bool ignorePunctuation()
 func (this *QCollator) IgnorePunctuation() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator17ignorePunctuationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -189,7 +178,7 @@ func (this *QCollator) Compare(s1 string, s2 string) int {
 	var tmpArg1 = NewQString_5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator7compareERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -201,7 +190,7 @@ func (this *QCollator) Compare_1(s1 *QStringRef, s2 *QStringRef) int {
 	var convArg0 = s1.GetCthis()
 	var convArg1 = s2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator7compareERK10QStringRefS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -213,7 +202,7 @@ func (this *QCollator) Compare_2(s1 *QChar /*777 const QChar **/, len1 int, s2 *
 	var convArg0 = s1.GetCthis()
 	var convArg2 = s2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator7compareEPK5QChariS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len1, convArg2, len2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -225,10 +214,29 @@ func (this *QCollator) SortKey(string string) *QCollatorSortKey /*123*/ {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator7sortKeyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCollatorSortKeyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCollatorSortKey)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

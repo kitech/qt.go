@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -74,7 +63,7 @@ func NewQSystemSemaphore(key string, initialValue int, mode int) *QSystemSemapho
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, convArg0, initialValue, mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSystemSemaphoreFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSystemSemaphore)
 	return gothis
@@ -87,7 +76,7 @@ func NewQSystemSemaphore(key string, initialValue int, mode int) *QSystemSemapho
 func DeleteQSystemSemaphore(this *QSystemSemaphore) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphoreD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -99,7 +88,7 @@ func (this *QSystemSemaphore) SetKey(key string, initialValue int, mode int) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, initialValue, mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:78
@@ -108,7 +97,7 @@ func (this *QSystemSemaphore) SetKey(key string, initialValue int, mode int) {
 // [8] QString key()
 func (this *QSystemSemaphore) Key() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSystemSemaphore3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -121,7 +110,7 @@ func (this *QSystemSemaphore) Key() string {
 // [1] bool acquire()
 func (this *QSystemSemaphore) Acquire() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore7acquireEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -131,7 +120,7 @@ func (this *QSystemSemaphore) Acquire() bool {
 // [1] bool release(int)
 func (this *QSystemSemaphore) Release(n int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -141,7 +130,7 @@ func (this *QSystemSemaphore) Release(n int) bool {
 // [4] QSystemSemaphore::SystemSemaphoreError error()
 func (this *QSystemSemaphore) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSystemSemaphore5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -151,7 +140,7 @@ func (this *QSystemSemaphore) Error() int {
 // [8] QString errorString()
 func (this *QSystemSemaphore) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSystemSemaphore11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -174,3 +163,22 @@ const QSystemSemaphore__OutOfResources QSystemSemaphore__SystemSemaphoreError = 
 const QSystemSemaphore__UnknownError QSystemSemaphore__SystemSemaphoreError = 6
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

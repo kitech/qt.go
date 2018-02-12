@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -75,7 +61,7 @@ func NewQDragMoveEvent(pos *qtcore.QPoint, actions int, data *qtcore.QMimeData /
 	var convArg0 = pos.GetCthis()
 	var convArg2 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDragMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDragMoveEvent)
 	return gothis
@@ -88,7 +74,7 @@ func NewQDragMoveEvent(pos *qtcore.QPoint, actions int, data *qtcore.QMimeData /
 func DeleteQDragMoveEvent(this *QDragMoveEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 88)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -98,7 +84,7 @@ func DeleteQDragMoveEvent(this *QDragMoveEvent) {
 // [16] QRect answerRect()
 func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -110,7 +96,7 @@ func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
 // [-2] void accept()
 func (this *QDragMoveEvent) Accept() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:651
@@ -120,7 +106,7 @@ func (this *QDragMoveEvent) Accept() {
 func (this *QDragMoveEvent) Accept_1(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:649
@@ -129,7 +115,7 @@ func (this *QDragMoveEvent) Accept_1(r *qtcore.QRect) {
 // [-2] void ignore()
 func (this *QDragMoveEvent) Ignore() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:652
@@ -139,7 +125,29 @@ func (this *QDragMoveEvent) Ignore() {
 func (this *QDragMoveEvent) Ignore_1(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

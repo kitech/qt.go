@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // void convertFromAscii(const char *, int, class QChar *&)
 func (this *QAbstractConcatenable) InheritConvertFromAscii(f func(a string, len int, out *QChar) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "convertFromAscii", f)
@@ -84,7 +74,7 @@ func (this *QAbstractConcatenable) ConvertFromAscii(a string, len int, out *QCha
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = out.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEPKciRP5QChar", qtrt.FFI_TYPE_POINTER, convArg0, len, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QAbstractConcatenable_ConvertFromAscii(a string, len int, out *QChar) {
 	var nilthis *QAbstractConcatenable
@@ -98,7 +88,7 @@ func QAbstractConcatenable_ConvertFromAscii(a string, len int, out *QChar) {
 func (this *QAbstractConcatenable) ConvertFromAscii_1(a byte, out *QChar) {
 	var convArg1 = out.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEcRP5QChar", qtrt.FFI_TYPE_POINTER, a, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QAbstractConcatenable_ConvertFromAscii_1(a byte, out *QChar) {
 	var nilthis *QAbstractConcatenable
@@ -114,7 +104,7 @@ func (this *QAbstractConcatenable) AppendLatin1To(a string, len int, out *QChar 
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = out.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractConcatenable14appendLatin1ToEPKciP5QChar", qtrt.FFI_TYPE_POINTER, convArg0, len, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QAbstractConcatenable_AppendLatin1To(a string, len int, out *QChar /*777 QChar **/) {
 	var nilthis *QAbstractConcatenable
@@ -123,8 +113,27 @@ func QAbstractConcatenable_AppendLatin1To(a string, len int, out *QChar /*777 QC
 
 func DeleteQAbstractConcatenable(this *QAbstractConcatenable) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractConcatenableD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

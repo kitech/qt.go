@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*ExternalRefCountData) NewFromPointer(cthis unsafe.Pointer) *ExternalRefCo
 // [-2] void ExternalRefCountData(Qt::Initialization)
 func NewExternalRefCountData(arg0 int) *ExternalRefCountData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewExternalRefCountDataFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteExternalRefCountData)
 	return gothis
@@ -85,7 +74,7 @@ func NewExternalRefCountData(arg0 int) *ExternalRefCountData {
 func DeleteExternalRefCountData(this *ExternalRefCountData) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -95,7 +84,7 @@ func DeleteExternalRefCountData(this *ExternalRefCountData) {
 // [-2] void destroy()
 func (this *ExternalRefCountData) Destroy() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData7destroyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:160
@@ -105,7 +94,7 @@ func (this *ExternalRefCountData) Destroy() {
 func (this *ExternalRefCountData) GetAndRef(arg0 *QObject /*777 const QObject **/) unsafe.Pointer /*666*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData9getAndRefEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 func ExternalRefCountData_GetAndRef(arg0 *QObject /*777 const QObject **/) unsafe.Pointer /*666*/ {
@@ -121,7 +110,7 @@ func ExternalRefCountData_GetAndRef(arg0 *QObject /*777 const QObject **/) unsaf
 func (this *ExternalRefCountData) SetQObjectShared(arg0 *QObject /*777 const QObject **/, enable bool) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData16setQObjectSharedEPK7QObjectb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, enable)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:162
@@ -131,7 +120,26 @@ func (this *ExternalRefCountData) SetQObjectShared(arg0 *QObject /*777 const QOb
 func (this *ExternalRefCountData) CheckQObjectShared(arg0 *QObject /*777 const QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData18checkQObjectSharedEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

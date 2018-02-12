@@ -6,6 +6,14 @@ package qtquickcontrols2
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,50 +24,13 @@ package qtquickcontrols2
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtnetwork"
-import "qt.go/qtquicktemplates2"
-import "qt.go/qtcore"
-import "qt.go/qtqml"
-import "qt.go/qtgui"
-import "qt.go/qtquick"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtquicktemplates2.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtquick.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtquicktemplates2"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtqml"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtquick"
 
 //  ext block end
 
@@ -96,7 +67,7 @@ func (*QQuickStyle) NewFromPointer(cthis unsafe.Pointer) *QQuickStyle {
 // [8] QString name()
 func (this *QQuickStyle) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle4nameEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -114,7 +85,7 @@ func QQuickStyle_Name() string {
 // [8] QString path()
 func (this *QQuickStyle) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle4pathEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -134,7 +105,7 @@ func (this *QQuickStyle) SetStyle(style string) {
 	var tmpArg0 = qtcore.NewQString_5(style)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle8setStyleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QQuickStyle_SetStyle(style string) {
 	var nilthis *QQuickStyle
@@ -149,7 +120,7 @@ func (this *QQuickStyle) SetFallbackStyle(style string) {
 	var tmpArg0 = qtcore.NewQString_5(style)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle16setFallbackStyleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QQuickStyle_SetFallbackStyle(style string) {
 	var nilthis *QQuickStyle
@@ -162,7 +133,7 @@ func QQuickStyle_SetFallbackStyle(style string) {
 // [8] QStringList availableStyles()
 func (this *QQuickStyle) AvailableStyles() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle15availableStylesEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -175,8 +146,45 @@ func QQuickStyle_AvailableStyles() *qtcore.QStringList /*123*/ {
 
 func DeleteQQuickStyle(this *QQuickStyle) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyleD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtquicktemplates2.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtquick.KeepMe()
+	}
+}
+
+//  keep block end

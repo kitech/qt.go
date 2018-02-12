@@ -7,11 +7,10 @@ package qtgui
 */
 // import "C"
 import (
-	"gopp"
 	"unsafe"
 
-	"qt.go/qtcore"
-	"qt.go/qtrt"
+	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 func init() {
@@ -53,13 +52,13 @@ func (*QWindowListx) NewFromPointer(cthis unsafe.Pointer) *QWindowListx {
 
 func (this *QWindowListx) At(i int) *QWindow {
 	rv, err := qtrt.InvokeQtFunc6("C_QWindowList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return NewQWindowFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QWindowListx) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QWindowList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 

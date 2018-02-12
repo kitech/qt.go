@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QSslError) NewFromPointer(cthis unsafe.Pointer) *QSslError {
 // [-2] void QSslError()
 func NewQSslError() *QSslError {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSslError)
 	return gothis
@@ -88,7 +74,7 @@ func NewQSslError() *QSslError {
 // [-2] void QSslError(enum QSslError::SslError)
 func NewQSslError_1(error int) *QSslError {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorE", qtrt.FFI_TYPE_POINTER, error)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSslError)
 	return gothis
@@ -101,7 +87,7 @@ func NewQSslError_1(error int) *QSslError {
 func NewQSslError_2(error int, certificate *QSslCertificate) *QSslError {
 	var convArg1 = certificate.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorERK15QSslCertificate", qtrt.FFI_TYPE_POINTER, error, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSslError)
 	return gothis
@@ -114,7 +100,7 @@ func NewQSslError_2(error int, certificate *QSslCertificate) *QSslError {
 func (this *QSslError) Swap(other *QSslError) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslError4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qsslerror.h:97
@@ -124,7 +110,7 @@ func (this *QSslError) Swap(other *QSslError) {
 func DeleteQSslError(this *QSslError) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -134,7 +120,7 @@ func DeleteQSslError(this *QSslError) {
 // [4] QSslError::SslError error()
 func (this *QSslError) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslError5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -144,7 +130,7 @@ func (this *QSslError) Error() int {
 // [8] QString errorString()
 func (this *QSslError) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslError11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -157,7 +143,7 @@ func (this *QSslError) ErrorString() string {
 // [8] QSslCertificate certificate()
 func (this *QSslError) Certificate() *QSslCertificate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslError11certificateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslCertificate)
 	return rv2
@@ -193,3 +179,25 @@ const QSslError__CertificateBlacklisted QSslError__SslError = 24
 const QSslError__UnspecifiedError QSslError__SslError = -1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

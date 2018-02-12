@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -69,7 +58,7 @@ func (*QIdentityProxyModel) NewFromPointer(cthis unsafe.Pointer) *QIdentityProxy
 // [8] const QMetaObject * metaObject()
 func (this *QIdentityProxyModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -80,7 +69,7 @@ func (this *QIdentityProxyModel) MetaObject() *QMetaObject /*777 const QMetaObje
 func NewQIdentityProxyModel(parent *QObject /*777 QObject **/) *QIdentityProxyModel {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQIdentityProxyModelFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -92,7 +81,7 @@ func NewQIdentityProxyModel(parent *QObject /*777 QObject **/) *QIdentityProxyMo
 func DeleteQIdentityProxyModel(this *QIdentityProxyModel) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModelD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -103,7 +92,7 @@ func DeleteQIdentityProxyModel(this *QIdentityProxyModel) {
 func (this *QIdentityProxyModel) ColumnCount(parent *QModelIndex) int {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -114,7 +103,7 @@ func (this *QIdentityProxyModel) ColumnCount(parent *QModelIndex) int {
 func (this *QIdentityProxyModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -127,7 +116,7 @@ func (this *QIdentityProxyModel) Index(row int, column int, parent *QModelIndex)
 func (this *QIdentityProxyModel) MapFromSource(sourceIndex *QModelIndex) *QModelIndex /*123*/ {
 	var convArg0 = sourceIndex.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -140,7 +129,7 @@ func (this *QIdentityProxyModel) MapFromSource(sourceIndex *QModelIndex) *QModel
 func (this *QIdentityProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelIndex /*123*/ {
 	var convArg0 = proxyIndex.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -153,7 +142,7 @@ func (this *QIdentityProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelInd
 func (this *QIdentityProxyModel) Parent(child *QModelIndex) *QModelIndex /*123*/ {
 	var convArg0 = child.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel6parentERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -166,7 +155,7 @@ func (this *QIdentityProxyModel) Parent(child *QModelIndex) *QModelIndex /*123*/
 func (this *QIdentityProxyModel) RowCount(parent *QModelIndex) int {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -176,7 +165,7 @@ func (this *QIdentityProxyModel) RowCount(parent *QModelIndex) int {
 // [16] QVariant headerData(int, Qt::Orientation, int)
 func (this *QIdentityProxyModel) HeaderData(section int, orientation int, role int) *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -190,7 +179,7 @@ func (this *QIdentityProxyModel) DropMimeData(data *QMimeData /*777 const QMimeD
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -201,7 +190,7 @@ func (this *QIdentityProxyModel) DropMimeData(data *QMimeData /*777 const QMimeD
 func (this *QIdentityProxyModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
 	var convArg2 = idx.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -214,7 +203,7 @@ func (this *QIdentityProxyModel) Sibling(row int, column int, idx *QModelIndex) 
 func (this *QIdentityProxyModel) MapSelectionFromSource(selection *QItemSelection) *QItemSelection /*123*/ {
 	var convArg0 = selection.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelection)
 	return rv2
@@ -227,7 +216,7 @@ func (this *QIdentityProxyModel) MapSelectionFromSource(selection *QItemSelectio
 func (this *QIdentityProxyModel) MapSelectionToSource(selection *QItemSelection) *QItemSelection /*123*/ {
 	var convArg0 = selection.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelection)
 	return rv2
@@ -241,7 +230,7 @@ func (this *QIdentityProxyModel) Match(start *QModelIndex, role int, value *QVar
 	var convArg0 = start.GetCthis()
 	var convArg2 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -253,7 +242,7 @@ func (this *QIdentityProxyModel) Match(start *QModelIndex, role int, value *QVar
 func (this *QIdentityProxyModel) SetSourceModel(sourceModel *QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = sourceModel.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel14setSourceModelEP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qidentityproxymodel.h:76
@@ -263,7 +252,7 @@ func (this *QIdentityProxyModel) SetSourceModel(sourceModel *QAbstractItemModel 
 func (this *QIdentityProxyModel) InsertColumns(column int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -274,7 +263,7 @@ func (this *QIdentityProxyModel) InsertColumns(column int, count int, parent *QM
 func (this *QIdentityProxyModel) InsertRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -285,7 +274,7 @@ func (this *QIdentityProxyModel) InsertRows(row int, count int, parent *QModelIn
 func (this *QIdentityProxyModel) RemoveColumns(column int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -296,8 +285,27 @@ func (this *QIdentityProxyModel) RemoveColumns(column int, count int, parent *QM
 func (this *QIdentityProxyModel) RemoveRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

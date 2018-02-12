@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QFlag) NewFromPointer(cthis unsafe.Pointer) *QFlag {
 // [-2] void QFlag(int)
 func NewQFlag(ai int) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ei", qtrt.FFI_TYPE_POINTER, ai)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
 	return gothis
@@ -84,7 +73,7 @@ func NewQFlag(ai int) *QFlag {
 // [-2] void QFlag(uint)
 func NewQFlag_1(ai uint) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ej", qtrt.FFI_TYPE_POINTER, ai)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
 	return gothis
@@ -96,7 +85,7 @@ func NewQFlag_1(ai uint) *QFlag {
 // [-2] void QFlag(short)
 func NewQFlag_2(ai int16) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Es", qtrt.FFI_TYPE_POINTER, ai)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
 	return gothis
@@ -108,7 +97,7 @@ func NewQFlag_2(ai int16) *QFlag {
 // [-2] void QFlag(ushort)
 func NewQFlag_3(ai uint16) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Et", qtrt.FFI_TYPE_POINTER, ai)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
 	return gothis
@@ -116,8 +105,27 @@ func NewQFlag_3(ai uint16) *QFlag {
 
 func DeleteQFlag(this *QFlag) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

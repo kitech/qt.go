@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QXmlStreamWriter) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamWriter 
 // [-2] void QXmlStreamWriter()
 func NewQXmlStreamWriter() *QXmlStreamWriter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamWriter)
 	return gothis
@@ -85,7 +74,7 @@ func NewQXmlStreamWriter() *QXmlStreamWriter {
 func NewQXmlStreamWriter_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamWriter {
 	var convArg0 = device.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamWriter)
 	return gothis
@@ -98,7 +87,7 @@ func NewQXmlStreamWriter_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamWri
 func NewQXmlStreamWriter_2(array *QByteArray /*777 QByteArray **/) *QXmlStreamWriter {
 	var convArg0 = array.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamWriter)
 	return gothis
@@ -112,7 +101,7 @@ func NewQXmlStreamWriter_3(string string) *QXmlStreamWriter {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamWriter)
 	return gothis
@@ -125,7 +114,7 @@ func NewQXmlStreamWriter_3(string string) *QXmlStreamWriter {
 func DeleteQXmlStreamWriter(this *QXmlStreamWriter) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriterD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -136,7 +125,7 @@ func DeleteQXmlStreamWriter(this *QXmlStreamWriter) {
 func (this *QXmlStreamWriter) SetDevice(device *QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:479
@@ -145,7 +134,7 @@ func (this *QXmlStreamWriter) SetDevice(device *QIODevice /*777 QIODevice **/) {
 // [8] QIODevice * device()
 func (this *QXmlStreamWriter) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -156,7 +145,7 @@ func (this *QXmlStreamWriter) Device() *QIODevice /*777 QIODevice **/ {
 func (this *QXmlStreamWriter) SetCodec(codec *QTextCodec /*777 QTextCodec **/) {
 	var convArg0 = codec.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter8setCodecEP10QTextCodec", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:483
@@ -167,7 +156,7 @@ func (this *QXmlStreamWriter) SetCodec_1(codecName string) {
 	var convArg0 = qtrt.CString(codecName)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter8setCodecEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:484
@@ -176,7 +165,7 @@ func (this *QXmlStreamWriter) SetCodec_1(codecName string) {
 // [8] QTextCodec * codec()
 func (this *QXmlStreamWriter) Codec() *QTextCodec /*777 QTextCodec **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter5codecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -186,7 +175,7 @@ func (this *QXmlStreamWriter) Codec() *QTextCodec /*777 QTextCodec **/ {
 // [-2] void setAutoFormatting(_Bool)
 func (this *QXmlStreamWriter) SetAutoFormatting(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter17setAutoFormattingEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:488
@@ -195,7 +184,7 @@ func (this *QXmlStreamWriter) SetAutoFormatting(arg0 bool) {
 // [1] bool autoFormatting()
 func (this *QXmlStreamWriter) AutoFormatting() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter14autoFormattingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -205,7 +194,7 @@ func (this *QXmlStreamWriter) AutoFormatting() bool {
 // [-2] void setAutoFormattingIndent(int)
 func (this *QXmlStreamWriter) SetAutoFormattingIndent(spacesOrTabs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter23setAutoFormattingIndentEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spacesOrTabs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:491
@@ -214,7 +203,7 @@ func (this *QXmlStreamWriter) SetAutoFormattingIndent(spacesOrTabs int) {
 // [4] int autoFormattingIndent()
 func (this *QXmlStreamWriter) AutoFormattingIndent() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter20autoFormattingIndentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -228,7 +217,7 @@ func (this *QXmlStreamWriter) WriteAttribute(qualifiedName string, value string)
 	var tmpArg1 = NewQString_5(value)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:494
@@ -243,7 +232,7 @@ func (this *QXmlStreamWriter) WriteAttribute_1(namespaceUri string, name string,
 	var tmpArg2 = NewQString_5(value)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:495
@@ -253,7 +242,7 @@ func (this *QXmlStreamWriter) WriteAttribute_1(namespaceUri string, name string,
 func (this *QXmlStreamWriter) WriteAttribute_2(attribute *QXmlStreamAttribute) {
 	var convArg0 = attribute.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:496
@@ -263,7 +252,7 @@ func (this *QXmlStreamWriter) WriteAttribute_2(attribute *QXmlStreamAttribute) {
 func (this *QXmlStreamWriter) WriteAttributes(attributes *QXmlStreamAttributes) {
 	var convArg0 = attributes.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:498
@@ -274,7 +263,7 @@ func (this *QXmlStreamWriter) WriteCDATA(text string) {
 	var tmpArg0 = NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter10writeCDATAERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:499
@@ -285,7 +274,7 @@ func (this *QXmlStreamWriter) WriteCharacters(text string) {
 	var tmpArg0 = NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter15writeCharactersERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:500
@@ -296,7 +285,7 @@ func (this *QXmlStreamWriter) WriteComment(text string) {
 	var tmpArg0 = NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter12writeCommentERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:502
@@ -307,7 +296,7 @@ func (this *QXmlStreamWriter) WriteDTD(dtd string) {
 	var tmpArg0 = NewQString_5(dtd)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter8writeDTDERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:504
@@ -318,7 +307,7 @@ func (this *QXmlStreamWriter) WriteEmptyElement(qualifiedName string) {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter17writeEmptyElementERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:505
@@ -331,7 +320,7 @@ func (this *QXmlStreamWriter) WriteEmptyElement_1(namespaceUri string, name stri
 	var tmpArg1 = NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:507
@@ -344,7 +333,7 @@ func (this *QXmlStreamWriter) WriteTextElement(qualifiedName string, text string
 	var tmpArg1 = NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:508
@@ -359,7 +348,7 @@ func (this *QXmlStreamWriter) WriteTextElement_1(namespaceUri string, name strin
 	var tmpArg2 = NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:510
@@ -368,7 +357,7 @@ func (this *QXmlStreamWriter) WriteTextElement_1(namespaceUri string, name strin
 // [-2] void writeEndDocument()
 func (this *QXmlStreamWriter) WriteEndDocument() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter16writeEndDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:511
@@ -377,7 +366,7 @@ func (this *QXmlStreamWriter) WriteEndDocument() {
 // [-2] void writeEndElement()
 func (this *QXmlStreamWriter) WriteEndElement() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter15writeEndElementEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:513
@@ -388,7 +377,7 @@ func (this *QXmlStreamWriter) WriteEntityReference(name string) {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter20writeEntityReferenceERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:514
@@ -401,7 +390,7 @@ func (this *QXmlStreamWriter) WriteNamespace(namespaceUri string, prefix string)
 	var tmpArg1 = NewQString_5(prefix)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:515
@@ -412,7 +401,7 @@ func (this *QXmlStreamWriter) WriteDefaultNamespace(namespaceUri string) {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:516
@@ -425,7 +414,7 @@ func (this *QXmlStreamWriter) WriteProcessingInstruction(target string, data str
 	var tmpArg1 = NewQString_5(data)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:518
@@ -434,7 +423,7 @@ func (this *QXmlStreamWriter) WriteProcessingInstruction(target string, data str
 // [-2] void writeStartDocument()
 func (this *QXmlStreamWriter) WriteStartDocument() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter18writeStartDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:519
@@ -445,7 +434,7 @@ func (this *QXmlStreamWriter) WriteStartDocument_1(version string) {
 	var tmpArg0 = NewQString_5(version)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter18writeStartDocumentERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:520
@@ -456,7 +445,7 @@ func (this *QXmlStreamWriter) WriteStartDocument_2(version string, standalone bo
 	var tmpArg0 = NewQString_5(version)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, standalone)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:521
@@ -467,7 +456,7 @@ func (this *QXmlStreamWriter) WriteStartElement(qualifiedName string) {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter17writeStartElementERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:522
@@ -480,7 +469,7 @@ func (this *QXmlStreamWriter) WriteStartElement_1(namespaceUri string, name stri
 	var tmpArg1 = NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:525
@@ -490,7 +479,7 @@ func (this *QXmlStreamWriter) WriteStartElement_1(namespaceUri string, name stri
 func (this *QXmlStreamWriter) WriteCurrentToken(reader *QXmlStreamReader) {
 	var convArg0 = reader.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:528
@@ -499,8 +488,27 @@ func (this *QXmlStreamWriter) WriteCurrentToken(reader *QXmlStreamReader) {
 // [1] bool hasError()
 func (this *QXmlStreamWriter) HasError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter8hasErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

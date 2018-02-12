@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QBasicTimer) NewFromPointer(cthis unsafe.Pointer) *QBasicTimer {
 // [-2] void QBasicTimer()
 func NewQBasicTimer() *QBasicTimer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimerC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQBasicTimerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBasicTimer)
 	return gothis
@@ -85,7 +74,7 @@ func NewQBasicTimer() *QBasicTimer {
 func DeleteQBasicTimer(this *QBasicTimer) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -95,7 +84,7 @@ func DeleteQBasicTimer(this *QBasicTimer) {
 // [1] bool isActive()
 func (this *QBasicTimer) IsActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicTimer8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -105,7 +94,7 @@ func (this *QBasicTimer) IsActive() bool {
 // [4] int timerId()
 func (this *QBasicTimer) TimerId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicTimer7timerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -116,7 +105,7 @@ func (this *QBasicTimer) TimerId() int {
 func (this *QBasicTimer) Start(msec int, obj *QObject /*777 QObject **/) {
 	var convArg1 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimer5startEiP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qbasictimer.h:62
@@ -126,7 +115,7 @@ func (this *QBasicTimer) Start(msec int, obj *QObject /*777 QObject **/) {
 func (this *QBasicTimer) Start_1(msec int, timerType int, obj *QObject /*777 QObject **/) {
 	var convArg2 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timerType, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qbasictimer.h:63
@@ -135,7 +124,26 @@ func (this *QBasicTimer) Start_1(msec int, timerType int, obj *QObject /*777 QOb
 // [-2] void stop()
 func (this *QBasicTimer) Stop() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimer4stopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

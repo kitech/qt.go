@@ -6,8 +6,8 @@ import "C"
 import (
 	"log"
 
-	"qt.go/qtcore"
-	"qt.go/qtrt"
+	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 // protected method override demo

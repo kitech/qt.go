@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QScrollArea) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -101,7 +85,7 @@ func (*QScrollArea) NewFromPointer(cthis unsafe.Pointer) *QScrollArea {
 // [8] const QMetaObject * metaObject()
 func (this *QScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -112,7 +96,7 @@ func (this *QScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 func NewQScrollArea(parent *QWidget /*777 QWidget **/) *QScrollArea {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollAreaC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQScrollAreaFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -124,7 +108,7 @@ func NewQScrollArea(parent *QWidget /*777 QWidget **/) *QScrollArea {
 func DeleteQScrollArea(this *QScrollArea) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollAreaD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -134,7 +118,7 @@ func DeleteQScrollArea(this *QScrollArea) {
 // [8] QWidget * widget()
 func (this *QScrollArea) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -145,7 +129,7 @@ func (this *QScrollArea) Widget() *QWidget /*777 QWidget **/ {
 func (this *QScrollArea) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea9setWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qscrollarea.h:64
@@ -154,7 +138,7 @@ func (this *QScrollArea) SetWidget(widget *QWidget /*777 QWidget **/) {
 // [8] QWidget * takeWidget()
 func (this *QScrollArea) TakeWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea10takeWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -164,7 +148,7 @@ func (this *QScrollArea) TakeWidget() *QWidget /*777 QWidget **/ {
 // [1] bool widgetResizable()
 func (this *QScrollArea) WidgetResizable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea15widgetResizableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -174,7 +158,7 @@ func (this *QScrollArea) WidgetResizable() bool {
 // [-2] void setWidgetResizable(_Bool)
 func (this *QScrollArea) SetWidgetResizable(resizable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea18setWidgetResizableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), resizable)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qscrollarea.h:69
@@ -183,7 +167,7 @@ func (this *QScrollArea) SetWidgetResizable(resizable bool) {
 // [8] QSize sizeHint()
 func (this *QScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -195,7 +179,7 @@ func (this *QScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 // [1] bool focusNextPrevChild(_Bool)
 func (this *QScrollArea) FocusNextPrevChild(next bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea18focusNextPrevChildEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), next)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -205,7 +189,7 @@ func (this *QScrollArea) FocusNextPrevChild(next bool) bool {
 // [4] Qt::Alignment alignment()
 func (this *QScrollArea) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -215,7 +199,7 @@ func (this *QScrollArea) Alignment() int {
 // [-2] void setAlignment(Qt::Alignment)
 func (this *QScrollArea) SetAlignment(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qscrollarea.h:76
@@ -224,7 +208,7 @@ func (this *QScrollArea) SetAlignment(arg0 int) {
 // [-2] void ensureVisible(int, int, int, int)
 func (this *QScrollArea) EnsureVisible(x int, y int, xmargin int, ymargin int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea13ensureVisibleEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, xmargin, ymargin)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qscrollarea.h:77
@@ -234,7 +218,7 @@ func (this *QScrollArea) EnsureVisible(x int, y int, xmargin int, ymargin int) {
 func (this *QScrollArea) EnsureWidgetVisible(childWidget *QWidget /*777 QWidget **/, xmargin int, ymargin int) {
 	var convArg0 = childWidget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qscrollarea.h:81
@@ -244,7 +228,7 @@ func (this *QScrollArea) EnsureWidgetVisible(childWidget *QWidget /*777 QWidget 
 func (this *QScrollArea) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -256,7 +240,7 @@ func (this *QScrollArea) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -267,7 +251,7 @@ func (this *QScrollArea) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg
 func (this *QScrollArea) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qscrollarea.h:84
@@ -276,7 +260,7 @@ func (this *QScrollArea) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent
 // [-2] void scrollContentsBy(int, int)
 func (this *QScrollArea) ScrollContentsBy(dx int, dy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea16scrollContentsByEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qscrollarea.h:86
@@ -285,10 +269,35 @@ func (this *QScrollArea) ScrollContentsBy(dx int, dy int) {
 // [8] QSize viewportSizeHint()
 func (this *QScrollArea) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

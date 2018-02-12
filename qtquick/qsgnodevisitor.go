@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,46 +24,16 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
 //  body block begin
+
 // void enterTransformNode(class QSGTransformNode *)
 func (this *QSGNodeVisitor) InheritEnterTransformNode(f func(arg0 *QSGTransformNode /*777 QSGTransformNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "enterTransformNode", f)
@@ -138,7 +116,7 @@ func (*QSGNodeVisitor) NewFromPointer(cthis unsafe.Pointer) *QSGNodeVisitor {
 func DeleteQSGNodeVisitor(this *QSGNodeVisitor) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -149,7 +127,7 @@ func DeleteQSGNodeVisitor(this *QSGNodeVisitor) {
 func (this *QSGNodeVisitor) EnterTransformNode(arg0 *QSGTransformNode /*777 QSGTransformNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor18enterTransformNodeEP16QSGTransformNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:341
@@ -159,7 +137,7 @@ func (this *QSGNodeVisitor) EnterTransformNode(arg0 *QSGTransformNode /*777 QSGT
 func (this *QSGNodeVisitor) LeaveTransformNode(arg0 *QSGTransformNode /*777 QSGTransformNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor18leaveTransformNodeEP16QSGTransformNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:342
@@ -169,7 +147,7 @@ func (this *QSGNodeVisitor) LeaveTransformNode(arg0 *QSGTransformNode /*777 QSGT
 func (this *QSGNodeVisitor) EnterClipNode(arg0 *QSGClipNode /*777 QSGClipNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor13enterClipNodeEP11QSGClipNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:343
@@ -179,7 +157,7 @@ func (this *QSGNodeVisitor) EnterClipNode(arg0 *QSGClipNode /*777 QSGClipNode **
 func (this *QSGNodeVisitor) LeaveClipNode(arg0 *QSGClipNode /*777 QSGClipNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor13leaveClipNodeEP11QSGClipNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:344
@@ -189,7 +167,7 @@ func (this *QSGNodeVisitor) LeaveClipNode(arg0 *QSGClipNode /*777 QSGClipNode **
 func (this *QSGNodeVisitor) EnterGeometryNode(arg0 *QSGGeometryNode /*777 QSGGeometryNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor17enterGeometryNodeEP15QSGGeometryNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:345
@@ -199,7 +177,7 @@ func (this *QSGNodeVisitor) EnterGeometryNode(arg0 *QSGGeometryNode /*777 QSGGeo
 func (this *QSGNodeVisitor) LeaveGeometryNode(arg0 *QSGGeometryNode /*777 QSGGeometryNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor17leaveGeometryNodeEP15QSGGeometryNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:346
@@ -209,7 +187,7 @@ func (this *QSGNodeVisitor) LeaveGeometryNode(arg0 *QSGGeometryNode /*777 QSGGeo
 func (this *QSGNodeVisitor) EnterOpacityNode(arg0 *QSGOpacityNode /*777 QSGOpacityNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor16enterOpacityNodeEP14QSGOpacityNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:347
@@ -219,7 +197,7 @@ func (this *QSGNodeVisitor) EnterOpacityNode(arg0 *QSGOpacityNode /*777 QSGOpaci
 func (this *QSGNodeVisitor) LeaveOpacityNode(arg0 *QSGOpacityNode /*777 QSGOpacityNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor16leaveOpacityNodeEP14QSGOpacityNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:348
@@ -229,7 +207,7 @@ func (this *QSGNodeVisitor) LeaveOpacityNode(arg0 *QSGOpacityNode /*777 QSGOpaci
 func (this *QSGNodeVisitor) VisitNode(n *QSGNode /*777 QSGNode **/) {
 	var convArg0 = n.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor9visitNodeEP7QSGNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:349
@@ -239,7 +217,38 @@ func (this *QSGNodeVisitor) VisitNode(n *QSGNode /*777 QSGNode **/) {
 func (this *QSGNodeVisitor) VisitChildren(n *QSGNode /*777 QSGNode **/) {
 	var convArg0 = n.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor13visitChildrenEP7QSGNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

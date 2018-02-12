@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QTemporaryDir) NewFromPointer(cthis unsafe.Pointer) *QTemporaryDir {
 // [-2] void QTemporaryDir()
 func NewQTemporaryDir() *QTemporaryDir {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDirC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTemporaryDirFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTemporaryDir)
 	return gothis
@@ -86,7 +75,7 @@ func NewQTemporaryDir_1(templateName string) *QTemporaryDir {
 	var tmpArg0 = NewQString_5(templateName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDirC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTemporaryDirFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTemporaryDir)
 	return gothis
@@ -99,7 +88,7 @@ func NewQTemporaryDir_1(templateName string) *QTemporaryDir {
 func DeleteQTemporaryDir(this *QTemporaryDir) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDirD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -109,7 +98,7 @@ func DeleteQTemporaryDir(this *QTemporaryDir) {
 // [1] bool isValid()
 func (this *QTemporaryDir) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -119,7 +108,7 @@ func (this *QTemporaryDir) IsValid() bool {
 // [8] QString errorString()
 func (this *QTemporaryDir) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -132,7 +121,7 @@ func (this *QTemporaryDir) ErrorString() string {
 // [1] bool autoRemove()
 func (this *QTemporaryDir) AutoRemove() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir10autoRemoveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -142,7 +131,7 @@ func (this *QTemporaryDir) AutoRemove() bool {
 // [-2] void setAutoRemove(_Bool)
 func (this *QTemporaryDir) SetAutoRemove(b bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDir13setAutoRemoveEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), b)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qtemporarydir.h:65
@@ -151,7 +140,7 @@ func (this *QTemporaryDir) SetAutoRemove(b bool) {
 // [1] bool remove()
 func (this *QTemporaryDir) Remove() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDir6removeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -161,7 +150,7 @@ func (this *QTemporaryDir) Remove() bool {
 // [8] QString path()
 func (this *QTemporaryDir) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir4pathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -176,7 +165,7 @@ func (this *QTemporaryDir) FilePath(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir8filePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -184,3 +173,22 @@ func (this *QTemporaryDir) FilePath(fileName string) string {
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,46 +24,16 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
 //  body block begin
+
 // void geometryChanged(const class QRectF &, const class QRectF &)
 func (this *QQuickFramebufferObject) InheritGeometryChanged(f func(newGeometry *qtcore.QRectF, oldGeometry *qtcore.QRectF) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "geometryChanged", f)
@@ -89,7 +67,7 @@ func (*QQuickFramebufferObject) NewFromPointer(cthis unsafe.Pointer) *QQuickFram
 // [8] const QMetaObject * metaObject()
 func (this *QQuickFramebufferObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -100,7 +78,7 @@ func (this *QQuickFramebufferObject) MetaObject() *qtcore.QMetaObject /*777 cons
 func NewQQuickFramebufferObject(parent *QQuickItem /*777 QQuickItem **/) *QQuickFramebufferObject {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObjectC2EP10QQuickItem", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickFramebufferObjectFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -111,7 +89,7 @@ func NewQQuickFramebufferObject(parent *QQuickItem /*777 QQuickItem **/) *QQuick
 // [1] bool textureFollowsItemSize()
 func (this *QQuickFramebufferObject) TextureFollowsItemSize() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject22textureFollowsItemSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -121,7 +99,7 @@ func (this *QQuickFramebufferObject) TextureFollowsItemSize() bool {
 // [-2] void setTextureFollowsItemSize(_Bool)
 func (this *QQuickFramebufferObject) SetTextureFollowsItemSize(follows bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObject25setTextureFollowsItemSizeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), follows)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:83
@@ -130,7 +108,7 @@ func (this *QQuickFramebufferObject) SetTextureFollowsItemSize(follows bool) {
 // [1] bool mirrorVertically()
 func (this *QQuickFramebufferObject) MirrorVertically() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject16mirrorVerticallyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -140,7 +118,7 @@ func (this *QQuickFramebufferObject) MirrorVertically() bool {
 // [-2] void setMirrorVertically(_Bool)
 func (this *QQuickFramebufferObject) SetMirrorVertically(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObject19setMirrorVerticallyEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:86
@@ -149,7 +127,7 @@ func (this *QQuickFramebufferObject) SetMirrorVertically(enable bool) {
 // [8] QQuickFramebufferObject::Renderer * createRenderer()
 func (this *QQuickFramebufferObject) CreateRenderer() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject14createRendererEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -159,7 +137,7 @@ func (this *QQuickFramebufferObject) CreateRenderer() unsafe.Pointer /*666*/ {
 // [1] bool isTextureProvider()
 func (this *QQuickFramebufferObject) IsTextureProvider() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject17isTextureProviderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -169,7 +147,7 @@ func (this *QQuickFramebufferObject) IsTextureProvider() bool {
 // [8] QSGTextureProvider * textureProvider()
 func (this *QQuickFramebufferObject) TextureProvider() *QSGTextureProvider /*777 QSGTextureProvider **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject15textureProviderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGTextureProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -179,7 +157,7 @@ func (this *QQuickFramebufferObject) TextureProvider() *QSGTextureProvider /*777
 // [-2] void releaseResources()
 func (this *QQuickFramebufferObject) ReleaseResources() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObject16releaseResourcesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:93
@@ -190,7 +168,7 @@ func (this *QQuickFramebufferObject) GeometryChanged(newGeometry *qtcore.QRectF,
 	var convArg0 = newGeometry.GetCthis()
 	var convArg1 = oldGeometry.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObject15geometryChangedERK6QRectFS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:99
@@ -199,7 +177,7 @@ func (this *QQuickFramebufferObject) GeometryChanged(newGeometry *qtcore.QRectF,
 // [-2] void textureFollowsItemSizeChanged(_Bool)
 func (this *QQuickFramebufferObject) TextureFollowsItemSizeChanged(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObject29textureFollowsItemSizeChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:100
@@ -208,13 +186,44 @@ func (this *QQuickFramebufferObject) TextureFollowsItemSizeChanged(arg0 bool) {
 // [-2] void mirrorVerticallyChanged(_Bool)
 func (this *QQuickFramebufferObject) MirrorVerticallyChanged(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObject23mirrorVerticallyChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 func DeleteQQuickFramebufferObject(this *QQuickFramebufferObject) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObjectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

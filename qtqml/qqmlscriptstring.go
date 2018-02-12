@@ -6,6 +6,14 @@ package qtqml
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QQmlScriptString) NewFromPointer(cthis unsafe.Pointer) *QQmlScriptString 
 // [-2] void QQmlScriptString()
 func NewQQmlScriptString() *QQmlScriptString {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlScriptStringC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlScriptStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlScriptString)
 	return gothis
@@ -93,7 +76,7 @@ func NewQQmlScriptString() *QQmlScriptString {
 func DeleteQQmlScriptString(this *QQmlScriptString) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlScriptStringD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -103,7 +86,7 @@ func DeleteQQmlScriptString(this *QQmlScriptString) {
 // [1] bool isEmpty()
 func (this *QQmlScriptString) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -113,7 +96,7 @@ func (this *QQmlScriptString) IsEmpty() bool {
 // [1] bool isUndefinedLiteral()
 func (this *QQmlScriptString) IsUndefinedLiteral() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString18isUndefinedLiteralEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -123,7 +106,7 @@ func (this *QQmlScriptString) IsUndefinedLiteral() bool {
 // [1] bool isNullLiteral()
 func (this *QQmlScriptString) IsNullLiteral() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13isNullLiteralEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -133,7 +116,7 @@ func (this *QQmlScriptString) IsNullLiteral() bool {
 // [8] QString stringLiteral()
 func (this *QQmlScriptString) StringLiteral() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13stringLiteralEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -146,7 +129,7 @@ func (this *QQmlScriptString) StringLiteral() string {
 // [8] qreal numberLiteral(_Bool *)
 func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13numberLiteralEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -156,8 +139,33 @@ func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
 // [1] bool booleanLiteral(_Bool *)
 func (this *QQmlScriptString) BooleanLiteral(ok unsafe.Pointer /*666*/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString14booleanLiteralEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+}
+
+//  keep block end

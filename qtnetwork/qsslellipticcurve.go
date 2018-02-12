@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QSslEllipticCurve) NewFromPointer(cthis unsafe.Pointer) *QSslEllipticCurv
 // [-2] void QSslEllipticCurve()
 func NewQSslEllipticCurve() *QSslEllipticCurve {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurveC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslEllipticCurveFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSslEllipticCurve)
 	return gothis
@@ -90,7 +76,7 @@ func (this *QSslEllipticCurve) FromShortName(name string) *QSslEllipticCurve /*1
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurve13fromShortNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSslEllipticCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslEllipticCurve)
 	return rv2
@@ -109,7 +95,7 @@ func (this *QSslEllipticCurve) FromLongName(name string) *QSslEllipticCurve /*12
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurve12fromLongNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSslEllipticCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslEllipticCurve)
 	return rv2
@@ -126,7 +112,7 @@ func QSslEllipticCurve_FromLongName(name string) *QSslEllipticCurve /*123*/ {
 // [8] QString shortName()
 func (this *QSslEllipticCurve) ShortName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve9shortNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -139,7 +125,7 @@ func (this *QSslEllipticCurve) ShortName() string {
 // [8] QString longName()
 func (this *QSslEllipticCurve) LongName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve8longNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -152,7 +138,7 @@ func (this *QSslEllipticCurve) LongName() string {
 // [1] bool isValid()
 func (this *QSslEllipticCurve) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -162,14 +148,36 @@ func (this *QSslEllipticCurve) IsValid() bool {
 // [1] bool isTlsNamedCurve()
 func (this *QSslEllipticCurve) IsTlsNamedCurve() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve15isTlsNamedCurveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 func DeleteQSslEllipticCurve(this *QSslEllipticCurve) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurveD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

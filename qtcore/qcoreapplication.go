@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QCoreApplication) InheritEvent(f func(arg0 *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -73,7 +63,7 @@ func (*QCoreApplication) NewFromPointer(cthis unsafe.Pointer) *QCoreApplication 
 // [8] const QMetaObject * metaObject()
 func (this *QCoreApplication) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QCoreApplication10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -84,7 +74,7 @@ func (this *QCoreApplication) MetaObject() *QMetaObject /*777 const QMetaObject 
 func NewQCoreApplication(argc int, argv []string, arg2 int) *QCoreApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCoreApplicationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -96,7 +86,7 @@ func NewQCoreApplication(argc int, argv []string, arg2 int) *QCoreApplication {
 func DeleteQCoreApplication(this *QCoreApplication) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplicationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -106,7 +96,7 @@ func DeleteQCoreApplication(this *QCoreApplication) {
 // [8] QStringList arguments()
 func (this *QCoreApplication) Arguments() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9argumentsEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -123,7 +113,7 @@ func QCoreApplication_Arguments() *QStringList /*123*/ {
 // [-2] void setAttribute(Qt::ApplicationAttribute, _Bool)
 func (this *QCoreApplication) SetAttribute(attribute int, on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication12setAttributeEN2Qt20ApplicationAttributeEb", qtrt.FFI_TYPE_POINTER, attribute, on)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_SetAttribute(attribute int, on bool) {
 	var nilthis *QCoreApplication
@@ -136,7 +126,7 @@ func QCoreApplication_SetAttribute(attribute int, on bool) {
 // [1] bool testAttribute(Qt::ApplicationAttribute)
 func (this *QCoreApplication) TestAttribute(attribute int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication13testAttributeEN2Qt20ApplicationAttributeE", qtrt.FFI_TYPE_POINTER, attribute)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QCoreApplication_TestAttribute(attribute int) bool {
@@ -153,7 +143,7 @@ func (this *QCoreApplication) SetOrganizationDomain(orgDomain string) {
 	var tmpArg0 = NewQString_5(orgDomain)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication21setOrganizationDomainERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_SetOrganizationDomain(orgDomain string) {
 	var nilthis *QCoreApplication
@@ -166,7 +156,7 @@ func QCoreApplication_SetOrganizationDomain(orgDomain string) {
 // [8] QString organizationDomain()
 func (this *QCoreApplication) OrganizationDomain() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18organizationDomainEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -186,7 +176,7 @@ func (this *QCoreApplication) SetOrganizationName(orgName string) {
 	var tmpArg0 = NewQString_5(orgName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication19setOrganizationNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_SetOrganizationName(orgName string) {
 	var nilthis *QCoreApplication
@@ -199,7 +189,7 @@ func QCoreApplication_SetOrganizationName(orgName string) {
 // [8] QString organizationName()
 func (this *QCoreApplication) OrganizationName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16organizationNameEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -219,7 +209,7 @@ func (this *QCoreApplication) SetApplicationName(application string) {
 	var tmpArg0 = NewQString_5(application)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18setApplicationNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_SetApplicationName(application string) {
 	var nilthis *QCoreApplication
@@ -232,7 +222,7 @@ func QCoreApplication_SetApplicationName(application string) {
 // [8] QString applicationName()
 func (this *QCoreApplication) ApplicationName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication15applicationNameEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -252,7 +242,7 @@ func (this *QCoreApplication) SetApplicationVersion(version string) {
 	var tmpArg0 = NewQString_5(version)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication21setApplicationVersionERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_SetApplicationVersion(version string) {
 	var nilthis *QCoreApplication
@@ -265,7 +255,7 @@ func QCoreApplication_SetApplicationVersion(version string) {
 // [8] QString applicationVersion()
 func (this *QCoreApplication) ApplicationVersion() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18applicationVersionEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -283,7 +273,7 @@ func QCoreApplication_ApplicationVersion() string {
 // [-2] void setSetuidAllowed(_Bool)
 func (this *QCoreApplication) SetSetuidAllowed(allow bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16setSetuidAllowedEb", qtrt.FFI_TYPE_POINTER, allow)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_SetSetuidAllowed(allow bool) {
 	var nilthis *QCoreApplication
@@ -296,7 +286,7 @@ func QCoreApplication_SetSetuidAllowed(allow bool) {
 // [1] bool isSetuidAllowed()
 func (this *QCoreApplication) IsSetuidAllowed() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication15isSetuidAllowedEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QCoreApplication_IsSetuidAllowed() bool {
@@ -311,7 +301,7 @@ func QCoreApplication_IsSetuidAllowed() bool {
 // [8] QCoreApplication * instance()
 func (this *QCoreApplication) Instance() *QCoreApplication /*777 QCoreApplication **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication8instanceEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQCoreApplicationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QCoreApplication_Instance() *QCoreApplication /*777 QCoreApplication **/ {
@@ -326,7 +316,7 @@ func QCoreApplication_Instance() *QCoreApplication /*777 QCoreApplication **/ {
 // [4] int exec()
 func (this *QCoreApplication) Exec() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication4execEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QCoreApplication_Exec() int {
@@ -341,7 +331,7 @@ func QCoreApplication_Exec() int {
 // [-2] void processEvents(QEventLoop::ProcessEventsFlags)
 func (this *QCoreApplication) ProcessEvents(flags int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_ProcessEvents(flags int) {
 	var nilthis *QCoreApplication
@@ -354,7 +344,7 @@ func QCoreApplication_ProcessEvents(flags int) {
 // [-2] void processEvents(QEventLoop::ProcessEventsFlags, int)
 func (this *QCoreApplication) ProcessEvents_1(flags int, maxtime int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEEi", qtrt.FFI_TYPE_POINTER, flags, maxtime)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_ProcessEvents_1(flags int, maxtime int) {
 	var nilthis *QCoreApplication
@@ -367,7 +357,7 @@ func QCoreApplication_ProcessEvents_1(flags int, maxtime int) {
 // [-2] void exit(int)
 func (this *QCoreApplication) Exit(retcode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication4exitEi", qtrt.FFI_TYPE_POINTER, retcode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_Exit(retcode int) {
 	var nilthis *QCoreApplication
@@ -382,7 +372,7 @@ func (this *QCoreApplication) SendEvent(receiver *QObject /*777 QObject **/, eve
 	var convArg0 = receiver.GetCthis()
 	var convArg1 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QCoreApplication_SendEvent(receiver *QObject /*777 QObject **/, event *QEvent /*777 QEvent **/) bool {
@@ -399,7 +389,7 @@ func (this *QCoreApplication) PostEvent(receiver *QObject /*777 QObject **/, eve
 	var convArg0 = receiver.GetCthis()
 	var convArg1 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9postEventEP7QObjectP6QEventi", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, priority)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_PostEvent(receiver *QObject /*777 QObject **/, event *QEvent /*777 QEvent **/, priority int) {
 	var nilthis *QCoreApplication
@@ -413,7 +403,7 @@ func QCoreApplication_PostEvent(receiver *QObject /*777 QObject **/, event *QEve
 func (this *QCoreApplication) SendPostedEvents(receiver *QObject /*777 QObject **/, event_type int) {
 	var convArg0 = receiver.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16sendPostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, event_type)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_SendPostedEvents(receiver *QObject /*777 QObject **/, event_type int) {
 	var nilthis *QCoreApplication
@@ -427,7 +417,7 @@ func QCoreApplication_SendPostedEvents(receiver *QObject /*777 QObject **/, even
 func (this *QCoreApplication) RemovePostedEvents(receiver *QObject /*777 QObject **/, eventType int) {
 	var convArg0 = receiver.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18removePostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, eventType)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_RemovePostedEvents(receiver *QObject /*777 QObject **/, eventType int) {
 	var nilthis *QCoreApplication
@@ -440,7 +430,7 @@ func QCoreApplication_RemovePostedEvents(receiver *QObject /*777 QObject **/, ev
 // [1] bool hasPendingEvents()
 func (this *QCoreApplication) HasPendingEvents() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16hasPendingEventsEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QCoreApplication_HasPendingEvents() bool {
@@ -455,7 +445,7 @@ func QCoreApplication_HasPendingEvents() bool {
 // [8] QAbstractEventDispatcher * eventDispatcher()
 func (this *QCoreApplication) EventDispatcher() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication15eventDispatcherEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QCoreApplication_EventDispatcher() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
@@ -471,7 +461,7 @@ func QCoreApplication_EventDispatcher() *QAbstractEventDispatcher /*777 QAbstrac
 func (this *QCoreApplication) SetEventDispatcher(eventDispatcher *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/) {
 	var convArg0 = eventDispatcher.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18setEventDispatcherEP24QAbstractEventDispatcher", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_SetEventDispatcher(eventDispatcher *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/) {
 	var nilthis *QCoreApplication
@@ -486,7 +476,7 @@ func (this *QCoreApplication) Notify(arg0 *QObject /*777 QObject **/, arg1 *QEve
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication6notifyEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -496,7 +486,7 @@ func (this *QCoreApplication) Notify(arg0 *QObject /*777 QObject **/, arg1 *QEve
 // [1] bool startingUp()
 func (this *QCoreApplication) StartingUp() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication10startingUpEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QCoreApplication_StartingUp() bool {
@@ -511,7 +501,7 @@ func QCoreApplication_StartingUp() bool {
 // [1] bool closingDown()
 func (this *QCoreApplication) ClosingDown() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication11closingDownEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QCoreApplication_ClosingDown() bool {
@@ -526,7 +516,7 @@ func QCoreApplication_ClosingDown() bool {
 // [8] QString applicationDirPath()
 func (this *QCoreApplication) ApplicationDirPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18applicationDirPathEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -544,7 +534,7 @@ func QCoreApplication_ApplicationDirPath() string {
 // [8] QString applicationFilePath()
 func (this *QCoreApplication) ApplicationFilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication19applicationFilePathEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -562,7 +552,7 @@ func QCoreApplication_ApplicationFilePath() string {
 // [8] qint64 applicationPid()
 func (this *QCoreApplication) ApplicationPid() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication14applicationPidEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 func QCoreApplication_ApplicationPid() int64 {
@@ -578,7 +568,7 @@ func QCoreApplication_ApplicationPid() int64 {
 func (this *QCoreApplication) SetLibraryPaths(arg0 *QStringList) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication15setLibraryPathsERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_SetLibraryPaths(arg0 *QStringList) {
 	var nilthis *QCoreApplication
@@ -591,7 +581,7 @@ func QCoreApplication_SetLibraryPaths(arg0 *QStringList) {
 // [8] QStringList libraryPaths()
 func (this *QCoreApplication) LibraryPaths() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication12libraryPathsEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -610,7 +600,7 @@ func (this *QCoreApplication) AddLibraryPath(arg0 string) {
 	var tmpArg0 = NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication14addLibraryPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_AddLibraryPath(arg0 string) {
 	var nilthis *QCoreApplication
@@ -625,7 +615,7 @@ func (this *QCoreApplication) RemoveLibraryPath(arg0 string) {
 	var tmpArg0 = NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication17removeLibraryPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_RemoveLibraryPath(arg0 string) {
 	var nilthis *QCoreApplication
@@ -639,7 +629,7 @@ func QCoreApplication_RemoveLibraryPath(arg0 string) {
 func (this *QCoreApplication) InstallTranslator(messageFile *QTranslator /*777 QTranslator **/) bool {
 	var convArg0 = messageFile.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication17installTranslatorEP11QTranslator", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QCoreApplication_InstallTranslator(messageFile *QTranslator /*777 QTranslator **/) bool {
@@ -655,7 +645,7 @@ func QCoreApplication_InstallTranslator(messageFile *QTranslator /*777 QTranslat
 func (this *QCoreApplication) RemoveTranslator(messageFile *QTranslator /*777 QTranslator **/) bool {
 	var convArg0 = messageFile.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16removeTranslatorEP11QTranslator", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QCoreApplication_RemoveTranslator(messageFile *QTranslator /*777 QTranslator **/) bool {
@@ -676,7 +666,7 @@ func (this *QCoreApplication) Translate(context string, key string, disambiguati
 	var convArg2 = qtrt.CString(disambiguation)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, n)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -694,7 +684,7 @@ func QCoreApplication_Translate(context string, key string, disambiguation strin
 // [-2] void flush()
 func (this *QCoreApplication) Flush() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication5flushEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_Flush() {
 	var nilthis *QCoreApplication
@@ -708,7 +698,7 @@ func QCoreApplication_Flush() {
 func (this *QCoreApplication) InstallNativeEventFilter(filterObj *QAbstractNativeEventFilter /*777 QAbstractNativeEventFilter **/) {
 	var convArg0 = filterObj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication24installNativeEventFilterEP26QAbstractNativeEventFilter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:173
@@ -718,7 +708,7 @@ func (this *QCoreApplication) InstallNativeEventFilter(filterObj *QAbstractNativ
 func (this *QCoreApplication) RemoveNativeEventFilter(filterObj *QAbstractNativeEventFilter /*777 QAbstractNativeEventFilter **/) {
 	var convArg0 = filterObj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEventFilter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:175
@@ -727,7 +717,7 @@ func (this *QCoreApplication) RemoveNativeEventFilter(filterObj *QAbstractNative
 // [1] bool isQuitLockEnabled()
 func (this *QCoreApplication) IsQuitLockEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication17isQuitLockEnabledEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QCoreApplication_IsQuitLockEnabled() bool {
@@ -742,7 +732,7 @@ func QCoreApplication_IsQuitLockEnabled() bool {
 // [-2] void setQuitLockEnabled(_Bool)
 func (this *QCoreApplication) SetQuitLockEnabled(enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18setQuitLockEnabledEb", qtrt.FFI_TYPE_POINTER, enabled)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_SetQuitLockEnabled(enabled bool) {
 	var nilthis *QCoreApplication
@@ -755,7 +745,7 @@ func QCoreApplication_SetQuitLockEnabled(enabled bool) {
 // [-2] void quit()
 func (this *QCoreApplication) Quit() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication4quitEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QCoreApplication_Quit() {
 	var nilthis *QCoreApplication
@@ -768,7 +758,7 @@ func QCoreApplication_Quit() {
 // [-2] void organizationNameChanged()
 func (this *QCoreApplication) OrganizationNameChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication23organizationNameChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:185
@@ -777,7 +767,7 @@ func (this *QCoreApplication) OrganizationNameChanged() {
 // [-2] void organizationDomainChanged()
 func (this *QCoreApplication) OrganizationDomainChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication25organizationDomainChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:186
@@ -786,7 +776,7 @@ func (this *QCoreApplication) OrganizationDomainChanged() {
 // [-2] void applicationNameChanged()
 func (this *QCoreApplication) ApplicationNameChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication22applicationNameChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:187
@@ -795,7 +785,7 @@ func (this *QCoreApplication) ApplicationNameChanged() {
 // [-2] void applicationVersionChanged()
 func (this *QCoreApplication) ApplicationVersionChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication25applicationVersionChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:190
@@ -805,7 +795,7 @@ func (this *QCoreApplication) ApplicationVersionChanged() {
 func (this *QCoreApplication) Event(arg0 *QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -814,3 +804,22 @@ type QCoreApplication__ = int
 const QCoreApplication__ApplicationFlags QCoreApplication__ = 330240
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

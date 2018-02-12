@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QGestureRecognizer) NewFromPointer(cthis unsafe.Pointer) *QGestureRecogni
 // [-2] void QGestureRecognizer()
 func NewQGestureRecognizer() *QGestureRecognizer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizerC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQGestureRecognizerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGestureRecognizer)
 	return gothis
@@ -93,7 +76,7 @@ func NewQGestureRecognizer() *QGestureRecognizer {
 func DeleteQGestureRecognizer(this *QGestureRecognizer) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -104,7 +87,7 @@ func DeleteQGestureRecognizer(this *QGestureRecognizer) {
 func (this *QGestureRecognizer) Create(target *qtcore.QObject /*777 QObject **/) *QGesture /*777 QGesture **/ {
 	var convArg0 = target.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer6createEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQGestureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -117,7 +100,7 @@ func (this *QGestureRecognizer) Recognize(state *QGesture /*777 QGesture **/, wa
 	var convArg1 = watched.GetCthis()
 	var convArg2 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer9recognizeEP8QGestureP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -128,7 +111,7 @@ func (this *QGestureRecognizer) Recognize(state *QGesture /*777 QGesture **/, wa
 func (this *QGestureRecognizer) Reset(state *QGesture /*777 QGesture **/) {
 	var convArg0 = state.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer5resetEP8QGesture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesturerecognizer.h:85
@@ -138,7 +121,7 @@ func (this *QGestureRecognizer) Reset(state *QGesture /*777 QGesture **/) {
 func (this *QGestureRecognizer) RegisterRecognizer(recognizer *QGestureRecognizer /*777 QGestureRecognizer **/) int {
 	var convArg0 = recognizer.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer18registerRecognizerEPS_", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QGestureRecognizer_RegisterRecognizer(recognizer *QGestureRecognizer /*777 QGestureRecognizer **/) int {
@@ -153,7 +136,7 @@ func QGestureRecognizer_RegisterRecognizer(recognizer *QGestureRecognizer /*777 
 // [-2] void unregisterRecognizer(Qt::GestureType)
 func (this *QGestureRecognizer) UnregisterRecognizer(type_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer20unregisterRecognizerEN2Qt11GestureTypeE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QGestureRecognizer_UnregisterRecognizer(type_ int) {
 	var nilthis *QGestureRecognizer
@@ -172,3 +155,28 @@ const QGestureRecognizer__ConsumeEventHint QGestureRecognizer__ResultFlag = 256
 const QGestureRecognizer__ResultHint_Mask QGestureRecognizer__ResultFlag = 65280
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

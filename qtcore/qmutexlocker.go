@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -73,7 +62,7 @@ func (*QMutexLocker) NewFromPointer(cthis unsafe.Pointer) *QMutexLocker {
 func NewQMutexLocker(m *QBasicMutex /*777 QBasicMutex **/) *QMutexLocker {
 	var convArg0 = m.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMutexLockerC2EP11QBasicMutex", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMutexLockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMutexLocker)
 	return gothis
@@ -86,7 +75,7 @@ func NewQMutexLocker(m *QBasicMutex /*777 QBasicMutex **/) *QMutexLocker {
 func DeleteQMutexLocker(this *QMutexLocker) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMutexLockerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -96,7 +85,7 @@ func DeleteQMutexLocker(this *QMutexLocker) {
 // [-2] void unlock()
 func (this *QMutexLocker) Unlock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMutexLocker6unlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:223
@@ -105,7 +94,7 @@ func (this *QMutexLocker) Unlock() {
 // [-2] void relock()
 func (this *QMutexLocker) Relock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMutexLocker6relockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:238
@@ -114,8 +103,27 @@ func (this *QMutexLocker) Relock() {
 // [8] QMutex * mutex()
 func (this *QMutexLocker) Mutex() *QMutex /*777 QMutex **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMutexLocker5mutexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMutexFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

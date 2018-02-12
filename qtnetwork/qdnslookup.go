@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QDnsLookup) NewFromPointer(cthis unsafe.Pointer) *QDnsLookup {
 // [8] const QMetaObject * metaObject()
 func (this *QDnsLookup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -84,7 +70,7 @@ func (this *QDnsLookup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 func NewQDnsLookup(parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -98,7 +84,7 @@ func NewQDnsLookup_1(type_ int, name string, parent *qtcore.QObject /*777 QObjec
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -113,7 +99,7 @@ func NewQDnsLookup_2(type_ int, name string, nameserver *QHostAddress, parent *q
 	var convArg2 = nameserver.GetCthis()
 	var convArg3 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringRK12QHostAddressP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -125,7 +111,7 @@ func NewQDnsLookup_2(type_ int, name string, nameserver *QHostAddress, parent *q
 func DeleteQDnsLookup(this *QDnsLookup) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -135,7 +121,7 @@ func DeleteQDnsLookup(this *QDnsLookup) {
 // [4] QDnsLookup::Error error()
 func (this *QDnsLookup) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -145,7 +131,7 @@ func (this *QDnsLookup) Error() int {
 // [8] QString errorString()
 func (this *QDnsLookup) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -158,7 +144,7 @@ func (this *QDnsLookup) ErrorString() string {
 // [1] bool isFinished()
 func (this *QDnsLookup) IsFinished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup10isFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -168,7 +154,7 @@ func (this *QDnsLookup) IsFinished() bool {
 // [8] QString name()
 func (this *QDnsLookup) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -183,7 +169,7 @@ func (this *QDnsLookup) SetName(name string) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup7setNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:233
@@ -192,7 +178,7 @@ func (this *QDnsLookup) SetName(name string) {
 // [4] QDnsLookup::Type type()
 func (this *QDnsLookup) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -202,7 +188,7 @@ func (this *QDnsLookup) Type() int {
 // [-2] void setType(QDnsLookup::Type)
 func (this *QDnsLookup) SetType(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup7setTypeENS_4TypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:236
@@ -211,7 +197,7 @@ func (this *QDnsLookup) SetType(arg0 int) {
 // [8] QHostAddress nameserver()
 func (this *QDnsLookup) Nameserver() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup10nameserverEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostAddress)
 	return rv2
@@ -224,7 +210,7 @@ func (this *QDnsLookup) Nameserver() *QHostAddress /*123*/ {
 func (this *QDnsLookup) SetNameserver(nameserver *QHostAddress) {
 	var convArg0 = nameserver.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup13setNameserverERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:249
@@ -233,7 +219,7 @@ func (this *QDnsLookup) SetNameserver(nameserver *QHostAddress) {
 // [-2] void abort()
 func (this *QDnsLookup) Abort() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup5abortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:250
@@ -242,7 +228,7 @@ func (this *QDnsLookup) Abort() {
 // [-2] void lookup()
 func (this *QDnsLookup) Lookup() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup6lookupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:253
@@ -251,7 +237,7 @@ func (this *QDnsLookup) Lookup() {
 // [-2] void finished()
 func (this *QDnsLookup) Finished() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup8finishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:254
@@ -262,7 +248,7 @@ func (this *QDnsLookup) NameChanged(name string) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup11nameChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:255
@@ -271,7 +257,7 @@ func (this *QDnsLookup) NameChanged(name string) {
 // [-2] void typeChanged(enum QDnsLookup::Type)
 func (this *QDnsLookup) TypeChanged(type_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup11typeChangedENS_4TypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:256
@@ -281,7 +267,7 @@ func (this *QDnsLookup) TypeChanged(type_ int) {
 func (this *QDnsLookup) NameserverChanged(nameserver *QHostAddress) {
 	var convArg0 = nameserver.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup17nameserverChangedERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QDnsLookup__Error = int
@@ -308,3 +294,25 @@ const QDnsLookup__SRV QDnsLookup__Type = 33
 const QDnsLookup__TXT QDnsLookup__Type = 16
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

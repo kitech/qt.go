@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QUrlQuery) NewFromPointer(cthis unsafe.Pointer) *QUrlQuery {
 // [-2] void QUrlQuery()
 func NewQUrlQuery() *QUrlQuery {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQUrlQuery)
 	return gothis
@@ -85,7 +74,7 @@ func NewQUrlQuery() *QUrlQuery {
 func NewQUrlQuery_1(url *QUrl) *QUrlQuery {
 	var convArg0 = url.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryC2ERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQUrlQuery)
 	return gothis
@@ -99,7 +88,7 @@ func NewQUrlQuery_2(queryString string) *QUrlQuery {
 	var tmpArg0 = NewQString_5(queryString)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQUrlQuery)
 	return gothis
@@ -112,7 +101,7 @@ func NewQUrlQuery_2(queryString string) *QUrlQuery {
 func DeleteQUrlQuery(this *QUrlQuery) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -123,7 +112,7 @@ func DeleteQUrlQuery(this *QUrlQuery) {
 func (this *QUrlQuery) Swap(other *QUrlQuery) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:75
@@ -132,7 +121,7 @@ func (this *QUrlQuery) Swap(other *QUrlQuery) {
 // [1] bool isEmpty()
 func (this *QUrlQuery) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -142,7 +131,7 @@ func (this *QUrlQuery) IsEmpty() bool {
 // [1] bool isDetached()
 func (this *QUrlQuery) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -152,7 +141,7 @@ func (this *QUrlQuery) IsDetached() bool {
 // [-2] void clear()
 func (this *QUrlQuery) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:80
@@ -163,7 +152,7 @@ func (this *QUrlQuery) SetQuery(queryString string) {
 	var tmpArg0 = NewQString_5(queryString)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery8setQueryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:84
@@ -174,7 +163,7 @@ func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter *QChar /*123*/, pairDel
 	var convArg0 = valueDelimiter.GetCthis()
 	var convArg1 = pairDelimiter.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:85
@@ -183,7 +172,7 @@ func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter *QChar /*123*/, pairDel
 // [2] QChar queryValueDelimiter()
 func (this *QUrlQuery) QueryValueDelimiter() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery19queryValueDelimiterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -195,7 +184,7 @@ func (this *QUrlQuery) QueryValueDelimiter() *QChar /*123*/ {
 // [2] QChar queryPairDelimiter()
 func (this *QUrlQuery) QueryPairDelimiter() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery18queryPairDelimiterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -209,7 +198,7 @@ func (this *QUrlQuery) HasQueryItem(key string) bool {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery12hasQueryItemERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -223,7 +212,7 @@ func (this *QUrlQuery) AddQueryItem(key string, value string) {
 	var tmpArg1 = NewQString_5(value)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery12addQueryItemERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:93
@@ -234,7 +223,7 @@ func (this *QUrlQuery) RemoveQueryItem(key string) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery15removeQueryItemERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:96
@@ -245,7 +234,7 @@ func (this *QUrlQuery) RemoveAllQueryItems(key string) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery19removeAllQueryItemsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:98
@@ -254,7 +243,7 @@ func (this *QUrlQuery) RemoveAllQueryItems(key string) {
 // [2] QChar defaultQueryValueDelimiter()
 func (this *QUrlQuery) DefaultQueryValueDelimiter() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery26defaultQueryValueDelimiterEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -271,7 +260,7 @@ func QUrlQuery_DefaultQueryValueDelimiter() *QChar /*123*/ {
 // [2] QChar defaultQueryPairDelimiter()
 func (this *QUrlQuery) DefaultQueryPairDelimiter() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery25defaultQueryPairDelimiterEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -283,3 +272,22 @@ func QUrlQuery_DefaultQueryPairDelimiter() *QChar /*123*/ {
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QAbstractItemDelegate) NewFromPointer(cthis unsafe.Pointer) *QAbstractIte
 // [8] const QMetaObject * metaObject()
 func (this *QAbstractItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -88,7 +71,7 @@ func (this *QAbstractItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const 
 func NewQAbstractItemDelegate(parent *qtcore.QObject /*777 QObject **/) *QAbstractItemDelegate {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegateC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractItemDelegateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -100,7 +83,7 @@ func NewQAbstractItemDelegate(parent *qtcore.QObject /*777 QObject **/) *QAbstra
 func DeleteQAbstractItemDelegate(this *QAbstractItemDelegate) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -113,7 +96,7 @@ func (this *QAbstractItemDelegate) Paint(painter *qtgui.QPainter /*777 QPainter 
 	var convArg1 = option.GetCthis()
 	var convArg2 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:80
@@ -124,7 +107,7 @@ func (this *QAbstractItemDelegate) SizeHint(option *QStyleOptionViewItem, index 
 	var convArg0 = option.GetCthis()
 	var convArg1 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -139,7 +122,7 @@ func (this *QAbstractItemDelegate) CreateEditor(parent *QWidget /*777 QWidget **
 	var convArg1 = option.GetCthis()
 	var convArg2 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -151,7 +134,7 @@ func (this *QAbstractItemDelegate) DestroyEditor(editor *QWidget /*777 QWidget *
 	var convArg0 = editor.GetCthis()
 	var convArg1 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate13destroyEditorEP7QWidgetRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:90
@@ -162,7 +145,7 @@ func (this *QAbstractItemDelegate) SetEditorData(editor *QWidget /*777 QWidget *
 	var convArg0 = editor.GetCthis()
 	var convArg1 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:92
@@ -174,7 +157,7 @@ func (this *QAbstractItemDelegate) SetModelData(editor *QWidget /*777 QWidget **
 	var convArg1 = model.GetCthis()
 	var convArg2 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:96
@@ -186,7 +169,7 @@ func (this *QAbstractItemDelegate) UpdateEditorGeometry(editor *QWidget /*777 QW
 	var convArg1 = option.GetCthis()
 	var convArg2 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:101
@@ -199,7 +182,7 @@ func (this *QAbstractItemDelegate) EditorEvent(event *qtcore.QEvent /*777 QEvent
 	var convArg2 = option.GetCthis()
 	var convArg3 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -212,7 +195,7 @@ func (this *QAbstractItemDelegate) ElidedText(fontMetrics *qtgui.QFontMetrics, w
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegate10elidedTextERK12QFontMetricsiN2Qt13TextElideModeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0, width, mode, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -234,7 +217,7 @@ func (this *QAbstractItemDelegate) HelpEvent(event *qtgui.QHelpEvent /*777 QHelp
 	var convArg2 = option.GetCthis()
 	var convArg3 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -245,7 +228,7 @@ func (this *QAbstractItemDelegate) HelpEvent(event *qtgui.QHelpEvent /*777 QHelp
 func (this *QAbstractItemDelegate) CommitData(editor *QWidget /*777 QWidget **/) {
 	var convArg0 = editor.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegate10commitDataEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:118
@@ -255,7 +238,7 @@ func (this *QAbstractItemDelegate) CommitData(editor *QWidget /*777 QWidget **/)
 func (this *QAbstractItemDelegate) CloseEditor(editor *QWidget /*777 QWidget **/, hint int) {
 	var convArg0 = editor.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:119
@@ -265,7 +248,7 @@ func (this *QAbstractItemDelegate) CloseEditor(editor *QWidget /*777 QWidget **/
 func (this *QAbstractItemDelegate) SizeHintChanged(arg0 *qtcore.QModelIndex) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QAbstractItemDelegate__EndEditHint = int
@@ -277,3 +260,28 @@ const QAbstractItemDelegate__SubmitModelCache QAbstractItemDelegate__EndEditHint
 const QAbstractItemDelegate__RevertModelCache QAbstractItemDelegate__EndEditHint = 4
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

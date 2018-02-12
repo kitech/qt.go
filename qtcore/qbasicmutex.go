@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QBasicMutex) NewFromPointer(cthis unsafe.Pointer) *QBasicMutex {
 // [-2] void QBasicMutex()
 func NewQBasicMutex() *QBasicMutex {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutexC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQBasicMutexFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBasicMutex)
 	return gothis
@@ -84,7 +73,7 @@ func NewQBasicMutex() *QBasicMutex {
 // [-2] void lock()
 func (this *QBasicMutex) Lock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutex4lockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:83
@@ -93,7 +82,7 @@ func (this *QBasicMutex) Lock() {
 // [-2] void unlock()
 func (this *QBasicMutex) Unlock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutex6unlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:89
@@ -102,7 +91,7 @@ func (this *QBasicMutex) Unlock() {
 // [1] bool tryLock()
 func (this *QBasicMutex) TryLock() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutex7tryLockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -112,7 +101,7 @@ func (this *QBasicMutex) TryLock() bool {
 // [1] bool try_lock()
 func (this *QBasicMutex) Try_lock() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutex8try_lockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -122,7 +111,7 @@ func (this *QBasicMutex) Try_lock() bool {
 // [1] bool isRecursive()
 func (this *QBasicMutex) IsRecursive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutex11isRecursiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -132,14 +121,33 @@ func (this *QBasicMutex) IsRecursive() bool {
 // [1] bool isRecursive()
 func (this *QBasicMutex) IsRecursive_1() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicMutex11isRecursiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 func DeleteQBasicMutex(this *QBasicMutex) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutexD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

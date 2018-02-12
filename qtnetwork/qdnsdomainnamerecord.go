@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QDnsDomainNameRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsDomainNam
 // [-2] void QDnsDomainNameRecord()
 func NewQDnsDomainNameRecord() *QDnsDomainNameRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDnsDomainNameRecordC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsDomainNameRecordFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDnsDomainNameRecord)
 	return gothis
@@ -89,7 +75,7 @@ func NewQDnsDomainNameRecord() *QDnsDomainNameRecord {
 func DeleteQDnsDomainNameRecord(this *QDnsDomainNameRecord) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDnsDomainNameRecordD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +86,7 @@ func DeleteQDnsDomainNameRecord(this *QDnsDomainNameRecord) {
 func (this *QDnsDomainNameRecord) Swap(other *QDnsDomainNameRecord) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDnsDomainNameRecord4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:73
@@ -109,7 +95,7 @@ func (this *QDnsDomainNameRecord) Swap(other *QDnsDomainNameRecord) {
 // [8] QString name()
 func (this *QDnsDomainNameRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -122,7 +108,7 @@ func (this *QDnsDomainNameRecord) Name() string {
 // [4] quint32 timeToLive()
 func (this *QDnsDomainNameRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -132,7 +118,7 @@ func (this *QDnsDomainNameRecord) TimeToLive() uint {
 // [8] QString value()
 func (this *QDnsDomainNameRecord) Value() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -140,3 +126,25 @@ func (this *QDnsDomainNameRecord) Value() string {
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

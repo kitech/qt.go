@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QGradient) NewFromPointer(cthis unsafe.Pointer) *QGradient {
 // [-2] void QGradient()
 func NewQGradient() *QGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradientC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQGradientFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGradient)
 	return gothis
@@ -88,7 +74,7 @@ func NewQGradient() *QGradient {
 // [4] QGradient::Type type()
 func (this *QGradient) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -98,7 +84,7 @@ func (this *QGradient) Type() int {
 // [-2] void setSpread(enum QGradient::Spread)
 func (this *QGradient) SetSpread(spread int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient9setSpreadENS_6SpreadE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spread)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:211
@@ -107,7 +93,7 @@ func (this *QGradient) SetSpread(spread int) {
 // [4] QGradient::Spread spread()
 func (this *QGradient) Spread() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient6spreadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -118,7 +104,7 @@ func (this *QGradient) Spread() int {
 func (this *QGradient) SetColorAt(pos float64, color *QColor) {
 	var convArg1 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient10setColorAtEdRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:218
@@ -127,7 +113,7 @@ func (this *QGradient) SetColorAt(pos float64, color *QColor) {
 // [4] QGradient::CoordinateMode coordinateMode()
 func (this *QGradient) CoordinateMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient14coordinateModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -137,7 +123,7 @@ func (this *QGradient) CoordinateMode() int {
 // [-2] void setCoordinateMode(enum QGradient::CoordinateMode)
 func (this *QGradient) SetCoordinateMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient17setCoordinateModeENS_14CoordinateModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:221
@@ -146,7 +132,7 @@ func (this *QGradient) SetCoordinateMode(mode int) {
 // [4] QGradient::InterpolationMode interpolationMode()
 func (this *QGradient) InterpolationMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient17interpolationModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -156,12 +142,12 @@ func (this *QGradient) InterpolationMode() int {
 // [-2] void setInterpolationMode(enum QGradient::InterpolationMode)
 func (this *QGradient) SetInterpolationMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient20setInterpolationModeENS_17InterpolationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 func DeleteQGradient(this *QGradient) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradientD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -190,3 +176,25 @@ const QGradient__ColorInterpolation QGradient__InterpolationMode = 0
 const QGradient__ComponentInterpolation QGradient__InterpolationMode = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

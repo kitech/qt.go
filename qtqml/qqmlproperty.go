@@ -6,6 +6,14 @@ package qtqml
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QQmlProperty) NewFromPointer(cthis unsafe.Pointer) *QQmlProperty {
 // [-2] void QQmlProperty()
 func NewQQmlProperty() *QQmlProperty {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlPropertyFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlProperty)
 	return gothis
@@ -93,7 +76,7 @@ func NewQQmlProperty() *QQmlProperty {
 func NewQQmlProperty_1(arg0 *qtcore.QObject /*777 QObject **/) *QQmlProperty {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlPropertyFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlProperty)
 	return gothis
@@ -107,7 +90,7 @@ func NewQQmlProperty_2(arg0 *qtcore.QObject /*777 QObject **/, arg1 *QQmlContext
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyC2EP7QObjectP11QQmlContext", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlPropertyFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlProperty)
 	return gothis
@@ -121,7 +104,7 @@ func NewQQmlProperty_3(arg0 *qtcore.QObject /*777 QObject **/, arg1 *QQmlEngine 
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyC2EP7QObjectP10QQmlEngine", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlPropertyFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlProperty)
 	return gothis
@@ -136,7 +119,7 @@ func NewQQmlProperty_4(arg0 *qtcore.QObject /*777 QObject **/, arg1 string) *QQm
 	var tmpArg1 = qtcore.NewQString_5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyC2EP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlPropertyFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlProperty)
 	return gothis
@@ -152,7 +135,7 @@ func NewQQmlProperty_5(arg0 *qtcore.QObject /*777 QObject **/, arg1 string, arg2
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = arg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyC2EP7QObjectRK7QStringP11QQmlContext", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlPropertyFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlProperty)
 	return gothis
@@ -168,7 +151,7 @@ func NewQQmlProperty_6(arg0 *qtcore.QObject /*777 QObject **/, arg1 string, arg2
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = arg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyC2EP7QObjectRK7QStringP10QQmlEngine", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlPropertyFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlProperty)
 	return gothis
@@ -181,7 +164,7 @@ func NewQQmlProperty_6(arg0 *qtcore.QObject /*777 QObject **/, arg1 string, arg2
 func DeleteQQmlProperty(this *QQmlProperty) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -191,7 +174,7 @@ func DeleteQQmlProperty(this *QQmlProperty) {
 // [4] QQmlProperty::Type type()
 func (this *QQmlProperty) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -201,7 +184,7 @@ func (this *QQmlProperty) Type() int {
 // [1] bool isValid()
 func (this *QQmlProperty) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -211,7 +194,7 @@ func (this *QQmlProperty) IsValid() bool {
 // [1] bool isProperty()
 func (this *QQmlProperty) IsProperty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty10isPropertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -221,7 +204,7 @@ func (this *QQmlProperty) IsProperty() bool {
 // [1] bool isSignalProperty()
 func (this *QQmlProperty) IsSignalProperty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty16isSignalPropertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -231,7 +214,7 @@ func (this *QQmlProperty) IsSignalProperty() bool {
 // [4] int propertyType()
 func (this *QQmlProperty) PropertyType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty12propertyTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -241,7 +224,7 @@ func (this *QQmlProperty) PropertyType() int {
 // [4] QQmlProperty::PropertyTypeCategory propertyTypeCategory()
 func (this *QQmlProperty) PropertyTypeCategory() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty20propertyTypeCategoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -251,7 +234,7 @@ func (this *QQmlProperty) PropertyTypeCategory() int {
 // [8] const char * propertyTypeName()
 func (this *QQmlProperty) PropertyTypeName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty16propertyTypeNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -261,7 +244,7 @@ func (this *QQmlProperty) PropertyTypeName() string {
 // [8] QString name()
 func (this *QQmlProperty) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -274,7 +257,7 @@ func (this *QQmlProperty) Name() string {
 // [16] QVariant read()
 func (this *QQmlProperty) Read() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty4readEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -289,7 +272,7 @@ func (this *QQmlProperty) Read_1(arg0 *qtcore.QObject /*777 const QObject **/, a
 	var tmpArg1 = qtcore.NewQString_5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -310,7 +293,7 @@ func (this *QQmlProperty) Read_2(arg0 *qtcore.QObject /*777 const QObject **/, a
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = arg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QStringP11QQmlContext", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -331,7 +314,7 @@ func (this *QQmlProperty) Read_3(arg0 *qtcore.QObject /*777 const QObject **/, a
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = arg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QStringP10QQmlEngine", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -349,7 +332,7 @@ func QQmlProperty_Read_3(arg0 *qtcore.QObject /*777 const QObject **/, arg1 stri
 func (this *QQmlProperty) Write(arg0 *qtcore.QVariant) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty5writeERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -363,7 +346,7 @@ func (this *QQmlProperty) Write_1(arg0 *qtcore.QObject /*777 QObject **/, arg1 s
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = arg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QQmlProperty_Write_1(arg0 *qtcore.QObject /*777 QObject **/, arg1 string, arg2 *qtcore.QVariant) bool {
@@ -383,7 +366,7 @@ func (this *QQmlProperty) Write_2(arg0 *qtcore.QObject /*777 QObject **/, arg1 s
 	var convArg2 = arg2.GetCthis()
 	var convArg3 = arg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariantP11QQmlContext", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QQmlProperty_Write_2(arg0 *qtcore.QObject /*777 QObject **/, arg1 string, arg2 *qtcore.QVariant, arg3 *QQmlContext /*777 QQmlContext **/) bool {
@@ -403,7 +386,7 @@ func (this *QQmlProperty) Write_3(arg0 *qtcore.QObject /*777 QObject **/, arg1 s
 	var convArg2 = arg2.GetCthis()
 	var convArg3 = arg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariantP10QQmlEngine", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QQmlProperty_Write_3(arg0 *qtcore.QObject /*777 QObject **/, arg1 string, arg2 *qtcore.QVariant, arg3 *QQmlEngine /*777 QQmlEngine **/) bool {
@@ -418,7 +401,7 @@ func QQmlProperty_Write_3(arg0 *qtcore.QObject /*777 QObject **/, arg1 string, a
 // [1] bool reset()
 func (this *QQmlProperty) Reset() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -428,7 +411,7 @@ func (this *QQmlProperty) Reset() bool {
 // [1] bool hasNotifySignal()
 func (this *QQmlProperty) HasNotifySignal() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty15hasNotifySignalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -438,7 +421,7 @@ func (this *QQmlProperty) HasNotifySignal() bool {
 // [1] bool needsNotifySignal()
 func (this *QQmlProperty) NeedsNotifySignal() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty17needsNotifySignalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -451,7 +434,7 @@ func (this *QQmlProperty) ConnectNotifySignal(dest *qtcore.QObject /*777 QObject
 	var convArg1 = qtrt.CString(slot)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty19connectNotifySignalEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -462,7 +445,7 @@ func (this *QQmlProperty) ConnectNotifySignal(dest *qtcore.QObject /*777 QObject
 func (this *QQmlProperty) ConnectNotifySignal_1(dest *qtcore.QObject /*777 QObject **/, method int) bool {
 	var convArg0 = dest.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty19connectNotifySignalEP7QObjecti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, method)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -472,7 +455,7 @@ func (this *QQmlProperty) ConnectNotifySignal_1(dest *qtcore.QObject /*777 QObje
 // [1] bool isWritable()
 func (this *QQmlProperty) IsWritable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty10isWritableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -482,7 +465,7 @@ func (this *QQmlProperty) IsWritable() bool {
 // [1] bool isDesignable()
 func (this *QQmlProperty) IsDesignable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty12isDesignableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -492,7 +475,7 @@ func (this *QQmlProperty) IsDesignable() bool {
 // [1] bool isResettable()
 func (this *QQmlProperty) IsResettable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty12isResettableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -502,7 +485,7 @@ func (this *QQmlProperty) IsResettable() bool {
 // [8] QObject * object()
 func (this *QQmlProperty) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -512,7 +495,7 @@ func (this *QQmlProperty) Object() *qtcore.QObject /*777 QObject **/ {
 // [4] int index()
 func (this *QQmlProperty) Index() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty5indexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -522,7 +505,7 @@ func (this *QQmlProperty) Index() int {
 // [32] QMetaProperty property()
 func (this *QQmlProperty) Property() *qtcore.QMetaProperty /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty8propertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQMetaPropertyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQMetaProperty)
 	return rv2
@@ -534,7 +517,7 @@ func (this *QQmlProperty) Property() *qtcore.QMetaProperty /*123*/ {
 // [16] QMetaMethod method()
 func (this *QQmlProperty) Method() *qtcore.QMetaMethod /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty6methodEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQMetaMethod)
 	return rv2
@@ -554,3 +537,28 @@ const QQmlProperty__Property QQmlProperty__Type = 1
 const QQmlProperty__SignalProperty QQmlProperty__Type = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+}
+
+//  keep block end

@@ -3,8 +3,8 @@ package main
 import (
 	"testing"
 
-	"qt.go/qtcore"
-	"qt.go/qtrt"
+	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 func TestGetSignature0(t *testing.T) {

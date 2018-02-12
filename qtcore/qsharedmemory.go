@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -69,7 +58,7 @@ func (*QSharedMemory) NewFromPointer(cthis unsafe.Pointer) *QSharedMemory {
 // [8] const QMetaObject * metaObject()
 func (this *QSharedMemory) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSharedMemory10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -80,7 +69,7 @@ func (this *QSharedMemory) MetaObject() *QMetaObject /*777 const QMetaObject **/
 func NewQSharedMemory(parent *QObject /*777 QObject **/) *QSharedMemory {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemoryC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSharedMemoryFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -94,7 +83,7 @@ func NewQSharedMemory_1(key string, parent *QObject /*777 QObject **/) *QSharedM
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemoryC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSharedMemoryFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -106,7 +95,7 @@ func NewQSharedMemory_1(key string, parent *QObject /*777 QObject **/) *QSharedM
 func DeleteQSharedMemory(this *QSharedMemory) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -118,7 +107,7 @@ func (this *QSharedMemory) SetKey(key string) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory6setKeyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:82
@@ -127,7 +116,7 @@ func (this *QSharedMemory) SetKey(key string) {
 // [8] QString key()
 func (this *QSharedMemory) Key() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSharedMemory3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -142,7 +131,7 @@ func (this *QSharedMemory) SetNativeKey(key string) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory12setNativeKeyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:84
@@ -151,7 +140,7 @@ func (this *QSharedMemory) SetNativeKey(key string) {
 // [8] QString nativeKey()
 func (this *QSharedMemory) NativeKey() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSharedMemory9nativeKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -164,7 +153,7 @@ func (this *QSharedMemory) NativeKey() string {
 // [1] bool create(int, enum QSharedMemory::AccessMode)
 func (this *QSharedMemory) Create(size int, mode int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory6createEiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size, mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -174,7 +163,7 @@ func (this *QSharedMemory) Create(size int, mode int) bool {
 // [4] int size()
 func (this *QSharedMemory) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSharedMemory4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -184,7 +173,7 @@ func (this *QSharedMemory) Size() int {
 // [1] bool attach(enum QSharedMemory::AccessMode)
 func (this *QSharedMemory) Attach(mode int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory6attachENS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -194,7 +183,7 @@ func (this *QSharedMemory) Attach(mode int) bool {
 // [1] bool isAttached()
 func (this *QSharedMemory) IsAttached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSharedMemory10isAttachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -204,7 +193,7 @@ func (this *QSharedMemory) IsAttached() bool {
 // [1] bool detach()
 func (this *QSharedMemory) Detach() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory6detachEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -214,7 +203,7 @@ func (this *QSharedMemory) Detach() bool {
 // [8] void * data()
 func (this *QSharedMemory) Data() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -224,7 +213,7 @@ func (this *QSharedMemory) Data() unsafe.Pointer /*666*/ {
 // [8] const void * data()
 func (this *QSharedMemory) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSharedMemory4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -234,7 +223,7 @@ func (this *QSharedMemory) Data_1() unsafe.Pointer /*666*/ {
 // [8] const void * constData()
 func (this *QSharedMemory) ConstData() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSharedMemory9constDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -244,7 +233,7 @@ func (this *QSharedMemory) ConstData() unsafe.Pointer /*666*/ {
 // [1] bool lock()
 func (this *QSharedMemory) Lock() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory4lockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -254,7 +243,7 @@ func (this *QSharedMemory) Lock() bool {
 // [1] bool unlock()
 func (this *QSharedMemory) Unlock() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory6unlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -264,7 +253,7 @@ func (this *QSharedMemory) Unlock() bool {
 // [4] QSharedMemory::SharedMemoryError error()
 func (this *QSharedMemory) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSharedMemory5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -274,7 +263,7 @@ func (this *QSharedMemory) Error() int {
 // [8] QString errorString()
 func (this *QSharedMemory) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSharedMemory11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -299,3 +288,22 @@ const QSharedMemory__OutOfResources QSharedMemory__SharedMemoryError = 7
 const QSharedMemory__UnknownError QSharedMemory__SharedMemoryError = 8
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

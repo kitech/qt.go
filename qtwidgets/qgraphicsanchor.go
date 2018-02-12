@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QGraphicsAnchor) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnchor {
 // [8] const QMetaObject * metaObject()
 func (this *QGraphicsAnchor) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -87,7 +70,7 @@ func (this *QGraphicsAnchor) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // [-2] void setSpacing(qreal)
 func (this *QGraphicsAnchor) SetSpacing(spacing float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchor10setSpacingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:62
@@ -96,7 +79,7 @@ func (this *QGraphicsAnchor) SetSpacing(spacing float64) {
 // [-2] void unsetSpacing()
 func (this *QGraphicsAnchor) UnsetSpacing() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchor12unsetSpacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:63
@@ -105,7 +88,7 @@ func (this *QGraphicsAnchor) UnsetSpacing() {
 // [8] qreal spacing()
 func (this *QGraphicsAnchor) Spacing() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor7spacingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -115,7 +98,7 @@ func (this *QGraphicsAnchor) Spacing() float64 {
 // [-2] void setSizePolicy(QSizePolicy::Policy)
 func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchor13setSizePolicyEN11QSizePolicy6PolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:65
@@ -124,7 +107,7 @@ func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
 // [4] QSizePolicy::Policy sizePolicy()
 func (this *QGraphicsAnchor) SizePolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10sizePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -135,8 +118,33 @@ func (this *QGraphicsAnchor) SizePolicy() int {
 func DeleteQGraphicsAnchor(this *QGraphicsAnchor) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

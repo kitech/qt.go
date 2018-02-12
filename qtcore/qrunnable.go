@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QRunnable) NewFromPointer(cthis unsafe.Pointer) *QRunnable {
 // [-2] void run()
 func (this *QRunnable) Run() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QRunnable3runEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qrunnable.h:60
@@ -81,7 +70,7 @@ func (this *QRunnable) Run() {
 // [-2] void QRunnable()
 func NewQRunnable() *QRunnable {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QRunnableC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRunnableFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRunnable)
 	return gothis
@@ -94,7 +83,7 @@ func NewQRunnable() *QRunnable {
 func DeleteQRunnable(this *QRunnable) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QRunnableD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -104,7 +93,7 @@ func DeleteQRunnable(this *QRunnable) {
 // [1] bool autoDelete()
 func (this *QRunnable) AutoDelete() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QRunnable10autoDeleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -114,7 +103,26 @@ func (this *QRunnable) AutoDelete() bool {
 // [-2] void setAutoDelete(_Bool)
 func (this *QRunnable) SetAutoDelete(_autoDelete bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), _autoDelete)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

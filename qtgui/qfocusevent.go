@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QFocusEvent) NewFromPointer(cthis unsafe.Pointer) *QFocusEvent {
 // [-2] void QFocusEvent(enum QEvent::Type, Qt::FocusReason)
 func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, type_, reason)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFocusEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFocusEvent)
 	return gothis
@@ -86,7 +72,7 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 func DeleteQFocusEvent(this *QFocusEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -96,7 +82,7 @@ func DeleteQFocusEvent(this *QFocusEvent) {
 // [1] bool gotFocus()
 func (this *QFocusEvent) GotFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent8gotFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -106,7 +92,7 @@ func (this *QFocusEvent) GotFocus() bool {
 // [1] bool lostFocus()
 func (this *QFocusEvent) LostFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent9lostFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -116,8 +102,30 @@ func (this *QFocusEvent) LostFocus() bool {
 // [4] Qt::FocusReason reason()
 func (this *QFocusEvent) Reason() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent6reasonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

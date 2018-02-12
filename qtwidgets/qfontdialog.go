@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void changeEvent(class QEvent *)
 func (this *QFontDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
@@ -91,7 +75,7 @@ func (*QFontDialog) NewFromPointer(cthis unsafe.Pointer) *QFontDialog {
 // [8] const QMetaObject * metaObject()
 func (this *QFontDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFontDialog10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -102,7 +86,7 @@ func (this *QFontDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 func NewQFontDialog(parent *QWidget /*777 QWidget **/) *QFontDialog {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialogC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontDialogFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -115,7 +99,7 @@ func NewQFontDialog_1(initial *qtgui.QFont, parent *QWidget /*777 QWidget **/) *
 	var convArg0 = initial.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialogC2ERK5QFontP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontDialogFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -127,7 +111,7 @@ func NewQFontDialog_1(initial *qtgui.QFont, parent *QWidget /*777 QWidget **/) *
 func DeleteQFontDialog(this *QFontDialog) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialogD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -138,7 +122,7 @@ func DeleteQFontDialog(this *QFontDialog) {
 func (this *QFontDialog) SetCurrentFont(font *qtgui.QFont) {
 	var convArg0 = font.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog14setCurrentFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:80
@@ -147,7 +131,7 @@ func (this *QFontDialog) SetCurrentFont(font *qtgui.QFont) {
 // [16] QFont currentFont()
 func (this *QFontDialog) CurrentFont() *qtgui.QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFontDialog11currentFontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
@@ -159,7 +143,7 @@ func (this *QFontDialog) CurrentFont() *qtgui.QFont /*123*/ {
 // [16] QFont selectedFont()
 func (this *QFontDialog) SelectedFont() *qtgui.QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFontDialog12selectedFontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
@@ -171,7 +155,7 @@ func (this *QFontDialog) SelectedFont() *qtgui.QFont /*123*/ {
 // [-2] void setOption(enum QFontDialog::FontDialogOption, _Bool)
 func (this *QFontDialog) SetOption(option int, on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog9setOptionENS_16FontDialogOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:85
@@ -180,7 +164,7 @@ func (this *QFontDialog) SetOption(option int, on bool) {
 // [1] bool testOption(enum QFontDialog::FontDialogOption)
 func (this *QFontDialog) TestOption(option int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFontDialog10testOptionENS_16FontDialogOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -190,7 +174,7 @@ func (this *QFontDialog) TestOption(option int) bool {
 // [-2] void setOptions(QFontDialog::FontDialogOptions)
 func (this *QFontDialog) SetOptions(options int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog10setOptionsE6QFlagsINS_16FontDialogOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:87
@@ -199,7 +183,7 @@ func (this *QFontDialog) SetOptions(options int) {
 // [4] QFontDialog::FontDialogOptions options()
 func (this *QFontDialog) Options() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFontDialog7optionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -212,7 +196,7 @@ func (this *QFontDialog) Open(receiver *qtcore.QObject /*777 QObject **/, member
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog4openEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:92
@@ -221,7 +205,7 @@ func (this *QFontDialog) Open(receiver *qtcore.QObject /*777 QObject **/, member
 // [-2] void setVisible(_Bool)
 func (this *QFontDialog) SetVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:94
@@ -231,7 +215,7 @@ func (this *QFontDialog) SetVisible(visible bool) {
 func (this *QFontDialog) GetFont(ok unsafe.Pointer /*666*/, parent *QWidget /*777 QWidget **/) *qtgui.QFont /*123*/ {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbP7QWidget", qtrt.FFI_TYPE_POINTER, &ok, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
@@ -252,7 +236,7 @@ func (this *QFontDialog) GetFont_1(ok unsafe.Pointer /*666*/, initial *qtgui.QFo
 	var tmpArg3 = qtcore.NewQString_5(title)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbRK5QFontP7QWidgetRK7QString6QFlagsINS_16FontDialogOptionEE", qtrt.FFI_TYPE_POINTER, &ok, convArg1, convArg2, convArg3, options)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
@@ -270,7 +254,7 @@ func QFontDialog_GetFont_1(ok unsafe.Pointer /*666*/, initial *qtgui.QFont, pare
 func (this *QFontDialog) CurrentFontChanged(font *qtgui.QFont) {
 	var convArg0 = font.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog18currentFontChangedERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:100
@@ -280,7 +264,7 @@ func (this *QFontDialog) CurrentFontChanged(font *qtgui.QFont) {
 func (this *QFontDialog) FontSelected(font *qtgui.QFont) {
 	var convArg0 = font.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog12fontSelectedERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:103
@@ -290,7 +274,7 @@ func (this *QFontDialog) FontSelected(font *qtgui.QFont) {
 func (this *QFontDialog) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:104
@@ -299,7 +283,7 @@ func (this *QFontDialog) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 // [-2] void done(int)
 func (this *QFontDialog) Done(result int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog4doneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), result)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:105
@@ -310,7 +294,7 @@ func (this *QFontDialog) EventFilter(object *qtcore.QObject /*777 QObject **/, e
 	var convArg0 = object.GetCthis()
 	var convArg1 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -324,3 +308,28 @@ const QFontDialog__MonospacedFonts QFontDialog__FontDialogOption = 16
 const QFontDialog__ProportionalFonts QFontDialog__FontDialogOption = 32
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

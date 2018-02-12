@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QScrollerProperties) NewFromPointer(cthis unsafe.Pointer) *QScrollerPrope
 // [-2] void QScrollerProperties()
 func NewQScrollerProperties() *QScrollerProperties {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerPropertiesC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQScrollerPropertiesFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQScrollerProperties)
 	return gothis
@@ -93,7 +76,7 @@ func NewQScrollerProperties() *QScrollerProperties {
 func DeleteQScrollerProperties(this *QScrollerProperties) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerPropertiesD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -104,7 +87,7 @@ func DeleteQScrollerProperties(this *QScrollerProperties) {
 func (this *QScrollerProperties) SetDefaultScrollerProperties(sp *QScrollerProperties) {
 	var convArg0 = sp.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QScrollerProperties_SetDefaultScrollerProperties(sp *QScrollerProperties) {
 	var nilthis *QScrollerProperties
@@ -117,7 +100,7 @@ func QScrollerProperties_SetDefaultScrollerProperties(sp *QScrollerProperties) {
 // [-2] void unsetDefaultScrollerProperties()
 func (this *QScrollerProperties) UnsetDefaultScrollerProperties() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QScrollerProperties_UnsetDefaultScrollerProperties() {
 	var nilthis *QScrollerProperties
@@ -130,7 +113,7 @@ func QScrollerProperties_UnsetDefaultScrollerProperties() {
 // [16] QVariant scrollMetric(enum QScrollerProperties::ScrollMetric)
 func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -143,7 +126,7 @@ func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123
 func (this *QScrollerProperties) SetScrollMetric(metric int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerProperties15setScrollMetricENS_12ScrollMetricERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QScrollerProperties__OvershootPolicy = int
@@ -184,3 +167,28 @@ const QScrollerProperties__FrameRate QScrollerProperties__ScrollMetric = 19
 const QScrollerProperties__ScrollMetricCount QScrollerProperties__ScrollMetric = 20
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

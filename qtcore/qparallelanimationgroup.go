@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QParallelAnimationGroup) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -88,7 +78,7 @@ func (*QParallelAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QParallelA
 // [8] const QMetaObject * metaObject()
 func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -99,7 +89,7 @@ func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMeta
 func NewQParallelAnimationGroup(parent *QObject /*777 QObject **/) *QParallelAnimationGroup {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQParallelAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -111,7 +101,7 @@ func NewQParallelAnimationGroup(parent *QObject /*777 QObject **/) *QParallelAni
 func DeleteQParallelAnimationGroup(this *QParallelAnimationGroup) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -121,7 +111,7 @@ func DeleteQParallelAnimationGroup(this *QParallelAnimationGroup) {
 // [4] int duration()
 func (this *QParallelAnimationGroup) Duration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -132,7 +122,7 @@ func (this *QParallelAnimationGroup) Duration() int {
 func (this *QParallelAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -142,7 +132,7 @@ func (this *QParallelAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool 
 // [-2] void updateCurrentTime(int)
 func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup17updateCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), currentTime)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:66
@@ -151,7 +141,7 @@ func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:67
@@ -160,7 +150,26 @@ func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
 // [-2] void updateDirection(QAbstractAnimation::Direction)
 func (this *QParallelAnimationGroup) UpdateDirection(direction int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), direction)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

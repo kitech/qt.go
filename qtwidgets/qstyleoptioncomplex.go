@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QStyleOptionComplex) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionCo
 // [-2] void QStyleOptionComplex(int, int)
 func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionComplexFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionComplex)
 	return gothis
@@ -85,7 +68,7 @@ func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
 
 func DeleteQStyleOptionComplex(this *QStyleOptionComplex) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionComplexD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -98,3 +81,28 @@ type QStyleOptionComplex__StyleOptionVersion = int
 const QStyleOptionComplex__Version QStyleOptionComplex__StyleOptionVersion = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

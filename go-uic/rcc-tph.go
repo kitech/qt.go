@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
-	"gopp"
 	"io/ioutil"
 	"log"
 	"os"
 	"os/exec"
 	"path"
 	"strings"
+
+	"github.com/kitech/qt.go/qtrt"
 )
 
 var file string
@@ -30,11 +31,11 @@ func main() {
 	log.SetFlags(log.Flags() | log.Lshortfile)
 	file = os.Args[1]
 	filep = path.Base(file)[0:strings.LastIndex(path.Base(file), ".")]
-	filep = gopp.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
+	filep = qtrt.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
 	log.Println(file, filep)
 
 	scc, err := runcmdout("rcc", file)
-	gopp.ErrPrint(err, "rcc", file)
+	qtrt.ErrPrint(err, "rcc", file)
 	if err != nil {
 		os.Exit(1)
 	}
@@ -43,8 +44,8 @@ func main() {
 	log.Println("lines:", len(lines), "size:", len(scc))
 
 	cp.APf("header", "import \"unsafe\"")
-	cp.APf("header", "// import \"qt.go/qtcore\"")
-	cp.APf("header", "import \"qt.go/qtmock\"")
+	cp.APf("header", "// import \"github.com/kitech/qt.go/qtcore\"")
+	cp.APf("header", "import \"github.com/kitech/qt.go/qtmock\"")
 
 	insection := INSEC_NONE
 	for _, line := range lines {
@@ -124,12 +125,12 @@ func saveCode() {
 	code += cp.ExportAll()
 	savefile := fmt.Sprintf("%s_rc.go", filep)
 	err := ioutil.WriteFile(savefile, []byte(code), mod)
-	gopp.ErrPrint(err, savefile)
+	qtrt.ErrPrint(err, savefile)
 
 	// gofmt the code
 	cmd := exec.Command("/usr/bin/gofmt", []string{"-w", savefile}...)
 	err = cmd.Run()
-	gopp.ErrPrint(err, cmd)
+	qtrt.ErrPrint(err, cmd)
 }
 
 func colon2uline(s string) string { return strings.Replace(s, ":", "_", -1) }

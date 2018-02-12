@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -77,7 +63,7 @@ func (*QAccessibleEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleEvent 
 func NewQAccessibleEvent(obj *qtcore.QObject /*777 QObject **/, typ int) *QAccessibleEvent {
 	var convArg0 = obj.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAccessibleEventC2EP7QObjectN11QAccessible5EventE", qtrt.FFI_TYPE_POINTER, convArg0, typ)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleEvent)
 	return gothis
@@ -90,7 +76,7 @@ func NewQAccessibleEvent(obj *qtcore.QObject /*777 QObject **/, typ int) *QAcces
 func NewQAccessibleEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
 	var convArg0 = iface.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAccessibleEventC2EP20QAccessibleInterfaceN11QAccessible5EventE", qtrt.FFI_TYPE_POINTER, convArg0, typ)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleEvent)
 	return gothis
@@ -103,7 +89,7 @@ func NewQAccessibleEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterfac
 func DeleteQAccessibleEvent(this *QAccessibleEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAccessibleEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -113,7 +99,7 @@ func DeleteQAccessibleEvent(this *QAccessibleEvent) {
 // [4] QAccessible::Event type()
 func (this *QAccessibleEvent) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -123,7 +109,7 @@ func (this *QAccessibleEvent) Type() int {
 // [8] QObject * object()
 func (this *QAccessibleEvent) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -133,7 +119,7 @@ func (this *QAccessibleEvent) Object() *qtcore.QObject /*777 QObject **/ {
 // [4] QAccessible::Id uniqueId()
 func (this *QAccessibleEvent) UniqueId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent8uniqueIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -143,7 +129,7 @@ func (this *QAccessibleEvent) UniqueId() int {
 // [-2] void setChild(int)
 func (this *QAccessibleEvent) SetChild(chld int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAccessibleEvent8setChildEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), chld)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:706
@@ -152,7 +138,7 @@ func (this *QAccessibleEvent) SetChild(chld int) {
 // [4] int child()
 func (this *QAccessibleEvent) Child() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent5childEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -162,8 +148,30 @@ func (this *QAccessibleEvent) Child() int {
 // [8] QAccessibleInterface * accessibleInterface()
 func (this *QAccessibleEvent) AccessibleInterface() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent19accessibleInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

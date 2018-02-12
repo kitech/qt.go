@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"gopp"
 	"io/ioutil"
 	"log"
 	"os"
@@ -10,6 +9,8 @@ import (
 	"path"
 	"regexp"
 	"strings"
+
+	"github.com/kitech/qt.go/qtrt"
 )
 
 var class string
@@ -36,11 +37,11 @@ func main() {
 	file = os.Args[1]
 
 	filep = "ui_" + path.Base(file)[0:strings.LastIndex(path.Base(file), ".")]
-	filep = gopp.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
+	filep = qtrt.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
 	log.Println(file, filep)
 
 	scc, err := runcmdout("uic", "-g", "cpp", file)
-	gopp.ErrPrint(err)
+	qtrt.ErrPrint(err)
 	if err != nil {
 		os.Exit(1)
 	}
@@ -48,11 +49,11 @@ func main() {
 	lines := strings.Split(scc, "\n")
 	log.Println("lines:", len(lines), "size:", len(scc))
 
-	cp.APf("header", "import \"qt.go/qtcore\"")
-	cp.APf("header", "import \"qt.go/qtgui\"")
-	cp.APf("header", "import \"qt.go/qtwidgets\"")
-	cp.APf("header", "import \"qt.go/qtquickwidgets\"")
-	cp.APf("header", "import \"qt.go/qtmock\"")
+	cp.APf("header", "import \"github.com/kitech/qt.go/qtcore\"")
+	cp.APf("header", "import \"github.com/kitech/qt.go/qtgui\"")
+	cp.APf("header", "import \"github.com/kitech/qt.go/qtwidgets\"")
+	cp.APf("header", "import \"github.com/kitech/qt.go/qtquickwidgets\"")
+	cp.APf("header", "import \"github.com/kitech/qt.go/qtmock\"")
 	cp.APf("header", "func init(){qtcore.KeepMe()}")
 	cp.APf("header", "func init(){qtwidgets.KeepMe()}")
 	cp.APf("header", "func init(){qtquickwidgets.KeepMe()}")
@@ -361,12 +362,12 @@ func saveCode() {
 	code += cp.ExportAll()
 	savefile := fmt.Sprintf("%s.go", filep)
 	err := ioutil.WriteFile(savefile, []byte(code), mod)
-	gopp.ErrPrint(err, savefile)
+	qtrt.ErrPrint(err, savefile)
 
 	// gofmt the code
 	cmd := exec.Command("/usr/bin/gofmt", []string{"-w", savefile}...)
 	err = cmd.Run()
-	gopp.ErrPrint(err, cmd)
+	qtrt.ErrPrint(err, cmd)
 }
 
 func colon2uline(s string) string { return strings.Replace(s, ":", "_", -1) }

@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,13 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
 //  body block begin
+
 // qint64 expire()
 func (this *QNetworkDiskCache) InheritExpire(f func() int64) {
 	qtrt.SetAllInheritCallback(this, "expire", f)
@@ -77,7 +64,7 @@ func (*QNetworkDiskCache) NewFromPointer(cthis unsafe.Pointer) *QNetworkDiskCach
 // [8] const QMetaObject * metaObject()
 func (this *QNetworkDiskCache) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -88,7 +75,7 @@ func (this *QNetworkDiskCache) MetaObject() *qtcore.QMetaObject /*777 const QMet
 func NewQNetworkDiskCache(parent *qtcore.QObject /*777 QObject **/) *QNetworkDiskCache {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCacheC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkDiskCacheFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -100,7 +87,7 @@ func NewQNetworkDiskCache(parent *qtcore.QObject /*777 QObject **/) *QNetworkDis
 func DeleteQNetworkDiskCache(this *QNetworkDiskCache) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCacheD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -110,7 +97,7 @@ func DeleteQNetworkDiskCache(this *QNetworkDiskCache) {
 // [8] QString cacheDirectory()
 func (this *QNetworkDiskCache) CacheDirectory() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache14cacheDirectoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -125,7 +112,7 @@ func (this *QNetworkDiskCache) SetCacheDirectory(cacheDir string) {
 	var tmpArg0 = qtcore.NewQString_5(cacheDir)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache17setCacheDirectoryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:62
@@ -134,7 +121,7 @@ func (this *QNetworkDiskCache) SetCacheDirectory(cacheDir string) {
 // [8] qint64 maximumCacheSize()
 func (this *QNetworkDiskCache) MaximumCacheSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache16maximumCacheSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -144,7 +131,7 @@ func (this *QNetworkDiskCache) MaximumCacheSize() int64 {
 // [-2] void setMaximumCacheSize(qint64)
 func (this *QNetworkDiskCache) SetMaximumCacheSize(size int64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache19setMaximumCacheSizeEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:65
@@ -153,7 +140,7 @@ func (this *QNetworkDiskCache) SetMaximumCacheSize(size int64) {
 // [8] qint64 cacheSize()
 func (this *QNetworkDiskCache) CacheSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache9cacheSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -164,7 +151,7 @@ func (this *QNetworkDiskCache) CacheSize() int64 {
 func (this *QNetworkDiskCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMetaData /*123*/ {
 	var convArg0 = url.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache8metaDataERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQNetworkCacheMetaDataFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkCacheMetaData)
 	return rv2
@@ -177,7 +164,7 @@ func (this *QNetworkDiskCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMetaData
 func (this *QNetworkDiskCache) UpdateMetaData(metaData *QNetworkCacheMetaData) {
 	var convArg0 = metaData.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache14updateMetaDataERK21QNetworkCacheMetaData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:68
@@ -187,7 +174,7 @@ func (this *QNetworkDiskCache) UpdateMetaData(metaData *QNetworkCacheMetaData) {
 func (this *QNetworkDiskCache) Data(url *qtcore.QUrl) *qtcore.QIODevice /*777 QIODevice **/ {
 	var convArg0 = url.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache4dataERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -198,7 +185,7 @@ func (this *QNetworkDiskCache) Data(url *qtcore.QUrl) *qtcore.QIODevice /*777 QI
 func (this *QNetworkDiskCache) Remove(url *qtcore.QUrl) bool {
 	var convArg0 = url.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache6removeERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -209,7 +196,7 @@ func (this *QNetworkDiskCache) Remove(url *qtcore.QUrl) bool {
 func (this *QNetworkDiskCache) Prepare(metaData *QNetworkCacheMetaData) *qtcore.QIODevice /*777 QIODevice **/ {
 	var convArg0 = metaData.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache7prepareERK21QNetworkCacheMetaData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -221,7 +208,7 @@ func (this *QNetworkDiskCache) FileMetaData(fileName string) *QNetworkCacheMetaD
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache12fileMetaDataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQNetworkCacheMetaDataFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkCacheMetaData)
 	return rv2
@@ -233,7 +220,7 @@ func (this *QNetworkDiskCache) FileMetaData(fileName string) *QNetworkCacheMetaD
 // [-2] void clear()
 func (this *QNetworkDiskCache) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:79
@@ -242,8 +229,30 @@ func (this *QNetworkDiskCache) Clear() {
 // [8] qint64 expire()
 func (this *QNetworkDiskCache) Expire() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache6expireEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

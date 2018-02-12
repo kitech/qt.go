@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QHttpMultiPart) NewFromPointer(cthis unsafe.Pointer) *QHttpMultiPart {
 // [8] const QMetaObject * metaObject()
 func (this *QHttpMultiPart) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QHttpMultiPart10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -84,7 +70,7 @@ func (this *QHttpMultiPart) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 func NewQHttpMultiPart(parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQHttpMultiPartFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -96,7 +82,7 @@ func NewQHttpMultiPart(parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart
 func NewQHttpMultiPart_1(contentType int, parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart {
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2ENS_11ContentTypeEP7QObject", qtrt.FFI_TYPE_POINTER, contentType, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQHttpMultiPartFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -108,7 +94,7 @@ func NewQHttpMultiPart_1(contentType int, parent *qtcore.QObject /*777 QObject *
 func DeleteQHttpMultiPart(this *QHttpMultiPart) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -118,7 +104,7 @@ func DeleteQHttpMultiPart(this *QHttpMultiPart) {
 // [-2] void setContentType(enum QHttpMultiPart::ContentType)
 func (this *QHttpMultiPart) SetContentType(contentType int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPart14setContentTypeENS_11ContentTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), contentType)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:109
@@ -127,7 +113,7 @@ func (this *QHttpMultiPart) SetContentType(contentType int) {
 // [8] QByteArray boundary()
 func (this *QHttpMultiPart) Boundary() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QHttpMultiPart8boundaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
@@ -140,7 +126,7 @@ func (this *QHttpMultiPart) Boundary() *qtcore.QByteArray /*123*/ {
 func (this *QHttpMultiPart) SetBoundary(boundary *qtcore.QByteArray) {
 	var convArg0 = boundary.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPart11setBoundaryERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QHttpMultiPart__ContentType = int
@@ -151,3 +137,25 @@ const QHttpMultiPart__FormDataType QHttpMultiPart__ContentType = 2
 const QHttpMultiPart__AlternativeType QHttpMultiPart__ContentType = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

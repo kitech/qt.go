@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"qt.go/qtcore"
+	"github.com/kitech/qt.go/qtcore"
 )
 
 func main() {

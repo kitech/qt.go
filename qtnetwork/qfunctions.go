@@ -1,9 +1,8 @@
 package qtnetwork
 
 import "unsafe"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 func init() {
 	if false {
@@ -14,9 +13,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
 	}
 	if false {
 		qtcore.KeepMe()
@@ -33,7 +29,7 @@ func init() {
 func QHash_36(key *QSslError, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QSslErrorj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -44,7 +40,7 @@ func QHash_36(key *QSslError, seed uint) uint {
 func QHash_37(dhparam *QSslDiffieHellmanParameters, seed uint) uint {
 	var convArg0 = dhparam.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK27QSslDiffieHellmanParametersj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -55,7 +51,7 @@ func QHash_37(dhparam *QSslDiffieHellmanParameters, seed uint) uint {
 func QHash_38(key *QSslCertificate, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK15QSslCertificatej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -66,7 +62,7 @@ func QHash_38(key *QSslCertificate, seed uint) uint {
 func QHash_39(key *QHostAddress, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK12QHostAddressj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -77,7 +73,7 @@ func QHash_39(key *QHostAddress, seed uint) uint {
 func QHash_40(curve *QSslEllipticCurve /*123*/, seed uint) uint {
 	var convArg0 = curve.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash17QSslEllipticCurvej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -88,7 +84,7 @@ func QHash_40(curve *QSslEllipticCurve /*123*/, seed uint) uint {
 func QHash_41(curve *QSslEllipticCurve /*123*/, seed uint) uint {
 	var convArg0 = curve.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash17QSslEllipticCurvej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 

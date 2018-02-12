@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QItemSelection) NewFromPointer(cthis unsafe.Pointer) *QItemSelection {
 // [-2] void QItemSelection()
 func NewQItemSelection() *QItemSelection {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelectionC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQItemSelection)
 	return gothis
@@ -86,7 +75,7 @@ func NewQItemSelection_1(topLeft *QModelIndex, bottomRight *QModelIndex) *QItemS
 	var convArg0 = topLeft.GetCthis()
 	var convArg1 = bottomRight.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelectionC2ERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQItemSelection)
 	return gothis
@@ -100,7 +89,7 @@ func (this *QItemSelection) Select(topLeft *QModelIndex, bottomRight *QModelInde
 	var convArg0 = topLeft.GetCthis()
 	var convArg1 = bottomRight.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelection6selectERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:256
@@ -110,7 +99,7 @@ func (this *QItemSelection) Select(topLeft *QModelIndex, bottomRight *QModelInde
 func (this *QItemSelection) Contains(index *QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QItemSelection8containsERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -120,7 +109,7 @@ func (this *QItemSelection) Contains(index *QModelIndex) bool {
 // [8] QModelIndexList indexes()
 func (this *QItemSelection) Indexes() *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QItemSelection7indexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
@@ -132,7 +121,7 @@ func (this *QItemSelection) Indexes() *QModelIndexList /*667*/ {
 func (this *QItemSelection) Merge(other *QItemSelection, command int) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelection5mergeERKS_6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:259
@@ -144,7 +133,7 @@ func (this *QItemSelection) Split(range_ *QItemSelectionRange, other *QItemSelec
 	var convArg1 = other.GetCthis()
 	var convArg2 = result.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QItemSelection_Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result *QItemSelection /*777 QItemSelection **/) {
 	var nilthis *QItemSelection
@@ -153,8 +142,27 @@ func QItemSelection_Split(range_ *QItemSelectionRange, other *QItemSelectionRang
 
 func DeleteQItemSelection(this *QItemSelection) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelectionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

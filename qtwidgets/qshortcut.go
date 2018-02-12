@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QShortcut) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -81,7 +65,7 @@ func (*QShortcut) NewFromPointer(cthis unsafe.Pointer) *QShortcut {
 // [8] const QMetaObject * metaObject()
 func (this *QShortcut) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -92,7 +76,7 @@ func (this *QShortcut) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 func NewQShortcut(parent *QWidget /*777 QWidget **/) *QShortcut {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQShortcutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -109,7 +93,7 @@ func NewQShortcut_1(key *qtgui.QKeySequence, parent *QWidget /*777 QWidget **/, 
 	var convArg3 = qtrt.CString(ambiguousMember)
 	defer qtrt.FreeMem(convArg3)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcutC2ERK12QKeySequenceP7QWidgetPKcS6_N2Qt15ShortcutContextE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, context)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQShortcutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -121,7 +105,7 @@ func NewQShortcut_1(key *qtgui.QKeySequence, parent *QWidget /*777 QWidget **/, 
 func DeleteQShortcut(this *QShortcut) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcutD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -132,7 +116,7 @@ func DeleteQShortcut(this *QShortcut) {
 func (this *QShortcut) SetKey(key *qtgui.QKeySequence) {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut6setKeyERK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qshortcut.h:70
@@ -141,7 +125,7 @@ func (this *QShortcut) SetKey(key *qtgui.QKeySequence) {
 // [8] QKeySequence key()
 func (this *QShortcut) Key() *qtgui.QKeySequence /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQKeySequence)
 	return rv2
@@ -153,7 +137,7 @@ func (this *QShortcut) Key() *qtgui.QKeySequence /*123*/ {
 // [-2] void setEnabled(_Bool)
 func (this *QShortcut) SetEnabled(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut10setEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qshortcut.h:73
@@ -162,7 +146,7 @@ func (this *QShortcut) SetEnabled(enable bool) {
 // [1] bool isEnabled()
 func (this *QShortcut) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -172,7 +156,7 @@ func (this *QShortcut) IsEnabled() bool {
 // [-2] void setContext(Qt::ShortcutContext)
 func (this *QShortcut) SetContext(context int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut10setContextEN2Qt15ShortcutContextE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), context)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qshortcut.h:76
@@ -181,7 +165,7 @@ func (this *QShortcut) SetContext(context int) {
 // [4] Qt::ShortcutContext context()
 func (this *QShortcut) Context() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut7contextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -193,7 +177,7 @@ func (this *QShortcut) SetWhatsThis(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut12setWhatsThisERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qshortcut.h:79
@@ -202,7 +186,7 @@ func (this *QShortcut) SetWhatsThis(text string) {
 // [8] QString whatsThis()
 func (this *QShortcut) WhatsThis() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut9whatsThisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -215,7 +199,7 @@ func (this *QShortcut) WhatsThis() string {
 // [-2] void setAutoRepeat(_Bool)
 func (this *QShortcut) SetAutoRepeat(on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut13setAutoRepeatEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qshortcut.h:82
@@ -224,7 +208,7 @@ func (this *QShortcut) SetAutoRepeat(on bool) {
 // [1] bool autoRepeat()
 func (this *QShortcut) AutoRepeat() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut10autoRepeatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -234,7 +218,7 @@ func (this *QShortcut) AutoRepeat() bool {
 // [4] int id()
 func (this *QShortcut) Id() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut2idEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -244,7 +228,7 @@ func (this *QShortcut) Id() int {
 // [8] QWidget * parentWidget()
 func (this *QShortcut) ParentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut12parentWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -254,7 +238,7 @@ func (this *QShortcut) ParentWidget() *QWidget /*777 QWidget **/ {
 // [-2] void activated()
 func (this *QShortcut) Activated() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut9activatedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qshortcut.h:91
@@ -263,7 +247,7 @@ func (this *QShortcut) Activated() {
 // [-2] void activatedAmbiguously()
 func (this *QShortcut) ActivatedAmbiguously() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut20activatedAmbiguouslyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qshortcut.h:94
@@ -273,8 +257,33 @@ func (this *QShortcut) ActivatedAmbiguously() {
 func (this *QShortcut) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

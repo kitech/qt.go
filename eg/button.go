@@ -1,6 +1,6 @@
 package main
 
-import "qt.go/qtwidgets"
+import "github.com/kitech/qt.go/qtwidgets"
 
 func main() {
 	argv := []string{"./guiapp", "-v", "-x"}

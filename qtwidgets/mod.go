@@ -7,12 +7,11 @@ package qtwidgets
 */
 // import "C"
 import (
-	"gopp"
 	"unsafe"
 
-	"qt.go/qtcore"
-	"qt.go/qtgui"
-	"qt.go/qtrt"
+	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtgui"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 func init() {
@@ -57,13 +56,13 @@ func (*QWidgetListx) NewFromPointer(cthis unsafe.Pointer) *QWidgetListx {
 
 func (this *QWidgetListx) At(i int) *QWidget {
 	rv, err := qtrt.InvokeQtFunc6("C_QWidgetList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QWidgetListx) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QWidgetList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
@@ -106,13 +105,13 @@ func (*QWidgetSetx) NewFromPointer(cthis unsafe.Pointer) *QWidgetSetx {
 
 func (this *QWidgetSetx) At(i int) *QWidget {
 	rv, err := qtrt.InvokeQtFunc6("C_QWidgetSet_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QWidgetSetx) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QWidgetSet_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 

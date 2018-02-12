@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QFontDatabase) NewFromPointer(cthis unsafe.Pointer) *QFontDatabase {
 // [-2] void QFontDatabase()
 func NewQFontDatabase() *QFontDatabase {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabaseC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontDatabaseFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFontDatabase)
 	return gothis
@@ -88,7 +74,7 @@ func NewQFontDatabase() *QFontDatabase {
 // [8] QStringList families(enum QFontDatabase::WritingSystem)
 func (this *QFontDatabase) Families(writingSystem int) *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase8familiesENS_13WritingSystemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), writingSystem)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -102,7 +88,7 @@ func (this *QFontDatabase) Styles(family string) *qtcore.QStringList /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase6stylesERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -115,7 +101,7 @@ func (this *QFontDatabase) Styles(family string) *qtcore.QStringList /*123*/ {
 func (this *QFontDatabase) StyleString(font *QFont) string {
 	var convArg0 = font.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -129,7 +115,7 @@ func (this *QFontDatabase) StyleString(font *QFont) string {
 func (this *QFontDatabase) StyleString_1(fontInfo *QFontInfo) string {
 	var convArg0 = fontInfo.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK9QFontInfo", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -146,7 +132,7 @@ func (this *QFontDatabase) Font(family string, style string, pointSize int) *QFo
 	var tmpArg1 = qtcore.NewQString_5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase4fontERK7QStringS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, pointSize)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
@@ -162,7 +148,7 @@ func (this *QFontDatabase) IsBitmapScalable(family string, style string) bool {
 	var tmpArg1 = qtcore.NewQString_5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -176,7 +162,7 @@ func (this *QFontDatabase) IsSmoothlyScalable(family string, style string) bool 
 	var tmpArg1 = qtcore.NewQString_5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -190,7 +176,7 @@ func (this *QFontDatabase) IsScalable(family string, style string) bool {
 	var tmpArg1 = qtcore.NewQString_5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase10isScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -204,7 +190,7 @@ func (this *QFontDatabase) IsFixedPitch(family string, style string) bool {
 	var tmpArg1 = qtcore.NewQString_5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -218,7 +204,7 @@ func (this *QFontDatabase) Italic(family string, style string) bool {
 	var tmpArg1 = qtcore.NewQString_5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase6italicERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -232,7 +218,7 @@ func (this *QFontDatabase) Bold(family string, style string) bool {
 	var tmpArg1 = qtcore.NewQString_5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase4boldERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -246,7 +232,7 @@ func (this *QFontDatabase) Weight(family string, style string) int {
 	var tmpArg1 = qtcore.NewQString_5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase6weightERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -258,7 +244,7 @@ func (this *QFontDatabase) HasFamily(family string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase9hasFamilyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -270,7 +256,7 @@ func (this *QFontDatabase) IsPrivateFamily(family string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase15isPrivateFamilyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -280,7 +266,7 @@ func (this *QFontDatabase) IsPrivateFamily(family string) bool {
 // [8] QString writingSystemName(enum QFontDatabase::WritingSystem)
 func (this *QFontDatabase) WritingSystemName(writingSystem int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase17writingSystemNameENS_13WritingSystemE", qtrt.FFI_TYPE_POINTER, writingSystem)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -298,7 +284,7 @@ func QFontDatabase_WritingSystemName(writingSystem int) string {
 // [8] QString writingSystemSample(enum QFontDatabase::WritingSystem)
 func (this *QFontDatabase) WritingSystemSample(writingSystem int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase19writingSystemSampleENS_13WritingSystemE", qtrt.FFI_TYPE_POINTER, writingSystem)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -318,7 +304,7 @@ func (this *QFontDatabase) AddApplicationFont(fileName string) int {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase18addApplicationFontERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QFontDatabase_AddApplicationFont(fileName string) int {
@@ -334,7 +320,7 @@ func QFontDatabase_AddApplicationFont(fileName string) int {
 func (this *QFontDatabase) AddApplicationFontFromData(fontData *qtcore.QByteArray) int {
 	var convArg0 = fontData.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QFontDatabase_AddApplicationFontFromData(fontData *qtcore.QByteArray) int {
@@ -349,7 +335,7 @@ func QFontDatabase_AddApplicationFontFromData(fontData *qtcore.QByteArray) int {
 // [8] QStringList applicationFontFamilies(int)
 func (this *QFontDatabase) ApplicationFontFamilies(id int) *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase23applicationFontFamiliesEi", qtrt.FFI_TYPE_POINTER, id)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -366,7 +352,7 @@ func QFontDatabase_ApplicationFontFamilies(id int) *qtcore.QStringList /*123*/ {
 // [1] bool removeApplicationFont(int)
 func (this *QFontDatabase) RemoveApplicationFont(id int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase21removeApplicationFontEi", qtrt.FFI_TYPE_POINTER, id)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QFontDatabase_RemoveApplicationFont(id int) bool {
@@ -381,7 +367,7 @@ func QFontDatabase_RemoveApplicationFont(id int) bool {
 // [1] bool removeAllApplicationFonts()
 func (this *QFontDatabase) RemoveAllApplicationFonts() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase25removeAllApplicationFontsEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QFontDatabase_RemoveAllApplicationFonts() bool {
@@ -396,7 +382,7 @@ func QFontDatabase_RemoveAllApplicationFonts() bool {
 // [1] bool supportsThreadedFontRendering()
 func (this *QFontDatabase) SupportsThreadedFontRendering() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase29supportsThreadedFontRenderingEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QFontDatabase_SupportsThreadedFontRendering() bool {
@@ -411,7 +397,7 @@ func QFontDatabase_SupportsThreadedFontRendering() bool {
 // [16] QFont systemFont(enum QFontDatabase::SystemFont)
 func (this *QFontDatabase) SystemFont(type_ int) *QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase10systemFontENS_10SystemFontE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
@@ -424,7 +410,7 @@ func QFontDatabase_SystemFont(type_ int) *QFont /*123*/ {
 
 func DeleteQFontDatabase(this *QFontDatabase) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabaseD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -475,3 +461,25 @@ const QFontDatabase__TitleFont QFontDatabase__SystemFont = 2
 const QFontDatabase__SmallestReadableFont QFontDatabase__SystemFont = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

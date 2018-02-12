@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QDial) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -116,7 +100,7 @@ func (*QDial) NewFromPointer(cthis unsafe.Pointer) *QDial {
 // [8] const QMetaObject * metaObject()
 func (this *QDial) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -127,7 +111,7 @@ func (this *QDial) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 func NewQDial(parent *QWidget /*777 QWidget **/) *QDial {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDialC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQDialFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -139,7 +123,7 @@ func NewQDial(parent *QWidget /*777 QWidget **/) *QDial {
 func DeleteQDial(this *QDial) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDialD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -149,7 +133,7 @@ func DeleteQDial(this *QDial) {
 // [1] bool wrapping()
 func (this *QDial) Wrapping() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial8wrappingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -159,7 +143,7 @@ func (this *QDial) Wrapping() bool {
 // [4] int notchSize()
 func (this *QDial) NotchSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial9notchSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -169,7 +153,7 @@ func (this *QDial) NotchSize() int {
 // [-2] void setNotchTarget(double)
 func (this *QDial) SetNotchTarget(target float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial14setNotchTargetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), target)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:73
@@ -178,7 +162,7 @@ func (this *QDial) SetNotchTarget(target float64) {
 // [8] qreal notchTarget()
 func (this *QDial) NotchTarget() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial11notchTargetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -188,7 +172,7 @@ func (this *QDial) NotchTarget() float64 {
 // [1] bool notchesVisible()
 func (this *QDial) NotchesVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial14notchesVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -198,7 +182,7 @@ func (this *QDial) NotchesVisible() bool {
 // [8] QSize sizeHint()
 func (this *QDial) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -210,7 +194,7 @@ func (this *QDial) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSizeHint()
 func (this *QDial) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -222,7 +206,7 @@ func (this *QDial) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // [-2] void setNotchesVisible(_Bool)
 func (this *QDial) SetNotchesVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial17setNotchesVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:81
@@ -231,7 +215,7 @@ func (this *QDial) SetNotchesVisible(visible bool) {
 // [-2] void setWrapping(_Bool)
 func (this *QDial) SetWrapping(on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial11setWrappingEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:84
@@ -241,7 +225,7 @@ func (this *QDial) SetWrapping(on bool) {
 func (this *QDial) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -252,7 +236,7 @@ func (this *QDial) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 func (this *QDial) ResizeEvent(re *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = re.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:86
@@ -262,7 +246,7 @@ func (this *QDial) ResizeEvent(re *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 func (this *QDial) PaintEvent(pe *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = pe.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:88
@@ -272,7 +256,7 @@ func (this *QDial) PaintEvent(pe *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 func (this *QDial) MousePressEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = me.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:89
@@ -282,7 +266,7 @@ func (this *QDial) MousePressEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) 
 func (this *QDial) MouseReleaseEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = me.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:90
@@ -292,7 +276,7 @@ func (this *QDial) MouseReleaseEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/
 func (this *QDial) MouseMoveEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = me.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:92
@@ -301,7 +285,7 @@ func (this *QDial) MouseMoveEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 // [-2] void sliderChange(enum QAbstractSlider::SliderChange)
 func (this *QDial) SliderChange(change int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial12sliderChangeEN15QAbstractSlider12SliderChangeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), change)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:93
@@ -311,7 +295,32 @@ func (this *QDial) SliderChange(change int) {
 func (this *QDial) InitStyleOption(option *QStyleOptionSlider /*777 QStyleOptionSlider **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial15initStyleOptionEP18QStyleOptionSlider", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

@@ -4,13 +4,12 @@ package qtrt
  */
 import "C"
 import (
-	"gopp"
 	"log"
 	"reflect"
 	"regexp"
 	"unsafe"
 
-	"github.com/therecipe/qt"
+	qt "github.com/kitech/qt.go/qtqt"
 )
 
 // see qobjectdefs.h:263
@@ -50,7 +49,7 @@ func callbackAllQDynSlotObjectGo(obj unsafe.Pointer, callType int, callId int, a
 	}
 
 	dsobjx := qt.LendSignal(obj, name)
-	gopp.NilPrint(dsobjx, "not found sigobj:", obj, name)
+	NilPrint(dsobjx, "not found sigobj:", obj, name)
 	if dsobjx != nil {
 		dsobj := dsobjx.(*QDynSlotObject)
 		_ = dsobj
@@ -80,7 +79,7 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 	if debugDynSlot {
 		log.Println(sigobjv.Kind().String(), sigobjv.String())
 	}
-	gopp.Assert(fv.Kind() == reflect.Func, "cbobj must func", fv.Kind().String(), fv.String())
+	Assert(fv.Kind() == reflect.Func, "cbobj must func", fv.Kind().String(), fv.String())
 
 	// signal函数的参数类型一般还是比较简单的，像整数，布尔，QString
 	in := []reflect.Value{} // 构造这个call in
@@ -97,7 +96,7 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 		case reflect.Int:
 			in = append(in, reflect.ValueOf(*(*int)(argvals[i+1])))
 		case reflect.Bool:
-			prmval := gopp.IfElse(*(*int)(argvals[i+1]) == 0, false, true).(bool)
+			prmval := IfElse(*(*int)(argvals[i+1]) == 0, false, true).(bool)
 			in = append(in, reflect.ValueOf(prmval))
 		case reflect.Ptr:
 			argd1ty := argty.Elem()
@@ -126,7 +125,7 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 	if len(in) != fv.Type().NumIn() {
 		log.Println("can not fill enough parameters,", len(in), fv.Type().NumIn())
 	}
-	gopp.Assert(len(in) == fv.Type().NumIn(), "no engouth parameters")
+	Assert(len(in) == fv.Type().NumIn(), "no engouth parameters")
 	if true {
 		out := fv.Call(in)
 		if debugDynSlot {

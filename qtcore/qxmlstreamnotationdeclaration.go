@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QXmlStreamNotationDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXml
 // [-2] void QXmlStreamNotationDeclaration()
 func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamNotationDeclarationFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamNotationDeclaration)
 	return gothis
@@ -85,7 +74,7 @@ func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
 func DeleteQXmlStreamNotationDeclaration(this *QXmlStreamNotationDeclaration) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -95,7 +84,7 @@ func DeleteQXmlStreamNotationDeclaration(this *QXmlStreamNotationDeclaration) {
 // [16] QStringRef name()
 func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -107,7 +96,7 @@ func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
 // [16] QStringRef systemId()
 func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -119,10 +108,29 @@ func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
 // [16] QStringRef publicId()
 func (this *QXmlStreamNotationDeclaration) PublicId() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

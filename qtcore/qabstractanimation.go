@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QAbstractAnimation) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -88,7 +78,7 @@ func (*QAbstractAnimation) NewFromPointer(cthis unsafe.Pointer) *QAbstractAnimat
 // [8] const QMetaObject * metaObject()
 func (this *QAbstractAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -99,7 +89,7 @@ func (this *QAbstractAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 func NewQAbstractAnimation(parent *QObject /*777 QObject **/) *QAbstractAnimation {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -111,7 +101,7 @@ func NewQAbstractAnimation(parent *QObject /*777 QObject **/) *QAbstractAnimatio
 func DeleteQAbstractAnimation(this *QAbstractAnimation) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -121,7 +111,7 @@ func DeleteQAbstractAnimation(this *QAbstractAnimation) {
 // [4] QAbstractAnimation::State state()
 func (this *QAbstractAnimation) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -131,7 +121,7 @@ func (this *QAbstractAnimation) State() int {
 // [8] QAnimationGroup * group()
 func (this *QAbstractAnimation) Group() *QAnimationGroup /*777 QAnimationGroup **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation5groupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -141,7 +131,7 @@ func (this *QAbstractAnimation) Group() *QAnimationGroup /*777 QAnimationGroup *
 // [4] QAbstractAnimation::Direction direction()
 func (this *QAbstractAnimation) Direction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation9directionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -151,7 +141,7 @@ func (this *QAbstractAnimation) Direction() int {
 // [-2] void setDirection(enum QAbstractAnimation::Direction)
 func (this *QAbstractAnimation) SetDirection(direction int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation12setDirectionENS_9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), direction)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:95
@@ -160,7 +150,7 @@ func (this *QAbstractAnimation) SetDirection(direction int) {
 // [4] int currentTime()
 func (this *QAbstractAnimation) CurrentTime() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation11currentTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -170,7 +160,7 @@ func (this *QAbstractAnimation) CurrentTime() int {
 // [4] int currentLoopTime()
 func (this *QAbstractAnimation) CurrentLoopTime() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation15currentLoopTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -180,7 +170,7 @@ func (this *QAbstractAnimation) CurrentLoopTime() int {
 // [4] int loopCount()
 func (this *QAbstractAnimation) LoopCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation9loopCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -190,7 +180,7 @@ func (this *QAbstractAnimation) LoopCount() int {
 // [-2] void setLoopCount(int)
 func (this *QAbstractAnimation) SetLoopCount(loopCount int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation12setLoopCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), loopCount)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:100
@@ -199,7 +189,7 @@ func (this *QAbstractAnimation) SetLoopCount(loopCount int) {
 // [4] int currentLoop()
 func (this *QAbstractAnimation) CurrentLoop() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation11currentLoopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -209,7 +199,7 @@ func (this *QAbstractAnimation) CurrentLoop() int {
 // [4] int duration()
 func (this *QAbstractAnimation) Duration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -219,7 +209,7 @@ func (this *QAbstractAnimation) Duration() int {
 // [4] int totalDuration()
 func (this *QAbstractAnimation) TotalDuration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation13totalDurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -229,7 +219,7 @@ func (this *QAbstractAnimation) TotalDuration() int {
 // [-2] void finished()
 func (this *QAbstractAnimation) Finished() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation8finishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:107
@@ -238,7 +228,7 @@ func (this *QAbstractAnimation) Finished() {
 // [-2] void stateChanged(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QAbstractAnimation) StateChanged(newState int, oldState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation12stateChangedENS_5StateES0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:108
@@ -247,7 +237,7 @@ func (this *QAbstractAnimation) StateChanged(newState int, oldState int) {
 // [-2] void currentLoopChanged(int)
 func (this *QAbstractAnimation) CurrentLoopChanged(currentLoop int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation18currentLoopChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), currentLoop)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:109
@@ -256,7 +246,7 @@ func (this *QAbstractAnimation) CurrentLoopChanged(currentLoop int) {
 // [-2] void directionChanged(QAbstractAnimation::Direction)
 func (this *QAbstractAnimation) DirectionChanged(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation16directionChangedENS_9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:112
@@ -265,7 +255,7 @@ func (this *QAbstractAnimation) DirectionChanged(arg0 int) {
 // [-2] void start(QAbstractAnimation::DeletionPolicy)
 func (this *QAbstractAnimation) Start(policy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation5startENS_14DeletionPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:113
@@ -274,7 +264,7 @@ func (this *QAbstractAnimation) Start(policy int) {
 // [-2] void pause()
 func (this *QAbstractAnimation) Pause() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation5pauseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:114
@@ -283,7 +273,7 @@ func (this *QAbstractAnimation) Pause() {
 // [-2] void resume()
 func (this *QAbstractAnimation) Resume() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation6resumeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:115
@@ -292,7 +282,7 @@ func (this *QAbstractAnimation) Resume() {
 // [-2] void setPaused(_Bool)
 func (this *QAbstractAnimation) SetPaused(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation9setPausedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:116
@@ -301,7 +291,7 @@ func (this *QAbstractAnimation) SetPaused(arg0 bool) {
 // [-2] void stop()
 func (this *QAbstractAnimation) Stop() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation4stopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:117
@@ -310,7 +300,7 @@ func (this *QAbstractAnimation) Stop() {
 // [-2] void setCurrentTime(int)
 func (this *QAbstractAnimation) SetCurrentTime(msecs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation14setCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:121
@@ -320,7 +310,7 @@ func (this *QAbstractAnimation) SetCurrentTime(msecs int) {
 func (this *QAbstractAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -330,7 +320,7 @@ func (this *QAbstractAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 // [-2] void updateCurrentTime(int)
 func (this *QAbstractAnimation) UpdateCurrentTime(currentTime int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation17updateCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), currentTime)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:124
@@ -339,7 +329,7 @@ func (this *QAbstractAnimation) UpdateCurrentTime(currentTime int) {
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QAbstractAnimation) UpdateState(newState int, oldState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation11updateStateENS_5StateES0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:125
@@ -348,7 +338,7 @@ func (this *QAbstractAnimation) UpdateState(newState int, oldState int) {
 // [-2] void updateDirection(QAbstractAnimation::Direction)
 func (this *QAbstractAnimation) UpdateDirection(direction int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation15updateDirectionENS_9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), direction)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QAbstractAnimation__Direction = int
@@ -368,3 +358,22 @@ const QAbstractAnimation__KeepWhenStopped QAbstractAnimation__DeletionPolicy = 0
 const QAbstractAnimation__DeleteWhenStopped QAbstractAnimation__DeletionPolicy = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

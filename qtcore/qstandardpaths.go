@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QStandardPaths) NewFromPointer(cthis unsafe.Pointer) *QStandardPaths {
 // [8] QString writableLocation(enum QStandardPaths::StandardLocation)
 func (this *QStandardPaths) WritableLocation(type_ int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths16writableLocationENS_16StandardLocationE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -90,7 +79,7 @@ func QStandardPaths_WritableLocation(type_ int) string {
 // [8] QStringList standardLocations(enum QStandardPaths::StandardLocation)
 func (this *QStandardPaths) StandardLocations(type_ int) *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths17standardLocationsENS_16StandardLocationE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -109,7 +98,7 @@ func (this *QStandardPaths) Locate(type_ int, fileName string, options int) stri
 	var tmpArg1 = NewQString_5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths6locateENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, options)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -129,7 +118,7 @@ func (this *QStandardPaths) LocateAll(type_ int, fileName string, options int) *
 	var tmpArg1 = NewQString_5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths9locateAllENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, options)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -146,7 +135,7 @@ func QStandardPaths_LocateAll(type_ int, fileName string, options int) *QStringL
 // [8] QString displayName(enum QStandardPaths::StandardLocation)
 func (this *QStandardPaths) DisplayName(type_ int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths11displayNameENS_16StandardLocationE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -167,7 +156,7 @@ func (this *QStandardPaths) FindExecutable(executableName string, paths *QString
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = paths.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -185,7 +174,7 @@ func QStandardPaths_FindExecutable(executableName string, paths *QStringList) st
 // [-2] void enableTestMode(_Bool)
 func (this *QStandardPaths) EnableTestMode(testMode bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths14enableTestModeEb", qtrt.FFI_TYPE_POINTER, testMode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QStandardPaths_EnableTestMode(testMode bool) {
 	var nilthis *QStandardPaths
@@ -198,7 +187,7 @@ func QStandardPaths_EnableTestMode(testMode bool) {
 // [-2] void setTestModeEnabled(_Bool)
 func (this *QStandardPaths) SetTestModeEnabled(testMode bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths18setTestModeEnabledEb", qtrt.FFI_TYPE_POINTER, testMode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QStandardPaths_SetTestModeEnabled(testMode bool) {
 	var nilthis *QStandardPaths
@@ -211,7 +200,7 @@ func QStandardPaths_SetTestModeEnabled(testMode bool) {
 // [1] bool isTestModeEnabled()
 func (this *QStandardPaths) IsTestModeEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths17isTestModeEnabledEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QStandardPaths_IsTestModeEnabled() bool {
@@ -222,7 +211,7 @@ func QStandardPaths_IsTestModeEnabled() bool {
 
 func DeleteQStandardPaths(this *QStandardPaths) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPathsD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -255,3 +244,22 @@ const QStandardPaths__LocateFile QStandardPaths__LocateOption = 0
 const QStandardPaths__LocateDirectory QStandardPaths__LocateOption = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

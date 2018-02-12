@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -77,7 +63,7 @@ func (*QAccessibleEditableTextInterface) NewFromPointer(cthis unsafe.Pointer) *Q
 func DeleteQAccessibleEditableTextInterface(this *QAccessibleEditableTextInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -87,7 +73,7 @@ func DeleteQAccessibleEditableTextInterface(this *QAccessibleEditableTextInterfa
 // [-2] void deleteText(int, int)
 func (this *QAccessibleEditableTextInterface) DeleteText(startOffset int, endOffset int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface10deleteTextEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startOffset, endOffset)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:559
@@ -98,7 +84,7 @@ func (this *QAccessibleEditableTextInterface) InsertText(offset int, text string
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface10insertTextEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:560
@@ -109,7 +95,29 @@ func (this *QAccessibleEditableTextInterface) ReplaceText(startOffset int, endOf
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface11replaceTextEiiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startOffset, endOffset, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

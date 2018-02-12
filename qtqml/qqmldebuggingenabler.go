@@ -6,6 +6,14 @@ package qtqml
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QQmlDebuggingEnabler) NewFromPointer(cthis unsafe.Pointer) *QQmlDebugging
 // [-2] void QQmlDebuggingEnabler(_Bool)
 func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnablerC2Eb", qtrt.FFI_TYPE_POINTER, printWarning)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlDebuggingEnablerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlDebuggingEnabler)
 	return gothis
@@ -92,7 +75,7 @@ func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 // [8] QStringList debuggerServices()
 func (this *QQmlDebuggingEnabler) DebuggerServices() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler16debuggerServicesEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -109,7 +92,7 @@ func QQmlDebuggingEnabler_DebuggerServices() *qtcore.QStringList /*123*/ {
 // [8] QStringList inspectorServices()
 func (this *QQmlDebuggingEnabler) InspectorServices() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler17inspectorServicesEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -126,7 +109,7 @@ func QQmlDebuggingEnabler_InspectorServices() *qtcore.QStringList /*123*/ {
 // [8] QStringList profilerServices()
 func (this *QQmlDebuggingEnabler) ProfilerServices() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler16profilerServicesEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -143,7 +126,7 @@ func QQmlDebuggingEnabler_ProfilerServices() *qtcore.QStringList /*123*/ {
 // [8] QStringList nativeDebuggerServices()
 func (this *QQmlDebuggingEnabler) NativeDebuggerServices() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler22nativeDebuggerServicesEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -161,7 +144,7 @@ func QQmlDebuggingEnabler_NativeDebuggerServices() *qtcore.QStringList /*123*/ {
 func (this *QQmlDebuggingEnabler) SetServices(services *qtcore.QStringList) {
 	var convArg0 = services.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler11setServicesERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QQmlDebuggingEnabler_SetServices(services *qtcore.QStringList) {
 	var nilthis *QQmlDebuggingEnabler
@@ -176,7 +159,7 @@ func (this *QQmlDebuggingEnabler) StartTcpDebugServer(port int, mode int, hostNa
 	var tmpArg2 = qtcore.NewQString_5(hostName)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler19startTcpDebugServerEiNS_9StartModeERK7QString", qtrt.FFI_TYPE_POINTER, port, mode, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QQmlDebuggingEnabler_StartTcpDebugServer(port int, mode int, hostName string) bool {
@@ -193,7 +176,7 @@ func (this *QQmlDebuggingEnabler) ConnectToLocalDebugger(socketFileName string, 
 	var tmpArg0 = qtcore.NewQString_5(socketFileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler22connectToLocalDebuggerERK7QStringNS_9StartModeE", qtrt.FFI_TYPE_POINTER, convArg0, mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QQmlDebuggingEnabler_ConnectToLocalDebugger(socketFileName string, mode int) bool {
@@ -204,7 +187,7 @@ func QQmlDebuggingEnabler_ConnectToLocalDebugger(socketFileName string, mode int
 
 func DeleteQQmlDebuggingEnabler(this *QQmlDebuggingEnabler) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnablerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -214,3 +197,28 @@ const QQmlDebuggingEnabler__DoNotWaitForClient QQmlDebuggingEnabler__StartMode =
 const QQmlDebuggingEnabler__WaitForClient QQmlDebuggingEnabler__StartMode = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+}
+
+//  keep block end

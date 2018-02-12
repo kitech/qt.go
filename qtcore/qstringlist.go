@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QStringList) NewFromPointer(cthis unsafe.Pointer) *QStringList {
 // [-2] void QStringList()
 func NewQStringList() *QStringList {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringListFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStringList)
 	return gothis
@@ -86,7 +75,7 @@ func NewQStringList_1(i string) *QStringList {
 	var tmpArg0 = NewQString_5(i)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringListFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStringList)
 	return gothis
@@ -100,7 +89,7 @@ func (this *QStringList) Contains(str string, cs int) bool {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList8containsERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -111,7 +100,7 @@ func (this *QStringList) Contains(str string, cs int) bool {
 func (this *QStringList) Contains_1(str *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = str.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList8containsE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -122,7 +111,7 @@ func (this *QStringList) Contains_1(str *QLatin1String /*123*/, cs int) bool {
 func (this *QStringList) IndexOf(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -133,7 +122,7 @@ func (this *QStringList) IndexOf(rx *QRegExp, from int) int {
 func (this *QStringList) IndexOf_1(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -144,7 +133,7 @@ func (this *QStringList) IndexOf_1(rx *QRegExp, from int) int {
 func (this *QStringList) IndexOf_2(re *QRegularExpression, from int) int {
 	var convArg0 = re.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -155,7 +144,7 @@ func (this *QStringList) IndexOf_2(re *QRegularExpression, from int) int {
 func (this *QStringList) LastIndexOf(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -166,7 +155,7 @@ func (this *QStringList) LastIndexOf(rx *QRegExp, from int) int {
 func (this *QStringList) LastIndexOf_1(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -177,14 +166,33 @@ func (this *QStringList) LastIndexOf_1(rx *QRegExp, from int) int {
 func (this *QStringList) LastIndexOf_2(re *QRegularExpression, from int) int {
 	var convArg0 = re.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 func DeleteQStringList(this *QStringList) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

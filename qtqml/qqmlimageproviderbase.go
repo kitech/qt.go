@@ -6,6 +6,14 @@ package qtqml
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
 
 //  ext block end
 
@@ -81,7 +64,7 @@ func (*QQmlImageProviderBase) NewFromPointer(cthis unsafe.Pointer) *QQmlImagePro
 func DeleteQQmlImageProviderBase(this *QQmlImageProviderBase) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlImageProviderBaseD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -91,7 +74,7 @@ func DeleteQQmlImageProviderBase(this *QQmlImageProviderBase) {
 // [4] QQmlImageProviderBase::ImageType imageType()
 func (this *QQmlImageProviderBase) ImageType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQmlImageProviderBase9imageTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -101,7 +84,7 @@ func (this *QQmlImageProviderBase) ImageType() int {
 // [4] QQmlImageProviderBase::Flags flags()
 func (this *QQmlImageProviderBase) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQmlImageProviderBase5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -118,3 +101,28 @@ type QQmlImageProviderBase__Flag = int
 const QQmlImageProviderBase__ForceAsynchronousImageLoading QQmlImageProviderBase__Flag = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+}
+
+//  keep block end

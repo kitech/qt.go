@@ -6,6 +6,14 @@ package qtmacextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtmacextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QMacToolBar) NewFromPointer(cthis unsafe.Pointer) *QMacToolBar {
 // [8] const QMetaObject * metaObject()
 func (this *QMacToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMacToolBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -88,7 +71,7 @@ func (this *QMacToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 func NewQMacToolBar(parent *qtcore.QObject /*777 QObject **/) *QMacToolBar {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMacToolBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -102,7 +85,7 @@ func NewQMacToolBar_1(identifier string, parent *qtcore.QObject /*777 QObject **
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBarC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMacToolBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -114,7 +97,7 @@ func NewQMacToolBar_1(identifier string, parent *qtcore.QObject /*777 QObject **
 func DeleteQMacToolBar(this *QMacToolBar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -127,7 +110,7 @@ func (this *QMacToolBar) AddItem(icon *qtgui.QIcon, text string) *QMacToolBarIte
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar7addItemERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMacToolBarItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -140,7 +123,7 @@ func (this *QMacToolBar) AddAllowedItem(icon *qtgui.QIcon, text string) *QMacToo
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar14addAllowedItemERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMacToolBarItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -150,7 +133,7 @@ func (this *QMacToolBar) AddAllowedItem(icon *qtgui.QIcon, text string) *QMacToo
 // [8] QMacToolBarItem * addStandardItem(QMacToolBarItem::StandardItem)
 func (this *QMacToolBar) AddStandardItem(standardItem int) *QMacToolBarItem /*777 QMacToolBarItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar15addStandardItemEN15QMacToolBarItem12StandardItemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardItem)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMacToolBarItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -160,7 +143,7 @@ func (this *QMacToolBar) AddStandardItem(standardItem int) *QMacToolBarItem /*77
 // [8] QMacToolBarItem * addAllowedStandardItem(QMacToolBarItem::StandardItem)
 func (this *QMacToolBar) AddAllowedStandardItem(standardItem int) *QMacToolBarItem /*777 QMacToolBarItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar22addAllowedStandardItemEN15QMacToolBarItem12StandardItemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardItem)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMacToolBarItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -170,7 +153,7 @@ func (this *QMacToolBar) AddAllowedStandardItem(standardItem int) *QMacToolBarIt
 // [-2] void addSeparator()
 func (this *QMacToolBar) AddSeparator() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar12addSeparatorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtMacExtras/../../src/macextras/qmactoolbar.h:77
@@ -180,7 +163,7 @@ func (this *QMacToolBar) AddSeparator() {
 func (this *QMacToolBar) AttachToWindow(window *qtgui.QWindow /*777 QWindow **/) {
 	var convArg0 = window.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar14attachToWindowEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtMacExtras/../../src/macextras/qmactoolbar.h:78
@@ -189,7 +172,7 @@ func (this *QMacToolBar) AttachToWindow(window *qtgui.QWindow /*777 QWindow **/)
 // [-2] void detachFromWindow()
 func (this *QMacToolBar) DetachFromWindow() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar16detachFromWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtMacExtras/../../src/macextras/qmactoolbar.h:80
@@ -198,8 +181,33 @@ func (this *QMacToolBar) DetachFromWindow() {
 // [8] NSToolbar * nativeToolbar()
 func (this *QMacToolBar) NativeToolbar() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMacToolBar13nativeToolbarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

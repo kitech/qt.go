@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,42 +24,11 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
@@ -85,7 +62,7 @@ func (*QSGRenderNode) NewFromPointer(cthis unsafe.Pointer) *QSGRenderNode {
 // [-2] void QSGRenderNode()
 func NewQSGRenderNode() *QSGRenderNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSGRenderNodeC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGRenderNodeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSGRenderNode)
 	return gothis
@@ -98,7 +75,7 @@ func NewQSGRenderNode() *QSGRenderNode {
 func DeleteQSGRenderNode(this *QSGRenderNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSGRenderNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 88)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -108,7 +85,7 @@ func DeleteQSGRenderNode(this *QSGRenderNode) {
 // [4] QSGRenderNode::StateFlags changedStates()
 func (this *QSGRenderNode) ChangedStates() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode13changedStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -118,7 +95,7 @@ func (this *QSGRenderNode) ChangedStates() int {
 // [-2] void releaseResources()
 func (this *QSGRenderNode) ReleaseResources() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSGRenderNode16releaseResourcesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:88
@@ -127,7 +104,7 @@ func (this *QSGRenderNode) ReleaseResources() {
 // [4] QSGRenderNode::RenderingFlags flags()
 func (this *QSGRenderNode) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -137,7 +114,7 @@ func (this *QSGRenderNode) Flags() int {
 // [32] QRectF rect()
 func (this *QSGRenderNode) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -149,7 +126,7 @@ func (this *QSGRenderNode) Rect() *qtcore.QRectF /*123*/ {
 // [8] const QMatrix4x4 * matrix()
 func (this *QSGRenderNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtgui.NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -159,7 +136,7 @@ func (this *QSGRenderNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/
 // [8] const QSGClipNode * clipList()
 func (this *QSGRenderNode) ClipList() *QSGClipNode /*777 const QSGClipNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode8clipListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGClipNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -169,7 +146,7 @@ func (this *QSGRenderNode) ClipList() *QSGClipNode /*777 const QSGClipNode **/ {
 // [8] qreal inheritedOpacity()
 func (this *QSGRenderNode) InheritedOpacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode16inheritedOpacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -191,3 +168,34 @@ const QSGRenderNode__DepthAwareRendering QSGRenderNode__RenderingFlag = 2
 const QSGRenderNode__OpaqueRendering QSGRenderNode__RenderingFlag = 4
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QContainerImplHelper) NewFromPointer(cthis unsafe.Pointer) *QContainerImp
 // [4] QtPrivate::QContainerImplHelper::CutResult mid(int, int *, int *)
 func (this *QContainerImplHelper) Mid(originalLength int, position unsafe.Pointer /*666*/, length unsafe.Pointer /*666*/) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate20QContainerImplHelper3midEiPiS1_", qtrt.FFI_TYPE_POINTER, originalLength, &position, &length)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QContainerImplHelper_Mid(originalLength int, position unsafe.Pointer /*666*/, length unsafe.Pointer /*666*/) int {
@@ -83,7 +72,7 @@ func QContainerImplHelper_Mid(originalLength int, position unsafe.Pointer /*666*
 
 func DeleteQContainerImplHelper(this *QContainerImplHelper) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QContainerImplHelperD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -95,3 +84,22 @@ const QContainerImplHelper__Full QContainerImplHelper__CutResult = 2
 const QContainerImplHelper__Subset QContainerImplHelper__CutResult = 3
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

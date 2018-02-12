@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -69,7 +58,7 @@ func (*QThreadPool) NewFromPointer(cthis unsafe.Pointer) *QThreadPool {
 // [8] const QMetaObject * metaObject()
 func (this *QThreadPool) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -80,7 +69,7 @@ func (this *QThreadPool) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 func NewQThreadPool(parent *QObject /*777 QObject **/) *QThreadPool {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPoolC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQThreadPoolFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -92,7 +81,7 @@ func NewQThreadPool(parent *QObject /*777 QObject **/) *QThreadPool {
 func DeleteQThreadPool(this *QThreadPool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPoolD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -102,7 +91,7 @@ func DeleteQThreadPool(this *QThreadPool) {
 // [8] QThreadPool * globalInstance()
 func (this *QThreadPool) GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool14globalInstanceEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQThreadPoolFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QThreadPool_GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
@@ -118,7 +107,7 @@ func QThreadPool_GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
 func (this *QThreadPool) Start(runnable *QRunnable /*777 QRunnable **/, priority int) {
 	var convArg0 = runnable.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:71
@@ -128,7 +117,7 @@ func (this *QThreadPool) Start(runnable *QRunnable /*777 QRunnable **/, priority
 func (this *QThreadPool) TryStart(runnable *QRunnable /*777 QRunnable **/) bool {
 	var convArg0 = runnable.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool8tryStartEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -138,7 +127,7 @@ func (this *QThreadPool) TryStart(runnable *QRunnable /*777 QRunnable **/) bool 
 // [4] int expiryTimeout()
 func (this *QThreadPool) ExpiryTimeout() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool13expiryTimeoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -148,7 +137,7 @@ func (this *QThreadPool) ExpiryTimeout() int {
 // [-2] void setExpiryTimeout(int)
 func (this *QThreadPool) SetExpiryTimeout(expiryTimeout int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool16setExpiryTimeoutEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), expiryTimeout)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:76
@@ -157,7 +146,7 @@ func (this *QThreadPool) SetExpiryTimeout(expiryTimeout int) {
 // [4] int maxThreadCount()
 func (this *QThreadPool) MaxThreadCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool14maxThreadCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -167,7 +156,7 @@ func (this *QThreadPool) MaxThreadCount() int {
 // [-2] void setMaxThreadCount(int)
 func (this *QThreadPool) SetMaxThreadCount(maxThreadCount int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool17setMaxThreadCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxThreadCount)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:79
@@ -176,7 +165,7 @@ func (this *QThreadPool) SetMaxThreadCount(maxThreadCount int) {
 // [4] int activeThreadCount()
 func (this *QThreadPool) ActiveThreadCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool17activeThreadCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -186,7 +175,7 @@ func (this *QThreadPool) ActiveThreadCount() int {
 // [-2] void setStackSize(uint)
 func (this *QThreadPool) SetStackSize(stackSize uint) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool12setStackSizeEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), stackSize)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:82
@@ -195,7 +184,7 @@ func (this *QThreadPool) SetStackSize(stackSize uint) {
 // [4] uint stackSize()
 func (this *QThreadPool) StackSize() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool9stackSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -205,7 +194,7 @@ func (this *QThreadPool) StackSize() uint {
 // [-2] void reserveThread()
 func (this *QThreadPool) ReserveThread() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool13reserveThreadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:85
@@ -214,7 +203,7 @@ func (this *QThreadPool) ReserveThread() {
 // [-2] void releaseThread()
 func (this *QThreadPool) ReleaseThread() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool13releaseThreadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:87
@@ -223,7 +212,7 @@ func (this *QThreadPool) ReleaseThread() {
 // [1] bool waitForDone(int)
 func (this *QThreadPool) WaitForDone(msecs int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool11waitForDoneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -233,7 +222,7 @@ func (this *QThreadPool) WaitForDone(msecs int) bool {
 // [-2] void clear()
 func (this *QThreadPool) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:93
@@ -243,7 +232,7 @@ func (this *QThreadPool) Clear() {
 func (this *QThreadPool) Cancel(runnable *QRunnable /*777 QRunnable **/) {
 	var convArg0 = runnable.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool6cancelEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:95
@@ -253,8 +242,27 @@ func (this *QThreadPool) Cancel(runnable *QRunnable /*777 QRunnable **/) {
 func (this *QThreadPool) TryTake(runnable *QRunnable /*777 QRunnable **/) bool {
 	var convArg0 = runnable.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool7tryTakeEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

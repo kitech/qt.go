@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QStylePainter) NewFromPointer(cthis unsafe.Pointer) *QStylePainter {
 // [-2] void QStylePainter()
 func NewQStylePainter() *QStylePainter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainterC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStylePainterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStylePainter)
 	return gothis
@@ -90,7 +73,7 @@ func NewQStylePainter() *QStylePainter {
 func NewQStylePainter_1(w *QWidget /*777 QWidget **/) *QStylePainter {
 	var convArg0 = w.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainterC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStylePainterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStylePainter)
 	return gothis
@@ -104,7 +87,7 @@ func NewQStylePainter_2(pd *qtgui.QPaintDevice /*777 QPaintDevice **/, w *QWidge
 	var convArg0 = pd.GetCthis()
 	var convArg1 = w.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStylePainterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStylePainter)
 	return gothis
@@ -117,7 +100,7 @@ func NewQStylePainter_2(pd *qtgui.QPaintDevice /*777 QPaintDevice **/, w *QWidge
 func (this *QStylePainter) Begin(w *QWidget /*777 QWidget **/) bool {
 	var convArg0 = w.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainter5beginEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -129,7 +112,7 @@ func (this *QStylePainter) Begin_1(pd *qtgui.QPaintDevice /*777 QPaintDevice **/
 	var convArg0 = pd.GetCthis()
 	var convArg1 = w.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -140,7 +123,7 @@ func (this *QStylePainter) Begin_1(pd *qtgui.QPaintDevice /*777 QPaintDevice **/
 func (this *QStylePainter) DrawPrimitive(pe int, opt *QStyleOption) {
 	var convArg1 = opt.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainter13drawPrimitiveEN6QStyle16PrimitiveElementERK12QStyleOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pe, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:65
@@ -150,7 +133,7 @@ func (this *QStylePainter) DrawPrimitive(pe int, opt *QStyleOption) {
 func (this *QStylePainter) DrawControl(ce int, opt *QStyleOption) {
 	var convArg1 = opt.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainter11drawControlEN6QStyle14ControlElementERK12QStyleOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ce, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:66
@@ -160,7 +143,7 @@ func (this *QStylePainter) DrawControl(ce int, opt *QStyleOption) {
 func (this *QStylePainter) DrawComplexControl(cc int, opt *QStyleOptionComplex) {
 	var convArg1 = opt.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainter18drawComplexControlEN6QStyle14ComplexControlERK19QStyleOptionComplex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cc, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:67
@@ -173,7 +156,7 @@ func (this *QStylePainter) DrawItemText(r *qtcore.QRect, flags int, pal *qtgui.Q
 	var tmpArg4 = qtcore.NewQString_5(text)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainter12drawItemTextERK5QRectiRK8QPalettebRK7QStringNS3_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, enabled, convArg4, textRole)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:69
@@ -184,7 +167,7 @@ func (this *QStylePainter) DrawItemPixmap(r *qtcore.QRect, flags int, pixmap *qt
 	var convArg0 = r.GetCthis()
 	var convArg2 = pixmap.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:70
@@ -193,14 +176,39 @@ func (this *QStylePainter) DrawItemPixmap(r *qtcore.QRect, flags int, pixmap *qt
 // [8] QStyle * style()
 func (this *QStylePainter) Style() *QStyle /*777 QStyle **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStylePainter5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 func DeleteQStylePainter(this *QStylePainter) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainterD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

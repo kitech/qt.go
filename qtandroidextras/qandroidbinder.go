@@ -6,6 +6,14 @@ package qtandroidextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QAndroidBinder) NewFromPointer(cthis unsafe.Pointer) *QAndroidBinder {
 // [-2] void QAndroidBinder()
 func NewQAndroidBinder() *QAndroidBinder {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidBinderC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidBinderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidBinder)
 	return gothis
@@ -89,7 +75,7 @@ func NewQAndroidBinder() *QAndroidBinder {
 func NewQAndroidBinder_1(binder *QAndroidJniObject) *QAndroidBinder {
 	var convArg0 = binder.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidBinderC2ERK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidBinderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidBinder)
 	return gothis
@@ -102,7 +88,7 @@ func NewQAndroidBinder_1(binder *QAndroidJniObject) *QAndroidBinder {
 func DeleteQAndroidBinder(this *QAndroidBinder) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidBinderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -114,7 +100,7 @@ func (this *QAndroidBinder) OnTransact(code int, data *QAndroidParcel, reply *QA
 	var convArg1 = data.GetCthis()
 	var convArg2 = reply.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidBinder10onTransactEiRK14QAndroidParcelS2_NS_8CallTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1, convArg2, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -126,7 +112,7 @@ func (this *QAndroidBinder) Transact(code int, data *QAndroidParcel, reply *QAnd
 	var convArg1 = data.GetCthis()
 	var convArg2 = reply.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder8transactEiRK14QAndroidParcelPS0_NS_8CallTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1, convArg2, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -136,7 +122,7 @@ func (this *QAndroidBinder) Transact(code int, data *QAndroidParcel, reply *QAnd
 // [1] QAndroidJniObject handle()
 func (this *QAndroidBinder) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
 	return rv2
@@ -148,3 +134,25 @@ const QAndroidBinder__Normal QAndroidBinder__CallType = 0
 const QAndroidBinder__OneWay QAndroidBinder__CallType = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

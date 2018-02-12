@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -75,7 +61,7 @@ func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*777 QObject **/, val *
 	var convArg0 = obj.GetCthis()
 	var convArg1 = val.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleValueChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleValueChangeEvent)
 	return gothis
@@ -89,7 +75,7 @@ func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*777 QAccessi
 	var convArg0 = iface.GetCthis()
 	var convArg1 = val.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleValueChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleValueChangeEvent)
 	return gothis
@@ -102,7 +88,7 @@ func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*777 QAccessi
 func DeleteQAccessibleValueChangeEvent(this *QAccessibleValueChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -113,7 +99,7 @@ func DeleteQAccessibleValueChangeEvent(this *QAccessibleValueChangeEvent) {
 func (this *QAccessibleValueChangeEvent) SetValue(val *qtcore.QVariant) {
 	var convArg0 = val.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEvent8setValueERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:914
@@ -122,10 +108,32 @@ func (this *QAccessibleValueChangeEvent) SetValue(val *qtcore.QVariant) {
 // [16] QVariant value()
 func (this *QAccessibleValueChangeEvent) Value() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAccessibleValueChangeEvent5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

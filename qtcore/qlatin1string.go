@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QLatin1String) NewFromPointer(cthis unsafe.Pointer) *QLatin1String {
 // [-2] void QLatin1String()
 func NewQLatin1String() *QLatin1String {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1StringC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLatin1String)
 	return gothis
@@ -86,7 +75,7 @@ func NewQLatin1String_1(s string) *QLatin1String {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLatin1String)
 	return gothis
@@ -102,7 +91,7 @@ func NewQLatin1String_2(f string, l string) *QLatin1String {
 	var convArg1 = qtrt.CString(l)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKcS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLatin1String)
 	return gothis
@@ -116,7 +105,7 @@ func NewQLatin1String_3(s string, sz int) *QLatin1String {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKci", qtrt.FFI_TYPE_POINTER, convArg0, sz)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLatin1String)
 	return gothis
@@ -129,7 +118,7 @@ func NewQLatin1String_3(s string, sz int) *QLatin1String {
 func NewQLatin1String_4(s *QByteArray) *QLatin1String {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1StringC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLatin1String)
 	return gothis
@@ -141,7 +130,7 @@ func NewQLatin1String_4(s *QByteArray) *QLatin1String {
 // [8] const char * latin1()
 func (this *QLatin1String) Latin1() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String6latin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -151,7 +140,7 @@ func (this *QLatin1String) Latin1() string {
 // [4] int size()
 func (this *QLatin1String) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -161,7 +150,7 @@ func (this *QLatin1String) Size() int {
 // [8] const char * data()
 func (this *QLatin1String) Data() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -171,7 +160,7 @@ func (this *QLatin1String) Data() string {
 // [1] bool isNull()
 func (this *QLatin1String) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -181,7 +170,7 @@ func (this *QLatin1String) IsNull() bool {
 // [1] bool isEmpty()
 func (this *QLatin1String) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -191,7 +180,7 @@ func (this *QLatin1String) IsEmpty() bool {
 // [1] QLatin1Char at(int)
 func (this *QLatin1String) At(i int) *QLatin1Char /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1Char)
 	return rv2
@@ -203,7 +192,7 @@ func (this *QLatin1String) At(i int) *QLatin1Char /*123*/ {
 // [1] QLatin1Char front()
 func (this *QLatin1String) Front() *QLatin1Char /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String5frontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1Char)
 	return rv2
@@ -215,7 +204,7 @@ func (this *QLatin1String) Front() *QLatin1Char /*123*/ {
 // [1] QLatin1Char back()
 func (this *QLatin1String) Back() *QLatin1Char /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String4backEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1Char)
 	return rv2
@@ -228,7 +217,7 @@ func (this *QLatin1String) Back() *QLatin1Char /*123*/ {
 func (this *QLatin1String) StartsWith(s *QStringView /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String10startsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -239,7 +228,7 @@ func (this *QLatin1String) StartsWith(s *QStringView /*123*/, cs int) bool {
 func (this *QLatin1String) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String10startsWithES_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -250,7 +239,7 @@ func (this *QLatin1String) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
 func (this *QLatin1String) StartsWith_2(c *QChar /*123*/) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String10startsWithE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -261,7 +250,7 @@ func (this *QLatin1String) StartsWith_2(c *QChar /*123*/) bool {
 func (this *QLatin1String) StartsWith_3(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String10startsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -272,7 +261,7 @@ func (this *QLatin1String) StartsWith_3(c *QChar /*123*/, cs int) bool {
 func (this *QLatin1String) EndsWith(s *QStringView /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String8endsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -283,7 +272,7 @@ func (this *QLatin1String) EndsWith(s *QStringView /*123*/, cs int) bool {
 func (this *QLatin1String) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String8endsWithES_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -294,7 +283,7 @@ func (this *QLatin1String) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
 func (this *QLatin1String) EndsWith_2(c *QChar /*123*/) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String8endsWithE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -305,7 +294,7 @@ func (this *QLatin1String) EndsWith_2(c *QChar /*123*/) bool {
 func (this *QLatin1String) EndsWith_3(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String8endsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -315,7 +304,7 @@ func (this *QLatin1String) EndsWith_3(c *QChar /*123*/, cs int) bool {
 // [8] QLatin1String::const_iterator begin()
 func (this *QLatin1String) Begin() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return string(rv) // 222
 }
 
@@ -325,7 +314,7 @@ func (this *QLatin1String) Begin() string {
 // [8] QLatin1String::const_iterator cbegin()
 func (this *QLatin1String) Cbegin() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String6cbeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return string(rv) // 222
 }
 
@@ -335,7 +324,7 @@ func (this *QLatin1String) Cbegin() string {
 // [8] QLatin1String::const_iterator end()
 func (this *QLatin1String) End() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return string(rv) // 222
 }
 
@@ -345,7 +334,7 @@ func (this *QLatin1String) End() string {
 // [8] QLatin1String::const_iterator cend()
 func (this *QLatin1String) Cend() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String4cendEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return string(rv) // 222
 }
 
@@ -355,7 +344,7 @@ func (this *QLatin1String) Cend() string {
 // [16] QLatin1String mid(int)
 func (this *QLatin1String) Mid(pos int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String3midEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
@@ -367,7 +356,7 @@ func (this *QLatin1String) Mid(pos int) *QLatin1String /*123*/ {
 // [16] QLatin1String mid(int, int)
 func (this *QLatin1String) Mid_1(pos int, n int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, n)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
@@ -379,7 +368,7 @@ func (this *QLatin1String) Mid_1(pos int, n int) *QLatin1String /*123*/ {
 // [16] QLatin1String left(int)
 func (this *QLatin1String) Left(n int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String4leftEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
@@ -391,7 +380,7 @@ func (this *QLatin1String) Left(n int) *QLatin1String /*123*/ {
 // [16] QLatin1String right(int)
 func (this *QLatin1String) Right(n int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String5rightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
@@ -403,7 +392,7 @@ func (this *QLatin1String) Right(n int) *QLatin1String /*123*/ {
 // [16] QLatin1String chopped(int)
 func (this *QLatin1String) Chopped(n int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String7choppedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
@@ -415,7 +404,7 @@ func (this *QLatin1String) Chopped(n int) *QLatin1String /*123*/ {
 // [-2] void chop(int)
 func (this *QLatin1String) Chop(n int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1String4chopEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qstring.h:167
@@ -424,7 +413,7 @@ func (this *QLatin1String) Chop(n int) {
 // [-2] void truncate(int)
 func (this *QLatin1String) Truncate(n int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1String8truncateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qstring.h:170
@@ -433,7 +422,7 @@ func (this *QLatin1String) Truncate(n int) {
 // [16] QLatin1String trimmed()
 func (this *QLatin1String) Trimmed() *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String7trimmedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
@@ -441,8 +430,27 @@ func (this *QLatin1String) Trimmed() *QLatin1String /*123*/ {
 
 func DeleteQLatin1String(this *QLatin1String) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1StringD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

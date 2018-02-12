@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,13 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
 //  body block begin
+
 // void paintEvent(class QPaintEvent *)
 func (this *QPaintDeviceWindow) InheritPaintEvent(f func(event *QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
@@ -95,7 +82,7 @@ func (*QPaintDeviceWindow) NewFromPointer(cthis unsafe.Pointer) *QPaintDeviceWin
 // [8] const QMetaObject * metaObject()
 func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -106,7 +93,7 @@ func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*777 const QMe
 func (this *QPaintDeviceWindow) Update(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:59
@@ -116,7 +103,7 @@ func (this *QPaintDeviceWindow) Update(rect *qtcore.QRect) {
 func (this *QPaintDeviceWindow) Update_1(region *QRegion) {
 	var convArg0 = region.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:66
@@ -125,7 +112,7 @@ func (this *QPaintDeviceWindow) Update_1(region *QRegion) {
 // [-2] void update()
 func (this *QPaintDeviceWindow) Update_2() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:69
@@ -135,7 +122,7 @@ func (this *QPaintDeviceWindow) Update_2() {
 func (this *QPaintDeviceWindow) PaintEvent(event *QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:71
@@ -144,7 +131,7 @@ func (this *QPaintDeviceWindow) PaintEvent(event *QPaintEvent /*777 QPaintEvent 
 // [4] int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QPaintDeviceWindow) Metric(metric int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow6metricEN12QPaintDevice17PaintDeviceMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -155,7 +142,7 @@ func (this *QPaintDeviceWindow) Metric(metric int) int {
 func (this *QPaintDeviceWindow) ExposeEvent(arg0 *QExposeEvent /*777 QExposeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow11exposeEventEP12QExposeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:73
@@ -165,14 +152,36 @@ func (this *QPaintDeviceWindow) ExposeEvent(arg0 *QExposeEvent /*777 QExposeEven
 func (this *QPaintDeviceWindow) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 func DeleteQPaintDeviceWindow(this *QPaintDeviceWindow) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindowD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

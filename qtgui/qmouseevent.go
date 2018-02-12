@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -74,7 +60,7 @@ func (*QMouseEvent) NewFromPointer(cthis unsafe.Pointer) *QMouseEvent {
 func NewQMouseEvent(type_ int, localPos *qtcore.QPointF, button int, buttons int, modifiers int) *QMouseEvent {
 	var convArg1 = localPos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMouseEventC2EN6QEvent4TypeERK7QPointFN2Qt11MouseButtonE6QFlagsIS6_ES7_INS5_16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, button, buttons, modifiers)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMouseEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMouseEvent)
 	return gothis
@@ -88,7 +74,7 @@ func NewQMouseEvent_1(type_ int, localPos *qtcore.QPointF, screenPos *qtcore.QPo
 	var convArg1 = localPos.GetCthis()
 	var convArg2 = screenPos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMouseEventC2EN6QEvent4TypeERK7QPointFS4_N2Qt11MouseButtonE6QFlagsIS6_ES7_INS5_16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, button, buttons, modifiers)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMouseEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMouseEvent)
 	return gothis
@@ -103,7 +89,7 @@ func NewQMouseEvent_2(type_ int, localPos *qtcore.QPointF, windowPos *qtcore.QPo
 	var convArg2 = windowPos.GetCthis()
 	var convArg3 = screenPos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMouseEventC2EN6QEvent4TypeERK7QPointFS4_S4_N2Qt11MouseButtonE6QFlagsIS6_ES7_INS5_16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3, button, buttons, modifiers)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMouseEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMouseEvent)
 	return gothis
@@ -118,7 +104,7 @@ func NewQMouseEvent_3(type_ int, localPos *qtcore.QPointF, windowPos *qtcore.QPo
 	var convArg2 = windowPos.GetCthis()
 	var convArg3 = screenPos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMouseEventC2EN6QEvent4TypeERK7QPointFS4_S4_N2Qt11MouseButtonE6QFlagsIS6_ES7_INS5_16KeyboardModifierEENS5_16MouseEventSourceE", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3, button, buttons, modifiers, source)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMouseEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMouseEvent)
 	return gothis
@@ -131,7 +117,7 @@ func NewQMouseEvent_3(type_ int, localPos *qtcore.QPointF, windowPos *qtcore.QPo
 func DeleteQMouseEvent(this *QMouseEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMouseEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 104)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -141,7 +127,7 @@ func DeleteQMouseEvent(this *QMouseEvent) {
 // [8] QPoint pos()
 func (this *QMouseEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -153,7 +139,7 @@ func (this *QMouseEvent) Pos() *qtcore.QPoint /*123*/ {
 // [8] QPoint globalPos()
 func (this *QMouseEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent9globalPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -165,7 +151,7 @@ func (this *QMouseEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 // [4] int x()
 func (this *QMouseEvent) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -175,7 +161,7 @@ func (this *QMouseEvent) X() int {
 // [4] int y()
 func (this *QMouseEvent) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -185,7 +171,7 @@ func (this *QMouseEvent) Y() int {
 // [4] int globalX()
 func (this *QMouseEvent) GlobalX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent7globalXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -195,7 +181,7 @@ func (this *QMouseEvent) GlobalX() int {
 // [4] int globalY()
 func (this *QMouseEvent) GlobalY() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent7globalYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -205,7 +191,7 @@ func (this *QMouseEvent) GlobalY() int {
 // [16] const QPointF & localPos()
 func (this *QMouseEvent) LocalPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent8localPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -217,7 +203,7 @@ func (this *QMouseEvent) LocalPos() *qtcore.QPointF {
 // [16] const QPointF & windowPos()
 func (this *QMouseEvent) WindowPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent9windowPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -229,7 +215,7 @@ func (this *QMouseEvent) WindowPos() *qtcore.QPointF {
 // [16] const QPointF & screenPos()
 func (this *QMouseEvent) ScreenPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -241,7 +227,7 @@ func (this *QMouseEvent) ScreenPos() *qtcore.QPointF {
 // [4] Qt::MouseButton button()
 func (this *QMouseEvent) Button() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent6buttonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -251,7 +237,7 @@ func (this *QMouseEvent) Button() int {
 // [4] Qt::MouseButtons buttons()
 func (this *QMouseEvent) Buttons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent7buttonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -262,7 +248,7 @@ func (this *QMouseEvent) Buttons() int {
 func (this *QMouseEvent) SetLocalPos(localPosition *qtcore.QPointF) {
 	var convArg0 = localPosition.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMouseEvent11setLocalPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:141
@@ -271,7 +257,7 @@ func (this *QMouseEvent) SetLocalPos(localPosition *qtcore.QPointF) {
 // [4] Qt::MouseEventSource source()
 func (this *QMouseEvent) Source() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -281,8 +267,30 @@ func (this *QMouseEvent) Source() int {
 // [4] Qt::MouseEventFlags flags()
 func (this *QMouseEvent) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

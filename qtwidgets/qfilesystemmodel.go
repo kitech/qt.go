@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void timerEvent(class QTimerEvent *)
 func (this *QFileSystemModel) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
@@ -86,7 +70,7 @@ func (*QFileSystemModel) NewFromPointer(cthis unsafe.Pointer) *QFileSystemModel 
 // [8] const QMetaObject * metaObject()
 func (this *QFileSystemModel) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -98,7 +82,7 @@ func (this *QFileSystemModel) RootPathChanged(newPath string) {
 	var tmpArg0 = qtcore.NewQString_5(newPath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel15rootPathChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:67
@@ -113,7 +97,7 @@ func (this *QFileSystemModel) FileRenamed(path string, oldName string, newName s
 	var tmpArg2 = qtcore.NewQString_5(newName)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:68
@@ -124,7 +108,7 @@ func (this *QFileSystemModel) DirectoryLoaded(path string) {
 	var tmpArg0 = qtcore.NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel15directoryLoadedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:78
@@ -134,7 +118,7 @@ func (this *QFileSystemModel) DirectoryLoaded(path string) {
 func NewQFileSystemModel(parent *qtcore.QObject /*777 QObject **/) *QFileSystemModel {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileSystemModelFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -146,7 +130,7 @@ func NewQFileSystemModel(parent *qtcore.QObject /*777 QObject **/) *QFileSystemM
 func DeleteQFileSystemModel(this *QFileSystemModel) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModelD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -157,7 +141,7 @@ func DeleteQFileSystemModel(this *QFileSystemModel) {
 func (this *QFileSystemModel) Index(row int, column int, parent *qtcore.QModelIndex) *qtcore.QModelIndex /*123*/ {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -171,7 +155,7 @@ func (this *QFileSystemModel) Index_1(path string, column int) *qtcore.QModelInd
 	var tmpArg0 = qtcore.NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel5indexERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -184,7 +168,7 @@ func (this *QFileSystemModel) Index_1(path string, column int) *qtcore.QModelInd
 func (this *QFileSystemModel) Parent(child *qtcore.QModelIndex) *qtcore.QModelIndex /*123*/ {
 	var convArg0 = child.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel6parentERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -197,7 +181,7 @@ func (this *QFileSystemModel) Parent(child *qtcore.QModelIndex) *qtcore.QModelIn
 func (this *QFileSystemModel) Sibling(row int, column int, idx *qtcore.QModelIndex) *qtcore.QModelIndex /*123*/ {
 	var convArg2 = idx.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel7siblingEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -210,7 +194,7 @@ func (this *QFileSystemModel) Sibling(row int, column int, idx *qtcore.QModelInd
 func (this *QFileSystemModel) HasChildren(parent *qtcore.QModelIndex) bool {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -221,7 +205,7 @@ func (this *QFileSystemModel) HasChildren(parent *qtcore.QModelIndex) bool {
 func (this *QFileSystemModel) CanFetchMore(parent *qtcore.QModelIndex) bool {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -232,7 +216,7 @@ func (this *QFileSystemModel) CanFetchMore(parent *qtcore.QModelIndex) bool {
 func (this *QFileSystemModel) FetchMore(parent *qtcore.QModelIndex) {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel9fetchMoreERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:90
@@ -242,7 +226,7 @@ func (this *QFileSystemModel) FetchMore(parent *qtcore.QModelIndex) {
 func (this *QFileSystemModel) RowCount(parent *qtcore.QModelIndex) int {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -253,7 +237,7 @@ func (this *QFileSystemModel) RowCount(parent *qtcore.QModelIndex) int {
 func (this *QFileSystemModel) ColumnCount(parent *qtcore.QModelIndex) int {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -263,7 +247,7 @@ func (this *QFileSystemModel) ColumnCount(parent *qtcore.QModelIndex) int {
 // [16] QVariant myComputer(int)
 func (this *QFileSystemModel) MyComputer(role int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel10myComputerEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -276,7 +260,7 @@ func (this *QFileSystemModel) MyComputer(role int) *qtcore.QVariant /*123*/ {
 func (this *QFileSystemModel) Data(index *qtcore.QModelIndex, role int) *qtcore.QVariant /*123*/ {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel4dataERK11QModelIndexi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -290,7 +274,7 @@ func (this *QFileSystemModel) SetData(index *qtcore.QModelIndex, value *qtcore.Q
 	var convArg0 = index.GetCthis()
 	var convArg1 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -300,7 +284,7 @@ func (this *QFileSystemModel) SetData(index *qtcore.QModelIndex, value *qtcore.Q
 // [16] QVariant headerData(int, Qt::Orientation, int)
 func (this *QFileSystemModel) HeaderData(section int, orientation int, role int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -313,7 +297,7 @@ func (this *QFileSystemModel) HeaderData(section int, orientation int, role int)
 func (this *QFileSystemModel) Flags(index *qtcore.QModelIndex) int {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel5flagsERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -323,7 +307,7 @@ func (this *QFileSystemModel) Flags(index *qtcore.QModelIndex) int {
 // [-2] void sort(int, Qt::SortOrder)
 func (this *QFileSystemModel) Sort(column int, order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:103
@@ -332,7 +316,7 @@ func (this *QFileSystemModel) Sort(column int, order int) {
 // [8] QStringList mimeTypes()
 func (this *QFileSystemModel) MimeTypes() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -346,7 +330,7 @@ func (this *QFileSystemModel) DropMimeData(data *qtcore.QMimeData /*777 const QM
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -356,7 +340,7 @@ func (this *QFileSystemModel) DropMimeData(data *qtcore.QMimeData /*777 const QM
 // [4] Qt::DropActions supportedDropActions()
 func (this *QFileSystemModel) SupportedDropActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel20supportedDropActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -368,7 +352,7 @@ func (this *QFileSystemModel) SetRootPath(path string) *qtcore.QModelIndex /*123
 	var tmpArg0 = qtcore.NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel11setRootPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -380,7 +364,7 @@ func (this *QFileSystemModel) SetRootPath(path string) *qtcore.QModelIndex /*123
 // [8] QString rootPath()
 func (this *QFileSystemModel) RootPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel8rootPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -393,7 +377,7 @@ func (this *QFileSystemModel) RootPath() string {
 // [8] QDir rootDirectory()
 func (this *QFileSystemModel) RootDirectory() *qtcore.QDir /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel13rootDirectoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQDir)
 	return rv2
@@ -406,7 +390,7 @@ func (this *QFileSystemModel) RootDirectory() *qtcore.QDir /*123*/ {
 func (this *QFileSystemModel) SetIconProvider(provider *QFileIconProvider /*777 QFileIconProvider **/) {
 	var convArg0 = provider.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:115
@@ -415,7 +399,7 @@ func (this *QFileSystemModel) SetIconProvider(provider *QFileIconProvider /*777 
 // [8] QFileIconProvider * iconProvider()
 func (this *QFileSystemModel) IconProvider() *QFileIconProvider /*777 QFileIconProvider **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel12iconProviderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQFileIconProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -425,7 +409,7 @@ func (this *QFileSystemModel) IconProvider() *QFileIconProvider /*777 QFileIconP
 // [-2] void setFilter(QDir::Filters)
 func (this *QFileSystemModel) SetFilter(filters int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel9setFilterE6QFlagsIN4QDir6FilterEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:118
@@ -434,7 +418,7 @@ func (this *QFileSystemModel) SetFilter(filters int) {
 // [4] QDir::Filters filter()
 func (this *QFileSystemModel) Filter() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel6filterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -444,7 +428,7 @@ func (this *QFileSystemModel) Filter() int {
 // [-2] void setResolveSymlinks(_Bool)
 func (this *QFileSystemModel) SetResolveSymlinks(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel18setResolveSymlinksEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:121
@@ -453,7 +437,7 @@ func (this *QFileSystemModel) SetResolveSymlinks(enable bool) {
 // [1] bool resolveSymlinks()
 func (this *QFileSystemModel) ResolveSymlinks() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel15resolveSymlinksEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -463,7 +447,7 @@ func (this *QFileSystemModel) ResolveSymlinks() bool {
 // [-2] void setReadOnly(_Bool)
 func (this *QFileSystemModel) SetReadOnly(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel11setReadOnlyEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:124
@@ -472,7 +456,7 @@ func (this *QFileSystemModel) SetReadOnly(enable bool) {
 // [1] bool isReadOnly()
 func (this *QFileSystemModel) IsReadOnly() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel10isReadOnlyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -482,7 +466,7 @@ func (this *QFileSystemModel) IsReadOnly() bool {
 // [-2] void setNameFilterDisables(_Bool)
 func (this *QFileSystemModel) SetNameFilterDisables(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel21setNameFilterDisablesEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:127
@@ -491,7 +475,7 @@ func (this *QFileSystemModel) SetNameFilterDisables(enable bool) {
 // [1] bool nameFilterDisables()
 func (this *QFileSystemModel) NameFilterDisables() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel18nameFilterDisablesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -502,7 +486,7 @@ func (this *QFileSystemModel) NameFilterDisables() bool {
 func (this *QFileSystemModel) SetNameFilters(filters *qtcore.QStringList) {
 	var convArg0 = filters.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel14setNameFiltersERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:130
@@ -511,7 +495,7 @@ func (this *QFileSystemModel) SetNameFilters(filters *qtcore.QStringList) {
 // [8] QStringList nameFilters()
 func (this *QFileSystemModel) NameFilters() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel11nameFiltersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -524,7 +508,7 @@ func (this *QFileSystemModel) NameFilters() *qtcore.QStringList /*123*/ {
 func (this *QFileSystemModel) FilePath(index *qtcore.QModelIndex) string {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel8filePathERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -538,7 +522,7 @@ func (this *QFileSystemModel) FilePath(index *qtcore.QModelIndex) string {
 func (this *QFileSystemModel) IsDir(index *qtcore.QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel5isDirERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -549,7 +533,7 @@ func (this *QFileSystemModel) IsDir(index *qtcore.QModelIndex) bool {
 func (this *QFileSystemModel) Size(index *qtcore.QModelIndex) int64 {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel4sizeERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -560,7 +544,7 @@ func (this *QFileSystemModel) Size(index *qtcore.QModelIndex) int64 {
 func (this *QFileSystemModel) Type(index *qtcore.QModelIndex) string {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel4typeERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -574,7 +558,7 @@ func (this *QFileSystemModel) Type(index *qtcore.QModelIndex) string {
 func (this *QFileSystemModel) LastModified(index *qtcore.QModelIndex) *qtcore.QDateTime /*123*/ {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQDateTime)
 	return rv2
@@ -589,7 +573,7 @@ func (this *QFileSystemModel) Mkdir(parent *qtcore.QModelIndex, name string) *qt
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -602,7 +586,7 @@ func (this *QFileSystemModel) Mkdir(parent *qtcore.QModelIndex, name string) *qt
 func (this *QFileSystemModel) Rmdir(index *qtcore.QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel5rmdirERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -613,7 +597,7 @@ func (this *QFileSystemModel) Rmdir(index *qtcore.QModelIndex) bool {
 func (this *QFileSystemModel) FileName(index *qtcore.QModelIndex) string {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel8fileNameERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -627,7 +611,7 @@ func (this *QFileSystemModel) FileName(index *qtcore.QModelIndex) string {
 func (this *QFileSystemModel) FileIcon(index *qtcore.QModelIndex) *qtgui.QIcon /*123*/ {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel8fileIconERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
@@ -640,7 +624,7 @@ func (this *QFileSystemModel) FileIcon(index *qtcore.QModelIndex) *qtgui.QIcon /
 func (this *QFileSystemModel) Permissions(index *qtcore.QModelIndex) int {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel11permissionsERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -651,7 +635,7 @@ func (this *QFileSystemModel) Permissions(index *qtcore.QModelIndex) int {
 func (this *QFileSystemModel) FileInfo(index *qtcore.QModelIndex) *qtcore.QFileInfo /*123*/ {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel8fileInfoERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQFileInfo)
 	return rv2
@@ -664,7 +648,7 @@ func (this *QFileSystemModel) FileInfo(index *qtcore.QModelIndex) *qtcore.QFileI
 func (this *QFileSystemModel) Remove(index *qtcore.QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel6removeERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -675,7 +659,7 @@ func (this *QFileSystemModel) Remove(index *qtcore.QModelIndex) bool {
 func (this *QFileSystemModel) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:149
@@ -685,7 +669,7 @@ func (this *QFileSystemModel) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerE
 func (this *QFileSystemModel) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -697,3 +681,28 @@ const QFileSystemModel__FileNameRole QFileSystemModel__Roles = 258
 const QFileSystemModel__FilePermissions QFileSystemModel__Roles = 259
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

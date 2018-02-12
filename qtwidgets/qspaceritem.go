@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QSpacerItem) NewFromPointer(cthis unsafe.Pointer) *QSpacerItem {
 // [-2] void QSpacerItem(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
 func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, w, h, hData, vData)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSpacerItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSpacerItem)
 	return gothis
@@ -90,7 +73,7 @@ func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 func DeleteQSpacerItem(this *QSpacerItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +83,7 @@ func DeleteQSpacerItem(this *QSpacerItem) {
 // [-2] void changeSize(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
 func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, hData, vData)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:104
@@ -109,7 +92,7 @@ func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 // [8] QSize sizeHint()
 func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -121,7 +104,7 @@ func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSize()
 func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -133,7 +116,7 @@ func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 // [8] QSize maximumSize()
 func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -145,7 +128,7 @@ func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 // [4] Qt::Orientations expandingDirections()
 func (this *QSpacerItem) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -155,7 +138,7 @@ func (this *QSpacerItem) ExpandingDirections() int {
 // [1] bool isEmpty()
 func (this *QSpacerItem) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -166,7 +149,7 @@ func (this *QSpacerItem) IsEmpty() bool {
 func (this *QSpacerItem) SetGeometry(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:110
@@ -175,7 +158,7 @@ func (this *QSpacerItem) SetGeometry(arg0 *qtcore.QRect) {
 // [16] QRect geometry()
 func (this *QSpacerItem) Geometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -187,7 +170,7 @@ func (this *QSpacerItem) Geometry() *qtcore.QRect /*123*/ {
 // [8] QSpacerItem * spacerItem()
 func (this *QSpacerItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10spacerItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSpacerItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -197,10 +180,35 @@ func (this *QSpacerItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 // [4] QSizePolicy sizePolicy()
 func (this *QSpacerItem) SizePolicy() *QSizePolicy /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem10sizePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSizePolicyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSizePolicy)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

@@ -1,9 +1,8 @@
 package qtandroidextras
 
 import "unsafe"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 func init() {
 	if false {
@@ -14,9 +13,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
 	}
 	if false {
 		qtcore.KeepMe()
@@ -34,7 +30,7 @@ func ShouldShowRequestPermissionRationale(permission string) bool {
 	var tmpArg0 = qtcore.NewQString_5(permission)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid36shouldShowRequestPermissionRationaleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -45,7 +41,7 @@ func ShouldShowRequestPermissionRationale(permission string) bool {
 func RequestPermissions(permissions *qtcore.QStringList, callbackFunc unsafe.Pointer /*555*/) {
 	var convArg0 = permissions.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid18requestPermissionsERK11QStringListRKSt8functionIFvRK5QHashI7QStringNS_16PermissionResultEEEE", qtrt.FFI_TYPE_POINTER, convArg0, callbackFunc)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end

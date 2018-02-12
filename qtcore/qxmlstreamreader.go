@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QXmlStreamReader) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamReader 
 // [-2] void QXmlStreamReader()
 func NewQXmlStreamReader() *QXmlStreamReader {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamReader)
 	return gothis
@@ -85,7 +74,7 @@ func NewQXmlStreamReader() *QXmlStreamReader {
 func NewQXmlStreamReader_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamReader {
 	var convArg0 = device.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2EP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamReader)
 	return gothis
@@ -98,7 +87,7 @@ func NewQXmlStreamReader_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamRea
 func NewQXmlStreamReader_2(data *QByteArray) *QXmlStreamReader {
 	var convArg0 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamReader)
 	return gothis
@@ -112,7 +101,7 @@ func NewQXmlStreamReader_3(data string) *QXmlStreamReader {
 	var tmpArg0 = NewQString_5(data)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamReader)
 	return gothis
@@ -126,7 +115,7 @@ func NewQXmlStreamReader_4(data string) *QXmlStreamReader {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamReader)
 	return gothis
@@ -139,7 +128,7 @@ func NewQXmlStreamReader_4(data string) *QXmlStreamReader {
 func DeleteQXmlStreamReader(this *QXmlStreamReader) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -150,7 +139,7 @@ func DeleteQXmlStreamReader(this *QXmlStreamReader) {
 func (this *QXmlStreamReader) SetDevice(device *QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:368
@@ -159,7 +148,7 @@ func (this *QXmlStreamReader) SetDevice(device *QIODevice /*777 QIODevice **/) {
 // [8] QIODevice * device()
 func (this *QXmlStreamReader) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -170,7 +159,7 @@ func (this *QXmlStreamReader) Device() *QIODevice /*777 QIODevice **/ {
 func (this *QXmlStreamReader) AddData(data *QByteArray) {
 	var convArg0 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:370
@@ -181,7 +170,7 @@ func (this *QXmlStreamReader) AddData_1(data string) {
 	var tmpArg0 = NewQString_5(data)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:371
@@ -192,7 +181,7 @@ func (this *QXmlStreamReader) AddData_2(data string) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:372
@@ -201,7 +190,7 @@ func (this *QXmlStreamReader) AddData_2(data string) {
 // [-2] void clear()
 func (this *QXmlStreamReader) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:375
@@ -210,7 +199,7 @@ func (this *QXmlStreamReader) Clear() {
 // [1] bool atEnd()
 func (this *QXmlStreamReader) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -220,7 +209,7 @@ func (this *QXmlStreamReader) AtEnd() bool {
 // [4] QXmlStreamReader::TokenType readNext()
 func (this *QXmlStreamReader) ReadNext() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader8readNextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -230,7 +219,7 @@ func (this *QXmlStreamReader) ReadNext() int {
 // [1] bool readNextStartElement()
 func (this *QXmlStreamReader) ReadNextStartElement() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader20readNextStartElementEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -240,7 +229,7 @@ func (this *QXmlStreamReader) ReadNextStartElement() bool {
 // [-2] void skipCurrentElement()
 func (this *QXmlStreamReader) SkipCurrentElement() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader18skipCurrentElementEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:381
@@ -249,7 +238,7 @@ func (this *QXmlStreamReader) SkipCurrentElement() {
 // [4] QXmlStreamReader::TokenType tokenType()
 func (this *QXmlStreamReader) TokenType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader9tokenTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -259,7 +248,7 @@ func (this *QXmlStreamReader) TokenType() int {
 // [8] QString tokenString()
 func (this *QXmlStreamReader) TokenString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader11tokenStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -272,7 +261,7 @@ func (this *QXmlStreamReader) TokenString() string {
 // [-2] void setNamespaceProcessing(_Bool)
 func (this *QXmlStreamReader) SetNamespaceProcessing(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader22setNamespaceProcessingEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:385
@@ -281,7 +270,7 @@ func (this *QXmlStreamReader) SetNamespaceProcessing(arg0 bool) {
 // [1] bool namespaceProcessing()
 func (this *QXmlStreamReader) NamespaceProcessing() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader19namespaceProcessingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -291,7 +280,7 @@ func (this *QXmlStreamReader) NamespaceProcessing() bool {
 // [1] bool isStartDocument()
 func (this *QXmlStreamReader) IsStartDocument() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader15isStartDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -301,7 +290,7 @@ func (this *QXmlStreamReader) IsStartDocument() bool {
 // [1] bool isEndDocument()
 func (this *QXmlStreamReader) IsEndDocument() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader13isEndDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -311,7 +300,7 @@ func (this *QXmlStreamReader) IsEndDocument() bool {
 // [1] bool isStartElement()
 func (this *QXmlStreamReader) IsStartElement() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader14isStartElementEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -321,7 +310,7 @@ func (this *QXmlStreamReader) IsStartElement() bool {
 // [1] bool isEndElement()
 func (this *QXmlStreamReader) IsEndElement() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader12isEndElementEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -331,7 +320,7 @@ func (this *QXmlStreamReader) IsEndElement() bool {
 // [1] bool isCharacters()
 func (this *QXmlStreamReader) IsCharacters() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader12isCharactersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -341,7 +330,7 @@ func (this *QXmlStreamReader) IsCharacters() bool {
 // [1] bool isWhitespace()
 func (this *QXmlStreamReader) IsWhitespace() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader12isWhitespaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -351,7 +340,7 @@ func (this *QXmlStreamReader) IsWhitespace() bool {
 // [1] bool isCDATA()
 func (this *QXmlStreamReader) IsCDATA() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader7isCDATAEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -361,7 +350,7 @@ func (this *QXmlStreamReader) IsCDATA() bool {
 // [1] bool isComment()
 func (this *QXmlStreamReader) IsComment() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader9isCommentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -371,7 +360,7 @@ func (this *QXmlStreamReader) IsComment() bool {
 // [1] bool isDTD()
 func (this *QXmlStreamReader) IsDTD() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader5isDTDEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -381,7 +370,7 @@ func (this *QXmlStreamReader) IsDTD() bool {
 // [1] bool isEntityReference()
 func (this *QXmlStreamReader) IsEntityReference() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader17isEntityReferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -391,7 +380,7 @@ func (this *QXmlStreamReader) IsEntityReference() bool {
 // [1] bool isProcessingInstruction()
 func (this *QXmlStreamReader) IsProcessingInstruction() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader23isProcessingInstructionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -401,7 +390,7 @@ func (this *QXmlStreamReader) IsProcessingInstruction() bool {
 // [1] bool isStandaloneDocument()
 func (this *QXmlStreamReader) IsStandaloneDocument() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader20isStandaloneDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -411,7 +400,7 @@ func (this *QXmlStreamReader) IsStandaloneDocument() bool {
 // [16] QStringRef documentVersion()
 func (this *QXmlStreamReader) DocumentVersion() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader15documentVersionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -423,7 +412,7 @@ func (this *QXmlStreamReader) DocumentVersion() *QStringRef /*123*/ {
 // [16] QStringRef documentEncoding()
 func (this *QXmlStreamReader) DocumentEncoding() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader16documentEncodingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -435,7 +424,7 @@ func (this *QXmlStreamReader) DocumentEncoding() *QStringRef /*123*/ {
 // [8] qint64 lineNumber()
 func (this *QXmlStreamReader) LineNumber() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader10lineNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -445,7 +434,7 @@ func (this *QXmlStreamReader) LineNumber() int64 {
 // [8] qint64 columnNumber()
 func (this *QXmlStreamReader) ColumnNumber() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader12columnNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -455,7 +444,7 @@ func (this *QXmlStreamReader) ColumnNumber() int64 {
 // [8] qint64 characterOffset()
 func (this *QXmlStreamReader) CharacterOffset() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader15characterOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -465,7 +454,7 @@ func (this *QXmlStreamReader) CharacterOffset() int64 {
 // [8] QXmlStreamAttributes attributes()
 func (this *QXmlStreamReader) Attributes() *QXmlStreamAttributes /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader10attributesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQXmlStreamAttributesFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQXmlStreamAttributes)
 	return rv2
@@ -477,7 +466,7 @@ func (this *QXmlStreamReader) Attributes() *QXmlStreamAttributes /*123*/ {
 // [8] QString readElementText(enum QXmlStreamReader::ReadElementTextBehaviour)
 func (this *QXmlStreamReader) ReadElementText(behaviour int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader15readElementTextENS_24ReadElementTextBehaviourE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), behaviour)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -490,7 +479,7 @@ func (this *QXmlStreamReader) ReadElementText(behaviour int) string {
 // [16] QStringRef name()
 func (this *QXmlStreamReader) Name() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -502,7 +491,7 @@ func (this *QXmlStreamReader) Name() *QStringRef /*123*/ {
 // [16] QStringRef namespaceUri()
 func (this *QXmlStreamReader) NamespaceUri() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader12namespaceUriEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -514,7 +503,7 @@ func (this *QXmlStreamReader) NamespaceUri() *QStringRef /*123*/ {
 // [16] QStringRef qualifiedName()
 func (this *QXmlStreamReader) QualifiedName() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader13qualifiedNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -526,7 +515,7 @@ func (this *QXmlStreamReader) QualifiedName() *QStringRef /*123*/ {
 // [16] QStringRef prefix()
 func (this *QXmlStreamReader) Prefix() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader6prefixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -538,7 +527,7 @@ func (this *QXmlStreamReader) Prefix() *QStringRef /*123*/ {
 // [16] QStringRef processingInstructionTarget()
 func (this *QXmlStreamReader) ProcessingInstructionTarget() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader27processingInstructionTargetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -550,7 +539,7 @@ func (this *QXmlStreamReader) ProcessingInstructionTarget() *QStringRef /*123*/ 
 // [16] QStringRef processingInstructionData()
 func (this *QXmlStreamReader) ProcessingInstructionData() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader25processingInstructionDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -562,7 +551,7 @@ func (this *QXmlStreamReader) ProcessingInstructionData() *QStringRef /*123*/ {
 // [16] QStringRef text()
 func (this *QXmlStreamReader) Text() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -575,7 +564,7 @@ func (this *QXmlStreamReader) Text() *QStringRef /*123*/ {
 func (this *QXmlStreamReader) AddExtraNamespaceDeclaration(extraNamespaceDeclaraction *QXmlStreamNamespaceDeclaration) {
 	var convArg0 = extraNamespaceDeclaraction.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:431
@@ -584,7 +573,7 @@ func (this *QXmlStreamReader) AddExtraNamespaceDeclaration(extraNamespaceDeclara
 // [16] QStringRef dtdName()
 func (this *QXmlStreamReader) DtdName() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader7dtdNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -596,7 +585,7 @@ func (this *QXmlStreamReader) DtdName() *QStringRef /*123*/ {
 // [16] QStringRef dtdPublicId()
 func (this *QXmlStreamReader) DtdPublicId() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader11dtdPublicIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -608,7 +597,7 @@ func (this *QXmlStreamReader) DtdPublicId() *QStringRef /*123*/ {
 // [16] QStringRef dtdSystemId()
 func (this *QXmlStreamReader) DtdSystemId() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader11dtdSystemIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -622,7 +611,7 @@ func (this *QXmlStreamReader) RaiseError(message string) {
 	var tmpArg0 = NewQString_5(message)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader10raiseErrorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:444
@@ -631,7 +620,7 @@ func (this *QXmlStreamReader) RaiseError(message string) {
 // [8] QString errorString()
 func (this *QXmlStreamReader) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -644,7 +633,7 @@ func (this *QXmlStreamReader) ErrorString() string {
 // [4] QXmlStreamReader::Error error()
 func (this *QXmlStreamReader) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -654,7 +643,7 @@ func (this *QXmlStreamReader) Error() int {
 // [1] bool hasError()
 func (this *QXmlStreamReader) HasError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader8hasErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -665,7 +654,7 @@ func (this *QXmlStreamReader) HasError() bool {
 func (this *QXmlStreamReader) SetEntityResolver(resolver *QXmlStreamEntityResolver /*777 QXmlStreamEntityResolver **/) {
 	var convArg0 = resolver.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:453
@@ -674,7 +663,7 @@ func (this *QXmlStreamReader) SetEntityResolver(resolver *QXmlStreamEntityResolv
 // [8] QXmlStreamEntityResolver * entityResolver()
 func (this *QXmlStreamReader) EntityResolver() *QXmlStreamEntityResolver /*777 QXmlStreamEntityResolver **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader14entityResolverEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQXmlStreamEntityResolverFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -707,3 +696,22 @@ const QXmlStreamReader__NotWellFormedError QXmlStreamReader__Error = 3
 const QXmlStreamReader__PrematureEndOfDocumentError QXmlStreamReader__Error = 4
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

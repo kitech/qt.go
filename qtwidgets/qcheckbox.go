@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QCheckBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -111,7 +95,7 @@ func (*QCheckBox) NewFromPointer(cthis unsafe.Pointer) *QCheckBox {
 // [8] const QMetaObject * metaObject()
 func (this *QCheckBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -122,7 +106,7 @@ func (this *QCheckBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 func NewQCheckBox(parent *QWidget /*777 QWidget **/) *QCheckBox {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCheckBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -136,7 +120,7 @@ func NewQCheckBox_1(text string, parent *QWidget /*777 QWidget **/) *QCheckBox {
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBoxC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQCheckBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -148,7 +132,7 @@ func NewQCheckBox_1(text string, parent *QWidget /*777 QWidget **/) *QCheckBox {
 func DeleteQCheckBox(this *QCheckBox) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -158,7 +142,7 @@ func DeleteQCheckBox(this *QCheckBox) {
 // [8] QSize sizeHint()
 func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -170,7 +154,7 @@ func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSizeHint()
 func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -182,7 +166,7 @@ func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // [-2] void setTristate(_Bool)
 func (this *QCheckBox) SetTristate(y bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox11setTristateEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), y)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:69
@@ -191,7 +175,7 @@ func (this *QCheckBox) SetTristate(y bool) {
 // [1] bool isTristate()
 func (this *QCheckBox) IsTristate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox10isTristateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -201,7 +185,7 @@ func (this *QCheckBox) IsTristate() bool {
 // [4] Qt::CheckState checkState()
 func (this *QCheckBox) CheckState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox10checkStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -211,7 +195,7 @@ func (this *QCheckBox) CheckState() int {
 // [-2] void setCheckState(Qt::CheckState)
 func (this *QCheckBox) SetCheckState(state int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox13setCheckStateEN2Qt10CheckStateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), state)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:75
@@ -220,7 +204,7 @@ func (this *QCheckBox) SetCheckState(state int) {
 // [-2] void stateChanged(int)
 func (this *QCheckBox) StateChanged(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox12stateChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:78
@@ -230,7 +214,7 @@ func (this *QCheckBox) StateChanged(arg0 int) {
 func (this *QCheckBox) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -241,7 +225,7 @@ func (this *QCheckBox) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 func (this *QCheckBox) HitButton(pos *qtcore.QPoint) bool {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox9hitButtonERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -251,7 +235,7 @@ func (this *QCheckBox) HitButton(pos *qtcore.QPoint) bool {
 // [-2] void checkStateSet()
 func (this *QCheckBox) CheckStateSet() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox13checkStateSetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:81
@@ -260,7 +244,7 @@ func (this *QCheckBox) CheckStateSet() {
 // [-2] void nextCheckState()
 func (this *QCheckBox) NextCheckState() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox14nextCheckStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:82
@@ -270,7 +254,7 @@ func (this *QCheckBox) NextCheckState() {
 func (this *QCheckBox) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:83
@@ -280,7 +264,7 @@ func (this *QCheckBox) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)
 func (this *QCheckBox) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:84
@@ -290,7 +274,32 @@ func (this *QCheckBox) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent 
 func (this *QCheckBox) InitStyleOption(option *QStyleOptionButton /*777 QStyleOptionButton **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox15initStyleOptionEP18QStyleOptionButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

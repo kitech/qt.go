@@ -6,6 +6,14 @@ package qtandroidextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QAndroidParcel) NewFromPointer(cthis unsafe.Pointer) *QAndroidParcel {
 // [-2] void QAndroidParcel()
 func NewQAndroidParcel() *QAndroidParcel {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidParcelC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidParcelFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidParcel)
 	return gothis
@@ -89,7 +75,7 @@ func NewQAndroidParcel() *QAndroidParcel {
 func NewQAndroidParcel_1(parcel *QAndroidJniObject) *QAndroidParcel {
 	var convArg0 = parcel.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidParcelC2ERK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidParcelFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidParcel)
 	return gothis
@@ -102,7 +88,7 @@ func NewQAndroidParcel_1(parcel *QAndroidJniObject) *QAndroidParcel {
 func DeleteQAndroidParcel(this *QAndroidParcel) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidParcelD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -113,7 +99,7 @@ func DeleteQAndroidParcel(this *QAndroidParcel) {
 func (this *QAndroidParcel) WriteData(data *qtcore.QByteArray) {
 	var convArg0 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel9writeDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:59
@@ -123,7 +109,7 @@ func (this *QAndroidParcel) WriteData(data *qtcore.QByteArray) {
 func (this *QAndroidParcel) WriteVariant(value *qtcore.QVariant) {
 	var convArg0 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel12writeVariantERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:60
@@ -133,7 +119,7 @@ func (this *QAndroidParcel) WriteVariant(value *qtcore.QVariant) {
 func (this *QAndroidParcel) WriteBinder(binder *QAndroidBinder) {
 	var convArg0 = binder.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel11writeBinderERK14QAndroidBinder", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:61
@@ -142,7 +128,7 @@ func (this *QAndroidParcel) WriteBinder(binder *QAndroidBinder) {
 // [-2] void writeFileDescriptor(int)
 func (this *QAndroidParcel) WriteFileDescriptor(fd int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel19writeFileDescriptorEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fd)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:63
@@ -151,7 +137,7 @@ func (this *QAndroidParcel) WriteFileDescriptor(fd int) {
 // [8] QByteArray readData()
 func (this *QAndroidParcel) ReadData() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel8readDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
@@ -163,7 +149,7 @@ func (this *QAndroidParcel) ReadData() *qtcore.QByteArray /*123*/ {
 // [16] QVariant readVariant()
 func (this *QAndroidParcel) ReadVariant() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel11readVariantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -175,7 +161,7 @@ func (this *QAndroidParcel) ReadVariant() *qtcore.QVariant /*123*/ {
 // [1] QAndroidBinder readBinder()
 func (this *QAndroidParcel) ReadBinder() *QAndroidBinder /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel10readBinderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQAndroidBinderFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidBinder)
 	return rv2
@@ -187,7 +173,7 @@ func (this *QAndroidParcel) ReadBinder() *QAndroidBinder /*123*/ {
 // [4] int readFileDescriptor()
 func (this *QAndroidParcel) ReadFileDescriptor() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel18readFileDescriptorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -197,10 +183,32 @@ func (this *QAndroidParcel) ReadFileDescriptor() int {
 // [1] QAndroidJniObject handle()
 func (this *QAndroidParcel) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

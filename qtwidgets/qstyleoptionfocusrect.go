@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QStyleOptionFocusRect) NewFromPointer(cthis unsafe.Pointer) *QStyleOption
 // [-2] void QStyleOptionFocusRect()
 func NewQStyleOptionFocusRect() *QStyleOptionFocusRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFocusRectFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionFocusRect)
 	return gothis
@@ -89,7 +72,7 @@ func NewQStyleOptionFocusRect() *QStyleOptionFocusRect {
 // [-2] void QStyleOptionFocusRect(int)
 func NewQStyleOptionFocusRect_1(version int) *QStyleOptionFocusRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFocusRectFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionFocusRect)
 	return gothis
@@ -97,7 +80,7 @@ func NewQStyleOptionFocusRect_1(version int) *QStyleOptionFocusRect {
 
 func DeleteQStyleOptionFocusRect(this *QStyleOptionFocusRect) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -110,3 +93,28 @@ type QStyleOptionFocusRect__StyleOptionVersion = int
 const QStyleOptionFocusRect__Version QStyleOptionFocusRect__StyleOptionVersion = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

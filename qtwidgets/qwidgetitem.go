@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -78,7 +61,7 @@ func (*QWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QWidgetItem {
 func NewQWidgetItem(w *QWidget /*777 QWidget **/) *QWidgetItem {
 	var convArg0 = w.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWidgetItemC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQWidgetItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQWidgetItem)
 	return gothis
@@ -91,7 +74,7 @@ func NewQWidgetItem(w *QWidget /*777 QWidget **/) *QWidgetItem {
 func DeleteQWidgetItem(this *QWidgetItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWidgetItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -101,7 +84,7 @@ func DeleteQWidgetItem(this *QWidgetItem) {
 // [8] QSize sizeHint()
 func (this *QWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -113,7 +96,7 @@ func (this *QWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSize()
 func (this *QWidgetItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -125,7 +108,7 @@ func (this *QWidgetItem) MinimumSize() *qtcore.QSize /*123*/ {
 // [8] QSize maximumSize()
 func (this *QWidgetItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -137,7 +120,7 @@ func (this *QWidgetItem) MaximumSize() *qtcore.QSize /*123*/ {
 // [4] Qt::Orientations expandingDirections()
 func (this *QWidgetItem) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -147,7 +130,7 @@ func (this *QWidgetItem) ExpandingDirections() int {
 // [1] bool isEmpty()
 func (this *QWidgetItem) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -158,7 +141,7 @@ func (this *QWidgetItem) IsEmpty() bool {
 func (this *QWidgetItem) SetGeometry(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWidgetItem11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:135
@@ -167,7 +150,7 @@ func (this *QWidgetItem) SetGeometry(arg0 *qtcore.QRect) {
 // [16] QRect geometry()
 func (this *QWidgetItem) Geometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -179,7 +162,7 @@ func (this *QWidgetItem) Geometry() *qtcore.QRect /*123*/ {
 // [8] QWidget * widget()
 func (this *QWidgetItem) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWidgetItem6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -189,7 +172,7 @@ func (this *QWidgetItem) Widget() *QWidget /*777 QWidget **/ {
 // [1] bool hasHeightForWidth()
 func (this *QWidgetItem) HasHeightForWidth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem17hasHeightForWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -199,7 +182,7 @@ func (this *QWidgetItem) HasHeightForWidth() bool {
 // [4] int heightForWidth(int)
 func (this *QWidgetItem) HeightForWidth(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -209,8 +192,33 @@ func (this *QWidgetItem) HeightForWidth(arg0 int) int {
 // [4] QSizePolicy::ControlTypes controlTypes()
 func (this *QWidgetItem) ControlTypes() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem12controlTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

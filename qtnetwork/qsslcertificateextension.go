@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QSslCertificateExtension) NewFromPointer(cthis unsafe.Pointer) *QSslCerti
 // [-2] void QSslCertificateExtension()
 func NewQSslCertificateExtension() *QSslCertificateExtension {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSslCertificateExtensionC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslCertificateExtensionFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSslCertificateExtension)
 	return gothis
@@ -89,7 +75,7 @@ func NewQSslCertificateExtension() *QSslCertificateExtension {
 func DeleteQSslCertificateExtension(this *QSslCertificateExtension) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSslCertificateExtensionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +86,7 @@ func DeleteQSslCertificateExtension(this *QSslCertificateExtension) {
 func (this *QSslCertificateExtension) Swap(other *QSslCertificateExtension) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSslCertificateExtension4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:69
@@ -109,7 +95,7 @@ func (this *QSslCertificateExtension) Swap(other *QSslCertificateExtension) {
 // [8] QString oid()
 func (this *QSslCertificateExtension) Oid() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSslCertificateExtension3oidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -122,7 +108,7 @@ func (this *QSslCertificateExtension) Oid() string {
 // [8] QString name()
 func (this *QSslCertificateExtension) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSslCertificateExtension4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -135,7 +121,7 @@ func (this *QSslCertificateExtension) Name() string {
 // [16] QVariant value()
 func (this *QSslCertificateExtension) Value() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSslCertificateExtension5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -147,7 +133,7 @@ func (this *QSslCertificateExtension) Value() *qtcore.QVariant /*123*/ {
 // [1] bool isCritical()
 func (this *QSslCertificateExtension) IsCritical() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSslCertificateExtension10isCriticalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -157,8 +143,30 @@ func (this *QSslCertificateExtension) IsCritical() bool {
 // [1] bool isSupported()
 func (this *QSslCertificateExtension) IsSupported() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSslCertificateExtension11isSupportedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

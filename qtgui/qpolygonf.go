@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QPolygonF) NewFromPointer(cthis unsafe.Pointer) *QPolygonF {
 // [-2] void QPolygonF()
 func NewQPolygonF() *QPolygonF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPolygonF)
 	return gothis
@@ -88,7 +74,7 @@ func NewQPolygonF() *QPolygonF {
 // [-2] void QPolygonF(int)
 func NewQPolygonF_1(size int) *QPolygonF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFC2Ei", qtrt.FFI_TYPE_POINTER, size)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPolygonF)
 	return gothis
@@ -101,7 +87,7 @@ func NewQPolygonF_1(size int) *QPolygonF {
 func NewQPolygonF_2(r *qtcore.QRectF) *QPolygonF {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFC2ERK6QRectF", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPolygonF)
 	return gothis
@@ -114,7 +100,7 @@ func NewQPolygonF_2(r *qtcore.QRectF) *QPolygonF {
 func NewQPolygonF_3(a *QPolygon) *QPolygonF {
 	var convArg0 = a.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFC2ERK8QPolygon", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPolygonF)
 	return gothis
@@ -127,7 +113,7 @@ func NewQPolygonF_3(a *QPolygon) *QPolygonF {
 func DeleteQPolygonF(this *QPolygonF) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -138,7 +124,7 @@ func DeleteQPolygonF(this *QPolygonF) {
 func (this *QPolygonF) Swap(other *QPolygonF) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonF4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:163
@@ -147,7 +133,7 @@ func (this *QPolygonF) Swap(other *QPolygonF) {
 // [-2] void translate(qreal, qreal)
 func (this *QPolygonF) Translate(dx float64, dy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonF9translateEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:164
@@ -157,7 +143,7 @@ func (this *QPolygonF) Translate(dx float64, dy float64) {
 func (this *QPolygonF) Translate_1(offset *qtcore.QPointF) {
 	var convArg0 = offset.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonF9translateERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:166
@@ -166,7 +152,7 @@ func (this *QPolygonF) Translate_1(offset *qtcore.QPointF) {
 // [8] QPolygonF translated(qreal, qreal)
 func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF10translatedEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
@@ -179,7 +165,7 @@ func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 func (this *QPolygonF) Translated_1(offset *qtcore.QPointF) *QPolygonF /*123*/ {
 	var convArg0 = offset.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF10translatedERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
@@ -191,7 +177,7 @@ func (this *QPolygonF) Translated_1(offset *qtcore.QPointF) *QPolygonF /*123*/ {
 // [8] QPolygon toPolygon()
 func (this *QPolygonF) ToPolygon() *QPolygon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF9toPolygonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygon)
 	return rv2
@@ -203,7 +189,7 @@ func (this *QPolygonF) ToPolygon() *QPolygon /*123*/ {
 // [1] bool isClosed()
 func (this *QPolygonF) IsClosed() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF8isClosedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -213,7 +199,7 @@ func (this *QPolygonF) IsClosed() bool {
 // [32] QRectF boundingRect()
 func (this *QPolygonF) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -226,7 +212,7 @@ func (this *QPolygonF) BoundingRect() *qtcore.QRectF /*123*/ {
 func (this *QPolygonF) ContainsPoint(pt *qtcore.QPointF, fillRule int) bool {
 	var convArg0 = pt.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF13containsPointERK7QPointFN2Qt8FillRuleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fillRule)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -237,7 +223,7 @@ func (this *QPolygonF) ContainsPoint(pt *qtcore.QPointF, fillRule int) bool {
 func (this *QPolygonF) United(r *QPolygonF) *QPolygonF /*123*/ {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF6unitedERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
@@ -250,7 +236,7 @@ func (this *QPolygonF) United(r *QPolygonF) *QPolygonF /*123*/ {
 func (this *QPolygonF) Intersected(r *QPolygonF) *QPolygonF /*123*/ {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF11intersectedERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
@@ -263,7 +249,7 @@ func (this *QPolygonF) Intersected(r *QPolygonF) *QPolygonF /*123*/ {
 func (this *QPolygonF) Subtracted(r *QPolygonF) *QPolygonF /*123*/ {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF10subtractedERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
@@ -276,8 +262,30 @@ func (this *QPolygonF) Subtracted(r *QPolygonF) *QPolygonF /*123*/ {
 func (this *QPolygonF) Intersects(r *QPolygonF) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF10intersectsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

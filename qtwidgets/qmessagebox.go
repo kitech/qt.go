@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QMessageBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -106,7 +90,7 @@ func (*QMessageBox) NewFromPointer(cthis unsafe.Pointer) *QMessageBox {
 // [8] const QMetaObject * metaObject()
 func (this *QMessageBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -117,7 +101,7 @@ func (this *QMessageBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 func NewQMessageBox(parent *QWidget /*777 QWidget **/) *QMessageBox {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMessageBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -133,7 +117,7 @@ func NewQMessageBox_1(icon int, title string, text string, buttons int, parent *
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxC2ENS_4IconERK7QStringS3_6QFlagsINS_14StandardButtonEEP7QWidgetS4_IN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, icon, convArg1, convArg2, buttons, convArg4, flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMessageBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -149,7 +133,7 @@ func NewQMessageBox_2(title string, text string, icon int, button0 int, button1 
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg6 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxC2ERK7QStringS2_NS_4IconEiiiP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, icon, button0, button1, button2, convArg6, f)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMessageBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -161,7 +145,7 @@ func NewQMessageBox_2(title string, text string, icon int, button0 int, button1 
 func DeleteQMessageBox(this *QMessageBox) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -172,7 +156,7 @@ func DeleteQMessageBox(this *QMessageBox) {
 func (this *QMessageBox) AddButton(button *QAbstractButton /*777 QAbstractButton **/, role int) {
 	var convArg0 = button.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox9addButtonEP15QAbstractButtonNS_10ButtonRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:142
@@ -183,7 +167,7 @@ func (this *QMessageBox) AddButton_1(text string, role int) *QPushButton /*777 Q
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox9addButtonERK7QStringNS_10ButtonRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -193,7 +177,7 @@ func (this *QMessageBox) AddButton_1(text string, role int) *QPushButton /*777 Q
 // [8] QPushButton * addButton(enum QMessageBox::StandardButton)
 func (this *QMessageBox) AddButton_2(button int) *QPushButton /*777 QPushButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox9addButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -204,7 +188,7 @@ func (this *QMessageBox) AddButton_2(button int) *QPushButton /*777 QPushButton 
 func (this *QMessageBox) RemoveButton(button *QAbstractButton /*777 QAbstractButton **/) {
 	var convArg0 = button.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox12removeButtonEP15QAbstractButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:147
@@ -216,7 +200,7 @@ func (this *QMessageBox) Open(receiver *qtcore.QObject /*777 QObject **/, member
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox4openEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:150
@@ -226,7 +210,7 @@ func (this *QMessageBox) Open(receiver *qtcore.QObject /*777 QObject **/, member
 func (this *QMessageBox) ButtonRole(button *QAbstractButton /*777 QAbstractButton **/) int {
 	var convArg0 = button.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox10buttonRoleEP15QAbstractButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -236,7 +220,7 @@ func (this *QMessageBox) ButtonRole(button *QAbstractButton /*777 QAbstractButto
 // [-2] void setStandardButtons(QMessageBox::StandardButtons)
 func (this *QMessageBox) SetStandardButtons(buttons int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox18setStandardButtonsE6QFlagsINS_14StandardButtonEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:153
@@ -245,7 +229,7 @@ func (this *QMessageBox) SetStandardButtons(buttons int) {
 // [4] QMessageBox::StandardButtons standardButtons()
 func (this *QMessageBox) StandardButtons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox15standardButtonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -256,7 +240,7 @@ func (this *QMessageBox) StandardButtons() int {
 func (this *QMessageBox) StandardButton(button *QAbstractButton /*777 QAbstractButton **/) int {
 	var convArg0 = button.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox14standardButtonEP15QAbstractButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -266,7 +250,7 @@ func (this *QMessageBox) StandardButton(button *QAbstractButton /*777 QAbstractB
 // [8] QAbstractButton * button(enum QMessageBox::StandardButton)
 func (this *QMessageBox) Button(which int) *QAbstractButton /*777 QAbstractButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox6buttonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -276,7 +260,7 @@ func (this *QMessageBox) Button(which int) *QAbstractButton /*777 QAbstractButto
 // [8] QPushButton * defaultButton()
 func (this *QMessageBox) DefaultButton() *QPushButton /*777 QPushButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox13defaultButtonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -287,7 +271,7 @@ func (this *QMessageBox) DefaultButton() *QPushButton /*777 QPushButton **/ {
 func (this *QMessageBox) SetDefaultButton(button *QPushButton /*777 QPushButton **/) {
 	var convArg0 = button.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox16setDefaultButtonEP11QPushButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:159
@@ -296,7 +280,7 @@ func (this *QMessageBox) SetDefaultButton(button *QPushButton /*777 QPushButton 
 // [-2] void setDefaultButton(enum QMessageBox::StandardButton)
 func (this *QMessageBox) SetDefaultButton_1(button int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox16setDefaultButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:161
@@ -305,7 +289,7 @@ func (this *QMessageBox) SetDefaultButton_1(button int) {
 // [8] QAbstractButton * escapeButton()
 func (this *QMessageBox) EscapeButton() *QAbstractButton /*777 QAbstractButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox12escapeButtonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -316,7 +300,7 @@ func (this *QMessageBox) EscapeButton() *QAbstractButton /*777 QAbstractButton *
 func (this *QMessageBox) SetEscapeButton(button *QAbstractButton /*777 QAbstractButton **/) {
 	var convArg0 = button.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:163
@@ -325,7 +309,7 @@ func (this *QMessageBox) SetEscapeButton(button *QAbstractButton /*777 QAbstract
 // [-2] void setEscapeButton(enum QMessageBox::StandardButton)
 func (this *QMessageBox) SetEscapeButton_1(button int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox15setEscapeButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:165
@@ -334,7 +318,7 @@ func (this *QMessageBox) SetEscapeButton_1(button int) {
 // [8] QAbstractButton * clickedButton()
 func (this *QMessageBox) ClickedButton() *QAbstractButton /*777 QAbstractButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox13clickedButtonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -344,7 +328,7 @@ func (this *QMessageBox) ClickedButton() *QAbstractButton /*777 QAbstractButton 
 // [8] QString text()
 func (this *QMessageBox) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -359,7 +343,7 @@ func (this *QMessageBox) SetText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:170
@@ -368,7 +352,7 @@ func (this *QMessageBox) SetText(text string) {
 // [4] QMessageBox::Icon icon()
 func (this *QMessageBox) Icon() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -378,7 +362,7 @@ func (this *QMessageBox) Icon() int {
 // [-2] void setIcon(enum QMessageBox::Icon)
 func (this *QMessageBox) SetIcon(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7setIconENS_4IconE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:173
@@ -387,7 +371,7 @@ func (this *QMessageBox) SetIcon(arg0 int) {
 // [32] QPixmap iconPixmap()
 func (this *QMessageBox) IconPixmap() *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox10iconPixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
@@ -400,7 +384,7 @@ func (this *QMessageBox) IconPixmap() *qtgui.QPixmap /*123*/ {
 func (this *QMessageBox) SetIconPixmap(pixmap *qtgui.QPixmap) {
 	var convArg0 = pixmap.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox13setIconPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:176
@@ -409,7 +393,7 @@ func (this *QMessageBox) SetIconPixmap(pixmap *qtgui.QPixmap) {
 // [4] Qt::TextFormat textFormat()
 func (this *QMessageBox) TextFormat() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox10textFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -419,7 +403,7 @@ func (this *QMessageBox) TextFormat() int {
 // [-2] void setTextFormat(Qt::TextFormat)
 func (this *QMessageBox) SetTextFormat(format int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox13setTextFormatEN2Qt10TextFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:179
@@ -428,7 +412,7 @@ func (this *QMessageBox) SetTextFormat(format int) {
 // [-2] void setTextInteractionFlags(Qt::TextInteractionFlags)
 func (this *QMessageBox) SetTextInteractionFlags(flags int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:180
@@ -437,7 +421,7 @@ func (this *QMessageBox) SetTextInteractionFlags(flags int) {
 // [4] Qt::TextInteractionFlags textInteractionFlags()
 func (this *QMessageBox) TextInteractionFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox20textInteractionFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -448,7 +432,7 @@ func (this *QMessageBox) TextInteractionFlags() int {
 func (this *QMessageBox) SetCheckBox(cb *QCheckBox /*777 QCheckBox **/) {
 	var convArg0 = cb.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11setCheckBoxEP9QCheckBox", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:183
@@ -457,7 +441,7 @@ func (this *QMessageBox) SetCheckBox(cb *QCheckBox /*777 QCheckBox **/) {
 // [8] QCheckBox * checkBox()
 func (this *QMessageBox) CheckBox() *QCheckBox /*777 QCheckBox **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox8checkBoxEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQCheckBoxFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -472,7 +456,7 @@ func (this *QMessageBox) Information(parent *QWidget /*777 QWidget **/, title st
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QMessageBox_Information(parent *QWidget /*777 QWidget **/, title string, text string, buttons int, defaultButton int) int {
@@ -492,7 +476,7 @@ func (this *QMessageBox) Information_1(parent *QWidget /*777 QWidget **/, title 
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Information_1(parent *QWidget /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
@@ -518,7 +502,7 @@ func (this *QMessageBox) Information_2(parent *QWidget /*777 QWidget **/, title 
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Information_2(parent *QWidget /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
@@ -538,7 +522,7 @@ func (this *QMessageBox) Information_3(parent *QWidget /*777 QWidget **/, title 
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QMessageBox_Information_3(parent *QWidget /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
@@ -558,7 +542,7 @@ func (this *QMessageBox) Question(parent *QWidget /*777 QWidget **/, title strin
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QMessageBox_Question(parent *QWidget /*777 QWidget **/, title string, text string, buttons int, defaultButton int) int {
@@ -578,7 +562,7 @@ func (this *QMessageBox) Question_1(parent *QWidget /*777 QWidget **/, title str
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Question_1(parent *QWidget /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
@@ -604,7 +588,7 @@ func (this *QMessageBox) Question_2(parent *QWidget /*777 QWidget **/, title str
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Question_2(parent *QWidget /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
@@ -624,7 +608,7 @@ func (this *QMessageBox) Question_3(parent *QWidget /*777 QWidget **/, title str
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Question_3(parent *QWidget /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
@@ -644,7 +628,7 @@ func (this *QMessageBox) Warning(parent *QWidget /*777 QWidget **/, title string
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QMessageBox_Warning(parent *QWidget /*777 QWidget **/, title string, text string, buttons int, defaultButton int) int {
@@ -664,7 +648,7 @@ func (this *QMessageBox) Warning_1(parent *QWidget /*777 QWidget **/, title stri
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Warning_1(parent *QWidget /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
@@ -690,7 +674,7 @@ func (this *QMessageBox) Warning_2(parent *QWidget /*777 QWidget **/, title stri
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Warning_2(parent *QWidget /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
@@ -710,7 +694,7 @@ func (this *QMessageBox) Warning_3(parent *QWidget /*777 QWidget **/, title stri
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Warning_3(parent *QWidget /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
@@ -730,7 +714,7 @@ func (this *QMessageBox) Critical(parent *QWidget /*777 QWidget **/, title strin
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QMessageBox_Critical(parent *QWidget /*777 QWidget **/, title string, text string, buttons int, defaultButton int) int {
@@ -750,7 +734,7 @@ func (this *QMessageBox) Critical_1(parent *QWidget /*777 QWidget **/, title str
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Critical_1(parent *QWidget /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
@@ -776,7 +760,7 @@ func (this *QMessageBox) Critical_2(parent *QWidget /*777 QWidget **/, title str
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Critical_2(parent *QWidget /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
@@ -796,7 +780,7 @@ func (this *QMessageBox) Critical_3(parent *QWidget /*777 QWidget **/, title str
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QMessageBox_Critical_3(parent *QWidget /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
@@ -816,7 +800,7 @@ func (this *QMessageBox) About(parent *QWidget /*777 QWidget **/, title string, 
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QMessageBox_About(parent *QWidget /*777 QWidget **/, title string, text string) {
 	var nilthis *QMessageBox
@@ -832,7 +816,7 @@ func (this *QMessageBox) AboutQt(parent *QWidget /*777 QWidget **/, title string
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QMessageBox_AboutQt(parent *QWidget /*777 QWidget **/, title string) {
 	var nilthis *QMessageBox
@@ -845,7 +829,7 @@ func QMessageBox_AboutQt(parent *QWidget /*777 QWidget **/, title string) {
 // [8] QString buttonText(int)
 func (this *QMessageBox) ButtonText(button int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox10buttonTextEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -860,7 +844,7 @@ func (this *QMessageBox) SetButtonText(button int, text string) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox13setButtonTextEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:270
@@ -869,7 +853,7 @@ func (this *QMessageBox) SetButtonText(button int, text string) {
 // [8] QString informativeText()
 func (this *QMessageBox) InformativeText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox15informativeTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -884,7 +868,7 @@ func (this *QMessageBox) SetInformativeText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox18setInformativeTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:274
@@ -893,7 +877,7 @@ func (this *QMessageBox) SetInformativeText(text string) {
 // [8] QString detailedText()
 func (this *QMessageBox) DetailedText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox12detailedTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -908,7 +892,7 @@ func (this *QMessageBox) SetDetailedText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox15setDetailedTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:278
@@ -919,7 +903,7 @@ func (this *QMessageBox) SetWindowTitle(title string) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox14setWindowTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:279
@@ -928,7 +912,7 @@ func (this *QMessageBox) SetWindowTitle(title string) {
 // [-2] void setWindowModality(Qt::WindowModality)
 func (this *QMessageBox) SetWindowModality(windowModality int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox17setWindowModalityEN2Qt14WindowModalityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), windowModality)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:282
@@ -937,7 +921,7 @@ func (this *QMessageBox) SetWindowModality(windowModality int) {
 // [32] QPixmap standardIcon(enum QMessageBox::Icon)
 func (this *QMessageBox) StandardIcon(icon int) *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox12standardIconENS_4IconE", qtrt.FFI_TYPE_POINTER, icon)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
@@ -955,7 +939,7 @@ func QMessageBox_StandardIcon(icon int) *qtgui.QPixmap /*123*/ {
 func (this *QMessageBox) ButtonClicked(button *QAbstractButton /*777 QAbstractButton **/) {
 	var convArg0 = button.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox13buttonClickedEP15QAbstractButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:293
@@ -965,7 +949,7 @@ func (this *QMessageBox) ButtonClicked(button *QAbstractButton /*777 QAbstractBu
 func (this *QMessageBox) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -976,7 +960,7 @@ func (this *QMessageBox) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 func (this *QMessageBox) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:295
@@ -986,7 +970,7 @@ func (this *QMessageBox) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEven
 func (this *QMessageBox) ShowEvent(event *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:296
@@ -996,7 +980,7 @@ func (this *QMessageBox) ShowEvent(event *qtgui.QShowEvent /*777 QShowEvent **/)
 func (this *QMessageBox) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox10closeEventEP11QCloseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:297
@@ -1006,7 +990,7 @@ func (this *QMessageBox) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEvent *
 func (this *QMessageBox) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:298
@@ -1016,7 +1000,7 @@ func (this *QMessageBox) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **
 func (this *QMessageBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QMessageBox__Icon = int
@@ -1072,3 +1056,28 @@ const QMessageBox__FlagMask QMessageBox__StandardButton = 768
 const QMessageBox__ButtonMask QMessageBox__StandardButton = -769
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

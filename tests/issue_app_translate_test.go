@@ -4,7 +4,7 @@ import (
 	"log"
 	"testing"
 
-	"qt.go/qtcore"
+	"github.com/kitech/qt.go/qtcore"
 )
 
 func Test0(t *testing.T) {

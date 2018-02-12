@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QEvent) NewFromPointer(cthis unsafe.Pointer) *QEvent {
 // [-2] void QEvent(enum QEvent::Type)
 func NewQEvent(type_ int) *QEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QEventC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQEvent)
 	return gothis
@@ -85,7 +74,7 @@ func NewQEvent(type_ int) *QEvent {
 func DeleteQEvent(this *QEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -95,7 +84,7 @@ func DeleteQEvent(this *QEvent) {
 // [4] QEvent::Type type()
 func (this *QEvent) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -105,7 +94,7 @@ func (this *QEvent) Type() int {
 // [1] bool spontaneous()
 func (this *QEvent) Spontaneous() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent11spontaneousEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -115,7 +104,7 @@ func (this *QEvent) Spontaneous() bool {
 // [-2] void setAccepted(_Bool)
 func (this *QEvent) SetAccepted(accepted bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent11setAcceptedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), accepted)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:305
@@ -124,7 +113,7 @@ func (this *QEvent) SetAccepted(accepted bool) {
 // [1] bool isAccepted()
 func (this *QEvent) IsAccepted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent10isAcceptedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -134,7 +123,7 @@ func (this *QEvent) IsAccepted() bool {
 // [-2] void accept()
 func (this *QEvent) Accept() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent6acceptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:308
@@ -143,7 +132,7 @@ func (this *QEvent) Accept() {
 // [-2] void ignore()
 func (this *QEvent) Ignore() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent6ignoreEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:310
@@ -152,7 +141,7 @@ func (this *QEvent) Ignore() {
 // [4] int registerEventType(int)
 func (this *QEvent) RegisterEventType(hint int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", qtrt.FFI_TYPE_POINTER, hint)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QEvent_RegisterEventType(hint int) int {
@@ -337,3 +326,22 @@ const QEvent__User QEvent__Type = 1000
 const QEvent__MaxUser QEvent__Type = 65535
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"gopp"
 	"io/ioutil"
 	"log"
 	"os"
@@ -11,6 +10,7 @@ import (
 
 	simplejson "github.com/bitly/go-simplejson"
 	"github.com/clbanning/mxj"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 // 使用.ui文件的转换
@@ -21,7 +21,7 @@ var filep string // file name without externsion
 type convContext struct {
 	topCls string
 	cp     *CodePager
-	djso   *gopp.Json
+	djso   *qtrt.Json
 
 	curobjName string
 	curobjCls  string
@@ -38,16 +38,16 @@ func main() {
 	log.Println(file, filep)
 
 	fp, err := os.Open(file)
-	gopp.ErrPrint(err, fp)
+	qtrt.ErrPrint(err, fp)
 
 	xml, err := mxj.NewMapXmlReader(fp)
-	gopp.ErrPrint(err, xml)
+	qtrt.ErrPrint(err, xml)
 	bcc, err := xml.Json()
-	gopp.ErrPrint(err)
+	qtrt.ErrPrint(err)
 	jso, err := simplejson.NewJson(bcc)
-	gopp.ErrPrint(err)
+	qtrt.ErrPrint(err)
 
-	cvctx.djso = gopp.NewJsonFromObject(jso)
+	cvctx.djso = qtrt.NewJsonFromObject(jso)
 	cvctx.cp = NewCodePager()
 	cvctx.cp.APf("header", "package main")
 	cvctx.cp.APf("import", "import \"qtcore\"")
@@ -275,13 +275,13 @@ func visitXml(xml mxj.Map, name, path string, depth int) {
 		case "widget":
 			clsn, err := xml.ValueForPath(path + ".-class")
 			varn, err := xml.ValueForPath(path + ".-name")
-			gopp.ErrPrint(err)
+			qtrt.ErrPrint(err)
 			log.Println(clsn, varn)
 			cpr.APf("struct", "%s *qtwidgets.%s", varn, clsn)
 		case "layout":
 			clsn, err := xml.ValueForPath(path + ".-class")
 			varn, err := xml.ValueForPath(path + ".-name")
-			gopp.ErrPrint(err)
+			qtrt.ErrPrint(err)
 			log.Println(clsn, varn)
 			cpr.APf("struct", "%s *qtwidgets.%s", varn, clsn)
 
@@ -292,12 +292,12 @@ func visitXml(xml mxj.Map, name, path string, depth int) {
 	}
 
 	relems, err := xml.Elements(path)
-	gopp.ErrPrint(err, depth)
+	qtrt.ErrPrint(err, depth)
 
 	for _, elem := range relems {
 		fpath := path + "." + elem
 		vals := xml.PathsForKey(fpath)
-		gopp.ErrPrint(err, vals)
+		qtrt.ErrPrint(err, vals)
 		log.Println("for vals:", fpath, depth)
 		// visit(xml, elem, fpath, depth+1)
 	}

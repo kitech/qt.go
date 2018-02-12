@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QElapsedTimer) NewFromPointer(cthis unsafe.Pointer) *QElapsedTimer {
 // [-2] void QElapsedTimer()
 func NewQElapsedTimer() *QElapsedTimer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimerC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQElapsedTimerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQElapsedTimer)
 	return gothis
@@ -84,7 +73,7 @@ func NewQElapsedTimer() *QElapsedTimer {
 // [4] QElapsedTimer::ClockType clockType()
 func (this *QElapsedTimer) ClockType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer9clockTypeEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QElapsedTimer_ClockType() int {
@@ -99,7 +88,7 @@ func QElapsedTimer_ClockType() int {
 // [1] bool isMonotonic()
 func (this *QElapsedTimer) IsMonotonic() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer11isMonotonicEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QElapsedTimer_IsMonotonic() bool {
@@ -114,7 +103,7 @@ func QElapsedTimer_IsMonotonic() bool {
 // [-2] void start()
 func (this *QElapsedTimer) Start() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:69
@@ -123,7 +112,7 @@ func (this *QElapsedTimer) Start() {
 // [8] qint64 restart()
 func (this *QElapsedTimer) Restart() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer7restartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -133,7 +122,7 @@ func (this *QElapsedTimer) Restart() int64 {
 // [-2] void invalidate()
 func (this *QElapsedTimer) Invalidate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer10invalidateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:71
@@ -142,7 +131,7 @@ func (this *QElapsedTimer) Invalidate() {
 // [1] bool isValid()
 func (this *QElapsedTimer) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -152,7 +141,7 @@ func (this *QElapsedTimer) IsValid() bool {
 // [8] qint64 nsecsElapsed()
 func (this *QElapsedTimer) NsecsElapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer12nsecsElapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -162,7 +151,7 @@ func (this *QElapsedTimer) NsecsElapsed() int64 {
 // [8] qint64 elapsed()
 func (this *QElapsedTimer) Elapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -172,7 +161,7 @@ func (this *QElapsedTimer) Elapsed() int64 {
 // [1] bool hasExpired(qint64)
 func (this *QElapsedTimer) HasExpired(timeout int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer10hasExpiredEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -182,7 +171,7 @@ func (this *QElapsedTimer) HasExpired(timeout int64) bool {
 // [8] qint64 msecsSinceReference()
 func (this *QElapsedTimer) MsecsSinceReference() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer19msecsSinceReferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -193,7 +182,7 @@ func (this *QElapsedTimer) MsecsSinceReference() int64 {
 func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) int64 {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -204,13 +193,13 @@ func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) int64 {
 func (this *QElapsedTimer) SecsTo(other *QElapsedTimer) int64 {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
 func DeleteQElapsedTimer(this *QElapsedTimer) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -223,3 +212,22 @@ const QElapsedTimer__MachAbsoluteTime QElapsedTimer__ClockType = 3
 const QElapsedTimer__PerformanceCounter QElapsedTimer__ClockType = 4
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

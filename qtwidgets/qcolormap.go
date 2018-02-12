@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QColormap) NewFromPointer(cthis unsafe.Pointer) *QColormap {
 // [-2] void initialize()
 func (this *QColormap) Initialize() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormap10initializeEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QColormap_Initialize() {
 	var nilthis *QColormap
@@ -93,7 +76,7 @@ func QColormap_Initialize() {
 // [-2] void cleanup()
 func (this *QColormap) Cleanup() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormap7cleanupEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QColormap_Cleanup() {
 	var nilthis *QColormap
@@ -106,7 +89,7 @@ func QColormap_Cleanup() {
 // [8] QColormap instance(int)
 func (this *QColormap) Instance(screen int) *QColormap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormap8instanceEi", qtrt.FFI_TYPE_POINTER, screen)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColormapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColormap)
 	return rv2
@@ -124,7 +107,7 @@ func QColormap_Instance(screen int) *QColormap /*123*/ {
 func DeleteQColormap(this *QColormap) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormapD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -134,7 +117,7 @@ func DeleteQColormap(this *QColormap) {
 // [4] QColormap::Mode mode()
 func (this *QColormap) Mode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap4modeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -144,7 +127,7 @@ func (this *QColormap) Mode() int {
 // [4] int depth()
 func (this *QColormap) Depth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap5depthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -154,7 +137,7 @@ func (this *QColormap) Depth() int {
 // [4] int size()
 func (this *QColormap) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -165,7 +148,7 @@ func (this *QColormap) Size() int {
 func (this *QColormap) Pixel(color *qtgui.QColor) uint {
 	var convArg0 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap5pixelERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -175,7 +158,7 @@ func (this *QColormap) Pixel(color *qtgui.QColor) uint {
 // [16] const QColor colorAt(uint)
 func (this *QColormap) ColorAt(pixel uint) *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap7colorAtEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pixel)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -188,3 +171,28 @@ const QColormap__Indexed QColormap__Mode = 1
 const QColormap__Gray QColormap__Mode = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

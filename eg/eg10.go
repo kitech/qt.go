@@ -2,10 +2,10 @@ package main
 
 import (
 	"log"
-	"qtrt"
 	"reflect"
 
-	"qt.go/qtcore"
+	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 // 这和qtcore.QString并不冲突

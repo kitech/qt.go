@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QApplicationStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAppl
 // [-2] void QApplicationStateChangeEvent(Qt::ApplicationState)
 func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventC2EN2Qt16ApplicationStateE", qtrt.FFI_TYPE_POINTER, state)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQApplicationStateChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQApplicationStateChangeEvent)
 	return gothis
@@ -85,14 +71,36 @@ func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 // [4] Qt::ApplicationState applicationState()
 func (this *QApplicationStateChangeEvent) ApplicationState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QApplicationStateChangeEvent16applicationStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
 func DeleteQApplicationStateChangeEvent(this *QApplicationStateChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

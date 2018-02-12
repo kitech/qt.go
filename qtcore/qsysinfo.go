@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QSysInfo) NewFromPointer(cthis unsafe.Pointer) *QSysInfo {
 // [4] QSysInfo::WinVersion windowsVersion()
 func (this *QSysInfo) WindowsVersion() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo14windowsVersionEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QSysInfo_WindowsVersion() int {
@@ -87,7 +76,7 @@ func QSysInfo_WindowsVersion() int {
 // [4] QSysInfo::MacVersion macVersion()
 func (this *QSysInfo) MacVersion() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo10macVersionEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QSysInfo_MacVersion() int {
@@ -102,7 +91,7 @@ func QSysInfo_MacVersion() int {
 // [8] QString buildCpuArchitecture()
 func (this *QSysInfo) BuildCpuArchitecture() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo20buildCpuArchitectureEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -120,7 +109,7 @@ func QSysInfo_BuildCpuArchitecture() string {
 // [8] QString currentCpuArchitecture()
 func (this *QSysInfo) CurrentCpuArchitecture() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo22currentCpuArchitectureEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -138,7 +127,7 @@ func QSysInfo_CurrentCpuArchitecture() string {
 // [8] QString buildAbi()
 func (this *QSysInfo) BuildAbi() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo8buildAbiEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -156,7 +145,7 @@ func QSysInfo_BuildAbi() string {
 // [8] QString kernelType()
 func (this *QSysInfo) KernelType() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo10kernelTypeEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -174,7 +163,7 @@ func QSysInfo_KernelType() string {
 // [8] QString kernelVersion()
 func (this *QSysInfo) KernelVersion() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo13kernelVersionEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -192,7 +181,7 @@ func QSysInfo_KernelVersion() string {
 // [8] QString productType()
 func (this *QSysInfo) ProductType() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo11productTypeEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -210,7 +199,7 @@ func QSysInfo_ProductType() string {
 // [8] QString productVersion()
 func (this *QSysInfo) ProductVersion() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo14productVersionEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -228,7 +217,7 @@ func QSysInfo_ProductVersion() string {
 // [8] QString prettyProductName()
 func (this *QSysInfo) PrettyProductName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo17prettyProductNameEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -246,7 +235,7 @@ func QSysInfo_PrettyProductName() string {
 // [8] QString machineHostName()
 func (this *QSysInfo) MachineHostName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo15machineHostNameEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -260,7 +249,7 @@ func QSysInfo_MachineHostName() string {
 
 func DeleteQSysInfo(this *QSysInfo) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfoD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -368,3 +357,22 @@ const QSysInfo__MV_WATCHOS_2_2 QSysInfo__MacVersion = 1058
 const QSysInfo__MV_WATCHOS_3_0 QSysInfo__MacVersion = 1072
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

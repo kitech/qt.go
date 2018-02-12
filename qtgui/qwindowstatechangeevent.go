@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QWindowStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWindowSta
 // [-2] void QWindowStateChangeEvent(Qt::WindowStates, _Bool)
 func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWindowStateChangeEventC2E6QFlagsIN2Qt11WindowStateEEb", qtrt.FFI_TYPE_POINTER, aOldState, isOverride)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQWindowStateChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQWindowStateChangeEvent)
 	return gothis
@@ -86,7 +72,7 @@ func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateCha
 func DeleteQWindowStateChangeEvent(this *QWindowStateChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWindowStateChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -96,7 +82,7 @@ func DeleteQWindowStateChangeEvent(this *QWindowStateChangeEvent) {
 // [4] Qt::WindowStates oldState()
 func (this *QWindowStateChangeEvent) OldState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent8oldStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -106,8 +92,30 @@ func (this *QWindowStateChangeEvent) OldState() int {
 // [1] bool isOverride()
 func (this *QWindowStateChangeEvent) IsOverride() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent10isOverrideEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

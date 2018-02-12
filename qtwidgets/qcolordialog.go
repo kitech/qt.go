@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void changeEvent(class QEvent *)
 func (this *QColorDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
@@ -86,7 +70,7 @@ func (*QColorDialog) NewFromPointer(cthis unsafe.Pointer) *QColorDialog {
 // [8] const QMetaObject * metaObject()
 func (this *QColorDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QColorDialog10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -97,7 +81,7 @@ func (this *QColorDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 func NewQColorDialog(parent *QWidget /*777 QWidget **/) *QColorDialog {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialogC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorDialogFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -110,7 +94,7 @@ func NewQColorDialog_1(initial *qtgui.QColor, parent *QWidget /*777 QWidget **/)
 	var convArg0 = initial.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialogC2ERK6QColorP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorDialogFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -122,7 +106,7 @@ func NewQColorDialog_1(initial *qtgui.QColor, parent *QWidget /*777 QWidget **/)
 func DeleteQColorDialog(this *QColorDialog) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialogD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -133,7 +117,7 @@ func DeleteQColorDialog(this *QColorDialog) {
 func (this *QColorDialog) SetCurrentColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog15setCurrentColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:76
@@ -142,7 +126,7 @@ func (this *QColorDialog) SetCurrentColor(color *qtgui.QColor) {
 // [16] QColor currentColor()
 func (this *QColorDialog) CurrentColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QColorDialog12currentColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -154,7 +138,7 @@ func (this *QColorDialog) CurrentColor() *qtgui.QColor /*123*/ {
 // [16] QColor selectedColor()
 func (this *QColorDialog) SelectedColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QColorDialog13selectedColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -166,7 +150,7 @@ func (this *QColorDialog) SelectedColor() *qtgui.QColor /*123*/ {
 // [-2] void setOption(enum QColorDialog::ColorDialogOption, _Bool)
 func (this *QColorDialog) SetOption(option int, on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog9setOptionENS_17ColorDialogOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:81
@@ -175,7 +159,7 @@ func (this *QColorDialog) SetOption(option int, on bool) {
 // [1] bool testOption(enum QColorDialog::ColorDialogOption)
 func (this *QColorDialog) TestOption(option int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QColorDialog10testOptionENS_17ColorDialogOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -185,7 +169,7 @@ func (this *QColorDialog) TestOption(option int) bool {
 // [-2] void setOptions(QColorDialog::ColorDialogOptions)
 func (this *QColorDialog) SetOptions(options int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog10setOptionsE6QFlagsINS_17ColorDialogOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:83
@@ -194,7 +178,7 @@ func (this *QColorDialog) SetOptions(options int) {
 // [4] QColorDialog::ColorDialogOptions options()
 func (this *QColorDialog) Options() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QColorDialog7optionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -207,7 +191,7 @@ func (this *QColorDialog) Open(receiver *qtcore.QObject /*777 QObject **/, membe
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog4openEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:88
@@ -216,7 +200,7 @@ func (this *QColorDialog) Open(receiver *qtcore.QObject /*777 QObject **/, membe
 // [-2] void setVisible(_Bool)
 func (this *QColorDialog) SetVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:90
@@ -229,7 +213,7 @@ func (this *QColorDialog) GetColor(initial *qtgui.QColor, parent *QWidget /*777 
 	var tmpArg2 = qtcore.NewQString_5(title)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog8getColorERK6QColorP7QWidgetRK7QString6QFlagsINS_17ColorDialogOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -247,7 +231,7 @@ func QColorDialog_GetColor(initial *qtgui.QColor, parent *QWidget /*777 QWidget 
 func (this *QColorDialog) GetRgba(rgba uint, ok unsafe.Pointer /*666*/, parent *QWidget /*777 QWidget **/) uint {
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog7getRgbaEjPbP7QWidget", qtrt.FFI_TYPE_POINTER, rgba, &ok, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 func QColorDialog_GetRgba(rgba uint, ok unsafe.Pointer /*666*/, parent *QWidget /*777 QWidget **/) uint {
@@ -262,7 +246,7 @@ func QColorDialog_GetRgba(rgba uint, ok unsafe.Pointer /*666*/, parent *QWidget 
 // [4] int customCount()
 func (this *QColorDialog) CustomCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog11customCountEv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QColorDialog_CustomCount() int {
@@ -277,7 +261,7 @@ func QColorDialog_CustomCount() int {
 // [16] QColor customColor(int)
 func (this *QColorDialog) CustomColor(index int) *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog11customColorEi", qtrt.FFI_TYPE_POINTER, index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -295,7 +279,7 @@ func QColorDialog_CustomColor(index int) *qtgui.QColor /*123*/ {
 func (this *QColorDialog) SetCustomColor(index int, color *qtgui.QColor /*123*/) {
 	var convArg1 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog14setCustomColorEi6QColor", qtrt.FFI_TYPE_POINTER, index, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QColorDialog_SetCustomColor(index int, color *qtgui.QColor /*123*/) {
 	var nilthis *QColorDialog
@@ -308,7 +292,7 @@ func QColorDialog_SetCustomColor(index int, color *qtgui.QColor /*123*/) {
 // [16] QColor standardColor(int)
 func (this *QColorDialog) StandardColor(index int) *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog13standardColorEi", qtrt.FFI_TYPE_POINTER, index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -326,7 +310,7 @@ func QColorDialog_StandardColor(index int) *qtgui.QColor /*123*/ {
 func (this *QColorDialog) SetStandardColor(index int, color *qtgui.QColor /*123*/) {
 	var convArg1 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog16setStandardColorEi6QColor", qtrt.FFI_TYPE_POINTER, index, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 func QColorDialog_SetStandardColor(index int, color *qtgui.QColor /*123*/) {
 	var nilthis *QColorDialog
@@ -340,7 +324,7 @@ func QColorDialog_SetStandardColor(index int, color *qtgui.QColor /*123*/) {
 func (this *QColorDialog) CurrentColorChanged(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog19currentColorChangedERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:106
@@ -350,7 +334,7 @@ func (this *QColorDialog) CurrentColorChanged(color *qtgui.QColor) {
 func (this *QColorDialog) ColorSelected(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog13colorSelectedERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:109
@@ -360,7 +344,7 @@ func (this *QColorDialog) ColorSelected(color *qtgui.QColor) {
 func (this *QColorDialog) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:110
@@ -369,7 +353,7 @@ func (this *QColorDialog) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 // [-2] void done(int)
 func (this *QColorDialog) Done(result int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog4doneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), result)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QColorDialog__ColorDialogOption = int
@@ -379,3 +363,28 @@ const QColorDialog__NoButtons QColorDialog__ColorDialogOption = 2
 const QColorDialog__DontUseNativeDialog QColorDialog__ColorDialogOption = 4
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

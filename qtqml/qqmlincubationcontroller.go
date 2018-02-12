@@ -6,6 +6,14 @@ package qtqml
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
 
 //  ext block end
 
 //  body block begin
+
 // void incubatingObjectCountChanged(int)
 func (this *QQmlIncubationController) InheritIncubatingObjectCountChanged(f func(arg0 int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "incubatingObjectCountChanged", f)
@@ -84,7 +68,7 @@ func (*QQmlIncubationController) NewFromPointer(cthis unsafe.Pointer) *QQmlIncub
 // [-2] void QQmlIncubationController()
 func NewQQmlIncubationController() *QQmlIncubationController {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQmlIncubationControllerC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlIncubationControllerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlIncubationController)
 	return gothis
@@ -97,7 +81,7 @@ func NewQQmlIncubationController() *QQmlIncubationController {
 func DeleteQQmlIncubationController(this *QQmlIncubationController) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQmlIncubationControllerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -107,7 +91,7 @@ func DeleteQQmlIncubationController(this *QQmlIncubationController) {
 // [8] QQmlEngine * engine()
 func (this *QQmlIncubationController) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QQmlIncubationController6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -117,7 +101,7 @@ func (this *QQmlIncubationController) Engine() *QQmlEngine /*777 QQmlEngine **/ 
 // [4] int incubatingObjectCount()
 func (this *QQmlIncubationController) IncubatingObjectCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QQmlIncubationController21incubatingObjectCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -127,7 +111,7 @@ func (this *QQmlIncubationController) IncubatingObjectCount() int {
 // [-2] void incubateFor(int)
 func (this *QQmlIncubationController) IncubateFor(msecs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQmlIncubationController11incubateForEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlincubator.h:110
@@ -136,7 +120,7 @@ func (this *QQmlIncubationController) IncubateFor(msecs int) {
 // [-2] void incubateWhile(volatile _Bool *, int)
 func (this *QQmlIncubationController) IncubateWhile(flag unsafe.Pointer /*666*/, msecs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQmlIncubationController13incubateWhileEPVbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &flag, msecs)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlincubator.h:113
@@ -145,7 +129,32 @@ func (this *QQmlIncubationController) IncubateWhile(flag unsafe.Pointer /*666*/,
 // [-2] void incubatingObjectCountChanged(int)
 func (this *QQmlIncubationController) IncubatingObjectCountChanged(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQmlIncubationController28incubatingObjectCountChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtandroidextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QAndroidJniObject) NewFromPointer(cthis unsafe.Pointer) *QAndroidJniObjec
 // [-2] void QAndroidJniObject()
 func NewQAndroidJniObject() *QAndroidJniObject {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidJniObject)
 	return gothis
@@ -90,7 +76,7 @@ func NewQAndroidJniObject_1(className string) *QAndroidJniObject {
 	var convArg0 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidJniObject)
 	return gothis
@@ -102,7 +88,7 @@ func NewQAndroidJniObject_1(className string) *QAndroidJniObject {
 // [-2] void QAndroidJniObject(int)
 func NewQAndroidJniObject_2(clazz int) *QAndroidJniObject {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectC2Ei", qtrt.FFI_TYPE_POINTER, clazz)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidJniObject)
 	return gothis
@@ -114,7 +100,7 @@ func NewQAndroidJniObject_2(clazz int) *QAndroidJniObject {
 // [-2] void QAndroidJniObject(int)
 func NewQAndroidJniObject_3(obj int) *QAndroidJniObject {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectC2Ei", qtrt.FFI_TYPE_POINTER, obj)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidJniObject)
 	return gothis
@@ -127,7 +113,7 @@ func NewQAndroidJniObject_3(obj int) *QAndroidJniObject {
 func DeleteQAndroidJniObject(this *QAndroidJniObject) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -137,7 +123,7 @@ func DeleteQAndroidJniObject(this *QAndroidJniObject) {
 // [4] int object()
 func (this *QAndroidJniObject) Object() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAndroidJniObject6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -151,7 +137,7 @@ func (this *QAndroidJniObject) GetObjectField(fieldName string, sig string) *QAn
 	var convArg1 = qtrt.CString(sig)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAndroidJniObject14getObjectFieldEPKcS1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
 	return rv2
@@ -169,7 +155,7 @@ func (this *QAndroidJniObject) GetStaticObjectField(className string, fieldName 
 	var convArg2 = qtrt.CString(sig)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObject20getStaticObjectFieldEPKcS1_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
 	return rv2
@@ -190,7 +176,7 @@ func (this *QAndroidJniObject) GetStaticObjectField_1(clazz int, fieldName strin
 	var convArg2 = qtrt.CString(sig)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObject20getStaticObjectFieldEiPKcS1_", qtrt.FFI_TYPE_POINTER, clazz, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
 	return rv2
@@ -209,7 +195,7 @@ func (this *QAndroidJniObject) FromString(string string) *QAndroidJniObject /*12
 	var tmpArg0 = qtcore.NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObject10fromStringERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
 	return rv2
@@ -226,7 +212,7 @@ func QAndroidJniObject_FromString(string string) *QAndroidJniObject /*123*/ {
 // [8] QString toString()
 func (this *QAndroidJniObject) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAndroidJniObject8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -241,7 +227,7 @@ func (this *QAndroidJniObject) IsClassAvailable(className string) bool {
 	var convArg0 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObject16isClassAvailableEPKc", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QAndroidJniObject_IsClassAvailable(className string) bool {
@@ -256,7 +242,7 @@ func QAndroidJniObject_IsClassAvailable(className string) bool {
 // [1] bool isValid()
 func (this *QAndroidJniObject) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAndroidJniObject7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -266,7 +252,7 @@ func (this *QAndroidJniObject) IsValid() bool {
 // [1] QAndroidJniObject fromLocalRef(int)
 func (this *QAndroidJniObject) FromLocalRef(obj int) *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObject12fromLocalRefEi", qtrt.FFI_TYPE_POINTER, obj)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
 	return rv2
@@ -278,3 +264,25 @@ func QAndroidJniObject_FromLocalRef(obj int) *QAndroidJniObject /*123*/ {
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

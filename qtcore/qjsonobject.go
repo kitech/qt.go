@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QJsonObject) NewFromPointer(cthis unsafe.Pointer) *QJsonObject {
 // [-2] void QJsonObject()
 func NewQJsonObject() *QJsonObject {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObjectC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQJsonObject)
 	return gothis
@@ -85,7 +74,7 @@ func NewQJsonObject() *QJsonObject {
 func DeleteQJsonObject(this *QJsonObject) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObjectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -96,7 +85,7 @@ func DeleteQJsonObject(this *QJsonObject) {
 func (this *QJsonObject) Swap(other *QJsonObject) {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qjsonobject.h:101
@@ -105,7 +94,7 @@ func (this *QJsonObject) Swap(other *QJsonObject) {
 // [8] QStringList keys()
 func (this *QJsonObject) Keys() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject4keysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
@@ -117,7 +106,7 @@ func (this *QJsonObject) Keys() *QStringList /*123*/ {
 // [4] int size()
 func (this *QJsonObject) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -127,7 +116,7 @@ func (this *QJsonObject) Size() int {
 // [4] int count()
 func (this *QJsonObject) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -137,7 +126,7 @@ func (this *QJsonObject) Count() int {
 // [4] int length()
 func (this *QJsonObject) Length() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject6lengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -147,7 +136,7 @@ func (this *QJsonObject) Length() int {
 // [1] bool isEmpty()
 func (this *QJsonObject) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -159,7 +148,7 @@ func (this *QJsonObject) Value(key string) *QJsonValue /*123*/ {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject5valueERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
@@ -172,7 +161,7 @@ func (this *QJsonObject) Value(key string) *QJsonValue /*123*/ {
 func (this *QJsonObject) Value_1(key *QLatin1String /*123*/) *QJsonValue /*123*/ {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject5valueE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
@@ -186,7 +175,7 @@ func (this *QJsonObject) Remove(key string) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject6removeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qjsonobject.h:115
@@ -197,7 +186,7 @@ func (this *QJsonObject) Take(key string) *QJsonValue /*123*/ {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject4takeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
@@ -211,7 +200,7 @@ func (this *QJsonObject) Contains(key string) bool {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject8containsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -222,7 +211,7 @@ func (this *QJsonObject) Contains(key string) bool {
 func (this *QJsonObject) Contains_1(key *QLatin1String /*123*/) bool {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject8containsE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -232,7 +221,7 @@ func (this *QJsonObject) Contains_1(key *QLatin1String /*123*/) bool {
 // [16] QJsonObject::iterator begin()
 func (this *QJsonObject) Begin() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -242,7 +231,7 @@ func (this *QJsonObject) Begin() unsafe.Pointer /*444*/ {
 // [16] QJsonObject::const_iterator begin()
 func (this *QJsonObject) Begin_1() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -252,7 +241,7 @@ func (this *QJsonObject) Begin_1() unsafe.Pointer /*444*/ {
 // [16] QJsonObject::const_iterator constBegin()
 func (this *QJsonObject) ConstBegin() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject10constBeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -262,7 +251,7 @@ func (this *QJsonObject) ConstBegin() unsafe.Pointer /*444*/ {
 // [16] QJsonObject::iterator end()
 func (this *QJsonObject) End() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -272,7 +261,7 @@ func (this *QJsonObject) End() unsafe.Pointer /*444*/ {
 // [16] QJsonObject::const_iterator end()
 func (this *QJsonObject) End_1() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -282,7 +271,7 @@ func (this *QJsonObject) End_1() unsafe.Pointer /*444*/ {
 // [16] QJsonObject::const_iterator constEnd()
 func (this *QJsonObject) ConstEnd() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject8constEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -294,7 +283,7 @@ func (this *QJsonObject) Find(key string) unsafe.Pointer /*444*/ {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject4findERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -305,7 +294,7 @@ func (this *QJsonObject) Find(key string) unsafe.Pointer /*444*/ {
 func (this *QJsonObject) Find_1(key *QLatin1String /*123*/) unsafe.Pointer /*444*/ {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject4findE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -317,7 +306,7 @@ func (this *QJsonObject) Find_2(key string) unsafe.Pointer /*444*/ {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject4findERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -328,7 +317,7 @@ func (this *QJsonObject) Find_2(key string) unsafe.Pointer /*444*/ {
 func (this *QJsonObject) Find_3(key *QLatin1String /*123*/) unsafe.Pointer /*444*/ {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject4findE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -340,7 +329,7 @@ func (this *QJsonObject) ConstFind(key string) unsafe.Pointer /*444*/ {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject9constFindERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -351,7 +340,7 @@ func (this *QJsonObject) ConstFind(key string) unsafe.Pointer /*444*/ {
 func (this *QJsonObject) ConstFind_1(key *QLatin1String /*123*/) unsafe.Pointer /*444*/ {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject9constFindE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -361,8 +350,27 @@ func (this *QJsonObject) ConstFind_1(key *QLatin1String /*123*/) unsafe.Pointer 
 // [1] bool empty()
 func (this *QJsonObject) Empty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject5emptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

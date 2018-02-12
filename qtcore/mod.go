@@ -1,10 +1,9 @@
 package qtcore
 
 import (
-	"gopp"
 	"unsafe"
 
-	"qt.go/qtrt"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 /*
@@ -48,13 +47,13 @@ func DeleteQObjectList(*QObjectList) {} // TODO
 
 func (this *QObjectListx) At(i int) *QObject {
 	rv, err := qtrt.InvokeQtFunc6("C_QObjectList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return NewQObjectFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QObjectListx) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QObjectList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
@@ -100,13 +99,13 @@ func (*QFileInfoListx) NewFromPointer(cthis unsafe.Pointer) *QFileInfoListx {
 
 func (this *QFileInfoListx) At(i int) *QFileInfo {
 	rv, err := qtrt.InvokeQtFunc6("C_QFileInfoList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QFileInfoListx) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QFileInfoList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
@@ -152,13 +151,13 @@ func (*QModelIndexListx) NewFromPointer(cthis unsafe.Pointer) *QModelIndexListx 
 
 func (this *QModelIndexListx) At(i int) *QModelIndex {
 	rv, err := qtrt.InvokeQtFunc6("C_QModelIndexList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QModelIndexListx) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QModelIndexList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
@@ -204,13 +203,13 @@ func (*QVariantListx) NewFromPointer(cthis unsafe.Pointer) *QVariantListx {
 
 func (this *QVariantListx) At(i int) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("C_QVariantList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QVariantListx) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QVariantList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 

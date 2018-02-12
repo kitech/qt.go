@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QMetaEnum) NewFromPointer(cthis unsafe.Pointer) *QMetaEnum {
 // [-2] void QMetaEnum()
 func NewQMetaEnum() *QMetaEnum {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMetaEnumC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQMetaEnumFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMetaEnum)
 	return gothis
@@ -84,7 +73,7 @@ func NewQMetaEnum() *QMetaEnum {
 // [8] const char * name()
 func (this *QMetaEnum) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -94,7 +83,7 @@ func (this *QMetaEnum) Name() string {
 // [1] bool isFlag()
 func (this *QMetaEnum) IsFlag() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum6isFlagEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -104,7 +93,7 @@ func (this *QMetaEnum) IsFlag() bool {
 // [1] bool isScoped()
 func (this *QMetaEnum) IsScoped() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum8isScopedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -114,7 +103,7 @@ func (this *QMetaEnum) IsScoped() bool {
 // [4] int keyCount()
 func (this *QMetaEnum) KeyCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum8keyCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -124,7 +113,7 @@ func (this *QMetaEnum) KeyCount() int {
 // [8] const char * key(int)
 func (this *QMetaEnum) Key(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum3keyEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -134,7 +123,7 @@ func (this *QMetaEnum) Key(index int) string {
 // [4] int value(int)
 func (this *QMetaEnum) Value(index int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum5valueEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -144,7 +133,7 @@ func (this *QMetaEnum) Value(index int) int {
 // [8] const char * scope()
 func (this *QMetaEnum) Scope() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum5scopeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -156,7 +145,7 @@ func (this *QMetaEnum) KeyToValue(key string, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = qtrt.CString(key)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum10keyToValueEPKcPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -166,7 +155,7 @@ func (this *QMetaEnum) KeyToValue(key string, ok unsafe.Pointer /*666*/) int {
 // [8] const char * valueToKey(int)
 func (this *QMetaEnum) ValueToKey(value int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum10valueToKeyEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
@@ -178,7 +167,7 @@ func (this *QMetaEnum) KeysToValue(keys string, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = qtrt.CString(keys)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum11keysToValueEPKcPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -188,7 +177,7 @@ func (this *QMetaEnum) KeysToValue(keys string, ok unsafe.Pointer /*666*/) int {
 // [8] QByteArray valueToKeys(int)
 func (this *QMetaEnum) ValueToKeys(value int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum11valueToKeysEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -200,7 +189,7 @@ func (this *QMetaEnum) ValueToKeys(value int) *QByteArray /*123*/ {
 // [8] const QMetaObject * enclosingMetaObject()
 func (this *QMetaEnum) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum19enclosingMetaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -210,14 +199,33 @@ func (this *QMetaEnum) EnclosingMetaObject() *QMetaObject /*777 const QMetaObjec
 // [1] bool isValid()
 func (this *QMetaEnum) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 func DeleteQMetaEnum(this *QMetaEnum) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMetaEnumD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

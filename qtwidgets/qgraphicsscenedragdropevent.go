@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QGraphicsSceneDragDropEvent) NewFromPointer(cthis unsafe.Pointer) *QGraph
 // [-2] void QGraphicsSceneDragDropEvent(enum QEvent::Type)
 func NewQGraphicsSceneDragDropEvent(type_ int) *QGraphicsSceneDragDropEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsSceneDragDropEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGraphicsSceneDragDropEvent)
 	return gothis
@@ -90,7 +73,7 @@ func NewQGraphicsSceneDragDropEvent(type_ int) *QGraphicsSceneDragDropEvent {
 func DeleteQGraphicsSceneDragDropEvent(this *QGraphicsSceneDragDropEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +83,7 @@ func DeleteQGraphicsSceneDragDropEvent(this *QGraphicsSceneDragDropEvent) {
 // [16] QPointF pos()
 func (this *QGraphicsSceneDragDropEvent) Pos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -113,7 +96,7 @@ func (this *QGraphicsSceneDragDropEvent) Pos() *qtcore.QPointF /*123*/ {
 func (this *QGraphicsSceneDragDropEvent) SetPos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:258
@@ -122,7 +105,7 @@ func (this *QGraphicsSceneDragDropEvent) SetPos(pos *qtcore.QPointF) {
 // [16] QPointF scenePos()
 func (this *QGraphicsSceneDragDropEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent8scenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -135,7 +118,7 @@ func (this *QGraphicsSceneDragDropEvent) ScenePos() *qtcore.QPointF /*123*/ {
 func (this *QGraphicsSceneDragDropEvent) SetScenePos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:261
@@ -144,7 +127,7 @@ func (this *QGraphicsSceneDragDropEvent) SetScenePos(pos *qtcore.QPointF) {
 // [8] QPoint screenPos()
 func (this *QGraphicsSceneDragDropEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -157,7 +140,7 @@ func (this *QGraphicsSceneDragDropEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 func (this *QGraphicsSceneDragDropEvent) SetScreenPos(pos *qtcore.QPoint) {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:264
@@ -166,7 +149,7 @@ func (this *QGraphicsSceneDragDropEvent) SetScreenPos(pos *qtcore.QPoint) {
 // [4] Qt::MouseButtons buttons()
 func (this *QGraphicsSceneDragDropEvent) Buttons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent7buttonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -176,7 +159,7 @@ func (this *QGraphicsSceneDragDropEvent) Buttons() int {
 // [-2] void setButtons(Qt::MouseButtons)
 func (this *QGraphicsSceneDragDropEvent) SetButtons(buttons int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent10setButtonsE6QFlagsIN2Qt11MouseButtonEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:267
@@ -185,7 +168,7 @@ func (this *QGraphicsSceneDragDropEvent) SetButtons(buttons int) {
 // [4] Qt::KeyboardModifiers modifiers()
 func (this *QGraphicsSceneDragDropEvent) Modifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent9modifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -195,7 +178,7 @@ func (this *QGraphicsSceneDragDropEvent) Modifiers() int {
 // [-2] void setModifiers(Qt::KeyboardModifiers)
 func (this *QGraphicsSceneDragDropEvent) SetModifiers(modifiers int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:270
@@ -204,7 +187,7 @@ func (this *QGraphicsSceneDragDropEvent) SetModifiers(modifiers int) {
 // [4] Qt::DropActions possibleActions()
 func (this *QGraphicsSceneDragDropEvent) PossibleActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -214,7 +197,7 @@ func (this *QGraphicsSceneDragDropEvent) PossibleActions() int {
 // [-2] void setPossibleActions(Qt::DropActions)
 func (this *QGraphicsSceneDragDropEvent) SetPossibleActions(actions int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent18setPossibleActionsE6QFlagsIN2Qt10DropActionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), actions)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:273
@@ -223,7 +206,7 @@ func (this *QGraphicsSceneDragDropEvent) SetPossibleActions(actions int) {
 // [4] Qt::DropAction proposedAction()
 func (this *QGraphicsSceneDragDropEvent) ProposedAction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent14proposedActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -233,7 +216,7 @@ func (this *QGraphicsSceneDragDropEvent) ProposedAction() int {
 // [-2] void setProposedAction(Qt::DropAction)
 func (this *QGraphicsSceneDragDropEvent) SetProposedAction(action int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent17setProposedActionEN2Qt10DropActionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:275
@@ -242,7 +225,7 @@ func (this *QGraphicsSceneDragDropEvent) SetProposedAction(action int) {
 // [-2] void acceptProposedAction()
 func (this *QGraphicsSceneDragDropEvent) AcceptProposedAction() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:277
@@ -251,7 +234,7 @@ func (this *QGraphicsSceneDragDropEvent) AcceptProposedAction() {
 // [4] Qt::DropAction dropAction()
 func (this *QGraphicsSceneDragDropEvent) DropAction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent10dropActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -261,7 +244,7 @@ func (this *QGraphicsSceneDragDropEvent) DropAction() int {
 // [-2] void setDropAction(Qt::DropAction)
 func (this *QGraphicsSceneDragDropEvent) SetDropAction(action int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent13setDropActionEN2Qt10DropActionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:280
@@ -270,7 +253,7 @@ func (this *QGraphicsSceneDragDropEvent) SetDropAction(action int) {
 // [8] QWidget * source()
 func (this *QGraphicsSceneDragDropEvent) Source() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -281,7 +264,7 @@ func (this *QGraphicsSceneDragDropEvent) Source() *QWidget /*777 QWidget **/ {
 func (this *QGraphicsSceneDragDropEvent) SetSource(source *QWidget /*777 QWidget **/) {
 	var convArg0 = source.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:283
@@ -290,7 +273,7 @@ func (this *QGraphicsSceneDragDropEvent) SetSource(source *QWidget /*777 QWidget
 // [8] const QMimeData * mimeData()
 func (this *QGraphicsSceneDragDropEvent) MimeData() *qtcore.QMimeData /*777 const QMimeData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMimeDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -301,7 +284,32 @@ func (this *QGraphicsSceneDragDropEvent) MimeData() *qtcore.QMimeData /*777 cons
 func (this *QGraphicsSceneDragDropEvent) SetMimeData(data *qtcore.QMimeData /*777 const QMimeData **/) {
 	var convArg0 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

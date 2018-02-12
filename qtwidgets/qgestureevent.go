@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -78,7 +61,7 @@ func (*QGestureEvent) NewFromPointer(cthis unsafe.Pointer) *QGestureEvent {
 func DeleteQGestureEvent(this *QGestureEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -88,7 +71,7 @@ func DeleteQGestureEvent(this *QGestureEvent) {
 // [8] QGesture * gesture(Qt::GestureType)
 func (this *QGestureEvent) Gesture(type_ int) *QGesture /*777 QGesture **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGestureEvent7gestureEN2Qt11GestureTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQGestureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -99,7 +82,7 @@ func (this *QGestureEvent) Gesture(type_ int) *QGesture /*777 QGesture **/ {
 func (this *QGestureEvent) SetAccepted(arg0 *QGesture /*777 QGesture **/, arg1 bool) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEP8QGestureb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:296
@@ -108,7 +91,7 @@ func (this *QGestureEvent) SetAccepted(arg0 *QGesture /*777 QGesture **/, arg1 b
 // [-2] void setAccepted(Qt::GestureType, _Bool)
 func (this *QGestureEvent) SetAccepted_1(arg0 int, arg1 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEN2Qt11GestureTypeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:292
@@ -118,7 +101,7 @@ func (this *QGestureEvent) SetAccepted_1(arg0 int, arg1 bool) {
 func (this *QGestureEvent) Accept(arg0 *QGesture /*777 QGesture **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEP8QGesture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:297
@@ -127,7 +110,7 @@ func (this *QGestureEvent) Accept(arg0 *QGesture /*777 QGesture **/) {
 // [-2] void accept(Qt::GestureType)
 func (this *QGestureEvent) Accept_1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEN2Qt11GestureTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:293
@@ -137,7 +120,7 @@ func (this *QGestureEvent) Accept_1(arg0 int) {
 func (this *QGestureEvent) Ignore(arg0 *QGesture /*777 QGesture **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEP8QGesture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:298
@@ -146,7 +129,7 @@ func (this *QGestureEvent) Ignore(arg0 *QGesture /*777 QGesture **/) {
 // [-2] void ignore(Qt::GestureType)
 func (this *QGestureEvent) Ignore_1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEN2Qt11GestureTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:294
@@ -156,7 +139,7 @@ func (this *QGestureEvent) Ignore_1(arg0 int) {
 func (this *QGestureEvent) IsAccepted(arg0 *QGesture /*777 QGesture **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEP8QGesture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -166,7 +149,7 @@ func (this *QGestureEvent) IsAccepted(arg0 *QGesture /*777 QGesture **/) bool {
 // [1] bool isAccepted(Qt::GestureType)
 func (this *QGestureEvent) IsAccepted_1(arg0 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEN2Qt11GestureTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -177,7 +160,7 @@ func (this *QGestureEvent) IsAccepted_1(arg0 int) bool {
 func (this *QGestureEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEvent9setWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:302
@@ -186,7 +169,7 @@ func (this *QGestureEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
 // [8] QWidget * widget()
 func (this *QGestureEvent) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGestureEvent6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -197,10 +180,35 @@ func (this *QGestureEvent) Widget() *QWidget /*777 QWidget **/ {
 func (this *QGestureEvent) MapToGraphicsScene(gesturePoint *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	var convArg0 = gesturePoint.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

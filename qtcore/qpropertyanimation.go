@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QPropertyAnimation) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -83,7 +73,7 @@ func (*QPropertyAnimation) NewFromPointer(cthis unsafe.Pointer) *QPropertyAnimat
 // [8] const QMetaObject * metaObject()
 func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -94,7 +84,7 @@ func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 func NewQPropertyAnimation(parent *QObject /*777 QObject **/) *QPropertyAnimation {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -108,7 +98,7 @@ func NewQPropertyAnimation_1(target *QObject /*777 QObject **/, propertyName *QB
 	var convArg1 = propertyName.GetCthis()
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -120,7 +110,7 @@ func NewQPropertyAnimation_1(target *QObject /*777 QObject **/, propertyName *QB
 func DeleteQPropertyAnimation(this *QPropertyAnimation) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -130,7 +120,7 @@ func DeleteQPropertyAnimation(this *QPropertyAnimation) {
 // [8] QObject * targetObject()
 func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation12targetObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -141,7 +131,7 @@ func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
 func (this *QPropertyAnimation) SetTargetObject(target *QObject /*777 QObject **/) {
 	var convArg0 = target.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation15setTargetObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qpropertyanimation.h:65
@@ -150,7 +140,7 @@ func (this *QPropertyAnimation) SetTargetObject(target *QObject /*777 QObject **
 // [8] QByteArray propertyName()
 func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation12propertyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -163,7 +153,7 @@ func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
 func (this *QPropertyAnimation) SetPropertyName(propertyName *QByteArray) {
 	var convArg0 = propertyName.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qpropertyanimation.h:69
@@ -173,7 +163,7 @@ func (this *QPropertyAnimation) SetPropertyName(propertyName *QByteArray) {
 func (this *QPropertyAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -184,7 +174,7 @@ func (this *QPropertyAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 func (this *QPropertyAnimation) UpdateCurrentValue(value *QVariant) {
 	var convArg0 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation18updateCurrentValueERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qpropertyanimation.h:71
@@ -193,7 +183,26 @@ func (this *QPropertyAnimation) UpdateCurrentValue(value *QVariant) {
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QPropertyAnimation) UpdateState(newState int, oldState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation11updateStateEN18QAbstractAnimation5StateES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

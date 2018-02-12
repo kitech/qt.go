@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -74,7 +60,7 @@ func (*QPaintEvent) NewFromPointer(cthis unsafe.Pointer) *QPaintEvent {
 func NewQPaintEvent(paintRegion *QRegion) *QPaintEvent {
 	var convArg0 = paintRegion.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventC2ERK7QRegion", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaintEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPaintEvent)
 	return gothis
@@ -87,7 +73,7 @@ func NewQPaintEvent(paintRegion *QRegion) *QPaintEvent {
 func NewQPaintEvent_1(paintRect *qtcore.QRect) *QPaintEvent {
 	var convArg0 = paintRect.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventC2ERK5QRect", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaintEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPaintEvent)
 	return gothis
@@ -100,7 +86,7 @@ func NewQPaintEvent_1(paintRect *qtcore.QRect) *QPaintEvent {
 func DeleteQPaintEvent(this *QPaintEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -110,7 +96,7 @@ func DeleteQPaintEvent(this *QPaintEvent) {
 // [16] const QRect & rect()
 func (this *QPaintEvent) Rect() *qtcore.QRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPaintEvent4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -122,10 +108,32 @@ func (this *QPaintEvent) Rect() *qtcore.QRect {
 // [8] const QRegion & region()
 func (this *QPaintEvent) Region() *QRegion {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPaintEvent6regionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

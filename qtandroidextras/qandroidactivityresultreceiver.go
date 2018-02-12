@@ -6,6 +6,14 @@ package qtandroidextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QAndroidActivityResultReceiver) NewFromPointer(cthis unsafe.Pointer) *QAn
 // [-2] void QAndroidActivityResultReceiver()
 func NewQAndroidActivityResultReceiver() *QAndroidActivityResultReceiver {
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QAndroidActivityResultReceiverC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidActivityResultReceiverFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAndroidActivityResultReceiver)
 	return gothis
@@ -89,7 +75,7 @@ func NewQAndroidActivityResultReceiver() *QAndroidActivityResultReceiver {
 func DeleteQAndroidActivityResultReceiver(this *QAndroidActivityResultReceiver) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QAndroidActivityResultReceiverD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +86,29 @@ func DeleteQAndroidActivityResultReceiver(this *QAndroidActivityResultReceiver) 
 func (this *QAndroidActivityResultReceiver) HandleActivityResult(receiverRequestCode int, resultCode int, data *QAndroidJniObject) {
 	var convArg2 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QAndroidActivityResultReceiver20handleActivityResultEiiRK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), receiverRequestCode, resultCode, convArg2)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QTextImageFormat) NewFromPointer(cthis unsafe.Pointer) *QTextImageFormat 
 // [-2] void QTextImageFormat()
 func NewQTextImageFormat() *QTextImageFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormatC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextImageFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextImageFormat)
 	return gothis
@@ -86,7 +72,7 @@ func NewQTextImageFormat() *QTextImageFormat {
 func NewQTextImageFormat_1(format *QTextFormat) *QTextImageFormat {
 	var convArg0 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextImageFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextImageFormat)
 	return gothis
@@ -98,7 +84,7 @@ func NewQTextImageFormat_1(format *QTextFormat) *QTextImageFormat {
 // [1] bool isValid()
 func (this *QTextImageFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -110,7 +96,7 @@ func (this *QTextImageFormat) SetName(name string) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormat7setNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:740
@@ -119,7 +105,7 @@ func (this *QTextImageFormat) SetName(name string) {
 // [8] QString name()
 func (this *QTextImageFormat) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -132,7 +118,7 @@ func (this *QTextImageFormat) Name() string {
 // [-2] void setWidth(qreal)
 func (this *QTextImageFormat) SetWidth(width float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormat8setWidthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:744
@@ -141,7 +127,7 @@ func (this *QTextImageFormat) SetWidth(width float64) {
 // [8] qreal width()
 func (this *QTextImageFormat) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -151,7 +137,7 @@ func (this *QTextImageFormat) Width() float64 {
 // [-2] void setHeight(qreal)
 func (this *QTextImageFormat) SetHeight(height float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormat9setHeightEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), height)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:748
@@ -160,14 +146,36 @@ func (this *QTextImageFormat) SetHeight(height float64) {
 // [8] qreal height()
 func (this *QTextImageFormat) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 func DeleteQTextImageFormat(this *QTextImageFormat) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormatD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QTextTableCell) NewFromPointer(cthis unsafe.Pointer) *QTextTableCell {
 // [-2] void QTextTableCell()
 func NewQTextTableCell() *QTextTableCell {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTextTableCellC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextTableCellFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextTableCell)
 	return gothis
@@ -89,7 +75,7 @@ func NewQTextTableCell() *QTextTableCell {
 func DeleteQTextTableCell(this *QTextTableCell) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTextTableCellD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -100,7 +86,7 @@ func DeleteQTextTableCell(this *QTextTableCell) {
 func (this *QTextTableCell) SetFormat(format *QTextCharFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTextTableCell9setFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:64
@@ -109,7 +95,7 @@ func (this *QTextTableCell) SetFormat(format *QTextCharFormat) {
 // [16] QTextCharFormat format()
 func (this *QTextTableCell) Format() *QTextCharFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCharFormat)
 	return rv2
@@ -121,7 +107,7 @@ func (this *QTextTableCell) Format() *QTextCharFormat /*123*/ {
 // [4] int row()
 func (this *QTextTableCell) Row() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell3rowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -131,7 +117,7 @@ func (this *QTextTableCell) Row() int {
 // [4] int column()
 func (this *QTextTableCell) Column() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell6columnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -141,7 +127,7 @@ func (this *QTextTableCell) Column() int {
 // [4] int rowSpan()
 func (this *QTextTableCell) RowSpan() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell7rowSpanEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -151,7 +137,7 @@ func (this *QTextTableCell) RowSpan() int {
 // [4] int columnSpan()
 func (this *QTextTableCell) ColumnSpan() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell10columnSpanEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -161,7 +147,7 @@ func (this *QTextTableCell) ColumnSpan() int {
 // [1] bool isValid()
 func (this *QTextTableCell) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -171,7 +157,7 @@ func (this *QTextTableCell) IsValid() bool {
 // [8] QTextCursor firstCursorPosition()
 func (this *QTextTableCell) FirstCursorPosition() *QTextCursor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell19firstCursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
@@ -183,7 +169,7 @@ func (this *QTextTableCell) FirstCursorPosition() *QTextCursor /*123*/ {
 // [8] QTextCursor lastCursorPosition()
 func (this *QTextTableCell) LastCursorPosition() *QTextCursor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell18lastCursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
@@ -195,7 +181,7 @@ func (this *QTextTableCell) LastCursorPosition() *QTextCursor /*123*/ {
 // [4] int firstPosition()
 func (this *QTextTableCell) FirstPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell13firstPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -205,7 +191,7 @@ func (this *QTextTableCell) FirstPosition() int {
 // [4] int lastPosition()
 func (this *QTextTableCell) LastPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell12lastPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -215,7 +201,7 @@ func (this *QTextTableCell) LastPosition() int {
 // [32] QTextFrame::iterator begin()
 func (this *QTextTableCell) Begin() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -225,7 +211,7 @@ func (this *QTextTableCell) Begin() int {
 // [32] QTextFrame::iterator end()
 func (this *QTextTableCell) End() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -235,8 +221,30 @@ func (this *QTextTableCell) End() int {
 // [4] int tableCellFormatIndex()
 func (this *QTextTableCell) TableCellFormatIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell20tableCellFormatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

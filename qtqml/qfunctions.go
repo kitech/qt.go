@@ -1,10 +1,9 @@
 package qtqml
 
 import "unsafe"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
 
 func init() {
 	if false {
@@ -15,9 +14,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
 	}
 	if false {
 		qtcore.KeepMe()
@@ -37,7 +33,7 @@ func init() {
 func QmlEngine(arg0 *qtcore.QObject /*777 const QObject **/) *QQmlEngine /*777 QQmlEngine **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml9qmlEngineEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -49,7 +45,7 @@ func QmlDebug(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *QQm
 	var convArg0 = me.GetCthis()
 	var convArg1 = error.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml8qmlDebugEPK7QObjectRK9QQmlError", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQmlInfo)
 	return rv2
@@ -62,7 +58,7 @@ func QmlDebug(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *QQm
 func QmlDebug_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ {
 	var convArg0 = me.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml8qmlDebugEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQmlInfo)
 	return rv2
@@ -76,7 +72,7 @@ func QmlInfo(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *QQml
 	var convArg0 = me.GetCthis()
 	var convArg1 = error.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml7qmlInfoEPK7QObjectRK9QQmlError", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQmlInfo)
 	return rv2
@@ -89,7 +85,7 @@ func QmlInfo(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *QQml
 func QmlInfo_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ {
 	var convArg0 = me.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml7qmlInfoEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQmlInfo)
 	return rv2
@@ -102,7 +98,7 @@ func QmlInfo_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ {
 func QmlAttachedPropertiesObjectById(arg0 int, arg1 *qtcore.QObject /*777 const QObject **/, create bool) *qtcore.QObject /*777 QObject **/ {
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml31qmlAttachedPropertiesObjectByIdEiPK7QObjectb", qtrt.FFI_TYPE_POINTER, arg0, convArg1, create)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -114,7 +110,7 @@ func QmlAttachedPropertiesObject(arg0 unsafe.Pointer /*666*/, arg1 *qtcore.QObje
 	var convArg1 = arg1.GetCthis()
 	var convArg2 = arg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml27qmlAttachedPropertiesObjectEPiPK7QObjectPK11QMetaObjectb", qtrt.FFI_TYPE_POINTER, &arg0, convArg1, convArg2, create)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -125,7 +121,7 @@ func QmlAttachedPropertiesObject(arg0 unsafe.Pointer /*666*/, arg1 *qtcore.QObje
 func QmlExecuteDeferred(arg0 *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml18qmlExecuteDeferredEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqmlinfo.h:62
@@ -136,7 +132,7 @@ func QmlWarning(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *Q
 	var convArg0 = me.GetCthis()
 	var convArg1 = error.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml10qmlWarningEPK7QObjectRK9QQmlError", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQmlInfo)
 	return rv2
@@ -149,7 +145,7 @@ func QmlWarning(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *Q
 func QmlWarning_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ {
 	var convArg0 = me.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml10qmlWarningEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQmlInfo)
 	return rv2
@@ -162,7 +158,7 @@ func QmlWarning_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ 
 func QmlContext(arg0 *qtcore.QObject /*777 const QObject **/) *QQmlContext /*777 QQmlContext **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml10qmlContextEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -172,7 +168,7 @@ func QmlContext(arg0 *qtcore.QObject /*777 const QObject **/) *QQmlContext /*777
 // [4] int qmlregister(enum QQmlPrivate::RegistrationType, void *)
 func Qmlregister(arg0 int, arg1 unsafe.Pointer /*666*/) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlPrivate11qmlregisterENS_16RegistrationTypeEPv", qtrt.FFI_TYPE_POINTER, arg0, arg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -183,7 +179,7 @@ func Qmlregister(arg0 int, arg1 unsafe.Pointer /*666*/) int {
 func QjsEngine(arg0 *qtcore.QObject /*777 const QObject **/) *QJSEngine /*777 QJSEngine **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z9qjsEnginePK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQJSEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -194,7 +190,7 @@ func QjsEngine(arg0 *qtcore.QObject /*777 const QObject **/) *QJSEngine /*777 QJ
 func QHash_42(key *QQmlProperty) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK12QQmlProperty", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
 
@@ -211,7 +207,7 @@ func QmlRegisterUncreatableMetaObject(staticMetaObject *qtcore.QMetaObject, uri 
 	var tmpArg5 = qtcore.NewQString_5(reason)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z32qmlRegisterUncreatableMetaObjectRK11QMetaObjectPKciiS3_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, versionMajor, versionMinor, convArg4, convArg5)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -227,7 +223,7 @@ func QmlRegisterTypeNotAvailable(uri string, versionMajor int, versionMinor int,
 	var tmpArg4 = qtcore.NewQString_5(message)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z27qmlRegisterTypeNotAvailablePKciiS0_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, versionMajor, versionMinor, convArg3, convArg4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -237,7 +233,7 @@ func QmlRegisterTypeNotAvailable(uri string, versionMajor int, versionMinor int,
 // [-2] void qmlClearTypeRegistrations()
 func QmlClearTypeRegistrations() {
 	rv, err := qtrt.InvokeQtFunc6("_Z25qmlClearTypeRegistrationsv", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqml.h:610
@@ -251,7 +247,7 @@ func QmlRegisterSingletonType(url *qtcore.QUrl, uri string, versionMajor int, ve
 	var convArg4 = qtrt.CString(qmlName)
 	defer qtrt.FreeMem(convArg4)
 	rv, err := qtrt.InvokeQtFunc6("_Z24qmlRegisterSingletonTypeRK4QUrlPKciiS3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, versionMajor, versionMinor, convArg4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -265,7 +261,7 @@ func QmlRegisterSingletonType_1(uri string, versionMajor int, versionMinor int, 
 	var convArg3 = qtrt.CString(typeName)
 	defer qtrt.FreeMem(convArg3)
 	rv, err := qtrt.InvokeQtFunc6("_Z24qmlRegisterSingletonTypePKciiS0_PF8QJSValueP10QQmlEngineP9QJSEngineE", qtrt.FFI_TYPE_POINTER, convArg0, versionMajor, versionMinor, convArg3, callback)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -277,7 +273,7 @@ func QmlRegisterBaseTypes(uri string, versionMajor int, versionMinor int) {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z20qmlRegisterBaseTypesPKcii", qtrt.FFI_TYPE_POINTER, convArg0, versionMajor, versionMinor)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qjsengine.h:133
@@ -287,7 +283,7 @@ func QmlRegisterBaseTypes(uri string, versionMajor int, versionMinor int) {
 func Qjsvalue_cast_helper(value *QJSValue, type_ int, ptr unsafe.Pointer /*666*/) bool {
 	var convArg0 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z20qjsvalue_cast_helperRK8QJSValueiPv", qtrt.FFI_TYPE_POINTER, convArg0, type_, ptr)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -299,7 +295,7 @@ func QmlRegisterModule(uri string, versionMajor int, versionMinor int) {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z17qmlRegisterModulePKcii", qtrt.FFI_TYPE_POINTER, convArg0, versionMajor, versionMinor)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQml/qqml.h:566
@@ -310,7 +306,7 @@ func QmlProtectModule(uri string, majVersion int) bool {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z16qmlProtectModulePKci", qtrt.FFI_TYPE_POINTER, convArg0, majVersion)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -325,7 +321,7 @@ func QmlRegisterType(url *qtcore.QUrl, uri string, versionMajor int, versionMino
 	var convArg4 = qtrt.CString(qmlName)
 	defer qtrt.FreeMem(convArg4)
 	rv, err := qtrt.InvokeQtFunc6("_Z15qmlRegisterTypeRK4QUrlPKciiS3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, versionMajor, versionMinor, convArg4)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

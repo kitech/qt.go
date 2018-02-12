@@ -4,18 +4,17 @@ package main
  */
 import "C"
 import (
-	"gopp"
 	"log"
 	"unsafe"
 
-	"qt.go/qtcore"
-	"qt.go/qtrt"
-	"qt.go/qtwidgets"
+	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtrt"
+	"github.com/kitech/qt.go/qtwidgets"
 )
 
 func tLength(ptr unsafe.Pointer) int {
 	rv, err := qtrt.InvokeQtFunc6("C_ZNK7QString6lengthEv", qtrt.FFI_TYPE_POINTER, ptr)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	//  return rv
 	log.Println(rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

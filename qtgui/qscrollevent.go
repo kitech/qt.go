@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -75,7 +61,7 @@ func NewQScrollEvent(contentPos *qtcore.QPointF, overshoot *qtcore.QPointF, scro
 	var convArg0 = contentPos.GetCthis()
 	var convArg1 = overshoot.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QScrollEventC2ERK7QPointFS2_NS_11ScrollStateE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, scrollState)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQScrollEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQScrollEvent)
 	return gothis
@@ -88,7 +74,7 @@ func NewQScrollEvent(contentPos *qtcore.QPointF, overshoot *qtcore.QPointF, scro
 func DeleteQScrollEvent(this *QScrollEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QScrollEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 64)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -98,7 +84,7 @@ func DeleteQScrollEvent(this *QScrollEvent) {
 // [16] QPointF contentPos()
 func (this *QScrollEvent) ContentPos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QScrollEvent10contentPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -110,7 +96,7 @@ func (this *QScrollEvent) ContentPos() *qtcore.QPointF /*123*/ {
 // [16] QPointF overshootDistance()
 func (this *QScrollEvent) OvershootDistance() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QScrollEvent17overshootDistanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -122,7 +108,7 @@ func (this *QScrollEvent) OvershootDistance() *qtcore.QPointF /*123*/ {
 // [4] QScrollEvent::ScrollState scrollState()
 func (this *QScrollEvent) ScrollState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QScrollEvent11scrollStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -133,3 +119,25 @@ const QScrollEvent__ScrollUpdated QScrollEvent__ScrollState = 1
 const QScrollEvent__ScrollFinished QScrollEvent__ScrollState = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

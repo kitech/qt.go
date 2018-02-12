@@ -6,6 +6,14 @@ package qtgui
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -76,7 +62,7 @@ func (*QTextDocumentWriter) NewFromPointer(cthis unsafe.Pointer) *QTextDocumentW
 // [-2] void QTextDocumentWriter()
 func NewQTextDocumentWriter() *QTextDocumentWriter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriterC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDocumentWriterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextDocumentWriter)
 	return gothis
@@ -90,7 +76,7 @@ func NewQTextDocumentWriter_1(device *qtcore.QIODevice /*777 QIODevice **/, form
 	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriterC2EP9QIODeviceRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDocumentWriterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextDocumentWriter)
 	return gothis
@@ -105,7 +91,7 @@ func NewQTextDocumentWriter_2(fileName string, format *qtcore.QByteArray) *QText
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDocumentWriterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextDocumentWriter)
 	return gothis
@@ -118,7 +104,7 @@ func NewQTextDocumentWriter_2(fileName string, format *qtcore.QByteArray) *QText
 func DeleteQTextDocumentWriter(this *QTextDocumentWriter) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriterD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -129,7 +115,7 @@ func DeleteQTextDocumentWriter(this *QTextDocumentWriter) {
 func (this *QTextDocumentWriter) SetFormat(format *qtcore.QByteArray) {
 	var convArg0 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:63
@@ -138,7 +124,7 @@ func (this *QTextDocumentWriter) SetFormat(format *qtcore.QByteArray) {
 // [8] QByteArray format()
 func (this *QTextDocumentWriter) Format() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextDocumentWriter6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
@@ -151,7 +137,7 @@ func (this *QTextDocumentWriter) Format() *qtcore.QByteArray /*123*/ {
 func (this *QTextDocumentWriter) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:66
@@ -160,7 +146,7 @@ func (this *QTextDocumentWriter) SetDevice(device *qtcore.QIODevice /*777 QIODev
 // [8] QIODevice * device()
 func (this *QTextDocumentWriter) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextDocumentWriter6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -172,7 +158,7 @@ func (this *QTextDocumentWriter) SetFileName(fileName string) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:68
@@ -181,7 +167,7 @@ func (this *QTextDocumentWriter) SetFileName(fileName string) {
 // [8] QString fileName()
 func (this *QTextDocumentWriter) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextDocumentWriter8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -195,7 +181,7 @@ func (this *QTextDocumentWriter) FileName() string {
 func (this *QTextDocumentWriter) Write(document *QTextDocument /*777 const QTextDocument **/) bool {
 	var convArg0 = document.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter5writeEPK13QTextDocument", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -206,7 +192,7 @@ func (this *QTextDocumentWriter) Write(document *QTextDocument /*777 const QText
 func (this *QTextDocumentWriter) Write_1(fragment *QTextDocumentFragment) bool {
 	var convArg0 = fragment.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -217,7 +203,7 @@ func (this *QTextDocumentWriter) Write_1(fragment *QTextDocumentFragment) bool {
 func (this *QTextDocumentWriter) SetCodec(codec *qtcore.QTextCodec /*777 QTextCodec **/) {
 	var convArg0 = codec.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter8setCodecEP10QTextCodec", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:75
@@ -226,8 +212,30 @@ func (this *QTextDocumentWriter) SetCodec(codec *qtcore.QTextCodec /*777 QTextCo
 // [8] QTextCodec * codec()
 func (this *QTextDocumentWriter) Codec() *qtcore.QTextCodec /*777 QTextCodec **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextDocumentWriter5codecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

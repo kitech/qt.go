@@ -6,6 +6,14 @@ package qtquick
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,42 +24,11 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtnetwork"
-import "qt.go/qtgui"
-import "qt.go/qtqml"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtnetwork.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
-		qtqml.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtnetwork"
+import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtqml"
 
 //  ext block end
 
@@ -89,7 +66,7 @@ func (*QSGRendererInterface) NewFromPointer(cthis unsafe.Pointer) *QSGRendererIn
 func DeleteQSGRendererInterface(this *QSGRendererInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGRendererInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -99,7 +76,7 @@ func DeleteQSGRendererInterface(this *QSGRendererInterface) {
 // [4] QSGRendererInterface::GraphicsApi graphicsApi()
 func (this *QSGRendererInterface) GraphicsApi() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11graphicsApiEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -110,7 +87,7 @@ func (this *QSGRendererInterface) GraphicsApi() int {
 func (this *QSGRendererInterface) GetResource(window *QQuickWindow /*777 QQuickWindow **/, resource int) unsafe.Pointer /*666*/ {
 	var convArg0 = window.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowNS_8ResourceE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, resource)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -123,7 +100,7 @@ func (this *QSGRendererInterface) GetResource_1(window *QQuickWindow /*777 QQuic
 	var convArg1 = qtrt.CString(resource)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -133,7 +110,7 @@ func (this *QSGRendererInterface) GetResource_1(window *QQuickWindow /*777 QQuic
 // [4] QSGRendererInterface::ShaderType shaderType()
 func (this *QSGRendererInterface) ShaderType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface10shaderTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -143,7 +120,7 @@ func (this *QSGRendererInterface) ShaderType() int {
 // [4] QSGRendererInterface::ShaderCompilationTypes shaderCompilationType()
 func (this *QSGRendererInterface) ShaderCompilationType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface21shaderCompilationTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -153,7 +130,7 @@ func (this *QSGRendererInterface) ShaderCompilationType() int {
 // [4] QSGRendererInterface::ShaderSourceTypes shaderSourceType()
 func (this *QSGRendererInterface) ShaderSourceType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface16shaderSourceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -190,3 +167,34 @@ const QSGRendererInterface__ShaderSourceFile QSGRendererInterface__ShaderSourceT
 const QSGRendererInterface__ShaderByteCode QSGRendererInterface__ShaderSourceType = 4
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtnetwork.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+	if false {
+		qtqml.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
@@ -73,7 +59,7 @@ func (*QNetworkConfigurationManager) NewFromPointer(cthis unsafe.Pointer) *QNetw
 // [8] const QMetaObject * metaObject()
 func (this *QNetworkConfigurationManager) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QNetworkConfigurationManager10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -84,7 +70,7 @@ func (this *QNetworkConfigurationManager) MetaObject() *qtcore.QMetaObject /*777
 func NewQNetworkConfigurationManager(parent *qtcore.QObject /*777 QObject **/) *QNetworkConfigurationManager {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManagerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkConfigurationManagerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -96,7 +82,7 @@ func NewQNetworkConfigurationManager(parent *qtcore.QObject /*777 QObject **/) *
 func DeleteQNetworkConfigurationManager(this *QNetworkConfigurationManager) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManagerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -106,7 +92,7 @@ func DeleteQNetworkConfigurationManager(this *QNetworkConfigurationManager) {
 // [4] QNetworkConfigurationManager::Capabilities capabilities()
 func (this *QNetworkConfigurationManager) Capabilities() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QNetworkConfigurationManager12capabilitiesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -116,7 +102,7 @@ func (this *QNetworkConfigurationManager) Capabilities() int {
 // [8] QNetworkConfiguration defaultConfiguration()
 func (this *QNetworkConfigurationManager) DefaultConfiguration() *QNetworkConfiguration /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QNetworkConfigurationManager20defaultConfigurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQNetworkConfigurationFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkConfiguration)
 	return rv2
@@ -130,7 +116,7 @@ func (this *QNetworkConfigurationManager) ConfigurationFromIdentifier(identifier
 	var tmpArg0 = qtcore.NewQString_5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QNetworkConfigurationManager27configurationFromIdentifierERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQNetworkConfigurationFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkConfiguration)
 	return rv2
@@ -142,7 +128,7 @@ func (this *QNetworkConfigurationManager) ConfigurationFromIdentifier(identifier
 // [1] bool isOnline()
 func (this *QNetworkConfigurationManager) IsOnline() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QNetworkConfigurationManager8isOnlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -152,7 +138,7 @@ func (this *QNetworkConfigurationManager) IsOnline() bool {
 // [-2] void updateConfigurations()
 func (this *QNetworkConfigurationManager) UpdateConfigurations() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManager20updateConfigurationsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfigmanager.h:84
@@ -162,7 +148,7 @@ func (this *QNetworkConfigurationManager) UpdateConfigurations() {
 func (this *QNetworkConfigurationManager) ConfigurationAdded(config *QNetworkConfiguration) {
 	var convArg0 = config.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManager18configurationAddedERK21QNetworkConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfigmanager.h:85
@@ -172,7 +158,7 @@ func (this *QNetworkConfigurationManager) ConfigurationAdded(config *QNetworkCon
 func (this *QNetworkConfigurationManager) ConfigurationRemoved(config *QNetworkConfiguration) {
 	var convArg0 = config.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManager20configurationRemovedERK21QNetworkConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfigmanager.h:86
@@ -182,7 +168,7 @@ func (this *QNetworkConfigurationManager) ConfigurationRemoved(config *QNetworkC
 func (this *QNetworkConfigurationManager) ConfigurationChanged(config *QNetworkConfiguration) {
 	var convArg0 = config.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManager20configurationChangedERK21QNetworkConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfigmanager.h:87
@@ -191,7 +177,7 @@ func (this *QNetworkConfigurationManager) ConfigurationChanged(config *QNetworkC
 // [-2] void onlineStateChanged(_Bool)
 func (this *QNetworkConfigurationManager) OnlineStateChanged(isOnline bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManager18onlineStateChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), isOnline)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfigmanager.h:88
@@ -200,7 +186,7 @@ func (this *QNetworkConfigurationManager) OnlineStateChanged(isOnline bool) {
 // [-2] void updateCompleted()
 func (this *QNetworkConfigurationManager) UpdateCompleted() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManager15updateCompletedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QNetworkConfigurationManager__Capability = int
@@ -214,3 +200,25 @@ const QNetworkConfigurationManager__DataStatistics QNetworkConfigurationManager_
 const QNetworkConfigurationManager__NetworkSessionRequired QNetworkConfigurationManager__Capability = 64
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // int indexOfIn(const char *, uint, const char *, int, int)
 func (this *QStaticByteArrayMatcherBase) InheritIndexOfIn(f func(needle string, nlen uint, haystack string, hlen int, from int) int) {
 	qtrt.SetAllInheritCallback(this, "indexOfIn", f)
@@ -78,7 +68,7 @@ func NewQStaticByteArrayMatcherBase(pattern string, n uint) *QStaticByteArrayMat
 	var convArg0 = qtrt.CString(pattern)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QStaticByteArrayMatcherBaseC2EPKcj", qtrt.FFI_TYPE_POINTER, convArg0, n)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStaticByteArrayMatcherBaseFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStaticByteArrayMatcherBase)
 	return gothis
@@ -94,14 +84,33 @@ func (this *QStaticByteArrayMatcherBase) IndexOfIn(needle string, nlen uint, hay
 	var convArg2 = qtrt.CString(haystack)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QStaticByteArrayMatcherBase9indexOfInEPKcjS1_ii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, nlen, convArg2, hlen, from)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 func DeleteQStaticByteArrayMatcherBase(this *QStaticByteArrayMatcherBase) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QStaticByteArrayMatcherBaseD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

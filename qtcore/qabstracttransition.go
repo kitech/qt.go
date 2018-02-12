@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,30 +24,12 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
 //  body block begin
+
 // bool eventTest(class QEvent *)
 func (this *QAbstractTransition) InheritEventTest(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventTest", f)
@@ -83,7 +73,7 @@ func (*QAbstractTransition) NewFromPointer(cthis unsafe.Pointer) *QAbstractTrans
 // [8] const QMetaObject * metaObject()
 func (this *QAbstractTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -94,7 +84,7 @@ func (this *QAbstractTransition) MetaObject() *QMetaObject /*777 const QMetaObje
 func NewQAbstractTransition(sourceState *QState /*777 QState **/) *QAbstractTransition {
 	var convArg0 = sourceState.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -106,7 +96,7 @@ func NewQAbstractTransition(sourceState *QState /*777 QState **/) *QAbstractTran
 func DeleteQAbstractTransition(this *QAbstractTransition) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransitionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -116,7 +106,7 @@ func DeleteQAbstractTransition(this *QAbstractTransition) {
 // [8] QState * sourceState()
 func (this *QAbstractTransition) SourceState() *QState /*777 QState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition11sourceStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQStateFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -126,7 +116,7 @@ func (this *QAbstractTransition) SourceState() *QState /*777 QState **/ {
 // [8] QAbstractState * targetState()
 func (this *QAbstractTransition) TargetState() *QAbstractState /*777 QAbstractState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition11targetStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractStateFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -137,7 +127,7 @@ func (this *QAbstractTransition) TargetState() *QAbstractState /*777 QAbstractSt
 func (this *QAbstractTransition) SetTargetState(target *QAbstractState /*777 QAbstractState **/) {
 	var convArg0 = target.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition14setTargetStateEP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracttransition.h:84
@@ -146,7 +136,7 @@ func (this *QAbstractTransition) SetTargetState(target *QAbstractState /*777 QAb
 // [4] QAbstractTransition::TransitionType transitionType()
 func (this *QAbstractTransition) TransitionType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition14transitionTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -156,7 +146,7 @@ func (this *QAbstractTransition) TransitionType() int {
 // [-2] void setTransitionType(enum QAbstractTransition::TransitionType)
 func (this *QAbstractTransition) SetTransitionType(type_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition17setTransitionTypeENS_14TransitionTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracttransition.h:87
@@ -165,7 +155,7 @@ func (this *QAbstractTransition) SetTransitionType(type_ int) {
 // [8] QStateMachine * machine()
 func (this *QAbstractTransition) Machine() *QStateMachine /*777 QStateMachine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition7machineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQStateMachineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -176,7 +166,7 @@ func (this *QAbstractTransition) Machine() *QStateMachine /*777 QStateMachine **
 func (this *QAbstractTransition) AddAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = animation.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracttransition.h:91
@@ -186,7 +176,7 @@ func (this *QAbstractTransition) AddAnimation(animation *QAbstractAnimation /*77
 func (this *QAbstractTransition) RemoveAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = animation.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracttransition.h:101
@@ -196,7 +186,7 @@ func (this *QAbstractTransition) RemoveAnimation(animation *QAbstractAnimation /
 func (this *QAbstractTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition9eventTestEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -207,7 +197,7 @@ func (this *QAbstractTransition) EventTest(event *QEvent /*777 QEvent **/) bool 
 func (this *QAbstractTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition12onTransitionEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qabstracttransition.h:105
@@ -217,7 +207,7 @@ func (this *QAbstractTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 func (this *QAbstractTransition) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -227,3 +217,22 @@ const QAbstractTransition__ExternalTransition QAbstractTransition__TransitionTyp
 const QAbstractTransition__InternalTransition QAbstractTransition__TransitionType = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

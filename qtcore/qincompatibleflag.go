@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QIncompatibleFlag) NewFromPointer(cthis unsafe.Pointer) *QIncompatibleFla
 // [-2] void QIncompatibleFlag(int)
 func NewQIncompatibleFlag(i int) *QIncompatibleFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", qtrt.FFI_TYPE_POINTER, i)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQIncompatibleFlag)
 	return gothis
@@ -80,8 +69,27 @@ func NewQIncompatibleFlag(i int) *QIncompatibleFlag {
 
 func DeleteQIncompatibleFlag(this *QIncompatibleFlag) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIncompatibleFlagD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

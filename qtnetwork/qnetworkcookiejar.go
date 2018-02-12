@@ -6,6 +6,14 @@ package qtnetwork
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,13 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
 //  body block begin
+
 // bool validateCookie(const class QNetworkCookie &, const class QUrl &)
 func (this *QNetworkCookieJar) InheritValidateCookie(f func(cookie *QNetworkCookie, url *qtcore.QUrl) bool) {
 	qtrt.SetAllInheritCallback(this, "validateCookie", f)
@@ -77,7 +64,7 @@ func (*QNetworkCookieJar) NewFromPointer(cthis unsafe.Pointer) *QNetworkCookieJa
 // [8] const QMetaObject * metaObject()
 func (this *QNetworkCookieJar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkCookieJar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -88,7 +75,7 @@ func (this *QNetworkCookieJar) MetaObject() *qtcore.QMetaObject /*777 const QMet
 func NewQNetworkCookieJar(parent *qtcore.QObject /*777 QObject **/) *QNetworkCookieJar {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkCookieJarFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -100,7 +87,7 @@ func NewQNetworkCookieJar(parent *qtcore.QObject /*777 QObject **/) *QNetworkCoo
 func DeleteQNetworkCookieJar(this *QNetworkCookieJar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -111,7 +98,7 @@ func DeleteQNetworkCookieJar(this *QNetworkCookieJar) {
 func (this *QNetworkCookieJar) InsertCookie(cookie *QNetworkCookie) bool {
 	var convArg0 = cookie.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJar12insertCookieERK14QNetworkCookie", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -122,7 +109,7 @@ func (this *QNetworkCookieJar) InsertCookie(cookie *QNetworkCookie) bool {
 func (this *QNetworkCookieJar) UpdateCookie(cookie *QNetworkCookie) bool {
 	var convArg0 = cookie.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJar12updateCookieERK14QNetworkCookie", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -133,7 +120,7 @@ func (this *QNetworkCookieJar) UpdateCookie(cookie *QNetworkCookie) bool {
 func (this *QNetworkCookieJar) DeleteCookie(cookie *QNetworkCookie) bool {
 	var convArg0 = cookie.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJar12deleteCookieERK14QNetworkCookie", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -145,8 +132,30 @@ func (this *QNetworkCookieJar) ValidateCookie(cookie *QNetworkCookie, url *qtcor
 	var convArg0 = cookie.GetCthis()
 	var convArg1 = url.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkCookieJar14validateCookieERK14QNetworkCookieRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+}
+
+//  keep block end

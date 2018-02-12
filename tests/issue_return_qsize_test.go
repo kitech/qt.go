@@ -1,15 +1,15 @@
 package main
 
 import (
-	"gopp"
 	"log"
 	"math/rand"
 	"os"
 	"testing"
 	"time"
 
-	"qt.go/qtcore"
-	"qt.go/qtwidgets"
+	gopp "github.com/kitech/goplusplus"
+	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtwidgets"
 )
 
 func Test0(t *testing.T) {

@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -77,7 +60,7 @@ func (*QStyleOptionGraphicsItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOpt
 // [-2] void QStyleOptionGraphicsItem()
 func NewQStyleOptionGraphicsItem() *QStyleOptionGraphicsItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionGraphicsItem)
 	return gothis
@@ -89,7 +72,7 @@ func NewQStyleOptionGraphicsItem() *QStyleOptionGraphicsItem {
 // [-2] void QStyleOptionGraphicsItem(int)
 func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionGraphicsItem)
 	return gothis
@@ -102,7 +85,7 @@ func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
 func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) float64 {
 	var convArg0 = worldTransform.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 func QStyleOptionGraphicsItem_LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) float64 {
@@ -113,7 +96,7 @@ func QStyleOptionGraphicsItem_LevelOfDetailFromTransform(worldTransform *qtgui.Q
 
 func DeleteQStyleOptionGraphicsItem(this *QStyleOptionGraphicsItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -126,3 +109,28 @@ type QStyleOptionGraphicsItem__StyleOptionVersion = int
 const QStyleOptionGraphicsItem__Version QStyleOptionGraphicsItem__StyleOptionVersion = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

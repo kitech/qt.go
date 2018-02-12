@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void draw(class QPainter *)
 func (this *QGraphicsBlurEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "draw", f)
@@ -81,7 +65,7 @@ func (*QGraphicsBlurEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsBlurE
 // [8] const QMetaObject * metaObject()
 func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -92,7 +76,7 @@ func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*777 const QM
 func NewQGraphicsBlurEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsBlurEffect {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsBlurEffectFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -104,7 +88,7 @@ func NewQGraphicsBlurEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphics
 func DeleteQGraphicsBlurEffect(this *QGraphicsBlurEffect) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -115,7 +99,7 @@ func DeleteQGraphicsBlurEffect(this *QGraphicsBlurEffect) {
 func (this *QGraphicsBlurEffect) BoundingRectFor(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	var convArg0 = rect.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -127,7 +111,7 @@ func (this *QGraphicsBlurEffect) BoundingRectFor(rect *qtcore.QRectF) *qtcore.QR
 // [8] qreal blurRadius()
 func (this *QGraphicsBlurEffect) BlurRadius() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10blurRadiusEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -137,7 +121,7 @@ func (this *QGraphicsBlurEffect) BlurRadius() float64 {
 // [4] QGraphicsBlurEffect::BlurHints blurHints()
 func (this *QGraphicsBlurEffect) BlurHints() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect9blurHintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -147,7 +131,7 @@ func (this *QGraphicsBlurEffect) BlurHints() int {
 // [-2] void setBlurRadius(qreal)
 func (this *QGraphicsBlurEffect) SetBlurRadius(blurRadius float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect13setBlurRadiusEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), blurRadius)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:179
@@ -156,7 +140,7 @@ func (this *QGraphicsBlurEffect) SetBlurRadius(blurRadius float64) {
 // [-2] void setBlurHints(QGraphicsBlurEffect::BlurHints)
 func (this *QGraphicsBlurEffect) SetBlurHints(hints int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect12setBlurHintsE6QFlagsINS_8BlurHintEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hints)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:182
@@ -165,7 +149,7 @@ func (this *QGraphicsBlurEffect) SetBlurHints(hints int) {
 // [-2] void blurRadiusChanged(qreal)
 func (this *QGraphicsBlurEffect) BlurRadiusChanged(blurRadius float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect17blurRadiusChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), blurRadius)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:183
@@ -174,7 +158,7 @@ func (this *QGraphicsBlurEffect) BlurRadiusChanged(blurRadius float64) {
 // [-2] void blurHintsChanged(QGraphicsBlurEffect::BlurHints)
 func (this *QGraphicsBlurEffect) BlurHintsChanged(hints int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect16blurHintsChangedE6QFlagsINS_8BlurHintEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hints)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:186
@@ -184,7 +168,7 @@ func (this *QGraphicsBlurEffect) BlurHintsChanged(hints int) {
 func (this *QGraphicsBlurEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect4drawEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QGraphicsBlurEffect__BlurHint = int
@@ -194,3 +178,28 @@ const QGraphicsBlurEffect__QualityHint QGraphicsBlurEffect__BlurHint = 1
 const QGraphicsBlurEffect__AnimationHint QGraphicsBlurEffect__BlurHint = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

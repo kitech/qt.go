@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // bool event(class QEvent *)
 func (this *QRubberBand) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
@@ -111,7 +95,7 @@ func (*QRubberBand) NewFromPointer(cthis unsafe.Pointer) *QRubberBand {
 // [8] const QMetaObject * metaObject()
 func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QRubberBand10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -122,7 +106,7 @@ func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 func NewQRubberBand(arg0 int, arg1 *QWidget /*777 QWidget **/) *QRubberBand {
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBandC2ENS_5ShapeEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQRubberBandFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -134,7 +118,7 @@ func NewQRubberBand(arg0 int, arg1 *QWidget /*777 QWidget **/) *QRubberBand {
 func DeleteQRubberBand(this *QRubberBand) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBandD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -144,7 +128,7 @@ func DeleteQRubberBand(this *QRubberBand) {
 // [4] QRubberBand::Shape shape()
 func (this *QRubberBand) Shape() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QRubberBand5shapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -155,7 +139,7 @@ func (this *QRubberBand) Shape() int {
 func (this *QRubberBand) SetGeometry(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:66
@@ -164,7 +148,7 @@ func (this *QRubberBand) SetGeometry(r *qtcore.QRect) {
 // [-2] void setGeometry(int, int, int, int)
 func (this *QRubberBand) SetGeometry_1(x int, y int, w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11setGeometryEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:67
@@ -173,7 +157,7 @@ func (this *QRubberBand) SetGeometry_1(x int, y int, w int, h int) {
 // [-2] void move(int, int)
 func (this *QRubberBand) Move(x int, y int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand4moveEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:68
@@ -183,7 +167,7 @@ func (this *QRubberBand) Move(x int, y int) {
 func (this *QRubberBand) Move_1(p *qtcore.QPoint) {
 	var convArg0 = p.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand4moveERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:70
@@ -192,7 +176,7 @@ func (this *QRubberBand) Move_1(p *qtcore.QPoint) {
 // [-2] void resize(int, int)
 func (this *QRubberBand) Resize(w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand6resizeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:72
@@ -202,7 +186,7 @@ func (this *QRubberBand) Resize(w int, h int) {
 func (this *QRubberBand) Resize_1(s *qtcore.QSize) {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand6resizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:76
@@ -212,7 +196,7 @@ func (this *QRubberBand) Resize_1(s *qtcore.QSize) {
 func (this *QRubberBand) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -223,7 +207,7 @@ func (this *QRubberBand) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 func (this *QRubberBand) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:78
@@ -233,7 +217,7 @@ func (this *QRubberBand) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **
 func (this *QRubberBand) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:79
@@ -243,7 +227,7 @@ func (this *QRubberBand) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 func (this *QRubberBand) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:80
@@ -253,7 +237,7 @@ func (this *QRubberBand) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) 
 func (this *QRubberBand) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:81
@@ -263,7 +247,7 @@ func (this *QRubberBand) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent
 func (this *QRubberBand) MoveEvent(arg0 *qtgui.QMoveEvent /*777 QMoveEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand9moveEventEP10QMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:82
@@ -273,7 +257,7 @@ func (this *QRubberBand) MoveEvent(arg0 *qtgui.QMoveEvent /*777 QMoveEvent **/) 
 func (this *QRubberBand) InitStyleOption(option *QStyleOptionRubberBand /*777 QStyleOptionRubberBand **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QRubberBand15initStyleOptionEP22QStyleOptionRubberBand", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QRubberBand__Shape = int
@@ -282,3 +266,28 @@ const QRubberBand__Line QRubberBand__Shape = 0
 const QRubberBand__Rectangle QRubberBand__Shape = 1
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

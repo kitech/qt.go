@@ -6,6 +6,14 @@ package qtwidgets
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,38 +24,14 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
 //  body block begin
+
 // void draw(class QPainter *)
 func (this *QGraphicsDropShadowEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "draw", f)
@@ -81,7 +65,7 @@ func (*QGraphicsDropShadowEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphic
 // [8] const QMetaObject * metaObject()
 func (this *QGraphicsDropShadowEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -92,7 +76,7 @@ func (this *QGraphicsDropShadowEffect) MetaObject() *qtcore.QMetaObject /*777 co
 func NewQGraphicsDropShadowEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsDropShadowEffect {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsDropShadowEffectFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -104,7 +88,7 @@ func NewQGraphicsDropShadowEffect(parent *qtcore.QObject /*777 QObject **/) *QGr
 func DeleteQGraphicsDropShadowEffect(this *QGraphicsDropShadowEffect) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -115,7 +99,7 @@ func DeleteQGraphicsDropShadowEffect(this *QGraphicsDropShadowEffect) {
 func (this *QGraphicsDropShadowEffect) BoundingRectFor(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	var convArg0 = rect.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect15boundingRectForERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -127,7 +111,7 @@ func (this *QGraphicsDropShadowEffect) BoundingRectFor(rect *qtcore.QRectF) *qtc
 // [16] QPointF offset()
 func (this *QGraphicsDropShadowEffect) Offset() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect6offsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -139,7 +123,7 @@ func (this *QGraphicsDropShadowEffect) Offset() *qtcore.QPointF /*123*/ {
 // [8] qreal xOffset()
 func (this *QGraphicsDropShadowEffect) XOffset() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect7xOffsetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -149,7 +133,7 @@ func (this *QGraphicsDropShadowEffect) XOffset() float64 {
 // [8] qreal yOffset()
 func (this *QGraphicsDropShadowEffect) YOffset() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect7yOffsetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -159,7 +143,7 @@ func (this *QGraphicsDropShadowEffect) YOffset() float64 {
 // [8] qreal blurRadius()
 func (this *QGraphicsDropShadowEffect) BlurRadius() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect10blurRadiusEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -169,7 +153,7 @@ func (this *QGraphicsDropShadowEffect) BlurRadius() float64 {
 // [16] QColor color()
 func (this *QGraphicsDropShadowEffect) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -182,7 +166,7 @@ func (this *QGraphicsDropShadowEffect) Color() *qtgui.QColor /*123*/ {
 func (this *QGraphicsDropShadowEffect) SetOffset(ofs *qtcore.QPointF) {
 	var convArg0 = ofs.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:223
@@ -191,7 +175,7 @@ func (this *QGraphicsDropShadowEffect) SetOffset(ofs *qtcore.QPointF) {
 // [-2] void setOffset(qreal, qreal)
 func (this *QGraphicsDropShadowEffect) SetOffset_1(dx float64, dy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect9setOffsetEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:226
@@ -200,7 +184,7 @@ func (this *QGraphicsDropShadowEffect) SetOffset_1(dx float64, dy float64) {
 // [-2] void setOffset(qreal)
 func (this *QGraphicsDropShadowEffect) SetOffset_2(d float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect9setOffsetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), d)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:229
@@ -209,7 +193,7 @@ func (this *QGraphicsDropShadowEffect) SetOffset_2(d float64) {
 // [-2] void setXOffset(qreal)
 func (this *QGraphicsDropShadowEffect) SetXOffset(dx float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect10setXOffsetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:232
@@ -218,7 +202,7 @@ func (this *QGraphicsDropShadowEffect) SetXOffset(dx float64) {
 // [-2] void setYOffset(qreal)
 func (this *QGraphicsDropShadowEffect) SetYOffset(dy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect10setYOffsetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dy)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:235
@@ -227,7 +211,7 @@ func (this *QGraphicsDropShadowEffect) SetYOffset(dy float64) {
 // [-2] void setBlurRadius(qreal)
 func (this *QGraphicsDropShadowEffect) SetBlurRadius(blurRadius float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect13setBlurRadiusEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), blurRadius)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:236
@@ -237,7 +221,7 @@ func (this *QGraphicsDropShadowEffect) SetBlurRadius(blurRadius float64) {
 func (this *QGraphicsDropShadowEffect) SetColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:239
@@ -247,7 +231,7 @@ func (this *QGraphicsDropShadowEffect) SetColor(color *qtgui.QColor) {
 func (this *QGraphicsDropShadowEffect) OffsetChanged(offset *qtcore.QPointF) {
 	var convArg0 = offset.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:240
@@ -256,7 +240,7 @@ func (this *QGraphicsDropShadowEffect) OffsetChanged(offset *qtcore.QPointF) {
 // [-2] void blurRadiusChanged(qreal)
 func (this *QGraphicsDropShadowEffect) BlurRadiusChanged(blurRadius float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect17blurRadiusChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), blurRadius)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:241
@@ -266,7 +250,7 @@ func (this *QGraphicsDropShadowEffect) BlurRadiusChanged(blurRadius float64) {
 func (this *QGraphicsDropShadowEffect) ColorChanged(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:244
@@ -276,7 +260,32 @@ func (this *QGraphicsDropShadowEffect) ColorChanged(color *qtgui.QColor) {
 func (this *QGraphicsDropShadowEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect4drawEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

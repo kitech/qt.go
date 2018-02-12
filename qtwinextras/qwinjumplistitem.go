@@ -6,6 +6,14 @@ package qtwinextras
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,34 +24,9 @@ package qtwinextras
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
 
 //  ext block end
 
@@ -80,7 +63,7 @@ func (*QWinJumpListItem) NewFromPointer(cthis unsafe.Pointer) *QWinJumpListItem 
 // [-2] void QWinJumpListItem(enum QWinJumpListItem::Type)
 func NewQWinJumpListItem(type_ int) *QWinJumpListItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItemC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinJumpListItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQWinJumpListItem)
 	return gothis
@@ -93,7 +76,7 @@ func NewQWinJumpListItem(type_ int) *QWinJumpListItem {
 func DeleteQWinJumpListItem(this *QWinJumpListItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -103,7 +86,7 @@ func DeleteQWinJumpListItem(this *QWinJumpListItem) {
 // [-2] void setType(enum QWinJumpListItem::Type)
 func (this *QWinJumpListItem) SetType(type_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem7setTypeENS_4TypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:67
@@ -112,7 +95,7 @@ func (this *QWinJumpListItem) SetType(type_ int) {
 // [4] QWinJumpListItem::Type type()
 func (this *QWinJumpListItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -124,7 +107,7 @@ func (this *QWinJumpListItem) SetFilePath(filePath string) {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem11setFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:69
@@ -133,7 +116,7 @@ func (this *QWinJumpListItem) SetFilePath(filePath string) {
 // [8] QString filePath()
 func (this *QWinJumpListItem) FilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem8filePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -148,7 +131,7 @@ func (this *QWinJumpListItem) SetWorkingDirectory(workingDirectory string) {
 	var tmpArg0 = qtcore.NewQString_5(workingDirectory)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem19setWorkingDirectoryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:71
@@ -157,7 +140,7 @@ func (this *QWinJumpListItem) SetWorkingDirectory(workingDirectory string) {
 // [8] QString workingDirectory()
 func (this *QWinJumpListItem) WorkingDirectory() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem16workingDirectoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -171,7 +154,7 @@ func (this *QWinJumpListItem) WorkingDirectory() string {
 func (this *QWinJumpListItem) SetIcon(icon *qtgui.QIcon) {
 	var convArg0 = icon.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:73
@@ -180,7 +163,7 @@ func (this *QWinJumpListItem) SetIcon(icon *qtgui.QIcon) {
 // [8] QIcon icon()
 func (this *QWinJumpListItem) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
@@ -194,7 +177,7 @@ func (this *QWinJumpListItem) SetTitle(title string) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:75
@@ -203,7 +186,7 @@ func (this *QWinJumpListItem) SetTitle(title string) {
 // [8] QString title()
 func (this *QWinJumpListItem) Title() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem5titleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -218,7 +201,7 @@ func (this *QWinJumpListItem) SetDescription(description string) {
 	var tmpArg0 = qtcore.NewQString_5(description)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:77
@@ -227,7 +210,7 @@ func (this *QWinJumpListItem) SetDescription(description string) {
 // [8] QString description()
 func (this *QWinJumpListItem) Description() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
@@ -241,7 +224,7 @@ func (this *QWinJumpListItem) Description() string {
 func (this *QWinJumpListItem) SetArguments(arguments *qtcore.QStringList) {
 	var convArg0 = arguments.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem12setArgumentsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:79
@@ -250,7 +233,7 @@ func (this *QWinJumpListItem) SetArguments(arguments *qtcore.QStringList) {
 // [8] QStringList arguments()
 func (this *QWinJumpListItem) Arguments() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem9argumentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
@@ -263,3 +246,28 @@ const QWinJumpListItem__Link QWinJumpListItem__Type = 1
 const QWinJumpListItem__Separator QWinJumpListItem__Type = 2
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

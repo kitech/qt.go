@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -69,7 +58,7 @@ func (*QSignalMapper) NewFromPointer(cthis unsafe.Pointer) *QSignalMapper {
 // [8] const QMetaObject * metaObject()
 func (this *QSignalMapper) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -80,7 +69,7 @@ func (this *QSignalMapper) MetaObject() *QMetaObject /*777 const QMetaObject **/
 func NewQSignalMapper(parent *QObject /*777 QObject **/) *QSignalMapper {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapperC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSignalMapperFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -92,7 +81,7 @@ func NewQSignalMapper(parent *QObject /*777 QObject **/) *QSignalMapper {
 func DeleteQSignalMapper(this *QSignalMapper) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapperD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -103,7 +92,7 @@ func DeleteQSignalMapper(this *QSignalMapper) {
 func (this *QSignalMapper) SetMapping(sender *QObject /*777 QObject **/, id int) {
 	var convArg0 = sender.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjecti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, id)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:60
@@ -115,7 +104,7 @@ func (this *QSignalMapper) SetMapping_1(sender *QObject /*777 QObject **/, text 
 	var tmpArg1 = NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:61
@@ -125,7 +114,7 @@ func (this *QSignalMapper) SetMapping_1(sender *QObject /*777 QObject **/, text 
 func (this *QSignalMapper) SetMapping_2(sender *QObject /*777 QObject **/, widget unsafe.Pointer /*666*/) {
 	var convArg0 = sender.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjectP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, widget)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:62
@@ -136,7 +125,7 @@ func (this *QSignalMapper) SetMapping_3(sender *QObject /*777 QObject **/, objec
 	var convArg0 = sender.GetCthis()
 	var convArg1 = object.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjectS1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:63
@@ -146,7 +135,7 @@ func (this *QSignalMapper) SetMapping_3(sender *QObject /*777 QObject **/, objec
 func (this *QSignalMapper) RemoveMappings(sender *QObject /*777 QObject **/) {
 	var convArg0 = sender.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper14removeMappingsEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:65
@@ -155,7 +144,7 @@ func (this *QSignalMapper) RemoveMappings(sender *QObject /*777 QObject **/) {
 // [8] QObject * mapping(int)
 func (this *QSignalMapper) Mapping(id int) *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -167,7 +156,7 @@ func (this *QSignalMapper) Mapping_1(text string) *QObject /*777 QObject **/ {
 	var tmpArg0 = NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -177,7 +166,7 @@ func (this *QSignalMapper) Mapping_1(text string) *QObject /*777 QObject **/ {
 // [8] QObject * mapping(QWidget *)
 func (this *QSignalMapper) Mapping_2(widget unsafe.Pointer /*666*/) *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), widget)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -188,7 +177,7 @@ func (this *QSignalMapper) Mapping_2(widget unsafe.Pointer /*666*/) *QObject /*7
 func (this *QSignalMapper) Mapping_3(object *QObject /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 = object.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -198,7 +187,7 @@ func (this *QSignalMapper) Mapping_3(object *QObject /*777 QObject **/) *QObject
 // [-2] void mapped(int)
 func (this *QSignalMapper) Mapped(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper6mappedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:72
@@ -209,7 +198,7 @@ func (this *QSignalMapper) Mapped_1(arg0 string) {
 	var tmpArg0 = NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper6mappedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:73
@@ -218,7 +207,7 @@ func (this *QSignalMapper) Mapped_1(arg0 string) {
 // [-2] void mapped(QWidget *)
 func (this *QSignalMapper) Mapped_2(arg0 unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper6mappedEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:74
@@ -228,7 +217,7 @@ func (this *QSignalMapper) Mapped_2(arg0 unsafe.Pointer /*666*/) {
 func (this *QSignalMapper) Mapped_3(arg0 *QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper6mappedEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:77
@@ -237,7 +226,7 @@ func (this *QSignalMapper) Mapped_3(arg0 *QObject /*777 QObject **/) {
 // [-2] void map()
 func (this *QSignalMapper) Map() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper3mapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:78
@@ -247,7 +236,26 @@ func (this *QSignalMapper) Map() {
 func (this *QSignalMapper) Map_1(sender *QObject /*777 QObject **/) {
 	var convArg0 = sender.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper3mapEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QSize) NewFromPointer(cthis unsafe.Pointer) *QSize {
 // [-2] void QSize()
 func NewQSize() *QSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizeC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSizeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSize)
 	return gothis
@@ -84,7 +73,7 @@ func NewQSize() *QSize {
 // [-2] void QSize(int, int)
 func NewQSize_1(w int, h int) *QSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizeC2Eii", qtrt.FFI_TYPE_POINTER, w, h)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQSizeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSize)
 	return gothis
@@ -96,7 +85,7 @@ func NewQSize_1(w int, h int) *QSize {
 // [1] bool isNull()
 func (this *QSize) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -106,7 +95,7 @@ func (this *QSize) IsNull() bool {
 // [1] bool isEmpty()
 func (this *QSize) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -116,7 +105,7 @@ func (this *QSize) IsEmpty() bool {
 // [1] bool isValid()
 func (this *QSize) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -126,7 +115,7 @@ func (this *QSize) IsValid() bool {
 // [4] int width()
 func (this *QSize) Width() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -136,7 +125,7 @@ func (this *QSize) Width() int {
 // [4] int height()
 func (this *QSize) Height() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize6heightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -146,7 +135,7 @@ func (this *QSize) Height() int {
 // [-2] void setWidth(int)
 func (this *QSize) SetWidth(w int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSize8setWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsize.h:65
@@ -155,7 +144,7 @@ func (this *QSize) SetWidth(w int) {
 // [-2] void setHeight(int)
 func (this *QSize) SetHeight(h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSize9setHeightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsize.h:66
@@ -164,7 +153,7 @@ func (this *QSize) SetHeight(h int) {
 // [-2] void transpose()
 func (this *QSize) Transpose() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSize9transposeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsize.h:67
@@ -173,7 +162,7 @@ func (this *QSize) Transpose() {
 // [8] QSize transposed()
 func (this *QSize) Transposed() *QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize10transposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
@@ -185,7 +174,7 @@ func (this *QSize) Transposed() *QSize /*123*/ {
 // [-2] void scale(int, int, Qt::AspectRatioMode)
 func (this *QSize) Scale(w int, h int, mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSize5scaleEiiN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsize.h:70
@@ -195,7 +184,7 @@ func (this *QSize) Scale(w int, h int, mode int) {
 func (this *QSize) Scale_1(s *QSize, mode int) {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSize5scaleERKS_N2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qsize.h:71
@@ -204,7 +193,7 @@ func (this *QSize) Scale_1(s *QSize, mode int) {
 // [8] QSize scaled(int, int, Qt::AspectRatioMode)
 func (this *QSize) Scaled(w int, h int, mode int) *QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize6scaledEiiN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
@@ -217,7 +206,7 @@ func (this *QSize) Scaled(w int, h int, mode int) *QSize /*123*/ {
 func (this *QSize) Scaled_1(s *QSize, mode int) *QSize /*123*/ {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize6scaledERKS_N2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
@@ -230,7 +219,7 @@ func (this *QSize) Scaled_1(s *QSize, mode int) *QSize /*123*/ {
 func (this *QSize) ExpandedTo(arg0 *QSize) *QSize /*123*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize10expandedToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
@@ -243,7 +232,7 @@ func (this *QSize) ExpandedTo(arg0 *QSize) *QSize /*123*/ {
 func (this *QSize) BoundedTo(arg0 *QSize) *QSize /*123*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize9boundedToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
@@ -255,7 +244,7 @@ func (this *QSize) BoundedTo(arg0 *QSize) *QSize /*123*/ {
 // [4] int & rwidth()
 func (this *QSize) Rwidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSize6rwidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
@@ -265,14 +254,33 @@ func (this *QSize) Rwidth() int {
 // [4] int & rheight()
 func (this *QSize) Rheight() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSize7rheightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
 func DeleteQSize(this *QSize) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end

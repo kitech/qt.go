@@ -1,7 +1,6 @@
 package main
 
 import (
-	"gopp"
 	"log"
 	"math/rand"
 	"os"
@@ -9,11 +8,9 @@ import (
 	"time"
 	"unsafe"
 
-	ffiqt "qt.go/cffiqt"
-	ffiqtalt "qt.go/cffiqtalt"
-	"qt.go/qtcore"
-	"qt.go/qtgui"
-	"qt.go/qtrt"
+	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtgui"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 func Test1(t *testing.T) {
@@ -36,10 +33,10 @@ func Test1(t *testing.T) {
 
 	{
 		szo := td.Size()
-		rv, err := ffiqt.InvokeQtFunc6("_ZN6QSizeF7rheightEv", ffiqt.FFI_TYPE_POINTER, szo.GetCthis())
-		gopp.ErrPrint(err, rv)
+		rv, err := qtrt.InvokeQtFunc6("_ZN6QSizeF7rheightEv", qtrt.FFI_TYPE_POINTER, szo.GetCthis())
+		qtrt.ErrPrint(err, rv)
 		//  return rv
-		log.Println(ffiqtalt.Cpretval2go("float64", rv).(float64))
+		log.Println(qtrt.Cpretval2go("float64", rv).(float64))
 	}
 
 	{
@@ -55,8 +52,8 @@ func Test1(t *testing.T) {
 		this := td
 		mv := qtrt.Calloc(1, 256)
 		log.Println(mv)
-		rv, err := ffiqt.InvokeQtFunc7("_ZNK13QTextDocument4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
-		gopp.ErrPrint(err, rv)
+		rv, err := qtrt.InvokeQtFunc7("_ZNK13QTextDocument4sizeEv", qtrt.FFI_TYPE_POINTER, mv, this.GetCthis())
+		qtrt.ErrPrint(err, rv)
 		//  return rv
 		log.Println(unsafe.Pointer(uintptr(rv)), mv)
 		rv = uint64(uintptr(mv))

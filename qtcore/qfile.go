@@ -6,6 +6,14 @@ package qtcore
 
 //  header block end
 
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
 //  ext block begin
 
 /*
@@ -16,26 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "gopp"
-import "qt.go/qtrt"
-
-func init() {
-	if false {
-		reflect.TypeOf(123)
-	}
-	if false {
-		reflect.TypeOf(unsafe.Sizeof(0))
-	}
-	if false {
-		fmt.Println(123)
-	}
-	if false {
-		qtrt.KeepMe()
-	}
-	if false {
-		gopp.KeepMe()
-	}
-}
+import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
 
@@ -72,7 +61,7 @@ func (*QFile) NewFromPointer(cthis unsafe.Pointer) *QFile {
 // [8] const QMetaObject * metaObject()
 func (this *QFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
@@ -82,7 +71,7 @@ func (this *QFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // [-2] void QFile()
 func NewQFile() *QFile {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2Ev", qtrt.FFI_TYPE_POINTER)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -95,7 +84,7 @@ func NewQFile_1(name string) *QFile {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -107,7 +96,7 @@ func NewQFile_1(name string) *QFile {
 func NewQFile_2(parent *QObject /*777 QObject **/) *QFile {
 	var convArg0 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -121,7 +110,7 @@ func NewQFile_3(name string, parent *QObject /*777 QObject **/) *QFile {
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
@@ -133,7 +122,7 @@ func NewQFile_3(name string, parent *QObject /*777 QObject **/) *QFile {
 func DeleteQFile(this *QFile) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
@@ -143,7 +132,7 @@ func DeleteQFile(this *QFile) {
 // [8] QString fileName()
 func (this *QFile) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -158,7 +147,7 @@ func (this *QFile) SetFileName(name string) {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qfile.h:88
@@ -169,7 +158,7 @@ func (this *QFile) EncodeName(fileName string) *QByteArray /*123*/ {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile10encodeNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -187,7 +176,7 @@ func QFile_EncodeName(fileName string) *QByteArray /*123*/ {
 func (this *QFile) DecodeName(localFileName *QByteArray) string {
 	var convArg0 = localFileName.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile10decodeNameERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -207,7 +196,7 @@ func (this *QFile) DecodeName_1(localFileName string) string {
 	var convArg0 = qtrt.CString(localFileName)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile10decodeNameEPKc", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -225,7 +214,7 @@ func QFile_DecodeName_1(localFileName string) string {
 // [1] bool exists()
 func (this *QFile) Exists() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile6existsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -237,7 +226,7 @@ func (this *QFile) Exists_1(fileName string) bool {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6existsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QFile_Exists_1(fileName string) bool {
@@ -252,7 +241,7 @@ func QFile_Exists_1(fileName string) bool {
 // [8] QString readLink()
 func (this *QFile) ReadLink() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile8readLinkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -267,7 +256,7 @@ func (this *QFile) ReadLink_1(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile8readLinkERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -285,7 +274,7 @@ func QFile_ReadLink_1(fileName string) string {
 // [8] QString symLinkTarget()
 func (this *QFile) SymLinkTarget() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile13symLinkTargetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -300,7 +289,7 @@ func (this *QFile) SymLinkTarget_1(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile13symLinkTargetERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
@@ -318,7 +307,7 @@ func QFile_SymLinkTarget_1(fileName string) string {
 // [1] bool remove()
 func (this *QFile) Remove() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6removeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -330,7 +319,7 @@ func (this *QFile) Remove_1(fileName string) bool {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6removeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QFile_Remove_1(fileName string) bool {
@@ -347,7 +336,7 @@ func (this *QFile) Rename(newName string) bool {
 	var tmpArg0 = NewQString_5(newName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6renameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -361,7 +350,7 @@ func (this *QFile) Rename_1(oldName string, newName string) bool {
 	var tmpArg1 = NewQString_5(newName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6renameERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QFile_Rename_1(oldName string, newName string) bool {
@@ -378,7 +367,7 @@ func (this *QFile) Link(newName string) bool {
 	var tmpArg0 = NewQString_5(newName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4linkERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -392,7 +381,7 @@ func (this *QFile) Link_1(oldname string, newName string) bool {
 	var tmpArg1 = NewQString_5(newName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4linkERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QFile_Link_1(oldname string, newName string) bool {
@@ -409,7 +398,7 @@ func (this *QFile) Copy(newName string) bool {
 	var tmpArg0 = NewQString_5(newName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4copyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -423,7 +412,7 @@ func (this *QFile) Copy_1(fileName string, newName string) bool {
 	var tmpArg1 = NewQString_5(newName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4copyERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QFile_Copy_1(fileName string, newName string) bool {
@@ -438,7 +427,7 @@ func QFile_Copy_1(fileName string, newName string) bool {
 // [1] bool open(QIODevice::OpenMode)
 func (this *QFile) Open(flags int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -448,7 +437,7 @@ func (this *QFile) Open(flags int) bool {
 // [1] bool open(int, QIODevice::OpenMode, QFileDevice::FileHandleFlags)
 func (this *QFile) Open_1(fd int, ioFlags int, handleFlags int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4openEi6QFlagsIN9QIODevice12OpenModeFlagEES0_IN11QFileDevice14FileHandleFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fd, ioFlags, handleFlags)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -458,7 +447,7 @@ func (this *QFile) Open_1(fd int, ioFlags int, handleFlags int) bool {
 // [8] qint64 size()
 func (this *QFile) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
 
@@ -468,7 +457,7 @@ func (this *QFile) Size() int64 {
 // [1] bool resize(qint64)
 func (this *QFile) Resize(sz int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6resizeEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), sz)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -480,7 +469,7 @@ func (this *QFile) Resize_1(filename string, sz int64) bool {
 	var tmpArg0 = NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6resizeERK7QStringx", qtrt.FFI_TYPE_POINTER, convArg0, sz)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QFile_Resize_1(filename string, sz int64) bool {
@@ -495,7 +484,7 @@ func QFile_Resize_1(filename string, sz int64) bool {
 // [4] QFileDevice::Permissions permissions()
 func (this *QFile) Permissions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile11permissionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
@@ -507,7 +496,7 @@ func (this *QFile) Permissions_1(filename string) int {
 	var tmpArg0 = NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile11permissionsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 func QFile_Permissions_1(filename string) int {
@@ -522,7 +511,7 @@ func QFile_Permissions_1(filename string) int {
 // [1] bool setPermissions(QFileDevice::Permissions)
 func (this *QFile) SetPermissions(permissionSpec int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile14setPermissionsE6QFlagsIN11QFileDevice10PermissionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), permissionSpec)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
@@ -534,7 +523,7 @@ func (this *QFile) SetPermissions_1(filename string, permissionSpec int) bool {
 	var tmpArg0 = NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile14setPermissionsERK7QString6QFlagsIN11QFileDevice10PermissionEE", qtrt.FFI_TYPE_POINTER, convArg0, permissionSpec)
-	gopp.ErrPrint(err, rv)
+	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 func QFile_SetPermissions_1(filename string, permissionSpec int) bool {
@@ -544,3 +533,22 @@ func QFile_SetPermissions_1(filename string, permissionSpec int) bool {
 }
 
 //  body block end
+
+//  keep block begin
+
+func init() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+}
+
+//  keep block end
