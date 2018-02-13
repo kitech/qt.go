@@ -44,6 +44,12 @@ func (this *QPixmap) InheritFromImageInPlace(f func(image *QImage, flags int) un
 type QPixmap struct {
 	*QPaintDevice
 }
+type QPixmap_ITF interface {
+	QPaintDevice_ITF
+	QPixmap_PTR() *QPixmap
+}
+
+func (ptr *QPixmap) QPixmap_PTR() *QPixmap { return ptr }
 
 func (this *QPixmap) GetCthis() unsafe.Pointer {
 	if this == nil {

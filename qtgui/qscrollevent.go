@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QScrollEvent struct {
 	*qtcore.QEvent
 }
+type QScrollEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QScrollEvent_PTR() *QScrollEvent
+}
+
+func (ptr *QScrollEvent) QScrollEvent_PTR() *QScrollEvent { return ptr }
 
 func (this *QScrollEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

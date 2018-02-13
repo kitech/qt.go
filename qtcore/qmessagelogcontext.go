@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QMessageLogContext struct {
 	*qtrt.CObject
 }
+type QMessageLogContext_ITF interface {
+	QMessageLogContext_PTR() *QMessageLogContext
+}
+
+func (ptr *QMessageLogContext) QMessageLogContext_PTR() *QMessageLogContext { return ptr }
 
 func (this *QMessageLogContext) GetCthis() unsafe.Pointer {
 	if this == nil {

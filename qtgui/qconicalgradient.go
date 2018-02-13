@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QConicalGradient struct {
 	*QGradient
 }
+type QConicalGradient_ITF interface {
+	QGradient_ITF
+	QConicalGradient_PTR() *QConicalGradient
+}
+
+func (ptr *QConicalGradient) QConicalGradient_PTR() *QConicalGradient { return ptr }
 
 func (this *QConicalGradient) GetCthis() unsafe.Pointer {
 	if this == nil {

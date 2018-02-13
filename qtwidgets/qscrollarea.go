@@ -60,6 +60,12 @@ func (this *QScrollArea) InheritViewportSizeHint(f func() unsafe.Pointer) {
 type QScrollArea struct {
 	*QAbstractScrollArea
 }
+type QScrollArea_ITF interface {
+	QAbstractScrollArea_ITF
+	QScrollArea_PTR() *QScrollArea
+}
+
+func (ptr *QScrollArea) QScrollArea_PTR() *QScrollArea { return ptr }
 
 func (this *QScrollArea) GetCthis() unsafe.Pointer {
 	if this == nil {

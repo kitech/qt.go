@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QBackingStore struct {
 	*qtrt.CObject
 }
+type QBackingStore_ITF interface {
+	QBackingStore_PTR() *QBackingStore
+}
+
+func (ptr *QBackingStore) QBackingStore_PTR() *QBackingStore { return ptr }
 
 func (this *QBackingStore) GetCthis() unsafe.Pointer {
 	if this == nil {

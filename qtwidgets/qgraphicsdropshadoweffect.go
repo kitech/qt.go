@@ -40,6 +40,14 @@ func (this *QGraphicsDropShadowEffect) InheritDraw(f func(painter *qtgui.QPainte
 type QGraphicsDropShadowEffect struct {
 	*QGraphicsEffect
 }
+type QGraphicsDropShadowEffect_ITF interface {
+	QGraphicsEffect_ITF
+	QGraphicsDropShadowEffect_PTR() *QGraphicsDropShadowEffect
+}
+
+func (ptr *QGraphicsDropShadowEffect) QGraphicsDropShadowEffect_PTR() *QGraphicsDropShadowEffect {
+	return ptr
+}
 
 func (this *QGraphicsDropShadowEffect) GetCthis() unsafe.Pointer {
 	if this == nil {

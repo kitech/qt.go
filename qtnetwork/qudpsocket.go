@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QUdpSocket struct {
 	*QAbstractSocket
 }
+type QUdpSocket_ITF interface {
+	QAbstractSocket_ITF
+	QUdpSocket_PTR() *QUdpSocket
+}
+
+func (ptr *QUdpSocket) QUdpSocket_PTR() *QUdpSocket { return ptr }
 
 func (this *QUdpSocket) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QDirIterator struct {
 	*qtrt.CObject
 }
+type QDirIterator_ITF interface {
+	QDirIterator_PTR() *QDirIterator
+}
+
+func (ptr *QDirIterator) QDirIterator_PTR() *QDirIterator { return ptr }
 
 func (this *QDirIterator) GetCthis() unsafe.Pointer {
 	if this == nil {

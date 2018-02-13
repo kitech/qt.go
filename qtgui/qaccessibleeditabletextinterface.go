@@ -34,6 +34,13 @@ import "github.com/kitech/qt.go/qtcore"
 type QAccessibleEditableTextInterface struct {
 	*qtrt.CObject
 }
+type QAccessibleEditableTextInterface_ITF interface {
+	QAccessibleEditableTextInterface_PTR() *QAccessibleEditableTextInterface
+}
+
+func (ptr *QAccessibleEditableTextInterface) QAccessibleEditableTextInterface_PTR() *QAccessibleEditableTextInterface {
+	return ptr
+}
 
 func (this *QAccessibleEditableTextInterface) GetCthis() unsafe.Pointer {
 	if this == nil {

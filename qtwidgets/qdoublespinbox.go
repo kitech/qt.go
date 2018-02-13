@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QDoubleSpinBox struct {
 	*QAbstractSpinBox
 }
+type QDoubleSpinBox_ITF interface {
+	QAbstractSpinBox_ITF
+	QDoubleSpinBox_PTR() *QDoubleSpinBox
+}
+
+func (ptr *QDoubleSpinBox) QDoubleSpinBox_PTR() *QDoubleSpinBox { return ptr }
 
 func (this *QDoubleSpinBox) GetCthis() unsafe.Pointer {
 	if this == nil {

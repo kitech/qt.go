@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QIcon struct {
 	*qtrt.CObject
 }
+type QIcon_ITF interface {
+	QIcon_PTR() *QIcon
+}
+
+func (ptr *QIcon) QIcon_PTR() *QIcon { return ptr }
 
 func (this *QIcon) GetCthis() unsafe.Pointer {
 	if this == nil {

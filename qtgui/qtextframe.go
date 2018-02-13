@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextFrame struct {
 	*QTextObject
 }
+type QTextFrame_ITF interface {
+	QTextObject_ITF
+	QTextFrame_PTR() *QTextFrame
+}
+
+func (ptr *QTextFrame) QTextFrame_PTR() *QTextFrame { return ptr }
 
 func (this *QTextFrame) GetCthis() unsafe.Pointer {
 	if this == nil {

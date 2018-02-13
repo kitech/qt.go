@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QNetworkAddressEntry struct {
 	*qtrt.CObject
 }
+type QNetworkAddressEntry_ITF interface {
+	QNetworkAddressEntry_PTR() *QNetworkAddressEntry
+}
+
+func (ptr *QNetworkAddressEntry) QNetworkAddressEntry_PTR() *QNetworkAddressEntry { return ptr }
 
 func (this *QNetworkAddressEntry) GetCthis() unsafe.Pointer {
 	if this == nil {

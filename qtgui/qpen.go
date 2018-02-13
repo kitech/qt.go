@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPen struct {
 	*qtrt.CObject
 }
+type QPen_ITF interface {
+	QPen_PTR() *QPen
+}
+
+func (ptr *QPen) QPen_PTR() *QPen { return ptr }
 
 func (this *QPen) GetCthis() unsafe.Pointer {
 	if this == nil {

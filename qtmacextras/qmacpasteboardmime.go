@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QMacPasteboardMime struct {
 	*qtrt.CObject
 }
+type QMacPasteboardMime_ITF interface {
+	QMacPasteboardMime_PTR() *QMacPasteboardMime
+}
+
+func (ptr *QMacPasteboardMime) QMacPasteboardMime_PTR() *QMacPasteboardMime { return ptr }
 
 func (this *QMacPasteboardMime) GetCthis() unsafe.Pointer {
 	if this == nil {

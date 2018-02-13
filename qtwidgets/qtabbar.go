@@ -125,6 +125,12 @@ func (this *QTabBar) InheritInitStyleOption(f func(option *QStyleOptionTab /*777
 type QTabBar struct {
 	*QWidget
 }
+type QTabBar_ITF interface {
+	QWidget_ITF
+	QTabBar_PTR() *QTabBar
+}
+
+func (ptr *QTabBar) QTabBar_PTR() *QTabBar { return ptr }
 
 func (this *QTabBar) GetCthis() unsafe.Pointer {
 	if this == nil {

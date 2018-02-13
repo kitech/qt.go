@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QDragMoveEvent struct {
 	*QDropEvent
 }
+type QDragMoveEvent_ITF interface {
+	QDropEvent_ITF
+	QDragMoveEvent_PTR() *QDragMoveEvent
+}
+
+func (ptr *QDragMoveEvent) QDragMoveEvent_PTR() *QDragMoveEvent { return ptr }
 
 func (this *QDragMoveEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

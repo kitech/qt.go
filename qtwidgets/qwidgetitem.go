@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QWidgetItem struct {
 	*QLayoutItem
 }
+type QWidgetItem_ITF interface {
+	QLayoutItem_ITF
+	QWidgetItem_PTR() *QWidgetItem
+}
+
+func (ptr *QWidgetItem) QWidgetItem_PTR() *QWidgetItem { return ptr }
 
 func (this *QWidgetItem) GetCthis() unsafe.Pointer {
 	if this == nil {

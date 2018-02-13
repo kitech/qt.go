@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QHoverEvent struct {
 	*QInputEvent
 }
+type QHoverEvent_ITF interface {
+	QInputEvent_ITF
+	QHoverEvent_PTR() *QHoverEvent
+}
+
+func (ptr *QHoverEvent) QHoverEvent_PTR() *QHoverEvent { return ptr }
 
 func (this *QHoverEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

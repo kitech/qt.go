@@ -45,6 +45,11 @@ func (this *QQmlIncubator) InheritSetInitialState(f func(arg0 *qtcore.QObject /*
 type QQmlIncubator struct {
 	*qtrt.CObject
 }
+type QQmlIncubator_ITF interface {
+	QQmlIncubator_PTR() *QQmlIncubator
+}
+
+func (ptr *QQmlIncubator) QQmlIncubator_PTR() *QQmlIncubator { return ptr }
 
 func (this *QQmlIncubator) GetCthis() unsafe.Pointer {
 	if this == nil {

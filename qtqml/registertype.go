@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type RegisterType struct {
 	*qtrt.CObject
 }
+type RegisterType_ITF interface {
+	RegisterType_PTR() *RegisterType
+}
+
+func (ptr *RegisterType) RegisterType_PTR() *RegisterType { return ptr }
 
 func (this *RegisterType) GetCthis() unsafe.Pointer {
 	if this == nil {

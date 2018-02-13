@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionComboBox struct {
 	*QStyleOptionComplex
 }
+type QStyleOptionComboBox_ITF interface {
+	QStyleOptionComplex_ITF
+	QStyleOptionComboBox_PTR() *QStyleOptionComboBox
+}
+
+func (ptr *QStyleOptionComboBox) QStyleOptionComboBox_PTR() *QStyleOptionComboBox { return ptr }
 
 func (this *QStyleOptionComboBox) GetCthis() unsafe.Pointer {
 	if this == nil {

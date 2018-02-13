@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QWaitCondition struct {
 	*qtrt.CObject
 }
+type QWaitCondition_ITF interface {
+	QWaitCondition_PTR() *QWaitCondition
+}
+
+func (ptr *QWaitCondition) QWaitCondition_PTR() *QWaitCondition { return ptr }
 
 func (this *QWaitCondition) GetCthis() unsafe.Pointer {
 	if this == nil {

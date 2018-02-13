@@ -33,6 +33,13 @@ import "github.com/kitech/qt.go/qtrt"
 type AbstractConverterFunction struct {
 	*qtrt.CObject
 }
+type AbstractConverterFunction_ITF interface {
+	AbstractConverterFunction_PTR() *AbstractConverterFunction
+}
+
+func (ptr *AbstractConverterFunction) AbstractConverterFunction_PTR() *AbstractConverterFunction {
+	return ptr
+}
 
 func (this *AbstractConverterFunction) GetCthis() unsafe.Pointer {
 	if this == nil {

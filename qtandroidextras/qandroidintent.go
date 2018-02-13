@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QAndroidIntent struct {
 	*qtrt.CObject
 }
+type QAndroidIntent_ITF interface {
+	QAndroidIntent_PTR() *QAndroidIntent
+}
+
+func (ptr *QAndroidIntent) QAndroidIntent_PTR() *QAndroidIntent { return ptr }
 
 func (this *QAndroidIntent) GetCthis() unsafe.Pointer {
 	if this == nil {

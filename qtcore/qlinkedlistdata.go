@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QLinkedListData struct {
 	*qtrt.CObject
 }
+type QLinkedListData_ITF interface {
+	QLinkedListData_PTR() *QLinkedListData
+}
+
+func (ptr *QLinkedListData) QLinkedListData_PTR() *QLinkedListData { return ptr }
 
 func (this *QLinkedListData) GetCthis() unsafe.Pointer {
 	if this == nil {

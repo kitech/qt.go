@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStackedLayout struct {
 	*QLayout
 }
+type QStackedLayout_ITF interface {
+	QLayout_ITF
+	QStackedLayout_PTR() *QStackedLayout
+}
+
+func (ptr *QStackedLayout) QStackedLayout_PTR() *QStackedLayout { return ptr }
 
 func (this *QStackedLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

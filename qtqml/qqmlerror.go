@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlError struct {
 	*qtrt.CObject
 }
+type QQmlError_ITF interface {
+	QQmlError_PTR() *QQmlError
+}
+
+func (ptr *QQmlError) QQmlError_PTR() *QQmlError { return ptr }
 
 func (this *QQmlError) GetCthis() unsafe.Pointer {
 	if this == nil {

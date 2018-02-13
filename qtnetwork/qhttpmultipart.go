@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QHttpMultiPart struct {
 	*qtcore.QObject
 }
+type QHttpMultiPart_ITF interface {
+	qtcore.QObject_ITF
+	QHttpMultiPart_PTR() *QHttpMultiPart
+}
+
+func (ptr *QHttpMultiPart) QHttpMultiPart_PTR() *QHttpMultiPart { return ptr }
 
 func (this *QHttpMultiPart) GetCthis() unsafe.Pointer {
 	if this == nil {

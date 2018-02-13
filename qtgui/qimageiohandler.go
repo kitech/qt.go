@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QImageIOHandler struct {
 	*qtrt.CObject
 }
+type QImageIOHandler_ITF interface {
+	QImageIOHandler_PTR() *QImageIOHandler
+}
+
+func (ptr *QImageIOHandler) QImageIOHandler_PTR() *QImageIOHandler { return ptr }
 
 func (this *QImageIOHandler) GetCthis() unsafe.Pointer {
 	if this == nil {

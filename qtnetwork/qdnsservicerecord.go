@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QDnsServiceRecord struct {
 	*qtrt.CObject
 }
+type QDnsServiceRecord_ITF interface {
+	QDnsServiceRecord_PTR() *QDnsServiceRecord
+}
+
+func (ptr *QDnsServiceRecord) QDnsServiceRecord_PTR() *QDnsServiceRecord { return ptr }
 
 func (this *QDnsServiceRecord) GetCthis() unsafe.Pointer {
 	if this == nil {

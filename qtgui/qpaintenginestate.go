@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPaintEngineState struct {
 	*qtrt.CObject
 }
+type QPaintEngineState_ITF interface {
+	QPaintEngineState_PTR() *QPaintEngineState
+}
+
+func (ptr *QPaintEngineState) QPaintEngineState_PTR() *QPaintEngineState { return ptr }
 
 func (this *QPaintEngineState) GetCthis() unsafe.Pointer {
 	if this == nil {

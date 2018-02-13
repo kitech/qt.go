@@ -33,6 +33,13 @@ import "github.com/kitech/qt.go/qtrt"
 type QScopedPointerPodDeleter struct {
 	*qtrt.CObject
 }
+type QScopedPointerPodDeleter_ITF interface {
+	QScopedPointerPodDeleter_PTR() *QScopedPointerPodDeleter
+}
+
+func (ptr *QScopedPointerPodDeleter) QScopedPointerPodDeleter_PTR() *QScopedPointerPodDeleter {
+	return ptr
+}
 
 func (this *QScopedPointerPodDeleter) GetCthis() unsafe.Pointer {
 	if this == nil {

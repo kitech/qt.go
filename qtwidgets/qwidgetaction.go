@@ -55,6 +55,12 @@ func (this *QWidgetAction) InheritDeleteWidget(f func(widget *QWidget /*777 QWid
 type QWidgetAction struct {
 	*QAction
 }
+type QWidgetAction_ITF interface {
+	QAction_ITF
+	QWidgetAction_PTR() *QWidgetAction
+}
+
+func (ptr *QWidgetAction) QWidgetAction_PTR() *QWidgetAction { return ptr }
 
 func (this *QWidgetAction) GetCthis() unsafe.Pointer {
 	if this == nil {

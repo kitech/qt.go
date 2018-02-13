@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QNetworkDatagram struct {
 	*qtrt.CObject
 }
+type QNetworkDatagram_ITF interface {
+	QNetworkDatagram_PTR() *QNetworkDatagram
+}
+
+func (ptr *QNetworkDatagram) QNetworkDatagram_PTR() *QNetworkDatagram { return ptr }
 
 func (this *QNetworkDatagram) GetCthis() unsafe.Pointer {
 	if this == nil {

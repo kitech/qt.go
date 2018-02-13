@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type NormalDeleter struct {
 	*qtrt.CObject
 }
+type NormalDeleter_ITF interface {
+	NormalDeleter_PTR() *NormalDeleter
+}
+
+func (ptr *NormalDeleter) NormalDeleter_PTR() *NormalDeleter { return ptr }
 
 func (this *NormalDeleter) GetCthis() unsafe.Pointer {
 	if this == nil {

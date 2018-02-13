@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionTab struct {
 	*QStyleOption
 }
+type QStyleOptionTab_ITF interface {
+	QStyleOption_ITF
+	QStyleOptionTab_PTR() *QStyleOptionTab
+}
+
+func (ptr *QStyleOptionTab) QStyleOptionTab_PTR() *QStyleOptionTab { return ptr }
 
 func (this *QStyleOptionTab) GetCthis() unsafe.Pointer {
 	if this == nil {

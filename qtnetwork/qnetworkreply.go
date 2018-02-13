@@ -89,6 +89,12 @@ func (this *QNetworkReply) InheritSetSslConfigurationImplementation(f func(arg0 
 type QNetworkReply struct {
 	*qtcore.QIODevice
 }
+type QNetworkReply_ITF interface {
+	qtcore.QIODevice_ITF
+	QNetworkReply_PTR() *QNetworkReply
+}
+
+func (ptr *QNetworkReply) QNetworkReply_PTR() *QNetworkReply { return ptr }
 
 func (this *QNetworkReply) GetCthis() unsafe.Pointer {
 	if this == nil {

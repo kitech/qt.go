@@ -16,22 +16,19 @@ package qtcore
 
 //  body block begin
 
-type Qt__float_round_style = int
-
+type Qt__float_round_style = int // stdglobal
 const Qt__round_indeterminate Qt__float_round_style = -1
 const Qt__round_toward_zero Qt__float_round_style = 0
 const Qt__round_to_nearest Qt__float_round_style = 1
 const Qt__round_toward_infinity Qt__float_round_style = 2
 const Qt__round_toward_neg_infinity Qt__float_round_style = 3
 
-type Qt__float_denorm_style = int
-
+type Qt__float_denorm_style = int // stdglobal
 const Qt__denorm_indeterminate Qt__float_denorm_style = -1
 const Qt__denorm_absent Qt__float_denorm_style = 0
 const Qt__denorm_present Qt__float_denorm_style = 1
 
-type Qt__QtMsgType = int
-
+type Qt__QtMsgType = int // core
 const Qt__QtDebugMsg Qt__QtMsgType = 0
 const Qt__QtWarningMsg Qt__QtMsgType = 1
 const Qt__QtCriticalMsg Qt__QtMsgType = 2
@@ -39,8 +36,7 @@ const Qt__QtFatalMsg Qt__QtMsgType = 3
 const Qt__QtInfoMsg Qt__QtMsgType = 4
 const Qt__QtSystemMsg Qt__QtMsgType = 2
 
-type Qt__memory_order = int
-
+type Qt__memory_order = int // stdglobal
 const Qt__memory_order_relaxed Qt__memory_order = 0
 const Qt__memory_order_consume Qt__memory_order = 1
 const Qt__memory_order_acquire Qt__memory_order = 2
@@ -48,15 +44,13 @@ const Qt__memory_order_release Qt__memory_order = 3
 const Qt__memory_order_acq_rel Qt__memory_order = 4
 const Qt__memory_order_seq_cst Qt__memory_order = 5
 
-type Qt____memory_order_modifier = int
-
+type Qt____memory_order_modifier = int // stdglobal
 const Qt____memory_order_mask Qt____memory_order_modifier = 65535
 const Qt____memory_order_modifier_mask Qt____memory_order_modifier = -65536
 const Qt____memory_order_hle_acquire Qt____memory_order_modifier = 65536
 const Qt____memory_order_hle_release Qt____memory_order_modifier = 131072
 
-type Qt__GlobalColor = int
-
+type Qt__GlobalColor = int // core
 const Qt__color0 Qt__GlobalColor = 0
 const Qt__color1 Qt__GlobalColor = 1
 const Qt__black Qt__GlobalColor = 2
@@ -78,8 +72,7 @@ const Qt__darkMagenta Qt__GlobalColor = 17
 const Qt__darkYellow Qt__GlobalColor = 18
 const Qt__transparent Qt__GlobalColor = 19
 
-type Qt__KeyboardModifier = int
-
+type Qt__KeyboardModifier = int // core
 const Qt__NoModifier Qt__KeyboardModifier = 0
 const Qt__ShiftModifier Qt__KeyboardModifier = 33554432
 const Qt__ControlModifier Qt__KeyboardModifier = 67108864
@@ -89,8 +82,7 @@ const Qt__KeypadModifier Qt__KeyboardModifier = 536870912
 const Qt__GroupSwitchModifier Qt__KeyboardModifier = 1073741824
 const Qt__KeyboardModifierMask Qt__KeyboardModifier = -33554432
 
-type Qt__Modifier = int
-
+type Qt__Modifier = int // core
 const Qt__META Qt__Modifier = 268435456
 const Qt__SHIFT Qt__Modifier = 33554432
 const Qt__CTRL Qt__Modifier = 67108864
@@ -98,8 +90,7 @@ const Qt__ALT Qt__Modifier = 134217728
 const Qt__MODIFIER_MASK Qt__Modifier = -33554432
 const Qt__UNICODE_ACCEL Qt__Modifier = 0
 
-type Qt__MouseButton = int
-
+type Qt__MouseButton = int // core
 const Qt__NoButton Qt__MouseButton = 0
 const Qt__LeftButton Qt__MouseButton = 1
 const Qt__RightButton Qt__MouseButton = 2
@@ -138,39 +129,33 @@ const Qt__AllButtons Qt__MouseButton = 134217727
 const Qt__MaxMouseButton Qt__MouseButton = 67108864
 const Qt__MouseButtonMask Qt__MouseButton = -1
 
-type Qt__Orientation = int
-
+type Qt__Orientation = int // core
 const Qt__Horizontal Qt__Orientation = 1
 const Qt__Vertical Qt__Orientation = 2
 
-type Qt__FocusPolicy = int
-
+type Qt__FocusPolicy = int // core
 const Qt__NoFocus Qt__FocusPolicy = 0
 const Qt__TabFocus Qt__FocusPolicy = 1
 const Qt__ClickFocus Qt__FocusPolicy = 2
 const Qt__StrongFocus Qt__FocusPolicy = 11
 const Qt__WheelFocus Qt__FocusPolicy = 15
 
-type Qt__TabFocusBehavior = int
-
+type Qt__TabFocusBehavior = int // core
 const Qt__NoTabFocus Qt__TabFocusBehavior = 0
 const Qt__TabFocusTextControls Qt__TabFocusBehavior = 1
 const Qt__TabFocusListControls Qt__TabFocusBehavior = 2
 const Qt__TabFocusAllControls Qt__TabFocusBehavior = 255
 
-type Qt__SortOrder = int
-
+type Qt__SortOrder = int // core
 const Qt__AscendingOrder Qt__SortOrder = 0
 const Qt__DescendingOrder Qt__SortOrder = 1
 
-type Qt__TileRule = int
-
+type Qt__TileRule = int // core
 const Qt__StretchTile Qt__TileRule = 0
 const Qt__RepeatTile Qt__TileRule = 1
 const Qt__RoundTile Qt__TileRule = 2
 
-type Qt__AlignmentFlag = int
-
+type Qt__AlignmentFlag = int // core
 const Qt__AlignLeft Qt__AlignmentFlag = 1
 const Qt__AlignLeading Qt__AlignmentFlag = 1
 const Qt__AlignRight Qt__AlignmentFlag = 2
@@ -186,8 +171,7 @@ const Qt__AlignBaseline Qt__AlignmentFlag = 256
 const Qt__AlignVertical_Mask Qt__AlignmentFlag = 480
 const Qt__AlignCenter Qt__AlignmentFlag = 132
 
-type Qt__TextFlag = int
-
+type Qt__TextFlag = int // core
 const Qt__TextSingleLine Qt__TextFlag = 256
 const Qt__TextDontClip Qt__TextFlag = 512
 const Qt__TextExpandTabs Qt__TextFlag = 1024
@@ -203,27 +187,23 @@ const Qt__TextForceRightToLeft Qt__TextFlag = 262144
 const Qt__TextLongestVariant Qt__TextFlag = 524288
 const Qt__TextBypassShaping Qt__TextFlag = 1048576
 
-type Qt__TextElideMode = int
-
+type Qt__TextElideMode = int // core
 const Qt__ElideLeft Qt__TextElideMode = 0
 const Qt__ElideRight Qt__TextElideMode = 1
 const Qt__ElideMiddle Qt__TextElideMode = 2
 const Qt__ElideNone Qt__TextElideMode = 3
 
-type Qt__WhiteSpaceMode = int
-
+type Qt__WhiteSpaceMode = int // core
 const Qt__WhiteSpaceNormal Qt__WhiteSpaceMode = 0
 const Qt__WhiteSpacePre Qt__WhiteSpaceMode = 1
 const Qt__WhiteSpaceNoWrap Qt__WhiteSpaceMode = 2
 const Qt__WhiteSpaceModeUndefined Qt__WhiteSpaceMode = -1
 
-type Qt__HitTestAccuracy = int
-
+type Qt__HitTestAccuracy = int // core
 const Qt__ExactHit Qt__HitTestAccuracy = 0
 const Qt__FuzzyHit Qt__HitTestAccuracy = 1
 
-type Qt__WindowType = int
-
+type Qt__WindowType = int // core
 const Qt__Widget Qt__WindowType = 0
 const Qt__Window Qt__WindowType = 1
 const Qt__Dialog Qt__WindowType = 3
@@ -263,31 +243,27 @@ const Qt__BypassGraphicsProxyWidget Qt__WindowType = 536870912
 const Qt__NoDropShadowWindowHint Qt__WindowType = 1073741824
 const Qt__WindowFullscreenButtonHint Qt__WindowType = -2147483648
 
-type Qt__WindowState = int
-
+type Qt__WindowState = int // core
 const Qt__WindowNoState Qt__WindowState = 0
 const Qt__WindowMinimized Qt__WindowState = 1
 const Qt__WindowMaximized Qt__WindowState = 2
 const Qt__WindowFullScreen Qt__WindowState = 4
 const Qt__WindowActive Qt__WindowState = 8
 
-type Qt__ApplicationState = int
-
+type Qt__ApplicationState = int // core
 const Qt__ApplicationSuspended Qt__ApplicationState = 0
 const Qt__ApplicationHidden Qt__ApplicationState = 1
 const Qt__ApplicationInactive Qt__ApplicationState = 2
 const Qt__ApplicationActive Qt__ApplicationState = 4
 
-type Qt__ScreenOrientation = int
-
+type Qt__ScreenOrientation = int // core
 const Qt__PrimaryOrientation Qt__ScreenOrientation = 0
 const Qt__PortraitOrientation Qt__ScreenOrientation = 1
 const Qt__LandscapeOrientation Qt__ScreenOrientation = 2
 const Qt__InvertedPortraitOrientation Qt__ScreenOrientation = 4
 const Qt__InvertedLandscapeOrientation Qt__ScreenOrientation = 8
 
-type Qt__WidgetAttribute = int
-
+type Qt__WidgetAttribute = int // core
 const Qt__WA_Disabled Qt__WidgetAttribute = 0
 const Qt__WA_UnderMouse Qt__WidgetAttribute = 1
 const Qt__WA_MouseTracking Qt__WidgetAttribute = 2
@@ -402,8 +378,7 @@ const Qt__WA_AlwaysStackOnTop Qt__WidgetAttribute = 128
 const Qt__WA_TabletTracking Qt__WidgetAttribute = 129
 const Qt__WA_AttributeCount Qt__WidgetAttribute = 130
 
-type Qt__ApplicationAttribute = int
-
+type Qt__ApplicationAttribute = int // core
 const Qt__AA_ImmediateWidgetCreation Qt__ApplicationAttribute = 0
 const Qt__AA_MSWindowsUseDirect3DByDefault Qt__ApplicationAttribute = 1
 const Qt__AA_DontShowIconsInMenus Qt__ApplicationAttribute = 2
@@ -437,8 +412,7 @@ const Qt__AA_CompressTabletEvents Qt__ApplicationAttribute = 29
 const Qt__AA_DisableWindowContextHelpButton Qt__ApplicationAttribute = 30
 const Qt__AA_AttributeCount Qt__ApplicationAttribute = 31
 
-type Qt__ImageConversionFlag = int
-
+type Qt__ImageConversionFlag = int // core
 const Qt__ColorMode_Mask Qt__ImageConversionFlag = 3
 const Qt__AutoColor Qt__ImageConversionFlag = 0
 const Qt__ColorOnly Qt__ImageConversionFlag = 3
@@ -459,13 +433,11 @@ const Qt__AvoidDither Qt__ImageConversionFlag = 128
 const Qt__NoOpaqueDetection Qt__ImageConversionFlag = 256
 const Qt__NoFormatConversion Qt__ImageConversionFlag = 512
 
-type Qt__BGMode = int
-
+type Qt__BGMode = int // core
 const Qt__TransparentMode Qt__BGMode = 0
 const Qt__OpaqueMode Qt__BGMode = 1
 
-type Qt__Key = int
-
+type Qt__Key = int // core
 const Qt__Key_Escape Qt__Key = 16777216
 const Qt__Key_Tab Qt__Key = 16777217
 const Qt__Key_Backtab Qt__Key = 16777218
@@ -906,16 +878,14 @@ const Qt__Key_Camera Qt__Key = 17825824
 const Qt__Key_CameraFocus Qt__Key = 17825825
 const Qt__Key_unknown Qt__Key = 33554431
 
-type Qt__ArrowType = int
-
+type Qt__ArrowType = int // core
 const Qt__NoArrow Qt__ArrowType = 0
 const Qt__UpArrow Qt__ArrowType = 1
 const Qt__DownArrow Qt__ArrowType = 2
 const Qt__LeftArrow Qt__ArrowType = 3
 const Qt__RightArrow Qt__ArrowType = 4
 
-type Qt__PenStyle = int
-
+type Qt__PenStyle = int // core
 const Qt__NoPen Qt__PenStyle = 0
 const Qt__SolidLine Qt__PenStyle = 1
 const Qt__DashLine Qt__PenStyle = 2
@@ -925,23 +895,20 @@ const Qt__DashDotDotLine Qt__PenStyle = 5
 const Qt__CustomDashLine Qt__PenStyle = 6
 const Qt__MPenStyle Qt__PenStyle = 15
 
-type Qt__PenCapStyle = int
-
+type Qt__PenCapStyle = int // core
 const Qt__FlatCap Qt__PenCapStyle = 0
 const Qt__SquareCap Qt__PenCapStyle = 16
 const Qt__RoundCap Qt__PenCapStyle = 32
 const Qt__MPenCapStyle Qt__PenCapStyle = 48
 
-type Qt__PenJoinStyle = int
-
+type Qt__PenJoinStyle = int // core
 const Qt__MiterJoin Qt__PenJoinStyle = 0
 const Qt__BevelJoin Qt__PenJoinStyle = 64
 const Qt__RoundJoin Qt__PenJoinStyle = 128
 const Qt__SvgMiterJoin Qt__PenJoinStyle = 256
 const Qt__MPenJoinStyle Qt__PenJoinStyle = 448
 
-type Qt__BrushStyle = int
-
+type Qt__BrushStyle = int // core
 const Qt__NoBrush Qt__BrushStyle = 0
 const Qt__SolidPattern Qt__BrushStyle = 1
 const Qt__Dense1Pattern Qt__BrushStyle = 2
@@ -962,13 +929,11 @@ const Qt__RadialGradientPattern Qt__BrushStyle = 16
 const Qt__ConicalGradientPattern Qt__BrushStyle = 17
 const Qt__TexturePattern Qt__BrushStyle = 24
 
-type Qt__SizeMode = int
-
+type Qt__SizeMode = int // core
 const Qt__AbsoluteSize Qt__SizeMode = 0
 const Qt__RelativeSize Qt__SizeMode = 1
 
-type Qt__UIEffect = int
-
+type Qt__UIEffect = int // core
 const Qt__UI_General Qt__UIEffect = 0
 const Qt__UI_AnimateMenu Qt__UIEffect = 1
 const Qt__UI_FadeMenu Qt__UIEffect = 2
@@ -977,8 +942,7 @@ const Qt__UI_AnimateTooltip Qt__UIEffect = 4
 const Qt__UI_FadeTooltip Qt__UIEffect = 5
 const Qt__UI_AnimateToolBox Qt__UIEffect = 6
 
-type Qt__CursorShape = int
-
+type Qt__CursorShape = int // core
 const Qt__ArrowCursor Qt__CursorShape = 0
 const Qt__UpArrowCursor Qt__CursorShape = 1
 const Qt__CrossCursor Qt__CursorShape = 2
@@ -1005,20 +969,17 @@ const Qt__LastCursor Qt__CursorShape = 21
 const Qt__BitmapCursor Qt__CursorShape = 24
 const Qt__CustomCursor Qt__CursorShape = 25
 
-type Qt__TextFormat = int
-
+type Qt__TextFormat = int // core
 const Qt__PlainText Qt__TextFormat = 0
 const Qt__RichText Qt__TextFormat = 1
 const Qt__AutoText Qt__TextFormat = 2
 
-type Qt__AspectRatioMode = int
-
+type Qt__AspectRatioMode = int // core
 const Qt__IgnoreAspectRatio Qt__AspectRatioMode = 0
 const Qt__KeepAspectRatio Qt__AspectRatioMode = 1
 const Qt__KeepAspectRatioByExpanding Qt__AspectRatioMode = 2
 
-type Qt__DockWidgetArea = int
-
+type Qt__DockWidgetArea = int // core
 const Qt__LeftDockWidgetArea Qt__DockWidgetArea = 1
 const Qt__RightDockWidgetArea Qt__DockWidgetArea = 2
 const Qt__TopDockWidgetArea Qt__DockWidgetArea = 4
@@ -1027,12 +988,10 @@ const Qt__DockWidgetArea_Mask Qt__DockWidgetArea = 15
 const Qt__AllDockWidgetAreas Qt__DockWidgetArea = 15
 const Qt__NoDockWidgetArea Qt__DockWidgetArea = 0
 
-type Qt__DockWidgetAreaSizes = int
-
+type Qt__DockWidgetAreaSizes = int // core
 const Qt__NDockWidgetAreas Qt__DockWidgetAreaSizes = 4
 
-type Qt__ToolBarArea = int
-
+type Qt__ToolBarArea = int // core
 const Qt__LeftToolBarArea Qt__ToolBarArea = 1
 const Qt__RightToolBarArea Qt__ToolBarArea = 2
 const Qt__TopToolBarArea Qt__ToolBarArea = 4
@@ -1041,12 +1000,10 @@ const Qt__ToolBarArea_Mask Qt__ToolBarArea = 15
 const Qt__AllToolBarAreas Qt__ToolBarArea = 15
 const Qt__NoToolBarArea Qt__ToolBarArea = 0
 
-type Qt__ToolBarAreaSizes = int
-
+type Qt__ToolBarAreaSizes = int // core
 const Qt__NToolBarAreas Qt__ToolBarAreaSizes = 4
 
-type Qt__DateFormat = int
-
+type Qt__DateFormat = int // core
 const Qt__TextDate Qt__DateFormat = 0
 const Qt__ISODate Qt__DateFormat = 1
 const Qt__SystemLocaleDate Qt__DateFormat = 2
@@ -1059,15 +1016,13 @@ const Qt__DefaultLocaleLongDate Qt__DateFormat = 7
 const Qt__RFC2822Date Qt__DateFormat = 8
 const Qt__ISODateWithMs Qt__DateFormat = 9
 
-type Qt__TimeSpec = int
-
+type Qt__TimeSpec = int // core
 const Qt__LocalTime Qt__TimeSpec = 0
 const Qt__UTC Qt__TimeSpec = 1
 const Qt__OffsetFromUTC Qt__TimeSpec = 2
 const Qt__TimeZone Qt__TimeSpec = 3
 
-type Qt__DayOfWeek = int
-
+type Qt__DayOfWeek = int // core
 const Qt__Monday Qt__DayOfWeek = 1
 const Qt__Tuesday Qt__DayOfWeek = 2
 const Qt__Wednesday Qt__DayOfWeek = 3
@@ -1076,87 +1031,73 @@ const Qt__Friday Qt__DayOfWeek = 5
 const Qt__Saturday Qt__DayOfWeek = 6
 const Qt__Sunday Qt__DayOfWeek = 7
 
-type Qt__ScrollBarPolicy = int
-
+type Qt__ScrollBarPolicy = int // core
 const Qt__ScrollBarAsNeeded Qt__ScrollBarPolicy = 0
 const Qt__ScrollBarAlwaysOff Qt__ScrollBarPolicy = 1
 const Qt__ScrollBarAlwaysOn Qt__ScrollBarPolicy = 2
 
-type Qt__CaseSensitivity = int
-
+type Qt__CaseSensitivity = int // core
 const Qt__CaseInsensitive Qt__CaseSensitivity = 0
 const Qt__CaseSensitive Qt__CaseSensitivity = 1
 
-type Qt__Corner = int
-
+type Qt__Corner = int // core
 const Qt__TopLeftCorner Qt__Corner = 0
 const Qt__TopRightCorner Qt__Corner = 1
 const Qt__BottomLeftCorner Qt__Corner = 2
 const Qt__BottomRightCorner Qt__Corner = 3
 
-type Qt__Edge = int
-
+type Qt__Edge = int // core
 const Qt__TopEdge Qt__Edge = 1
 const Qt__LeftEdge Qt__Edge = 2
 const Qt__RightEdge Qt__Edge = 4
 const Qt__BottomEdge Qt__Edge = 8
 
-type Qt__ConnectionType = int
-
+type Qt__ConnectionType = int // core
 const Qt__AutoConnection Qt__ConnectionType = 0
 const Qt__DirectConnection Qt__ConnectionType = 1
 const Qt__QueuedConnection Qt__ConnectionType = 2
 const Qt__BlockingQueuedConnection Qt__ConnectionType = 3
 const Qt__UniqueConnection Qt__ConnectionType = 128
 
-type Qt__ShortcutContext = int
-
+type Qt__ShortcutContext = int // core
 const Qt__WidgetShortcut Qt__ShortcutContext = 0
 const Qt__WindowShortcut Qt__ShortcutContext = 1
 const Qt__ApplicationShortcut Qt__ShortcutContext = 2
 const Qt__WidgetWithChildrenShortcut Qt__ShortcutContext = 3
 
-type Qt__FillRule = int
-
+type Qt__FillRule = int // core
 const Qt__OddEvenFill Qt__FillRule = 0
 const Qt__WindingFill Qt__FillRule = 1
 
-type Qt__MaskMode = int
-
+type Qt__MaskMode = int // core
 const Qt__MaskInColor Qt__MaskMode = 0
 const Qt__MaskOutColor Qt__MaskMode = 1
 
-type Qt__ClipOperation = int
-
+type Qt__ClipOperation = int // core
 const Qt__NoClip Qt__ClipOperation = 0
 const Qt__ReplaceClip Qt__ClipOperation = 1
 const Qt__IntersectClip Qt__ClipOperation = 2
 
-type Qt__ItemSelectionMode = int
-
+type Qt__ItemSelectionMode = int // core
 const Qt__ContainsItemShape Qt__ItemSelectionMode = 0
 const Qt__IntersectsItemShape Qt__ItemSelectionMode = 1
 const Qt__ContainsItemBoundingRect Qt__ItemSelectionMode = 2
 const Qt__IntersectsItemBoundingRect Qt__ItemSelectionMode = 3
 
-type Qt__ItemSelectionOperation = int
-
+type Qt__ItemSelectionOperation = int // core
 const Qt__ReplaceSelection Qt__ItemSelectionOperation = 0
 const Qt__AddToSelection Qt__ItemSelectionOperation = 1
 
-type Qt__TransformationMode = int
-
+type Qt__TransformationMode = int // core
 const Qt__FastTransformation Qt__TransformationMode = 0
 const Qt__SmoothTransformation Qt__TransformationMode = 1
 
-type Qt__Axis = int
-
+type Qt__Axis = int // core
 const Qt__XAxis Qt__Axis = 0
 const Qt__YAxis Qt__Axis = 1
 const Qt__ZAxis Qt__Axis = 2
 
-type Qt__FocusReason = int
-
+type Qt__FocusReason = int // core
 const Qt__MouseFocusReason Qt__FocusReason = 0
 const Qt__TabFocusReason Qt__FocusReason = 1
 const Qt__BacktabFocusReason Qt__FocusReason = 2
@@ -1167,16 +1108,14 @@ const Qt__MenuBarFocusReason Qt__FocusReason = 6
 const Qt__OtherFocusReason Qt__FocusReason = 7
 const Qt__NoFocusReason Qt__FocusReason = 8
 
-type Qt__ContextMenuPolicy = int
-
+type Qt__ContextMenuPolicy = int // core
 const Qt__NoContextMenu Qt__ContextMenuPolicy = 0
 const Qt__DefaultContextMenu Qt__ContextMenuPolicy = 1
 const Qt__ActionsContextMenu Qt__ContextMenuPolicy = 2
 const Qt__CustomContextMenu Qt__ContextMenuPolicy = 3
 const Qt__PreventContextMenu Qt__ContextMenuPolicy = 4
 
-type Qt__InputMethodQuery = int
-
+type Qt__InputMethodQuery = int // core
 const Qt__ImEnabled Qt__InputMethodQuery = 1
 const Qt__ImCursorRectangle Qt__InputMethodQuery = 2
 const Qt__ImMicroFocus Qt__InputMethodQuery = 2
@@ -1198,8 +1137,7 @@ const Qt__ImPlatformData Qt__InputMethodQuery = -2147483648
 const Qt__ImQueryInput Qt__InputMethodQuery = 16570
 const Qt__ImQueryAll Qt__InputMethodQuery = -1
 
-type Qt__InputMethodHint = int
-
+type Qt__InputMethodHint = int // core
 const Qt__ImhNone Qt__InputMethodHint = 0
 const Qt__ImhHiddenText Qt__InputMethodHint = 1
 const Qt__ImhSensitiveData Qt__InputMethodHint = 2
@@ -1222,8 +1160,7 @@ const Qt__ImhUrlCharactersOnly Qt__InputMethodHint = 4194304
 const Qt__ImhLatinOnly Qt__InputMethodHint = 8388608
 const Qt__ImhExclusiveInputMask Qt__InputMethodHint = -65536
 
-type Qt__EnterKeyType = int
-
+type Qt__EnterKeyType = int // core
 const Qt__EnterKeyDefault Qt__EnterKeyType = 0
 const Qt__EnterKeyReturn Qt__EnterKeyType = 1
 const Qt__EnterKeyDone Qt__EnterKeyType = 2
@@ -1233,22 +1170,19 @@ const Qt__EnterKeySearch Qt__EnterKeyType = 5
 const Qt__EnterKeyNext Qt__EnterKeyType = 6
 const Qt__EnterKeyPrevious Qt__EnterKeyType = 7
 
-type Qt__ToolButtonStyle = int
-
+type Qt__ToolButtonStyle = int // core
 const Qt__ToolButtonIconOnly Qt__ToolButtonStyle = 0
 const Qt__ToolButtonTextOnly Qt__ToolButtonStyle = 1
 const Qt__ToolButtonTextBesideIcon Qt__ToolButtonStyle = 2
 const Qt__ToolButtonTextUnderIcon Qt__ToolButtonStyle = 3
 const Qt__ToolButtonFollowStyle Qt__ToolButtonStyle = 4
 
-type Qt__LayoutDirection = int
-
+type Qt__LayoutDirection = int // core
 const Qt__LeftToRight Qt__LayoutDirection = 0
 const Qt__RightToLeft Qt__LayoutDirection = 1
 const Qt__LayoutDirectionAuto Qt__LayoutDirection = 2
 
-type Qt__AnchorPoint = int
-
+type Qt__AnchorPoint = int // core
 const Qt__AnchorLeft Qt__AnchorPoint = 0
 const Qt__AnchorHorizontalCenter Qt__AnchorPoint = 1
 const Qt__AnchorRight Qt__AnchorPoint = 2
@@ -1256,13 +1190,11 @@ const Qt__AnchorTop Qt__AnchorPoint = 3
 const Qt__AnchorVerticalCenter Qt__AnchorPoint = 4
 const Qt__AnchorBottom Qt__AnchorPoint = 5
 
-type Qt__FindChildOption = int
-
+type Qt__FindChildOption = int // core
 const Qt__FindDirectChildrenOnly Qt__FindChildOption = 0
 const Qt__FindChildrenRecursively Qt__FindChildOption = 1
 
-type Qt__DropAction = int
-
+type Qt__DropAction = int // core
 const Qt__CopyAction Qt__DropAction = 1
 const Qt__MoveAction Qt__DropAction = 2
 const Qt__LinkAction Qt__DropAction = 4
@@ -1270,14 +1202,12 @@ const Qt__ActionMask Qt__DropAction = 255
 const Qt__TargetMoveAction Qt__DropAction = 32770
 const Qt__IgnoreAction Qt__DropAction = 0
 
-type Qt__CheckState = int
-
+type Qt__CheckState = int // core
 const Qt__Unchecked Qt__CheckState = 0
 const Qt__PartiallyChecked Qt__CheckState = 1
 const Qt__Checked Qt__CheckState = 2
 
-type Qt__ItemDataRole = int
-
+type Qt__ItemDataRole = int // core
 const Qt__DisplayRole Qt__ItemDataRole = 0
 const Qt__DecorationRole Qt__ItemDataRole = 1
 const Qt__EditRole Qt__ItemDataRole = 2
@@ -1302,8 +1232,7 @@ const Qt__StatusTipPropertyRole Qt__ItemDataRole = 30
 const Qt__WhatsThisPropertyRole Qt__ItemDataRole = 31
 const Qt__UserRole Qt__ItemDataRole = 256
 
-type Qt__ItemFlag = int
-
+type Qt__ItemFlag = int // core
 const Qt__NoItemFlags Qt__ItemFlag = 0
 const Qt__ItemIsSelectable Qt__ItemFlag = 1
 const Qt__ItemIsEditable Qt__ItemFlag = 2
@@ -1316,8 +1245,7 @@ const Qt__ItemIsTristate Qt__ItemFlag = 64
 const Qt__ItemNeverHasChildren Qt__ItemFlag = 128
 const Qt__ItemIsUserTristate Qt__ItemFlag = 256
 
-type Qt__MatchFlag = int
-
+type Qt__MatchFlag = int // core
 const Qt__MatchExactly Qt__MatchFlag = 0
 const Qt__MatchContains Qt__MatchFlag = 1
 const Qt__MatchStartsWith Qt__MatchFlag = 2
@@ -1329,14 +1257,12 @@ const Qt__MatchCaseSensitive Qt__MatchFlag = 16
 const Qt__MatchWrap Qt__MatchFlag = 32
 const Qt__MatchRecursive Qt__MatchFlag = 64
 
-type Qt__WindowModality = int
-
+type Qt__WindowModality = int // core
 const Qt__NonModal Qt__WindowModality = 0
 const Qt__WindowModal Qt__WindowModality = 1
 const Qt__ApplicationModal Qt__WindowModality = 2
 
-type Qt__TextInteractionFlag = int
-
+type Qt__TextInteractionFlag = int // core
 const Qt__NoTextInteraction Qt__TextInteractionFlag = 0
 const Qt__TextSelectableByMouse Qt__TextInteractionFlag = 1
 const Qt__TextSelectableByKeyboard Qt__TextInteractionFlag = 2
@@ -1346,22 +1272,19 @@ const Qt__TextEditable Qt__TextInteractionFlag = 16
 const Qt__TextEditorInteraction Qt__TextInteractionFlag = 19
 const Qt__TextBrowserInteraction Qt__TextInteractionFlag = 13
 
-type Qt__EventPriority = int
-
+type Qt__EventPriority = int // core
 const Qt__HighEventPriority Qt__EventPriority = 1
 const Qt__NormalEventPriority Qt__EventPriority = 0
 const Qt__LowEventPriority Qt__EventPriority = -1
 
-type Qt__SizeHint = int
-
+type Qt__SizeHint = int // core
 const Qt__MinimumSize Qt__SizeHint = 0
 const Qt__PreferredSize Qt__SizeHint = 1
 const Qt__MaximumSize Qt__SizeHint = 2
 const Qt__MinimumDescent Qt__SizeHint = 3
 const Qt__NSizeHints Qt__SizeHint = 4
 
-type Qt__WindowFrameSection = int
-
+type Qt__WindowFrameSection = int // core
 const Qt__NoSection Qt__WindowFrameSection = 0
 const Qt__LeftSection Qt__WindowFrameSection = 1
 const Qt__TopLeftSection Qt__WindowFrameSection = 2
@@ -1373,32 +1296,27 @@ const Qt__BottomSection Qt__WindowFrameSection = 7
 const Qt__BottomLeftSection Qt__WindowFrameSection = 8
 const Qt__TitleBarArea Qt__WindowFrameSection = 9
 
-type Qt__Initialization = int
-
+type Qt__Initialization = int // core
 const Qt__Uninitialized Qt__Initialization = 0
 
-type Qt__CoordinateSystem = int
-
+type Qt__CoordinateSystem = int // core
 const Qt__DeviceCoordinates Qt__CoordinateSystem = 0
 const Qt__LogicalCoordinates Qt__CoordinateSystem = 1
 
-type Qt__TouchPointState = int
-
+type Qt__TouchPointState = int // core
 const Qt__TouchPointPressed Qt__TouchPointState = 1
 const Qt__TouchPointMoved Qt__TouchPointState = 2
 const Qt__TouchPointStationary Qt__TouchPointState = 4
 const Qt__TouchPointReleased Qt__TouchPointState = 8
 
-type Qt__GestureState = int
-
+type Qt__GestureState = int // core
 const Qt__NoGesture Qt__GestureState = 0
 const Qt__GestureStarted Qt__GestureState = 1
 const Qt__GestureUpdated Qt__GestureState = 2
 const Qt__GestureFinished Qt__GestureState = 3
 const Qt__GestureCanceled Qt__GestureState = 4
 
-type Qt__GestureType = int
-
+type Qt__GestureType = int // core
 const Qt__TapGesture Qt__GestureType = 1
 const Qt__TapAndHoldGesture Qt__GestureType = 2
 const Qt__PanGesture Qt__GestureType = 3
@@ -1407,14 +1325,12 @@ const Qt__SwipeGesture Qt__GestureType = 5
 const Qt__CustomGesture Qt__GestureType = 256
 const Qt__LastGestureType Qt__GestureType = -1
 
-type Qt__GestureFlag = int
-
+type Qt__GestureFlag = int // core
 const Qt__DontStartGestureOnChildren Qt__GestureFlag = 1
 const Qt__ReceivePartialGestures Qt__GestureFlag = 2
 const Qt__IgnoredGesturesPropagateToParent Qt__GestureFlag = 4
 
-type Qt__NativeGestureType = int
-
+type Qt__NativeGestureType = int // core
 const Qt__BeginNativeGesture Qt__NativeGestureType = 0
 const Qt__EndNativeGesture Qt__NativeGestureType = 1
 const Qt__PanNativeGesture Qt__NativeGestureType = 2
@@ -1423,51 +1339,43 @@ const Qt__SmartZoomNativeGesture Qt__NativeGestureType = 4
 const Qt__RotateNativeGesture Qt__NativeGestureType = 5
 const Qt__SwipeNativeGesture Qt__NativeGestureType = 6
 
-type Qt__NavigationMode = int
-
+type Qt__NavigationMode = int // core
 const Qt__NavigationModeNone Qt__NavigationMode = 0
 const Qt__NavigationModeKeypadTabOrder Qt__NavigationMode = 1
 const Qt__NavigationModeKeypadDirectional Qt__NavigationMode = 2
 const Qt__NavigationModeCursorAuto Qt__NavigationMode = 3
 const Qt__NavigationModeCursorForceVisible Qt__NavigationMode = 4
 
-type Qt__CursorMoveStyle = int
-
+type Qt__CursorMoveStyle = int // core
 const Qt__LogicalMoveStyle Qt__CursorMoveStyle = 0
 const Qt__VisualMoveStyle Qt__CursorMoveStyle = 1
 
-type Qt__TimerType = int
-
+type Qt__TimerType = int // core
 const Qt__PreciseTimer Qt__TimerType = 0
 const Qt__CoarseTimer Qt__TimerType = 1
 const Qt__VeryCoarseTimer Qt__TimerType = 2
 
-type Qt__ScrollPhase = int
-
+type Qt__ScrollPhase = int // core
 const Qt__NoScrollPhase Qt__ScrollPhase = 0
 const Qt__ScrollBegin Qt__ScrollPhase = 1
 const Qt__ScrollUpdate Qt__ScrollPhase = 2
 const Qt__ScrollEnd Qt__ScrollPhase = 3
 
-type Qt__MouseEventSource = int
-
+type Qt__MouseEventSource = int // core
 const Qt__MouseEventNotSynthesized Qt__MouseEventSource = 0
 const Qt__MouseEventSynthesizedBySystem Qt__MouseEventSource = 1
 const Qt__MouseEventSynthesizedByQt Qt__MouseEventSource = 2
 const Qt__MouseEventSynthesizedByApplication Qt__MouseEventSource = 3
 
-type Qt__MouseEventFlag = int
-
+type Qt__MouseEventFlag = int // core
 const Qt__MouseEventCreatedDoubleClick Qt__MouseEventFlag = 1
 const Qt__MouseEventFlagMask Qt__MouseEventFlag = 255
 
-type Qt__ChecksumType = int
-
+type Qt__ChecksumType = int // core
 const Qt__ChecksumIso3309 Qt__ChecksumType = 0
 const Qt__ChecksumItuV41 Qt__ChecksumType = 1
 
-type Qt__errc = int
-
+type Qt__errc = int // stdglobal
 const Qt__address_family_not_supported Qt__errc = 97
 const Qt__address_in_use Qt__errc = 98
 const Qt__address_not_available Qt__errc = 99
@@ -1547,8 +1455,7 @@ const Qt__too_many_symbolic_link_levels Qt__errc = 40
 const Qt__value_too_large Qt__errc = 75
 const Qt__wrong_protocol_type Qt__errc = 91
 
-type Qt___Ios_Fmtflags = int
-
+type Qt___Ios_Fmtflags = int // stdglobal
 const Qt___S_boolalpha Qt___Ios_Fmtflags = 1
 const Qt___S_dec Qt___Ios_Fmtflags = 2
 const Qt___S_fixed Qt___Ios_Fmtflags = 4
@@ -1571,8 +1478,7 @@ const Qt___S_ios_fmtflags_end Qt___Ios_Fmtflags = 65536
 const Qt___S_ios_fmtflags_max Qt___Ios_Fmtflags = 2147483647
 const Qt___S_ios_fmtflags_min Qt___Ios_Fmtflags = -2147483648
 
-type Qt___Ios_Openmode = int
-
+type Qt___Ios_Openmode = int // stdglobal
 const Qt___S_app Qt___Ios_Openmode = 1
 const Qt___S_ate Qt___Ios_Openmode = 2
 const Qt___S_bin Qt___Ios_Openmode = 4
@@ -1583,8 +1489,7 @@ const Qt___S_ios_openmode_end Qt___Ios_Openmode = 65536
 const Qt___S_ios_openmode_max Qt___Ios_Openmode = 2147483647
 const Qt___S_ios_openmode_min Qt___Ios_Openmode = -2147483648
 
-type Qt___Ios_Iostate = int
-
+type Qt___Ios_Iostate = int // stdglobal
 const Qt___S_goodbit Qt___Ios_Iostate = 0
 const Qt___S_badbit Qt___Ios_Iostate = 1
 const Qt___S_eofbit Qt___Ios_Iostate = 2
@@ -1593,62 +1498,52 @@ const Qt___S_ios_iostate_end Qt___Ios_Iostate = 65536
 const Qt___S_ios_iostate_max Qt___Ios_Iostate = 2147483647
 const Qt___S_ios_iostate_min Qt___Ios_Iostate = -2147483648
 
-type Qt___Ios_Seekdir = int
-
+type Qt___Ios_Seekdir = int // stdglobal
 const Qt___S_beg Qt___Ios_Seekdir = 0
 const Qt___S_cur Qt___Ios_Seekdir = 1
 const Qt___S_end Qt___Ios_Seekdir = 2
 const Qt___S_ios_seekdir_end Qt___Ios_Seekdir = 65536
 
-type Qt__io_errc = int
-
+type Qt__io_errc = int // stdglobal
 const Qt__stream Qt__io_errc = 1
 
-type Qt___Rb_tree_color = int
-
+type Qt___Rb_tree_color = int // stdglobal
 const Qt___S_red Qt___Rb_tree_color = 0
 const Qt___S_black Qt___Rb_tree_color = 1
 
-type Qt__IteratorCapability = int
-
+type Qt__IteratorCapability = int // core
 const Qt__ForwardCapability Qt__IteratorCapability = 1
 const Qt__BiDirectionalCapability Qt__IteratorCapability = 2
 const Qt__RandomAccessCapability Qt__IteratorCapability = 4
 
-type Qt___Manager_operation = int
-
+type Qt___Manager_operation = int // stdglobal
 const Qt____get_type_info Qt___Manager_operation = 0
 const Qt____get_functor_ptr Qt___Manager_operation = 1
 const Qt____clone_functor Qt___Manager_operation = 2
 const Qt____destroy_functor Qt___Manager_operation = 3
 
-type Qt___Lock_policy = int
-
+type Qt___Lock_policy = int // stdglobal
 const Qt___S_single Qt___Lock_policy = 0
 const Qt___S_mutex Qt___Lock_policy = 1
 const Qt___S_atomic Qt___Lock_policy = 2
 
-type Qt__pointer_safety = int
-
+type Qt__pointer_safety = int // stdglobal
 const Qt__relaxed Qt__pointer_safety = 0
 const Qt__preferred Qt__pointer_safety = 1
 const Qt__strict Qt__pointer_safety = 2
 
-type Qt__future_errc = int
-
+type Qt__future_errc = int // stdglobal
 const Qt__future_already_retrieved Qt__future_errc = 1
 const Qt__promise_already_satisfied Qt__future_errc = 2
 const Qt__no_state Qt__future_errc = 3
 const Qt__broken_promise Qt__future_errc = 4
 
-type Qt__future_status = int
-
+type Qt__future_status = int // stdglobal
 const Qt__ready Qt__future_status = 0
 const Qt__timeout Qt__future_status = 1
 const Qt__deferred Qt__future_status = 2
 
-type Qt__DrawingHint = int
-
+type Qt__DrawingHint = int // widgets
 const Qt__OpaqueTopLeft Qt__DrawingHint = 1
 const Qt__OpaqueTop Qt__DrawingHint = 2
 const Qt__OpaqueTopRight Qt__DrawingHint = 4
@@ -1663,30 +1558,25 @@ const Qt__OpaqueEdges Qt__DrawingHint = 170
 const Qt__OpaqueFrame Qt__DrawingHint = 495
 const Qt__OpaqueAll Qt__DrawingHint = 511
 
-type Qt__KeyType = int
-
+type Qt__KeyType = int // network
 const Qt__PrivateKey Qt__KeyType = 0
 const Qt__PublicKey Qt__KeyType = 1
 
-type Qt__EncodingFormat = int
-
+type Qt__EncodingFormat = int // network
 const Qt__Pem Qt__EncodingFormat = 0
 const Qt__Der Qt__EncodingFormat = 1
 
-type Qt__KeyAlgorithm = int
-
+type Qt__KeyAlgorithm = int // network
 const Qt__Opaque Qt__KeyAlgorithm = 0
 const Qt__Rsa Qt__KeyAlgorithm = 1
 const Qt__Dsa Qt__KeyAlgorithm = 2
 const Qt__Ec Qt__KeyAlgorithm = 3
 
-type Qt__AlternativeNameEntryType = int
-
+type Qt__AlternativeNameEntryType = int // network
 const Qt__EmailEntry Qt__AlternativeNameEntryType = 0
 const Qt__DnsEntry Qt__AlternativeNameEntryType = 1
 
-type Qt__SslProtocol = int
-
+type Qt__SslProtocol = int // network
 const Qt__SslV3 Qt__SslProtocol = 0
 const Qt__SslV2 Qt__SslProtocol = 1
 const Qt__TlsV1_0 Qt__SslProtocol = 2
@@ -1700,8 +1590,7 @@ const Qt__TlsV1_1OrLater Qt__SslProtocol = 9
 const Qt__TlsV1_2OrLater Qt__SslProtocol = 10
 const Qt__UnknownProtocol Qt__SslProtocol = -1
 
-type Qt__SslOption = int
-
+type Qt__SslOption = int // network
 const Qt__SslOptionDisableEmptyFragments Qt__SslOption = 1
 const Qt__SslOptionDisableSessionTickets Qt__SslOption = 2
 const Qt__SslOptionDisableCompression Qt__SslOption = 4
@@ -1711,14 +1600,12 @@ const Qt__SslOptionDisableSessionSharing Qt__SslOption = 32
 const Qt__SslOptionDisableSessionPersistence Qt__SslOption = 64
 const Qt__SslOptionDisableServerCipherPreference Qt__SslOption = 128
 
-type Qt__AutoParentResult = int
-
+type Qt__AutoParentResult = int // qml
 const Qt__Parented Qt__AutoParentResult = 0
 const Qt__IncompatibleObject Qt__AutoParentResult = 1
 const Qt__IncompatibleParent Qt__AutoParentResult = 2
 
-type Qt__RegistrationType = int
-
+type Qt__RegistrationType = int // qml
 const Qt__TypeRegistration Qt__RegistrationType = 0
 const Qt__InterfaceRegistration Qt__RegistrationType = 1
 const Qt__AutoParentRegistration Qt__RegistrationType = 2
@@ -1727,15 +1614,13 @@ const Qt__CompositeRegistration Qt__RegistrationType = 4
 const Qt__CompositeSingletonRegistration Qt__RegistrationType = 5
 const Qt__QmlUnitCacheHookRegistration Qt__RegistrationType = 6
 
-type Qt___EXCEPTION_DISPOSITION = int
-
+type Qt___EXCEPTION_DISPOSITION = int // stdglobal
 const Qt__ExceptionContinueExecution Qt___EXCEPTION_DISPOSITION = 0
 const Qt__ExceptionContinueSearch Qt___EXCEPTION_DISPOSITION = 1
 const Qt__ExceptionNestedException Qt___EXCEPTION_DISPOSITION = 2
 const Qt__ExceptionCollidedUnwind Qt___EXCEPTION_DISPOSITION = 3
 
-type Qt__tagExtendedErrorParamTypes = int
-
+type Qt__tagExtendedErrorParamTypes = int // stdglobal
 const Qt__eeptAnsiString Qt__tagExtendedErrorParamTypes = 1
 const Qt__eeptUnicodeString Qt__tagExtendedErrorParamTypes = 2
 const Qt__eeptLongVal Qt__tagExtendedErrorParamTypes = 3
@@ -1744,8 +1629,7 @@ const Qt__eeptPointerVal Qt__tagExtendedErrorParamTypes = 5
 const Qt__eeptNone Qt__tagExtendedErrorParamTypes = 6
 const Qt__eeptBinary Qt__tagExtendedErrorParamTypes = 7
 
-type Qt___RPC_NOTIFICATION_TYPES = int
-
+type Qt___RPC_NOTIFICATION_TYPES = int // stdglobal
 const Qt__RpcNotificationTypeNone Qt___RPC_NOTIFICATION_TYPES = 0
 const Qt__RpcNotificationTypeEvent Qt___RPC_NOTIFICATION_TYPES = 1
 const Qt__RpcNotificationTypeApc Qt___RPC_NOTIFICATION_TYPES = 2
@@ -1753,16 +1637,14 @@ const Qt__RpcNotificationTypeIoc Qt___RPC_NOTIFICATION_TYPES = 3
 const Qt__RpcNotificationTypeHwnd Qt___RPC_NOTIFICATION_TYPES = 4
 const Qt__RpcNotificationTypeCallback Qt___RPC_NOTIFICATION_TYPES = 5
 
-type Qt___RPC_ASYNC_EVENT = int
-
+type Qt___RPC_ASYNC_EVENT = int // stdglobal
 const Qt__RpcCallComplete Qt___RPC_ASYNC_EVENT = 0
 const Qt__RpcSendComplete Qt___RPC_ASYNC_EVENT = 1
 const Qt__RpcReceiveComplete Qt___RPC_ASYNC_EVENT = 2
 const Qt__RpcClientDisconnect Qt___RPC_ASYNC_EVENT = 3
 const Qt__RpcClientCancel Qt___RPC_ASYNC_EVENT = 4
 
-type Qt___MEDIA_TYPE = int
-
+type Qt___MEDIA_TYPE = int // stdglobal
 const Qt__Unknown Qt___MEDIA_TYPE = 0
 const Qt__F5_1Pt2_512 Qt___MEDIA_TYPE = 1
 const Qt__F3_1Pt44_512 Qt___MEDIA_TYPE = 2
@@ -1787,20 +1669,17 @@ const Qt__F3_128Mb_512 Qt___MEDIA_TYPE = 20
 const Qt__F3_230Mb_512 Qt___MEDIA_TYPE = 21
 const Qt__F8_256_128 Qt___MEDIA_TYPE = 22
 
-type Qt__HBitmapFormat = int
-
+type Qt__HBitmapFormat = int // winextras
 const Qt__HBitmapNoAlpha Qt__HBitmapFormat = 0
 const Qt__HBitmapPremultipliedAlpha Qt__HBitmapFormat = 1
 const Qt__HBitmapAlpha Qt__HBitmapFormat = 2
 
-type Qt__WindowFlip3DPolicy = int
-
+type Qt__WindowFlip3DPolicy = int // winextras
 const Qt__FlipDefault Qt__WindowFlip3DPolicy = 0
 const Qt__FlipExcludeBelow Qt__WindowFlip3DPolicy = 1
 const Qt__FlipExcludeAbove Qt__WindowFlip3DPolicy = 2
 
-type Qt__BindFlag = int
-
+type Qt__BindFlag = int // androidextras
 const Qt__None Qt__BindFlag = 0
 const Qt__AutoCreate Qt__BindFlag = 1
 const Qt__DebugUnbind Qt__BindFlag = 2
@@ -1812,8 +1691,7 @@ const Qt__Important Qt__BindFlag = 64
 const Qt__AdjustWithActivity Qt__BindFlag = 128
 const Qt__ExternalService Qt__BindFlag = -2147483648
 
-type Qt__PermissionResult = int
-
+type Qt__PermissionResult = int // androidextras
 const Qt__Granted Qt__PermissionResult = 0
 const Qt__Denied Qt__PermissionResult = 1
 

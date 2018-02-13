@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QJSEngine struct {
 	*qtcore.QObject
 }
+type QJSEngine_ITF interface {
+	qtcore.QObject_ITF
+	QJSEngine_PTR() *QJSEngine
+}
+
+func (ptr *QJSEngine) QJSEngine_PTR() *QJSEngine { return ptr }
 
 func (this *QJSEngine) GetCthis() unsafe.Pointer {
 	if this == nil {

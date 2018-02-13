@@ -39,6 +39,12 @@ func (this *QPagedPaintDevice) InheritDevicePageLayout(f func() unsafe.Pointer) 
 type QPagedPaintDevice struct {
 	*QPaintDevice
 }
+type QPagedPaintDevice_ITF interface {
+	QPaintDevice_ITF
+	QPagedPaintDevice_PTR() *QPagedPaintDevice
+}
+
+func (ptr *QPagedPaintDevice) QPagedPaintDevice_PTR() *QPagedPaintDevice { return ptr }
 
 func (this *QPagedPaintDevice) GetCthis() unsafe.Pointer {
 	if this == nil {

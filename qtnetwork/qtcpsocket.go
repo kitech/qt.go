@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTcpSocket struct {
 	*QAbstractSocket
 }
+type QTcpSocket_ITF interface {
+	QAbstractSocket_ITF
+	QTcpSocket_PTR() *QTcpSocket
+}
+
+func (ptr *QTcpSocket) QTcpSocket_PTR() *QTcpSocket { return ptr }
 
 func (this *QTcpSocket) GetCthis() unsafe.Pointer {
 	if this == nil {

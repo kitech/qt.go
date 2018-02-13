@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QJsonParseError struct {
 	*qtrt.CObject
 }
+type QJsonParseError_ITF interface {
+	QJsonParseError_PTR() *QJsonParseError
+}
+
+func (ptr *QJsonParseError) QJsonParseError_PTR() *QJsonParseError { return ptr }
 
 func (this *QJsonParseError) GetCthis() unsafe.Pointer {
 	if this == nil {

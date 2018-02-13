@@ -125,6 +125,13 @@ type QWindow struct {
 	*qtcore.QObject
 	*QSurface
 }
+type QWindow_ITF interface {
+	qtcore.QObject_ITF
+	QSurface_ITF
+	QWindow_PTR() *QWindow
+}
+
+func (ptr *QWindow) QWindow_PTR() *QWindow { return ptr }
 
 func (this *QWindow) GetCthis() unsafe.Pointer {
 	if this == nil {

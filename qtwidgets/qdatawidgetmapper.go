@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QDataWidgetMapper struct {
 	*qtcore.QObject
 }
+type QDataWidgetMapper_ITF interface {
+	qtcore.QObject_ITF
+	QDataWidgetMapper_PTR() *QDataWidgetMapper
+}
+
+func (ptr *QDataWidgetMapper) QDataWidgetMapper_PTR() *QDataWidgetMapper { return ptr }
 
 func (this *QDataWidgetMapper) GetCthis() unsafe.Pointer {
 	if this == nil {

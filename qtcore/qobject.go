@@ -78,6 +78,11 @@ func (this *QObject) InheritDisconnectNotify(f func(signal *QMetaMethod) /*void*
 type QObject struct {
 	*qtrt.CObject
 }
+type QObject_ITF interface {
+	QObject_PTR() *QObject
+}
+
+func (ptr *QObject) QObject_PTR() *QObject { return ptr }
 
 func (this *QObject) GetCthis() unsafe.Pointer {
 	if this == nil {

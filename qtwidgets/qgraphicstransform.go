@@ -40,6 +40,12 @@ func (this *QGraphicsTransform) InheritUpdate(f func() /*void*/) {
 type QGraphicsTransform struct {
 	*qtcore.QObject
 }
+type QGraphicsTransform_ITF interface {
+	qtcore.QObject_ITF
+	QGraphicsTransform_PTR() *QGraphicsTransform
+}
+
+func (ptr *QGraphicsTransform) QGraphicsTransform_PTR() *QGraphicsTransform { return ptr }
 
 func (this *QGraphicsTransform) GetCthis() unsafe.Pointer {
 	if this == nil {

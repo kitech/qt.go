@@ -53,6 +53,12 @@ func (this *QFutureWatcherBase) InheritDisconnectOutputInterface(f func(pendingA
 type QFutureWatcherBase struct {
 	*QObject
 }
+type QFutureWatcherBase_ITF interface {
+	QObject_ITF
+	QFutureWatcherBase_PTR() *QFutureWatcherBase
+}
+
+func (ptr *QFutureWatcherBase) QFutureWatcherBase_PTR() *QFutureWatcherBase { return ptr }
 
 func (this *QFutureWatcherBase) GetCthis() unsafe.Pointer {
 	if this == nil {

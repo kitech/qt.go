@@ -39,6 +39,11 @@ func (this *QStandardItem) InheritEmitDataChanged(f func() /*void*/) {
 type QStandardItem struct {
 	*qtrt.CObject
 }
+type QStandardItem_ITF interface {
+	QStandardItem_PTR() *QStandardItem
+}
+
+func (ptr *QStandardItem) QStandardItem_PTR() *QStandardItem { return ptr }
 
 func (this *QStandardItem) GetCthis() unsafe.Pointer {
 	if this == nil {

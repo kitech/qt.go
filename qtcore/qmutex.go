@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QMutex struct {
 	*QBasicMutex
 }
+type QMutex_ITF interface {
+	QBasicMutex_ITF
+	QMutex_PTR() *QMutex
+}
+
+func (ptr *QMutex) QMutex_PTR() *QMutex { return ptr }
 
 func (this *QMutex) GetCthis() unsafe.Pointer {
 	if this == nil {

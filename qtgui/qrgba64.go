@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QRgba64 struct {
 	*qtrt.CObject
 }
+type QRgba64_ITF interface {
+	QRgba64_PTR() *QRgba64
+}
+
+func (ptr *QRgba64) QRgba64_PTR() *QRgba64 { return ptr }
 
 func (this *QRgba64) GetCthis() unsafe.Pointer {
 	if this == nil {

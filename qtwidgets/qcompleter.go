@@ -45,6 +45,12 @@ func (this *QCompleter) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/
 type QCompleter struct {
 	*qtcore.QObject
 }
+type QCompleter_ITF interface {
+	qtcore.QObject_ITF
+	QCompleter_PTR() *QCompleter
+}
+
+func (ptr *QCompleter) QCompleter_PTR() *QCompleter { return ptr }
 
 func (this *QCompleter) GetCthis() unsafe.Pointer {
 	if this == nil {

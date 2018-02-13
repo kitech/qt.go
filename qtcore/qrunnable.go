@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QRunnable struct {
 	*qtrt.CObject
 }
+type QRunnable_ITF interface {
+	QRunnable_PTR() *QRunnable
+}
+
+func (ptr *QRunnable) QRunnable_PTR() *QRunnable { return ptr }
 
 func (this *QRunnable) GetCthis() unsafe.Pointer {
 	if this == nil {

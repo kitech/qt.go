@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type CachedQmlUnit struct {
 	*qtrt.CObject
 }
+type CachedQmlUnit_ITF interface {
+	CachedQmlUnit_PTR() *CachedQmlUnit
+}
+
+func (ptr *CachedQmlUnit) CachedQmlUnit_PTR() *CachedQmlUnit { return ptr }
 
 func (this *CachedQmlUnit) GetCthis() unsafe.Pointer {
 	if this == nil {

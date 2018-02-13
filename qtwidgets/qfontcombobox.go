@@ -40,6 +40,12 @@ func (this *QFontComboBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/
 type QFontComboBox struct {
 	*QComboBox
 }
+type QFontComboBox_ITF interface {
+	QComboBox_ITF
+	QFontComboBox_PTR() *QFontComboBox
+}
+
+func (ptr *QFontComboBox) QFontComboBox_PTR() *QFontComboBox { return ptr }
 
 func (this *QFontComboBox) GetCthis() unsafe.Pointer {
 	if this == nil {

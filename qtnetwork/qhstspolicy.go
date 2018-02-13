@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QHstsPolicy struct {
 	*qtrt.CObject
 }
+type QHstsPolicy_ITF interface {
+	QHstsPolicy_PTR() *QHstsPolicy
+}
+
+func (ptr *QHstsPolicy) QHstsPolicy_PTR() *QHstsPolicy { return ptr }
 
 func (this *QHstsPolicy) GetCthis() unsafe.Pointer {
 	if this == nil {

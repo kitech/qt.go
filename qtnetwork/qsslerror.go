@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QSslError struct {
 	*qtrt.CObject
 }
+type QSslError_ITF interface {
+	QSslError_PTR() *QSslError
+}
+
+func (ptr *QSslError) QSslError_PTR() *QSslError { return ptr }
 
 func (this *QSslError) GetCthis() unsafe.Pointer {
 	if this == nil {

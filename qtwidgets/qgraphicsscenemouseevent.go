@@ -35,6 +35,14 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsSceneMouseEvent struct {
 	*QGraphicsSceneEvent
 }
+type QGraphicsSceneMouseEvent_ITF interface {
+	QGraphicsSceneEvent_ITF
+	QGraphicsSceneMouseEvent_PTR() *QGraphicsSceneMouseEvent
+}
+
+func (ptr *QGraphicsSceneMouseEvent) QGraphicsSceneMouseEvent_PTR() *QGraphicsSceneMouseEvent {
+	return ptr
+}
 
 func (this *QGraphicsSceneMouseEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

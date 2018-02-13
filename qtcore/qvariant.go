@@ -53,6 +53,11 @@ func (this *QVariant) InheritConvert(f func(t int, ptr unsafe.Pointer /*666*/) b
 type QVariant struct {
 	*qtrt.CObject
 }
+type QVariant_ITF interface {
+	QVariant_PTR() *QVariant
+}
+
+func (ptr *QVariant) QVariant_PTR() *QVariant { return ptr }
 
 func (this *QVariant) GetCthis() unsafe.Pointer {
 	if this == nil {

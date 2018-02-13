@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QObjectCleanupHandler struct {
 	*QObject
 }
+type QObjectCleanupHandler_ITF interface {
+	QObject_ITF
+	QObjectCleanupHandler_PTR() *QObjectCleanupHandler
+}
+
+func (ptr *QObjectCleanupHandler) QObjectCleanupHandler_PTR() *QObjectCleanupHandler { return ptr }
 
 func (this *QObjectCleanupHandler) GetCthis() unsafe.Pointer {
 	if this == nil {

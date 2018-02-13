@@ -145,6 +145,11 @@ func (this *QGraphicsTextItem) InheritExtension(f func(variant *qtcore.QVariant)
 type QGraphicsTextItem struct {
 	*qtrt.CObject
 }
+type QGraphicsTextItem_ITF interface {
+	QGraphicsTextItem_PTR() *QGraphicsTextItem
+}
+
+func (ptr *QGraphicsTextItem) QGraphicsTextItem_PTR() *QGraphicsTextItem { return ptr }
 
 func (this *QGraphicsTextItem) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QSurfaceFormat struct {
 	*qtrt.CObject
 }
+type QSurfaceFormat_ITF interface {
+	QSurfaceFormat_PTR() *QSurfaceFormat
+}
+
+func (ptr *QSurfaceFormat) QSurfaceFormat_PTR() *QSurfaceFormat { return ptr }
 
 func (this *QSurfaceFormat) GetCthis() unsafe.Pointer {
 	if this == nil {

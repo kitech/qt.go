@@ -40,6 +40,12 @@ func (this *QGraphicsBlurEffect) InheritDraw(f func(painter *qtgui.QPainter /*77
 type QGraphicsBlurEffect struct {
 	*QGraphicsEffect
 }
+type QGraphicsBlurEffect_ITF interface {
+	QGraphicsEffect_ITF
+	QGraphicsBlurEffect_PTR() *QGraphicsBlurEffect
+}
+
+func (ptr *QGraphicsBlurEffect) QGraphicsBlurEffect_PTR() *QGraphicsBlurEffect { return ptr }
 
 func (this *QGraphicsBlurEffect) GetCthis() unsafe.Pointer {
 	if this == nil {

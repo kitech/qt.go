@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QEventLoopLocker struct {
 	*qtrt.CObject
 }
+type QEventLoopLocker_ITF interface {
+	QEventLoopLocker_PTR() *QEventLoopLocker
+}
+
+func (ptr *QEventLoopLocker) QEventLoopLocker_PTR() *QEventLoopLocker { return ptr }
 
 func (this *QEventLoopLocker) GetCthis() unsafe.Pointer {
 	if this == nil {

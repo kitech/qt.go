@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QTextCodec struct {
 	*qtrt.CObject
 }
+type QTextCodec_ITF interface {
+	QTextCodec_PTR() *QTextCodec
+}
+
+func (ptr *QTextCodec) QTextCodec_PTR() *QTextCodec { return ptr }
 
 func (this *QTextCodec) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -50,6 +50,12 @@ func (this *QFontDialog) InheritEventFilter(f func(object *qtcore.QObject /*777 
 type QFontDialog struct {
 	*QDialog
 }
+type QFontDialog_ITF interface {
+	QDialog_ITF
+	QFontDialog_PTR() *QFontDialog
+}
+
+func (ptr *QFontDialog) QFontDialog_PTR() *QFontDialog { return ptr }
 
 func (this *QFontDialog) GetCthis() unsafe.Pointer {
 	if this == nil {

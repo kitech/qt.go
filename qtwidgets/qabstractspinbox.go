@@ -135,6 +135,12 @@ func (this *QAbstractSpinBox) InheritStepEnabled(f func() int) {
 type QAbstractSpinBox struct {
 	*QWidget
 }
+type QAbstractSpinBox_ITF interface {
+	QWidget_ITF
+	QAbstractSpinBox_PTR() *QAbstractSpinBox
+}
+
+func (ptr *QAbstractSpinBox) QAbstractSpinBox_PTR() *QAbstractSpinBox { return ptr }
 
 func (this *QAbstractSpinBox) GetCthis() unsafe.Pointer {
 	if this == nil {

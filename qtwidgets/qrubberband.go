@@ -70,6 +70,12 @@ func (this *QRubberBand) InheritInitStyleOption(f func(option *QStyleOptionRubbe
 type QRubberBand struct {
 	*QWidget
 }
+type QRubberBand_ITF interface {
+	QWidget_ITF
+	QRubberBand_PTR() *QRubberBand
+}
+
+func (ptr *QRubberBand) QRubberBand_PTR() *QRubberBand { return ptr }
 
 func (this *QRubberBand) GetCthis() unsafe.Pointer {
 	if this == nil {

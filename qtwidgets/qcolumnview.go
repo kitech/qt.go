@@ -95,6 +95,12 @@ func (this *QColumnView) InheritInitializeColumn(f func(column *QAbstractItemVie
 type QColumnView struct {
 	*QAbstractItemView
 }
+type QColumnView_ITF interface {
+	QAbstractItemView_ITF
+	QColumnView_PTR() *QColumnView
+}
+
+func (ptr *QColumnView) QColumnView_PTR() *QColumnView { return ptr }
 
 func (this *QColumnView) GetCthis() unsafe.Pointer {
 	if this == nil {

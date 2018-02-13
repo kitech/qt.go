@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QCollator struct {
 	*qtrt.CObject
 }
+type QCollator_ITF interface {
+	QCollator_PTR() *QCollator
+}
+
+func (ptr *QCollator) QCollator_PTR() *QCollator { return ptr }
 
 func (this *QCollator) GetCthis() unsafe.Pointer {
 	if this == nil {

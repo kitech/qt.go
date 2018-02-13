@@ -40,6 +40,12 @@ func (this *QAction) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) b
 type QAction struct {
 	*qtcore.QObject
 }
+type QAction_ITF interface {
+	qtcore.QObject_ITF
+	QAction_PTR() *QAction
+}
+
+func (ptr *QAction) QAction_PTR() *QAction { return ptr }
 
 func (this *QAction) GetCthis() unsafe.Pointer {
 	if this == nil {

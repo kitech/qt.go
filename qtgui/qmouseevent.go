@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QMouseEvent struct {
 	*QInputEvent
 }
+type QMouseEvent_ITF interface {
+	QInputEvent_ITF
+	QMouseEvent_PTR() *QMouseEvent
+}
+
+func (ptr *QMouseEvent) QMouseEvent_PTR() *QMouseEvent { return ptr }
 
 func (this *QMouseEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

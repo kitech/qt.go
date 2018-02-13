@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextObjectInterface struct {
 	*qtrt.CObject
 }
+type QTextObjectInterface_ITF interface {
+	QTextObjectInterface_PTR() *QTextObjectInterface
+}
+
+func (ptr *QTextObjectInterface) QTextObjectInterface_PTR() *QTextObjectInterface { return ptr }
 
 func (this *QTextObjectInterface) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextLength struct {
 	*qtrt.CObject
 }
+type QTextLength_ITF interface {
+	QTextLength_PTR() *QTextLength
+}
+
+func (ptr *QTextLength) QTextLength_PTR() *QTextLength { return ptr }
 
 func (this *QTextLength) GetCthis() unsafe.Pointer {
 	if this == nil {

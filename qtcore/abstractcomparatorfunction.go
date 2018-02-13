@@ -33,6 +33,13 @@ import "github.com/kitech/qt.go/qtrt"
 type AbstractComparatorFunction struct {
 	*qtrt.CObject
 }
+type AbstractComparatorFunction_ITF interface {
+	AbstractComparatorFunction_PTR() *AbstractComparatorFunction
+}
+
+func (ptr *AbstractComparatorFunction) AbstractComparatorFunction_PTR() *AbstractComparatorFunction {
+	return ptr
+}
 
 func (this *AbstractComparatorFunction) GetCthis() unsafe.Pointer {
 	if this == nil {

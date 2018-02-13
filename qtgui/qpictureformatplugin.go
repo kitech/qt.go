@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QPictureFormatPlugin struct {
 	*qtcore.QObject
 }
+type QPictureFormatPlugin_ITF interface {
+	qtcore.QObject_ITF
+	QPictureFormatPlugin_PTR() *QPictureFormatPlugin
+}
+
+func (ptr *QPictureFormatPlugin) QPictureFormatPlugin_PTR() *QPictureFormatPlugin { return ptr }
 
 func (this *QPictureFormatPlugin) GetCthis() unsafe.Pointer {
 	if this == nil {

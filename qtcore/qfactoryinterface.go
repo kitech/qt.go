@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QFactoryInterface struct {
 	*qtrt.CObject
 }
+type QFactoryInterface_ITF interface {
+	QFactoryInterface_PTR() *QFactoryInterface
+}
+
+func (ptr *QFactoryInterface) QFactoryInterface_PTR() *QFactoryInterface { return ptr }
 
 func (this *QFactoryInterface) GetCthis() unsafe.Pointer {
 	if this == nil {

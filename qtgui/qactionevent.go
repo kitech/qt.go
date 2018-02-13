@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QActionEvent struct {
 	*qtcore.QEvent
 }
+type QActionEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QActionEvent_PTR() *QActionEvent
+}
+
+func (ptr *QActionEvent) QActionEvent_PTR() *QActionEvent { return ptr }
 
 func (this *QActionEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QAuthenticator struct {
 	*qtrt.CObject
 }
+type QAuthenticator_ITF interface {
+	QAuthenticator_PTR() *QAuthenticator
+}
+
+func (ptr *QAuthenticator) QAuthenticator_PTR() *QAuthenticator { return ptr }
 
 func (this *QAuthenticator) GetCthis() unsafe.Pointer {
 	if this == nil {

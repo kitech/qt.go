@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QButtonGroup struct {
 	*qtcore.QObject
 }
+type QButtonGroup_ITF interface {
+	qtcore.QObject_ITF
+	QButtonGroup_PTR() *QButtonGroup
+}
+
+func (ptr *QButtonGroup) QButtonGroup_PTR() *QButtonGroup { return ptr }
 
 func (this *QButtonGroup) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlImageProviderBase struct {
 	*qtrt.CObject
 }
+type QQmlImageProviderBase_ITF interface {
+	QQmlImageProviderBase_PTR() *QQmlImageProviderBase
+}
+
+func (ptr *QQmlImageProviderBase) QQmlImageProviderBase_PTR() *QQmlImageProviderBase { return ptr }
 
 func (this *QQmlImageProviderBase) GetCthis() unsafe.Pointer {
 	if this == nil {

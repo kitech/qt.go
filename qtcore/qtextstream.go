@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QTextStream struct {
 	*qtrt.CObject
 }
+type QTextStream_ITF interface {
+	QTextStream_PTR() *QTextStream
+}
+
+func (ptr *QTextStream) QTextStream_PTR() *QTextStream { return ptr }
 
 func (this *QTextStream) GetCthis() unsafe.Pointer {
 	if this == nil {

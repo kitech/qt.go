@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QMetaEnum struct {
 	*qtrt.CObject
 }
+type QMetaEnum_ITF interface {
+	QMetaEnum_PTR() *QMetaEnum
+}
+
+func (ptr *QMetaEnum) QMetaEnum_PTR() *QMetaEnum { return ptr }
 
 func (this *QMetaEnum) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QNetworkCacheMetaData struct {
 	*qtrt.CObject
 }
+type QNetworkCacheMetaData_ITF interface {
+	QNetworkCacheMetaData_PTR() *QNetworkCacheMetaData
+}
+
+func (ptr *QNetworkCacheMetaData) QNetworkCacheMetaData_PTR() *QNetworkCacheMetaData { return ptr }
 
 func (this *QNetworkCacheMetaData) GetCthis() unsafe.Pointer {
 	if this == nil {

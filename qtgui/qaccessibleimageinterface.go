@@ -34,6 +34,13 @@ import "github.com/kitech/qt.go/qtcore"
 type QAccessibleImageInterface struct {
 	*qtrt.CObject
 }
+type QAccessibleImageInterface_ITF interface {
+	QAccessibleImageInterface_PTR() *QAccessibleImageInterface
+}
+
+func (ptr *QAccessibleImageInterface) QAccessibleImageInterface_PTR() *QAccessibleImageInterface {
+	return ptr
+}
 
 func (this *QAccessibleImageInterface) GetCthis() unsafe.Pointer {
 	if this == nil {

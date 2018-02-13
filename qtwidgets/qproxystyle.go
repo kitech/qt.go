@@ -40,6 +40,12 @@ func (this *QProxyStyle) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) 
 type QProxyStyle struct {
 	*QCommonStyle
 }
+type QProxyStyle_ITF interface {
+	QCommonStyle_ITF
+	QProxyStyle_PTR() *QProxyStyle
+}
+
+func (ptr *QProxyStyle) QProxyStyle_PTR() *QProxyStyle { return ptr }
 
 func (this *QProxyStyle) GetCthis() unsafe.Pointer {
 	if this == nil {

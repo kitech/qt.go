@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QTemporaryDir struct {
 	*qtrt.CObject
 }
+type QTemporaryDir_ITF interface {
+	QTemporaryDir_PTR() *QTemporaryDir
+}
+
+func (ptr *QTemporaryDir) QTemporaryDir_PTR() *QTemporaryDir { return ptr }
 
 func (this *QTemporaryDir) GetCthis() unsafe.Pointer {
 	if this == nil {

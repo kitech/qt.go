@@ -75,6 +75,12 @@ func (this *QAbstractSlider) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QE
 type QAbstractSlider struct {
 	*QWidget
 }
+type QAbstractSlider_ITF interface {
+	QWidget_ITF
+	QAbstractSlider_PTR() *QAbstractSlider
+}
+
+func (ptr *QAbstractSlider) QAbstractSlider_PTR() *QAbstractSlider { return ptr }
 
 func (this *QAbstractSlider) GetCthis() unsafe.Pointer {
 	if this == nil {

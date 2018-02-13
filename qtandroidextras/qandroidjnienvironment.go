@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QAndroidJniEnvironment struct {
 	*qtrt.CObject
 }
+type QAndroidJniEnvironment_ITF interface {
+	QAndroidJniEnvironment_PTR() *QAndroidJniEnvironment
+}
+
+func (ptr *QAndroidJniEnvironment) QAndroidJniEnvironment_PTR() *QAndroidJniEnvironment { return ptr }
 
 func (this *QAndroidJniEnvironment) GetCthis() unsafe.Pointer {
 	if this == nil {

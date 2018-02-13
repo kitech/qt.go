@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type RegisterInterface struct {
 	*qtrt.CObject
 }
+type RegisterInterface_ITF interface {
+	RegisterInterface_PTR() *RegisterInterface
+}
+
+func (ptr *RegisterInterface) RegisterInterface_PTR() *RegisterInterface { return ptr }
 
 func (this *RegisterInterface) GetCthis() unsafe.Pointer {
 	if this == nil {

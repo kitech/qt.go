@@ -44,6 +44,12 @@ func (this *QNetworkSession) InheritDisconnectNotify(f func(signal *qtcore.QMeta
 type QNetworkSession struct {
 	*qtcore.QObject
 }
+type QNetworkSession_ITF interface {
+	qtcore.QObject_ITF
+	QNetworkSession_PTR() *QNetworkSession
+}
+
+func (ptr *QNetworkSession) QNetworkSession_PTR() *QNetworkSession { return ptr }
 
 func (this *QNetworkSession) GetCthis() unsafe.Pointer {
 	if this == nil {

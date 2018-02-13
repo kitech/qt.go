@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QWindowStateChangeEvent struct {
 	*qtcore.QEvent
 }
+type QWindowStateChangeEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QWindowStateChangeEvent_PTR() *QWindowStateChangeEvent
+}
+
+func (ptr *QWindowStateChangeEvent) QWindowStateChangeEvent_PTR() *QWindowStateChangeEvent { return ptr }
 
 func (this *QWindowStateChangeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QLocale struct {
 	*qtrt.CObject
 }
+type QLocale_ITF interface {
+	QLocale_PTR() *QLocale
+}
+
+func (ptr *QLocale) QLocale_PTR() *QLocale { return ptr }
 
 func (this *QLocale) GetCthis() unsafe.Pointer {
 	if this == nil {

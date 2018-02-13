@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type VectorBoolElements struct {
 	*qtrt.CObject
 }
+type VectorBoolElements_ITF interface {
+	VectorBoolElements_PTR() *VectorBoolElements
+}
+
+func (ptr *VectorBoolElements) VectorBoolElements_PTR() *VectorBoolElements { return ptr }
 
 func (this *VectorBoolElements) GetCthis() unsafe.Pointer {
 	if this == nil {

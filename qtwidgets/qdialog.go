@@ -70,6 +70,12 @@ func (this *QDialog) InheritAdjustPosition(f func(arg0 *QWidget /*777 QWidget **
 type QDialog struct {
 	*QWidget
 }
+type QDialog_ITF interface {
+	QWidget_ITF
+	QDialog_PTR() *QDialog
+}
+
+func (ptr *QDialog) QDialog_PTR() *QDialog { return ptr }
 
 func (this *QDialog) GetCthis() unsafe.Pointer {
 	if this == nil {

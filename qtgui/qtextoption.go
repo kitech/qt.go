@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextOption struct {
 	*qtrt.CObject
 }
+type QTextOption_ITF interface {
+	QTextOption_PTR() *QTextOption
+}
+
+func (ptr *QTextOption) QTextOption_PTR() *QTextOption { return ptr }
 
 func (this *QTextOption) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -33,6 +33,14 @@ import "github.com/kitech/qt.go/qtrt"
 type QDynamicPropertyChangeEvent struct {
 	*QEvent
 }
+type QDynamicPropertyChangeEvent_ITF interface {
+	QEvent_ITF
+	QDynamicPropertyChangeEvent_PTR() *QDynamicPropertyChangeEvent
+}
+
+func (ptr *QDynamicPropertyChangeEvent) QDynamicPropertyChangeEvent_PTR() *QDynamicPropertyChangeEvent {
+	return ptr
+}
 
 func (this *QDynamicPropertyChangeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -226,6 +226,13 @@ type QWidget struct {
 	*qtcore.QObject
 	*qtgui.QPaintDevice
 }
+type QWidget_ITF interface {
+	qtcore.QObject_ITF
+	qtgui.QPaintDevice_ITF
+	QWidget_PTR() *QWidget
+}
+
+func (ptr *QWidget) QWidget_PTR() *QWidget { return ptr }
 
 func (this *QWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

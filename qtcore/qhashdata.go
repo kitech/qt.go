@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QHashData struct {
 	*qtrt.CObject
 }
+type QHashData_ITF interface {
+	QHashData_PTR() *QHashData
+}
+
+func (ptr *QHashData) QHashData_PTR() *QHashData { return ptr }
 
 func (this *QHashData) GetCthis() unsafe.Pointer {
 	if this == nil {

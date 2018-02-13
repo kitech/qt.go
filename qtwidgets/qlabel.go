@@ -90,6 +90,12 @@ func (this *QLabel) InheritFocusNextPrevChild(f func(next bool) bool) {
 type QLabel struct {
 	*QFrame
 }
+type QLabel_ITF interface {
+	QFrame_ITF
+	QLabel_PTR() *QLabel
+}
+
+func (ptr *QLabel) QLabel_PTR() *QLabel { return ptr }
 
 func (this *QLabel) GetCthis() unsafe.Pointer {
 	if this == nil {

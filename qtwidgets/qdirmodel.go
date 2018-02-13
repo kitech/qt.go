@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QDirModel struct {
 	*qtcore.QAbstractItemModel
 }
+type QDirModel_ITF interface {
+	qtcore.QAbstractItemModel_ITF
+	QDirModel_PTR() *QDirModel
+}
+
+func (ptr *QDirModel) QDirModel_PTR() *QDirModel { return ptr }
 
 func (this *QDirModel) GetCthis() unsafe.Pointer {
 	if this == nil {

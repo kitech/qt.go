@@ -42,6 +42,12 @@ func (this *QQuickTransform) InheritUpdate(f func() /*void*/) {
 type QQuickTransform struct {
 	*qtcore.QObject
 }
+type QQuickTransform_ITF interface {
+	qtcore.QObject_ITF
+	QQuickTransform_PTR() *QQuickTransform
+}
+
+func (ptr *QQuickTransform) QQuickTransform_PTR() *QQuickTransform { return ptr }
 
 func (this *QQuickTransform) GetCthis() unsafe.Pointer {
 	if this == nil {

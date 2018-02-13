@@ -70,6 +70,12 @@ func (this *QTreeWidget) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 Q
 type QTreeWidget struct {
 	*QTreeView
 }
+type QTreeWidget_ITF interface {
+	QTreeView_ITF
+	QTreeWidget_PTR() *QTreeWidget
+}
+
+func (ptr *QTreeWidget) QTreeWidget_PTR() *QTreeWidget { return ptr }
 
 func (this *QTreeWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

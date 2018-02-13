@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QGlyphRun struct {
 	*qtrt.CObject
 }
+type QGlyphRun_ITF interface {
+	QGlyphRun_PTR() *QGlyphRun
+}
+
+func (ptr *QGlyphRun) QGlyphRun_PTR() *QGlyphRun { return ptr }
 
 func (this *QGlyphRun) GetCthis() unsafe.Pointer {
 	if this == nil {

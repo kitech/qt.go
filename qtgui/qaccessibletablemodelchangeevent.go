@@ -34,6 +34,14 @@ import "github.com/kitech/qt.go/qtcore"
 type QAccessibleTableModelChangeEvent struct {
 	*QAccessibleEvent
 }
+type QAccessibleTableModelChangeEvent_ITF interface {
+	QAccessibleEvent_ITF
+	QAccessibleTableModelChangeEvent_PTR() *QAccessibleTableModelChangeEvent
+}
+
+func (ptr *QAccessibleTableModelChangeEvent) QAccessibleTableModelChangeEvent_PTR() *QAccessibleTableModelChangeEvent {
+	return ptr
+}
 
 func (this *QAccessibleTableModelChangeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

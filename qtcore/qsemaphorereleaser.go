@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QSemaphoreReleaser struct {
 	*qtrt.CObject
 }
+type QSemaphoreReleaser_ITF interface {
+	QSemaphoreReleaser_PTR() *QSemaphoreReleaser
+}
+
+func (ptr *QSemaphoreReleaser) QSemaphoreReleaser_PTR() *QSemaphoreReleaser { return ptr }
 
 func (this *QSemaphoreReleaser) GetCthis() unsafe.Pointer {
 	if this == nil {

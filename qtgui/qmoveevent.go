@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QMoveEvent struct {
 	*qtcore.QEvent
 }
+type QMoveEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QMoveEvent_PTR() *QMoveEvent
+}
+
+func (ptr *QMoveEvent) QMoveEvent_PTR() *QMoveEvent { return ptr }
 
 func (this *QMoveEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QSignalMapper struct {
 	*QObject
 }
+type QSignalMapper_ITF interface {
+	QObject_ITF
+	QSignalMapper_PTR() *QSignalMapper
+}
+
+func (ptr *QSignalMapper) QSignalMapper_PTR() *QSignalMapper { return ptr }
 
 func (this *QSignalMapper) GetCthis() unsafe.Pointer {
 	if this == nil {

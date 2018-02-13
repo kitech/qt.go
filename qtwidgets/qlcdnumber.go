@@ -45,6 +45,12 @@ func (this *QLCDNumber) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 Q
 type QLCDNumber struct {
 	*QFrame
 }
+type QLCDNumber_ITF interface {
+	QFrame_ITF
+	QLCDNumber_PTR() *QLCDNumber
+}
+
+func (ptr *QLCDNumber) QLCDNumber_PTR() *QLCDNumber { return ptr }
 
 func (this *QLCDNumber) GetCthis() unsafe.Pointer {
 	if this == nil {

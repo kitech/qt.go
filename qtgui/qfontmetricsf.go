@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QFontMetricsF struct {
 	*qtrt.CObject
 }
+type QFontMetricsF_ITF interface {
+	QFontMetricsF_PTR() *QFontMetricsF
+}
+
+func (ptr *QFontMetricsF) QFontMetricsF_PTR() *QFontMetricsF { return ptr }
 
 func (this *QFontMetricsF) GetCthis() unsafe.Pointer {
 	if this == nil {

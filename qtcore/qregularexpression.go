@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QRegularExpression struct {
 	*qtrt.CObject
 }
+type QRegularExpression_ITF interface {
+	QRegularExpression_PTR() *QRegularExpression
+}
+
+func (ptr *QRegularExpression) QRegularExpression_PTR() *QRegularExpression { return ptr }
 
 func (this *QRegularExpression) GetCthis() unsafe.Pointer {
 	if this == nil {

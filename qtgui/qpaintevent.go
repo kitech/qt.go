@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QPaintEvent struct {
 	*qtcore.QEvent
 }
+type QPaintEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QPaintEvent_PTR() *QPaintEvent
+}
+
+func (ptr *QPaintEvent) QPaintEvent_PTR() *QPaintEvent { return ptr }
 
 func (this *QPaintEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

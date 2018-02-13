@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QMacToolBar struct {
 	*qtcore.QObject
 }
+type QMacToolBar_ITF interface {
+	qtcore.QObject_ITF
+	QMacToolBar_PTR() *QMacToolBar
+}
+
+func (ptr *QMacToolBar) QMacToolBar_PTR() *QMacToolBar { return ptr }
 
 func (this *QMacToolBar) GetCthis() unsafe.Pointer {
 	if this == nil {

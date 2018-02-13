@@ -40,6 +40,12 @@ func (this *QGraphicsColorizeEffect) InheritDraw(f func(painter *qtgui.QPainter 
 type QGraphicsColorizeEffect struct {
 	*QGraphicsEffect
 }
+type QGraphicsColorizeEffect_ITF interface {
+	QGraphicsEffect_ITF
+	QGraphicsColorizeEffect_PTR() *QGraphicsColorizeEffect
+}
+
+func (ptr *QGraphicsColorizeEffect) QGraphicsColorizeEffect_PTR() *QGraphicsColorizeEffect { return ptr }
 
 func (this *QGraphicsColorizeEffect) GetCthis() unsafe.Pointer {
 	if this == nil {

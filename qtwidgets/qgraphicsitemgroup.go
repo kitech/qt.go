@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsItemGroup struct {
 	*QGraphicsItem
 }
+type QGraphicsItemGroup_ITF interface {
+	QGraphicsItem_ITF
+	QGraphicsItemGroup_PTR() *QGraphicsItemGroup
+}
+
+func (ptr *QGraphicsItemGroup) QGraphicsItemGroup_PTR() *QGraphicsItemGroup { return ptr }
 
 func (this *QGraphicsItemGroup) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QQuickTextDocument struct {
 	*qtcore.QObject
 }
+type QQuickTextDocument_ITF interface {
+	qtcore.QObject_ITF
+	QQuickTextDocument_PTR() *QQuickTextDocument
+}
+
+func (ptr *QQuickTextDocument) QQuickTextDocument_PTR() *QQuickTextDocument { return ptr }
 
 func (this *QQuickTextDocument) GetCthis() unsafe.Pointer {
 	if this == nil {

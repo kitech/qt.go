@@ -60,6 +60,12 @@ func (this *QSpinBox) InheritFixup(f func(str string) /*void*/) {
 type QSpinBox struct {
 	*QAbstractSpinBox
 }
+type QSpinBox_ITF interface {
+	QAbstractSpinBox_ITF
+	QSpinBox_PTR() *QSpinBox
+}
+
+func (ptr *QSpinBox) QSpinBox_PTR() *QSpinBox { return ptr }
 
 func (this *QSpinBox) GetCthis() unsafe.Pointer {
 	if this == nil {

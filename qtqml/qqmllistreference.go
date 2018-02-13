@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlListReference struct {
 	*qtrt.CObject
 }
+type QQmlListReference_ITF interface {
+	QQmlListReference_PTR() *QQmlListReference
+}
+
+func (ptr *QQmlListReference) QQmlListReference_PTR() *QQmlListReference { return ptr }
 
 func (this *QQmlListReference) GetCthis() unsafe.Pointer {
 	if this == nil {

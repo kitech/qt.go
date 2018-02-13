@@ -60,6 +60,12 @@ func (this *QSlider) InheritInitStyleOption(f func(option *QStyleOptionSlider /*
 type QSlider struct {
 	*QAbstractSlider
 }
+type QSlider_ITF interface {
+	QAbstractSlider_ITF
+	QSlider_PTR() *QSlider
+}
+
+func (ptr *QSlider) QSlider_PTR() *QSlider { return ptr }
 
 func (this *QSlider) GetCthis() unsafe.Pointer {
 	if this == nil {

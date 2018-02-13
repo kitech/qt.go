@@ -37,6 +37,14 @@ import "github.com/kitech/qt.go/qtqml"
 type QQuickAsyncImageProvider struct {
 	*QQuickImageProvider
 }
+type QQuickAsyncImageProvider_ITF interface {
+	QQuickImageProvider_ITF
+	QQuickAsyncImageProvider_PTR() *QQuickAsyncImageProvider
+}
+
+func (ptr *QQuickAsyncImageProvider) QQuickAsyncImageProvider_PTR() *QQuickAsyncImageProvider {
+	return ptr
+}
 
 func (this *QQuickAsyncImageProvider) GetCthis() unsafe.Pointer {
 	if this == nil {

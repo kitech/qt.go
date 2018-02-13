@@ -95,6 +95,12 @@ func (this *QDateTimeEdit) InheritInitStyleOption(f func(option *QStyleOptionSpi
 type QDateTimeEdit struct {
 	*QAbstractSpinBox
 }
+type QDateTimeEdit_ITF interface {
+	QAbstractSpinBox_ITF
+	QDateTimeEdit_PTR() *QDateTimeEdit
+}
+
+func (ptr *QDateTimeEdit) QDateTimeEdit_PTR() *QDateTimeEdit { return ptr }
 
 func (this *QDateTimeEdit) GetCthis() unsafe.Pointer {
 	if this == nil {

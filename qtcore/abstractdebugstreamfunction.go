@@ -33,6 +33,13 @@ import "github.com/kitech/qt.go/qtrt"
 type AbstractDebugStreamFunction struct {
 	*qtrt.CObject
 }
+type AbstractDebugStreamFunction_ITF interface {
+	AbstractDebugStreamFunction_PTR() *AbstractDebugStreamFunction
+}
+
+func (ptr *AbstractDebugStreamFunction) AbstractDebugStreamFunction_PTR() *AbstractDebugStreamFunction {
+	return ptr
+}
 
 func (this *AbstractDebugStreamFunction) GetCthis() unsafe.Pointer {
 	if this == nil {

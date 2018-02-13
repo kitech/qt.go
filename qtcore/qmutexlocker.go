@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QMutexLocker struct {
 	*qtrt.CObject
 }
+type QMutexLocker_ITF interface {
+	QMutexLocker_PTR() *QMutexLocker
+}
+
+func (ptr *QMutexLocker) QMutexLocker_PTR() *QMutexLocker { return ptr }
 
 func (this *QMutexLocker) GetCthis() unsafe.Pointer {
 	if this == nil {

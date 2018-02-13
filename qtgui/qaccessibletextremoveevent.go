@@ -34,6 +34,14 @@ import "github.com/kitech/qt.go/qtcore"
 type QAccessibleTextRemoveEvent struct {
 	*QAccessibleTextCursorEvent
 }
+type QAccessibleTextRemoveEvent_ITF interface {
+	QAccessibleTextCursorEvent_ITF
+	QAccessibleTextRemoveEvent_PTR() *QAccessibleTextRemoveEvent
+}
+
+func (ptr *QAccessibleTextRemoveEvent) QAccessibleTextRemoveEvent_PTR() *QAccessibleTextRemoveEvent {
+	return ptr
+}
 
 func (this *QAccessibleTextRemoveEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

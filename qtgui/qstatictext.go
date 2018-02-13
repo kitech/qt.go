@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QStaticText struct {
 	*qtrt.CObject
 }
+type QStaticText_ITF interface {
+	QStaticText_PTR() *QStaticText
+}
+
+func (ptr *QStaticText) QStaticText_PTR() *QStaticText { return ptr }
 
 func (this *QStaticText) GetCthis() unsafe.Pointer {
 	if this == nil {

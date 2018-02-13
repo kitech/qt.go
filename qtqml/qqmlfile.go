@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlFile struct {
 	*qtrt.CObject
 }
+type QQmlFile_ITF interface {
+	QQmlFile_PTR() *QQmlFile
+}
+
+func (ptr *QQmlFile) QQmlFile_PTR() *QQmlFile { return ptr }
 
 func (this *QQmlFile) GetCthis() unsafe.Pointer {
 	if this == nil {

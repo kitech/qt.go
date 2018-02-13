@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QIconEngine struct {
 	*qtrt.CObject
 }
+type QIconEngine_ITF interface {
+	QIconEngine_PTR() *QIconEngine
+}
+
+func (ptr *QIconEngine) QIconEngine_PTR() *QIconEngine { return ptr }
 
 func (this *QIconEngine) GetCthis() unsafe.Pointer {
 	if this == nil {

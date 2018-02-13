@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextFrameLayoutData struct {
 	*qtrt.CObject
 }
+type QTextFrameLayoutData_ITF interface {
+	QTextFrameLayoutData_PTR() *QTextFrameLayoutData
+}
+
+func (ptr *QTextFrameLayoutData) QTextFrameLayoutData_PTR() *QTextFrameLayoutData { return ptr }
 
 func (this *QTextFrameLayoutData) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlParserStatus struct {
 	*qtrt.CObject
 }
+type QQmlParserStatus_ITF interface {
+	QQmlParserStatus_PTR() *QQmlParserStatus
+}
+
+func (ptr *QQmlParserStatus) QQmlParserStatus_PTR() *QQmlParserStatus { return ptr }
 
 func (this *QQmlParserStatus) GetCthis() unsafe.Pointer {
 	if this == nil {

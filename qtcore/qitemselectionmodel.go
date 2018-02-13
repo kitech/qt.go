@@ -38,6 +38,12 @@ func (this *QItemSelectionModel) InheritEmitSelectionChanged(f func(newSelection
 type QItemSelectionModel struct {
 	*QObject
 }
+type QItemSelectionModel_ITF interface {
+	QObject_ITF
+	QItemSelectionModel_PTR() *QItemSelectionModel
+}
+
+func (ptr *QItemSelectionModel) QItemSelectionModel_PTR() *QItemSelectionModel { return ptr }
 
 func (this *QItemSelectionModel) GetCthis() unsafe.Pointer {
 	if this == nil {

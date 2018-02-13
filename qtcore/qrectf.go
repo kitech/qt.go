@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QRectF struct {
 	*qtrt.CObject
 }
+type QRectF_ITF interface {
+	QRectF_PTR() *QRectF
+}
+
+func (ptr *QRectF) QRectF_PTR() *QRectF { return ptr }
 
 func (this *QRectF) GetCthis() unsafe.Pointer {
 	if this == nil {

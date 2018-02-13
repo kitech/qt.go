@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QJSValueIterator struct {
 	*qtrt.CObject
 }
+type QJSValueIterator_ITF interface {
+	QJSValueIterator_PTR() *QJSValueIterator
+}
+
+func (ptr *QJSValueIterator) QJSValueIterator_PTR() *QJSValueIterator { return ptr }
 
 func (this *QJSValueIterator) GetCthis() unsafe.Pointer {
 	if this == nil {

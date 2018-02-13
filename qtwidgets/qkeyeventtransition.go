@@ -45,6 +45,12 @@ func (this *QKeyEventTransition) InheritEventTest(f func(event *qtcore.QEvent /*
 type QKeyEventTransition struct {
 	*qtcore.QEventTransition
 }
+type QKeyEventTransition_ITF interface {
+	qtcore.QEventTransition_ITF
+	QKeyEventTransition_PTR() *QKeyEventTransition
+}
+
+func (ptr *QKeyEventTransition) QKeyEventTransition_PTR() *QKeyEventTransition { return ptr }
 
 func (this *QKeyEventTransition) GetCthis() unsafe.Pointer {
 	if this == nil {

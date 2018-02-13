@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGRootNode struct {
 	*QSGNode
 }
+type QSGRootNode_ITF interface {
+	QSGNode_ITF
+	QSGRootNode_PTR() *QSGRootNode
+}
+
+func (ptr *QSGRootNode) QSGRootNode_PTR() *QSGRootNode { return ptr }
 
 func (this *QSGRootNode) GetCthis() unsafe.Pointer {
 	if this == nil {

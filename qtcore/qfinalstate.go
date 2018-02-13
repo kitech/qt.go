@@ -48,6 +48,12 @@ func (this *QFinalState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
 type QFinalState struct {
 	*QAbstractState
 }
+type QFinalState_ITF interface {
+	QAbstractState_ITF
+	QFinalState_PTR() *QFinalState
+}
+
+func (ptr *QFinalState) QFinalState_PTR() *QFinalState { return ptr }
 
 func (this *QFinalState) GetCthis() unsafe.Pointer {
 	if this == nil {

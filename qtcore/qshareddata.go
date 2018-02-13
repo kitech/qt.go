@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QSharedData struct {
 	*qtrt.CObject
 }
+type QSharedData_ITF interface {
+	QSharedData_PTR() *QSharedData
+}
+
+func (ptr *QSharedData) QSharedData_PTR() *QSharedData { return ptr }
 
 func (this *QSharedData) GetCthis() unsafe.Pointer {
 	if this == nil {

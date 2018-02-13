@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlComponent struct {
 	*qtcore.QObject
 }
+type QQmlComponent_ITF interface {
+	qtcore.QObject_ITF
+	QQmlComponent_PTR() *QQmlComponent
+}
+
+func (ptr *QQmlComponent) QQmlComponent_PTR() *QQmlComponent { return ptr }
 
 func (this *QQmlComponent) GetCthis() unsafe.Pointer {
 	if this == nil {

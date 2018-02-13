@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPictureIO struct {
 	*qtrt.CObject
 }
+type QPictureIO_ITF interface {
+	QPictureIO_PTR() *QPictureIO
+}
+
+func (ptr *QPictureIO) QPictureIO_PTR() *QPictureIO { return ptr }
 
 func (this *QPictureIO) GetCthis() unsafe.Pointer {
 	if this == nil {

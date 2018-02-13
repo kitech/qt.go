@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QMetaClassInfo struct {
 	*qtrt.CObject
 }
+type QMetaClassInfo_ITF interface {
+	QMetaClassInfo_PTR() *QMetaClassInfo
+}
+
+func (ptr *QMetaClassInfo) QMetaClassInfo_PTR() *QMetaClassInfo { return ptr }
 
 func (this *QMetaClassInfo) GetCthis() unsafe.Pointer {
 	if this == nil {

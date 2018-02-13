@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QMetaMethod struct {
 	*qtrt.CObject
 }
+type QMetaMethod_ITF interface {
+	QMetaMethod_PTR() *QMetaMethod
+}
+
+func (ptr *QMetaMethod) QMetaMethod_PTR() *QMetaMethod { return ptr }
 
 func (this *QMetaMethod) GetCthis() unsafe.Pointer {
 	if this == nil {

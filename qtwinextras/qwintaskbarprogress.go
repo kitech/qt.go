@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QWinTaskbarProgress struct {
 	*qtcore.QObject
 }
+type QWinTaskbarProgress_ITF interface {
+	qtcore.QObject_ITF
+	QWinTaskbarProgress_PTR() *QWinTaskbarProgress
+}
+
+func (ptr *QWinTaskbarProgress) QWinTaskbarProgress_PTR() *QWinTaskbarProgress { return ptr }
 
 func (this *QWinTaskbarProgress) GetCthis() unsafe.Pointer {
 	if this == nil {

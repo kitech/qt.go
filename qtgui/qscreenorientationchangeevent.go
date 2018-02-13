@@ -34,6 +34,14 @@ import "github.com/kitech/qt.go/qtcore"
 type QScreenOrientationChangeEvent struct {
 	*qtcore.QEvent
 }
+type QScreenOrientationChangeEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QScreenOrientationChangeEvent_PTR() *QScreenOrientationChangeEvent
+}
+
+func (ptr *QScreenOrientationChangeEvent) QScreenOrientationChangeEvent_PTR() *QScreenOrientationChangeEvent {
+	return ptr
+}
 
 func (this *QScreenOrientationChangeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

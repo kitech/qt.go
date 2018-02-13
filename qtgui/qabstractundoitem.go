@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QAbstractUndoItem struct {
 	*qtrt.CObject
 }
+type QAbstractUndoItem_ITF interface {
+	QAbstractUndoItem_PTR() *QAbstractUndoItem
+}
+
+func (ptr *QAbstractUndoItem) QAbstractUndoItem_PTR() *QAbstractUndoItem { return ptr }
 
 func (this *QAbstractUndoItem) GetCthis() unsafe.Pointer {
 	if this == nil {

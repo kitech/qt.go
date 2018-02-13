@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QFlag struct {
 	*qtrt.CObject
 }
+type QFlag_ITF interface {
+	QFlag_PTR() *QFlag
+}
+
+func (ptr *QFlag) QFlag_PTR() *QFlag { return ptr }
 
 func (this *QFlag) GetCthis() unsafe.Pointer {
 	if this == nil {

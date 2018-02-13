@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QScreen struct {
 	*qtcore.QObject
 }
+type QScreen_ITF interface {
+	qtcore.QObject_ITF
+	QScreen_PTR() *QScreen
+}
+
+func (ptr *QScreen) QScreen_PTR() *QScreen { return ptr }
 
 func (this *QScreen) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,14 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsSceneResizeEvent struct {
 	*QGraphicsSceneEvent
 }
+type QGraphicsSceneResizeEvent_ITF interface {
+	QGraphicsSceneEvent_ITF
+	QGraphicsSceneResizeEvent_PTR() *QGraphicsSceneResizeEvent
+}
+
+func (ptr *QGraphicsSceneResizeEvent) QGraphicsSceneResizeEvent_PTR() *QGraphicsSceneResizeEvent {
+	return ptr
+}
 
 func (this *QGraphicsSceneResizeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

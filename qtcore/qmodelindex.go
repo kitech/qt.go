@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QModelIndex struct {
 	*qtrt.CObject
 }
+type QModelIndex_ITF interface {
+	QModelIndex_PTR() *QModelIndex
+}
+
+func (ptr *QModelIndex) QModelIndex_PTR() *QModelIndex { return ptr }
 
 func (this *QModelIndex) GetCthis() unsafe.Pointer {
 	if this == nil {

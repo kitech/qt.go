@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QGenericPlugin struct {
 	*qtcore.QObject
 }
+type QGenericPlugin_ITF interface {
+	qtcore.QObject_ITF
+	QGenericPlugin_PTR() *QGenericPlugin
+}
+
+func (ptr *QGenericPlugin) QGenericPlugin_PTR() *QGenericPlugin { return ptr }
 
 func (this *QGenericPlugin) GetCthis() unsafe.Pointer {
 	if this == nil {

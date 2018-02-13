@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QUuid struct {
 	*qtrt.CObject
 }
+type QUuid_ITF interface {
+	QUuid_PTR() *QUuid
+}
+
+func (ptr *QUuid) QUuid_PTR() *QUuid { return ptr }
 
 func (this *QUuid) GetCthis() unsafe.Pointer {
 	if this == nil {

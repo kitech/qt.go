@@ -40,6 +40,12 @@ func (this *QGraphicsLayout) InheritAddChildLayoutItem(f func(layoutItem *QGraph
 type QGraphicsLayout struct {
 	*QGraphicsLayoutItem
 }
+type QGraphicsLayout_ITF interface {
+	QGraphicsLayoutItem_ITF
+	QGraphicsLayout_PTR() *QGraphicsLayout
+}
+
+func (ptr *QGraphicsLayout) QGraphicsLayout_PTR() *QGraphicsLayout { return ptr }
 
 func (this *QGraphicsLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

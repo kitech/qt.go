@@ -50,6 +50,12 @@ func (this *QGraphicsRectItem) InheritExtension(f func(variant *qtcore.QVariant)
 type QGraphicsRectItem struct {
 	*QAbstractGraphicsShapeItem
 }
+type QGraphicsRectItem_ITF interface {
+	QAbstractGraphicsShapeItem_ITF
+	QGraphicsRectItem_PTR() *QGraphicsRectItem
+}
+
+func (ptr *QGraphicsRectItem) QGraphicsRectItem_PTR() *QGraphicsRectItem { return ptr }
 
 func (this *QGraphicsRectItem) GetCthis() unsafe.Pointer {
 	if this == nil {

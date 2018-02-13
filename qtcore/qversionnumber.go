@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QVersionNumber struct {
 	*qtrt.CObject
 }
+type QVersionNumber_ITF interface {
+	QVersionNumber_PTR() *QVersionNumber
+}
+
+func (ptr *QVersionNumber) QVersionNumber_PTR() *QVersionNumber { return ptr }
 
 func (this *QVersionNumber) GetCthis() unsafe.Pointer {
 	if this == nil {

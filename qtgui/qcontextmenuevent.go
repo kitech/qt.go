@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QContextMenuEvent struct {
 	*QInputEvent
 }
+type QContextMenuEvent_ITF interface {
+	QInputEvent_ITF
+	QContextMenuEvent_PTR() *QContextMenuEvent
+}
+
+func (ptr *QContextMenuEvent) QContextMenuEvent_PTR() *QContextMenuEvent { return ptr }
 
 func (this *QContextMenuEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

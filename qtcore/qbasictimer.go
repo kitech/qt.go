@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QBasicTimer struct {
 	*qtrt.CObject
 }
+type QBasicTimer_ITF interface {
+	QBasicTimer_PTR() *QBasicTimer
+}
+
+func (ptr *QBasicTimer) QBasicTimer_PTR() *QBasicTimer { return ptr }
 
 func (this *QBasicTimer) GetCthis() unsafe.Pointer {
 	if this == nil {

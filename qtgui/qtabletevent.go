@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTabletEvent struct {
 	*QInputEvent
 }
+type QTabletEvent_ITF interface {
+	QInputEvent_ITF
+	QTabletEvent_PTR() *QTabletEvent
+}
+
+func (ptr *QTabletEvent) QTabletEvent_PTR() *QTabletEvent { return ptr }
 
 func (this *QTabletEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

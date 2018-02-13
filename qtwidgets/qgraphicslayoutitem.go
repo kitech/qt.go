@@ -50,6 +50,11 @@ func (this *QGraphicsLayoutItem) InheritSizeHint(f func(which int, constraint *q
 type QGraphicsLayoutItem struct {
 	*qtrt.CObject
 }
+type QGraphicsLayoutItem_ITF interface {
+	QGraphicsLayoutItem_PTR() *QGraphicsLayoutItem
+}
+
+func (ptr *QGraphicsLayoutItem) QGraphicsLayoutItem_PTR() *QGraphicsLayoutItem { return ptr }
 
 func (this *QGraphicsLayoutItem) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QRawFont struct {
 	*qtrt.CObject
 }
+type QRawFont_ITF interface {
+	QRawFont_PTR() *QRawFont
+}
+
+func (ptr *QRawFont) QRawFont_PTR() *QRawFont { return ptr }
 
 func (this *QRawFont) GetCthis() unsafe.Pointer {
 	if this == nil {

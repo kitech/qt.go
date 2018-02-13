@@ -55,6 +55,13 @@ type QPaintDeviceWindow struct {
 	*QWindow
 	*QPaintDevice
 }
+type QPaintDeviceWindow_ITF interface {
+	QWindow_ITF
+	QPaintDevice_ITF
+	QPaintDeviceWindow_PTR() *QPaintDeviceWindow
+}
+
+func (ptr *QPaintDeviceWindow) QPaintDeviceWindow_PTR() *QPaintDeviceWindow { return ptr }
 
 func (this *QPaintDeviceWindow) GetCthis() unsafe.Pointer {
 	if this == nil {

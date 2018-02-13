@@ -79,6 +79,12 @@ func (this *QSyntaxHighlighter) InheritCurrentBlock(f func() unsafe.Pointer) {
 type QSyntaxHighlighter struct {
 	*qtcore.QObject
 }
+type QSyntaxHighlighter_ITF interface {
+	qtcore.QObject_ITF
+	QSyntaxHighlighter_PTR() *QSyntaxHighlighter
+}
+
+func (ptr *QSyntaxHighlighter) QSyntaxHighlighter_PTR() *QSyntaxHighlighter { return ptr }
 
 func (this *QSyntaxHighlighter) GetCthis() unsafe.Pointer {
 	if this == nil {

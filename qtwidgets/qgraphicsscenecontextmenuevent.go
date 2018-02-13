@@ -35,6 +35,14 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsSceneContextMenuEvent struct {
 	*QGraphicsSceneEvent
 }
+type QGraphicsSceneContextMenuEvent_ITF interface {
+	QGraphicsSceneEvent_ITF
+	QGraphicsSceneContextMenuEvent_PTR() *QGraphicsSceneContextMenuEvent
+}
+
+func (ptr *QGraphicsSceneContextMenuEvent) QGraphicsSceneContextMenuEvent_PTR() *QGraphicsSceneContextMenuEvent {
+	return ptr
+}
 
 func (this *QGraphicsSceneContextMenuEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

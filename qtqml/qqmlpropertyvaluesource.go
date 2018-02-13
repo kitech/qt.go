@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlPropertyValueSource struct {
 	*qtrt.CObject
 }
+type QQmlPropertyValueSource_ITF interface {
+	QQmlPropertyValueSource_PTR() *QQmlPropertyValueSource
+}
+
+func (ptr *QQmlPropertyValueSource) QQmlPropertyValueSource_PTR() *QQmlPropertyValueSource { return ptr }
 
 func (this *QQmlPropertyValueSource) GetCthis() unsafe.Pointer {
 	if this == nil {

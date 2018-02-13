@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGOpacityNode struct {
 	*QSGNode
 }
+type QSGOpacityNode_ITF interface {
+	QSGNode_ITF
+	QSGOpacityNode_PTR() *QSGOpacityNode
+}
+
+func (ptr *QSGOpacityNode) QSGOpacityNode_PTR() *QSGOpacityNode { return ptr }
 
 func (this *QSGOpacityNode) GetCthis() unsafe.Pointer {
 	if this == nil {

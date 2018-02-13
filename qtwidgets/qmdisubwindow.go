@@ -135,6 +135,12 @@ func (this *QMdiSubWindow) InheritChildEvent(f func(childEvent *qtcore.QChildEve
 type QMdiSubWindow struct {
 	*QWidget
 }
+type QMdiSubWindow_ITF interface {
+	QWidget_ITF
+	QMdiSubWindow_PTR() *QMdiSubWindow
+}
+
+func (ptr *QMdiSubWindow) QMdiSubWindow_PTR() *QMdiSubWindow { return ptr }
 
 func (this *QMdiSubWindow) GetCthis() unsafe.Pointer {
 	if this == nil {

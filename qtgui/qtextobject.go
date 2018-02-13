@@ -39,6 +39,12 @@ func (this *QTextObject) InheritSetFormat(f func(format *QTextFormat) /*void*/) 
 type QTextObject struct {
 	*qtcore.QObject
 }
+type QTextObject_ITF interface {
+	qtcore.QObject_ITF
+	QTextObject_PTR() *QTextObject
+}
+
+func (ptr *QTextObject) QTextObject_PTR() *QTextObject { return ptr }
 
 func (this *QTextObject) GetCthis() unsafe.Pointer {
 	if this == nil {

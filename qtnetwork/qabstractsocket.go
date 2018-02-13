@@ -84,6 +84,12 @@ func (this *QAbstractSocket) InheritSetPeerName(f func(name string) /*void*/) {
 type QAbstractSocket struct {
 	*qtcore.QIODevice
 }
+type QAbstractSocket_ITF interface {
+	qtcore.QIODevice_ITF
+	QAbstractSocket_PTR() *QAbstractSocket
+}
+
+func (ptr *QAbstractSocket) QAbstractSocket_PTR() *QAbstractSocket { return ptr }
 
 func (this *QAbstractSocket) GetCthis() unsafe.Pointer {
 	if this == nil {

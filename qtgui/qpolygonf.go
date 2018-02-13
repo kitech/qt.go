@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPolygonF struct {
 	*qtrt.CObject
 }
+type QPolygonF_ITF interface {
+	QPolygonF_PTR() *QPolygonF
+}
+
+func (ptr *QPolygonF) QPolygonF_PTR() *QPolygonF { return ptr }
 
 func (this *QPolygonF) GetCthis() unsafe.Pointer {
 	if this == nil {

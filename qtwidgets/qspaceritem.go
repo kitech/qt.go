@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QSpacerItem struct {
 	*QLayoutItem
 }
+type QSpacerItem_ITF interface {
+	QLayoutItem_ITF
+	QSpacerItem_PTR() *QSpacerItem
+}
+
+func (ptr *QSpacerItem) QSpacerItem_PTR() *QSpacerItem { return ptr }
 
 func (this *QSpacerItem) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -50,6 +50,12 @@ func (this *QGraphicsPixmapItem) InheritExtension(f func(variant *qtcore.QVarian
 type QGraphicsPixmapItem struct {
 	*QGraphicsItem
 }
+type QGraphicsPixmapItem_ITF interface {
+	QGraphicsItem_ITF
+	QGraphicsPixmapItem_PTR() *QGraphicsPixmapItem
+}
+
+func (ptr *QGraphicsPixmapItem) QGraphicsPixmapItem_PTR() *QGraphicsPixmapItem { return ptr }
 
 func (this *QGraphicsPixmapItem) GetCthis() unsafe.Pointer {
 	if this == nil {

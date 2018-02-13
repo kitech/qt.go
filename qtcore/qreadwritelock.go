@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QReadWriteLock struct {
 	*qtrt.CObject
 }
+type QReadWriteLock_ITF interface {
+	QReadWriteLock_PTR() *QReadWriteLock
+}
+
+func (ptr *QReadWriteLock) QReadWriteLock_PTR() *QReadWriteLock { return ptr }
 
 func (this *QReadWriteLock) GetCthis() unsafe.Pointer {
 	if this == nil {

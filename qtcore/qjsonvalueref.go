@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QJsonValueRef struct {
 	*qtrt.CObject
 }
+type QJsonValueRef_ITF interface {
+	QJsonValueRef_PTR() *QJsonValueRef
+}
+
+func (ptr *QJsonValueRef) QJsonValueRef_PTR() *QJsonValueRef { return ptr }
 
 func (this *QJsonValueRef) GetCthis() unsafe.Pointer {
 	if this == nil {

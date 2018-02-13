@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QImageReader struct {
 	*qtrt.CObject
 }
+type QImageReader_ITF interface {
+	QImageReader_PTR() *QImageReader
+}
+
+func (ptr *QImageReader) QImageReader_PTR() *QImageReader { return ptr }
 
 func (this *QImageReader) GetCthis() unsafe.Pointer {
 	if this == nil {

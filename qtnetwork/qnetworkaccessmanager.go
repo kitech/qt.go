@@ -44,6 +44,12 @@ func (this *QNetworkAccessManager) InheritSupportedSchemesImplementation(f func(
 type QNetworkAccessManager struct {
 	*qtcore.QObject
 }
+type QNetworkAccessManager_ITF interface {
+	qtcore.QObject_ITF
+	QNetworkAccessManager_PTR() *QNetworkAccessManager
+}
+
+func (ptr *QNetworkAccessManager) QNetworkAccessManager_PTR() *QNetworkAccessManager { return ptr }
 
 func (this *QNetworkAccessManager) GetCthis() unsafe.Pointer {
 	if this == nil {

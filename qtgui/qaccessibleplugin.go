@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QAccessiblePlugin struct {
 	*qtcore.QObject
 }
+type QAccessiblePlugin_ITF interface {
+	qtcore.QObject_ITF
+	QAccessiblePlugin_PTR() *QAccessiblePlugin
+}
+
+func (ptr *QAccessiblePlugin) QAccessiblePlugin_PTR() *QAccessiblePlugin { return ptr }
 
 func (this *QAccessiblePlugin) GetCthis() unsafe.Pointer {
 	if this == nil {

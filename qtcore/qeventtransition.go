@@ -48,6 +48,12 @@ func (this *QEventTransition) InheritEvent(f func(e *QEvent /*777 QEvent **/) bo
 type QEventTransition struct {
 	*QAbstractTransition
 }
+type QEventTransition_ITF interface {
+	QAbstractTransition_ITF
+	QEventTransition_PTR() *QEventTransition
+}
+
+func (ptr *QEventTransition) QEventTransition_PTR() *QEventTransition { return ptr }
 
 func (this *QEventTransition) GetCthis() unsafe.Pointer {
 	if this == nil {

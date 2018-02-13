@@ -50,6 +50,12 @@ func (this *QStyledItemDelegate) InheritEditorEvent(f func(event *qtcore.QEvent 
 type QStyledItemDelegate struct {
 	*QAbstractItemDelegate
 }
+type QStyledItemDelegate_ITF interface {
+	QAbstractItemDelegate_ITF
+	QStyledItemDelegate_PTR() *QStyledItemDelegate
+}
+
+func (ptr *QStyledItemDelegate) QStyledItemDelegate_PTR() *QStyledItemDelegate { return ptr }
 
 func (this *QStyledItemDelegate) GetCthis() unsafe.Pointer {
 	if this == nil {

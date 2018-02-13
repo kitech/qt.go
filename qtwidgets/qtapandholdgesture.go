@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QTapAndHoldGesture struct {
 	*QGesture
 }
+type QTapAndHoldGesture_ITF interface {
+	QGesture_ITF
+	QTapAndHoldGesture_PTR() *QTapAndHoldGesture
+}
+
+func (ptr *QTapAndHoldGesture) QTapAndHoldGesture_PTR() *QTapAndHoldGesture { return ptr }
 
 func (this *QTapAndHoldGesture) GetCthis() unsafe.Pointer {
 	if this == nil {

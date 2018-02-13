@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QDeferredDeleteEvent struct {
 	*QEvent
 }
+type QDeferredDeleteEvent_ITF interface {
+	QEvent_ITF
+	QDeferredDeleteEvent_PTR() *QDeferredDeleteEvent
+}
+
+func (ptr *QDeferredDeleteEvent) QDeferredDeleteEvent_PTR() *QDeferredDeleteEvent { return ptr }
 
 func (this *QDeferredDeleteEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

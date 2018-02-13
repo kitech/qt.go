@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QXmlStreamStringRef struct {
 	*qtrt.CObject
 }
+type QXmlStreamStringRef_ITF interface {
+	QXmlStreamStringRef_PTR() *QXmlStreamStringRef
+}
+
+func (ptr *QXmlStreamStringRef) QXmlStreamStringRef_PTR() *QXmlStreamStringRef { return ptr }
 
 func (this *QXmlStreamStringRef) GetCthis() unsafe.Pointer {
 	if this == nil {

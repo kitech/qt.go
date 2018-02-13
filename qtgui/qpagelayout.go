@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPageLayout struct {
 	*qtrt.CObject
 }
+type QPageLayout_ITF interface {
+	QPageLayout_PTR() *QPageLayout
+}
+
+func (ptr *QPageLayout) QPageLayout_PTR() *QPageLayout { return ptr }
 
 func (this *QPageLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

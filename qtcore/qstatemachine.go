@@ -68,6 +68,12 @@ func (this *QStateMachine) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool)
 type QStateMachine struct {
 	*QState
 }
+type QStateMachine_ITF interface {
+	QState_ITF
+	QStateMachine_PTR() *QStateMachine
+}
+
+func (ptr *QStateMachine) QStateMachine_PTR() *QStateMachine { return ptr }
 
 func (this *QStateMachine) GetCthis() unsafe.Pointer {
 	if this == nil {

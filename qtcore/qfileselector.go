@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QFileSelector struct {
 	*QObject
 }
+type QFileSelector_ITF interface {
+	QObject_ITF
+	QFileSelector_PTR() *QFileSelector
+}
+
+func (ptr *QFileSelector) QFileSelector_PTR() *QFileSelector { return ptr }
 
 func (this *QFileSelector) GetCthis() unsafe.Pointer {
 	if this == nil {

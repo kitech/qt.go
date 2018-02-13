@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextItem struct {
 	*qtrt.CObject
 }
+type QTextItem_ITF interface {
+	QTextItem_PTR() *QTextItem
+}
+
+func (ptr *QTextItem) QTextItem_PTR() *QTextItem { return ptr }
 
 func (this *QTextItem) GetCthis() unsafe.Pointer {
 	if this == nil {

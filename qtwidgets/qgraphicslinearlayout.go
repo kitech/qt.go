@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsLinearLayout struct {
 	*QGraphicsLayout
 }
+type QGraphicsLinearLayout_ITF interface {
+	QGraphicsLayout_ITF
+	QGraphicsLinearLayout_PTR() *QGraphicsLinearLayout
+}
+
+func (ptr *QGraphicsLinearLayout) QGraphicsLinearLayout_PTR() *QGraphicsLinearLayout { return ptr }
 
 func (this *QGraphicsLinearLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

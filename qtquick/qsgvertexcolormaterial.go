@@ -47,6 +47,12 @@ func (this *QSGVertexColorMaterial) InheritCreateShader(f func() unsafe.Pointer 
 type QSGVertexColorMaterial struct {
 	*QSGMaterial
 }
+type QSGVertexColorMaterial_ITF interface {
+	QSGMaterial_ITF
+	QSGVertexColorMaterial_PTR() *QSGVertexColorMaterial
+}
+
+func (ptr *QSGVertexColorMaterial) QSGVertexColorMaterial_PTR() *QSGVertexColorMaterial { return ptr }
 
 func (this *QSGVertexColorMaterial) GetCthis() unsafe.Pointer {
 	if this == nil {

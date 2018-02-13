@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QMimeType struct {
 	*qtrt.CObject
 }
+type QMimeType_ITF interface {
+	QMimeType_PTR() *QMimeType
+}
+
+func (ptr *QMimeType) QMimeType_PTR() *QMimeType { return ptr }
 
 func (this *QMimeType) GetCthis() unsafe.Pointer {
 	if this == nil {

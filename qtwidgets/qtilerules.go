@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QTileRules struct {
 	*qtrt.CObject
 }
+type QTileRules_ITF interface {
+	QTileRules_PTR() *QTileRules
+}
+
+func (ptr *QTileRules) QTileRules_PTR() *QTileRules { return ptr }
 
 func (this *QTileRules) GetCthis() unsafe.Pointer {
 	if this == nil {

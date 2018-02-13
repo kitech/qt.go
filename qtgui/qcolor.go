@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QColor struct {
 	*qtrt.CObject
 }
+type QColor_ITF interface {
+	QColor_PTR() *QColor
+}
+
+func (ptr *QColor) QColor_PTR() *QColor { return ptr }
 
 func (this *QColor) GetCthis() unsafe.Pointer {
 	if this == nil {

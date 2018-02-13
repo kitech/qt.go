@@ -37,6 +37,11 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGGeometry struct {
 	*qtrt.CObject
 }
+type QSGGeometry_ITF interface {
+	QSGGeometry_PTR() *QSGGeometry
+}
+
+func (ptr *QSGGeometry) QSGGeometry_PTR() *QSGGeometry { return ptr }
 
 func (this *QSGGeometry) GetCthis() unsafe.Pointer {
 	if this == nil {

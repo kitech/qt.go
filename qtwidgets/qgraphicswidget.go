@@ -160,6 +160,12 @@ func (this *QGraphicsWidget) InheritUngrabKeyboardEvent(f func(event *qtcore.QEv
 type QGraphicsWidget struct {
 	*QGraphicsLayoutItem
 }
+type QGraphicsWidget_ITF interface {
+	QGraphicsLayoutItem_ITF
+	QGraphicsWidget_PTR() *QGraphicsWidget
+}
+
+func (ptr *QGraphicsWidget) QGraphicsWidget_PTR() *QGraphicsWidget { return ptr }
 
 func (this *QGraphicsWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

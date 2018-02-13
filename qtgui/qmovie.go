@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QMovie struct {
 	*qtcore.QObject
 }
+type QMovie_ITF interface {
+	qtcore.QObject_ITF
+	QMovie_PTR() *QMovie
+}
+
+func (ptr *QMovie) QMovie_PTR() *QMovie { return ptr }
 
 func (this *QMovie) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QDeadlineTimer struct {
 	*qtrt.CObject
 }
+type QDeadlineTimer_ITF interface {
+	QDeadlineTimer_PTR() *QDeadlineTimer
+}
+
+func (ptr *QDeadlineTimer) QDeadlineTimer_PTR() *QDeadlineTimer { return ptr }
 
 func (this *QDeadlineTimer) GetCthis() unsafe.Pointer {
 	if this == nil {

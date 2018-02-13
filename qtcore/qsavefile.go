@@ -38,6 +38,11 @@ func (this *QSaveFile) InheritWriteData(f func(data string, len int64) int64) {
 type QSaveFile struct {
 	*qtrt.CObject
 }
+type QSaveFile_ITF interface {
+	QSaveFile_PTR() *QSaveFile
+}
+
+func (ptr *QSaveFile) QSaveFile_PTR() *QSaveFile { return ptr }
 
 func (this *QSaveFile) GetCthis() unsafe.Pointer {
 	if this == nil {

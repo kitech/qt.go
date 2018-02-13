@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QTableWidgetItem struct {
 	*qtrt.CObject
 }
+type QTableWidgetItem_ITF interface {
+	QTableWidgetItem_PTR() *QTableWidgetItem
+}
+
+func (ptr *QTableWidgetItem) QTableWidgetItem_PTR() *QTableWidgetItem { return ptr }
 
 func (this *QTableWidgetItem) GetCthis() unsafe.Pointer {
 	if this == nil {

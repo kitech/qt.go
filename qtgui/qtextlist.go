@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextList struct {
 	*QTextBlockGroup
 }
+type QTextList_ITF interface {
+	QTextBlockGroup_ITF
+	QTextList_PTR() *QTextList
+}
+
+func (ptr *QTextList) QTextList_PTR() *QTextList { return ptr }
 
 func (this *QTextList) GetCthis() unsafe.Pointer {
 	if this == nil {

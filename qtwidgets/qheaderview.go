@@ -180,6 +180,12 @@ func (this *QHeaderView) InheritInitStyleOption(f func(option *QStyleOptionHeade
 type QHeaderView struct {
 	*QAbstractItemView
 }
+type QHeaderView_ITF interface {
+	QAbstractItemView_ITF
+	QHeaderView_PTR() *QHeaderView
+}
+
+func (ptr *QHeaderView) QHeaderView_PTR() *QHeaderView { return ptr }
 
 func (this *QHeaderView) GetCthis() unsafe.Pointer {
 	if this == nil {

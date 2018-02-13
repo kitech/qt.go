@@ -160,6 +160,12 @@ func (this *QTableView) InheritCurrentChanged(f func(current *qtcore.QModelIndex
 type QTableView struct {
 	*QAbstractItemView
 }
+type QTableView_ITF interface {
+	QAbstractItemView_ITF
+	QTableView_PTR() *QTableView
+}
+
+func (ptr *QTableView) QTableView_PTR() *QTableView { return ptr }
 
 func (this *QTableView) GetCthis() unsafe.Pointer {
 	if this == nil {

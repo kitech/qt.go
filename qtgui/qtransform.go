@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTransform struct {
 	*qtrt.CObject
 }
+type QTransform_ITF interface {
+	QTransform_PTR() *QTransform
+}
+
+func (ptr *QTransform) QTransform_PTR() *QTransform { return ptr }
 
 func (this *QTransform) GetCthis() unsafe.Pointer {
 	if this == nil {

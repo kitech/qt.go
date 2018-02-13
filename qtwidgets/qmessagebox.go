@@ -65,6 +65,12 @@ func (this *QMessageBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QE
 type QMessageBox struct {
 	*QDialog
 }
+type QMessageBox_ITF interface {
+	QDialog_ITF
+	QMessageBox_PTR() *QMessageBox
+}
+
+func (ptr *QMessageBox) QMessageBox_PTR() *QMessageBox { return ptr }
 
 func (this *QMessageBox) GetCthis() unsafe.Pointer {
 	if this == nil {

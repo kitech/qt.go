@@ -50,6 +50,12 @@ func (this *QSplashScreen) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent
 type QSplashScreen struct {
 	*QWidget
 }
+type QSplashScreen_ITF interface {
+	QWidget_ITF
+	QSplashScreen_PTR() *QSplashScreen
+}
+
+func (ptr *QSplashScreen) QSplashScreen_PTR() *QSplashScreen { return ptr }
 
 func (this *QSplashScreen) GetCthis() unsafe.Pointer {
 	if this == nil {

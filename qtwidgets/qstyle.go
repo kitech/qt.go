@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyle struct {
 	*qtcore.QObject
 }
+type QStyle_ITF interface {
+	qtcore.QObject_ITF
+	QStyle_PTR() *QStyle
+}
+
+func (ptr *QStyle) QStyle_PTR() *QStyle { return ptr }
 
 func (this *QStyle) GetCthis() unsafe.Pointer {
 	if this == nil {

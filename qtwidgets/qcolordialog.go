@@ -45,6 +45,12 @@ func (this *QColorDialog) InheritDone(f func(result int) /*void*/) {
 type QColorDialog struct {
 	*QDialog
 }
+type QColorDialog_ITF interface {
+	QDialog_ITF
+	QColorDialog_PTR() *QColorDialog
+}
+
+func (ptr *QColorDialog) QColorDialog_PTR() *QColorDialog { return ptr }
 
 func (this *QColorDialog) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -42,6 +42,12 @@ func (this *QQuickItemGrabResult) InheritEvent(f func(arg0 *qtcore.QEvent /*777 
 type QQuickItemGrabResult struct {
 	*qtcore.QObject
 }
+type QQuickItemGrabResult_ITF interface {
+	qtcore.QObject_ITF
+	QQuickItemGrabResult_PTR() *QQuickItemGrabResult
+}
+
+func (ptr *QQuickItemGrabResult) QQuickItemGrabResult_PTR() *QQuickItemGrabResult { return ptr }
 
 func (this *QQuickItemGrabResult) GetCthis() unsafe.Pointer {
 	if this == nil {

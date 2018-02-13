@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QCommandLineParser struct {
 	*qtrt.CObject
 }
+type QCommandLineParser_ITF interface {
+	QCommandLineParser_PTR() *QCommandLineParser
+}
+
+func (ptr *QCommandLineParser) QCommandLineParser_PTR() *QCommandLineParser { return ptr }
 
 func (this *QCommandLineParser) GetCthis() unsafe.Pointer {
 	if this == nil {

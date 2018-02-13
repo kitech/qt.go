@@ -72,6 +72,12 @@ func (this *QQuickView) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*7
 type QQuickView struct {
 	*QQuickWindow
 }
+type QQuickView_ITF interface {
+	QQuickWindow_ITF
+	QQuickView_PTR() *QQuickView
+}
+
+func (ptr *QQuickView) QQuickView_PTR() *QQuickView { return ptr }
 
 func (this *QQuickView) GetCthis() unsafe.Pointer {
 	if this == nil {

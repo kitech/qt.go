@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QLoggingCategory struct {
 	*qtrt.CObject
 }
+type QLoggingCategory_ITF interface {
+	QLoggingCategory_PTR() *QLoggingCategory
+}
+
+func (ptr *QLoggingCategory) QLoggingCategory_PTR() *QLoggingCategory { return ptr }
 
 func (this *QLoggingCategory) GetCthis() unsafe.Pointer {
 	if this == nil {

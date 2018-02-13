@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QQuaternion struct {
 	*qtrt.CObject
 }
+type QQuaternion_ITF interface {
+	QQuaternion_PTR() *QQuaternion
+}
+
+func (ptr *QQuaternion) QQuaternion_PTR() *QQuaternion { return ptr }
 
 func (this *QQuaternion) GetCthis() unsafe.Pointer {
 	if this == nil {

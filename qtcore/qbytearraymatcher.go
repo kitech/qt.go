@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QByteArrayMatcher struct {
 	*qtrt.CObject
 }
+type QByteArrayMatcher_ITF interface {
+	QByteArrayMatcher_PTR() *QByteArrayMatcher
+}
+
+func (ptr *QByteArrayMatcher) QByteArrayMatcher_PTR() *QByteArrayMatcher { return ptr }
 
 func (this *QByteArrayMatcher) GetCthis() unsafe.Pointer {
 	if this == nil {

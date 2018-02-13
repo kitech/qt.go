@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QRegExp struct {
 	*qtrt.CObject
 }
+type QRegExp_ITF interface {
+	QRegExp_PTR() *QRegExp
+}
+
+func (ptr *QRegExp) QRegExp_PTR() *QRegExp { return ptr }
 
 func (this *QRegExp) GetCthis() unsafe.Pointer {
 	if this == nil {

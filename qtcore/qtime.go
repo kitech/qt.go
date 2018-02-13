@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QTime struct {
 	*qtrt.CObject
 }
+type QTime_ITF interface {
+	QTime_PTR() *QTime
+}
+
+func (ptr *QTime) QTime_PTR() *QTime { return ptr }
 
 func (this *QTime) GetCthis() unsafe.Pointer {
 	if this == nil {

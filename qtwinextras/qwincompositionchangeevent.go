@@ -35,6 +35,14 @@ import "github.com/kitech/qt.go/qtgui"
 type QWinCompositionChangeEvent struct {
 	*QWinEvent
 }
+type QWinCompositionChangeEvent_ITF interface {
+	QWinEvent_ITF
+	QWinCompositionChangeEvent_PTR() *QWinCompositionChangeEvent
+}
+
+func (ptr *QWinCompositionChangeEvent) QWinCompositionChangeEvent_PTR() *QWinCompositionChangeEvent {
+	return ptr
+}
 
 func (this *QWinCompositionChangeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

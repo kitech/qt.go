@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QImageWriter struct {
 	*qtrt.CObject
 }
+type QImageWriter_ITF interface {
+	QImageWriter_PTR() *QImageWriter
+}
+
+func (ptr *QImageWriter) QImageWriter_PTR() *QImageWriter { return ptr }
 
 func (this *QImageWriter) GetCthis() unsafe.Pointer {
 	if this == nil {

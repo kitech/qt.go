@@ -110,6 +110,12 @@ func (this *QComboBox) InheritInitStyleOption(f func(option *QStyleOptionComboBo
 type QComboBox struct {
 	*QWidget
 }
+type QComboBox_ITF interface {
+	QWidget_ITF
+	QComboBox_PTR() *QComboBox
+}
+
+func (ptr *QComboBox) QComboBox_PTR() *QComboBox { return ptr }
 
 func (this *QComboBox) GetCthis() unsafe.Pointer {
 	if this == nil {

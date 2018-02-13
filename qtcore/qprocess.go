@@ -53,6 +53,12 @@ func (this *QProcess) InheritWriteData(f func(data string, len int64) int64) {
 type QProcess struct {
 	*QIODevice
 }
+type QProcess_ITF interface {
+	QIODevice_ITF
+	QProcess_PTR() *QProcess
+}
+
+func (ptr *QProcess) QProcess_PTR() *QProcess { return ptr }
 
 func (this *QProcess) GetCthis() unsafe.Pointer {
 	if this == nil {

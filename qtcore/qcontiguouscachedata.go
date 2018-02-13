@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QContiguousCacheData struct {
 	*qtrt.CObject
 }
+type QContiguousCacheData_ITF interface {
+	QContiguousCacheData_PTR() *QContiguousCacheData
+}
+
+func (ptr *QContiguousCacheData) QContiguousCacheData_PTR() *QContiguousCacheData { return ptr }
 
 func (this *QContiguousCacheData) GetCthis() unsafe.Pointer {
 	if this == nil {

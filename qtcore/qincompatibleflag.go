@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QIncompatibleFlag struct {
 	*qtrt.CObject
 }
+type QIncompatibleFlag_ITF interface {
+	QIncompatibleFlag_PTR() *QIncompatibleFlag
+}
+
+func (ptr *QIncompatibleFlag) QIncompatibleFlag_PTR() *QIncompatibleFlag { return ptr }
 
 func (this *QIncompatibleFlag) GetCthis() unsafe.Pointer {
 	if this == nil {

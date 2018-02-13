@@ -40,6 +40,12 @@ func (this *QDesktopWidget) InheritResizeEvent(f func(e *qtgui.QResizeEvent /*77
 type QDesktopWidget struct {
 	*QWidget
 }
+type QDesktopWidget_ITF interface {
+	QWidget_ITF
+	QDesktopWidget_PTR() *QDesktopWidget
+}
+
+func (ptr *QDesktopWidget) QDesktopWidget_PTR() *QDesktopWidget { return ptr }
 
 func (this *QDesktopWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

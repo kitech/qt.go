@@ -34,6 +34,14 @@ import "github.com/kitech/qt.go/qtcore"
 type QAccessibleTextSelectionEvent struct {
 	*QAccessibleTextCursorEvent
 }
+type QAccessibleTextSelectionEvent_ITF interface {
+	QAccessibleTextCursorEvent_ITF
+	QAccessibleTextSelectionEvent_PTR() *QAccessibleTextSelectionEvent
+}
+
+func (ptr *QAccessibleTextSelectionEvent) QAccessibleTextSelectionEvent_PTR() *QAccessibleTextSelectionEvent {
+	return ptr
+}
 
 func (this *QAccessibleTextSelectionEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

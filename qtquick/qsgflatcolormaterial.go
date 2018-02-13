@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGFlatColorMaterial struct {
 	*QSGMaterial
 }
+type QSGFlatColorMaterial_ITF interface {
+	QSGMaterial_ITF
+	QSGFlatColorMaterial_PTR() *QSGFlatColorMaterial
+}
+
+func (ptr *QSGFlatColorMaterial) QSGFlatColorMaterial_PTR() *QSGFlatColorMaterial { return ptr }
 
 func (this *QSGFlatColorMaterial) GetCthis() unsafe.Pointer {
 	if this == nil {

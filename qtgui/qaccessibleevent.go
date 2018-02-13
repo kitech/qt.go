@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QAccessibleEvent struct {
 	*qtrt.CObject
 }
+type QAccessibleEvent_ITF interface {
+	QAccessibleEvent_PTR() *QAccessibleEvent
+}
+
+func (ptr *QAccessibleEvent) QAccessibleEvent_PTR() *QAccessibleEvent { return ptr }
 
 func (this *QAccessibleEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

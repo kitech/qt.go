@@ -38,6 +38,12 @@ func (this *QTemporaryFile) InheritOpen(f func(flags int) bool) {
 type QTemporaryFile struct {
 	*QFile
 }
+type QTemporaryFile_ITF interface {
+	QFile_ITF
+	QTemporaryFile_PTR() *QTemporaryFile
+}
+
+func (ptr *QTemporaryFile) QTemporaryFile_PTR() *QTemporaryFile { return ptr }
 
 func (this *QTemporaryFile) GetCthis() unsafe.Pointer {
 	if this == nil {

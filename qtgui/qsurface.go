@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QSurface struct {
 	*qtrt.CObject
 }
+type QSurface_ITF interface {
+	QSurface_PTR() *QSurface
+}
+
+func (ptr *QSurface) QSurface_PTR() *QSurface { return ptr }
 
 func (this *QSurface) GetCthis() unsafe.Pointer {
 	if this == nil {

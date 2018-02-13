@@ -43,6 +43,11 @@ func (this *QFutureInterfaceBase) InheritDerefT(f func() bool) {
 type QFutureInterfaceBase struct {
 	*qtrt.CObject
 }
+type QFutureInterfaceBase_ITF interface {
+	QFutureInterfaceBase_PTR() *QFutureInterfaceBase
+}
+
+func (ptr *QFutureInterfaceBase) QFutureInterfaceBase_PTR() *QFutureInterfaceBase { return ptr }
 
 func (this *QFutureInterfaceBase) GetCthis() unsafe.Pointer {
 	if this == nil {

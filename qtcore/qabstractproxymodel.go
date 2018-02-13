@@ -38,6 +38,12 @@ func (this *QAbstractProxyModel) InheritResetInternalData(f func() /*void*/) {
 type QAbstractProxyModel struct {
 	*QAbstractItemModel
 }
+type QAbstractProxyModel_ITF interface {
+	QAbstractItemModel_ITF
+	QAbstractProxyModel_PTR() *QAbstractProxyModel
+}
+
+func (ptr *QAbstractProxyModel) QAbstractProxyModel_PTR() *QAbstractProxyModel { return ptr }
 
 func (this *QAbstractProxyModel) GetCthis() unsafe.Pointer {
 	if this == nil {

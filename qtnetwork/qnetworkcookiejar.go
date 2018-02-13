@@ -39,6 +39,12 @@ func (this *QNetworkCookieJar) InheritValidateCookie(f func(cookie *QNetworkCook
 type QNetworkCookieJar struct {
 	*qtcore.QObject
 }
+type QNetworkCookieJar_ITF interface {
+	qtcore.QObject_ITF
+	QNetworkCookieJar_PTR() *QNetworkCookieJar
+}
+
+func (ptr *QNetworkCookieJar) QNetworkCookieJar_PTR() *QNetworkCookieJar { return ptr }
 
 func (this *QNetworkCookieJar) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QRegExpValidator struct {
 	*QValidator
 }
+type QRegExpValidator_ITF interface {
+	QValidator_ITF
+	QRegExpValidator_PTR() *QRegExpValidator
+}
+
+func (ptr *QRegExpValidator) QRegExpValidator_PTR() *QRegExpValidator { return ptr }
 
 func (this *QRegExpValidator) GetCthis() unsafe.Pointer {
 	if this == nil {

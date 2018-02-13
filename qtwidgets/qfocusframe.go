@@ -55,6 +55,12 @@ func (this *QFocusFrame) InheritInitStyleOption(f func(option *QStyleOption /*77
 type QFocusFrame struct {
 	*QWidget
 }
+type QFocusFrame_ITF interface {
+	QWidget_ITF
+	QFocusFrame_PTR() *QFocusFrame
+}
+
+func (ptr *QFocusFrame) QFocusFrame_PTR() *QFocusFrame { return ptr }
 
 func (this *QFocusFrame) GetCthis() unsafe.Pointer {
 	if this == nil {

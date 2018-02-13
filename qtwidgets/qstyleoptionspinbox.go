@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionSpinBox struct {
 	*QStyleOptionComplex
 }
+type QStyleOptionSpinBox_ITF interface {
+	QStyleOptionComplex_ITF
+	QStyleOptionSpinBox_PTR() *QStyleOptionSpinBox
+}
+
+func (ptr *QStyleOptionSpinBox) QStyleOptionSpinBox_PTR() *QStyleOptionSpinBox { return ptr }
 
 func (this *QStyleOptionSpinBox) GetCthis() unsafe.Pointer {
 	if this == nil {

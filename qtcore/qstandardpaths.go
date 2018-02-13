@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QStandardPaths struct {
 	*qtrt.CObject
 }
+type QStandardPaths_ITF interface {
+	QStandardPaths_PTR() *QStandardPaths
+}
+
+func (ptr *QStandardPaths) QStandardPaths_PTR() *QStandardPaths { return ptr }
 
 func (this *QStandardPaths) GetCthis() unsafe.Pointer {
 	if this == nil {

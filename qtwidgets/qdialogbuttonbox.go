@@ -45,6 +45,12 @@ func (this *QDialogButtonBox) InheritEvent(f func(event *qtcore.QEvent /*777 QEv
 type QDialogButtonBox struct {
 	*QWidget
 }
+type QDialogButtonBox_ITF interface {
+	QWidget_ITF
+	QDialogButtonBox_PTR() *QDialogButtonBox
+}
+
+func (ptr *QDialogButtonBox) QDialogButtonBox_PTR() *QDialogButtonBox { return ptr }
 
 func (this *QDialogButtonBox) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -38,6 +38,13 @@ func (this *QStaticByteArrayMatcherBase) InheritIndexOfIn(f func(needle string, 
 type QStaticByteArrayMatcherBase struct {
 	*qtrt.CObject
 }
+type QStaticByteArrayMatcherBase_ITF interface {
+	QStaticByteArrayMatcherBase_PTR() *QStaticByteArrayMatcherBase
+}
+
+func (ptr *QStaticByteArrayMatcherBase) QStaticByteArrayMatcherBase_PTR() *QStaticByteArrayMatcherBase {
+	return ptr
+}
 
 func (this *QStaticByteArrayMatcherBase) GetCthis() unsafe.Pointer {
 	if this == nil {

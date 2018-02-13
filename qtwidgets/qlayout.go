@@ -66,6 +66,13 @@ type QLayout struct {
 	*qtcore.QObject
 	*QLayoutItem
 }
+type QLayout_ITF interface {
+	qtcore.QObject_ITF
+	QLayoutItem_ITF
+	QLayout_PTR() *QLayout
+}
+
+func (ptr *QLayout) QLayout_PTR() *QLayout { return ptr }
 
 func (this *QLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

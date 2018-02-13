@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QStringListModel struct {
 	*QAbstractListModel
 }
+type QStringListModel_ITF interface {
+	QAbstractListModel_ITF
+	QStringListModel_PTR() *QStringListModel
+}
+
+func (ptr *QStringListModel) QStringListModel_PTR() *QStringListModel { return ptr }
 
 func (this *QStringListModel) GetCthis() unsafe.Pointer {
 	if this == nil {

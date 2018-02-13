@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QInputMethodEvent struct {
 	*qtcore.QEvent
 }
+type QInputMethodEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QInputMethodEvent_PTR() *QInputMethodEvent
+}
+
+func (ptr *QInputMethodEvent) QInputMethodEvent_PTR() *QInputMethodEvent { return ptr }
 
 func (this *QInputMethodEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

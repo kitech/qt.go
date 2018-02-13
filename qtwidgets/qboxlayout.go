@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QBoxLayout struct {
 	*QLayout
 }
+type QBoxLayout_ITF interface {
+	QLayout_ITF
+	QBoxLayout_PTR() *QBoxLayout
+}
+
+func (ptr *QBoxLayout) QBoxLayout_PTR() *QBoxLayout { return ptr }
 
 func (this *QBoxLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGClipNode struct {
 	*QSGBasicGeometryNode
 }
+type QSGClipNode_ITF interface {
+	QSGBasicGeometryNode_ITF
+	QSGClipNode_PTR() *QSGClipNode
+}
+
+func (ptr *QSGClipNode) QSGClipNode_PTR() *QSGClipNode { return ptr }
 
 func (this *QSGClipNode) GetCthis() unsafe.Pointer {
 	if this == nil {

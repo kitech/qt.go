@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionRubberBand struct {
 	*QStyleOption
 }
+type QStyleOptionRubberBand_ITF interface {
+	QStyleOption_ITF
+	QStyleOptionRubberBand_PTR() *QStyleOptionRubberBand
+}
+
+func (ptr *QStyleOptionRubberBand) QStyleOptionRubberBand_PTR() *QStyleOptionRubberBand { return ptr }
 
 func (this *QStyleOptionRubberBand) GetCthis() unsafe.Pointer {
 	if this == nil {

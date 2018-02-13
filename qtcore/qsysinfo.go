@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QSysInfo struct {
 	*qtrt.CObject
 }
+type QSysInfo_ITF interface {
+	QSysInfo_PTR() *QSysInfo
+}
+
+func (ptr *QSysInfo) QSysInfo_PTR() *QSysInfo { return ptr }
 
 func (this *QSysInfo) GetCthis() unsafe.Pointer {
 	if this == nil {

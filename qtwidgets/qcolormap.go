@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QColormap struct {
 	*qtrt.CObject
 }
+type QColormap_ITF interface {
+	QColormap_PTR() *QColormap
+}
+
+func (ptr *QColormap) QColormap_PTR() *QColormap { return ptr }
 
 func (this *QColormap) GetCthis() unsafe.Pointer {
 	if this == nil {

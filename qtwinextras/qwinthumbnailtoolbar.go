@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QWinThumbnailToolBar struct {
 	*qtcore.QObject
 }
+type QWinThumbnailToolBar_ITF interface {
+	qtcore.QObject_ITF
+	QWinThumbnailToolBar_PTR() *QWinThumbnailToolBar
+}
+
+func (ptr *QWinThumbnailToolBar) QWinThumbnailToolBar_PTR() *QWinThumbnailToolBar { return ptr }
 
 func (this *QWinThumbnailToolBar) GetCthis() unsafe.Pointer {
 	if this == nil {

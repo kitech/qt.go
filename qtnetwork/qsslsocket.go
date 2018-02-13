@@ -44,6 +44,12 @@ func (this *QSslSocket) InheritWriteData(f func(data string, len int64) int64) {
 type QSslSocket struct {
 	*QTcpSocket
 }
+type QSslSocket_ITF interface {
+	QTcpSocket_ITF
+	QSslSocket_PTR() *QSslSocket
+}
+
+func (ptr *QSslSocket) QSslSocket_PTR() *QSslSocket { return ptr }
 
 func (this *QSslSocket) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -60,6 +60,12 @@ func (this *QCommandLinkButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent
 type QCommandLinkButton struct {
 	*QPushButton
 }
+type QCommandLinkButton_ITF interface {
+	QPushButton_ITF
+	QCommandLinkButton_PTR() *QCommandLinkButton
+}
+
+func (ptr *QCommandLinkButton) QCommandLinkButton_PTR() *QCommandLinkButton { return ptr }
 
 func (this *QCommandLinkButton) GetCthis() unsafe.Pointer {
 	if this == nil {

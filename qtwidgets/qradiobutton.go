@@ -60,6 +60,12 @@ func (this *QRadioButton) InheritInitStyleOption(f func(button *QStyleOptionButt
 type QRadioButton struct {
 	*QAbstractButton
 }
+type QRadioButton_ITF interface {
+	QAbstractButton_ITF
+	QRadioButton_PTR() *QRadioButton
+}
+
+func (ptr *QRadioButton) QRadioButton_PTR() *QRadioButton { return ptr }
 
 func (this *QRadioButton) GetCthis() unsafe.Pointer {
 	if this == nil {

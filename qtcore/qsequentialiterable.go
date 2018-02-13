@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QSequentialIterable struct {
 	*qtrt.CObject
 }
+type QSequentialIterable_ITF interface {
+	QSequentialIterable_PTR() *QSequentialIterable
+}
+
+func (ptr *QSequentialIterable) QSequentialIterable_PTR() *QSequentialIterable { return ptr }
 
 func (this *QSequentialIterable) GetCthis() unsafe.Pointer {
 	if this == nil {

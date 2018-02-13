@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QWidgetData struct {
 	*qtrt.CObject
 }
+type QWidgetData_ITF interface {
+	QWidgetData_PTR() *QWidgetData
+}
+
+func (ptr *QWidgetData) QWidgetData_PTR() *QWidgetData { return ptr }
 
 func (this *QWidgetData) GetCthis() unsafe.Pointer {
 	if this == nil {

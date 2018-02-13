@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QCommonStyle struct {
 	*QStyle
 }
+type QCommonStyle_ITF interface {
+	QStyle_ITF
+	QCommonStyle_PTR() *QCommonStyle
+}
+
+func (ptr *QCommonStyle) QCommonStyle_PTR() *QCommonStyle { return ptr }
 
 func (this *QCommonStyle) GetCthis() unsafe.Pointer {
 	if this == nil {

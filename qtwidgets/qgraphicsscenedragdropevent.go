@@ -35,6 +35,14 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsSceneDragDropEvent struct {
 	*QGraphicsSceneEvent
 }
+type QGraphicsSceneDragDropEvent_ITF interface {
+	QGraphicsSceneEvent_ITF
+	QGraphicsSceneDragDropEvent_PTR() *QGraphicsSceneDragDropEvent
+}
+
+func (ptr *QGraphicsSceneDragDropEvent) QGraphicsSceneDragDropEvent_PTR() *QGraphicsSceneDragDropEvent {
+	return ptr
+}
 
 func (this *QGraphicsSceneDragDropEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

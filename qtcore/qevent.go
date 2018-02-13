@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QEvent struct {
 	*qtrt.CObject
 }
+type QEvent_ITF interface {
+	QEvent_PTR() *QEvent
+}
+
+func (ptr *QEvent) QEvent_PTR() *QEvent { return ptr }
 
 func (this *QEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

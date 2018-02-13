@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPixelFormat struct {
 	*qtrt.CObject
 }
+type QPixelFormat_ITF interface {
+	QPixelFormat_PTR() *QPixelFormat
+}
+
+func (ptr *QPixelFormat) QPixelFormat_PTR() *QPixelFormat { return ptr }
 
 func (this *QPixelFormat) GetCthis() unsafe.Pointer {
 	if this == nil {

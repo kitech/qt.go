@@ -35,6 +35,14 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsSceneWheelEvent struct {
 	*QGraphicsSceneEvent
 }
+type QGraphicsSceneWheelEvent_ITF interface {
+	QGraphicsSceneEvent_ITF
+	QGraphicsSceneWheelEvent_PTR() *QGraphicsSceneWheelEvent
+}
+
+func (ptr *QGraphicsSceneWheelEvent) QGraphicsSceneWheelEvent_PTR() *QGraphicsSceneWheelEvent {
+	return ptr
+}
 
 func (this *QGraphicsSceneWheelEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

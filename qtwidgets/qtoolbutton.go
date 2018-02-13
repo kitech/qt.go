@@ -95,6 +95,12 @@ func (this *QToolButton) InheritInitStyleOption(f func(option *QStyleOptionToolB
 type QToolButton struct {
 	*QAbstractButton
 }
+type QToolButton_ITF interface {
+	QAbstractButton_ITF
+	QToolButton_PTR() *QToolButton
+}
+
+func (ptr *QToolButton) QToolButton_PTR() *QToolButton { return ptr }
 
 func (this *QToolButton) GetCthis() unsafe.Pointer {
 	if this == nil {

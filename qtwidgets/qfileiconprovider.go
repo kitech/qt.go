@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QFileIconProvider struct {
 	*qtrt.CObject
 }
+type QFileIconProvider_ITF interface {
+	QFileIconProvider_PTR() *QFileIconProvider
+}
+
+func (ptr *QFileIconProvider) QFileIconProvider_PTR() *QFileIconProvider { return ptr }
 
 func (this *QFileIconProvider) GetCthis() unsafe.Pointer {
 	if this == nil {

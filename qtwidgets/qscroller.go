@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QScroller struct {
 	*qtcore.QObject
 }
+type QScroller_ITF interface {
+	qtcore.QObject_ITF
+	QScroller_PTR() *QScroller
+}
+
+func (ptr *QScroller) QScroller_PTR() *QScroller { return ptr }
 
 func (this *QScroller) GetCthis() unsafe.Pointer {
 	if this == nil {

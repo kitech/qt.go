@@ -60,6 +60,12 @@ func (this *QDockWidget) InheritInitStyleOption(f func(option *QStyleOptionDockW
 type QDockWidget struct {
 	*QWidget
 }
+type QDockWidget_ITF interface {
+	QWidget_ITF
+	QDockWidget_PTR() *QDockWidget
+}
+
+func (ptr *QDockWidget) QDockWidget_PTR() *QDockWidget { return ptr }
 
 func (this *QDockWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

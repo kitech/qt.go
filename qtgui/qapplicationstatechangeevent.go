@@ -34,6 +34,14 @@ import "github.com/kitech/qt.go/qtcore"
 type QApplicationStateChangeEvent struct {
 	*qtcore.QEvent
 }
+type QApplicationStateChangeEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QApplicationStateChangeEvent_PTR() *QApplicationStateChangeEvent
+}
+
+func (ptr *QApplicationStateChangeEvent) QApplicationStateChangeEvent_PTR() *QApplicationStateChangeEvent {
+	return ptr
+}
 
 func (this *QApplicationStateChangeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QAndroidService struct {
 	*qtcore.QCoreApplication
 }
+type QAndroidService_ITF interface {
+	qtcore.QCoreApplication_ITF
+	QAndroidService_PTR() *QAndroidService
+}
+
+func (ptr *QAndroidService) QAndroidService_PTR() *QAndroidService { return ptr }
 
 func (this *QAndroidService) GetCthis() unsafe.Pointer {
 	if this == nil {

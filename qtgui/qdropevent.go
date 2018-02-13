@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QDropEvent struct {
 	*qtcore.QEvent
 }
+type QDropEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QDropEvent_PTR() *QDropEvent
+}
+
+func (ptr *QDropEvent) QDropEvent_PTR() *QDropEvent { return ptr }
 
 func (this *QDropEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

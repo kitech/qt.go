@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QUndoView struct {
 	*QListView
 }
+type QUndoView_ITF interface {
+	QListView_ITF
+	QUndoView_PTR() *QUndoView
+}
+
+func (ptr *QUndoView) QUndoView_PTR() *QUndoView { return ptr }
 
 func (this *QUndoView) GetCthis() unsafe.Pointer {
 	if this == nil {

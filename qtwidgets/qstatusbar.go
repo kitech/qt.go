@@ -65,6 +65,12 @@ func (this *QStatusBar) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/
 type QStatusBar struct {
 	*QWidget
 }
+type QStatusBar_ITF interface {
+	QWidget_ITF
+	QStatusBar_PTR() *QStatusBar
+}
+
+func (ptr *QStatusBar) QStatusBar_PTR() *QStatusBar { return ptr }
 
 func (this *QStatusBar) GetCthis() unsafe.Pointer {
 	if this == nil {

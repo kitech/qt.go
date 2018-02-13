@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextFrameFormat struct {
 	*QTextFormat
 }
+type QTextFrameFormat_ITF interface {
+	QTextFormat_ITF
+	QTextFrameFormat_PTR() *QTextFrameFormat
+}
+
+func (ptr *QTextFrameFormat) QTextFrameFormat_PTR() *QTextFrameFormat { return ptr }
 
 func (this *QTextFrameFormat) GetCthis() unsafe.Pointer {
 	if this == nil {

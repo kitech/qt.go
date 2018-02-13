@@ -37,6 +37,11 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGMaterial struct {
 	*qtrt.CObject
 }
+type QSGMaterial_ITF interface {
+	QSGMaterial_PTR() *QSGMaterial
+}
+
+func (ptr *QSGMaterial) QSGMaterial_PTR() *QSGMaterial { return ptr }
 
 func (this *QSGMaterial) GetCthis() unsafe.Pointer {
 	if this == nil {

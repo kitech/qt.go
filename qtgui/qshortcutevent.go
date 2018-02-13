@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QShortcutEvent struct {
 	*qtcore.QEvent
 }
+type QShortcutEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QShortcutEvent_PTR() *QShortcutEvent
+}
+
+func (ptr *QShortcutEvent) QShortcutEvent_PTR() *QShortcutEvent { return ptr }
 
 func (this *QShortcutEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

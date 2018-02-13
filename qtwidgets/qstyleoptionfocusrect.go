@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionFocusRect struct {
 	*QStyleOption
 }
+type QStyleOptionFocusRect_ITF interface {
+	QStyleOption_ITF
+	QStyleOptionFocusRect_PTR() *QStyleOptionFocusRect
+}
+
+func (ptr *QStyleOptionFocusRect) QStyleOptionFocusRect_PTR() *QStyleOptionFocusRect { return ptr }
 
 func (this *QStyleOptionFocusRect) GetCthis() unsafe.Pointer {
 	if this == nil {

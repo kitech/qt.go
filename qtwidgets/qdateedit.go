@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QDateEdit struct {
 	*QDateTimeEdit
 }
+type QDateEdit_ITF interface {
+	QDateTimeEdit_ITF
+	QDateEdit_PTR() *QDateEdit
+}
+
+func (ptr *QDateEdit) QDateEdit_PTR() *QDateEdit { return ptr }
 
 func (this *QDateEdit) GetCthis() unsafe.Pointer {
 	if this == nil {

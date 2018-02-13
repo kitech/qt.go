@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QIPv6Address struct {
 	*qtrt.CObject
 }
+type QIPv6Address_ITF interface {
+	QIPv6Address_PTR() *QIPv6Address
+}
+
+func (ptr *QIPv6Address) QIPv6Address_PTR() *QIPv6Address { return ptr }
 
 func (this *QIPv6Address) GetCthis() unsafe.Pointer {
 	if this == nil {

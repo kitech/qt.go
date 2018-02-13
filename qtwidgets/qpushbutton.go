@@ -65,6 +65,12 @@ func (this *QPushButton) InheritInitStyleOption(f func(option *QStyleOptionButto
 type QPushButton struct {
 	*QAbstractButton
 }
+type QPushButton_ITF interface {
+	QAbstractButton_ITF
+	QPushButton_PTR() *QPushButton
+}
+
+func (ptr *QPushButton) QPushButton_PTR() *QPushButton { return ptr }
 
 func (this *QPushButton) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QJSValue struct {
 	*qtrt.CObject
 }
+type QJSValue_ITF interface {
+	QJSValue_PTR() *QJSValue
+}
+
+func (ptr *QJSValue) QJSValue_PTR() *QJSValue { return ptr }
 
 func (this *QJSValue) GetCthis() unsafe.Pointer {
 	if this == nil {

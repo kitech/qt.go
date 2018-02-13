@@ -35,6 +35,14 @@ import "github.com/kitech/qt.go/qtgui"
 type QWinColorizationChangeEvent struct {
 	*QWinEvent
 }
+type QWinColorizationChangeEvent_ITF interface {
+	QWinEvent_ITF
+	QWinColorizationChangeEvent_PTR() *QWinColorizationChangeEvent
+}
+
+func (ptr *QWinColorizationChangeEvent) QWinColorizationChangeEvent_PTR() *QWinColorizationChangeEvent {
+	return ptr
+}
 
 func (this *QWinColorizationChangeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

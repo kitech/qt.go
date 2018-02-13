@@ -35,6 +35,13 @@ import "github.com/kitech/qt.go/qtgui"
 type QTableWidgetSelectionRange struct {
 	*qtrt.CObject
 }
+type QTableWidgetSelectionRange_ITF interface {
+	QTableWidgetSelectionRange_PTR() *QTableWidgetSelectionRange
+}
+
+func (ptr *QTableWidgetSelectionRange) QTableWidgetSelectionRange_PTR() *QTableWidgetSelectionRange {
+	return ptr
+}
 
 func (this *QTableWidgetSelectionRange) GetCthis() unsafe.Pointer {
 	if this == nil {

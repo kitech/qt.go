@@ -54,6 +54,11 @@ func (this *QPaintDevice) InheritSharedPainter(f func() unsafe.Pointer /*666*/) 
 type QPaintDevice struct {
 	*qtrt.CObject
 }
+type QPaintDevice_ITF interface {
+	QPaintDevice_PTR() *QPaintDevice
+}
+
+func (ptr *QPaintDevice) QPaintDevice_PTR() *QPaintDevice { return ptr }
 
 func (this *QPaintDevice) GetCthis() unsafe.Pointer {
 	if this == nil {

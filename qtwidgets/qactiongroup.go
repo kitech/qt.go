@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QActionGroup struct {
 	*qtcore.QObject
 }
+type QActionGroup_ITF interface {
+	qtcore.QObject_ITF
+	QActionGroup_PTR() *QActionGroup
+}
+
+func (ptr *QActionGroup) QActionGroup_PTR() *QActionGroup { return ptr }
 
 func (this *QActionGroup) GetCthis() unsafe.Pointer {
 	if this == nil {

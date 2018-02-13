@@ -34,6 +34,13 @@ import "github.com/kitech/qt.go/qtcore"
 type QAndroidJniExceptionCleaner struct {
 	*qtrt.CObject
 }
+type QAndroidJniExceptionCleaner_ITF interface {
+	QAndroidJniExceptionCleaner_PTR() *QAndroidJniExceptionCleaner
+}
+
+func (ptr *QAndroidJniExceptionCleaner) QAndroidJniExceptionCleaner_PTR() *QAndroidJniExceptionCleaner {
+	return ptr
+}
 
 func (this *QAndroidJniExceptionCleaner) GetCthis() unsafe.Pointer {
 	if this == nil {

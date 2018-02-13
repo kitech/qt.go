@@ -53,6 +53,14 @@ func (this *QSequentialAnimationGroup) InheritUpdateDirection(f func(direction i
 type QSequentialAnimationGroup struct {
 	*QAnimationGroup
 }
+type QSequentialAnimationGroup_ITF interface {
+	QAnimationGroup_ITF
+	QSequentialAnimationGroup_PTR() *QSequentialAnimationGroup
+}
+
+func (ptr *QSequentialAnimationGroup) QSequentialAnimationGroup_PTR() *QSequentialAnimationGroup {
+	return ptr
+}
 
 func (this *QSequentialAnimationGroup) GetCthis() unsafe.Pointer {
 	if this == nil {

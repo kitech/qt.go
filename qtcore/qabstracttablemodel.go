@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QAbstractTableModel struct {
 	*QAbstractItemModel
 }
+type QAbstractTableModel_ITF interface {
+	QAbstractItemModel_ITF
+	QAbstractTableModel_PTR() *QAbstractTableModel
+}
+
+func (ptr *QAbstractTableModel) QAbstractTableModel_PTR() *QAbstractTableModel { return ptr }
 
 func (this *QAbstractTableModel) GetCthis() unsafe.Pointer {
 	if this == nil {

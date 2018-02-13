@@ -50,6 +50,12 @@ func (this *QProgressBar) InheritInitStyleOption(f func(option *QStyleOptionProg
 type QProgressBar struct {
 	*QWidget
 }
+type QProgressBar_ITF interface {
+	QWidget_ITF
+	QProgressBar_PTR() *QProgressBar
+}
+
+func (ptr *QProgressBar) QProgressBar_PTR() *QProgressBar { return ptr }
 
 func (this *QProgressBar) GetCthis() unsafe.Pointer {
 	if this == nil {

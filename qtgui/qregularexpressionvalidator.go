@@ -34,6 +34,14 @@ import "github.com/kitech/qt.go/qtcore"
 type QRegularExpressionValidator struct {
 	*QValidator
 }
+type QRegularExpressionValidator_ITF interface {
+	QValidator_ITF
+	QRegularExpressionValidator_PTR() *QRegularExpressionValidator
+}
+
+func (ptr *QRegularExpressionValidator) QRegularExpressionValidator_PTR() *QRegularExpressionValidator {
+	return ptr
+}
 
 func (this *QRegularExpressionValidator) GetCthis() unsafe.Pointer {
 	if this == nil {

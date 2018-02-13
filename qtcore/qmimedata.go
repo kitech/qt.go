@@ -38,6 +38,12 @@ func (this *QMimeData) InheritRetrieveData(f func(mimetype string, preferredType
 type QMimeData struct {
 	*QObject
 }
+type QMimeData_ITF interface {
+	QObject_ITF
+	QMimeData_PTR() *QMimeData
+}
+
+func (ptr *QMimeData) QMimeData_PTR() *QMimeData { return ptr }
 
 func (this *QMimeData) GetCthis() unsafe.Pointer {
 	if this == nil {

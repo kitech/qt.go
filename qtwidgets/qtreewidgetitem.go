@@ -40,6 +40,11 @@ func (this *QTreeWidgetItem) InheritEmitDataChanged(f func() /*void*/) {
 type QTreeWidgetItem struct {
 	*qtrt.CObject
 }
+type QTreeWidgetItem_ITF interface {
+	QTreeWidgetItem_PTR() *QTreeWidgetItem
+}
+
+func (ptr *QTreeWidgetItem) QTreeWidgetItem_PTR() *QTreeWidgetItem { return ptr }
 
 func (this *QTreeWidgetItem) GetCthis() unsafe.Pointer {
 	if this == nil {

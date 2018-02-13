@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QCloseEvent struct {
 	*qtcore.QEvent
 }
+type QCloseEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QCloseEvent_PTR() *QCloseEvent
+}
+
+func (ptr *QCloseEvent) QCloseEvent_PTR() *QCloseEvent { return ptr }
 
 func (this *QCloseEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

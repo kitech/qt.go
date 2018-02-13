@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QSystemSemaphore struct {
 	*qtrt.CObject
 }
+type QSystemSemaphore_ITF interface {
+	QSystemSemaphore_PTR() *QSystemSemaphore
+}
+
+func (ptr *QSystemSemaphore) QSystemSemaphore_PTR() *QSystemSemaphore { return ptr }
 
 func (this *QSystemSemaphore) GetCthis() unsafe.Pointer {
 	if this == nil {

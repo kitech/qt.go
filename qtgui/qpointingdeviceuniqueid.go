@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPointingDeviceUniqueId struct {
 	*qtrt.CObject
 }
+type QPointingDeviceUniqueId_ITF interface {
+	QPointingDeviceUniqueId_PTR() *QPointingDeviceUniqueId
+}
+
+func (ptr *QPointingDeviceUniqueId) QPointingDeviceUniqueId_PTR() *QPointingDeviceUniqueId { return ptr }
 
 func (this *QPointingDeviceUniqueId) GetCthis() unsafe.Pointer {
 	if this == nil {

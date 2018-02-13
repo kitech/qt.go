@@ -40,6 +40,12 @@ func (this *QApplication) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent *
 type QApplication struct {
 	*qtgui.QGuiApplication
 }
+type QApplication_ITF interface {
+	qtgui.QGuiApplication_ITF
+	QApplication_PTR() *QApplication
+}
+
+func (ptr *QApplication) QApplication_PTR() *QApplication { return ptr }
 
 func (this *QApplication) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -185,6 +185,12 @@ func (this *QGraphicsProxyWidget) InheritNewProxyWidget(f func(arg0 *QWidget /*7
 type QGraphicsProxyWidget struct {
 	*QGraphicsWidget
 }
+type QGraphicsProxyWidget_ITF interface {
+	QGraphicsWidget_ITF
+	QGraphicsProxyWidget_PTR() *QGraphicsProxyWidget
+}
+
+func (ptr *QGraphicsProxyWidget) QGraphicsProxyWidget_PTR() *QGraphicsProxyWidget { return ptr }
 
 func (this *QGraphicsProxyWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

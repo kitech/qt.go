@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QKeySequence struct {
 	*qtrt.CObject
 }
+type QKeySequence_ITF interface {
+	QKeySequence_PTR() *QKeySequence
+}
+
+func (ptr *QKeySequence) QKeySequence_PTR() *QKeySequence { return ptr }
 
 func (this *QKeySequence) GetCthis() unsafe.Pointer {
 	if this == nil {

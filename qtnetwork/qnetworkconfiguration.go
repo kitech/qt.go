@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QNetworkConfiguration struct {
 	*qtrt.CObject
 }
+type QNetworkConfiguration_ITF interface {
+	QNetworkConfiguration_PTR() *QNetworkConfiguration
+}
+
+func (ptr *QNetworkConfiguration) QNetworkConfiguration_PTR() *QNetworkConfiguration { return ptr }
 
 func (this *QNetworkConfiguration) GetCthis() unsafe.Pointer {
 	if this == nil {

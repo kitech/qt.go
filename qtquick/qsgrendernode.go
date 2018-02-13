@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGRenderNode struct {
 	*QSGNode
 }
+type QSGRenderNode_ITF interface {
+	QSGNode_ITF
+	QSGRenderNode_PTR() *QSGRenderNode
+}
+
+func (ptr *QSGRenderNode) QSGRenderNode_PTR() *QSGRenderNode { return ptr }
 
 func (this *QSGRenderNode) GetCthis() unsafe.Pointer {
 	if this == nil {

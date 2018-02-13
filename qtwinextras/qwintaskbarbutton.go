@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QWinTaskbarButton struct {
 	*qtcore.QObject
 }
+type QWinTaskbarButton_ITF interface {
+	qtcore.QObject_ITF
+	QWinTaskbarButton_PTR() *QWinTaskbarButton
+}
+
+func (ptr *QWinTaskbarButton) QWinTaskbarButton_PTR() *QWinTaskbarButton { return ptr }
 
 func (this *QWinTaskbarButton) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QCryptographicHash struct {
 	*qtrt.CObject
 }
+type QCryptographicHash_ITF interface {
+	QCryptographicHash_PTR() *QCryptographicHash
+}
+
+func (ptr *QCryptographicHash) QCryptographicHash_PTR() *QCryptographicHash { return ptr }
 
 func (this *QCryptographicHash) GetCthis() unsafe.Pointer {
 	if this == nil {

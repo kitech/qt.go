@@ -42,6 +42,12 @@ func (this *QQuickFramebufferObject) InheritGeometryChanged(f func(newGeometry *
 type QQuickFramebufferObject struct {
 	*QQuickItem
 }
+type QQuickFramebufferObject_ITF interface {
+	QQuickItem_ITF
+	QQuickFramebufferObject_PTR() *QQuickFramebufferObject
+}
+
+func (ptr *QQuickFramebufferObject) QQuickFramebufferObject_PTR() *QQuickFramebufferObject { return ptr }
 
 func (this *QQuickFramebufferObject) GetCthis() unsafe.Pointer {
 	if this == nil {

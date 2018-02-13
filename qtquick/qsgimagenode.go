@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGImageNode struct {
 	*QSGGeometryNode
 }
+type QSGImageNode_ITF interface {
+	QSGGeometryNode_ITF
+	QSGImageNode_PTR() *QSGImageNode
+}
+
+func (ptr *QSGImageNode) QSGImageNode_PTR() *QSGImageNode { return ptr }
 
 func (this *QSGImageNode) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QUndoGroup struct {
 	*qtcore.QObject
 }
+type QUndoGroup_ITF interface {
+	qtcore.QObject_ITF
+	QUndoGroup_PTR() *QUndoGroup
+}
+
+func (ptr *QUndoGroup) QUndoGroup_PTR() *QUndoGroup { return ptr }
 
 func (this *QUndoGroup) GetCthis() unsafe.Pointer {
 	if this == nil {

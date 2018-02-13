@@ -38,6 +38,12 @@ func (this *QAnimationGroup) InheritEvent(f func(event *QEvent /*777 QEvent **/)
 type QAnimationGroup struct {
 	*QAbstractAnimation
 }
+type QAnimationGroup_ITF interface {
+	QAbstractAnimation_ITF
+	QAnimationGroup_PTR() *QAnimationGroup
+}
+
+func (ptr *QAnimationGroup) QAnimationGroup_PTR() *QAnimationGroup { return ptr }
 
 func (this *QAnimationGroup) GetCthis() unsafe.Pointer {
 	if this == nil {

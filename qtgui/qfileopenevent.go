@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QFileOpenEvent struct {
 	*qtcore.QEvent
 }
+type QFileOpenEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QFileOpenEvent_PTR() *QFileOpenEvent
+}
+
+func (ptr *QFileOpenEvent) QFileOpenEvent_PTR() *QFileOpenEvent { return ptr }
 
 func (this *QFileOpenEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

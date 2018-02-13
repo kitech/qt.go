@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPixmapCache struct {
 	*qtrt.CObject
 }
+type QPixmapCache_ITF interface {
+	QPixmapCache_PTR() *QPixmapCache
+}
+
+func (ptr *QPixmapCache) QPixmapCache_PTR() *QPixmapCache { return ptr }
 
 func (this *QPixmapCache) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QWinJumpList struct {
 	*qtcore.QObject
 }
+type QWinJumpList_ITF interface {
+	qtcore.QObject_ITF
+	QWinJumpList_PTR() *QWinJumpList
+}
+
+func (ptr *QWinJumpList) QWinJumpList_PTR() *QWinJumpList { return ptr }
 
 func (this *QWinJumpList) GetCthis() unsafe.Pointer {
 	if this == nil {

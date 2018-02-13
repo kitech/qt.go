@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlFileSelector struct {
 	*qtcore.QObject
 }
+type QQmlFileSelector_ITF interface {
+	qtcore.QObject_ITF
+	QQmlFileSelector_PTR() *QQmlFileSelector
+}
+
+func (ptr *QQmlFileSelector) QQmlFileSelector_PTR() *QQmlFileSelector { return ptr }
 
 func (this *QQmlFileSelector) GetCthis() unsafe.Pointer {
 	if this == nil {

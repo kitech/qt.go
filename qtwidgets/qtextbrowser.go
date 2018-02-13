@@ -75,6 +75,12 @@ func (this *QTextBrowser) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QP
 type QTextBrowser struct {
 	*QTextEdit
 }
+type QTextBrowser_ITF interface {
+	QTextEdit_ITF
+	QTextBrowser_PTR() *QTextBrowser
+}
+
+func (ptr *QTextBrowser) QTextBrowser_PTR() *QTextBrowser { return ptr }
 
 func (this *QTextBrowser) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -40,6 +40,12 @@ func (this *QSystemTrayIcon) InheritEvent(f func(event *qtcore.QEvent /*777 QEve
 type QSystemTrayIcon struct {
 	*qtcore.QObject
 }
+type QSystemTrayIcon_ITF interface {
+	qtcore.QObject_ITF
+	QSystemTrayIcon_PTR() *QSystemTrayIcon
+}
+
+func (ptr *QSystemTrayIcon) QSystemTrayIcon_PTR() *QSystemTrayIcon { return ptr }
 
 func (this *QSystemTrayIcon) GetCthis() unsafe.Pointer {
 	if this == nil {

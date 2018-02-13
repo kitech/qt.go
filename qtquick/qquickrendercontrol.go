@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QQuickRenderControl struct {
 	*qtcore.QObject
 }
+type QQuickRenderControl_ITF interface {
+	qtcore.QObject_ITF
+	QQuickRenderControl_PTR() *QQuickRenderControl
+}
+
+func (ptr *QQuickRenderControl) QQuickRenderControl_PTR() *QQuickRenderControl { return ptr }
 
 func (this *QQuickRenderControl) GetCthis() unsafe.Pointer {
 	if this == nil {

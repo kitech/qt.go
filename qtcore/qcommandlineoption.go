@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QCommandLineOption struct {
 	*qtrt.CObject
 }
+type QCommandLineOption_ITF interface {
+	QCommandLineOption_PTR() *QCommandLineOption
+}
+
+func (ptr *QCommandLineOption) QCommandLineOption_PTR() *QCommandLineOption { return ptr }
 
 func (this *QCommandLineOption) GetCthis() unsafe.Pointer {
 	if this == nil {

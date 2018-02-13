@@ -65,6 +65,12 @@ func (this *QListWidget) InheritItemFromIndex(f func(index *qtcore.QModelIndex) 
 type QListWidget struct {
 	*QListView
 }
+type QListWidget_ITF interface {
+	QListView_ITF
+	QListWidget_PTR() *QListWidget
+}
+
+func (ptr *QListWidget) QListWidget_PTR() *QListWidget { return ptr }
 
 func (this *QListWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

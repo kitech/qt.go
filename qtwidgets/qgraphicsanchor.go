@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsAnchor struct {
 	*qtcore.QObject
 }
+type QGraphicsAnchor_ITF interface {
+	qtcore.QObject_ITF
+	QGraphicsAnchor_PTR() *QGraphicsAnchor
+}
+
+func (ptr *QGraphicsAnchor) QGraphicsAnchor_PTR() *QGraphicsAnchor { return ptr }
 
 func (this *QGraphicsAnchor) GetCthis() unsafe.Pointer {
 	if this == nil {

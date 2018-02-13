@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QFormLayout struct {
 	*QLayout
 }
+type QFormLayout_ITF interface {
+	QLayout_ITF
+	QFormLayout_PTR() *QFormLayout
+}
+
+func (ptr *QFormLayout) QFormLayout_PTR() *QFormLayout { return ptr }
 
 func (this *QFormLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

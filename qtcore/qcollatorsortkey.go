@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QCollatorSortKey struct {
 	*qtrt.CObject
 }
+type QCollatorSortKey_ITF interface {
+	QCollatorSortKey_PTR() *QCollatorSortKey
+}
+
+func (ptr *QCollatorSortKey) QCollatorSortKey_PTR() *QCollatorSortKey { return ptr }
 
 func (this *QCollatorSortKey) GetCthis() unsafe.Pointer {
 	if this == nil {

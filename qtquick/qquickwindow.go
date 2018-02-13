@@ -107,6 +107,12 @@ func (this *QQuickWindow) InheritWheelEvent(f func(arg0 *qtgui.QWheelEvent /*777
 type QQuickWindow struct {
 	*qtgui.QWindow
 }
+type QQuickWindow_ITF interface {
+	qtgui.QWindow_ITF
+	QQuickWindow_PTR() *QQuickWindow
+}
+
+func (ptr *QQuickWindow) QQuickWindow_PTR() *QQuickWindow { return ptr }
 
 func (this *QQuickWindow) GetCthis() unsafe.Pointer {
 	if this == nil {

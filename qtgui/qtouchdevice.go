@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTouchDevice struct {
 	*qtrt.CObject
 }
+type QTouchDevice_ITF interface {
+	QTouchDevice_PTR() *QTouchDevice
+}
+
+func (ptr *QTouchDevice) QTouchDevice_PTR() *QTouchDevice { return ptr }
 
 func (this *QTouchDevice) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -110,6 +110,12 @@ func (this *QMenuBar) InheritInitStyleOption(f func(option *QStyleOptionMenuItem
 type QMenuBar struct {
 	*QWidget
 }
+type QMenuBar_ITF interface {
+	QWidget_ITF
+	QMenuBar_PTR() *QMenuBar
+}
+
+func (ptr *QMenuBar) QMenuBar_PTR() *QMenuBar { return ptr }
 
 func (this *QMenuBar) GetCthis() unsafe.Pointer {
 	if this == nil {

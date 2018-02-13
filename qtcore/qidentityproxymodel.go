@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QIdentityProxyModel struct {
 	*QAbstractProxyModel
 }
+type QIdentityProxyModel_ITF interface {
+	QAbstractProxyModel_ITF
+	QIdentityProxyModel_PTR() *QIdentityProxyModel
+}
+
+func (ptr *QIdentityProxyModel) QIdentityProxyModel_PTR() *QIdentityProxyModel { return ptr }
 
 func (this *QIdentityProxyModel) GetCthis() unsafe.Pointer {
 	if this == nil {

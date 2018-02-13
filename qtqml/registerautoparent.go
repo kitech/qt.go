@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type RegisterAutoParent struct {
 	*qtrt.CObject
 }
+type RegisterAutoParent_ITF interface {
+	RegisterAutoParent_PTR() *RegisterAutoParent
+}
+
+func (ptr *RegisterAutoParent) RegisterAutoParent_PTR() *RegisterAutoParent { return ptr }
 
 func (this *RegisterAutoParent) GetCthis() unsafe.Pointer {
 	if this == nil {

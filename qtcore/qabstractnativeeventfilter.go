@@ -33,6 +33,13 @@ import "github.com/kitech/qt.go/qtrt"
 type QAbstractNativeEventFilter struct {
 	*qtrt.CObject
 }
+type QAbstractNativeEventFilter_ITF interface {
+	QAbstractNativeEventFilter_PTR() *QAbstractNativeEventFilter
+}
+
+func (ptr *QAbstractNativeEventFilter) QAbstractNativeEventFilter_PTR() *QAbstractNativeEventFilter {
+	return ptr
+}
 
 func (this *QAbstractNativeEventFilter) GetCthis() unsafe.Pointer {
 	if this == nil {

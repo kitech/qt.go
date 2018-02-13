@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QDir struct {
 	*qtrt.CObject
 }
+type QDir_ITF interface {
+	QDir_PTR() *QDir
+}
+
+func (ptr *QDir) QDir_PTR() *QDir { return ptr }
 
 func (this *QDir) GetCthis() unsafe.Pointer {
 	if this == nil {

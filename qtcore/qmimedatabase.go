@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QMimeDatabase struct {
 	*qtrt.CObject
 }
+type QMimeDatabase_ITF interface {
+	QMimeDatabase_PTR() *QMimeDatabase
+}
+
+func (ptr *QMimeDatabase) QMimeDatabase_PTR() *QMimeDatabase { return ptr }
 
 func (this *QMimeDatabase) GetCthis() unsafe.Pointer {
 	if this == nil {

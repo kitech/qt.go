@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionTabBarBase struct {
 	*QStyleOption
 }
+type QStyleOptionTabBarBase_ITF interface {
+	QStyleOption_ITF
+	QStyleOptionTabBarBase_PTR() *QStyleOptionTabBarBase
+}
+
+func (ptr *QStyleOptionTabBarBase) QStyleOptionTabBarBase_PTR() *QStyleOptionTabBarBase { return ptr }
 
 func (this *QStyleOptionTabBarBase) GetCthis() unsafe.Pointer {
 	if this == nil {

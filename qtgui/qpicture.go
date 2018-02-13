@@ -39,6 +39,12 @@ func (this *QPicture) InheritMetric(f func(m int) int) {
 type QPicture struct {
 	*QPaintDevice
 }
+type QPicture_ITF interface {
+	QPaintDevice_ITF
+	QPicture_PTR() *QPicture
+}
+
+func (ptr *QPicture) QPicture_PTR() *QPicture { return ptr }
 
 func (this *QPicture) GetCthis() unsafe.Pointer {
 	if this == nil {

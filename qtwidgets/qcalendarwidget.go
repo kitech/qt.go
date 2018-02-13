@@ -75,6 +75,12 @@ func (this *QCalendarWidget) InheritUpdateCells(f func() /*void*/) {
 type QCalendarWidget struct {
 	*QWidget
 }
+type QCalendarWidget_ITF interface {
+	QWidget_ITF
+	QCalendarWidget_PTR() *QCalendarWidget
+}
+
+func (ptr *QCalendarWidget) QCalendarWidget_PTR() *QCalendarWidget { return ptr }
 
 func (this *QCalendarWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

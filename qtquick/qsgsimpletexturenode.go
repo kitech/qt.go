@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGSimpleTextureNode struct {
 	*QSGGeometryNode
 }
+type QSGSimpleTextureNode_ITF interface {
+	QSGGeometryNode_ITF
+	QSGSimpleTextureNode_PTR() *QSGSimpleTextureNode
+}
+
+func (ptr *QSGSimpleTextureNode) QSGSimpleTextureNode_PTR() *QSGSimpleTextureNode { return ptr }
 
 func (this *QSGSimpleTextureNode) GetCthis() unsafe.Pointer {
 	if this == nil {

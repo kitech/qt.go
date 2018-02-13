@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QTextBoundaryFinder struct {
 	*qtrt.CObject
 }
+type QTextBoundaryFinder_ITF interface {
+	QTextBoundaryFinder_PTR() *QTextBoundaryFinder
+}
+
+func (ptr *QTextBoundaryFinder) QTextBoundaryFinder_PTR() *QTextBoundaryFinder { return ptr }
 
 func (this *QTextBoundaryFinder) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QHostAddress struct {
 	*qtrt.CObject
 }
+type QHostAddress_ITF interface {
+	QHostAddress_PTR() *QHostAddress
+}
+
+func (ptr *QHostAddress) QHostAddress_PTR() *QHostAddress { return ptr }
 
 func (this *QHostAddress) GetCthis() unsafe.Pointer {
 	if this == nil {

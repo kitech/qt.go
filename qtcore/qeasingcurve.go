@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QEasingCurve struct {
 	*qtrt.CObject
 }
+type QEasingCurve_ITF interface {
+	QEasingCurve_PTR() *QEasingCurve
+}
+
+func (ptr *QEasingCurve) QEasingCurve_PTR() *QEasingCurve { return ptr }
 
 func (this *QEasingCurve) GetCthis() unsafe.Pointer {
 	if this == nil {

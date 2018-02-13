@@ -33,6 +33,13 @@ import "github.com/kitech/qt.go/qtrt"
 type QMessageAuthenticationCode struct {
 	*qtrt.CObject
 }
+type QMessageAuthenticationCode_ITF interface {
+	QMessageAuthenticationCode_PTR() *QMessageAuthenticationCode
+}
+
+func (ptr *QMessageAuthenticationCode) QMessageAuthenticationCode_PTR() *QMessageAuthenticationCode {
+	return ptr
+}
 
 func (this *QMessageAuthenticationCode) GetCthis() unsafe.Pointer {
 	if this == nil {

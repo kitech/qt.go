@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QHashDummyValue struct {
 	*qtrt.CObject
 }
+type QHashDummyValue_ITF interface {
+	QHashDummyValue_PTR() *QHashDummyValue
+}
+
+func (ptr *QHashDummyValue) QHashDummyValue_PTR() *QHashDummyValue { return ptr }
 
 func (this *QHashDummyValue) GetCthis() unsafe.Pointer {
 	if this == nil {

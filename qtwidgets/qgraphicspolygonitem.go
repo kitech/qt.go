@@ -50,6 +50,12 @@ func (this *QGraphicsPolygonItem) InheritExtension(f func(variant *qtcore.QVaria
 type QGraphicsPolygonItem struct {
 	*QAbstractGraphicsShapeItem
 }
+type QGraphicsPolygonItem_ITF interface {
+	QAbstractGraphicsShapeItem_ITF
+	QGraphicsPolygonItem_PTR() *QGraphicsPolygonItem
+}
+
+func (ptr *QGraphicsPolygonItem) QGraphicsPolygonItem_PTR() *QGraphicsPolygonItem { return ptr }
 
 func (this *QGraphicsPolygonItem) GetCthis() unsafe.Pointer {
 	if this == nil {

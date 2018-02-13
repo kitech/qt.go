@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QSharedMemory struct {
 	*QObject
 }
+type QSharedMemory_ITF interface {
+	QObject_ITF
+	QSharedMemory_PTR() *QSharedMemory
+}
+
+func (ptr *QSharedMemory) QSharedMemory_PTR() *QSharedMemory { return ptr }
 
 func (this *QSharedMemory) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QHostInfo struct {
 	*qtrt.CObject
 }
+type QHostInfo_ITF interface {
+	QHostInfo_PTR() *QHostInfo
+}
+
+func (ptr *QHostInfo) QHostInfo_PTR() *QHostInfo { return ptr }
 
 func (this *QHostInfo) GetCthis() unsafe.Pointer {
 	if this == nil {

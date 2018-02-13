@@ -42,6 +42,12 @@ func (this *QQuickPaintedItem) InheritReleaseResources(f func() /*void*/) {
 type QQuickPaintedItem struct {
 	*QQuickItem
 }
+type QQuickPaintedItem_ITF interface {
+	QQuickItem_ITF
+	QQuickPaintedItem_PTR() *QQuickPaintedItem
+}
+
+func (ptr *QQuickPaintedItem) QQuickPaintedItem_PTR() *QQuickPaintedItem { return ptr }
 
 func (this *QQuickPaintedItem) GetCthis() unsafe.Pointer {
 	if this == nil {

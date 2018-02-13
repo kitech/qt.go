@@ -36,6 +36,13 @@ type QQmlExtensionPlugin struct {
 	*qtcore.QObject
 	*QQmlExtensionInterface
 }
+type QQmlExtensionPlugin_ITF interface {
+	qtcore.QObject_ITF
+	QQmlExtensionInterface_ITF
+	QQmlExtensionPlugin_PTR() *QQmlExtensionPlugin
+}
+
+func (ptr *QQmlExtensionPlugin) QQmlExtensionPlugin_PTR() *QQmlExtensionPlugin { return ptr }
 
 func (this *QQmlExtensionPlugin) GetCthis() unsafe.Pointer {
 	if this == nil {

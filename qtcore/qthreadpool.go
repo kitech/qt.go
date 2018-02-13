@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QThreadPool struct {
 	*QObject
 }
+type QThreadPool_ITF interface {
+	QObject_ITF
+	QThreadPool_PTR() *QThreadPool
+}
+
+func (ptr *QThreadPool) QThreadPool_PTR() *QThreadPool { return ptr }
 
 func (this *QThreadPool) GetCthis() unsafe.Pointer {
 	if this == nil {

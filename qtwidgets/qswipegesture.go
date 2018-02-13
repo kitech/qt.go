@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QSwipeGesture struct {
 	*QGesture
 }
+type QSwipeGesture_ITF interface {
+	QGesture_ITF
+	QSwipeGesture_PTR() *QSwipeGesture
+}
+
+func (ptr *QSwipeGesture) QSwipeGesture_PTR() *QSwipeGesture { return ptr }
 
 func (this *QSwipeGesture) GetCthis() unsafe.Pointer {
 	if this == nil {

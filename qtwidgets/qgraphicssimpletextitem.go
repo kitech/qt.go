@@ -50,6 +50,12 @@ func (this *QGraphicsSimpleTextItem) InheritExtension(f func(variant *qtcore.QVa
 type QGraphicsSimpleTextItem struct {
 	*QAbstractGraphicsShapeItem
 }
+type QGraphicsSimpleTextItem_ITF interface {
+	QAbstractGraphicsShapeItem_ITF
+	QGraphicsSimpleTextItem_PTR() *QGraphicsSimpleTextItem
+}
+
+func (ptr *QGraphicsSimpleTextItem) QGraphicsSimpleTextItem_PTR() *QGraphicsSimpleTextItem { return ptr }
 
 func (this *QGraphicsSimpleTextItem) GetCthis() unsafe.Pointer {
 	if this == nil {

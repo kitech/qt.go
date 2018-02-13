@@ -120,6 +120,12 @@ func (this *QLineEdit) InheritCursorRect(f func() unsafe.Pointer) {
 type QLineEdit struct {
 	*QWidget
 }
+type QLineEdit_ITF interface {
+	QWidget_ITF
+	QLineEdit_PTR() *QLineEdit
+}
+
+func (ptr *QLineEdit) QLineEdit_PTR() *QLineEdit { return ptr }
 
 func (this *QLineEdit) GetCthis() unsafe.Pointer {
 	if this == nil {

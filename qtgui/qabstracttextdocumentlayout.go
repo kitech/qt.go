@@ -64,6 +64,14 @@ func (this *QAbstractTextDocumentLayout) InheritFormat(f func(pos int) unsafe.Po
 type QAbstractTextDocumentLayout struct {
 	*qtcore.QObject
 }
+type QAbstractTextDocumentLayout_ITF interface {
+	qtcore.QObject_ITF
+	QAbstractTextDocumentLayout_PTR() *QAbstractTextDocumentLayout
+}
+
+func (ptr *QAbstractTextDocumentLayout) QAbstractTextDocumentLayout_PTR() *QAbstractTextDocumentLayout {
+	return ptr
+}
 
 func (this *QAbstractTextDocumentLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

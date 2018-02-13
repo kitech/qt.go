@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QDragLeaveEvent struct {
 	*qtcore.QEvent
 }
+type QDragLeaveEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QDragLeaveEvent_PTR() *QDragLeaveEvent
+}
+
+func (ptr *QDragLeaveEvent) QDragLeaveEvent_PTR() *QDragLeaveEvent { return ptr }
 
 func (this *QDragLeaveEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

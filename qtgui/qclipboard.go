@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QClipboard struct {
 	*qtcore.QObject
 }
+type QClipboard_ITF interface {
+	qtcore.QObject_ITF
+	QClipboard_PTR() *QClipboard
+}
+
+func (ptr *QClipboard) QClipboard_PTR() *QClipboard { return ptr }
 
 func (this *QClipboard) GetCthis() unsafe.Pointer {
 	if this == nil {

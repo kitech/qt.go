@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QWinMime struct {
 	*qtrt.CObject
 }
+type QWinMime_ITF interface {
+	QWinMime_PTR() *QWinMime
+}
+
+func (ptr *QWinMime) QWinMime_PTR() *QWinMime { return ptr }
 
 func (this *QWinMime) GetCthis() unsafe.Pointer {
 	if this == nil {

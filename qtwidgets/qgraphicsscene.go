@@ -145,6 +145,12 @@ func (this *QGraphicsScene) InheritFocusNextPrevChild(f func(next bool) bool) {
 type QGraphicsScene struct {
 	*qtcore.QObject
 }
+type QGraphicsScene_ITF interface {
+	qtcore.QObject_ITF
+	QGraphicsScene_PTR() *QGraphicsScene
+}
+
+func (ptr *QGraphicsScene) QGraphicsScene_PTR() *QGraphicsScene { return ptr }
 
 func (this *QGraphicsScene) GetCthis() unsafe.Pointer {
 	if this == nil {

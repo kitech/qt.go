@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionDockWidget struct {
 	*QStyleOption
 }
+type QStyleOptionDockWidget_ITF interface {
+	QStyleOption_ITF
+	QStyleOptionDockWidget_PTR() *QStyleOptionDockWidget
+}
+
+func (ptr *QStyleOptionDockWidget) QStyleOptionDockWidget_PTR() *QStyleOptionDockWidget { return ptr }
 
 func (this *QStyleOptionDockWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

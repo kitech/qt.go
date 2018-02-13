@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QUndoCommand struct {
 	*qtrt.CObject
 }
+type QUndoCommand_ITF interface {
+	QUndoCommand_PTR() *QUndoCommand
+}
+
+func (ptr *QUndoCommand) QUndoCommand_PTR() *QUndoCommand { return ptr }
 
 func (this *QUndoCommand) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextTableCell struct {
 	*qtrt.CObject
 }
+type QTextTableCell_ITF interface {
+	QTextTableCell_PTR() *QTextTableCell
+}
+
+func (ptr *QTextTableCell) QTextTableCell_PTR() *QTextTableCell { return ptr }
 
 func (this *QTextTableCell) GetCthis() unsafe.Pointer {
 	if this == nil {

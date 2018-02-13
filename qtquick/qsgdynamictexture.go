@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGDynamicTexture struct {
 	*QSGTexture
 }
+type QSGDynamicTexture_ITF interface {
+	QSGTexture_ITF
+	QSGDynamicTexture_PTR() *QSGDynamicTexture
+}
+
+func (ptr *QSGDynamicTexture) QSGDynamicTexture_PTR() *QSGDynamicTexture { return ptr }
 
 func (this *QSGDynamicTexture) GetCthis() unsafe.Pointer {
 	if this == nil {

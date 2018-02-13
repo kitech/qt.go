@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QStringView struct {
 	*qtrt.CObject
 }
+type QStringView_ITF interface {
+	QStringView_PTR() *QStringView
+}
+
+func (ptr *QStringView) QStringView_PTR() *QStringView { return ptr }
 
 func (this *QStringView) GetCthis() unsafe.Pointer {
 	if this == nil {

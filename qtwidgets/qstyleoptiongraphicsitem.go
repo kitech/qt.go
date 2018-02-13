@@ -35,6 +35,14 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionGraphicsItem struct {
 	*QStyleOption
 }
+type QStyleOptionGraphicsItem_ITF interface {
+	QStyleOption_ITF
+	QStyleOptionGraphicsItem_PTR() *QStyleOptionGraphicsItem
+}
+
+func (ptr *QStyleOptionGraphicsItem) QStyleOptionGraphicsItem_PTR() *QStyleOptionGraphicsItem {
+	return ptr
+}
 
 func (this *QStyleOptionGraphicsItem) GetCthis() unsafe.Pointer {
 	if this == nil {

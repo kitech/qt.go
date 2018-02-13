@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QTimerEvent struct {
 	*QEvent
 }
+type QTimerEvent_ITF interface {
+	QEvent_ITF
+	QTimerEvent_PTR() *QTimerEvent
+}
+
+func (ptr *QTimerEvent) QTimerEvent_PTR() *QTimerEvent { return ptr }
 
 func (this *QTimerEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

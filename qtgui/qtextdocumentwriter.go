@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextDocumentWriter struct {
 	*qtrt.CObject
 }
+type QTextDocumentWriter_ITF interface {
+	QTextDocumentWriter_PTR() *QTextDocumentWriter
+}
+
+func (ptr *QTextDocumentWriter) QTextDocumentWriter_PTR() *QTextDocumentWriter { return ptr }
 
 func (this *QTextDocumentWriter) GetCthis() unsafe.Pointer {
 	if this == nil {

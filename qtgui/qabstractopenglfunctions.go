@@ -39,6 +39,13 @@ func (this *QAbstractOpenGLFunctions) InheritIsInitialized(f func() bool) {
 type QAbstractOpenGLFunctions struct {
 	*qtrt.CObject
 }
+type QAbstractOpenGLFunctions_ITF interface {
+	QAbstractOpenGLFunctions_PTR() *QAbstractOpenGLFunctions
+}
+
+func (ptr *QAbstractOpenGLFunctions) QAbstractOpenGLFunctions_PTR() *QAbstractOpenGLFunctions {
+	return ptr
+}
 
 func (this *QAbstractOpenGLFunctions) GetCthis() unsafe.Pointer {
 	if this == nil {

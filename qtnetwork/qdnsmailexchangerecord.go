@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QDnsMailExchangeRecord struct {
 	*qtrt.CObject
 }
+type QDnsMailExchangeRecord_ITF interface {
+	QDnsMailExchangeRecord_PTR() *QDnsMailExchangeRecord
+}
+
+func (ptr *QDnsMailExchangeRecord) QDnsMailExchangeRecord_PTR() *QDnsMailExchangeRecord { return ptr }
 
 func (this *QDnsMailExchangeRecord) GetCthis() unsafe.Pointer {
 	if this == nil {

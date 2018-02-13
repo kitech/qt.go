@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QStatusTipEvent struct {
 	*qtcore.QEvent
 }
+type QStatusTipEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QStatusTipEvent_PTR() *QStatusTipEvent
+}
+
+func (ptr *QStatusTipEvent) QStatusTipEvent_PTR() *QStatusTipEvent { return ptr }
 
 func (this *QStatusTipEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

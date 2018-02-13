@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextListFormat struct {
 	*QTextFormat
 }
+type QTextListFormat_ITF interface {
+	QTextFormat_ITF
+	QTextListFormat_PTR() *QTextListFormat
+}
+
+func (ptr *QTextListFormat) QTextListFormat_PTR() *QTextListFormat { return ptr }
 
 func (this *QTextListFormat) GetCthis() unsafe.Pointer {
 	if this == nil {

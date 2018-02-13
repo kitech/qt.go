@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QSslEllipticCurve struct {
 	*qtrt.CObject
 }
+type QSslEllipticCurve_ITF interface {
+	QSslEllipticCurve_PTR() *QSslEllipticCurve
+}
+
+func (ptr *QSslEllipticCurve) QSslEllipticCurve_PTR() *QSslEllipticCurve { return ptr }
 
 func (this *QSslEllipticCurve) GetCthis() unsafe.Pointer {
 	if this == nil {

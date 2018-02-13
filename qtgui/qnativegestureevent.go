@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QNativeGestureEvent struct {
 	*QInputEvent
 }
+type QNativeGestureEvent_ITF interface {
+	QInputEvent_ITF
+	QNativeGestureEvent_PTR() *QNativeGestureEvent
+}
+
+func (ptr *QNativeGestureEvent) QNativeGestureEvent_PTR() *QNativeGestureEvent { return ptr }
 
 func (this *QNativeGestureEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

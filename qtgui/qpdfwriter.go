@@ -45,6 +45,13 @@ type QPdfWriter struct {
 	*qtcore.QObject
 	*QPagedPaintDevice
 }
+type QPdfWriter_ITF interface {
+	qtcore.QObject_ITF
+	QPagedPaintDevice_ITF
+	QPdfWriter_PTR() *QPdfWriter
+}
+
+func (ptr *QPdfWriter) QPdfWriter_PTR() *QPdfWriter { return ptr }
 
 func (this *QPdfWriter) GetCthis() unsafe.Pointer {
 	if this == nil {

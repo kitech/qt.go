@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QSessionManager struct {
 	*qtcore.QObject
 }
+type QSessionManager_ITF interface {
+	qtcore.QObject_ITF
+	QSessionManager_PTR() *QSessionManager
+}
+
+func (ptr *QSessionManager) QSessionManager_PTR() *QSessionManager { return ptr }
 
 func (this *QSessionManager) GetCthis() unsafe.Pointer {
 	if this == nil {

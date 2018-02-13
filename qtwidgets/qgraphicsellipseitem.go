@@ -50,6 +50,12 @@ func (this *QGraphicsEllipseItem) InheritExtension(f func(variant *qtcore.QVaria
 type QGraphicsEllipseItem struct {
 	*QAbstractGraphicsShapeItem
 }
+type QGraphicsEllipseItem_ITF interface {
+	QAbstractGraphicsShapeItem_ITF
+	QGraphicsEllipseItem_PTR() *QGraphicsEllipseItem
+}
+
+func (ptr *QGraphicsEllipseItem) QGraphicsEllipseItem_PTR() *QGraphicsEllipseItem { return ptr }
 
 func (this *QGraphicsEllipseItem) GetCthis() unsafe.Pointer {
 	if this == nil {

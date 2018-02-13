@@ -43,6 +43,12 @@ func (this *QPauseAnimation) InheritUpdateCurrentTime(f func(arg0 int) /*void*/)
 type QPauseAnimation struct {
 	*QAbstractAnimation
 }
+type QPauseAnimation_ITF interface {
+	QAbstractAnimation_ITF
+	QPauseAnimation_PTR() *QPauseAnimation
+}
+
+func (ptr *QPauseAnimation) QPauseAnimation_PTR() *QPauseAnimation { return ptr }
 
 func (this *QPauseAnimation) GetCthis() unsafe.Pointer {
 	if this == nil {

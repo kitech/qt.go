@@ -80,6 +80,12 @@ func (this *QScrollBar) InheritInitStyleOption(f func(option *QStyleOptionSlider
 type QScrollBar struct {
 	*QAbstractSlider
 }
+type QScrollBar_ITF interface {
+	QAbstractSlider_ITF
+	QScrollBar_PTR() *QScrollBar
+}
+
+func (ptr *QScrollBar) QScrollBar_PTR() *QScrollBar { return ptr }
 
 func (this *QScrollBar) GetCthis() unsafe.Pointer {
 	if this == nil {

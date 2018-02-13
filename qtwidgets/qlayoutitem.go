@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QLayoutItem struct {
 	*qtrt.CObject
 }
+type QLayoutItem_ITF interface {
+	QLayoutItem_PTR() *QLayoutItem
+}
+
+func (ptr *QLayoutItem) QLayoutItem_PTR() *QLayoutItem { return ptr }
 
 func (this *QLayoutItem) GetCthis() unsafe.Pointer {
 	if this == nil {

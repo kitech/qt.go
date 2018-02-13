@@ -39,6 +39,11 @@ import "github.com/kitech/qt.go/qtquick"
 type QQuickStyle struct {
 	*qtrt.CObject
 }
+type QQuickStyle_ITF interface {
+	QQuickStyle_PTR() *QQuickStyle
+}
+
+func (ptr *QQuickStyle) QQuickStyle_PTR() *QQuickStyle { return ptr }
 
 func (this *QQuickStyle) GetCthis() unsafe.Pointer {
 	if this == nil {

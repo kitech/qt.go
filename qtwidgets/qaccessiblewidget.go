@@ -50,6 +50,11 @@ func (this *QAccessibleWidget) InheritAddControllingSignal(f func(signal string)
 type QAccessibleWidget struct {
 	*qtrt.CObject
 }
+type QAccessibleWidget_ITF interface {
+	QAccessibleWidget_PTR() *QAccessibleWidget
+}
+
+func (ptr *QAccessibleWidget) QAccessibleWidget_PTR() *QAccessibleWidget { return ptr }
 
 func (this *QAccessibleWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type ExternalRefCountData struct {
 	*qtrt.CObject
 }
+type ExternalRefCountData_ITF interface {
+	ExternalRefCountData_PTR() *ExternalRefCountData
+}
+
+func (ptr *ExternalRefCountData) ExternalRefCountData_PTR() *ExternalRefCountData { return ptr }
 
 func (this *ExternalRefCountData) GetCthis() unsafe.Pointer {
 	if this == nil {

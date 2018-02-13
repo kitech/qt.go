@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QInputDialog struct {
 	*QDialog
 }
+type QInputDialog_ITF interface {
+	QDialog_ITF
+	QInputDialog_PTR() *QInputDialog
+}
+
+func (ptr *QInputDialog) QInputDialog_PTR() *QInputDialog { return ptr }
 
 func (this *QInputDialog) GetCthis() unsafe.Pointer {
 	if this == nil {

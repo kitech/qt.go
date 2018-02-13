@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QXmlStreamWriter struct {
 	*qtrt.CObject
 }
+type QXmlStreamWriter_ITF interface {
+	QXmlStreamWriter_PTR() *QXmlStreamWriter
+}
+
+func (ptr *QXmlStreamWriter) QXmlStreamWriter_PTR() *QXmlStreamWriter { return ptr }
 
 func (this *QXmlStreamWriter) GetCthis() unsafe.Pointer {
 	if this == nil {

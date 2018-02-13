@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QChar struct {
 	*qtrt.CObject
 }
+type QChar_ITF interface {
+	QChar_PTR() *QChar
+}
+
+func (ptr *QChar) QChar_PTR() *QChar { return ptr }
 
 func (this *QChar) GetCthis() unsafe.Pointer {
 	if this == nil {

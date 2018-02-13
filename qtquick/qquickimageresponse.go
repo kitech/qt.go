@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QQuickImageResponse struct {
 	*qtcore.QObject
 }
+type QQuickImageResponse_ITF interface {
+	qtcore.QObject_ITF
+	QQuickImageResponse_PTR() *QQuickImageResponse
+}
+
+func (ptr *QQuickImageResponse) QQuickImageResponse_PTR() *QQuickImageResponse { return ptr }
 
 func (this *QQuickImageResponse) GetCthis() unsafe.Pointer {
 	if this == nil {

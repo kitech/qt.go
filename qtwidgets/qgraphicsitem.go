@@ -180,6 +180,11 @@ func (this *QGraphicsItem) InheritPrepareGeometryChange(f func() /*void*/) {
 type QGraphicsItem struct {
 	*qtrt.CObject
 }
+type QGraphicsItem_ITF interface {
+	QGraphicsItem_PTR() *QGraphicsItem
+}
+
+func (ptr *QGraphicsItem) QGraphicsItem_PTR() *QGraphicsItem { return ptr }
 
 func (this *QGraphicsItem) GetCthis() unsafe.Pointer {
 	if this == nil {

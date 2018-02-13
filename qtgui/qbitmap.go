@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QBitmap struct {
 	*QPixmap
 }
+type QBitmap_ITF interface {
+	QPixmap_ITF
+	QBitmap_PTR() *QBitmap
+}
+
+func (ptr *QBitmap) QBitmap_PTR() *QBitmap { return ptr }
 
 func (this *QBitmap) GetCthis() unsafe.Pointer {
 	if this == nil {

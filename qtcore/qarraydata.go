@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QArrayData struct {
 	*qtrt.CObject
 }
+type QArrayData_ITF interface {
+	QArrayData_PTR() *QArrayData
+}
+
+func (ptr *QArrayData) QArrayData_PTR() *QArrayData { return ptr }
 
 func (this *QArrayData) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -85,6 +85,12 @@ func (this *QMdiArea) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) {
 type QMdiArea struct {
 	*QAbstractScrollArea
 }
+type QMdiArea_ITF interface {
+	QAbstractScrollArea_ITF
+	QMdiArea_PTR() *QMdiArea
+}
+
+func (ptr *QMdiArea) QMdiArea_PTR() *QMdiArea { return ptr }
 
 func (this *QMdiArea) GetCthis() unsafe.Pointer {
 	if this == nil {

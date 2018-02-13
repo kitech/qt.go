@@ -134,6 +134,12 @@ func (this *QQuickWidget) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*77
 type QQuickWidget struct {
 	*qtwidgets.QWidget
 }
+type QQuickWidget_ITF interface {
+	qtwidgets.QWidget_ITF
+	QQuickWidget_PTR() *QQuickWidget
+}
+
+func (ptr *QQuickWidget) QQuickWidget_PTR() *QQuickWidget { return ptr }
 
 func (this *QQuickWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

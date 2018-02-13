@@ -55,6 +55,12 @@ func (this *QKeySequenceEdit) InheritTimerEvent(f func(arg0 *qtcore.QTimerEvent 
 type QKeySequenceEdit struct {
 	*QWidget
 }
+type QKeySequenceEdit_ITF interface {
+	QWidget_ITF
+	QKeySequenceEdit_PTR() *QKeySequenceEdit
+}
+
+func (ptr *QKeySequenceEdit) QKeySequenceEdit_PTR() *QKeySequenceEdit { return ptr }
 
 func (this *QKeySequenceEdit) GetCthis() unsafe.Pointer {
 	if this == nil {

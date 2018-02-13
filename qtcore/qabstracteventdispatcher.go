@@ -33,6 +33,14 @@ import "github.com/kitech/qt.go/qtrt"
 type QAbstractEventDispatcher struct {
 	*QObject
 }
+type QAbstractEventDispatcher_ITF interface {
+	QObject_ITF
+	QAbstractEventDispatcher_PTR() *QAbstractEventDispatcher
+}
+
+func (ptr *QAbstractEventDispatcher) QAbstractEventDispatcher_PTR() *QAbstractEventDispatcher {
+	return ptr
+}
 
 func (this *QAbstractEventDispatcher) GetCthis() unsafe.Pointer {
 	if this == nil {

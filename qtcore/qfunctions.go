@@ -2802,7 +2802,7 @@ func QEnvironmentVariableIsSet(varName string) bool {
 	return rv != 0
 }
 
-// /home/me/oss/qt.gen/headers/QtCore/extra_export.h:7
+// ./headers/QtCore/extra_export.h:7
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *)
@@ -2884,7 +2884,7 @@ func QCountTrailingZeroBits_4(v byte) uint {
 	return uint(rv) // 222
 }
 
-// /home/me/oss/qt.gen/headers/QtCore/extra_export.h:6
+// ./headers/QtCore/extra_export.h:6
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qRegisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *)

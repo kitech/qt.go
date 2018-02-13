@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlExtensionInterface struct {
 	*QQmlTypesExtensionInterface
 }
+type QQmlExtensionInterface_ITF interface {
+	QQmlTypesExtensionInterface_ITF
+	QQmlExtensionInterface_PTR() *QQmlExtensionInterface
+}
+
+func (ptr *QQmlExtensionInterface) QQmlExtensionInterface_PTR() *QQmlExtensionInterface { return ptr }
 
 func (this *QQmlExtensionInterface) GetCthis() unsafe.Pointer {
 	if this == nil {

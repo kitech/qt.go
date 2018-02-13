@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlExpression struct {
 	*qtcore.QObject
 }
+type QQmlExpression_ITF interface {
+	qtcore.QObject_ITF
+	QQmlExpression_PTR() *QQmlExpression
+}
+
+func (ptr *QQmlExpression) QQmlExpression_PTR() *QQmlExpression { return ptr }
 
 func (this *QQmlExpression) GetCthis() unsafe.Pointer {
 	if this == nil {

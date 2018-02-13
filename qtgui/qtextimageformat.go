@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextImageFormat struct {
 	*QTextCharFormat
 }
+type QTextImageFormat_ITF interface {
+	QTextCharFormat_ITF
+	QTextImageFormat_PTR() *QTextImageFormat
+}
+
+func (ptr *QTextImageFormat) QTextImageFormat_PTR() *QTextImageFormat { return ptr }
 
 func (this *QTextImageFormat) GetCthis() unsafe.Pointer {
 	if this == nil {

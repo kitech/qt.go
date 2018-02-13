@@ -60,6 +60,12 @@ func (this *QFrame) InheritInitStyleOption(f func(option *QStyleOptionFrame /*77
 type QFrame struct {
 	*QWidget
 }
+type QFrame_ITF interface {
+	QWidget_ITF
+	QFrame_PTR() *QFrame
+}
+
+func (ptr *QFrame) QFrame_PTR() *QFrame { return ptr }
 
 func (this *QFrame) GetCthis() unsafe.Pointer {
 	if this == nil {

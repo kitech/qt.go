@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QThreadStorageData struct {
 	*qtrt.CObject
 }
+type QThreadStorageData_ITF interface {
+	QThreadStorageData_PTR() *QThreadStorageData
+}
+
+func (ptr *QThreadStorageData) QThreadStorageData_PTR() *QThreadStorageData { return ptr }
 
 func (this *QThreadStorageData) GetCthis() unsafe.Pointer {
 	if this == nil {

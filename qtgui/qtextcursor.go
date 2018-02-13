@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextCursor struct {
 	*qtrt.CObject
 }
+type QTextCursor_ITF interface {
+	QTextCursor_PTR() *QTextCursor
+}
+
+func (ptr *QTextCursor) QTextCursor_PTR() *QTextCursor { return ptr }
 
 func (this *QTextCursor) GetCthis() unsafe.Pointer {
 	if this == nil {

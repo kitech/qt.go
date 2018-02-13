@@ -53,6 +53,12 @@ func (this *QBuffer) InheritWriteData(f func(data string, len int64) int64) {
 type QBuffer struct {
 	*QIODevice
 }
+type QBuffer_ITF interface {
+	QIODevice_ITF
+	QBuffer_PTR() *QBuffer
+}
+
+func (ptr *QBuffer) QBuffer_PTR() *QBuffer { return ptr }
 
 func (this *QBuffer) GetCthis() unsafe.Pointer {
 	if this == nil {

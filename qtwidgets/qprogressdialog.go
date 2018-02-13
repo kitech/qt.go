@@ -60,6 +60,12 @@ func (this *QProgressDialog) InheritForceShow(f func() /*void*/) {
 type QProgressDialog struct {
 	*QDialog
 }
+type QProgressDialog_ITF interface {
+	QDialog_ITF
+	QProgressDialog_PTR() *QProgressDialog
+}
+
+func (ptr *QProgressDialog) QProgressDialog_PTR() *QProgressDialog { return ptr }
 
 func (this *QProgressDialog) GetCthis() unsafe.Pointer {
 	if this == nil {

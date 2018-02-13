@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QStorageInfo struct {
 	*qtrt.CObject
 }
+type QStorageInfo_ITF interface {
+	QStorageInfo_PTR() *QStorageInfo
+}
+
+func (ptr *QStorageInfo) QStorageInfo_PTR() *QStorageInfo { return ptr }
 
 func (this *QStorageInfo) GetCthis() unsafe.Pointer {
 	if this == nil {

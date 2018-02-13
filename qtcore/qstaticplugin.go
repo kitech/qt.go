@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QStaticPlugin struct {
 	*qtrt.CObject
 }
+type QStaticPlugin_ITF interface {
+	QStaticPlugin_PTR() *QStaticPlugin
+}
+
+func (ptr *QStaticPlugin) QStaticPlugin_PTR() *QStaticPlugin { return ptr }
 
 func (this *QStaticPlugin) GetCthis() unsafe.Pointer {
 	if this == nil {

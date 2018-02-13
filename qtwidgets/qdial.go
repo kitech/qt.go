@@ -75,6 +75,12 @@ func (this *QDial) InheritInitStyleOption(f func(option *QStyleOptionSlider /*77
 type QDial struct {
 	*QAbstractSlider
 }
+type QDial_ITF interface {
+	QAbstractSlider_ITF
+	QDial_PTR() *QDial
+}
+
+func (ptr *QDial) QDial_PTR() *QDial { return ptr }
 
 func (this *QDial) GetCthis() unsafe.Pointer {
 	if this == nil {

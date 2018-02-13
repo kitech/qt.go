@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QGenericArgument struct {
 	*qtrt.CObject
 }
+type QGenericArgument_ITF interface {
+	QGenericArgument_PTR() *QGenericArgument
+}
+
+func (ptr *QGenericArgument) QGenericArgument_PTR() *QGenericArgument { return ptr }
 
 func (this *QGenericArgument) GetCthis() unsafe.Pointer {
 	if this == nil {

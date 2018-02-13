@@ -43,6 +43,11 @@ func (this *QAbstractConcatenable) InheritAppendLatin1To(f func(a string, len in
 type QAbstractConcatenable struct {
 	*qtrt.CObject
 }
+type QAbstractConcatenable_ITF interface {
+	QAbstractConcatenable_PTR() *QAbstractConcatenable
+}
+
+func (ptr *QAbstractConcatenable) QAbstractConcatenable_PTR() *QAbstractConcatenable { return ptr }
 
 func (this *QAbstractConcatenable) GetCthis() unsafe.Pointer {
 	if this == nil {

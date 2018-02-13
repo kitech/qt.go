@@ -45,6 +45,12 @@ func (this *QErrorMessage) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEve
 type QErrorMessage struct {
 	*QDialog
 }
+type QErrorMessage_ITF interface {
+	QDialog_ITF
+	QErrorMessage_PTR() *QErrorMessage
+}
+
+func (ptr *QErrorMessage) QErrorMessage_PTR() *QErrorMessage { return ptr }
 
 func (this *QErrorMessage) GetCthis() unsafe.Pointer {
 	if this == nil {

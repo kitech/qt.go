@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QDnsLookup struct {
 	*qtcore.QObject
 }
+type QDnsLookup_ITF interface {
+	qtcore.QObject_ITF
+	QDnsLookup_PTR() *QDnsLookup
+}
+
+func (ptr *QDnsLookup) QDnsLookup_PTR() *QDnsLookup { return ptr }
 
 func (this *QDnsLookup) GetCthis() unsafe.Pointer {
 	if this == nil {

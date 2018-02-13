@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QRegion struct {
 	*qtrt.CObject
 }
+type QRegion_ITF interface {
+	QRegion_PTR() *QRegion
+}
+
+func (ptr *QRegion) QRegion_PTR() *QRegion { return ptr }
 
 func (this *QRegion) GetCthis() unsafe.Pointer {
 	if this == nil {

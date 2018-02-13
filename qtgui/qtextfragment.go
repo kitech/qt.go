@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextFragment struct {
 	*qtrt.CObject
 }
+type QTextFragment_ITF interface {
+	QTextFragment_PTR() *QTextFragment
+}
+
+func (ptr *QTextFragment) QTextFragment_PTR() *QTextFragment { return ptr }
 
 func (this *QTextFragment) GetCthis() unsafe.Pointer {
 	if this == nil {

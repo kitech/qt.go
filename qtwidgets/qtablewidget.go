@@ -70,6 +70,12 @@ func (this *QTableWidget) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 
 type QTableWidget struct {
 	*QTableView
 }
+type QTableWidget_ITF interface {
+	QTableView_ITF
+	QTableWidget_PTR() *QTableWidget
+}
+
+func (ptr *QTableWidget) QTableWidget_PTR() *QTableWidget { return ptr }
 
 func (this *QTableWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

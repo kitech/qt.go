@@ -210,6 +210,12 @@ func (this *QTreeView) InheritCurrentChanged(f func(current *qtcore.QModelIndex,
 type QTreeView struct {
 	*QAbstractItemView
 }
+type QTreeView_ITF interface {
+	QAbstractItemView_ITF
+	QTreeView_PTR() *QTreeView
+}
+
+func (ptr *QTreeView) QTreeView_PTR() *QTreeView { return ptr }
 
 func (this *QTreeView) GetCthis() unsafe.Pointer {
 	if this == nil {

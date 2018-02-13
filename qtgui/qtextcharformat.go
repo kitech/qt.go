@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextCharFormat struct {
 	*QTextFormat
 }
+type QTextCharFormat_ITF interface {
+	QTextFormat_ITF
+	QTextCharFormat_PTR() *QTextCharFormat
+}
+
+func (ptr *QTextCharFormat) QTextCharFormat_PTR() *QTextCharFormat { return ptr }
 
 func (this *QTextCharFormat) GetCthis() unsafe.Pointer {
 	if this == nil {

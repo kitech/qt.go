@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QHttpPart struct {
 	*qtrt.CObject
 }
+type QHttpPart_ITF interface {
+	QHttpPart_PTR() *QHttpPart
+}
+
+func (ptr *QHttpPart) QHttpPart_PTR() *QHttpPart { return ptr }
 
 func (this *QHttpPart) GetCthis() unsafe.Pointer {
 	if this == nil {

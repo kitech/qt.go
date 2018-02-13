@@ -34,6 +34,13 @@ import "github.com/kitech/qt.go/qtcore"
 type QSslPreSharedKeyAuthenticator struct {
 	*qtrt.CObject
 }
+type QSslPreSharedKeyAuthenticator_ITF interface {
+	QSslPreSharedKeyAuthenticator_PTR() *QSslPreSharedKeyAuthenticator
+}
+
+func (ptr *QSslPreSharedKeyAuthenticator) QSslPreSharedKeyAuthenticator_PTR() *QSslPreSharedKeyAuthenticator {
+	return ptr
+}
 
 func (this *QSslPreSharedKeyAuthenticator) GetCthis() unsafe.Pointer {
 	if this == nil {

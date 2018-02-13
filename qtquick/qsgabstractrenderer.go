@@ -42,6 +42,12 @@ func (this *QSGAbstractRenderer) InheritNodeChanged(f func(node *QSGNode /*777 Q
 type QSGAbstractRenderer struct {
 	*qtcore.QObject
 }
+type QSGAbstractRenderer_ITF interface {
+	qtcore.QObject_ITF
+	QSGAbstractRenderer_PTR() *QSGAbstractRenderer
+}
+
+func (ptr *QSGAbstractRenderer) QSGAbstractRenderer_PTR() *QSGAbstractRenderer { return ptr }
 
 func (this *QSGAbstractRenderer) GetCthis() unsafe.Pointer {
 	if this == nil {

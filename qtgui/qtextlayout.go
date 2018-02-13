@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextLayout struct {
 	*qtrt.CObject
 }
+type QTextLayout_ITF interface {
+	QTextLayout_PTR() *QTextLayout
+}
+
+func (ptr *QTextLayout) QTextLayout_PTR() *QTextLayout { return ptr }
 
 func (this *QTextLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

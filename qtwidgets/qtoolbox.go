@@ -60,6 +60,12 @@ func (this *QToolBox) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent
 type QToolBox struct {
 	*QFrame
 }
+type QToolBox_ITF interface {
+	QFrame_ITF
+	QToolBox_PTR() *QToolBox
+}
+
+func (ptr *QToolBox) QToolBox_PTR() *QToolBox { return ptr }
 
 func (this *QToolBox) GetCthis() unsafe.Pointer {
 	if this == nil {

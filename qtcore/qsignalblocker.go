@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QSignalBlocker struct {
 	*qtrt.CObject
 }
+type QSignalBlocker_ITF interface {
+	QSignalBlocker_PTR() *QSignalBlocker
+}
+
+func (ptr *QSignalBlocker) QSignalBlocker_PTR() *QSignalBlocker { return ptr }
 
 func (this *QSignalBlocker) GetCthis() unsafe.Pointer {
 	if this == nil {

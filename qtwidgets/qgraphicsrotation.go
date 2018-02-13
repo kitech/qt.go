@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsRotation struct {
 	*QGraphicsTransform
 }
+type QGraphicsRotation_ITF interface {
+	QGraphicsTransform_ITF
+	QGraphicsRotation_PTR() *QGraphicsRotation
+}
+
+func (ptr *QGraphicsRotation) QGraphicsRotation_PTR() *QGraphicsRotation { return ptr }
 
 func (this *QGraphicsRotation) GetCthis() unsafe.Pointer {
 	if this == nil {

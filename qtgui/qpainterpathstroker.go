@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPainterPathStroker struct {
 	*qtrt.CObject
 }
+type QPainterPathStroker_ITF interface {
+	QPainterPathStroker_PTR() *QPainterPathStroker
+}
+
+func (ptr *QPainterPathStroker) QPainterPathStroker_PTR() *QPainterPathStroker { return ptr }
 
 func (this *QPainterPathStroker) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -55,6 +55,12 @@ func (this *QWizardPage) InheritWizard(f func() unsafe.Pointer /*666*/) {
 type QWizardPage struct {
 	*QWidget
 }
+type QWizardPage_ITF interface {
+	QWidget_ITF
+	QWizardPage_PTR() *QWizardPage
+}
+
+func (ptr *QWizardPage) QWizardPage_PTR() *QWizardPage { return ptr }
 
 func (this *QWizardPage) GetCthis() unsafe.Pointer {
 	if this == nil {

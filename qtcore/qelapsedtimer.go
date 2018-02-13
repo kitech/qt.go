@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QElapsedTimer struct {
 	*qtrt.CObject
 }
+type QElapsedTimer_ITF interface {
+	QElapsedTimer_PTR() *QElapsedTimer
+}
+
+func (ptr *QElapsedTimer) QElapsedTimer_PTR() *QElapsedTimer { return ptr }
 
 func (this *QElapsedTimer) GetCthis() unsafe.Pointer {
 	if this == nil {

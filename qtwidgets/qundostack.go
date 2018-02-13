@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QUndoStack struct {
 	*qtcore.QObject
 }
+type QUndoStack_ITF interface {
+	qtcore.QObject_ITF
+	QUndoStack_PTR() *QUndoStack
+}
+
+func (ptr *QUndoStack) QUndoStack_PTR() *QUndoStack { return ptr }
 
 func (this *QUndoStack) GetCthis() unsafe.Pointer {
 	if this == nil {

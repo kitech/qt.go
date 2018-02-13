@@ -35,6 +35,13 @@ type QOffscreenSurface struct {
 	*qtcore.QObject
 	*QSurface
 }
+type QOffscreenSurface_ITF interface {
+	qtcore.QObject_ITF
+	QSurface_ITF
+	QOffscreenSurface_PTR() *QOffscreenSurface
+}
+
+func (ptr *QOffscreenSurface) QOffscreenSurface_PTR() *QOffscreenSurface { return ptr }
 
 func (this *QOffscreenSurface) GetCthis() unsafe.Pointer {
 	if this == nil {

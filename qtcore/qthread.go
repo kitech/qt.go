@@ -48,6 +48,12 @@ func (this *QThread) InheritSetTerminationEnabled(f func(enabled bool) /*void*/)
 type QThread struct {
 	*QObject
 }
+type QThread_ITF interface {
+	QObject_ITF
+	QThread_PTR() *QThread
+}
+
+func (ptr *QThread) QThread_PTR() *QThread { return ptr }
 
 func (this *QThread) GetCthis() unsafe.Pointer {
 	if this == nil {

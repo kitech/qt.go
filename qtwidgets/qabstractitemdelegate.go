@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QAbstractItemDelegate struct {
 	*qtcore.QObject
 }
+type QAbstractItemDelegate_ITF interface {
+	qtcore.QObject_ITF
+	QAbstractItemDelegate_PTR() *QAbstractItemDelegate
+}
+
+func (ptr *QAbstractItemDelegate) QAbstractItemDelegate_PTR() *QAbstractItemDelegate { return ptr }
 
 func (this *QAbstractItemDelegate) GetCthis() unsafe.Pointer {
 	if this == nil {

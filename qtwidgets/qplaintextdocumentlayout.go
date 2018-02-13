@@ -40,6 +40,14 @@ func (this *QPlainTextDocumentLayout) InheritDocumentChanged(f func(from int, ar
 type QPlainTextDocumentLayout struct {
 	*qtgui.QAbstractTextDocumentLayout
 }
+type QPlainTextDocumentLayout_ITF interface {
+	qtgui.QAbstractTextDocumentLayout_ITF
+	QPlainTextDocumentLayout_PTR() *QPlainTextDocumentLayout
+}
+
+func (ptr *QPlainTextDocumentLayout) QPlainTextDocumentLayout_PTR() *QPlainTextDocumentLayout {
+	return ptr
+}
 
 func (this *QPlainTextDocumentLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

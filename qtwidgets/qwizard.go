@@ -65,6 +65,12 @@ func (this *QWizard) InheritCleanupPage(f func(id int) /*void*/) {
 type QWizard struct {
 	*QDialog
 }
+type QWizard_ITF interface {
+	QDialog_ITF
+	QWizard_PTR() *QWizard
+}
+
+func (ptr *QWizard) QWizard_PTR() *QWizard { return ptr }
 
 func (this *QWizard) GetCthis() unsafe.Pointer {
 	if this == nil {

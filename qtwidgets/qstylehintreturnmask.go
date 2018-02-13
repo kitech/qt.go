@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleHintReturnMask struct {
 	*QStyleHintReturn
 }
+type QStyleHintReturnMask_ITF interface {
+	QStyleHintReturn_ITF
+	QStyleHintReturnMask_PTR() *QStyleHintReturnMask
+}
+
+func (ptr *QStyleHintReturnMask) QStyleHintReturnMask_PTR() *QStyleHintReturnMask { return ptr }
 
 func (this *QStyleHintReturnMask) GetCthis() unsafe.Pointer {
 	if this == nil {

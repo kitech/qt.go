@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QImageIOPlugin struct {
 	*qtcore.QObject
 }
+type QImageIOPlugin_ITF interface {
+	qtcore.QObject_ITF
+	QImageIOPlugin_PTR() *QImageIOPlugin
+}
+
+func (ptr *QImageIOPlugin) QImageIOPlugin_PTR() *QImageIOPlugin { return ptr }
 
 func (this *QImageIOPlugin) GetCthis() unsafe.Pointer {
 	if this == nil {

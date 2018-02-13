@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QBrush struct {
 	*qtrt.CObject
 }
+type QBrush_ITF interface {
+	QBrush_PTR() *QBrush
+}
+
+func (ptr *QBrush) QBrush_PTR() *QBrush { return ptr }
 
 func (this *QBrush) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -50,6 +50,12 @@ func (this *QGraphicsLineItem) InheritExtension(f func(variant *qtcore.QVariant)
 type QGraphicsLineItem struct {
 	*QGraphicsItem
 }
+type QGraphicsLineItem_ITF interface {
+	QGraphicsItem_ITF
+	QGraphicsLineItem_PTR() *QGraphicsLineItem
+}
+
+func (ptr *QGraphicsLineItem) QGraphicsLineItem_PTR() *QGraphicsLineItem { return ptr }
 
 func (this *QGraphicsLineItem) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QSizePolicy struct {
 	*qtrt.CObject
 }
+type QSizePolicy_ITF interface {
+	QSizePolicy_PTR() *QSizePolicy
+}
+
+func (ptr *QSizePolicy) QSizePolicy_PTR() *QSizePolicy { return ptr }
 
 func (this *QSizePolicy) GetCthis() unsafe.Pointer {
 	if this == nil {

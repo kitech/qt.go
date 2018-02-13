@@ -48,6 +48,12 @@ func (this *QPropertyAnimation) InheritUpdateState(f func(newState int, oldState
 type QPropertyAnimation struct {
 	*QVariantAnimation
 }
+type QPropertyAnimation_ITF interface {
+	QVariantAnimation_ITF
+	QPropertyAnimation_PTR() *QPropertyAnimation
+}
+
+func (ptr *QPropertyAnimation) QPropertyAnimation_PTR() *QPropertyAnimation { return ptr }
 
 func (this *QPropertyAnimation) GetCthis() unsafe.Pointer {
 	if this == nil {

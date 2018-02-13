@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionProgressBar struct {
 	*QStyleOption
 }
+type QStyleOptionProgressBar_ITF interface {
+	QStyleOption_ITF
+	QStyleOptionProgressBar_PTR() *QStyleOptionProgressBar
+}
+
+func (ptr *QStyleOptionProgressBar) QStyleOptionProgressBar_PTR() *QStyleOptionProgressBar { return ptr }
 
 func (this *QStyleOptionProgressBar) GetCthis() unsafe.Pointer {
 	if this == nil {

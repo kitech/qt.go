@@ -34,6 +34,13 @@ import "github.com/kitech/qt.go/qtcore"
 type QAndroidActivityResultReceiver struct {
 	*qtrt.CObject
 }
+type QAndroidActivityResultReceiver_ITF interface {
+	QAndroidActivityResultReceiver_PTR() *QAndroidActivityResultReceiver
+}
+
+func (ptr *QAndroidActivityResultReceiver) QAndroidActivityResultReceiver_PTR() *QAndroidActivityResultReceiver {
+	return ptr
+}
 
 func (this *QAndroidActivityResultReceiver) GetCthis() unsafe.Pointer {
 	if this == nil {

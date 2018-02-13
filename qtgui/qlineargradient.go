@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QLinearGradient struct {
 	*QGradient
 }
+type QLinearGradient_ITF interface {
+	QGradient_ITF
+	QLinearGradient_PTR() *QLinearGradient
+}
+
+func (ptr *QLinearGradient) QLinearGradient_PTR() *QLinearGradient { return ptr }
 
 func (this *QLinearGradient) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -40,6 +40,12 @@ func (this *QGraphicsAnchorLayout) InheritSizeHint(f func(which int, constraint 
 type QGraphicsAnchorLayout struct {
 	*QGraphicsLayout
 }
+type QGraphicsAnchorLayout_ITF interface {
+	QGraphicsLayout_ITF
+	QGraphicsAnchorLayout_PTR() *QGraphicsAnchorLayout
+}
+
+func (ptr *QGraphicsAnchorLayout) QGraphicsAnchorLayout_PTR() *QGraphicsAnchorLayout { return ptr }
 
 func (this *QGraphicsAnchorLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

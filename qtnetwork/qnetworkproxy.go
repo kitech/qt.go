@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QNetworkProxy struct {
 	*qtrt.CObject
 }
+type QNetworkProxy_ITF interface {
+	QNetworkProxy_PTR() *QNetworkProxy
+}
+
+func (ptr *QNetworkProxy) QNetworkProxy_PTR() *QNetworkProxy { return ptr }
 
 func (this *QNetworkProxy) GetCthis() unsafe.Pointer {
 	if this == nil {

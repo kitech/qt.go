@@ -105,6 +105,12 @@ func (this *QItemDelegate) InheritTextRectangle(f func(painter *qtgui.QPainter /
 type QItemDelegate struct {
 	*QAbstractItemDelegate
 }
+type QItemDelegate_ITF interface {
+	QAbstractItemDelegate_ITF
+	QItemDelegate_PTR() *QItemDelegate
+}
+
+func (ptr *QItemDelegate) QItemDelegate_PTR() *QItemDelegate { return ptr }
 
 func (this *QItemDelegate) GetCthis() unsafe.Pointer {
 	if this == nil {

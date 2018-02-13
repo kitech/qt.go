@@ -35,6 +35,13 @@ import "github.com/kitech/qt.go/qtnetwork"
 type RegisterCompositeSingletonType struct {
 	*qtrt.CObject
 }
+type RegisterCompositeSingletonType_ITF interface {
+	RegisterCompositeSingletonType_PTR() *RegisterCompositeSingletonType
+}
+
+func (ptr *RegisterCompositeSingletonType) RegisterCompositeSingletonType_PTR() *RegisterCompositeSingletonType {
+	return ptr
+}
 
 func (this *RegisterCompositeSingletonType) GetCthis() unsafe.Pointer {
 	if this == nil {

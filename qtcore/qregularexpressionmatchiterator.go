@@ -33,6 +33,13 @@ import "github.com/kitech/qt.go/qtrt"
 type QRegularExpressionMatchIterator struct {
 	*qtrt.CObject
 }
+type QRegularExpressionMatchIterator_ITF interface {
+	QRegularExpressionMatchIterator_PTR() *QRegularExpressionMatchIterator
+}
+
+func (ptr *QRegularExpressionMatchIterator) QRegularExpressionMatchIterator_PTR() *QRegularExpressionMatchIterator {
+	return ptr
+}
 
 func (this *QRegularExpressionMatchIterator) GetCthis() unsafe.Pointer {
 	if this == nil {

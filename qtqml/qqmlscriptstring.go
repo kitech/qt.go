@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlScriptString struct {
 	*qtrt.CObject
 }
+type QQmlScriptString_ITF interface {
+	QQmlScriptString_PTR() *QQmlScriptString
+}
+
+func (ptr *QQmlScriptString) QQmlScriptString_PTR() *QQmlScriptString { return ptr }
 
 func (this *QQmlScriptString) GetCthis() unsafe.Pointer {
 	if this == nil {

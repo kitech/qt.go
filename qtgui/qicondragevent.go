@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QIconDragEvent struct {
 	*qtcore.QEvent
 }
+type QIconDragEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QIconDragEvent_PTR() *QIconDragEvent
+}
+
+func (ptr *QIconDragEvent) QIconDragEvent_PTR() *QIconDragEvent { return ptr }
 
 func (this *QIconDragEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

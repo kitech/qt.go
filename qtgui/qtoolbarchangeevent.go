@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QToolBarChangeEvent struct {
 	*qtcore.QEvent
 }
+type QToolBarChangeEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QToolBarChangeEvent_PTR() *QToolBarChangeEvent
+}
+
+func (ptr *QToolBarChangeEvent) QToolBarChangeEvent_PTR() *QToolBarChangeEvent { return ptr }
 
 func (this *QToolBarChangeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -87,6 +87,11 @@ func (this *QSGNodeVisitor) InheritVisitChildren(f func(n *QSGNode /*777 QSGNode
 type QSGNodeVisitor struct {
 	*qtrt.CObject
 }
+type QSGNodeVisitor_ITF interface {
+	QSGNodeVisitor_PTR() *QSGNodeVisitor
+}
+
+func (ptr *QSGNodeVisitor) QSGNodeVisitor_PTR() *QSGNodeVisitor { return ptr }
 
 func (this *QSGNodeVisitor) GetCthis() unsafe.Pointer {
 	if this == nil {

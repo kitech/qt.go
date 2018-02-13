@@ -35,6 +35,14 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsSceneHoverEvent struct {
 	*QGraphicsSceneEvent
 }
+type QGraphicsSceneHoverEvent_ITF interface {
+	QGraphicsSceneEvent_ITF
+	QGraphicsSceneHoverEvent_PTR() *QGraphicsSceneHoverEvent
+}
+
+func (ptr *QGraphicsSceneHoverEvent) QGraphicsSceneHoverEvent_PTR() *QGraphicsSceneHoverEvent {
+	return ptr
+}
 
 func (this *QGraphicsSceneHoverEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

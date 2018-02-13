@@ -105,6 +105,12 @@ func (this *QAbstractButton) InheritTimerEvent(f func(e *qtcore.QTimerEvent /*77
 type QAbstractButton struct {
 	*QWidget
 }
+type QAbstractButton_ITF interface {
+	QWidget_ITF
+	QAbstractButton_PTR() *QAbstractButton
+}
+
+func (ptr *QAbstractButton) QAbstractButton_PTR() *QAbstractButton { return ptr }
 
 func (this *QAbstractButton) GetCthis() unsafe.Pointer {
 	if this == nil {

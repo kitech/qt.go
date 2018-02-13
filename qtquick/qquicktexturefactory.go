@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QQuickTextureFactory struct {
 	*qtcore.QObject
 }
+type QQuickTextureFactory_ITF interface {
+	qtcore.QObject_ITF
+	QQuickTextureFactory_PTR() *QQuickTextureFactory
+}
+
+func (ptr *QQuickTextureFactory) QQuickTextureFactory_PTR() *QQuickTextureFactory { return ptr }
 
 func (this *QQuickTextureFactory) GetCthis() unsafe.Pointer {
 	if this == nil {

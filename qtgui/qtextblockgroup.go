@@ -49,6 +49,12 @@ func (this *QTextBlockGroup) InheritBlockFormatChanged(f func(block *QTextBlock)
 type QTextBlockGroup struct {
 	*QTextObject
 }
+type QTextBlockGroup_ITF interface {
+	QTextObject_ITF
+	QTextBlockGroup_PTR() *QTextBlockGroup
+}
+
+func (ptr *QTextBlockGroup) QTextBlockGroup_PTR() *QTextBlockGroup { return ptr }
 
 func (this *QTextBlockGroup) GetCthis() unsafe.Pointer {
 	if this == nil {

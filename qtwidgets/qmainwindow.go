@@ -45,6 +45,12 @@ func (this *QMainWindow) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent *
 type QMainWindow struct {
 	*QWidget
 }
+type QMainWindow_ITF interface {
+	QWidget_ITF
+	QMainWindow_PTR() *QMainWindow
+}
+
+func (ptr *QMainWindow) QMainWindow_PTR() *QMainWindow { return ptr }
 
 func (this *QMainWindow) GetCthis() unsafe.Pointer {
 	if this == nil {

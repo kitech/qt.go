@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QBitRef struct {
 	*qtrt.CObject
 }
+type QBitRef_ITF interface {
+	QBitRef_PTR() *QBitRef
+}
+
+func (ptr *QBitRef) QBitRef_PTR() *QBitRef { return ptr }
 
 func (this *QBitRef) GetCthis() unsafe.Pointer {
 	if this == nil {

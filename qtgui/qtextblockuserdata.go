@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextBlockUserData struct {
 	*qtrt.CObject
 }
+type QTextBlockUserData_ITF interface {
+	QTextBlockUserData_PTR() *QTextBlockUserData
+}
+
+func (ptr *QTextBlockUserData) QTextBlockUserData_PTR() *QTextBlockUserData { return ptr }
 
 func (this *QTextBlockUserData) GetCthis() unsafe.Pointer {
 	if this == nil {

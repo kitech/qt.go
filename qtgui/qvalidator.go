@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QValidator struct {
 	*qtcore.QObject
 }
+type QValidator_ITF interface {
+	qtcore.QObject_ITF
+	QValidator_PTR() *QValidator
+}
+
+func (ptr *QValidator) QValidator_PTR() *QValidator { return ptr }
 
 func (this *QValidator) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QResizeEvent struct {
 	*qtcore.QEvent
 }
+type QResizeEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QResizeEvent_PTR() *QResizeEvent
+}
+
+func (ptr *QResizeEvent) QResizeEvent_PTR() *QResizeEvent { return ptr }
 
 func (this *QResizeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QGesture struct {
 	*qtcore.QObject
 }
+type QGesture_ITF interface {
+	qtcore.QObject_ITF
+	QGesture_PTR() *QGesture
+}
+
+func (ptr *QGesture) QGesture_PTR() *QGesture { return ptr }
 
 func (this *QGesture) GetCthis() unsafe.Pointer {
 	if this == nil {

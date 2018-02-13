@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGNinePatchNode struct {
 	*QSGGeometryNode
 }
+type QSGNinePatchNode_ITF interface {
+	QSGGeometryNode_ITF
+	QSGNinePatchNode_PTR() *QSGNinePatchNode
+}
+
+func (ptr *QSGNinePatchNode) QSGNinePatchNode_PTR() *QSGNinePatchNode { return ptr }
 
 func (this *QSGNinePatchNode) GetCthis() unsafe.Pointer {
 	if this == nil {

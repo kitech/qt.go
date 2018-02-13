@@ -40,6 +40,12 @@ func (this *QGraphicsOpacityEffect) InheritDraw(f func(painter *qtgui.QPainter /
 type QGraphicsOpacityEffect struct {
 	*QGraphicsEffect
 }
+type QGraphicsOpacityEffect_ITF interface {
+	QGraphicsEffect_ITF
+	QGraphicsOpacityEffect_PTR() *QGraphicsOpacityEffect
+}
+
+func (ptr *QGraphicsOpacityEffect) QGraphicsOpacityEffect_PTR() *QGraphicsOpacityEffect { return ptr }
 
 func (this *QGraphicsOpacityEffect) GetCthis() unsafe.Pointer {
 	if this == nil {

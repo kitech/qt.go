@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QScrollerProperties struct {
 	*qtrt.CObject
 }
+type QScrollerProperties_ITF interface {
+	QScrollerProperties_PTR() *QScrollerProperties
+}
+
+func (ptr *QScrollerProperties) QScrollerProperties_PTR() *QScrollerProperties { return ptr }
 
 func (this *QScrollerProperties) GetCthis() unsafe.Pointer {
 	if this == nil {

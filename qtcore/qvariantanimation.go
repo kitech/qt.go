@@ -58,6 +58,12 @@ func (this *QVariantAnimation) InheritInterpolated(f func(from *QVariant, to *QV
 type QVariantAnimation struct {
 	*QAbstractAnimation
 }
+type QVariantAnimation_ITF interface {
+	QAbstractAnimation_ITF
+	QVariantAnimation_PTR() *QVariantAnimation
+}
+
+func (ptr *QVariantAnimation) QVariantAnimation_PTR() *QVariantAnimation { return ptr }
 
 func (this *QVariantAnimation) GetCthis() unsafe.Pointer {
 	if this == nil {

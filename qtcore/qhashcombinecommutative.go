@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QHashCombineCommutative struct {
 	*qtrt.CObject
 }
+type QHashCombineCommutative_ITF interface {
+	QHashCombineCommutative_PTR() *QHashCombineCommutative
+}
+
+func (ptr *QHashCombineCommutative) QHashCombineCommutative_PTR() *QHashCombineCommutative { return ptr }
 
 func (this *QHashCombineCommutative) GetCthis() unsafe.Pointer {
 	if this == nil {

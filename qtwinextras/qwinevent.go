@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QWinEvent struct {
 	*qtcore.QEvent
 }
+type QWinEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QWinEvent_PTR() *QWinEvent
+}
+
+func (ptr *QWinEvent) QWinEvent_PTR() *QWinEvent { return ptr }
 
 func (this *QWinEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

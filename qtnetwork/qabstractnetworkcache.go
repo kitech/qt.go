@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QAbstractNetworkCache struct {
 	*qtcore.QObject
 }
+type QAbstractNetworkCache_ITF interface {
+	qtcore.QObject_ITF
+	QAbstractNetworkCache_PTR() *QAbstractNetworkCache
+}
+
+func (ptr *QAbstractNetworkCache) QAbstractNetworkCache_PTR() *QAbstractNetworkCache { return ptr }
 
 func (this *QAbstractNetworkCache) GetCthis() unsafe.Pointer {
 	if this == nil {

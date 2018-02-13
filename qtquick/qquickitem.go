@@ -203,6 +203,13 @@ type QQuickItem struct {
 	*qtcore.QObject
 	*qtqml.QQmlParserStatus
 }
+type QQuickItem_ITF interface {
+	qtcore.QObject_ITF
+	qtqml.QQmlParserStatus_ITF
+	QQuickItem_PTR() *QQuickItem
+}
+
+func (ptr *QQuickItem) QQuickItem_PTR() *QQuickItem { return ptr }
 
 func (this *QQuickItem) GetCthis() unsafe.Pointer {
 	if this == nil {

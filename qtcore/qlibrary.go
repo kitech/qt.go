@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QLibrary struct {
 	*QObject
 }
+type QLibrary_ITF interface {
+	QObject_ITF
+	QLibrary_PTR() *QLibrary
+}
+
+func (ptr *QLibrary) QLibrary_PTR() *QLibrary { return ptr }
 
 func (this *QLibrary) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QExposeEvent struct {
 	*qtcore.QEvent
 }
+type QExposeEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QExposeEvent_PTR() *QExposeEvent
+}
+
+func (ptr *QExposeEvent) QExposeEvent_PTR() *QExposeEvent { return ptr }
 
 func (this *QExposeEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

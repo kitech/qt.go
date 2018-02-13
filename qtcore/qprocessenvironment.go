@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QProcessEnvironment struct {
 	*qtrt.CObject
 }
+type QProcessEnvironment_ITF interface {
+	QProcessEnvironment_PTR() *QProcessEnvironment
+}
+
+func (ptr *QProcessEnvironment) QProcessEnvironment_PTR() *QProcessEnvironment { return ptr }
 
 func (this *QProcessEnvironment) GetCthis() unsafe.Pointer {
 	if this == nil {

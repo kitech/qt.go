@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QDrag struct {
 	*qtcore.QObject
 }
+type QDrag_ITF interface {
+	qtcore.QObject_ITF
+	QDrag_PTR() *QDrag
+}
+
+func (ptr *QDrag) QDrag_PTR() *QDrag { return ptr }
 
 func (this *QDrag) GetCthis() unsafe.Pointer {
 	if this == nil {

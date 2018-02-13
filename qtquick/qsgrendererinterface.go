@@ -37,6 +37,11 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGRendererInterface struct {
 	*qtrt.CObject
 }
+type QSGRendererInterface_ITF interface {
+	QSGRendererInterface_PTR() *QSGRendererInterface
+}
+
+func (ptr *QSGRendererInterface) QSGRendererInterface_PTR() *QSGRendererInterface { return ptr }
 
 func (this *QSGRendererInterface) GetCthis() unsafe.Pointer {
 	if this == nil {

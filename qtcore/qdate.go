@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QDate struct {
 	*qtrt.CObject
 }
+type QDate_ITF interface {
+	QDate_PTR() *QDate
+}
+
+func (ptr *QDate) QDate_PTR() *QDate { return ptr }
 
 func (this *QDate) GetCthis() unsafe.Pointer {
 	if this == nil {

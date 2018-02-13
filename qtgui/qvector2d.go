@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QVector2D struct {
 	*qtrt.CObject
 }
+type QVector2D_ITF interface {
+	QVector2D_PTR() *QVector2D
+}
+
+func (ptr *QVector2D) QVector2D_PTR() *QVector2D { return ptr }
 
 func (this *QVector2D) GetCthis() unsafe.Pointer {
 	if this == nil {

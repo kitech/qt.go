@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextTableCellFormat struct {
 	*QTextCharFormat
 }
+type QTextTableCellFormat_ITF interface {
+	QTextCharFormat_ITF
+	QTextTableCellFormat_PTR() *QTextTableCellFormat
+}
+
+func (ptr *QTextTableCellFormat) QTextTableCellFormat_PTR() *QTextTableCellFormat { return ptr }
 
 func (this *QTextTableCellFormat) GetCthis() unsafe.Pointer {
 	if this == nil {

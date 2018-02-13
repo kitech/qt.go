@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QHideEvent struct {
 	*qtcore.QEvent
 }
+type QHideEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QHideEvent_PTR() *QHideEvent
+}
+
+func (ptr *QHideEvent) QHideEvent_PTR() *QHideEvent { return ptr }
 
 func (this *QHideEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

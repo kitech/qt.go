@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionFrame struct {
 	*QStyleOption
 }
+type QStyleOptionFrame_ITF interface {
+	QStyleOption_ITF
+	QStyleOptionFrame_PTR() *QStyleOptionFrame
+}
+
+func (ptr *QStyleOptionFrame) QStyleOptionFrame_PTR() *QStyleOptionFrame { return ptr }
 
 func (this *QStyleOptionFrame) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -44,6 +44,12 @@ func (this *QTcpServer) InheritAddPendingConnection(f func(socket *QTcpSocket /*
 type QTcpServer struct {
 	*qtcore.QObject
 }
+type QTcpServer_ITF interface {
+	qtcore.QObject_ITF
+	QTcpServer_PTR() *QTcpServer
+}
+
+func (ptr *QTcpServer) QTcpServer_PTR() *QTcpServer { return ptr }
 
 func (this *QTcpServer) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QMatrix struct {
 	*qtrt.CObject
 }
+type QMatrix_ITF interface {
+	QMatrix_PTR() *QMatrix
+}
+
+func (ptr *QMatrix) QMatrix_PTR() *QMatrix { return ptr }
 
 func (this *QMatrix) GetCthis() unsafe.Pointer {
 	if this == nil {

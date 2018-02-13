@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QTranslator struct {
 	*QObject
 }
+type QTranslator_ITF interface {
+	QObject_ITF
+	QTranslator_PTR() *QTranslator
+}
+
+func (ptr *QTranslator) QTranslator_PTR() *QTranslator { return ptr }
 
 func (this *QTranslator) GetCthis() unsafe.Pointer {
 	if this == nil {

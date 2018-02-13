@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QNetworkCookie struct {
 	*qtrt.CObject
 }
+type QNetworkCookie_ITF interface {
+	QNetworkCookie_PTR() *QNetworkCookie
+}
+
+func (ptr *QNetworkCookie) QNetworkCookie_PTR() *QNetworkCookie { return ptr }
 
 func (this *QNetworkCookie) GetCthis() unsafe.Pointer {
 	if this == nil {

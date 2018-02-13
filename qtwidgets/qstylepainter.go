@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStylePainter struct {
 	*qtgui.QPainter
 }
+type QStylePainter_ITF interface {
+	qtgui.QPainter_ITF
+	QStylePainter_PTR() *QStylePainter
+}
+
+func (ptr *QStylePainter) QStylePainter_PTR() *QStylePainter { return ptr }
 
 func (this *QStylePainter) GetCthis() unsafe.Pointer {
 	if this == nil {

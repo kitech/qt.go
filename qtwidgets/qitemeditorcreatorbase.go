@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QItemEditorCreatorBase struct {
 	*qtrt.CObject
 }
+type QItemEditorCreatorBase_ITF interface {
+	QItemEditorCreatorBase_PTR() *QItemEditorCreatorBase
+}
+
+func (ptr *QItemEditorCreatorBase) QItemEditorCreatorBase_PTR() *QItemEditorCreatorBase { return ptr }
 
 func (this *QItemEditorCreatorBase) GetCthis() unsafe.Pointer {
 	if this == nil {

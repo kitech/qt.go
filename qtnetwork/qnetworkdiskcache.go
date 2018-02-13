@@ -39,6 +39,12 @@ func (this *QNetworkDiskCache) InheritExpire(f func() int64) {
 type QNetworkDiskCache struct {
 	*QAbstractNetworkCache
 }
+type QNetworkDiskCache_ITF interface {
+	QAbstractNetworkCache_ITF
+	QNetworkDiskCache_PTR() *QNetworkDiskCache
+}
+
+func (ptr *QNetworkDiskCache) QNetworkDiskCache_PTR() *QNetworkDiskCache { return ptr }
 
 func (this *QNetworkDiskCache) GetCthis() unsafe.Pointer {
 	if this == nil {

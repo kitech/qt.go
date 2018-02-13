@@ -75,6 +75,12 @@ func (this *QSplitter) InheritClosestLegalPosition(f func(arg0 int, arg1 int) in
 type QSplitter struct {
 	*QFrame
 }
+type QSplitter_ITF interface {
+	QFrame_ITF
+	QSplitter_PTR() *QSplitter
+}
+
+func (ptr *QSplitter) QSplitter_PTR() *QSplitter { return ptr }
 
 func (this *QSplitter) GetCthis() unsafe.Pointer {
 	if this == nil {

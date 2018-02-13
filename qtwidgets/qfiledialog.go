@@ -50,6 +50,12 @@ func (this *QFileDialog) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent
 type QFileDialog struct {
 	*QDialog
 }
+type QFileDialog_ITF interface {
+	QDialog_ITF
+	QFileDialog_PTR() *QFileDialog
+}
+
+func (ptr *QFileDialog) QFileDialog_PTR() *QFileDialog { return ptr }
 
 func (this *QFileDialog) GetCthis() unsafe.Pointer {
 	if this == nil {

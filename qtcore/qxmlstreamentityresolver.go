@@ -33,6 +33,13 @@ import "github.com/kitech/qt.go/qtrt"
 type QXmlStreamEntityResolver struct {
 	*qtrt.CObject
 }
+type QXmlStreamEntityResolver_ITF interface {
+	QXmlStreamEntityResolver_PTR() *QXmlStreamEntityResolver
+}
+
+func (ptr *QXmlStreamEntityResolver) QXmlStreamEntityResolver_PTR() *QXmlStreamEntityResolver {
+	return ptr
+}
 
 func (this *QXmlStreamEntityResolver) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -39,6 +39,12 @@ func (this *QLocalServer) InheritIncomingConnection(f func(socketDescriptor uint
 type QLocalServer struct {
 	*qtcore.QObject
 }
+type QLocalServer_ITF interface {
+	qtcore.QObject_ITF
+	QLocalServer_PTR() *QLocalServer
+}
+
+func (ptr *QLocalServer) QLocalServer_PTR() *QLocalServer { return ptr }
 
 func (this *QLocalServer) GetCthis() unsafe.Pointer {
 	if this == nil {

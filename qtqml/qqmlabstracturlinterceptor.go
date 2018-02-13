@@ -35,6 +35,13 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlAbstractUrlInterceptor struct {
 	*qtrt.CObject
 }
+type QQmlAbstractUrlInterceptor_ITF interface {
+	QQmlAbstractUrlInterceptor_PTR() *QQmlAbstractUrlInterceptor
+}
+
+func (ptr *QQmlAbstractUrlInterceptor) QQmlAbstractUrlInterceptor_PTR() *QQmlAbstractUrlInterceptor {
+	return ptr
+}
 
 func (this *QQmlAbstractUrlInterceptor) GetCthis() unsafe.Pointer {
 	if this == nil {

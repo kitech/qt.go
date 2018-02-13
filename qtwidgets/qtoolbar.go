@@ -60,6 +60,12 @@ func (this *QToolBar) InheritInitStyleOption(f func(option *QStyleOptionToolBar 
 type QToolBar struct {
 	*QWidget
 }
+type QToolBar_ITF interface {
+	QWidget_ITF
+	QToolBar_PTR() *QToolBar
+}
+
+func (ptr *QToolBar) QToolBar_PTR() *QToolBar { return ptr }
 
 func (this *QToolBar) GetCthis() unsafe.Pointer {
 	if this == nil {

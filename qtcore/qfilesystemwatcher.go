@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QFileSystemWatcher struct {
 	*QObject
 }
+type QFileSystemWatcher_ITF interface {
+	QObject_ITF
+	QFileSystemWatcher_PTR() *QFileSystemWatcher
+}
+
+func (ptr *QFileSystemWatcher) QFileSystemWatcher_PTR() *QFileSystemWatcher { return ptr }
 
 func (this *QFileSystemWatcher) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,13 @@ import "github.com/kitech/qt.go/qtcore"
 type QSslDiffieHellmanParameters struct {
 	*qtrt.CObject
 }
+type QSslDiffieHellmanParameters_ITF interface {
+	QSslDiffieHellmanParameters_PTR() *QSslDiffieHellmanParameters
+}
+
+func (ptr *QSslDiffieHellmanParameters) QSslDiffieHellmanParameters_PTR() *QSslDiffieHellmanParameters {
+	return ptr
+}
 
 func (this *QSslDiffieHellmanParameters) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlApplicationEngine struct {
 	*QQmlEngine
 }
+type QQmlApplicationEngine_ITF interface {
+	QQmlEngine_ITF
+	QQmlApplicationEngine_PTR() *QQmlApplicationEngine
+}
+
+func (ptr *QQmlApplicationEngine) QQmlApplicationEngine_PTR() *QQmlApplicationEngine { return ptr }
 
 func (this *QQmlApplicationEngine) GetCthis() unsafe.Pointer {
 	if this == nil {

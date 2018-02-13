@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QAndroidParcel struct {
 	*qtrt.CObject
 }
+type QAndroidParcel_ITF interface {
+	QAndroidParcel_PTR() *QAndroidParcel
+}
+
+func (ptr *QAndroidParcel) QAndroidParcel_PTR() *QAndroidParcel { return ptr }
 
 func (this *QAndroidParcel) GetCthis() unsafe.Pointer {
 	if this == nil {

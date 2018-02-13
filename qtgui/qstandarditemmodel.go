@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QStandardItemModel struct {
 	*qtcore.QAbstractItemModel
 }
+type QStandardItemModel_ITF interface {
+	qtcore.QAbstractItemModel_ITF
+	QStandardItemModel_PTR() *QStandardItemModel
+}
+
+func (ptr *QStandardItemModel) QStandardItemModel_PTR() *QStandardItemModel { return ptr }
 
 func (this *QStandardItemModel) GetCthis() unsafe.Pointer {
 	if this == nil {

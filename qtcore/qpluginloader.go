@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QPluginLoader struct {
 	*QObject
 }
+type QPluginLoader_ITF interface {
+	QObject_ITF
+	QPluginLoader_PTR() *QPluginLoader
+}
+
+func (ptr *QPluginLoader) QPluginLoader_PTR() *QPluginLoader { return ptr }
 
 func (this *QPluginLoader) GetCthis() unsafe.Pointer {
 	if this == nil {

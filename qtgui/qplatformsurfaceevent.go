@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QPlatformSurfaceEvent struct {
 	*qtcore.QEvent
 }
+type QPlatformSurfaceEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QPlatformSurfaceEvent_PTR() *QPlatformSurfaceEvent
+}
+
+func (ptr *QPlatformSurfaceEvent) QPlatformSurfaceEvent_PTR() *QPlatformSurfaceEvent { return ptr }
 
 func (this *QPlatformSurfaceEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

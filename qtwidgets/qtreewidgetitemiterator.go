@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QTreeWidgetItemIterator struct {
 	*qtrt.CObject
 }
+type QTreeWidgetItemIterator_ITF interface {
+	QTreeWidgetItemIterator_PTR() *QTreeWidgetItemIterator
+}
+
+func (ptr *QTreeWidgetItemIterator) QTreeWidgetItemIterator_PTR() *QTreeWidgetItemIterator { return ptr }
 
 func (this *QTreeWidgetItemIterator) GetCthis() unsafe.Pointer {
 	if this == nil {

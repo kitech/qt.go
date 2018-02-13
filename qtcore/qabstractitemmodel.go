@@ -128,6 +128,12 @@ func (this *QAbstractItemModel) InheritPersistentIndexList(f func() unsafe.Point
 type QAbstractItemModel struct {
 	*QObject
 }
+type QAbstractItemModel_ITF interface {
+	QObject_ITF
+	QAbstractItemModel_PTR() *QAbstractItemModel
+}
+
+func (ptr *QAbstractItemModel) QAbstractItemModel_PTR() *QAbstractItemModel { return ptr }
 
 func (this *QAbstractItemModel) GetCthis() unsafe.Pointer {
 	if this == nil {

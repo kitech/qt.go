@@ -34,6 +34,13 @@ import "github.com/kitech/qt.go/qtcore"
 type QAccessibleValueInterface struct {
 	*qtrt.CObject
 }
+type QAccessibleValueInterface_ITF interface {
+	QAccessibleValueInterface_PTR() *QAccessibleValueInterface
+}
+
+func (ptr *QAccessibleValueInterface) QAccessibleValueInterface_PTR() *QAccessibleValueInterface {
+	return ptr
+}
 
 func (this *QAccessibleValueInterface) GetCthis() unsafe.Pointer {
 	if this == nil {

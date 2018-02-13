@@ -165,6 +165,12 @@ func (this *QGraphicsView) InheritDrawItems(f func(painter *qtgui.QPainter /*777
 type QGraphicsView struct {
 	*QAbstractScrollArea
 }
+type QGraphicsView_ITF interface {
+	QAbstractScrollArea_ITF
+	QGraphicsView_PTR() *QGraphicsView
+}
+
+func (ptr *QGraphicsView) QGraphicsView_PTR() *QGraphicsView { return ptr }
 
 func (this *QGraphicsView) GetCthis() unsafe.Pointer {
 	if this == nil {

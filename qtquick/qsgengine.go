@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGEngine struct {
 	*qtcore.QObject
 }
+type QSGEngine_ITF interface {
+	qtcore.QObject_ITF
+	QSGEngine_PTR() *QSGEngine
+}
+
+func (ptr *QSGEngine) QSGEngine_PTR() *QSGEngine { return ptr }
 
 func (this *QSGEngine) GetCthis() unsafe.Pointer {
 	if this == nil {

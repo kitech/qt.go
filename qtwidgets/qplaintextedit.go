@@ -200,6 +200,12 @@ func (this *QPlainTextEdit) InheritZoomInF(f func(range_ float32) /*void*/) {
 type QPlainTextEdit struct {
 	*QAbstractScrollArea
 }
+type QPlainTextEdit_ITF interface {
+	QAbstractScrollArea_ITF
+	QPlainTextEdit_PTR() *QPlainTextEdit
+}
+
+func (ptr *QPlainTextEdit) QPlainTextEdit_PTR() *QPlainTextEdit { return ptr }
 
 func (this *QPlainTextEdit) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionSlider struct {
 	*QStyleOptionComplex
 }
+type QStyleOptionSlider_ITF interface {
+	QStyleOptionComplex_ITF
+	QStyleOptionSlider_PTR() *QStyleOptionSlider
+}
+
+func (ptr *QStyleOptionSlider) QStyleOptionSlider_PTR() *QStyleOptionSlider { return ptr }
 
 func (this *QStyleOptionSlider) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QFocusEvent struct {
 	*qtcore.QEvent
 }
+type QFocusEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QFocusEvent_PTR() *QFocusEvent
+}
+
+func (ptr *QFocusEvent) QFocusEvent_PTR() *QFocusEvent { return ptr }
 
 func (this *QFocusEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

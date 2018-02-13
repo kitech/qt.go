@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QWheelEvent struct {
 	*QInputEvent
 }
+type QWheelEvent_ITF interface {
+	QInputEvent_ITF
+	QWheelEvent_PTR() *QWheelEvent
+}
+
+func (ptr *QWheelEvent) QWheelEvent_PTR() *QWheelEvent { return ptr }
 
 func (this *QWheelEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

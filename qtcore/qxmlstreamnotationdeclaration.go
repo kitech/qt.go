@@ -33,6 +33,13 @@ import "github.com/kitech/qt.go/qtrt"
 type QXmlStreamNotationDeclaration struct {
 	*qtrt.CObject
 }
+type QXmlStreamNotationDeclaration_ITF interface {
+	QXmlStreamNotationDeclaration_PTR() *QXmlStreamNotationDeclaration
+}
+
+func (ptr *QXmlStreamNotationDeclaration) QXmlStreamNotationDeclaration_PTR() *QXmlStreamNotationDeclaration {
+	return ptr
+}
 
 func (this *QXmlStreamNotationDeclaration) GetCthis() unsafe.Pointer {
 	if this == nil {

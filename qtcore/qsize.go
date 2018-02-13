@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QSize struct {
 	*qtrt.CObject
 }
+type QSize_ITF interface {
+	QSize_PTR() *QSize
+}
+
+func (ptr *QSize) QSize_PTR() *QSize { return ptr }
 
 func (this *QSize) GetCthis() unsafe.Pointer {
 	if this == nil {

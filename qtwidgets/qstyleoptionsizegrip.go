@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionSizeGrip struct {
 	*QStyleOptionComplex
 }
+type QStyleOptionSizeGrip_ITF interface {
+	QStyleOptionComplex_ITF
+	QStyleOptionSizeGrip_PTR() *QStyleOptionSizeGrip
+}
+
+func (ptr *QStyleOptionSizeGrip) QStyleOptionSizeGrip_PTR() *QStyleOptionSizeGrip { return ptr }
 
 func (this *QStyleOptionSizeGrip) GetCthis() unsafe.Pointer {
 	if this == nil {

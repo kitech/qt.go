@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QStringMatcher struct {
 	*qtrt.CObject
 }
+type QStringMatcher_ITF interface {
+	QStringMatcher_PTR() *QStringMatcher
+}
+
+func (ptr *QStringMatcher) QStringMatcher_PTR() *QStringMatcher { return ptr }
 
 func (this *QStringMatcher) GetCthis() unsafe.Pointer {
 	if this == nil {

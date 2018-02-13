@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QItemSelectionRange struct {
 	*qtrt.CObject
 }
+type QItemSelectionRange_ITF interface {
+	QItemSelectionRange_PTR() *QItemSelectionRange
+}
+
+func (ptr *QItemSelectionRange) QItemSelectionRange_PTR() *QItemSelectionRange { return ptr }
 
 func (this *QItemSelectionRange) GetCthis() unsafe.Pointer {
 	if this == nil {

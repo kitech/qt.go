@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QFile struct {
 	*qtrt.CObject
 }
+type QFile_ITF interface {
+	QFile_PTR() *QFile
+}
+
+func (ptr *QFile) QFile_PTR() *QFile { return ptr }
 
 func (this *QFile) GetCthis() unsafe.Pointer {
 	if this == nil {

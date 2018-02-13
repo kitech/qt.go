@@ -40,6 +40,12 @@ func (this *QGridLayout) InheritAddItem(f func(arg0 *QLayoutItem /*777 QLayoutIt
 type QGridLayout struct {
 	*QLayout
 }
+type QGridLayout_ITF interface {
+	QLayout_ITF
+	QGridLayout_PTR() *QGridLayout
+}
+
+func (ptr *QGridLayout) QGridLayout_PTR() *QGridLayout { return ptr }
 
 func (this *QGridLayout) GetCthis() unsafe.Pointer {
 	if this == nil {

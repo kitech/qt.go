@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPainter struct {
 	*qtrt.CObject
 }
+type QPainter_ITF interface {
+	QPainter_PTR() *QPainter
+}
+
+func (ptr *QPainter) QPainter_PTR() *QPainter { return ptr }
 
 func (this *QPainter) GetCthis() unsafe.Pointer {
 	if this == nil {

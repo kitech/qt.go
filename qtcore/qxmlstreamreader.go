@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QXmlStreamReader struct {
 	*qtrt.CObject
 }
+type QXmlStreamReader_ITF interface {
+	QXmlStreamReader_PTR() *QXmlStreamReader
+}
+
+func (ptr *QXmlStreamReader) QXmlStreamReader_PTR() *QXmlStreamReader { return ptr }
 
 func (this *QXmlStreamReader) GetCthis() unsafe.Pointer {
 	if this == nil {

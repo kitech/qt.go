@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QSslKey struct {
 	*qtrt.CObject
 }
+type QSslKey_ITF interface {
+	QSslKey_PTR() *QSslKey
+}
+
+func (ptr *QSslKey) QSslKey_PTR() *QSslKey { return ptr }
 
 func (this *QSslKey) GetCthis() unsafe.Pointer {
 	if this == nil {

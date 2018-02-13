@@ -38,6 +38,12 @@ func (this *QCoreApplication) InheritEvent(f func(arg0 *QEvent /*777 QEvent **/)
 type QCoreApplication struct {
 	*QObject
 }
+type QCoreApplication_ITF interface {
+	QObject_ITF
+	QCoreApplication_PTR() *QCoreApplication
+}
+
+func (ptr *QCoreApplication) QCoreApplication_PTR() *QCoreApplication { return ptr }
 
 func (this *QCoreApplication) GetCthis() unsafe.Pointer {
 	if this == nil {

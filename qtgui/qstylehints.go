@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QStyleHints struct {
 	*qtcore.QObject
 }
+type QStyleHints_ITF interface {
+	qtcore.QObject_ITF
+	QStyleHints_PTR() *QStyleHints
+}
+
+func (ptr *QStyleHints) QStyleHints_PTR() *QStyleHints { return ptr }
 
 func (this *QStyleHints) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QContainerImplHelper struct {
 	*qtrt.CObject
 }
+type QContainerImplHelper_ITF interface {
+	QContainerImplHelper_PTR() *QContainerImplHelper
+}
+
+func (ptr *QContainerImplHelper) QContainerImplHelper_PTR() *QContainerImplHelper { return ptr }
 
 func (this *QContainerImplHelper) GetCthis() unsafe.Pointer {
 	if this == nil {

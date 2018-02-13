@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type VariantData struct {
 	*qtrt.CObject
 }
+type VariantData_ITF interface {
+	VariantData_PTR() *VariantData
+}
+
+func (ptr *VariantData) VariantData_PTR() *VariantData { return ptr }
 
 func (this *VariantData) GetCthis() unsafe.Pointer {
 	if this == nil {

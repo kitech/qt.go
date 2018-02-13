@@ -40,6 +40,13 @@ func (this *QQmlIncubationController) InheritIncubatingObjectCountChanged(f func
 type QQmlIncubationController struct {
 	*qtrt.CObject
 }
+type QQmlIncubationController_ITF interface {
+	QQmlIncubationController_PTR() *QQmlIncubationController
+}
+
+func (ptr *QQmlIncubationController) QQmlIncubationController_PTR() *QQmlIncubationController {
+	return ptr
+}
 
 func (this *QQmlIncubationController) GetCthis() unsafe.Pointer {
 	if this == nil {

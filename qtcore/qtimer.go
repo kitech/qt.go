@@ -38,6 +38,12 @@ func (this *QTimer) InheritTimerEvent(f func(arg0 *QTimerEvent /*777 QTimerEvent
 type QTimer struct {
 	*QObject
 }
+type QTimer_ITF interface {
+	QObject_ITF
+	QTimer_PTR() *QTimer
+}
+
+func (ptr *QTimer) QTimer_PTR() *QTimer { return ptr }
 
 func (this *QTimer) GetCthis() unsafe.Pointer {
 	if this == nil {

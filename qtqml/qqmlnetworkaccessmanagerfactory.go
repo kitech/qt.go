@@ -35,6 +35,13 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlNetworkAccessManagerFactory struct {
 	*qtrt.CObject
 }
+type QQmlNetworkAccessManagerFactory_ITF interface {
+	QQmlNetworkAccessManagerFactory_PTR() *QQmlNetworkAccessManagerFactory
+}
+
+func (ptr *QQmlNetworkAccessManagerFactory) QQmlNetworkAccessManagerFactory_PTR() *QQmlNetworkAccessManagerFactory {
+	return ptr
+}
 
 func (this *QQmlNetworkAccessManagerFactory) GetCthis() unsafe.Pointer {
 	if this == nil {

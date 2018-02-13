@@ -40,6 +40,12 @@ func (this *QShortcut) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bo
 type QShortcut struct {
 	*qtcore.QObject
 }
+type QShortcut_ITF interface {
+	qtcore.QObject_ITF
+	QShortcut_PTR() *QShortcut
+}
+
+func (ptr *QShortcut) QShortcut_PTR() *QShortcut { return ptr }
 
 func (this *QShortcut) GetCthis() unsafe.Pointer {
 	if this == nil {

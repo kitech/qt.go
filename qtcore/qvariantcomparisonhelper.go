@@ -33,6 +33,13 @@ import "github.com/kitech/qt.go/qtrt"
 type QVariantComparisonHelper struct {
 	*qtrt.CObject
 }
+type QVariantComparisonHelper_ITF interface {
+	QVariantComparisonHelper_PTR() *QVariantComparisonHelper
+}
+
+func (ptr *QVariantComparisonHelper) QVariantComparisonHelper_PTR() *QVariantComparisonHelper {
+	return ptr
+}
 
 func (this *QVariantComparisonHelper) GetCthis() unsafe.Pointer {
 	if this == nil {

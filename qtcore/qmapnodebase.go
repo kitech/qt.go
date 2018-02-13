@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QMapNodeBase struct {
 	*qtrt.CObject
 }
+type QMapNodeBase_ITF interface {
+	QMapNodeBase_PTR() *QMapNodeBase
+}
+
+func (ptr *QMapNodeBase) QMapNodeBase_PTR() *QMapNodeBase { return ptr }
 
 func (this *QMapNodeBase) GetCthis() unsafe.Pointer {
 	if this == nil {

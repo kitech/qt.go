@@ -58,6 +58,12 @@ func (this *QSortFilterProxyModel) InheritInvalidateFilter(f func() /*void*/) {
 type QSortFilterProxyModel struct {
 	*QAbstractProxyModel
 }
+type QSortFilterProxyModel_ITF interface {
+	QAbstractProxyModel_ITF
+	QSortFilterProxyModel_PTR() *QSortFilterProxyModel
+}
+
+func (ptr *QSortFilterProxyModel) QSortFilterProxyModel_PTR() *QSortFilterProxyModel { return ptr }
 
 func (this *QSortFilterProxyModel) GetCthis() unsafe.Pointer {
 	if this == nil {

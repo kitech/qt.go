@@ -44,6 +44,12 @@ func (this *QTextDocument) InheritLoadResource(f func(type_ int, name *qtcore.QU
 type QTextDocument struct {
 	*qtcore.QObject
 }
+type QTextDocument_ITF interface {
+	qtcore.QObject_ITF
+	QTextDocument_PTR() *QTextDocument
+}
+
+func (ptr *QTextDocument) QTextDocument_PTR() *QTextDocument { return ptr }
 
 func (this *QTextDocument) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -40,6 +40,12 @@ func (this *QQmlEngine) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/
 type QQmlEngine struct {
 	*QJSEngine
 }
+type QQmlEngine_ITF interface {
+	QJSEngine_ITF
+	QQmlEngine_PTR() *QQmlEngine
+}
+
+func (ptr *QQmlEngine) QQmlEngine_PTR() *QQmlEngine { return ptr }
 
 func (this *QQmlEngine) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -53,6 +53,12 @@ func (this *QAbstractAnimation) InheritUpdateDirection(f func(direction int) /*v
 type QAbstractAnimation struct {
 	*QObject
 }
+type QAbstractAnimation_ITF interface {
+	QObject_ITF
+	QAbstractAnimation_PTR() *QAbstractAnimation
+}
+
+func (ptr *QAbstractAnimation) QAbstractAnimation_PTR() *QAbstractAnimation { return ptr }
 
 func (this *QAbstractAnimation) GetCthis() unsafe.Pointer {
 	if this == nil {

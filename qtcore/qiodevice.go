@@ -58,6 +58,12 @@ func (this *QIODevice) InheritSetErrorString(f func(errorString string) /*void*/
 type QIODevice struct {
 	*QObject
 }
+type QIODevice_ITF interface {
+	QObject_ITF
+	QIODevice_PTR() *QIODevice
+}
+
+func (ptr *QIODevice) QIODevice_PTR() *QIODevice { return ptr }
 
 func (this *QIODevice) GetCthis() unsafe.Pointer {
 	if this == nil {

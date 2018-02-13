@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPalette struct {
 	*qtrt.CObject
 }
+type QPalette_ITF interface {
+	QPalette_PTR() *QPalette
+}
+
+func (ptr *QPalette) QPalette_PTR() *QPalette { return ptr }
 
 func (this *QPalette) GetCthis() unsafe.Pointer {
 	if this == nil {

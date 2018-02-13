@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QOperatingSystemVersion struct {
 	*qtrt.CObject
 }
+type QOperatingSystemVersion_ITF interface {
+	QOperatingSystemVersion_PTR() *QOperatingSystemVersion
+}
+
+func (ptr *QOperatingSystemVersion) QOperatingSystemVersion_PTR() *QOperatingSystemVersion { return ptr }
 
 func (this *QOperatingSystemVersion) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -67,6 +67,11 @@ func (this *QSGMaterialShader) InheritFragmentShader(f func() unsafe.Pointer /*6
 type QSGMaterialShader struct {
 	*qtrt.CObject
 }
+type QSGMaterialShader_ITF interface {
+	QSGMaterialShader_PTR() *QSGMaterialShader
+}
+
+func (ptr *QSGMaterialShader) QSGMaterialShader_PTR() *QSGMaterialShader { return ptr }
 
 func (this *QSGMaterialShader) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -40,6 +40,12 @@ func (this *QStackedWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **
 type QStackedWidget struct {
 	*QFrame
 }
+type QStackedWidget_ITF interface {
+	QFrame_ITF
+	QStackedWidget_PTR() *QStackedWidget
+}
+
+func (ptr *QStackedWidget) QStackedWidget_PTR() *QStackedWidget { return ptr }
 
 func (this *QStackedWidget) GetCthis() unsafe.Pointer {
 	if this == nil {

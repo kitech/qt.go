@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextTableFormat struct {
 	*QTextFrameFormat
 }
+type QTextTableFormat_ITF interface {
+	QTextFrameFormat_ITF
+	QTextTableFormat_PTR() *QTextTableFormat
+}
+
+func (ptr *QTextTableFormat) QTextTableFormat_PTR() *QTextTableFormat { return ptr }
 
 func (this *QTextTableFormat) GetCthis() unsafe.Pointer {
 	if this == nil {

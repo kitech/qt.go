@@ -48,6 +48,12 @@ func (this *QAnimationDriver) InheritStop(f func() /*void*/) {
 type QAnimationDriver struct {
 	*QObject
 }
+type QAnimationDriver_ITF interface {
+	QObject_ITF
+	QAnimationDriver_PTR() *QAnimationDriver
+}
+
+func (ptr *QAnimationDriver) QAnimationDriver_PTR() *QAnimationDriver { return ptr }
 
 func (this *QAnimationDriver) GetCthis() unsafe.Pointer {
 	if this == nil {

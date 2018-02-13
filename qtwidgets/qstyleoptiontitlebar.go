@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionTitleBar struct {
 	*QStyleOptionComplex
 }
+type QStyleOptionTitleBar_ITF interface {
+	QStyleOptionComplex_ITF
+	QStyleOptionTitleBar_PTR() *QStyleOptionTitleBar
+}
+
+func (ptr *QStyleOptionTitleBar) QStyleOptionTitleBar_PTR() *QStyleOptionTitleBar { return ptr }
 
 func (this *QStyleOptionTitleBar) GetCthis() unsafe.Pointer {
 	if this == nil {

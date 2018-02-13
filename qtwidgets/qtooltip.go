@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QToolTip struct {
 	*qtrt.CObject
 }
+type QToolTip_ITF interface {
+	QToolTip_PTR() *QToolTip
+}
+
+func (ptr *QToolTip) QToolTip_PTR() *QToolTip { return ptr }
 
 func (this *QToolTip) GetCthis() unsafe.Pointer {
 	if this == nil {

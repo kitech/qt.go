@@ -34,6 +34,14 @@ import "github.com/kitech/qt.go/qtcore"
 type QAccessibleTextUpdateEvent struct {
 	*QAccessibleTextCursorEvent
 }
+type QAccessibleTextUpdateEvent_ITF interface {
+	QAccessibleTextCursorEvent_ITF
+	QAccessibleTextUpdateEvent_PTR() *QAccessibleTextUpdateEvent
+}
+
+func (ptr *QAccessibleTextUpdateEvent) QAccessibleTextUpdateEvent_PTR() *QAccessibleTextUpdateEvent {
+	return ptr
+}
 
 func (this *QAccessibleTextUpdateEvent) GetCthis() unsafe.Pointer {
 	if this == nil {

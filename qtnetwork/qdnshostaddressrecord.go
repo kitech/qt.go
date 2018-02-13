@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QDnsHostAddressRecord struct {
 	*qtrt.CObject
 }
+type QDnsHostAddressRecord_ITF interface {
+	QDnsHostAddressRecord_PTR() *QDnsHostAddressRecord
+}
+
+func (ptr *QDnsHostAddressRecord) QDnsHostAddressRecord_PTR() *QDnsHostAddressRecord { return ptr }
 
 func (this *QDnsHostAddressRecord) GetCthis() unsafe.Pointer {
 	if this == nil {

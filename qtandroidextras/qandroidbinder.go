@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QAndroidBinder struct {
 	*qtrt.CObject
 }
+type QAndroidBinder_ITF interface {
+	QAndroidBinder_PTR() *QAndroidBinder
+}
+
+func (ptr *QAndroidBinder) QAndroidBinder_PTR() *QAndroidBinder { return ptr }
 
 func (this *QAndroidBinder) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,13 @@ import "github.com/kitech/qt.go/qtnetwork"
 type RegisterQmlUnitCacheHook struct {
 	*qtrt.CObject
 }
+type RegisterQmlUnitCacheHook_ITF interface {
+	RegisterQmlUnitCacheHook_PTR() *RegisterQmlUnitCacheHook
+}
+
+func (ptr *RegisterQmlUnitCacheHook) RegisterQmlUnitCacheHook_PTR() *RegisterQmlUnitCacheHook {
+	return ptr
+}
 
 func (this *RegisterQmlUnitCacheHook) GetCthis() unsafe.Pointer {
 	if this == nil {

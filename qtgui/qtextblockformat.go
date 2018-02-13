@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextBlockFormat struct {
 	*QTextFormat
 }
+type QTextBlockFormat_ITF interface {
+	QTextFormat_ITF
+	QTextBlockFormat_PTR() *QTextBlockFormat
+}
+
+func (ptr *QTextBlockFormat) QTextBlockFormat_PTR() *QTextBlockFormat { return ptr }
 
 func (this *QTextBlockFormat) GetCthis() unsafe.Pointer {
 	if this == nil {

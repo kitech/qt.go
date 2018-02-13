@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionGroupBox struct {
 	*QStyleOptionComplex
 }
+type QStyleOptionGroupBox_ITF interface {
+	QStyleOptionComplex_ITF
+	QStyleOptionGroupBox_PTR() *QStyleOptionGroupBox
+}
+
+func (ptr *QStyleOptionGroupBox) QStyleOptionGroupBox_PTR() *QStyleOptionGroupBox { return ptr }
 
 func (this *QStyleOptionGroupBox) GetCthis() unsafe.Pointer {
 	if this == nil {

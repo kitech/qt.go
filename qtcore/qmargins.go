@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QMargins struct {
 	*qtrt.CObject
 }
+type QMargins_ITF interface {
+	QMargins_PTR() *QMargins
+}
+
+func (ptr *QMargins) QMargins_PTR() *QMargins { return ptr }
 
 func (this *QMargins) GetCthis() unsafe.Pointer {
 	if this == nil {

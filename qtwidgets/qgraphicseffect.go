@@ -70,6 +70,12 @@ func (this *QGraphicsEffect) InheritSourcePixmap(f func(system int, offset *qtco
 type QGraphicsEffect struct {
 	*qtcore.QObject
 }
+type QGraphicsEffect_ITF interface {
+	qtcore.QObject_ITF
+	QGraphicsEffect_PTR() *QGraphicsEffect
+}
+
+func (ptr *QGraphicsEffect) QGraphicsEffect_PTR() *QGraphicsEffect { return ptr }
 
 func (this *QGraphicsEffect) GetCthis() unsafe.Pointer {
 	if this == nil {

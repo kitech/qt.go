@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QStyleOptionToolButton struct {
 	*QStyleOptionComplex
 }
+type QStyleOptionToolButton_ITF interface {
+	QStyleOptionComplex_ITF
+	QStyleOptionToolButton_PTR() *QStyleOptionToolButton
+}
+
+func (ptr *QStyleOptionToolButton) QStyleOptionToolButton_PTR() *QStyleOptionToolButton { return ptr }
 
 func (this *QStyleOptionToolButton) GetCthis() unsafe.Pointer {
 	if this == nil {

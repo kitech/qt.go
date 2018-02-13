@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlDebuggingEnabler struct {
 	*qtrt.CObject
 }
+type QQmlDebuggingEnabler_ITF interface {
+	QQmlDebuggingEnabler_PTR() *QQmlDebuggingEnabler
+}
+
+func (ptr *QQmlDebuggingEnabler) QQmlDebuggingEnabler_PTR() *QQmlDebuggingEnabler { return ptr }
 
 func (this *QQmlDebuggingEnabler) GetCthis() unsafe.Pointer {
 	if this == nil {

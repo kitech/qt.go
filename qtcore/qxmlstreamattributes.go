@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QXmlStreamAttributes struct {
 	*qtrt.CObject
 }
+type QXmlStreamAttributes_ITF interface {
+	QXmlStreamAttributes_PTR() *QXmlStreamAttributes
+}
+
+func (ptr *QXmlStreamAttributes) QXmlStreamAttributes_PTR() *QXmlStreamAttributes { return ptr }
 
 func (this *QXmlStreamAttributes) GetCthis() unsafe.Pointer {
 	if this == nil {

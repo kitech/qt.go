@@ -35,6 +35,14 @@ import "github.com/kitech/qt.go/qtgui"
 type QAbstractGraphicsShapeItem struct {
 	*QGraphicsItem
 }
+type QAbstractGraphicsShapeItem_ITF interface {
+	QGraphicsItem_ITF
+	QAbstractGraphicsShapeItem_PTR() *QAbstractGraphicsShapeItem
+}
+
+func (ptr *QAbstractGraphicsShapeItem) QAbstractGraphicsShapeItem_PTR() *QAbstractGraphicsShapeItem {
+	return ptr
+}
 
 func (this *QAbstractGraphicsShapeItem) GetCthis() unsafe.Pointer {
 	if this == nil {

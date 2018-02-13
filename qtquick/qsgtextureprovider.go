@@ -37,6 +37,12 @@ import "github.com/kitech/qt.go/qtqml"
 type QSGTextureProvider struct {
 	*qtcore.QObject
 }
+type QSGTextureProvider_ITF interface {
+	qtcore.QObject_ITF
+	QSGTextureProvider_PTR() *QSGTextureProvider
+}
+
+func (ptr *QSGTextureProvider) QSGTextureProvider_PTR() *QSGTextureProvider { return ptr }
 
 func (this *QSGTextureProvider) GetCthis() unsafe.Pointer {
 	if this == nil {

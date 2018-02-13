@@ -35,6 +35,11 @@ import "github.com/kitech/qt.go/qtgui"
 type QWhatsThis struct {
 	*qtrt.CObject
 }
+type QWhatsThis_ITF interface {
+	QWhatsThis_PTR() *QWhatsThis
+}
+
+func (ptr *QWhatsThis) QWhatsThis_PTR() *QWhatsThis { return ptr }
 
 func (this *QWhatsThis) GetCthis() unsafe.Pointer {
 	if this == nil {

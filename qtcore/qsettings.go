@@ -38,6 +38,12 @@ func (this *QSettings) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool)
 type QSettings struct {
 	*QObject
 }
+type QSettings_ITF interface {
+	QObject_ITF
+	QSettings_PTR() *QSettings
+}
+
+func (ptr *QSettings) QSettings_PTR() *QSettings { return ptr }
 
 func (this *QSettings) GetCthis() unsafe.Pointer {
 	if this == nil {

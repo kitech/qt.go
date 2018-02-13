@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QAssociativeIterable struct {
 	*qtrt.CObject
 }
+type QAssociativeIterable_ITF interface {
+	QAssociativeIterable_PTR() *QAssociativeIterable
+}
+
+func (ptr *QAssociativeIterable) QAssociativeIterable_PTR() *QAssociativeIterable { return ptr }
 
 func (this *QAssociativeIterable) GetCthis() unsafe.Pointer {
 	if this == nil {

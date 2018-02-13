@@ -45,6 +45,12 @@ func (this *QGraphicsItemAnimation) InheritAfterAnimationStep(f func(step float6
 type QGraphicsItemAnimation struct {
 	*qtcore.QObject
 }
+type QGraphicsItemAnimation_ITF interface {
+	qtcore.QObject_ITF
+	QGraphicsItemAnimation_PTR() *QGraphicsItemAnimation
+}
+
+func (ptr *QGraphicsItemAnimation) QGraphicsItemAnimation_PTR() *QGraphicsItemAnimation { return ptr }
 
 func (this *QGraphicsItemAnimation) GetCthis() unsafe.Pointer {
 	if this == nil {

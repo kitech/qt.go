@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtgui"
 type QGraphicsScale struct {
 	*QGraphicsTransform
 }
+type QGraphicsScale_ITF interface {
+	QGraphicsTransform_ITF
+	QGraphicsScale_PTR() *QGraphicsScale
+}
+
+func (ptr *QGraphicsScale) QGraphicsScale_PTR() *QGraphicsScale { return ptr }
 
 func (this *QGraphicsScale) GetCthis() unsafe.Pointer {
 	if this == nil {

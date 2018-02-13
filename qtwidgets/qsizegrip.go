@@ -80,6 +80,12 @@ func (this *QSizeGrip) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)
 type QSizeGrip struct {
 	*QWidget
 }
+type QSizeGrip_ITF interface {
+	QWidget_ITF
+	QSizeGrip_PTR() *QSizeGrip
+}
+
+func (ptr *QSizeGrip) QSizeGrip_PTR() *QSizeGrip { return ptr }
 
 func (this *QSizeGrip) GetCthis() unsafe.Pointer {
 	if this == nil {

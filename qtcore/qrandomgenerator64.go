@@ -33,6 +33,12 @@ import "github.com/kitech/qt.go/qtrt"
 type QRandomGenerator64 struct {
 	*QRandomGenerator
 }
+type QRandomGenerator64_ITF interface {
+	QRandomGenerator_ITF
+	QRandomGenerator64_PTR() *QRandomGenerator64
+}
+
+func (ptr *QRandomGenerator64) QRandomGenerator64_PTR() *QRandomGenerator64 { return ptr }
 
 func (this *QRandomGenerator64) GetCthis() unsafe.Pointer {
 	if this == nil {

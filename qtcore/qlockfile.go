@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QLockFile struct {
 	*qtrt.CObject
 }
+type QLockFile_ITF interface {
+	QLockFile_PTR() *QLockFile
+}
+
+func (ptr *QLockFile) QLockFile_PTR() *QLockFile { return ptr }
 
 func (this *QLockFile) GetCthis() unsafe.Pointer {
 	if this == nil {

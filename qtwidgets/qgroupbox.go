@@ -85,6 +85,12 @@ func (this *QGroupBox) InheritInitStyleOption(f func(option *QStyleOptionGroupBo
 type QGroupBox struct {
 	*QWidget
 }
+type QGroupBox_ITF interface {
+	QWidget_ITF
+	QGroupBox_PTR() *QGroupBox
+}
+
+func (ptr *QGroupBox) QGroupBox_PTR() *QGroupBox { return ptr }
 
 func (this *QGroupBox) GetCthis() unsafe.Pointer {
 	if this == nil {

@@ -35,6 +35,12 @@ import "github.com/kitech/qt.go/qtnetwork"
 type QQmlContext struct {
 	*qtcore.QObject
 }
+type QQmlContext_ITF interface {
+	qtcore.QObject_ITF
+	QQmlContext_PTR() *QQmlContext
+}
+
+func (ptr *QQmlContext) QQmlContext_PTR() *QQmlContext { return ptr }
 
 func (this *QQmlContext) GetCthis() unsafe.Pointer {
 	if this == nil {

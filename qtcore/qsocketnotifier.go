@@ -38,6 +38,12 @@ func (this *QSocketNotifier) InheritEvent(f func(arg0 *QEvent /*777 QEvent **/) 
 type QSocketNotifier struct {
 	*QObject
 }
+type QSocketNotifier_ITF interface {
+	QObject_ITF
+	QSocketNotifier_PTR() *QSocketNotifier
+}
+
+func (ptr *QSocketNotifier) QSocketNotifier_PTR() *QSocketNotifier { return ptr }
 
 func (this *QSocketNotifier) GetCthis() unsafe.Pointer {
 	if this == nil {

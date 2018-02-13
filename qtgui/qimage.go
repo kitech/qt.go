@@ -74,6 +74,12 @@ func (this *QImage) InheritSmoothScaled(f func(w int, h int) unsafe.Pointer) {
 type QImage struct {
 	*QPaintDevice
 }
+type QImage_ITF interface {
+	QPaintDevice_ITF
+	QImage_PTR() *QImage
+}
+
+func (ptr *QImage) QImage_PTR() *QImage { return ptr }
 
 func (this *QImage) GetCthis() unsafe.Pointer {
 	if this == nil {

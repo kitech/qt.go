@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QUrl struct {
 	*qtrt.CObject
 }
+type QUrl_ITF interface {
+	QUrl_PTR() *QUrl
+}
+
+func (ptr *QUrl) QUrl_PTR() *QUrl { return ptr }
 
 func (this *QUrl) GetCthis() unsafe.Pointer {
 	if this == nil {

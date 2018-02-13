@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QAtomicInt struct {
 	*qtrt.CObject
 }
+type QAtomicInt_ITF interface {
+	QAtomicInt_PTR() *QAtomicInt
+}
+
+func (ptr *QAtomicInt) QAtomicInt_PTR() *QAtomicInt { return ptr }
 
 func (this *QAtomicInt) GetCthis() unsafe.Pointer {
 	if this == nil {

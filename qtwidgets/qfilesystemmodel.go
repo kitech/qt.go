@@ -45,6 +45,12 @@ func (this *QFileSystemModel) InheritEvent(f func(event *qtcore.QEvent /*777 QEv
 type QFileSystemModel struct {
 	*qtcore.QAbstractItemModel
 }
+type QFileSystemModel_ITF interface {
+	qtcore.QAbstractItemModel_ITF
+	QFileSystemModel_PTR() *QFileSystemModel
+}
+
+func (ptr *QFileSystemModel) QFileSystemModel_PTR() *QFileSystemModel { return ptr }
 
 func (this *QFileSystemModel) GetCthis() unsafe.Pointer {
 	if this == nil {

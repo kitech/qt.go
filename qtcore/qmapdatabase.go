@@ -33,6 +33,11 @@ import "github.com/kitech/qt.go/qtrt"
 type QMapDataBase struct {
 	*qtrt.CObject
 }
+type QMapDataBase_ITF interface {
+	QMapDataBase_PTR() *QMapDataBase
+}
+
+func (ptr *QMapDataBase) QMapDataBase_PTR() *QMapDataBase { return ptr }
 
 func (this *QMapDataBase) GetCthis() unsafe.Pointer {
 	if this == nil {

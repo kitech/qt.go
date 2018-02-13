@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QTextInlineObject struct {
 	*qtrt.CObject
 }
+type QTextInlineObject_ITF interface {
+	QTextInlineObject_PTR() *QTextInlineObject
+}
+
+func (ptr *QTextInlineObject) QTextInlineObject_PTR() *QTextInlineObject { return ptr }
 
 func (this *QTextInlineObject) GetCthis() unsafe.Pointer {
 	if this == nil {

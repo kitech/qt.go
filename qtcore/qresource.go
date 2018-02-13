@@ -48,6 +48,11 @@ func (this *QResource) InheritChildren(f func() unsafe.Pointer) {
 type QResource struct {
 	*qtrt.CObject
 }
+type QResource_ITF interface {
+	QResource_PTR() *QResource
+}
+
+func (ptr *QResource) QResource_PTR() *QResource { return ptr }
 
 func (this *QResource) GetCthis() unsafe.Pointer {
 	if this == nil {

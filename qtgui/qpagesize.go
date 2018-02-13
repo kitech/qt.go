@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QPageSize struct {
 	*qtrt.CObject
 }
+type QPageSize_ITF interface {
+	QPageSize_PTR() *QPageSize
+}
+
+func (ptr *QPageSize) QPageSize_PTR() *QPageSize { return ptr }
 
 func (this *QPageSize) GetCthis() unsafe.Pointer {
 	if this == nil {

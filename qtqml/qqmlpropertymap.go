@@ -40,6 +40,12 @@ func (this *QQmlPropertyMap) InheritUpdateValue(f func(key string, input *qtcore
 type QQmlPropertyMap struct {
 	*qtcore.QObject
 }
+type QQmlPropertyMap_ITF interface {
+	qtcore.QObject_ITF
+	QQmlPropertyMap_PTR() *QQmlPropertyMap
+}
+
+func (ptr *QQmlPropertyMap) QQmlPropertyMap_PTR() *QQmlPropertyMap { return ptr }
 
 func (this *QQmlPropertyMap) GetCthis() unsafe.Pointer {
 	if this == nil {

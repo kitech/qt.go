@@ -185,6 +185,12 @@ func (this *QListView) InheritViewportSizeHint(f func() unsafe.Pointer) {
 type QListView struct {
 	*QAbstractItemView
 }
+type QListView_ITF interface {
+	QAbstractItemView_ITF
+	QListView_PTR() *QListView
+}
+
+func (ptr *QListView) QListView_PTR() *QListView { return ptr }
 
 func (this *QListView) GetCthis() unsafe.Pointer {
 	if this == nil {

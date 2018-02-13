@@ -70,6 +70,12 @@ func (this *QCheckBox) InheritInitStyleOption(f func(option *QStyleOptionButton 
 type QCheckBox struct {
 	*QAbstractButton
 }
+type QCheckBox_ITF interface {
+	QAbstractButton_ITF
+	QCheckBox_PTR() *QCheckBox
+}
+
+func (ptr *QCheckBox) QCheckBox_PTR() *QCheckBox { return ptr }
 
 func (this *QCheckBox) GetCthis() unsafe.Pointer {
 	if this == nil {

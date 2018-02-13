@@ -45,6 +45,12 @@ func (this *QMouseEventTransition) InheritEventTest(f func(event *qtcore.QEvent 
 type QMouseEventTransition struct {
 	*qtcore.QEventTransition
 }
+type QMouseEventTransition_ITF interface {
+	qtcore.QEventTransition_ITF
+	QMouseEventTransition_PTR() *QMouseEventTransition
+}
+
+func (ptr *QMouseEventTransition) QMouseEventTransition_PTR() *QMouseEventTransition { return ptr }
 
 func (this *QMouseEventTransition) GetCthis() unsafe.Pointer {
 	if this == nil {

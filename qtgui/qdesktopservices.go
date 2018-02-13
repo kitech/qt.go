@@ -34,6 +34,11 @@ import "github.com/kitech/qt.go/qtcore"
 type QDesktopServices struct {
 	*qtrt.CObject
 }
+type QDesktopServices_ITF interface {
+	QDesktopServices_PTR() *QDesktopServices
+}
+
+func (ptr *QDesktopServices) QDesktopServices_PTR() *QDesktopServices { return ptr }
 
 func (this *QDesktopServices) GetCthis() unsafe.Pointer {
 	if this == nil {

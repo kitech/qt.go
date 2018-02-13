@@ -44,6 +44,12 @@ func (this *QLocalSocket) InheritWriteData(f func(arg0 string, arg1 int64) int64
 type QLocalSocket struct {
 	*qtcore.QIODevice
 }
+type QLocalSocket_ITF interface {
+	qtcore.QIODevice_ITF
+	QLocalSocket_PTR() *QLocalSocket
+}
+
+func (ptr *QLocalSocket) QLocalSocket_PTR() *QLocalSocket { return ptr }
 
 func (this *QLocalSocket) GetCthis() unsafe.Pointer {
 	if this == nil {

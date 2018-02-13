@@ -44,6 +44,12 @@ func (this *QRasterWindow) InheritRedirected(f func(arg0 *qtcore.QPoint /*777 QP
 type QRasterWindow struct {
 	*QPaintDeviceWindow
 }
+type QRasterWindow_ITF interface {
+	QPaintDeviceWindow_ITF
+	QRasterWindow_PTR() *QRasterWindow
+}
+
+func (ptr *QRasterWindow) QRasterWindow_PTR() *QRasterWindow { return ptr }
 
 func (this *QRasterWindow) GetCthis() unsafe.Pointer {
 	if this == nil {

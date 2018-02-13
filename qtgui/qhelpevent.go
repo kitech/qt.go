@@ -34,6 +34,12 @@ import "github.com/kitech/qt.go/qtcore"
 type QHelpEvent struct {
 	*qtcore.QEvent
 }
+type QHelpEvent_ITF interface {
+	qtcore.QEvent_ITF
+	QHelpEvent_PTR() *QHelpEvent
+}
+
+func (ptr *QHelpEvent) QHelpEvent_PTR() *QHelpEvent { return ptr }
 
 func (this *QHelpEvent) GetCthis() unsafe.Pointer {
 	if this == nil {
