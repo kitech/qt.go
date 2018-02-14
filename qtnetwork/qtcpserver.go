@@ -83,8 +83,8 @@ func (this *QTcpServer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTcpServer(QObject *)
-func NewQTcpServer(parent *qtcore.QObject /*777 QObject **/) *QTcpServer {
-	var convArg0 = parent.GetCthis()
+func NewQTcpServer(parent qtcore.QObject_ITF /*777 QObject **/) *QTcpServer {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTcpServerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -106,8 +106,8 @@ func DeleteQTcpServer(this *QTcpServer) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool listen(const QHostAddress &, quint16)
-func (this *QTcpServer) Listen(address *QHostAddress, port uint16) bool {
-	var convArg0 = address.GetCthis()
+func (this *QTcpServer) Listen(address QHostAddress_ITF, port uint16) bool {
+	var convArg0 = address.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer6listenERK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -268,8 +268,8 @@ func (this *QTcpServer) ResumeAccepting() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProxy(const QNetworkProxy &)
-func (this *QTcpServer) SetProxy(networkProxy *QNetworkProxy) {
-	var convArg0 = networkProxy.GetCthis()
+func (this *QTcpServer) SetProxy(networkProxy QNetworkProxy_ITF) {
+	var convArg0 = networkProxy.QNetworkProxy_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer8setProxyERK13QNetworkProxy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -299,8 +299,8 @@ func (this *QTcpServer) IncomingConnection(handle int64) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void addPendingConnection(QTcpSocket *)
-func (this *QTcpServer) AddPendingConnection(socket *QTcpSocket /*777 QTcpSocket **/) {
-	var convArg0 = socket.GetCthis()
+func (this *QTcpServer) AddPendingConnection(socket QTcpSocket_ITF /*777 QTcpSocket **/) {
+	var convArg0 = socket.QTcpSocket_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer20addPendingConnectionEP10QTcpSocket", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

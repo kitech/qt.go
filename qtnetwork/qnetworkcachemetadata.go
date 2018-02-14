@@ -88,8 +88,8 @@ func DeleteQNetworkCacheMetaData(this *QNetworkCacheMetaData) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkCacheMetaData &)
-func (this *QNetworkCacheMetaData) Swap(other *QNetworkCacheMetaData) {
-	var convArg0 = other.GetCthis()
+func (this *QNetworkCacheMetaData) Swap(other QNetworkCacheMetaData_ITF) {
+	var convArg0 = other.QNetworkCacheMetaData_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -120,8 +120,8 @@ func (this *QNetworkCacheMetaData) Url() *qtcore.QUrl /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUrl(const QUrl &)
-func (this *QNetworkCacheMetaData) SetUrl(url *qtcore.QUrl) {
-	var convArg0 = url.GetCthis()
+func (this *QNetworkCacheMetaData) SetUrl(url qtcore.QUrl_ITF) {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData6setUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -142,8 +142,8 @@ func (this *QNetworkCacheMetaData) LastModified() *qtcore.QDateTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastModified(const QDateTime &)
-func (this *QNetworkCacheMetaData) SetLastModified(dateTime *qtcore.QDateTime) {
-	var convArg0 = dateTime.GetCthis()
+func (this *QNetworkCacheMetaData) SetLastModified(dateTime qtcore.QDateTime_ITF) {
+	var convArg0 = dateTime.QDateTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData15setLastModifiedERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -164,8 +164,8 @@ func (this *QNetworkCacheMetaData) ExpirationDate() *qtcore.QDateTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExpirationDate(const QDateTime &)
-func (this *QNetworkCacheMetaData) SetExpirationDate(dateTime *qtcore.QDateTime) {
-	var convArg0 = dateTime.GetCthis()
+func (this *QNetworkCacheMetaData) SetExpirationDate(dateTime qtcore.QDateTime_ITF) {
+	var convArg0 = dateTime.QDateTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData17setExpirationDateERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

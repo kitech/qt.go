@@ -184,8 +184,8 @@ func (this *QElapsedTimer) MsecsSinceReference() int64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 msecsTo(const QElapsedTimer &)
-func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) int64 {
-	var convArg0 = other.GetCthis()
+func (this *QElapsedTimer) MsecsTo(other QElapsedTimer_ITF) int64 {
+	var convArg0 = other.QElapsedTimer_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -195,8 +195,8 @@ func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) int64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 secsTo(const QElapsedTimer &)
-func (this *QElapsedTimer) SecsTo(other *QElapsedTimer) int64 {
-	var convArg0 = other.GetCthis()
+func (this *QElapsedTimer) SecsTo(other QElapsedTimer_ITF) int64 {
+	var convArg0 = other.QElapsedTimer_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222

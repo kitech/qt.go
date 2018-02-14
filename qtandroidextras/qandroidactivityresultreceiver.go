@@ -90,8 +90,8 @@ func DeleteQAndroidActivityResultReceiver(this *QAndroidActivityResultReceiver) 
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void handleActivityResult(int, int, const QAndroidJniObject &)
-func (this *QAndroidActivityResultReceiver) HandleActivityResult(receiverRequestCode int, resultCode int, data *QAndroidJniObject) {
-	var convArg2 = data.GetCthis()
+func (this *QAndroidActivityResultReceiver) HandleActivityResult(receiverRequestCode int, resultCode int, data QAndroidJniObject_ITF) {
+	var convArg2 = data.QAndroidJniObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QAndroidActivityResultReceiver20handleActivityResultEiiRK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), receiverRequestCode, resultCode, convArg2)
 	qtrt.ErrPrint(err, rv)
 }

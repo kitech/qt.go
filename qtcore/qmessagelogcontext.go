@@ -94,8 +94,8 @@ func NewQMessageLogContext_1(fileName string, lineNumber int, functionName strin
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void copy(const QMessageLogContext &)
-func (this *QMessageLogContext) Copy(logContext *QMessageLogContext) {
-	var convArg0 = logContext.GetCthis()
+func (this *QMessageLogContext) Copy(logContext QMessageLogContext_ITF) {
+	var convArg0 = logContext.QMessageLogContext_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContext4copyERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

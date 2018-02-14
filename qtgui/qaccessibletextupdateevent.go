@@ -65,8 +65,8 @@ func (*QAccessibleTextUpdateEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextUpdateEvent(QObject *, int, const QString &, const QString &)
-func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
-	var convArg0 = obj.GetCthis()
+func NewQAccessibleTextUpdateEvent(obj qtcore.QObject_ITF /*777 QObject **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(oldText)
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(text)
@@ -82,8 +82,8 @@ func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, positi
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextUpdateEvent(QAccessibleInterface *, int, const QString &, const QString &)
-func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
-	var convArg0 = iface.GetCthis()
+func NewQAccessibleTextUpdateEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
+	var convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(oldText)
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(text)

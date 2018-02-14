@@ -146,8 +146,8 @@ func (this *QMacPasteboardMime) FlavorFor(mime string) string {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int count(QMimeData *)
-func (this *QMacPasteboardMime) Count(mimeData *qtcore.QMimeData /*777 QMimeData **/) int {
-	var convArg0 = mimeData.GetCthis()
+func (this *QMacPasteboardMime) Count(mimeData qtcore.QMimeData_ITF /*777 QMimeData **/) int {
+	var convArg0 = mimeData.QMimeData_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime5countEP9QMimeData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

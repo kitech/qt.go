@@ -117,12 +117,12 @@ func QApplication_Style() *QStyle /*777 QStyle **/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setStyle(QStyle *)
-func (this *QApplication) SetStyle(arg0 *QStyle /*777 QStyle **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QApplication) SetStyle(arg0 QStyle_ITF /*777 QStyle **/) {
+	var convArg0 = arg0.QStyle_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication8setStyleEP6QStyle", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QApplication_SetStyle(arg0 *QStyle /*777 QStyle **/) {
+func QApplication_SetStyle(arg0 QStyle_ITF /*777 QStyle **/) {
 	var nilthis *QApplication
 	nilthis.SetStyle(arg0)
 }
@@ -176,15 +176,15 @@ func QApplication_SetColorSpec(arg0 int) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QPalette palette(const QWidget *)
-func (this *QApplication) Palette(arg0 *QWidget /*777 const QWidget **/) *qtgui.QPalette /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QApplication) Palette(arg0 QWidget_ITF /*777 const QWidget **/) *qtgui.QPalette /*123*/ {
+	var convArg0 = arg0.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication7paletteEPK7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPalette)
 	return rv2
 }
-func QApplication_Palette(arg0 *QWidget /*777 const QWidget **/) *qtgui.QPalette /*123*/ {
+func QApplication_Palette(arg0 QWidget_ITF /*777 const QWidget **/) *qtgui.QPalette /*123*/ {
 	var nilthis *QApplication
 	rv := nilthis.Palette(arg0)
 	return rv
@@ -213,14 +213,14 @@ func QApplication_Palette_1(className string) *qtgui.QPalette /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setPalette(const QPalette &, const char *)
-func (this *QApplication) SetPalette(arg0 *qtgui.QPalette, className string) {
-	var convArg0 = arg0.GetCthis()
+func (this *QApplication) SetPalette(arg0 qtgui.QPalette_ITF, className string) {
+	var convArg0 = arg0.QPalette_PTR().GetCthis()
 	var convArg1 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication10setPaletteERK8QPalettePKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
-func QApplication_SetPalette(arg0 *qtgui.QPalette, className string) {
+func QApplication_SetPalette(arg0 qtgui.QPalette_ITF, className string) {
 	var nilthis *QApplication
 	nilthis.SetPalette(arg0, className)
 }
@@ -246,15 +246,15 @@ func QApplication_Font() *qtgui.QFont /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QFont font(const QWidget *)
-func (this *QApplication) Font_1(arg0 *QWidget /*777 const QWidget **/) *qtgui.QFont /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QApplication) Font_1(arg0 QWidget_ITF /*777 const QWidget **/) *qtgui.QFont /*123*/ {
+	var convArg0 = arg0.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication4fontEPK7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
-func QApplication_Font_1(arg0 *QWidget /*777 const QWidget **/) *qtgui.QFont /*123*/ {
+func QApplication_Font_1(arg0 QWidget_ITF /*777 const QWidget **/) *qtgui.QFont /*123*/ {
 	var nilthis *QApplication
 	rv := nilthis.Font_1(arg0)
 	return rv
@@ -283,14 +283,14 @@ func QApplication_Font_2(className string) *qtgui.QFont /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &, const char *)
-func (this *QApplication) SetFont(arg0 *qtgui.QFont, className string) {
-	var convArg0 = arg0.GetCthis()
+func (this *QApplication) SetFont(arg0 qtgui.QFont_ITF, className string) {
+	var convArg0 = arg0.QFont_PTR().GetCthis()
 	var convArg1 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication7setFontERK5QFontPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
-func QApplication_SetFont(arg0 *qtgui.QFont, className string) {
+func QApplication_SetFont(arg0 qtgui.QFont_ITF, className string) {
 	var nilthis *QApplication
 	nilthis.SetFont(arg0, className)
 }
@@ -316,12 +316,12 @@ func QApplication_FontMetrics() *qtgui.QFontMetrics /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setWindowIcon(const QIcon &)
-func (this *QApplication) SetWindowIcon(icon *qtgui.QIcon) {
-	var convArg0 = icon.GetCthis()
+func (this *QApplication) SetWindowIcon(icon qtgui.QIcon_ITF) {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication13setWindowIconERK5QIcon", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QApplication_SetWindowIcon(icon *qtgui.QIcon) {
+func QApplication_SetWindowIcon(icon qtgui.QIcon_ITF) {
 	var nilthis *QApplication
 	nilthis.SetWindowIcon(icon)
 }
@@ -454,12 +454,12 @@ func QApplication_ActiveWindow() *QWidget /*777 QWidget **/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setActiveWindow(QWidget *)
-func (this *QApplication) SetActiveWindow(act *QWidget /*777 QWidget **/) {
-	var convArg0 = act.GetCthis()
+func (this *QApplication) SetActiveWindow(act QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = act.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication15setActiveWindowEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QApplication_SetActiveWindow(act *QWidget /*777 QWidget **/) {
+func QApplication_SetActiveWindow(act QWidget_ITF /*777 QWidget **/) {
 	var nilthis *QApplication
 	nilthis.SetActiveWindow(act)
 }
@@ -468,13 +468,13 @@ func QApplication_SetActiveWindow(act *QWidget /*777 QWidget **/) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QWidget * widgetAt(const QPoint &)
-func (this *QApplication) WidgetAt(p *qtcore.QPoint) *QWidget /*777 QWidget **/ {
-	var convArg0 = p.GetCthis()
+func (this *QApplication) WidgetAt(p qtcore.QPoint_ITF) *QWidget /*777 QWidget **/ {
+	var convArg0 = p.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication8widgetAtERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QApplication_WidgetAt(p *qtcore.QPoint) *QWidget /*777 QWidget **/ {
+func QApplication_WidgetAt(p qtcore.QPoint_ITF) *QWidget /*777 QWidget **/ {
 	var nilthis *QApplication
 	rv := nilthis.WidgetAt(p)
 	return rv
@@ -499,13 +499,13 @@ func QApplication_WidgetAt_1(x int, y int) *QWidget /*777 QWidget **/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QWidget * topLevelAt(const QPoint &)
-func (this *QApplication) TopLevelAt(p *qtcore.QPoint) *QWidget /*777 QWidget **/ {
-	var convArg0 = p.GetCthis()
+func (this *QApplication) TopLevelAt(p qtcore.QPoint_ITF) *QWidget /*777 QWidget **/ {
+	var convArg0 = p.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication10topLevelAtERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QApplication_TopLevelAt(p *qtcore.QPoint) *QWidget /*777 QWidget **/ {
+func QApplication_TopLevelAt(p qtcore.QPoint_ITF) *QWidget /*777 QWidget **/ {
 	var nilthis *QApplication
 	rv := nilthis.TopLevelAt(p)
 	return rv
@@ -543,12 +543,12 @@ func QApplication_Beep() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void alert(QWidget *, int)
-func (this *QApplication) Alert(widget *QWidget /*777 QWidget **/, duration int) {
-	var convArg0 = widget.GetCthis()
+func (this *QApplication) Alert(widget QWidget_ITF /*777 QWidget **/, duration int) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication5alertEP7QWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, duration)
 	qtrt.ErrPrint(err, rv)
 }
-func QApplication_Alert(widget *QWidget /*777 QWidget **/, duration int) {
+func QApplication_Alert(widget QWidget_ITF /*777 QWidget **/, duration int) {
 	var nilthis *QApplication
 	nilthis.Alert(widget, duration)
 }
@@ -669,12 +669,12 @@ func QApplication_WheelScrollLines() int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setGlobalStrut(const QSize &)
-func (this *QApplication) SetGlobalStrut(arg0 *qtcore.QSize) {
-	var convArg0 = arg0.GetCthis()
+func (this *QApplication) SetGlobalStrut(arg0 qtcore.QSize_ITF) {
+	var convArg0 = arg0.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication14setGlobalStrutERK5QSize", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QApplication_SetGlobalStrut(arg0 *qtcore.QSize) {
+func QApplication_SetGlobalStrut(arg0 qtcore.QSize_ITF) {
 	var nilthis *QApplication
 	nilthis.SetGlobalStrut(arg0)
 }
@@ -799,9 +799,9 @@ func QApplication_Exec() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool notify(QObject *, QEvent *)
-func (this *QApplication) Notify(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+func (this *QApplication) Notify(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg1 = arg1.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication6notifyEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -811,9 +811,9 @@ func (this *QApplication) Notify(arg0 *qtcore.QObject /*777 QObject **/, arg1 *q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void focusChanged(QWidget *, QWidget *)
-func (this *QApplication) FocusChanged(old *QWidget /*777 QWidget **/, now *QWidget /*777 QWidget **/) {
-	var convArg0 = old.GetCthis()
-	var convArg1 = now.GetCthis()
+func (this *QApplication) FocusChanged(old QWidget_ITF /*777 QWidget **/, now QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = old.QWidget_PTR().GetCthis()
+	var convArg1 = now.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication12focusChangedEP7QWidgetS1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -891,8 +891,8 @@ func QApplication_AboutQt() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QApplication) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QApplication) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

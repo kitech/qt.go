@@ -88,8 +88,8 @@ func DeleteQImageIOHandler(this *QImageIOHandler) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
-func (this *QImageIOHandler) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
-	var convArg0 = device.GetCthis()
+func (this *QImageIOHandler) SetDevice(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandler9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -108,8 +108,8 @@ func (this *QImageIOHandler) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QByteArray &)
-func (this *QImageIOHandler) SetFormat(format *qtcore.QByteArray) {
-	var convArg0 = format.GetCthis()
+func (this *QImageIOHandler) SetFormat(format qtcore.QByteArray_ITF) {
+	var convArg0 = format.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandler9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -118,8 +118,8 @@ func (this *QImageIOHandler) SetFormat(format *qtcore.QByteArray) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QByteArray &)
-func (this *QImageIOHandler) SetFormat_1(format *qtcore.QByteArray) {
-	var convArg0 = format.GetCthis()
+func (this *QImageIOHandler) SetFormat_1(format qtcore.QByteArray_ITF) {
+	var convArg0 = format.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QImageIOHandler9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -162,8 +162,8 @@ func (this *QImageIOHandler) CanRead() bool {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool read(QImage *)
-func (this *QImageIOHandler) Read(image *QImage /*777 QImage **/) bool {
-	var convArg0 = image.GetCthis()
+func (this *QImageIOHandler) Read(image QImage_ITF /*777 QImage **/) bool {
+	var convArg0 = image.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandler4readEP6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -173,8 +173,8 @@ func (this *QImageIOHandler) Read(image *QImage /*777 QImage **/) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool write(const QImage &)
-func (this *QImageIOHandler) Write(image *QImage) bool {
-	var convArg0 = image.GetCthis()
+func (this *QImageIOHandler) Write(image QImage_ITF) bool {
+	var convArg0 = image.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandler5writeERK6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -196,8 +196,8 @@ func (this *QImageIOHandler) Option(option int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setOption(enum QImageIOHandler::ImageOption, const QVariant &)
-func (this *QImageIOHandler) SetOption(option int, value *qtcore.QVariant) {
-	var convArg1 = value.GetCthis()
+func (this *QImageIOHandler) SetOption(option int, value qtcore.QVariant_ITF) {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandler9setOptionENS_11ImageOptionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

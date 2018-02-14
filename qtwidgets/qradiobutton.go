@@ -99,8 +99,8 @@ func (this *QRadioButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRadioButton(QWidget *)
-func NewQRadioButton(parent *QWidget /*777 QWidget **/) *QRadioButton {
-	var convArg0 = parent.GetCthis()
+func NewQRadioButton(parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRadioButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQRadioButton(parent *QWidget /*777 QWidget **/) *QRadioButton {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRadioButton(const QString &, QWidget *)
-func NewQRadioButton_1(text string, parent *QWidget /*777 QWidget **/) *QRadioButton {
+func NewQRadioButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButtonC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRadioButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -160,8 +160,8 @@ func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QRadioButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QRadioButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButton5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -171,8 +171,8 @@ func (this *QRadioButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool hitButton(const QPoint &)
-func (this *QRadioButton) HitButton(arg0 *qtcore.QPoint) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QRadioButton) HitButton(arg0 qtcore.QPoint_ITF) bool {
+	var convArg0 = arg0.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QRadioButton9hitButtonERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -182,8 +182,8 @@ func (this *QRadioButton) HitButton(arg0 *qtcore.QPoint) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QRadioButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QRadioButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButton10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -192,8 +192,8 @@ func (this *QRadioButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QRadioButton) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QRadioButton) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButton14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -202,8 +202,8 @@ func (this *QRadioButton) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEve
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionButton *)
-func (this *QRadioButton) InitStyleOption(button *QStyleOptionButton /*777 QStyleOptionButton **/) {
-	var convArg0 = button.GetCthis()
+func (this *QRadioButton) InitStyleOption(button QStyleOptionButton_ITF /*777 QStyleOptionButton **/) {
+	var convArg0 = button.QStyleOptionButton_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QRadioButton15initStyleOptionEP18QStyleOptionButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

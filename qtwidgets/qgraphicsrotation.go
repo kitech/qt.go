@@ -74,8 +74,8 @@ func (this *QGraphicsRotation) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsRotation(QObject *)
-func NewQGraphicsRotation(parent *qtcore.QObject /*777 QObject **/) *QGraphicsRotation {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsRotation(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsRotation {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsRotationFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -109,8 +109,8 @@ func (this *QGraphicsRotation) Origin() *qtgui.QVector3D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrigin(const QVector3D &)
-func (this *QGraphicsRotation) SetOrigin(point *qtgui.QVector3D) {
-	var convArg0 = point.GetCthis()
+func (this *QGraphicsRotation) SetOrigin(point qtgui.QVector3D_ITF) {
+	var convArg0 = point.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotation9setOriginERK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -150,8 +150,8 @@ func (this *QGraphicsRotation) Axis() *qtgui.QVector3D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAxis(const QVector3D &)
-func (this *QGraphicsRotation) SetAxis(axis *qtgui.QVector3D) {
-	var convArg0 = axis.GetCthis()
+func (this *QGraphicsRotation) SetAxis(axis qtgui.QVector3D_ITF) {
+	var convArg0 = axis.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotation7setAxisERK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -169,8 +169,8 @@ func (this *QGraphicsRotation) SetAxis_1(axis int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void applyTo(QMatrix4x4 *)
-func (this *QGraphicsRotation) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **/) {
-	var convArg0 = matrix.GetCthis()
+func (this *QGraphicsRotation) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x4 **/) {
+	var convArg0 = matrix.QMatrix4x4_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRotation7applyToEP10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

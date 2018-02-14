@@ -85,8 +85,8 @@ func NewQJSEngine() *QJSEngine {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QJSEngine(QObject *)
-func NewQJSEngine_1(parent *qtcore.QObject /*777 QObject **/) *QJSEngine {
-	var convArg0 = parent.GetCthis()
+func NewQJSEngine_1(parent qtcore.QObject_ITF /*777 QObject **/) *QJSEngine {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSEngineFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -160,8 +160,8 @@ func (this *QJSEngine) NewArray(length uint) *QJSValue /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJSValue newQObject(QObject *)
-func (this *QJSEngine) NewQObject(object *qtcore.QObject /*777 QObject **/) *QJSValue /*123*/ {
-	var convArg0 = object.GetCthis()
+func (this *QJSEngine) NewQObject(object qtcore.QObject_ITF /*777 QObject **/) *QJSValue /*123*/ {
+	var convArg0 = object.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine10newQObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -182,8 +182,8 @@ func (this *QJSEngine) CollectGarbage() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void installTranslatorFunctions(const QJSValue &)
-func (this *QJSEngine) InstallTranslatorFunctions(object *QJSValue) {
-	var convArg0 = object.GetCthis()
+func (this *QJSEngine) InstallTranslatorFunctions(object QJSValue_ITF) {
+	var convArg0 = object.QJSValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine26installTranslatorFunctionsERK8QJSValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -192,8 +192,8 @@ func (this *QJSEngine) InstallTranslatorFunctions(object *QJSValue) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void installExtensions(QJSEngine::Extensions, const QJSValue &)
-func (this *QJSEngine) InstallExtensions(extensions int, object *QJSValue) {
-	var convArg1 = object.GetCthis()
+func (this *QJSEngine) InstallExtensions(extensions int, object QJSValue_ITF) {
+	var convArg1 = object.QJSValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine17installExtensionsE6QFlagsINS_9ExtensionEERK8QJSValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extensions, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

@@ -97,8 +97,8 @@ func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
-func (this *QGraphicsSceneEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
-	var convArg0 = widget.GetCthis()
+func (this *QGraphicsSceneEvent) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

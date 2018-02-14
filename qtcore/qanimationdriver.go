@@ -87,8 +87,8 @@ func (this *QAnimationDriver) MetaObject() *QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAnimationDriver(QObject *)
-func NewQAnimationDriver(parent *QObject /*777 QObject **/) *QAnimationDriver {
-	var convArg0 = parent.GetCthis()
+func NewQAnimationDriver(parent QObject_ITF /*777 QObject **/) *QAnimationDriver {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriverC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAnimationDriverFromPointer(unsafe.Pointer(uintptr(rv)))

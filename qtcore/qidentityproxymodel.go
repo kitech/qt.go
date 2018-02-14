@@ -72,8 +72,8 @@ func (this *QIdentityProxyModel) MetaObject() *QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIdentityProxyModel(QObject *)
-func NewQIdentityProxyModel(parent *QObject /*777 QObject **/) *QIdentityProxyModel {
-	var convArg0 = parent.GetCthis()
+func NewQIdentityProxyModel(parent QObject_ITF /*777 QObject **/) *QIdentityProxyModel {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIdentityProxyModelFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -95,8 +95,8 @@ func DeleteQIdentityProxyModel(this *QIdentityProxyModel) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &)
-func (this *QIdentityProxyModel) ColumnCount(parent *QModelIndex) int {
-	var convArg0 = parent.GetCthis()
+func (this *QIdentityProxyModel) ColumnCount(parent QModelIndex_ITF) int {
+	var convArg0 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -106,8 +106,8 @@ func (this *QIdentityProxyModel) ColumnCount(parent *QModelIndex) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &)
-func (this *QIdentityProxyModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
-	var convArg2 = parent.GetCthis()
+func (this *QIdentityProxyModel) Index(row int, column int, parent QModelIndex_ITF) *QModelIndex /*123*/ {
+	var convArg2 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -119,8 +119,8 @@ func (this *QIdentityProxyModel) Index(row int, column int, parent *QModelIndex)
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex mapFromSource(const QModelIndex &)
-func (this *QIdentityProxyModel) MapFromSource(sourceIndex *QModelIndex) *QModelIndex /*123*/ {
-	var convArg0 = sourceIndex.GetCthis()
+func (this *QIdentityProxyModel) MapFromSource(sourceIndex QModelIndex_ITF) *QModelIndex /*123*/ {
+	var convArg0 = sourceIndex.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -132,8 +132,8 @@ func (this *QIdentityProxyModel) MapFromSource(sourceIndex *QModelIndex) *QModel
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex mapToSource(const QModelIndex &)
-func (this *QIdentityProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelIndex /*123*/ {
-	var convArg0 = proxyIndex.GetCthis()
+func (this *QIdentityProxyModel) MapToSource(proxyIndex QModelIndex_ITF) *QModelIndex /*123*/ {
+	var convArg0 = proxyIndex.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -145,8 +145,8 @@ func (this *QIdentityProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelInd
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex parent(const QModelIndex &)
-func (this *QIdentityProxyModel) Parent(child *QModelIndex) *QModelIndex /*123*/ {
-	var convArg0 = child.GetCthis()
+func (this *QIdentityProxyModel) Parent(child QModelIndex_ITF) *QModelIndex /*123*/ {
+	var convArg0 = child.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel6parentERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -158,8 +158,8 @@ func (this *QIdentityProxyModel) Parent(child *QModelIndex) *QModelIndex /*123*/
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &)
-func (this *QIdentityProxyModel) RowCount(parent *QModelIndex) int {
-	var convArg0 = parent.GetCthis()
+func (this *QIdentityProxyModel) RowCount(parent QModelIndex_ITF) int {
+	var convArg0 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -181,9 +181,9 @@ func (this *QIdentityProxyModel) HeaderData(section int, orientation int, role i
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
-func (this *QIdentityProxyModel) DropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
-	var convArg0 = data.GetCthis()
-	var convArg4 = parent.GetCthis()
+func (this *QIdentityProxyModel) DropMimeData(data QMimeData_ITF /*777 const QMimeData **/, action int, row int, column int, parent QModelIndex_ITF) bool {
+	var convArg0 = data.QMimeData_PTR().GetCthis()
+	var convArg4 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -193,8 +193,8 @@ func (this *QIdentityProxyModel) DropMimeData(data *QMimeData /*777 const QMimeD
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &)
-func (this *QIdentityProxyModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
-	var convArg2 = idx.GetCthis()
+func (this *QIdentityProxyModel) Sibling(row int, column int, idx QModelIndex_ITF) *QModelIndex /*123*/ {
+	var convArg2 = idx.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -206,8 +206,8 @@ func (this *QIdentityProxyModel) Sibling(row int, column int, idx *QModelIndex) 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QItemSelection mapSelectionFromSource(const QItemSelection &)
-func (this *QIdentityProxyModel) MapSelectionFromSource(selection *QItemSelection) *QItemSelection /*123*/ {
-	var convArg0 = selection.GetCthis()
+func (this *QIdentityProxyModel) MapSelectionFromSource(selection QItemSelection_ITF) *QItemSelection /*123*/ {
+	var convArg0 = selection.QItemSelection_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -219,8 +219,8 @@ func (this *QIdentityProxyModel) MapSelectionFromSource(selection *QItemSelectio
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QItemSelection mapSelectionToSource(const QItemSelection &)
-func (this *QIdentityProxyModel) MapSelectionToSource(selection *QItemSelection) *QItemSelection /*123*/ {
-	var convArg0 = selection.GetCthis()
+func (this *QIdentityProxyModel) MapSelectionToSource(selection QItemSelection_ITF) *QItemSelection /*123*/ {
+	var convArg0 = selection.QItemSelection_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -232,9 +232,9 @@ func (this *QIdentityProxyModel) MapSelectionToSource(selection *QItemSelection)
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QModelIndexList match(const QModelIndex &, int, const QVariant &, int, Qt::MatchFlags)
-func (this *QIdentityProxyModel) Match(start *QModelIndex, role int, value *QVariant, hits int, flags int) *QModelIndexList /*667*/ {
-	var convArg0 = start.GetCthis()
-	var convArg2 = value.GetCthis()
+func (this *QIdentityProxyModel) Match(start QModelIndex_ITF, role int, value QVariant_ITF, hits int, flags int) *QModelIndexList /*667*/ {
+	var convArg0 = start.QModelIndex_PTR().GetCthis()
+	var convArg2 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
@@ -245,8 +245,8 @@ func (this *QIdentityProxyModel) Match(start *QModelIndex, role int, value *QVar
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSourceModel(QAbstractItemModel *)
-func (this *QIdentityProxyModel) SetSourceModel(sourceModel *QAbstractItemModel /*777 QAbstractItemModel **/) {
-	var convArg0 = sourceModel.GetCthis()
+func (this *QIdentityProxyModel) SetSourceModel(sourceModel QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
+	var convArg0 = sourceModel.QAbstractItemModel_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel14setSourceModelEP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -255,8 +255,8 @@ func (this *QIdentityProxyModel) SetSourceModel(sourceModel *QAbstractItemModel 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertColumns(int, int, const QModelIndex &)
-func (this *QIdentityProxyModel) InsertColumns(column int, count int, parent *QModelIndex) bool {
-	var convArg2 = parent.GetCthis()
+func (this *QIdentityProxyModel) InsertColumns(column int, count int, parent QModelIndex_ITF) bool {
+	var convArg2 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -266,8 +266,8 @@ func (this *QIdentityProxyModel) InsertColumns(column int, count int, parent *QM
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
-func (this *QIdentityProxyModel) InsertRows(row int, count int, parent *QModelIndex) bool {
-	var convArg2 = parent.GetCthis()
+func (this *QIdentityProxyModel) InsertRows(row int, count int, parent QModelIndex_ITF) bool {
+	var convArg2 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -277,8 +277,8 @@ func (this *QIdentityProxyModel) InsertRows(row int, count int, parent *QModelIn
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeColumns(int, int, const QModelIndex &)
-func (this *QIdentityProxyModel) RemoveColumns(column int, count int, parent *QModelIndex) bool {
-	var convArg2 = parent.GetCthis()
+func (this *QIdentityProxyModel) RemoveColumns(column int, count int, parent QModelIndex_ITF) bool {
+	var convArg2 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -288,8 +288,8 @@ func (this *QIdentityProxyModel) RemoveColumns(column int, count int, parent *QM
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
-func (this *QIdentityProxyModel) RemoveRows(row int, count int, parent *QModelIndex) bool {
-	var convArg2 = parent.GetCthis()
+func (this *QIdentityProxyModel) RemoveRows(row int, count int, parent QModelIndex_ITF) bool {
+	var convArg2 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

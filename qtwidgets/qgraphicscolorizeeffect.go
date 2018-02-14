@@ -79,8 +79,8 @@ func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*777 cons
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsColorizeEffect(QObject *)
-func NewQGraphicsColorizeEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsColorizeEffect {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsColorizeEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsColorizeEffect {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsColorizeEffectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -124,8 +124,8 @@ func (this *QGraphicsColorizeEffect) Strength() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
-func (this *QGraphicsColorizeEffect) SetColor(c *qtgui.QColor) {
-	var convArg0 = c.GetCthis()
+func (this *QGraphicsColorizeEffect) SetColor(c qtgui.QColor_ITF) {
+	var convArg0 = c.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -143,8 +143,8 @@ func (this *QGraphicsColorizeEffect) SetStrength(strength float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void colorChanged(const QColor &)
-func (this *QGraphicsColorizeEffect) ColorChanged(color *qtgui.QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QGraphicsColorizeEffect) ColorChanged(color qtgui.QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect12colorChangedERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -162,8 +162,8 @@ func (this *QGraphicsColorizeEffect) StrengthChanged(strength float64) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
-func (this *QGraphicsColorizeEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
-	var convArg0 = painter.GetCthis()
+func (this *QGraphicsColorizeEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect4drawEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

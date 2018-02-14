@@ -66,8 +66,8 @@ func (*QMessageAuthenticationCode) NewFromPointer(cthis unsafe.Pointer) *QMessag
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageAuthenticationCode(QCryptographicHash::Algorithm, const QByteArray &)
-func NewQMessageAuthenticationCode(method int, key *QByteArray) *QMessageAuthenticationCode {
-	var convArg1 = key.GetCthis()
+func NewQMessageAuthenticationCode(method int, key QByteArray_ITF) *QMessageAuthenticationCode {
+	var convArg1 = key.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeC2EN18QCryptographicHash9AlgorithmERK10QByteArray", qtrt.FFI_TYPE_POINTER, method, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMessageAuthenticationCodeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -99,8 +99,8 @@ func (this *QMessageAuthenticationCode) Reset() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKey(const QByteArray &)
-func (this *QMessageAuthenticationCode) SetKey(key *QByteArray) {
-	var convArg0 = key.GetCthis()
+func (this *QMessageAuthenticationCode) SetKey(key QByteArray_ITF) {
+	var convArg0 = key.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -120,8 +120,8 @@ func (this *QMessageAuthenticationCode) AddData(data string, length int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addData(const QByteArray &)
-func (this *QMessageAuthenticationCode) AddData_1(data *QByteArray) {
-	var convArg0 = data.GetCthis()
+func (this *QMessageAuthenticationCode) AddData_1(data QByteArray_ITF) {
+	var convArg0 = data.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -130,8 +130,8 @@ func (this *QMessageAuthenticationCode) AddData_1(data *QByteArray) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool addData(QIODevice *)
-func (this *QMessageAuthenticationCode) AddData_2(device *QIODevice /*777 QIODevice **/) bool {
-	var convArg0 = device.GetCthis()
+func (this *QMessageAuthenticationCode) AddData_2(device QIODevice_ITF /*777 QIODevice **/) bool {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -153,16 +153,16 @@ func (this *QMessageAuthenticationCode) Result() *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray hash(const QByteArray &, const QByteArray &, QCryptographicHash::Algorithm)
-func (this *QMessageAuthenticationCode) Hash(message *QByteArray, key *QByteArray, method int) *QByteArray /*123*/ {
-	var convArg0 = message.GetCthis()
-	var convArg1 = key.GetCthis()
+func (this *QMessageAuthenticationCode) Hash(message QByteArray_ITF, key QByteArray_ITF, method int) *QByteArray /*123*/ {
+	var convArg0 = message.QByteArray_PTR().GetCthis()
+	var convArg1 = key.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode4hashERK10QByteArrayS2_N18QCryptographicHash9AlgorithmE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, method)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QMessageAuthenticationCode_Hash(message *QByteArray, key *QByteArray, method int) *QByteArray /*123*/ {
+func QMessageAuthenticationCode_Hash(message QByteArray_ITF, key QByteArray_ITF, method int) *QByteArray /*123*/ {
 	var nilthis *QMessageAuthenticationCode
 	rv := nilthis.Hash(message, key, method)
 	return rv

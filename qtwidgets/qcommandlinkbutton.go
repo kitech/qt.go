@@ -99,8 +99,8 @@ func (this *QCommandLinkButton) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLinkButton(QWidget *)
-func NewQCommandLinkButton(parent *QWidget /*777 QWidget **/) *QCommandLinkButton {
-	var convArg0 = parent.GetCthis()
+func NewQCommandLinkButton(parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCommandLinkButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQCommandLinkButton(parent *QWidget /*777 QWidget **/) *QCommandLinkButto
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLinkButton(const QString &, QWidget *)
-func NewQCommandLinkButton_1(text string, parent *QWidget /*777 QWidget **/) *QCommandLinkButton {
+func NewQCommandLinkButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButtonC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCommandLinkButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -125,12 +125,12 @@ func NewQCommandLinkButton_1(text string, parent *QWidget /*777 QWidget **/) *QC
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLinkButton(const QString &, const QString &, QWidget *)
-func NewQCommandLinkButton_2(text string, description string, parent *QWidget /*777 QWidget **/) *QCommandLinkButton {
+func NewQCommandLinkButton_2(text string, description string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(description)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = parent.GetCthis()
+	var convArg2 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButtonC2ERK7QStringS2_P7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCommandLinkButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -210,8 +210,8 @@ func (this *QCommandLinkButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QCommandLinkButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QCommandLinkButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButton5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -221,8 +221,8 @@ func (this *QCommandLinkButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QCommandLinkButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QCommandLinkButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButton10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

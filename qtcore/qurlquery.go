@@ -76,8 +76,8 @@ func NewQUrlQuery() *QUrlQuery {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QUrlQuery(const QUrl &)
-func NewQUrlQuery_1(url *QUrl) *QUrlQuery {
-	var convArg0 = url.GetCthis()
+func NewQUrlQuery_1(url QUrl_ITF) *QUrlQuery {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryC2ERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -114,8 +114,8 @@ func DeleteQUrlQuery(this *QUrlQuery) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QUrlQuery &)
-func (this *QUrlQuery) Swap(other *QUrlQuery) {
-	var convArg0 = other.GetCthis()
+func (this *QUrlQuery) Swap(other QUrlQuery_ITF) {
+	var convArg0 = other.QUrlQuery_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -164,9 +164,9 @@ func (this *QUrlQuery) SetQuery(queryString string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setQueryDelimiters(QChar, QChar)
-func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter *QChar /*123*/, pairDelimiter *QChar /*123*/) {
-	var convArg0 = valueDelimiter.GetCthis()
-	var convArg1 = pairDelimiter.GetCthis()
+func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter QChar_ITF /*123*/, pairDelimiter QChar_ITF /*123*/) {
+	var convArg0 = valueDelimiter.QChar_PTR().GetCthis()
+	var convArg1 = pairDelimiter.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

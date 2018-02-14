@@ -104,8 +104,8 @@ func (this *QPushButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPushButton(QWidget *)
-func NewQPushButton(parent *QWidget /*777 QWidget **/) *QPushButton {
-	var convArg0 = parent.GetCthis()
+func NewQPushButton(parent QWidget_ITF /*777 QWidget **/) *QPushButton {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,10 +116,10 @@ func NewQPushButton(parent *QWidget /*777 QWidget **/) *QPushButton {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPushButton(const QString &, QWidget *)
-func NewQPushButton_1(text string, parent *QWidget /*777 QWidget **/) *QPushButton {
+func NewQPushButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButtonC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,11 +130,11 @@ func NewQPushButton_1(text string, parent *QWidget /*777 QWidget **/) *QPushButt
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QPushButton(const QIcon &, const QString &, QWidget *)
-func NewQPushButton_2(icon *qtgui.QIcon, text string, parent *QWidget /*777 QWidget **/) *QPushButton {
-	var convArg0 = icon.GetCthis()
+func NewQPushButton_2(icon qtgui.QIcon_ITF, text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = parent.GetCthis()
+	var convArg2 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -218,8 +218,8 @@ func (this *QPushButton) SetDefault(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenu(QMenu *)
-func (this *QPushButton) SetMenu(menu *QMenu /*777 QMenu **/) {
-	var convArg0 = menu.GetCthis()
+func (this *QPushButton) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
+	var convArg0 = menu.QMenu_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButton7setMenuEP5QMenu", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -266,8 +266,8 @@ func (this *QPushButton) ShowMenu() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QPushButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QPushButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButton5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -277,8 +277,8 @@ func (this *QPushButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QPushButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QPushButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButton10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -287,8 +287,8 @@ func (this *QPushButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QPushButton) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QPushButton) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButton13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -297,8 +297,8 @@ func (this *QPushButton) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
-func (this *QPushButton) FocusInEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QPushButton) FocusInEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = arg0.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButton12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -307,8 +307,8 @@ func (this *QPushButton) FocusInEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
-func (this *QPushButton) FocusOutEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QPushButton) FocusOutEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = arg0.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButton13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -317,8 +317,8 @@ func (this *QPushButton) FocusOutEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionButton *)
-func (this *QPushButton) InitStyleOption(option *QStyleOptionButton /*777 QStyleOptionButton **/) {
-	var convArg0 = option.GetCthis()
+func (this *QPushButton) InitStyleOption(option QStyleOptionButton_ITF /*777 QStyleOptionButton **/) {
+	var convArg0 = option.QStyleOptionButton_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton15initStyleOptionEP18QStyleOptionButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

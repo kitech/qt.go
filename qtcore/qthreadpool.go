@@ -72,8 +72,8 @@ func (this *QThreadPool) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QThreadPool(QObject *)
-func NewQThreadPool(parent *QObject /*777 QObject **/) *QThreadPool {
-	var convArg0 = parent.GetCthis()
+func NewQThreadPool(parent QObject_ITF /*777 QObject **/) *QThreadPool {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPoolC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQThreadPoolFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,8 +110,8 @@ func QThreadPool_GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(QRunnable *, int)
-func (this *QThreadPool) Start(runnable *QRunnable /*777 QRunnable **/, priority int) {
-	var convArg0 = runnable.GetCthis()
+func (this *QThreadPool) Start(runnable QRunnable_ITF /*777 QRunnable **/, priority int) {
+	var convArg0 = runnable.QRunnable_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
 	qtrt.ErrPrint(err, rv)
 }
@@ -120,8 +120,8 @@ func (this *QThreadPool) Start(runnable *QRunnable /*777 QRunnable **/, priority
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryStart(QRunnable *)
-func (this *QThreadPool) TryStart(runnable *QRunnable /*777 QRunnable **/) bool {
-	var convArg0 = runnable.GetCthis()
+func (this *QThreadPool) TryStart(runnable QRunnable_ITF /*777 QRunnable **/) bool {
+	var convArg0 = runnable.QRunnable_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool8tryStartEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -235,8 +235,8 @@ func (this *QThreadPool) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cancel(QRunnable *)
-func (this *QThreadPool) Cancel(runnable *QRunnable /*777 QRunnable **/) {
-	var convArg0 = runnable.GetCthis()
+func (this *QThreadPool) Cancel(runnable QRunnable_ITF /*777 QRunnable **/) {
+	var convArg0 = runnable.QRunnable_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool6cancelEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -245,8 +245,8 @@ func (this *QThreadPool) Cancel(runnable *QRunnable /*777 QRunnable **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryTake(QRunnable *)
-func (this *QThreadPool) TryTake(runnable *QRunnable /*777 QRunnable **/) bool {
-	var convArg0 = runnable.GetCthis()
+func (this *QThreadPool) TryTake(runnable QRunnable_ITF /*777 QRunnable **/) bool {
+	var convArg0 = runnable.QRunnable_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool7tryTakeEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

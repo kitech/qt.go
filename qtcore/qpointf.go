@@ -76,8 +76,8 @@ func NewQPointF() *QPointF {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPointF(const QPoint &)
-func NewQPointF_1(p *QPoint) *QPointF {
-	var convArg0 = p.GetCthis()
+func NewQPointF_1(p QPoint_ITF) *QPointF {
+	var convArg0 = p.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointFC2ERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPointFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -179,14 +179,14 @@ func (this *QPointF) Ry() float64 {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] qreal dotProduct(const QPointF &, const QPointF &)
-func (this *QPointF) DotProduct(p1 *QPointF, p2 *QPointF) float64 {
-	var convArg0 = p1.GetCthis()
-	var convArg1 = p2.GetCthis()
+func (this *QPointF) DotProduct(p1 QPointF_ITF, p2 QPointF_ITF) float64 {
+	var convArg0 = p1.QPointF_PTR().GetCthis()
+	var convArg1 = p2.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointF10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
-func QPointF_DotProduct(p1 *QPointF, p2 *QPointF) float64 {
+func QPointF_DotProduct(p1 QPointF_ITF, p2 QPointF_ITF) float64 {
 	var nilthis *QPointF
 	rv := nilthis.DotProduct(p1, p2)
 	return rv

@@ -74,8 +74,8 @@ func (this *QWinThumbnailToolButton) MetaObject() *qtcore.QMetaObject /*777 cons
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinThumbnailToolButton(QObject *)
-func NewQWinThumbnailToolButton(parent *qtcore.QObject /*777 QObject **/) *QWinThumbnailToolButton {
-	var convArg0 = parent.GetCthis()
+func NewQWinThumbnailToolButton(parent qtcore.QObject_ITF /*777 QObject **/) *QWinThumbnailToolButton {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWinThumbnailToolButtonC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinThumbnailToolButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -121,8 +121,8 @@ func (this *QWinThumbnailToolButton) ToolTip() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
-func (this *QWinThumbnailToolButton) SetIcon(icon *qtgui.QIcon) {
-	var convArg0 = icon.GetCthis()
+func (this *QWinThumbnailToolButton) SetIcon(icon qtgui.QIcon_ITF) {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWinThumbnailToolButton7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

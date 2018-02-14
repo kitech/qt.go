@@ -84,8 +84,8 @@ func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*777 const
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsItemAnimation(QObject *)
-func NewQGraphicsItemAnimation(parent *qtcore.QObject /*777 QObject **/) *QGraphicsItemAnimation {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsItemAnimation(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsItemAnimation {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsItemAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,8 +117,8 @@ func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*777 QGraphicsItem **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItem(QGraphicsItem *)
-func (this *QGraphicsItemAnimation) SetItem(item *QGraphicsItem /*777 QGraphicsItem **/) {
-	var convArg0 = item.GetCthis()
+func (this *QGraphicsItemAnimation) SetItem(item QGraphicsItem_ITF /*777 QGraphicsItem **/) {
+	var convArg0 = item.QGraphicsItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -137,8 +137,8 @@ func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*777 QTimeLine
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTimeLine(QTimeLine *)
-func (this *QGraphicsItemAnimation) SetTimeLine(timeLine *qtcore.QTimeLine /*777 QTimeLine **/) {
-	var convArg0 = timeLine.GetCthis()
+func (this *QGraphicsItemAnimation) SetTimeLine(timeLine qtcore.QTimeLine_ITF /*777 QTimeLine **/) {
+	var convArg0 = timeLine.QTimeLine_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -159,8 +159,8 @@ func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosAt(qreal, const QPointF &)
-func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos *qtcore.QPointF) {
-	var convArg1 = pos.GetCthis()
+func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos qtcore.QPointF_ITF) {
+	var convArg1 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

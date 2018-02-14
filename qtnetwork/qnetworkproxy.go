@@ -106,8 +106,8 @@ func DeleteQNetworkProxy(this *QNetworkProxy) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkProxy &)
-func (this *QNetworkProxy) Swap(other *QNetworkProxy) {
-	var convArg0 = other.GetCthis()
+func (this *QNetworkProxy) Swap(other QNetworkProxy_ITF) {
+	var convArg0 = other.QNetworkProxy_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxy4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -265,12 +265,12 @@ func (this *QNetworkProxy) Port() uint16 {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setApplicationProxy(const QNetworkProxy &)
-func (this *QNetworkProxy) SetApplicationProxy(proxy *QNetworkProxy) {
-	var convArg0 = proxy.GetCthis()
+func (this *QNetworkProxy) SetApplicationProxy(proxy QNetworkProxy_ITF) {
+	var convArg0 = proxy.QNetworkProxy_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxy19setApplicationProxyERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QNetworkProxy_SetApplicationProxy(proxy *QNetworkProxy) {
+func QNetworkProxy_SetApplicationProxy(proxy QNetworkProxy_ITF) {
 	var nilthis *QNetworkProxy
 	nilthis.SetApplicationProxy(proxy)
 }
@@ -308,8 +308,8 @@ func (this *QNetworkProxy) Header(header int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
-func (this *QNetworkProxy) SetHeader(header int, value *qtcore.QVariant) {
-	var convArg1 = value.GetCthis()
+func (this *QNetworkProxy) SetHeader(header int, value qtcore.QVariant_ITF) {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxy9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), header, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -318,8 +318,8 @@ func (this *QNetworkProxy) SetHeader(header int, value *qtcore.QVariant) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasRawHeader(const QByteArray &)
-func (this *QNetworkProxy) HasRawHeader(headerName *qtcore.QByteArray) bool {
-	var convArg0 = headerName.GetCthis()
+func (this *QNetworkProxy) HasRawHeader(headerName qtcore.QByteArray_ITF) bool {
+	var convArg0 = headerName.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy12hasRawHeaderERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -329,8 +329,8 @@ func (this *QNetworkProxy) HasRawHeader(headerName *qtcore.QByteArray) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray rawHeader(const QByteArray &)
-func (this *QNetworkProxy) RawHeader(headerName *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
-	var convArg0 = headerName.GetCthis()
+func (this *QNetworkProxy) RawHeader(headerName qtcore.QByteArray_ITF) *qtcore.QByteArray /*123*/ {
+	var convArg0 = headerName.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy9rawHeaderERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -342,9 +342,9 @@ func (this *QNetworkProxy) RawHeader(headerName *qtcore.QByteArray) *qtcore.QByt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRawHeader(const QByteArray &, const QByteArray &)
-func (this *QNetworkProxy) SetRawHeader(headerName *qtcore.QByteArray, value *qtcore.QByteArray) {
-	var convArg0 = headerName.GetCthis()
-	var convArg1 = value.GetCthis()
+func (this *QNetworkProxy) SetRawHeader(headerName qtcore.QByteArray_ITF, value qtcore.QByteArray_ITF) {
+	var convArg0 = headerName.QByteArray_PTR().GetCthis()
+	var convArg1 = value.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxy12setRawHeaderERK10QByteArrayS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

@@ -92,8 +92,8 @@ func (this *QAbstractAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractAnimation(QObject *)
-func NewQAbstractAnimation(parent *QObject /*777 QObject **/) *QAbstractAnimation {
-	var convArg0 = parent.GetCthis()
+func NewQAbstractAnimation(parent QObject_ITF /*777 QObject **/) *QAbstractAnimation {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -313,8 +313,8 @@ func (this *QAbstractAnimation) SetCurrentTime(msecs int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QAbstractAnimation) Event(event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

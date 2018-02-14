@@ -85,8 +85,8 @@ func NewQHBoxLayout() *QHBoxLayout {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHBoxLayout(QWidget *)
-func NewQHBoxLayout_1(parent *QWidget /*777 QWidget **/) *QHBoxLayout {
-	var convArg0 = parent.GetCthis()
+func NewQHBoxLayout_1(parent QWidget_ITF /*777 QWidget **/) *QHBoxLayout {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHBoxLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHBoxLayoutFromPointer(unsafe.Pointer(uintptr(rv)))

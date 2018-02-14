@@ -75,9 +75,9 @@ func NewQLinearGradient() *QLinearGradient {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QLinearGradient(const QPointF &, const QPointF &)
-func NewQLinearGradient_1(start *qtcore.QPointF, finalStop *qtcore.QPointF) *QLinearGradient {
-	var convArg0 = start.GetCthis()
-	var convArg1 = finalStop.GetCthis()
+func NewQLinearGradient_1(start qtcore.QPointF_ITF, finalStop qtcore.QPointF_ITF) *QLinearGradient {
+	var convArg0 = start.QPointF_PTR().GetCthis()
+	var convArg1 = finalStop.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QLinearGradientC2ERK7QPointFS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLinearGradientFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -113,8 +113,8 @@ func (this *QLinearGradient) Start() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStart(const QPointF &)
-func (this *QLinearGradient) SetStart(start *qtcore.QPointF) {
-	var convArg0 = start.GetCthis()
+func (this *QLinearGradient) SetStart(start qtcore.QPointF_ITF) {
+	var convArg0 = start.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QLinearGradient8setStartERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -144,8 +144,8 @@ func (this *QLinearGradient) FinalStop() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFinalStop(const QPointF &)
-func (this *QLinearGradient) SetFinalStop(stop *qtcore.QPointF) {
-	var convArg0 = stop.GetCthis()
+func (this *QLinearGradient) SetFinalStop(stop qtcore.QPointF_ITF) {
+	var convArg0 = stop.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QLinearGradient12setFinalStopERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

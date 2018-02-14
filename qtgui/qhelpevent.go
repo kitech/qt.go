@@ -63,9 +63,9 @@ func (*QHelpEvent) NewFromPointer(cthis unsafe.Pointer) *QHelpEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHelpEvent(enum QEvent::Type, const QPoint &, const QPoint &)
-func NewQHelpEvent(type_ int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QHelpEvent {
-	var convArg1 = pos.GetCthis()
-	var convArg2 = globalPos.GetCthis()
+func NewQHelpEvent(type_ int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF) *QHelpEvent {
+	var convArg1 = pos.QPoint_PTR().GetCthis()
+	var convArg2 = globalPos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QHelpEventC2EN6QEvent4TypeERK6QPointS4_", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHelpEventFromPointer(unsafe.Pointer(uintptr(rv)))

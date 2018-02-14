@@ -77,8 +77,8 @@ func NewQTextCursor() *QTextCursor {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextCursor(QTextDocument *)
-func NewQTextCursor_1(document *QTextDocument /*777 QTextDocument **/) *QTextCursor {
-	var convArg0 = document.GetCthis()
+func NewQTextCursor_1(document QTextDocument_ITF /*777 QTextDocument **/) *QTextCursor {
+	var convArg0 = document.QTextDocument_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursorC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -90,8 +90,8 @@ func NewQTextCursor_1(document *QTextDocument /*777 QTextDocument **/) *QTextCur
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextCursor(QTextFrame *)
-func NewQTextCursor_2(frame *QTextFrame /*777 QTextFrame **/) *QTextCursor {
-	var convArg0 = frame.GetCthis()
+func NewQTextCursor_2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
+	var convArg0 = frame.QTextFrame_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursorC2EP10QTextFrame", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,8 +103,8 @@ func NewQTextCursor_2(frame *QTextFrame /*777 QTextFrame **/) *QTextCursor {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTextCursor(const QTextBlock &)
-func NewQTextCursor_3(block *QTextBlock) *QTextCursor {
-	var convArg0 = block.GetCthis()
+func NewQTextCursor_3(block QTextBlock_ITF) *QTextCursor {
+	var convArg0 = block.QTextBlock_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursorC2ERK10QTextBlock", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -127,8 +127,8 @@ func DeleteQTextCursor(this *QTextCursor) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QTextCursor &)
-func (this *QTextCursor) Swap(other *QTextCursor) {
-	var convArg0 = other.GetCthis()
+func (this *QTextCursor) Swap(other QTextCursor_ITF) {
+	var convArg0 = other.QTextCursor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -197,10 +197,10 @@ func (this *QTextCursor) InsertText(text string) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void insertText(const QString &, const QTextCharFormat &)
-func (this *QTextCursor) InsertText_1(text string, format *QTextCharFormat) {
+func (this *QTextCursor) InsertText_1(text string, format QTextCharFormat_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = format.GetCthis()
+	var convArg1 = format.QTextCharFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -419,8 +419,8 @@ func (this *QTextCursor) CharFormat() *QTextCharFormat /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCharFormat(const QTextCharFormat &)
-func (this *QTextCursor) SetCharFormat(format *QTextCharFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QTextCursor) SetCharFormat(format QTextCharFormat_ITF) {
+	var convArg0 = format.QTextCharFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor13setCharFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -429,8 +429,8 @@ func (this *QTextCursor) SetCharFormat(format *QTextCharFormat) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mergeCharFormat(const QTextCharFormat &)
-func (this *QTextCursor) MergeCharFormat(modifier *QTextCharFormat) {
-	var convArg0 = modifier.GetCthis()
+func (this *QTextCursor) MergeCharFormat(modifier QTextCharFormat_ITF) {
+	var convArg0 = modifier.QTextCharFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -451,8 +451,8 @@ func (this *QTextCursor) BlockFormat() *QTextBlockFormat /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBlockFormat(const QTextBlockFormat &)
-func (this *QTextCursor) SetBlockFormat(format *QTextBlockFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QTextCursor) SetBlockFormat(format QTextBlockFormat_ITF) {
+	var convArg0 = format.QTextBlockFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor14setBlockFormatERK16QTextBlockFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -461,8 +461,8 @@ func (this *QTextCursor) SetBlockFormat(format *QTextBlockFormat) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mergeBlockFormat(const QTextBlockFormat &)
-func (this *QTextCursor) MergeBlockFormat(modifier *QTextBlockFormat) {
-	var convArg0 = modifier.GetCthis()
+func (this *QTextCursor) MergeBlockFormat(modifier QTextBlockFormat_ITF) {
+	var convArg0 = modifier.QTextBlockFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor16mergeBlockFormatERK16QTextBlockFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -483,8 +483,8 @@ func (this *QTextCursor) BlockCharFormat() *QTextCharFormat /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBlockCharFormat(const QTextCharFormat &)
-func (this *QTextCursor) SetBlockCharFormat(format *QTextCharFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QTextCursor) SetBlockCharFormat(format QTextCharFormat_ITF) {
+	var convArg0 = format.QTextCharFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor18setBlockCharFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -493,8 +493,8 @@ func (this *QTextCursor) SetBlockCharFormat(format *QTextCharFormat) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mergeBlockCharFormat(const QTextCharFormat &)
-func (this *QTextCursor) MergeBlockCharFormat(modifier *QTextCharFormat) {
-	var convArg0 = modifier.GetCthis()
+func (this *QTextCursor) MergeBlockCharFormat(modifier QTextCharFormat_ITF) {
+	var convArg0 = modifier.QTextCharFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor20mergeBlockCharFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -552,8 +552,8 @@ func (this *QTextCursor) InsertBlock() {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void insertBlock(const QTextBlockFormat &)
-func (this *QTextCursor) InsertBlock_1(format *QTextBlockFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QTextCursor) InsertBlock_1(format QTextBlockFormat_ITF) {
+	var convArg0 = format.QTextBlockFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertBlockERK16QTextBlockFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -562,9 +562,9 @@ func (this *QTextCursor) InsertBlock_1(format *QTextBlockFormat) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void insertBlock(const QTextBlockFormat &, const QTextCharFormat &)
-func (this *QTextCursor) InsertBlock_2(format *QTextBlockFormat, charFormat *QTextCharFormat) {
-	var convArg0 = format.GetCthis()
-	var convArg1 = charFormat.GetCthis()
+func (this *QTextCursor) InsertBlock_2(format QTextBlockFormat_ITF, charFormat QTextCharFormat_ITF) {
+	var convArg0 = format.QTextBlockFormat_PTR().GetCthis()
+	var convArg1 = charFormat.QTextCharFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -573,8 +573,8 @@ func (this *QTextCursor) InsertBlock_2(format *QTextBlockFormat, charFormat *QTe
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextList * insertList(const QTextListFormat &)
-func (this *QTextCursor) InsertList(format *QTextListFormat) *QTextList /*777 QTextList **/ {
-	var convArg0 = format.GetCthis()
+func (this *QTextCursor) InsertList(format QTextListFormat_ITF) *QTextList /*777 QTextList **/ {
+	var convArg0 = format.QTextListFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor10insertListERK15QTextListFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextListFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -594,8 +594,8 @@ func (this *QTextCursor) InsertList_1(style int) *QTextList /*777 QTextList **/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextList * createList(const QTextListFormat &)
-func (this *QTextCursor) CreateList(format *QTextListFormat) *QTextList /*777 QTextList **/ {
-	var convArg0 = format.GetCthis()
+func (this *QTextCursor) CreateList(format QTextListFormat_ITF) *QTextList /*777 QTextList **/ {
+	var convArg0 = format.QTextListFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor10createListERK15QTextListFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextListFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -625,8 +625,8 @@ func (this *QTextCursor) CurrentList() *QTextList /*777 QTextList **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextTable * insertTable(int, int, const QTextTableFormat &)
-func (this *QTextCursor) InsertTable(rows int, cols int, format *QTextTableFormat) *QTextTable /*777 QTextTable **/ {
-	var convArg2 = format.GetCthis()
+func (this *QTextCursor) InsertTable(rows int, cols int, format QTextTableFormat_ITF) *QTextTable /*777 QTextTable **/ {
+	var convArg2 = format.QTextTableFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rows, cols, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextTableFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -656,8 +656,8 @@ func (this *QTextCursor) CurrentTable() *QTextTable /*777 QTextTable **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextFrame * insertFrame(const QTextFrameFormat &)
-func (this *QTextCursor) InsertFrame(format *QTextFrameFormat) *QTextFrame /*777 QTextFrame **/ {
-	var convArg0 = format.GetCthis()
+func (this *QTextCursor) InsertFrame(format QTextFrameFormat_ITF) *QTextFrame /*777 QTextFrame **/ {
+	var convArg0 = format.QTextFrameFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertFrameERK16QTextFrameFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextFrameFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -677,8 +677,8 @@ func (this *QTextCursor) CurrentFrame() *QTextFrame /*777 QTextFrame **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertFragment(const QTextDocumentFragment &)
-func (this *QTextCursor) InsertFragment(fragment *QTextDocumentFragment) {
-	var convArg0 = fragment.GetCthis()
+func (this *QTextCursor) InsertFragment(fragment QTextDocumentFragment_ITF) {
+	var convArg0 = fragment.QTextDocumentFragment_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor14insertFragmentERK21QTextDocumentFragment", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -698,8 +698,8 @@ func (this *QTextCursor) InsertHtml(html string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertImage(const QTextImageFormat &, QTextFrameFormat::Position)
-func (this *QTextCursor) InsertImage(format *QTextImageFormat, alignment int) {
-	var convArg0 = format.GetCthis()
+func (this *QTextCursor) InsertImage(format QTextImageFormat_ITF, alignment int) {
+	var convArg0 = format.QTextImageFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK16QTextImageFormatN16QTextFrameFormat8PositionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
 	qtrt.ErrPrint(err, rv)
 }
@@ -708,8 +708,8 @@ func (this *QTextCursor) InsertImage(format *QTextImageFormat, alignment int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void insertImage(const QTextImageFormat &)
-func (this *QTextCursor) InsertImage_1(format *QTextImageFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QTextCursor) InsertImage_1(format QTextImageFormat_ITF) {
+	var convArg0 = format.QTextImageFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK16QTextImageFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -729,8 +729,8 @@ func (this *QTextCursor) InsertImage_2(name string) {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void insertImage(const QImage &, const QString &)
-func (this *QTextCursor) InsertImage_3(image *QImage, name string) {
-	var convArg0 = image.GetCthis()
+func (this *QTextCursor) InsertImage_3(image QImage_ITF, name string) {
+	var convArg0 = image.QImage_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK6QImageRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -768,8 +768,8 @@ func (this *QTextCursor) EndEditBlock() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCopyOf(const QTextCursor &)
-func (this *QTextCursor) IsCopyOf(other *QTextCursor) bool {
-	var convArg0 = other.GetCthis()
+func (this *QTextCursor) IsCopyOf(other QTextCursor_ITF) bool {
+	var convArg0 = other.QTextCursor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor8isCopyOfERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

@@ -100,8 +100,8 @@ func DeleteQTextFormat(this *QTextFormat) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QTextFormat &)
-func (this *QTextFormat) Swap(other *QTextFormat) {
-	var convArg0 = other.GetCthis()
+func (this *QTextFormat) Swap(other QTextFormat_ITF) {
+	var convArg0 = other.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormat4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -110,8 +110,8 @@ func (this *QTextFormat) Swap(other *QTextFormat) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void merge(const QTextFormat &)
-func (this *QTextFormat) Merge(other *QTextFormat) {
-	var convArg0 = other.GetCthis()
+func (this *QTextFormat) Merge(other QTextFormat_ITF) {
+	var convArg0 = other.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormat5mergeERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -181,8 +181,8 @@ func (this *QTextFormat) Property(propertyId int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProperty(int, const QVariant &)
-func (this *QTextFormat) SetProperty(propertyId int, value *qtcore.QVariant) {
-	var convArg1 = value.GetCthis()
+func (this *QTextFormat) SetProperty(propertyId int, value qtcore.QVariant_ITF) {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormat11setPropertyEiRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), propertyId, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -503,8 +503,8 @@ func (this *QTextFormat) LayoutDirection() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
-func (this *QTextFormat) SetBackground(brush *QBrush) {
-	var convArg0 = brush.GetCthis()
+func (this *QTextFormat) SetBackground(brush QBrush_ITF) {
+	var convArg0 = brush.QBrush_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormat13setBackgroundERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -534,8 +534,8 @@ func (this *QTextFormat) ClearBackground() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setForeground(const QBrush &)
-func (this *QTextFormat) SetForeground(brush *QBrush) {
-	var convArg0 = brush.GetCthis()
+func (this *QTextFormat) SetForeground(brush QBrush_ITF) {
+	var convArg0 = brush.QBrush_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormat13setForegroundERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

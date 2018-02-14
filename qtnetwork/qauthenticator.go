@@ -174,10 +174,10 @@ func (this *QAuthenticator) Option(opt string) *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(const QString &, const QVariant &)
-func (this *QAuthenticator) SetOption(opt string, value *qtcore.QVariant) {
+func (this *QAuthenticator) SetOption(opt string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(opt)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.GetCthis()
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAuthenticator9setOptionERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

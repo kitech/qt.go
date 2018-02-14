@@ -77,8 +77,8 @@ func NewQAndroidBinder() *QAndroidBinder {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidBinder(const QAndroidJniObject &)
-func NewQAndroidBinder_1(binder *QAndroidJniObject) *QAndroidBinder {
-	var convArg0 = binder.GetCthis()
+func NewQAndroidBinder_1(binder QAndroidJniObject_ITF) *QAndroidBinder {
+	var convArg0 = binder.QAndroidJniObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidBinderC2ERK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidBinderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -101,9 +101,9 @@ func DeleteQAndroidBinder(this *QAndroidBinder) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool onTransact(int, const QAndroidParcel &, const QAndroidParcel &, enum QAndroidBinder::CallType)
-func (this *QAndroidBinder) OnTransact(code int, data *QAndroidParcel, reply *QAndroidParcel, flags int) bool {
-	var convArg1 = data.GetCthis()
-	var convArg2 = reply.GetCthis()
+func (this *QAndroidBinder) OnTransact(code int, data QAndroidParcel_ITF, reply QAndroidParcel_ITF, flags int) bool {
+	var convArg1 = data.QAndroidParcel_PTR().GetCthis()
+	var convArg2 = reply.QAndroidParcel_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidBinder10onTransactEiRK14QAndroidParcelS2_NS_8CallTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -113,9 +113,9 @@ func (this *QAndroidBinder) OnTransact(code int, data *QAndroidParcel, reply *QA
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType)
-func (this *QAndroidBinder) Transact(code int, data *QAndroidParcel, reply *QAndroidParcel /*777 QAndroidParcel **/, flags int) bool {
-	var convArg1 = data.GetCthis()
-	var convArg2 = reply.GetCthis()
+func (this *QAndroidBinder) Transact(code int, data QAndroidParcel_ITF, reply QAndroidParcel_ITF /*777 QAndroidParcel **/, flags int) bool {
+	var convArg1 = data.QAndroidParcel_PTR().GetCthis()
+	var convArg2 = reply.QAndroidParcel_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder8transactEiRK14QAndroidParcelPS0_NS_8CallTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

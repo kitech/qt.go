@@ -108,8 +108,8 @@ func (this *QLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLayout(QWidget *)
-func NewQLayout(parent *QWidget /*777 QWidget **/) *QLayout {
-	var convArg0 = parent.GetCthis()
+func NewQLayout(parent QWidget_ITF /*777 QWidget **/) *QLayout {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -189,8 +189,8 @@ func (this *QLayout) SetContentsMargins(left int, top int, right int, bottom int
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setContentsMargins(const QMargins &)
-func (this *QLayout) SetContentsMargins_1(margins *qtcore.QMargins) {
-	var convArg0 = margins.GetCthis()
+func (this *QLayout) SetContentsMargins_1(margins qtcore.QMargins_ITF) {
+	var convArg0 = margins.QMargins_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout18setContentsMarginsERK8QMargins", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -232,8 +232,8 @@ func (this *QLayout) ContentsRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setAlignment(QWidget *, Qt::Alignment)
-func (this *QLayout) SetAlignment(w *QWidget /*777 QWidget **/, alignment int) bool {
-	var convArg0 = w.GetCthis()
+func (this *QLayout) SetAlignment(w QWidget_ITF /*777 QWidget **/, alignment int) bool {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout12setAlignmentEP7QWidget6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -243,8 +243,8 @@ func (this *QLayout) SetAlignment(w *QWidget /*777 QWidget **/, alignment int) b
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool setAlignment(QLayout *, Qt::Alignment)
-func (this *QLayout) SetAlignment_1(l *QLayout /*777 QLayout **/, alignment int) bool {
-	var convArg0 = l.GetCthis()
+func (this *QLayout) SetAlignment_1(l QLayout_ITF /*777 QLayout **/, alignment int) bool {
+	var convArg0 = l.QLayout_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout12setAlignmentEPS_6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -273,8 +273,8 @@ func (this *QLayout) SizeConstraint() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenuBar(QWidget *)
-func (this *QLayout) SetMenuBar(w *QWidget /*777 QWidget **/) {
-	var convArg0 = w.GetCthis()
+func (this *QLayout) SetMenuBar(w QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout10setMenuBarEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -343,8 +343,8 @@ func (this *QLayout) Update() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addWidget(QWidget *)
-func (this *QLayout) AddWidget(w *QWidget /*777 QWidget **/) {
-	var convArg0 = w.GetCthis()
+func (this *QLayout) AddWidget(w QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout9addWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -353,8 +353,8 @@ func (this *QLayout) AddWidget(w *QWidget /*777 QWidget **/) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void addItem(QLayoutItem *)
-func (this *QLayout) AddItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLayout) AddItem(arg0 QLayoutItem_ITF /*777 QLayoutItem **/) {
+	var convArg0 = arg0.QLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout7addItemEP11QLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -363,8 +363,8 @@ func (this *QLayout) AddItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeWidget(QWidget *)
-func (this *QLayout) RemoveWidget(w *QWidget /*777 QWidget **/) {
-	var convArg0 = w.GetCthis()
+func (this *QLayout) RemoveWidget(w QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout12removeWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -373,8 +373,8 @@ func (this *QLayout) RemoveWidget(w *QWidget /*777 QWidget **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeItem(QLayoutItem *)
-func (this *QLayout) RemoveItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLayout) RemoveItem(arg0 QLayoutItem_ITF /*777 QLayoutItem **/) {
+	var convArg0 = arg0.QLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout10removeItemEP11QLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -417,8 +417,8 @@ func (this *QLayout) MaximumSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
-func (this *QLayout) SetGeometry(arg0 *qtcore.QRect) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLayout) SetGeometry(arg0 qtcore.QRect_ITF) {
+	var convArg0 = arg0.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -447,8 +447,8 @@ func (this *QLayout) TakeAt(index int) *QLayoutItem /*777 QLayoutItem **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int indexOf(QWidget *)
-func (this *QLayout) IndexOf(arg0 *QWidget /*777 QWidget **/) int {
-	var convArg0 = arg0.GetCthis()
+func (this *QLayout) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
+	var convArg0 = arg0.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLayout7indexOfEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -488,9 +488,9 @@ func (this *QLayout) ControlTypes() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QLayoutItem * replaceWidget(QWidget *, QWidget *, Qt::FindChildOptions)
-func (this *QLayout) ReplaceWidget(from *QWidget /*777 QWidget **/, to *QWidget /*777 QWidget **/, options int) *QLayoutItem /*777 QLayoutItem **/ {
-	var convArg0 = from.GetCthis()
-	var convArg1 = to.GetCthis()
+func (this *QLayout) ReplaceWidget(from QWidget_ITF /*777 QWidget **/, to QWidget_ITF /*777 QWidget **/, options int) *QLayoutItem /*777 QLayoutItem **/ {
+	var convArg0 = from.QWidget_PTR().GetCthis()
+	var convArg1 = to.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout13replaceWidgetEP7QWidgetS1_6QFlagsIN2Qt15FindChildOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, options)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -575,16 +575,16 @@ func (this *QLayout) IsEnabled() bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QSize closestAcceptableSize(const QWidget *, const QSize &)
-func (this *QLayout) ClosestAcceptableSize(w *QWidget /*777 const QWidget **/, s *qtcore.QSize) *qtcore.QSize /*123*/ {
-	var convArg0 = w.GetCthis()
-	var convArg1 = s.GetCthis()
+func (this *QLayout) ClosestAcceptableSize(w QWidget_ITF /*777 const QWidget **/, s qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
+	var convArg0 = w.QWidget_PTR().GetCthis()
+	var convArg1 = s.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout21closestAcceptableSizeEPK7QWidgetRK5QSize", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
-func QLayout_ClosestAcceptableSize(w *QWidget /*777 const QWidget **/, s *qtcore.QSize) *qtcore.QSize /*123*/ {
+func QLayout_ClosestAcceptableSize(w QWidget_ITF /*777 const QWidget **/, s qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 	var nilthis *QLayout
 	rv := nilthis.ClosestAcceptableSize(w, s)
 	return rv
@@ -594,8 +594,8 @@ func QLayout_ClosestAcceptableSize(w *QWidget /*777 const QWidget **/, s *qtcore
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void widgetEvent(QEvent *)
-func (this *QLayout) WidgetEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLayout) WidgetEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout11widgetEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -604,8 +604,8 @@ func (this *QLayout) WidgetEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void childEvent(QChildEvent *)
-func (this *QLayout) ChildEvent(e *qtcore.QChildEvent /*777 QChildEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QLayout) ChildEvent(e qtcore.QChildEvent_ITF /*777 QChildEvent **/) {
+	var convArg0 = e.QChildEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout10childEventEP11QChildEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -614,8 +614,8 @@ func (this *QLayout) ChildEvent(e *qtcore.QChildEvent /*777 QChildEvent **/) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void addChildLayout(QLayout *)
-func (this *QLayout) AddChildLayout(l *QLayout /*777 QLayout **/) {
-	var convArg0 = l.GetCthis()
+func (this *QLayout) AddChildLayout(l QLayout_ITF /*777 QLayout **/) {
+	var convArg0 = l.QLayout_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout14addChildLayoutEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -624,8 +624,8 @@ func (this *QLayout) AddChildLayout(l *QLayout /*777 QLayout **/) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void addChildWidget(QWidget *)
-func (this *QLayout) AddChildWidget(w *QWidget /*777 QWidget **/) {
-	var convArg0 = w.GetCthis()
+func (this *QLayout) AddChildWidget(w QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout14addChildWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -634,8 +634,8 @@ func (this *QLayout) AddChildWidget(w *QWidget /*777 QWidget **/) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool adoptLayout(QLayout *)
-func (this *QLayout) AdoptLayout(layout *QLayout /*777 QLayout **/) bool {
-	var convArg0 = layout.GetCthis()
+func (this *QLayout) AdoptLayout(layout QLayout_ITF /*777 QLayout **/) bool {
+	var convArg0 = layout.QLayout_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout11adoptLayoutEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -645,8 +645,8 @@ func (this *QLayout) AdoptLayout(layout *QLayout /*777 QLayout **/) bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QRect alignmentRect(const QRect &)
-func (this *QLayout) AlignmentRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QLayout) AlignmentRect(arg0 qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
+	var convArg0 = arg0.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLayout13alignmentRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333

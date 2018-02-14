@@ -188,8 +188,8 @@ func (this *QMatrix) Map_1(x float64, y float64, tx unsafe.Pointer /*666*/, ty u
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPoint map(const QPoint &)
-func (this *QMatrix) Map_2(p *qtcore.QPoint) *qtcore.QPoint /*123*/ {
-	var convArg0 = p.GetCthis()
+func (this *QMatrix) Map_2(p qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
+	var convArg0 = p.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -201,8 +201,8 @@ func (this *QMatrix) Map_2(p *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 // index:3
 // Public Visibility=Default Availability=Available
 // [16] QPointF map(const QPointF &)
-func (this *QMatrix) Map_3(p *qtcore.QPointF) *qtcore.QPointF /*123*/ {
-	var convArg0 = p.GetCthis()
+func (this *QMatrix) Map_3(p qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
+	var convArg0 = p.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -214,8 +214,8 @@ func (this *QMatrix) Map_3(p *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 // index:4
 // Public Visibility=Default Availability=Available
 // [16] QLine map(const QLine &)
-func (this *QMatrix) Map_4(l *qtcore.QLine) *qtcore.QLine /*123*/ {
-	var convArg0 = l.GetCthis()
+func (this *QMatrix) Map_4(l qtcore.QLine_ITF) *qtcore.QLine /*123*/ {
+	var convArg0 = l.QLine_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapERK5QLine", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -227,8 +227,8 @@ func (this *QMatrix) Map_4(l *qtcore.QLine) *qtcore.QLine /*123*/ {
 // index:5
 // Public Visibility=Default Availability=Available
 // [32] QLineF map(const QLineF &)
-func (this *QMatrix) Map_5(l *qtcore.QLineF) *qtcore.QLineF /*123*/ {
-	var convArg0 = l.GetCthis()
+func (this *QMatrix) Map_5(l qtcore.QLineF_ITF) *qtcore.QLineF /*123*/ {
+	var convArg0 = l.QLineF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapERK6QLineF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -240,8 +240,8 @@ func (this *QMatrix) Map_5(l *qtcore.QLineF) *qtcore.QLineF /*123*/ {
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF map(const QPolygonF &)
-func (this *QMatrix) Map_6(a *QPolygonF) *QPolygonF /*123*/ {
-	var convArg0 = a.GetCthis()
+func (this *QMatrix) Map_6(a QPolygonF_ITF) *QPolygonF /*123*/ {
+	var convArg0 = a.QPolygonF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapERK9QPolygonF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -253,8 +253,8 @@ func (this *QMatrix) Map_6(a *QPolygonF) *QPolygonF /*123*/ {
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QPolygon map(const QPolygon &)
-func (this *QMatrix) Map_7(a *QPolygon) *QPolygon /*123*/ {
-	var convArg0 = a.GetCthis()
+func (this *QMatrix) Map_7(a QPolygon_ITF) *QPolygon /*123*/ {
+	var convArg0 = a.QPolygon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapERK8QPolygon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -266,8 +266,8 @@ func (this *QMatrix) Map_7(a *QPolygon) *QPolygon /*123*/ {
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QRegion map(const QRegion &)
-func (this *QMatrix) Map_8(r *QRegion) *QRegion /*123*/ {
-	var convArg0 = r.GetCthis()
+func (this *QMatrix) Map_8(r QRegion_ITF) *QRegion /*123*/ {
+	var convArg0 = r.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -279,8 +279,8 @@ func (this *QMatrix) Map_8(r *QRegion) *QRegion /*123*/ {
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath map(const QPainterPath &)
-func (this *QMatrix) Map_9(p *QPainterPath) *QPainterPath /*123*/ {
-	var convArg0 = p.GetCthis()
+func (this *QMatrix) Map_9(p QPainterPath_ITF) *QPainterPath /*123*/ {
+	var convArg0 = p.QPainterPath_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapERK12QPainterPath", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -292,8 +292,8 @@ func (this *QMatrix) Map_9(p *QPainterPath) *QPainterPath /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect mapRect(const QRect &)
-func (this *QMatrix) MapRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QMatrix) MapRect(arg0 qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
+	var convArg0 = arg0.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix7mapRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -305,8 +305,8 @@ func (this *QMatrix) MapRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRect(const QRectF &)
-func (this *QMatrix) MapRect_1(arg0 *qtcore.QRectF) *qtcore.QRectF /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QMatrix) MapRect_1(arg0 qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
+	var convArg0 = arg0.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix7mapRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -318,8 +318,8 @@ func (this *QMatrix) MapRect_1(arg0 *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygon mapToPolygon(const QRect &)
-func (this *QMatrix) MapToPolygon(r *qtcore.QRect) *QPolygon /*123*/ {
-	var convArg0 = r.GetCthis()
+func (this *QMatrix) MapToPolygon(r qtcore.QRect_ITF) *QPolygon /*123*/ {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix12mapToPolygonERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333

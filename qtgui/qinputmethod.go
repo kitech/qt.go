@@ -85,8 +85,8 @@ func (this *QInputMethod) InputItemTransform() *QTransform /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInputItemTransform(const QTransform &)
-func (this *QInputMethod) SetInputItemTransform(transform *QTransform) {
-	var convArg0 = transform.GetCthis()
+func (this *QInputMethod) SetInputItemTransform(transform QTransform_ITF) {
+	var convArg0 = transform.QTransform_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputMethod21setInputItemTransformERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -107,8 +107,8 @@ func (this *QInputMethod) InputItemRectangle() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInputItemRectangle(const QRectF &)
-func (this *QInputMethod) SetInputItemRectangle(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QInputMethod) SetInputItemRectangle(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputMethod21setInputItemRectangleERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -216,15 +216,15 @@ func (this *QInputMethod) InputDirection() int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QVariant queryFocusObject(Qt::InputMethodQuery, QVariant)
-func (this *QInputMethod) QueryFocusObject(query int, argument *qtcore.QVariant /*123*/) *qtcore.QVariant /*123*/ {
-	var convArg1 = argument.GetCthis()
+func (this *QInputMethod) QueryFocusObject(query int, argument qtcore.QVariant_ITF /*123*/) *qtcore.QVariant /*123*/ {
+	var convArg1 = argument.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputMethod16queryFocusObjectEN2Qt16InputMethodQueryE8QVariant", qtrt.FFI_TYPE_POINTER, query, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
-func QInputMethod_QueryFocusObject(query int, argument *qtcore.QVariant /*123*/) *qtcore.QVariant /*123*/ {
+func QInputMethod_QueryFocusObject(query int, argument qtcore.QVariant_ITF /*123*/) *qtcore.QVariant /*123*/ {
 	var nilthis *QInputMethod
 	rv := nilthis.QueryFocusObject(query, argument)
 	return rv

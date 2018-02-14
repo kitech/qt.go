@@ -74,8 +74,8 @@ func (this *QBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QBoxLayout(enum QBoxLayout::Direction, QWidget *)
-func NewQBoxLayout(arg0 int, parent *QWidget /*777 QWidget **/) *QBoxLayout {
-	var convArg1 = parent.GetCthis()
+func NewQBoxLayout(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QBoxLayout {
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayoutC2ENS_9DirectionEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBoxLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -134,8 +134,8 @@ func (this *QBoxLayout) AddStretch(stretch int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addSpacerItem(QSpacerItem *)
-func (this *QBoxLayout) AddSpacerItem(spacerItem *QSpacerItem /*777 QSpacerItem **/) {
-	var convArg0 = spacerItem.GetCthis()
+func (this *QBoxLayout) AddSpacerItem(spacerItem QSpacerItem_ITF /*777 QSpacerItem **/) {
+	var convArg0 = spacerItem.QSpacerItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout13addSpacerItemEP11QSpacerItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -144,8 +144,8 @@ func (this *QBoxLayout) AddSpacerItem(spacerItem *QSpacerItem /*777 QSpacerItem 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addWidget(QWidget *, int, Qt::Alignment)
-func (this *QBoxLayout) AddWidget(arg0 *QWidget /*777 QWidget **/, stretch int, alignment int) {
-	var convArg0 = arg0.GetCthis()
+func (this *QBoxLayout) AddWidget(arg0 QWidget_ITF /*777 QWidget **/, stretch int, alignment int) {
+	var convArg0 = arg0.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch, alignment)
 	qtrt.ErrPrint(err, rv)
 }
@@ -154,8 +154,8 @@ func (this *QBoxLayout) AddWidget(arg0 *QWidget /*777 QWidget **/, stretch int, 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addLayout(QLayout *, int)
-func (this *QBoxLayout) AddLayout(layout *QLayout /*777 QLayout **/, stretch int) {
-	var convArg0 = layout.GetCthis()
+func (this *QBoxLayout) AddLayout(layout QLayout_ITF /*777 QLayout **/, stretch int) {
+	var convArg0 = layout.QLayout_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout9addLayoutEP7QLayouti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -173,8 +173,8 @@ func (this *QBoxLayout) AddStrut(arg0 int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void addItem(QLayoutItem *)
-func (this *QBoxLayout) AddItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QBoxLayout) AddItem(arg0 QLayoutItem_ITF /*777 QLayoutItem **/) {
+	var convArg0 = arg0.QLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout7addItemEP11QLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -201,8 +201,8 @@ func (this *QBoxLayout) InsertStretch(index int, stretch int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertSpacerItem(int, QSpacerItem *)
-func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem *QSpacerItem /*777 QSpacerItem **/) {
-	var convArg1 = spacerItem.GetCthis()
+func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem QSpacerItem_ITF /*777 QSpacerItem **/) {
+	var convArg1 = spacerItem.QSpacerItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -211,8 +211,8 @@ func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem *QSpacerItem /*77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertWidget(int, QWidget *, int, Qt::Alignment)
-func (this *QBoxLayout) InsertWidget(index int, widget *QWidget /*777 QWidget **/, stretch int, alignment int) {
-	var convArg1 = widget.GetCthis()
+func (this *QBoxLayout) InsertWidget(index int, widget QWidget_ITF /*777 QWidget **/, stretch int, alignment int) {
+	var convArg1 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout12insertWidgetEiP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch, alignment)
 	qtrt.ErrPrint(err, rv)
 }
@@ -221,8 +221,8 @@ func (this *QBoxLayout) InsertWidget(index int, widget *QWidget /*777 QWidget **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertLayout(int, QLayout *, int)
-func (this *QBoxLayout) InsertLayout(index int, layout *QLayout /*777 QLayout **/, stretch int) {
-	var convArg1 = layout.GetCthis()
+func (this *QBoxLayout) InsertLayout(index int, layout QLayout_ITF /*777 QLayout **/, stretch int) {
+	var convArg1 = layout.QLayout_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout12insertLayoutEiP7QLayouti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -231,8 +231,8 @@ func (this *QBoxLayout) InsertLayout(index int, layout *QLayout /*777 QLayout **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertItem(int, QLayoutItem *)
-func (this *QBoxLayout) InsertItem(index int, arg1 *QLayoutItem /*777 QLayoutItem **/) {
-	var convArg1 = arg1.GetCthis()
+func (this *QBoxLayout) InsertItem(index int, arg1 QLayoutItem_ITF /*777 QLayoutItem **/) {
+	var convArg1 = arg1.QLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout10insertItemEiP11QLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -260,8 +260,8 @@ func (this *QBoxLayout) SetSpacing(spacing int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setStretchFactor(QWidget *, int)
-func (this *QBoxLayout) SetStretchFactor(w *QWidget /*777 QWidget **/, stretch int) bool {
-	var convArg0 = w.GetCthis()
+func (this *QBoxLayout) SetStretchFactor(w QWidget_ITF /*777 QWidget **/, stretch int) bool {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout16setStretchFactorEP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -271,8 +271,8 @@ func (this *QBoxLayout) SetStretchFactor(w *QWidget /*777 QWidget **/, stretch i
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool setStretchFactor(QLayout *, int)
-func (this *QBoxLayout) SetStretchFactor_1(l *QLayout /*777 QLayout **/, stretch int) bool {
-	var convArg0 = l.GetCthis()
+func (this *QBoxLayout) SetStretchFactor_1(l QLayout_ITF /*777 QLayout **/, stretch int) bool {
+	var convArg0 = l.QLayout_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout16setStretchFactorEP7QLayouti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -416,8 +416,8 @@ func (this *QBoxLayout) Count() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
-func (this *QBoxLayout) SetGeometry(arg0 *qtcore.QRect) {
-	var convArg0 = arg0.GetCthis()
+func (this *QBoxLayout) SetGeometry(arg0 qtcore.QRect_ITF) {
+	var convArg0 = arg0.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

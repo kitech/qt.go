@@ -88,8 +88,8 @@ func DeleteQQuickTextureFactory(this *QQuickTextureFactory) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSGTexture * createTexture(QQuickWindow *)
-func (this *QQuickTextureFactory) CreateTexture(window *QQuickWindow /*777 QQuickWindow **/) *QSGTexture /*777 QSGTexture **/ {
-	var convArg0 = window.GetCthis()
+func (this *QQuickTextureFactory) CreateTexture(window QQuickWindow_ITF /*777 QQuickWindow **/) *QSGTexture /*777 QSGTexture **/ {
+	var convArg0 = window.QQuickWindow_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickTextureFactory13createTextureEP12QQuickWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -133,13 +133,13 @@ func (this *QQuickTextureFactory) Image() *qtgui.QImage /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QQuickTextureFactory * textureFactoryForImage(const QImage &)
-func (this *QQuickTextureFactory) TextureFactoryForImage(image *qtgui.QImage) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
-	var convArg0 = image.GetCthis()
+func (this *QQuickTextureFactory) TextureFactoryForImage(image qtgui.QImage_ITF) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
+	var convArg0 = image.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickTextureFactory22textureFactoryForImageERK6QImage", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QQuickTextureFactory_TextureFactoryForImage(image *qtgui.QImage) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
+func QQuickTextureFactory_TextureFactoryForImage(image qtgui.QImage_ITF) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
 	var nilthis *QQuickTextureFactory
 	rv := nilthis.TextureFactoryForImage(image)
 	return rv

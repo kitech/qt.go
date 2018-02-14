@@ -116,8 +116,8 @@ func NewQUuid_3(arg0 string) *QUuid {
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QUuid(const QByteArray &)
-func NewQUuid_4(arg0 *QByteArray) *QUuid {
-	var convArg0 = arg0.GetCthis()
+func NewQUuid_4(arg0 QByteArray_ITF) *QUuid {
+	var convArg0 = arg0.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuidC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -129,15 +129,15 @@ func NewQUuid_4(arg0 *QByteArray) *QUuid {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromString(QStringView)
-func (this *QUuid) FromString(string *QStringView /*123*/) *QUuid /*123*/ {
-	var convArg0 = string.GetCthis()
+func (this *QUuid) FromString(string QStringView_ITF /*123*/) *QUuid /*123*/ {
+	var convArg0 = string.QStringView_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid10fromStringE11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
-func QUuid_FromString(string *QStringView /*123*/) *QUuid /*123*/ {
+func QUuid_FromString(string QStringView_ITF /*123*/) *QUuid /*123*/ {
 	var nilthis *QUuid
 	rv := nilthis.FromString(string)
 	return rv
@@ -147,15 +147,15 @@ func QUuid_FromString(string *QStringView /*123*/) *QUuid /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromString(QLatin1String)
-func (this *QUuid) FromString_1(string *QLatin1String /*123*/) *QUuid /*123*/ {
-	var convArg0 = string.GetCthis()
+func (this *QUuid) FromString_1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
+	var convArg0 = string.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid10fromStringE13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
-func QUuid_FromString_1(string *QLatin1String /*123*/) *QUuid /*123*/ {
+func QUuid_FromString_1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
 	var nilthis *QUuid
 	rv := nilthis.FromString_1(string)
 	return rv
@@ -202,15 +202,15 @@ func (this *QUuid) ToRfc4122() *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromRfc4122(const QByteArray &)
-func (this *QUuid) FromRfc4122(arg0 *QByteArray) *QUuid /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QUuid) FromRfc4122(arg0 QByteArray_ITF) *QUuid /*123*/ {
+	var convArg0 = arg0.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid11fromRfc4122ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
-func QUuid_FromRfc4122(arg0 *QByteArray) *QUuid /*123*/ {
+func QUuid_FromRfc4122(arg0 QByteArray_ITF) *QUuid /*123*/ {
 	var nilthis *QUuid
 	rv := nilthis.FromRfc4122(arg0)
 	return rv
@@ -247,16 +247,16 @@ func QUuid_CreateUuid() *QUuid /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid createUuidV3(const QUuid &, const QByteArray &)
-func (this *QUuid) CreateUuidV3(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
-	var convArg0 = ns.GetCthis()
-	var convArg1 = baseData.GetCthis()
+func (this *QUuid) CreateUuidV3(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
+	var convArg0 = ns.QUuid_PTR().GetCthis()
+	var convArg1 = baseData.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid12createUuidV3ERKS_RK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
-func QUuid_CreateUuidV3(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
+func QUuid_CreateUuidV3(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
 	var nilthis *QUuid
 	rv := nilthis.CreateUuidV3(ns, baseData)
 	return rv
@@ -266,8 +266,8 @@ func QUuid_CreateUuidV3(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [16] QUuid createUuidV3(const QUuid &, const QString &)
-func (this *QUuid) CreateUuidV3_1(ns *QUuid, baseData string) *QUuid /*123*/ {
-	var convArg0 = ns.GetCthis()
+func (this *QUuid) CreateUuidV3_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
+	var convArg0 = ns.QUuid_PTR().GetCthis()
 	var tmpArg1 = NewQString_5(baseData)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid12createUuidV3ERKS_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -276,7 +276,7 @@ func (this *QUuid) CreateUuidV3_1(ns *QUuid, baseData string) *QUuid /*123*/ {
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
-func QUuid_CreateUuidV3_1(ns *QUuid, baseData string) *QUuid /*123*/ {
+func QUuid_CreateUuidV3_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 	var nilthis *QUuid
 	rv := nilthis.CreateUuidV3_1(ns, baseData)
 	return rv
@@ -286,16 +286,16 @@ func QUuid_CreateUuidV3_1(ns *QUuid, baseData string) *QUuid /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid createUuidV5(const QUuid &, const QByteArray &)
-func (this *QUuid) CreateUuidV5(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
-	var convArg0 = ns.GetCthis()
-	var convArg1 = baseData.GetCthis()
+func (this *QUuid) CreateUuidV5(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
+	var convArg0 = ns.QUuid_PTR().GetCthis()
+	var convArg1 = baseData.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid12createUuidV5ERKS_RK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
-func QUuid_CreateUuidV5(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
+func QUuid_CreateUuidV5(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
 	var nilthis *QUuid
 	rv := nilthis.CreateUuidV5(ns, baseData)
 	return rv
@@ -305,8 +305,8 @@ func QUuid_CreateUuidV5(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [16] QUuid createUuidV5(const QUuid &, const QString &)
-func (this *QUuid) CreateUuidV5_1(ns *QUuid, baseData string) *QUuid /*123*/ {
-	var convArg0 = ns.GetCthis()
+func (this *QUuid) CreateUuidV5_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
+	var convArg0 = ns.QUuid_PTR().GetCthis()
 	var tmpArg1 = NewQString_5(baseData)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid12createUuidV5ERKS_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -315,7 +315,7 @@ func (this *QUuid) CreateUuidV5_1(ns *QUuid, baseData string) *QUuid /*123*/ {
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
-func QUuid_CreateUuidV5_1(ns *QUuid, baseData string) *QUuid /*123*/ {
+func QUuid_CreateUuidV5_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 	var nilthis *QUuid
 	rv := nilthis.CreateUuidV5_1(ns, baseData)
 	return rv

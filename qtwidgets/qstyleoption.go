@@ -89,8 +89,8 @@ func DeleteQStyleOption(this *QStyleOption) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void init(const QWidget *)
-func (this *QStyleOption) Init(w *QWidget /*777 const QWidget **/) {
-	var convArg0 = w.GetCthis()
+func (this *QStyleOption) Init(w QWidget_ITF /*777 const QWidget **/) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOption4initEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -99,8 +99,8 @@ func (this *QStyleOption) Init(w *QWidget /*777 const QWidget **/) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void initFrom(const QWidget *)
-func (this *QStyleOption) InitFrom(w *QWidget /*777 const QWidget **/) {
-	var convArg0 = w.GetCthis()
+func (this *QStyleOption) InitFrom(w QWidget_ITF /*777 const QWidget **/) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOption8initFromEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

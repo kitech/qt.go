@@ -73,8 +73,8 @@ func (this *QRegExpValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegExpValidator(QObject *)
-func NewQRegExpValidator(parent *qtcore.QObject /*777 QObject **/) *QRegExpValidator {
-	var convArg0 = parent.GetCthis()
+func NewQRegExpValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRegExpValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegExpValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -85,9 +85,9 @@ func NewQRegExpValidator(parent *qtcore.QObject /*777 QObject **/) *QRegExpValid
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegExpValidator(const QRegExp &, QObject *)
-func NewQRegExpValidator_1(rx *qtcore.QRegExp, parent *qtcore.QObject /*777 QObject **/) *QRegExpValidator {
-	var convArg0 = rx.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQRegExpValidator_1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
+	var convArg0 = rx.QRegExp_PTR().GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRegExpValidatorC2ERK7QRegExpP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegExpValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -121,8 +121,8 @@ func (this *QRegExpValidator) Validate(input string, pos int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRegExp(const QRegExp &)
-func (this *QRegExpValidator) SetRegExp(rx *qtcore.QRegExp) {
-	var convArg0 = rx.GetCthis()
+func (this *QRegExpValidator) SetRegExp(rx qtcore.QRegExp_ITF) {
+	var convArg0 = rx.QRegExp_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRegExpValidator9setRegExpERK7QRegExp", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -143,8 +143,8 @@ func (this *QRegExpValidator) RegExp() *qtcore.QRegExp {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void regExpChanged(const QRegExp &)
-func (this *QRegExpValidator) RegExpChanged(regExp *qtcore.QRegExp) {
-	var convArg0 = regExp.GetCthis()
+func (this *QRegExpValidator) RegExpChanged(regExp qtcore.QRegExp_ITF) {
+	var convArg0 = regExp.QRegExp_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRegExpValidator13regExpChangedERK7QRegExp", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

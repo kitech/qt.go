@@ -77,8 +77,8 @@ func (this *QTimer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTimer(QObject *)
-func NewQTimer(parent *QObject /*777 QObject **/) *QTimer {
-	var convArg0 = parent.GetCthis()
+func NewQTimer(parent QObject_ITF /*777 QObject **/) *QTimer {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -187,14 +187,14 @@ func (this *QTimer) IsSingleShot() bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void singleShot(int, const QObject *, const char *)
-func (this *QTimer) SingleShot(msec int, receiver *QObject /*777 const QObject **/, member string) {
-	var convArg1 = receiver.GetCthis()
+func (this *QTimer) SingleShot(msec int, receiver QObject_ITF /*777 const QObject **/, member string) {
+	var convArg1 = receiver.QObject_PTR().GetCthis()
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer10singleShotEiPK7QObjectPKc", qtrt.FFI_TYPE_POINTER, msec, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
-func QTimer_SingleShot(msec int, receiver *QObject /*777 const QObject **/, member string) {
+func QTimer_SingleShot(msec int, receiver QObject_ITF /*777 const QObject **/, member string) {
 	var nilthis *QTimer
 	nilthis.SingleShot(msec, receiver, member)
 }
@@ -203,14 +203,14 @@ func QTimer_SingleShot(msec int, receiver *QObject /*777 const QObject **/, memb
 // index:1
 // Public static Visibility=Default Availability=Available
 // [-2] void singleShot(int, Qt::TimerType, const QObject *, const char *)
-func (this *QTimer) SingleShot_1(msec int, timerType int, receiver *QObject /*777 const QObject **/, member string) {
-	var convArg2 = receiver.GetCthis()
+func (this *QTimer) SingleShot_1(msec int, timerType int, receiver QObject_ITF /*777 const QObject **/, member string) {
+	var convArg2 = receiver.QObject_PTR().GetCthis()
 	var convArg3 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg3)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", qtrt.FFI_TYPE_POINTER, msec, timerType, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 }
-func QTimer_SingleShot_1(msec int, timerType int, receiver *QObject /*777 const QObject **/, member string) {
+func QTimer_SingleShot_1(msec int, timerType int, receiver QObject_ITF /*777 const QObject **/, member string) {
 	var nilthis *QTimer
 	nilthis.SingleShot_1(msec, timerType, receiver, member)
 }
@@ -266,8 +266,8 @@ func (this *QTimer) RemainingTimeAsDuration() int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
-func (this *QTimer) TimerEvent(arg0 *QTimerEvent /*777 QTimerEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QTimer) TimerEvent(arg0 QTimerEvent_ITF /*777 QTimerEvent **/) {
+	var convArg0 = arg0.QTimerEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

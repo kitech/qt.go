@@ -98,8 +98,8 @@ func NewQFile_1(name string) *QFile {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QFile(QObject *)
-func NewQFile_2(parent *QObject /*777 QObject **/) *QFile {
-	var convArg0 = parent.GetCthis()
+func NewQFile_2(parent QObject_ITF /*777 QObject **/) *QFile {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,10 +110,10 @@ func NewQFile_2(parent *QObject /*777 QObject **/) *QFile {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QFile(const QString &, QObject *)
-func NewQFile_3(name string, parent *QObject /*777 QObject **/) *QFile {
+func NewQFile_3(name string, parent QObject_ITF /*777 QObject **/) *QFile {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -178,8 +178,8 @@ func QFile_EncodeName(fileName string) *QByteArray /*123*/ {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString decodeName(const QByteArray &)
-func (this *QFile) DecodeName(localFileName *QByteArray) string {
-	var convArg0 = localFileName.GetCthis()
+func (this *QFile) DecodeName(localFileName QByteArray_ITF) string {
+	var convArg0 = localFileName.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile10decodeNameERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -187,7 +187,7 @@ func (this *QFile) DecodeName(localFileName *QByteArray) string {
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }
-func QFile_DecodeName(localFileName *QByteArray) string {
+func QFile_DecodeName(localFileName QByteArray_ITF) string {
 	var nilthis *QFile
 	rv := nilthis.DecodeName(localFileName)
 	return rv

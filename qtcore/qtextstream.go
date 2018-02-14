@@ -76,8 +76,8 @@ func NewQTextStream() *QTextStream {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(QIODevice *)
-func NewQTextStream_1(device *QIODevice /*777 QIODevice **/) *QTextStream {
-	var convArg0 = device.GetCthis()
+func NewQTextStream_1(device QIODevice_ITF /*777 QIODevice **/) *QTextStream {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamC2EP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,8 +103,8 @@ func NewQTextStream_2(string string, openMode int) *QTextStream {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(QByteArray *, QIODevice::OpenMode)
-func NewQTextStream_3(array *QByteArray /*777 QByteArray **/, openMode int) *QTextStream {
-	var convArg0 = array.GetCthis()
+func NewQTextStream_3(array QByteArray_ITF /*777 QByteArray **/, openMode int) *QTextStream {
+	var convArg0 = array.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamC2EP10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, openMode)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,8 +116,8 @@ func NewQTextStream_3(array *QByteArray /*777 QByteArray **/, openMode int) *QTe
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(const QByteArray &, QIODevice::OpenMode)
-func NewQTextStream_4(array *QByteArray, openMode int) *QTextStream {
-	var convArg0 = array.GetCthis()
+func NewQTextStream_4(array QByteArray_ITF, openMode int) *QTextStream {
+	var convArg0 = array.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamC2ERK10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, openMode)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -140,8 +140,8 @@ func DeleteQTextStream(this *QTextStream) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCodec(QTextCodec *)
-func (this *QTextStream) SetCodec(codec *QTextCodec /*777 QTextCodec **/) {
-	var convArg0 = codec.GetCthis()
+func (this *QTextStream) SetCodec(codec QTextCodec_ITF /*777 QTextCodec **/) {
+	var convArg0 = codec.QTextCodec_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream8setCodecEP10QTextCodec", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -209,8 +209,8 @@ func (this *QTextStream) GenerateByteOrderMark() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLocale(const QLocale &)
-func (this *QTextStream) SetLocale(locale *QLocale) {
-	var convArg0 = locale.GetCthis()
+func (this *QTextStream) SetLocale(locale QLocale_ITF) {
+	var convArg0 = locale.QLocale_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream9setLocaleERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -231,8 +231,8 @@ func (this *QTextStream) Locale() *QLocale /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
-func (this *QTextStream) SetDevice(device *QIODevice /*777 QIODevice **/) {
-	var convArg0 = device.GetCthis()
+func (this *QTextStream) SetDevice(device QIODevice_ITF /*777 QIODevice **/) {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -430,8 +430,8 @@ func (this *QTextStream) FieldAlignment() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPadChar(QChar)
-func (this *QTextStream) SetPadChar(ch *QChar /*123*/) {
-	var convArg0 = ch.GetCthis()
+func (this *QTextStream) SetPadChar(ch QChar_ITF /*123*/) {
+	var convArg0 = ch.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream10setPadCharE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

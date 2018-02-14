@@ -74,8 +74,8 @@ func (this *QActionGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QActionGroup(QObject *)
-func NewQActionGroup(parent *qtcore.QObject /*777 QObject **/) *QActionGroup {
-	var convArg0 = parent.GetCthis()
+func NewQActionGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QActionGroup {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQActionGroupFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -97,8 +97,8 @@ func DeleteQActionGroup(this *QActionGroup) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(QAction *)
-func (this *QActionGroup) AddAction(a *QAction /*777 QAction **/) *QAction /*777 QAction **/ {
-	var convArg0 = a.GetCthis()
+func (this *QActionGroup) AddAction(a QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
+	var convArg0 = a.QAction_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup9addActionEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -120,8 +120,8 @@ func (this *QActionGroup) AddAction_1(text string) *QAction /*777 QAction **/ {
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &)
-func (this *QActionGroup) AddAction_2(icon *qtgui.QIcon, text string) *QAction /*777 QAction **/ {
-	var convArg0 = icon.GetCthis()
+func (this *QActionGroup) AddAction_2(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -133,8 +133,8 @@ func (this *QActionGroup) AddAction_2(icon *qtgui.QIcon, text string) *QAction /
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAction(QAction *)
-func (this *QActionGroup) RemoveAction(a *QAction /*777 QAction **/) {
-	var convArg0 = a.GetCthis()
+func (this *QActionGroup) RemoveAction(a QAction_ITF /*777 QAction **/) {
+	var convArg0 = a.QAction_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup12removeActionEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -219,8 +219,8 @@ func (this *QActionGroup) SetExclusive(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(QAction *)
-func (this *QActionGroup) Triggered(arg0 *QAction /*777 QAction **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QActionGroup) Triggered(arg0 QAction_ITF /*777 QAction **/) {
+	var convArg0 = arg0.QAction_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup9triggeredEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -229,8 +229,8 @@ func (this *QActionGroup) Triggered(arg0 *QAction /*777 QAction **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hovered(QAction *)
-func (this *QActionGroup) Hovered(arg0 *QAction /*777 QAction **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QActionGroup) Hovered(arg0 QAction_ITF /*777 QAction **/) {
+	var convArg0 = arg0.QAction_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup7hoveredEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

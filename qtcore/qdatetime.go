@@ -76,8 +76,8 @@ func NewQDateTime() *QDateTime {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTime(const QDate &)
-func NewQDateTime_1(arg0 *QDate) *QDateTime {
-	var convArg0 = arg0.GetCthis()
+func NewQDateTime_1(arg0 QDate_ITF) *QDateTime {
+	var convArg0 = arg0.QDate_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTimeC2ERK5QDate", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -89,9 +89,9 @@ func NewQDateTime_1(arg0 *QDate) *QDateTime {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTime(const QDate &, const QTime &, Qt::TimeSpec)
-func NewQDateTime_2(arg0 *QDate, arg1 *QTime, spec int) *QDateTime {
-	var convArg0 = arg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+func NewQDateTime_2(arg0 QDate_ITF, arg1 QTime_ITF, spec int) *QDateTime {
+	var convArg0 = arg0.QDate_PTR().GetCthis()
+	var convArg1 = arg1.QTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTimeC2ERK5QDateRK5QTimeN2Qt8TimeSpecE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, spec)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,9 +103,9 @@ func NewQDateTime_2(arg0 *QDate, arg1 *QTime, spec int) *QDateTime {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTime(const QDate &, const QTime &, Qt::TimeSpec, int)
-func NewQDateTime_3(date *QDate, time *QTime, spec int, offsetSeconds int) *QDateTime {
-	var convArg0 = date.GetCthis()
-	var convArg1 = time.GetCthis()
+func NewQDateTime_3(date QDate_ITF, time QTime_ITF, spec int, offsetSeconds int) *QDateTime {
+	var convArg0 = date.QDate_PTR().GetCthis()
+	var convArg1 = time.QTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTimeC2ERK5QDateRK5QTimeN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, spec, offsetSeconds)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,10 +117,10 @@ func NewQDateTime_3(date *QDate, time *QTime, spec int, offsetSeconds int) *QDat
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTime(const QDate &, const QTime &, const QTimeZone &)
-func NewQDateTime_4(date *QDate, time *QTime, timeZone *QTimeZone) *QDateTime {
-	var convArg0 = date.GetCthis()
-	var convArg1 = time.GetCthis()
-	var convArg2 = timeZone.GetCthis()
+func NewQDateTime_4(date QDate_ITF, time QTime_ITF, timeZone QTimeZone_ITF) *QDateTime {
+	var convArg0 = date.QDate_PTR().GetCthis()
+	var convArg1 = time.QTime_PTR().GetCthis()
+	var convArg2 = timeZone.QTimeZone_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -143,8 +143,8 @@ func DeleteQDateTime(this *QDateTime) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDateTime &)
-func (this *QDateTime) Swap(other *QDateTime) {
-	var convArg0 = other.GetCthis()
+func (this *QDateTime) Swap(other QDateTime_ITF) {
+	var convArg0 = other.QDateTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -272,8 +272,8 @@ func (this *QDateTime) ToSecsSinceEpoch() int64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDate(const QDate &)
-func (this *QDateTime) SetDate(date *QDate) {
-	var convArg0 = date.GetCthis()
+func (this *QDateTime) SetDate(date QDate_ITF) {
+	var convArg0 = date.QDate_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime7setDateERK5QDate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -282,8 +282,8 @@ func (this *QDateTime) SetDate(date *QDate) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTime(const QTime &)
-func (this *QDateTime) SetTime(time *QTime) {
-	var convArg0 = time.GetCthis()
+func (this *QDateTime) SetTime(time QTime_ITF) {
+	var convArg0 = time.QTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime7setTimeERK5QTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -310,8 +310,8 @@ func (this *QDateTime) SetOffsetFromUtc(offsetSeconds int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTimeZone(const QTimeZone &)
-func (this *QDateTime) SetTimeZone(toZone *QTimeZone) {
-	var convArg0 = toZone.GetCthis()
+func (this *QDateTime) SetTimeZone(toZone QTimeZone_ITF) {
+	var convArg0 = toZone.QTimeZone_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime11setTimeZoneERK9QTimeZone", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -366,8 +366,8 @@ func (this *QDateTime) ToString_1(format string) string {
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString toString(QStringView)
-func (this *QDateTime) ToString_2(format *QStringView /*123*/) string {
-	var convArg0 = format.GetCthis()
+func (this *QDateTime) ToString_2(format QStringView_ITF /*123*/) string {
+	var convArg0 = format.QStringView_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime8toStringE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -488,8 +488,8 @@ func (this *QDateTime) ToOffsetFromUtc(offsetSeconds int) *QDateTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime toTimeZone(const QTimeZone &)
-func (this *QDateTime) ToTimeZone(toZone *QTimeZone) *QDateTime /*123*/ {
-	var convArg0 = toZone.GetCthis()
+func (this *QDateTime) ToTimeZone(toZone QTimeZone_ITF) *QDateTime /*123*/ {
+	var convArg0 = toZone.QTimeZone_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime10toTimeZoneERK9QTimeZone", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -501,8 +501,8 @@ func (this *QDateTime) ToTimeZone(toZone *QTimeZone) *QDateTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 daysTo(const QDateTime &)
-func (this *QDateTime) DaysTo(arg0 *QDateTime) int64 {
-	var convArg0 = arg0.GetCthis()
+func (this *QDateTime) DaysTo(arg0 QDateTime_ITF) int64 {
+	var convArg0 = arg0.QDateTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime6daysToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -512,8 +512,8 @@ func (this *QDateTime) DaysTo(arg0 *QDateTime) int64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 secsTo(const QDateTime &)
-func (this *QDateTime) SecsTo(arg0 *QDateTime) int64 {
-	var convArg0 = arg0.GetCthis()
+func (this *QDateTime) SecsTo(arg0 QDateTime_ITF) int64 {
+	var convArg0 = arg0.QDateTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -523,8 +523,8 @@ func (this *QDateTime) SecsTo(arg0 *QDateTime) int64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 msecsTo(const QDateTime &)
-func (this *QDateTime) MsecsTo(arg0 *QDateTime) int64 {
-	var convArg0 = arg0.GetCthis()
+func (this *QDateTime) MsecsTo(arg0 QDateTime_ITF) int64 {
+	var convArg0 = arg0.QDateTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -680,15 +680,15 @@ func QDateTime_FromTime_t_1(secsSince1Jan1970UTC uint, spec int, offsetFromUtc i
 // index:2
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromTime_t(uint, const QTimeZone &)
-func (this *QDateTime) FromTime_t_2(secsSince1Jan1970UTC uint, timeZone *QTimeZone) *QDateTime /*123*/ {
-	var convArg1 = timeZone.GetCthis()
+func (this *QDateTime) FromTime_t_2(secsSince1Jan1970UTC uint, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
+	var convArg1 = timeZone.QTimeZone_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime10fromTime_tEjRK9QTimeZone", qtrt.FFI_TYPE_POINTER, secsSince1Jan1970UTC, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
 }
-func QDateTime_FromTime_t_2(secsSince1Jan1970UTC uint, timeZone *QTimeZone) *QDateTime /*123*/ {
+func QDateTime_FromTime_t_2(secsSince1Jan1970UTC uint, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
 	var nilthis *QDateTime
 	rv := nilthis.FromTime_t_2(secsSince1Jan1970UTC, timeZone)
 	return rv
@@ -732,15 +732,15 @@ func QDateTime_FromMSecsSinceEpoch_1(msecs int64, spec int, offsetFromUtc int) *
 // index:2
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromMSecsSinceEpoch(qint64, const QTimeZone &)
-func (this *QDateTime) FromMSecsSinceEpoch_2(msecs int64, timeZone *QTimeZone) *QDateTime /*123*/ {
-	var convArg1 = timeZone.GetCthis()
+func (this *QDateTime) FromMSecsSinceEpoch_2(msecs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
+	var convArg1 = timeZone.QTimeZone_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime19fromMSecsSinceEpochExRK9QTimeZone", qtrt.FFI_TYPE_POINTER, msecs, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
 }
-func QDateTime_FromMSecsSinceEpoch_2(msecs int64, timeZone *QTimeZone) *QDateTime /*123*/ {
+func QDateTime_FromMSecsSinceEpoch_2(msecs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
 	var nilthis *QDateTime
 	rv := nilthis.FromMSecsSinceEpoch_2(msecs, timeZone)
 	return rv
@@ -767,15 +767,15 @@ func QDateTime_FromSecsSinceEpoch(secs int64, spe int, offsetFromUtc int) *QDate
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromSecsSinceEpoch(qint64, const QTimeZone &)
-func (this *QDateTime) FromSecsSinceEpoch_1(secs int64, timeZone *QTimeZone) *QDateTime /*123*/ {
-	var convArg1 = timeZone.GetCthis()
+func (this *QDateTime) FromSecsSinceEpoch_1(secs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
+	var convArg1 = timeZone.QTimeZone_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime18fromSecsSinceEpochExRK9QTimeZone", qtrt.FFI_TYPE_POINTER, secs, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
 }
-func QDateTime_FromSecsSinceEpoch_1(secs int64, timeZone *QTimeZone) *QDateTime /*123*/ {
+func QDateTime_FromSecsSinceEpoch_1(secs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
 	var nilthis *QDateTime
 	rv := nilthis.FromSecsSinceEpoch_1(secs, timeZone)
 	return rv

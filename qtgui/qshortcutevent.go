@@ -63,8 +63,8 @@ func (*QShortcutEvent) NewFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcutEvent(const QKeySequence &, int, _Bool)
-func NewQShortcutEvent(key *QKeySequence, id int, ambiguous bool) *QShortcutEvent {
-	var convArg0 = key.GetCthis()
+func NewQShortcutEvent(key QKeySequence_ITF, id int, ambiguous bool) *QShortcutEvent {
+	var convArg0 = key.QKeySequence_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QShortcutEventC2ERK12QKeySequenceib", qtrt.FFI_TYPE_POINTER, convArg0, id, ambiguous)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQShortcutEventFromPointer(unsafe.Pointer(uintptr(rv)))

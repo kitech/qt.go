@@ -125,8 +125,8 @@ func DeleteQByteArray(this *QByteArray) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QByteArray &)
-func (this *QByteArray) Swap(other *QByteArray) {
-	var convArg0 = other.GetCthis()
+func (this *QByteArray) Swap(other QByteArray_ITF) {
+	var convArg0 = other.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -253,8 +253,8 @@ func (this *QByteArray) IsDetached() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSharedWith(const QByteArray &)
-func (this *QByteArray) IsSharedWith(other *QByteArray) bool {
-	var convArg0 = other.GetCthis()
+func (this *QByteArray) IsSharedWith(other QByteArray_ITF) bool {
+	var convArg0 = other.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray12isSharedWithERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -349,8 +349,8 @@ func (this *QByteArray) IndexOf_1(c string, from int) int {
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QByteArray &, int)
-func (this *QByteArray) IndexOf_2(a *QByteArray, from int) int {
-	var convArg0 = a.GetCthis()
+func (this *QByteArray) IndexOf_2(a QByteArray_ITF, from int) int {
+	var convArg0 = a.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfERKS_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -394,8 +394,8 @@ func (this *QByteArray) LastIndexOf_1(c string, from int) int {
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QByteArray &, int)
-func (this *QByteArray) LastIndexOf_2(a *QByteArray, from int) int {
-	var convArg0 = a.GetCthis()
+func (this *QByteArray) LastIndexOf_2(a QByteArray_ITF, from int) int {
+	var convArg0 = a.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfERKS_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -439,8 +439,8 @@ func (this *QByteArray) Contains_1(a string) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QByteArray &)
-func (this *QByteArray) Contains_2(a *QByteArray) bool {
-	var convArg0 = a.GetCthis()
+func (this *QByteArray) Contains_2(a QByteArray_ITF) bool {
+	var convArg0 = a.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8containsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -472,8 +472,8 @@ func (this *QByteArray) Count_1(a string) int {
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int count(const QByteArray &)
-func (this *QByteArray) Count_2(a *QByteArray) int {
-	var convArg0 = a.GetCthis()
+func (this *QByteArray) Count_2(a QByteArray_ITF) int {
+	var convArg0 = a.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5countERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -541,8 +541,8 @@ func (this *QByteArray) Chopped(len int) *QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QByteArray &)
-func (this *QByteArray) StartsWith(a *QByteArray) bool {
-	var convArg0 = a.GetCthis()
+func (this *QByteArray) StartsWith(a QByteArray_ITF) bool {
+	var convArg0 = a.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10startsWithERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -574,8 +574,8 @@ func (this *QByteArray) StartsWith_2(c string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QByteArray &)
-func (this *QByteArray) EndsWith(a *QByteArray) bool {
-	var convArg0 = a.GetCthis()
+func (this *QByteArray) EndsWith(a QByteArray_ITF) bool {
+	var convArg0 = a.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8endsWithERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -785,8 +785,8 @@ func (this *QByteArray) Replace_1(index int, len int, s string, alen int) *QByte
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(int, int, const QByteArray &)
-func (this *QByteArray) Replace_2(index int, len int, s *QByteArray) *QByteArray {
-	var convArg2 = s.GetCthis()
+func (this *QByteArray) Replace_2(index int, len int, s QByteArray_ITF) *QByteArray {
+	var convArg2 = s.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -812,8 +812,8 @@ func (this *QByteArray) Replace_3(before byte, after string) *QByteArray {
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(char, const QByteArray &)
-func (this *QByteArray) Replace_4(before byte, after *QByteArray) *QByteArray {
-	var convArg1 = after.GetCthis()
+func (this *QByteArray) Replace_4(before byte, after QByteArray_ITF) *QByteArray {
+	var convArg1 = after.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEcRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), before, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -857,9 +857,9 @@ func (this *QByteArray) Replace_6(before string, bsize int, after string, asize 
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(const QByteArray &, const QByteArray &)
-func (this *QByteArray) Replace_7(before *QByteArray, after *QByteArray) *QByteArray {
-	var convArg0 = before.GetCthis()
-	var convArg1 = after.GetCthis()
+func (this *QByteArray) Replace_7(before QByteArray_ITF, after QByteArray_ITF) *QByteArray {
+	var convArg0 = before.QByteArray_PTR().GetCthis()
+	var convArg1 = after.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceERKS_S1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -871,8 +871,8 @@ func (this *QByteArray) Replace_7(before *QByteArray, after *QByteArray) *QByteA
 // index:8
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & replace(const QByteArray &, const char *)
-func (this *QByteArray) Replace_8(before *QByteArray, after string) *QByteArray {
-	var convArg0 = before.GetCthis()
+func (this *QByteArray) Replace_8(before QByteArray_ITF, after string) *QByteArray {
+	var convArg0 = before.QByteArray_PTR().GetCthis()
 	var convArg1 = qtrt.CString(after)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceERKS_PKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -886,10 +886,10 @@ func (this *QByteArray) Replace_8(before *QByteArray, after string) *QByteArray 
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(const char *, const QByteArray &)
-func (this *QByteArray) Replace_9(before string, after *QByteArray) *QByteArray {
+func (this *QByteArray) Replace_9(before string, after QByteArray_ITF) *QByteArray {
 	var convArg0 = qtrt.CString(before)
 	defer qtrt.FreeMem(convArg0)
-	var convArg1 = after.GetCthis()
+	var convArg1 = after.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEPKcRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -943,10 +943,10 @@ func (this *QByteArray) Replace_12(c byte, after string) *QByteArray {
 // index:13
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(const QString &, const QByteArray &)
-func (this *QByteArray) Replace_13(before string, after *QByteArray) *QByteArray {
+func (this *QByteArray) Replace_13(before string, after QByteArray_ITF) *QByteArray {
 	var tmpArg0 = NewQString_5(before)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = after.GetCthis()
+	var convArg1 = after.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceERK7QStringRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1118,9 +1118,9 @@ func (this *QByteArray) ToHex_1(separator byte) *QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char)
-func (this *QByteArray) ToPercentEncoding(exclude *QByteArray, include *QByteArray, percent byte) *QByteArray /*123*/ {
-	var convArg0 = exclude.GetCthis()
-	var convArg1 = include.GetCthis()
+func (this *QByteArray) ToPercentEncoding(exclude QByteArray_ITF, include QByteArray_ITF, percent byte) *QByteArray /*123*/ {
+	var convArg0 = exclude.QByteArray_PTR().GetCthis()
+	var convArg1 = include.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray17toPercentEncodingERKS_S1_c", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, percent)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1346,15 +1346,15 @@ func QByteArray_FromRawData(arg0 string, size int) *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray fromBase64(const QByteArray &, QByteArray::Base64Options)
-func (this *QByteArray) FromBase64(base64 *QByteArray, options int) *QByteArray /*123*/ {
-	var convArg0 = base64.GetCthis()
+func (this *QByteArray) FromBase64(base64 QByteArray_ITF, options int) *QByteArray /*123*/ {
+	var convArg0 = base64.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray10fromBase64ERKS_6QFlagsINS_12Base64OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, options)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QByteArray_FromBase64(base64 *QByteArray, options int) *QByteArray /*123*/ {
+func QByteArray_FromBase64(base64 QByteArray_ITF, options int) *QByteArray /*123*/ {
 	var nilthis *QByteArray
 	rv := nilthis.FromBase64(base64, options)
 	return rv
@@ -1364,15 +1364,15 @@ func QByteArray_FromBase64(base64 *QByteArray, options int) *QByteArray /*123*/ 
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray fromBase64(const QByteArray &)
-func (this *QByteArray) FromBase64_1(base64 *QByteArray) *QByteArray /*123*/ {
-	var convArg0 = base64.GetCthis()
+func (this *QByteArray) FromBase64_1(base64 QByteArray_ITF) *QByteArray /*123*/ {
+	var convArg0 = base64.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray10fromBase64ERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QByteArray_FromBase64_1(base64 *QByteArray) *QByteArray /*123*/ {
+func QByteArray_FromBase64_1(base64 QByteArray_ITF) *QByteArray /*123*/ {
 	var nilthis *QByteArray
 	rv := nilthis.FromBase64_1(base64)
 	return rv
@@ -1382,15 +1382,15 @@ func QByteArray_FromBase64_1(base64 *QByteArray) *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray fromHex(const QByteArray &)
-func (this *QByteArray) FromHex(hexEncoded *QByteArray) *QByteArray /*123*/ {
-	var convArg0 = hexEncoded.GetCthis()
+func (this *QByteArray) FromHex(hexEncoded QByteArray_ITF) *QByteArray /*123*/ {
+	var convArg0 = hexEncoded.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7fromHexERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QByteArray_FromHex(hexEncoded *QByteArray) *QByteArray /*123*/ {
+func QByteArray_FromHex(hexEncoded QByteArray_ITF) *QByteArray /*123*/ {
 	var nilthis *QByteArray
 	rv := nilthis.FromHex(hexEncoded)
 	return rv
@@ -1400,15 +1400,15 @@ func QByteArray_FromHex(hexEncoded *QByteArray) *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray fromPercentEncoding(const QByteArray &, char)
-func (this *QByteArray) FromPercentEncoding(pctEncoded *QByteArray, percent byte) *QByteArray /*123*/ {
-	var convArg0 = pctEncoded.GetCthis()
+func (this *QByteArray) FromPercentEncoding(pctEncoded QByteArray_ITF, percent byte) *QByteArray /*123*/ {
+	var convArg0 = pctEncoded.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray19fromPercentEncodingERKS_c", qtrt.FFI_TYPE_POINTER, convArg0, percent)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QByteArray_FromPercentEncoding(pctEncoded *QByteArray, percent byte) *QByteArray /*123*/ {
+func QByteArray_FromPercentEncoding(pctEncoded QByteArray_ITF, percent byte) *QByteArray /*123*/ {
 	var nilthis *QByteArray
 	rv := nilthis.FromPercentEncoding(pctEncoded, percent)
 	return rv
@@ -1518,8 +1518,8 @@ func (this *QByteArray) Push_back_1(c string) {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_back(const QByteArray &)
-func (this *QByteArray) Push_back_2(a *QByteArray) {
-	var convArg0 = a.GetCthis()
+func (this *QByteArray) Push_back_2(a QByteArray_ITF) {
+	var convArg0 = a.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray9push_backERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1548,8 +1548,8 @@ func (this *QByteArray) Push_front_1(c string) {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_front(const QByteArray &)
-func (this *QByteArray) Push_front_2(a *QByteArray) {
-	var convArg0 = a.GetCthis()
+func (this *QByteArray) Push_front_2(a QByteArray_ITF) {
+	var convArg0 = a.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray10push_frontERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

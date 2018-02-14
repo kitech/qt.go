@@ -119,8 +119,8 @@ func (this *QSizeGrip) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSizeGrip(QWidget *)
-func NewQSizeGrip(parent *QWidget /*777 QWidget **/) *QSizeGrip {
-	var convArg0 = parent.GetCthis()
+func NewQSizeGrip(parent QWidget_ITF /*777 QWidget **/) *QSizeGrip {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGripC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSizeGripFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -163,8 +163,8 @@ func (this *QSizeGrip) SetVisible(arg0 bool) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QSizeGrip) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QSizeGrip) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -173,8 +173,8 @@ func (this *QSizeGrip) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
-func (this *QSizeGrip) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QSizeGrip) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -183,8 +183,8 @@ func (this *QSizeGrip) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QSizeGrip) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QSizeGrip) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -193,8 +193,8 @@ func (this *QSizeGrip) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QSizeGrip) MouseReleaseEvent(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = mouseEvent.GetCthis()
+func (this *QSizeGrip) MouseReleaseEvent(mouseEvent qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = mouseEvent.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -203,8 +203,8 @@ func (this *QSizeGrip) MouseReleaseEvent(mouseEvent *qtgui.QMouseEvent /*777 QMo
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void moveEvent(QMoveEvent *)
-func (this *QSizeGrip) MoveEvent(moveEvent *qtgui.QMoveEvent /*777 QMoveEvent **/) {
-	var convArg0 = moveEvent.GetCthis()
+func (this *QSizeGrip) MoveEvent(moveEvent qtgui.QMoveEvent_ITF /*777 QMoveEvent **/) {
+	var convArg0 = moveEvent.QMoveEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip9moveEventEP10QMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -213,8 +213,8 @@ func (this *QSizeGrip) MoveEvent(moveEvent *qtgui.QMoveEvent /*777 QMoveEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
-func (this *QSizeGrip) ShowEvent(showEvent *qtgui.QShowEvent /*777 QShowEvent **/) {
-	var convArg0 = showEvent.GetCthis()
+func (this *QSizeGrip) ShowEvent(showEvent qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
+	var convArg0 = showEvent.QShowEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -223,8 +223,8 @@ func (this *QSizeGrip) ShowEvent(showEvent *qtgui.QShowEvent /*777 QShowEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
-func (this *QSizeGrip) HideEvent(hideEvent *qtgui.QHideEvent /*777 QHideEvent **/) {
-	var convArg0 = hideEvent.GetCthis()
+func (this *QSizeGrip) HideEvent(hideEvent qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
+	var convArg0 = hideEvent.QHideEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip9hideEventEP10QHideEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -233,9 +233,9 @@ func (this *QSizeGrip) HideEvent(hideEvent *qtgui.QHideEvent /*777 QHideEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
-func (this *QSizeGrip) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+func (this *QSizeGrip) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg1 = arg1.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -245,8 +245,8 @@ func (this *QSizeGrip) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QSizeGrip) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QSizeGrip) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

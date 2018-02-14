@@ -63,10 +63,10 @@ func (*QEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QEnterEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QEnterEvent(const QPointF &, const QPointF &, const QPointF &)
-func NewQEnterEvent(localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenPos *qtcore.QPointF) *QEnterEvent {
-	var convArg0 = localPos.GetCthis()
-	var convArg1 = windowPos.GetCthis()
-	var convArg2 = screenPos.GetCthis()
+func NewQEnterEvent(localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF) *QEnterEvent {
+	var convArg0 = localPos.QPointF_PTR().GetCthis()
+	var convArg1 = windowPos.QPointF_PTR().GetCthis()
+	var convArg2 = screenPos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QEnterEventC2ERK7QPointFS2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEnterEventFromPointer(unsafe.Pointer(uintptr(rv)))

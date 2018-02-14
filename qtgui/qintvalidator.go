@@ -73,8 +73,8 @@ func (this *QIntValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(QObject *)
-func NewQIntValidator(parent *qtcore.QObject /*777 QObject **/) *QIntValidator {
-	var convArg0 = parent.GetCthis()
+func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIntValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -85,8 +85,8 @@ func NewQIntValidator(parent *qtcore.QObject /*777 QObject **/) *QIntValidator {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(int, int, QObject *)
-func NewQIntValidator_1(bottom int, top int, parent *qtcore.QObject /*777 QObject **/) *QIntValidator {
-	var convArg2 = parent.GetCthis()
+func NewQIntValidator_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
+	var convArg2 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EiiP7QObject", qtrt.FFI_TYPE_POINTER, bottom, top, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIntValidatorFromPointer(unsafe.Pointer(uintptr(rv)))

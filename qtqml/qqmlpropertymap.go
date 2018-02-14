@@ -79,8 +79,8 @@ func (this *QQmlPropertyMap) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlPropertyMap(QObject *)
-func NewQQmlPropertyMap(parent *qtcore.QObject /*777 QObject **/) *QQmlPropertyMap {
-	var convArg0 = parent.GetCthis()
+func NewQQmlPropertyMap(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlPropertyMap {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQmlPropertyMapC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlPropertyMapFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -181,10 +181,10 @@ func (this *QQmlPropertyMap) Contains(key string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(const QString &, const QVariant &)
-func (this *QQmlPropertyMap) ValueChanged(key string, value *qtcore.QVariant) {
+func (this *QQmlPropertyMap) ValueChanged(key string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.GetCthis()
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQmlPropertyMap12valueChangedERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -193,10 +193,10 @@ func (this *QQmlPropertyMap) ValueChanged(key string, value *qtcore.QVariant) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant updateValue(const QString &, const QVariant &)
-func (this *QQmlPropertyMap) UpdateValue(key string, input *qtcore.QVariant) *qtcore.QVariant /*123*/ {
+func (this *QQmlPropertyMap) UpdateValue(key string, input qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = input.GetCthis()
+	var convArg1 = input.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQmlPropertyMap11updateValueERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333

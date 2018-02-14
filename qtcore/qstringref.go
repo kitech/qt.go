@@ -170,8 +170,8 @@ func (this *QStringRef) Count_1(s string, cs int) int {
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int count(QChar, Qt::CaseSensitivity)
-func (this *QStringRef) Count_2(c *QChar /*123*/, cs int) int {
-	var convArg0 = c.GetCthis()
+func (this *QStringRef) Count_2(c QChar_ITF /*123*/, cs int) int {
+	var convArg0 = c.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef5countE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -181,8 +181,8 @@ func (this *QStringRef) Count_2(c *QChar /*123*/, cs int) int {
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int count(const QStringRef &, Qt::CaseSensitivity)
-func (this *QStringRef) Count_3(s *QStringRef, cs int) int {
-	var convArg0 = s.GetCthis()
+func (this *QStringRef) Count_3(s QStringRef_ITF, cs int) int {
+	var convArg0 = s.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef5countERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -214,8 +214,8 @@ func (this *QStringRef) IndexOf(str string, from int, cs int) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QChar, int, Qt::CaseSensitivity)
-func (this *QStringRef) IndexOf_1(ch *QChar /*123*/, from int, cs int) int {
-	var convArg0 = ch.GetCthis()
+func (this *QStringRef) IndexOf_1(ch QChar_ITF /*123*/, from int, cs int) int {
+	var convArg0 = ch.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7indexOfE5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -225,8 +225,8 @@ func (this *QStringRef) IndexOf_1(ch *QChar /*123*/, from int, cs int) int {
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QLatin1String, int, Qt::CaseSensitivity)
-func (this *QStringRef) IndexOf_2(str *QLatin1String /*123*/, from int, cs int) int {
-	var convArg0 = str.GetCthis()
+func (this *QStringRef) IndexOf_2(str QLatin1String_ITF /*123*/, from int, cs int) int {
+	var convArg0 = str.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7indexOfE13QLatin1StringiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -236,8 +236,8 @@ func (this *QStringRef) IndexOf_2(str *QLatin1String /*123*/, from int, cs int) 
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QStringRef &, int, Qt::CaseSensitivity)
-func (this *QStringRef) IndexOf_3(str *QStringRef, from int, cs int) int {
-	var convArg0 = str.GetCthis()
+func (this *QStringRef) IndexOf_3(str QStringRef_ITF, from int, cs int) int {
+	var convArg0 = str.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7indexOfERKS_iN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -259,8 +259,8 @@ func (this *QStringRef) LastIndexOf(str string, from int, cs int) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QChar, int, Qt::CaseSensitivity)
-func (this *QStringRef) LastIndexOf_1(ch *QChar /*123*/, from int, cs int) int {
-	var convArg0 = ch.GetCthis()
+func (this *QStringRef) LastIndexOf_1(ch QChar_ITF /*123*/, from int, cs int) int {
+	var convArg0 = ch.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef11lastIndexOfE5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -270,8 +270,8 @@ func (this *QStringRef) LastIndexOf_1(ch *QChar /*123*/, from int, cs int) int {
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QLatin1String, int, Qt::CaseSensitivity)
-func (this *QStringRef) LastIndexOf_2(str *QLatin1String /*123*/, from int, cs int) int {
-	var convArg0 = str.GetCthis()
+func (this *QStringRef) LastIndexOf_2(str QLatin1String_ITF /*123*/, from int, cs int) int {
+	var convArg0 = str.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef11lastIndexOfE13QLatin1StringiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -281,8 +281,8 @@ func (this *QStringRef) LastIndexOf_2(str *QLatin1String /*123*/, from int, cs i
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QStringRef &, int, Qt::CaseSensitivity)
-func (this *QStringRef) LastIndexOf_3(str *QStringRef, from int, cs int) int {
-	var convArg0 = str.GetCthis()
+func (this *QStringRef) LastIndexOf_3(str QStringRef_ITF, from int, cs int) int {
+	var convArg0 = str.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef11lastIndexOfERKS_iN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -304,8 +304,8 @@ func (this *QStringRef) Contains(str string, cs int) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QChar, Qt::CaseSensitivity)
-func (this *QStringRef) Contains_1(ch *QChar /*123*/, cs int) bool {
-	var convArg0 = ch.GetCthis()
+func (this *QStringRef) Contains_1(ch QChar_ITF /*123*/, cs int) bool {
+	var convArg0 = ch.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8containsE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -315,8 +315,8 @@ func (this *QStringRef) Contains_1(ch *QChar /*123*/, cs int) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity)
-func (this *QStringRef) Contains_2(str *QLatin1String /*123*/, cs int) bool {
-	var convArg0 = str.GetCthis()
+func (this *QStringRef) Contains_2(str QLatin1String_ITF /*123*/, cs int) bool {
+	var convArg0 = str.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8containsE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -326,8 +326,8 @@ func (this *QStringRef) Contains_2(str *QLatin1String /*123*/, cs int) bool {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QStringRef &, Qt::CaseSensitivity)
-func (this *QStringRef) Contains_3(str *QStringRef, cs int) bool {
-	var convArg0 = str.GetCthis()
+func (this *QStringRef) Contains_3(str QStringRef_ITF, cs int) bool {
+	var convArg0 = str.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8containsERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -413,8 +413,8 @@ func (this *QStringRef) IsRightToLeft() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity)
-func (this *QStringRef) StartsWith(s *QStringView /*123*/, cs int) bool {
-	var convArg0 = s.GetCthis()
+func (this *QStringRef) StartsWith(s QStringView_ITF /*123*/, cs int) bool {
+	var convArg0 = s.QStringView_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef10startsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -424,8 +424,8 @@ func (this *QStringRef) StartsWith(s *QStringView /*123*/, cs int) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity)
-func (this *QStringRef) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
-	var convArg0 = s.GetCthis()
+func (this *QStringRef) StartsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
+	var convArg0 = s.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -435,8 +435,8 @@ func (this *QStringRef) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QChar, Qt::CaseSensitivity)
-func (this *QStringRef) StartsWith_2(c *QChar /*123*/, cs int) bool {
-	var convArg0 = c.GetCthis()
+func (this *QStringRef) StartsWith_2(c QChar_ITF /*123*/, cs int) bool {
+	var convArg0 = c.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef10startsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -458,8 +458,8 @@ func (this *QStringRef) StartsWith_3(s string, cs int) bool {
 // index:4
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QStringRef &, Qt::CaseSensitivity)
-func (this *QStringRef) StartsWith_4(c *QStringRef, cs int) bool {
-	var convArg0 = c.GetCthis()
+func (this *QStringRef) StartsWith_4(c QStringRef_ITF, cs int) bool {
+	var convArg0 = c.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef10startsWithERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -469,8 +469,8 @@ func (this *QStringRef) StartsWith_4(c *QStringRef, cs int) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity)
-func (this *QStringRef) EndsWith(s *QStringView /*123*/, cs int) bool {
-	var convArg0 = s.GetCthis()
+func (this *QStringRef) EndsWith(s QStringView_ITF /*123*/, cs int) bool {
+	var convArg0 = s.QStringView_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8endsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -480,8 +480,8 @@ func (this *QStringRef) EndsWith(s *QStringView /*123*/, cs int) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity)
-func (this *QStringRef) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
-	var convArg0 = s.GetCthis()
+func (this *QStringRef) EndsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
+	var convArg0 = s.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -491,8 +491,8 @@ func (this *QStringRef) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QChar, Qt::CaseSensitivity)
-func (this *QStringRef) EndsWith_2(c *QChar /*123*/, cs int) bool {
-	var convArg0 = c.GetCthis()
+func (this *QStringRef) EndsWith_2(c QChar_ITF /*123*/, cs int) bool {
+	var convArg0 = c.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8endsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -514,8 +514,8 @@ func (this *QStringRef) EndsWith_3(s string, cs int) bool {
 // index:4
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QStringRef &, Qt::CaseSensitivity)
-func (this *QStringRef) EndsWith_4(c *QStringRef, cs int) bool {
-	var convArg0 = c.GetCthis()
+func (this *QStringRef) EndsWith_4(c QStringRef_ITF, cs int) bool {
+	var convArg0 = c.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8endsWithERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -761,8 +761,8 @@ func (this *QStringRef) Compare(s string, cs int) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, Qt::CaseSensitivity)
-func (this *QStringRef) Compare_1(s *QStringRef, cs int) int {
-	var convArg0 = s.GetCthis()
+func (this *QStringRef) Compare_1(s QStringRef_ITF, cs int) int {
+	var convArg0 = s.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7compareERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -772,8 +772,8 @@ func (this *QStringRef) Compare_1(s *QStringRef, cs int) int {
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int compare(QLatin1String, Qt::CaseSensitivity)
-func (this *QStringRef) Compare_2(s *QLatin1String /*123*/, cs int) int {
-	var convArg0 = s.GetCthis()
+func (this *QStringRef) Compare_2(s QLatin1String_ITF /*123*/, cs int) int {
+	var convArg0 = s.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7compareE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -783,8 +783,8 @@ func (this *QStringRef) Compare_2(s *QLatin1String /*123*/, cs int) int {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [4] int compare(const QByteArray &, Qt::CaseSensitivity)
-func (this *QStringRef) Compare_3(s *QByteArray, cs int) int {
-	var convArg0 = s.GetCthis()
+func (this *QStringRef) Compare_3(s QByteArray_ITF, cs int) int {
+	var convArg0 = s.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7compareERK10QByteArrayN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -794,15 +794,15 @@ func (this *QStringRef) Compare_3(s *QByteArray, cs int) int {
 // index:4
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, const QString &, Qt::CaseSensitivity)
-func (this *QStringRef) Compare_4(s1 *QStringRef, s2 string, arg2 int) int {
-	var convArg0 = s1.GetCthis()
+func (this *QStringRef) Compare_4(s1 QStringRef_ITF, s2 string, arg2 int) int {
+	var convArg0 = s1.QStringRef_PTR().GetCthis()
 	var tmpArg1 = NewQString_5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRef7compareERKS_RK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QStringRef_Compare_4(s1 *QStringRef, s2 string, arg2 int) int {
+func QStringRef_Compare_4(s1 QStringRef_ITF, s2 string, arg2 int) int {
 	var nilthis *QStringRef
 	rv := nilthis.Compare_4(s1, s2, arg2)
 	return rv
@@ -812,14 +812,14 @@ func QStringRef_Compare_4(s1 *QStringRef, s2 string, arg2 int) int {
 // index:5
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, const QStringRef &, Qt::CaseSensitivity)
-func (this *QStringRef) Compare_5(s1 *QStringRef, s2 *QStringRef, arg2 int) int {
-	var convArg0 = s1.GetCthis()
-	var convArg1 = s2.GetCthis()
+func (this *QStringRef) Compare_5(s1 QStringRef_ITF, s2 QStringRef_ITF, arg2 int) int {
+	var convArg0 = s1.QStringRef_PTR().GetCthis()
+	var convArg1 = s2.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRef7compareERKS_S1_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QStringRef_Compare_5(s1 *QStringRef, s2 *QStringRef, arg2 int) int {
+func QStringRef_Compare_5(s1 QStringRef_ITF, s2 QStringRef_ITF, arg2 int) int {
 	var nilthis *QStringRef
 	rv := nilthis.Compare_5(s1, s2, arg2)
 	return rv
@@ -829,14 +829,14 @@ func QStringRef_Compare_5(s1 *QStringRef, s2 *QStringRef, arg2 int) int {
 // index:6
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, QLatin1String, Qt::CaseSensitivity)
-func (this *QStringRef) Compare_6(s1 *QStringRef, s2 *QLatin1String /*123*/, cs int) int {
-	var convArg0 = s1.GetCthis()
-	var convArg1 = s2.GetCthis()
+func (this *QStringRef) Compare_6(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/, cs int) int {
+	var convArg0 = s1.QStringRef_PTR().GetCthis()
+	var convArg1 = s2.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRef7compareERKS_13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QStringRef_Compare_6(s1 *QStringRef, s2 *QLatin1String /*123*/, cs int) int {
+func QStringRef_Compare_6(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/, cs int) int {
 	var nilthis *QStringRef
 	rv := nilthis.Compare_6(s1, s2, cs)
 	return rv
@@ -858,8 +858,8 @@ func (this *QStringRef) LocaleAwareCompare(s string) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QStringRef &)
-func (this *QStringRef) LocaleAwareCompare_1(s *QStringRef) int {
-	var convArg0 = s.GetCthis()
+func (this *QStringRef) LocaleAwareCompare_1(s QStringRef_ITF) int {
+	var convArg0 = s.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef18localeAwareCompareERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -869,15 +869,15 @@ func (this *QStringRef) LocaleAwareCompare_1(s *QStringRef) int {
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QStringRef &, const QString &)
-func (this *QStringRef) LocaleAwareCompare_2(s1 *QStringRef, s2 string) int {
-	var convArg0 = s1.GetCthis()
+func (this *QStringRef) LocaleAwareCompare_2(s1 QStringRef_ITF, s2 string) int {
+	var convArg0 = s1.QStringRef_PTR().GetCthis()
 	var tmpArg1 = NewQString_5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRef18localeAwareCompareERKS_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QStringRef_LocaleAwareCompare_2(s1 *QStringRef, s2 string) int {
+func QStringRef_LocaleAwareCompare_2(s1 QStringRef_ITF, s2 string) int {
 	var nilthis *QStringRef
 	rv := nilthis.LocaleAwareCompare_2(s1, s2)
 	return rv
@@ -887,14 +887,14 @@ func QStringRef_LocaleAwareCompare_2(s1 *QStringRef, s2 string) int {
 // index:3
 // Public static Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QStringRef &, const QStringRef &)
-func (this *QStringRef) LocaleAwareCompare_3(s1 *QStringRef, s2 *QStringRef) int {
-	var convArg0 = s1.GetCthis()
-	var convArg1 = s2.GetCthis()
+func (this *QStringRef) LocaleAwareCompare_3(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
+	var convArg0 = s1.QStringRef_PTR().GetCthis()
+	var convArg1 = s2.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRef18localeAwareCompareERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QStringRef_LocaleAwareCompare_3(s1 *QStringRef, s2 *QStringRef) int {
+func QStringRef_LocaleAwareCompare_3(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 	var nilthis *QStringRef
 	rv := nilthis.LocaleAwareCompare_3(s1, s2)
 	return rv

@@ -189,8 +189,8 @@ func (this *QMimeData) ImageData() *QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setImageData(const QVariant &)
-func (this *QMimeData) SetImageData(image *QVariant) {
-	var convArg0 = image.GetCthis()
+func (this *QMimeData) SetImageData(image QVariant_ITF) {
+	var convArg0 = image.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData12setImageDataERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -221,8 +221,8 @@ func (this *QMimeData) ColorData() *QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColorData(const QVariant &)
-func (this *QMimeData) SetColorData(color *QVariant) {
-	var convArg0 = color.GetCthis()
+func (this *QMimeData) SetColorData(color QVariant_ITF) {
+	var convArg0 = color.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData12setColorDataERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -255,10 +255,10 @@ func (this *QMimeData) Data(mimetype string) *QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QString &, const QByteArray &)
-func (this *QMimeData) SetData(mimetype string, data *QByteArray) {
+func (this *QMimeData) SetData(mimetype string, data QByteArray_ITF) {
 	var tmpArg0 = NewQString_5(mimetype)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = data.GetCthis()
+	var convArg1 = data.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData7setDataERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

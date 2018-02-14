@@ -83,9 +83,9 @@ func (this *QNetworkSession) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkSession(const QNetworkConfiguration &, QObject *)
-func NewQNetworkSession(connConfig *QNetworkConfiguration, parent *qtcore.QObject /*777 QObject **/) *QNetworkSession {
-	var convArg0 = connConfig.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQNetworkSession(connConfig QNetworkConfiguration_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkSession {
+	var convArg0 = connConfig.QNetworkConfiguration_PTR().GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSessionC2ERK21QNetworkConfigurationP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkSessionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -197,10 +197,10 @@ func (this *QNetworkSession) SessionProperty(key string) *qtcore.QVariant /*123*
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSessionProperty(const QString &, const QVariant &)
-func (this *QNetworkSession) SetSessionProperty(key string, value *qtcore.QVariant) {
+func (this *QNetworkSession) SetSessionProperty(key string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.GetCthis()
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSession18setSessionPropertyERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -349,8 +349,8 @@ func (this *QNetworkSession) Closed() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void preferredConfigurationChanged(const QNetworkConfiguration &, _Bool)
-func (this *QNetworkSession) PreferredConfigurationChanged(config *QNetworkConfiguration, isSeamless bool) {
-	var convArg0 = config.GetCthis()
+func (this *QNetworkSession) PreferredConfigurationChanged(config QNetworkConfiguration_ITF, isSeamless bool) {
+	var convArg0 = config.QNetworkConfiguration_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSession29preferredConfigurationChangedERK21QNetworkConfigurationb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, isSeamless)
 	qtrt.ErrPrint(err, rv)
 }
@@ -377,8 +377,8 @@ func (this *QNetworkSession) UsagePoliciesChanged(usagePolicies int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void connectNotify(const QMetaMethod &)
-func (this *QNetworkSession) ConnectNotify(signal *qtcore.QMetaMethod) {
-	var convArg0 = signal.GetCthis()
+func (this *QNetworkSession) ConnectNotify(signal qtcore.QMetaMethod_ITF) {
+	var convArg0 = signal.QMetaMethod_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSession13connectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -387,8 +387,8 @@ func (this *QNetworkSession) ConnectNotify(signal *qtcore.QMetaMethod) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void disconnectNotify(const QMetaMethod &)
-func (this *QNetworkSession) DisconnectNotify(signal *qtcore.QMetaMethod) {
-	var convArg0 = signal.GetCthis()
+func (this *QNetworkSession) DisconnectNotify(signal qtcore.QMetaMethod_ITF) {
+	var convArg0 = signal.QMetaMethod_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSession16disconnectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

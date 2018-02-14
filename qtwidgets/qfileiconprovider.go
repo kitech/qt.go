@@ -101,8 +101,8 @@ func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [8] QIcon icon(const QFileInfo &)
-func (this *QFileIconProvider) Icon_1(info *qtcore.QFileInfo) *qtgui.QIcon /*123*/ {
-	var convArg0 = info.GetCthis()
+func (this *QFileIconProvider) Icon_1(info qtcore.QFileInfo_ITF) *qtgui.QIcon /*123*/ {
+	var convArg0 = info.QFileInfo_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconERK9QFileInfo", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -114,8 +114,8 @@ func (this *QFileIconProvider) Icon_1(info *qtcore.QFileInfo) *qtgui.QIcon /*123
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString type(const QFileInfo &)
-func (this *QFileIconProvider) Type(info *qtcore.QFileInfo) string {
-	var convArg0 = info.GetCthis()
+func (this *QFileIconProvider) Type(info qtcore.QFileInfo_ITF) string {
+	var convArg0 = info.QFileInfo_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFileIconProvider4typeERK9QFileInfo", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))

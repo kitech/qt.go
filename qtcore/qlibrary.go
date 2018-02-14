@@ -72,8 +72,8 @@ func (this *QLibrary) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLibrary(QObject *)
-func NewQLibrary(parent *QObject /*777 QObject **/) *QLibrary {
-	var convArg0 = parent.GetCthis()
+func NewQLibrary(parent QObject_ITF /*777 QObject **/) *QLibrary {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -84,10 +84,10 @@ func NewQLibrary(parent *QObject /*777 QObject **/) *QLibrary {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QLibrary(const QString &, QObject *)
-func NewQLibrary_1(fileName string, parent *QObject /*777 QObject **/) *QLibrary {
+func NewQLibrary_1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -98,10 +98,10 @@ func NewQLibrary_1(fileName string, parent *QObject /*777 QObject **/) *QLibrary
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QLibrary(const QString &, int, QObject *)
-func NewQLibrary_2(fileName string, verNum int, parent *QObject /*777 QObject **/) *QLibrary {
+func NewQLibrary_2(fileName string, verNum int, parent QObject_ITF /*777 QObject **/) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg2 = parent.GetCthis()
+	var convArg2 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringiP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, verNum, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -112,12 +112,12 @@ func NewQLibrary_2(fileName string, verNum int, parent *QObject /*777 QObject **
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QLibrary(const QString &, const QString &, QObject *)
-func NewQLibrary_3(fileName string, version string, parent *QObject /*777 QObject **/) *QLibrary {
+func NewQLibrary_3(fileName string, version string, parent QObject_ITF /*777 QObject **/) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(version)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = parent.GetCthis()
+	var convArg2 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringS2_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))

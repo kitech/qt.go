@@ -89,8 +89,8 @@ func NewQSslError_1(error int) *QSslError {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSslError(enum QSslError::SslError, const QSslCertificate &)
-func NewQSslError_2(error int, certificate *QSslCertificate) *QSslError {
-	var convArg1 = certificate.GetCthis()
+func NewQSslError_2(error int, certificate QSslCertificate_ITF) *QSslError {
+	var convArg1 = certificate.QSslCertificate_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorERK15QSslCertificate", qtrt.FFI_TYPE_POINTER, error, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,8 +102,8 @@ func NewQSslError_2(error int, certificate *QSslCertificate) *QSslError {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslError &)
-func (this *QSslError) Swap(other *QSslError) {
-	var convArg0 = other.GetCthis()
+func (this *QSslError) Swap(other QSslError_ITF) {
+	var convArg0 = other.QSslError_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslError4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -89,8 +89,8 @@ func NewQBrush_1(bs int) *QBrush {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(const QColor &, Qt::BrushStyle)
-func NewQBrush_2(color *QColor, bs int) *QBrush {
-	var convArg0 = color.GetCthis()
+func NewQBrush_2(color QColor_ITF, bs int) *QBrush {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorN2Qt10BrushStyleE", qtrt.FFI_TYPE_POINTER, convArg0, bs)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -114,9 +114,9 @@ func NewQBrush_3(color int, bs int) *QBrush {
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(const QColor &, const QPixmap &)
-func NewQBrush_4(color *QColor, pixmap *QPixmap) *QBrush {
-	var convArg0 = color.GetCthis()
-	var convArg1 = pixmap.GetCthis()
+func NewQBrush_4(color QColor_ITF, pixmap QPixmap_ITF) *QBrush {
+	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorRK7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -128,8 +128,8 @@ func NewQBrush_4(color *QColor, pixmap *QPixmap) *QBrush {
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(Qt::GlobalColor, const QPixmap &)
-func NewQBrush_5(color int, pixmap *QPixmap) *QBrush {
-	var convArg1 = pixmap.GetCthis()
+func NewQBrush_5(color int, pixmap QPixmap_ITF) *QBrush {
+	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorERK7QPixmap", qtrt.FFI_TYPE_POINTER, color, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -141,8 +141,8 @@ func NewQBrush_5(color int, pixmap *QPixmap) *QBrush {
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(const QPixmap &)
-func NewQBrush_6(pixmap *QPixmap) *QBrush {
-	var convArg0 = pixmap.GetCthis()
+func NewQBrush_6(pixmap QPixmap_ITF) *QBrush {
+	var convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -154,8 +154,8 @@ func NewQBrush_6(pixmap *QPixmap) *QBrush {
 // index:7
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(const QImage &)
-func NewQBrush_7(image *QImage) *QBrush {
-	var convArg0 = image.GetCthis()
+func NewQBrush_7(image QImage_ITF) *QBrush {
+	var convArg0 = image.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK6QImage", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -167,8 +167,8 @@ func NewQBrush_7(image *QImage) *QBrush {
 // index:8
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(const QGradient &)
-func NewQBrush_8(gradient *QGradient) *QBrush {
-	var convArg0 = gradient.GetCthis()
+func NewQBrush_8(gradient QGradient_ITF) *QBrush {
+	var convArg0 = gradient.QGradient_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK9QGradient", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -191,8 +191,8 @@ func DeleteQBrush(this *QBrush) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QBrush &)
-func (this *QBrush) Swap(other *QBrush) {
-	var convArg0 = other.GetCthis()
+func (this *QBrush) Swap(other QBrush_ITF) {
+	var convArg0 = other.QBrush_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -232,8 +232,8 @@ func (this *QBrush) Matrix() *QMatrix {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMatrix(const QMatrix &)
-func (this *QBrush) SetMatrix(mat *QMatrix) {
-	var convArg0 = mat.GetCthis()
+func (this *QBrush) SetMatrix(mat QMatrix_ITF) {
+	var convArg0 = mat.QMatrix_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush9setMatrixERK7QMatrix", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -254,8 +254,8 @@ func (this *QBrush) Transform() *QTransform /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransform(const QTransform &)
-func (this *QBrush) SetTransform(arg0 *QTransform) {
-	var convArg0 = arg0.GetCthis()
+func (this *QBrush) SetTransform(arg0 QTransform_ITF) {
+	var convArg0 = arg0.QTransform_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush12setTransformERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -276,8 +276,8 @@ func (this *QBrush) Texture() *QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTexture(const QPixmap &)
-func (this *QBrush) SetTexture(pixmap *QPixmap) {
-	var convArg0 = pixmap.GetCthis()
+func (this *QBrush) SetTexture(pixmap QPixmap_ITF) {
+	var convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush10setTextureERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -298,8 +298,8 @@ func (this *QBrush) TextureImage() *QImage /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextureImage(const QImage &)
-func (this *QBrush) SetTextureImage(image *QImage) {
-	var convArg0 = image.GetCthis()
+func (this *QBrush) SetTextureImage(image QImage_ITF) {
+	var convArg0 = image.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush15setTextureImageERK6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -320,8 +320,8 @@ func (this *QBrush) Color() *QColor {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
-func (this *QBrush) SetColor(color *QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QBrush) SetColor(color QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

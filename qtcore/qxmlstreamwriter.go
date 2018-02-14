@@ -76,8 +76,8 @@ func NewQXmlStreamWriter() *QXmlStreamWriter {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamWriter(QIODevice *)
-func NewQXmlStreamWriter_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamWriter {
-	var convArg0 = device.GetCthis()
+func NewQXmlStreamWriter_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamWriter {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -89,8 +89,8 @@ func NewQXmlStreamWriter_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamWri
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamWriter(QByteArray *)
-func NewQXmlStreamWriter_2(array *QByteArray /*777 QByteArray **/) *QXmlStreamWriter {
-	var convArg0 = array.GetCthis()
+func NewQXmlStreamWriter_2(array QByteArray_ITF /*777 QByteArray **/) *QXmlStreamWriter {
+	var convArg0 = array.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -127,8 +127,8 @@ func DeleteQXmlStreamWriter(this *QXmlStreamWriter) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
-func (this *QXmlStreamWriter) SetDevice(device *QIODevice /*777 QIODevice **/) {
-	var convArg0 = device.GetCthis()
+func (this *QXmlStreamWriter) SetDevice(device QIODevice_ITF /*777 QIODevice **/) {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -147,8 +147,8 @@ func (this *QXmlStreamWriter) Device() *QIODevice /*777 QIODevice **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCodec(QTextCodec *)
-func (this *QXmlStreamWriter) SetCodec(codec *QTextCodec /*777 QTextCodec **/) {
-	var convArg0 = codec.GetCthis()
+func (this *QXmlStreamWriter) SetCodec(codec QTextCodec_ITF /*777 QTextCodec **/) {
+	var convArg0 = codec.QTextCodec_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter8setCodecEP10QTextCodec", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -244,8 +244,8 @@ func (this *QXmlStreamWriter) WriteAttribute_1(namespaceUri string, name string,
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void writeAttribute(const QXmlStreamAttribute &)
-func (this *QXmlStreamWriter) WriteAttribute_2(attribute *QXmlStreamAttribute) {
-	var convArg0 = attribute.GetCthis()
+func (this *QXmlStreamWriter) WriteAttribute_2(attribute QXmlStreamAttribute_ITF) {
+	var convArg0 = attribute.QXmlStreamAttribute_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -254,8 +254,8 @@ func (this *QXmlStreamWriter) WriteAttribute_2(attribute *QXmlStreamAttribute) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeAttributes(const QXmlStreamAttributes &)
-func (this *QXmlStreamWriter) WriteAttributes(attributes *QXmlStreamAttributes) {
-	var convArg0 = attributes.GetCthis()
+func (this *QXmlStreamWriter) WriteAttributes(attributes QXmlStreamAttributes_ITF) {
+	var convArg0 = attributes.QXmlStreamAttributes_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -481,8 +481,8 @@ func (this *QXmlStreamWriter) WriteStartElement_1(namespaceUri string, name stri
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeCurrentToken(const QXmlStreamReader &)
-func (this *QXmlStreamWriter) WriteCurrentToken(reader *QXmlStreamReader) {
-	var convArg0 = reader.GetCthis()
+func (this *QXmlStreamWriter) WriteCurrentToken(reader QXmlStreamReader_ITF) {
+	var convArg0 = reader.QXmlStreamReader_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

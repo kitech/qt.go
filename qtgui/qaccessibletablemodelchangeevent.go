@@ -65,8 +65,8 @@ func (*QAccessibleTableModelChangeEvent) NewFromPointer(cthis unsafe.Pointer) *Q
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTableModelChangeEvent(QObject *, enum QAccessibleTableModelChangeEvent::ModelChangeType)
-func NewQAccessibleTableModelChangeEvent(obj *qtcore.QObject /*777 QObject **/, changeType int) *QAccessibleTableModelChangeEvent {
-	var convArg0 = obj.GetCthis()
+func NewQAccessibleTableModelChangeEvent(obj qtcore.QObject_ITF /*777 QObject **/, changeType int) *QAccessibleTableModelChangeEvent {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP7QObjectNS_15ModelChangeTypeE", qtrt.FFI_TYPE_POINTER, convArg0, changeType)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTableModelChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -78,8 +78,8 @@ func NewQAccessibleTableModelChangeEvent(obj *qtcore.QObject /*777 QObject **/, 
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTableModelChangeEvent(QAccessibleInterface *, enum QAccessibleTableModelChangeEvent::ModelChangeType)
-func NewQAccessibleTableModelChangeEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
-	var convArg0 = iface.GetCthis()
+func NewQAccessibleTableModelChangeEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
+	var convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP20QAccessibleInterfaceNS_15ModelChangeTypeE", qtrt.FFI_TYPE_POINTER, convArg0, changeType)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTableModelChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))

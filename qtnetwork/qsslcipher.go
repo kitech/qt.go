@@ -116,8 +116,8 @@ func DeleteQSslCipher(this *QSslCipher) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslCipher &)
-func (this *QSslCipher) Swap(other *QSslCipher) {
-	var convArg0 = other.GetCthis()
+func (this *QSslCipher) Swap(other QSslCipher_ITF) {
+	var convArg0 = other.QSslCipher_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslCipher4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

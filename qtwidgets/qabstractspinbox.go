@@ -174,8 +174,8 @@ func (this *QAbstractSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractSpinBox(QWidget *)
-func NewQAbstractSpinBox(parent *QWidget /*777 QWidget **/) *QAbstractSpinBox {
-	var convArg0 = parent.GetCthis()
+func NewQAbstractSpinBox(parent QWidget_ITF /*777 QWidget **/) *QAbstractSpinBox {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -448,8 +448,8 @@ func (this *QAbstractSpinBox) InterpretText() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QAbstractSpinBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -539,8 +539,8 @@ func (this *QAbstractSpinBox) Clear() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QAbstractSpinBox) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = event.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -549,8 +549,8 @@ func (this *QAbstractSpinBox) ResizeEvent(event *qtgui.QResizeEvent /*777 QResiz
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QAbstractSpinBox) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = event.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -559,8 +559,8 @@ func (this *QAbstractSpinBox) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
-func (this *QAbstractSpinBox) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = event.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox15keyReleaseEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -569,8 +569,8 @@ func (this *QAbstractSpinBox) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKeyE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
-func (this *QAbstractSpinBox) WheelEvent(event *qtgui.QWheelEvent /*777 QWheelEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
+	var convArg0 = event.QWheelEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -579,8 +579,8 @@ func (this *QAbstractSpinBox) WheelEvent(event *qtgui.QWheelEvent /*777 QWheelEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
-func (this *QAbstractSpinBox) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = event.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -589,8 +589,8 @@ func (this *QAbstractSpinBox) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocus
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
-func (this *QAbstractSpinBox) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = event.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -599,8 +599,8 @@ func (this *QAbstractSpinBox) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocu
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
-func (this *QAbstractSpinBox) ContextMenuEvent(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
+	var convArg0 = event.QContextMenuEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -609,8 +609,8 @@ func (this *QAbstractSpinBox) ContextMenuEvent(event *qtgui.QContextMenuEvent /*
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QAbstractSpinBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -619,8 +619,8 @@ func (this *QAbstractSpinBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
-func (this *QAbstractSpinBox) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEvent **/) {
+	var convArg0 = event.QCloseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox10closeEventEP11QCloseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -629,8 +629,8 @@ func (this *QAbstractSpinBox) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
-func (this *QAbstractSpinBox) HideEvent(event *qtgui.QHideEvent /*777 QHideEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) HideEvent(event qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
+	var convArg0 = event.QHideEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox9hideEventEP10QHideEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -639,8 +639,8 @@ func (this *QAbstractSpinBox) HideEvent(event *qtgui.QHideEvent /*777 QHideEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
-func (this *QAbstractSpinBox) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = event.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -649,8 +649,8 @@ func (this *QAbstractSpinBox) MousePressEvent(event *qtgui.QMouseEvent /*777 QMo
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QAbstractSpinBox) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = event.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -659,8 +659,8 @@ func (this *QAbstractSpinBox) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 Q
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QAbstractSpinBox) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = event.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -669,8 +669,8 @@ func (this *QAbstractSpinBox) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMou
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
-func (this *QAbstractSpinBox) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
+	var convArg0 = event.QTimerEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -679,8 +679,8 @@ func (this *QAbstractSpinBox) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QAbstractSpinBox) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = event.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -689,8 +689,8 @@ func (this *QAbstractSpinBox) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
-func (this *QAbstractSpinBox) ShowEvent(event *qtgui.QShowEvent /*777 QShowEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractSpinBox) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
+	var convArg0 = event.QShowEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -699,8 +699,8 @@ func (this *QAbstractSpinBox) ShowEvent(event *qtgui.QShowEvent /*777 QShowEvent
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSpinBox *)
-func (this *QAbstractSpinBox) InitStyleOption(option *QStyleOptionSpinBox /*777 QStyleOptionSpinBox **/) {
-	var convArg0 = option.GetCthis()
+func (this *QAbstractSpinBox) InitStyleOption(option QStyleOptionSpinBox_ITF /*777 QStyleOptionSpinBox **/) {
+	var convArg0 = option.QStyleOptionSpinBox_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox15initStyleOptionEP19QStyleOptionSpinBox", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -719,8 +719,8 @@ func (this *QAbstractSpinBox) LineEdit() *QLineEdit /*777 QLineEdit **/ {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setLineEdit(QLineEdit *)
-func (this *QAbstractSpinBox) SetLineEdit(edit *QLineEdit /*777 QLineEdit **/) {
-	var convArg0 = edit.GetCthis()
+func (this *QAbstractSpinBox) SetLineEdit(edit QLineEdit_ITF /*777 QLineEdit **/) {
+	var convArg0 = edit.QLineEdit_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox11setLineEditEP9QLineEdit", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

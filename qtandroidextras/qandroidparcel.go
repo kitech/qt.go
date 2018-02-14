@@ -77,8 +77,8 @@ func NewQAndroidParcel() *QAndroidParcel {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidParcel(const QAndroidJniObject &)
-func NewQAndroidParcel_1(parcel *QAndroidJniObject) *QAndroidParcel {
-	var convArg0 = parcel.GetCthis()
+func NewQAndroidParcel_1(parcel QAndroidJniObject_ITF) *QAndroidParcel {
+	var convArg0 = parcel.QAndroidJniObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidParcelC2ERK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidParcelFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -101,8 +101,8 @@ func DeleteQAndroidParcel(this *QAndroidParcel) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeData(const QByteArray &)
-func (this *QAndroidParcel) WriteData(data *qtcore.QByteArray) {
-	var convArg0 = data.GetCthis()
+func (this *QAndroidParcel) WriteData(data qtcore.QByteArray_ITF) {
+	var convArg0 = data.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel9writeDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -111,8 +111,8 @@ func (this *QAndroidParcel) WriteData(data *qtcore.QByteArray) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeVariant(const QVariant &)
-func (this *QAndroidParcel) WriteVariant(value *qtcore.QVariant) {
-	var convArg0 = value.GetCthis()
+func (this *QAndroidParcel) WriteVariant(value qtcore.QVariant_ITF) {
+	var convArg0 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel12writeVariantERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -121,8 +121,8 @@ func (this *QAndroidParcel) WriteVariant(value *qtcore.QVariant) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeBinder(const QAndroidBinder &)
-func (this *QAndroidParcel) WriteBinder(binder *QAndroidBinder) {
-	var convArg0 = binder.GetCthis()
+func (this *QAndroidParcel) WriteBinder(binder QAndroidBinder_ITF) {
+	var convArg0 = binder.QAndroidBinder_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel11writeBinderERK14QAndroidBinder", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

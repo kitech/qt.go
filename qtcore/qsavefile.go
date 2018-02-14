@@ -30,7 +30,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// qint64 writeData(const char *, qint64)
+// long long writeData(const char *, qint64)
 func (this *QSaveFile) InheritWriteData(f func(data string, len int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
@@ -92,8 +92,8 @@ func NewQSaveFile(name string) *QSaveFile {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSaveFile(QObject *)
-func NewQSaveFile_1(parent *QObject /*777 QObject **/) *QSaveFile {
-	var convArg0 = parent.GetCthis()
+func NewQSaveFile_1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSaveFileFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -104,10 +104,10 @@ func NewQSaveFile_1(parent *QObject /*777 QObject **/) *QSaveFile {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSaveFile(const QString &, QObject *)
-func NewQSaveFile_2(name string, parent *QObject /*777 QObject **/) *QSaveFile {
+func NewQSaveFile_2(name string, parent QObject_ITF /*777 QObject **/) *QSaveFile {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFileC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSaveFileFromPointer(unsafe.Pointer(uintptr(rv)))

@@ -166,14 +166,14 @@ func (this *QPoint) Ry() int {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [4] int dotProduct(const QPoint &, const QPoint &)
-func (this *QPoint) DotProduct(p1 *QPoint, p2 *QPoint) int {
-	var convArg0 = p1.GetCthis()
-	var convArg1 = p2.GetCthis()
+func (this *QPoint) DotProduct(p1 QPoint_ITF, p2 QPoint_ITF) int {
+	var convArg0 = p1.QPoint_PTR().GetCthis()
+	var convArg1 = p2.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPoint10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QPoint_DotProduct(p1 *QPoint, p2 *QPoint) int {
+func QPoint_DotProduct(p1 QPoint_ITF, p2 QPoint_ITF) int {
 	var nilthis *QPoint
 	rv := nilthis.DotProduct(p1, p2)
 	return rv

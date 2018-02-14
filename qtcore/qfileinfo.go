@@ -90,8 +90,8 @@ func NewQFileInfo_1(file string) *QFileInfo {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QFileInfo(const QFile &)
-func NewQFileInfo_2(file *QFile) *QFileInfo {
-	var convArg0 = file.GetCthis()
+func NewQFileInfo_2(file QFile_ITF) *QFileInfo {
+	var convArg0 = file.QFile_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfoC2ERK5QFile", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,8 +103,8 @@ func NewQFileInfo_2(file *QFile) *QFileInfo {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QFileInfo(const QDir &, const QString &)
-func NewQFileInfo_3(dir *QDir, file string) *QFileInfo {
-	var convArg0 = dir.GetCthis()
+func NewQFileInfo_3(dir QDir_ITF, file string) *QFileInfo {
+	var convArg0 = dir.QDir_PTR().GetCthis()
 	var tmpArg1 = NewQString_5(file)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfoC2ERK4QDirRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -129,8 +129,8 @@ func DeleteQFileInfo(this *QFileInfo) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QFileInfo &)
-func (this *QFileInfo) Swap(other *QFileInfo) {
-	var convArg0 = other.GetCthis()
+func (this *QFileInfo) Swap(other QFileInfo_ITF) {
+	var convArg0 = other.QFileInfo_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfo4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -150,8 +150,8 @@ func (this *QFileInfo) SetFile(file string) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setFile(const QFile &)
-func (this *QFileInfo) SetFile_1(file *QFile) {
-	var convArg0 = file.GetCthis()
+func (this *QFileInfo) SetFile_1(file QFile_ITF) {
+	var convArg0 = file.QFile_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK5QFile", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -160,8 +160,8 @@ func (this *QFileInfo) SetFile_1(file *QFile) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void setFile(const QDir &, const QString &)
-func (this *QFileInfo) SetFile_2(dir *QDir, file string) {
-	var convArg0 = dir.GetCthis()
+func (this *QFileInfo) SetFile_2(dir QDir_ITF, file string) {
+	var convArg0 = dir.QDir_PTR().GetCthis()
 	var tmpArg1 = NewQString_5(file)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK4QDirRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)

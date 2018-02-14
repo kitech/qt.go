@@ -73,8 +73,8 @@ func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*777 const Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPictureFormatPlugin(QObject *)
-func NewQPictureFormatPlugin(parent *qtcore.QObject /*777 QObject **/) *QPictureFormatPlugin {
-	var convArg0 = parent.GetCthis()
+func NewQPictureFormatPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QPictureFormatPlugin {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPictureFormatPluginFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -96,12 +96,12 @@ func DeleteQPictureFormatPlugin(this *QPictureFormatPlugin) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool loadPicture(const QString &, const QString &, QPicture *)
-func (this *QPictureFormatPlugin) LoadPicture(format string, filename string, pic *QPicture /*777 QPicture **/) bool {
+func (this *QPictureFormatPlugin) LoadPicture(format string, filename string, pic QPicture_ITF /*777 QPicture **/) bool {
 	var tmpArg0 = qtcore.NewQString_5(format)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(filename)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = pic.GetCthis()
+	var convArg2 = pic.QPicture_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -111,12 +111,12 @@ func (this *QPictureFormatPlugin) LoadPicture(format string, filename string, pi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool savePicture(const QString &, const QString &, const QPicture &)
-func (this *QPictureFormatPlugin) SavePicture(format string, filename string, pic *QPicture) bool {
+func (this *QPictureFormatPlugin) SavePicture(format string, filename string, pic QPicture_ITF) bool {
 	var tmpArg0 = qtcore.NewQString_5(format)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(filename)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = pic.GetCthis()
+	var convArg2 = pic.QPicture_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

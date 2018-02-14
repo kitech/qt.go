@@ -63,8 +63,8 @@ func (*QExposeEvent) NewFromPointer(cthis unsafe.Pointer) *QExposeEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QExposeEvent(const QRegion &)
-func NewQExposeEvent(rgn *QRegion) *QExposeEvent {
-	var convArg0 = rgn.GetCthis()
+func NewQExposeEvent(rgn QRegion_ITF) *QExposeEvent {
+	var convArg0 = rgn.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QExposeEventC2ERK7QRegion", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQExposeEventFromPointer(unsafe.Pointer(uintptr(rv)))

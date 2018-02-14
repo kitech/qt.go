@@ -65,8 +65,8 @@ func (*QAccessibleEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleEvent 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleEvent(QObject *, QAccessible::Event)
-func NewQAccessibleEvent(obj *qtcore.QObject /*777 QObject **/, typ int) *QAccessibleEvent {
-	var convArg0 = obj.GetCthis()
+func NewQAccessibleEvent(obj qtcore.QObject_ITF /*777 QObject **/, typ int) *QAccessibleEvent {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAccessibleEventC2EP7QObjectN11QAccessible5EventE", qtrt.FFI_TYPE_POINTER, convArg0, typ)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -78,8 +78,8 @@ func NewQAccessibleEvent(obj *qtcore.QObject /*777 QObject **/, typ int) *QAcces
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleEvent(QAccessibleInterface *, QAccessible::Event)
-func NewQAccessibleEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
-	var convArg0 = iface.GetCthis()
+func NewQAccessibleEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
+	var convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAccessibleEventC2EP20QAccessibleInterfaceN11QAccessible5EventE", qtrt.FFI_TYPE_POINTER, convArg0, typ)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleEventFromPointer(unsafe.Pointer(uintptr(rv)))

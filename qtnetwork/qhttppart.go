@@ -88,8 +88,8 @@ func DeleteQHttpPart(this *QHttpPart) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QHttpPart &)
-func (this *QHttpPart) Swap(other *QHttpPart) {
-	var convArg0 = other.GetCthis()
+func (this *QHttpPart) Swap(other QHttpPart_ITF) {
+	var convArg0 = other.QHttpPart_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPart4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -98,8 +98,8 @@ func (this *QHttpPart) Swap(other *QHttpPart) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
-func (this *QHttpPart) SetHeader(header int, value *qtcore.QVariant) {
-	var convArg1 = value.GetCthis()
+func (this *QHttpPart) SetHeader(header int, value qtcore.QVariant_ITF) {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPart9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), header, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -108,9 +108,9 @@ func (this *QHttpPart) SetHeader(header int, value *qtcore.QVariant) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRawHeader(const QByteArray &, const QByteArray &)
-func (this *QHttpPart) SetRawHeader(headerName *qtcore.QByteArray, headerValue *qtcore.QByteArray) {
-	var convArg0 = headerName.GetCthis()
-	var convArg1 = headerValue.GetCthis()
+func (this *QHttpPart) SetRawHeader(headerName qtcore.QByteArray_ITF, headerValue qtcore.QByteArray_ITF) {
+	var convArg0 = headerName.QByteArray_PTR().GetCthis()
+	var convArg1 = headerValue.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPart12setRawHeaderERK10QByteArrayS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -119,8 +119,8 @@ func (this *QHttpPart) SetRawHeader(headerName *qtcore.QByteArray, headerValue *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBody(const QByteArray &)
-func (this *QHttpPart) SetBody(body *qtcore.QByteArray) {
-	var convArg0 = body.GetCthis()
+func (this *QHttpPart) SetBody(body qtcore.QByteArray_ITF) {
+	var convArg0 = body.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPart7setBodyERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -129,8 +129,8 @@ func (this *QHttpPart) SetBody(body *qtcore.QByteArray) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBodyDevice(QIODevice *)
-func (this *QHttpPart) SetBodyDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
-	var convArg0 = device.GetCthis()
+func (this *QHttpPart) SetBodyDevice(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPart13setBodyDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

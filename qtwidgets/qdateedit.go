@@ -74,8 +74,8 @@ func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDateEdit(QWidget *)
-func NewQDateEdit(parent *QWidget /*777 QWidget **/) *QDateEdit {
-	var convArg0 = parent.GetCthis()
+func NewQDateEdit(parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateEditFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -86,9 +86,9 @@ func NewQDateEdit(parent *QWidget /*777 QWidget **/) *QDateEdit {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDateEdit(const QDate &, QWidget *)
-func NewQDateEdit_1(date *qtcore.QDate, parent *QWidget /*777 QWidget **/) *QDateEdit {
-	var convArg0 = date.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQDateEdit_1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
+	var convArg0 = date.QDate_PTR().GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateEditC2ERK5QDateP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateEditFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,8 +110,8 @@ func DeleteQDateEdit(this *QDateEdit) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void userDateChanged(const QDate &)
-func (this *QDateEdit) UserDateChanged(date *qtcore.QDate) {
-	var convArg0 = date.GetCthis()
+func (this *QDateEdit) UserDateChanged(date qtcore.QDate_ITF) {
+	var convArg0 = date.QDate_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateEdit15userDateChangedERK5QDate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

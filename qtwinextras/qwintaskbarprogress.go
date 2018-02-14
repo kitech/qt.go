@@ -74,8 +74,8 @@ func (this *QWinTaskbarProgress) MetaObject() *qtcore.QMetaObject /*777 const QM
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinTaskbarProgress(QObject *)
-func NewQWinTaskbarProgress(parent *qtcore.QObject /*777 QObject **/) *QWinTaskbarProgress {
-	var convArg0 = parent.GetCthis()
+func NewQWinTaskbarProgress(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTaskbarProgress {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QWinTaskbarProgressC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinTaskbarProgressFromPointer(unsafe.Pointer(uintptr(rv)))

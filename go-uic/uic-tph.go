@@ -178,7 +178,7 @@ func onSetupUi(line string) {
 		reg100 := regexp.MustCompile(`QMetaObject::connectSlotsByName\((.+)\);`)
 		if reg100.MatchString(line) {
 			mats := reg100.FindAllStringSubmatch(line, -1)
-			cp.APf("setupUi", "qtcore.QMetaObject_ConnectSlotsByName(qtcore.NewQObjectFromPointer(%s.GetCthis())) // 100111", mats[0][1])
+			cp.APf("setupUi", "qtcore.QMetaObject_ConnectSlotsByName(%s) // 100111", mats[0][1])
 		} else if reg1.MatchString(line) {
 			mats := reg1.FindAllStringSubmatch(line, -1)
 			refmtval := strings.Title(mats[0][3])
@@ -186,16 +186,16 @@ func onSetupUi(line string) {
 			pkgname := "qtwidgets"
 			switch mats[0][2] {
 			case "QAction":
-				refmtval = fmt.Sprintf("qtcore.NewQObjectFromPointer(%s.GetCthis())", refmtval)
+				refmtval = fmt.Sprintf("%s", refmtval)
 			case "QWidget":
 				if refmtval != "" {
-					refmtval = fmt.Sprintf("qtwidgets.NewQWidgetFromPointer(this.%s.GetCthis()), 0", refmtval)
+					refmtval = fmt.Sprintf("this.%s, 0", refmtval)
 				} else {
 					refmtval = fmt.Sprintf("nil, 0")
 				}
 			case "QVBoxLayout", "QHBoxLayout":
 				if refmtval != "" {
-					refmtval = fmt.Sprintf("qtwidgets.NewQWidgetFromPointer(this.%s.GetCthis())", refmtval)
+					refmtval = fmt.Sprintf("this.%s", refmtval)
 					refmtsuf = "_1"
 				}
 			case "QLabel":
@@ -290,11 +290,11 @@ func onSetupUi(line string) {
 				if strings.Contains(mats[0][1], "Layout") {
 					refmtname = "Layout()." + refmtname
 				}
-				refmtval = fmt.Sprintf("qtwidgets.NewQWidgetFromPointer(this.%s.GetCthis())", refmtval)
+				refmtval = fmt.Sprintf("this.%s", refmtval)
 			case "addLayout":
-				refmtval = fmt.Sprintf("qtwidgets.NewQLayoutFromPointer(this.%s.GetCthis()), 0", refmtval)
+				refmtval = fmt.Sprintf("this.%s, 0", refmtval)
 			case "addItem":
-				refmtval = fmt.Sprintf("qtwidgets.NewQLayoutItemFromPointer(this.%s.GetCthis())", refmtval)
+				refmtval = fmt.Sprintf("this.%s", refmtval)
 			case "addFile":
 				parts := strings.Split(refmtval, ", ")
 				alst := []string{}

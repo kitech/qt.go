@@ -64,8 +64,8 @@ func (*QWriteLocker) NewFromPointer(cthis unsafe.Pointer) *QWriteLocker {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QWriteLocker(QReadWriteLock *)
-func NewQWriteLocker(readWriteLock *QReadWriteLock /*777 QReadWriteLock **/) *QWriteLocker {
-	var convArg0 = readWriteLock.GetCthis()
+func NewQWriteLocker(readWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) *QWriteLocker {
+	var convArg0 = readWriteLock.QReadWriteLock_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWriteLockerC2EP14QReadWriteLock", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWriteLockerFromPointer(unsafe.Pointer(uintptr(rv)))

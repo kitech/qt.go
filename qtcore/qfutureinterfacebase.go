@@ -133,8 +133,8 @@ func (this *QFutureInterfaceBase) ReportResultsReady(beginIndex int, endIndex in
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRunnable(QRunnable *)
-func (this *QFutureInterfaceBase) SetRunnable(runnable *QRunnable /*777 QRunnable **/) {
-	var convArg0 = runnable.GetCthis()
+func (this *QFutureInterfaceBase) SetRunnable(runnable QRunnable_ITF /*777 QRunnable **/) {
+	var convArg0 = runnable.QRunnable_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QFutureInterfaceBase11setRunnableEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -143,8 +143,8 @@ func (this *QFutureInterfaceBase) SetRunnable(runnable *QRunnable /*777 QRunnabl
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setThreadPool(QThreadPool *)
-func (this *QFutureInterfaceBase) SetThreadPool(pool *QThreadPool /*777 QThreadPool **/) {
-	var convArg0 = pool.GetCthis()
+func (this *QFutureInterfaceBase) SetThreadPool(pool QThreadPool_ITF /*777 QThreadPool **/) {
+	var convArg0 = pool.QThreadPool_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

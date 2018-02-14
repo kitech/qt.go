@@ -94,8 +94,8 @@ func (this *QFocusFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFocusFrame(QWidget *)
-func NewQFocusFrame(parent *QWidget /*777 QWidget **/) *QFocusFrame {
-	var convArg0 = parent.GetCthis()
+func NewQFocusFrame(parent QWidget_ITF /*777 QWidget **/) *QFocusFrame {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusFrameC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFocusFrameFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,8 +117,8 @@ func DeleteQFocusFrame(this *QFocusFrame) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
-func (this *QFocusFrame) SetWidget(widget *QWidget /*777 QWidget **/) {
-	var convArg0 = widget.GetCthis()
+func (this *QFocusFrame) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusFrame9setWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -137,8 +137,8 @@ func (this *QFocusFrame) Widget() *QWidget /*777 QWidget **/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QFocusFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QFocusFrame) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusFrame5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -148,9 +148,9 @@ func (this *QFocusFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
-func (this *QFocusFrame) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+func (this *QFocusFrame) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg1 = arg1.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusFrame11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -160,8 +160,8 @@ func (this *QFocusFrame) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QFocusFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QFocusFrame) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusFrame10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -170,8 +170,8 @@ func (this *QFocusFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOption *)
-func (this *QFocusFrame) InitStyleOption(option *QStyleOption /*777 QStyleOption **/) {
-	var convArg0 = option.GetCthis()
+func (this *QFocusFrame) InitStyleOption(option QStyleOption_ITF /*777 QStyleOption **/) {
+	var convArg0 = option.QStyleOption_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusFrame15initStyleOptionEP12QStyleOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

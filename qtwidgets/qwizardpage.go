@@ -94,8 +94,8 @@ func (this *QWizardPage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWizardPage(QWidget *)
-func NewQWizardPage(parent *QWidget /*777 QWidget **/) *QWizardPage {
-	var convArg0 = parent.GetCthis()
+func NewQWizardPage(parent QWidget_ITF /*777 QWidget **/) *QWizardPage {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPageC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWizardPageFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -165,8 +165,8 @@ func (this *QWizardPage) SubTitle() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixmap(QWizard::WizardPixmap, const QPixmap &)
-func (this *QWizardPage) SetPixmap(which int, pixmap *qtgui.QPixmap) {
-	var convArg1 = pixmap.GetCthis()
+func (this *QWizardPage) SetPixmap(which int, pixmap qtgui.QPixmap_ITF) {
+	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage9setPixmapEN7QWizard12WizardPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -306,10 +306,10 @@ func (this *QWizardPage) CompleteChanged() {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setField(const QString &, const QVariant &)
-func (this *QWizardPage) SetField(name string, value *qtcore.QVariant) {
+func (this *QWizardPage) SetField(name string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.GetCthis()
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage8setFieldERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -332,10 +332,10 @@ func (this *QWizardPage) Field(name string) *qtcore.QVariant /*123*/ {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void registerField(const QString &, QWidget *, const char *, const char *)
-func (this *QWizardPage) RegisterField(name string, widget *QWidget /*777 QWidget **/, property string, changedSignal string) {
+func (this *QWizardPage) RegisterField(name string, widget QWidget_ITF /*777 QWidget **/, property string, changedSignal string) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = widget.GetCthis()
+	var convArg1 = widget.QWidget_PTR().GetCthis()
 	var convArg2 = qtrt.CString(property)
 	defer qtrt.FreeMem(convArg2)
 	var convArg3 = qtrt.CString(changedSignal)

@@ -88,8 +88,8 @@ func DeleteQDnsMailExchangeRecord(this *QDnsMailExchangeRecord) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsMailExchangeRecord &)
-func (this *QDnsMailExchangeRecord) Swap(other *QDnsMailExchangeRecord) {
-	var convArg0 = other.GetCthis()
+func (this *QDnsMailExchangeRecord) Swap(other QDnsMailExchangeRecord_ITF) {
+	var convArg0 = other.QDnsMailExchangeRecord_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QDnsMailExchangeRecord4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

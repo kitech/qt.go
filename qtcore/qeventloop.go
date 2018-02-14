@@ -72,8 +72,8 @@ func (this *QEventLoop) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QEventLoop(QObject *)
-func NewQEventLoop(parent *QObject /*777 QObject **/) *QEventLoop {
-	var convArg0 = parent.GetCthis()
+func NewQEventLoop(parent QObject_ITF /*777 QObject **/) *QEventLoop {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoopC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventLoopFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -152,8 +152,8 @@ func (this *QEventLoop) WakeUp() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QEventLoop) Event(event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QEventLoop) Event(event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

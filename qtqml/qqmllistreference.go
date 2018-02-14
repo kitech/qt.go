@@ -78,11 +78,11 @@ func NewQQmlListReference() *QQmlListReference {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlListReference(QObject *, const char *, QQmlEngine *)
-func NewQQmlListReference_1(arg0 *qtcore.QObject /*777 QObject **/, property string, arg2 *QQmlEngine /*777 QQmlEngine **/) *QQmlListReference {
-	var convArg0 = arg0.GetCthis()
+func NewQQmlListReference_1(arg0 qtcore.QObject_ITF /*777 QObject **/, property string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlListReference {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	var convArg1 = qtrt.CString(property)
 	defer qtrt.FreeMem(convArg1)
-	var convArg2 = arg2.GetCthis()
+	var convArg2 = arg2.QQmlEngine_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQmlListReferenceC2EP7QObjectPKcP10QQmlEngine", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlListReferenceFromPointer(unsafe.Pointer(uintptr(rv)))

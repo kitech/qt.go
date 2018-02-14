@@ -88,8 +88,8 @@ func DeleteQGlyphRun(this *QGlyphRun) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QGlyphRun &)
-func (this *QGlyphRun) Swap(other *QGlyphRun) {
-	var convArg0 = other.GetCthis()
+func (this *QGlyphRun) Swap(other QGlyphRun_ITF) {
+	var convArg0 = other.QGlyphRun_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -110,8 +110,8 @@ func (this *QGlyphRun) RawFont() *QRawFont /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRawFont(const QRawFont &)
-func (this *QGlyphRun) SetRawFont(rawFont *QRawFont) {
-	var convArg0 = rawFont.GetCthis()
+func (this *QGlyphRun) SetRawFont(rawFont QRawFont_ITF) {
+	var convArg0 = rawFont.QRawFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun10setRawFontERK8QRawFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -120,8 +120,8 @@ func (this *QGlyphRun) SetRawFont(rawFont *QRawFont) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRawData(const quint32 *, const QPointF *, int)
-func (this *QGlyphRun) SetRawData(glyphIndexArray unsafe.Pointer /*666*/, glyphPositionArray *qtcore.QPointF /*777 const QPointF **/, size int) {
-	var convArg1 = glyphPositionArray.GetCthis()
+func (this *QGlyphRun) SetRawData(glyphIndexArray unsafe.Pointer /*666*/, glyphPositionArray qtcore.QPointF_ITF /*777 const QPointF **/, size int) {
+	var convArg1 = glyphPositionArray.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &glyphIndexArray, convArg1, size)
 	qtrt.ErrPrint(err, rv)
 }
@@ -243,8 +243,8 @@ func (this *QGlyphRun) Flags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBoundingRect(const QRectF &)
-func (this *QGlyphRun) SetBoundingRect(boundingRect *qtcore.QRectF) {
-	var convArg0 = boundingRect.GetCthis()
+func (this *QGlyphRun) SetBoundingRect(boundingRect qtcore.QRectF_ITF) {
+	var convArg0 = boundingRect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun15setBoundingRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

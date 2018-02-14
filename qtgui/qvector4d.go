@@ -101,8 +101,8 @@ func NewQVector4D_2(xpos float32, ypos float32, zpos float32, wpos float32) *QVe
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector4D(const QPoint &)
-func NewQVector4D_3(point *qtcore.QPoint) *QVector4D {
-	var convArg0 = point.GetCthis()
+func NewQVector4D_3(point qtcore.QPoint_ITF) *QVector4D {
+	var convArg0 = point.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector4DC2ERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -114,8 +114,8 @@ func NewQVector4D_3(point *qtcore.QPoint) *QVector4D {
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector4D(const QPointF &)
-func NewQVector4D_4(point *qtcore.QPointF) *QVector4D {
-	var convArg0 = point.GetCthis()
+func NewQVector4D_4(point qtcore.QPointF_ITF) *QVector4D {
+	var convArg0 = point.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector4DC2ERK7QPointF", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -127,8 +127,8 @@ func NewQVector4D_4(point *qtcore.QPointF) *QVector4D {
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QVector4D(const QVector2D &)
-func NewQVector4D_5(vector *QVector2D) *QVector4D {
-	var convArg0 = vector.GetCthis()
+func NewQVector4D_5(vector QVector2D_ITF) *QVector4D {
+	var convArg0 = vector.QVector2D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector4DC2ERK9QVector2D", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -140,8 +140,8 @@ func NewQVector4D_5(vector *QVector2D) *QVector4D {
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QVector4D(const QVector2D &, float, float)
-func NewQVector4D_6(vector *QVector2D, zpos float32, wpos float32) *QVector4D {
-	var convArg0 = vector.GetCthis()
+func NewQVector4D_6(vector QVector2D_ITF, zpos float32, wpos float32) *QVector4D {
+	var convArg0 = vector.QVector2D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector4DC2ERK9QVector2Dff", qtrt.FFI_TYPE_POINTER, convArg0, zpos, wpos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -153,8 +153,8 @@ func NewQVector4D_6(vector *QVector2D, zpos float32, wpos float32) *QVector4D {
 // index:7
 // Public Visibility=Default Availability=Available
 // [-2] void QVector4D(const QVector3D &)
-func NewQVector4D_7(vector *QVector3D) *QVector4D {
-	var convArg0 = vector.GetCthis()
+func NewQVector4D_7(vector QVector3D_ITF) *QVector4D {
+	var convArg0 = vector.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector4DC2ERK9QVector3D", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -166,8 +166,8 @@ func NewQVector4D_7(vector *QVector3D) *QVector4D {
 // index:8
 // Public Visibility=Default Availability=Available
 // [-2] void QVector4D(const QVector3D &, float)
-func NewQVector4D_8(vector *QVector3D, wpos float32) *QVector4D {
-	var convArg0 = vector.GetCthis()
+func NewQVector4D_8(vector QVector3D_ITF, wpos float32) *QVector4D {
+	var convArg0 = vector.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector4DC2ERK9QVector3Df", qtrt.FFI_TYPE_POINTER, convArg0, wpos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -306,14 +306,14 @@ func (this *QVector4D) Normalize() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] float dotProduct(const QVector4D &, const QVector4D &)
-func (this *QVector4D) DotProduct(v1 *QVector4D, v2 *QVector4D) float32 {
-	var convArg0 = v1.GetCthis()
-	var convArg1 = v2.GetCthis()
+func (this *QVector4D) DotProduct(v1 QVector4D_ITF, v2 QVector4D_ITF) float32 {
+	var convArg0 = v1.QVector4D_PTR().GetCthis()
+	var convArg1 = v2.QVector4D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector4D10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
-func QVector4D_DotProduct(v1 *QVector4D, v2 *QVector4D) float32 {
+func QVector4D_DotProduct(v1 QVector4D_ITF, v2 QVector4D_ITF) float32 {
 	var nilthis *QVector4D
 	rv := nilthis.DotProduct(v1, v2)
 	return rv

@@ -90,8 +90,8 @@ func NewQStringMatcher_1(pattern string, cs int) *QStringMatcher {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QStringMatcher(const QChar *, int, Qt::CaseSensitivity)
-func NewQStringMatcher_2(uc *QChar /*777 const QChar **/, len int, cs int) *QStringMatcher {
-	var convArg0 = uc.GetCthis()
+func NewQStringMatcher_2(uc QChar_ITF /*777 const QChar **/, len int, cs int) *QStringMatcher {
+	var convArg0 = uc.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherC2EPK5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, len, cs)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -146,8 +146,8 @@ func (this *QStringMatcher) IndexIn(str string, from int) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const QChar *, int, int)
-func (this *QStringMatcher) IndexIn_1(str *QChar /*777 const QChar **/, length int, from int) int {
-	var convArg0 = str.GetCthis()
+func (this *QStringMatcher) IndexIn_1(str QChar_ITF /*777 const QChar **/, length int, from int) int {
+	var convArg0 = str.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInEPK5QCharii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, length, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

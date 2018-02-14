@@ -99,8 +99,8 @@ func (this *QGraphicsSceneHelpEvent) ScenePos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
-func (this *QGraphicsSceneHelpEvent) SetScenePos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneHelpEvent) SetScenePos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -121,8 +121,8 @@ func (this *QGraphicsSceneHelpEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
-func (this *QGraphicsSceneHelpEvent) SetScreenPos(pos *qtcore.QPoint) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneHelpEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

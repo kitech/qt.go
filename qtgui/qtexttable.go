@@ -73,8 +73,8 @@ func (this *QTextTable) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextTable(QTextDocument *)
-func NewQTextTable(doc *QTextDocument /*777 QTextDocument **/) *QTextTable {
-	var convArg0 = doc.GetCthis()
+func NewQTextTable(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextTable {
+	var convArg0 = doc.QTextDocument_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextTableC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextTableFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -168,8 +168,8 @@ func (this *QTextTable) MergeCells(row int, col int, numRows int, numCols int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void mergeCells(const QTextCursor &)
-func (this *QTextTable) MergeCells_1(cursor *QTextCursor) {
-	var convArg0 = cursor.GetCthis()
+func (this *QTextTable) MergeCells_1(cursor QTextCursor_ITF) {
+	var convArg0 = cursor.QTextCursor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextTable10mergeCellsERK11QTextCursor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -231,8 +231,8 @@ func (this *QTextTable) CellAt_1(position int) *QTextTableCell /*123*/ {
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QTextTableCell cellAt(const QTextCursor &)
-func (this *QTextTable) CellAt_2(c *QTextCursor) *QTextTableCell /*123*/ {
-	var convArg0 = c.GetCthis()
+func (this *QTextTable) CellAt_2(c QTextCursor_ITF) *QTextTableCell /*123*/ {
+	var convArg0 = c.QTextCursor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextTable6cellAtERK11QTextCursor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextTableCellFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -244,8 +244,8 @@ func (this *QTextTable) CellAt_2(c *QTextCursor) *QTextTableCell /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor rowStart(const QTextCursor &)
-func (this *QTextTable) RowStart(c *QTextCursor) *QTextCursor /*123*/ {
-	var convArg0 = c.GetCthis()
+func (this *QTextTable) RowStart(c QTextCursor_ITF) *QTextCursor /*123*/ {
+	var convArg0 = c.QTextCursor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextTable8rowStartERK11QTextCursor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -257,8 +257,8 @@ func (this *QTextTable) RowStart(c *QTextCursor) *QTextCursor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor rowEnd(const QTextCursor &)
-func (this *QTextTable) RowEnd(c *QTextCursor) *QTextCursor /*123*/ {
-	var convArg0 = c.GetCthis()
+func (this *QTextTable) RowEnd(c QTextCursor_ITF) *QTextCursor /*123*/ {
+	var convArg0 = c.QTextCursor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextTable6rowEndERK11QTextCursor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -270,8 +270,8 @@ func (this *QTextTable) RowEnd(c *QTextCursor) *QTextCursor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QTextTableFormat &)
-func (this *QTextTable) SetFormat(format *QTextTableFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QTextTable) SetFormat(format QTextTableFormat_ITF) {
+	var convArg0 = format.QTextTableFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextTable9setFormatERK16QTextTableFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

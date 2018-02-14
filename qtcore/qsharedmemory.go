@@ -72,8 +72,8 @@ func (this *QSharedMemory) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSharedMemory(QObject *)
-func NewQSharedMemory(parent *QObject /*777 QObject **/) *QSharedMemory {
-	var convArg0 = parent.GetCthis()
+func NewQSharedMemory(parent QObject_ITF /*777 QObject **/) *QSharedMemory {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemoryC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSharedMemoryFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -84,10 +84,10 @@ func NewQSharedMemory(parent *QObject /*777 QObject **/) *QSharedMemory {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSharedMemory(const QString &, QObject *)
-func NewQSharedMemory_1(key string, parent *QObject /*777 QObject **/) *QSharedMemory {
+func NewQSharedMemory_1(key string, parent QObject_ITF /*777 QObject **/) *QSharedMemory {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemoryC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSharedMemoryFromPointer(unsafe.Pointer(uintptr(rv)))

@@ -89,8 +89,8 @@ func NewQPageSize_1(pageSizeId int) *QPageSize {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QPageSize(const QSize &, const QString &, enum QPageSize::SizeMatchPolicy)
-func NewQPageSize_2(pointSize *qtcore.QSize, name string, matchPolicy int) *QPageSize {
-	var convArg0 = pointSize.GetCthis()
+func NewQPageSize_2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *QPageSize {
+	var convArg0 = pointSize.QSize_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK5QSizeRK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, matchPolicy)
@@ -104,8 +104,8 @@ func NewQPageSize_2(pointSize *qtcore.QSize, name string, matchPolicy int) *QPag
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QPageSize(const QSizeF &, enum QPageSize::Unit, const QString &, enum QPageSize::SizeMatchPolicy)
-func NewQPageSize_3(size *qtcore.QSizeF, units int, name string, matchPolicy int) *QPageSize {
-	var convArg0 = size.GetCthis()
+func NewQPageSize_3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy int) *QPageSize {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(name)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, units, convArg2, matchPolicy)
@@ -130,8 +130,8 @@ func DeleteQPageSize(this *QPageSize) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPageSize &)
-func (this *QPageSize) Swap(other *QPageSize) {
-	var convArg0 = other.GetCthis()
+func (this *QPageSize) Swap(other QPageSize_ITF) {
+	var convArg0 = other.QPageSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -140,8 +140,8 @@ func (this *QPageSize) Swap(other *QPageSize) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEquivalentTo(const QPageSize &)
-func (this *QPageSize) IsEquivalentTo(other *QPageSize) bool {
-	var convArg0 = other.GetCthis()
+func (this *QPageSize) IsEquivalentTo(other QPageSize_ITF) bool {
+	var convArg0 = other.QPageSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize14isEquivalentToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -233,13 +233,13 @@ func (this *QPageSize) Id() int {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QPageSize::PageSizeId id(const QSize &, enum QPageSize::SizeMatchPolicy)
-func (this *QPageSize) Id_1(pointSize *qtcore.QSize, matchPolicy int) int {
-	var convArg0 = pointSize.GetCthis()
+func (this *QPageSize) Id_1(pointSize qtcore.QSize_ITF, matchPolicy int) int {
+	var convArg0 = pointSize.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize2idERK5QSizeNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, matchPolicy)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QPageSize_Id_1(pointSize *qtcore.QSize, matchPolicy int) int {
+func QPageSize_Id_1(pointSize qtcore.QSize_ITF, matchPolicy int) int {
 	var nilthis *QPageSize
 	rv := nilthis.Id_1(pointSize, matchPolicy)
 	return rv
@@ -249,13 +249,13 @@ func QPageSize_Id_1(pointSize *qtcore.QSize, matchPolicy int) int {
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] QPageSize::PageSizeId id(const QSizeF &, enum QPageSize::Unit, enum QPageSize::SizeMatchPolicy)
-func (this *QPageSize) Id_2(size *qtcore.QSizeF, units int, matchPolicy int) int {
-	var convArg0 = size.GetCthis()
+func (this *QPageSize) Id_2(size qtcore.QSizeF_ITF, units int, matchPolicy int) int {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize2idERK6QSizeFNS_4UnitENS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, units, matchPolicy)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QPageSize_Id_2(size *qtcore.QSizeF, units int, matchPolicy int) int {
+func QPageSize_Id_2(size qtcore.QSizeF_ITF, units int, matchPolicy int) int {
 	var nilthis *QPageSize
 	rv := nilthis.Id_2(size, units, matchPolicy)
 	return rv

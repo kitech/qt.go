@@ -64,8 +64,8 @@ func (*QDirIterator) NewFromPointer(cthis unsafe.Pointer) *QDirIterator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QDir &, QDirIterator::IteratorFlags)
-func NewQDirIterator(dir *QDir, flags int) *QDirIterator {
-	var convArg0 = dir.GetCthis()
+func NewQDirIterator(dir QDir_ITF, flags int) *QDirIterator {
+	var convArg0 = dir.QDir_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK4QDir6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -105,10 +105,10 @@ func NewQDirIterator_2(path string, filter int, flags int) *QDirIterator {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QString &, const QStringList &, QDir::Filters, QDirIterator::IteratorFlags)
-func NewQDirIterator_3(path string, nameFilters *QStringList, filters int, flags int) *QDirIterator {
+func NewQDirIterator_3(path string, nameFilters QStringList_ITF, filters int, flags int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = nameFilters.GetCthis()
+	var convArg1 = nameFilters.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QStringRK11QStringList6QFlagsIN4QDir6FilterEES6_INS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, filters, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))

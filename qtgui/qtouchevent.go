@@ -124,8 +124,8 @@ func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWindow(QWindow *)
-func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
-	var convArg0 = awindow.GetCthis()
+func (this *QTouchEvent) SetWindow(awindow QWindow_ITF /*777 QWindow **/) {
+	var convArg0 = awindow.QWindow_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setWindowEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -134,8 +134,8 @@ func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTarget(QObject *)
-func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
-	var convArg0 = atarget.GetCthis()
+func (this *QTouchEvent) SetTarget(atarget qtcore.QObject_ITF /*777 QObject **/) {
+	var convArg0 = atarget.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setTargetEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -153,8 +153,8 @@ func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDevice(QTouchDevice *)
-func (this *QTouchEvent) SetDevice(adevice *QTouchDevice /*777 QTouchDevice **/) {
-	var convArg0 = adevice.GetCthis()
+func (this *QTouchEvent) SetDevice(adevice QTouchDevice_ITF /*777 QTouchDevice **/) {
+	var convArg0 = adevice.QTouchDevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setDeviceEP12QTouchDevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

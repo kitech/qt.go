@@ -224,8 +224,8 @@ func (this *QGraphicsProxyWidget) MetaObject() *qtcore.QMetaObject /*777 const Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsProxyWidget(QGraphicsItem *, Qt::WindowFlags)
-func NewQGraphicsProxyWidget(parent *QGraphicsItem /*777 QGraphicsItem **/, wFlags int) *QGraphicsProxyWidget {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsProxyWidget(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, wFlags int) *QGraphicsProxyWidget {
+	var convArg0 = parent.QGraphicsItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidgetC2EP13QGraphicsItem6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, wFlags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsProxyWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -247,8 +247,8 @@ func DeleteQGraphicsProxyWidget(this *QGraphicsProxyWidget) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
-func (this *QGraphicsProxyWidget) SetWidget(widget *QWidget /*777 QWidget **/) {
-	var convArg0 = widget.GetCthis()
+func (this *QGraphicsProxyWidget) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget9setWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -267,8 +267,8 @@ func (this *QGraphicsProxyWidget) Widget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF subWidgetRect(const QWidget *)
-func (this *QGraphicsProxyWidget) SubWidgetRect(widget *QWidget /*777 const QWidget **/) *qtcore.QRectF /*123*/ {
-	var convArg0 = widget.GetCthis()
+func (this *QGraphicsProxyWidget) SubWidgetRect(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRectF /*123*/ {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -280,8 +280,8 @@ func (this *QGraphicsProxyWidget) SubWidgetRect(widget *QWidget /*777 const QWid
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
-func (this *QGraphicsProxyWidget) SetGeometry(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QGraphicsProxyWidget) SetGeometry(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget11setGeometryERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -290,10 +290,10 @@ func (this *QGraphicsProxyWidget) SetGeometry(rect *qtcore.QRectF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
-func (this *QGraphicsProxyWidget) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionGraphicsItem /*777 const QStyleOptionGraphicsItem **/, widget *QWidget /*777 QWidget **/) {
-	var convArg0 = painter.GetCthis()
-	var convArg1 = option.GetCthis()
-	var convArg2 = widget.GetCthis()
+func (this *QGraphicsProxyWidget) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/, widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
+	var convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
+	var convArg2 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -312,8 +312,8 @@ func (this *QGraphicsProxyWidget) Type() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsProxyWidget * createProxyForChildWidget(QWidget *)
-func (this *QGraphicsProxyWidget) CreateProxyForChildWidget(child *QWidget /*777 QWidget **/) *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
-	var convArg0 = child.GetCthis()
+func (this *QGraphicsProxyWidget) CreateProxyForChildWidget(child QWidget_ITF /*777 QWidget **/) *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
+	var convArg0 = child.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQGraphicsProxyWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -323,8 +323,8 @@ func (this *QGraphicsProxyWidget) CreateProxyForChildWidget(child *QWidget /*777
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const QVariant &)
-func (this *QGraphicsProxyWidget) ItemChange(change int, value *qtcore.QVariant) *qtcore.QVariant /*123*/ {
-	var convArg1 = value.GetCthis()
+func (this *QGraphicsProxyWidget) ItemChange(change int, value qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget10itemChangeEN13QGraphicsItem18GraphicsItemChangeERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), change, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -336,8 +336,8 @@ func (this *QGraphicsProxyWidget) ItemChange(change int, value *qtcore.QVariant)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QGraphicsProxyWidget) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -347,9 +347,9 @@ func (this *QGraphicsProxyWidget) Event(event *qtcore.QEvent /*777 QEvent **/) b
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
-func (this *QGraphicsProxyWidget) EventFilter(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = object.GetCthis()
-	var convArg1 = event.GetCthis()
+func (this *QGraphicsProxyWidget) EventFilter(object qtcore.QObject_ITF /*777 QObject **/, event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = object.QObject_PTR().GetCthis()
+	var convArg1 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -359,8 +359,8 @@ func (this *QGraphicsProxyWidget) EventFilter(object *qtcore.QObject /*777 QObje
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
-func (this *QGraphicsProxyWidget) ShowEvent(event *qtgui.QShowEvent /*777 QShowEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
+	var convArg0 = event.QShowEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -369,8 +369,8 @@ func (this *QGraphicsProxyWidget) ShowEvent(event *qtgui.QShowEvent /*777 QShowE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
-func (this *QGraphicsProxyWidget) HideEvent(event *qtgui.QHideEvent /*777 QHideEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) HideEvent(event qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
+	var convArg0 = event.QHideEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget9hideEventEP10QHideEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -379,8 +379,8 @@ func (this *QGraphicsProxyWidget) HideEvent(event *qtgui.QHideEvent /*777 QHideE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
-func (this *QGraphicsProxyWidget) ContextMenuEvent(event *QGraphicsSceneContextMenuEvent /*777 QGraphicsSceneContextMenuEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) ContextMenuEvent(event QGraphicsSceneContextMenuEvent_ITF /*777 QGraphicsSceneContextMenuEvent **/) {
+	var convArg0 = event.QGraphicsSceneContextMenuEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget16contextMenuEventEP30QGraphicsSceneContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -389,8 +389,8 @@ func (this *QGraphicsProxyWidget) ContextMenuEvent(event *QGraphicsSceneContextM
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QGraphicsSceneDragDropEvent *)
-func (this *QGraphicsProxyWidget) DragEnterEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) DragEnterEvent(event QGraphicsSceneDragDropEvent_ITF /*777 QGraphicsSceneDragDropEvent **/) {
+	var convArg0 = event.QGraphicsSceneDragDropEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14dragEnterEventEP27QGraphicsSceneDragDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -399,8 +399,8 @@ func (this *QGraphicsProxyWidget) DragEnterEvent(event *QGraphicsSceneDragDropEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
-func (this *QGraphicsProxyWidget) DragLeaveEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) DragLeaveEvent(event QGraphicsSceneDragDropEvent_ITF /*777 QGraphicsSceneDragDropEvent **/) {
+	var convArg0 = event.QGraphicsSceneDragDropEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14dragLeaveEventEP27QGraphicsSceneDragDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -409,8 +409,8 @@ func (this *QGraphicsProxyWidget) DragLeaveEvent(event *QGraphicsSceneDragDropEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QGraphicsSceneDragDropEvent *)
-func (this *QGraphicsProxyWidget) DragMoveEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) DragMoveEvent(event QGraphicsSceneDragDropEvent_ITF /*777 QGraphicsSceneDragDropEvent **/) {
+	var convArg0 = event.QGraphicsSceneDragDropEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget13dragMoveEventEP27QGraphicsSceneDragDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -419,8 +419,8 @@ func (this *QGraphicsProxyWidget) DragMoveEvent(event *QGraphicsSceneDragDropEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QGraphicsSceneDragDropEvent *)
-func (this *QGraphicsProxyWidget) DropEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) DropEvent(event QGraphicsSceneDragDropEvent_ITF /*777 QGraphicsSceneDragDropEvent **/) {
+	var convArg0 = event.QGraphicsSceneDragDropEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget9dropEventEP27QGraphicsSceneDragDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -429,8 +429,8 @@ func (this *QGraphicsProxyWidget) DropEvent(event *QGraphicsSceneDragDropEvent /
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverEnterEvent(QGraphicsSceneHoverEvent *)
-func (this *QGraphicsProxyWidget) HoverEnterEvent(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) HoverEnterEvent(event QGraphicsSceneHoverEvent_ITF /*777 QGraphicsSceneHoverEvent **/) {
+	var convArg0 = event.QGraphicsSceneHoverEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget15hoverEnterEventEP24QGraphicsSceneHoverEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -439,8 +439,8 @@ func (this *QGraphicsProxyWidget) HoverEnterEvent(event *QGraphicsSceneHoverEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverLeaveEvent(QGraphicsSceneHoverEvent *)
-func (this *QGraphicsProxyWidget) HoverLeaveEvent(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) HoverLeaveEvent(event QGraphicsSceneHoverEvent_ITF /*777 QGraphicsSceneHoverEvent **/) {
+	var convArg0 = event.QGraphicsSceneHoverEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget15hoverLeaveEventEP24QGraphicsSceneHoverEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -449,8 +449,8 @@ func (this *QGraphicsProxyWidget) HoverLeaveEvent(event *QGraphicsSceneHoverEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverMoveEvent(QGraphicsSceneHoverEvent *)
-func (this *QGraphicsProxyWidget) HoverMoveEvent(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) HoverMoveEvent(event QGraphicsSceneHoverEvent_ITF /*777 QGraphicsSceneHoverEvent **/) {
+	var convArg0 = event.QGraphicsSceneHoverEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14hoverMoveEventEP24QGraphicsSceneHoverEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -459,8 +459,8 @@ func (this *QGraphicsProxyWidget) HoverMoveEvent(event *QGraphicsSceneHoverEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void grabMouseEvent(QEvent *)
-func (this *QGraphicsProxyWidget) GrabMouseEvent(event *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) GrabMouseEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14grabMouseEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -469,8 +469,8 @@ func (this *QGraphicsProxyWidget) GrabMouseEvent(event *qtcore.QEvent /*777 QEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ungrabMouseEvent(QEvent *)
-func (this *QGraphicsProxyWidget) UngrabMouseEvent(event *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) UngrabMouseEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget16ungrabMouseEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -479,8 +479,8 @@ func (this *QGraphicsProxyWidget) UngrabMouseEvent(event *qtcore.QEvent /*777 QE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QGraphicsSceneMouseEvent *)
-func (this *QGraphicsProxyWidget) MouseMoveEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) MouseMoveEvent(event QGraphicsSceneMouseEvent_ITF /*777 QGraphicsSceneMouseEvent **/) {
+	var convArg0 = event.QGraphicsSceneMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14mouseMoveEventEP24QGraphicsSceneMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -489,8 +489,8 @@ func (this *QGraphicsProxyWidget) MouseMoveEvent(event *QGraphicsSceneMouseEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QGraphicsSceneMouseEvent *)
-func (this *QGraphicsProxyWidget) MousePressEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) MousePressEvent(event QGraphicsSceneMouseEvent_ITF /*777 QGraphicsSceneMouseEvent **/) {
+	var convArg0 = event.QGraphicsSceneMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget15mousePressEventEP24QGraphicsSceneMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -499,8 +499,8 @@ func (this *QGraphicsProxyWidget) MousePressEvent(event *QGraphicsSceneMouseEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
-func (this *QGraphicsProxyWidget) MouseReleaseEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) MouseReleaseEvent(event QGraphicsSceneMouseEvent_ITF /*777 QGraphicsSceneMouseEvent **/) {
+	var convArg0 = event.QGraphicsSceneMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget17mouseReleaseEventEP24QGraphicsSceneMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -509,8 +509,8 @@ func (this *QGraphicsProxyWidget) MouseReleaseEvent(event *QGraphicsSceneMouseEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
-func (this *QGraphicsProxyWidget) MouseDoubleClickEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) MouseDoubleClickEvent(event QGraphicsSceneMouseEvent_ITF /*777 QGraphicsSceneMouseEvent **/) {
+	var convArg0 = event.QGraphicsSceneMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -519,8 +519,8 @@ func (this *QGraphicsProxyWidget) MouseDoubleClickEvent(event *QGraphicsSceneMou
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QGraphicsSceneWheelEvent *)
-func (this *QGraphicsProxyWidget) WheelEvent(event *QGraphicsSceneWheelEvent /*777 QGraphicsSceneWheelEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) WheelEvent(event QGraphicsSceneWheelEvent_ITF /*777 QGraphicsSceneWheelEvent **/) {
+	var convArg0 = event.QGraphicsSceneWheelEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget10wheelEventEP24QGraphicsSceneWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -529,8 +529,8 @@ func (this *QGraphicsProxyWidget) WheelEvent(event *QGraphicsSceneWheelEvent /*7
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QGraphicsProxyWidget) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = event.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -539,8 +539,8 @@ func (this *QGraphicsProxyWidget) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKe
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
-func (this *QGraphicsProxyWidget) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = event.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget15keyReleaseEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -549,8 +549,8 @@ func (this *QGraphicsProxyWidget) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 Q
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
-func (this *QGraphicsProxyWidget) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = event.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -559,8 +559,8 @@ func (this *QGraphicsProxyWidget) FocusInEvent(event *qtgui.QFocusEvent /*777 QF
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
-func (this *QGraphicsProxyWidget) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = event.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -591,8 +591,8 @@ func (this *QGraphicsProxyWidget) InputMethodQuery(query int) *qtcore.QVariant /
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void inputMethodEvent(QInputMethodEvent *)
-func (this *QGraphicsProxyWidget) InputMethodEvent(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) InputMethodEvent(event qtgui.QInputMethodEvent_ITF /*777 QInputMethodEvent **/) {
+	var convArg0 = event.QInputMethodEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget16inputMethodEventEP17QInputMethodEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -601,8 +601,8 @@ func (this *QGraphicsProxyWidget) InputMethodEvent(event *qtgui.QInputMethodEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
-func (this *QGraphicsProxyWidget) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
-	var convArg1 = constraint.GetCthis()
+func (this *QGraphicsProxyWidget) SizeHint(which int, constraint qtcore.QSizeF_ITF) *qtcore.QSizeF /*123*/ {
+	var convArg1 = constraint.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -614,8 +614,8 @@ func (this *QGraphicsProxyWidget) SizeHint(which int, constraint *qtcore.QSizeF)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QGraphicsSceneResizeEvent *)
-func (this *QGraphicsProxyWidget) ResizeEvent(event *QGraphicsSceneResizeEvent /*777 QGraphicsSceneResizeEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGraphicsProxyWidget) ResizeEvent(event QGraphicsSceneResizeEvent_ITF /*777 QGraphicsSceneResizeEvent **/) {
+	var convArg0 = event.QGraphicsSceneResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget11resizeEventEP25QGraphicsSceneResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -624,8 +624,8 @@ func (this *QGraphicsProxyWidget) ResizeEvent(event *QGraphicsSceneResizeEvent /
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QGraphicsProxyWidget * newProxyWidget(const QWidget *)
-func (this *QGraphicsProxyWidget) NewProxyWidget(arg0 *QWidget /*777 const QWidget **/) *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QGraphicsProxyWidget) NewProxyWidget(arg0 QWidget_ITF /*777 const QWidget **/) *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
+	var convArg0 = arg0.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14newProxyWidgetEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQGraphicsProxyWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444

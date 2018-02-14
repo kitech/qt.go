@@ -156,8 +156,8 @@ func (this *QAccessibleInterface) ChildCount() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int indexOfChild(const QAccessibleInterface *)
-func (this *QAccessibleInterface) IndexOfChild(arg0 *QAccessibleInterface /*777 const QAccessibleInterface **/) int {
-	var convArg0 = arg0.GetCthis()
+func (this *QAccessibleInterface) IndexOfChild(arg0 QAccessibleInterface_ITF /*777 const QAccessibleInterface **/) int {
+	var convArg0 = arg0.QAccessibleInterface_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface12indexOfChildEPKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

@@ -110,15 +110,15 @@ func QPixmapCache_Find(key string) *QPixmap /*777 QPixmap **/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool find(const QString &, QPixmap &)
-func (this *QPixmapCache) Find_1(key string, pixmap *QPixmap) bool {
+func (this *QPixmapCache) Find_1(key string, pixmap QPixmap_ITF) bool {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = pixmap.GetCthis()
+	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringR7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QPixmapCache_Find_1(key string, pixmap *QPixmap) bool {
+func QPixmapCache_Find_1(key string, pixmap QPixmap_ITF) bool {
 	var nilthis *QPixmapCache
 	rv := nilthis.Find_1(key, pixmap)
 	return rv
@@ -128,15 +128,15 @@ func QPixmapCache_Find_1(key string, pixmap *QPixmap) bool {
 // index:2
 // Public static Visibility=Default Availability=Available
 // [1] bool find(const QString &, QPixmap *)
-func (this *QPixmapCache) Find_2(key string, pixmap *QPixmap /*777 QPixmap **/) bool {
+func (this *QPixmapCache) Find_2(key string, pixmap QPixmap_ITF /*777 QPixmap **/) bool {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = pixmap.GetCthis()
+	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringP7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QPixmapCache_Find_2(key string, pixmap *QPixmap /*777 QPixmap **/) bool {
+func QPixmapCache_Find_2(key string, pixmap QPixmap_ITF /*777 QPixmap **/) bool {
 	var nilthis *QPixmapCache
 	rv := nilthis.Find_2(key, pixmap)
 	return rv

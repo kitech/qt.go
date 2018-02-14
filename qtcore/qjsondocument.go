@@ -76,8 +76,8 @@ func NewQJsonDocument() *QJsonDocument {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QJsonDocument(const QJsonObject &)
-func NewQJsonDocument_1(object *QJsonObject) *QJsonDocument {
-	var convArg0 = object.GetCthis()
+func NewQJsonDocument_1(object QJsonObject_ITF) *QJsonDocument {
+	var convArg0 = object.QJsonObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocumentC2ERK11QJsonObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -89,8 +89,8 @@ func NewQJsonDocument_1(object *QJsonObject) *QJsonDocument {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QJsonDocument(const QJsonArray &)
-func NewQJsonDocument_2(array *QJsonArray) *QJsonDocument {
-	var convArg0 = array.GetCthis()
+func NewQJsonDocument_2(array QJsonArray_ITF) *QJsonDocument {
+	var convArg0 = array.QJsonArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocumentC2ERK10QJsonArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -113,8 +113,8 @@ func DeleteQJsonDocument(this *QJsonDocument) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QJsonDocument &)
-func (this *QJsonDocument) Swap(other *QJsonDocument) {
-	var convArg0 = other.GetCthis()
+func (this *QJsonDocument) Swap(other QJsonDocument_ITF) {
+	var convArg0 = other.QJsonDocument_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocument4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -152,15 +152,15 @@ func (this *QJsonDocument) RawData(size unsafe.Pointer /*666*/) string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QJsonDocument fromBinaryData(const QByteArray &, enum QJsonDocument::DataValidation)
-func (this *QJsonDocument) FromBinaryData(data *QByteArray, validation int) *QJsonDocument /*123*/ {
-	var convArg0 = data.GetCthis()
+func (this *QJsonDocument) FromBinaryData(data QByteArray_ITF, validation int) *QJsonDocument /*123*/ {
+	var convArg0 = data.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocument14fromBinaryDataERK10QByteArrayNS_14DataValidationE", qtrt.FFI_TYPE_POINTER, convArg0, validation)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonDocument)
 	return rv2
 }
-func QJsonDocument_FromBinaryData(data *QByteArray, validation int) *QJsonDocument /*123*/ {
+func QJsonDocument_FromBinaryData(data QByteArray_ITF, validation int) *QJsonDocument /*123*/ {
 	var nilthis *QJsonDocument
 	rv := nilthis.FromBinaryData(data, validation)
 	return rv
@@ -182,15 +182,15 @@ func (this *QJsonDocument) ToBinaryData() *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QJsonDocument fromVariant(const QVariant &)
-func (this *QJsonDocument) FromVariant(variant *QVariant) *QJsonDocument /*123*/ {
-	var convArg0 = variant.GetCthis()
+func (this *QJsonDocument) FromVariant(variant QVariant_ITF) *QJsonDocument /*123*/ {
+	var convArg0 = variant.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocument11fromVariantERK8QVariant", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonDocument)
 	return rv2
 }
-func QJsonDocument_FromVariant(variant *QVariant) *QJsonDocument /*123*/ {
+func QJsonDocument_FromVariant(variant QVariant_ITF) *QJsonDocument /*123*/ {
 	var nilthis *QJsonDocument
 	rv := nilthis.FromVariant(variant)
 	return rv
@@ -290,8 +290,8 @@ func (this *QJsonDocument) Array() *QJsonArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setObject(const QJsonObject &)
-func (this *QJsonDocument) SetObject(object *QJsonObject) {
-	var convArg0 = object.GetCthis()
+func (this *QJsonDocument) SetObject(object QJsonObject_ITF) {
+	var convArg0 = object.QJsonObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocument9setObjectERK11QJsonObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -300,8 +300,8 @@ func (this *QJsonDocument) SetObject(object *QJsonObject) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setArray(const QJsonArray &)
-func (this *QJsonDocument) SetArray(array *QJsonArray) {
-	var convArg0 = array.GetCthis()
+func (this *QJsonDocument) SetArray(array QJsonArray_ITF) {
+	var convArg0 = array.QJsonArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocument8setArrayERK10QJsonArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

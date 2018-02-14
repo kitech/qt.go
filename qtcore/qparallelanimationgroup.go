@@ -92,8 +92,8 @@ func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QParallelAnimationGroup(QObject *)
-func NewQParallelAnimationGroup(parent *QObject /*777 QObject **/) *QParallelAnimationGroup {
-	var convArg0 = parent.GetCthis()
+func NewQParallelAnimationGroup(parent QObject_ITF /*777 QObject **/) *QParallelAnimationGroup {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQParallelAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -125,8 +125,8 @@ func (this *QParallelAnimationGroup) Duration() int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QParallelAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QParallelAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

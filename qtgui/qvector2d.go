@@ -101,8 +101,8 @@ func NewQVector2D_2(xpos float32, ypos float32) *QVector2D {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector2D(const QPoint &)
-func NewQVector2D_3(point *qtcore.QPoint) *QVector2D {
-	var convArg0 = point.GetCthis()
+func NewQVector2D_3(point qtcore.QPoint_ITF) *QVector2D {
+	var convArg0 = point.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2ERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -114,8 +114,8 @@ func NewQVector2D_3(point *qtcore.QPoint) *QVector2D {
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector2D(const QPointF &)
-func NewQVector2D_4(point *qtcore.QPointF) *QVector2D {
-	var convArg0 = point.GetCthis()
+func NewQVector2D_4(point qtcore.QPointF_ITF) *QVector2D {
+	var convArg0 = point.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2ERK7QPointF", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -127,8 +127,8 @@ func NewQVector2D_4(point *qtcore.QPointF) *QVector2D {
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QVector2D(const QVector3D &)
-func NewQVector2D_5(vector *QVector3D) *QVector2D {
-	var convArg0 = vector.GetCthis()
+func NewQVector2D_5(vector QVector3D_ITF) *QVector2D {
+	var convArg0 = vector.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2ERK9QVector3D", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -140,8 +140,8 @@ func NewQVector2D_5(vector *QVector3D) *QVector2D {
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QVector2D(const QVector4D &)
-func NewQVector2D_6(vector *QVector4D) *QVector2D {
-	var convArg0 = vector.GetCthis()
+func NewQVector2D_6(vector QVector4D_ITF) *QVector2D {
+	var convArg0 = vector.QVector4D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2ERK9QVector4D", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -242,8 +242,8 @@ func (this *QVector2D) Normalize() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float distanceToPoint(const QVector2D &)
-func (this *QVector2D) DistanceToPoint(point *QVector2D) float32 {
-	var convArg0 = point.GetCthis()
+func (this *QVector2D) DistanceToPoint(point QVector2D_ITF) float32 {
+	var convArg0 = point.QVector2D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D15distanceToPointERKS_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -253,9 +253,9 @@ func (this *QVector2D) DistanceToPoint(point *QVector2D) float32 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float distanceToLine(const QVector2D &, const QVector2D &)
-func (this *QVector2D) DistanceToLine(point *QVector2D, direction *QVector2D) float32 {
-	var convArg0 = point.GetCthis()
-	var convArg1 = direction.GetCthis()
+func (this *QVector2D) DistanceToLine(point QVector2D_ITF, direction QVector2D_ITF) float32 {
+	var convArg0 = point.QVector2D_PTR().GetCthis()
+	var convArg1 = direction.QVector2D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D14distanceToLineERKS_S1_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -265,14 +265,14 @@ func (this *QVector2D) DistanceToLine(point *QVector2D, direction *QVector2D) fl
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] float dotProduct(const QVector2D &, const QVector2D &)
-func (this *QVector2D) DotProduct(v1 *QVector2D, v2 *QVector2D) float32 {
-	var convArg0 = v1.GetCthis()
-	var convArg1 = v2.GetCthis()
+func (this *QVector2D) DotProduct(v1 QVector2D_ITF, v2 QVector2D_ITF) float32 {
+	var convArg0 = v1.QVector2D_PTR().GetCthis()
+	var convArg1 = v2.QVector2D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2D10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
-func QVector2D_DotProduct(v1 *QVector2D, v2 *QVector2D) float32 {
+func QVector2D_DotProduct(v1 QVector2D_ITF, v2 QVector2D_ITF) float32 {
 	var nilthis *QVector2D
 	rv := nilthis.DotProduct(v1, v2)
 	return rv

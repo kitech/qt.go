@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// qint64 expire()
+// long long expire()
 func (this *QNetworkDiskCache) InheritExpire(f func() int64) {
 	qtrt.SetAllInheritCallback(this, "expire", f)
 }
@@ -78,8 +78,8 @@ func (this *QNetworkDiskCache) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkDiskCache(QObject *)
-func NewQNetworkDiskCache(parent *qtcore.QObject /*777 QObject **/) *QNetworkDiskCache {
-	var convArg0 = parent.GetCthis()
+func NewQNetworkDiskCache(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkDiskCache {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCacheC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkDiskCacheFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -154,8 +154,8 @@ func (this *QNetworkDiskCache) CacheSize() int64 {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QNetworkCacheMetaData metaData(const QUrl &)
-func (this *QNetworkDiskCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMetaData /*123*/ {
-	var convArg0 = url.GetCthis()
+func (this *QNetworkDiskCache) MetaData(url qtcore.QUrl_ITF) *QNetworkCacheMetaData /*123*/ {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache8metaDataERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQNetworkCacheMetaDataFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -167,8 +167,8 @@ func (this *QNetworkDiskCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMetaData
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void updateMetaData(const QNetworkCacheMetaData &)
-func (this *QNetworkDiskCache) UpdateMetaData(metaData *QNetworkCacheMetaData) {
-	var convArg0 = metaData.GetCthis()
+func (this *QNetworkDiskCache) UpdateMetaData(metaData QNetworkCacheMetaData_ITF) {
+	var convArg0 = metaData.QNetworkCacheMetaData_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache14updateMetaDataERK21QNetworkCacheMetaData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -177,8 +177,8 @@ func (this *QNetworkDiskCache) UpdateMetaData(metaData *QNetworkCacheMetaData) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QIODevice * data(const QUrl &)
-func (this *QNetworkDiskCache) Data(url *qtcore.QUrl) *qtcore.QIODevice /*777 QIODevice **/ {
-	var convArg0 = url.GetCthis()
+func (this *QNetworkDiskCache) Data(url qtcore.QUrl_ITF) *qtcore.QIODevice /*777 QIODevice **/ {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache4dataERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -188,8 +188,8 @@ func (this *QNetworkDiskCache) Data(url *qtcore.QUrl) *qtcore.QIODevice /*777 QI
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool remove(const QUrl &)
-func (this *QNetworkDiskCache) Remove(url *qtcore.QUrl) bool {
-	var convArg0 = url.GetCthis()
+func (this *QNetworkDiskCache) Remove(url qtcore.QUrl_ITF) bool {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache6removeERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -199,8 +199,8 @@ func (this *QNetworkDiskCache) Remove(url *qtcore.QUrl) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QIODevice * prepare(const QNetworkCacheMetaData &)
-func (this *QNetworkDiskCache) Prepare(metaData *QNetworkCacheMetaData) *qtcore.QIODevice /*777 QIODevice **/ {
-	var convArg0 = metaData.GetCthis()
+func (this *QNetworkDiskCache) Prepare(metaData QNetworkCacheMetaData_ITF) *qtcore.QIODevice /*777 QIODevice **/ {
+	var convArg0 = metaData.QNetworkCacheMetaData_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache7prepareERK21QNetworkCacheMetaData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444

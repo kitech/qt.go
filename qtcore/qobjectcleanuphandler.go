@@ -94,8 +94,8 @@ func DeleteQObjectCleanupHandler(this *QObjectCleanupHandler) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * add(QObject *)
-func (this *QObjectCleanupHandler) Add(object *QObject /*777 QObject **/) *QObject /*777 QObject **/ {
-	var convArg0 = object.GetCthis()
+func (this *QObjectCleanupHandler) Add(object QObject_ITF /*777 QObject **/) *QObject /*777 QObject **/ {
+	var convArg0 = object.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -105,8 +105,8 @@ func (this *QObjectCleanupHandler) Add(object *QObject /*777 QObject **/) *QObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void remove(QObject *)
-func (this *QObjectCleanupHandler) Remove(object *QObject /*777 QObject **/) {
-	var convArg0 = object.GetCthis()
+func (this *QObjectCleanupHandler) Remove(object QObject_ITF /*777 QObject **/) {
+	var convArg0 = object.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

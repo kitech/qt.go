@@ -138,8 +138,8 @@ func NewQJsonValue_5(s string) *QJsonValue {
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QJsonValue(QLatin1String)
-func NewQJsonValue_6(s *QLatin1String /*123*/) *QJsonValue {
-	var convArg0 = s.GetCthis()
+func NewQJsonValue_6(s QLatin1String_ITF /*123*/) *QJsonValue {
+	var convArg0 = s.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValueC2E13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -165,8 +165,8 @@ func NewQJsonValue_7(s string) *QJsonValue {
 // index:8
 // Public Visibility=Default Availability=Available
 // [-2] void QJsonValue(const QJsonArray &)
-func NewQJsonValue_8(a *QJsonArray) *QJsonValue {
-	var convArg0 = a.GetCthis()
+func NewQJsonValue_8(a QJsonArray_ITF) *QJsonValue {
+	var convArg0 = a.QJsonArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValueC2ERK10QJsonArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -178,8 +178,8 @@ func NewQJsonValue_8(a *QJsonArray) *QJsonValue {
 // index:9
 // Public Visibility=Default Availability=Available
 // [-2] void QJsonValue(const QJsonObject &)
-func NewQJsonValue_9(o *QJsonObject) *QJsonValue {
-	var convArg0 = o.GetCthis()
+func NewQJsonValue_9(o QJsonObject_ITF) *QJsonValue {
+	var convArg0 = o.QJsonObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValueC2ERK11QJsonObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -202,8 +202,8 @@ func DeleteQJsonValue(this *QJsonValue) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QJsonValue &)
-func (this *QJsonValue) Swap(other *QJsonValue) {
-	var convArg0 = other.GetCthis()
+func (this *QJsonValue) Swap(other QJsonValue_ITF) {
+	var convArg0 = other.QJsonValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValue4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -212,15 +212,15 @@ func (this *QJsonValue) Swap(other *QJsonValue) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [24] QJsonValue fromVariant(const QVariant &)
-func (this *QJsonValue) FromVariant(variant *QVariant) *QJsonValue /*123*/ {
-	var convArg0 = variant.GetCthis()
+func (this *QJsonValue) FromVariant(variant QVariant_ITF) *QJsonValue /*123*/ {
+	var convArg0 = variant.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValue11fromVariantERK8QVariant", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
 }
-func QJsonValue_FromVariant(variant *QVariant) *QJsonValue /*123*/ {
+func QJsonValue_FromVariant(variant QVariant_ITF) *QJsonValue /*123*/ {
 	var nilthis *QJsonValue
 	rv := nilthis.FromVariant(variant)
 	return rv
@@ -392,8 +392,8 @@ func (this *QJsonValue) ToArray() *QJsonArray /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QJsonArray toArray(const QJsonArray &)
-func (this *QJsonValue) ToArray_1(defaultValue *QJsonArray) *QJsonArray /*123*/ {
-	var convArg0 = defaultValue.GetCthis()
+func (this *QJsonValue) ToArray_1(defaultValue QJsonArray_ITF) *QJsonArray /*123*/ {
+	var convArg0 = defaultValue.QJsonArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValue7toArrayERK10QJsonArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -417,8 +417,8 @@ func (this *QJsonValue) ToObject() *QJsonObject /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject toObject(const QJsonObject &)
-func (this *QJsonValue) ToObject_1(defaultValue *QJsonObject) *QJsonObject /*123*/ {
-	var convArg0 = defaultValue.GetCthis()
+func (this *QJsonValue) ToObject_1(defaultValue QJsonObject_ITF) *QJsonObject /*123*/ {
+	var convArg0 = defaultValue.QJsonObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValue8toObjectERK11QJsonObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333

@@ -113,8 +113,8 @@ func NewQTransform_3(h11 float64, h12 float64, h21 float64, h22 float64, dx floa
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QTransform(const QMatrix &)
-func NewQTransform_4(mtx *QMatrix) *QTransform {
-	var convArg0 = mtx.GetCthis()
+func NewQTransform_4(mtx QMatrix_ITF) *QTransform {
+	var convArg0 = mtx.QMatrix_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2ERK7QMatrix", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -431,14 +431,14 @@ func (this *QTransform) RotateRadians(a float64, axis int) *QTransform {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool squareToQuad(const QPolygonF &, QTransform &)
-func (this *QTransform) SquareToQuad(square *QPolygonF, result *QTransform) bool {
-	var convArg0 = square.GetCthis()
-	var convArg1 = result.GetCthis()
+func (this *QTransform) SquareToQuad(square QPolygonF_ITF, result QTransform_ITF) bool {
+	var convArg0 = square.QPolygonF_PTR().GetCthis()
+	var convArg1 = result.QTransform_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransform12squareToQuadERK9QPolygonFRS_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QTransform_SquareToQuad(square *QPolygonF, result *QTransform) bool {
+func QTransform_SquareToQuad(square QPolygonF_ITF, result QTransform_ITF) bool {
 	var nilthis *QTransform
 	rv := nilthis.SquareToQuad(square, result)
 	return rv
@@ -448,14 +448,14 @@ func QTransform_SquareToQuad(square *QPolygonF, result *QTransform) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool quadToSquare(const QPolygonF &, QTransform &)
-func (this *QTransform) QuadToSquare(quad *QPolygonF, result *QTransform) bool {
-	var convArg0 = quad.GetCthis()
-	var convArg1 = result.GetCthis()
+func (this *QTransform) QuadToSquare(quad QPolygonF_ITF, result QTransform_ITF) bool {
+	var convArg0 = quad.QPolygonF_PTR().GetCthis()
+	var convArg1 = result.QTransform_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransform12quadToSquareERK9QPolygonFRS_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QTransform_QuadToSquare(quad *QPolygonF, result *QTransform) bool {
+func QTransform_QuadToSquare(quad QPolygonF_ITF, result QTransform_ITF) bool {
 	var nilthis *QTransform
 	rv := nilthis.QuadToSquare(quad, result)
 	return rv
@@ -465,15 +465,15 @@ func QTransform_QuadToSquare(quad *QPolygonF, result *QTransform) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool quadToQuad(const QPolygonF &, const QPolygonF &, QTransform &)
-func (this *QTransform) QuadToQuad(one *QPolygonF, two *QPolygonF, result *QTransform) bool {
-	var convArg0 = one.GetCthis()
-	var convArg1 = two.GetCthis()
-	var convArg2 = result.GetCthis()
+func (this *QTransform) QuadToQuad(one QPolygonF_ITF, two QPolygonF_ITF, result QTransform_ITF) bool {
+	var convArg0 = one.QPolygonF_PTR().GetCthis()
+	var convArg1 = two.QPolygonF_PTR().GetCthis()
+	var convArg2 = result.QTransform_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QTransform_QuadToQuad(one *QPolygonF, two *QPolygonF, result *QTransform) bool {
+func QTransform_QuadToQuad(one QPolygonF_ITF, two QPolygonF_ITF, result QTransform_ITF) bool {
 	var nilthis *QTransform
 	rv := nilthis.QuadToQuad(one, two, result)
 	return rv
@@ -492,8 +492,8 @@ func (this *QTransform) Reset() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint map(const QPoint &)
-func (this *QTransform) Map(p *qtcore.QPoint) *qtcore.QPoint /*123*/ {
-	var convArg0 = p.GetCthis()
+func (this *QTransform) Map(p qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
+	var convArg0 = p.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -505,8 +505,8 @@ func (this *QTransform) Map(p *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QPointF map(const QPointF &)
-func (this *QTransform) Map_1(p *qtcore.QPointF) *qtcore.QPointF /*123*/ {
-	var convArg0 = p.GetCthis()
+func (this *QTransform) Map_1(p qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
+	var convArg0 = p.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -518,8 +518,8 @@ func (this *QTransform) Map_1(p *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QLine map(const QLine &)
-func (this *QTransform) Map_2(l *qtcore.QLine) *qtcore.QLine /*123*/ {
-	var convArg0 = l.GetCthis()
+func (this *QTransform) Map_2(l qtcore.QLine_ITF) *qtcore.QLine /*123*/ {
+	var convArg0 = l.QLine_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapERK5QLine", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -531,8 +531,8 @@ func (this *QTransform) Map_2(l *qtcore.QLine) *qtcore.QLine /*123*/ {
 // index:3
 // Public Visibility=Default Availability=Available
 // [32] QLineF map(const QLineF &)
-func (this *QTransform) Map_3(l *qtcore.QLineF) *qtcore.QLineF /*123*/ {
-	var convArg0 = l.GetCthis()
+func (this *QTransform) Map_3(l qtcore.QLineF_ITF) *qtcore.QLineF /*123*/ {
+	var convArg0 = l.QLineF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapERK6QLineF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -544,8 +544,8 @@ func (this *QTransform) Map_3(l *qtcore.QLineF) *qtcore.QLineF /*123*/ {
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF map(const QPolygonF &)
-func (this *QTransform) Map_4(a *QPolygonF) *QPolygonF /*123*/ {
-	var convArg0 = a.GetCthis()
+func (this *QTransform) Map_4(a QPolygonF_ITF) *QPolygonF /*123*/ {
+	var convArg0 = a.QPolygonF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapERK9QPolygonF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -557,8 +557,8 @@ func (this *QTransform) Map_4(a *QPolygonF) *QPolygonF /*123*/ {
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QPolygon map(const QPolygon &)
-func (this *QTransform) Map_5(a *QPolygon) *QPolygon /*123*/ {
-	var convArg0 = a.GetCthis()
+func (this *QTransform) Map_5(a QPolygon_ITF) *QPolygon /*123*/ {
+	var convArg0 = a.QPolygon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapERK8QPolygon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -570,8 +570,8 @@ func (this *QTransform) Map_5(a *QPolygon) *QPolygon /*123*/ {
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QRegion map(const QRegion &)
-func (this *QTransform) Map_6(r *QRegion) *QRegion /*123*/ {
-	var convArg0 = r.GetCthis()
+func (this *QTransform) Map_6(r QRegion_ITF) *QRegion /*123*/ {
+	var convArg0 = r.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -583,8 +583,8 @@ func (this *QTransform) Map_6(r *QRegion) *QRegion /*123*/ {
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath map(const QPainterPath &)
-func (this *QTransform) Map_7(p *QPainterPath) *QPainterPath /*123*/ {
-	var convArg0 = p.GetCthis()
+func (this *QTransform) Map_7(p QPainterPath_ITF) *QPainterPath /*123*/ {
+	var convArg0 = p.QPainterPath_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapERK12QPainterPath", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -614,8 +614,8 @@ func (this *QTransform) Map_9(x float64, y float64, tx unsafe.Pointer /*666*/, t
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygon mapToPolygon(const QRect &)
-func (this *QTransform) MapToPolygon(r *qtcore.QRect) *QPolygon /*123*/ {
-	var convArg0 = r.GetCthis()
+func (this *QTransform) MapToPolygon(r qtcore.QRect_ITF) *QPolygon /*123*/ {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform12mapToPolygonERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -627,8 +627,8 @@ func (this *QTransform) MapToPolygon(r *qtcore.QRect) *QPolygon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect mapRect(const QRect &)
-func (this *QTransform) MapRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QTransform) MapRect(arg0 qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
+	var convArg0 = arg0.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform7mapRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -640,8 +640,8 @@ func (this *QTransform) MapRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRect(const QRectF &)
-func (this *QTransform) MapRect_1(arg0 *qtcore.QRectF) *qtcore.QRectF /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QTransform) MapRect_1(arg0 qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
+	var convArg0 = arg0.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform7mapRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333

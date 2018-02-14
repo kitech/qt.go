@@ -97,8 +97,8 @@ func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRect &)
-func (this *QPaintDeviceWindow) Update(rect *qtcore.QRect) {
-	var convArg0 = rect.GetCthis()
+func (this *QPaintDeviceWindow) Update(rect qtcore.QRect_ITF) {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -107,8 +107,8 @@ func (this *QPaintDeviceWindow) Update(rect *qtcore.QRect) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRegion &)
-func (this *QPaintDeviceWindow) Update_1(region *QRegion) {
-	var convArg0 = region.GetCthis()
+func (this *QPaintDeviceWindow) Update_1(region QRegion_ITF) {
+	var convArg0 = region.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -126,8 +126,8 @@ func (this *QPaintDeviceWindow) Update_2() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QPaintDeviceWindow) PaintEvent(event *QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QPaintDeviceWindow) PaintEvent(event QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = event.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -146,8 +146,8 @@ func (this *QPaintDeviceWindow) Metric(metric int) int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void exposeEvent(QExposeEvent *)
-func (this *QPaintDeviceWindow) ExposeEvent(arg0 *QExposeEvent /*777 QExposeEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QPaintDeviceWindow) ExposeEvent(arg0 QExposeEvent_ITF /*777 QExposeEvent **/) {
+	var convArg0 = arg0.QExposeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow11exposeEventEP12QExposeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -156,8 +156,8 @@ func (this *QPaintDeviceWindow) ExposeEvent(arg0 *QExposeEvent /*777 QExposeEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QPaintDeviceWindow) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QPaintDeviceWindow) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

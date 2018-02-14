@@ -94,8 +94,8 @@ func (this *QWidgetAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWidgetAction(QObject *)
-func NewQWidgetAction(parent *qtcore.QObject /*777 QObject **/) *QWidgetAction {
-	var convArg0 = parent.GetCthis()
+func NewQWidgetAction(parent qtcore.QObject_ITF /*777 QObject **/) *QWidgetAction {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetActionC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWidgetActionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,8 +117,8 @@ func DeleteQWidgetAction(this *QWidgetAction) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultWidget(QWidget *)
-func (this *QWidgetAction) SetDefaultWidget(w *QWidget /*777 QWidget **/) {
-	var convArg0 = w.GetCthis()
+func (this *QWidgetAction) SetDefaultWidget(w QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetAction16setDefaultWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -137,8 +137,8 @@ func (this *QWidgetAction) DefaultWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * requestWidget(QWidget *)
-func (this *QWidgetAction) RequestWidget(parent *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
-	var convArg0 = parent.GetCthis()
+func (this *QWidgetAction) RequestWidget(parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetAction13requestWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -148,8 +148,8 @@ func (this *QWidgetAction) RequestWidget(parent *QWidget /*777 QWidget **/) *QWi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void releaseWidget(QWidget *)
-func (this *QWidgetAction) ReleaseWidget(widget *QWidget /*777 QWidget **/) {
-	var convArg0 = widget.GetCthis()
+func (this *QWidgetAction) ReleaseWidget(widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetAction13releaseWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -158,8 +158,8 @@ func (this *QWidgetAction) ReleaseWidget(widget *QWidget /*777 QWidget **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QWidgetAction) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QWidgetAction) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetAction5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -169,9 +169,9 @@ func (this *QWidgetAction) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
-func (this *QWidgetAction) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+func (this *QWidgetAction) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg1 = arg1.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetAction11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -181,8 +181,8 @@ func (this *QWidgetAction) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, a
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QWidget * createWidget(QWidget *)
-func (this *QWidgetAction) CreateWidget(parent *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
-	var convArg0 = parent.GetCthis()
+func (this *QWidgetAction) CreateWidget(parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetAction12createWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -192,8 +192,8 @@ func (this *QWidgetAction) CreateWidget(parent *QWidget /*777 QWidget **/) *QWid
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void deleteWidget(QWidget *)
-func (this *QWidgetAction) DeleteWidget(widget *QWidget /*777 QWidget **/) {
-	var convArg0 = widget.GetCthis()
+func (this *QWidgetAction) DeleteWidget(widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetAction12deleteWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

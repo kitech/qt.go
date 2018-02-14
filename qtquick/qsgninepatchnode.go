@@ -77,8 +77,8 @@ func DeleteQSGNinePatchNode(this *QSGNinePatchNode) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setTexture(QSGTexture *)
-func (this *QSGNinePatchNode) SetTexture(texture *QSGTexture /*777 QSGTexture **/) {
-	var convArg0 = texture.GetCthis()
+func (this *QSGNinePatchNode) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/) {
+	var convArg0 = texture.QSGTexture_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGNinePatchNode10setTextureEP10QSGTexture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -87,8 +87,8 @@ func (this *QSGNinePatchNode) SetTexture(texture *QSGTexture /*777 QSGTexture **
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setBounds(const QRectF &)
-func (this *QSGNinePatchNode) SetBounds(bounds *qtcore.QRectF) {
-	var convArg0 = bounds.GetCthis()
+func (this *QSGNinePatchNode) SetBounds(bounds qtcore.QRectF_ITF) {
+	var convArg0 = bounds.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGNinePatchNode9setBoundsERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -124,15 +124,15 @@ func (this *QSGNinePatchNode) Update() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void rebuildGeometry(QSGTexture *, QSGGeometry *, const QVector4D &, const QRectF &, qreal)
-func (this *QSGNinePatchNode) RebuildGeometry(texture *QSGTexture /*777 QSGTexture **/, geometry *QSGGeometry /*777 QSGGeometry **/, padding *qtgui.QVector4D, bounds *qtcore.QRectF, dpr float64) {
-	var convArg0 = texture.GetCthis()
-	var convArg1 = geometry.GetCthis()
-	var convArg2 = padding.GetCthis()
-	var convArg3 = bounds.GetCthis()
+func (this *QSGNinePatchNode) RebuildGeometry(texture QSGTexture_ITF /*777 QSGTexture **/, geometry QSGGeometry_ITF /*777 QSGGeometry **/, padding qtgui.QVector4D_ITF, bounds qtcore.QRectF_ITF, dpr float64) {
+	var convArg0 = texture.QSGTexture_PTR().GetCthis()
+	var convArg1 = geometry.QSGGeometry_PTR().GetCthis()
+	var convArg2 = padding.QVector4D_PTR().GetCthis()
+	var convArg3 = bounds.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGNinePatchNode15rebuildGeometryEP10QSGTextureP11QSGGeometryRK9QVector4DRK6QRectFd", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, dpr)
 	qtrt.ErrPrint(err, rv)
 }
-func QSGNinePatchNode_RebuildGeometry(texture *QSGTexture /*777 QSGTexture **/, geometry *QSGGeometry /*777 QSGGeometry **/, padding *qtgui.QVector4D, bounds *qtcore.QRectF, dpr float64) {
+func QSGNinePatchNode_RebuildGeometry(texture QSGTexture_ITF /*777 QSGTexture **/, geometry QSGGeometry_ITF /*777 QSGGeometry **/, padding qtgui.QVector4D_ITF, bounds qtcore.QRectF_ITF, dpr float64) {
 	var nilthis *QSGNinePatchNode
 	nilthis.RebuildGeometry(texture, geometry, padding, bounds, dpr)
 }

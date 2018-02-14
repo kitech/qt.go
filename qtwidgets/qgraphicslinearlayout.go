@@ -64,8 +64,8 @@ func (*QGraphicsLinearLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLin
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLinearLayout(QGraphicsLayoutItem *)
-func NewQGraphicsLinearLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsLinearLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
+	var convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsLinearLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -77,8 +77,8 @@ func NewQGraphicsLinearLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutI
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLinearLayout(Qt::Orientation, QGraphicsLayoutItem *)
-func NewQGraphicsLinearLayout_1(orientation int, parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
-	var convArg1 = parent.GetCthis()
+func NewQGraphicsLinearLayout_1(orientation int, parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
+	var convArg1 = parent.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayoutC2EN2Qt11OrientationEP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsLinearLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -120,8 +120,8 @@ func (this *QGraphicsLinearLayout) Orientation() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(QGraphicsLayoutItem *)
-func (this *QGraphicsLinearLayout) AddItem(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
-	var convArg0 = item.GetCthis()
+func (this *QGraphicsLinearLayout) AddItem(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) {
+	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -139,8 +139,8 @@ func (this *QGraphicsLinearLayout) AddStretch(stretch int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertItem(int, QGraphicsLayoutItem *)
-func (this *QGraphicsLinearLayout) InsertItem(index int, item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
-	var convArg1 = item.GetCthis()
+func (this *QGraphicsLinearLayout) InsertItem(index int, item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) {
+	var convArg1 = item.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -158,8 +158,8 @@ func (this *QGraphicsLinearLayout) InsertStretch(index int, stretch int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeItem(QGraphicsLayoutItem *)
-func (this *QGraphicsLinearLayout) RemoveItem(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
-	var convArg0 = item.GetCthis()
+func (this *QGraphicsLinearLayout) RemoveItem(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) {
+	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -215,8 +215,8 @@ func (this *QGraphicsLinearLayout) ItemSpacing(index int) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStretchFactor(QGraphicsLayoutItem *, int)
-func (this *QGraphicsLinearLayout) SetStretchFactor(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, stretch int) {
-	var convArg0 = item.GetCthis()
+func (this *QGraphicsLinearLayout) SetStretchFactor(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, stretch int) {
+	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -225,8 +225,8 @@ func (this *QGraphicsLinearLayout) SetStretchFactor(item *QGraphicsLayoutItem /*
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int stretchFactor(QGraphicsLayoutItem *)
-func (this *QGraphicsLinearLayout) StretchFactor(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) int {
-	var convArg0 = item.GetCthis()
+func (this *QGraphicsLinearLayout) StretchFactor(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) int {
+	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -236,8 +236,8 @@ func (this *QGraphicsLinearLayout) StretchFactor(item *QGraphicsLayoutItem /*777
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(QGraphicsLayoutItem *, Qt::Alignment)
-func (this *QGraphicsLinearLayout) SetAlignment(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, alignment int) {
-	var convArg0 = item.GetCthis()
+func (this *QGraphicsLinearLayout) SetAlignment(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, alignment int) {
+	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout12setAlignmentEP19QGraphicsLayoutItem6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
 	qtrt.ErrPrint(err, rv)
 }
@@ -246,8 +246,8 @@ func (this *QGraphicsLinearLayout) SetAlignment(item *QGraphicsLayoutItem /*777 
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment(QGraphicsLayoutItem *)
-func (this *QGraphicsLinearLayout) Alignment(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) int {
-	var convArg0 = item.GetCthis()
+func (this *QGraphicsLinearLayout) Alignment(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) int {
+	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout9alignmentEP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -257,8 +257,8 @@ func (this *QGraphicsLinearLayout) Alignment(item *QGraphicsLayoutItem /*777 QGr
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
-func (this *QGraphicsLinearLayout) SetGeometry(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QGraphicsLinearLayout) SetGeometry(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout11setGeometryERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -296,8 +296,8 @@ func (this *QGraphicsLinearLayout) Invalidate() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
-func (this *QGraphicsLinearLayout) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
-	var convArg1 = constraint.GetCthis()
+func (this *QGraphicsLinearLayout) SizeHint(which int, constraint qtcore.QSizeF_ITF) *qtcore.QSizeF /*123*/ {
+	var convArg1 = constraint.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333

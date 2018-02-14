@@ -73,8 +73,8 @@ func (this *QDnsLookup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(QObject *)
-func NewQDnsLookup(parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
-	var convArg0 = parent.GetCthis()
+func NewQDnsLookup(parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -85,10 +85,10 @@ func NewQDnsLookup(parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, QObject *)
-func NewQDnsLookup_1(type_ int, name string, parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
+func NewQDnsLookup_1(type_ int, name string, parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = parent.GetCthis()
+	var convArg2 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -99,11 +99,11 @@ func NewQDnsLookup_1(type_ int, name string, parent *qtcore.QObject /*777 QObjec
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
-func NewQDnsLookup_2(type_ int, name string, nameserver *QHostAddress, parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
+func NewQDnsLookup_2(type_ int, name string, nameserver QHostAddress_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = nameserver.GetCthis()
-	var convArg3 = parent.GetCthis()
+	var convArg2 = nameserver.QHostAddress_PTR().GetCthis()
+	var convArg3 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringRK12QHostAddressP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -213,8 +213,8 @@ func (this *QDnsLookup) Nameserver() *QHostAddress /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNameserver(const QHostAddress &)
-func (this *QDnsLookup) SetNameserver(nameserver *QHostAddress) {
-	var convArg0 = nameserver.GetCthis()
+func (this *QDnsLookup) SetNameserver(nameserver QHostAddress_ITF) {
+	var convArg0 = nameserver.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup13setNameserverERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -270,8 +270,8 @@ func (this *QDnsLookup) TypeChanged(type_ int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void nameserverChanged(const QHostAddress &)
-func (this *QDnsLookup) NameserverChanged(nameserver *QHostAddress) {
-	var convArg0 = nameserver.GetCthis()
+func (this *QDnsLookup) NameserverChanged(nameserver QHostAddress_ITF) {
+	var convArg0 = nameserver.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup17nameserverChangedERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

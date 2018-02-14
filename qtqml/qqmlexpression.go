@@ -85,12 +85,12 @@ func NewQQmlExpression() *QQmlExpression {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(QQmlContext *, QObject *, const QString &, QObject *)
-func NewQQmlExpression_1(arg0 *QQmlContext /*777 QQmlContext **/, arg1 *qtcore.QObject /*777 QObject **/, arg2 string, arg3 *qtcore.QObject /*777 QObject **/) *QQmlExpression {
-	var convArg0 = arg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+func NewQQmlExpression_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+	var convArg0 = arg0.QQmlContext_PTR().GetCthis()
+	var convArg1 = arg1.QObject_PTR().GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(arg2)
 	var convArg2 = tmpArg2.GetCthis()
-	var convArg3 = arg3.GetCthis()
+	var convArg3 = arg3.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2EP11QQmlContextP7QObjectRK7QStringS3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlExpressionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -101,11 +101,11 @@ func NewQQmlExpression_1(arg0 *QQmlContext /*777 QQmlContext **/, arg1 *qtcore.Q
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(const QQmlScriptString &, QQmlContext *, QObject *, QObject *)
-func NewQQmlExpression_2(arg0 *QQmlScriptString, arg1 *QQmlContext /*777 QQmlContext **/, arg2 *qtcore.QObject /*777 QObject **/, arg3 *qtcore.QObject /*777 QObject **/) *QQmlExpression {
-	var convArg0 = arg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
-	var convArg2 = arg2.GetCthis()
-	var convArg3 = arg3.GetCthis()
+func NewQQmlExpression_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+	var convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
+	var convArg1 = arg1.QQmlContext_PTR().GetCthis()
+	var convArg2 = arg2.QObject_PTR().GetCthis()
+	var convArg3 = arg3.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2ERK16QQmlScriptStringP11QQmlContextP7QObjectS6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlExpressionFromPointer(unsafe.Pointer(uintptr(rv)))

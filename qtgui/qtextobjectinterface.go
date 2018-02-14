@@ -76,9 +76,9 @@ func DeleteQTextObjectInterface(this *QTextObjectInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QSizeF intrinsicSize(QTextDocument *, int, const QTextFormat &)
-func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*777 QTextDocument **/, posInDocument int, format *QTextFormat) *qtcore.QSizeF /*123*/ {
-	var convArg0 = doc.GetCthis()
-	var convArg2 = format.GetCthis()
+func (this *QTextObjectInterface) IntrinsicSize(doc QTextDocument_ITF /*777 QTextDocument **/, posInDocument int, format QTextFormat_ITF) *qtcore.QSizeF /*123*/ {
+	var convArg0 = doc.QTextDocument_PTR().GetCthis()
+	var convArg2 = format.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, posInDocument, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -90,11 +90,11 @@ func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*777 QTextDo
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void drawObject(QPainter *, const QRectF &, QTextDocument *, int, const QTextFormat &)
-func (this *QTextObjectInterface) DrawObject(painter *QPainter /*777 QPainter **/, rect *qtcore.QRectF, doc *QTextDocument /*777 QTextDocument **/, posInDocument int, format *QTextFormat) {
-	var convArg0 = painter.GetCthis()
-	var convArg1 = rect.GetCthis()
-	var convArg2 = doc.GetCthis()
-	var convArg4 = format.GetCthis()
+func (this *QTextObjectInterface) DrawObject(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRectF_ITF, doc QTextDocument_ITF /*777 QTextDocument **/, posInDocument int, format QTextFormat_ITF) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
+	var convArg1 = rect.QRectF_PTR().GetCthis()
+	var convArg2 = doc.QTextDocument_PTR().GetCthis()
+	var convArg4 = format.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, posInDocument, convArg4)
 	qtrt.ErrPrint(err, rv)
 }

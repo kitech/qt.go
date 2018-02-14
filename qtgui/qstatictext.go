@@ -102,8 +102,8 @@ func DeleteQStaticText(this *QStaticText) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QStaticText &)
-func (this *QStaticText) Swap(other *QStaticText) {
-	var convArg0 = other.GetCthis()
+func (this *QStaticText) Swap(other QStaticText_ITF) {
+	var convArg0 = other.QStaticText_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -174,8 +174,8 @@ func (this *QStaticText) TextWidth() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextOption(const QTextOption &)
-func (this *QStaticText) SetTextOption(textOption *QTextOption) {
-	var convArg0 = textOption.GetCthis()
+func (this *QStaticText) SetTextOption(textOption QTextOption_ITF) {
+	var convArg0 = textOption.QTextOption_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText13setTextOptionERK11QTextOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -208,9 +208,9 @@ func (this *QStaticText) Size() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void prepare(const QTransform &, const QFont &)
-func (this *QStaticText) Prepare(matrix *QTransform, font *QFont) {
-	var convArg0 = matrix.GetCthis()
-	var convArg1 = font.GetCthis()
+func (this *QStaticText) Prepare(matrix QTransform_ITF, font QFont_ITF) {
+	var convArg0 = matrix.QTransform_PTR().GetCthis()
+	var convArg1 = font.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText7prepareERK10QTransformRK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

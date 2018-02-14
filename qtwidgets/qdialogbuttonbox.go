@@ -84,8 +84,8 @@ func (this *QDialogButtonBox) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QWidget *)
-func NewQDialogButtonBox(parent *QWidget /*777 QWidget **/) *QDialogButtonBox {
-	var convArg0 = parent.GetCthis()
+func NewQDialogButtonBox(parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDialogButtonBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -96,8 +96,8 @@ func NewQDialogButtonBox(parent *QWidget /*777 QWidget **/) *QDialogButtonBox {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(Qt::Orientation, QWidget *)
-func NewQDialogButtonBox_1(orientation int, parent *QWidget /*777 QWidget **/) *QDialogButtonBox {
-	var convArg1 = parent.GetCthis()
+func NewQDialogButtonBox_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDialogButtonBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -108,8 +108,8 @@ func NewQDialogButtonBox_1(orientation int, parent *QWidget /*777 QWidget **/) *
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, QWidget *)
-func NewQDialogButtonBox_2(buttons int, parent *QWidget /*777 QWidget **/) *QDialogButtonBox {
-	var convArg1 = parent.GetCthis()
+func NewQDialogButtonBox_2(buttons int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2E6QFlagsINS_14StandardButtonEEP7QWidget", qtrt.FFI_TYPE_POINTER, buttons, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDialogButtonBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -120,8 +120,8 @@ func NewQDialogButtonBox_2(buttons int, parent *QWidget /*777 QWidget **/) *QDia
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, Qt::Orientation, QWidget *)
-func NewQDialogButtonBox_3(buttons int, orientation int, parent *QWidget /*777 QWidget **/) *QDialogButtonBox {
-	var convArg2 = parent.GetCthis()
+func NewQDialogButtonBox_3(buttons int, orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	var convArg2 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2E6QFlagsINS_14StandardButtonEEN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, buttons, orientation, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDialogButtonBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -162,8 +162,8 @@ func (this *QDialogButtonBox) Orientation() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addButton(QAbstractButton *, enum QDialogButtonBox::ButtonRole)
-func (this *QDialogButtonBox) AddButton(button *QAbstractButton /*777 QAbstractButton **/, role int) {
-	var convArg0 = button.GetCthis()
+func (this *QDialogButtonBox) AddButton(button QAbstractButton_ITF /*777 QAbstractButton **/, role int) {
+	var convArg0 = button.QAbstractButton_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonEP15QAbstractButtonNS_10ButtonRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	qtrt.ErrPrint(err, rv)
 }
@@ -194,8 +194,8 @@ func (this *QDialogButtonBox) AddButton_2(button int) *QPushButton /*777 QPushBu
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeButton(QAbstractButton *)
-func (this *QDialogButtonBox) RemoveButton(button *QAbstractButton /*777 QAbstractButton **/) {
-	var convArg0 = button.GetCthis()
+func (this *QDialogButtonBox) RemoveButton(button QAbstractButton_ITF /*777 QAbstractButton **/) {
+	var convArg0 = button.QAbstractButton_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox12removeButtonEP15QAbstractButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -213,8 +213,8 @@ func (this *QDialogButtonBox) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDialogButtonBox::ButtonRole buttonRole(QAbstractButton *)
-func (this *QDialogButtonBox) ButtonRole(button *QAbstractButton /*777 QAbstractButton **/) int {
-	var convArg0 = button.GetCthis()
+func (this *QDialogButtonBox) ButtonRole(button QAbstractButton_ITF /*777 QAbstractButton **/) int {
+	var convArg0 = button.QAbstractButton_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDialogButtonBox10buttonRoleEP15QAbstractButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -243,8 +243,8 @@ func (this *QDialogButtonBox) StandardButtons() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDialogButtonBox::StandardButton standardButton(QAbstractButton *)
-func (this *QDialogButtonBox) StandardButton(button *QAbstractButton /*777 QAbstractButton **/) int {
-	var convArg0 = button.GetCthis()
+func (this *QDialogButtonBox) StandardButton(button QAbstractButton_ITF /*777 QAbstractButton **/) int {
+	var convArg0 = button.QAbstractButton_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDialogButtonBox14standardButtonEP15QAbstractButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -283,8 +283,8 @@ func (this *QDialogButtonBox) CenterButtons() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clicked(QAbstractButton *)
-func (this *QDialogButtonBox) Clicked(button *QAbstractButton /*777 QAbstractButton **/) {
-	var convArg0 = button.GetCthis()
+func (this *QDialogButtonBox) Clicked(button QAbstractButton_ITF /*777 QAbstractButton **/) {
+	var convArg0 = button.QAbstractButton_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox7clickedEP15QAbstractButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -320,8 +320,8 @@ func (this *QDialogButtonBox) Rejected() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QDialogButtonBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QDialogButtonBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -330,8 +330,8 @@ func (this *QDialogButtonBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QDialogButtonBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QDialogButtonBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

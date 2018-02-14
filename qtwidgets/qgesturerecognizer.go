@@ -89,8 +89,8 @@ func DeleteQGestureRecognizer(this *QGestureRecognizer) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QGesture * create(QObject *)
-func (this *QGestureRecognizer) Create(target *qtcore.QObject /*777 QObject **/) *QGesture /*777 QGesture **/ {
-	var convArg0 = target.GetCthis()
+func (this *QGestureRecognizer) Create(target qtcore.QObject_ITF /*777 QObject **/) *QGesture /*777 QGesture **/ {
+	var convArg0 = target.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer6createEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQGestureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -100,10 +100,10 @@ func (this *QGestureRecognizer) Create(target *qtcore.QObject /*777 QObject **/)
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QGestureRecognizer::Result recognize(QGesture *, QObject *, QEvent *)
-func (this *QGestureRecognizer) Recognize(state *QGesture /*777 QGesture **/, watched *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) int {
-	var convArg0 = state.GetCthis()
-	var convArg1 = watched.GetCthis()
-	var convArg2 = event.GetCthis()
+func (this *QGestureRecognizer) Recognize(state QGesture_ITF /*777 QGesture **/, watched qtcore.QObject_ITF /*777 QObject **/, event qtcore.QEvent_ITF /*777 QEvent **/) int {
+	var convArg0 = state.QGesture_PTR().GetCthis()
+	var convArg1 = watched.QObject_PTR().GetCthis()
+	var convArg2 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer9recognizeEP8QGestureP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -113,8 +113,8 @@ func (this *QGestureRecognizer) Recognize(state *QGesture /*777 QGesture **/, wa
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void reset(QGesture *)
-func (this *QGestureRecognizer) Reset(state *QGesture /*777 QGesture **/) {
-	var convArg0 = state.GetCthis()
+func (this *QGestureRecognizer) Reset(state QGesture_ITF /*777 QGesture **/) {
+	var convArg0 = state.QGesture_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer5resetEP8QGesture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -123,13 +123,13 @@ func (this *QGestureRecognizer) Reset(state *QGesture /*777 QGesture **/) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] Qt::GestureType registerRecognizer(QGestureRecognizer *)
-func (this *QGestureRecognizer) RegisterRecognizer(recognizer *QGestureRecognizer /*777 QGestureRecognizer **/) int {
-	var convArg0 = recognizer.GetCthis()
+func (this *QGestureRecognizer) RegisterRecognizer(recognizer QGestureRecognizer_ITF /*777 QGestureRecognizer **/) int {
+	var convArg0 = recognizer.QGestureRecognizer_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer18registerRecognizerEPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QGestureRecognizer_RegisterRecognizer(recognizer *QGestureRecognizer /*777 QGestureRecognizer **/) int {
+func QGestureRecognizer_RegisterRecognizer(recognizer QGestureRecognizer_ITF /*777 QGestureRecognizer **/) int {
 	var nilthis *QGestureRecognizer
 	rv := nilthis.RegisterRecognizer(recognizer)
 	return rv

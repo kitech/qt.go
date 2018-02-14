@@ -244,8 +244,8 @@ func (this *QAccessibleTableInterface) UnselectColumn(column int) bool {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void modelChange(QAccessibleTableModelChangeEvent *)
-func (this *QAccessibleTableInterface) ModelChange(event *QAccessibleTableModelChangeEvent /*777 QAccessibleTableModelChangeEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAccessibleTableInterface) ModelChange(event QAccessibleTableModelChangeEvent_ITF /*777 QAccessibleTableModelChangeEvent **/) {
+	var convArg0 = event.QAccessibleTableModelChangeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAccessibleTableInterface11modelChangeEP32QAccessibleTableModelChangeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

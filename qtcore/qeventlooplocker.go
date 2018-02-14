@@ -76,8 +76,8 @@ func NewQEventLoopLocker() *QEventLoopLocker {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QEventLoopLocker(QEventLoop *)
-func NewQEventLoopLocker_1(loop *QEventLoop /*777 QEventLoop **/) *QEventLoopLocker {
-	var convArg0 = loop.GetCthis()
+func NewQEventLoopLocker_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoopLocker {
+	var convArg0 = loop.QEventLoop_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -89,8 +89,8 @@ func NewQEventLoopLocker_1(loop *QEventLoop /*777 QEventLoop **/) *QEventLoopLoc
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QEventLoopLocker(QThread *)
-func NewQEventLoopLocker_2(thread *QThread /*777 QThread **/) *QEventLoopLocker {
-	var convArg0 = thread.GetCthis()
+func NewQEventLoopLocker_2(thread QThread_ITF /*777 QThread **/) *QEventLoopLocker {
+	var convArg0 = thread.QThread_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))

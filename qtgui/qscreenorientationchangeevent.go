@@ -65,8 +65,8 @@ func (*QScreenOrientationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QScr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScreenOrientationChangeEvent(QScreen *, Qt::ScreenOrientation)
-func NewQScreenOrientationChangeEvent(screen *QScreen /*777 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
-	var convArg0 = screen.GetCthis()
+func NewQScreenOrientationChangeEvent(screen QScreen_ITF /*777 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
+	var convArg0 = screen.QScreen_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", qtrt.FFI_TYPE_POINTER, convArg0, orientation)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQScreenOrientationChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))

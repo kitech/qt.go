@@ -109,8 +109,8 @@ func (this *QCheckBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCheckBox(QWidget *)
-func NewQCheckBox(parent *QWidget /*777 QWidget **/) *QCheckBox {
-	var convArg0 = parent.GetCthis()
+func NewQCheckBox(parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCheckBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -121,10 +121,10 @@ func NewQCheckBox(parent *QWidget /*777 QWidget **/) *QCheckBox {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCheckBox(const QString &, QWidget *)
-func NewQCheckBox_1(text string, parent *QWidget /*777 QWidget **/) *QCheckBox {
+func NewQCheckBox_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBoxC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCheckBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -217,8 +217,8 @@ func (this *QCheckBox) StateChanged(arg0 int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QCheckBox) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QCheckBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -228,8 +228,8 @@ func (this *QCheckBox) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool hitButton(const QPoint &)
-func (this *QCheckBox) HitButton(pos *qtcore.QPoint) bool {
-	var convArg0 = pos.GetCthis()
+func (this *QCheckBox) HitButton(pos qtcore.QPoint_ITF) bool {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox9hitButtonERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -257,8 +257,8 @@ func (this *QCheckBox) NextCheckState() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QCheckBox) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QCheckBox) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -267,8 +267,8 @@ func (this *QCheckBox) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QCheckBox) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QCheckBox) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -277,8 +277,8 @@ func (this *QCheckBox) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent 
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionButton *)
-func (this *QCheckBox) InitStyleOption(option *QStyleOptionButton /*777 QStyleOptionButton **/) {
-	var convArg0 = option.GetCthis()
+func (this *QCheckBox) InitStyleOption(option QStyleOptionButton_ITF /*777 QStyleOptionButton **/) {
+	var convArg0 = option.QStyleOptionButton_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox15initStyleOptionEP18QStyleOptionButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

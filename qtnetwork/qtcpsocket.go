@@ -73,8 +73,8 @@ func (this *QTcpSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTcpSocket(QObject *)
-func NewQTcpSocket(parent *qtcore.QObject /*777 QObject **/) *QTcpSocket {
-	var convArg0 = parent.GetCthis()
+func NewQTcpSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QTcpSocket {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTcpSocketFromPointer(unsafe.Pointer(uintptr(rv)))

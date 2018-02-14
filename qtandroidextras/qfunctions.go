@@ -38,8 +38,8 @@ func ShouldShowRequestPermissionRationale(permission string) bool {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void requestPermissions(const QStringList &, const QtAndroid::PermissionResultCallback &)
-func RequestPermissions(permissions *qtcore.QStringList, callbackFunc unsafe.Pointer /*555*/) {
-	var convArg0 = permissions.GetCthis()
+func RequestPermissions(permissions qtcore.QStringList_ITF, callbackFunc unsafe.Pointer /*555*/) {
+	var convArg0 = permissions.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid18requestPermissionsERK11QStringListRKSt8functionIFvRK5QHashI7QStringNS_16PermissionResultEEEE", qtrt.FFI_TYPE_POINTER, convArg0, callbackFunc)
 	qtrt.ErrPrint(err, rv)
 }

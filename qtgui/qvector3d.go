@@ -101,8 +101,8 @@ func NewQVector3D_2(xpos float32, ypos float32, zpos float32) *QVector3D {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector3D(const QPoint &)
-func NewQVector3D_3(point *qtcore.QPoint) *QVector3D {
-	var convArg0 = point.GetCthis()
+func NewQVector3D_3(point qtcore.QPoint_ITF) *QVector3D {
+	var convArg0 = point.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2ERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -114,8 +114,8 @@ func NewQVector3D_3(point *qtcore.QPoint) *QVector3D {
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector3D(const QPointF &)
-func NewQVector3D_4(point *qtcore.QPointF) *QVector3D {
-	var convArg0 = point.GetCthis()
+func NewQVector3D_4(point qtcore.QPointF_ITF) *QVector3D {
+	var convArg0 = point.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2ERK7QPointF", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -127,8 +127,8 @@ func NewQVector3D_4(point *qtcore.QPointF) *QVector3D {
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QVector3D(const QVector2D &)
-func NewQVector3D_5(vector *QVector2D) *QVector3D {
-	var convArg0 = vector.GetCthis()
+func NewQVector3D_5(vector QVector2D_ITF) *QVector3D {
+	var convArg0 = vector.QVector2D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2ERK9QVector2D", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -140,8 +140,8 @@ func NewQVector3D_5(vector *QVector2D) *QVector3D {
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QVector3D(const QVector2D &, float)
-func NewQVector3D_6(vector *QVector2D, zpos float32) *QVector3D {
-	var convArg0 = vector.GetCthis()
+func NewQVector3D_6(vector QVector2D_ITF, zpos float32) *QVector3D {
+	var convArg0 = vector.QVector2D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2ERK9QVector2Df", qtrt.FFI_TYPE_POINTER, convArg0, zpos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -153,8 +153,8 @@ func NewQVector3D_6(vector *QVector2D, zpos float32) *QVector3D {
 // index:7
 // Public Visibility=Default Availability=Available
 // [-2] void QVector3D(const QVector4D &)
-func NewQVector3D_7(vector *QVector4D) *QVector3D {
-	var convArg0 = vector.GetCthis()
+func NewQVector3D_7(vector QVector4D_ITF) *QVector3D {
+	var convArg0 = vector.QVector4D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2ERK9QVector4D", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -274,14 +274,14 @@ func (this *QVector3D) Normalize() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] float dotProduct(const QVector3D &, const QVector3D &)
-func (this *QVector3D) DotProduct(v1 *QVector3D, v2 *QVector3D) float32 {
-	var convArg0 = v1.GetCthis()
-	var convArg1 = v2.GetCthis()
+func (this *QVector3D) DotProduct(v1 QVector3D_ITF, v2 QVector3D_ITF) float32 {
+	var convArg0 = v1.QVector3D_PTR().GetCthis()
+	var convArg1 = v2.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3D10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
-func QVector3D_DotProduct(v1 *QVector3D, v2 *QVector3D) float32 {
+func QVector3D_DotProduct(v1 QVector3D_ITF, v2 QVector3D_ITF) float32 {
 	var nilthis *QVector3D
 	rv := nilthis.DotProduct(v1, v2)
 	return rv
@@ -291,16 +291,16 @@ func QVector3D_DotProduct(v1 *QVector3D, v2 *QVector3D) float32 {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [12] QVector3D crossProduct(const QVector3D &, const QVector3D &)
-func (this *QVector3D) CrossProduct(v1 *QVector3D, v2 *QVector3D) *QVector3D /*123*/ {
-	var convArg0 = v1.GetCthis()
-	var convArg1 = v2.GetCthis()
+func (this *QVector3D) CrossProduct(v1 QVector3D_ITF, v2 QVector3D_ITF) *QVector3D /*123*/ {
+	var convArg0 = v1.QVector3D_PTR().GetCthis()
+	var convArg1 = v2.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3D12crossProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
 	return rv2
 }
-func QVector3D_CrossProduct(v1 *QVector3D, v2 *QVector3D) *QVector3D /*123*/ {
+func QVector3D_CrossProduct(v1 QVector3D_ITF, v2 QVector3D_ITF) *QVector3D /*123*/ {
 	var nilthis *QVector3D
 	rv := nilthis.CrossProduct(v1, v2)
 	return rv
@@ -310,16 +310,16 @@ func QVector3D_CrossProduct(v1 *QVector3D, v2 *QVector3D) *QVector3D /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [12] QVector3D normal(const QVector3D &, const QVector3D &)
-func (this *QVector3D) Normal(v1 *QVector3D, v2 *QVector3D) *QVector3D /*123*/ {
-	var convArg0 = v1.GetCthis()
-	var convArg1 = v2.GetCthis()
+func (this *QVector3D) Normal(v1 QVector3D_ITF, v2 QVector3D_ITF) *QVector3D /*123*/ {
+	var convArg0 = v1.QVector3D_PTR().GetCthis()
+	var convArg1 = v2.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3D6normalERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
 	return rv2
 }
-func QVector3D_Normal(v1 *QVector3D, v2 *QVector3D) *QVector3D /*123*/ {
+func QVector3D_Normal(v1 QVector3D_ITF, v2 QVector3D_ITF) *QVector3D /*123*/ {
 	var nilthis *QVector3D
 	rv := nilthis.Normal(v1, v2)
 	return rv
@@ -329,17 +329,17 @@ func QVector3D_Normal(v1 *QVector3D, v2 *QVector3D) *QVector3D /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [12] QVector3D normal(const QVector3D &, const QVector3D &, const QVector3D &)
-func (this *QVector3D) Normal_1(v1 *QVector3D, v2 *QVector3D, v3 *QVector3D) *QVector3D /*123*/ {
-	var convArg0 = v1.GetCthis()
-	var convArg1 = v2.GetCthis()
-	var convArg2 = v3.GetCthis()
+func (this *QVector3D) Normal_1(v1 QVector3D_ITF, v2 QVector3D_ITF, v3 QVector3D_ITF) *QVector3D /*123*/ {
+	var convArg0 = v1.QVector3D_PTR().GetCthis()
+	var convArg1 = v2.QVector3D_PTR().GetCthis()
+	var convArg2 = v3.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3D6normalERKS_S1_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
 	return rv2
 }
-func QVector3D_Normal_1(v1 *QVector3D, v2 *QVector3D, v3 *QVector3D) *QVector3D /*123*/ {
+func QVector3D_Normal_1(v1 QVector3D_ITF, v2 QVector3D_ITF, v3 QVector3D_ITF) *QVector3D /*123*/ {
 	var nilthis *QVector3D
 	rv := nilthis.Normal_1(v1, v2, v3)
 	return rv
@@ -349,10 +349,10 @@ func QVector3D_Normal_1(v1 *QVector3D, v2 *QVector3D, v3 *QVector3D) *QVector3D 
 // index:0
 // Public Visibility=Default Availability=Available
 // [12] QVector3D project(const QMatrix4x4 &, const QMatrix4x4 &, const QRect &)
-func (this *QVector3D) Project(modelView *QMatrix4x4, projection *QMatrix4x4, viewport *qtcore.QRect) *QVector3D /*123*/ {
-	var convArg0 = modelView.GetCthis()
-	var convArg1 = projection.GetCthis()
-	var convArg2 = viewport.GetCthis()
+func (this *QVector3D) Project(modelView QMatrix4x4_ITF, projection QMatrix4x4_ITF, viewport qtcore.QRect_ITF) *QVector3D /*123*/ {
+	var convArg0 = modelView.QMatrix4x4_PTR().GetCthis()
+	var convArg1 = projection.QMatrix4x4_PTR().GetCthis()
+	var convArg2 = viewport.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -364,10 +364,10 @@ func (this *QVector3D) Project(modelView *QMatrix4x4, projection *QMatrix4x4, vi
 // index:0
 // Public Visibility=Default Availability=Available
 // [12] QVector3D unproject(const QMatrix4x4 &, const QMatrix4x4 &, const QRect &)
-func (this *QVector3D) Unproject(modelView *QMatrix4x4, projection *QMatrix4x4, viewport *qtcore.QRect) *QVector3D /*123*/ {
-	var convArg0 = modelView.GetCthis()
-	var convArg1 = projection.GetCthis()
-	var convArg2 = viewport.GetCthis()
+func (this *QVector3D) Unproject(modelView QMatrix4x4_ITF, projection QMatrix4x4_ITF, viewport qtcore.QRect_ITF) *QVector3D /*123*/ {
+	var convArg0 = modelView.QMatrix4x4_PTR().GetCthis()
+	var convArg1 = projection.QMatrix4x4_PTR().GetCthis()
+	var convArg2 = viewport.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -379,8 +379,8 @@ func (this *QVector3D) Unproject(modelView *QMatrix4x4, projection *QMatrix4x4, 
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float distanceToPoint(const QVector3D &)
-func (this *QVector3D) DistanceToPoint(point *QVector3D) float32 {
-	var convArg0 = point.GetCthis()
+func (this *QVector3D) DistanceToPoint(point QVector3D_ITF) float32 {
+	var convArg0 = point.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPointERKS_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -390,9 +390,9 @@ func (this *QVector3D) DistanceToPoint(point *QVector3D) float32 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float distanceToPlane(const QVector3D &, const QVector3D &)
-func (this *QVector3D) DistanceToPlane(plane *QVector3D, normal *QVector3D) float32 {
-	var convArg0 = plane.GetCthis()
-	var convArg1 = normal.GetCthis()
+func (this *QVector3D) DistanceToPlane(plane QVector3D_ITF, normal QVector3D_ITF) float32 {
+	var convArg0 = plane.QVector3D_PTR().GetCthis()
+	var convArg1 = normal.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPlaneERKS_S1_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -402,10 +402,10 @@ func (this *QVector3D) DistanceToPlane(plane *QVector3D, normal *QVector3D) floa
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] float distanceToPlane(const QVector3D &, const QVector3D &, const QVector3D &)
-func (this *QVector3D) DistanceToPlane_1(plane1 *QVector3D, plane2 *QVector3D, plane3 *QVector3D) float32 {
-	var convArg0 = plane1.GetCthis()
-	var convArg1 = plane2.GetCthis()
-	var convArg2 = plane3.GetCthis()
+func (this *QVector3D) DistanceToPlane_1(plane1 QVector3D_ITF, plane2 QVector3D_ITF, plane3 QVector3D_ITF) float32 {
+	var convArg0 = plane1.QVector3D_PTR().GetCthis()
+	var convArg1 = plane2.QVector3D_PTR().GetCthis()
+	var convArg2 = plane3.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPlaneERKS_S1_S1_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -415,9 +415,9 @@ func (this *QVector3D) DistanceToPlane_1(plane1 *QVector3D, plane2 *QVector3D, p
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float distanceToLine(const QVector3D &, const QVector3D &)
-func (this *QVector3D) DistanceToLine(point *QVector3D, direction *QVector3D) float32 {
-	var convArg0 = point.GetCthis()
-	var convArg1 = direction.GetCthis()
+func (this *QVector3D) DistanceToLine(point QVector3D_ITF, direction QVector3D_ITF) float32 {
+	var convArg0 = point.QVector3D_PTR().GetCthis()
+	var convArg1 = direction.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D14distanceToLineERKS_S1_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111

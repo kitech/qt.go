@@ -74,8 +74,8 @@ func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeEdit(QWidget *)
-func NewQTimeEdit(parent *QWidget /*777 QWidget **/) *QTimeEdit {
-	var convArg0 = parent.GetCthis()
+func NewQTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -86,9 +86,9 @@ func NewQTimeEdit(parent *QWidget /*777 QWidget **/) *QTimeEdit {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeEdit(const QTime &, QWidget *)
-func NewQTimeEdit_1(time *qtcore.QTime, parent *QWidget /*777 QWidget **/) *QTimeEdit {
-	var convArg0 = time.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQTimeEdit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
+	var convArg0 = time.QTime_PTR().GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEditC2ERK5QTimeP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,8 +110,8 @@ func DeleteQTimeEdit(this *QTimeEdit) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void userTimeChanged(const QTime &)
-func (this *QTimeEdit) UserTimeChanged(time *qtcore.QTime) {
-	var convArg0 = time.GetCthis()
+func (this *QTimeEdit) UserTimeChanged(time qtcore.QTime_ITF) {
+	var convArg0 = time.QTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEdit15userTimeChangedERK5QTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

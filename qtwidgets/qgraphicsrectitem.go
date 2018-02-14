@@ -79,8 +79,8 @@ func (*QGraphicsRectItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsRectIte
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsRectItem(QGraphicsItem *)
-func NewQGraphicsRectItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsRectItem {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsRectItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
+	var convArg0 = parent.QGraphicsItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsRectItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -92,9 +92,9 @@ func NewQGraphicsRectItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraph
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsRectItem(const QRectF &, QGraphicsItem *)
-func NewQGraphicsRectItem_1(rect *qtcore.QRectF, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsRectItem {
-	var convArg0 = rect.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQGraphicsRectItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg1 = parent.QGraphicsItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2ERK6QRectFP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsRectItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -106,8 +106,8 @@ func NewQGraphicsRectItem_1(rect *qtcore.QRectF, parent *QGraphicsItem /*777 QGr
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsRectItem(qreal, qreal, qreal, qreal, QGraphicsItem *)
-func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsRectItem {
-	var convArg4 = parent.GetCthis()
+func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
+	var convArg4 = parent.QGraphicsItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2EddddP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, x, y, w, h, convArg4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsRectItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -142,8 +142,8 @@ func (this *QGraphicsRectItem) Rect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
-func (this *QGraphicsRectItem) SetRect(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QGraphicsRectItem) SetRect(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItem7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -185,8 +185,8 @@ func (this *QGraphicsRectItem) Shape() *qtgui.QPainterPath /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &)
-func (this *QGraphicsRectItem) Contains(point *qtcore.QPointF) bool {
-	var convArg0 = point.GetCthis()
+func (this *QGraphicsRectItem) Contains(point qtcore.QPointF_ITF) bool {
+	var convArg0 = point.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRectItem8containsERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -196,10 +196,10 @@ func (this *QGraphicsRectItem) Contains(point *qtcore.QPointF) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
-func (this *QGraphicsRectItem) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionGraphicsItem /*777 const QStyleOptionGraphicsItem **/, widget *QWidget /*777 QWidget **/) {
-	var convArg0 = painter.GetCthis()
-	var convArg1 = option.GetCthis()
-	var convArg2 = widget.GetCthis()
+func (this *QGraphicsRectItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/, widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
+	var convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
+	var convArg2 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -208,8 +208,8 @@ func (this *QGraphicsRectItem) Paint(painter *qtgui.QPainter /*777 QPainter **/,
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *)
-func (this *QGraphicsRectItem) IsObscuredBy(item *QGraphicsItem /*777 const QGraphicsItem **/) bool {
-	var convArg0 = item.GetCthis()
+func (this *QGraphicsRectItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
+	var convArg0 = item.QGraphicsItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -251,8 +251,8 @@ func (this *QGraphicsRectItem) SupportsExtension(extension int) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setExtension(enum QGraphicsItem::Extension, const QVariant &)
-func (this *QGraphicsRectItem) SetExtension(extension int, variant *qtcore.QVariant) {
-	var convArg1 = variant.GetCthis()
+func (this *QGraphicsRectItem) SetExtension(extension int, variant qtcore.QVariant_ITF) {
+	var convArg1 = variant.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -261,8 +261,8 @@ func (this *QGraphicsRectItem) SetExtension(extension int, variant *qtcore.QVari
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant extension(const QVariant &)
-func (this *QGraphicsRectItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
-	var convArg0 = variant.GetCthis()
+func (this *QGraphicsRectItem) Extension(variant qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
+	var convArg0 = variant.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRectItem9extensionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333

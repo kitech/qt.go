@@ -87,8 +87,8 @@ func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFinalState(QState *)
-func NewQFinalState(parent *QState /*777 QState **/) *QFinalState {
-	var convArg0 = parent.GetCthis()
+func NewQFinalState(parent QState_ITF /*777 QState **/) *QFinalState {
+	var convArg0 = parent.QState_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFinalStateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,8 +110,8 @@ func DeleteQFinalState(this *QFinalState) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onEntry(QEvent *)
-func (this *QFinalState) OnEntry(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QFinalState) OnEntry(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -120,8 +120,8 @@ func (this *QFinalState) OnEntry(event *QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onExit(QEvent *)
-func (this *QFinalState) OnExit(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QFinalState) OnExit(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -130,8 +130,8 @@ func (this *QFinalState) OnExit(event *QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QFinalState) Event(e *QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QFinalState) Event(e QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

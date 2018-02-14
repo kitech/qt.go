@@ -63,8 +63,8 @@ func (*QScrollPrepareEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollPrepare
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollPrepareEvent(const QPointF &)
-func NewQScrollPrepareEvent(startPos *qtcore.QPointF) *QScrollPrepareEvent {
-	var convArg0 = startPos.GetCthis()
+func NewQScrollPrepareEvent(startPos qtcore.QPointF_ITF) *QScrollPrepareEvent {
+	var convArg0 = startPos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollPrepareEventC2ERK7QPointF", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQScrollPrepareEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -135,8 +135,8 @@ func (this *QScrollPrepareEvent) ContentPos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setViewportSize(const QSizeF &)
-func (this *QScrollPrepareEvent) SetViewportSize(size *qtcore.QSizeF) {
-	var convArg0 = size.GetCthis()
+func (this *QScrollPrepareEvent) SetViewportSize(size qtcore.QSizeF_ITF) {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -145,8 +145,8 @@ func (this *QScrollPrepareEvent) SetViewportSize(size *qtcore.QSizeF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContentPosRange(const QRectF &)
-func (this *QScrollPrepareEvent) SetContentPosRange(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QScrollPrepareEvent) SetContentPosRange(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -155,8 +155,8 @@ func (this *QScrollPrepareEvent) SetContentPosRange(rect *qtcore.QRectF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContentPos(const QPointF &)
-func (this *QScrollPrepareEvent) SetContentPos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QScrollPrepareEvent) SetContentPos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollPrepareEvent13setContentPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

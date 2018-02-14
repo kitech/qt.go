@@ -79,8 +79,8 @@ func NewQAndroidServiceConnection() *QAndroidServiceConnection {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidServiceConnection(const QAndroidJniObject &)
-func NewQAndroidServiceConnection_1(serviceConnection *QAndroidJniObject) *QAndroidServiceConnection {
-	var convArg0 = serviceConnection.GetCthis()
+func NewQAndroidServiceConnection_1(serviceConnection QAndroidJniObject_ITF) *QAndroidServiceConnection {
+	var convArg0 = serviceConnection.QAndroidJniObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnectionC2ERK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidServiceConnectionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,10 +103,10 @@ func DeleteQAndroidServiceConnection(this *QAndroidServiceConnection) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void onServiceConnected(const QString &, const QAndroidBinder &)
-func (this *QAndroidServiceConnection) OnServiceConnected(name string, serviceBinder *QAndroidBinder) {
+func (this *QAndroidServiceConnection) OnServiceConnected(name string, serviceBinder QAndroidBinder_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = serviceBinder.GetCthis()
+	var convArg1 = serviceBinder.QAndroidBinder_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnection18onServiceConnectedERK7QStringRK14QAndroidBinder", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

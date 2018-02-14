@@ -273,8 +273,8 @@ func NewQPaintDevice() *QPaintDevice {
 // index:1
 // Private inline Visibility=Default Availability=NotAvailable
 // [-2] void QPaintDevice(const QPaintDevice &)
-func NewQPaintDevice_1(arg0 *QPaintDevice) *QPaintDevice {
-	var convArg0 = arg0.GetCthis()
+func NewQPaintDevice_1(arg0 QPaintDevice_ITF) *QPaintDevice {
+	var convArg0 = arg0.QPaintDevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDeviceC2ERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -296,8 +296,8 @@ func (this *QPaintDevice) Metric(metric int) int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void initPainter(QPainter *)
-func (this *QPaintDevice) InitPainter(painter *QPainter /*777 QPainter **/) {
-	var convArg0 = painter.GetCthis()
+func (this *QPaintDevice) InitPainter(painter QPainter_ITF /*777 QPainter **/) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice11initPainterEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -306,8 +306,8 @@ func (this *QPaintDevice) InitPainter(painter *QPainter /*777 QPainter **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QPaintDevice * redirected(QPoint *)
-func (this *QPaintDevice) Redirected(offset *qtcore.QPoint /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
-	var convArg0 = offset.GetCthis()
+func (this *QPaintDevice) Redirected(offset qtcore.QPoint_ITF /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
+	var convArg0 = offset.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice10redirectedEP6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444

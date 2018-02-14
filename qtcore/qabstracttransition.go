@@ -87,8 +87,8 @@ func (this *QAbstractTransition) MetaObject() *QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractTransition(QState *)
-func NewQAbstractTransition(sourceState *QState /*777 QState **/) *QAbstractTransition {
-	var convArg0 = sourceState.GetCthis()
+func NewQAbstractTransition(sourceState QState_ITF /*777 QState **/) *QAbstractTransition {
+	var convArg0 = sourceState.QState_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,8 +130,8 @@ func (this *QAbstractTransition) TargetState() *QAbstractState /*777 QAbstractSt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTargetState(QAbstractState *)
-func (this *QAbstractTransition) SetTargetState(target *QAbstractState /*777 QAbstractState **/) {
-	var convArg0 = target.GetCthis()
+func (this *QAbstractTransition) SetTargetState(target QAbstractState_ITF /*777 QAbstractState **/) {
+	var convArg0 = target.QAbstractState_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition14setTargetStateEP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -169,8 +169,8 @@ func (this *QAbstractTransition) Machine() *QStateMachine /*777 QStateMachine **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addAnimation(QAbstractAnimation *)
-func (this *QAbstractTransition) AddAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
-	var convArg0 = animation.GetCthis()
+func (this *QAbstractTransition) AddAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
+	var convArg0 = animation.QAbstractAnimation_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -179,8 +179,8 @@ func (this *QAbstractTransition) AddAnimation(animation *QAbstractAnimation /*77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAnimation(QAbstractAnimation *)
-func (this *QAbstractTransition) RemoveAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
-	var convArg0 = animation.GetCthis()
+func (this *QAbstractTransition) RemoveAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
+	var convArg0 = animation.QAbstractAnimation_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -189,8 +189,8 @@ func (this *QAbstractTransition) RemoveAnimation(animation *QAbstractAnimation /
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [1] bool eventTest(QEvent *)
-func (this *QAbstractTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractTransition) EventTest(event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition9eventTestEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -200,8 +200,8 @@ func (this *QAbstractTransition) EventTest(event *QEvent /*777 QEvent **/) bool 
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void onTransition(QEvent *)
-func (this *QAbstractTransition) OnTransition(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAbstractTransition) OnTransition(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition12onTransitionEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -210,8 +210,8 @@ func (this *QAbstractTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QAbstractTransition) Event(e *QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractTransition) Event(e QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

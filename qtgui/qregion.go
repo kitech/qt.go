@@ -89,8 +89,8 @@ func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QRegion(const QRect &, enum QRegion::RegionType)
-func NewQRegion_2(r *qtcore.QRect, t int) *QRegion {
-	var convArg0 = r.GetCthis()
+func NewQRegion_2(r qtcore.QRect_ITF, t int) *QRegion {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionC2ERK5QRectNS_10RegionTypeE", qtrt.FFI_TYPE_POINTER, convArg0, t)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,8 +102,8 @@ func NewQRegion_2(r *qtcore.QRect, t int) *QRegion {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QRegion(const QPolygon &, Qt::FillRule)
-func NewQRegion_3(pa *QPolygon, fillRule int) *QRegion {
-	var convArg0 = pa.GetCthis()
+func NewQRegion_3(pa QPolygon_ITF, fillRule int) *QRegion {
+	var convArg0 = pa.QPolygon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionC2ERK8QPolygonN2Qt8FillRuleE", qtrt.FFI_TYPE_POINTER, convArg0, fillRule)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -115,8 +115,8 @@ func NewQRegion_3(pa *QPolygon, fillRule int) *QRegion {
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QRegion(const QBitmap &)
-func NewQRegion_4(bitmap *QBitmap) *QRegion {
-	var convArg0 = bitmap.GetCthis()
+func NewQRegion_4(bitmap QBitmap_ITF) *QRegion {
+	var convArg0 = bitmap.QBitmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionC2ERK7QBitmap", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -139,8 +139,8 @@ func DeleteQRegion(this *QRegion) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QRegion &)
-func (this *QRegion) Swap(other *QRegion) {
-	var convArg0 = other.GetCthis()
+func (this *QRegion) Swap(other QRegion_ITF) {
+	var convArg0 = other.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegion4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -213,8 +213,8 @@ func (this *QRegion) Cend() *qtcore.QRect /*777 const QRect **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QPoint &)
-func (this *QRegion) Contains(p *qtcore.QPoint) bool {
-	var convArg0 = p.GetCthis()
+func (this *QRegion) Contains(p qtcore.QPoint_ITF) bool {
+	var convArg0 = p.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion8containsERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -224,8 +224,8 @@ func (this *QRegion) Contains(p *qtcore.QPoint) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QRect &)
-func (this *QRegion) Contains_1(r *qtcore.QRect) bool {
-	var convArg0 = r.GetCthis()
+func (this *QRegion) Contains_1(r qtcore.QRect_ITF) bool {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion8containsERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -244,8 +244,8 @@ func (this *QRegion) Translate(dx int, dy int) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void translate(const QPoint &)
-func (this *QRegion) Translate_1(p *qtcore.QPoint) {
-	var convArg0 = p.GetCthis()
+func (this *QRegion) Translate_1(p qtcore.QPoint_ITF) {
+	var convArg0 = p.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegion9translateERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -266,8 +266,8 @@ func (this *QRegion) Translated(dx int, dy int) *QRegion /*123*/ {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QRegion translated(const QPoint &)
-func (this *QRegion) Translated_1(p *qtcore.QPoint) *QRegion /*123*/ {
-	var convArg0 = p.GetCthis()
+func (this *QRegion) Translated_1(p qtcore.QPoint_ITF) *QRegion /*123*/ {
+	var convArg0 = p.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion10translatedERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -279,8 +279,8 @@ func (this *QRegion) Translated_1(p *qtcore.QPoint) *QRegion /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion united(const QRegion &)
-func (this *QRegion) United(r *QRegion) *QRegion /*123*/ {
-	var convArg0 = r.GetCthis()
+func (this *QRegion) United(r QRegion_ITF) *QRegion /*123*/ {
+	var convArg0 = r.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion6unitedERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -292,8 +292,8 @@ func (this *QRegion) United(r *QRegion) *QRegion /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegion united(const QRect &)
-func (this *QRegion) United_1(r *qtcore.QRect) *QRegion /*123*/ {
-	var convArg0 = r.GetCthis()
+func (this *QRegion) United_1(r qtcore.QRect_ITF) *QRegion /*123*/ {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion6unitedERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -305,8 +305,8 @@ func (this *QRegion) United_1(r *qtcore.QRect) *QRegion /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion intersected(const QRegion &)
-func (this *QRegion) Intersected(r *QRegion) *QRegion /*123*/ {
-	var convArg0 = r.GetCthis()
+func (this *QRegion) Intersected(r QRegion_ITF) *QRegion /*123*/ {
+	var convArg0 = r.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion11intersectedERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -318,8 +318,8 @@ func (this *QRegion) Intersected(r *QRegion) *QRegion /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegion intersected(const QRect &)
-func (this *QRegion) Intersected_1(r *qtcore.QRect) *QRegion /*123*/ {
-	var convArg0 = r.GetCthis()
+func (this *QRegion) Intersected_1(r qtcore.QRect_ITF) *QRegion /*123*/ {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion11intersectedERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -331,8 +331,8 @@ func (this *QRegion) Intersected_1(r *qtcore.QRect) *QRegion /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion subtracted(const QRegion &)
-func (this *QRegion) Subtracted(r *QRegion) *QRegion /*123*/ {
-	var convArg0 = r.GetCthis()
+func (this *QRegion) Subtracted(r QRegion_ITF) *QRegion /*123*/ {
+	var convArg0 = r.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion10subtractedERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -344,8 +344,8 @@ func (this *QRegion) Subtracted(r *QRegion) *QRegion /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion xored(const QRegion &)
-func (this *QRegion) Xored(r *QRegion) *QRegion /*123*/ {
-	var convArg0 = r.GetCthis()
+func (this *QRegion) Xored(r QRegion_ITF) *QRegion /*123*/ {
+	var convArg0 = r.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion5xoredERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -357,8 +357,8 @@ func (this *QRegion) Xored(r *QRegion) *QRegion /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool intersects(const QRegion &)
-func (this *QRegion) Intersects(r *QRegion) bool {
-	var convArg0 = r.GetCthis()
+func (this *QRegion) Intersects(r QRegion_ITF) bool {
+	var convArg0 = r.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion10intersectsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -368,8 +368,8 @@ func (this *QRegion) Intersects(r *QRegion) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool intersects(const QRect &)
-func (this *QRegion) Intersects_1(r *qtcore.QRect) bool {
-	var convArg0 = r.GetCthis()
+func (this *QRegion) Intersects_1(r qtcore.QRect_ITF) bool {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegion10intersectsERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -391,8 +391,8 @@ func (this *QRegion) BoundingRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRects(const QRect *, int)
-func (this *QRegion) SetRects(rect *qtcore.QRect /*777 const QRect **/, num int) {
-	var convArg0 = rect.GetCthis()
+func (this *QRegion) SetRects(rect qtcore.QRect_ITF /*777 const QRect **/, num int) {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegion8setRectsEPK5QRecti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, num)
 	qtrt.ErrPrint(err, rv)
 }

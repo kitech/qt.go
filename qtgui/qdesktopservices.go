@@ -65,13 +65,13 @@ func (*QDesktopServices) NewFromPointer(cthis unsafe.Pointer) *QDesktopServices 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool openUrl(const QUrl &)
-func (this *QDesktopServices) OpenUrl(url *qtcore.QUrl) bool {
-	var convArg0 = url.GetCthis()
+func (this *QDesktopServices) OpenUrl(url qtcore.QUrl_ITF) bool {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices7openUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QDesktopServices_OpenUrl(url *qtcore.QUrl) bool {
+func QDesktopServices_OpenUrl(url qtcore.QUrl_ITF) bool {
 	var nilthis *QDesktopServices
 	rv := nilthis.OpenUrl(url)
 	return rv
@@ -81,16 +81,16 @@ func QDesktopServices_OpenUrl(url *qtcore.QUrl) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setUrlHandler(const QString &, QObject *, const char *)
-func (this *QDesktopServices) SetUrlHandler(scheme string, receiver *qtcore.QObject /*777 QObject **/, method string) {
+func (this *QDesktopServices) SetUrlHandler(scheme string, receiver qtcore.QObject_ITF /*777 QObject **/, method string) {
 	var tmpArg0 = qtcore.NewQString_5(scheme)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = receiver.GetCthis()
+	var convArg1 = receiver.QObject_PTR().GetCthis()
 	var convArg2 = qtrt.CString(method)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
-func QDesktopServices_SetUrlHandler(scheme string, receiver *qtcore.QObject /*777 QObject **/, method string) {
+func QDesktopServices_SetUrlHandler(scheme string, receiver qtcore.QObject_ITF /*777 QObject **/, method string) {
 	var nilthis *QDesktopServices
 	nilthis.SetUrlHandler(scheme, receiver, method)
 }

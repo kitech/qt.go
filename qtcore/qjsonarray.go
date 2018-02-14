@@ -87,15 +87,15 @@ func DeleteQJsonArray(this *QJsonArray) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QJsonArray fromStringList(const QStringList &)
-func (this *QJsonArray) FromStringList(list *QStringList) *QJsonArray /*123*/ {
-	var convArg0 = list.GetCthis()
+func (this *QJsonArray) FromStringList(list QStringList_ITF) *QJsonArray /*123*/ {
+	var convArg0 = list.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonArray14fromStringListERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonArray)
 	return rv2
 }
-func QJsonArray_FromStringList(list *QStringList) *QJsonArray /*123*/ {
+func QJsonArray_FromStringList(list QStringList_ITF) *QJsonArray /*123*/ {
 	var nilthis *QJsonArray
 	rv := nilthis.FromStringList(list)
 	return rv
@@ -221,8 +221,8 @@ func (this *QJsonArray) RemoveLast() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void replace(int, const QJsonValue &)
-func (this *QJsonArray) Replace(i int, value *QJsonValue) {
-	var convArg1 = value.GetCthis()
+func (this *QJsonArray) Replace(i int, value QJsonValue_ITF) {
+	var convArg1 = value.QJsonValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonArray7replaceEiRK10QJsonValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -231,8 +231,8 @@ func (this *QJsonArray) Replace(i int, value *QJsonValue) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QJsonValue &)
-func (this *QJsonArray) Contains(element *QJsonValue) bool {
-	var convArg0 = element.GetCthis()
+func (this *QJsonArray) Contains(element QJsonValue_ITF) bool {
+	var convArg0 = element.QJsonValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray8containsERK10QJsonValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -242,8 +242,8 @@ func (this *QJsonArray) Contains(element *QJsonValue) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QJsonArray &)
-func (this *QJsonArray) Swap(other *QJsonArray) {
-	var convArg0 = other.GetCthis()
+func (this *QJsonArray) Swap(other QJsonArray_ITF) {
+	var convArg0 = other.QJsonArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonArray4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -312,8 +312,8 @@ func (this *QJsonArray) ConstEnd() unsafe.Pointer /*444*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_back(const QJsonValue &)
-func (this *QJsonArray) Push_back(t *QJsonValue) {
-	var convArg0 = t.GetCthis()
+func (this *QJsonArray) Push_back(t QJsonValue_ITF) {
+	var convArg0 = t.QJsonValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonArray9push_backERK10QJsonValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -322,8 +322,8 @@ func (this *QJsonArray) Push_back(t *QJsonValue) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_front(const QJsonValue &)
-func (this *QJsonArray) Push_front(t *QJsonValue) {
-	var convArg0 = t.GetCthis()
+func (this *QJsonArray) Push_front(t QJsonValue_ITF) {
+	var convArg0 = t.QJsonValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonArray10push_frontERK10QJsonValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

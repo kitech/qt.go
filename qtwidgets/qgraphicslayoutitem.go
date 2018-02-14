@@ -81,8 +81,8 @@ func (*QGraphicsLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayou
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, _Bool)
-func NewQGraphicsLayoutItem(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, isLayout bool) *QGraphicsLayoutItem {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, isLayout bool) *QGraphicsLayoutItem {
+	var convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItemC2EPS_b", qtrt.FFI_TYPE_POINTER, convArg0, isLayout)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -105,8 +105,8 @@ func DeleteQGraphicsLayoutItem(this *QGraphicsLayoutItem) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSizePolicy(const QSizePolicy &)
-func (this *QGraphicsLayoutItem) SetSizePolicy(policy *QSizePolicy) {
-	var convArg0 = policy.GetCthis()
+func (this *QGraphicsLayoutItem) SetSizePolicy(policy QSizePolicy_ITF) {
+	var convArg0 = policy.QSizePolicy_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -136,8 +136,8 @@ func (this *QGraphicsLayoutItem) SizePolicy() *QSizePolicy /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumSize(const QSizeF &)
-func (this *QGraphicsLayoutItem) SetMinimumSize(size *qtcore.QSizeF) {
-	var convArg0 = size.GetCthis()
+func (this *QGraphicsLayoutItem) SetMinimumSize(size qtcore.QSizeF_ITF) {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -205,8 +205,8 @@ func (this *QGraphicsLayoutItem) MinimumHeight() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreferredSize(const QSizeF &)
-func (this *QGraphicsLayoutItem) SetPreferredSize(size *qtcore.QSizeF) {
-	var convArg0 = size.GetCthis()
+func (this *QGraphicsLayoutItem) SetPreferredSize(size qtcore.QSizeF_ITF) {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -274,8 +274,8 @@ func (this *QGraphicsLayoutItem) PreferredHeight() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumSize(const QSizeF &)
-func (this *QGraphicsLayoutItem) SetMaximumSize(size *qtcore.QSizeF) {
-	var convArg0 = size.GetCthis()
+func (this *QGraphicsLayoutItem) SetMaximumSize(size qtcore.QSizeF_ITF) {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -343,8 +343,8 @@ func (this *QGraphicsLayoutItem) MaximumHeight() float64 {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
-func (this *QGraphicsLayoutItem) SetGeometry(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QGraphicsLayoutItem) SetGeometry(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem11setGeometryERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -386,8 +386,8 @@ func (this *QGraphicsLayoutItem) ContentsRect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF effectiveSizeHint(Qt::SizeHint, const QSizeF &)
-func (this *QGraphicsLayoutItem) EffectiveSizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
-	var convArg1 = constraint.GetCthis()
+func (this *QGraphicsLayoutItem) EffectiveSizeHint(which int, constraint qtcore.QSizeF_ITF) *qtcore.QSizeF /*123*/ {
+	var convArg1 = constraint.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem17effectiveSizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -418,8 +418,8 @@ func (this *QGraphicsLayoutItem) ParentLayoutItem() *QGraphicsLayoutItem /*777 Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setParentLayoutItem(QGraphicsLayoutItem *)
-func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
-	var convArg0 = parent.GetCthis()
+func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) {
+	var convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -458,8 +458,8 @@ func (this *QGraphicsLayoutItem) OwnedByLayout() bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setGraphicsItem(QGraphicsItem *)
-func (this *QGraphicsLayoutItem) SetGraphicsItem(item *QGraphicsItem /*777 QGraphicsItem **/) {
-	var convArg0 = item.GetCthis()
+func (this *QGraphicsLayoutItem) SetGraphicsItem(item QGraphicsItem_ITF /*777 QGraphicsItem **/) {
+	var convArg0 = item.QGraphicsItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem15setGraphicsItemEP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -477,8 +477,8 @@ func (this *QGraphicsLayoutItem) SetOwnedByLayout(ownedByLayout bool) {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
-func (this *QGraphicsLayoutItem) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
-	var convArg1 = constraint.GetCthis()
+func (this *QGraphicsLayoutItem) SizeHint(which int, constraint qtcore.QSizeF_ITF) *qtcore.QSizeF /*123*/ {
+	var convArg1 = constraint.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333

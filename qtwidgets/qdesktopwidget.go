@@ -141,8 +141,8 @@ func (this *QDesktopWidget) PrimaryScreen() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int screenNumber(const QWidget *)
-func (this *QDesktopWidget) ScreenNumber(widget *QWidget /*777 const QWidget **/) int {
-	var convArg0 = widget.GetCthis()
+func (this *QDesktopWidget) ScreenNumber(widget QWidget_ITF /*777 const QWidget **/) int {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget12screenNumberEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -152,8 +152,8 @@ func (this *QDesktopWidget) ScreenNumber(widget *QWidget /*777 const QWidget **/
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int screenNumber(const QPoint &)
-func (this *QDesktopWidget) ScreenNumber_1(arg0 *qtcore.QPoint) int {
-	var convArg0 = arg0.GetCthis()
+func (this *QDesktopWidget) ScreenNumber_1(arg0 qtcore.QPoint_ITF) int {
+	var convArg0 = arg0.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget12screenNumberERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -185,8 +185,8 @@ func (this *QDesktopWidget) ScreenGeometry(screen int) *qtcore.QRect /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] const QRect screenGeometry(const QWidget *)
-func (this *QDesktopWidget) ScreenGeometry_1(widget *QWidget /*777 const QWidget **/) *qtcore.QRect /*123*/ {
-	var convArg0 = widget.GetCthis()
+func (this *QDesktopWidget) ScreenGeometry_1(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget14screenGeometryEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -198,8 +198,8 @@ func (this *QDesktopWidget) ScreenGeometry_1(widget *QWidget /*777 const QWidget
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [16] const QRect screenGeometry(const QPoint &)
-func (this *QDesktopWidget) ScreenGeometry_2(point *qtcore.QPoint) *qtcore.QRect /*123*/ {
-	var convArg0 = point.GetCthis()
+func (this *QDesktopWidget) ScreenGeometry_2(point qtcore.QPoint_ITF) *qtcore.QRect /*123*/ {
+	var convArg0 = point.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget14screenGeometryERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -223,8 +223,8 @@ func (this *QDesktopWidget) AvailableGeometry(screen int) *qtcore.QRect /*123*/ 
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] const QRect availableGeometry(const QWidget *)
-func (this *QDesktopWidget) AvailableGeometry_1(widget *QWidget /*777 const QWidget **/) *qtcore.QRect /*123*/ {
-	var convArg0 = widget.GetCthis()
+func (this *QDesktopWidget) AvailableGeometry_1(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget17availableGeometryEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -236,8 +236,8 @@ func (this *QDesktopWidget) AvailableGeometry_1(widget *QWidget /*777 const QWid
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [16] const QRect availableGeometry(const QPoint &)
-func (this *QDesktopWidget) AvailableGeometry_2(point *qtcore.QPoint) *qtcore.QRect /*123*/ {
-	var convArg0 = point.GetCthis()
+func (this *QDesktopWidget) AvailableGeometry_2(point qtcore.QPoint_ITF) *qtcore.QRect /*123*/ {
+	var convArg0 = point.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget17availableGeometryERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -285,8 +285,8 @@ func (this *QDesktopWidget) PrimaryScreenChanged() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QDesktopWidget) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QDesktopWidget) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = e.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidget11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

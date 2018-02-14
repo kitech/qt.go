@@ -150,8 +150,8 @@ func DeleteQHostAddress(this *QHostAddress) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QHostAddress &)
-func (this *QHostAddress) Swap(other *QHostAddress) {
-	var convArg0 = other.GetCthis()
+func (this *QHostAddress) Swap(other QHostAddress_ITF) {
+	var convArg0 = other.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -286,8 +286,8 @@ func (this *QHostAddress) SetScopeId(id string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEqual(const QHostAddress &, QHostAddress::ConversionMode)
-func (this *QHostAddress) IsEqual(address *QHostAddress, mode int) bool {
-	var convArg0 = address.GetCthis()
+func (this *QHostAddress) IsEqual(address QHostAddress_ITF, mode int) bool {
+	var convArg0 = address.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress7isEqualERKS_6QFlagsINS_18ConversionModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -316,8 +316,8 @@ func (this *QHostAddress) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isInSubnet(const QHostAddress &, int)
-func (this *QHostAddress) IsInSubnet(subnet *QHostAddress, netmask int) bool {
-	var convArg0 = subnet.GetCthis()
+func (this *QHostAddress) IsInSubnet(subnet QHostAddress_ITF, netmask int) bool {
+	var convArg0 = subnet.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress10isInSubnetERKS_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, netmask)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

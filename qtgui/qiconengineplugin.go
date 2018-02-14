@@ -73,8 +73,8 @@ func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIconEnginePlugin(QObject *)
-func NewQIconEnginePlugin(parent *qtcore.QObject /*777 QObject **/) *QIconEnginePlugin {
-	var convArg0 = parent.GetCthis()
+func NewQIconEnginePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QIconEnginePlugin {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIconEnginePluginFromPointer(unsafe.Pointer(uintptr(rv)))

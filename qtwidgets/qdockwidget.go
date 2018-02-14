@@ -99,10 +99,10 @@ func (this *QDockWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDockWidget(const QString &, QWidget *, Qt::WindowFlags)
-func NewQDockWidget(title string, parent *QWidget /*777 QWidget **/, flags int) *QDockWidget {
+func NewQDockWidget(title string, parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidgetC2ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -113,8 +113,8 @@ func NewQDockWidget(title string, parent *QWidget /*777 QWidget **/, flags int) 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDockWidget(QWidget *, Qt::WindowFlags)
-func NewQDockWidget_1(parent *QWidget /*777 QWidget **/, flags int) *QDockWidget {
-	var convArg0 = parent.GetCthis()
+func NewQDockWidget_1(parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidgetC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -146,8 +146,8 @@ func (this *QDockWidget) Widget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
-func (this *QDockWidget) SetWidget(widget *QWidget /*777 QWidget **/) {
-	var convArg0 = widget.GetCthis()
+func (this *QDockWidget) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget9setWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -213,8 +213,8 @@ func (this *QDockWidget) AllowedAreas() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitleBarWidget(QWidget *)
-func (this *QDockWidget) SetTitleBarWidget(widget *QWidget /*777 QWidget **/) {
-	var convArg0 = widget.GetCthis()
+func (this *QDockWidget) SetTitleBarWidget(widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget17setTitleBarWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -298,8 +298,8 @@ func (this *QDockWidget) DockLocationChanged(area int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QDockWidget) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QDockWidget) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -308,8 +308,8 @@ func (this *QDockWidget) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
-func (this *QDockWidget) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QDockWidget) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEvent **/) {
+	var convArg0 = event.QCloseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget10closeEventEP11QCloseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -318,8 +318,8 @@ func (this *QDockWidget) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QDockWidget) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QDockWidget) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = event.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -328,8 +328,8 @@ func (this *QDockWidget) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QDockWidget) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QDockWidget) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -339,8 +339,8 @@ func (this *QDockWidget) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionDockWidget *)
-func (this *QDockWidget) InitStyleOption(option *QStyleOptionDockWidget /*777 QStyleOptionDockWidget **/) {
-	var convArg0 = option.GetCthis()
+func (this *QDockWidget) InitStyleOption(option QStyleOptionDockWidget_ITF /*777 QStyleOptionDockWidget **/) {
+	var convArg0 = option.QStyleOptionDockWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDockWidget15initStyleOptionEP22QStyleOptionDockWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -74,8 +74,8 @@ func (this *QWinJumpList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinJumpList(QObject *)
-func NewQWinJumpList(parent *qtcore.QObject /*777 QObject **/) *QWinJumpList {
-	var convArg0 = parent.GetCthis()
+func NewQWinJumpList(parent qtcore.QObject_ITF /*777 QObject **/) *QWinJumpList {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpListC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinJumpListFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -151,8 +151,8 @@ func (this *QWinJumpList) Tasks() *QWinJumpListCategory /*777 QWinJumpListCatego
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addCategory(QWinJumpListCategory *)
-func (this *QWinJumpList) AddCategory(category *QWinJumpListCategory /*777 QWinJumpListCategory **/) {
-	var convArg0 = category.GetCthis()
+func (this *QWinJumpList) AddCategory(category QWinJumpListCategory_ITF /*777 QWinJumpListCategory **/) {
+	var convArg0 = category.QWinJumpListCategory_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpList11addCategoryEP20QWinJumpListCategory", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

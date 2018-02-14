@@ -194,8 +194,8 @@ func (this *QVersionNumber) SegmentCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isPrefixOf(const QVersionNumber &)
-func (this *QVersionNumber) IsPrefixOf(other *QVersionNumber) bool {
-	var convArg0 = other.GetCthis()
+func (this *QVersionNumber) IsPrefixOf(other QVersionNumber_ITF) bool {
+	var convArg0 = other.QVersionNumber_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QVersionNumber10isPrefixOfERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -205,14 +205,14 @@ func (this *QVersionNumber) IsPrefixOf(other *QVersionNumber) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QVersionNumber &, const QVersionNumber &)
-func (this *QVersionNumber) Compare(v1 *QVersionNumber, v2 *QVersionNumber) int {
-	var convArg0 = v1.GetCthis()
-	var convArg1 = v2.GetCthis()
+func (this *QVersionNumber) Compare(v1 QVersionNumber_ITF, v2 QVersionNumber_ITF) int {
+	var convArg0 = v1.QVersionNumber_PTR().GetCthis()
+	var convArg1 = v2.QVersionNumber_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber7compareERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QVersionNumber_Compare(v1 *QVersionNumber, v2 *QVersionNumber) int {
+func QVersionNumber_Compare(v1 QVersionNumber_ITF, v2 QVersionNumber_ITF) int {
 	var nilthis *QVersionNumber
 	rv := nilthis.Compare(v1, v2)
 	return rv
@@ -222,16 +222,16 @@ func QVersionNumber_Compare(v1 *QVersionNumber, v2 *QVersionNumber) int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QVersionNumber commonPrefix(const QVersionNumber &, const QVersionNumber &)
-func (this *QVersionNumber) CommonPrefix(v1 *QVersionNumber, v2 *QVersionNumber) *QVersionNumber /*123*/ {
-	var convArg0 = v1.GetCthis()
-	var convArg1 = v2.GetCthis()
+func (this *QVersionNumber) CommonPrefix(v1 QVersionNumber_ITF, v2 QVersionNumber_ITF) *QVersionNumber /*123*/ {
+	var convArg0 = v1.QVersionNumber_PTR().GetCthis()
+	var convArg1 = v2.QVersionNumber_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber12commonPrefixERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
 	return rv2
 }
-func QVersionNumber_CommonPrefix(v1 *QVersionNumber, v2 *QVersionNumber) *QVersionNumber /*123*/ {
+func QVersionNumber_CommonPrefix(v1 QVersionNumber_ITF, v2 QVersionNumber_ITF) *QVersionNumber /*123*/ {
 	var nilthis *QVersionNumber
 	rv := nilthis.CommonPrefix(v1, v2)
 	return rv
@@ -273,15 +273,15 @@ func QVersionNumber_FromString(string string, suffixIndex unsafe.Pointer /*666*/
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QVersionNumber fromString(QLatin1String, int *)
-func (this *QVersionNumber) FromString_1(string *QLatin1String /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
-	var convArg0 = string.GetCthis()
+func (this *QVersionNumber) FromString_1(string QLatin1String_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
+	var convArg0 = string.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE13QLatin1StringPi", qtrt.FFI_TYPE_POINTER, convArg0, &suffixIndex)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
 	return rv2
 }
-func QVersionNumber_FromString_1(string *QLatin1String /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
+func QVersionNumber_FromString_1(string QLatin1String_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
 	var nilthis *QVersionNumber
 	rv := nilthis.FromString_1(string, suffixIndex)
 	return rv
@@ -291,15 +291,15 @@ func QVersionNumber_FromString_1(string *QLatin1String /*123*/, suffixIndex unsa
 // index:2
 // Public static Visibility=Default Availability=Available
 // [8] QVersionNumber fromString(QStringView, int *)
-func (this *QVersionNumber) FromString_2(string *QStringView /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
-	var convArg0 = string.GetCthis()
+func (this *QVersionNumber) FromString_2(string QStringView_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
+	var convArg0 = string.QStringView_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE11QStringViewPi", qtrt.FFI_TYPE_POINTER, convArg0, &suffixIndex)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
 	return rv2
 }
-func QVersionNumber_FromString_2(string *QStringView /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
+func QVersionNumber_FromString_2(string QStringView_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
 	var nilthis *QVersionNumber
 	rv := nilthis.FromString_2(string, suffixIndex)
 	return rv

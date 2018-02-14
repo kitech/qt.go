@@ -76,8 +76,8 @@ func NewQMimeType() *QMimeType {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QMimeType &)
-func (this *QMimeType) Swap(other *QMimeType) {
-	var convArg0 = other.GetCthis()
+func (this *QMimeType) Swap(other QMimeType_ITF) {
+	var convArg0 = other.QMimeType_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeType4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

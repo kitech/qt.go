@@ -81,8 +81,8 @@ func (this *QQuickPaintedItem) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickPaintedItem(QQuickItem *)
-func NewQQuickPaintedItem(parent *QQuickItem /*777 QQuickItem **/) *QQuickPaintedItem {
-	var convArg0 = parent.GetCthis()
+func NewQQuickPaintedItem(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickPaintedItem {
+	var convArg0 = parent.QQuickItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItemC2EP10QQuickItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickPaintedItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -104,8 +104,8 @@ func DeleteQQuickPaintedItem(this *QQuickPaintedItem) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRect &)
-func (this *QQuickPaintedItem) Update(rect *qtcore.QRect) {
-	var convArg0 = rect.GetCthis()
+func (this *QQuickPaintedItem) Update(rect qtcore.QRect_ITF) {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItem6updateERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -223,8 +223,8 @@ func (this *QQuickPaintedItem) ContentsSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContentsSize(const QSize &)
-func (this *QQuickPaintedItem) SetContentsSize(arg0 *qtcore.QSize) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickPaintedItem) SetContentsSize(arg0 qtcore.QSize_ITF) {
+	var convArg0 = arg0.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItem15setContentsSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -273,8 +273,8 @@ func (this *QQuickPaintedItem) TextureSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextureSize(const QSize &)
-func (this *QQuickPaintedItem) SetTextureSize(size *qtcore.QSize) {
-	var convArg0 = size.GetCthis()
+func (this *QQuickPaintedItem) SetTextureSize(size qtcore.QSize_ITF) {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItem14setTextureSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -295,8 +295,8 @@ func (this *QQuickPaintedItem) FillColor() *qtgui.QColor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFillColor(const QColor &)
-func (this *QQuickPaintedItem) SetFillColor(arg0 *qtgui.QColor) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickPaintedItem) SetFillColor(arg0 qtgui.QColor_ITF) {
+	var convArg0 = arg0.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItem12setFillColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -324,8 +324,8 @@ func (this *QQuickPaintedItem) SetRenderTarget(target int) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *)
-func (this *QQuickPaintedItem) Paint(painter *qtgui.QPainter /*777 QPainter **/) {
-	var convArg0 = painter.GetCthis()
+func (this *QQuickPaintedItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItem5paintEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

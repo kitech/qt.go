@@ -75,8 +75,8 @@ func NewQTextListFormat() *QTextListFormat {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextListFormat(const QTextFormat &)
-func NewQTextListFormat_1(fmt *QTextFormat) *QTextListFormat {
-	var convArg0 = fmt.GetCthis()
+func NewQTextListFormat_1(fmt QTextFormat_ITF) *QTextListFormat {
+	var convArg0 = fmt.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextListFormatFromPointer(unsafe.Pointer(uintptr(rv)))

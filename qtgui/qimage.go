@@ -115,8 +115,8 @@ func NewQImage() *QImage {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QImage(const QSize &, enum QImage::Format)
-func NewQImage_1(size *qtcore.QSize, format int) *QImage {
-	var convArg0 = size.GetCthis()
+func NewQImage_1(size qtcore.QSize_ITF, format int) *QImage {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2ERK5QSizeNS_6FormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -180,8 +180,8 @@ func DeleteQImage(this *QImage) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QImage &)
-func (this *QImage) Swap(other *QImage) {
-	var convArg0 = other.GetCthis()
+func (this *QImage) Swap(other QImage_ITF) {
+	var convArg0 = other.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -229,8 +229,8 @@ func (this *QImage) IsDetached() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage copy(const QRect &)
-func (this *QImage) Copy(rect *qtcore.QRect) *QImage /*123*/ {
-	var convArg0 = rect.GetCthis()
+func (this *QImage) Copy(rect qtcore.QRect_ITF) *QImage /*123*/ {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4copyERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -520,8 +520,8 @@ func (this *QImage) Valid(x int, y int) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool valid(const QPoint &)
-func (this *QImage) Valid_1(pt *qtcore.QPoint) bool {
-	var convArg0 = pt.GetCthis()
+func (this *QImage) Valid_1(pt qtcore.QPoint_ITF) bool {
+	var convArg0 = pt.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage5validERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -541,8 +541,8 @@ func (this *QImage) PixelIndex(x int, y int) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int pixelIndex(const QPoint &)
-func (this *QImage) PixelIndex_1(pt *qtcore.QPoint) int {
-	var convArg0 = pt.GetCthis()
+func (this *QImage) PixelIndex_1(pt qtcore.QPoint_ITF) int {
+	var convArg0 = pt.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage10pixelIndexERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -562,8 +562,8 @@ func (this *QImage) Pixel(x int, y int) uint {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] QRgb pixel(const QPoint &)
-func (this *QImage) Pixel_1(pt *qtcore.QPoint) uint {
-	var convArg0 = pt.GetCthis()
+func (this *QImage) Pixel_1(pt qtcore.QPoint_ITF) uint {
+	var convArg0 = pt.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage5pixelERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -582,8 +582,8 @@ func (this *QImage) SetPixel(x int, y int, index_or_rgb uint) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setPixel(const QPoint &, uint)
-func (this *QImage) SetPixel_1(pt *qtcore.QPoint, index_or_rgb uint) {
-	var convArg0 = pt.GetCthis()
+func (this *QImage) SetPixel_1(pt qtcore.QPoint_ITF, index_or_rgb uint) {
+	var convArg0 = pt.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage8setPixelERK6QPointj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, index_or_rgb)
 	qtrt.ErrPrint(err, rv)
 }
@@ -604,8 +604,8 @@ func (this *QImage) PixelColor(x int, y int) *QColor /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QColor pixelColor(const QPoint &)
-func (this *QImage) PixelColor_1(pt *qtcore.QPoint) *QColor /*123*/ {
-	var convArg0 = pt.GetCthis()
+func (this *QImage) PixelColor_1(pt qtcore.QPoint_ITF) *QColor /*123*/ {
+	var convArg0 = pt.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage10pixelColorERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -617,8 +617,8 @@ func (this *QImage) PixelColor_1(pt *qtcore.QPoint) *QColor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixelColor(int, int, const QColor &)
-func (this *QImage) SetPixelColor(x int, y int, c *QColor) {
-	var convArg2 = c.GetCthis()
+func (this *QImage) SetPixelColor(x int, y int, c QColor_ITF) {
+	var convArg2 = c.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage13setPixelColorEiiRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -627,9 +627,9 @@ func (this *QImage) SetPixelColor(x int, y int, c *QColor) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setPixelColor(const QPoint &, const QColor &)
-func (this *QImage) SetPixelColor_1(pt *qtcore.QPoint, c *QColor) {
-	var convArg0 = pt.GetCthis()
-	var convArg1 = c.GetCthis()
+func (this *QImage) SetPixelColor_1(pt qtcore.QPoint_ITF, c QColor_ITF) {
+	var convArg0 = pt.QPoint_PTR().GetCthis()
+	var convArg1 = c.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage13setPixelColorERK6QPointRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -666,8 +666,8 @@ func (this *QImage) Fill(pixel uint) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void fill(const QColor &)
-func (this *QImage) Fill_1(color *QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QImage) Fill_1(color QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage4fillERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -695,8 +695,8 @@ func (this *QImage) HasAlphaChannel() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlphaChannel(const QImage &)
-func (this *QImage) SetAlphaChannel(alphaChannel *QImage) {
-	var convArg0 = alphaChannel.GetCthis()
+func (this *QImage) SetAlphaChannel(alphaChannel QImage_ITF) {
+	var convArg0 = alphaChannel.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage15setAlphaChannelERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -765,8 +765,8 @@ func (this *QImage) Scaled(w int, h int, aspectMode int, mode int) *QImage /*123
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QImage scaled(const QSize &, Qt::AspectRatioMode, Qt::TransformationMode)
-func (this *QImage) Scaled_1(s *qtcore.QSize, aspectMode int, mode int) *QImage /*123*/ {
-	var convArg0 = s.GetCthis()
+func (this *QImage) Scaled_1(s qtcore.QSize_ITF, aspectMode int, mode int) *QImage /*123*/ {
+	var convArg0 = s.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage6scaledERK5QSizeN2Qt15AspectRatioModeENS3_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, aspectMode, mode)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -802,8 +802,8 @@ func (this *QImage) ScaledToHeight(h int, mode int) *QImage /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage transformed(const QMatrix &, Qt::TransformationMode)
-func (this *QImage) Transformed(matrix *QMatrix, mode int) *QImage /*123*/ {
-	var convArg0 = matrix.GetCthis()
+func (this *QImage) Transformed(matrix QMatrix_ITF, mode int) *QImage /*123*/ {
+	var convArg0 = matrix.QMatrix_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage11transformedERK7QMatrixN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -815,8 +815,8 @@ func (this *QImage) Transformed(matrix *QMatrix, mode int) *QImage /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QImage transformed(const QTransform &, Qt::TransformationMode)
-func (this *QImage) Transformed_1(matrix *QTransform, mode int) *QImage /*123*/ {
-	var convArg0 = matrix.GetCthis()
+func (this *QImage) Transformed_1(matrix QTransform_ITF, mode int) *QImage /*123*/ {
+	var convArg0 = matrix.QTransform_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage11transformedERK10QTransformN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -828,15 +828,15 @@ func (this *QImage) Transformed_1(matrix *QTransform, mode int) *QImage /*123*/ 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [48] QMatrix trueMatrix(const QMatrix &, int, int)
-func (this *QImage) TrueMatrix(arg0 *QMatrix, w int, h int) *QMatrix /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QImage) TrueMatrix(arg0 QMatrix_ITF, w int, h int) *QMatrix /*123*/ {
+	var convArg0 = arg0.QMatrix_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage10trueMatrixERK7QMatrixii", qtrt.FFI_TYPE_POINTER, convArg0, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMatrix)
 	return rv2
 }
-func QImage_TrueMatrix(arg0 *QMatrix, w int, h int) *QMatrix /*123*/ {
+func QImage_TrueMatrix(arg0 QMatrix_ITF, w int, h int) *QMatrix /*123*/ {
 	var nilthis *QImage
 	rv := nilthis.TrueMatrix(arg0, w, h)
 	return rv
@@ -846,15 +846,15 @@ func QImage_TrueMatrix(arg0 *QMatrix, w int, h int) *QMatrix /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [88] QTransform trueMatrix(const QTransform &, int, int)
-func (this *QImage) TrueMatrix_1(arg0 *QTransform, w int, h int) *QTransform /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QImage) TrueMatrix_1(arg0 QTransform_ITF, w int, h int) *QTransform /*123*/ {
+	var convArg0 = arg0.QTransform_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage10trueMatrixERK10QTransformii", qtrt.FFI_TYPE_POINTER, convArg0, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
-func QImage_TrueMatrix_1(arg0 *QTransform, w int, h int) *QTransform /*123*/ {
+func QImage_TrueMatrix_1(arg0 QTransform_ITF, w int, h int) *QTransform /*123*/ {
 	var nilthis *QImage
 	rv := nilthis.TrueMatrix_1(arg0, w, h)
 	return rv
@@ -917,8 +917,8 @@ func (this *QImage) InvertPixels(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(QIODevice *, const char *)
-func (this *QImage) Load(device *qtcore.QIODevice /*777 QIODevice **/, format string) bool {
-	var convArg0 = device.GetCthis()
+func (this *QImage) Load(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string) bool {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage4loadEP9QIODevicePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -956,8 +956,8 @@ func (this *QImage) LoadFromData(buf unsafe.Pointer /*666*/, len int, format str
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool loadFromData(const QByteArray &, const char *)
-func (this *QImage) LoadFromData_1(data *qtcore.QByteArray, aformat string) bool {
-	var convArg0 = data.GetCthis()
+func (this *QImage) LoadFromData_1(data qtcore.QByteArray_ITF, aformat string) bool {
+	var convArg0 = data.QByteArray_PTR().GetCthis()
 	var convArg1 = qtrt.CString(aformat)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage12loadFromDataERK10QByteArrayPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -983,8 +983,8 @@ func (this *QImage) Save(fileName string, format string, quality int) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool save(QIODevice *, const char *, int)
-func (this *QImage) Save_1(device *qtcore.QIODevice /*777 QIODevice **/, format string, quality int) bool {
-	var convArg0 = device.GetCthis()
+func (this *QImage) Save_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string, quality int) bool {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4saveEP9QIODevicePKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
@@ -1015,8 +1015,8 @@ func QImage_FromData(data unsafe.Pointer /*666*/, size int, format string) *QIma
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [32] QImage fromData(const QByteArray &, const char *)
-func (this *QImage) FromData_1(data *qtcore.QByteArray, format string) *QImage /*123*/ {
-	var convArg0 = data.GetCthis()
+func (this *QImage) FromData_1(data qtcore.QByteArray_ITF, format string) *QImage /*123*/ {
+	var convArg0 = data.QByteArray_PTR().GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage8fromDataERK10QByteArrayPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -1025,7 +1025,7 @@ func (this *QImage) FromData_1(data *qtcore.QByteArray, format string) *QImage /
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQImage)
 	return rv2
 }
-func QImage_FromData_1(data *qtcore.QByteArray, format string) *QImage /*123*/ {
+func QImage_FromData_1(data qtcore.QByteArray_ITF, format string) *QImage /*123*/ {
 	var nilthis *QImage
 	rv := nilthis.FromData_1(data, format)
 	return rv
@@ -1105,8 +1105,8 @@ func (this *QImage) Offset() *qtcore.QPoint /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOffset(const QPoint &)
-func (this *QImage) SetOffset(arg0 *qtcore.QPoint) {
-	var convArg0 = arg0.GetCthis()
+func (this *QImage) SetOffset(arg0 qtcore.QPoint_ITF) {
+	var convArg0 = arg0.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage9setOffsetERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1184,13 +1184,13 @@ func QImage_ToPixelFormat(format int) *QPixelFormat /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QImage::Format toImageFormat(QPixelFormat)
-func (this *QImage) ToImageFormat(format *QPixelFormat /*123*/) int {
-	var convArg0 = format.GetCthis()
+func (this *QImage) ToImageFormat(format QPixelFormat_ITF /*123*/) int {
+	var convArg0 = format.QPixelFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage13toImageFormatE12QPixelFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QImage_ToImageFormat(format *QPixelFormat /*123*/) int {
+func QImage_ToImageFormat(format QPixelFormat_ITF /*123*/) int {
 	var nilthis *QImage
 	rv := nilthis.ToImageFormat(format)
 	return rv

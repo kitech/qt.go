@@ -124,8 +124,8 @@ func (this *QGroupBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGroupBox(QWidget *)
-func NewQGroupBox(parent *QWidget /*777 QWidget **/) *QGroupBox {
-	var convArg0 = parent.GetCthis()
+func NewQGroupBox(parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -136,10 +136,10 @@ func NewQGroupBox(parent *QWidget /*777 QWidget **/) *QGroupBox {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGroupBox(const QString &, QWidget *)
-func NewQGroupBox_1(title string, parent *QWidget /*777 QWidget **/) *QGroupBox {
+func NewQGroupBox_1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBoxC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -291,8 +291,8 @@ func (this *QGroupBox) Toggled(arg0 bool) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QGroupBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QGroupBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -302,8 +302,8 @@ func (this *QGroupBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void childEvent(QChildEvent *)
-func (this *QGroupBox) ChildEvent(event *qtcore.QChildEvent /*777 QChildEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGroupBox) ChildEvent(event qtcore.QChildEvent_ITF /*777 QChildEvent **/) {
+	var convArg0 = event.QChildEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox10childEventEP11QChildEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -312,8 +312,8 @@ func (this *QGroupBox) ChildEvent(event *qtcore.QChildEvent /*777 QChildEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QGroupBox) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGroupBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = event.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -322,8 +322,8 @@ func (this *QGroupBox) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QGroupBox) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGroupBox) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = event.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -332,8 +332,8 @@ func (this *QGroupBox) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
-func (this *QGroupBox) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGroupBox) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = event.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -342,8 +342,8 @@ func (this *QGroupBox) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QGroupBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGroupBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -352,8 +352,8 @@ func (this *QGroupBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
-func (this *QGroupBox) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGroupBox) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = event.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -362,8 +362,8 @@ func (this *QGroupBox) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QGroupBox) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGroupBox) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = event.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -372,8 +372,8 @@ func (this *QGroupBox) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QGroupBox) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QGroupBox) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = event.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -382,8 +382,8 @@ func (this *QGroupBox) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEv
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionGroupBox *)
-func (this *QGroupBox) InitStyleOption(option *QStyleOptionGroupBox /*777 QStyleOptionGroupBox **/) {
-	var convArg0 = option.GetCthis()
+func (this *QGroupBox) InitStyleOption(option QStyleOptionGroupBox_ITF /*777 QStyleOptionGroupBox **/) {
+	var convArg0 = option.QStyleOptionGroupBox_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox15initStyleOptionEP20QStyleOptionGroupBox", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

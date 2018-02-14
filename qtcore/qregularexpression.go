@@ -120,8 +120,8 @@ func DeleteQRegularExpression(this *QRegularExpression) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QRegularExpression &)
-func (this *QRegularExpression) Swap(other *QRegularExpression) {
-	var convArg0 = other.GetCthis()
+func (this *QRegularExpression) Swap(other QRegularExpression_ITF) {
+	var convArg0 = other.QRegularExpression_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpression4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -223,8 +223,8 @@ func (this *QRegularExpression) Match(subject string, offset int, matchType int,
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch match(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions)
-func (this *QRegularExpression) Match_1(subjectRef *QStringRef, offset int, matchType int, matchOptions int) *QRegularExpressionMatch /*123*/ {
-	var convArg0 = subjectRef.GetCthis()
+func (this *QRegularExpression) Match_1(subjectRef QStringRef_ITF, offset int, matchType int, matchOptions int) *QRegularExpressionMatch /*123*/ {
+	var convArg0 = subjectRef.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression5matchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -250,8 +250,8 @@ func (this *QRegularExpression) GlobalMatch(subject string, offset int, matchTyp
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions)
-func (this *QRegularExpression) GlobalMatch_1(subjectRef *QStringRef, offset int, matchType int, matchOptions int) *QRegularExpressionMatchIterator /*123*/ {
-	var convArg0 = subjectRef.GetCthis()
+func (this *QRegularExpression) GlobalMatch_1(subjectRef QStringRef_ITF, offset int, matchType int, matchOptions int) *QRegularExpressionMatchIterator /*123*/ {
+	var convArg0 = subjectRef.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegularExpressionMatchIteratorFromPointer(unsafe.Pointer(uintptr(rv))) // 333

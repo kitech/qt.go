@@ -104,8 +104,8 @@ func (this *QStatusBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStatusBar(QWidget *)
-func NewQStatusBar(parent *QWidget /*777 QWidget **/) *QStatusBar {
-	var convArg0 = parent.GetCthis()
+func NewQStatusBar(parent QWidget_ITF /*777 QWidget **/) *QStatusBar {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStatusBarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -127,8 +127,8 @@ func DeleteQStatusBar(this *QStatusBar) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addWidget(QWidget *, int)
-func (this *QStatusBar) AddWidget(widget *QWidget /*777 QWidget **/, stretch int) {
-	var convArg0 = widget.GetCthis()
+func (this *QStatusBar) AddWidget(widget QWidget_ITF /*777 QWidget **/, stretch int) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar9addWidgetEP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -137,8 +137,8 @@ func (this *QStatusBar) AddWidget(widget *QWidget /*777 QWidget **/, stretch int
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertWidget(int, QWidget *, int)
-func (this *QStatusBar) InsertWidget(index int, widget *QWidget /*777 QWidget **/, stretch int) int {
-	var convArg1 = widget.GetCthis()
+func (this *QStatusBar) InsertWidget(index int, widget QWidget_ITF /*777 QWidget **/, stretch int) int {
+	var convArg1 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar12insertWidgetEiP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -148,8 +148,8 @@ func (this *QStatusBar) InsertWidget(index int, widget *QWidget /*777 QWidget **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addPermanentWidget(QWidget *, int)
-func (this *QStatusBar) AddPermanentWidget(widget *QWidget /*777 QWidget **/, stretch int) {
-	var convArg0 = widget.GetCthis()
+func (this *QStatusBar) AddPermanentWidget(widget QWidget_ITF /*777 QWidget **/, stretch int) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -158,8 +158,8 @@ func (this *QStatusBar) AddPermanentWidget(widget *QWidget /*777 QWidget **/, st
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertPermanentWidget(int, QWidget *, int)
-func (this *QStatusBar) InsertPermanentWidget(index int, widget *QWidget /*777 QWidget **/, stretch int) int {
-	var convArg1 = widget.GetCthis()
+func (this *QStatusBar) InsertPermanentWidget(index int, widget QWidget_ITF /*777 QWidget **/, stretch int) int {
+	var convArg1 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -169,8 +169,8 @@ func (this *QStatusBar) InsertPermanentWidget(index int, widget *QWidget /*777 Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeWidget(QWidget *)
-func (this *QStatusBar) RemoveWidget(widget *QWidget /*777 QWidget **/) {
-	var convArg0 = widget.GetCthis()
+func (this *QStatusBar) RemoveWidget(widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar12removeWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -242,8 +242,8 @@ func (this *QStatusBar) MessageChanged(text string) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
-func (this *QStatusBar) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QStatusBar) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
+	var convArg0 = arg0.QShowEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -252,8 +252,8 @@ func (this *QStatusBar) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QStatusBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QStatusBar) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -262,8 +262,8 @@ func (this *QStatusBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QStatusBar) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QStatusBar) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = arg0.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -290,8 +290,8 @@ func (this *QStatusBar) HideOrShow() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QStatusBar) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QStatusBar) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

@@ -140,8 +140,8 @@ func NewQJSValue_5(value string) *QJSValue {
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(const QLatin1String &)
-func NewQJSValue_6(value *qtcore.QLatin1String) *QJSValue {
-	var convArg0 = value.GetCthis()
+func NewQJSValue_6(value qtcore.QLatin1String_ITF) *QJSValue {
+	var convArg0 = value.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2ERK13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -405,8 +405,8 @@ func (this *QJSValue) ToDateTime() *qtcore.QDateTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool equals(const QJSValue &)
-func (this *QJSValue) Equals(other *QJSValue) bool {
-	var convArg0 = other.GetCthis()
+func (this *QJSValue) Equals(other QJSValue_ITF) bool {
+	var convArg0 = other.QJSValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue6equalsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -416,8 +416,8 @@ func (this *QJSValue) Equals(other *QJSValue) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool strictlyEquals(const QJSValue &)
-func (this *QJSValue) StrictlyEquals(other *QJSValue) bool {
-	var convArg0 = other.GetCthis()
+func (this *QJSValue) StrictlyEquals(other QJSValue_ITF) bool {
+	var convArg0 = other.QJSValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue14strictlyEqualsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -439,8 +439,8 @@ func (this *QJSValue) Prototype() *QJSValue /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPrototype(const QJSValue &)
-func (this *QJSValue) SetPrototype(prototype *QJSValue) {
-	var convArg0 = prototype.GetCthis()
+func (this *QJSValue) SetPrototype(prototype QJSValue_ITF) {
+	var convArg0 = prototype.QJSValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValue12setPrototypeERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -475,10 +475,10 @@ func (this *QJSValue) Property_1(arrayIndex uint) *QJSValue /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProperty(const QString &, const QJSValue &)
-func (this *QJSValue) SetProperty(name string, value *QJSValue) {
+func (this *QJSValue) SetProperty(name string, value QJSValue_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.GetCthis()
+	var convArg1 = value.QJSValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValue11setPropertyERK7QStringRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -487,8 +487,8 @@ func (this *QJSValue) SetProperty(name string, value *QJSValue) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setProperty(quint32, const QJSValue &)
-func (this *QJSValue) SetProperty_1(arrayIndex uint, value *QJSValue) {
-	var convArg1 = value.GetCthis()
+func (this *QJSValue) SetProperty_1(arrayIndex uint, value QJSValue_ITF) {
+	var convArg1 = value.QJSValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValue11setPropertyEjRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arrayIndex, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

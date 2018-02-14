@@ -383,8 +383,8 @@ func (this *QScreen) AngleBetween(a int, b int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform transformBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &)
-func (this *QScreen) TransformBetween(a int, b int, target *qtcore.QRect) *QTransform /*123*/ {
-	var convArg2 = target.GetCthis()
+func (this *QScreen) TransformBetween(a int, b int, target qtcore.QRect_ITF) *QTransform /*123*/ {
+	var convArg2 = target.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen16transformBetweenEN2Qt17ScreenOrientationES1_RK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, b, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -396,8 +396,8 @@ func (this *QScreen) TransformBetween(a int, b int, target *qtcore.QRect) *QTran
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect mapBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &)
-func (this *QScreen) MapBetween(a int, b int, rect *qtcore.QRect) *qtcore.QRect /*123*/ {
-	var convArg2 = rect.GetCthis()
+func (this *QScreen) MapBetween(a int, b int, rect qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
+	var convArg2 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen10mapBetweenEN2Qt17ScreenOrientationES1_RK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, b, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -451,8 +451,8 @@ func (this *QScreen) RefreshRate() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void geometryChanged(const QRect &)
-func (this *QScreen) GeometryChanged(geometry *qtcore.QRect) {
-	var convArg0 = geometry.GetCthis()
+func (this *QScreen) GeometryChanged(geometry qtcore.QRect_ITF) {
+	var convArg0 = geometry.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen15geometryChangedERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -461,8 +461,8 @@ func (this *QScreen) GeometryChanged(geometry *qtcore.QRect) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void availableGeometryChanged(const QRect &)
-func (this *QScreen) AvailableGeometryChanged(geometry *qtcore.QRect) {
-	var convArg0 = geometry.GetCthis()
+func (this *QScreen) AvailableGeometryChanged(geometry qtcore.QRect_ITF) {
+	var convArg0 = geometry.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen24availableGeometryChangedERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -471,8 +471,8 @@ func (this *QScreen) AvailableGeometryChanged(geometry *qtcore.QRect) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void physicalSizeChanged(const QSizeF &)
-func (this *QScreen) PhysicalSizeChanged(size *qtcore.QSizeF) {
-	var convArg0 = size.GetCthis()
+func (this *QScreen) PhysicalSizeChanged(size qtcore.QSizeF_ITF) {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen19physicalSizeChangedERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -499,8 +499,8 @@ func (this *QScreen) LogicalDotsPerInchChanged(dpi float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void virtualGeometryChanged(const QRect &)
-func (this *QScreen) VirtualGeometryChanged(rect *qtcore.QRect) {
-	var convArg0 = rect.GetCthis()
+func (this *QScreen) VirtualGeometryChanged(rect qtcore.QRect_ITF) {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen22virtualGeometryChangedERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

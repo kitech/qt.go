@@ -90,8 +90,8 @@ func DeleteQSslPreSharedKeyAuthenticator(this *QSslPreSharedKeyAuthenticator) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslPreSharedKeyAuthenticator &)
-func (this *QSslPreSharedKeyAuthenticator) Swap(other *QSslPreSharedKeyAuthenticator) {
-	var convArg0 = other.GetCthis()
+func (this *QSslPreSharedKeyAuthenticator) Swap(other QSslPreSharedKeyAuthenticator_ITF) {
+	var convArg0 = other.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -112,8 +112,8 @@ func (this *QSslPreSharedKeyAuthenticator) IdentityHint() *qtcore.QByteArray /*1
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIdentity(const QByteArray &)
-func (this *QSslPreSharedKeyAuthenticator) SetIdentity(identity *qtcore.QByteArray) {
-	var convArg0 = identity.GetCthis()
+func (this *QSslPreSharedKeyAuthenticator) SetIdentity(identity qtcore.QByteArray_ITF) {
+	var convArg0 = identity.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator11setIdentityERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -144,8 +144,8 @@ func (this *QSslPreSharedKeyAuthenticator) MaximumIdentityLength() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreSharedKey(const QByteArray &)
-func (this *QSslPreSharedKeyAuthenticator) SetPreSharedKey(preSharedKey *qtcore.QByteArray) {
-	var convArg0 = preSharedKey.GetCthis()
+func (this *QSslPreSharedKeyAuthenticator) SetPreSharedKey(preSharedKey qtcore.QByteArray_ITF) {
+	var convArg0 = preSharedKey.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator15setPreSharedKeyERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

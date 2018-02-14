@@ -84,8 +84,8 @@ func (this *QMainWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMainWindow(QWidget *, Qt::WindowFlags)
-func NewQMainWindow(parent *QWidget /*777 QWidget **/, flags int) *QMainWindow {
-	var convArg0 = parent.GetCthis()
+func NewQMainWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMainWindow {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMainWindowFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -119,8 +119,8 @@ func (this *QMainWindow) IconSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
-func (this *QMainWindow) SetIconSize(iconSize *qtcore.QSize) {
-	var convArg0 = iconSize.GetCthis()
+func (this *QMainWindow) SetIconSize(iconSize qtcore.QSize_ITF) {
+	var convArg0 = iconSize.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow11setIconSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -244,8 +244,8 @@ func (this *QMainWindow) DockOptions() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSeparator(const QPoint &)
-func (this *QMainWindow) IsSeparator(pos *qtcore.QPoint) bool {
-	var convArg0 = pos.GetCthis()
+func (this *QMainWindow) IsSeparator(pos qtcore.QPoint_ITF) bool {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow11isSeparatorERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -265,8 +265,8 @@ func (this *QMainWindow) MenuBar() *QMenuBar /*777 QMenuBar **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenuBar(QMenuBar *)
-func (this *QMainWindow) SetMenuBar(menubar *QMenuBar /*777 QMenuBar **/) {
-	var convArg0 = menubar.GetCthis()
+func (this *QMainWindow) SetMenuBar(menubar QMenuBar_ITF /*777 QMenuBar **/) {
+	var convArg0 = menubar.QMenuBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow10setMenuBarEP8QMenuBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -285,8 +285,8 @@ func (this *QMainWindow) MenuWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenuWidget(QWidget *)
-func (this *QMainWindow) SetMenuWidget(menubar *QWidget /*777 QWidget **/) {
-	var convArg0 = menubar.GetCthis()
+func (this *QMainWindow) SetMenuWidget(menubar QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = menubar.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow13setMenuWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -305,8 +305,8 @@ func (this *QMainWindow) StatusBar() *QStatusBar /*777 QStatusBar **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStatusBar(QStatusBar *)
-func (this *QMainWindow) SetStatusBar(statusbar *QStatusBar /*777 QStatusBar **/) {
-	var convArg0 = statusbar.GetCthis()
+func (this *QMainWindow) SetStatusBar(statusbar QStatusBar_ITF /*777 QStatusBar **/) {
+	var convArg0 = statusbar.QStatusBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow12setStatusBarEP10QStatusBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -325,8 +325,8 @@ func (this *QMainWindow) CentralWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCentralWidget(QWidget *)
-func (this *QMainWindow) SetCentralWidget(widget *QWidget /*777 QWidget **/) {
-	var convArg0 = widget.GetCthis()
+func (this *QMainWindow) SetCentralWidget(widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow16setCentralWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -373,8 +373,8 @@ func (this *QMainWindow) AddToolBarBreak(area int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertToolBarBreak(QToolBar *)
-func (this *QMainWindow) InsertToolBarBreak(before *QToolBar /*777 QToolBar **/) {
-	var convArg0 = before.GetCthis()
+func (this *QMainWindow) InsertToolBarBreak(before QToolBar_ITF /*777 QToolBar **/) {
+	var convArg0 = before.QToolBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow18insertToolBarBreakEP8QToolBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -383,8 +383,8 @@ func (this *QMainWindow) InsertToolBarBreak(before *QToolBar /*777 QToolBar **/)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addToolBar(Qt::ToolBarArea, QToolBar *)
-func (this *QMainWindow) AddToolBar(area int, toolbar *QToolBar /*777 QToolBar **/) {
-	var convArg1 = toolbar.GetCthis()
+func (this *QMainWindow) AddToolBar(area int, toolbar QToolBar_ITF /*777 QToolBar **/) {
+	var convArg1 = toolbar.QToolBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow10addToolBarEN2Qt11ToolBarAreaEP8QToolBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), area, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -393,8 +393,8 @@ func (this *QMainWindow) AddToolBar(area int, toolbar *QToolBar /*777 QToolBar *
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addToolBar(QToolBar *)
-func (this *QMainWindow) AddToolBar_1(toolbar *QToolBar /*777 QToolBar **/) {
-	var convArg0 = toolbar.GetCthis()
+func (this *QMainWindow) AddToolBar_1(toolbar QToolBar_ITF /*777 QToolBar **/) {
+	var convArg0 = toolbar.QToolBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow10addToolBarEP8QToolBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -415,9 +415,9 @@ func (this *QMainWindow) AddToolBar_2(title string) *QToolBar /*777 QToolBar **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertToolBar(QToolBar *, QToolBar *)
-func (this *QMainWindow) InsertToolBar(before *QToolBar /*777 QToolBar **/, toolbar *QToolBar /*777 QToolBar **/) {
-	var convArg0 = before.GetCthis()
-	var convArg1 = toolbar.GetCthis()
+func (this *QMainWindow) InsertToolBar(before QToolBar_ITF /*777 QToolBar **/, toolbar QToolBar_ITF /*777 QToolBar **/) {
+	var convArg0 = before.QToolBar_PTR().GetCthis()
+	var convArg1 = toolbar.QToolBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow13insertToolBarEP8QToolBarS1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -426,8 +426,8 @@ func (this *QMainWindow) InsertToolBar(before *QToolBar /*777 QToolBar **/, tool
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeToolBar(QToolBar *)
-func (this *QMainWindow) RemoveToolBar(toolbar *QToolBar /*777 QToolBar **/) {
-	var convArg0 = toolbar.GetCthis()
+func (this *QMainWindow) RemoveToolBar(toolbar QToolBar_ITF /*777 QToolBar **/) {
+	var convArg0 = toolbar.QToolBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow13removeToolBarEP8QToolBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -436,8 +436,8 @@ func (this *QMainWindow) RemoveToolBar(toolbar *QToolBar /*777 QToolBar **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeToolBarBreak(QToolBar *)
-func (this *QMainWindow) RemoveToolBarBreak(before *QToolBar /*777 QToolBar **/) {
-	var convArg0 = before.GetCthis()
+func (this *QMainWindow) RemoveToolBarBreak(before QToolBar_ITF /*777 QToolBar **/) {
+	var convArg0 = before.QToolBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow18removeToolBarBreakEP8QToolBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -456,8 +456,8 @@ func (this *QMainWindow) UnifiedTitleAndToolBarOnMac() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ToolBarArea toolBarArea(QToolBar *)
-func (this *QMainWindow) ToolBarArea(toolbar *QToolBar /*777 QToolBar **/) int {
-	var convArg0 = toolbar.GetCthis()
+func (this *QMainWindow) ToolBarArea(toolbar QToolBar_ITF /*777 QToolBar **/) int {
+	var convArg0 = toolbar.QToolBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow11toolBarAreaEP8QToolBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -467,8 +467,8 @@ func (this *QMainWindow) ToolBarArea(toolbar *QToolBar /*777 QToolBar **/) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool toolBarBreak(QToolBar *)
-func (this *QMainWindow) ToolBarBreak(toolbar *QToolBar /*777 QToolBar **/) bool {
-	var convArg0 = toolbar.GetCthis()
+func (this *QMainWindow) ToolBarBreak(toolbar QToolBar_ITF /*777 QToolBar **/) bool {
+	var convArg0 = toolbar.QToolBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow12toolBarBreakEP8QToolBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -478,8 +478,8 @@ func (this *QMainWindow) ToolBarBreak(toolbar *QToolBar /*777 QToolBar **/) bool
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addDockWidget(Qt::DockWidgetArea, QDockWidget *)
-func (this *QMainWindow) AddDockWidget(area int, dockwidget *QDockWidget /*777 QDockWidget **/) {
-	var convArg1 = dockwidget.GetCthis()
+func (this *QMainWindow) AddDockWidget(area int, dockwidget QDockWidget_ITF /*777 QDockWidget **/) {
+	var convArg1 = dockwidget.QDockWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow13addDockWidgetEN2Qt14DockWidgetAreaEP11QDockWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), area, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -488,8 +488,8 @@ func (this *QMainWindow) AddDockWidget(area int, dockwidget *QDockWidget /*777 Q
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addDockWidget(Qt::DockWidgetArea, QDockWidget *, Qt::Orientation)
-func (this *QMainWindow) AddDockWidget_1(area int, dockwidget *QDockWidget /*777 QDockWidget **/, orientation int) {
-	var convArg1 = dockwidget.GetCthis()
+func (this *QMainWindow) AddDockWidget_1(area int, dockwidget QDockWidget_ITF /*777 QDockWidget **/, orientation int) {
+	var convArg1 = dockwidget.QDockWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow13addDockWidgetEN2Qt14DockWidgetAreaEP11QDockWidgetNS0_11OrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), area, convArg1, orientation)
 	qtrt.ErrPrint(err, rv)
 }
@@ -498,9 +498,9 @@ func (this *QMainWindow) AddDockWidget_1(area int, dockwidget *QDockWidget /*777
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void splitDockWidget(QDockWidget *, QDockWidget *, Qt::Orientation)
-func (this *QMainWindow) SplitDockWidget(after *QDockWidget /*777 QDockWidget **/, dockwidget *QDockWidget /*777 QDockWidget **/, orientation int) {
-	var convArg0 = after.GetCthis()
-	var convArg1 = dockwidget.GetCthis()
+func (this *QMainWindow) SplitDockWidget(after QDockWidget_ITF /*777 QDockWidget **/, dockwidget QDockWidget_ITF /*777 QDockWidget **/, orientation int) {
+	var convArg0 = after.QDockWidget_PTR().GetCthis()
+	var convArg1 = dockwidget.QDockWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow15splitDockWidgetEP11QDockWidgetS1_N2Qt11OrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, orientation)
 	qtrt.ErrPrint(err, rv)
 }
@@ -509,9 +509,9 @@ func (this *QMainWindow) SplitDockWidget(after *QDockWidget /*777 QDockWidget **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tabifyDockWidget(QDockWidget *, QDockWidget *)
-func (this *QMainWindow) TabifyDockWidget(first *QDockWidget /*777 QDockWidget **/, second *QDockWidget /*777 QDockWidget **/) {
-	var convArg0 = first.GetCthis()
-	var convArg1 = second.GetCthis()
+func (this *QMainWindow) TabifyDockWidget(first QDockWidget_ITF /*777 QDockWidget **/, second QDockWidget_ITF /*777 QDockWidget **/) {
+	var convArg0 = first.QDockWidget_PTR().GetCthis()
+	var convArg1 = second.QDockWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -520,8 +520,8 @@ func (this *QMainWindow) TabifyDockWidget(first *QDockWidget /*777 QDockWidget *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeDockWidget(QDockWidget *)
-func (this *QMainWindow) RemoveDockWidget(dockwidget *QDockWidget /*777 QDockWidget **/) {
-	var convArg0 = dockwidget.GetCthis()
+func (this *QMainWindow) RemoveDockWidget(dockwidget QDockWidget_ITF /*777 QDockWidget **/) {
+	var convArg0 = dockwidget.QDockWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow16removeDockWidgetEP11QDockWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -530,8 +530,8 @@ func (this *QMainWindow) RemoveDockWidget(dockwidget *QDockWidget /*777 QDockWid
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool restoreDockWidget(QDockWidget *)
-func (this *QMainWindow) RestoreDockWidget(dockwidget *QDockWidget /*777 QDockWidget **/) bool {
-	var convArg0 = dockwidget.GetCthis()
+func (this *QMainWindow) RestoreDockWidget(dockwidget QDockWidget_ITF /*777 QDockWidget **/) bool {
+	var convArg0 = dockwidget.QDockWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -541,8 +541,8 @@ func (this *QMainWindow) RestoreDockWidget(dockwidget *QDockWidget /*777 QDockWi
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::DockWidgetArea dockWidgetArea(QDockWidget *)
-func (this *QMainWindow) DockWidgetArea(dockwidget *QDockWidget /*777 QDockWidget **/) int {
-	var convArg0 = dockwidget.GetCthis()
+func (this *QMainWindow) DockWidgetArea(dockwidget QDockWidget_ITF /*777 QDockWidget **/) int {
+	var convArg0 = dockwidget.QDockWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow14dockWidgetAreaEP11QDockWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -564,8 +564,8 @@ func (this *QMainWindow) SaveState(version int) *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool restoreState(const QByteArray &, int)
-func (this *QMainWindow) RestoreState(state *qtcore.QByteArray, version int) bool {
-	var convArg0 = state.GetCthis()
+func (this *QMainWindow) RestoreState(state qtcore.QByteArray_ITF, version int) bool {
+	var convArg0 = state.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow12restoreStateERK10QByteArrayi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, version)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -612,8 +612,8 @@ func (this *QMainWindow) SetUnifiedTitleAndToolBarOnMac(set bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void iconSizeChanged(const QSize &)
-func (this *QMainWindow) IconSizeChanged(iconSize *qtcore.QSize) {
-	var convArg0 = iconSize.GetCthis()
+func (this *QMainWindow) IconSizeChanged(iconSize qtcore.QSize_ITF) {
+	var convArg0 = iconSize.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow15iconSizeChangedERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -631,8 +631,8 @@ func (this *QMainWindow) ToolButtonStyleChanged(toolButtonStyle int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tabifiedDockWidgetActivated(QDockWidget *)
-func (this *QMainWindow) TabifiedDockWidgetActivated(dockWidget *QDockWidget /*777 QDockWidget **/) {
-	var convArg0 = dockWidget.GetCthis()
+func (this *QMainWindow) TabifiedDockWidgetActivated(dockWidget QDockWidget_ITF /*777 QDockWidget **/) {
+	var convArg0 = dockWidget.QDockWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow27tabifiedDockWidgetActivatedEP11QDockWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -641,8 +641,8 @@ func (this *QMainWindow) TabifiedDockWidgetActivated(dockWidget *QDockWidget /*7
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
-func (this *QMainWindow) ContextMenuEvent(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QMainWindow) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
+	var convArg0 = event.QContextMenuEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -651,8 +651,8 @@ func (this *QMainWindow) ContextMenuEvent(event *qtgui.QContextMenuEvent /*777 Q
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QMainWindow) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QMainWindow) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

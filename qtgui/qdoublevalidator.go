@@ -73,8 +73,8 @@ func (this *QDoubleValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(QObject *)
-func NewQDoubleValidator(parent *qtcore.QObject /*777 QObject **/) *QDoubleValidator {
-	var convArg0 = parent.GetCthis()
+func NewQDoubleValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleValidator {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDoubleValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -85,8 +85,8 @@ func NewQDoubleValidator(parent *qtcore.QObject /*777 QObject **/) *QDoubleValid
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(double, double, int, QObject *)
-func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent *qtcore.QObject /*777 QObject **/) *QDoubleValidator {
-	var convArg3 = parent.GetCthis()
+func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleValidator {
+	var convArg3 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidatorC2EddiP7QObject", qtrt.FFI_TYPE_POINTER, bottom, top, decimals, convArg3)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDoubleValidatorFromPointer(unsafe.Pointer(uintptr(rv)))

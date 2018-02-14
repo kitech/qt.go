@@ -74,8 +74,8 @@ func (this *QWinTaskbarButton) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinTaskbarButton(QObject *)
-func NewQWinTaskbarButton(parent *qtcore.QObject /*777 QObject **/) *QWinTaskbarButton {
-	var convArg0 = parent.GetCthis()
+func NewQWinTaskbarButton(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTaskbarButton {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButtonC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinTaskbarButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -97,8 +97,8 @@ func DeleteQWinTaskbarButton(this *QWinTaskbarButton) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWindow(QWindow *)
-func (this *QWinTaskbarButton) SetWindow(window *qtgui.QWindow /*777 QWindow **/) {
-	var convArg0 = window.GetCthis()
+func (this *QWinTaskbarButton) SetWindow(window qtgui.QWindow_ITF /*777 QWindow **/) {
+	var convArg0 = window.QWindow_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton9setWindowEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -152,9 +152,9 @@ func (this *QWinTaskbarButton) Progress() *QWinTaskbarProgress /*777 QWinTaskbar
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
-func (this *QWinTaskbarButton) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+func (this *QWinTaskbarButton) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg1 = arg1.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -164,8 +164,8 @@ func (this *QWinTaskbarButton) EventFilter(arg0 *qtcore.QObject /*777 QObject **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOverlayIcon(const QIcon &)
-func (this *QWinTaskbarButton) SetOverlayIcon(icon *qtgui.QIcon) {
-	var convArg0 = icon.GetCthis()
+func (this *QWinTaskbarButton) SetOverlayIcon(icon qtgui.QIcon_ITF) {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton14setOverlayIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -79,8 +79,8 @@ func (this *QGraphicsOpacityEffect) MetaObject() *qtcore.QMetaObject /*777 const
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsOpacityEffect(QObject *)
-func NewQGraphicsOpacityEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsOpacityEffect {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsOpacityEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsOpacityEffect {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsOpacityEffectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -133,8 +133,8 @@ func (this *QGraphicsOpacityEffect) SetOpacity(opacity float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacityMask(const QBrush &)
-func (this *QGraphicsOpacityEffect) SetOpacityMask(mask *qtgui.QBrush) {
-	var convArg0 = mask.GetCthis()
+func (this *QGraphicsOpacityEffect) SetOpacityMask(mask qtgui.QBrush_ITF) {
+	var convArg0 = mask.QBrush_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -152,8 +152,8 @@ func (this *QGraphicsOpacityEffect) OpacityChanged(opacity float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void opacityMaskChanged(const QBrush &)
-func (this *QGraphicsOpacityEffect) OpacityMaskChanged(mask *qtgui.QBrush) {
-	var convArg0 = mask.GetCthis()
+func (this *QGraphicsOpacityEffect) OpacityMaskChanged(mask qtgui.QBrush_ITF) {
+	var convArg0 = mask.QBrush_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect18opacityMaskChangedERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -162,8 +162,8 @@ func (this *QGraphicsOpacityEffect) OpacityMaskChanged(mask *qtgui.QBrush) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
-func (this *QGraphicsOpacityEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
-	var convArg0 = painter.GetCthis()
+func (this *QGraphicsOpacityEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect4drawEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

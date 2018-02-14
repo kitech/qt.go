@@ -108,8 +108,8 @@ func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator64(const QRandomGenerator &)
-func NewQRandomGenerator64_3(other *QRandomGenerator) *QRandomGenerator64 {
-	var convArg0 = other.GetCthis()
+func NewQRandomGenerator64_3(other QRandomGenerator_ITF) *QRandomGenerator64 {
+	var convArg0 = other.QRandomGenerator_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2ERK16QRandomGenerator", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))

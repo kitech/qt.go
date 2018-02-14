@@ -135,8 +135,8 @@ func (this *QLayoutItem) ExpandingDirections() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
-func (this *QLayoutItem) SetGeometry(arg0 *qtcore.QRect) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLayoutItem) SetGeometry(arg0 qtcore.QRect_ITF) {
+	var convArg0 = arg0.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QLayoutItem11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

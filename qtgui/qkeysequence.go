@@ -178,8 +178,8 @@ func QKeySequence_FromString(str string, format int) *QKeySequence /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QKeySequence::SequenceMatch matches(const QKeySequence &)
-func (this *QKeySequence) Matches(seq *QKeySequence) int {
-	var convArg0 = seq.GetCthis()
+func (this *QKeySequence) Matches(seq QKeySequence_ITF) int {
+	var convArg0 = seq.QKeySequence_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence7matchesERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -208,8 +208,8 @@ func QKeySequence_Mnemonic(text string) *QKeySequence /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QKeySequence &)
-func (this *QKeySequence) Swap(other *QKeySequence) {
-	var convArg0 = other.GetCthis()
+func (this *QKeySequence) Swap(other QKeySequence_ITF) {
+	var convArg0 = other.QKeySequence_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequence4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

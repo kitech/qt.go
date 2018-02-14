@@ -30,17 +30,17 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// qint64 readData(char *, qint64)
+// long long readData(char *, qint64)
 func (this *QIODevice) InheritReadData(f func(data string, maxlen int64) int64) {
 	qtrt.SetAllInheritCallback(this, "readData", f)
 }
 
-// qint64 readLineData(char *, qint64)
+// long long readLineData(char *, qint64)
 func (this *QIODevice) InheritReadLineData(f func(data string, maxlen int64) int64) {
 	qtrt.SetAllInheritCallback(this, "readLineData", f)
 }
 
-// qint64 writeData(const char *, qint64)
+// long long writeData(const char *, qint64)
 func (this *QIODevice) InheritWriteData(f func(data string, len int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
@@ -108,8 +108,8 @@ func NewQIODevice() *QIODevice {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QIODevice(QObject *)
-func NewQIODevice_1(parent *QObject /*777 QObject **/) *QIODevice {
-	var convArg0 = parent.GetCthis()
+func NewQIODevice_1(parent QObject_ITF /*777 QObject **/) *QIODevice {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODeviceC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -478,8 +478,8 @@ func (this *QIODevice) Write_1(data string) int64 {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] qint64 write(const QByteArray &)
-func (this *QIODevice) Write_2(data *QByteArray) int64 {
-	var convArg0 = data.GetCthis()
+func (this *QIODevice) Write_2(data QByteArray_ITF) int64 {
+	var convArg0 = data.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice5writeERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222

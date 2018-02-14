@@ -196,8 +196,8 @@ func (this *QQmlIncubator) StatusChanged(arg0 int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setInitialState(QObject *)
-func (this *QQmlIncubator) SetInitialState(arg0 *qtcore.QObject /*777 QObject **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQmlIncubator) SetInitialState(arg0 qtcore.QObject_ITF /*777 QObject **/) {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubator15setInitialStateEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

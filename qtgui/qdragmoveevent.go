@@ -63,9 +63,9 @@ func (*QDragMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
-func NewQDragMoveEvent(pos *qtcore.QPoint, actions int, data *qtcore.QMimeData /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDragMoveEvent {
-	var convArg0 = pos.GetCthis()
-	var convArg2 = data.GetCthis()
+func NewQDragMoveEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDragMoveEvent {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
+	var convArg2 = data.QMimeData_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers, type_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDragMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -109,8 +109,8 @@ func (this *QDragMoveEvent) Accept() {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void accept(const QRect &)
-func (this *QDragMoveEvent) Accept_1(r *qtcore.QRect) {
-	var convArg0 = r.GetCthis()
+func (this *QDragMoveEvent) Accept_1(r qtcore.QRect_ITF) {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -128,8 +128,8 @@ func (this *QDragMoveEvent) Ignore() {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void ignore(const QRect &)
-func (this *QDragMoveEvent) Ignore_1(r *qtcore.QRect) {
-	var convArg0 = r.GetCthis()
+func (this *QDragMoveEvent) Ignore_1(r qtcore.QRect_ITF) {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

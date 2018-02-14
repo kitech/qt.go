@@ -89,8 +89,8 @@ func NewQPen_1(arg0 int) *QPen {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QPen(const QColor &)
-func NewQPen_2(color *QColor) *QPen {
-	var convArg0 = color.GetCthis()
+func NewQPen_2(color QColor_ITF) *QPen {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2ERK6QColor", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,8 +102,8 @@ func NewQPen_2(color *QColor) *QPen {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QPen(const QBrush &, qreal, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle)
-func NewQPen_3(brush *QBrush, width float64, s int, c int, j int) *QPen {
-	var convArg0 = brush.GetCthis()
+func NewQPen_3(brush QBrush_ITF, width float64, s int, c int, j int) *QPen {
+	var convArg0 = brush.QBrush_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, convArg0, width, s, c, j)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -126,8 +126,8 @@ func DeleteQPen(this *QPen) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPen &)
-func (this *QPen) Swap(other *QPen) {
-	var convArg0 = other.GetCthis()
+func (this *QPen) Swap(other QPen_ITF) {
+	var convArg0 = other.QPen_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -243,8 +243,8 @@ func (this *QPen) Color() *QColor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
-func (this *QPen) SetColor(color *QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QPen) SetColor(color QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -265,8 +265,8 @@ func (this *QPen) Brush() *QBrush /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBrush(const QBrush &)
-func (this *QPen) SetBrush(brush *QBrush) {
-	var convArg0 = brush.GetCthis()
+func (this *QPen) SetBrush(brush QBrush_ITF) {
+	var convArg0 = brush.QBrush_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen8setBrushERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

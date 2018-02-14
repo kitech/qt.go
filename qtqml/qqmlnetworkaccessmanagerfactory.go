@@ -79,8 +79,8 @@ func DeleteQQmlNetworkAccessManagerFactory(this *QQmlNetworkAccessManagerFactory
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QNetworkAccessManager * create(QObject *)
-func (this *QQmlNetworkAccessManagerFactory) Create(parent *qtcore.QObject /*777 QObject **/) *qtnetwork.QNetworkAccessManager /*777 QNetworkAccessManager **/ {
-	var convArg0 = parent.GetCthis()
+func (this *QQmlNetworkAccessManagerFactory) Create(parent qtcore.QObject_ITF /*777 QObject **/) *qtnetwork.QNetworkAccessManager /*777 QNetworkAccessManager **/ {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactory6createEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtnetwork.NewQNetworkAccessManagerFromPointer(unsafe.Pointer(uintptr(rv))) // 444

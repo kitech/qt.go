@@ -88,8 +88,8 @@ func NewQMarginsF_1(left float64, top float64, right float64, bottom float64) *Q
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMarginsF(const QMargins &)
-func NewQMarginsF_2(margins *QMargins) *QMarginsF {
-	var convArg0 = margins.GetCthis()
+func NewQMarginsF_2(margins QMargins_ITF) *QMarginsF {
+	var convArg0 = margins.QMargins_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFC2ERK8QMargins", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv)))

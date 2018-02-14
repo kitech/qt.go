@@ -89,8 +89,8 @@ func (this *QProgressBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressBar(QWidget *)
-func NewQProgressBar(parent *QWidget /*777 QWidget **/) *QProgressBar {
-	var convArg0 = parent.GetCthis()
+func NewQProgressBar(parent QWidget_ITF /*777 QWidget **/) *QProgressBar {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQProgressBarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -361,8 +361,8 @@ func (this *QProgressBar) ValueChanged(value int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QProgressBar) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QProgressBar) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -372,8 +372,8 @@ func (this *QProgressBar) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QProgressBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QProgressBar) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -382,8 +382,8 @@ func (this *QProgressBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent *
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionProgressBar *)
-func (this *QProgressBar) InitStyleOption(option *QStyleOptionProgressBar /*777 QStyleOptionProgressBar **/) {
-	var convArg0 = option.GetCthis()
+func (this *QProgressBar) InitStyleOption(option QStyleOptionProgressBar_ITF /*777 QStyleOptionProgressBar **/) {
+	var convArg0 = option.QStyleOptionProgressBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar15initStyleOptionEP23QStyleOptionProgressBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

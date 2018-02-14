@@ -146,12 +146,12 @@ func QQmlDebuggingEnabler_NativeDebuggerServices() *qtcore.QStringList /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setServices(const QStringList &)
-func (this *QQmlDebuggingEnabler) SetServices(services *qtcore.QStringList) {
-	var convArg0 = services.GetCthis()
+func (this *QQmlDebuggingEnabler) SetServices(services qtcore.QStringList_ITF) {
+	var convArg0 = services.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler11setServicesERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QQmlDebuggingEnabler_SetServices(services *qtcore.QStringList) {
+func QQmlDebuggingEnabler_SetServices(services qtcore.QStringList_ITF) {
 	var nilthis *QQmlDebuggingEnabler
 	nilthis.SetServices(services)
 }

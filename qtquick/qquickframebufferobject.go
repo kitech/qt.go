@@ -81,8 +81,8 @@ func (this *QQuickFramebufferObject) MetaObject() *qtcore.QMetaObject /*777 cons
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickFramebufferObject(QQuickItem *)
-func NewQQuickFramebufferObject(parent *QQuickItem /*777 QQuickItem **/) *QQuickFramebufferObject {
-	var convArg0 = parent.GetCthis()
+func NewQQuickFramebufferObject(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickFramebufferObject {
+	var convArg0 = parent.QQuickItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObjectC2EP10QQuickItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickFramebufferObjectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -170,9 +170,9 @@ func (this *QQuickFramebufferObject) ReleaseResources() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void geometryChanged(const QRectF &, const QRectF &)
-func (this *QQuickFramebufferObject) GeometryChanged(newGeometry *qtcore.QRectF, oldGeometry *qtcore.QRectF) {
-	var convArg0 = newGeometry.GetCthis()
-	var convArg1 = oldGeometry.GetCthis()
+func (this *QQuickFramebufferObject) GeometryChanged(newGeometry qtcore.QRectF_ITF, oldGeometry qtcore.QRectF_ITF) {
+	var convArg0 = newGeometry.QRectF_PTR().GetCthis()
+	var convArg1 = oldGeometry.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObject15geometryChangedERK6QRectFS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

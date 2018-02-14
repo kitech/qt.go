@@ -114,8 +114,8 @@ func (this *QAbstractSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractSlider(QWidget *)
-func NewQAbstractSlider(parent *QWidget /*777 QWidget **/) *QAbstractSlider {
-	var convArg0 = parent.GetCthis()
+func NewQAbstractSlider(parent QWidget_ITF /*777 QWidget **/) *QAbstractSlider {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSliderC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractSliderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -418,8 +418,8 @@ func (this *QAbstractSlider) ActionTriggered(action int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QAbstractSlider) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractSlider) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -457,8 +457,8 @@ func (this *QAbstractSlider) SliderChange(change int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QAbstractSlider) KeyPressEvent(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = ev.GetCthis()
+func (this *QAbstractSlider) KeyPressEvent(ev qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = ev.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -467,8 +467,8 @@ func (this *QAbstractSlider) KeyPressEvent(ev *qtgui.QKeyEvent /*777 QKeyEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
-func (this *QAbstractSlider) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QAbstractSlider) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
+	var convArg0 = arg0.QTimerEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -477,8 +477,8 @@ func (this *QAbstractSlider) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
-func (this *QAbstractSlider) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractSlider) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
+	var convArg0 = e.QWheelEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -487,8 +487,8 @@ func (this *QAbstractSlider) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QAbstractSlider) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractSlider) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

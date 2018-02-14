@@ -72,8 +72,8 @@ func (this *QStringListModel) MetaObject() *QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStringListModel(QObject *)
-func NewQStringListModel(parent *QObject /*777 QObject **/) *QStringListModel {
-	var convArg0 = parent.GetCthis()
+func NewQStringListModel(parent QObject_ITF /*777 QObject **/) *QStringListModel {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringListModelFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -84,9 +84,9 @@ func NewQStringListModel(parent *QObject /*777 QObject **/) *QStringListModel {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStringListModel(const QStringList &, QObject *)
-func NewQStringListModel_1(strings *QStringList, parent *QObject /*777 QObject **/) *QStringListModel {
-	var convArg0 = strings.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQStringListModel_1(strings QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QStringListModel {
+	var convArg0 = strings.QStringList_PTR().GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModelC2ERK11QStringListP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringListModelFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -97,8 +97,8 @@ func NewQStringListModel_1(strings *QStringList, parent *QObject /*777 QObject *
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &)
-func (this *QStringListModel) RowCount(parent *QModelIndex) int {
-	var convArg0 = parent.GetCthis()
+func (this *QStringListModel) RowCount(parent QModelIndex_ITF) int {
+	var convArg0 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QStringListModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -108,8 +108,8 @@ func (this *QStringListModel) RowCount(parent *QModelIndex) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &)
-func (this *QStringListModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
-	var convArg2 = idx.GetCthis()
+func (this *QStringListModel) Sibling(row int, column int, idx QModelIndex_ITF) *QModelIndex /*123*/ {
+	var convArg2 = idx.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QStringListModel7siblingEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -121,8 +121,8 @@ func (this *QStringListModel) Sibling(row int, column int, idx *QModelIndex) *QM
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int)
-func (this *QStringListModel) Data(index *QModelIndex, role int) *QVariant /*123*/ {
-	var convArg0 = index.GetCthis()
+func (this *QStringListModel) Data(index QModelIndex_ITF, role int) *QVariant /*123*/ {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QStringListModel4dataERK11QModelIndexi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -134,9 +134,9 @@ func (this *QStringListModel) Data(index *QModelIndex, role int) *QVariant /*123
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
-func (this *QStringListModel) SetData(index *QModelIndex, value *QVariant, role int) bool {
-	var convArg0 = index.GetCthis()
-	var convArg1 = value.GetCthis()
+func (this *QStringListModel) SetData(index QModelIndex_ITF, value QVariant_ITF, role int) bool {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, role)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -146,8 +146,8 @@ func (this *QStringListModel) SetData(index *QModelIndex, value *QVariant, role 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &)
-func (this *QStringListModel) Flags(index *QModelIndex) int {
-	var convArg0 = index.GetCthis()
+func (this *QStringListModel) Flags(index QModelIndex_ITF) int {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QStringListModel5flagsERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -157,8 +157,8 @@ func (this *QStringListModel) Flags(index *QModelIndex) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
-func (this *QStringListModel) InsertRows(row int, count int, parent *QModelIndex) bool {
-	var convArg2 = parent.GetCthis()
+func (this *QStringListModel) InsertRows(row int, count int, parent QModelIndex_ITF) bool {
+	var convArg2 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModel10insertRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -168,8 +168,8 @@ func (this *QStringListModel) InsertRows(row int, count int, parent *QModelIndex
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
-func (this *QStringListModel) RemoveRows(row int, count int, parent *QModelIndex) bool {
-	var convArg2 = parent.GetCthis()
+func (this *QStringListModel) RemoveRows(row int, count int, parent QModelIndex_ITF) bool {
+	var convArg2 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModel10removeRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -200,8 +200,8 @@ func (this *QStringListModel) StringList() *QStringList /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStringList(const QStringList &)
-func (this *QStringListModel) SetStringList(strings *QStringList) {
-	var convArg0 = strings.GetCthis()
+func (this *QStringListModel) SetStringList(strings QStringList_ITF) {
+	var convArg0 = strings.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModel13setStringListERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

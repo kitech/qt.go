@@ -100,8 +100,8 @@ func NewQDeadlineTimer_2(msecs int64, type_ int) *QDeadlineTimer {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDeadlineTimer &)
-func (this *QDeadlineTimer) Swap(other *QDeadlineTimer) {
-	var convArg0 = other.GetCthis()
+func (this *QDeadlineTimer) Swap(other QDeadlineTimer_ITF) {
+	var convArg0 = other.QDeadlineTimer_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -225,15 +225,15 @@ func (this *QDeadlineTimer) SetPreciseDeadline(secs int64, nsecs int64, type_ in
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QDeadlineTimer addNSecs(QDeadlineTimer, qint64)
-func (this *QDeadlineTimer) AddNSecs(dt *QDeadlineTimer /*123*/, nsecs int64) *QDeadlineTimer /*123*/ {
-	var convArg0 = dt.GetCthis()
+func (this *QDeadlineTimer) AddNSecs(dt QDeadlineTimer_ITF /*123*/, nsecs int64) *QDeadlineTimer /*123*/ {
+	var convArg0 = dt.QDeadlineTimer_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer8addNSecsES_x", qtrt.FFI_TYPE_POINTER, convArg0, nsecs)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDeadlineTimer)
 	return rv2
 }
-func QDeadlineTimer_AddNSecs(dt *QDeadlineTimer /*123*/, nsecs int64) *QDeadlineTimer /*123*/ {
+func QDeadlineTimer_AddNSecs(dt QDeadlineTimer_ITF /*123*/, nsecs int64) *QDeadlineTimer /*123*/ {
 	var nilthis *QDeadlineTimer
 	rv := nilthis.AddNSecs(dt, nsecs)
 	return rv

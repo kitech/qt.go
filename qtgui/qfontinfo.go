@@ -65,8 +65,8 @@ func (*QFontInfo) NewFromPointer(cthis unsafe.Pointer) *QFontInfo {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFontInfo(const QFont &)
-func NewQFontInfo(arg0 *QFont) *QFontInfo {
-	var convArg0 = arg0.GetCthis()
+func NewQFontInfo(arg0 QFont_ITF) *QFontInfo {
+	var convArg0 = arg0.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFontInfoC2ERK5QFont", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontInfoFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -89,8 +89,8 @@ func DeleteQFontInfo(this *QFontInfo) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QFontInfo &)
-func (this *QFontInfo) Swap(other *QFontInfo) {
-	var convArg0 = other.GetCthis()
+func (this *QFontInfo) Swap(other QFontInfo_ITF) {
+	var convArg0 = other.QFontInfo_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFontInfo4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

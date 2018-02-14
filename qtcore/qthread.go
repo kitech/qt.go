@@ -145,8 +145,8 @@ func QThread_YieldCurrentThread() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QThread(QObject *)
-func NewQThread(parent *QObject /*777 QObject **/) *QThread {
-	var convArg0 = parent.GetCthis()
+func NewQThread(parent QObject_ITF /*777 QObject **/) *QThread {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThreadC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQThreadFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -264,8 +264,8 @@ func (this *QThread) EventDispatcher() *QAbstractEventDispatcher /*777 QAbstract
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEventDispatcher(QAbstractEventDispatcher *)
-func (this *QThread) SetEventDispatcher(eventDispatcher *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/) {
-	var convArg0 = eventDispatcher.GetCthis()
+func (this *QThread) SetEventDispatcher(eventDispatcher QAbstractEventDispatcher_ITF /*777 QAbstractEventDispatcher **/) {
+	var convArg0 = eventDispatcher.QAbstractEventDispatcher_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -274,8 +274,8 @@ func (this *QThread) SetEventDispatcher(eventDispatcher *QAbstractEventDispatche
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QThread) Event(event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QThread) Event(event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

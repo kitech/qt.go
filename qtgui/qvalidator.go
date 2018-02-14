@@ -73,8 +73,8 @@ func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QValidator(QObject *)
-func NewQValidator(parent *qtcore.QObject /*777 QObject **/) *QValidator {
-	var convArg0 = parent.GetCthis()
+func NewQValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QValidator {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -96,8 +96,8 @@ func DeleteQValidator(this *QValidator) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLocale(const QLocale &)
-func (this *QValidator) SetLocale(locale *qtcore.QLocale) {
-	var convArg0 = locale.GetCthis()
+func (this *QValidator) SetLocale(locale qtcore.QLocale_ITF) {
+	var convArg0 = locale.QLocale_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidator9setLocaleERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

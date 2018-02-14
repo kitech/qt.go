@@ -73,8 +73,8 @@ func (this *QUdpSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUdpSocket(QObject *)
-func NewQUdpSocket(parent *qtcore.QObject /*777 QObject **/) *QUdpSocket {
-	var convArg0 = parent.GetCthis()
+func NewQUdpSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QUdpSocket {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUdpSocketFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -96,8 +96,8 @@ func DeleteQUdpSocket(this *QUdpSocket) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool joinMulticastGroup(const QHostAddress &)
-func (this *QUdpSocket) JoinMulticastGroup(groupAddress *QHostAddress) bool {
-	var convArg0 = groupAddress.GetCthis()
+func (this *QUdpSocket) JoinMulticastGroup(groupAddress QHostAddress_ITF) bool {
+	var convArg0 = groupAddress.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket18joinMulticastGroupERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -107,9 +107,9 @@ func (this *QUdpSocket) JoinMulticastGroup(groupAddress *QHostAddress) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool joinMulticastGroup(const QHostAddress &, const QNetworkInterface &)
-func (this *QUdpSocket) JoinMulticastGroup_1(groupAddress *QHostAddress, iface *QNetworkInterface) bool {
-	var convArg0 = groupAddress.GetCthis()
-	var convArg1 = iface.GetCthis()
+func (this *QUdpSocket) JoinMulticastGroup_1(groupAddress QHostAddress_ITF, iface QNetworkInterface_ITF) bool {
+	var convArg0 = groupAddress.QHostAddress_PTR().GetCthis()
+	var convArg1 = iface.QNetworkInterface_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket18joinMulticastGroupERK12QHostAddressRK17QNetworkInterface", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -119,8 +119,8 @@ func (this *QUdpSocket) JoinMulticastGroup_1(groupAddress *QHostAddress, iface *
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool leaveMulticastGroup(const QHostAddress &)
-func (this *QUdpSocket) LeaveMulticastGroup(groupAddress *QHostAddress) bool {
-	var convArg0 = groupAddress.GetCthis()
+func (this *QUdpSocket) LeaveMulticastGroup(groupAddress QHostAddress_ITF) bool {
+	var convArg0 = groupAddress.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket19leaveMulticastGroupERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -130,9 +130,9 @@ func (this *QUdpSocket) LeaveMulticastGroup(groupAddress *QHostAddress) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool leaveMulticastGroup(const QHostAddress &, const QNetworkInterface &)
-func (this *QUdpSocket) LeaveMulticastGroup_1(groupAddress *QHostAddress, iface *QNetworkInterface) bool {
-	var convArg0 = groupAddress.GetCthis()
-	var convArg1 = iface.GetCthis()
+func (this *QUdpSocket) LeaveMulticastGroup_1(groupAddress QHostAddress_ITF, iface QNetworkInterface_ITF) bool {
+	var convArg0 = groupAddress.QHostAddress_PTR().GetCthis()
+	var convArg1 = iface.QNetworkInterface_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket19leaveMulticastGroupERK12QHostAddressRK17QNetworkInterface", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -154,8 +154,8 @@ func (this *QUdpSocket) MulticastInterface() *QNetworkInterface /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMulticastInterface(const QNetworkInterface &)
-func (this *QUdpSocket) SetMulticastInterface(iface *QNetworkInterface) {
-	var convArg0 = iface.GetCthis()
+func (this *QUdpSocket) SetMulticastInterface(iface QNetworkInterface_ITF) {
+	var convArg0 = iface.QNetworkInterface_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket21setMulticastInterfaceERK17QNetworkInterface", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -196,10 +196,10 @@ func (this *QUdpSocket) ReceiveDatagram(maxSize int64) *QNetworkDatagram /*123*/
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 readDatagram(char *, qint64, QHostAddress *, quint16 *)
-func (this *QUdpSocket) ReadDatagram(data string, maxlen int64, host *QHostAddress /*777 QHostAddress **/, port unsafe.Pointer /*666*/) int64 {
+func (this *QUdpSocket) ReadDatagram(data string, maxlen int64, host QHostAddress_ITF /*777 QHostAddress **/, port unsafe.Pointer /*666*/) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	var convArg2 = host.GetCthis()
+	var convArg2 = host.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, &port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -209,8 +209,8 @@ func (this *QUdpSocket) ReadDatagram(data string, maxlen int64, host *QHostAddre
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 writeDatagram(const QNetworkDatagram &)
-func (this *QUdpSocket) WriteDatagram(datagram *QNetworkDatagram) int64 {
-	var convArg0 = datagram.GetCthis()
+func (this *QUdpSocket) WriteDatagram(datagram QNetworkDatagram_ITF) int64 {
+	var convArg0 = datagram.QNetworkDatagram_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramERK16QNetworkDatagram", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -220,10 +220,10 @@ func (this *QUdpSocket) WriteDatagram(datagram *QNetworkDatagram) int64 {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] qint64 writeDatagram(const char *, qint64, const QHostAddress &, quint16)
-func (this *QUdpSocket) WriteDatagram_1(data string, len int64, host *QHostAddress, port uint16) int64 {
+func (this *QUdpSocket) WriteDatagram_1(data string, len int64, host QHostAddress_ITF, port uint16) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	var convArg2 = host.GetCthis()
+	var convArg2 = host.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramEPKcxRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len, convArg2, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -233,9 +233,9 @@ func (this *QUdpSocket) WriteDatagram_1(data string, len int64, host *QHostAddre
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] qint64 writeDatagram(const QByteArray &, const QHostAddress &, quint16)
-func (this *QUdpSocket) WriteDatagram_2(datagram *qtcore.QByteArray, host *QHostAddress, port uint16) int64 {
-	var convArg0 = datagram.GetCthis()
-	var convArg1 = host.GetCthis()
+func (this *QUdpSocket) WriteDatagram_2(datagram qtcore.QByteArray_ITF, host QHostAddress_ITF, port uint16) int64 {
+	var convArg0 = datagram.QByteArray_PTR().GetCthis()
+	var convArg1 = host.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramERK10QByteArrayRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222

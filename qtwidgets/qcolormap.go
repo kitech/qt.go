@@ -150,8 +150,8 @@ func (this *QColormap) Size() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint pixel(const QColor &)
-func (this *QColormap) Pixel(color *qtgui.QColor) uint {
-	var convArg0 = color.GetCthis()
+func (this *QColormap) Pixel(color qtgui.QColor_ITF) uint {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap5pixelERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222

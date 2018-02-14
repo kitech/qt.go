@@ -90,8 +90,8 @@ func DeleteQSslCertificateExtension(this *QSslCertificateExtension) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslCertificateExtension &)
-func (this *QSslCertificateExtension) Swap(other *QSslCertificateExtension) {
-	var convArg0 = other.GetCthis()
+func (this *QSslCertificateExtension) Swap(other QSslCertificateExtension_ITF) {
+	var convArg0 = other.QSslCertificateExtension_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSslCertificateExtension4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -87,8 +87,8 @@ func (this *QHistoryState) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHistoryState(QState *)
-func NewQHistoryState(parent *QState /*777 QState **/) *QHistoryState {
-	var convArg0 = parent.GetCthis()
+func NewQHistoryState(parent QState_ITF /*777 QState **/) *QHistoryState {
+	var convArg0 = parent.QState_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHistoryStateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -99,8 +99,8 @@ func NewQHistoryState(parent *QState /*777 QState **/) *QHistoryState {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHistoryState(enum QHistoryState::HistoryType, QState *)
-func NewQHistoryState_1(type_ int, parent *QState /*777 QState **/) *QHistoryState {
-	var convArg1 = parent.GetCthis()
+func NewQHistoryState_1(type_ int, parent QState_ITF /*777 QState **/) *QHistoryState {
+	var convArg1 = parent.QState_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2ENS_11HistoryTypeEP6QState", qtrt.FFI_TYPE_POINTER, type_, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHistoryStateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -132,8 +132,8 @@ func (this *QHistoryState) DefaultTransition() *QAbstractTransition /*777 QAbstr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultTransition(QAbstractTransition *)
-func (this *QHistoryState) SetDefaultTransition(transition *QAbstractTransition /*777 QAbstractTransition **/) {
-	var convArg0 = transition.GetCthis()
+func (this *QHistoryState) SetDefaultTransition(transition QAbstractTransition_ITF /*777 QAbstractTransition **/) {
+	var convArg0 = transition.QAbstractTransition_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState20setDefaultTransitionEP19QAbstractTransition", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -152,8 +152,8 @@ func (this *QHistoryState) DefaultState() *QAbstractState /*777 QAbstractState *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultState(QAbstractState *)
-func (this *QHistoryState) SetDefaultState(state *QAbstractState /*777 QAbstractState **/) {
-	var convArg0 = state.GetCthis()
+func (this *QHistoryState) SetDefaultState(state QAbstractState_ITF /*777 QAbstractState **/) {
+	var convArg0 = state.QAbstractState_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState15setDefaultStateEP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -181,8 +181,8 @@ func (this *QHistoryState) SetHistoryType(type_ int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onEntry(QEvent *)
-func (this *QHistoryState) OnEntry(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QHistoryState) OnEntry(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState7onEntryEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -191,8 +191,8 @@ func (this *QHistoryState) OnEntry(event *QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onExit(QEvent *)
-func (this *QHistoryState) OnExit(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QHistoryState) OnExit(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState6onExitEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -201,8 +201,8 @@ func (this *QHistoryState) OnExit(event *QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QHistoryState) Event(e *QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QHistoryState) Event(e QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

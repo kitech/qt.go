@@ -79,8 +79,8 @@ func (this *QAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(QObject *)
-func NewQAction(parent *qtcore.QObject /*777 QObject **/) *QAction {
-	var convArg0 = parent.GetCthis()
+func NewQAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQActionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -91,10 +91,10 @@ func NewQAction(parent *qtcore.QObject /*777 QObject **/) *QAction {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QString &, QObject *)
-func NewQAction_1(text string, parent *qtcore.QObject /*777 QObject **/) *QAction {
+func NewQAction_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQActionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -105,11 +105,11 @@ func NewQAction_1(text string, parent *qtcore.QObject /*777 QObject **/) *QActio
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QIcon &, const QString &, QObject *)
-func NewQAction_2(icon *qtgui.QIcon, text string, parent *qtcore.QObject /*777 QObject **/) *QAction {
-	var convArg0 = icon.GetCthis()
+func NewQAction_2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = parent.GetCthis()
+	var convArg2 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionC2ERK5QIconRK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQActionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -131,8 +131,8 @@ func DeleteQAction(this *QAction) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActionGroup(QActionGroup *)
-func (this *QAction) SetActionGroup(group *QActionGroup /*777 QActionGroup **/) {
-	var convArg0 = group.GetCthis()
+func (this *QAction) SetActionGroup(group QActionGroup_ITF /*777 QActionGroup **/) {
+	var convArg0 = group.QActionGroup_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction14setActionGroupEP12QActionGroup", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -151,8 +151,8 @@ func (this *QAction) ActionGroup() *QActionGroup /*777 QActionGroup **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
-func (this *QAction) SetIcon(icon *qtgui.QIcon) {
-	var convArg0 = icon.GetCthis()
+func (this *QAction) SetIcon(icon qtgui.QIcon_ITF) {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -322,8 +322,8 @@ func (this *QAction) Menu() *QMenu /*777 QMenu **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenu(QMenu *)
-func (this *QAction) SetMenu(menu *QMenu /*777 QMenu **/) {
-	var convArg0 = menu.GetCthis()
+func (this *QAction) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
+	var convArg0 = menu.QMenu_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7setMenuEP5QMenu", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -351,8 +351,8 @@ func (this *QAction) IsSeparator() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcut(const QKeySequence &)
-func (this *QAction) SetShortcut(shortcut *qtgui.QKeySequence) {
-	var convArg0 = shortcut.GetCthis()
+func (this *QAction) SetShortcut(shortcut qtgui.QKeySequence_ITF) {
+	var convArg0 = shortcut.QKeySequence_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction11setShortcutERK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -420,8 +420,8 @@ func (this *QAction) AutoRepeat() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
-func (this *QAction) SetFont(font *qtgui.QFont) {
-	var convArg0 = font.GetCthis()
+func (this *QAction) SetFont(font qtgui.QFont_ITF) {
+	var convArg0 = font.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -473,8 +473,8 @@ func (this *QAction) Data() *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QVariant &)
-func (this *QAction) SetData(var_ *qtcore.QVariant) {
-	var convArg0 = var_.GetCthis()
+func (this *QAction) SetData(var_ qtcore.QVariant_ITF) {
+	var convArg0 = var_.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7setDataERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -522,8 +522,8 @@ func (this *QAction) Activate(event int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showStatusText(QWidget *)
-func (this *QAction) ShowStatusText(widget *QWidget /*777 QWidget **/) bool {
-	var convArg0 = widget.GetCthis()
+func (this *QAction) ShowStatusText(widget QWidget_ITF /*777 QWidget **/) bool {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction14showStatusTextEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -600,8 +600,8 @@ func (this *QAction) ParentWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QAction) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QAction) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

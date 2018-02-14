@@ -78,8 +78,8 @@ func NewQCommandLineOption(name string) *QCommandLineOption {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QStringList &)
-func NewQCommandLineOption_1(names *QStringList) *QCommandLineOption {
-	var convArg0 = names.GetCthis()
+func NewQCommandLineOption_1(names QStringList_ITF) *QCommandLineOption {
+	var convArg0 = names.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,8 +111,8 @@ func NewQCommandLineOption_2(name string, description string, valueName string, 
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QStringList &, const QString &, const QString &, const QString &)
-func NewQCommandLineOption_3(names *QStringList, description string, valueName string, defaultValue string) *QCommandLineOption {
-	var convArg0 = names.GetCthis()
+func NewQCommandLineOption_3(names QStringList_ITF, description string, valueName string, defaultValue string) *QCommandLineOption {
+	var convArg0 = names.QStringList_PTR().GetCthis()
 	var tmpArg1 = NewQString_5(description)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(valueName)
@@ -141,8 +141,8 @@ func DeleteQCommandLineOption(this *QCommandLineOption) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QCommandLineOption &)
-func (this *QCommandLineOption) Swap(other *QCommandLineOption) {
-	var convArg0 = other.GetCthis()
+func (this *QCommandLineOption) Swap(other QCommandLineOption_ITF) {
+	var convArg0 = other.QCommandLineOption_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOption4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -222,8 +222,8 @@ func (this *QCommandLineOption) SetDefaultValue(defaultValue string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultValues(const QStringList &)
-func (this *QCommandLineOption) SetDefaultValues(defaultValues *QStringList) {
-	var convArg0 = defaultValues.GetCthis()
+func (this *QCommandLineOption) SetDefaultValues(defaultValues QStringList_ITF) {
+	var convArg0 = defaultValues.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOption16setDefaultValuesERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

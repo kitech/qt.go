@@ -77,9 +77,9 @@ func NewQImageWriter() *QImageWriter {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QImageWriter(QIODevice *, const QByteArray &)
-func NewQImageWriter_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) *QImageWriter {
-	var convArg0 = device.GetCthis()
-	var convArg1 = format.GetCthis()
+func NewQImageWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageWriter {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg1 = format.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriterC2EP9QIODeviceRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageWriterFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -91,10 +91,10 @@ func NewQImageWriter_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtc
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QImageWriter(const QString &, const QByteArray &)
-func NewQImageWriter_2(fileName string, format *qtcore.QByteArray) *QImageWriter {
+func NewQImageWriter_2(fileName string, format qtcore.QByteArray_ITF) *QImageWriter {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = format.GetCthis()
+	var convArg1 = format.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriterC2ERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageWriterFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,8 +117,8 @@ func DeleteQImageWriter(this *QImageWriter) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QByteArray &)
-func (this *QImageWriter) SetFormat(format *qtcore.QByteArray) {
-	var convArg0 = format.GetCthis()
+func (this *QImageWriter) SetFormat(format qtcore.QByteArray_ITF) {
+	var convArg0 = format.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -139,8 +139,8 @@ func (this *QImageWriter) Format() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
-func (this *QImageWriter) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
-	var convArg0 = device.GetCthis()
+func (this *QImageWriter) SetDevice(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -240,8 +240,8 @@ func (this *QImageWriter) Gamma() float32 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSubType(const QByteArray &)
-func (this *QImageWriter) SetSubType(type_ *qtcore.QByteArray) {
-	var convArg0 = type_.GetCthis()
+func (this *QImageWriter) SetSubType(type_ qtcore.QByteArray_ITF) {
+	var convArg0 = type_.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter10setSubTypeERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -366,8 +366,8 @@ func (this *QImageWriter) CanWrite() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool write(const QImage &)
-func (this *QImageWriter) Write(image *QImage) bool {
-	var convArg0 = image.GetCthis()
+func (this *QImageWriter) Write(image QImage_ITF) bool {
+	var convArg0 = image.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter5writeERK6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

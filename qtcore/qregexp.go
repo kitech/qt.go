@@ -101,8 +101,8 @@ func DeleteQRegExp(this *QRegExp) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QRegExp &)
-func (this *QRegExp) Swap(other *QRegExp) {
-	var convArg0 = other.GetCthis()
+func (this *QRegExp) Swap(other QRegExp_ITF) {
+	var convArg0 = other.QRegExp_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

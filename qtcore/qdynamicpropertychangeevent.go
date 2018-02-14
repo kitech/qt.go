@@ -64,8 +64,8 @@ func (*QDynamicPropertyChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QDynam
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDynamicPropertyChangeEvent(const QByteArray &)
-func NewQDynamicPropertyChangeEvent(name *QByteArray) *QDynamicPropertyChangeEvent {
-	var convArg0 = name.GetCthis()
+func NewQDynamicPropertyChangeEvent(name QByteArray_ITF) *QDynamicPropertyChangeEvent {
+	var convArg0 = name.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDynamicPropertyChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))

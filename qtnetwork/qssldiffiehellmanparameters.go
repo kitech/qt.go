@@ -107,8 +107,8 @@ func DeleteQSslDiffieHellmanParameters(this *QSslDiffieHellmanParameters) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslDiffieHellmanParameters &)
-func (this *QSslDiffieHellmanParameters) Swap(other *QSslDiffieHellmanParameters) {
-	var convArg0 = other.GetCthis()
+func (this *QSslDiffieHellmanParameters) Swap(other QSslDiffieHellmanParameters_ITF) {
+	var convArg0 = other.QSslDiffieHellmanParameters_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -117,15 +117,15 @@ func (this *QSslDiffieHellmanParameters) Swap(other *QSslDiffieHellmanParameters
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters fromEncoded(const QByteArray &, QSsl::EncodingFormat)
-func (this *QSslDiffieHellmanParameters) FromEncoded(encoded *qtcore.QByteArray, format int) *QSslDiffieHellmanParameters /*123*/ {
-	var convArg0 = encoded.GetCthis()
+func (this *QSslDiffieHellmanParameters) FromEncoded(encoded qtcore.QByteArray_ITF, format int) *QSslDiffieHellmanParameters /*123*/ {
+	var convArg0 = encoded.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters11fromEncodedERK10QByteArrayN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSslDiffieHellmanParametersFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslDiffieHellmanParameters)
 	return rv2
 }
-func QSslDiffieHellmanParameters_FromEncoded(encoded *qtcore.QByteArray, format int) *QSslDiffieHellmanParameters /*123*/ {
+func QSslDiffieHellmanParameters_FromEncoded(encoded qtcore.QByteArray_ITF, format int) *QSslDiffieHellmanParameters /*123*/ {
 	var nilthis *QSslDiffieHellmanParameters
 	rv := nilthis.FromEncoded(encoded, format)
 	return rv
@@ -135,15 +135,15 @@ func QSslDiffieHellmanParameters_FromEncoded(encoded *qtcore.QByteArray, format 
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters fromEncoded(QIODevice *, QSsl::EncodingFormat)
-func (this *QSslDiffieHellmanParameters) FromEncoded_1(device *qtcore.QIODevice /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
-	var convArg0 = device.GetCthis()
+func (this *QSslDiffieHellmanParameters) FromEncoded_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters11fromEncodedEP9QIODeviceN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSslDiffieHellmanParametersFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslDiffieHellmanParameters)
 	return rv2
 }
-func QSslDiffieHellmanParameters_FromEncoded_1(device *qtcore.QIODevice /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
+func QSslDiffieHellmanParameters_FromEncoded_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
 	var nilthis *QSslDiffieHellmanParameters
 	rv := nilthis.FromEncoded_1(device, format)
 	return rv

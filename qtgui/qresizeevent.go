@@ -63,9 +63,9 @@ func (*QResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QResizeEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QResizeEvent(const QSize &, const QSize &)
-func NewQResizeEvent(size *qtcore.QSize, oldSize *qtcore.QSize) *QResizeEvent {
-	var convArg0 = size.GetCthis()
-	var convArg1 = oldSize.GetCthis()
+func NewQResizeEvent(size qtcore.QSize_ITF, oldSize qtcore.QSize_ITF) *QResizeEvent {
+	var convArg0 = size.QSize_PTR().GetCthis()
+	var convArg1 = oldSize.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QResizeEventC2ERK5QSizeS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQResizeEventFromPointer(unsafe.Pointer(uintptr(rv)))

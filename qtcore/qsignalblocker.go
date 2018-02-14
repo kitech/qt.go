@@ -64,8 +64,8 @@ func (*QSignalBlocker) NewFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSignalBlocker(QObject *)
-func NewQSignalBlocker(o *QObject /*777 QObject **/) *QSignalBlocker {
-	var convArg0 = o.GetCthis()
+func NewQSignalBlocker(o QObject_ITF /*777 QObject **/) *QSignalBlocker {
+	var convArg0 = o.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlockerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -77,8 +77,8 @@ func NewQSignalBlocker(o *QObject /*777 QObject **/) *QSignalBlocker {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSignalBlocker(QObject &)
-func NewQSignalBlocker_1(o *QObject) *QSignalBlocker {
-	var convArg0 = o.GetCthis()
+func NewQSignalBlocker_1(o QObject_ITF) *QSignalBlocker {
+	var convArg0 = o.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlockerC2ER7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(unsafe.Pointer(uintptr(rv)))

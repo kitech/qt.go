@@ -72,8 +72,8 @@ func (this *QTranslator) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTranslator(QObject *)
-func NewQTranslator(parent *QObject /*777 QObject **/) *QTranslator {
-	var convArg0 = parent.GetCthis()
+func NewQTranslator(parent QObject_ITF /*777 QObject **/) *QTranslator {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTranslatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -142,8 +142,8 @@ func (this *QTranslator) Load(filename string, directory string, search_delimite
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QLocale &, const QString &, const QString &, const QString &, const QString &)
-func (this *QTranslator) Load_1(locale *QLocale, filename string, prefix string, directory string, suffix string) bool {
-	var convArg0 = locale.GetCthis()
+func (this *QTranslator) Load_1(locale QLocale_ITF, filename string, prefix string, directory string, suffix string) bool {
+	var convArg0 = locale.QLocale_PTR().GetCthis()
 	var tmpArg1 = NewQString_5(filename)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(prefix)

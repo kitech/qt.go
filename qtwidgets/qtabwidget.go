@@ -124,8 +124,8 @@ func (this *QTabWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTabWidget(QWidget *)
-func NewQTabWidget(parent *QWidget /*777 QWidget **/) *QTabWidget {
-	var convArg0 = parent.GetCthis()
+func NewQTabWidget(parent QWidget_ITF /*777 QWidget **/) *QTabWidget {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTabWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -147,8 +147,8 @@ func DeleteQTabWidget(this *QTabWidget) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int addTab(QWidget *, const QString &)
-func (this *QTabWidget) AddTab(widget *QWidget /*777 QWidget **/, arg1 string) int {
-	var convArg0 = widget.GetCthis()
+func (this *QTabWidget) AddTab(widget QWidget_ITF /*777 QWidget **/, arg1 string) int {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget6addTabEP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -160,9 +160,9 @@ func (this *QTabWidget) AddTab(widget *QWidget /*777 QWidget **/, arg1 string) i
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int addTab(QWidget *, const QIcon &, const QString &)
-func (this *QTabWidget) AddTab_1(widget *QWidget /*777 QWidget **/, icon *qtgui.QIcon, label string) int {
-	var convArg0 = widget.GetCthis()
-	var convArg1 = icon.GetCthis()
+func (this *QTabWidget) AddTab_1(widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, label string) int {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg1 = icon.QIcon_PTR().GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
@@ -174,8 +174,8 @@ func (this *QTabWidget) AddTab_1(widget *QWidget /*777 QWidget **/, icon *qtgui.
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertTab(int, QWidget *, const QString &)
-func (this *QTabWidget) InsertTab(index int, widget *QWidget /*777 QWidget **/, arg2 string) int {
-	var convArg1 = widget.GetCthis()
+func (this *QTabWidget) InsertTab(index int, widget QWidget_ITF /*777 QWidget **/, arg2 string) int {
+	var convArg1 = widget.QWidget_PTR().GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(arg2)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget9insertTabEiP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2)
@@ -187,9 +187,9 @@ func (this *QTabWidget) InsertTab(index int, widget *QWidget /*777 QWidget **/, 
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int insertTab(int, QWidget *, const QIcon &, const QString &)
-func (this *QTabWidget) InsertTab_1(index int, widget *QWidget /*777 QWidget **/, icon *qtgui.QIcon, label string) int {
-	var convArg1 = widget.GetCthis()
-	var convArg2 = icon.GetCthis()
+func (this *QTabWidget) InsertTab_1(index int, widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, label string) int {
+	var convArg1 = widget.QWidget_PTR().GetCthis()
+	var convArg2 = icon.QIcon_PTR().GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(label)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2, convArg3)
@@ -265,8 +265,8 @@ func (this *QTabWidget) TabIcon(index int) *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabIcon(int, const QIcon &)
-func (this *QTabWidget) SetTabIcon(index int, icon *qtgui.QIcon) {
-	var convArg1 = icon.GetCthis()
+func (this *QTabWidget) SetTabIcon(index int, icon qtgui.QIcon_ITF) {
+	var convArg1 = icon.QIcon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget10setTabIconEiRK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -353,8 +353,8 @@ func (this *QTabWidget) Widget(index int) *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QWidget *)
-func (this *QTabWidget) IndexOf(widget *QWidget /*777 QWidget **/) int {
-	var convArg0 = widget.GetCthis()
+func (this *QTabWidget) IndexOf(widget QWidget_ITF /*777 QWidget **/) int {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget7indexOfEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -494,8 +494,8 @@ func (this *QTabWidget) HasHeightForWidth() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCornerWidget(QWidget *, Qt::Corner)
-func (this *QTabWidget) SetCornerWidget(w *QWidget /*777 QWidget **/, corner int) {
-	var convArg0 = w.GetCthis()
+func (this *QTabWidget) SetCornerWidget(w QWidget_ITF /*777 QWidget **/, corner int) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget15setCornerWidgetEP7QWidgetN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, corner)
 	qtrt.ErrPrint(err, rv)
 }
@@ -545,8 +545,8 @@ func (this *QTabWidget) IconSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
-func (this *QTabWidget) SetIconSize(size *qtcore.QSize) {
-	var convArg0 = size.GetCthis()
+func (this *QTabWidget) SetIconSize(size qtcore.QSize_ITF) {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget11setIconSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -640,8 +640,8 @@ func (this *QTabWidget) SetCurrentIndex(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWidget(QWidget *)
-func (this *QTabWidget) SetCurrentWidget(widget *QWidget /*777 QWidget **/) {
-	var convArg0 = widget.GetCthis()
+func (this *QTabWidget) SetCurrentWidget(widget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = widget.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget16setCurrentWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -704,8 +704,8 @@ func (this *QTabWidget) TabRemoved(index int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
-func (this *QTabWidget) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QTabWidget) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
+	var convArg0 = arg0.QShowEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -714,8 +714,8 @@ func (this *QTabWidget) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QTabWidget) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QTabWidget) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = arg0.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -724,8 +724,8 @@ func (this *QTabWidget) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QTabWidget) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QTabWidget) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -734,8 +734,8 @@ func (this *QTabWidget) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QTabWidget) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QTabWidget) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -744,8 +744,8 @@ func (this *QTabWidget) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setTabBar(QTabBar *)
-func (this *QTabWidget) SetTabBar(arg0 *QTabBar /*777 QTabBar **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QTabWidget) SetTabBar(arg0 QTabBar_ITF /*777 QTabBar **/) {
+	var convArg0 = arg0.QTabBar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget9setTabBarEP7QTabBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -754,8 +754,8 @@ func (this *QTabWidget) SetTabBar(arg0 *QTabBar /*777 QTabBar **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QTabWidget) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QTabWidget) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -764,8 +764,8 @@ func (this *QTabWidget) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QTabWidget) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QTabWidget) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -775,8 +775,8 @@ func (this *QTabWidget) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionTabWidgetFrame *)
-func (this *QTabWidget) InitStyleOption(option *QStyleOptionTabWidgetFrame /*777 QStyleOptionTabWidgetFrame **/) {
-	var convArg0 = option.GetCthis()
+func (this *QTabWidget) InitStyleOption(option QStyleOptionTabWidgetFrame_ITF /*777 QStyleOptionTabWidgetFrame **/) {
+	var convArg0 = option.QStyleOptionTabWidgetFrame_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget15initStyleOptionEP26QStyleOptionTabWidgetFrame", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -75,8 +75,8 @@ func NewQTextFrameFormat() *QTextFrameFormat {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextFrameFormat(const QTextFormat &)
-func NewQTextFrameFormat_1(fmt *QTextFormat) *QTextFrameFormat {
-	var convArg0 = fmt.GetCthis()
+func NewQTextFrameFormat_1(fmt QTextFormat_ITF) *QTextFrameFormat {
+	var convArg0 = fmt.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextFrameFormatFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -136,8 +136,8 @@ func (this *QTextFrameFormat) Border() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBorderBrush(const QBrush &)
-func (this *QTextFrameFormat) SetBorderBrush(brush *QBrush) {
-	var convArg0 = brush.GetCthis()
+func (this *QTextFrameFormat) SetBorderBrush(brush QBrush_ITF) {
+	var convArg0 = brush.QBrush_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat14setBorderBrushERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -300,8 +300,8 @@ func (this *QTextFrameFormat) SetWidth(width float64) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWidth(const QTextLength &)
-func (this *QTextFrameFormat) SetWidth_1(length *QTextLength) {
-	var convArg0 = length.GetCthis()
+func (this *QTextFrameFormat) SetWidth_1(length QTextLength_ITF) {
+	var convArg0 = length.QTextLength_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat8setWidthERK11QTextLength", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -331,8 +331,8 @@ func (this *QTextFrameFormat) SetHeight(height float64) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHeight(const QTextLength &)
-func (this *QTextFrameFormat) SetHeight_1(height *QTextLength) {
-	var convArg0 = height.GetCthis()
+func (this *QTextFrameFormat) SetHeight_1(height QTextLength_ITF) {
+	var convArg0 = height.QTextLength_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat9setHeightERK11QTextLength", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

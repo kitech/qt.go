@@ -76,8 +76,8 @@ func DeleteQAccessibleBridge(this *QAccessibleBridge) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setRootObject(QAccessibleInterface *)
-func (this *QAccessibleBridge) SetRootObject(arg0 *QAccessibleInterface /*777 QAccessibleInterface **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QAccessibleBridge) SetRootObject(arg0 QAccessibleInterface_ITF /*777 QAccessibleInterface **/) {
+	var convArg0 = arg0.QAccessibleInterface_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -86,8 +86,8 @@ func (this *QAccessibleBridge) SetRootObject(arg0 *QAccessibleInterface /*777 QA
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void notifyAccessibilityUpdate(QAccessibleEvent *)
-func (this *QAccessibleBridge) NotifyAccessibilityUpdate(event *QAccessibleEvent /*777 QAccessibleEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QAccessibleBridge) NotifyAccessibilityUpdate(event QAccessibleEvent_ITF /*777 QAccessibleEvent **/) {
+	var convArg0 = event.QAccessibleEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -91,8 +91,8 @@ func DeleteQQmlAbstractUrlInterceptor(this *QQmlAbstractUrlInterceptor) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QUrl intercept(const QUrl &, enum QQmlAbstractUrlInterceptor::DataType)
-func (this *QQmlAbstractUrlInterceptor) Intercept(path *qtcore.QUrl, type_ int) *qtcore.QUrl /*123*/ {
-	var convArg0 = path.GetCthis()
+func (this *QQmlAbstractUrlInterceptor) Intercept(path qtcore.QUrl_ITF, type_ int) *qtcore.QUrl /*123*/ {
+	var convArg0 = path.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptor9interceptERK4QUrlNS_8DataTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, type_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333

@@ -62,8 +62,8 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QChildEvent(enum QEvent::Type, QObject *)
-func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
-	var convArg1 = child.GetCthis()
+func NewQChildEvent(type_ int, child QObject_ITF /*777 QObject **/) *QChildEvent {
+	var convArg1 = child.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQChildEventFromPointer(unsafe.Pointer(uintptr(rv)))

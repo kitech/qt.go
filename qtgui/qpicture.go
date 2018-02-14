@@ -142,8 +142,8 @@ func (this *QPicture) SetData(data string, size uint) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool play(QPainter *)
-func (this *QPicture) Play(p *QPainter /*777 QPainter **/) bool {
-	var convArg0 = p.GetCthis()
+func (this *QPicture) Play(p QPainter_ITF /*777 QPainter **/) bool {
+	var convArg0 = p.QPainter_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4playEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -153,8 +153,8 @@ func (this *QPicture) Play(p *QPainter /*777 QPainter **/) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(QIODevice *, const char *)
-func (this *QPicture) Load(dev *qtcore.QIODevice /*777 QIODevice **/, format string) bool {
-	var convArg0 = dev.GetCthis()
+func (this *QPicture) Load(dev qtcore.QIODevice_ITF /*777 QIODevice **/, format string) bool {
+	var convArg0 = dev.QIODevice_PTR().GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4loadEP9QIODevicePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -180,8 +180,8 @@ func (this *QPicture) Load_1(fileName string, format string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool save(QIODevice *, const char *)
-func (this *QPicture) Save(dev *qtcore.QIODevice /*777 QIODevice **/, format string) bool {
-	var convArg0 = dev.GetCthis()
+func (this *QPicture) Save(dev qtcore.QIODevice_ITF /*777 QIODevice **/, format string) bool {
+	var convArg0 = dev.QIODevice_PTR().GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4saveEP9QIODevicePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -219,8 +219,8 @@ func (this *QPicture) BoundingRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBoundingRect(const QRect &)
-func (this *QPicture) SetBoundingRect(r *qtcore.QRect) {
-	var convArg0 = r.GetCthis()
+func (this *QPicture) SetBoundingRect(r qtcore.QRect_ITF) {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture15setBoundingRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -229,8 +229,8 @@ func (this *QPicture) SetBoundingRect(r *qtcore.QRect) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPicture &)
-func (this *QPicture) Swap(other *QPicture) {
-	var convArg0 = other.GetCthis()
+func (this *QPicture) Swap(other QPicture_ITF) {
+	var convArg0 = other.QPicture_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

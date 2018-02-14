@@ -76,8 +76,8 @@ func (this *QQuickRenderControl) MetaObject() *qtcore.QMetaObject /*777 const QM
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickRenderControl(QObject *)
-func NewQQuickRenderControl(parent *qtcore.QObject /*777 QObject **/) *QQuickRenderControl {
-	var convArg0 = parent.GetCthis()
+func NewQQuickRenderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickRenderControl {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickRenderControlFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -99,8 +99,8 @@ func DeleteQQuickRenderControl(this *QQuickRenderControl) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void prepareThread(QThread *)
-func (this *QQuickRenderControl) PrepareThread(targetThread *qtcore.QThread /*777 QThread **/) {
-	var convArg0 = targetThread.GetCthis()
+func (this *QQuickRenderControl) PrepareThread(targetThread qtcore.QThread_ITF /*777 QThread **/) {
+	var convArg0 = targetThread.QThread_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl13prepareThreadEP7QThread", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -158,14 +158,14 @@ func (this *QQuickRenderControl) Grab() *qtgui.QImage /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QWindow * renderWindowFor(QQuickWindow *, QPoint *)
-func (this *QQuickRenderControl) RenderWindowFor(win *QQuickWindow /*777 QQuickWindow **/, offset *qtcore.QPoint /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
-	var convArg0 = win.GetCthis()
-	var convArg1 = offset.GetCthis()
+func (this *QQuickRenderControl) RenderWindowFor(win QQuickWindow_ITF /*777 QQuickWindow **/, offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
+	var convArg0 = win.QQuickWindow_PTR().GetCthis()
+	var convArg1 = offset.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl15renderWindowForEP12QQuickWindowP6QPoint", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtgui.NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QQuickRenderControl_RenderWindowFor(win *QQuickWindow /*777 QQuickWindow **/, offset *qtcore.QPoint /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
+func QQuickRenderControl_RenderWindowFor(win QQuickWindow_ITF /*777 QQuickWindow **/, offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
 	var nilthis *QQuickRenderControl
 	rv := nilthis.RenderWindowFor(win, offset)
 	return rv
@@ -175,8 +175,8 @@ func QQuickRenderControl_RenderWindowFor(win *QQuickWindow /*777 QQuickWindow **
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [8] QWindow * renderWindow(QPoint *)
-func (this *QQuickRenderControl) RenderWindow(offset *qtcore.QPoint /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
-	var convArg0 = offset.GetCthis()
+func (this *QQuickRenderControl) RenderWindow(offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
+	var convArg0 = offset.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl12renderWindowEP6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtgui.NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444

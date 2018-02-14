@@ -92,8 +92,8 @@ func NewQTableWidgetItem_1(text string, type_ int) *QTableWidgetItem {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetItem(const QIcon &, const QString &, int)
-func NewQTableWidgetItem_2(icon *qtgui.QIcon, text string, type_ int) *QTableWidgetItem {
-	var convArg0 = icon.GetCthis()
+func NewQTableWidgetItem_2(icon qtgui.QIcon_ITF, text string, type_ int) *QTableWidgetItem {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
@@ -232,8 +232,8 @@ func (this *QTableWidgetItem) Icon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
-func (this *QTableWidgetItem) SetIcon(icon *qtgui.QIcon) {
-	var convArg0 = icon.GetCthis()
+func (this *QTableWidgetItem) SetIcon(icon qtgui.QIcon_ITF) {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -326,8 +326,8 @@ func (this *QTableWidgetItem) Font() *qtgui.QFont /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
-func (this *QTableWidgetItem) SetFont(font *qtgui.QFont) {
-	var convArg0 = font.GetCthis()
+func (this *QTableWidgetItem) SetFont(font qtgui.QFont_ITF) {
+	var convArg0 = font.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -367,8 +367,8 @@ func (this *QTableWidgetItem) BackgroundColor() *qtgui.QColor /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackgroundColor(const QColor &)
-func (this *QTableWidgetItem) SetBackgroundColor(color *qtgui.QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QTableWidgetItem) SetBackgroundColor(color qtgui.QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem18setBackgroundColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -389,8 +389,8 @@ func (this *QTableWidgetItem) Background() *qtgui.QBrush /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
-func (this *QTableWidgetItem) SetBackground(brush *qtgui.QBrush) {
-	var convArg0 = brush.GetCthis()
+func (this *QTableWidgetItem) SetBackground(brush qtgui.QBrush_ITF) {
+	var convArg0 = brush.QBrush_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem13setBackgroundERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -411,8 +411,8 @@ func (this *QTableWidgetItem) TextColor() *qtgui.QColor /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextColor(const QColor &)
-func (this *QTableWidgetItem) SetTextColor(color *qtgui.QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QTableWidgetItem) SetTextColor(color qtgui.QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem12setTextColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -433,8 +433,8 @@ func (this *QTableWidgetItem) Foreground() *qtgui.QBrush /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setForeground(const QBrush &)
-func (this *QTableWidgetItem) SetForeground(brush *qtgui.QBrush) {
-	var convArg0 = brush.GetCthis()
+func (this *QTableWidgetItem) SetForeground(brush qtgui.QBrush_ITF) {
+	var convArg0 = brush.QBrush_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem13setForegroundERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -474,8 +474,8 @@ func (this *QTableWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSizeHint(const QSize &)
-func (this *QTableWidgetItem) SetSizeHint(size *qtcore.QSize) {
-	var convArg0 = size.GetCthis()
+func (this *QTableWidgetItem) SetSizeHint(size qtcore.QSize_ITF) {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem11setSizeHintERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -496,8 +496,8 @@ func (this *QTableWidgetItem) Data(role int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setData(int, const QVariant &)
-func (this *QTableWidgetItem) SetData(role int, value *qtcore.QVariant) {
-	var convArg1 = value.GetCthis()
+func (this *QTableWidgetItem) SetData(role int, value qtcore.QVariant_ITF) {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem7setDataEiRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -506,8 +506,8 @@ func (this *QTableWidgetItem) SetData(role int, value *qtcore.QVariant) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void read(QDataStream &)
-func (this *QTableWidgetItem) Read(in *qtcore.QDataStream) {
-	var convArg0 = in.GetCthis()
+func (this *QTableWidgetItem) Read(in qtcore.QDataStream_ITF) {
+	var convArg0 = in.QDataStream_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem4readER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -516,8 +516,8 @@ func (this *QTableWidgetItem) Read(in *qtcore.QDataStream) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void write(QDataStream &)
-func (this *QTableWidgetItem) Write(out *qtcore.QDataStream) {
-	var convArg0 = out.GetCthis()
+func (this *QTableWidgetItem) Write(out qtcore.QDataStream_ITF) {
+	var convArg0 = out.QDataStream_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTableWidgetItem5writeER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

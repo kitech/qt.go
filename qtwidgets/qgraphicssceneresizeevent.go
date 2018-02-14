@@ -101,8 +101,8 @@ func (this *QGraphicsSceneResizeEvent) OldSize() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOldSize(const QSizeF &)
-func (this *QGraphicsSceneResizeEvent) SetOldSize(size *qtcore.QSizeF) {
-	var convArg0 = size.GetCthis()
+func (this *QGraphicsSceneResizeEvent) SetOldSize(size qtcore.QSizeF_ITF) {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -123,8 +123,8 @@ func (this *QGraphicsSceneResizeEvent) NewSize() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNewSize(const QSizeF &)
-func (this *QGraphicsSceneResizeEvent) SetNewSize(size *qtcore.QSizeF) {
-	var convArg0 = size.GetCthis()
+func (this *QGraphicsSceneResizeEvent) SetNewSize(size qtcore.QSizeF_ITF) {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -79,8 +79,8 @@ func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*777 const QM
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsBlurEffect(QObject *)
-func NewQGraphicsBlurEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsBlurEffect {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsBlurEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsBlurEffect {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsBlurEffectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,8 +102,8 @@ func DeleteQGraphicsBlurEffect(this *QGraphicsBlurEffect) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRectFor(const QRectF &)
-func (this *QGraphicsBlurEffect) BoundingRectFor(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
-	var convArg0 = rect.GetCthis()
+func (this *QGraphicsBlurEffect) BoundingRectFor(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -171,8 +171,8 @@ func (this *QGraphicsBlurEffect) BlurHintsChanged(hints int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
-func (this *QGraphicsBlurEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
-	var convArg0 = painter.GetCthis()
+func (this *QGraphicsBlurEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect4drawEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

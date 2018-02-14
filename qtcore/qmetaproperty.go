@@ -156,8 +156,8 @@ func (this *QMetaProperty) IsResettable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDesignable(const QObject *)
-func (this *QMetaProperty) IsDesignable(obj *QObject /*777 const QObject **/) bool {
-	var convArg0 = obj.GetCthis()
+func (this *QMetaProperty) IsDesignable(obj QObject_ITF /*777 const QObject **/) bool {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty12isDesignableEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -167,8 +167,8 @@ func (this *QMetaProperty) IsDesignable(obj *QObject /*777 const QObject **/) bo
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isScriptable(const QObject *)
-func (this *QMetaProperty) IsScriptable(obj *QObject /*777 const QObject **/) bool {
-	var convArg0 = obj.GetCthis()
+func (this *QMetaProperty) IsScriptable(obj QObject_ITF /*777 const QObject **/) bool {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty12isScriptableEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -178,8 +178,8 @@ func (this *QMetaProperty) IsScriptable(obj *QObject /*777 const QObject **/) bo
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isStored(const QObject *)
-func (this *QMetaProperty) IsStored(obj *QObject /*777 const QObject **/) bool {
-	var convArg0 = obj.GetCthis()
+func (this *QMetaProperty) IsStored(obj QObject_ITF /*777 const QObject **/) bool {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty8isStoredEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -189,8 +189,8 @@ func (this *QMetaProperty) IsStored(obj *QObject /*777 const QObject **/) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEditable(const QObject *)
-func (this *QMetaProperty) IsEditable(obj *QObject /*777 const QObject **/) bool {
-	var convArg0 = obj.GetCthis()
+func (this *QMetaProperty) IsEditable(obj QObject_ITF /*777 const QObject **/) bool {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty10isEditableEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -200,8 +200,8 @@ func (this *QMetaProperty) IsEditable(obj *QObject /*777 const QObject **/) bool
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isUser(const QObject *)
-func (this *QMetaProperty) IsUser(obj *QObject /*777 const QObject **/) bool {
-	var convArg0 = obj.GetCthis()
+func (this *QMetaProperty) IsUser(obj QObject_ITF /*777 const QObject **/) bool {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty6isUserEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -305,8 +305,8 @@ func (this *QMetaProperty) Revision() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant read(const QObject *)
-func (this *QMetaProperty) Read(obj *QObject /*777 const QObject **/) *QVariant /*123*/ {
-	var convArg0 = obj.GetCthis()
+func (this *QMetaProperty) Read(obj QObject_ITF /*777 const QObject **/) *QVariant /*123*/ {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty4readEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -318,9 +318,9 @@ func (this *QMetaProperty) Read(obj *QObject /*777 const QObject **/) *QVariant 
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool write(QObject *, const QVariant &)
-func (this *QMetaProperty) Write(obj *QObject /*777 QObject **/, value *QVariant) bool {
-	var convArg0 = obj.GetCthis()
-	var convArg1 = value.GetCthis()
+func (this *QMetaProperty) Write(obj QObject_ITF /*777 QObject **/, value QVariant_ITF) bool {
+	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty5writeEP7QObjectRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -330,8 +330,8 @@ func (this *QMetaProperty) Write(obj *QObject /*777 QObject **/, value *QVariant
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool reset(QObject *)
-func (this *QMetaProperty) Reset(obj *QObject /*777 QObject **/) bool {
-	var convArg0 = obj.GetCthis()
+func (this *QMetaProperty) Reset(obj QObject_ITF /*777 QObject **/) bool {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty5resetEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -353,8 +353,8 @@ func (this *QMetaProperty) ReadOnGadget(gadget unsafe.Pointer /*666*/) *QVariant
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool writeOnGadget(void *, const QVariant &)
-func (this *QMetaProperty) WriteOnGadget(gadget unsafe.Pointer /*666*/, value *QVariant) bool {
-	var convArg1 = value.GetCthis()
+func (this *QMetaProperty) WriteOnGadget(gadget unsafe.Pointer /*666*/, value QVariant_ITF) bool {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty13writeOnGadgetEPvRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), gadget, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

@@ -176,9 +176,9 @@ func QUnpremultiply(p uint) uint {
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyCompare(const QQuaternion &, const QQuaternion &)
-func QFuzzyCompare_2(q1 *QQuaternion, q2 *QQuaternion) bool {
-	var convArg0 = q1.GetCthis()
-	var convArg1 = q2.GetCthis()
+func QFuzzyCompare_2(q1 QQuaternion_ITF, q2 QQuaternion_ITF) bool {
+	var convArg0 = q1.QQuaternion_PTR().GetCthis()
+	var convArg1 = q2.QQuaternion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z13qFuzzyCompareRK11QQuaternionS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

@@ -181,8 +181,8 @@ func (this *QClipboard) MimeData(mode int) *qtcore.QMimeData /*777 const QMimeDa
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMimeData(QMimeData *, enum QClipboard::Mode)
-func (this *QClipboard) SetMimeData(data *qtcore.QMimeData /*777 QMimeData **/, mode int) {
-	var convArg0 = data.GetCthis()
+func (this *QClipboard) SetMimeData(data qtcore.QMimeData_ITF /*777 QMimeData **/, mode int) {
+	var convArg0 = data.QMimeData_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard11setMimeDataEP9QMimeDataNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -215,8 +215,8 @@ func (this *QClipboard) Pixmap(mode int) *QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setImage(const QImage &, enum QClipboard::Mode)
-func (this *QClipboard) SetImage(arg0 *QImage, mode int) {
-	var convArg0 = arg0.GetCthis()
+func (this *QClipboard) SetImage(arg0 QImage_ITF, mode int) {
+	var convArg0 = arg0.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard8setImageERK6QImageNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -225,8 +225,8 @@ func (this *QClipboard) SetImage(arg0 *QImage, mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixmap(const QPixmap &, enum QClipboard::Mode)
-func (this *QClipboard) SetPixmap(arg0 *QPixmap, mode int) {
-	var convArg0 = arg0.GetCthis()
+func (this *QClipboard) SetPixmap(arg0 QPixmap_ITF, mode int) {
+	var convArg0 = arg0.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard9setPixmapERK7QPixmapNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 }

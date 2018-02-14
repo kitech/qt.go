@@ -160,8 +160,8 @@ func (this *QSGMaterialShader) SetShaderSourceFile(type_ int, sourceFile string)
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setShaderSourceFiles(QOpenGLShader::ShaderType, const QStringList &)
-func (this *QSGMaterialShader) SetShaderSourceFiles(type_ int, sourceFiles *qtcore.QStringList) {
-	var convArg1 = sourceFiles.GetCthis()
+func (this *QSGMaterialShader) SetShaderSourceFiles(type_ int, sourceFiles qtcore.QStringList_ITF) {
+	var convArg1 = sourceFiles.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader20setShaderSourceFilesE6QFlagsIN13QOpenGLShader13ShaderTypeBitEERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

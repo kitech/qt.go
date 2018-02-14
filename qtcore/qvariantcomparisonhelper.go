@@ -66,8 +66,8 @@ func (*QVariantComparisonHelper) NewFromPointer(cthis unsafe.Pointer) *QVariantC
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVariantComparisonHelper(const QVariant &)
-func NewQVariantComparisonHelper(var_ *QVariant) *QVariantComparisonHelper {
-	var convArg0 = var_.GetCthis()
+func NewQVariantComparisonHelper(var_ QVariant_ITF) *QVariantComparisonHelper {
+	var convArg0 = var_.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QVariantComparisonHelperC2ERK8QVariant", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantComparisonHelperFromPointer(unsafe.Pointer(uintptr(rv)))

@@ -88,9 +88,9 @@ func DeleteQIconEngine(this *QIconEngine) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QRect &, QIcon::Mode, QIcon::State)
-func (this *QIconEngine) Paint(painter *QPainter /*777 QPainter **/, rect *qtcore.QRect, mode int, state int) {
-	var convArg0 = painter.GetCthis()
-	var convArg1 = rect.GetCthis()
+func (this *QIconEngine) Paint(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, mode int, state int) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
+	var convArg1 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngine5paintEP8QPainterRK5QRectN5QIcon4ModeENS5_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	qtrt.ErrPrint(err, rv)
 }
@@ -99,8 +99,8 @@ func (this *QIconEngine) Paint(painter *QPainter /*777 QPainter **/, rect *qtcor
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize actualSize(const QSize &, QIcon::Mode, QIcon::State)
-func (this *QIconEngine) ActualSize(size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
-	var convArg0 = size.GetCthis()
+func (this *QIconEngine) ActualSize(size qtcore.QSize_ITF, mode int, state int) *qtcore.QSize /*123*/ {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngine10actualSizeERK5QSizeN5QIcon4ModeENS3_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -112,8 +112,8 @@ func (this *QIconEngine) ActualSize(size *qtcore.QSize, mode int, state int) *qt
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QPixmap pixmap(const QSize &, QIcon::Mode, QIcon::State)
-func (this *QIconEngine) Pixmap(size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
-	var convArg0 = size.GetCthis()
+func (this *QIconEngine) Pixmap(size qtcore.QSize_ITF, mode int, state int) *QPixmap /*123*/ {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngine6pixmapERK5QSizeN5QIcon4ModeENS3_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -125,8 +125,8 @@ func (this *QIconEngine) Pixmap(size *qtcore.QSize, mode int, state int) *QPixma
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void addPixmap(const QPixmap &, QIcon::Mode, QIcon::State)
-func (this *QIconEngine) AddPixmap(pixmap *QPixmap, mode int, state int) {
-	var convArg0 = pixmap.GetCthis()
+func (this *QIconEngine) AddPixmap(pixmap QPixmap_ITF, mode int, state int) {
+	var convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngine9addPixmapERK7QPixmapN5QIcon4ModeENS3_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	qtrt.ErrPrint(err, rv)
 }
@@ -135,10 +135,10 @@ func (this *QIconEngine) AddPixmap(pixmap *QPixmap, mode int, state int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void addFile(const QString &, const QSize &, QIcon::Mode, QIcon::State)
-func (this *QIconEngine) AddFile(fileName string, size *qtcore.QSize, mode int, state int) {
+func (this *QIconEngine) AddFile(fileName string, size qtcore.QSize_ITF, mode int, state int) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = size.GetCthis()
+	var convArg1 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngine7addFileERK7QStringRK5QSizeN5QIcon4ModeENS6_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	qtrt.ErrPrint(err, rv)
 }
@@ -170,8 +170,8 @@ func (this *QIconEngine) Clone() *QIconEngine /*777 QIconEngine **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool read(QDataStream &)
-func (this *QIconEngine) Read(in *qtcore.QDataStream) bool {
-	var convArg0 = in.GetCthis()
+func (this *QIconEngine) Read(in qtcore.QDataStream_ITF) bool {
+	var convArg0 = in.QDataStream_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngine4readER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -181,8 +181,8 @@ func (this *QIconEngine) Read(in *qtcore.QDataStream) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool write(QDataStream &)
-func (this *QIconEngine) Write(out *qtcore.QDataStream) bool {
-	var convArg0 = out.GetCthis()
+func (this *QIconEngine) Write(out qtcore.QDataStream_ITF) bool {
+	var convArg0 = out.QDataStream_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine5writeER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -215,8 +215,8 @@ func (this *QIconEngine) IsNull() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap scaledPixmap(const QSize &, QIcon::Mode, QIcon::State, qreal)
-func (this *QIconEngine) ScaledPixmap(size *qtcore.QSize, mode int, state int, scale float64) *QPixmap /*123*/ {
-	var convArg0 = size.GetCthis()
+func (this *QIconEngine) ScaledPixmap(size qtcore.QSize_ITF, mode int, state int, scale float64) *QPixmap /*123*/ {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngine12scaledPixmapERK5QSizeN5QIcon4ModeENS3_5StateEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state, scale)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333

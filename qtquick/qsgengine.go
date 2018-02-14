@@ -76,8 +76,8 @@ func (this *QSGEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGEngine(QObject *)
-func NewQSGEngine(parent *qtcore.QObject /*777 QObject **/) *QSGEngine {
-	var convArg0 = parent.GetCthis()
+func NewQSGEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QSGEngine {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSGEngineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGEngineFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -118,8 +118,8 @@ func (this *QSGEngine) CreateRenderer() *QSGAbstractRenderer /*777 QSGAbstractRe
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromImage(const QImage &, QSGEngine::CreateTextureOptions)
-func (this *QSGEngine) CreateTextureFromImage(image *qtgui.QImage, options int) *QSGTexture /*777 QSGTexture **/ {
-	var convArg0 = image.GetCthis()
+func (this *QSGEngine) CreateTextureFromImage(image qtgui.QImage_ITF, options int) *QSGTexture /*777 QSGTexture **/ {
+	var convArg0 = image.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSGEngine22createTextureFromImageERK6QImage6QFlagsINS_19CreateTextureOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -129,8 +129,8 @@ func (this *QSGEngine) CreateTextureFromImage(image *qtgui.QImage, options int) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromId(uint, const QSize &, QSGEngine::CreateTextureOptions)
-func (this *QSGEngine) CreateTextureFromId(id uint, size *qtcore.QSize, options int) *QSGTexture /*777 QSGTexture **/ {
-	var convArg1 = size.GetCthis()
+func (this *QSGEngine) CreateTextureFromId(id uint, size qtcore.QSize_ITF, options int) *QSGTexture /*777 QSGTexture **/ {
+	var convArg1 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSGEngine19createTextureFromIdEjRK5QSize6QFlagsINS_19CreateTextureOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1, options)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444

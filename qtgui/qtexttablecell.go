@@ -88,8 +88,8 @@ func DeleteQTextTableCell(this *QTextTableCell) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QTextCharFormat &)
-func (this *QTextTableCell) SetFormat(format *QTextCharFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QTextTableCell) SetFormat(format QTextCharFormat_ITF) {
+	var convArg0 = format.QTextCharFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTextTableCell9setFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -94,8 +94,8 @@ func (this *QSequentialAnimationGroup) MetaObject() *QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSequentialAnimationGroup(QObject *)
-func NewQSequentialAnimationGroup(parent *QObject /*777 QObject **/) *QSequentialAnimationGroup {
-	var convArg0 = parent.GetCthis()
+func NewQSequentialAnimationGroup(parent QObject_ITF /*777 QObject **/) *QSequentialAnimationGroup {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSequentialAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -157,8 +157,8 @@ func (this *QSequentialAnimationGroup) Duration() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentAnimationChanged(QAbstractAnimation *)
-func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current *QAbstractAnimation /*777 QAbstractAnimation **/) {
-	var convArg0 = current.GetCthis()
+func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
+	var convArg0 = current.QAbstractAnimation_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -167,8 +167,8 @@ func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current *QAbstrac
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QSequentialAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QSequentialAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

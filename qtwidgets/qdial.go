@@ -114,8 +114,8 @@ func (this *QDial) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDial(QWidget *)
-func NewQDial(parent *QWidget /*777 QWidget **/) *QDial {
-	var convArg0 = parent.GetCthis()
+func NewQDial(parent QWidget_ITF /*777 QWidget **/) *QDial {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDialC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDialFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -228,8 +228,8 @@ func (this *QDial) SetWrapping(on bool) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QDial) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QDial) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -239,8 +239,8 @@ func (this *QDial) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QDial) ResizeEvent(re *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = re.GetCthis()
+func (this *QDial) ResizeEvent(re qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = re.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -249,8 +249,8 @@ func (this *QDial) ResizeEvent(re *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QDial) PaintEvent(pe *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = pe.GetCthis()
+func (this *QDial) PaintEvent(pe qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = pe.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -259,8 +259,8 @@ func (this *QDial) PaintEvent(pe *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
-func (this *QDial) MousePressEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = me.GetCthis()
+func (this *QDial) MousePressEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = me.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -269,8 +269,8 @@ func (this *QDial) MousePressEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QDial) MouseReleaseEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = me.GetCthis()
+func (this *QDial) MouseReleaseEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = me.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -279,8 +279,8 @@ func (this *QDial) MouseReleaseEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QDial) MouseMoveEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = me.GetCthis()
+func (this *QDial) MouseMoveEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = me.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -298,8 +298,8 @@ func (this *QDial) SliderChange(change int) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSlider *)
-func (this *QDial) InitStyleOption(option *QStyleOptionSlider /*777 QStyleOptionSlider **/) {
-	var convArg0 = option.GetCthis()
+func (this *QDial) InitStyleOption(option QStyleOptionSlider_ITF /*777 QStyleOptionSlider **/) {
+	var convArg0 = option.QStyleOptionSlider_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial15initStyleOptionEP18QStyleOptionSlider", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

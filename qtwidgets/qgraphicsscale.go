@@ -74,8 +74,8 @@ func (this *QGraphicsScale) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsScale(QObject *)
-func NewQGraphicsScale(parent *qtcore.QObject /*777 QObject **/) *QGraphicsScale {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsScale(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScale {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScaleC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsScaleFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -109,8 +109,8 @@ func (this *QGraphicsScale) Origin() *qtgui.QVector3D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrigin(const QVector3D &)
-func (this *QGraphicsScale) SetOrigin(point *qtgui.QVector3D) {
-	var convArg0 = point.GetCthis()
+func (this *QGraphicsScale) SetOrigin(point qtgui.QVector3D_ITF) {
+	var convArg0 = point.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScale9setOriginERK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -176,8 +176,8 @@ func (this *QGraphicsScale) SetZScale(arg0 float64) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void applyTo(QMatrix4x4 *)
-func (this *QGraphicsScale) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **/) {
-	var convArg0 = matrix.GetCthis()
+func (this *QGraphicsScale) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x4 **/) {
+	var convArg0 = matrix.QMatrix4x4_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale7applyToEP10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

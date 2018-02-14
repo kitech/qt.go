@@ -153,7 +153,7 @@ func (this *QListView) InheritVisualRegionForSelection(f func(selection *qtcore.
 }
 
 // QModelIndexList selectedIndexes()
-func (this *QListView) InheritSelectedIndexes(f func() unsafe.Pointer) {
+func (this *QListView) InheritSelectedIndexes(f func() *qtcore.QModelIndexList /*9999*/) {
 	qtrt.SetAllInheritCallback(this, "selectedIndexes", f)
 }
 
@@ -224,8 +224,8 @@ func (this *QListView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListView(QWidget *)
-func NewQListView(parent *QWidget /*777 QWidget **/) *QListView {
-	var convArg0 = parent.GetCthis()
+func NewQListView(parent QWidget_ITF /*777 QWidget **/) *QListView {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQListViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -380,8 +380,8 @@ func (this *QListView) BatchSize() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGridSize(const QSize &)
-func (this *QListView) SetGridSize(size *qtcore.QSize) {
-	var convArg0 = size.GetCthis()
+func (this *QListView) SetGridSize(size qtcore.QSize_ITF) {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView11setGridSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -525,8 +525,8 @@ func (this *QListView) IsSelectionRectVisible() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect visualRect(const QModelIndex &)
-func (this *QListView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123*/ {
-	var convArg0 = index.GetCthis()
+func (this *QListView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*123*/ {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView10visualRectERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -538,8 +538,8 @@ func (this *QListView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
-func (this *QListView) ScrollTo(index *qtcore.QModelIndex, hint int) {
-	var convArg0 = index.GetCthis()
+func (this *QListView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)
 }
@@ -548,8 +548,8 @@ func (this *QListView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex indexAt(const QPoint &)
-func (this *QListView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
-	var convArg0 = p.GetCthis()
+func (this *QListView) IndexAt(p qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*/ {
+	var convArg0 = p.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView7indexAtERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -579,8 +579,8 @@ func (this *QListView) Reset() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRootIndex(const QModelIndex &)
-func (this *QListView) SetRootIndex(index *qtcore.QModelIndex) {
-	var convArg0 = index.GetCthis()
+func (this *QListView) SetRootIndex(index qtcore.QModelIndex_ITF) {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView12setRootIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -589,8 +589,8 @@ func (this *QListView) SetRootIndex(index *qtcore.QModelIndex) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QListView) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QListView) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -630,8 +630,8 @@ func (this *QListView) ContentsSize() *qtcore.QSize /*123*/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void rowsInserted(const QModelIndex &, int, int)
-func (this *QListView) RowsInserted(parent *qtcore.QModelIndex, start int, end int) {
-	var convArg0 = parent.GetCthis()
+func (this *QListView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end int) {
+	var convArg0 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
 	qtrt.ErrPrint(err, rv)
 }
@@ -640,8 +640,8 @@ func (this *QListView) RowsInserted(parent *qtcore.QModelIndex, start int, end i
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void rowsAboutToBeRemoved(const QModelIndex &, int, int)
-func (this *QListView) RowsAboutToBeRemoved(parent *qtcore.QModelIndex, start int, end int) {
-	var convArg0 = parent.GetCthis()
+func (this *QListView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start int, end int) {
+	var convArg0 = parent.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView20rowsAboutToBeRemovedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
 	qtrt.ErrPrint(err, rv)
 }
@@ -650,8 +650,8 @@ func (this *QListView) RowsAboutToBeRemoved(parent *qtcore.QModelIndex, start in
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QListView) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QListView) MouseMoveEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = e.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -660,8 +660,8 @@ func (this *QListView) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QListView) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QListView) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = e.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -670,8 +670,8 @@ func (this *QListView) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
-func (this *QListView) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QListView) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
+	var convArg0 = e.QWheelEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -680,8 +680,8 @@ func (this *QListView) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
-func (this *QListView) TimerEvent(e *qtcore.QTimerEvent /*777 QTimerEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QListView) TimerEvent(e qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
+	var convArg0 = e.QTimerEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -690,8 +690,8 @@ func (this *QListView) TimerEvent(e *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QListView) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QListView) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = e.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -700,8 +700,8 @@ func (this *QListView) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
-func (this *QListView) DragMoveEvent(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QListView) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
+	var convArg0 = e.QDragMoveEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView13dragMoveEventEP14QDragMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -710,8 +710,8 @@ func (this *QListView) DragMoveEvent(e *qtgui.QDragMoveEvent /*777 QDragMoveEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
-func (this *QListView) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QListView) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
+	var convArg0 = e.QDragLeaveEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView14dragLeaveEventEP15QDragLeaveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -720,8 +720,8 @@ func (this *QListView) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*777 QDragLeaveE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
-func (this *QListView) DropEvent(e *qtgui.QDropEvent /*777 QDropEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QListView) DropEvent(e qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
+	var convArg0 = e.QDropEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -751,8 +751,8 @@ func (this *QListView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QListView) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QListView) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = e.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -793,8 +793,8 @@ func (this *QListView) MoveCursor(cursorAction int, modifiers int) *qtcore.QMode
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QRect rectForIndex(const QModelIndex &)
-func (this *QListView) RectForIndex(index *qtcore.QModelIndex) *qtcore.QRect /*123*/ {
-	var convArg0 = index.GetCthis()
+func (this *QListView) RectForIndex(index qtcore.QModelIndex_ITF) *qtcore.QRect /*123*/ {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView12rectForIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -806,9 +806,9 @@ func (this *QListView) RectForIndex(index *qtcore.QModelIndex) *qtcore.QRect /*1
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setPositionForIndex(const QPoint &, const QModelIndex &)
-func (this *QListView) SetPositionForIndex(position *qtcore.QPoint, index *qtcore.QModelIndex) {
-	var convArg0 = position.GetCthis()
-	var convArg1 = index.GetCthis()
+func (this *QListView) SetPositionForIndex(position qtcore.QPoint_ITF, index qtcore.QModelIndex_ITF) {
+	var convArg0 = position.QPoint_PTR().GetCthis()
+	var convArg1 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView19setPositionForIndexERK6QPointRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -817,8 +817,8 @@ func (this *QListView) SetPositionForIndex(position *qtcore.QPoint, index *qtcor
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
-func (this *QListView) SetSelection(rect *qtcore.QRect, command int) {
-	var convArg0 = rect.GetCthis()
+func (this *QListView) SetSelection(rect qtcore.QRect_ITF, command int) {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
 	qtrt.ErrPrint(err, rv)
 }
@@ -827,8 +827,8 @@ func (this *QListView) SetSelection(rect *qtcore.QRect, command int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QRegion visualRegionForSelection(const QItemSelection &)
-func (this *QListView) VisualRegionForSelection(selection *qtcore.QItemSelection) *qtgui.QRegion /*123*/ {
-	var convArg0 = selection.GetCthis()
+func (this *QListView) VisualRegionForSelection(selection qtcore.QItemSelection_ITF) *qtgui.QRegion /*123*/ {
+	var convArg0 = selection.QItemSelection_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView24visualRegionForSelectionERK14QItemSelection", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -860,8 +860,8 @@ func (this *QListView) UpdateGeometries() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool isIndexHidden(const QModelIndex &)
-func (this *QListView) IsIndexHidden(index *qtcore.QModelIndex) bool {
-	var convArg0 = index.GetCthis()
+func (this *QListView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView13isIndexHiddenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -871,9 +871,9 @@ func (this *QListView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void selectionChanged(const QItemSelection &, const QItemSelection &)
-func (this *QListView) SelectionChanged(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection) {
-	var convArg0 = selected.GetCthis()
-	var convArg1 = deselected.GetCthis()
+func (this *QListView) SelectionChanged(selected qtcore.QItemSelection_ITF, deselected qtcore.QItemSelection_ITF) {
+	var convArg0 = selected.QItemSelection_PTR().GetCthis()
+	var convArg1 = deselected.QItemSelection_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView16selectionChangedERK14QItemSelectionS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -882,9 +882,9 @@ func (this *QListView) SelectionChanged(selected *qtcore.QItemSelection, deselec
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void currentChanged(const QModelIndex &, const QModelIndex &)
-func (this *QListView) CurrentChanged(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) {
-	var convArg0 = current.GetCthis()
-	var convArg1 = previous.GetCthis()
+func (this *QListView) CurrentChanged(current qtcore.QModelIndex_ITF, previous qtcore.QModelIndex_ITF) {
+	var convArg0 = current.QModelIndex_PTR().GetCthis()
+	var convArg1 = previous.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView14currentChangedERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

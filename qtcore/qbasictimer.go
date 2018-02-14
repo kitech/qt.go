@@ -107,8 +107,8 @@ func (this *QBasicTimer) TimerId() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(int, QObject *)
-func (this *QBasicTimer) Start(msec int, obj *QObject /*777 QObject **/) {
-	var convArg1 = obj.GetCthis()
+func (this *QBasicTimer) Start(msec int, obj QObject_ITF /*777 QObject **/) {
+	var convArg1 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimer5startEiP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -117,8 +117,8 @@ func (this *QBasicTimer) Start(msec int, obj *QObject /*777 QObject **/) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void start(int, Qt::TimerType, QObject *)
-func (this *QBasicTimer) Start_1(msec int, timerType int, obj *QObject /*777 QObject **/) {
-	var convArg2 = obj.GetCthis()
+func (this *QBasicTimer) Start_1(msec int, timerType int, obj QObject_ITF /*777 QObject **/) {
+	var convArg2 = obj.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timerType, convArg2)
 	qtrt.ErrPrint(err, rv)
 }

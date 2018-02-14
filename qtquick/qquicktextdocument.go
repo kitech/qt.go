@@ -76,8 +76,8 @@ func (this *QQuickTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickTextDocument(QQuickItem *)
-func NewQQuickTextDocument(parent *QQuickItem /*777 QQuickItem **/) *QQuickTextDocument {
-	var convArg0 = parent.GetCthis()
+func NewQQuickTextDocument(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickTextDocument {
+	var convArg0 = parent.QQuickItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QQuickTextDocumentC2EP10QQuickItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickTextDocumentFromPointer(unsafe.Pointer(uintptr(rv)))

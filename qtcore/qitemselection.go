@@ -76,9 +76,9 @@ func NewQItemSelection() *QItemSelection {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QItemSelection(const QModelIndex &, const QModelIndex &)
-func NewQItemSelection_1(topLeft *QModelIndex, bottomRight *QModelIndex) *QItemSelection {
-	var convArg0 = topLeft.GetCthis()
-	var convArg1 = bottomRight.GetCthis()
+func NewQItemSelection_1(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) *QItemSelection {
+	var convArg0 = topLeft.QModelIndex_PTR().GetCthis()
+	var convArg1 = bottomRight.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelectionC2ERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -90,9 +90,9 @@ func NewQItemSelection_1(topLeft *QModelIndex, bottomRight *QModelIndex) *QItemS
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void select(const QModelIndex &, const QModelIndex &)
-func (this *QItemSelection) Select(topLeft *QModelIndex, bottomRight *QModelIndex) {
-	var convArg0 = topLeft.GetCthis()
-	var convArg1 = bottomRight.GetCthis()
+func (this *QItemSelection) Select(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) {
+	var convArg0 = topLeft.QModelIndex_PTR().GetCthis()
+	var convArg1 = bottomRight.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelection6selectERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -101,8 +101,8 @@ func (this *QItemSelection) Select(topLeft *QModelIndex, bottomRight *QModelInde
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QModelIndex &)
-func (this *QItemSelection) Contains(index *QModelIndex) bool {
-	var convArg0 = index.GetCthis()
+func (this *QItemSelection) Contains(index QModelIndex_ITF) bool {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QItemSelection8containsERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -123,8 +123,8 @@ func (this *QItemSelection) Indexes() *QModelIndexList /*667*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void merge(const QItemSelection &, QItemSelectionModel::SelectionFlags)
-func (this *QItemSelection) Merge(other *QItemSelection, command int) {
-	var convArg0 = other.GetCthis()
+func (this *QItemSelection) Merge(other QItemSelection_ITF, command int) {
+	var convArg0 = other.QItemSelection_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelection5mergeERKS_6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
 	qtrt.ErrPrint(err, rv)
 }
@@ -133,14 +133,14 @@ func (this *QItemSelection) Merge(other *QItemSelection, command int) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void split(const QItemSelectionRange &, const QItemSelectionRange &, QItemSelection *)
-func (this *QItemSelection) Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result *QItemSelection /*777 QItemSelection **/) {
-	var convArg0 = range_.GetCthis()
-	var convArg1 = other.GetCthis()
-	var convArg2 = result.GetCthis()
+func (this *QItemSelection) Split(range_ QItemSelectionRange_ITF, other QItemSelectionRange_ITF, result QItemSelection_ITF /*777 QItemSelection **/) {
+	var convArg0 = range_.QItemSelectionRange_PTR().GetCthis()
+	var convArg1 = other.QItemSelectionRange_PTR().GetCthis()
+	var convArg2 = result.QItemSelection_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
-func QItemSelection_Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result *QItemSelection /*777 QItemSelection **/) {
+func QItemSelection_Split(range_ QItemSelectionRange_ITF, other QItemSelectionRange_ITF, result QItemSelection_ITF /*777 QItemSelection **/) {
 	var nilthis *QItemSelection
 	nilthis.Split(range_, other, result)
 }

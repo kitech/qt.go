@@ -107,8 +107,8 @@ func (this *QStateMachine) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStateMachine(QObject *)
-func NewQStateMachine(parent *QObject /*777 QObject **/) *QStateMachine {
-	var convArg0 = parent.GetCthis()
+func NewQStateMachine(parent QObject_ITF /*777 QObject **/) *QStateMachine {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStateMachineFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -119,8 +119,8 @@ func NewQStateMachine(parent *QObject /*777 QObject **/) *QStateMachine {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStateMachine(QState::ChildMode, QObject *)
-func NewQStateMachine_1(childMode int, parent *QObject /*777 QObject **/) *QStateMachine {
-	var convArg1 = parent.GetCthis()
+func NewQStateMachine_1(childMode int, parent QObject_ITF /*777 QObject **/) *QStateMachine {
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachineC2EN6QState9ChildModeEP7QObject", qtrt.FFI_TYPE_POINTER, childMode, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStateMachineFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -142,8 +142,8 @@ func DeleteQStateMachine(this *QStateMachine) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addState(QAbstractState *)
-func (this *QStateMachine) AddState(state *QAbstractState /*777 QAbstractState **/) {
-	var convArg0 = state.GetCthis()
+func (this *QStateMachine) AddState(state QAbstractState_ITF /*777 QAbstractState **/) {
+	var convArg0 = state.QAbstractState_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine8addStateEP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -152,8 +152,8 @@ func (this *QStateMachine) AddState(state *QAbstractState /*777 QAbstractState *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeState(QAbstractState *)
-func (this *QStateMachine) RemoveState(state *QAbstractState /*777 QAbstractState **/) {
-	var convArg0 = state.GetCthis()
+func (this *QStateMachine) RemoveState(state QAbstractState_ITF /*777 QAbstractState **/) {
+	var convArg0 = state.QAbstractState_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine11removeStateEP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -223,8 +223,8 @@ func (this *QStateMachine) SetAnimated(enabled bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addDefaultAnimation(QAbstractAnimation *)
-func (this *QStateMachine) AddDefaultAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
-	var convArg0 = animation.GetCthis()
+func (this *QStateMachine) AddDefaultAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
+	var convArg0 = animation.QAbstractAnimation_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -233,8 +233,8 @@ func (this *QStateMachine) AddDefaultAnimation(animation *QAbstractAnimation /*7
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeDefaultAnimation(QAbstractAnimation *)
-func (this *QStateMachine) RemoveDefaultAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
-	var convArg0 = animation.GetCthis()
+func (this *QStateMachine) RemoveDefaultAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
+	var convArg0 = animation.QAbstractAnimation_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -262,8 +262,8 @@ func (this *QStateMachine) SetGlobalRestorePolicy(restorePolicy int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void postEvent(QEvent *, enum QStateMachine::EventPriority)
-func (this *QStateMachine) PostEvent(event *QEvent /*777 QEvent **/, priority int) {
-	var convArg0 = event.GetCthis()
+func (this *QStateMachine) PostEvent(event QEvent_ITF /*777 QEvent **/, priority int) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine9postEventEP6QEventNS_13EventPriorityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
 	qtrt.ErrPrint(err, rv)
 }
@@ -272,8 +272,8 @@ func (this *QStateMachine) PostEvent(event *QEvent /*777 QEvent **/, priority in
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int postDelayedEvent(QEvent *, int)
-func (this *QStateMachine) PostDelayedEvent(event *QEvent /*777 QEvent **/, delay int) int {
-	var convArg0 = event.GetCthis()
+func (this *QStateMachine) PostDelayedEvent(event QEvent_ITF /*777 QEvent **/, delay int) int {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine16postDelayedEventEP6QEventi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, delay)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -293,9 +293,9 @@ func (this *QStateMachine) CancelDelayedEvent(id int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
-func (this *QStateMachine) EventFilter(watched *QObject /*777 QObject **/, event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = watched.GetCthis()
-	var convArg1 = event.GetCthis()
+func (this *QStateMachine) EventFilter(watched QObject_ITF /*777 QObject **/, event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = watched.QObject_PTR().GetCthis()
+	var convArg1 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -341,8 +341,8 @@ func (this *QStateMachine) RunningChanged(running bool) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onEntry(QEvent *)
-func (this *QStateMachine) OnEntry(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QStateMachine) OnEntry(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine7onEntryEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -351,8 +351,8 @@ func (this *QStateMachine) OnEntry(event *QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onExit(QEvent *)
-func (this *QStateMachine) OnExit(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QStateMachine) OnExit(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine6onExitEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -361,8 +361,8 @@ func (this *QStateMachine) OnExit(event *QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void beginSelectTransitions(QEvent *)
-func (this *QStateMachine) BeginSelectTransitions(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QStateMachine) BeginSelectTransitions(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine22beginSelectTransitionsEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -371,8 +371,8 @@ func (this *QStateMachine) BeginSelectTransitions(event *QEvent /*777 QEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void endSelectTransitions(QEvent *)
-func (this *QStateMachine) EndSelectTransitions(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QStateMachine) EndSelectTransitions(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine20endSelectTransitionsEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -381,8 +381,8 @@ func (this *QStateMachine) EndSelectTransitions(event *QEvent /*777 QEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void beginMicrostep(QEvent *)
-func (this *QStateMachine) BeginMicrostep(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QStateMachine) BeginMicrostep(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine14beginMicrostepEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -391,8 +391,8 @@ func (this *QStateMachine) BeginMicrostep(event *QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void endMicrostep(QEvent *)
-func (this *QStateMachine) EndMicrostep(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QStateMachine) EndMicrostep(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine12endMicrostepEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -401,8 +401,8 @@ func (this *QStateMachine) EndMicrostep(event *QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QStateMachine) Event(e *QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QStateMachine) Event(e QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

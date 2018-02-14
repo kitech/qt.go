@@ -199,13 +199,13 @@ func QGuiApplication_TopLevelWindows() *QWindowList /*667*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QWindow * topLevelAt(const QPoint &)
-func (this *QGuiApplication) TopLevelAt(pos *qtcore.QPoint) *QWindow /*777 QWindow **/ {
-	var convArg0 = pos.GetCthis()
+func (this *QGuiApplication) TopLevelAt(pos qtcore.QPoint_ITF) *QWindow /*777 QWindow **/ {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication10topLevelAtERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QGuiApplication_TopLevelAt(pos *qtcore.QPoint) *QWindow /*777 QWindow **/ {
+func QGuiApplication_TopLevelAt(pos qtcore.QPoint_ITF) *QWindow /*777 QWindow **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.TopLevelAt(pos)
 	return rv
@@ -215,12 +215,12 @@ func QGuiApplication_TopLevelAt(pos *qtcore.QPoint) *QWindow /*777 QWindow **/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setWindowIcon(const QIcon &)
-func (this *QGuiApplication) SetWindowIcon(icon *QIcon) {
-	var convArg0 = icon.GetCthis()
+func (this *QGuiApplication) SetWindowIcon(icon QIcon_ITF) {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication13setWindowIconERK5QIcon", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QGuiApplication_SetWindowIcon(icon *QIcon) {
+func QGuiApplication_SetWindowIcon(icon QIcon_ITF) {
 	var nilthis *QGuiApplication
 	nilthis.SetWindowIcon(icon)
 }
@@ -324,13 +324,13 @@ func QGuiApplication_PrimaryScreen() *QScreen /*777 QScreen **/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QScreen * screenAt(const QPoint &)
-func (this *QGuiApplication) ScreenAt(point *qtcore.QPoint) *QScreen /*777 QScreen **/ {
-	var convArg0 = point.GetCthis()
+func (this *QGuiApplication) ScreenAt(point qtcore.QPoint_ITF) *QScreen /*777 QScreen **/ {
+	var convArg0 = point.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication8screenAtERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QGuiApplication_ScreenAt(point *qtcore.QPoint) *QScreen /*777 QScreen **/ {
+func QGuiApplication_ScreenAt(point qtcore.QPoint_ITF) *QScreen /*777 QScreen **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.ScreenAt(point)
 	return rv
@@ -365,12 +365,12 @@ func QGuiApplication_OverrideCursor() *QCursor /*777 QCursor **/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setOverrideCursor(const QCursor &)
-func (this *QGuiApplication) SetOverrideCursor(arg0 *QCursor) {
-	var convArg0 = arg0.GetCthis()
+func (this *QGuiApplication) SetOverrideCursor(arg0 QCursor_ITF) {
+	var convArg0 = arg0.QCursor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication17setOverrideCursorERK7QCursor", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QGuiApplication_SetOverrideCursor(arg0 *QCursor) {
+func QGuiApplication_SetOverrideCursor(arg0 QCursor_ITF) {
 	var nilthis *QGuiApplication
 	nilthis.SetOverrideCursor(arg0)
 }
@@ -379,12 +379,12 @@ func QGuiApplication_SetOverrideCursor(arg0 *QCursor) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void changeOverrideCursor(const QCursor &)
-func (this *QGuiApplication) ChangeOverrideCursor(arg0 *QCursor) {
-	var convArg0 = arg0.GetCthis()
+func (this *QGuiApplication) ChangeOverrideCursor(arg0 QCursor_ITF) {
+	var convArg0 = arg0.QCursor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication20changeOverrideCursorERK7QCursor", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QGuiApplication_ChangeOverrideCursor(arg0 *QCursor) {
+func QGuiApplication_ChangeOverrideCursor(arg0 QCursor_ITF) {
 	var nilthis *QGuiApplication
 	nilthis.ChangeOverrideCursor(arg0)
 }
@@ -423,12 +423,12 @@ func QGuiApplication_Font() *QFont /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
-func (this *QGuiApplication) SetFont(arg0 *QFont) {
-	var convArg0 = arg0.GetCthis()
+func (this *QGuiApplication) SetFont(arg0 QFont_ITF) {
+	var convArg0 = arg0.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QGuiApplication_SetFont(arg0 *QFont) {
+func QGuiApplication_SetFont(arg0 QFont_ITF) {
 	var nilthis *QGuiApplication
 	nilthis.SetFont(arg0)
 }
@@ -469,12 +469,12 @@ func QGuiApplication_Palette() *QPalette /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setPalette(const QPalette &)
-func (this *QGuiApplication) SetPalette(pal *QPalette) {
-	var convArg0 = pal.GetCthis()
+func (this *QGuiApplication) SetPalette(pal QPalette_ITF) {
+	var convArg0 = pal.QPalette_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication10setPaletteERK8QPalette", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QGuiApplication_SetPalette(pal *QPalette) {
+func QGuiApplication_SetPalette(pal QPalette_ITF) {
 	var nilthis *QGuiApplication
 	nilthis.SetPalette(pal)
 }
@@ -644,13 +644,13 @@ func QGuiApplication_InputMethod() *QInputMethod /*777 QInputMethod **/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QFunctionPointer platformFunction(const QByteArray &)
-func (this *QGuiApplication) PlatformFunction(function *qtcore.QByteArray) unsafe.Pointer /*666*/ {
-	var convArg0 = function.GetCthis()
+func (this *QGuiApplication) PlatformFunction(function qtcore.QByteArray_ITF) unsafe.Pointer /*666*/ {
+	var convArg0 = function.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication16platformFunctionERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
-func QGuiApplication_PlatformFunction(function *qtcore.QByteArray) unsafe.Pointer /*666*/ {
+func QGuiApplication_PlatformFunction(function qtcore.QByteArray_ITF) unsafe.Pointer /*666*/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.PlatformFunction(function)
 	return rv
@@ -718,9 +718,9 @@ func QGuiApplication_Exec() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool notify(QObject *, QEvent *)
-func (this *QGuiApplication) Notify(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+func (this *QGuiApplication) Notify(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg1 = arg1.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication6notifyEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -826,8 +826,8 @@ func (this *QGuiApplication) FontDatabaseChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void screenAdded(QScreen *)
-func (this *QGuiApplication) ScreenAdded(screen *QScreen /*777 QScreen **/) {
-	var convArg0 = screen.GetCthis()
+func (this *QGuiApplication) ScreenAdded(screen QScreen_ITF /*777 QScreen **/) {
+	var convArg0 = screen.QScreen_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication11screenAddedEP7QScreen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -836,8 +836,8 @@ func (this *QGuiApplication) ScreenAdded(screen *QScreen /*777 QScreen **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void screenRemoved(QScreen *)
-func (this *QGuiApplication) ScreenRemoved(screen *QScreen /*777 QScreen **/) {
-	var convArg0 = screen.GetCthis()
+func (this *QGuiApplication) ScreenRemoved(screen QScreen_ITF /*777 QScreen **/) {
+	var convArg0 = screen.QScreen_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication13screenRemovedEP7QScreen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -846,8 +846,8 @@ func (this *QGuiApplication) ScreenRemoved(screen *QScreen /*777 QScreen **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void primaryScreenChanged(QScreen *)
-func (this *QGuiApplication) PrimaryScreenChanged(screen *QScreen /*777 QScreen **/) {
-	var convArg0 = screen.GetCthis()
+func (this *QGuiApplication) PrimaryScreenChanged(screen QScreen_ITF /*777 QScreen **/) {
+	var convArg0 = screen.QScreen_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication20primaryScreenChangedEP7QScreen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -865,8 +865,8 @@ func (this *QGuiApplication) LastWindowClosed() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void focusObjectChanged(QObject *)
-func (this *QGuiApplication) FocusObjectChanged(focusObject *qtcore.QObject /*777 QObject **/) {
-	var convArg0 = focusObject.GetCthis()
+func (this *QGuiApplication) FocusObjectChanged(focusObject qtcore.QObject_ITF /*777 QObject **/) {
+	var convArg0 = focusObject.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication18focusObjectChangedEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -875,8 +875,8 @@ func (this *QGuiApplication) FocusObjectChanged(focusObject *qtcore.QObject /*77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void focusWindowChanged(QWindow *)
-func (this *QGuiApplication) FocusWindowChanged(focusWindow *QWindow /*777 QWindow **/) {
-	var convArg0 = focusWindow.GetCthis()
+func (this *QGuiApplication) FocusWindowChanged(focusWindow QWindow_ITF /*777 QWindow **/) {
+	var convArg0 = focusWindow.QWindow_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication18focusWindowChangedEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -903,8 +903,8 @@ func (this *QGuiApplication) LayoutDirectionChanged(direction int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void commitDataRequest(QSessionManager &)
-func (this *QGuiApplication) CommitDataRequest(sessionManager *QSessionManager) {
-	var convArg0 = sessionManager.GetCthis()
+func (this *QGuiApplication) CommitDataRequest(sessionManager QSessionManager_ITF) {
+	var convArg0 = sessionManager.QSessionManager_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication17commitDataRequestER15QSessionManager", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -913,8 +913,8 @@ func (this *QGuiApplication) CommitDataRequest(sessionManager *QSessionManager) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void saveStateRequest(QSessionManager &)
-func (this *QGuiApplication) SaveStateRequest(sessionManager *QSessionManager) {
-	var convArg0 = sessionManager.GetCthis()
+func (this *QGuiApplication) SaveStateRequest(sessionManager QSessionManager_ITF) {
+	var convArg0 = sessionManager.QSessionManager_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication16saveStateRequestER15QSessionManager", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -923,8 +923,8 @@ func (this *QGuiApplication) SaveStateRequest(sessionManager *QSessionManager) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void paletteChanged(const QPalette &)
-func (this *QGuiApplication) PaletteChanged(pal *QPalette) {
-	var convArg0 = pal.GetCthis()
+func (this *QGuiApplication) PaletteChanged(pal QPalette_ITF) {
+	var convArg0 = pal.QPalette_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication14paletteChangedERK8QPalette", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -942,8 +942,8 @@ func (this *QGuiApplication) ApplicationDisplayNameChanged() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QGuiApplication) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QGuiApplication) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

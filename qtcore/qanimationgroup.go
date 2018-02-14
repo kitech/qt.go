@@ -77,8 +77,8 @@ func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAnimationGroup(QObject *)
-func NewQAnimationGroup(parent *QObject /*777 QObject **/) *QAnimationGroup {
-	var convArg0 = parent.GetCthis()
+func NewQAnimationGroup(parent QObject_ITF /*777 QObject **/) *QAnimationGroup {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -120,8 +120,8 @@ func (this *QAnimationGroup) AnimationCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfAnimation(QAbstractAnimation *)
-func (this *QAnimationGroup) IndexOfAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) int {
-	var convArg0 = animation.GetCthis()
+func (this *QAnimationGroup) IndexOfAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) int {
+	var convArg0 = animation.QAbstractAnimation_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -131,8 +131,8 @@ func (this *QAnimationGroup) IndexOfAnimation(animation *QAbstractAnimation /*77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addAnimation(QAbstractAnimation *)
-func (this *QAnimationGroup) AddAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
-	var convArg0 = animation.GetCthis()
+func (this *QAnimationGroup) AddAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
+	var convArg0 = animation.QAbstractAnimation_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -141,8 +141,8 @@ func (this *QAnimationGroup) AddAnimation(animation *QAbstractAnimation /*777 QA
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertAnimation(int, QAbstractAnimation *)
-func (this *QAnimationGroup) InsertAnimation(index int, animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
-	var convArg1 = animation.GetCthis()
+func (this *QAnimationGroup) InsertAnimation(index int, animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
+	var convArg1 = animation.QAbstractAnimation_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -151,8 +151,8 @@ func (this *QAnimationGroup) InsertAnimation(index int, animation *QAbstractAnim
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAnimation(QAbstractAnimation *)
-func (this *QAnimationGroup) RemoveAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
-	var convArg0 = animation.GetCthis()
+func (this *QAnimationGroup) RemoveAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
+	var convArg0 = animation.QAbstractAnimation_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -180,8 +180,8 @@ func (this *QAnimationGroup) Clear() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

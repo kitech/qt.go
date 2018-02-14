@@ -74,8 +74,8 @@ func (this *QGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGesture(QObject *)
-func NewQGesture(parent *qtcore.QObject /*777 QObject **/) *QGesture {
-	var convArg0 = parent.GetCthis()
+func NewQGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QGesture {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGestureFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -129,8 +129,8 @@ func (this *QGesture) HotSpot() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHotSpot(const QPointF &)
-func (this *QGesture) SetHotSpot(value *qtcore.QPointF) {
-	var convArg0 = value.GetCthis()
+func (this *QGesture) SetHotSpot(value qtcore.QPointF_ITF) {
+	var convArg0 = value.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QGesture10setHotSpotERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

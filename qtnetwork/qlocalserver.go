@@ -87,8 +87,8 @@ func (this *QLocalServer) NewConnection() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLocalServer(QObject *)
-func NewQLocalServer(parent *qtcore.QObject /*777 QObject **/) *QLocalServer {
-	var convArg0 = parent.GetCthis()
+func NewQLocalServer(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalServer {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLocalServerFromPointer(unsafe.Pointer(uintptr(rv)))

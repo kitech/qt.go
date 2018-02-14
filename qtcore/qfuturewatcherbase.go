@@ -92,8 +92,8 @@ func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFutureWatcherBase(QObject *)
-func NewQFutureWatcherBase(parent *QObject /*777 QObject **/) *QFutureWatcherBase {
-	var convArg0 = parent.GetCthis()
+func NewQFutureWatcherBase(parent QObject_ITF /*777 QObject **/) *QFutureWatcherBase {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBaseC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFutureWatcherBaseFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -215,8 +215,8 @@ func (this *QFutureWatcherBase) SetPendingResultsLimit(limit int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QFutureWatcherBase) Event(event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QFutureWatcherBase) Event(event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -363,8 +363,8 @@ func (this *QFutureWatcherBase) TogglePaused() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void connectNotify(const QMetaMethod &)
-func (this *QFutureWatcherBase) ConnectNotify(signal *QMetaMethod) {
-	var convArg0 = signal.GetCthis()
+func (this *QFutureWatcherBase) ConnectNotify(signal QMetaMethod_ITF) {
+	var convArg0 = signal.QMetaMethod_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase13connectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -373,8 +373,8 @@ func (this *QFutureWatcherBase) ConnectNotify(signal *QMetaMethod) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void disconnectNotify(const QMetaMethod &)
-func (this *QFutureWatcherBase) DisconnectNotify(signal *QMetaMethod) {
-	var convArg0 = signal.GetCthis()
+func (this *QFutureWatcherBase) DisconnectNotify(signal QMetaMethod_ITF) {
+	var convArg0 = signal.QMetaMethod_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase16disconnectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -78,8 +78,8 @@ func (this *QNetworkCookieJar) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkCookieJar(QObject *)
-func NewQNetworkCookieJar(parent *qtcore.QObject /*777 QObject **/) *QNetworkCookieJar {
-	var convArg0 = parent.GetCthis()
+func NewQNetworkCookieJar(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkCookieJar {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkCookieJarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -101,8 +101,8 @@ func DeleteQNetworkCookieJar(this *QNetworkCookieJar) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertCookie(const QNetworkCookie &)
-func (this *QNetworkCookieJar) InsertCookie(cookie *QNetworkCookie) bool {
-	var convArg0 = cookie.GetCthis()
+func (this *QNetworkCookieJar) InsertCookie(cookie QNetworkCookie_ITF) bool {
+	var convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJar12insertCookieERK14QNetworkCookie", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -112,8 +112,8 @@ func (this *QNetworkCookieJar) InsertCookie(cookie *QNetworkCookie) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool updateCookie(const QNetworkCookie &)
-func (this *QNetworkCookieJar) UpdateCookie(cookie *QNetworkCookie) bool {
-	var convArg0 = cookie.GetCthis()
+func (this *QNetworkCookieJar) UpdateCookie(cookie QNetworkCookie_ITF) bool {
+	var convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJar12updateCookieERK14QNetworkCookie", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -123,8 +123,8 @@ func (this *QNetworkCookieJar) UpdateCookie(cookie *QNetworkCookie) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool deleteCookie(const QNetworkCookie &)
-func (this *QNetworkCookieJar) DeleteCookie(cookie *QNetworkCookie) bool {
-	var convArg0 = cookie.GetCthis()
+func (this *QNetworkCookieJar) DeleteCookie(cookie QNetworkCookie_ITF) bool {
+	var convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJar12deleteCookieERK14QNetworkCookie", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -134,9 +134,9 @@ func (this *QNetworkCookieJar) DeleteCookie(cookie *QNetworkCookie) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool validateCookie(const QNetworkCookie &, const QUrl &)
-func (this *QNetworkCookieJar) ValidateCookie(cookie *QNetworkCookie, url *qtcore.QUrl) bool {
-	var convArg0 = cookie.GetCthis()
-	var convArg1 = url.GetCthis()
+func (this *QNetworkCookieJar) ValidateCookie(cookie QNetworkCookie_ITF, url qtcore.QUrl_ITF) bool {
+	var convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
+	var convArg1 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkCookieJar14validateCookieERK14QNetworkCookieRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

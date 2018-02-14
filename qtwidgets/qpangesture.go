@@ -74,8 +74,8 @@ func (this *QPanGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPanGesture(QObject *)
-func NewQPanGesture(parent *qtcore.QObject /*777 QObject **/) *QPanGesture {
-	var convArg0 = parent.GetCthis()
+func NewQPanGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPanGesture {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPanGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPanGestureFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -143,8 +143,8 @@ func (this *QPanGesture) Acceleration() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastOffset(const QPointF &)
-func (this *QPanGesture) SetLastOffset(value *qtcore.QPointF) {
-	var convArg0 = value.GetCthis()
+func (this *QPanGesture) SetLastOffset(value qtcore.QPointF_ITF) {
+	var convArg0 = value.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPanGesture13setLastOffsetERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -153,8 +153,8 @@ func (this *QPanGesture) SetLastOffset(value *qtcore.QPointF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOffset(const QPointF &)
-func (this *QPanGesture) SetOffset(value *qtcore.QPointF) {
-	var convArg0 = value.GetCthis()
+func (this *QPanGesture) SetOffset(value qtcore.QPointF_ITF) {
+	var convArg0 = value.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPanGesture9setOffsetERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

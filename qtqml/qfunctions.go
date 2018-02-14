@@ -30,8 +30,8 @@ func init() {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QQmlEngine * qmlEngine(const QObject *)
-func QmlEngine(arg0 *qtcore.QObject /*777 const QObject **/) *QQmlEngine /*777 QQmlEngine **/ {
-	var convArg0 = arg0.GetCthis()
+func QmlEngine(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QQmlEngine /*777 QQmlEngine **/ {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml9qmlEngineEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -41,9 +41,9 @@ func QmlEngine(arg0 *qtcore.QObject /*777 const QObject **/) *QQmlEngine /*777 Q
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlDebug(const QObject *, const QQmlError &)
-func QmlDebug(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *QQmlInfo /*123*/ {
-	var convArg0 = me.GetCthis()
-	var convArg1 = error.GetCthis()
+func QmlDebug(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_ITF) *QQmlInfo /*123*/ {
+	var convArg0 = me.QObject_PTR().GetCthis()
+	var convArg1 = error.QQmlError_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml8qmlDebugEPK7QObjectRK9QQmlError", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -55,8 +55,8 @@ func QmlDebug(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *QQm
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlDebug(const QObject *)
-func QmlDebug_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ {
-	var convArg0 = me.GetCthis()
+func QmlDebug_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
+	var convArg0 = me.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml8qmlDebugEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -68,9 +68,9 @@ func QmlDebug_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlInfo(const QObject *, const QQmlError &)
-func QmlInfo(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *QQmlInfo /*123*/ {
-	var convArg0 = me.GetCthis()
-	var convArg1 = error.GetCthis()
+func QmlInfo(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_ITF) *QQmlInfo /*123*/ {
+	var convArg0 = me.QObject_PTR().GetCthis()
+	var convArg1 = error.QQmlError_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml7qmlInfoEPK7QObjectRK9QQmlError", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -82,8 +82,8 @@ func QmlInfo(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *QQml
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlInfo(const QObject *)
-func QmlInfo_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ {
-	var convArg0 = me.GetCthis()
+func QmlInfo_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
+	var convArg0 = me.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml7qmlInfoEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -95,8 +95,8 @@ func QmlInfo_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QObject * qmlAttachedPropertiesObjectById(int, const QObject *, _Bool)
-func QmlAttachedPropertiesObjectById(arg0 int, arg1 *qtcore.QObject /*777 const QObject **/, create bool) *qtcore.QObject /*777 QObject **/ {
-	var convArg1 = arg1.GetCthis()
+func QmlAttachedPropertiesObjectById(arg0 int, arg1 qtcore.QObject_ITF /*777 const QObject **/, create bool) *qtcore.QObject /*777 QObject **/ {
+	var convArg1 = arg1.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml31qmlAttachedPropertiesObjectByIdEiPK7QObjectb", qtrt.FFI_TYPE_POINTER, arg0, convArg1, create)
 	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -106,9 +106,9 @@ func QmlAttachedPropertiesObjectById(arg0 int, arg1 *qtcore.QObject /*777 const 
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QObject * qmlAttachedPropertiesObject(int *, const QObject *, const struct QMetaObject *, _Bool)
-func QmlAttachedPropertiesObject(arg0 unsafe.Pointer /*666*/, arg1 *qtcore.QObject /*777 const QObject **/, arg2 *qtcore.QMetaObject /*777 const QMetaObject **/, create bool) *qtcore.QObject /*777 QObject **/ {
-	var convArg1 = arg1.GetCthis()
-	var convArg2 = arg2.GetCthis()
+func QmlAttachedPropertiesObject(arg0 unsafe.Pointer /*666*/, arg1 qtcore.QObject_ITF /*777 const QObject **/, arg2 qtcore.QMetaObject_ITF /*777 const QMetaObject **/, create bool) *qtcore.QObject /*777 QObject **/ {
+	var convArg1 = arg1.QObject_PTR().GetCthis()
+	var convArg2 = arg2.QMetaObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml27qmlAttachedPropertiesObjectEPiPK7QObjectPK11QMetaObjectb", qtrt.FFI_TYPE_POINTER, &arg0, convArg1, convArg2, create)
 	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -118,8 +118,8 @@ func QmlAttachedPropertiesObject(arg0 unsafe.Pointer /*666*/, arg1 *qtcore.QObje
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qmlExecuteDeferred(QObject *)
-func QmlExecuteDeferred(arg0 *qtcore.QObject /*777 QObject **/) {
-	var convArg0 = arg0.GetCthis()
+func QmlExecuteDeferred(arg0 qtcore.QObject_ITF /*777 QObject **/) {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml18qmlExecuteDeferredEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -128,9 +128,9 @@ func QmlExecuteDeferred(arg0 *qtcore.QObject /*777 QObject **/) {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlWarning(const QObject *, const QQmlError &)
-func QmlWarning(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *QQmlInfo /*123*/ {
-	var convArg0 = me.GetCthis()
-	var convArg1 = error.GetCthis()
+func QmlWarning(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_ITF) *QQmlInfo /*123*/ {
+	var convArg0 = me.QObject_PTR().GetCthis()
+	var convArg1 = error.QQmlError_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml10qmlWarningEPK7QObjectRK9QQmlError", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -142,8 +142,8 @@ func QmlWarning(me *qtcore.QObject /*777 const QObject **/, error *QQmlError) *Q
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlWarning(const QObject *)
-func QmlWarning_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ {
-	var convArg0 = me.GetCthis()
+func QmlWarning_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
+	var convArg0 = me.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml10qmlWarningEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -155,8 +155,8 @@ func QmlWarning_1(me *qtcore.QObject /*777 const QObject **/) *QQmlInfo /*123*/ 
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QQmlContext * qmlContext(const QObject *)
-func QmlContext(arg0 *qtcore.QObject /*777 const QObject **/) *QQmlContext /*777 QQmlContext **/ {
-	var convArg0 = arg0.GetCthis()
+func QmlContext(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QQmlContext /*777 QQmlContext **/ {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtQml10qmlContextEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -176,8 +176,8 @@ func Qmlregister(arg0 int, arg1 unsafe.Pointer /*666*/) int {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QJSEngine * qjsEngine(const QObject *)
-func QjsEngine(arg0 *qtcore.QObject /*777 const QObject **/) *QJSEngine /*777 QJSEngine **/ {
-	var convArg0 = arg0.GetCthis()
+func QjsEngine(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QJSEngine /*777 QJSEngine **/ {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z9qjsEnginePK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQJSEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -187,8 +187,8 @@ func QjsEngine(arg0 *qtcore.QObject /*777 const QObject **/) *QJSEngine /*777 QJ
 // index:42
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QQmlProperty &)
-func QHash_42(key *QQmlProperty) uint {
-	var convArg0 = key.GetCthis()
+func QHash_42(key QQmlProperty_ITF) uint {
+	var convArg0 = key.QQmlProperty_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK12QQmlProperty", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -198,8 +198,8 @@ func QHash_42(key *QQmlProperty) uint {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qmlRegisterUncreatableMetaObject(const struct QMetaObject &, const char *, int, int, const char *, const QString &)
-func QmlRegisterUncreatableMetaObject(staticMetaObject *qtcore.QMetaObject, uri string, versionMajor int, versionMinor int, qmlName string, reason string) int {
-	var convArg0 = staticMetaObject.GetCthis()
+func QmlRegisterUncreatableMetaObject(staticMetaObject qtcore.QMetaObject_ITF, uri string, versionMajor int, versionMinor int, qmlName string, reason string) int {
+	var convArg0 = staticMetaObject.QMetaObject_PTR().GetCthis()
 	var convArg1 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg1)
 	var convArg4 = qtrt.CString(qmlName)
@@ -240,8 +240,8 @@ func QmlClearTypeRegistrations() {
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qmlRegisterSingletonType(const QUrl &, const char *, int, int, const char *)
-func QmlRegisterSingletonType(url *qtcore.QUrl, uri string, versionMajor int, versionMinor int, qmlName string) int {
-	var convArg0 = url.GetCthis()
+func QmlRegisterSingletonType(url qtcore.QUrl_ITF, uri string, versionMajor int, versionMinor int, qmlName string) int {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	var convArg1 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg1)
 	var convArg4 = qtrt.CString(qmlName)
@@ -280,8 +280,8 @@ func QmlRegisterBaseTypes(uri string, versionMajor int, versionMinor int) {
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qjsvalue_cast_helper(const QJSValue &, int, void *)
-func Qjsvalue_cast_helper(value *QJSValue, type_ int, ptr unsafe.Pointer /*666*/) bool {
-	var convArg0 = value.GetCthis()
+func Qjsvalue_cast_helper(value QJSValue_ITF, type_ int, ptr unsafe.Pointer /*666*/) bool {
+	var convArg0 = value.QJSValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z20qjsvalue_cast_helperRK8QJSValueiPv", qtrt.FFI_TYPE_POINTER, convArg0, type_, ptr)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -314,8 +314,8 @@ func QmlProtectModule(uri string, majVersion int) bool {
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qmlRegisterType(const QUrl &, const char *, int, int, const char *)
-func QmlRegisterType(url *qtcore.QUrl, uri string, versionMajor int, versionMinor int, qmlName string) int {
-	var convArg0 = url.GetCthis()
+func QmlRegisterType(url qtcore.QUrl_ITF, uri string, versionMajor int, versionMinor int, qmlName string) int {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	var convArg1 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg1)
 	var convArg4 = qtrt.CString(qmlName)

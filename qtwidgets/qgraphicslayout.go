@@ -69,8 +69,8 @@ func (*QGraphicsLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayout(QGraphicsLayoutItem *)
-func NewQGraphicsLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsLayout {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayout {
+	var convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -148,8 +148,8 @@ func (this *QGraphicsLayout) UpdateGeometry() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void widgetEvent(QEvent *)
-func (this *QGraphicsLayout) WidgetEvent(e *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QGraphicsLayout) WidgetEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayout11widgetEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -215,8 +215,8 @@ func QGraphicsLayout_InstantInvalidatePropagation() bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void addChildLayoutItem(QGraphicsLayoutItem *)
-func (this *QGraphicsLayout) AddChildLayoutItem(layoutItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
-	var convArg0 = layoutItem.GetCthis()
+func (this *QGraphicsLayout) AddChildLayoutItem(layoutItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) {
+	var convArg0 = layoutItem.QGraphicsLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayout18addChildLayoutItemEP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

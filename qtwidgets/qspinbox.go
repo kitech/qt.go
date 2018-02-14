@@ -99,8 +99,8 @@ func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSpinBox(QWidget *)
-func NewQSpinBox(parent *QWidget /*777 QWidget **/) *QSpinBox {
-	var convArg0 = parent.GetCthis()
+func NewQSpinBox(parent QWidget_ITF /*777 QWidget **/) *QSpinBox {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -278,8 +278,8 @@ func (this *QSpinBox) SetDisplayIntegerBase(base int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QSpinBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QSpinBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

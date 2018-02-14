@@ -149,8 +149,8 @@ func (this *QComboBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QComboBox(QWidget *)
-func NewQComboBox(parent *QWidget /*777 QWidget **/) *QComboBox {
-	var convArg0 = parent.GetCthis()
+func NewQComboBox(parent QWidget_ITF /*777 QWidget **/) *QComboBox {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQComboBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -308,8 +308,8 @@ func (this *QComboBox) FindText(text string, flags int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int findData(const QVariant &, int, Qt::MatchFlags)
-func (this *QComboBox) FindData(data *qtcore.QVariant, role int, flags int) int {
-	var convArg0 = data.GetCthis()
+func (this *QComboBox) FindData(data qtcore.QVariant_ITF, role int, flags int) int {
+	var convArg0 = data.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8findDataERK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, flags)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -388,8 +388,8 @@ func (this *QComboBox) IconSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
-func (this *QComboBox) SetIconSize(size *qtcore.QSize) {
-	var convArg0 = size.GetCthis()
+func (this *QComboBox) SetIconSize(size qtcore.QSize_ITF) {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11setIconSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -417,8 +417,8 @@ func (this *QComboBox) SetEditable(editable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLineEdit(QLineEdit *)
-func (this *QComboBox) SetLineEdit(edit *QLineEdit /*777 QLineEdit **/) {
-	var convArg0 = edit.GetCthis()
+func (this *QComboBox) SetLineEdit(edit QLineEdit_ITF /*777 QLineEdit **/) {
+	var convArg0 = edit.QLineEdit_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11setLineEditEP9QLineEdit", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -437,8 +437,8 @@ func (this *QComboBox) LineEdit() *QLineEdit /*777 QLineEdit **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValidator(const QValidator *)
-func (this *QComboBox) SetValidator(v *qtgui.QValidator /*777 const QValidator **/) {
-	var convArg0 = v.GetCthis()
+func (this *QComboBox) SetValidator(v qtgui.QValidator_ITF /*777 const QValidator **/) {
+	var convArg0 = v.QValidator_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox12setValidatorEPK10QValidator", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -457,8 +457,8 @@ func (this *QComboBox) Validator() *qtgui.QValidator /*777 const QValidator **/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCompleter(QCompleter *)
-func (this *QComboBox) SetCompleter(c *QCompleter /*777 QCompleter **/) {
-	var convArg0 = c.GetCthis()
+func (this *QComboBox) SetCompleter(c QCompleter_ITF /*777 QCompleter **/) {
+	var convArg0 = c.QCompleter_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox12setCompleterEP10QCompleter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -487,8 +487,8 @@ func (this *QComboBox) ItemDelegate() *QAbstractItemDelegate /*777 QAbstractItem
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemDelegate(QAbstractItemDelegate *)
-func (this *QComboBox) SetItemDelegate(delegate *QAbstractItemDelegate /*777 QAbstractItemDelegate **/) {
-	var convArg0 = delegate.GetCthis()
+func (this *QComboBox) SetItemDelegate(delegate QAbstractItemDelegate_ITF /*777 QAbstractItemDelegate **/) {
+	var convArg0 = delegate.QAbstractItemDelegate_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox15setItemDelegateEP21QAbstractItemDelegate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -507,8 +507,8 @@ func (this *QComboBox) Model() *qtcore.QAbstractItemModel /*777 QAbstractItemMod
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
-func (this *QComboBox) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/) {
-	var convArg0 = model.GetCthis()
+func (this *QComboBox) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
+	var convArg0 = model.QAbstractItemModel_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox8setModelEP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -529,8 +529,8 @@ func (this *QComboBox) RootModelIndex() *qtcore.QModelIndex /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRootModelIndex(const QModelIndex &)
-func (this *QComboBox) SetRootModelIndex(index *qtcore.QModelIndex) {
-	var convArg0 = index.GetCthis()
+func (this *QComboBox) SetRootModelIndex(index qtcore.QModelIndex_ITF) {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox17setRootModelIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -630,10 +630,10 @@ func (this *QComboBox) ItemData(index int, role int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(const QString &, const QVariant &)
-func (this *QComboBox) AddItem(text string, userData *qtcore.QVariant) {
+func (this *QComboBox) AddItem(text string, userData qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = userData.GetCthis()
+	var convArg1 = userData.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox7addItemERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -642,11 +642,11 @@ func (this *QComboBox) AddItem(text string, userData *qtcore.QVariant) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(const QIcon &, const QString &, const QVariant &)
-func (this *QComboBox) AddItem_1(icon *qtgui.QIcon, text string, userData *qtcore.QVariant) {
-	var convArg0 = icon.GetCthis()
+func (this *QComboBox) AddItem_1(icon qtgui.QIcon_ITF, text string, userData qtcore.QVariant_ITF) {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = userData.GetCthis()
+	var convArg2 = userData.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -655,8 +655,8 @@ func (this *QComboBox) AddItem_1(icon *qtgui.QIcon, text string, userData *qtcor
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItems(const QStringList &)
-func (this *QComboBox) AddItems(texts *qtcore.QStringList) {
-	var convArg0 = texts.GetCthis()
+func (this *QComboBox) AddItems(texts qtcore.QStringList_ITF) {
+	var convArg0 = texts.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox8addItemsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -665,10 +665,10 @@ func (this *QComboBox) AddItems(texts *qtcore.QStringList) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void insertItem(int, const QString &, const QVariant &)
-func (this *QComboBox) InsertItem(index int, text string, userData *qtcore.QVariant) {
+func (this *QComboBox) InsertItem(index int, text string, userData qtcore.QVariant_ITF) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = userData.GetCthis()
+	var convArg2 = userData.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -677,11 +677,11 @@ func (this *QComboBox) InsertItem(index int, text string, userData *qtcore.QVari
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void insertItem(int, const QIcon &, const QString &, const QVariant &)
-func (this *QComboBox) InsertItem_1(index int, icon *qtgui.QIcon, text string, userData *qtcore.QVariant) {
-	var convArg1 = icon.GetCthis()
+func (this *QComboBox) InsertItem_1(index int, icon qtgui.QIcon_ITF, text string, userData qtcore.QVariant_ITF) {
+	var convArg1 = icon.QIcon_PTR().GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var convArg3 = userData.GetCthis()
+	var convArg3 = userData.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 }
@@ -690,8 +690,8 @@ func (this *QComboBox) InsertItem_1(index int, icon *qtgui.QIcon, text string, u
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertItems(int, const QStringList &)
-func (this *QComboBox) InsertItems(index int, texts *qtcore.QStringList) {
-	var convArg1 = texts.GetCthis()
+func (this *QComboBox) InsertItems(index int, texts qtcore.QStringList_ITF) {
+	var convArg1 = texts.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11insertItemsEiRK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -729,8 +729,8 @@ func (this *QComboBox) SetItemText(index int, text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemIcon(int, const QIcon &)
-func (this *QComboBox) SetItemIcon(index int, icon *qtgui.QIcon) {
-	var convArg1 = icon.GetCthis()
+func (this *QComboBox) SetItemIcon(index int, icon qtgui.QIcon_ITF) {
+	var convArg1 = icon.QIcon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11setItemIconEiRK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -739,8 +739,8 @@ func (this *QComboBox) SetItemIcon(index int, icon *qtgui.QIcon) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemData(int, const QVariant &, int)
-func (this *QComboBox) SetItemData(index int, value *qtcore.QVariant, role int) {
-	var convArg1 = value.GetCthis()
+func (this *QComboBox) SetItemData(index int, value qtcore.QVariant_ITF, role int) {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11setItemDataEiRK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, role)
 	qtrt.ErrPrint(err, rv)
 }
@@ -759,8 +759,8 @@ func (this *QComboBox) View() *QAbstractItemView /*777 QAbstractItemView **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setView(QAbstractItemView *)
-func (this *QComboBox) SetView(itemView *QAbstractItemView /*777 QAbstractItemView **/) {
-	var convArg0 = itemView.GetCthis()
+func (this *QComboBox) SetView(itemView QAbstractItemView_ITF /*777 QAbstractItemView **/) {
+	var convArg0 = itemView.QAbstractItemView_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox7setViewEP17QAbstractItemView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -811,8 +811,8 @@ func (this *QComboBox) HidePopup() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QComboBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QComboBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -834,8 +834,8 @@ func (this *QComboBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery, const QVariant &)
-func (this *QComboBox) InputMethodQuery_1(query int, argument *qtcore.QVariant) *qtcore.QVariant /*123*/ {
-	var convArg1 = argument.GetCthis()
+func (this *QComboBox) InputMethodQuery_1(query int, argument qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
+	var convArg1 = argument.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox16inputMethodQueryEN2Qt16InputMethodQueryERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), query, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -978,8 +978,8 @@ func (this *QComboBox) CurrentTextChanged(arg0 string) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
-func (this *QComboBox) FocusInEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) FocusInEvent(e qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = e.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -988,8 +988,8 @@ func (this *QComboBox) FocusInEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
-func (this *QComboBox) FocusOutEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) FocusOutEvent(e qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = e.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -998,8 +998,8 @@ func (this *QComboBox) FocusOutEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QComboBox) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1008,8 +1008,8 @@ func (this *QComboBox) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QComboBox) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = e.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1018,8 +1018,8 @@ func (this *QComboBox) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QComboBox) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = e.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1028,8 +1028,8 @@ func (this *QComboBox) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
-func (this *QComboBox) ShowEvent(e *qtgui.QShowEvent /*777 QShowEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) ShowEvent(e qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
+	var convArg0 = e.QShowEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1038,8 +1038,8 @@ func (this *QComboBox) ShowEvent(e *qtgui.QShowEvent /*777 QShowEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
-func (this *QComboBox) HideEvent(e *qtgui.QHideEvent /*777 QHideEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) HideEvent(e qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
+	var convArg0 = e.QHideEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox9hideEventEP10QHideEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1048,8 +1048,8 @@ func (this *QComboBox) HideEvent(e *qtgui.QHideEvent /*777 QHideEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
-func (this *QComboBox) MousePressEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) MousePressEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = e.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1058,8 +1058,8 @@ func (this *QComboBox) MousePressEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QComboBox) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = e.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1068,8 +1068,8 @@ func (this *QComboBox) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QComboBox) KeyPressEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) KeyPressEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = e.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1078,8 +1078,8 @@ func (this *QComboBox) KeyPressEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
-func (this *QComboBox) KeyReleaseEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) KeyReleaseEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = e.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox15keyReleaseEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1088,8 +1088,8 @@ func (this *QComboBox) KeyReleaseEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
-func (this *QComboBox) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
+	var convArg0 = e.QWheelEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1098,8 +1098,8 @@ func (this *QComboBox) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
-func (this *QComboBox) ContextMenuEvent(e *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QComboBox) ContextMenuEvent(e qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
+	var convArg0 = e.QContextMenuEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1108,8 +1108,8 @@ func (this *QComboBox) ContextMenuEvent(e *qtgui.QContextMenuEvent /*777 QContex
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void inputMethodEvent(QInputMethodEvent *)
-func (this *QComboBox) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QComboBox) InputMethodEvent(arg0 qtgui.QInputMethodEvent_ITF /*777 QInputMethodEvent **/) {
+	var convArg0 = arg0.QInputMethodEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox16inputMethodEventEP17QInputMethodEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1118,8 +1118,8 @@ func (this *QComboBox) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*777 QInp
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionComboBox *)
-func (this *QComboBox) InitStyleOption(option *QStyleOptionComboBox /*777 QStyleOptionComboBox **/) {
-	var convArg0 = option.GetCthis()
+func (this *QComboBox) InitStyleOption(option QStyleOptionComboBox_ITF /*777 QStyleOptionComboBox **/) {
+	var convArg0 = option.QStyleOptionComboBox_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox15initStyleOptionEP20QStyleOptionComboBox", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -109,8 +109,8 @@ func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRubberBand(enum QRubberBand::Shape, QWidget *)
-func NewQRubberBand(arg0 int, arg1 *QWidget /*777 QWidget **/) *QRubberBand {
-	var convArg1 = arg1.GetCthis()
+func NewQRubberBand(arg0 int, arg1 QWidget_ITF /*777 QWidget **/) *QRubberBand {
+	var convArg1 = arg1.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBandC2ENS_5ShapeEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRubberBandFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -142,8 +142,8 @@ func (this *QRubberBand) Shape() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
-func (this *QRubberBand) SetGeometry(r *qtcore.QRect) {
-	var convArg0 = r.GetCthis()
+func (this *QRubberBand) SetGeometry(r qtcore.QRect_ITF) {
+	var convArg0 = r.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -170,8 +170,8 @@ func (this *QRubberBand) Move(x int, y int) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void move(const QPoint &)
-func (this *QRubberBand) Move_1(p *qtcore.QPoint) {
-	var convArg0 = p.GetCthis()
+func (this *QRubberBand) Move_1(p qtcore.QPoint_ITF) {
+	var convArg0 = p.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand4moveERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -189,8 +189,8 @@ func (this *QRubberBand) Resize(w int, h int) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void resize(const QSize &)
-func (this *QRubberBand) Resize_1(s *qtcore.QSize) {
-	var convArg0 = s.GetCthis()
+func (this *QRubberBand) Resize_1(s qtcore.QSize_ITF) {
+	var convArg0 = s.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand6resizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -199,8 +199,8 @@ func (this *QRubberBand) Resize_1(s *qtcore.QSize) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QRubberBand) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QRubberBand) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -210,8 +210,8 @@ func (this *QRubberBand) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QRubberBand) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QRubberBand) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -220,8 +220,8 @@ func (this *QRubberBand) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QRubberBand) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QRubberBand) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -230,8 +230,8 @@ func (this *QRubberBand) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
-func (this *QRubberBand) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QRubberBand) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
+	var convArg0 = arg0.QShowEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -240,8 +240,8 @@ func (this *QRubberBand) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QRubberBand) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QRubberBand) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = arg0.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -250,8 +250,8 @@ func (this *QRubberBand) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void moveEvent(QMoveEvent *)
-func (this *QRubberBand) MoveEvent(arg0 *qtgui.QMoveEvent /*777 QMoveEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QRubberBand) MoveEvent(arg0 qtgui.QMoveEvent_ITF /*777 QMoveEvent **/) {
+	var convArg0 = arg0.QMoveEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand9moveEventEP10QMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -260,8 +260,8 @@ func (this *QRubberBand) MoveEvent(arg0 *qtgui.QMoveEvent /*777 QMoveEvent **/) 
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionRubberBand *)
-func (this *QRubberBand) InitStyleOption(option *QStyleOptionRubberBand /*777 QStyleOptionRubberBand **/) {
-	var convArg0 = option.GetCthis()
+func (this *QRubberBand) InitStyleOption(option QStyleOptionRubberBand_ITF /*777 QStyleOptionRubberBand **/) {
+	var convArg0 = option.QStyleOptionRubberBand_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QRubberBand15initStyleOptionEP22QStyleOptionRubberBand", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

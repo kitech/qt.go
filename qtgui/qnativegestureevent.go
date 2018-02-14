@@ -63,10 +63,10 @@ func (*QNativeGestureEvent) NewFromPointer(cthis unsafe.Pointer) *QNativeGesture
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNativeGestureEvent(Qt::NativeGestureType, const QPointF &, const QPointF &, const QPointF &, qreal, ulong, quint64)
-func NewQNativeGestureEvent(type_ int, localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenPos *qtcore.QPointF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
-	var convArg1 = localPos.GetCthis()
-	var convArg2 = windowPos.GetCthis()
-	var convArg3 = screenPos.GetCthis()
+func NewQNativeGestureEvent(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
+	var convArg1 = localPos.QPointF_PTR().GetCthis()
+	var convArg2 = windowPos.QPointF_PTR().GetCthis()
+	var convArg3 = screenPos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QNativeGestureEventC2EN2Qt17NativeGestureTypeERK7QPointFS4_S4_dmy", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3, value, sequenceId, intArgument)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQNativeGestureEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -78,11 +78,11 @@ func NewQNativeGestureEvent(type_ int, localPos *qtcore.QPointF, windowPos *qtco
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QNativeGestureEvent(Qt::NativeGestureType, const QTouchDevice *, const QPointF &, const QPointF &, const QPointF &, qreal, ulong, quint64)
-func NewQNativeGestureEvent_1(type_ int, dev *QTouchDevice /*777 const QTouchDevice **/, localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenPos *qtcore.QPointF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
-	var convArg1 = dev.GetCthis()
-	var convArg2 = localPos.GetCthis()
-	var convArg3 = windowPos.GetCthis()
-	var convArg4 = screenPos.GetCthis()
+func NewQNativeGestureEvent_1(type_ int, dev QTouchDevice_ITF /*777 const QTouchDevice **/, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
+	var convArg1 = dev.QTouchDevice_PTR().GetCthis()
+	var convArg2 = localPos.QPointF_PTR().GetCthis()
+	var convArg3 = windowPos.QPointF_PTR().GetCthis()
+	var convArg4 = screenPos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QNativeGestureEventC2EN2Qt17NativeGestureTypeEPK12QTouchDeviceRK7QPointFS7_S7_dmy", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3, convArg4, value, sequenceId, intArgument)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQNativeGestureEventFromPointer(unsafe.Pointer(uintptr(rv)))

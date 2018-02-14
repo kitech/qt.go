@@ -77,10 +77,10 @@ func NewQPageLayout() *QPageLayout {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPageLayout(const QPageSize &, enum QPageLayout::Orientation, const QMarginsF &, enum QPageLayout::Unit, const QMarginsF &)
-func NewQPageLayout_1(pageSize *QPageSize, orientation int, margins *qtcore.QMarginsF, units int, minMargins *qtcore.QMarginsF) *QPageLayout {
-	var convArg0 = pageSize.GetCthis()
-	var convArg2 = margins.GetCthis()
-	var convArg4 = minMargins.GetCthis()
+func NewQPageLayout_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int, minMargins qtcore.QMarginsF_ITF) *QPageLayout {
+	var convArg0 = pageSize.QPageSize_PTR().GetCthis()
+	var convArg2 = margins.QMarginsF_PTR().GetCthis()
+	var convArg4 = minMargins.QMarginsF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayoutC2ERK9QPageSizeNS_11OrientationERK9QMarginsFNS_4UnitES6_", qtrt.FFI_TYPE_POINTER, convArg0, orientation, convArg2, units, convArg4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,8 +103,8 @@ func DeleteQPageLayout(this *QPageLayout) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPageLayout &)
-func (this *QPageLayout) Swap(other *QPageLayout) {
-	var convArg0 = other.GetCthis()
+func (this *QPageLayout) Swap(other QPageLayout_ITF) {
+	var convArg0 = other.QPageLayout_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -113,8 +113,8 @@ func (this *QPageLayout) Swap(other *QPageLayout) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEquivalentTo(const QPageLayout &)
-func (this *QPageLayout) IsEquivalentTo(other *QPageLayout) bool {
-	var convArg0 = other.GetCthis()
+func (this *QPageLayout) IsEquivalentTo(other QPageLayout_ITF) bool {
+	var convArg0 = other.QPageLayout_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout14isEquivalentToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -153,9 +153,9 @@ func (this *QPageLayout) Mode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPageSize(const QPageSize &, const QMarginsF &)
-func (this *QPageLayout) SetPageSize(pageSize *QPageSize, minMargins *qtcore.QMarginsF) {
-	var convArg0 = pageSize.GetCthis()
-	var convArg1 = minMargins.GetCthis()
+func (this *QPageLayout) SetPageSize(pageSize QPageSize_ITF, minMargins qtcore.QMarginsF_ITF) {
+	var convArg0 = pageSize.QPageSize_PTR().GetCthis()
+	var convArg1 = minMargins.QMarginsF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -214,8 +214,8 @@ func (this *QPageLayout) Units() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setMargins(const QMarginsF &)
-func (this *QPageLayout) SetMargins(margins *qtcore.QMarginsF) bool {
-	var convArg0 = margins.GetCthis()
+func (this *QPageLayout) SetMargins(margins qtcore.QMarginsF_ITF) bool {
+	var convArg0 = margins.QMarginsF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout10setMarginsERK9QMarginsF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -313,8 +313,8 @@ func (this *QPageLayout) MarginsPixels(resolution int) *qtcore.QMargins /*123*/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumMargins(const QMarginsF &)
-func (this *QPageLayout) SetMinimumMargins(minMargins *qtcore.QMarginsF) {
-	var convArg0 = minMargins.GetCthis()
+func (this *QPageLayout) SetMinimumMargins(minMargins qtcore.QMarginsF_ITF) {
+	var convArg0 = minMargins.QMarginsF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -88,8 +88,8 @@ func DeleteQNetworkAddressEntry(this *QNetworkAddressEntry) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkAddressEntry &)
-func (this *QNetworkAddressEntry) Swap(other *QNetworkAddressEntry) {
-	var convArg0 = other.GetCthis()
+func (this *QNetworkAddressEntry) Swap(other QNetworkAddressEntry_ITF) {
+	var convArg0 = other.QNetworkAddressEntry_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -110,8 +110,8 @@ func (this *QNetworkAddressEntry) Ip() *QHostAddress /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIp(const QHostAddress &)
-func (this *QNetworkAddressEntry) SetIp(newIp *QHostAddress) {
-	var convArg0 = newIp.GetCthis()
+func (this *QNetworkAddressEntry) SetIp(newIp QHostAddress_ITF) {
+	var convArg0 = newIp.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry5setIpERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -132,8 +132,8 @@ func (this *QNetworkAddressEntry) Netmask() *QHostAddress /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNetmask(const QHostAddress &)
-func (this *QNetworkAddressEntry) SetNetmask(newNetmask *QHostAddress) {
-	var convArg0 = newNetmask.GetCthis()
+func (this *QNetworkAddressEntry) SetNetmask(newNetmask QHostAddress_ITF) {
+	var convArg0 = newNetmask.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry10setNetmaskERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -173,8 +173,8 @@ func (this *QNetworkAddressEntry) Broadcast() *QHostAddress /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBroadcast(const QHostAddress &)
-func (this *QNetworkAddressEntry) SetBroadcast(newBroadcast *QHostAddress) {
-	var convArg0 = newBroadcast.GetCthis()
+func (this *QNetworkAddressEntry) SetBroadcast(newBroadcast QHostAddress_ITF) {
+	var convArg0 = newBroadcast.QHostAddress_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry12setBroadcastERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

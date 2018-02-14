@@ -75,8 +75,8 @@ func NewQConicalGradient() *QConicalGradient {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QConicalGradient(const QPointF &, qreal)
-func NewQConicalGradient_1(center *qtcore.QPointF, startAngle float64) *QConicalGradient {
-	var convArg0 = center.GetCthis()
+func NewQConicalGradient_1(center qtcore.QPointF_ITF, startAngle float64) *QConicalGradient {
+	var convArg0 = center.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QConicalGradientC2ERK7QPointFd", qtrt.FFI_TYPE_POINTER, convArg0, startAngle)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQConicalGradientFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -112,8 +112,8 @@ func (this *QConicalGradient) Center() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCenter(const QPointF &)
-func (this *QConicalGradient) SetCenter(center *qtcore.QPointF) {
-	var convArg0 = center.GetCthis()
+func (this *QConicalGradient) SetCenter(center qtcore.QPointF_ITF) {
+	var convArg0 = center.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QConicalGradient9setCenterERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

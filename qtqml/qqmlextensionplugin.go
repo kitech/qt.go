@@ -78,8 +78,8 @@ func (this *QQmlExtensionPlugin) MetaObject() *qtcore.QMetaObject /*777 const QM
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExtensionPlugin(QObject *)
-func NewQQmlExtensionPlugin(parent *qtcore.QObject /*777 QObject **/) *QQmlExtensionPlugin {
-	var convArg0 = parent.GetCthis()
+func NewQQmlExtensionPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlExtensionPlugin {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQmlExtensionPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlExtensionPluginFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -124,8 +124,8 @@ func (this *QQmlExtensionPlugin) RegisterTypes(uri string) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void initializeEngine(QQmlEngine *, const char *)
-func (this *QQmlExtensionPlugin) InitializeEngine(engine *QQmlEngine /*777 QQmlEngine **/, uri string) {
-	var convArg0 = engine.GetCthis()
+func (this *QQmlExtensionPlugin) InitializeEngine(engine QQmlEngine_ITF /*777 QQmlEngine **/, uri string) {
+	var convArg0 = engine.QQmlEngine_PTR().GetCthis()
 	var convArg1 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQmlExtensionPlugin16initializeEngineEP10QQmlEnginePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)

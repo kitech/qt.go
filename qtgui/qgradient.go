@@ -106,8 +106,8 @@ func (this *QGradient) Spread() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColorAt(qreal, const QColor &)
-func (this *QGradient) SetColorAt(pos float64, color *QColor) {
-	var convArg1 = color.GetCthis()
+func (this *QGradient) SetColorAt(pos float64, color QColor_ITF) {
+	var convArg1 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient10setColorAtEdRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

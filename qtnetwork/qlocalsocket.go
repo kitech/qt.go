@@ -31,12 +31,12 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// qint64 readData(char *, qint64)
+// long long readData(char *, qint64)
 func (this *QLocalSocket) InheritReadData(f func(arg0 string, arg1 int64) int64) {
 	qtrt.SetAllInheritCallback(this, "readData", f)
 }
 
-// qint64 writeData(const char *, qint64)
+// long long writeData(const char *, qint64)
 func (this *QLocalSocket) InheritWriteData(f func(arg0 string, arg1 int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
@@ -83,8 +83,8 @@ func (this *QLocalSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLocalSocket(QObject *)
-func NewQLocalSocket(parent *qtcore.QObject /*777 QObject **/) *QLocalSocket {
-	var convArg0 = parent.GetCthis()
+func NewQLocalSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalSocket {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLocalSocketFromPointer(unsafe.Pointer(uintptr(rv)))

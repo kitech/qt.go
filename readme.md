@@ -14,6 +14,12 @@ Qt5 binding for Go (Golang) but without CGO aims get go's compile speed again. I
 * full signal/slot support
 * protected method override support
 
+### Multiple platforms support
+
+It's should be support all platforms.
+
+Now only tested Linux/Android.
+
 ### Installation
 
 ##### qt.go:

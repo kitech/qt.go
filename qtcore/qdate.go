@@ -303,8 +303,8 @@ func (this *QDate) ToString_1(format string) string {
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString toString(QStringView)
-func (this *QDate) ToString_2(format *QStringView /*123*/) string {
-	var convArg0 = format.GetCthis()
+func (this *QDate) ToString_2(format QStringView_ITF /*123*/) string {
+	var convArg0 = format.QStringView_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -381,8 +381,8 @@ func (this *QDate) AddYears(years int) *QDate /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 daysTo(const QDate &)
-func (this *QDate) DaysTo(arg0 *QDate) int64 {
-	var convArg0 = arg0.GetCthis()
+func (this *QDate) DaysTo(arg0 QDate_ITF) int64 {
+	var convArg0 = arg0.QDate_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate6daysToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222

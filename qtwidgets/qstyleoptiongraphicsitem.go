@@ -90,13 +90,13 @@ func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] qreal levelOfDetailFromTransform(const QTransform &)
-func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) float64 {
-	var convArg0 = worldTransform.GetCthis()
+func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform(worldTransform qtgui.QTransform_ITF) float64 {
+	var convArg0 = worldTransform.QTransform_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
-func QStyleOptionGraphicsItem_LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) float64 {
+func QStyleOptionGraphicsItem_LevelOfDetailFromTransform(worldTransform qtgui.QTransform_ITF) float64 {
 	var nilthis *QStyleOptionGraphicsItem
 	rv := nilthis.LevelOfDetailFromTransform(worldTransform)
 	return rv

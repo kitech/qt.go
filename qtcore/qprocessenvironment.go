@@ -87,8 +87,8 @@ func DeleteQProcessEnvironment(this *QProcessEnvironment) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QProcessEnvironment &)
-func (this *QProcessEnvironment) Swap(other *QProcessEnvironment) {
-	var convArg0 = other.GetCthis()
+func (this *QProcessEnvironment) Swap(other QProcessEnvironment_ITF) {
+	var convArg0 = other.QProcessEnvironment_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

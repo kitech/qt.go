@@ -101,8 +101,8 @@ func (this *QGraphicsSceneContextMenuEvent) Pos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
-func (this *QGraphicsSceneContextMenuEvent) SetPos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneContextMenuEvent) SetPos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -123,8 +123,8 @@ func (this *QGraphicsSceneContextMenuEvent) ScenePos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
-func (this *QGraphicsSceneContextMenuEvent) SetScenePos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneContextMenuEvent) SetScenePos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -145,8 +145,8 @@ func (this *QGraphicsSceneContextMenuEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
-func (this *QGraphicsSceneContextMenuEvent) SetScreenPos(pos *qtcore.QPoint) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneContextMenuEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

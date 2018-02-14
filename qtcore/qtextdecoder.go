@@ -64,8 +64,8 @@ func (*QTextDecoder) NewFromPointer(cthis unsafe.Pointer) *QTextDecoder {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextDecoder(const QTextCodec *)
-func NewQTextDecoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextDecoder {
-	var convArg0 = codec.GetCthis()
+func NewQTextDecoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextDecoder {
+	var convArg0 = codec.QTextCodec_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDecoderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -77,8 +77,8 @@ func NewQTextDecoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextDecoder
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDecoder(const QTextCodec *, QTextCodec::ConversionFlags)
-func NewQTextDecoder_1(codec *QTextCodec /*777 const QTextCodec **/, flags int) *QTextDecoder {
-	var convArg0 = codec.GetCthis()
+func NewQTextDecoder_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextDecoder {
+	var convArg0 = codec.QTextCodec_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec6QFlagsINS0_14ConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDecoderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,8 +116,8 @@ func (this *QTextDecoder) ToUnicode(chars string, len int) string {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const QByteArray &)
-func (this *QTextDecoder) ToUnicode_1(ba *QByteArray) string {
-	var convArg0 = ba.GetCthis()
+func (this *QTextDecoder) ToUnicode_1(ba QByteArray_ITF) string {
+	var convArg0 = ba.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))

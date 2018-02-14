@@ -78,8 +78,8 @@ func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextObject(QTextDocument *)
-func NewQTextObject(doc *QTextDocument /*777 QTextDocument **/) *QTextObject {
-	var convArg0 = doc.GetCthis()
+func NewQTextObject(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextObject {
+	var convArg0 = doc.QTextDocument_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextObjectC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextObjectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -101,8 +101,8 @@ func DeleteQTextObject(this *QTextObject) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setFormat(const QTextFormat &)
-func (this *QTextObject) SetFormat(format *QTextFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QTextObject) SetFormat(format QTextFormat_ITF) {
+	var convArg0 = format.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextObject9setFormatERK11QTextFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

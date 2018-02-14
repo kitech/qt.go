@@ -87,8 +87,8 @@ func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *)
-func NewQPropertyAnimation(parent *QObject /*777 QObject **/) *QPropertyAnimation {
-	var convArg0 = parent.GetCthis()
+func NewQPropertyAnimation(parent QObject_ITF /*777 QObject **/) *QPropertyAnimation {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -99,10 +99,10 @@ func NewQPropertyAnimation(parent *QObject /*777 QObject **/) *QPropertyAnimatio
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *, const QByteArray &, QObject *)
-func NewQPropertyAnimation_1(target *QObject /*777 QObject **/, propertyName *QByteArray, parent *QObject /*777 QObject **/) *QPropertyAnimation {
-	var convArg0 = target.GetCthis()
-	var convArg1 = propertyName.GetCthis()
-	var convArg2 = parent.GetCthis()
+func NewQPropertyAnimation_1(target QObject_ITF /*777 QObject **/, propertyName QByteArray_ITF, parent QObject_ITF /*777 QObject **/) *QPropertyAnimation {
+	var convArg0 = target.QObject_PTR().GetCthis()
+	var convArg1 = propertyName.QByteArray_PTR().GetCthis()
+	var convArg2 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -134,8 +134,8 @@ func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTargetObject(QObject *)
-func (this *QPropertyAnimation) SetTargetObject(target *QObject /*777 QObject **/) {
-	var convArg0 = target.GetCthis()
+func (this *QPropertyAnimation) SetTargetObject(target QObject_ITF /*777 QObject **/) {
+	var convArg0 = target.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation15setTargetObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -156,8 +156,8 @@ func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPropertyName(const QByteArray &)
-func (this *QPropertyAnimation) SetPropertyName(propertyName *QByteArray) {
-	var convArg0 = propertyName.GetCthis()
+func (this *QPropertyAnimation) SetPropertyName(propertyName QByteArray_ITF) {
+	var convArg0 = propertyName.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -166,8 +166,8 @@ func (this *QPropertyAnimation) SetPropertyName(propertyName *QByteArray) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QPropertyAnimation) Event(event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QPropertyAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -177,8 +177,8 @@ func (this *QPropertyAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentValue(const QVariant &)
-func (this *QPropertyAnimation) UpdateCurrentValue(value *QVariant) {
-	var convArg0 = value.GetCthis()
+func (this *QPropertyAnimation) UpdateCurrentValue(value QVariant_ITF) {
+	var convArg0 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation18updateCurrentValueERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

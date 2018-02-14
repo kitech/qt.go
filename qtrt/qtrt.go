@@ -38,11 +38,19 @@ func Cmemset(p unsafe.Pointer, c int, n int) {
 type CObject struct {
 	Cthis unsafe.Pointer
 }
-
 type GetCthiser interface {
 	GetCthis() unsafe.Pointer
 }
 
+func (this *CObject) GetCthis_() unsafe.Pointer {
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
+}
+
+///////////
 var DebugFinal bool = false
 
 func objectFinalBefore(o interface{}) {

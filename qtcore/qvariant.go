@@ -132,8 +132,8 @@ func NewQVariant_3(typeId int, copy unsafe.Pointer /*666*/, flags uint) *QVarian
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(QDataStream &)
-func NewQVariant_4(s *QDataStream) *QVariant {
-	var convArg0 = s.GetCthis()
+func NewQVariant_4(s QDataStream_ITF) *QVariant {
+	var convArg0 = s.QDataStream_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ER11QDataStream", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -243,8 +243,8 @@ func NewQVariant_12(str string) *QVariant {
 // index:13
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QByteArray &)
-func NewQVariant_13(bytearray *QByteArray) *QVariant {
-	var convArg0 = bytearray.GetCthis()
+func NewQVariant_13(bytearray QByteArray_ITF) *QVariant {
+	var convArg0 = bytearray.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -256,8 +256,8 @@ func NewQVariant_13(bytearray *QByteArray) *QVariant {
 // index:14
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QBitArray &)
-func NewQVariant_14(bitarray *QBitArray) *QVariant {
-	var convArg0 = bitarray.GetCthis()
+func NewQVariant_14(bitarray QBitArray_ITF) *QVariant {
+	var convArg0 = bitarray.QBitArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK9QBitArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -283,8 +283,8 @@ func NewQVariant_15(string string) *QVariant {
 // index:16
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(QLatin1String)
-func NewQVariant_16(string *QLatin1String /*123*/) *QVariant {
-	var convArg0 = string.GetCthis()
+func NewQVariant_16(string QLatin1String_ITF /*123*/) *QVariant {
+	var convArg0 = string.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2E13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -296,8 +296,8 @@ func NewQVariant_16(string *QLatin1String /*123*/) *QVariant {
 // index:17
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QStringList &)
-func NewQVariant_17(stringlist *QStringList) *QVariant {
-	var convArg0 = stringlist.GetCthis()
+func NewQVariant_17(stringlist QStringList_ITF) *QVariant {
+	var convArg0 = stringlist.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -309,8 +309,8 @@ func NewQVariant_17(stringlist *QStringList) *QVariant {
 // index:18
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(QChar)
-func NewQVariant_18(qchar *QChar /*123*/) *QVariant {
-	var convArg0 = qchar.GetCthis()
+func NewQVariant_18(qchar QChar_ITF /*123*/) *QVariant {
+	var convArg0 = qchar.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2E5QChar", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -322,8 +322,8 @@ func NewQVariant_18(qchar *QChar /*123*/) *QVariant {
 // index:19
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QDate &)
-func NewQVariant_19(date *QDate) *QVariant {
-	var convArg0 = date.GetCthis()
+func NewQVariant_19(date QDate_ITF) *QVariant {
+	var convArg0 = date.QDate_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK5QDate", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -335,8 +335,8 @@ func NewQVariant_19(date *QDate) *QVariant {
 // index:20
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QTime &)
-func NewQVariant_20(time *QTime) *QVariant {
-	var convArg0 = time.GetCthis()
+func NewQVariant_20(time QTime_ITF) *QVariant {
+	var convArg0 = time.QTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK5QTime", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -348,8 +348,8 @@ func NewQVariant_20(time *QTime) *QVariant {
 // index:21
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QDateTime &)
-func NewQVariant_21(datetime *QDateTime) *QVariant {
-	var convArg0 = datetime.GetCthis()
+func NewQVariant_21(datetime QDateTime_ITF) *QVariant {
+	var convArg0 = datetime.QDateTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK9QDateTime", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -361,8 +361,8 @@ func NewQVariant_21(datetime *QDateTime) *QVariant {
 // index:22
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QSize &)
-func NewQVariant_22(size *QSize) *QVariant {
-	var convArg0 = size.GetCthis()
+func NewQVariant_22(size QSize_ITF) *QVariant {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK5QSize", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -374,8 +374,8 @@ func NewQVariant_22(size *QSize) *QVariant {
 // index:23
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QSizeF &)
-func NewQVariant_23(size *QSizeF) *QVariant {
-	var convArg0 = size.GetCthis()
+func NewQVariant_23(size QSizeF_ITF) *QVariant {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK6QSizeF", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -387,8 +387,8 @@ func NewQVariant_23(size *QSizeF) *QVariant {
 // index:24
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QPoint &)
-func NewQVariant_24(pt *QPoint) *QVariant {
-	var convArg0 = pt.GetCthis()
+func NewQVariant_24(pt QPoint_ITF) *QVariant {
+	var convArg0 = pt.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -400,8 +400,8 @@ func NewQVariant_24(pt *QPoint) *QVariant {
 // index:25
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QPointF &)
-func NewQVariant_25(pt *QPointF) *QVariant {
-	var convArg0 = pt.GetCthis()
+func NewQVariant_25(pt QPointF_ITF) *QVariant {
+	var convArg0 = pt.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK7QPointF", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -413,8 +413,8 @@ func NewQVariant_25(pt *QPointF) *QVariant {
 // index:26
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QLine &)
-func NewQVariant_26(line *QLine) *QVariant {
-	var convArg0 = line.GetCthis()
+func NewQVariant_26(line QLine_ITF) *QVariant {
+	var convArg0 = line.QLine_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK5QLine", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -426,8 +426,8 @@ func NewQVariant_26(line *QLine) *QVariant {
 // index:27
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QLineF &)
-func NewQVariant_27(line *QLineF) *QVariant {
-	var convArg0 = line.GetCthis()
+func NewQVariant_27(line QLineF_ITF) *QVariant {
+	var convArg0 = line.QLineF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK6QLineF", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -439,8 +439,8 @@ func NewQVariant_27(line *QLineF) *QVariant {
 // index:28
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QRect &)
-func NewQVariant_28(rect *QRect) *QVariant {
-	var convArg0 = rect.GetCthis()
+func NewQVariant_28(rect QRect_ITF) *QVariant {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK5QRect", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -452,8 +452,8 @@ func NewQVariant_28(rect *QRect) *QVariant {
 // index:29
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QRectF &)
-func NewQVariant_29(rect *QRectF) *QVariant {
-	var convArg0 = rect.GetCthis()
+func NewQVariant_29(rect QRectF_ITF) *QVariant {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK6QRectF", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -465,8 +465,8 @@ func NewQVariant_29(rect *QRectF) *QVariant {
 // index:30
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QLocale &)
-func NewQVariant_30(locale *QLocale) *QVariant {
-	var convArg0 = locale.GetCthis()
+func NewQVariant_30(locale QLocale_ITF) *QVariant {
+	var convArg0 = locale.QLocale_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK7QLocale", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -478,8 +478,8 @@ func NewQVariant_30(locale *QLocale) *QVariant {
 // index:31
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QRegExp &)
-func NewQVariant_31(regExp *QRegExp) *QVariant {
-	var convArg0 = regExp.GetCthis()
+func NewQVariant_31(regExp QRegExp_ITF) *QVariant {
+	var convArg0 = regExp.QRegExp_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK7QRegExp", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -491,8 +491,8 @@ func NewQVariant_31(regExp *QRegExp) *QVariant {
 // index:32
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QRegularExpression &)
-func NewQVariant_32(re *QRegularExpression) *QVariant {
-	var convArg0 = re.GetCthis()
+func NewQVariant_32(re QRegularExpression_ITF) *QVariant {
+	var convArg0 = re.QRegularExpression_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK18QRegularExpression", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -504,8 +504,8 @@ func NewQVariant_32(re *QRegularExpression) *QVariant {
 // index:33
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QUrl &)
-func NewQVariant_33(url *QUrl) *QVariant {
-	var convArg0 = url.GetCthis()
+func NewQVariant_33(url QUrl_ITF) *QVariant {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -517,8 +517,8 @@ func NewQVariant_33(url *QUrl) *QVariant {
 // index:34
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QEasingCurve &)
-func NewQVariant_34(easing *QEasingCurve) *QVariant {
-	var convArg0 = easing.GetCthis()
+func NewQVariant_34(easing QEasingCurve_ITF) *QVariant {
+	var convArg0 = easing.QEasingCurve_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK12QEasingCurve", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -530,8 +530,8 @@ func NewQVariant_34(easing *QEasingCurve) *QVariant {
 // index:35
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QUuid &)
-func NewQVariant_35(uuid *QUuid) *QVariant {
-	var convArg0 = uuid.GetCthis()
+func NewQVariant_35(uuid QUuid_ITF) *QVariant {
+	var convArg0 = uuid.QUuid_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK5QUuid", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -543,8 +543,8 @@ func NewQVariant_35(uuid *QUuid) *QVariant {
 // index:36
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QModelIndex &)
-func NewQVariant_36(modelIndex *QModelIndex) *QVariant {
-	var convArg0 = modelIndex.GetCthis()
+func NewQVariant_36(modelIndex QModelIndex_ITF) *QVariant {
+	var convArg0 = modelIndex.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK11QModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -556,8 +556,8 @@ func NewQVariant_36(modelIndex *QModelIndex) *QVariant {
 // index:37
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QPersistentModelIndex &)
-func NewQVariant_37(modelIndex *QPersistentModelIndex) *QVariant {
-	var convArg0 = modelIndex.GetCthis()
+func NewQVariant_37(modelIndex QPersistentModelIndex_ITF) *QVariant {
+	var convArg0 = modelIndex.QPersistentModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK21QPersistentModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -569,8 +569,8 @@ func NewQVariant_37(modelIndex *QPersistentModelIndex) *QVariant {
 // index:38
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QJsonValue &)
-func NewQVariant_38(jsonValue *QJsonValue) *QVariant {
-	var convArg0 = jsonValue.GetCthis()
+func NewQVariant_38(jsonValue QJsonValue_ITF) *QVariant {
+	var convArg0 = jsonValue.QJsonValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK10QJsonValue", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -582,8 +582,8 @@ func NewQVariant_38(jsonValue *QJsonValue) *QVariant {
 // index:39
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QJsonObject &)
-func NewQVariant_39(jsonObject *QJsonObject) *QVariant {
-	var convArg0 = jsonObject.GetCthis()
+func NewQVariant_39(jsonObject QJsonObject_ITF) *QVariant {
+	var convArg0 = jsonObject.QJsonObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK11QJsonObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -595,8 +595,8 @@ func NewQVariant_39(jsonObject *QJsonObject) *QVariant {
 // index:40
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QJsonArray &)
-func NewQVariant_40(jsonArray *QJsonArray) *QVariant {
-	var convArg0 = jsonArray.GetCthis()
+func NewQVariant_40(jsonArray QJsonArray_ITF) *QVariant {
+	var convArg0 = jsonArray.QJsonArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK10QJsonArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -608,8 +608,8 @@ func NewQVariant_40(jsonArray *QJsonArray) *QVariant {
 // index:41
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QJsonDocument &)
-func NewQVariant_41(jsonDocument *QJsonDocument) *QVariant {
-	var convArg0 = jsonDocument.GetCthis()
+func NewQVariant_41(jsonDocument QJsonDocument_ITF) *QVariant {
+	var convArg0 = jsonDocument.QJsonDocument_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK13QJsonDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -632,8 +632,8 @@ func DeleteQVariant(this *QVariant) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QVariant &)
-func (this *QVariant) Swap(other *QVariant) {
-	var convArg0 = other.GetCthis()
+func (this *QVariant) Swap(other QVariant_ITF) {
+	var convArg0 = other.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariant4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1167,8 +1167,8 @@ func (this *QVariant) ToJsonDocument() *QJsonDocument /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void load(QDataStream &)
-func (this *QVariant) Load(ds *QDataStream) {
-	var convArg0 = ds.GetCthis()
+func (this *QVariant) Load(ds QDataStream_ITF) {
+	var convArg0 = ds.QDataStream_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariant4loadER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1177,8 +1177,8 @@ func (this *QVariant) Load(ds *QDataStream) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void save(QDataStream &)
-func (this *QVariant) Save(ds *QDataStream) {
-	var convArg0 = ds.GetCthis()
+func (this *QVariant) Save(ds QDataStream_ITF) {
+	var convArg0 = ds.QDataStream_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant4saveER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1258,8 +1258,8 @@ func (this *QVariant) Create(type_ int, copy unsafe.Pointer /*666*/) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool cmp(const QVariant &)
-func (this *QVariant) Cmp(other *QVariant) bool {
-	var convArg0 = other.GetCthis()
+func (this *QVariant) Cmp(other QVariant_ITF) bool {
+	var convArg0 = other.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant3cmpERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1269,8 +1269,8 @@ func (this *QVariant) Cmp(other *QVariant) bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int compare(const QVariant &)
-func (this *QVariant) Compare(other *QVariant) int {
-	var convArg0 = other.GetCthis()
+func (this *QVariant) Compare(other QVariant_ITF) int {
+	var convArg0 = other.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7compareERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

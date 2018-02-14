@@ -96,13 +96,13 @@ func (this *ExternalRefCountData) Destroy() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QtSharedPointer::ExternalRefCountData * getAndRef(const QObject *)
-func (this *ExternalRefCountData) GetAndRef(arg0 *QObject /*777 const QObject **/) unsafe.Pointer /*666*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *ExternalRefCountData) GetAndRef(arg0 QObject_ITF /*777 const QObject **/) unsafe.Pointer /*666*/ {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData9getAndRefEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
-func ExternalRefCountData_GetAndRef(arg0 *QObject /*777 const QObject **/) unsafe.Pointer /*666*/ {
+func ExternalRefCountData_GetAndRef(arg0 QObject_ITF /*777 const QObject **/) unsafe.Pointer /*666*/ {
 	var nilthis *ExternalRefCountData
 	rv := nilthis.GetAndRef(arg0)
 	return rv
@@ -112,8 +112,8 @@ func ExternalRefCountData_GetAndRef(arg0 *QObject /*777 const QObject **/) unsaf
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setQObjectShared(const QObject *, _Bool)
-func (this *ExternalRefCountData) SetQObjectShared(arg0 *QObject /*777 const QObject **/, enable bool) {
-	var convArg0 = arg0.GetCthis()
+func (this *ExternalRefCountData) SetQObjectShared(arg0 QObject_ITF /*777 const QObject **/, enable bool) {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData16setQObjectSharedEPK7QObjectb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, enable)
 	qtrt.ErrPrint(err, rv)
 }
@@ -122,8 +122,8 @@ func (this *ExternalRefCountData) SetQObjectShared(arg0 *QObject /*777 const QOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void checkQObjectShared(const QObject *)
-func (this *ExternalRefCountData) CheckQObjectShared(arg0 *QObject /*777 const QObject **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *ExternalRefCountData) CheckQObjectShared(arg0 QObject_ITF /*777 const QObject **/) {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData18checkQObjectSharedEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -64,8 +64,8 @@ func (*QCollator) NewFromPointer(cthis unsafe.Pointer) *QCollator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCollator(const QLocale &)
-func NewQCollator(locale *QLocale) *QCollator {
-	var convArg0 = locale.GetCthis()
+func NewQCollator(locale QLocale_ITF) *QCollator {
+	var convArg0 = locale.QLocale_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollatorC2ERK7QLocale", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCollatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -88,8 +88,8 @@ func DeleteQCollator(this *QCollator) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QCollator &)
-func (this *QCollator) Swap(other *QCollator) {
-	var convArg0 = other.GetCthis()
+func (this *QCollator) Swap(other QCollator_ITF) {
+	var convArg0 = other.QCollator_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollator4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -98,8 +98,8 @@ func (this *QCollator) Swap(other *QCollator) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLocale(const QLocale &)
-func (this *QCollator) SetLocale(locale *QLocale) {
-	var convArg0 = locale.GetCthis()
+func (this *QCollator) SetLocale(locale QLocale_ITF) {
+	var convArg0 = locale.QLocale_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollator9setLocaleERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -191,9 +191,9 @@ func (this *QCollator) Compare(s1 string, s2 string) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, const QStringRef &)
-func (this *QCollator) Compare_1(s1 *QStringRef, s2 *QStringRef) int {
-	var convArg0 = s1.GetCthis()
-	var convArg1 = s2.GetCthis()
+func (this *QCollator) Compare_1(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
+	var convArg0 = s1.QStringRef_PTR().GetCthis()
+	var convArg1 = s2.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator7compareERK10QStringRefS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -203,9 +203,9 @@ func (this *QCollator) Compare_1(s1 *QStringRef, s2 *QStringRef) int {
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QChar *, int, const QChar *, int)
-func (this *QCollator) Compare_2(s1 *QChar /*777 const QChar **/, len1 int, s2 *QChar /*777 const QChar **/, len2 int) int {
-	var convArg0 = s1.GetCthis()
-	var convArg2 = s2.GetCthis()
+func (this *QCollator) Compare_2(s1 QChar_ITF /*777 const QChar **/, len1 int, s2 QChar_ITF /*777 const QChar **/, len2 int) int {
+	var convArg0 = s1.QChar_PTR().GetCthis()
+	var convArg2 = s2.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator7compareEPK5QChariS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len1, convArg2, len2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

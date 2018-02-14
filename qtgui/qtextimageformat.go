@@ -75,8 +75,8 @@ func NewQTextImageFormat() *QTextImageFormat {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextImageFormat(const QTextFormat &)
-func NewQTextImageFormat_1(format *QTextFormat) *QTextImageFormat {
-	var convArg0 = format.GetCthis()
+func NewQTextImageFormat_1(format QTextFormat_ITF) *QTextImageFormat {
+	var convArg0 = format.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextImageFormatFromPointer(unsafe.Pointer(uintptr(rv)))

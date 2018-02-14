@@ -101,8 +101,8 @@ func NewQQuaternion_2(scalar float32, xpos float32, ypos float32, zpos float32) 
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QQuaternion(float, const QVector3D &)
-func NewQQuaternion_3(scalar float32, vector *QVector3D) *QQuaternion {
-	var convArg1 = vector.GetCthis()
+func NewQQuaternion_3(scalar float32, vector QVector3D_ITF) *QQuaternion {
+	var convArg1 = vector.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternionC2EfRK9QVector3D", qtrt.FFI_TYPE_POINTER, scalar, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -114,8 +114,8 @@ func NewQQuaternion_3(scalar float32, vector *QVector3D) *QQuaternion {
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QQuaternion(const QVector4D &)
-func NewQQuaternion_4(vector *QVector4D) *QQuaternion {
-	var convArg0 = vector.GetCthis()
+func NewQQuaternion_4(vector QVector4D_ITF) *QQuaternion {
+	var convArg0 = vector.QVector4D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternionC2ERK9QVector4D", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -159,8 +159,8 @@ func (this *QQuaternion) Vector() *QVector3D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVector(const QVector3D &)
-func (this *QQuaternion) SetVector(vector *QVector3D) {
-	var convArg0 = vector.GetCthis()
+func (this *QQuaternion) SetVector(vector QVector3D_ITF) {
+	var convArg0 = vector.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion9setVectorERK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -254,14 +254,14 @@ func (this *QQuaternion) SetScalar(scalar float32) {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [4] float dotProduct(const QQuaternion &, const QQuaternion &)
-func (this *QQuaternion) DotProduct(q1 *QQuaternion, q2 *QQuaternion) float32 {
-	var convArg0 = q1.GetCthis()
-	var convArg1 = q2.GetCthis()
+func (this *QQuaternion) DotProduct(q1 QQuaternion_ITF, q2 QQuaternion_ITF) float32 {
+	var convArg0 = q1.QQuaternion_PTR().GetCthis()
+	var convArg1 = q2.QQuaternion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
-func QQuaternion_DotProduct(q1 *QQuaternion, q2 *QQuaternion) float32 {
+func QQuaternion_DotProduct(q1 QQuaternion_ITF, q2 QQuaternion_ITF) float32 {
 	var nilthis *QQuaternion
 	rv := nilthis.DotProduct(q1, q2)
 	return rv
@@ -348,8 +348,8 @@ func (this *QQuaternion) Conjugate() *QQuaternion /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [12] QVector3D rotatedVector(const QVector3D &)
-func (this *QQuaternion) RotatedVector(vector *QVector3D) *QVector3D /*123*/ {
-	var convArg0 = vector.GetCthis()
+func (this *QQuaternion) RotatedVector(vector QVector3D_ITF) *QVector3D /*123*/ {
+	var convArg0 = vector.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion13rotatedVectorERK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -373,8 +373,8 @@ func (this *QQuaternion) ToVector4D() *QVector4D /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void getAxisAndAngle(QVector3D *, float *)
-func (this *QQuaternion) GetAxisAndAngle(axis *QVector3D /*777 QVector3D **/, angle unsafe.Pointer /*666*/) {
-	var convArg0 = axis.GetCthis()
+func (this *QQuaternion) GetAxisAndAngle(axis QVector3D_ITF /*777 QVector3D **/, angle unsafe.Pointer /*666*/) {
+	var convArg0 = axis.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &angle)
 	qtrt.ErrPrint(err, rv)
 }
@@ -392,15 +392,15 @@ func (this *QQuaternion) GetAxisAndAngle_1(x unsafe.Pointer /*666*/, y unsafe.Po
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QQuaternion fromAxisAndAngle(const QVector3D &, float)
-func (this *QQuaternion) FromAxisAndAngle(axis *QVector3D, angle float32) *QQuaternion /*123*/ {
-	var convArg0 = axis.GetCthis()
+func (this *QQuaternion) FromAxisAndAngle(axis QVector3D_ITF, angle float32) *QQuaternion /*123*/ {
+	var convArg0 = axis.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion16fromAxisAndAngleERK9QVector3Df", qtrt.FFI_TYPE_POINTER, convArg0, angle)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
 }
-func QQuaternion_FromAxisAndAngle(axis *QVector3D, angle float32) *QQuaternion /*123*/ {
+func QQuaternion_FromAxisAndAngle(axis QVector3D_ITF, angle float32) *QQuaternion /*123*/ {
 	var nilthis *QQuaternion
 	rv := nilthis.FromAxisAndAngle(axis, angle)
 	return rv
@@ -439,15 +439,15 @@ func (this *QQuaternion) ToEulerAngles() *QVector3D /*123*/ {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [16] QQuaternion fromEulerAngles(const QVector3D &)
-func (this *QQuaternion) FromEulerAngles(eulerAngles *QVector3D) *QQuaternion /*123*/ {
-	var convArg0 = eulerAngles.GetCthis()
+func (this *QQuaternion) FromEulerAngles(eulerAngles QVector3D_ITF) *QQuaternion /*123*/ {
+	var convArg0 = eulerAngles.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion15fromEulerAnglesERK9QVector3D", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
 }
-func QQuaternion_FromEulerAngles(eulerAngles *QVector3D) *QQuaternion /*123*/ {
+func QQuaternion_FromEulerAngles(eulerAngles QVector3D_ITF) *QQuaternion /*123*/ {
 	var nilthis *QQuaternion
 	rv := nilthis.FromEulerAngles(eulerAngles)
 	return rv
@@ -483,10 +483,10 @@ func (this *QQuaternion) GetEulerAngles(pitch unsafe.Pointer /*666*/, yaw unsafe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getAxes(QVector3D *, QVector3D *, QVector3D *)
-func (this *QQuaternion) GetAxes(xAxis *QVector3D /*777 QVector3D **/, yAxis *QVector3D /*777 QVector3D **/, zAxis *QVector3D /*777 QVector3D **/) {
-	var convArg0 = xAxis.GetCthis()
-	var convArg1 = yAxis.GetCthis()
-	var convArg2 = zAxis.GetCthis()
+func (this *QQuaternion) GetAxes(xAxis QVector3D_ITF /*777 QVector3D **/, yAxis QVector3D_ITF /*777 QVector3D **/, zAxis QVector3D_ITF /*777 QVector3D **/) {
+	var convArg0 = xAxis.QVector3D_PTR().GetCthis()
+	var convArg1 = yAxis.QVector3D_PTR().GetCthis()
+	var convArg2 = zAxis.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion7getAxesEP9QVector3DS1_S1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -495,17 +495,17 @@ func (this *QQuaternion) GetAxes(xAxis *QVector3D /*777 QVector3D **/, yAxis *QV
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QQuaternion fromAxes(const QVector3D &, const QVector3D &, const QVector3D &)
-func (this *QQuaternion) FromAxes(xAxis *QVector3D, yAxis *QVector3D, zAxis *QVector3D) *QQuaternion /*123*/ {
-	var convArg0 = xAxis.GetCthis()
-	var convArg1 = yAxis.GetCthis()
-	var convArg2 = zAxis.GetCthis()
+func (this *QQuaternion) FromAxes(xAxis QVector3D_ITF, yAxis QVector3D_ITF, zAxis QVector3D_ITF) *QQuaternion /*123*/ {
+	var convArg0 = xAxis.QVector3D_PTR().GetCthis()
+	var convArg1 = yAxis.QVector3D_PTR().GetCthis()
+	var convArg2 = zAxis.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion8fromAxesERK9QVector3DS2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
 }
-func QQuaternion_FromAxes(xAxis *QVector3D, yAxis *QVector3D, zAxis *QVector3D) *QQuaternion /*123*/ {
+func QQuaternion_FromAxes(xAxis QVector3D_ITF, yAxis QVector3D_ITF, zAxis QVector3D_ITF) *QQuaternion /*123*/ {
 	var nilthis *QQuaternion
 	rv := nilthis.FromAxes(xAxis, yAxis, zAxis)
 	return rv
@@ -515,16 +515,16 @@ func QQuaternion_FromAxes(xAxis *QVector3D, yAxis *QVector3D, zAxis *QVector3D) 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QQuaternion fromDirection(const QVector3D &, const QVector3D &)
-func (this *QQuaternion) FromDirection(direction *QVector3D, up *QVector3D) *QQuaternion /*123*/ {
-	var convArg0 = direction.GetCthis()
-	var convArg1 = up.GetCthis()
+func (this *QQuaternion) FromDirection(direction QVector3D_ITF, up QVector3D_ITF) *QQuaternion /*123*/ {
+	var convArg0 = direction.QVector3D_PTR().GetCthis()
+	var convArg1 = up.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion13fromDirectionERK9QVector3DS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
 }
-func QQuaternion_FromDirection(direction *QVector3D, up *QVector3D) *QQuaternion /*123*/ {
+func QQuaternion_FromDirection(direction QVector3D_ITF, up QVector3D_ITF) *QQuaternion /*123*/ {
 	var nilthis *QQuaternion
 	rv := nilthis.FromDirection(direction, up)
 	return rv
@@ -534,16 +534,16 @@ func QQuaternion_FromDirection(direction *QVector3D, up *QVector3D) *QQuaternion
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QQuaternion rotationTo(const QVector3D &, const QVector3D &)
-func (this *QQuaternion) RotationTo(from *QVector3D, to *QVector3D) *QQuaternion /*123*/ {
-	var convArg0 = from.GetCthis()
-	var convArg1 = to.GetCthis()
+func (this *QQuaternion) RotationTo(from QVector3D_ITF, to QVector3D_ITF) *QQuaternion /*123*/ {
+	var convArg0 = from.QVector3D_PTR().GetCthis()
+	var convArg1 = to.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion10rotationToERK9QVector3DS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
 }
-func QQuaternion_RotationTo(from *QVector3D, to *QVector3D) *QQuaternion /*123*/ {
+func QQuaternion_RotationTo(from QVector3D_ITF, to QVector3D_ITF) *QQuaternion /*123*/ {
 	var nilthis *QQuaternion
 	rv := nilthis.RotationTo(from, to)
 	return rv
@@ -553,16 +553,16 @@ func QQuaternion_RotationTo(from *QVector3D, to *QVector3D) *QQuaternion /*123*/
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QQuaternion slerp(const QQuaternion &, const QQuaternion &, float)
-func (this *QQuaternion) Slerp(q1 *QQuaternion, q2 *QQuaternion, t float32) *QQuaternion /*123*/ {
-	var convArg0 = q1.GetCthis()
-	var convArg1 = q2.GetCthis()
+func (this *QQuaternion) Slerp(q1 QQuaternion_ITF, q2 QQuaternion_ITF, t float32) *QQuaternion /*123*/ {
+	var convArg0 = q1.QQuaternion_PTR().GetCthis()
+	var convArg1 = q2.QQuaternion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion5slerpERKS_S1_f", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
 }
-func QQuaternion_Slerp(q1 *QQuaternion, q2 *QQuaternion, t float32) *QQuaternion /*123*/ {
+func QQuaternion_Slerp(q1 QQuaternion_ITF, q2 QQuaternion_ITF, t float32) *QQuaternion /*123*/ {
 	var nilthis *QQuaternion
 	rv := nilthis.Slerp(q1, q2, t)
 	return rv
@@ -572,16 +572,16 @@ func QQuaternion_Slerp(q1 *QQuaternion, q2 *QQuaternion, t float32) *QQuaternion
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QQuaternion nlerp(const QQuaternion &, const QQuaternion &, float)
-func (this *QQuaternion) Nlerp(q1 *QQuaternion, q2 *QQuaternion, t float32) *QQuaternion /*123*/ {
-	var convArg0 = q1.GetCthis()
-	var convArg1 = q2.GetCthis()
+func (this *QQuaternion) Nlerp(q1 QQuaternion_ITF, q2 QQuaternion_ITF, t float32) *QQuaternion /*123*/ {
+	var convArg0 = q1.QQuaternion_PTR().GetCthis()
+	var convArg1 = q2.QQuaternion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion5nlerpERKS_S1_f", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
 }
-func QQuaternion_Nlerp(q1 *QQuaternion, q2 *QQuaternion, t float32) *QQuaternion /*123*/ {
+func QQuaternion_Nlerp(q1 QQuaternion_ITF, q2 QQuaternion_ITF, t float32) *QQuaternion /*123*/ {
 	var nilthis *QQuaternion
 	rv := nilthis.Nlerp(q1, q2, t)
 	return rv

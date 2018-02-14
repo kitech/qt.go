@@ -84,8 +84,8 @@ func (this *QLCDNumber) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLCDNumber(QWidget *)
-func NewQLCDNumber(parent *QWidget /*777 QWidget **/) *QLCDNumber {
-	var convArg0 = parent.GetCthis()
+func NewQLCDNumber(parent QWidget_ITF /*777 QWidget **/) *QLCDNumber {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumberC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLCDNumberFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -96,8 +96,8 @@ func NewQLCDNumber(parent *QWidget /*777 QWidget **/) *QLCDNumber {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QLCDNumber(uint, QWidget *)
-func NewQLCDNumber_1(numDigits uint, parent *QWidget /*777 QWidget **/) *QLCDNumber {
-	var convArg1 = parent.GetCthis()
+func NewQLCDNumber_1(numDigits uint, parent QWidget_ITF /*777 QWidget **/) *QLCDNumber {
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumberC2EjP7QWidget", qtrt.FFI_TYPE_POINTER, numDigits, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLCDNumberFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -321,8 +321,8 @@ func (this *QLCDNumber) Overflow() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QLCDNumber) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QLCDNumber) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumber5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -332,8 +332,8 @@ func (this *QLCDNumber) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QLCDNumber) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLCDNumber) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumber10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

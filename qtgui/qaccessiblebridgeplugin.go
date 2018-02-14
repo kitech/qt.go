@@ -73,8 +73,8 @@ func (this *QAccessibleBridgePlugin) MetaObject() *qtcore.QMetaObject /*777 cons
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAccessibleBridgePlugin(QObject *)
-func NewQAccessibleBridgePlugin(parent *qtcore.QObject /*777 QObject **/) *QAccessibleBridgePlugin {
-	var convArg0 = parent.GetCthis()
+func NewQAccessibleBridgePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessibleBridgePlugin {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleBridgePluginFromPointer(unsafe.Pointer(uintptr(rv)))

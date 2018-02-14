@@ -72,8 +72,8 @@ func (this *QPluginLoader) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPluginLoader(QObject *)
-func NewQPluginLoader(parent *QObject /*777 QObject **/) *QPluginLoader {
-	var convArg0 = parent.GetCthis()
+func NewQPluginLoader(parent QObject_ITF /*777 QObject **/) *QPluginLoader {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoaderC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPluginLoaderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -84,10 +84,10 @@ func NewQPluginLoader(parent *QObject /*777 QObject **/) *QPluginLoader {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPluginLoader(const QString &, QObject *)
-func NewQPluginLoader_1(fileName string, parent *QObject /*777 QObject **/) *QPluginLoader {
+func NewQPluginLoader_1(fileName string, parent QObject_ITF /*777 QObject **/) *QPluginLoader {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoaderC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPluginLoaderFromPointer(unsafe.Pointer(uintptr(rv)))

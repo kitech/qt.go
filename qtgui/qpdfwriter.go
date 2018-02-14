@@ -100,8 +100,8 @@ func NewQPdfWriter(filename string) *QPdfWriter {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPdfWriter(QIODevice *)
-func NewQPdfWriter_1(device *qtcore.QIODevice /*777 QIODevice **/) *QPdfWriter {
-	var convArg0 = device.GetCthis()
+func NewQPdfWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QPdfWriter {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPdfWriterC2EP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPdfWriterFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -228,8 +228,8 @@ func (this *QPdfWriter) SetPageSize(size int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setPageSizeMM(const QSizeF &)
-func (this *QPdfWriter) SetPageSizeMM(size *qtcore.QSizeF) {
-	var convArg0 = size.GetCthis()
+func (this *QPdfWriter) SetPageSizeMM(size qtcore.QSizeF_ITF) {
+	var convArg0 = size.QSizeF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPdfWriter13setPageSizeMMERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

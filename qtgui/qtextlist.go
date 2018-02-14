@@ -73,8 +73,8 @@ func (this *QTextList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextList(QTextDocument *)
-func NewQTextList(doc *QTextDocument /*777 QTextDocument **/) *QTextList {
-	var convArg0 = doc.GetCthis()
+func NewQTextList(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextList {
+	var convArg0 = doc.QTextDocument_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextListC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextListFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -128,8 +128,8 @@ func (this *QTextList) Item(i int) *QTextBlock /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int itemNumber(const QTextBlock &)
-func (this *QTextList) ItemNumber(arg0 *QTextBlock) int {
-	var convArg0 = arg0.GetCthis()
+func (this *QTextList) ItemNumber(arg0 QTextBlock_ITF) int {
+	var convArg0 = arg0.QTextBlock_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList10itemNumberERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -139,8 +139,8 @@ func (this *QTextList) ItemNumber(arg0 *QTextBlock) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString itemText(const QTextBlock &)
-func (this *QTextList) ItemText(arg0 *QTextBlock) string {
-	var convArg0 = arg0.GetCthis()
+func (this *QTextList) ItemText(arg0 QTextBlock_ITF) string {
+	var convArg0 = arg0.QTextBlock_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList8itemTextERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -162,8 +162,8 @@ func (this *QTextList) RemoveItem(i int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void remove(const QTextBlock &)
-func (this *QTextList) Remove(arg0 *QTextBlock) {
-	var convArg0 = arg0.GetCthis()
+func (this *QTextList) Remove(arg0 QTextBlock_ITF) {
+	var convArg0 = arg0.QTextBlock_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextList6removeERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -172,8 +172,8 @@ func (this *QTextList) Remove(arg0 *QTextBlock) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void add(const QTextBlock &)
-func (this *QTextList) Add(block *QTextBlock) {
-	var convArg0 = block.GetCthis()
+func (this *QTextList) Add(block QTextBlock_ITF) {
+	var convArg0 = block.QTextBlock_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextList3addERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -182,8 +182,8 @@ func (this *QTextList) Add(block *QTextBlock) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFormat(const QTextListFormat &)
-func (this *QTextList) SetFormat(format *QTextListFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QTextList) SetFormat(format QTextListFormat_ITF) {
+	var convArg0 = format.QTextListFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextList9setFormatERK15QTextListFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

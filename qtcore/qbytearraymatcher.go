@@ -76,8 +76,8 @@ func NewQByteArrayMatcher() *QByteArrayMatcher {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QByteArrayMatcher(const QByteArray &)
-func NewQByteArrayMatcher_1(pattern *QByteArray) *QByteArrayMatcher {
-	var convArg0 = pattern.GetCthis()
+func NewQByteArrayMatcher_1(pattern QByteArray_ITF) *QByteArrayMatcher {
+	var convArg0 = pattern.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQByteArrayMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -114,8 +114,8 @@ func DeleteQByteArrayMatcher(this *QByteArrayMatcher) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPattern(const QByteArray &)
-func (this *QByteArrayMatcher) SetPattern(pattern *QByteArray) {
-	var convArg0 = pattern.GetCthis()
+func (this *QByteArrayMatcher) SetPattern(pattern QByteArray_ITF) {
+	var convArg0 = pattern.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QByteArrayMatcher10setPatternERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -124,8 +124,8 @@ func (this *QByteArrayMatcher) SetPattern(pattern *QByteArray) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const QByteArray &, int)
-func (this *QByteArrayMatcher) IndexIn(ba *QByteArray, from int) int {
-	var convArg0 = ba.GetCthis()
+func (this *QByteArrayMatcher) IndexIn(ba QByteArray_ITF, from int) int {
+	var convArg0 = ba.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

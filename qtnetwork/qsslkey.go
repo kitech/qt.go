@@ -77,9 +77,9 @@ func NewQSslKey() *QSslKey {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey(const QByteArray &, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
-func NewQSslKey_1(encoded *qtcore.QByteArray, algorithm int, format int, type_ int, passPhrase *qtcore.QByteArray) *QSslKey {
-	var convArg0 = encoded.GetCthis()
-	var convArg4 = passPhrase.GetCthis()
+func NewQSslKey_1(encoded qtcore.QByteArray_ITF, algorithm int, format int, type_ int, passPhrase qtcore.QByteArray_ITF) *QSslKey {
+	var convArg0 = encoded.QByteArray_PTR().GetCthis()
+	var convArg4 = passPhrase.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2ERK10QByteArrayN4QSsl12KeyAlgorithmENS3_14EncodingFormatENS3_7KeyTypeES2_", qtrt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslKeyFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -91,9 +91,9 @@ func NewQSslKey_1(encoded *qtcore.QByteArray, algorithm int, format int, type_ i
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey(QIODevice *, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
-func NewQSslKey_2(device *qtcore.QIODevice /*777 QIODevice **/, algorithm int, format int, type_ int, passPhrase *qtcore.QByteArray) *QSslKey {
-	var convArg0 = device.GetCthis()
-	var convArg4 = passPhrase.GetCthis()
+func NewQSslKey_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int, format int, type_ int, passPhrase qtcore.QByteArray_ITF) *QSslKey {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg4 = passPhrase.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2EP9QIODeviceN4QSsl12KeyAlgorithmENS2_14EncodingFormatENS2_7KeyTypeERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslKeyFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,8 +116,8 @@ func DeleteQSslKey(this *QSslKey) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslKey &)
-func (this *QSslKey) Swap(other *QSslKey) {
-	var convArg0 = other.GetCthis()
+func (this *QSslKey) Swap(other QSslKey_ITF) {
+	var convArg0 = other.QSslKey_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKey4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -175,8 +175,8 @@ func (this *QSslKey) Algorithm() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toPem(const QByteArray &)
-func (this *QSslKey) ToPem(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
-	var convArg0 = passPhrase.GetCthis()
+func (this *QSslKey) ToPem(passPhrase qtcore.QByteArray_ITF) *qtcore.QByteArray /*123*/ {
+	var convArg0 = passPhrase.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey5toPemERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -188,8 +188,8 @@ func (this *QSslKey) ToPem(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*1
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toDer(const QByteArray &)
-func (this *QSslKey) ToDer(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
-	var convArg0 = passPhrase.GetCthis()
+func (this *QSslKey) ToDer(passPhrase qtcore.QByteArray_ITF) *qtcore.QByteArray /*123*/ {
+	var convArg0 = passPhrase.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey5toDerERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333

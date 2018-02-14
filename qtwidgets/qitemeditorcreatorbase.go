@@ -77,8 +77,8 @@ func DeleteQItemEditorCreatorBase(this *QItemEditorCreatorBase) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QWidget * createWidget(QWidget *)
-func (this *QItemEditorCreatorBase) CreateWidget(parent *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
-	var convArg0 = parent.GetCthis()
+func (this *QItemEditorCreatorBase) CreateWidget(parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444

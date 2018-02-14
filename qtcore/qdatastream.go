@@ -76,8 +76,8 @@ func NewQDataStream() *QDataStream {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDataStream(QIODevice *)
-func NewQDataStream_1(arg0 *QIODevice /*777 QIODevice **/) *QDataStream {
-	var convArg0 = arg0.GetCthis()
+func NewQDataStream_1(arg0 QIODevice_ITF /*777 QIODevice **/) *QDataStream {
+	var convArg0 = arg0.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamC2EP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -89,8 +89,8 @@ func NewQDataStream_1(arg0 *QIODevice /*777 QIODevice **/) *QDataStream {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDataStream(QByteArray *, QIODevice::OpenMode)
-func NewQDataStream_2(arg0 *QByteArray /*777 QByteArray **/, flags int) *QDataStream {
-	var convArg0 = arg0.GetCthis()
+func NewQDataStream_2(arg0 QByteArray_ITF /*777 QByteArray **/, flags int) *QDataStream {
+	var convArg0 = arg0.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamC2EP10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,8 +102,8 @@ func NewQDataStream_2(arg0 *QByteArray /*777 QByteArray **/, flags int) *QDataSt
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDataStream(const QByteArray &)
-func NewQDataStream_3(arg0 *QByteArray) *QDataStream {
-	var convArg0 = arg0.GetCthis()
+func NewQDataStream_3(arg0 QByteArray_ITF) *QDataStream {
+	var convArg0 = arg0.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -136,8 +136,8 @@ func (this *QDataStream) Device() *QIODevice /*777 QIODevice **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
-func (this *QDataStream) SetDevice(arg0 *QIODevice /*777 QIODevice **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QDataStream) SetDevice(arg0 QIODevice_ITF /*777 QIODevice **/) {
+	var convArg0 = arg0.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

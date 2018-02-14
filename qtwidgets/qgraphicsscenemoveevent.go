@@ -99,8 +99,8 @@ func (this *QGraphicsSceneMoveEvent) OldPos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOldPos(const QPointF &)
-func (this *QGraphicsSceneMoveEvent) SetOldPos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneMoveEvent) SetOldPos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -121,8 +121,8 @@ func (this *QGraphicsSceneMoveEvent) NewPos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNewPos(const QPointF &)
-func (this *QGraphicsSceneMoveEvent) SetNewPos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneMoveEvent) SetNewPos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

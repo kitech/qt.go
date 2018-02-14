@@ -96,8 +96,8 @@ func (this *QInputMethodQueryEvent) Queries() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(Qt::InputMethodQuery, const QVariant &)
-func (this *QInputMethodQueryEvent) SetValue(query int, value *qtcore.QVariant) {
-	var convArg1 = value.GetCthis()
+func (this *QInputMethodQueryEvent) SetValue(query int, value qtcore.QVariant_ITF) {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QInputMethodQueryEvent8setValueEN2Qt16InputMethodQueryERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), query, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

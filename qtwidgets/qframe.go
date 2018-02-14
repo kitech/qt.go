@@ -99,8 +99,8 @@ func (this *QFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFrame(QWidget *, Qt::WindowFlags)
-func NewQFrame(parent *QWidget /*777 QWidget **/, f int) *QFrame {
-	var convArg0 = parent.GetCthis()
+func NewQFrame(parent QWidget_ITF /*777 QWidget **/, f int) *QFrame {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrameC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFrameFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -251,8 +251,8 @@ func (this *QFrame) FrameRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFrameRect(const QRect &)
-func (this *QFrame) SetFrameRect(arg0 *qtcore.QRect) {
-	var convArg0 = arg0.GetCthis()
+func (this *QFrame) SetFrameRect(arg0 qtcore.QRect_ITF) {
+	var convArg0 = arg0.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame12setFrameRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -261,8 +261,8 @@ func (this *QFrame) SetFrameRect(arg0 *qtcore.QRect) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QFrame) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -272,8 +272,8 @@ func (this *QFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QFrame) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -282,8 +282,8 @@ func (this *QFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QFrame) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QFrame) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -292,8 +292,8 @@ func (this *QFrame) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void drawFrame(QPainter *)
-func (this *QFrame) DrawFrame(arg0 *qtgui.QPainter /*777 QPainter **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QFrame) DrawFrame(arg0 qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg0 = arg0.QPainter_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame9drawFrameEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -302,8 +302,8 @@ func (this *QFrame) DrawFrame(arg0 *qtgui.QPainter /*777 QPainter **/) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionFrame *)
-func (this *QFrame) InitStyleOption(option *QStyleOptionFrame /*777 QStyleOptionFrame **/) {
-	var convArg0 = option.GetCthis()
+func (this *QFrame) InitStyleOption(option QStyleOptionFrame_ITF /*777 QStyleOptionFrame **/) {
+	var convArg0 = option.QStyleOptionFrame_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame15initStyleOptionEP17QStyleOptionFrame", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

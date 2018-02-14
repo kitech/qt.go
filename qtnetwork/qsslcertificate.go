@@ -65,8 +65,8 @@ func (*QSslCertificate) NewFromPointer(cthis unsafe.Pointer) *QSslCertificate {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCertificate(QIODevice *, QSsl::EncodingFormat)
-func NewQSslCertificate(device *qtcore.QIODevice /*777 QIODevice **/, format int) *QSslCertificate {
-	var convArg0 = device.GetCthis()
+func NewQSslCertificate(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslCertificate {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2EP9QIODeviceN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -78,8 +78,8 @@ func NewQSslCertificate(device *qtcore.QIODevice /*777 QIODevice **/, format int
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCertificate(const QByteArray &, QSsl::EncodingFormat)
-func NewQSslCertificate_1(data *qtcore.QByteArray, format int) *QSslCertificate {
-	var convArg0 = data.GetCthis()
+func NewQSslCertificate_1(data qtcore.QByteArray_ITF, format int) *QSslCertificate {
+	var convArg0 = data.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2ERK10QByteArrayN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,8 +102,8 @@ func DeleteQSslCertificate(this *QSslCertificate) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslCertificate &)
-func (this *QSslCertificate) Swap(other *QSslCertificate) {
-	var convArg0 = other.GetCthis()
+func (this *QSslCertificate) Swap(other QSslCertificate_ITF) {
+	var convArg0 = other.QSslCertificate_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificate4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -199,8 +199,8 @@ func (this *QSslCertificate) IssuerInfo(info int) *qtcore.QStringList /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QStringList issuerInfo(const QByteArray &)
-func (this *QSslCertificate) IssuerInfo_1(attribute *qtcore.QByteArray) *qtcore.QStringList /*123*/ {
-	var convArg0 = attribute.GetCthis()
+func (this *QSslCertificate) IssuerInfo_1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
+	var convArg0 = attribute.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate10issuerInfoERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -224,8 +224,8 @@ func (this *QSslCertificate) SubjectInfo(info int) *qtcore.QStringList /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QStringList subjectInfo(const QByteArray &)
-func (this *QSslCertificate) SubjectInfo_1(attribute *qtcore.QByteArray) *qtcore.QStringList /*123*/ {
-	var convArg0 = attribute.GetCthis()
+func (this *QSslCertificate) SubjectInfo_1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
+	var convArg0 = attribute.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate11subjectInfoERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333

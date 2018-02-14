@@ -89,8 +89,8 @@ func DeleteQQmlPropertyValueSource(this *QQmlPropertyValueSource) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setTarget(const QQmlProperty &)
-func (this *QQmlPropertyValueSource) SetTarget(arg0 *QQmlProperty) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQmlPropertyValueSource) SetTarget(arg0 QQmlProperty_ITF) {
+	var convArg0 = arg0.QQmlProperty_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQmlPropertyValueSource9setTargetERK12QQmlProperty", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

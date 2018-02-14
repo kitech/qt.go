@@ -77,8 +77,8 @@ func NewQAndroidIntent() *QAndroidIntent {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidIntent(const QAndroidJniObject &)
-func NewQAndroidIntent_1(intent *QAndroidJniObject) *QAndroidIntent {
-	var convArg0 = intent.GetCthis()
+func NewQAndroidIntent_1(intent QAndroidJniObject_ITF) *QAndroidIntent {
+	var convArg0 = intent.QAndroidJniObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntentC2ERK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidIntentFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -104,8 +104,8 @@ func NewQAndroidIntent_2(action string) *QAndroidIntent {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidIntent(const QAndroidJniObject &, const char *)
-func NewQAndroidIntent_3(packageContext *QAndroidJniObject, className string) *QAndroidIntent {
-	var convArg0 = packageContext.GetCthis()
+func NewQAndroidIntent_3(packageContext QAndroidJniObject_ITF, className string) *QAndroidIntent {
+	var convArg0 = packageContext.QAndroidJniObject_PTR().GetCthis()
 	var convArg1 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntentC2ERK17QAndroidJniObjectPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -130,10 +130,10 @@ func DeleteQAndroidIntent(this *QAndroidIntent) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void putExtra(const QString &, const QByteArray &)
-func (this *QAndroidIntent) PutExtra(key string, data *qtcore.QByteArray) {
+func (this *QAndroidIntent) PutExtra(key string, data qtcore.QByteArray_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = data.GetCthis()
+	var convArg1 = data.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntent8putExtraERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -142,10 +142,10 @@ func (this *QAndroidIntent) PutExtra(key string, data *qtcore.QByteArray) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void putExtra(const QString &, const QVariant &)
-func (this *QAndroidIntent) PutExtra_1(key string, value *qtcore.QVariant) {
+func (this *QAndroidIntent) PutExtra_1(key string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.GetCthis()
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntent8putExtraERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

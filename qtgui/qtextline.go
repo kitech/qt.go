@@ -277,8 +277,8 @@ func (this *QTextLine) SetNumColumns_1(columns int, alignmentWidth float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(const QPointF &)
-func (this *QTextLine) SetPosition(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QTextLine) SetPosition(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextLine11setPositionERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

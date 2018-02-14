@@ -63,8 +63,8 @@ func (*QPaintEvent) NewFromPointer(cthis unsafe.Pointer) *QPaintEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEvent(const QRegion &)
-func NewQPaintEvent(paintRegion *QRegion) *QPaintEvent {
-	var convArg0 = paintRegion.GetCthis()
+func NewQPaintEvent(paintRegion QRegion_ITF) *QPaintEvent {
+	var convArg0 = paintRegion.QRegion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventC2ERK7QRegion", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaintEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -76,8 +76,8 @@ func NewQPaintEvent(paintRegion *QRegion) *QPaintEvent {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEvent(const QRect &)
-func NewQPaintEvent_1(paintRect *qtcore.QRect) *QPaintEvent {
-	var convArg0 = paintRect.GetCthis()
+func NewQPaintEvent_1(paintRect qtcore.QRect_ITF) *QPaintEvent {
+	var convArg0 = paintRect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventC2ERK5QRect", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaintEventFromPointer(unsafe.Pointer(uintptr(rv)))

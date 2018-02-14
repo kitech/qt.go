@@ -77,8 +77,8 @@ func NewQHstsPolicy() *QHstsPolicy {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHstsPolicy(const QDateTime &, QHstsPolicy::PolicyFlags, const QString &, QUrl::ParsingMode)
-func NewQHstsPolicy_1(expiry *qtcore.QDateTime, flags int, host string, mode int) *QHstsPolicy {
-	var convArg0 = expiry.GetCthis()
+func NewQHstsPolicy_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode int) *QHstsPolicy {
+	var convArg0 = expiry.QDateTime_PTR().GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(host)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyC2ERK9QDateTime6QFlagsINS_10PolicyFlagEERK7QStringN4QUrl11ParsingModeE", qtrt.FFI_TYPE_POINTER, convArg0, flags, convArg2, mode)
@@ -103,8 +103,8 @@ func DeleteQHstsPolicy(this *QHstsPolicy) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QHstsPolicy &)
-func (this *QHstsPolicy) Swap(other *QHstsPolicy) {
-	var convArg0 = other.GetCthis()
+func (this *QHstsPolicy) Swap(other QHstsPolicy_ITF) {
+	var convArg0 = other.QHstsPolicy_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -124,8 +124,8 @@ func (this *QHstsPolicy) SetHost(host string, mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExpiry(const QDateTime &)
-func (this *QHstsPolicy) SetExpiry(expiry *qtcore.QDateTime) {
-	var convArg0 = expiry.GetCthis()
+func (this *QHstsPolicy) SetExpiry(expiry qtcore.QDateTime_ITF) {
+	var convArg0 = expiry.QDateTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy9setExpiryERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

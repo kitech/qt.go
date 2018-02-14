@@ -63,9 +63,9 @@ func (*QTabletEvent) NewFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTabletEvent(enum QEvent::Type, const QPointF &, const QPointF &, int, int, qreal, int, int, qreal, qreal, int, Qt::KeyboardModifiers, qint64)
-func NewQTabletEvent(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64) *QTabletEvent {
-	var convArg1 = pos.GetCthis()
-	var convArg2 = globalPos.GetCthis()
+func NewQTabletEvent(t int, pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64) *QTabletEvent {
+	var convArg1 = pos.QPointF_PTR().GetCthis()
+	var convArg2 = globalPos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEEx", qtrt.FFI_TYPE_POINTER, t, convArg1, convArg2, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTabletEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -77,9 +77,9 @@ func NewQTabletEvent(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, devi
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTabletEvent(enum QEvent::Type, const QPointF &, const QPointF &, int, int, qreal, int, int, qreal, qreal, int, Qt::KeyboardModifiers, qint64, Qt::MouseButton, Qt::MouseButtons)
-func NewQTabletEvent_1(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64, button int, buttons int) *QTabletEvent {
-	var convArg1 = pos.GetCthis()
-	var convArg2 = globalPos.GetCthis()
+func NewQTabletEvent_1(t int, pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64, button int, buttons int) *QTabletEvent {
+	var convArg1 = pos.QPointF_PTR().GetCthis()
+	var convArg2 = globalPos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEExNS6_11MouseButtonES5_IS9_E", qtrt.FFI_TYPE_POINTER, t, convArg1, convArg2, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID, button, buttons)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTabletEventFromPointer(unsafe.Pointer(uintptr(rv)))

@@ -129,8 +129,8 @@ func (this *QLabel) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLabel(QWidget *, Qt::WindowFlags)
-func NewQLabel(parent *QWidget /*777 QWidget **/, f int) *QLabel {
-	var convArg0 = parent.GetCthis()
+func NewQLabel(parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabelC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLabelFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -141,10 +141,10 @@ func NewQLabel(parent *QWidget /*777 QWidget **/, f int) *QLabel {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QLabel(const QString &, QWidget *, Qt::WindowFlags)
-func NewQLabel_1(text string, parent *QWidget /*777 QWidget **/, f int) *QLabel {
+func NewQLabel_1(text string, parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabelC2ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, f)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLabelFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -347,8 +347,8 @@ func (this *QLabel) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBuddy(QWidget *)
-func (this *QLabel) SetBuddy(arg0 *QWidget /*777 QWidget **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLabel) SetBuddy(arg0 QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = arg0.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel8setBuddyEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -468,8 +468,8 @@ func (this *QLabel) SetText(arg0 string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixmap(const QPixmap &)
-func (this *QLabel) SetPixmap(arg0 *qtgui.QPixmap) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLabel) SetPixmap(arg0 qtgui.QPixmap_ITF) {
+	var convArg0 = arg0.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel9setPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -478,8 +478,8 @@ func (this *QLabel) SetPixmap(arg0 *qtgui.QPixmap) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPicture(const QPicture &)
-func (this *QLabel) SetPicture(arg0 *qtgui.QPicture) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLabel) SetPicture(arg0 qtgui.QPicture_ITF) {
+	var convArg0 = arg0.QPicture_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel10setPictureERK8QPicture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -488,8 +488,8 @@ func (this *QLabel) SetPicture(arg0 *qtgui.QPicture) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMovie(QMovie *)
-func (this *QLabel) SetMovie(movie *qtgui.QMovie /*777 QMovie **/) {
-	var convArg0 = movie.GetCthis()
+func (this *QLabel) SetMovie(movie qtgui.QMovie_ITF /*777 QMovie **/) {
+	var convArg0 = movie.QMovie_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel8setMovieEP6QMovie", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -547,8 +547,8 @@ func (this *QLabel) LinkHovered(link string) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QLabel) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QLabel) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -558,8 +558,8 @@ func (this *QLabel) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QLabel) KeyPressEvent(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = ev.GetCthis()
+func (this *QLabel) KeyPressEvent(ev qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = ev.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -568,8 +568,8 @@ func (this *QLabel) KeyPressEvent(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QLabel) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLabel) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -578,8 +578,8 @@ func (this *QLabel) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QLabel) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QLabel) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -588,8 +588,8 @@ func (this *QLabel) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
-func (this *QLabel) MousePressEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = ev.GetCthis()
+func (this *QLabel) MousePressEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = ev.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -598,8 +598,8 @@ func (this *QLabel) MousePressEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QLabel) MouseMoveEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = ev.GetCthis()
+func (this *QLabel) MouseMoveEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = ev.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -608,8 +608,8 @@ func (this *QLabel) MouseMoveEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QLabel) MouseReleaseEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = ev.GetCthis()
+func (this *QLabel) MouseReleaseEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = ev.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -618,8 +618,8 @@ func (this *QLabel) MouseReleaseEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
-func (this *QLabel) ContextMenuEvent(ev *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
-	var convArg0 = ev.GetCthis()
+func (this *QLabel) ContextMenuEvent(ev qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
+	var convArg0 = ev.QContextMenuEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -628,8 +628,8 @@ func (this *QLabel) ContextMenuEvent(ev *qtgui.QContextMenuEvent /*777 QContextM
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
-func (this *QLabel) FocusInEvent(ev *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = ev.GetCthis()
+func (this *QLabel) FocusInEvent(ev qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = ev.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -638,8 +638,8 @@ func (this *QLabel) FocusInEvent(ev *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
-func (this *QLabel) FocusOutEvent(ev *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = ev.GetCthis()
+func (this *QLabel) FocusOutEvent(ev qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = ev.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

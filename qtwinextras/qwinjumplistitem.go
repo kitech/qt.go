@@ -156,8 +156,8 @@ func (this *QWinJumpListItem) WorkingDirectory() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
-func (this *QWinJumpListItem) SetIcon(icon *qtgui.QIcon) {
-	var convArg0 = icon.GetCthis()
+func (this *QWinJumpListItem) SetIcon(icon qtgui.QIcon_ITF) {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -226,8 +226,8 @@ func (this *QWinJumpListItem) Description() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setArguments(const QStringList &)
-func (this *QWinJumpListItem) SetArguments(arguments *qtcore.QStringList) {
-	var convArg0 = arguments.GetCthis()
+func (this *QWinJumpListItem) SetArguments(arguments qtcore.QStringList_ITF) {
+	var convArg0 = arguments.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem12setArgumentsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

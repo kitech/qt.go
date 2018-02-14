@@ -88,8 +88,8 @@ func DeleteQDnsHostAddressRecord(this *QDnsHostAddressRecord) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsHostAddressRecord &)
-func (this *QDnsHostAddressRecord) Swap(other *QDnsHostAddressRecord) {
-	var convArg0 = other.GetCthis()
+func (this *QDnsHostAddressRecord) Swap(other QDnsHostAddressRecord_ITF) {
+	var convArg0 = other.QDnsHostAddressRecord_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QDnsHostAddressRecord4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -77,8 +77,8 @@ func DeleteQSGImageNode(this *QSGImageNode) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
-func (this *QSGImageNode) SetRect(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QSGImageNode) SetRect(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -108,8 +108,8 @@ func (this *QSGImageNode) Rect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setSourceRect(const QRectF &)
-func (this *QSGImageNode) SetSourceRect(r *qtcore.QRectF) {
-	var convArg0 = r.GetCthis()
+func (this *QSGImageNode) SetSourceRect(r qtcore.QRectF_ITF) {
+	var convArg0 = r.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode13setSourceRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -139,8 +139,8 @@ func (this *QSGImageNode) SourceRect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setTexture(QSGTexture *)
-func (this *QSGImageNode) SetTexture(texture *QSGTexture /*777 QSGTexture **/) {
-	var convArg0 = texture.GetCthis()
+func (this *QSGImageNode) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/) {
+	var convArg0 = texture.QSGTexture_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode10setTextureEP10QSGTexture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -235,15 +235,15 @@ func (this *QSGImageNode) OwnsTexture() bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void rebuildGeometry(QSGGeometry *, QSGTexture *, const QRectF &, QRectF, QSGImageNode::TextureCoordinatesTransformMode)
-func (this *QSGImageNode) RebuildGeometry(g *QSGGeometry /*777 QSGGeometry **/, texture *QSGTexture /*777 QSGTexture **/, rect *qtcore.QRectF, sourceRect *qtcore.QRectF /*123*/, texCoordMode int) {
-	var convArg0 = g.GetCthis()
-	var convArg1 = texture.GetCthis()
-	var convArg2 = rect.GetCthis()
-	var convArg3 = sourceRect.GetCthis()
+func (this *QSGImageNode) RebuildGeometry(g QSGGeometry_ITF /*777 QSGGeometry **/, texture QSGTexture_ITF /*777 QSGTexture **/, rect qtcore.QRectF_ITF, sourceRect qtcore.QRectF_ITF /*123*/, texCoordMode int) {
+	var convArg0 = g.QSGGeometry_PTR().GetCthis()
+	var convArg1 = texture.QSGTexture_PTR().GetCthis()
+	var convArg2 = rect.QRectF_PTR().GetCthis()
+	var convArg3 = sourceRect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode15rebuildGeometryEP11QSGGeometryP10QSGTextureRK6QRectFS4_6QFlagsINS_31TextureCoordinatesTransformFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, texCoordMode)
 	qtrt.ErrPrint(err, rv)
 }
-func QSGImageNode_RebuildGeometry(g *QSGGeometry /*777 QSGGeometry **/, texture *QSGTexture /*777 QSGTexture **/, rect *qtcore.QRectF, sourceRect *qtcore.QRectF /*123*/, texCoordMode int) {
+func QSGImageNode_RebuildGeometry(g QSGGeometry_ITF /*777 QSGGeometry **/, texture QSGTexture_ITF /*777 QSGTexture **/, rect qtcore.QRectF_ITF, sourceRect qtcore.QRectF_ITF /*123*/, texCoordMode int) {
 	var nilthis *QSGImageNode
 	nilthis.RebuildGeometry(g, texture, rect, sourceRect, texCoordMode)
 }

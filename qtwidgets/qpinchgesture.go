@@ -74,8 +74,8 @@ func (this *QPinchGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPinchGesture(QObject *)
-func NewQPinchGesture(parent *qtcore.QObject /*777 QObject **/) *QPinchGesture {
-	var convArg0 = parent.GetCthis()
+func NewQPinchGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPinchGesture {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPinchGestureFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -171,8 +171,8 @@ func (this *QPinchGesture) CenterPoint() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStartCenterPoint(const QPointF &)
-func (this *QPinchGesture) SetStartCenterPoint(value *qtcore.QPointF) {
-	var convArg0 = value.GetCthis()
+func (this *QPinchGesture) SetStartCenterPoint(value qtcore.QPointF_ITF) {
+	var convArg0 = value.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture19setStartCenterPointERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -181,8 +181,8 @@ func (this *QPinchGesture) SetStartCenterPoint(value *qtcore.QPointF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastCenterPoint(const QPointF &)
-func (this *QPinchGesture) SetLastCenterPoint(value *qtcore.QPointF) {
-	var convArg0 = value.GetCthis()
+func (this *QPinchGesture) SetLastCenterPoint(value qtcore.QPointF_ITF) {
+	var convArg0 = value.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture18setLastCenterPointERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -191,8 +191,8 @@ func (this *QPinchGesture) SetLastCenterPoint(value *qtcore.QPointF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCenterPoint(const QPointF &)
-func (this *QPinchGesture) SetCenterPoint(value *qtcore.QPointF) {
-	var convArg0 = value.GetCthis()
+func (this *QPinchGesture) SetCenterPoint(value qtcore.QPointF_ITF) {
+	var convArg0 = value.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture14setCenterPointERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

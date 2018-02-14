@@ -89,8 +89,8 @@ func (this *QSGRendererInterface) GraphicsApi() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] void * getResource(QQuickWindow *, enum QSGRendererInterface::Resource)
-func (this *QSGRendererInterface) GetResource(window *QQuickWindow /*777 QQuickWindow **/, resource int) unsafe.Pointer /*666*/ {
-	var convArg0 = window.GetCthis()
+func (this *QSGRendererInterface) GetResource(window QQuickWindow_ITF /*777 QQuickWindow **/, resource int) unsafe.Pointer /*666*/ {
+	var convArg0 = window.QQuickWindow_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowNS_8ResourceE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, resource)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -100,8 +100,8 @@ func (this *QSGRendererInterface) GetResource(window *QQuickWindow /*777 QQuickW
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [8] void * getResource(QQuickWindow *, const char *)
-func (this *QSGRendererInterface) GetResource_1(window *QQuickWindow /*777 QQuickWindow **/, resource string) unsafe.Pointer /*666*/ {
-	var convArg0 = window.GetCthis()
+func (this *QSGRendererInterface) GetResource_1(window QQuickWindow_ITF /*777 QQuickWindow **/, resource string) unsafe.Pointer /*666*/ {
+	var convArg0 = window.QQuickWindow_PTR().GetCthis()
 	var convArg1 = qtrt.CString(resource)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)

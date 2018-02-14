@@ -74,8 +74,8 @@ func (this *QWinThumbnailToolBar) MetaObject() *qtcore.QMetaObject /*777 const Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinThumbnailToolBar(QObject *)
-func NewQWinThumbnailToolBar(parent *qtcore.QObject /*777 QObject **/) *QWinThumbnailToolBar {
-	var convArg0 = parent.GetCthis()
+func NewQWinThumbnailToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QWinThumbnailToolBar {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinThumbnailToolBarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -97,8 +97,8 @@ func DeleteQWinThumbnailToolBar(this *QWinThumbnailToolBar) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWindow(QWindow *)
-func (this *QWinThumbnailToolBar) SetWindow(window *qtgui.QWindow /*777 QWindow **/) {
-	var convArg0 = window.GetCthis()
+func (this *QWinThumbnailToolBar) SetWindow(window qtgui.QWindow_ITF /*777 QWindow **/) {
+	var convArg0 = window.QWindow_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar9setWindowEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -117,8 +117,8 @@ func (this *QWinThumbnailToolBar) Window() *qtgui.QWindow /*777 QWindow **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addButton(QWinThumbnailToolButton *)
-func (this *QWinThumbnailToolBar) AddButton(button *QWinThumbnailToolButton /*777 QWinThumbnailToolButton **/) {
-	var convArg0 = button.GetCthis()
+func (this *QWinThumbnailToolBar) AddButton(button QWinThumbnailToolButton_ITF /*777 QWinThumbnailToolButton **/) {
+	var convArg0 = button.QWinThumbnailToolButton_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar9addButtonEP23QWinThumbnailToolButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -127,8 +127,8 @@ func (this *QWinThumbnailToolBar) AddButton(button *QWinThumbnailToolButton /*77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeButton(QWinThumbnailToolButton *)
-func (this *QWinThumbnailToolBar) RemoveButton(button *QWinThumbnailToolButton /*777 QWinThumbnailToolButton **/) {
-	var convArg0 = button.GetCthis()
+func (this *QWinThumbnailToolBar) RemoveButton(button QWinThumbnailToolButton_ITF /*777 QWinThumbnailToolButton **/) {
+	var convArg0 = button.QWinThumbnailToolButton_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar12removeButtonEP23QWinThumbnailToolButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -199,8 +199,8 @@ func (this *QWinThumbnailToolBar) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconicThumbnailPixmap(const QPixmap &)
-func (this *QWinThumbnailToolBar) SetIconicThumbnailPixmap(arg0 *qtgui.QPixmap) {
-	var convArg0 = arg0.GetCthis()
+func (this *QWinThumbnailToolBar) SetIconicThumbnailPixmap(arg0 qtgui.QPixmap_ITF) {
+	var convArg0 = arg0.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar24setIconicThumbnailPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -209,8 +209,8 @@ func (this *QWinThumbnailToolBar) SetIconicThumbnailPixmap(arg0 *qtgui.QPixmap) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconicLivePreviewPixmap(const QPixmap &)
-func (this *QWinThumbnailToolBar) SetIconicLivePreviewPixmap(arg0 *qtgui.QPixmap) {
-	var convArg0 = arg0.GetCthis()
+func (this *QWinThumbnailToolBar) SetIconicLivePreviewPixmap(arg0 qtgui.QPixmap_ITF) {
+	var convArg0 = arg0.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar26setIconicLivePreviewPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

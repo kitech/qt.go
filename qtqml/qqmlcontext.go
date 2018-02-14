@@ -74,9 +74,9 @@ func (this *QQmlContext) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlContext(QQmlEngine *, QObject *)
-func NewQQmlContext(parent *QQmlEngine /*777 QQmlEngine **/, objParent *qtcore.QObject /*777 QObject **/) *QQmlContext {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = objParent.GetCthis()
+func NewQQmlContext(parent QQmlEngine_ITF /*777 QQmlEngine **/, objParent qtcore.QObject_ITF /*777 QObject **/) *QQmlContext {
+	var convArg0 = parent.QQmlEngine_PTR().GetCthis()
+	var convArg1 = objParent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContextC2EP10QQmlEngineP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -87,9 +87,9 @@ func NewQQmlContext(parent *QQmlEngine /*777 QQmlEngine **/, objParent *qtcore.Q
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlContext(QQmlContext *, QObject *)
-func NewQQmlContext_1(parent *QQmlContext /*777 QQmlContext **/, objParent *qtcore.QObject /*777 QObject **/) *QQmlContext {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = objParent.GetCthis()
+func NewQQmlContext_1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qtcore.QObject_ITF /*777 QObject **/) *QQmlContext {
+	var convArg0 = parent.QQmlContext_PTR().GetCthis()
+	var convArg1 = objParent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContextC2EPS_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -151,8 +151,8 @@ func (this *QQmlContext) ContextObject() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContextObject(QObject *)
-func (this *QQmlContext) SetContextObject(arg0 *qtcore.QObject /*777 QObject **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQmlContext) SetContextObject(arg0 qtcore.QObject_ITF /*777 QObject **/) {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContext16setContextObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -175,10 +175,10 @@ func (this *QQmlContext) ContextProperty(arg0 string) *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContextProperty(const QString &, QObject *)
-func (this *QQmlContext) SetContextProperty(arg0 string, arg1 *qtcore.QObject /*777 QObject **/) {
+func (this *QQmlContext) SetContextProperty(arg0 string, arg1 qtcore.QObject_ITF /*777 QObject **/) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+	var convArg1 = arg1.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContext18setContextPropertyERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -187,10 +187,10 @@ func (this *QQmlContext) SetContextProperty(arg0 string, arg1 *qtcore.QObject /*
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setContextProperty(const QString &, const QVariant &)
-func (this *QQmlContext) SetContextProperty_1(arg0 string, arg1 *qtcore.QVariant) {
+func (this *QQmlContext) SetContextProperty_1(arg0 string, arg1 qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+	var convArg1 = arg1.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContext18setContextPropertyERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -199,8 +199,8 @@ func (this *QQmlContext) SetContextProperty_1(arg0 string, arg1 *qtcore.QVariant
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString nameForObject(QObject *)
-func (this *QQmlContext) NameForObject(arg0 *qtcore.QObject /*777 QObject **/) string {
-	var convArg0 = arg0.GetCthis()
+func (this *QQmlContext) NameForObject(arg0 qtcore.QObject_ITF /*777 QObject **/) string {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext13nameForObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -213,8 +213,8 @@ func (this *QQmlContext) NameForObject(arg0 *qtcore.QObject /*777 QObject **/) s
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl resolvedUrl(const QUrl &)
-func (this *QQmlContext) ResolvedUrl(arg0 *qtcore.QUrl) *qtcore.QUrl /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QQmlContext) ResolvedUrl(arg0 qtcore.QUrl_ITF) *qtcore.QUrl /*123*/ {
+	var convArg0 = arg0.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContext11resolvedUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -226,8 +226,8 @@ func (this *QQmlContext) ResolvedUrl(arg0 *qtcore.QUrl) *qtcore.QUrl /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBaseUrl(const QUrl &)
-func (this *QQmlContext) SetBaseUrl(arg0 *qtcore.QUrl) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQmlContext) SetBaseUrl(arg0 qtcore.QUrl_ITF) {
+	var convArg0 = arg0.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContext10setBaseUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

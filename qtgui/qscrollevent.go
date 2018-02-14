@@ -63,9 +63,9 @@ func (*QScrollEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollEvent(const QPointF &, const QPointF &, enum QScrollEvent::ScrollState)
-func NewQScrollEvent(contentPos *qtcore.QPointF, overshoot *qtcore.QPointF, scrollState int) *QScrollEvent {
-	var convArg0 = contentPos.GetCthis()
-	var convArg1 = overshoot.GetCthis()
+func NewQScrollEvent(contentPos qtcore.QPointF_ITF, overshoot qtcore.QPointF_ITF, scrollState int) *QScrollEvent {
+	var convArg0 = contentPos.QPointF_PTR().GetCthis()
+	var convArg1 = overshoot.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QScrollEventC2ERK7QPointFS2_NS_11ScrollStateE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, scrollState)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQScrollEventFromPointer(unsafe.Pointer(uintptr(rv)))

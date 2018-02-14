@@ -88,8 +88,8 @@ func NewQSGVertexColorMaterial() *QSGVertexColorMaterial {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int compare(const QSGMaterial *)
-func (this *QSGVertexColorMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/) int {
-	var convArg0 = other.GetCthis()
+func (this *QSGVertexColorMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
+	var convArg0 = other.QSGMaterial_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QSGVertexColorMaterial7compareEPK11QSGMaterial", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

@@ -156,10 +156,10 @@ func QStandardPaths_DisplayName(type_ int) string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString findExecutable(const QString &, const QStringList &)
-func (this *QStandardPaths) FindExecutable(executableName string, paths *QStringList) string {
+func (this *QStandardPaths) FindExecutable(executableName string, paths QStringList_ITF) string {
 	var tmpArg0 = NewQString_5(executableName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = paths.GetCthis()
+	var convArg1 = paths.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -167,7 +167,7 @@ func (this *QStandardPaths) FindExecutable(executableName string, paths *QString
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }
-func QStandardPaths_FindExecutable(executableName string, paths *QStringList) string {
+func QStandardPaths_FindExecutable(executableName string, paths QStringList_ITF) string {
 	var nilthis *QStandardPaths
 	rv := nilthis.FindExecutable(executableName, paths)
 	return rv

@@ -76,8 +76,8 @@ func NewQPersistentModelIndex() *QPersistentModelIndex {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPersistentModelIndex(const QModelIndex &)
-func NewQPersistentModelIndex_1(index *QModelIndex) *QPersistentModelIndex {
-	var convArg0 = index.GetCthis()
+func NewQPersistentModelIndex_1(index QModelIndex_ITF) *QPersistentModelIndex {
+	var convArg0 = index.QModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPersistentModelIndexC2ERK11QModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -100,8 +100,8 @@ func DeleteQPersistentModelIndex(this *QPersistentModelIndex) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPersistentModelIndex &)
-func (this *QPersistentModelIndex) Swap(other *QPersistentModelIndex) {
-	var convArg0 = other.GetCthis()
+func (this *QPersistentModelIndex) Swap(other QPersistentModelIndex_ITF) {
+	var convArg0 = other.QPersistentModelIndex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPersistentModelIndex4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

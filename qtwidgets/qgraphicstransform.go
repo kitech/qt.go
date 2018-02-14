@@ -79,8 +79,8 @@ func (this *QGraphicsTransform) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsTransform(QObject *)
-func NewQGraphicsTransform(parent *qtcore.QObject /*777 QObject **/) *QGraphicsTransform {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsTransform {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsTransformC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsTransformFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,8 +102,8 @@ func DeleteQGraphicsTransform(this *QGraphicsTransform) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void applyTo(QMatrix4x4 *)
-func (this *QGraphicsTransform) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **/) {
-	var convArg0 = matrix.GetCthis()
+func (this *QGraphicsTransform) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x4 **/) {
+	var convArg0 = matrix.QMatrix4x4_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

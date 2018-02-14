@@ -107,8 +107,8 @@ func (this *QCryptographicHash) AddData(data string, length int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addData(const QByteArray &)
-func (this *QCryptographicHash) AddData_1(data *QByteArray) {
-	var convArg0 = data.GetCthis()
+func (this *QCryptographicHash) AddData_1(data QByteArray_ITF) {
+	var convArg0 = data.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -117,8 +117,8 @@ func (this *QCryptographicHash) AddData_1(data *QByteArray) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool addData(QIODevice *)
-func (this *QCryptographicHash) AddData_2(device *QIODevice /*777 QIODevice **/) bool {
-	var convArg0 = device.GetCthis()
+func (this *QCryptographicHash) AddData_2(device QIODevice_ITF /*777 QIODevice **/) bool {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -140,15 +140,15 @@ func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray hash(const QByteArray &, enum QCryptographicHash::Algorithm)
-func (this *QCryptographicHash) Hash(data *QByteArray, method int) *QByteArray /*123*/ {
-	var convArg0 = data.GetCthis()
+func (this *QCryptographicHash) Hash(data QByteArray_ITF, method int) *QByteArray /*123*/ {
+	var convArg0 = data.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCryptographicHash4hashERK10QByteArrayNS_9AlgorithmE", qtrt.FFI_TYPE_POINTER, convArg0, method)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QCryptographicHash_Hash(data *QByteArray, method int) *QByteArray /*123*/ {
+func QCryptographicHash_Hash(data QByteArray_ITF, method int) *QByteArray /*123*/ {
 	var nilthis *QCryptographicHash
 	rv := nilthis.Hash(data, method)
 	return rv

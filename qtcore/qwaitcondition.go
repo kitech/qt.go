@@ -87,8 +87,8 @@ func DeleteQWaitCondition(this *QWaitCondition) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wait(QMutex *, unsigned long)
-func (this *QWaitCondition) Wait(lockedMutex *QMutex /*777 QMutex **/, time uint) bool {
-	var convArg0 = lockedMutex.GetCthis()
+func (this *QWaitCondition) Wait(lockedMutex QMutex_ITF /*777 QMutex **/, time uint) bool {
+	var convArg0 = lockedMutex.QMutex_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -98,8 +98,8 @@ func (this *QWaitCondition) Wait(lockedMutex *QMutex /*777 QMutex **/, time uint
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool wait(QReadWriteLock *, unsigned long)
-func (this *QWaitCondition) Wait_1(lockedReadWriteLock *QReadWriteLock /*777 QReadWriteLock **/, time uint) bool {
-	var convArg0 = lockedReadWriteLock.GetCthis()
+func (this *QWaitCondition) Wait_1(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/, time uint) bool {
+	var convArg0 = lockedReadWriteLock.QReadWriteLock_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

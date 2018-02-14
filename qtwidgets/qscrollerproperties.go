@@ -89,12 +89,12 @@ func DeleteQScrollerProperties(this *QScrollerProperties) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultScrollerProperties(const QScrollerProperties &)
-func (this *QScrollerProperties) SetDefaultScrollerProperties(sp *QScrollerProperties) {
-	var convArg0 = sp.GetCthis()
+func (this *QScrollerProperties) SetDefaultScrollerProperties(sp QScrollerProperties_ITF) {
+	var convArg0 = sp.QScrollerProperties_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QScrollerProperties_SetDefaultScrollerProperties(sp *QScrollerProperties) {
+func QScrollerProperties_SetDefaultScrollerProperties(sp QScrollerProperties_ITF) {
 	var nilthis *QScrollerProperties
 	nilthis.SetDefaultScrollerProperties(sp)
 }
@@ -128,8 +128,8 @@ func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScrollMetric(enum QScrollerProperties::ScrollMetric, const QVariant &)
-func (this *QScrollerProperties) SetScrollMetric(metric int, value *qtcore.QVariant) {
-	var convArg1 = value.GetCthis()
+func (this *QScrollerProperties) SetScrollMetric(metric int, value qtcore.QVariant_ITF) {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerProperties15setScrollMetricENS_12ScrollMetricERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1)
 	qtrt.ErrPrint(err, rv)
 }

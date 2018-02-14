@@ -66,8 +66,8 @@ func (*QTreeWidgetItemIterator) NewFromPointer(cthis unsafe.Pointer) *QTreeWidge
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTreeWidgetItemIterator(QTreeWidget *, QTreeWidgetItemIterator::IteratorFlags)
-func NewQTreeWidgetItemIterator(widget *QTreeWidget /*777 QTreeWidget **/, flags int) *QTreeWidgetItemIterator {
-	var convArg0 = widget.GetCthis()
+func NewQTreeWidgetItemIterator(widget QTreeWidget_ITF /*777 QTreeWidget **/, flags int) *QTreeWidgetItemIterator {
+	var convArg0 = widget.QTreeWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP11QTreeWidget6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -79,8 +79,8 @@ func NewQTreeWidgetItemIterator(widget *QTreeWidget /*777 QTreeWidget **/, flags
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTreeWidgetItemIterator(QTreeWidgetItem *, QTreeWidgetItemIterator::IteratorFlags)
-func NewQTreeWidgetItemIterator_1(item *QTreeWidgetItem /*777 QTreeWidgetItem **/, flags int) *QTreeWidgetItemIterator {
-	var convArg0 = item.GetCthis()
+func NewQTreeWidgetItemIterator_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, flags int) *QTreeWidgetItemIterator {
+	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP15QTreeWidgetItem6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemIteratorFromPointer(unsafe.Pointer(uintptr(rv)))

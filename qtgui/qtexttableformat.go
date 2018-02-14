@@ -75,8 +75,8 @@ func NewQTextTableFormat() *QTextTableFormat {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextTableFormat(const QTextFormat &)
-func NewQTextTableFormat_1(fmt *QTextFormat) *QTextTableFormat {
-	var convArg0 = fmt.GetCthis()
+func NewQTextTableFormat_1(fmt QTextFormat_ITF) *QTextTableFormat {
+	var convArg0 = fmt.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextTableFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextTableFormatFromPointer(unsafe.Pointer(uintptr(rv)))

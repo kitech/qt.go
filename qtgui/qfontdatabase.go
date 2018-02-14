@@ -103,8 +103,8 @@ func (this *QFontDatabase) Styles(family string) *qtcore.QStringList /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString styleString(const QFont &)
-func (this *QFontDatabase) StyleString(font *QFont) string {
-	var convArg0 = font.GetCthis()
+func (this *QFontDatabase) StyleString(font QFont_ITF) string {
+	var convArg0 = font.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,8 +117,8 @@ func (this *QFontDatabase) StyleString(font *QFont) string {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString styleString(const QFontInfo &)
-func (this *QFontDatabase) StyleString_1(fontInfo *QFontInfo) string {
-	var convArg0 = fontInfo.GetCthis()
+func (this *QFontDatabase) StyleString_1(fontInfo QFontInfo_ITF) string {
+	var convArg0 = fontInfo.QFontInfo_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK9QFontInfo", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -322,13 +322,13 @@ func QFontDatabase_AddApplicationFont(fileName string) int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int addApplicationFontFromData(const QByteArray &)
-func (this *QFontDatabase) AddApplicationFontFromData(fontData *qtcore.QByteArray) int {
-	var convArg0 = fontData.GetCthis()
+func (this *QFontDatabase) AddApplicationFontFromData(fontData qtcore.QByteArray_ITF) int {
+	var convArg0 = fontData.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QFontDatabase_AddApplicationFontFromData(fontData *qtcore.QByteArray) int {
+func QFontDatabase_AddApplicationFontFromData(fontData qtcore.QByteArray_ITF) int {
 	var nilthis *QFontDatabase
 	rv := nilthis.AddApplicationFontFromData(fontData)
 	return rv

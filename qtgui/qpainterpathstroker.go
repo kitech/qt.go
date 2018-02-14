@@ -77,8 +77,8 @@ func NewQPainterPathStroker() *QPainterPathStroker {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPainterPathStroker(const QPen &)
-func NewQPainterPathStroker_1(pen *QPen) *QPainterPathStroker {
-	var convArg0 = pen.GetCthis()
+func NewQPainterPathStroker_1(pen QPen_ITF) *QPainterPathStroker {
+	var convArg0 = pen.QPen_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QPainterPathStrokerC2ERK4QPen", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPainterPathStrokerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -224,8 +224,8 @@ func (this *QPainterPathStroker) DashOffset() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath createStroke(const QPainterPath &)
-func (this *QPainterPathStroker) CreateStroke(path *QPainterPath) *QPainterPath /*123*/ {
-	var convArg0 = path.GetCthis()
+func (this *QPainterPathStroker) CreateStroke(path QPainterPath_ITF) *QPainterPath /*123*/ {
+	var convArg0 = path.QPainterPath_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333

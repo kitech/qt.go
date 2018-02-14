@@ -461,12 +461,12 @@ func (this *QSurfaceFormat) SetColorSpace(colorSpace int) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultFormat(const QSurfaceFormat &)
-func (this *QSurfaceFormat) SetDefaultFormat(format *QSurfaceFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QSurfaceFormat) SetDefaultFormat(format QSurfaceFormat_ITF) {
+	var convArg0 = format.QSurfaceFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat16setDefaultFormatERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QSurfaceFormat_SetDefaultFormat(format *QSurfaceFormat) {
+func QSurfaceFormat_SetDefaultFormat(format QSurfaceFormat_ITF) {
 	var nilthis *QSurfaceFormat
 	nilthis.SetDefaultFormat(format)
 }

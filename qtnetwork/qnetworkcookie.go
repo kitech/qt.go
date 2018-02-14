@@ -65,9 +65,9 @@ func (*QNetworkCookie) NewFromPointer(cthis unsafe.Pointer) *QNetworkCookie {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkCookie(const QByteArray &, const QByteArray &)
-func NewQNetworkCookie(name *qtcore.QByteArray, value *qtcore.QByteArray) *QNetworkCookie {
-	var convArg0 = name.GetCthis()
-	var convArg1 = value.GetCthis()
+func NewQNetworkCookie(name qtcore.QByteArray_ITF, value qtcore.QByteArray_ITF) *QNetworkCookie {
+	var convArg0 = name.QByteArray_PTR().GetCthis()
+	var convArg1 = value.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QNetworkCookieC2ERK10QByteArrayS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkCookieFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -90,8 +90,8 @@ func DeleteQNetworkCookie(this *QNetworkCookie) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkCookie &)
-func (this *QNetworkCookie) Swap(other *QNetworkCookie) {
-	var convArg0 = other.GetCthis()
+func (this *QNetworkCookie) Swap(other QNetworkCookie_ITF) {
+	var convArg0 = other.QNetworkCookie_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QNetworkCookie4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -160,8 +160,8 @@ func (this *QNetworkCookie) ExpirationDate() *qtcore.QDateTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExpirationDate(const QDateTime &)
-func (this *QNetworkCookie) SetExpirationDate(date *qtcore.QDateTime) {
-	var convArg0 = date.GetCthis()
+func (this *QNetworkCookie) SetExpirationDate(date qtcore.QDateTime_ITF) {
+	var convArg0 = date.QDateTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QNetworkCookie17setExpirationDateERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -230,8 +230,8 @@ func (this *QNetworkCookie) Name() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setName(const QByteArray &)
-func (this *QNetworkCookie) SetName(cookieName *qtcore.QByteArray) {
-	var convArg0 = cookieName.GetCthis()
+func (this *QNetworkCookie) SetName(cookieName qtcore.QByteArray_ITF) {
+	var convArg0 = cookieName.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QNetworkCookie7setNameERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -252,8 +252,8 @@ func (this *QNetworkCookie) Value() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(const QByteArray &)
-func (this *QNetworkCookie) SetValue(value *qtcore.QByteArray) {
-	var convArg0 = value.GetCthis()
+func (this *QNetworkCookie) SetValue(value qtcore.QByteArray_ITF) {
+	var convArg0 = value.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QNetworkCookie8setValueERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -274,8 +274,8 @@ func (this *QNetworkCookie) ToRawForm(form int) *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasSameIdentifier(const QNetworkCookie &)
-func (this *QNetworkCookie) HasSameIdentifier(other *QNetworkCookie) bool {
-	var convArg0 = other.GetCthis()
+func (this *QNetworkCookie) HasSameIdentifier(other QNetworkCookie_ITF) bool {
+	var convArg0 = other.QNetworkCookie_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QNetworkCookie17hasSameIdentifierERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -285,8 +285,8 @@ func (this *QNetworkCookie) HasSameIdentifier(other *QNetworkCookie) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void normalize(const QUrl &)
-func (this *QNetworkCookie) Normalize(url *qtcore.QUrl) {
-	var convArg0 = url.GetCthis()
+func (this *QNetworkCookie) Normalize(url qtcore.QUrl_ITF) {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QNetworkCookie9normalizeERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

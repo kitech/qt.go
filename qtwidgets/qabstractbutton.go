@@ -144,8 +144,8 @@ func (this *QAbstractButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractButton(QWidget *)
-func NewQAbstractButton(parent *QWidget /*777 QWidget **/) *QAbstractButton {
-	var convArg0 = parent.GetCthis()
+func NewQAbstractButton(parent QWidget_ITF /*777 QWidget **/) *QAbstractButton {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -191,8 +191,8 @@ func (this *QAbstractButton) Text() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
-func (this *QAbstractButton) SetIcon(icon *qtgui.QIcon) {
-	var convArg0 = icon.GetCthis()
+func (this *QAbstractButton) SetIcon(icon qtgui.QIcon_ITF) {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -225,8 +225,8 @@ func (this *QAbstractButton) IconSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcut(const QKeySequence &)
-func (this *QAbstractButton) SetShortcut(key *qtgui.QKeySequence) {
-	var convArg0 = key.GetCthis()
+func (this *QAbstractButton) SetShortcut(key qtgui.QKeySequence_ITF) {
+	var convArg0 = key.QKeySequence_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton11setShortcutERK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -381,8 +381,8 @@ func (this *QAbstractButton) Group() *QButtonGroup /*777 QButtonGroup **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
-func (this *QAbstractButton) SetIconSize(size *qtcore.QSize) {
-	var convArg0 = size.GetCthis()
+func (this *QAbstractButton) SetIconSize(size qtcore.QSize_ITF) {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton11setIconSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -463,8 +463,8 @@ func (this *QAbstractButton) Toggled(checked bool) {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QAbstractButton) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = e.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -473,8 +473,8 @@ func (this *QAbstractButton) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool hitButton(const QPoint &)
-func (this *QAbstractButton) HitButton(pos *qtcore.QPoint) bool {
-	var convArg0 = pos.GetCthis()
+func (this *QAbstractButton) HitButton(pos qtcore.QPoint_ITF) bool {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractButton9hitButtonERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -502,8 +502,8 @@ func (this *QAbstractButton) NextCheckState() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QAbstractButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -513,8 +513,8 @@ func (this *QAbstractButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QAbstractButton) KeyPressEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) KeyPressEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = e.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -523,8 +523,8 @@ func (this *QAbstractButton) KeyPressEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
-func (this *QAbstractButton) KeyReleaseEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) KeyReleaseEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = e.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton15keyReleaseEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -533,8 +533,8 @@ func (this *QAbstractButton) KeyReleaseEvent(e *qtgui.QKeyEvent /*777 QKeyEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
-func (this *QAbstractButton) MousePressEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) MousePressEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = e.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -543,8 +543,8 @@ func (this *QAbstractButton) MousePressEvent(e *qtgui.QMouseEvent /*777 QMouseEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QAbstractButton) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = e.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -553,8 +553,8 @@ func (this *QAbstractButton) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouse
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QAbstractButton) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) MouseMoveEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = e.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -563,8 +563,8 @@ func (this *QAbstractButton) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
-func (this *QAbstractButton) FocusInEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) FocusInEvent(e qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = e.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -573,8 +573,8 @@ func (this *QAbstractButton) FocusInEvent(e *qtgui.QFocusEvent /*777 QFocusEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
-func (this *QAbstractButton) FocusOutEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) FocusOutEvent(e qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = e.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -583,8 +583,8 @@ func (this *QAbstractButton) FocusOutEvent(e *qtgui.QFocusEvent /*777 QFocusEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
-func (this *QAbstractButton) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -593,8 +593,8 @@ func (this *QAbstractButton) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
-func (this *QAbstractButton) TimerEvent(e *qtcore.QTimerEvent /*777 QTimerEvent **/) {
-	var convArg0 = e.GetCthis()
+func (this *QAbstractButton) TimerEvent(e qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
+	var convArg0 = e.QTimerEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

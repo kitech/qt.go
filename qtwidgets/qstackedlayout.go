@@ -85,8 +85,8 @@ func NewQStackedLayout() *QStackedLayout {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedLayout(QWidget *)
-func NewQStackedLayout_1(parent *QWidget /*777 QWidget **/) *QStackedLayout {
-	var convArg0 = parent.GetCthis()
+func NewQStackedLayout_1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStackedLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -97,8 +97,8 @@ func NewQStackedLayout_1(parent *QWidget /*777 QWidget **/) *QStackedLayout {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedLayout(QLayout *)
-func NewQStackedLayout_2(parentLayout *QLayout /*777 QLayout **/) *QStackedLayout {
-	var convArg0 = parentLayout.GetCthis()
+func NewQStackedLayout_2(parentLayout QLayout_ITF /*777 QLayout **/) *QStackedLayout {
+	var convArg0 = parentLayout.QLayout_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QLayout", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStackedLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -120,8 +120,8 @@ func DeleteQStackedLayout(this *QStackedLayout) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int addWidget(QWidget *)
-func (this *QStackedLayout) AddWidget(w *QWidget /*777 QWidget **/) int {
-	var convArg0 = w.GetCthis()
+func (this *QStackedLayout) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout9addWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -131,8 +131,8 @@ func (this *QStackedLayout) AddWidget(w *QWidget /*777 QWidget **/) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertWidget(int, QWidget *)
-func (this *QStackedLayout) InsertWidget(index int, w *QWidget /*777 QWidget **/) int {
-	var convArg1 = w.GetCthis()
+func (this *QStackedLayout) InsertWidget(index int, w QWidget_ITF /*777 QWidget **/) int {
+	var convArg1 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout12insertWidgetEiP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -201,8 +201,8 @@ func (this *QStackedLayout) SetStackingMode(stackingMode int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void addItem(QLayoutItem *)
-func (this *QStackedLayout) AddItem(item *QLayoutItem /*777 QLayoutItem **/) {
-	var convArg0 = item.GetCthis()
+func (this *QStackedLayout) AddItem(item QLayoutItem_ITF /*777 QLayoutItem **/) {
+	var convArg0 = item.QLayoutItem_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout7addItemEP11QLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -255,8 +255,8 @@ func (this *QStackedLayout) TakeAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
-func (this *QStackedLayout) SetGeometry(rect *qtcore.QRect) {
-	var convArg0 = rect.GetCthis()
+func (this *QStackedLayout) SetGeometry(rect qtcore.QRect_ITF) {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -312,8 +312,8 @@ func (this *QStackedLayout) SetCurrentIndex(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWidget(QWidget *)
-func (this *QStackedLayout) SetCurrentWidget(w *QWidget /*777 QWidget **/) {
-	var convArg0 = w.GetCthis()
+func (this *QStackedLayout) SetCurrentWidget(w QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout16setCurrentWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

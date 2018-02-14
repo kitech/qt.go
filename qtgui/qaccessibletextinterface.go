@@ -217,8 +217,8 @@ func (this *QAccessibleTextInterface) CharacterRect(offset int) *qtcore.QRect /*
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int offsetAtPoint(const QPoint &)
-func (this *QAccessibleTextInterface) OffsetAtPoint(point *qtcore.QPoint) int {
-	var convArg0 = point.GetCthis()
+func (this *QAccessibleTextInterface) OffsetAtPoint(point qtcore.QPoint_ITF) int {
+	var convArg0 = point.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface13offsetAtPointERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

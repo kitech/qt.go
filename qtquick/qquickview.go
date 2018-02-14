@@ -111,8 +111,8 @@ func (this *QQuickView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(QWindow *)
-func NewQQuickView(parent *qtgui.QWindow /*777 QWindow **/) *QQuickView {
-	var convArg0 = parent.GetCthis()
+func NewQQuickView(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
+	var convArg0 = parent.QWindow_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -123,9 +123,9 @@ func NewQQuickView(parent *qtgui.QWindow /*777 QWindow **/) *QQuickView {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(QQmlEngine *, QWindow *)
-func NewQQuickView_1(engine *qtqml.QQmlEngine /*777 QQmlEngine **/, parent *qtgui.QWindow /*777 QWindow **/) *QQuickView {
-	var convArg0 = engine.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQQuickView_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
+	var convArg0 = engine.QQmlEngine_PTR().GetCthis()
+	var convArg1 = parent.QWindow_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2EP10QQmlEngineP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -136,9 +136,9 @@ func NewQQuickView_1(engine *qtqml.QQmlEngine /*777 QQmlEngine **/, parent *qtgu
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(const QUrl &, QWindow *)
-func NewQQuickView_2(source *qtcore.QUrl, parent *qtgui.QWindow /*777 QWindow **/) *QQuickView {
-	var convArg0 = source.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQQuickView_2(source qtcore.QUrl_ITF, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
+	var convArg0 = source.QUrl_PTR().GetCthis()
+	var convArg1 = parent.QWindow_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2ERK4QUrlP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -255,8 +255,8 @@ func (this *QQuickView) InitialSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSource(const QUrl &)
-func (this *QQuickView) SetSource(arg0 *qtcore.QUrl) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickView) SetSource(arg0 qtcore.QUrl_ITF) {
+	var convArg0 = arg0.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView9setSourceERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -265,10 +265,10 @@ func (this *QQuickView) SetSource(arg0 *qtcore.QUrl) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContent(const QUrl &, QQmlComponent *, QObject *)
-func (this *QQuickView) SetContent(url *qtcore.QUrl, component *qtqml.QQmlComponent /*777 QQmlComponent **/, item *qtcore.QObject /*777 QObject **/) {
-	var convArg0 = url.GetCthis()
-	var convArg1 = component.GetCthis()
-	var convArg2 = item.GetCthis()
+func (this *QQuickView) SetContent(url qtcore.QUrl_ITF, component qtqml.QQmlComponent_ITF /*777 QQmlComponent **/, item qtcore.QObject_ITF /*777 QObject **/) {
+	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg1 = component.QQmlComponent_PTR().GetCthis()
+	var convArg2 = item.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView10setContentERK4QUrlP13QQmlComponentP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -286,8 +286,8 @@ func (this *QQuickView) StatusChanged(arg0 int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QQuickView) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickView) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = arg0.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -296,8 +296,8 @@ func (this *QQuickView) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
-func (this *QQuickView) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickView) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
+	var convArg0 = arg0.QTimerEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -306,8 +306,8 @@ func (this *QQuickView) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QQuickView) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickView) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -316,8 +316,8 @@ func (this *QQuickView) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
-func (this *QQuickView) KeyReleaseEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickView) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView15keyReleaseEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -326,8 +326,8 @@ func (this *QQuickView) KeyReleaseEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
-func (this *QQuickView) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickView) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -336,8 +336,8 @@ func (this *QQuickView) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QQuickView) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickView) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -346,8 +346,8 @@ func (this *QQuickView) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QQuickView) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickView) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

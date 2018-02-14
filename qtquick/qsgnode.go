@@ -113,8 +113,8 @@ func (this *QSGNode) Parent() *QSGNode /*777 QSGNode **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeChildNode(QSGNode *)
-func (this *QSGNode) RemoveChildNode(node *QSGNode /*777 QSGNode **/) {
-	var convArg0 = node.GetCthis()
+func (this *QSGNode) RemoveChildNode(node QSGNode_ITF /*777 QSGNode **/) {
+	var convArg0 = node.QSGNode_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode15removeChildNodeEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -132,8 +132,8 @@ func (this *QSGNode) RemoveAllChildNodes() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void prependChildNode(QSGNode *)
-func (this *QSGNode) PrependChildNode(node *QSGNode /*777 QSGNode **/) {
-	var convArg0 = node.GetCthis()
+func (this *QSGNode) PrependChildNode(node QSGNode_ITF /*777 QSGNode **/) {
+	var convArg0 = node.QSGNode_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode16prependChildNodeEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -142,8 +142,8 @@ func (this *QSGNode) PrependChildNode(node *QSGNode /*777 QSGNode **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void appendChildNode(QSGNode *)
-func (this *QSGNode) AppendChildNode(node *QSGNode /*777 QSGNode **/) {
-	var convArg0 = node.GetCthis()
+func (this *QSGNode) AppendChildNode(node QSGNode_ITF /*777 QSGNode **/) {
+	var convArg0 = node.QSGNode_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode15appendChildNodeEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -152,9 +152,9 @@ func (this *QSGNode) AppendChildNode(node *QSGNode /*777 QSGNode **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertChildNodeBefore(QSGNode *, QSGNode *)
-func (this *QSGNode) InsertChildNodeBefore(node *QSGNode /*777 QSGNode **/, before *QSGNode /*777 QSGNode **/) {
-	var convArg0 = node.GetCthis()
-	var convArg1 = before.GetCthis()
+func (this *QSGNode) InsertChildNodeBefore(node QSGNode_ITF /*777 QSGNode **/, before QSGNode_ITF /*777 QSGNode **/) {
+	var convArg0 = node.QSGNode_PTR().GetCthis()
+	var convArg1 = before.QSGNode_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode21insertChildNodeBeforeEPS_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -163,9 +163,9 @@ func (this *QSGNode) InsertChildNodeBefore(node *QSGNode /*777 QSGNode **/, befo
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertChildNodeAfter(QSGNode *, QSGNode *)
-func (this *QSGNode) InsertChildNodeAfter(node *QSGNode /*777 QSGNode **/, after *QSGNode /*777 QSGNode **/) {
-	var convArg0 = node.GetCthis()
-	var convArg1 = after.GetCthis()
+func (this *QSGNode) InsertChildNodeAfter(node QSGNode_ITF /*777 QSGNode **/, after QSGNode_ITF /*777 QSGNode **/) {
+	var convArg0 = node.QSGNode_PTR().GetCthis()
+	var convArg1 = after.QSGNode_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode20insertChildNodeAfterEPS_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -174,8 +174,8 @@ func (this *QSGNode) InsertChildNodeAfter(node *QSGNode /*777 QSGNode **/, after
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reparentChildNodesTo(QSGNode *)
-func (this *QSGNode) ReparentChildNodesTo(newParent *QSGNode /*777 QSGNode **/) {
-	var convArg0 = newParent.GetCthis()
+func (this *QSGNode) ReparentChildNodesTo(newParent QSGNode_ITF /*777 QSGNode **/) {
+	var convArg0 = newParent.QSGNode_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode20reparentChildNodesToEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

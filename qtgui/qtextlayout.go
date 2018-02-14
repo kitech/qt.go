@@ -91,11 +91,11 @@ func NewQTextLayout_1(text string) *QTextLayout {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextLayout(const QString &, const QFont &, QPaintDevice *)
-func NewQTextLayout_2(text string, font *QFont, paintdevice *QPaintDevice /*777 QPaintDevice **/) *QTextLayout {
+func NewQTextLayout_2(text string, font QFont_ITF, paintdevice QPaintDevice_ITF /*777 QPaintDevice **/) *QTextLayout {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = font.GetCthis()
-	var convArg2 = paintdevice.GetCthis()
+	var convArg1 = font.QFont_PTR().GetCthis()
+	var convArg2 = paintdevice.QPaintDevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -107,8 +107,8 @@ func NewQTextLayout_2(text string, font *QFont, paintdevice *QPaintDevice /*777 
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTextLayout(const QTextBlock &)
-func NewQTextLayout_3(b *QTextBlock) *QTextLayout {
-	var convArg0 = b.GetCthis()
+func NewQTextLayout_3(b QTextBlock_ITF) *QTextLayout {
+	var convArg0 = b.QTextBlock_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK10QTextBlock", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -131,8 +131,8 @@ func DeleteQTextLayout(this *QTextLayout) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
-func (this *QTextLayout) SetFont(f *QFont) {
-	var convArg0 = f.GetCthis()
+func (this *QTextLayout) SetFont(f QFont_ITF) {
+	var convArg0 = f.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -153,8 +153,8 @@ func (this *QTextLayout) Font() *QFont /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRawFont(const QRawFont &)
-func (this *QTextLayout) SetRawFont(rawFont *QRawFont) {
-	var convArg0 = rawFont.GetCthis()
+func (this *QTextLayout) SetRawFont(rawFont QRawFont_ITF) {
+	var convArg0 = rawFont.QRawFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout10setRawFontERK8QRawFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -187,8 +187,8 @@ func (this *QTextLayout) Text() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextOption(const QTextOption &)
-func (this *QTextLayout) SetTextOption(option *QTextOption) {
-	var convArg0 = option.GetCthis()
+func (this *QTextLayout) SetTextOption(option QTextOption_ITF) {
+	var convArg0 = option.QTextOption_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout13setTextOptionERK11QTextOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -422,9 +422,9 @@ func (this *QTextLayout) RightCursorPosition(oldPos int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void drawCursor(QPainter *, const QPointF &, int)
-func (this *QTextLayout) DrawCursor(p *QPainter /*777 QPainter **/, pos *qtcore.QPointF, cursorPosition int) {
-	var convArg0 = p.GetCthis()
-	var convArg1 = pos.GetCthis()
+func (this *QTextLayout) DrawCursor(p QPainter_ITF /*777 QPainter **/, pos qtcore.QPointF_ITF, cursorPosition int) {
+	var convArg0 = p.QPainter_PTR().GetCthis()
+	var convArg1 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cursorPosition)
 	qtrt.ErrPrint(err, rv)
 }
@@ -433,9 +433,9 @@ func (this *QTextLayout) DrawCursor(p *QPainter /*777 QPainter **/, pos *qtcore.
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void drawCursor(QPainter *, const QPointF &, int, int)
-func (this *QTextLayout) DrawCursor_1(p *QPainter /*777 QPainter **/, pos *qtcore.QPointF, cursorPosition int, width int) {
-	var convArg0 = p.GetCthis()
-	var convArg1 = pos.GetCthis()
+func (this *QTextLayout) DrawCursor_1(p QPainter_ITF /*777 QPainter **/, pos qtcore.QPointF_ITF, cursorPosition int, width int) {
+	var convArg0 = p.QPainter_PTR().GetCthis()
+	var convArg1 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cursorPosition, width)
 	qtrt.ErrPrint(err, rv)
 }
@@ -456,8 +456,8 @@ func (this *QTextLayout) Position() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(const QPointF &)
-func (this *QTextLayout) SetPosition(p *qtcore.QPointF) {
-	var convArg0 = p.GetCthis()
+func (this *QTextLayout) SetPosition(p qtcore.QPointF_ITF) {
+	var convArg0 = p.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout11setPositionERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

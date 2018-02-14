@@ -111,8 +111,8 @@ func (this *QQmlError) Url() *qtcore.QUrl /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUrl(const QUrl &)
-func (this *QQmlError) SetUrl(arg0 *qtcore.QUrl) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQmlError) SetUrl(arg0 qtcore.QUrl_ITF) {
+	var convArg0 = arg0.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError6setUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -193,8 +193,8 @@ func (this *QQmlError) Object() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setObject(QObject *)
-func (this *QQmlError) SetObject(arg0 *qtcore.QObject /*777 QObject **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQmlError) SetObject(arg0 qtcore.QObject_ITF /*777 QObject **/) {
+	var convArg0 = arg0.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError9setObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

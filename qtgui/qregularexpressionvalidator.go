@@ -75,8 +75,8 @@ func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*777 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionValidator(QObject *)
-func NewQRegularExpressionValidator(parent *qtcore.QObject /*777 QObject **/) *QRegularExpressionValidator {
-	var convArg0 = parent.GetCthis()
+func NewQRegularExpressionValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -87,9 +87,9 @@ func NewQRegularExpressionValidator(parent *qtcore.QObject /*777 QObject **/) *Q
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionValidator(const QRegularExpression &, QObject *)
-func NewQRegularExpressionValidator_1(re *qtcore.QRegularExpression, parent *qtcore.QObject /*777 QObject **/) *QRegularExpressionValidator {
-	var convArg0 = re.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQRegularExpressionValidator_1(re qtcore.QRegularExpression_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
+	var convArg0 = re.QRegularExpression_PTR().GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2ERK18QRegularExpressionP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -135,8 +135,8 @@ func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExp
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRegularExpression(const QRegularExpression &)
-func (this *QRegularExpressionValidator) SetRegularExpression(re *qtcore.QRegularExpression) {
-	var convArg0 = re.GetCthis()
+func (this *QRegularExpressionValidator) SetRegularExpression(re qtcore.QRegularExpression_ITF) {
+	var convArg0 = re.QRegularExpression_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -145,8 +145,8 @@ func (this *QRegularExpressionValidator) SetRegularExpression(re *qtcore.QRegula
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void regularExpressionChanged(const QRegularExpression &)
-func (this *QRegularExpressionValidator) RegularExpressionChanged(re *qtcore.QRegularExpression) {
-	var convArg0 = re.GetCthis()
+func (this *QRegularExpressionValidator) RegularExpressionChanged(re qtcore.QRegularExpression_ITF) {
+	var convArg0 = re.QRegularExpression_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

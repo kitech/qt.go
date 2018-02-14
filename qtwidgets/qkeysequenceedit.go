@@ -94,8 +94,8 @@ func (this *QKeySequenceEdit) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QKeySequenceEdit(QWidget *)
-func NewQKeySequenceEdit(parent *QWidget /*777 QWidget **/) *QKeySequenceEdit {
-	var convArg0 = parent.GetCthis()
+func NewQKeySequenceEdit(parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceEditFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -106,9 +106,9 @@ func NewQKeySequenceEdit(parent *QWidget /*777 QWidget **/) *QKeySequenceEdit {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QKeySequenceEdit(const QKeySequence &, QWidget *)
-func NewQKeySequenceEdit_1(keySequence *qtgui.QKeySequence, parent *QWidget /*777 QWidget **/) *QKeySequenceEdit {
-	var convArg0 = keySequence.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQKeySequenceEdit_1(keySequence qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
+	var convArg0 = keySequence.QKeySequence_PTR().GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceEditFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -142,8 +142,8 @@ func (this *QKeySequenceEdit) KeySequence() *qtgui.QKeySequence /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeySequence(const QKeySequence &)
-func (this *QKeySequenceEdit) SetKeySequence(keySequence *qtgui.QKeySequence) {
-	var convArg0 = keySequence.GetCthis()
+func (this *QKeySequenceEdit) SetKeySequence(keySequence qtgui.QKeySequence_ITF) {
+	var convArg0 = keySequence.QKeySequence_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -170,8 +170,8 @@ func (this *QKeySequenceEdit) EditingFinished() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void keySequenceChanged(const QKeySequence &)
-func (this *QKeySequenceEdit) KeySequenceChanged(keySequence *qtgui.QKeySequence) {
-	var convArg0 = keySequence.GetCthis()
+func (this *QKeySequenceEdit) KeySequenceChanged(keySequence qtgui.QKeySequence_ITF) {
+	var convArg0 = keySequence.QKeySequence_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -180,8 +180,8 @@ func (this *QKeySequenceEdit) KeySequenceChanged(keySequence *qtgui.QKeySequence
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QKeySequenceEdit) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QKeySequenceEdit) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEdit5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -191,8 +191,8 @@ func (this *QKeySequenceEdit) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QKeySequenceEdit) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QKeySequenceEdit) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEdit13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -201,8 +201,8 @@ func (this *QKeySequenceEdit) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
-func (this *QKeySequenceEdit) KeyReleaseEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QKeySequenceEdit) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEdit15keyReleaseEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -211,8 +211,8 @@ func (this *QKeySequenceEdit) KeyReleaseEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
-func (this *QKeySequenceEdit) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QKeySequenceEdit) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
+	var convArg0 = arg0.QTimerEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEdit10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

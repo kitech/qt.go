@@ -64,8 +64,8 @@ func (*QTextStreamManipulator) NewFromPointer(cthis unsafe.Pointer) *QTextStream
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void exec(QTextStream &)
-func (this *QTextStreamManipulator) Exec(s *QTextStream) {
-	var convArg0 = s.GetCthis()
+func (this *QTextStreamManipulator) Exec(s QTextStream_ITF) {
+	var convArg0 = s.QTextStream_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QTextStreamManipulator4execER11QTextStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -66,8 +66,8 @@ func (*QJSValueIterator) NewFromPointer(cthis unsafe.Pointer) *QJSValueIterator 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValueIterator(const QJSValue &)
-func NewQJSValueIterator(value *QJSValue) *QJSValueIterator {
-	var convArg0 = value.GetCthis()
+func NewQJSValueIterator(value QJSValue_ITF) *QJSValueIterator {
+	var convArg0 = value.QJSValue_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QJSValueIteratorC2ERK8QJSValue", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSValueIteratorFromPointer(unsafe.Pointer(uintptr(rv)))

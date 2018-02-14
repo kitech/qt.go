@@ -1125,14 +1125,14 @@ func QChar_SurrogateToUcs4(high uint16, low uint16) uint {
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [4] uint surrogateToUcs4(QChar, QChar)
-func (this *QChar) SurrogateToUcs4_1(high *QChar /*123*/, low *QChar /*123*/) uint {
-	var convArg0 = high.GetCthis()
-	var convArg1 = low.GetCthis()
+func (this *QChar) SurrogateToUcs4_1(high QChar_ITF /*123*/, low QChar_ITF /*123*/) uint {
+	var convArg0 = high.QChar_PTR().GetCthis()
+	var convArg1 = low.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4ES_S_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
-func QChar_SurrogateToUcs4_1(high *QChar /*123*/, low *QChar /*123*/) uint {
+func QChar_SurrogateToUcs4_1(high QChar_ITF /*123*/, low QChar_ITF /*123*/) uint {
 	var nilthis *QChar
 	rv := nilthis.SurrogateToUcs4_1(high, low)
 	return rv

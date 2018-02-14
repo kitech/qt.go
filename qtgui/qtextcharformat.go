@@ -75,8 +75,8 @@ func NewQTextCharFormat() *QTextCharFormat {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextCharFormat(const QTextFormat &)
-func NewQTextCharFormat_1(fmt *QTextFormat) *QTextCharFormat {
-	var convArg0 = fmt.GetCthis()
+func NewQTextCharFormat_1(fmt QTextFormat_ITF) *QTextCharFormat {
+	var convArg0 = fmt.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -98,8 +98,8 @@ func (this *QTextCharFormat) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &, enum QTextCharFormat::FontPropertiesInheritanceBehavior)
-func (this *QTextCharFormat) SetFont(font *QFont, behavior int) {
-	var convArg0 = font.GetCthis()
+func (this *QTextCharFormat) SetFont(font QFont_ITF, behavior int) {
+	var convArg0 = font.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat7setFontERK5QFontNS_33FontPropertiesInheritanceBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior)
 	qtrt.ErrPrint(err, rv)
 }
@@ -108,8 +108,8 @@ func (this *QTextCharFormat) SetFont(font *QFont, behavior int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
-func (this *QTextCharFormat) SetFont_1(font *QFont) {
-	var convArg0 = font.GetCthis()
+func (this *QTextCharFormat) SetFont_1(font QFont_ITF) {
+	var convArg0 = font.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -344,8 +344,8 @@ func (this *QTextCharFormat) FontStrikeOut() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setUnderlineColor(const QColor &)
-func (this *QTextCharFormat) SetUnderlineColor(color *QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QTextCharFormat) SetUnderlineColor(color QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat17setUnderlineColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -518,8 +518,8 @@ func (this *QTextCharFormat) VerticalAlignment() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextOutline(const QPen &)
-func (this *QTextCharFormat) SetTextOutline(pen *QPen) {
-	var convArg0 = pen.GetCthis()
+func (this *QTextCharFormat) SetTextOutline(pen QPen_ITF) {
+	var convArg0 = pen.QPen_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat14setTextOutlineERK4QPen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -631,8 +631,8 @@ func (this *QTextCharFormat) AnchorName() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAnchorNames(const QStringList &)
-func (this *QTextCharFormat) SetAnchorNames(names *qtcore.QStringList) {
-	var convArg0 = names.GetCthis()
+func (this *QTextCharFormat) SetAnchorNames(names qtcore.QStringList_ITF) {
+	var convArg0 = names.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat14setAnchorNamesERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

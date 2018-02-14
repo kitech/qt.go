@@ -74,8 +74,8 @@ func (this *QStylePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStylePlugin(QObject *)
-func NewQStylePlugin(parent *qtcore.QObject /*777 QObject **/) *QStylePlugin {
-	var convArg0 = parent.GetCthis()
+func NewQStylePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QStylePlugin {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStylePluginFromPointer(unsafe.Pointer(uintptr(rv)))

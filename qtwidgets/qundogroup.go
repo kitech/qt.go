@@ -74,8 +74,8 @@ func (this *QUndoGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoGroup(QObject *)
-func NewQUndoGroup(parent *qtcore.QObject /*777 QObject **/) *QUndoGroup {
-	var convArg0 = parent.GetCthis()
+func NewQUndoGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QUndoGroup {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUndoGroupFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -97,8 +97,8 @@ func DeleteQUndoGroup(this *QUndoGroup) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addStack(QUndoStack *)
-func (this *QUndoGroup) AddStack(stack *QUndoStack /*777 QUndoStack **/) {
-	var convArg0 = stack.GetCthis()
+func (this *QUndoGroup) AddStack(stack QUndoStack_ITF /*777 QUndoStack **/) {
+	var convArg0 = stack.QUndoStack_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoGroup8addStackEP10QUndoStack", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -107,8 +107,8 @@ func (this *QUndoGroup) AddStack(stack *QUndoStack /*777 QUndoStack **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeStack(QUndoStack *)
-func (this *QUndoGroup) RemoveStack(stack *QUndoStack /*777 QUndoStack **/) {
-	var convArg0 = stack.GetCthis()
+func (this *QUndoGroup) RemoveStack(stack QUndoStack_ITF /*777 QUndoStack **/) {
+	var convArg0 = stack.QUndoStack_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoGroup11removeStackEP10QUndoStack", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -127,8 +127,8 @@ func (this *QUndoGroup) ActiveStack() *QUndoStack /*777 QUndoStack **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * createUndoAction(QObject *, const QString &)
-func (this *QUndoGroup) CreateUndoAction(parent *qtcore.QObject /*777 QObject **/, prefix string) *QAction /*777 QAction **/ {
-	var convArg0 = parent.GetCthis()
+func (this *QUndoGroup) CreateUndoAction(parent qtcore.QObject_ITF /*777 QObject **/, prefix string) *QAction /*777 QAction **/ {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(prefix)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -140,8 +140,8 @@ func (this *QUndoGroup) CreateUndoAction(parent *qtcore.QObject /*777 QObject **
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * createRedoAction(QObject *, const QString &)
-func (this *QUndoGroup) CreateRedoAction(parent *qtcore.QObject /*777 QObject **/, prefix string) *QAction /*777 QAction **/ {
-	var convArg0 = parent.GetCthis()
+func (this *QUndoGroup) CreateRedoAction(parent qtcore.QObject_ITF /*777 QObject **/, prefix string) *QAction /*777 QAction **/ {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(prefix)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -227,8 +227,8 @@ func (this *QUndoGroup) Redo() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActiveStack(QUndoStack *)
-func (this *QUndoGroup) SetActiveStack(stack *QUndoStack /*777 QUndoStack **/) {
-	var convArg0 = stack.GetCthis()
+func (this *QUndoGroup) SetActiveStack(stack QUndoStack_ITF /*777 QUndoStack **/) {
+	var convArg0 = stack.QUndoStack_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoGroup14setActiveStackEP10QUndoStack", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -237,8 +237,8 @@ func (this *QUndoGroup) SetActiveStack(stack *QUndoStack /*777 QUndoStack **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activeStackChanged(QUndoStack *)
-func (this *QUndoGroup) ActiveStackChanged(stack *QUndoStack /*777 QUndoStack **/) {
-	var convArg0 = stack.GetCthis()
+func (this *QUndoGroup) ActiveStackChanged(stack QUndoStack_ITF /*777 QUndoStack **/) {
+	var convArg0 = stack.QUndoStack_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoGroup18activeStackChangedEP10QUndoStack", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -102,8 +102,8 @@ func (this *QStringList) Contains(str string, cs int) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity)
-func (this *QStringList) Contains_1(str *QLatin1String /*123*/, cs int) bool {
-	var convArg0 = str.GetCthis()
+func (this *QStringList) Contains_1(str QLatin1String_ITF /*123*/, cs int) bool {
+	var convArg0 = str.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList8containsE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -113,8 +113,8 @@ func (this *QStringList) Contains_1(str *QLatin1String /*123*/, cs int) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(const QRegExp &, int)
-func (this *QStringList) IndexOf(rx *QRegExp, from int) int {
-	var convArg0 = rx.GetCthis()
+func (this *QStringList) IndexOf(rx QRegExp_ITF, from int) int {
+	var convArg0 = rx.QRegExp_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -124,8 +124,8 @@ func (this *QStringList) IndexOf(rx *QRegExp, from int) int {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(QRegExp &, int)
-func (this *QStringList) IndexOf_1(rx *QRegExp, from int) int {
-	var convArg0 = rx.GetCthis()
+func (this *QStringList) IndexOf_1(rx QRegExp_ITF, from int) int {
+	var convArg0 = rx.QRegExp_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -135,8 +135,8 @@ func (this *QStringList) IndexOf_1(rx *QRegExp, from int) int {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(const QRegularExpression &, int)
-func (this *QStringList) IndexOf_2(re *QRegularExpression, from int) int {
-	var convArg0 = re.GetCthis()
+func (this *QStringList) IndexOf_2(re QRegularExpression_ITF, from int) int {
+	var convArg0 = re.QRegularExpression_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -146,8 +146,8 @@ func (this *QStringList) IndexOf_2(re *QRegularExpression, from int) int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegExp &, int)
-func (this *QStringList) LastIndexOf(rx *QRegExp, from int) int {
-	var convArg0 = rx.GetCthis()
+func (this *QStringList) LastIndexOf(rx QRegExp_ITF, from int) int {
+	var convArg0 = rx.QRegExp_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -157,8 +157,8 @@ func (this *QStringList) LastIndexOf(rx *QRegExp, from int) int {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(QRegExp &, int)
-func (this *QStringList) LastIndexOf_1(rx *QRegExp, from int) int {
-	var convArg0 = rx.GetCthis()
+func (this *QStringList) LastIndexOf_1(rx QRegExp_ITF, from int) int {
+	var convArg0 = rx.QRegExp_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -168,8 +168,8 @@ func (this *QStringList) LastIndexOf_1(rx *QRegExp, from int) int {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegularExpression &, int)
-func (this *QStringList) LastIndexOf_2(re *QRegularExpression, from int) int {
-	var convArg0 = re.GetCthis()
+func (this *QStringList) LastIndexOf_2(re QRegularExpression_ITF, from int) int {
+	var convArg0 = re.QRegularExpression_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

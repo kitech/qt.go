@@ -79,8 +79,8 @@ func (this *QShortcut) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcut(QWidget *)
-func NewQShortcut(parent *QWidget /*777 QWidget **/) *QShortcut {
-	var convArg0 = parent.GetCthis()
+func NewQShortcut(parent QWidget_ITF /*777 QWidget **/) *QShortcut {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQShortcutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -91,9 +91,9 @@ func NewQShortcut(parent *QWidget /*777 QWidget **/) *QShortcut {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcut(const QKeySequence &, QWidget *, const char *, const char *, Qt::ShortcutContext)
-func NewQShortcut_1(key *qtgui.QKeySequence, parent *QWidget /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
-	var convArg0 = key.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQShortcut_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
+	var convArg0 = key.QKeySequence_PTR().GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
 	var convArg3 = qtrt.CString(ambiguousMember)
@@ -119,8 +119,8 @@ func DeleteQShortcut(this *QShortcut) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKey(const QKeySequence &)
-func (this *QShortcut) SetKey(key *qtgui.QKeySequence) {
-	var convArg0 = key.GetCthis()
+func (this *QShortcut) SetKey(key qtgui.QKeySequence_ITF) {
+	var convArg0 = key.QKeySequence_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut6setKeyERK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -260,8 +260,8 @@ func (this *QShortcut) ActivatedAmbiguously() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QShortcut) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QShortcut) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

@@ -77,9 +77,9 @@ func NewQImageReader() *QImageReader {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QImageReader(QIODevice *, const QByteArray &)
-func NewQImageReader_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) *QImageReader {
-	var convArg0 = device.GetCthis()
-	var convArg1 = format.GetCthis()
+func NewQImageReader_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageReader {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg1 = format.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReaderC2EP9QIODeviceRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageReaderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -91,10 +91,10 @@ func NewQImageReader_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtc
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QImageReader(const QString &, const QByteArray &)
-func NewQImageReader_2(fileName string, format *qtcore.QByteArray) *QImageReader {
+func NewQImageReader_2(fileName string, format qtcore.QByteArray_ITF) *QImageReader {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = format.GetCthis()
+	var convArg1 = format.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReaderC2ERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageReaderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,8 +117,8 @@ func DeleteQImageReader(this *QImageReader) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QByteArray &)
-func (this *QImageReader) SetFormat(format *qtcore.QByteArray) {
-	var convArg0 = format.GetCthis()
+func (this *QImageReader) SetFormat(format qtcore.QByteArray_ITF) {
+	var convArg0 = format.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReader9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -177,8 +177,8 @@ func (this *QImageReader) DecideFormatFromContent() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
-func (this *QImageReader) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
-	var convArg0 = device.GetCthis()
+func (this *QImageReader) SetDevice(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReader9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -262,15 +262,15 @@ func QImageReader_ImageFormat_1(fileName string) *qtcore.QByteArray /*123*/ {
 // index:2
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray imageFormat(QIODevice *)
-func (this *QImageReader) ImageFormat_2(device *qtcore.QIODevice /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
-	var convArg0 = device.GetCthis()
+func (this *QImageReader) ImageFormat_2(device qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
+	var convArg0 = device.QIODevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReader11imageFormatEP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
-func QImageReader_ImageFormat_2(device *qtcore.QIODevice /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
+func QImageReader_ImageFormat_2(device qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
 	var nilthis *QImageReader
 	rv := nilthis.ImageFormat_2(device)
 	return rv
@@ -307,8 +307,8 @@ func (this *QImageReader) Text(key string) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClipRect(const QRect &)
-func (this *QImageReader) SetClipRect(rect *qtcore.QRect) {
-	var convArg0 = rect.GetCthis()
+func (this *QImageReader) SetClipRect(rect qtcore.QRect_ITF) {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReader11setClipRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -329,8 +329,8 @@ func (this *QImageReader) ClipRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScaledSize(const QSize &)
-func (this *QImageReader) SetScaledSize(size *qtcore.QSize) {
-	var convArg0 = size.GetCthis()
+func (this *QImageReader) SetScaledSize(size qtcore.QSize_ITF) {
+	var convArg0 = size.QSize_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReader13setScaledSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -370,8 +370,8 @@ func (this *QImageReader) Quality() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScaledClipRect(const QRect &)
-func (this *QImageReader) SetScaledClipRect(rect *qtcore.QRect) {
-	var convArg0 = rect.GetCthis()
+func (this *QImageReader) SetScaledClipRect(rect qtcore.QRect_ITF) {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReader17setScaledClipRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -392,8 +392,8 @@ func (this *QImageReader) ScaledClipRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBackgroundColor(const QColor &)
-func (this *QImageReader) SetBackgroundColor(color *QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QImageReader) SetBackgroundColor(color QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReader18setBackgroundColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -506,8 +506,8 @@ func (this *QImageReader) Read() *QImage /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool read(QImage *)
-func (this *QImageReader) Read_1(image *QImage /*777 QImage **/) bool {
-	var convArg0 = image.GetCthis()
+func (this *QImageReader) Read_1(image QImage_ITF /*777 QImage **/) bool {
+	var convArg0 = image.QImage_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReader4readEP6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

@@ -73,8 +73,8 @@ func (this *QDrag) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDrag(QObject *)
-func NewQDrag(dragSource *qtcore.QObject /*777 QObject **/) *QDrag {
-	var convArg0 = dragSource.GetCthis()
+func NewQDrag(dragSource qtcore.QObject_ITF /*777 QObject **/) *QDrag {
+	var convArg0 = dragSource.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDragC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDragFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -96,8 +96,8 @@ func DeleteQDrag(this *QDrag) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMimeData(QMimeData *)
-func (this *QDrag) SetMimeData(data *qtcore.QMimeData /*777 QMimeData **/) {
-	var convArg0 = data.GetCthis()
+func (this *QDrag) SetMimeData(data qtcore.QMimeData_ITF /*777 QMimeData **/) {
+	var convArg0 = data.QMimeData_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag11setMimeDataEP9QMimeData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -116,8 +116,8 @@ func (this *QDrag) MimeData() *qtcore.QMimeData /*777 QMimeData **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixmap(const QPixmap &)
-func (this *QDrag) SetPixmap(arg0 *QPixmap) {
-	var convArg0 = arg0.GetCthis()
+func (this *QDrag) SetPixmap(arg0 QPixmap_ITF) {
+	var convArg0 = arg0.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag9setPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -138,8 +138,8 @@ func (this *QDrag) Pixmap() *QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHotSpot(const QPoint &)
-func (this *QDrag) SetHotSpot(hotspot *qtcore.QPoint) {
-	var convArg0 = hotspot.GetCthis()
+func (this *QDrag) SetHotSpot(hotspot qtcore.QPoint_ITF) {
+	var convArg0 = hotspot.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag10setHotSpotERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -210,8 +210,8 @@ func (this *QDrag) Exec_1(supportedActions int, defaultAction int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDragCursor(const QPixmap &, Qt::DropAction)
-func (this *QDrag) SetDragCursor(cursor *QPixmap, action int) {
-	var convArg0 = cursor.GetCthis()
+func (this *QDrag) SetDragCursor(cursor QPixmap_ITF, action int) {
+	var convArg0 = cursor.QPixmap_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag13setDragCursorERK7QPixmapN2Qt10DropActionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action)
 	qtrt.ErrPrint(err, rv)
 }
@@ -274,8 +274,8 @@ func (this *QDrag) ActionChanged(action int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void targetChanged(QObject *)
-func (this *QDrag) TargetChanged(newTarget *qtcore.QObject /*777 QObject **/) {
-	var convArg0 = newTarget.GetCthis()
+func (this *QDrag) TargetChanged(newTarget qtcore.QObject_ITF /*777 QObject **/) {
+	var convArg0 = newTarget.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag13targetChangedEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

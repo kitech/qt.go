@@ -119,8 +119,8 @@ func (this *QScrollBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollBar(QWidget *)
-func NewQScrollBar(parent *QWidget /*777 QWidget **/) *QScrollBar {
-	var convArg0 = parent.GetCthis()
+func NewQScrollBar(parent QWidget_ITF /*777 QWidget **/) *QScrollBar {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQScrollBarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -131,8 +131,8 @@ func NewQScrollBar(parent *QWidget /*777 QWidget **/) *QScrollBar {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollBar(Qt::Orientation, QWidget *)
-func NewQScrollBar_1(arg0 int, parent *QWidget /*777 QWidget **/) *QScrollBar {
-	var convArg1 = parent.GetCthis()
+func NewQScrollBar_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QScrollBar {
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBarC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQScrollBarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -166,8 +166,8 @@ func (this *QScrollBar) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QScrollBar) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QScrollBar) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBar5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -177,8 +177,8 @@ func (this *QScrollBar) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
-func (this *QScrollBar) WheelEvent(arg0 *qtgui.QWheelEvent /*777 QWheelEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QScrollBar) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
+	var convArg0 = arg0.QWheelEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBar10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -187,8 +187,8 @@ func (this *QScrollBar) WheelEvent(arg0 *qtgui.QWheelEvent /*777 QWheelEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QScrollBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QScrollBar) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBar10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -197,8 +197,8 @@ func (this *QScrollBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
-func (this *QScrollBar) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QScrollBar) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBar15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -207,8 +207,8 @@ func (this *QScrollBar) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QScrollBar) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QScrollBar) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBar17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -217,8 +217,8 @@ func (this *QScrollBar) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QScrollBar) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QScrollBar) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBar14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -227,8 +227,8 @@ func (this *QScrollBar) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
-func (this *QScrollBar) HideEvent(arg0 *qtgui.QHideEvent /*777 QHideEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QScrollBar) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
+	var convArg0 = arg0.QHideEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBar9hideEventEP10QHideEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -246,8 +246,8 @@ func (this *QScrollBar) SliderChange(change int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
-func (this *QScrollBar) ContextMenuEvent(arg0 *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QScrollBar) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
+	var convArg0 = arg0.QContextMenuEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBar16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -256,8 +256,8 @@ func (this *QScrollBar) ContextMenuEvent(arg0 *qtgui.QContextMenuEvent /*777 QCo
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSlider *)
-func (this *QScrollBar) InitStyleOption(option *QStyleOptionSlider /*777 QStyleOptionSlider **/) {
-	var convArg0 = option.GetCthis()
+func (this *QScrollBar) InitStyleOption(option QStyleOptionSlider_ITF /*777 QStyleOptionSlider **/) {
+	var convArg0 = option.QStyleOptionSlider_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QScrollBar15initStyleOptionEP18QStyleOptionSlider", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

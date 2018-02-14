@@ -79,8 +79,8 @@ func (this *QStackedWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedWidget(QWidget *)
-func NewQStackedWidget(parent *QWidget /*777 QWidget **/) *QStackedWidget {
-	var convArg0 = parent.GetCthis()
+func NewQStackedWidget(parent QWidget_ITF /*777 QWidget **/) *QStackedWidget {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStackedWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,8 +102,8 @@ func DeleteQStackedWidget(this *QStackedWidget) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int addWidget(QWidget *)
-func (this *QStackedWidget) AddWidget(w *QWidget /*777 QWidget **/) int {
-	var convArg0 = w.GetCthis()
+func (this *QStackedWidget) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidget9addWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -113,8 +113,8 @@ func (this *QStackedWidget) AddWidget(w *QWidget /*777 QWidget **/) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertWidget(int, QWidget *)
-func (this *QStackedWidget) InsertWidget(index int, w *QWidget /*777 QWidget **/) int {
-	var convArg1 = w.GetCthis()
+func (this *QStackedWidget) InsertWidget(index int, w QWidget_ITF /*777 QWidget **/) int {
+	var convArg1 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidget12insertWidgetEiP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -124,8 +124,8 @@ func (this *QStackedWidget) InsertWidget(index int, w *QWidget /*777 QWidget **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeWidget(QWidget *)
-func (this *QStackedWidget) RemoveWidget(w *QWidget /*777 QWidget **/) {
-	var convArg0 = w.GetCthis()
+func (this *QStackedWidget) RemoveWidget(w QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidget12removeWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -154,8 +154,8 @@ func (this *QStackedWidget) CurrentIndex() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QWidget *)
-func (this *QStackedWidget) IndexOf(arg0 *QWidget /*777 QWidget **/) int {
-	var convArg0 = arg0.GetCthis()
+func (this *QStackedWidget) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
+	var convArg0 = arg0.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedWidget7indexOfEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -194,8 +194,8 @@ func (this *QStackedWidget) SetCurrentIndex(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWidget(QWidget *)
-func (this *QStackedWidget) SetCurrentWidget(w *QWidget /*777 QWidget **/) {
-	var convArg0 = w.GetCthis()
+func (this *QStackedWidget) SetCurrentWidget(w QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = w.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidget16setCurrentWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -222,8 +222,8 @@ func (this *QStackedWidget) WidgetRemoved(index int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QStackedWidget) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QStackedWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

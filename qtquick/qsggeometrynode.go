@@ -89,8 +89,8 @@ func DeleteQSGGeometryNode(this *QSGGeometryNode) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaterial(QSGMaterial *)
-func (this *QSGGeometryNode) SetMaterial(material *QSGMaterial /*777 QSGMaterial **/) {
-	var convArg0 = material.GetCthis()
+func (this *QSGGeometryNode) SetMaterial(material QSGMaterial_ITF /*777 QSGMaterial **/) {
+	var convArg0 = material.QSGMaterial_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSGGeometryNode11setMaterialEP11QSGMaterial", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -109,8 +109,8 @@ func (this *QSGGeometryNode) Material() *QSGMaterial /*777 QSGMaterial **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpaqueMaterial(QSGMaterial *)
-func (this *QSGGeometryNode) SetOpaqueMaterial(material *QSGMaterial /*777 QSGMaterial **/) {
-	var convArg0 = material.GetCthis()
+func (this *QSGGeometryNode) SetOpaqueMaterial(material QSGMaterial_ITF /*777 QSGMaterial **/) {
+	var convArg0 = material.QSGMaterial_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSGGeometryNode17setOpaqueMaterialEP11QSGMaterial", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

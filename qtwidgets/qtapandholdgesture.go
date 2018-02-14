@@ -74,8 +74,8 @@ func (this *QTapAndHoldGesture) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTapAndHoldGesture(QObject *)
-func NewQTapAndHoldGesture(parent *qtcore.QObject /*777 QObject **/) *QTapAndHoldGesture {
-	var convArg0 = parent.GetCthis()
+func NewQTapAndHoldGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QTapAndHoldGesture {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QTapAndHoldGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTapAndHoldGestureFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -109,8 +109,8 @@ func (this *QTapAndHoldGesture) Position() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(const QPointF &)
-func (this *QTapAndHoldGesture) SetPosition(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QTapAndHoldGesture) SetPosition(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QTapAndHoldGesture11setPositionERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

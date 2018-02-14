@@ -87,8 +87,8 @@ func (this *QEventTransition) MetaObject() *QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QEventTransition(QState *)
-func NewQEventTransition(sourceState *QState /*777 QState **/) *QEventTransition {
-	var convArg0 = sourceState.GetCthis()
+func NewQEventTransition(sourceState QState_ITF /*777 QState **/) *QEventTransition {
+	var convArg0 = sourceState.QState_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -99,9 +99,9 @@ func NewQEventTransition(sourceState *QState /*777 QState **/) *QEventTransition
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QEventTransition(QObject *, QEvent::Type, QState *)
-func NewQEventTransition_1(object *QObject /*777 QObject **/, type_ int, sourceState *QState /*777 QState **/) *QEventTransition {
-	var convArg0 = object.GetCthis()
-	var convArg2 = sourceState.GetCthis()
+func NewQEventTransition_1(object QObject_ITF /*777 QObject **/, type_ int, sourceState QState_ITF /*777 QState **/) *QEventTransition {
+	var convArg0 = object.QObject_PTR().GetCthis()
+	var convArg2 = sourceState.QState_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionC2EP7QObjectN6QEvent4TypeEP6QState", qtrt.FFI_TYPE_POINTER, convArg0, type_, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -133,8 +133,8 @@ func (this *QEventTransition) EventSource() *QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEventSource(QObject *)
-func (this *QEventTransition) SetEventSource(object *QObject /*777 QObject **/) {
-	var convArg0 = object.GetCthis()
+func (this *QEventTransition) SetEventSource(object QObject_ITF /*777 QObject **/) {
+	var convArg0 = object.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransition14setEventSourceEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -162,8 +162,8 @@ func (this *QEventTransition) SetEventType(type_ int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventTest(QEvent *)
-func (this *QEventTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
-	var convArg0 = event.GetCthis()
+func (this *QEventTransition) EventTest(event QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransition9eventTestEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -173,8 +173,8 @@ func (this *QEventTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onTransition(QEvent *)
-func (this *QEventTransition) OnTransition(event *QEvent /*777 QEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QEventTransition) OnTransition(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 = event.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransition12onTransitionEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -183,8 +183,8 @@ func (this *QEventTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QEventTransition) Event(e *QEvent /*777 QEvent **/) bool {
-	var convArg0 = e.GetCthis()
+func (this *QEventTransition) Event(e QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = e.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransition5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

@@ -101,8 +101,8 @@ func (this *QGraphicsSceneMouseEvent) Pos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
-func (this *QGraphicsSceneMouseEvent) SetPos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneMouseEvent) SetPos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -123,8 +123,8 @@ func (this *QGraphicsSceneMouseEvent) ScenePos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
-func (this *QGraphicsSceneMouseEvent) SetScenePos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneMouseEvent) SetScenePos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -145,8 +145,8 @@ func (this *QGraphicsSceneMouseEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
-func (this *QGraphicsSceneMouseEvent) SetScreenPos(pos *qtcore.QPoint) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneMouseEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -167,8 +167,8 @@ func (this *QGraphicsSceneMouseEvent) ButtonDownPos(button int) *qtcore.QPointF 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonDownPos(Qt::MouseButton, const QPointF &)
-func (this *QGraphicsSceneMouseEvent) SetButtonDownPos(button int, pos *qtcore.QPointF) {
-	var convArg1 = pos.GetCthis()
+func (this *QGraphicsSceneMouseEvent) SetButtonDownPos(button int, pos qtcore.QPointF_ITF) {
+	var convArg1 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent16setButtonDownPosEN2Qt11MouseButtonERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -189,8 +189,8 @@ func (this *QGraphicsSceneMouseEvent) ButtonDownScenePos(button int) *qtcore.QPo
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonDownScenePos(Qt::MouseButton, const QPointF &)
-func (this *QGraphicsSceneMouseEvent) SetButtonDownScenePos(button int, pos *qtcore.QPointF) {
-	var convArg1 = pos.GetCthis()
+func (this *QGraphicsSceneMouseEvent) SetButtonDownScenePos(button int, pos qtcore.QPointF_ITF) {
+	var convArg1 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent21setButtonDownScenePosEN2Qt11MouseButtonERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -211,8 +211,8 @@ func (this *QGraphicsSceneMouseEvent) ButtonDownScreenPos(button int) *qtcore.QP
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonDownScreenPos(Qt::MouseButton, const QPoint &)
-func (this *QGraphicsSceneMouseEvent) SetButtonDownScreenPos(button int, pos *qtcore.QPoint) {
-	var convArg1 = pos.GetCthis()
+func (this *QGraphicsSceneMouseEvent) SetButtonDownScreenPos(button int, pos qtcore.QPoint_ITF) {
+	var convArg1 = pos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent22setButtonDownScreenPosEN2Qt11MouseButtonERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -233,8 +233,8 @@ func (this *QGraphicsSceneMouseEvent) LastPos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastPos(const QPointF &)
-func (this *QGraphicsSceneMouseEvent) SetLastPos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneMouseEvent) SetLastPos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -255,8 +255,8 @@ func (this *QGraphicsSceneMouseEvent) LastScenePos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastScenePos(const QPointF &)
-func (this *QGraphicsSceneMouseEvent) SetLastScenePos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneMouseEvent) SetLastScenePos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -277,8 +277,8 @@ func (this *QGraphicsSceneMouseEvent) LastScreenPos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastScreenPos(const QPoint &)
-func (this *QGraphicsSceneMouseEvent) SetLastScreenPos(pos *qtcore.QPoint) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneMouseEvent) SetLastScreenPos(pos qtcore.QPoint_ITF) {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -191,8 +191,8 @@ func (this *QTime) ToString_1(format string) string {
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString toString(QStringView)
-func (this *QTime) ToString_2(format *QStringView /*123*/) string {
-	var convArg0 = format.GetCthis()
+func (this *QTime) ToString_2(format QStringView_ITF /*123*/) string {
+	var convArg0 = format.QStringView_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -227,8 +227,8 @@ func (this *QTime) AddSecs(secs int) *QTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int secsTo(const QTime &)
-func (this *QTime) SecsTo(arg0 *QTime) int {
-	var convArg0 = arg0.GetCthis()
+func (this *QTime) SecsTo(arg0 QTime_ITF) int {
+	var convArg0 = arg0.QTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -250,8 +250,8 @@ func (this *QTime) AddMSecs(ms int) *QTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int msecsTo(const QTime &)
-func (this *QTime) MsecsTo(arg0 *QTime) int {
-	var convArg0 = arg0.GetCthis()
+func (this *QTime) MsecsTo(arg0 QTime_ITF) int {
+	var convArg0 = arg0.QTime_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

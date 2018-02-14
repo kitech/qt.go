@@ -79,10 +79,10 @@ func (*QResource) NewFromPointer(cthis unsafe.Pointer) *QResource {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QResource(const QString &, const QLocale &)
-func NewQResource(file string, locale *QLocale) *QResource {
+func NewQResource(file string, locale QLocale_ITF) *QResource {
 	var tmpArg0 = NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = locale.GetCthis()
+	var convArg1 = locale.QLocale_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResourceC2ERK7QStringRK7QLocale", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQResourceFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -142,8 +142,8 @@ func (this *QResource) AbsoluteFilePath() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLocale(const QLocale &)
-func (this *QResource) SetLocale(locale *QLocale) {
-	var convArg0 = locale.GetCthis()
+func (this *QResource) SetLocale(locale QLocale_ITF) {
+	var convArg0 = locale.QLocale_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource9setLocaleERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// qint64 writeData(const char *, qint64)
+// long long writeData(const char *, qint64)
 func (this *QNetworkReply) InheritWriteData(f func(data string, len int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
@@ -272,8 +272,8 @@ func (this *QNetworkReply) Header(header int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasRawHeader(const QByteArray &)
-func (this *QNetworkReply) HasRawHeader(headerName *qtcore.QByteArray) bool {
-	var convArg0 = headerName.GetCthis()
+func (this *QNetworkReply) HasRawHeader(headerName qtcore.QByteArray_ITF) bool {
+	var convArg0 = headerName.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply12hasRawHeaderERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -283,8 +283,8 @@ func (this *QNetworkReply) HasRawHeader(headerName *qtcore.QByteArray) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray rawHeader(const QByteArray &)
-func (this *QNetworkReply) RawHeader(headerName *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
-	var convArg0 = headerName.GetCthis()
+func (this *QNetworkReply) RawHeader(headerName qtcore.QByteArray_ITF) *qtcore.QByteArray /*123*/ {
+	var convArg0 = headerName.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply9rawHeaderERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -320,8 +320,8 @@ func (this *QNetworkReply) SslConfiguration() *QSslConfiguration /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSslConfiguration(const QSslConfiguration &)
-func (this *QNetworkReply) SetSslConfiguration(configuration *QSslConfiguration) {
-	var convArg0 = configuration.GetCthis()
+func (this *QNetworkReply) SetSslConfiguration(configuration QSslConfiguration_ITF) {
+	var convArg0 = configuration.QSslConfiguration_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply19setSslConfigurationERK17QSslConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -375,8 +375,8 @@ func (this *QNetworkReply) Encrypted() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator *)
-func (this *QNetworkReply) PreSharedKeyAuthenticationRequired(authenticator *QSslPreSharedKeyAuthenticator /*777 QSslPreSharedKeyAuthenticator **/) {
-	var convArg0 = authenticator.GetCthis()
+func (this *QNetworkReply) PreSharedKeyAuthenticationRequired(authenticator QSslPreSharedKeyAuthenticator_ITF /*777 QSslPreSharedKeyAuthenticator **/) {
+	var convArg0 = authenticator.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply34preSharedKeyAuthenticationRequiredEP29QSslPreSharedKeyAuthenticator", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -385,8 +385,8 @@ func (this *QNetworkReply) PreSharedKeyAuthenticationRequired(authenticator *QSs
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void redirected(const QUrl &)
-func (this *QNetworkReply) Redirected(url *qtcore.QUrl) {
-	var convArg0 = url.GetCthis()
+func (this *QNetworkReply) Redirected(url qtcore.QUrl_ITF) {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply10redirectedERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -422,8 +422,8 @@ func (this *QNetworkReply) DownloadProgress(bytesReceived int64, bytesTotal int6
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QNetworkReply(QObject *)
-func NewQNetworkReply(parent *qtcore.QObject /*777 QObject **/) *QNetworkReply {
-	var convArg0 = parent.GetCthis()
+func NewQNetworkReply(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkReply {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReplyC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -455,8 +455,8 @@ func (this *QNetworkReply) SetOperation(operation int) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setRequest(const QNetworkRequest &)
-func (this *QNetworkReply) SetRequest(request *QNetworkRequest) {
-	var convArg0 = request.GetCthis()
+func (this *QNetworkReply) SetRequest(request QNetworkRequest_ITF) {
+	var convArg0 = request.QNetworkRequest_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply10setRequestERK15QNetworkRequest", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -485,8 +485,8 @@ func (this *QNetworkReply) SetFinished(arg0 bool) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setUrl(const QUrl &)
-func (this *QNetworkReply) SetUrl(url *qtcore.QUrl) {
-	var convArg0 = url.GetCthis()
+func (this *QNetworkReply) SetUrl(url qtcore.QUrl_ITF) {
+	var convArg0 = url.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply6setUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -495,8 +495,8 @@ func (this *QNetworkReply) SetUrl(url *qtcore.QUrl) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
-func (this *QNetworkReply) SetHeader(header int, value *qtcore.QVariant) {
-	var convArg1 = value.GetCthis()
+func (this *QNetworkReply) SetHeader(header int, value qtcore.QVariant_ITF) {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), header, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -505,9 +505,9 @@ func (this *QNetworkReply) SetHeader(header int, value *qtcore.QVariant) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setRawHeader(const QByteArray &, const QByteArray &)
-func (this *QNetworkReply) SetRawHeader(headerName *qtcore.QByteArray, value *qtcore.QByteArray) {
-	var convArg0 = headerName.GetCthis()
-	var convArg1 = value.GetCthis()
+func (this *QNetworkReply) SetRawHeader(headerName qtcore.QByteArray_ITF, value qtcore.QByteArray_ITF) {
+	var convArg0 = headerName.QByteArray_PTR().GetCthis()
+	var convArg1 = value.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply12setRawHeaderERK10QByteArrayS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -516,8 +516,8 @@ func (this *QNetworkReply) SetRawHeader(headerName *qtcore.QByteArray, value *qt
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setAttribute(QNetworkRequest::Attribute, const QVariant &)
-func (this *QNetworkReply) SetAttribute(code int, value *qtcore.QVariant) {
-	var convArg1 = value.GetCthis()
+func (this *QNetworkReply) SetAttribute(code int, value qtcore.QVariant_ITF) {
+	var convArg1 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply12setAttributeEN15QNetworkRequest9AttributeERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -526,8 +526,8 @@ func (this *QNetworkReply) SetAttribute(code int, value *qtcore.QVariant) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void sslConfigurationImplementation(QSslConfiguration &)
-func (this *QNetworkReply) SslConfigurationImplementation(arg0 *QSslConfiguration) {
-	var convArg0 = arg0.GetCthis()
+func (this *QNetworkReply) SslConfigurationImplementation(arg0 QSslConfiguration_ITF) {
+	var convArg0 = arg0.QSslConfiguration_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply30sslConfigurationImplementationER17QSslConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -536,8 +536,8 @@ func (this *QNetworkReply) SslConfigurationImplementation(arg0 *QSslConfiguratio
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setSslConfigurationImplementation(const QSslConfiguration &)
-func (this *QNetworkReply) SetSslConfigurationImplementation(arg0 *QSslConfiguration) {
-	var convArg0 = arg0.GetCthis()
+func (this *QNetworkReply) SetSslConfigurationImplementation(arg0 QSslConfiguration_ITF) {
+	var convArg0 = arg0.QSslConfiguration_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply33setSslConfigurationImplementationERK17QSslConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

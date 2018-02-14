@@ -98,8 +98,8 @@ func (this *QSGFlatColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMat
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
-func (this *QSGFlatColorMaterial) SetColor(color *qtgui.QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QSGFlatColorMaterial) SetColor(color qtgui.QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGFlatColorMaterial8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -120,8 +120,8 @@ func (this *QSGFlatColorMaterial) Color() *qtgui.QColor {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int compare(const QSGMaterial *)
-func (this *QSGFlatColorMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/) int {
-	var convArg0 = other.GetCthis()
+func (this *QSGFlatColorMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
+	var convArg0 = other.QSGMaterial_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial7compareEPK11QSGMaterial", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

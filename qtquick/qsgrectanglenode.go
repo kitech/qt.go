@@ -77,8 +77,8 @@ func DeleteQSGRectangleNode(this *QSGRectangleNode) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
-func (this *QSGRectangleNode) SetRect(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QSGRectangleNode) SetRect(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNode7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -108,8 +108,8 @@ func (this *QSGRectangleNode) Rect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
-func (this *QSGRectangleNode) SetColor(color *qtgui.QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QSGRectangleNode) SetColor(color qtgui.QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNode8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

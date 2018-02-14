@@ -76,8 +76,8 @@ func NewQSemaphoreReleaser() *QSemaphoreReleaser {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser(QSemaphore &, int)
-func NewQSemaphoreReleaser_1(sem *QSemaphore, n int) *QSemaphoreReleaser {
-	var convArg0 = sem.GetCthis()
+func NewQSemaphoreReleaser_1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
+	var convArg0 = sem.QSemaphore_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", qtrt.FFI_TYPE_POINTER, convArg0, n)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSemaphoreReleaserFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -89,8 +89,8 @@ func NewQSemaphoreReleaser_1(sem *QSemaphore, n int) *QSemaphoreReleaser {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser(QSemaphore *, int)
-func NewQSemaphoreReleaser_2(sem *QSemaphore /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
-	var convArg0 = sem.GetCthis()
+func NewQSemaphoreReleaser_2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
+	var convArg0 = sem.QSemaphore_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", qtrt.FFI_TYPE_POINTER, convArg0, n)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSemaphoreReleaserFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -113,8 +113,8 @@ func DeleteQSemaphoreReleaser(this *QSemaphoreReleaser) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSemaphoreReleaser &)
-func (this *QSemaphoreReleaser) Swap(other *QSemaphoreReleaser) {
-	var convArg0 = other.GetCthis()
+func (this *QSemaphoreReleaser) Swap(other QSemaphoreReleaser_ITF) {
+	var convArg0 = other.QSemaphoreReleaser_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaser4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

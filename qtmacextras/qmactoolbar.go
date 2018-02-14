@@ -74,8 +74,8 @@ func (this *QMacToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMacToolBar(QObject *)
-func NewQMacToolBar(parent *qtcore.QObject /*777 QObject **/) *QMacToolBar {
-	var convArg0 = parent.GetCthis()
+func NewQMacToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMacToolBarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -86,10 +86,10 @@ func NewQMacToolBar(parent *qtcore.QObject /*777 QObject **/) *QMacToolBar {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMacToolBar(const QString &, QObject *)
-func NewQMacToolBar_1(identifier string, parent *qtcore.QObject /*777 QObject **/) *QMacToolBar {
+func NewQMacToolBar_1(identifier string, parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 	var tmpArg0 = qtcore.NewQString_5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBarC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMacToolBarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,8 +111,8 @@ func DeleteQMacToolBar(this *QMacToolBar) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMacToolBarItem * addItem(const QIcon &, const QString &)
-func (this *QMacToolBar) AddItem(icon *qtgui.QIcon, text string) *QMacToolBarItem /*777 QMacToolBarItem **/ {
-	var convArg0 = icon.GetCthis()
+func (this *QMacToolBar) AddItem(icon qtgui.QIcon_ITF, text string) *QMacToolBarItem /*777 QMacToolBarItem **/ {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar7addItemERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -124,8 +124,8 @@ func (this *QMacToolBar) AddItem(icon *qtgui.QIcon, text string) *QMacToolBarIte
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMacToolBarItem * addAllowedItem(const QIcon &, const QString &)
-func (this *QMacToolBar) AddAllowedItem(icon *qtgui.QIcon, text string) *QMacToolBarItem /*777 QMacToolBarItem **/ {
-	var convArg0 = icon.GetCthis()
+func (this *QMacToolBar) AddAllowedItem(icon qtgui.QIcon_ITF, text string) *QMacToolBarItem /*777 QMacToolBarItem **/ {
+	var convArg0 = icon.QIcon_PTR().GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar14addAllowedItemERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -166,8 +166,8 @@ func (this *QMacToolBar) AddSeparator() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void attachToWindow(QWindow *)
-func (this *QMacToolBar) AttachToWindow(window *qtgui.QWindow /*777 QWindow **/) {
-	var convArg0 = window.GetCthis()
+func (this *QMacToolBar) AttachToWindow(window qtgui.QWindow_ITF /*777 QWindow **/) {
+	var convArg0 = window.QWindow_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar14attachToWindowEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

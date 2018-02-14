@@ -65,9 +65,9 @@ func (*QAccessibleValueChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAcces
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleValueChangeEvent(QObject *, const QVariant &)
-func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*777 QObject **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
-	var convArg0 = obj.GetCthis()
-	var convArg1 = val.GetCthis()
+func NewQAccessibleValueChangeEvent(obj qtcore.QObject_ITF /*777 QObject **/, val qtcore.QVariant_ITF) *QAccessibleValueChangeEvent {
+	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg1 = val.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleValueChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -79,9 +79,9 @@ func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*777 QObject **/, val *
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleValueChangeEvent(QAccessibleInterface *, const QVariant &)
-func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
-	var convArg0 = iface.GetCthis()
-	var convArg1 = val.GetCthis()
+func NewQAccessibleValueChangeEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, val qtcore.QVariant_ITF) *QAccessibleValueChangeEvent {
+	var convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	var convArg1 = val.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleValueChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -104,8 +104,8 @@ func DeleteQAccessibleValueChangeEvent(this *QAccessibleValueChangeEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setValue(const QVariant &)
-func (this *QAccessibleValueChangeEvent) SetValue(val *qtcore.QVariant) {
-	var convArg0 = val.GetCthis()
+func (this *QAccessibleValueChangeEvent) SetValue(val qtcore.QVariant_ITF) {
+	var convArg0 = val.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEvent8setValueERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

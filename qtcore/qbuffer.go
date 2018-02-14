@@ -40,12 +40,12 @@ func (this *QBuffer) InheritDisconnectNotify(f func(arg0 *QMetaMethod) /*void*/)
 	qtrt.SetAllInheritCallback(this, "disconnectNotify", f)
 }
 
-// qint64 readData(char *, qint64)
+// long long readData(char *, qint64)
 func (this *QBuffer) InheritReadData(f func(data string, maxlen int64) int64) {
 	qtrt.SetAllInheritCallback(this, "readData", f)
 }
 
-// qint64 writeData(const char *, qint64)
+// long long writeData(const char *, qint64)
 func (this *QBuffer) InheritWriteData(f func(data string, len int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
@@ -92,8 +92,8 @@ func (this *QBuffer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QBuffer(QObject *)
-func NewQBuffer(parent *QObject /*777 QObject **/) *QBuffer {
-	var convArg0 = parent.GetCthis()
+func NewQBuffer(parent QObject_ITF /*777 QObject **/) *QBuffer {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBufferFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -104,9 +104,9 @@ func NewQBuffer(parent *QObject /*777 QObject **/) *QBuffer {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QBuffer(QByteArray *, QObject *)
-func NewQBuffer_1(buf *QByteArray /*777 QByteArray **/, parent *QObject /*777 QObject **/) *QBuffer {
-	var convArg0 = buf.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQBuffer_1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*777 QObject **/) *QBuffer {
+	var convArg0 = buf.QByteArray_PTR().GetCthis()
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferC2EP10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBufferFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -152,8 +152,8 @@ func (this *QBuffer) Buffer_1() *QByteArray {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBuffer(QByteArray *)
-func (this *QBuffer) SetBuffer(a *QByteArray /*777 QByteArray **/) {
-	var convArg0 = a.GetCthis()
+func (this *QBuffer) SetBuffer(a QByteArray_ITF /*777 QByteArray **/) {
+	var convArg0 = a.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer9setBufferEP10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -162,8 +162,8 @@ func (this *QBuffer) SetBuffer(a *QByteArray /*777 QByteArray **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QByteArray &)
-func (this *QBuffer) SetData(data *QByteArray) {
-	var convArg0 = data.GetCthis()
+func (this *QBuffer) SetData(data QByteArray_ITF) {
+	var convArg0 = data.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer7setDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -264,8 +264,8 @@ func (this *QBuffer) CanReadLine() bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void connectNotify(const QMetaMethod &)
-func (this *QBuffer) ConnectNotify(arg0 *QMetaMethod) {
-	var convArg0 = arg0.GetCthis()
+func (this *QBuffer) ConnectNotify(arg0 QMetaMethod_ITF) {
+	var convArg0 = arg0.QMetaMethod_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer13connectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -274,8 +274,8 @@ func (this *QBuffer) ConnectNotify(arg0 *QMetaMethod) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void disconnectNotify(const QMetaMethod &)
-func (this *QBuffer) DisconnectNotify(arg0 *QMetaMethod) {
-	var convArg0 = arg0.GetCthis()
+func (this *QBuffer) DisconnectNotify(arg0 QMetaMethod_ITF) {
+	var convArg0 = arg0.QMetaMethod_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer16disconnectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

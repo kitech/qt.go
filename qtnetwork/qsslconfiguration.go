@@ -88,8 +88,8 @@ func DeleteQSslConfiguration(this *QSslConfiguration) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslConfiguration &)
-func (this *QSslConfiguration) Swap(other *QSslConfiguration) {
-	var convArg0 = other.GetCthis()
+func (this *QSslConfiguration) Swap(other QSslConfiguration_ITF) {
+	var convArg0 = other.QSslConfiguration_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -177,8 +177,8 @@ func (this *QSslConfiguration) LocalCertificate() *QSslCertificate /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLocalCertificate(const QSslCertificate &)
-func (this *QSslConfiguration) SetLocalCertificate(certificate *QSslCertificate) {
-	var convArg0 = certificate.GetCthis()
+func (this *QSslConfiguration) SetLocalCertificate(certificate QSslCertificate_ITF) {
+	var convArg0 = certificate.QSslCertificate_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration19setLocalCertificateERK15QSslCertificate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -233,8 +233,8 @@ func (this *QSslConfiguration) PrivateKey() *QSslKey /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPrivateKey(const QSslKey &)
-func (this *QSslConfiguration) SetPrivateKey(key *QSslKey) {
-	var convArg0 = key.GetCthis()
+func (this *QSslConfiguration) SetPrivateKey(key QSslKey_ITF) {
+	var convArg0 = key.QSslKey_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration13setPrivateKeyERK7QSslKey", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -274,8 +274,8 @@ func (this *QSslConfiguration) SessionTicket() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSessionTicket(const QByteArray &)
-func (this *QSslConfiguration) SetSessionTicket(sessionTicket *qtcore.QByteArray) {
-	var convArg0 = sessionTicket.GetCthis()
+func (this *QSslConfiguration) SetSessionTicket(sessionTicket qtcore.QByteArray_ITF) {
+	var convArg0 = sessionTicket.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration16setSessionTicketERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -318,8 +318,8 @@ func (this *QSslConfiguration) PreSharedKeyIdentityHint() *qtcore.QByteArray /*1
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreSharedKeyIdentityHint(const QByteArray &)
-func (this *QSslConfiguration) SetPreSharedKeyIdentityHint(hint *qtcore.QByteArray) {
-	var convArg0 = hint.GetCthis()
+func (this *QSslConfiguration) SetPreSharedKeyIdentityHint(hint qtcore.QByteArray_ITF) {
+	var convArg0 = hint.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration27setPreSharedKeyIdentityHintERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -340,8 +340,8 @@ func (this *QSslConfiguration) DiffieHellmanParameters() *QSslDiffieHellmanParam
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDiffieHellmanParameters(const QSslDiffieHellmanParameters &)
-func (this *QSslConfiguration) SetDiffieHellmanParameters(dhparams *QSslDiffieHellmanParameters) {
-	var convArg0 = dhparams.GetCthis()
+func (this *QSslConfiguration) SetDiffieHellmanParameters(dhparams QSslDiffieHellmanParameters_ITF) {
+	var convArg0 = dhparams.QSslDiffieHellmanParameters_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration26setDiffieHellmanParametersERK27QSslDiffieHellmanParameters", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -367,12 +367,12 @@ func QSslConfiguration_DefaultConfiguration() *QSslConfiguration /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultConfiguration(const QSslConfiguration &)
-func (this *QSslConfiguration) SetDefaultConfiguration(configuration *QSslConfiguration) {
-	var convArg0 = configuration.GetCthis()
+func (this *QSslConfiguration) SetDefaultConfiguration(configuration QSslConfiguration_ITF) {
+	var convArg0 = configuration.QSslConfiguration_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration23setDefaultConfigurationERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QSslConfiguration_SetDefaultConfiguration(configuration *QSslConfiguration) {
+func QSslConfiguration_SetDefaultConfiguration(configuration QSslConfiguration_ITF) {
 	var nilthis *QSslConfiguration
 	nilthis.SetDefaultConfiguration(configuration)
 }

@@ -101,8 +101,8 @@ func (this *QGraphicsSceneDragDropEvent) Pos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
-func (this *QGraphicsSceneDragDropEvent) SetPos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneDragDropEvent) SetPos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -123,8 +123,8 @@ func (this *QGraphicsSceneDragDropEvent) ScenePos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
-func (this *QGraphicsSceneDragDropEvent) SetScenePos(pos *qtcore.QPointF) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneDragDropEvent) SetScenePos(pos qtcore.QPointF_ITF) {
+	var convArg0 = pos.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -145,8 +145,8 @@ func (this *QGraphicsSceneDragDropEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
-func (this *QGraphicsSceneDragDropEvent) SetScreenPos(pos *qtcore.QPoint) {
-	var convArg0 = pos.GetCthis()
+func (this *QGraphicsSceneDragDropEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -269,8 +269,8 @@ func (this *QGraphicsSceneDragDropEvent) Source() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSource(QWidget *)
-func (this *QGraphicsSceneDragDropEvent) SetSource(source *QWidget /*777 QWidget **/) {
-	var convArg0 = source.GetCthis()
+func (this *QGraphicsSceneDragDropEvent) SetSource(source QWidget_ITF /*777 QWidget **/) {
+	var convArg0 = source.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -289,8 +289,8 @@ func (this *QGraphicsSceneDragDropEvent) MimeData() *qtcore.QMimeData /*777 cons
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMimeData(const QMimeData *)
-func (this *QGraphicsSceneDragDropEvent) SetMimeData(data *qtcore.QMimeData /*777 const QMimeData **/) {
-	var convArg0 = data.GetCthis()
+func (this *QGraphicsSceneDragDropEvent) SetMimeData(data qtcore.QMimeData_ITF /*777 const QMimeData **/) {
+	var convArg0 = data.QMimeData_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

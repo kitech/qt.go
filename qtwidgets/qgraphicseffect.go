@@ -109,8 +109,8 @@ func (this *QGraphicsEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEffect(QObject *)
-func NewQGraphicsEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsEffect {
-	var convArg0 = parent.GetCthis()
+func NewQGraphicsEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsEffect {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsEffectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -132,8 +132,8 @@ func DeleteQGraphicsEffect(this *QGraphicsEffect) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRectFor(const QRectF &)
-func (this *QGraphicsEffect) BoundingRectFor(sourceRect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
-	var convArg0 = sourceRect.GetCthis()
+func (this *QGraphicsEffect) BoundingRectFor(sourceRect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
+	var convArg0 = sourceRect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect15boundingRectForERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -194,8 +194,8 @@ func (this *QGraphicsEffect) EnabledChanged(enabled bool) {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
-func (this *QGraphicsEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
-	var convArg0 = painter.GetCthis()
+func (this *QGraphicsEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffect4drawEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -244,8 +244,8 @@ func (this *QGraphicsEffect) SourceBoundingRect(system int) *qtcore.QRectF /*123
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void drawSource(QPainter *)
-func (this *QGraphicsEffect) DrawSource(painter *qtgui.QPainter /*777 QPainter **/) {
-	var convArg0 = painter.GetCthis()
+func (this *QGraphicsEffect) DrawSource(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg0 = painter.QPainter_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffect10drawSourceEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -254,8 +254,8 @@ func (this *QGraphicsEffect) DrawSource(painter *qtgui.QPainter /*777 QPainter *
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode)
-func (this *QGraphicsEffect) SourcePixmap(system int, offset *qtcore.QPoint /*777 QPoint **/, mode int) *qtgui.QPixmap /*123*/ {
-	var convArg1 = offset.GetCthis()
+func (this *QGraphicsEffect) SourcePixmap(system int, offset qtcore.QPoint_ITF /*777 QPoint **/, mode int) *qtgui.QPixmap /*123*/ {
+	var convArg1 = offset.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect12sourcePixmapEN2Qt16CoordinateSystemEP6QPointNS_13PixmapPadModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), system, convArg1, mode)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333

@@ -75,8 +75,8 @@ func NewQTextBlockFormat() *QTextBlockFormat {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextBlockFormat(const QTextFormat &)
-func NewQTextBlockFormat_1(fmt *QTextFormat) *QTextBlockFormat {
-	var convArg0 = fmt.GetCthis()
+func NewQTextBlockFormat_1(fmt QTextFormat_ITF) *QTextBlockFormat {
+	var convArg0 = fmt.QTextFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextBlockFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextBlockFormatFromPointer(unsafe.Pointer(uintptr(rv)))

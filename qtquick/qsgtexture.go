@@ -285,8 +285,8 @@ func (this *QSGTexture) VerticalWrapMode() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF convertToNormalizedSourceRect(const QRectF &)
-func (this *QSGTexture) ConvertToNormalizedSourceRect(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
-	var convArg0 = rect.GetCthis()
+func (this *QSGTexture) ConvertToNormalizedSourceRect(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture29convertToNormalizedSourceRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333

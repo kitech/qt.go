@@ -90,8 +90,8 @@ func NewQTextBoundaryFinder_1(type_ int, string string) *QTextBoundaryFinder {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
-func NewQTextBoundaryFinder_2(type_ int, chars *QChar /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
-	var convArg1 = chars.GetCthis()
+func NewQTextBoundaryFinder_2(type_ int, chars QChar_ITF /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
+	var convArg1 = chars.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", qtrt.FFI_TYPE_POINTER, type_, convArg1, length, buffer, bufferSize)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextBoundaryFinderFromPointer(unsafe.Pointer(uintptr(rv)))

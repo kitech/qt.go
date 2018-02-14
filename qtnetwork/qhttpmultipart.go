@@ -73,8 +73,8 @@ func (this *QHttpMultiPart) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(QObject *)
-func NewQHttpMultiPart(parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart {
-	var convArg0 = parent.GetCthis()
+func NewQHttpMultiPart(parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
+	var convArg0 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHttpMultiPartFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -85,8 +85,8 @@ func NewQHttpMultiPart(parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(enum QHttpMultiPart::ContentType, QObject *)
-func NewQHttpMultiPart_1(contentType int, parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart {
-	var convArg1 = parent.GetCthis()
+func NewQHttpMultiPart_1(contentType int, parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
+	var convArg1 = parent.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2ENS_11ContentTypeEP7QObject", qtrt.FFI_TYPE_POINTER, contentType, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHttpMultiPartFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -129,8 +129,8 @@ func (this *QHttpMultiPart) Boundary() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBoundary(const QByteArray &)
-func (this *QHttpMultiPart) SetBoundary(boundary *qtcore.QByteArray) {
-	var convArg0 = boundary.GetCthis()
+func (this *QHttpMultiPart) SetBoundary(boundary qtcore.QByteArray_ITF) {
+	var convArg0 = boundary.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPart11setBoundaryERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

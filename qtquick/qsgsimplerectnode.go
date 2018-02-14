@@ -66,9 +66,9 @@ func (*QSGSimpleRectNode) NewFromPointer(cthis unsafe.Pointer) *QSGSimpleRectNod
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGSimpleRectNode(const QRectF &, const QColor &)
-func NewQSGSimpleRectNode(rect *qtcore.QRectF, color *qtgui.QColor) *QSGSimpleRectNode {
-	var convArg0 = rect.GetCthis()
-	var convArg1 = color.GetCthis()
+func NewQSGSimpleRectNode(rect qtcore.QRectF_ITF, color qtgui.QColor_ITF) *QSGSimpleRectNode {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg1 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNodeC2ERK6QRectFRK6QColor", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGSimpleRectNodeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -92,8 +92,8 @@ func NewQSGSimpleRectNode_1() *QSGSimpleRectNode {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
-func (this *QSGSimpleRectNode) SetRect(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QSGSimpleRectNode) SetRect(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNode7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -123,8 +123,8 @@ func (this *QSGSimpleRectNode) Rect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
-func (this *QSGSimpleRectNode) SetColor(color *qtgui.QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QSGSimpleRectNode) SetColor(color qtgui.QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNode8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -116,12 +116,12 @@ func QNetworkProxyFactory_SetUseSystemConfiguration(enable bool) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setApplicationProxyFactory(QNetworkProxyFactory *)
-func (this *QNetworkProxyFactory) SetApplicationProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {
-	var convArg0 = factory.GetCthis()
+func (this *QNetworkProxyFactory) SetApplicationProxyFactory(factory QNetworkProxyFactory_ITF /*777 QNetworkProxyFactory **/) {
+	var convArg0 = factory.QNetworkProxyFactory_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactory26setApplicationProxyFactoryEPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QNetworkProxyFactory_SetApplicationProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {
+func QNetworkProxyFactory_SetApplicationProxyFactory(factory QNetworkProxyFactory_ITF /*777 QNetworkProxyFactory **/) {
 	var nilthis *QNetworkProxyFactory
 	nilthis.SetApplicationProxyFactory(factory)
 }

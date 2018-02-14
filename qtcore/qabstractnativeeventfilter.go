@@ -89,8 +89,8 @@ func DeleteQAbstractNativeEventFilter(this *QAbstractNativeEventFilter) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool nativeEventFilter(const QByteArray &, void *, long *)
-func (this *QAbstractNativeEventFilter) NativeEventFilter(eventType *QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
-	var convArg0 = eventType.GetCthis()
+func (this *QAbstractNativeEventFilter) NativeEventFilter(eventType QByteArray_ITF, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
+	var convArg0 = eventType.QByteArray_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, &result)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

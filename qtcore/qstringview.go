@@ -258,8 +258,8 @@ func (this *QStringView) Trimmed() *QStringView /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity)
-func (this *QStringView) StartsWith(s *QStringView /*123*/, cs int) bool {
-	var convArg0 = s.GetCthis()
+func (this *QStringView) StartsWith(s QStringView_ITF /*123*/, cs int) bool {
+	var convArg0 = s.QStringView_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithES_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -269,8 +269,8 @@ func (this *QStringView) StartsWith(s *QStringView /*123*/, cs int) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity)
-func (this *QStringView) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
-	var convArg0 = s.GetCthis()
+func (this *QStringView) StartsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
+	var convArg0 = s.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -280,8 +280,8 @@ func (this *QStringView) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QChar)
-func (this *QStringView) StartsWith_2(c *QChar /*123*/) bool {
-	var convArg0 = c.GetCthis()
+func (this *QStringView) StartsWith_2(c QChar_ITF /*123*/) bool {
+	var convArg0 = c.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -291,8 +291,8 @@ func (this *QStringView) StartsWith_2(c *QChar /*123*/) bool {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QChar, Qt::CaseSensitivity)
-func (this *QStringView) StartsWith_3(c *QChar /*123*/, cs int) bool {
-	var convArg0 = c.GetCthis()
+func (this *QStringView) StartsWith_3(c QChar_ITF /*123*/, cs int) bool {
+	var convArg0 = c.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -302,8 +302,8 @@ func (this *QStringView) StartsWith_3(c *QChar /*123*/, cs int) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity)
-func (this *QStringView) EndsWith(s *QStringView /*123*/, cs int) bool {
-	var convArg0 = s.GetCthis()
+func (this *QStringView) EndsWith(s QStringView_ITF /*123*/, cs int) bool {
+	var convArg0 = s.QStringView_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithES_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -313,8 +313,8 @@ func (this *QStringView) EndsWith(s *QStringView /*123*/, cs int) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity)
-func (this *QStringView) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
-	var convArg0 = s.GetCthis()
+func (this *QStringView) EndsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
+	var convArg0 = s.QLatin1String_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -324,8 +324,8 @@ func (this *QStringView) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QChar)
-func (this *QStringView) EndsWith_2(c *QChar /*123*/) bool {
-	var convArg0 = c.GetCthis()
+func (this *QStringView) EndsWith_2(c QChar_ITF /*123*/) bool {
+	var convArg0 = c.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -335,8 +335,8 @@ func (this *QStringView) EndsWith_2(c *QChar /*123*/) bool {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QChar, Qt::CaseSensitivity)
-func (this *QStringView) EndsWith_3(c *QChar /*123*/, cs int) bool {
-	var convArg0 = c.GetCthis()
+func (this *QStringView) EndsWith_3(c QChar_ITF /*123*/, cs int) bool {
+	var convArg0 = c.QChar_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

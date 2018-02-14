@@ -88,8 +88,8 @@ func DeleteQDnsDomainNameRecord(this *QDnsDomainNameRecord) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsDomainNameRecord &)
-func (this *QDnsDomainNameRecord) Swap(other *QDnsDomainNameRecord) {
-	var convArg0 = other.GetCthis()
+func (this *QDnsDomainNameRecord) Swap(other QDnsDomainNameRecord_ITF) {
+	var convArg0 = other.QDnsDomainNameRecord_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDnsDomainNameRecord4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -88,8 +88,8 @@ func DeleteQNetworkInterface(this *QNetworkInterface) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkInterface &)
-func (this *QNetworkInterface) Swap(other *QNetworkInterface) {
-	var convArg0 = other.GetCthis()
+func (this *QNetworkInterface) Swap(other QNetworkInterface_ITF) {
+	var convArg0 = other.QNetworkInterface_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterface4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

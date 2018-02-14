@@ -233,8 +233,8 @@ func (this *QTextBlock) UserData() *QTextBlockUserData /*777 QTextBlockUserData 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUserData(QTextBlockUserData *)
-func (this *QTextBlock) SetUserData(data *QTextBlockUserData /*777 QTextBlockUserData **/) {
-	var convArg0 = data.GetCthis()
+func (this *QTextBlock) SetUserData(data QTextBlockUserData_ITF /*777 QTextBlockUserData **/) {
+	var convArg0 = data.QTextBlockUserData_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextBlock11setUserDataEP18QTextBlockUserData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

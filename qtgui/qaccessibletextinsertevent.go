@@ -65,8 +65,8 @@ func (*QAccessibleTextInsertEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextInsertEvent(QObject *, int, const QString &)
-func NewQAccessibleTextInsertEvent(obj *qtcore.QObject /*777 QObject **/, position int, text string) *QAccessibleTextInsertEvent {
-	var convArg0 = obj.GetCthis()
+func NewQAccessibleTextInsertEvent(obj qtcore.QObject_ITF /*777 QObject **/, position int, text string) *QAccessibleTextInsertEvent {
+	var convArg0 = obj.QObject_PTR().GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextInsertEventC2EP7QObjectiRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2)
@@ -80,8 +80,8 @@ func NewQAccessibleTextInsertEvent(obj *qtcore.QObject /*777 QObject **/, positi
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextInsertEvent(QAccessibleInterface *, int, const QString &)
-func NewQAccessibleTextInsertEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, position int, text string) *QAccessibleTextInsertEvent {
-	var convArg0 = iface.GetCthis()
+func NewQAccessibleTextInsertEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, position int, text string) *QAccessibleTextInsertEvent {
+	var convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextInsertEventC2EP20QAccessibleInterfaceiRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2)

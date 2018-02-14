@@ -63,9 +63,9 @@ func (*QMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QMoveEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMoveEvent(const QPoint &, const QPoint &)
-func NewQMoveEvent(pos *qtcore.QPoint, oldPos *qtcore.QPoint) *QMoveEvent {
-	var convArg0 = pos.GetCthis()
-	var convArg1 = oldPos.GetCthis()
+func NewQMoveEvent(pos qtcore.QPoint_ITF, oldPos qtcore.QPoint_ITF) *QMoveEvent {
+	var convArg0 = pos.QPoint_PTR().GetCthis()
+	var convArg1 = oldPos.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMoveEventC2ERK6QPointS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))

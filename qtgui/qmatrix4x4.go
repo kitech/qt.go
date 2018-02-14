@@ -125,8 +125,8 @@ func NewQMatrix4x4_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QMatrix4x4(const QTransform &)
-func NewQMatrix4x4_5(transform *QTransform) *QMatrix4x4 {
-	var convArg0 = transform.GetCthis()
+func NewQMatrix4x4_5(transform QTransform_ITF) *QMatrix4x4 {
+	var convArg0 = transform.QTransform_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2ERK10QTransform", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv)))
@@ -138,8 +138,8 @@ func NewQMatrix4x4_5(transform *QTransform) *QMatrix4x4 {
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QMatrix4x4(const QMatrix &)
-func NewQMatrix4x4_6(matrix *QMatrix) *QMatrix4x4 {
-	var convArg0 = matrix.GetCthis()
+func NewQMatrix4x4_6(matrix QMatrix_ITF) *QMatrix4x4 {
+	var convArg0 = matrix.QMatrix_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2ERK7QMatrix", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv)))
@@ -163,8 +163,8 @@ func (this *QMatrix4x4) Column(index int) *QVector4D /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColumn(int, const QVector4D &)
-func (this *QMatrix4x4) SetColumn(index int, value *QVector4D) {
-	var convArg1 = value.GetCthis()
+func (this *QMatrix4x4) SetColumn(index int, value QVector4D_ITF) {
+	var convArg1 = value.QVector4D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x49setColumnEiRK9QVector4D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -185,8 +185,8 @@ func (this *QMatrix4x4) Row(index int) *QVector4D /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRow(int, const QVector4D &)
-func (this *QMatrix4x4) SetRow(index int, value *QVector4D) {
-	var convArg1 = value.GetCthis()
+func (this *QMatrix4x4) SetRow(index int, value QVector4D_ITF) {
+	var convArg1 = value.QVector4D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46setRowEiRK9QVector4D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -267,8 +267,8 @@ func (this *QMatrix4x4) Transposed() *QMatrix4x4 /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scale(const QVector3D &)
-func (this *QMatrix4x4) Scale(vector *QVector3D) {
-	var convArg0 = vector.GetCthis()
+func (this *QMatrix4x4) Scale(vector QVector3D_ITF) {
+	var convArg0 = vector.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45scaleERK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -304,8 +304,8 @@ func (this *QMatrix4x4) Scale_3(factor float32) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void translate(const QVector3D &)
-func (this *QMatrix4x4) Translate(vector *QVector3D) {
-	var convArg0 = vector.GetCthis()
+func (this *QMatrix4x4) Translate(vector QVector3D_ITF) {
+	var convArg0 = vector.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x49translateERK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -332,8 +332,8 @@ func (this *QMatrix4x4) Translate_2(x float32, y float32, z float32) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rotate(float, const QVector3D &)
-func (this *QMatrix4x4) Rotate(angle float32, vector *QVector3D) {
-	var convArg1 = vector.GetCthis()
+func (this *QMatrix4x4) Rotate(angle float32, vector QVector3D_ITF) {
+	var convArg1 = vector.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEfRK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), angle, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -351,8 +351,8 @@ func (this *QMatrix4x4) Rotate_1(angle float32, x float32, y float32, z float32)
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void rotate(const QQuaternion &)
-func (this *QMatrix4x4) Rotate_2(quaternion *QQuaternion) {
-	var convArg0 = quaternion.GetCthis()
+func (this *QMatrix4x4) Rotate_2(quaternion QQuaternion_ITF) {
+	var convArg0 = quaternion.QQuaternion_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46rotateERK11QQuaternion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -361,8 +361,8 @@ func (this *QMatrix4x4) Rotate_2(quaternion *QQuaternion) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ortho(const QRect &)
-func (this *QMatrix4x4) Ortho(rect *qtcore.QRect) {
-	var convArg0 = rect.GetCthis()
+func (this *QMatrix4x4) Ortho(rect qtcore.QRect_ITF) {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45orthoERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -371,8 +371,8 @@ func (this *QMatrix4x4) Ortho(rect *qtcore.QRect) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void ortho(const QRectF &)
-func (this *QMatrix4x4) Ortho_1(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QMatrix4x4) Ortho_1(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45orthoERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -408,10 +408,10 @@ func (this *QMatrix4x4) Perspective(verticalAngle float32, aspectRatio float32, 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void lookAt(const QVector3D &, const QVector3D &, const QVector3D &)
-func (this *QMatrix4x4) LookAt(eye *QVector3D, center *QVector3D, up *QVector3D) {
-	var convArg0 = eye.GetCthis()
-	var convArg1 = center.GetCthis()
-	var convArg2 = up.GetCthis()
+func (this *QMatrix4x4) LookAt(eye QVector3D_ITF, center QVector3D_ITF, up QVector3D_ITF) {
+	var convArg0 = eye.QVector3D_PTR().GetCthis()
+	var convArg1 = center.QVector3D_PTR().GetCthis()
+	var convArg2 = up.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46lookAtERK9QVector3DS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -420,8 +420,8 @@ func (this *QMatrix4x4) LookAt(eye *QVector3D, center *QVector3D, up *QVector3D)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void viewport(const QRectF &)
-func (this *QMatrix4x4) Viewport(rect *qtcore.QRectF) {
-	var convArg0 = rect.GetCthis()
+func (this *QMatrix4x4) Viewport(rect qtcore.QRectF_ITF) {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48viewportERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -493,8 +493,8 @@ func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) *QTransform /*123
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint map(const QPoint &)
-func (this *QMatrix4x4) Map(point *qtcore.QPoint) *qtcore.QPoint /*123*/ {
-	var convArg0 = point.GetCthis()
+func (this *QMatrix4x4) Map(point qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
+	var convArg0 = point.QPoint_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -506,8 +506,8 @@ func (this *QMatrix4x4) Map(point *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QPointF map(const QPointF &)
-func (this *QMatrix4x4) Map_1(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
-	var convArg0 = point.GetCthis()
+func (this *QMatrix4x4) Map_1(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
+	var convArg0 = point.QPointF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -519,8 +519,8 @@ func (this *QMatrix4x4) Map_1(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 // index:2
 // Public Visibility=Default Availability=Available
 // [12] QVector3D map(const QVector3D &)
-func (this *QMatrix4x4) Map_2(point *QVector3D) *QVector3D /*123*/ {
-	var convArg0 = point.GetCthis()
+func (this *QMatrix4x4) Map_2(point QVector3D_ITF) *QVector3D /*123*/ {
+	var convArg0 = point.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -532,8 +532,8 @@ func (this *QMatrix4x4) Map_2(point *QVector3D) *QVector3D /*123*/ {
 // index:3
 // Public Visibility=Default Availability=Available
 // [16] QVector4D map(const QVector4D &)
-func (this *QMatrix4x4) Map_3(point *QVector4D) *QVector4D /*123*/ {
-	var convArg0 = point.GetCthis()
+func (this *QMatrix4x4) Map_3(point QVector4D_ITF) *QVector4D /*123*/ {
+	var convArg0 = point.QVector4D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK9QVector4D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -545,8 +545,8 @@ func (this *QMatrix4x4) Map_3(point *QVector4D) *QVector4D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [12] QVector3D mapVector(const QVector3D &)
-func (this *QMatrix4x4) MapVector(vector *QVector3D) *QVector3D /*123*/ {
-	var convArg0 = vector.GetCthis()
+func (this *QMatrix4x4) MapVector(vector QVector3D_ITF) *QVector3D /*123*/ {
+	var convArg0 = vector.QVector3D_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x49mapVectorERK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -558,8 +558,8 @@ func (this *QMatrix4x4) MapVector(vector *QVector3D) *QVector3D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect mapRect(const QRect &)
-func (this *QMatrix4x4) MapRect(rect *qtcore.QRect) *qtcore.QRect /*123*/ {
-	var convArg0 = rect.GetCthis()
+func (this *QMatrix4x4) MapRect(rect qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
+	var convArg0 = rect.QRect_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x47mapRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -571,8 +571,8 @@ func (this *QMatrix4x4) MapRect(rect *qtcore.QRect) *qtcore.QRect /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRect(const QRectF &)
-func (this *QMatrix4x4) MapRect_1(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
-	var convArg0 = rect.GetCthis()
+func (this *QMatrix4x4) MapRect_1(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
+	var convArg0 = rect.QRectF_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x47mapRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333

@@ -100,8 +100,8 @@ func (this *QSGOpaqueTextureMaterial) CreateShader() *QSGMaterialShader /*777 QS
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int compare(const QSGMaterial *)
-func (this *QSGOpaqueTextureMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/) int {
-	var convArg0 = other.GetCthis()
+func (this *QSGOpaqueTextureMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
+	var convArg0 = other.QSGMaterial_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSGOpaqueTextureMaterial7compareEPK11QSGMaterial", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -111,8 +111,8 @@ func (this *QSGOpaqueTextureMaterial) Compare(other *QSGMaterial /*777 const QSG
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTexture(QSGTexture *)
-func (this *QSGOpaqueTextureMaterial) SetTexture(texture *QSGTexture /*777 QSGTexture **/) {
-	var convArg0 = texture.GetCthis()
+func (this *QSGOpaqueTextureMaterial) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/) {
+	var convArg0 = texture.QSGTexture_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSGOpaqueTextureMaterial10setTextureEP10QSGTexture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

@@ -86,8 +86,8 @@ func DeleteQAndroidService(this *QAndroidService) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAndroidBinder * onBind(const QAndroidIntent &)
-func (this *QAndroidService) OnBind(intent *QAndroidIntent) *QAndroidBinder /*777 QAndroidBinder **/ {
-	var convArg0 = intent.GetCthis()
+func (this *QAndroidService) OnBind(intent QAndroidIntent_ITF) *QAndroidBinder /*777 QAndroidBinder **/ {
+	var convArg0 = intent.QAndroidIntent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidService6onBindERK14QAndroidIntent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAndroidBinderFromPointer(unsafe.Pointer(uintptr(rv))) // 444

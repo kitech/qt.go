@@ -90,8 +90,8 @@ func NewQStorageInfo_1(path string) *QStorageInfo {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QStorageInfo(const QDir &)
-func NewQStorageInfo_2(dir *QDir) *QStorageInfo {
-	var convArg0 = dir.GetCthis()
+func NewQStorageInfo_2(dir QDir_ITF) *QStorageInfo {
+	var convArg0 = dir.QDir_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfoC2ERK4QDir", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStorageInfoFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -114,8 +114,8 @@ func DeleteQStorageInfo(this *QStorageInfo) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QStorageInfo &)
-func (this *QStorageInfo) Swap(other *QStorageInfo) {
-	var convArg0 = other.GetCthis()
+func (this *QStorageInfo) Swap(other QStorageInfo_ITF) {
+	var convArg0 = other.QStorageInfo_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfo4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

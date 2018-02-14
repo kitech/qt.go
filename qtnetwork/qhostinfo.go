@@ -88,8 +88,8 @@ func DeleteQHostInfo(this *QHostInfo) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QHostInfo &)
-func (this *QHostInfo) Swap(other *QHostInfo) {
-	var convArg0 = other.GetCthis()
+func (this *QHostInfo) Swap(other QHostInfo_ITF) {
+	var convArg0 = other.QHostInfo_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -184,17 +184,17 @@ func (this *QHostInfo) LookupId() int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int lookupHost(const QString &, QObject *, const char *)
-func (this *QHostInfo) LookupHost(name string, receiver *qtcore.QObject /*777 QObject **/, member string) int {
+func (this *QHostInfo) LookupHost(name string, receiver qtcore.QObject_ITF /*777 QObject **/, member string) int {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = receiver.GetCthis()
+	var convArg1 = receiver.QObject_PTR().GetCthis()
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo10lookupHostERK7QStringP7QObjectPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QHostInfo_LookupHost(name string, receiver *qtcore.QObject /*777 QObject **/, member string) int {
+func QHostInfo_LookupHost(name string, receiver qtcore.QObject_ITF /*777 QObject **/, member string) int {
 	var nilthis *QHostInfo
 	rv := nilthis.LookupHost(name, receiver, member)
 	return rv

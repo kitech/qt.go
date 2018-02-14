@@ -75,8 +75,8 @@ func DeleteQQmlExtensionInterface(this *QQmlExtensionInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void initializeEngine(QQmlEngine *, const char *)
-func (this *QQmlExtensionInterface) InitializeEngine(engine *QQmlEngine /*777 QQmlEngine **/, uri string) {
-	var convArg0 = engine.GetCthis()
+func (this *QQmlExtensionInterface) InitializeEngine(engine QQmlEngine_ITF /*777 QQmlEngine **/, uri string) {
+	var convArg0 = engine.QQmlEngine_PTR().GetCthis()
 	var convArg1 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QQmlExtensionInterface16initializeEngineEP10QQmlEnginePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)

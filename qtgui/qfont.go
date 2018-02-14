@@ -91,9 +91,9 @@ func NewQFont_1(family string, pointSize int, weight int, italic bool) *QFont {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QFont(const QFont &, QPaintDevice *)
-func NewQFont_2(arg0 *QFont, pd *QPaintDevice /*777 QPaintDevice **/) *QFont {
-	var convArg0 = arg0.GetCthis()
-	var convArg1 = pd.GetCthis()
+func NewQFont_2(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFont {
+	var convArg0 = arg0.QFont_PTR().GetCthis()
+	var convArg1 = pd.QPaintDevice_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontC2ERKS_P12QPaintDevice", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,8 +116,8 @@ func DeleteQFont(this *QFont) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QFont &)
-func (this *QFont) Swap(other *QFont) {
-	var convArg0 = other.GetCthis()
+func (this *QFont) Swap(other QFont_ITF) {
+	var convArg0 = other.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -574,8 +574,8 @@ func (this *QFont) ExactMatch() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCopyOf(const QFont &)
-func (this *QFont) IsCopyOf(arg0 *QFont) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QFont) IsCopyOf(arg0 QFont_ITF) bool {
+	var convArg0 = arg0.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFont8isCopyOfERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -720,14 +720,14 @@ func QFont_InsertSubstitution(arg0 string, arg1 string) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void insertSubstitutions(const QString &, const QStringList &)
-func (this *QFont) InsertSubstitutions(arg0 string, arg1 *qtcore.QStringList) {
+func (this *QFont) InsertSubstitutions(arg0 string, arg1 qtcore.QStringList_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = arg1.GetCthis()
+	var convArg1 = arg1.QStringList_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont19insertSubstitutionsERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
-func QFont_InsertSubstitutions(arg0 string, arg1 *qtcore.QStringList) {
+func QFont_InsertSubstitutions(arg0 string, arg1 qtcore.QStringList_ITF) {
 	var nilthis *QFont
 	nilthis.InsertSubstitutions(arg0, arg1)
 }
@@ -829,8 +829,8 @@ func (this *QFont) LastResortFont() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont resolve(const QFont &)
-func (this *QFont) Resolve(arg0 *QFont) *QFont /*123*/ {
-	var convArg0 = arg0.GetCthis()
+func (this *QFont) Resolve(arg0 QFont_ITF) *QFont /*123*/ {
+	var convArg0 = arg0.QFont_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFont7resolveERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333

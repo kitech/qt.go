@@ -90,8 +90,8 @@ func (this *QAccessibleValueInterface) CurrentValue() *qtcore.QVariant /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setCurrentValue(const QVariant &)
-func (this *QAccessibleValueInterface) SetCurrentValue(value *qtcore.QVariant) {
-	var convArg0 = value.GetCthis()
+func (this *QAccessibleValueInterface) SetCurrentValue(value qtcore.QVariant_ITF) {
+	var convArg0 = value.QVariant_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAccessibleValueInterface15setCurrentValueERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

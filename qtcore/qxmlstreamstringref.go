@@ -76,8 +76,8 @@ func NewQXmlStreamStringRef() *QXmlStreamStringRef {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QXmlStreamStringRef(const QStringRef &)
-func NewQXmlStreamStringRef_1(aString *QStringRef) *QXmlStreamStringRef {
-	var convArg0 = aString.GetCthis()
+func NewQXmlStreamStringRef_1(aString QStringRef_ITF) *QXmlStreamStringRef {
+	var convArg0 = aString.QStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK10QStringRef", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -126,8 +126,8 @@ func DeleteQXmlStreamStringRef(this *QXmlStreamStringRef) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QXmlStreamStringRef &)
-func (this *QXmlStreamStringRef) Swap(other *QXmlStreamStringRef) {
-	var convArg0 = other.GetCthis()
+func (this *QXmlStreamStringRef) Swap(other QXmlStreamStringRef_ITF) {
+	var convArg0 = other.QXmlStreamStringRef_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRef4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }

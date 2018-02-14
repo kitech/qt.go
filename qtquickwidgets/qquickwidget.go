@@ -173,8 +173,8 @@ func (this *QQuickWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWidget(QWidget *)
-func NewQQuickWidget(parent *qtwidgets.QWidget /*777 QWidget **/) *QQuickWidget {
-	var convArg0 = parent.GetCthis()
+func NewQQuickWidget(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
+	var convArg0 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -185,9 +185,9 @@ func NewQQuickWidget(parent *qtwidgets.QWidget /*777 QWidget **/) *QQuickWidget 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWidget(QQmlEngine *, QWidget *)
-func NewQQuickWidget_1(engine *qtqml.QQmlEngine /*777 QQmlEngine **/, parent *qtwidgets.QWidget /*777 QWidget **/) *QQuickWidget {
-	var convArg0 = engine.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQQuickWidget_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
+	var convArg0 = engine.QQmlEngine_PTR().GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidgetC2EP10QQmlEngineP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -198,9 +198,9 @@ func NewQQuickWidget_1(engine *qtqml.QQmlEngine /*777 QQmlEngine **/, parent *qt
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWidget(const QUrl &, QWidget *)
-func NewQQuickWidget_2(source *qtcore.QUrl, parent *qtwidgets.QWidget /*777 QWidget **/) *QQuickWidget {
-	var convArg0 = source.GetCthis()
-	var convArg1 = parent.GetCthis()
+func NewQQuickWidget_2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
+	var convArg0 = source.QUrl_PTR().GetCthis()
+	var convArg1 = parent.QWidget_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidgetC2ERK4QUrlP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -317,8 +317,8 @@ func (this *QQuickWidget) InitialSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QSurfaceFormat &)
-func (this *QQuickWidget) SetFormat(format *qtgui.QSurfaceFormat) {
-	var convArg0 = format.GetCthis()
+func (this *QQuickWidget) SetFormat(format qtgui.QSurfaceFormat_ITF) {
+	var convArg0 = format.QSurfaceFormat_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget9setFormatERK14QSurfaceFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -351,8 +351,8 @@ func (this *QQuickWidget) GrabFramebuffer() *qtgui.QImage /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClearColor(const QColor &)
-func (this *QQuickWidget) SetClearColor(color *qtgui.QColor) {
-	var convArg0 = color.GetCthis()
+func (this *QQuickWidget) SetClearColor(color qtgui.QColor_ITF) {
+	var convArg0 = color.QColor_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget13setClearColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -371,8 +371,8 @@ func (this *QQuickWidget) QuickWindow() *qtquick.QQuickWindow /*777 QQuickWindow
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSource(const QUrl &)
-func (this *QQuickWidget) SetSource(arg0 *qtcore.QUrl) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) SetSource(arg0 qtcore.QUrl_ITF) {
+	var convArg0 = arg0.QUrl_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget9setSourceERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -381,10 +381,10 @@ func (this *QQuickWidget) SetSource(arg0 *qtcore.QUrl) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContent(const QUrl &, QQmlComponent *, QObject *)
-func (this *QQuickWidget) SetContent(url *qtcore.QUrl, component *qtqml.QQmlComponent /*777 QQmlComponent **/, item *qtcore.QObject /*777 QObject **/) {
-	var convArg0 = url.GetCthis()
-	var convArg1 = component.GetCthis()
-	var convArg2 = item.GetCthis()
+func (this *QQuickWidget) SetContent(url qtcore.QUrl_ITF, component qtqml.QQmlComponent_ITF /*777 QQmlComponent **/, item qtcore.QObject_ITF /*777 QObject **/) {
+	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg1 = component.QQmlComponent_PTR().GetCthis()
+	var convArg2 = item.QObject_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget10setContentERK4QUrlP13QQmlComponentP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -413,8 +413,8 @@ func (this *QQuickWidget) SceneGraphError(error int, message string) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
-func (this *QQuickWidget) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
+	var convArg0 = arg0.QResizeEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -423,8 +423,8 @@ func (this *QQuickWidget) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
-func (this *QQuickWidget) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
+	var convArg0 = arg0.QTimerEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -433,8 +433,8 @@ func (this *QQuickWidget) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
-func (this *QQuickWidget) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -443,8 +443,8 @@ func (this *QQuickWidget) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
-func (this *QQuickWidget) KeyReleaseEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
+	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget15keyReleaseEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -453,8 +453,8 @@ func (this *QQuickWidget) KeyReleaseEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
-func (this *QQuickWidget) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -463,8 +463,8 @@ func (this *QQuickWidget) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
-func (this *QQuickWidget) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -473,8 +473,8 @@ func (this *QQuickWidget) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouse
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
-func (this *QQuickWidget) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -483,8 +483,8 @@ func (this *QQuickWidget) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
-func (this *QQuickWidget) MouseDoubleClickEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) MouseDoubleClickEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
+	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget21mouseDoubleClickEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -493,8 +493,8 @@ func (this *QQuickWidget) MouseDoubleClickEvent(arg0 *qtgui.QMouseEvent /*777 QM
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
-func (this *QQuickWidget) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
+	var convArg0 = arg0.QShowEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -503,8 +503,8 @@ func (this *QQuickWidget) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
-func (this *QQuickWidget) HideEvent(arg0 *qtgui.QHideEvent /*777 QHideEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
+	var convArg0 = arg0.QHideEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget9hideEventEP10QHideEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -513,8 +513,8 @@ func (this *QQuickWidget) HideEvent(arg0 *qtgui.QHideEvent /*777 QHideEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
-func (this *QQuickWidget) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QQuickWidget) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = event.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -523,8 +523,8 @@ func (this *QQuickWidget) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
-func (this *QQuickWidget) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QQuickWidget) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
+	var convArg0 = event.QFocusEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -533,8 +533,8 @@ func (this *QQuickWidget) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
-func (this *QQuickWidget) WheelEvent(arg0 *qtgui.QWheelEvent /*777 QWheelEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
+	var convArg0 = arg0.QWheelEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -543,8 +543,8 @@ func (this *QQuickWidget) WheelEvent(arg0 *qtgui.QWheelEvent /*777 QWheelEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QDragEnterEvent *)
-func (this *QQuickWidget) DragEnterEvent(arg0 *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /*777 QDragEnterEvent **/) {
+	var convArg0 = arg0.QDragEnterEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget14dragEnterEventEP15QDragEnterEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -553,8 +553,8 @@ func (this *QQuickWidget) DragEnterEvent(arg0 *qtgui.QDragEnterEvent /*777 QDrag
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
-func (this *QQuickWidget) DragMoveEvent(arg0 *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) DragMoveEvent(arg0 qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
+	var convArg0 = arg0.QDragMoveEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget13dragMoveEventEP14QDragMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -563,8 +563,8 @@ func (this *QQuickWidget) DragMoveEvent(arg0 *qtgui.QDragMoveEvent /*777 QDragMo
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
-func (this *QQuickWidget) DragLeaveEvent(arg0 *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) DragLeaveEvent(arg0 qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
+	var convArg0 = arg0.QDragLeaveEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget14dragLeaveEventEP15QDragLeaveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -573,8 +573,8 @@ func (this *QQuickWidget) DragLeaveEvent(arg0 *qtgui.QDragLeaveEvent /*777 QDrag
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
-func (this *QQuickWidget) DropEvent(arg0 *qtgui.QDropEvent /*777 QDropEvent **/) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) DropEvent(arg0 qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
+	var convArg0 = arg0.QDropEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -583,8 +583,8 @@ func (this *QQuickWidget) DropEvent(arg0 *qtgui.QDropEvent /*777 QDropEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
-func (this *QQuickWidget) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
-	var convArg0 = arg0.GetCthis()
+func (this *QQuickWidget) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 = arg0.QEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -594,8 +594,8 @@ func (this *QQuickWidget) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
-func (this *QQuickWidget) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
-	var convArg0 = event.GetCthis()
+func (this *QQuickWidget) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
+	var convArg0 = event.QPaintEvent_PTR().GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
