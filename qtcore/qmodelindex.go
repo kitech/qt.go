@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -190,6 +191,48 @@ func (this *QModelIndex) IsValid() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qabstractitemmodel.h:73
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QModelIndex &)
+func (this *QModelIndex) Operator_equal_equal(other QModelIndex_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QModelIndex_PTR() != nil {
+		convArg0 = other.QModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndexeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:75
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QModelIndex &)
+func (this *QModelIndex) Operator_not_equal(other QModelIndex_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QModelIndex_PTR() != nil {
+		convArg0 = other.QModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndexneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:77
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(const QModelIndex &)
+func (this *QModelIndex) Operator_less_than(other QModelIndex_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QModelIndex_PTR() != nil {
+		convArg0 = other.QModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndexltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 func DeleteQModelIndex(this *QModelIndex) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QModelIndexD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -209,6 +252,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

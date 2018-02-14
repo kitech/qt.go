@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -90,7 +91,10 @@ func DeleteQStyleOption(this *QStyleOption) {
 // Public Visibility=Default Availability=Available
 // [-2] void init(const QWidget *)
 func (this *QStyleOption) Init(w QWidget_ITF /*777 const QWidget **/) {
-	var convArg0 = w.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOption4initEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -100,9 +104,28 @@ func (this *QStyleOption) Init(w QWidget_ITF /*777 const QWidget **/) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void initFrom(const QWidget *)
 func (this *QStyleOption) InitFrom(w QWidget_ITF /*777 const QWidget **/) {
-	var convArg0 = w.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOption8initFromEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:108
+// index:0
+// Public Visibility=Default Availability=Available
+// [64] QStyleOption & operator=(const QStyleOption &)
+func (this *QStyleOption) Operator_equal(other QStyleOption_ITF) *QStyleOption {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QStyleOption_PTR() != nil {
+		convArg0 = other.QStyleOption_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOptionaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStyleOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStyleOption)
+	return rv2
 }
 
 type QStyleOption__OptionType = int
@@ -155,6 +178,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

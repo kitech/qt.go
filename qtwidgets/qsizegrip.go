@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -120,10 +121,14 @@ func (this *QSizeGrip) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // Public Visibility=Default Availability=Available
 // [-2] void QSizeGrip(QWidget *)
 func NewQSizeGrip(parent QWidget_ITF /*777 QWidget **/) *QSizeGrip {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGripC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSizeGripFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSizeGrip")
 	return gothis
 }
 
@@ -164,7 +169,10 @@ func (this *QSizeGrip) SetVisible(arg0 bool) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QSizeGrip) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
+		convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -174,7 +182,10 @@ func (this *QSizeGrip) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent *
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
 func (this *QSizeGrip) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -184,7 +195,10 @@ func (this *QSizeGrip) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEv
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
 func (this *QSizeGrip) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -194,7 +208,10 @@ func (this *QSizeGrip) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEve
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 func (this *QSizeGrip) MouseReleaseEvent(mouseEvent qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = mouseEvent.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if mouseEvent != nil && mouseEvent.QMouseEvent_PTR() != nil {
+		convArg0 = mouseEvent.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -204,7 +221,10 @@ func (this *QSizeGrip) MouseReleaseEvent(mouseEvent qtgui.QMouseEvent_ITF /*777 
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void moveEvent(QMoveEvent *)
 func (this *QSizeGrip) MoveEvent(moveEvent qtgui.QMoveEvent_ITF /*777 QMoveEvent **/) {
-	var convArg0 = moveEvent.QMoveEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if moveEvent != nil && moveEvent.QMoveEvent_PTR() != nil {
+		convArg0 = moveEvent.QMoveEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip9moveEventEP10QMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -214,7 +234,10 @@ func (this *QSizeGrip) MoveEvent(moveEvent qtgui.QMoveEvent_ITF /*777 QMoveEvent
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
 func (this *QSizeGrip) ShowEvent(showEvent qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
-	var convArg0 = showEvent.QShowEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if showEvent != nil && showEvent.QShowEvent_PTR() != nil {
+		convArg0 = showEvent.QShowEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -224,7 +247,10 @@ func (this *QSizeGrip) ShowEvent(showEvent qtgui.QShowEvent_ITF /*777 QShowEvent
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
 func (this *QSizeGrip) HideEvent(hideEvent qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
-	var convArg0 = hideEvent.QHideEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if hideEvent != nil && hideEvent.QHideEvent_PTR() != nil {
+		convArg0 = hideEvent.QHideEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip9hideEventEP10QHideEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -234,8 +260,14 @@ func (this *QSizeGrip) HideEvent(hideEvent qtgui.QHideEvent_ITF /*777 QHideEvent
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
 func (this *QSizeGrip) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
-	var convArg1 = arg1.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QEvent_PTR() != nil {
+		convArg1 = arg1.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -246,7 +278,10 @@ func (this *QSizeGrip) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, ar
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QSizeGrip) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -265,6 +300,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

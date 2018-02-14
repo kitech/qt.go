@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -70,6 +71,7 @@ func NewQQuickTextureFactory() *QQuickTextureFactory {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickTextureFactoryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickTextureFactory")
 	return gothis
 }
 
@@ -89,7 +91,10 @@ func DeleteQQuickTextureFactory(this *QQuickTextureFactory) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSGTexture * createTexture(QQuickWindow *)
 func (this *QQuickTextureFactory) CreateTexture(window QQuickWindow_ITF /*777 QQuickWindow **/) *QSGTexture /*777 QSGTexture **/ {
-	var convArg0 = window.QQuickWindow_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QQuickWindow_PTR() != nil {
+		convArg0 = window.QQuickWindow_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickTextureFactory13createTextureEP12QQuickWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -134,7 +139,10 @@ func (this *QQuickTextureFactory) Image() *qtgui.QImage /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QQuickTextureFactory * textureFactoryForImage(const QImage &)
 func (this *QQuickTextureFactory) TextureFactoryForImage(image qtgui.QImage_ITF) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
-	var convArg0 = image.QImage_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QImage_PTR() != nil {
+		convArg0 = image.QImage_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickTextureFactory22textureFactoryForImageERK6QImage", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -158,6 +166,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

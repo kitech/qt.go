@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -85,10 +86,14 @@ func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*777 const
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsItemAnimation(QObject *)
 func NewQGraphicsItemAnimation(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsItemAnimation {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsItemAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsItemAnimation")
 	return gothis
 }
 
@@ -118,7 +123,10 @@ func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*777 QGraphicsItem **
 // Public Visibility=Default Availability=Available
 // [-2] void setItem(QGraphicsItem *)
 func (this *QGraphicsItemAnimation) SetItem(item QGraphicsItem_ITF /*777 QGraphicsItem **/) {
-	var convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsItem_PTR() != nil {
+		convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -138,7 +146,10 @@ func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*777 QTimeLine
 // Public Visibility=Default Availability=Available
 // [-2] void setTimeLine(QTimeLine *)
 func (this *QGraphicsItemAnimation) SetTimeLine(timeLine qtcore.QTimeLine_ITF /*777 QTimeLine **/) {
-	var convArg0 = timeLine.QTimeLine_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if timeLine != nil && timeLine.QTimeLine_PTR() != nil {
+		convArg0 = timeLine.QTimeLine_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -160,7 +171,10 @@ func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ 
 // Public Visibility=Default Availability=Available
 // [-2] void setPosAt(qreal, const QPointF &)
 func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos qtcore.QPointF_ITF) {
-	var convArg1 = pos.QPointF_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg1 = pos.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -341,6 +355,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

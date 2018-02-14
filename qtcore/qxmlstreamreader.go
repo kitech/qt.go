@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -77,7 +78,10 @@ func NewQXmlStreamReader() *QXmlStreamReader {
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamReader(QIODevice *)
 func NewQXmlStreamReader_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamReader {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2EP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -90,7 +94,10 @@ func NewQXmlStreamReader_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStream
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamReader(const QByteArray &)
 func NewQXmlStreamReader_2(data QByteArray_ITF) *QXmlStreamReader {
-	var convArg0 = data.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -142,7 +149,10 @@ func DeleteQXmlStreamReader(this *QXmlStreamReader) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
 func (this *QXmlStreamReader) SetDevice(device QIODevice_ITF /*777 QIODevice **/) {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -162,7 +172,10 @@ func (this *QXmlStreamReader) Device() *QIODevice /*777 QIODevice **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void addData(const QByteArray &)
 func (this *QXmlStreamReader) AddData(data QByteArray_ITF) {
-	var convArg0 = data.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -567,7 +580,10 @@ func (this *QXmlStreamReader) Text() *QStringRef /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration &)
 func (this *QXmlStreamReader) AddExtraNamespaceDeclaration(extraNamespaceDeclaraction QXmlStreamNamespaceDeclaration_ITF) {
-	var convArg0 = extraNamespaceDeclaraction.QXmlStreamNamespaceDeclaration_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if extraNamespaceDeclaraction != nil && extraNamespaceDeclaraction.QXmlStreamNamespaceDeclaration_PTR() != nil {
+		convArg0 = extraNamespaceDeclaraction.QXmlStreamNamespaceDeclaration_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -657,7 +673,10 @@ func (this *QXmlStreamReader) HasError() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setEntityResolver(QXmlStreamEntityResolver *)
 func (this *QXmlStreamReader) SetEntityResolver(resolver QXmlStreamEntityResolver_ITF /*777 QXmlStreamEntityResolver **/) {
-	var convArg0 = resolver.QXmlStreamEntityResolver_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if resolver != nil && resolver.QXmlStreamEntityResolver_PTR() != nil {
+		convArg0 = resolver.QXmlStreamEntityResolver_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -713,6 +732,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

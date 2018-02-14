@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -97,14 +98,73 @@ func DeleteQRegExp(this *QRegExp) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qregexp.h:75
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QRegExp & operator=(const QRegExp &)
+func (this *QRegExp) Operator_equal(rx QRegExp_ITF) *QRegExp {
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExpaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegExp)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qregexp.h:77
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QRegExp & operator=(QRegExp &&)
+func (this *QRegExp) Operator_equal_1(other unsafe.Pointer /*333*/) *QRegExp {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExpaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegExp)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qregexp.h:79
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QRegExp &)
 func (this *QRegExp) Swap(other QRegExp_ITF) {
-	var convArg0 = other.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QRegExp_PTR() != nil {
+		convArg0 = other.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qregexp.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QRegExp &)
+func (this *QRegExp) Operator_equal_equal(rx QRegExp_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExpeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qregexp.h:82
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QRegExp &)
+func (this *QRegExp) Operator_not_equal(rx QRegExp_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExpneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qregexp.h:84
@@ -408,6 +468,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 67
+// extern C begin: 69
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -110,10 +111,14 @@ func (this *QTreeWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // Public Visibility=Default Availability=Available
 // [-2] void QTreeWidget(QWidget *)
 func NewQTreeWidget(parent QWidget_ITF /*777 QWidget **/) *QTreeWidget {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTreeWidget")
 	return gothis
 }
 
@@ -182,7 +187,10 @@ func (this *QTreeWidget) TopLevelItemCount() int {
 // Public Visibility=Default Availability=Available
 // [-2] void insertTopLevelItem(int, QTreeWidgetItem *)
 func (this *QTreeWidget) InsertTopLevelItem(index int, item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
-	var convArg1 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg1 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget18insertTopLevelItemEiP15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -192,7 +200,10 @@ func (this *QTreeWidget) InsertTopLevelItem(index int, item QTreeWidgetItem_ITF 
 // Public Visibility=Default Availability=Available
 // [-2] void addTopLevelItem(QTreeWidgetItem *)
 func (this *QTreeWidget) AddTopLevelItem(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget15addTopLevelItemEP15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -212,7 +223,10 @@ func (this *QTreeWidget) TakeTopLevelItem(index int) *QTreeWidgetItem /*777 QTre
 // Public Visibility=Default Availability=Available
 // [4] int indexOfTopLevelItem(QTreeWidgetItem *)
 func (this *QTreeWidget) IndexOfTopLevelItem(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) int {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -233,7 +247,10 @@ func (this *QTreeWidget) HeaderItem() *QTreeWidgetItem /*777 QTreeWidgetItem **/
 // Public Visibility=Default Availability=Available
 // [-2] void setHeaderItem(QTreeWidgetItem *)
 func (this *QTreeWidget) SetHeaderItem(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget13setHeaderItemEP15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -243,7 +260,10 @@ func (this *QTreeWidget) SetHeaderItem(item QTreeWidgetItem_ITF /*777 QTreeWidge
 // Public Visibility=Default Availability=Available
 // [-2] void setHeaderLabels(const QStringList &)
 func (this *QTreeWidget) SetHeaderLabels(labels qtcore.QStringList_ITF) {
-	var convArg0 = labels.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if labels != nil && labels.QStringList_PTR() != nil {
+		convArg0 = labels.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget15setHeaderLabelsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -284,7 +304,10 @@ func (this *QTreeWidget) CurrentColumn() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QTreeWidgetItem *)
 func (this *QTreeWidget) SetCurrentItem(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -294,7 +317,10 @@ func (this *QTreeWidget) SetCurrentItem(item QTreeWidgetItem_ITF /*777 QTreeWidg
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QTreeWidgetItem *, int)
 func (this *QTreeWidget) SetCurrentItem_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -304,7 +330,10 @@ func (this *QTreeWidget) SetCurrentItem_1(item QTreeWidgetItem_ITF /*777 QTreeWi
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QTreeWidgetItem *, int, QItemSelectionModel::SelectionFlags)
 func (this *QTreeWidget) SetCurrentItem_2(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int, command int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column, command)
 	qtrt.ErrPrint(err, rv)
 }
@@ -314,7 +343,10 @@ func (this *QTreeWidget) SetCurrentItem_2(item QTreeWidgetItem_ITF /*777 QTreeWi
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * itemAt(const QPoint &)
 func (this *QTreeWidget) ItemAt(p qtcore.QPoint_ITF) *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
-	var convArg0 = p.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPoint_PTR() != nil {
+		convArg0 = p.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget6itemAtERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -335,7 +367,10 @@ func (this *QTreeWidget) ItemAt_1(x int, y int) *QTreeWidgetItem /*777 QTreeWidg
 // Public Visibility=Default Availability=Available
 // [16] QRect visualItemRect(const QTreeWidgetItem *)
 func (this *QTreeWidget) VisualItemRect(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) *qtcore.QRect /*123*/ {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -367,7 +402,10 @@ func (this *QTreeWidget) SortItems(column int, order int) {
 // Public Visibility=Default Availability=Available
 // [-2] void editItem(QTreeWidgetItem *, int)
 func (this *QTreeWidget) EditItem(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget8editItemEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -377,7 +415,10 @@ func (this *QTreeWidget) EditItem(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem
 // Public Visibility=Default Availability=Available
 // [-2] void openPersistentEditor(QTreeWidgetItem *, int)
 func (this *QTreeWidget) OpenPersistentEditor(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -387,7 +428,10 @@ func (this *QTreeWidget) OpenPersistentEditor(item QTreeWidgetItem_ITF /*777 QTr
 // Public Visibility=Default Availability=Available
 // [-2] void closePersistentEditor(QTreeWidgetItem *, int)
 func (this *QTreeWidget) ClosePersistentEditor(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -397,7 +441,10 @@ func (this *QTreeWidget) ClosePersistentEditor(item QTreeWidgetItem_ITF /*777 QT
 // Public Visibility=Default Availability=Available
 // [1] bool isPersistentEditorOpen(QTreeWidgetItem *, int)
 func (this *QTreeWidget) IsPersistentEditorOpen(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) bool {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget22isPersistentEditorOpenEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -408,7 +455,10 @@ func (this *QTreeWidget) IsPersistentEditorOpen(item QTreeWidgetItem_ITF /*777 Q
 // Public Visibility=Default Availability=Available
 // [8] QWidget * itemWidget(QTreeWidgetItem *, int)
 func (this *QTreeWidget) ItemWidget(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) *QWidget /*777 QWidget **/ {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -419,8 +469,14 @@ func (this *QTreeWidget) ItemWidget(item QTreeWidgetItem_ITF /*777 QTreeWidgetIt
 // Public Visibility=Default Availability=Available
 // [-2] void setItemWidget(QTreeWidgetItem *, int, QWidget *)
 func (this *QTreeWidget) SetItemWidget(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int, widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
-	var convArg2 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg2 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget13setItemWidgetEP15QTreeWidgetItemiP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -430,7 +486,10 @@ func (this *QTreeWidget) SetItemWidget(item QTreeWidgetItem_ITF /*777 QTreeWidge
 // Public inline Visibility=Default Availability=Available
 // [-2] void removeItemWidget(QTreeWidgetItem *, int)
 func (this *QTreeWidget) RemoveItemWidget(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget16removeItemWidgetEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -440,7 +499,10 @@ func (this *QTreeWidget) RemoveItemWidget(item QTreeWidgetItem_ITF /*777 QTreeWi
 // Public Visibility=Default Availability=Available
 // [1] bool isItemSelected(const QTreeWidgetItem *)
 func (this *QTreeWidget) IsItemSelected(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) bool {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -451,7 +513,10 @@ func (this *QTreeWidget) IsItemSelected(item QTreeWidgetItem_ITF /*777 const QTr
 // Public Visibility=Default Availability=Available
 // [-2] void setItemSelected(const QTreeWidgetItem *, _Bool)
 func (this *QTreeWidget) SetItemSelected(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/, select_ bool) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget15setItemSelectedEPK15QTreeWidgetItemb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, select_)
 	qtrt.ErrPrint(err, rv)
 }
@@ -461,7 +526,10 @@ func (this *QTreeWidget) SetItemSelected(item QTreeWidgetItem_ITF /*777 const QT
 // Public Visibility=Default Availability=Available
 // [1] bool isItemHidden(const QTreeWidgetItem *)
 func (this *QTreeWidget) IsItemHidden(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) bool {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -472,7 +540,10 @@ func (this *QTreeWidget) IsItemHidden(item QTreeWidgetItem_ITF /*777 const QTree
 // Public Visibility=Default Availability=Available
 // [-2] void setItemHidden(const QTreeWidgetItem *, _Bool)
 func (this *QTreeWidget) SetItemHidden(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/, hide bool) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget13setItemHiddenEPK15QTreeWidgetItemb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hide)
 	qtrt.ErrPrint(err, rv)
 }
@@ -482,7 +553,10 @@ func (this *QTreeWidget) SetItemHidden(item QTreeWidgetItem_ITF /*777 const QTre
 // Public Visibility=Default Availability=Available
 // [1] bool isItemExpanded(const QTreeWidgetItem *)
 func (this *QTreeWidget) IsItemExpanded(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) bool {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget14isItemExpandedEPK15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -493,7 +567,10 @@ func (this *QTreeWidget) IsItemExpanded(item QTreeWidgetItem_ITF /*777 const QTr
 // Public Visibility=Default Availability=Available
 // [-2] void setItemExpanded(const QTreeWidgetItem *, _Bool)
 func (this *QTreeWidget) SetItemExpanded(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/, expand bool) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget15setItemExpandedEPK15QTreeWidgetItemb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, expand)
 	qtrt.ErrPrint(err, rv)
 }
@@ -503,7 +580,10 @@ func (this *QTreeWidget) SetItemExpanded(item QTreeWidgetItem_ITF /*777 const QT
 // Public Visibility=Default Availability=Available
 // [1] bool isFirstItemColumnSpanned(const QTreeWidgetItem *)
 func (this *QTreeWidget) IsFirstItemColumnSpanned(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) bool {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget24isFirstItemColumnSpannedEPK15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -514,7 +594,10 @@ func (this *QTreeWidget) IsFirstItemColumnSpanned(item QTreeWidgetItem_ITF /*777
 // Public Visibility=Default Availability=Available
 // [-2] void setFirstItemColumnSpanned(const QTreeWidgetItem *, _Bool)
 func (this *QTreeWidget) SetFirstItemColumnSpanned(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/, span bool) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget25setFirstItemColumnSpannedEPK15QTreeWidgetItemb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, span)
 	qtrt.ErrPrint(err, rv)
 }
@@ -524,7 +607,10 @@ func (this *QTreeWidget) SetFirstItemColumnSpanned(item QTreeWidgetItem_ITF /*77
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * itemAbove(const QTreeWidgetItem *)
 func (this *QTreeWidget) ItemAbove(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -535,7 +621,10 @@ func (this *QTreeWidget) ItemAbove(item QTreeWidgetItem_ITF /*777 const QTreeWid
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * itemBelow(const QTreeWidgetItem *)
 func (this *QTreeWidget) ItemBelow(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -546,7 +635,10 @@ func (this *QTreeWidget) ItemBelow(item QTreeWidgetItem_ITF /*777 const QTreeWid
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSelectionModel(QItemSelectionModel *)
 func (this *QTreeWidget) SetSelectionModel(selectionModel qtcore.QItemSelectionModel_ITF /*777 QItemSelectionModel **/) {
-	var convArg0 = selectionModel.QItemSelectionModel_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if selectionModel != nil && selectionModel.QItemSelectionModel_PTR() != nil {
+		convArg0 = selectionModel.QItemSelectionModel_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget17setSelectionModelEP19QItemSelectionModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -556,7 +648,10 @@ func (this *QTreeWidget) SetSelectionModel(selectionModel qtcore.QItemSelectionM
 // Public Visibility=Default Availability=Available
 // [-2] void scrollToItem(const QTreeWidgetItem *, QAbstractItemView::ScrollHint)
 func (this *QTreeWidget) ScrollToItem(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/, hint int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget12scrollToItemEPK15QTreeWidgetItemN17QAbstractItemView10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)
 }
@@ -566,7 +661,10 @@ func (this *QTreeWidget) ScrollToItem(item QTreeWidgetItem_ITF /*777 const QTree
 // Public Visibility=Default Availability=Available
 // [-2] void expandItem(const QTreeWidgetItem *)
 func (this *QTreeWidget) ExpandItem(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget10expandItemEPK15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -576,7 +674,10 @@ func (this *QTreeWidget) ExpandItem(item QTreeWidgetItem_ITF /*777 const QTreeWi
 // Public Visibility=Default Availability=Available
 // [-2] void collapseItem(const QTreeWidgetItem *)
 func (this *QTreeWidget) CollapseItem(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget12collapseItemEPK15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -595,7 +696,10 @@ func (this *QTreeWidget) Clear() {
 // Public Visibility=Default Availability=Available
 // [-2] void itemPressed(QTreeWidgetItem *, int)
 func (this *QTreeWidget) ItemPressed(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget11itemPressedEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -605,7 +709,10 @@ func (this *QTreeWidget) ItemPressed(item QTreeWidgetItem_ITF /*777 QTreeWidgetI
 // Public Visibility=Default Availability=Available
 // [-2] void itemClicked(QTreeWidgetItem *, int)
 func (this *QTreeWidget) ItemClicked(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget11itemClickedEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -615,7 +722,10 @@ func (this *QTreeWidget) ItemClicked(item QTreeWidgetItem_ITF /*777 QTreeWidgetI
 // Public Visibility=Default Availability=Available
 // [-2] void itemDoubleClicked(QTreeWidgetItem *, int)
 func (this *QTreeWidget) ItemDoubleClicked(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget17itemDoubleClickedEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -625,7 +735,10 @@ func (this *QTreeWidget) ItemDoubleClicked(item QTreeWidgetItem_ITF /*777 QTreeW
 // Public Visibility=Default Availability=Available
 // [-2] void itemActivated(QTreeWidgetItem *, int)
 func (this *QTreeWidget) ItemActivated(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget13itemActivatedEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -635,7 +748,10 @@ func (this *QTreeWidget) ItemActivated(item QTreeWidgetItem_ITF /*777 QTreeWidge
 // Public Visibility=Default Availability=Available
 // [-2] void itemEntered(QTreeWidgetItem *, int)
 func (this *QTreeWidget) ItemEntered(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget11itemEnteredEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -645,7 +761,10 @@ func (this *QTreeWidget) ItemEntered(item QTreeWidgetItem_ITF /*777 QTreeWidgetI
 // Public Visibility=Default Availability=Available
 // [-2] void itemChanged(QTreeWidgetItem *, int)
 func (this *QTreeWidget) ItemChanged(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget11itemChangedEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -655,7 +774,10 @@ func (this *QTreeWidget) ItemChanged(item QTreeWidgetItem_ITF /*777 QTreeWidgetI
 // Public Visibility=Default Availability=Available
 // [-2] void itemExpanded(QTreeWidgetItem *)
 func (this *QTreeWidget) ItemExpanded(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget12itemExpandedEP15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -665,7 +787,10 @@ func (this *QTreeWidget) ItemExpanded(item QTreeWidgetItem_ITF /*777 QTreeWidget
 // Public Visibility=Default Availability=Available
 // [-2] void itemCollapsed(QTreeWidgetItem *)
 func (this *QTreeWidget) ItemCollapsed(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget13itemCollapsedEP15QTreeWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -675,8 +800,14 @@ func (this *QTreeWidget) ItemCollapsed(item QTreeWidgetItem_ITF /*777 QTreeWidge
 // Public Visibility=Default Availability=Available
 // [-2] void currentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)
 func (this *QTreeWidget) CurrentItemChanged(current QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, previous QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
-	var convArg0 = current.QTreeWidgetItem_PTR().GetCthis()
-	var convArg1 = previous.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if current != nil && current.QTreeWidgetItem_PTR() != nil {
+		convArg0 = current.QTreeWidgetItem_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if previous != nil && previous.QTreeWidgetItem_PTR() != nil {
+		convArg1 = previous.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget18currentItemChangedEP15QTreeWidgetItemS1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -695,7 +826,10 @@ func (this *QTreeWidget) ItemSelectionChanged() {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QTreeWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -718,8 +852,14 @@ func (this *QTreeWidget) MimeTypes() *qtcore.QStringList /*123*/ {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(QTreeWidgetItem *, int, const QMimeData *, Qt::DropAction)
 func (this *QTreeWidget) DropMimeData(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, index int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, action int) bool {
-	var convArg0 = parent.QTreeWidgetItem_PTR().GetCthis()
-	var convArg2 = data.QMimeData_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QTreeWidgetItem_PTR() != nil {
+		convArg0 = parent.QTreeWidgetItem_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if data != nil && data.QMimeData_PTR() != nil {
+		convArg2 = data.QMimeData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget12dropMimeDataEP15QTreeWidgetItemiPK9QMimeDataN2Qt10DropActionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, index, convArg2, action)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -740,7 +880,10 @@ func (this *QTreeWidget) SupportedDropActions() int {
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(const QTreeWidgetItem *, int)
 func (this *QTreeWidget) IndexFromItem(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/, column int) *qtcore.QModelIndex /*123*/ {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget13indexFromItemEPK15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -753,7 +896,10 @@ func (this *QTreeWidget) IndexFromItem(item QTreeWidgetItem_ITF /*777 const QTre
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(QTreeWidgetItem *, int)
 func (this *QTreeWidget) IndexFromItem_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) *qtcore.QModelIndex /*123*/ {
-	var convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget13indexFromItemEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -766,7 +912,10 @@ func (this *QTreeWidget) IndexFromItem_1(item QTreeWidgetItem_ITF /*777 QTreeWid
 // Protected Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * itemFromIndex(const QModelIndex &)
 func (this *QTreeWidget) ItemFromIndex(index qtcore.QModelIndex_ITF) *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget13itemFromIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -777,7 +926,10 @@ func (this *QTreeWidget) ItemFromIndex(index qtcore.QModelIndex_ITF) *QTreeWidge
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
 func (this *QTreeWidget) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
-	var convArg0 = event.QDropEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QDropEvent_PTR() != nil {
+		convArg0 = event.QDropEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -795,6 +947,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

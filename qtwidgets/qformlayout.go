@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -75,10 +76,14 @@ func (this *QFormLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // Public Visibility=Default Availability=Available
 // [-2] void QFormLayout(QWidget *)
 func NewQFormLayout(parent QWidget_ITF /*777 QWidget **/) *QFormLayout {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFormLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFormLayout")
 	return gothis
 }
 
@@ -231,8 +236,14 @@ func (this *QFormLayout) SetSpacing(arg0 int) {
 // Public Visibility=Default Availability=Available
 // [-2] void addRow(QWidget *, QWidget *)
 func (this *QFormLayout) AddRow(label QWidget_ITF /*777 QWidget **/, field QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = label.QWidget_PTR().GetCthis()
-	var convArg1 = field.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if label != nil && label.QWidget_PTR() != nil {
+		convArg0 = label.QWidget_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if field != nil && field.QWidget_PTR() != nil {
+		convArg1 = field.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout6addRowEP7QWidgetS1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -242,8 +253,14 @@ func (this *QFormLayout) AddRow(label QWidget_ITF /*777 QWidget **/, field QWidg
 // Public Visibility=Default Availability=Available
 // [-2] void addRow(QWidget *, QLayout *)
 func (this *QFormLayout) AddRow_1(label QWidget_ITF /*777 QWidget **/, field QLayout_ITF /*777 QLayout **/) {
-	var convArg0 = label.QWidget_PTR().GetCthis()
-	var convArg1 = field.QLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if label != nil && label.QWidget_PTR() != nil {
+		convArg0 = label.QWidget_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if field != nil && field.QLayout_PTR() != nil {
+		convArg1 = field.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout6addRowEP7QWidgetP7QLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -255,7 +272,10 @@ func (this *QFormLayout) AddRow_1(label QWidget_ITF /*777 QWidget **/, field QLa
 func (this *QFormLayout) AddRow_2(labelText string, field QWidget_ITF /*777 QWidget **/) {
 	var tmpArg0 = qtcore.NewQString_5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = field.QWidget_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if field != nil && field.QWidget_PTR() != nil {
+		convArg1 = field.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout6addRowERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -267,7 +287,10 @@ func (this *QFormLayout) AddRow_2(labelText string, field QWidget_ITF /*777 QWid
 func (this *QFormLayout) AddRow_3(labelText string, field QLayout_ITF /*777 QLayout **/) {
 	var tmpArg0 = qtcore.NewQString_5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = field.QLayout_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if field != nil && field.QLayout_PTR() != nil {
+		convArg1 = field.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout6addRowERK7QStringP7QLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -277,7 +300,10 @@ func (this *QFormLayout) AddRow_3(labelText string, field QLayout_ITF /*777 QLay
 // Public Visibility=Default Availability=Available
 // [-2] void addRow(QWidget *)
 func (this *QFormLayout) AddRow_4(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout6addRowEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -287,7 +313,10 @@ func (this *QFormLayout) AddRow_4(widget QWidget_ITF /*777 QWidget **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void addRow(QLayout *)
 func (this *QFormLayout) AddRow_5(layout QLayout_ITF /*777 QLayout **/) {
-	var convArg0 = layout.QLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if layout != nil && layout.QLayout_PTR() != nil {
+		convArg0 = layout.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout6addRowEP7QLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -297,8 +326,14 @@ func (this *QFormLayout) AddRow_5(layout QLayout_ITF /*777 QLayout **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void insertRow(int, QWidget *, QWidget *)
 func (this *QFormLayout) InsertRow(row int, label QWidget_ITF /*777 QWidget **/, field QWidget_ITF /*777 QWidget **/) {
-	var convArg1 = label.QWidget_PTR().GetCthis()
-	var convArg2 = field.QWidget_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if label != nil && label.QWidget_PTR() != nil {
+		convArg1 = label.QWidget_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if field != nil && field.QWidget_PTR() != nil {
+		convArg2 = field.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiP7QWidgetS1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -308,8 +343,14 @@ func (this *QFormLayout) InsertRow(row int, label QWidget_ITF /*777 QWidget **/,
 // Public Visibility=Default Availability=Available
 // [-2] void insertRow(int, QWidget *, QLayout *)
 func (this *QFormLayout) InsertRow_1(row int, label QWidget_ITF /*777 QWidget **/, field QLayout_ITF /*777 QLayout **/) {
-	var convArg1 = label.QWidget_PTR().GetCthis()
-	var convArg2 = field.QLayout_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if label != nil && label.QWidget_PTR() != nil {
+		convArg1 = label.QWidget_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if field != nil && field.QLayout_PTR() != nil {
+		convArg2 = field.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiP7QWidgetP7QLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -321,7 +362,10 @@ func (this *QFormLayout) InsertRow_1(row int, label QWidget_ITF /*777 QWidget **
 func (this *QFormLayout) InsertRow_2(row int, labelText string, field QWidget_ITF /*777 QWidget **/) {
 	var tmpArg1 = qtcore.NewQString_5(labelText)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = field.QWidget_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if field != nil && field.QWidget_PTR() != nil {
+		convArg2 = field.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiRK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -333,7 +377,10 @@ func (this *QFormLayout) InsertRow_2(row int, labelText string, field QWidget_IT
 func (this *QFormLayout) InsertRow_3(row int, labelText string, field QLayout_ITF /*777 QLayout **/) {
 	var tmpArg1 = qtcore.NewQString_5(labelText)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = field.QLayout_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if field != nil && field.QLayout_PTR() != nil {
+		convArg2 = field.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiRK7QStringP7QLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -343,7 +390,10 @@ func (this *QFormLayout) InsertRow_3(row int, labelText string, field QLayout_IT
 // Public Visibility=Default Availability=Available
 // [-2] void insertRow(int, QWidget *)
 func (this *QFormLayout) InsertRow_4(row int, widget QWidget_ITF /*777 QWidget **/) {
-	var convArg1 = widget.QWidget_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg1 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -353,7 +403,10 @@ func (this *QFormLayout) InsertRow_4(row int, widget QWidget_ITF /*777 QWidget *
 // Public Visibility=Default Availability=Available
 // [-2] void insertRow(int, QLayout *)
 func (this *QFormLayout) InsertRow_5(row int, layout QLayout_ITF /*777 QLayout **/) {
-	var convArg1 = layout.QLayout_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if layout != nil && layout.QLayout_PTR() != nil {
+		convArg1 = layout.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiP7QLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -372,7 +425,10 @@ func (this *QFormLayout) RemoveRow(row int) {
 // Public Visibility=Default Availability=Available
 // [-2] void removeRow(QWidget *)
 func (this *QFormLayout) RemoveRow_1(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9removeRowEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -382,7 +438,10 @@ func (this *QFormLayout) RemoveRow_1(widget QWidget_ITF /*777 QWidget **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void removeRow(QLayout *)
 func (this *QFormLayout) RemoveRow_2(layout QLayout_ITF /*777 QLayout **/) {
-	var convArg0 = layout.QLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if layout != nil && layout.QLayout_PTR() != nil {
+		convArg0 = layout.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9removeRowEP7QLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -402,7 +461,10 @@ func (this *QFormLayout) TakeRow(row int) unsafe.Pointer /*444*/ {
 // Public Visibility=Default Availability=Available
 // [16] QFormLayout::TakeRowResult takeRow(QWidget *)
 func (this *QFormLayout) TakeRow_1(widget QWidget_ITF /*777 QWidget **/) unsafe.Pointer /*444*/ {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout7takeRowEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -413,7 +475,10 @@ func (this *QFormLayout) TakeRow_1(widget QWidget_ITF /*777 QWidget **/) unsafe.
 // Public Visibility=Default Availability=Available
 // [16] QFormLayout::TakeRowResult takeRow(QLayout *)
 func (this *QFormLayout) TakeRow_2(layout QLayout_ITF /*777 QLayout **/) unsafe.Pointer /*444*/ {
-	var convArg0 = layout.QLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if layout != nil && layout.QLayout_PTR() != nil {
+		convArg0 = layout.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout7takeRowEP7QLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -424,7 +489,10 @@ func (this *QFormLayout) TakeRow_2(layout QLayout_ITF /*777 QLayout **/) unsafe.
 // Public Visibility=Default Availability=Available
 // [-2] void setItem(int, enum QFormLayout::ItemRole, QLayoutItem *)
 func (this *QFormLayout) SetItem(row int, role int, item QLayoutItem_ITF /*777 QLayoutItem **/) {
-	var convArg2 = item.QLayoutItem_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if item != nil && item.QLayoutItem_PTR() != nil {
+		convArg2 = item.QLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout7setItemEiNS_8ItemRoleEP11QLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, role, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -434,7 +502,10 @@ func (this *QFormLayout) SetItem(row int, role int, item QLayoutItem_ITF /*777 Q
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(int, enum QFormLayout::ItemRole, QWidget *)
 func (this *QFormLayout) SetWidget(row int, role int, widget QWidget_ITF /*777 QWidget **/) {
-	var convArg2 = widget.QWidget_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg2 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9setWidgetEiNS_8ItemRoleEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, role, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -444,7 +515,10 @@ func (this *QFormLayout) SetWidget(row int, role int, widget QWidget_ITF /*777 Q
 // Public Visibility=Default Availability=Available
 // [-2] void setLayout(int, enum QFormLayout::ItemRole, QLayout *)
 func (this *QFormLayout) SetLayout(row int, role int, layout QLayout_ITF /*777 QLayout **/) {
-	var convArg2 = layout.QLayout_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if layout != nil && layout.QLayout_PTR() != nil {
+		convArg2 = layout.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9setLayoutEiNS_8ItemRoleEP7QLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, role, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -474,7 +548,7 @@ func (this *QFormLayout) ItemAt_1(index int) *QLayoutItem /*777 QLayoutItem **/ 
 // Public Visibility=Default Availability=Available
 // [-2] void getItemPosition(int, int *, enum QFormLayout::ItemRole *)
 func (this *QFormLayout) GetItemPosition(index int, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout15getItemPositionEiPiPNS_8ItemRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, &rowPtr, &rolePtr)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout15getItemPositionEiPiPNS_8ItemRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, rowPtr, rolePtr)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -483,8 +557,11 @@ func (this *QFormLayout) GetItemPosition(index int, rowPtr unsafe.Pointer /*666*
 // Public Visibility=Default Availability=Available
 // [-2] void getWidgetPosition(QWidget *, int *, enum QFormLayout::ItemRole *)
 func (this *QFormLayout) GetWidgetPosition(widget QWidget_ITF /*777 QWidget **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout17getWidgetPositionEP7QWidgetPiPNS_8ItemRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rowPtr, &rolePtr)
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout17getWidgetPositionEP7QWidgetPiPNS_8ItemRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, rowPtr, rolePtr)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -493,8 +570,11 @@ func (this *QFormLayout) GetWidgetPosition(widget QWidget_ITF /*777 QWidget **/,
 // Public Visibility=Default Availability=Available
 // [-2] void getLayoutPosition(QLayout *, int *, enum QFormLayout::ItemRole *)
 func (this *QFormLayout) GetLayoutPosition(layout QLayout_ITF /*777 QLayout **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
-	var convArg0 = layout.QLayout_PTR().GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout17getLayoutPositionEP7QLayoutPiPNS_8ItemRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rowPtr, &rolePtr)
+	var convArg0 unsafe.Pointer
+	if layout != nil && layout.QLayout_PTR() != nil {
+		convArg0 = layout.QLayout_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout17getLayoutPositionEP7QLayoutPiPNS_8ItemRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, rowPtr, rolePtr)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -503,7 +583,10 @@ func (this *QFormLayout) GetLayoutPosition(layout QLayout_ITF /*777 QLayout **/,
 // Public Visibility=Default Availability=Available
 // [8] QWidget * labelForField(QWidget *)
 func (this *QFormLayout) LabelForField(field QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
-	var convArg0 = field.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if field != nil && field.QWidget_PTR() != nil {
+		convArg0 = field.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout13labelForFieldEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -514,7 +597,10 @@ func (this *QFormLayout) LabelForField(field QWidget_ITF /*777 QWidget **/) *QWi
 // Public Visibility=Default Availability=Available
 // [8] QWidget * labelForField(QLayout *)
 func (this *QFormLayout) LabelForField_1(field QLayout_ITF /*777 QLayout **/) *QWidget /*777 QWidget **/ {
-	var convArg0 = field.QLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if field != nil && field.QLayout_PTR() != nil {
+		convArg0 = field.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout13labelForFieldEP7QLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -525,7 +611,10 @@ func (this *QFormLayout) LabelForField_1(field QLayout_ITF /*777 QLayout **/) *Q
 // Public virtual Visibility=Default Availability=Available
 // [-2] void addItem(QLayoutItem *)
 func (this *QFormLayout) AddItem(item QLayoutItem_ITF /*777 QLayoutItem **/) {
-	var convArg0 = item.QLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QLayoutItem_PTR() != nil {
+		convArg0 = item.QLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout7addItemEP11QLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -545,7 +634,10 @@ func (this *QFormLayout) TakeAt(index int) *QLayoutItem /*777 QLayoutItem **/ {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
 func (this *QFormLayout) SetGeometry(rect qtcore.QRect_ITF) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -664,6 +756,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

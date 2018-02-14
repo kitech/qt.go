@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -67,8 +68,14 @@ func (*QSGSimpleRectNode) NewFromPointer(cthis unsafe.Pointer) *QSGSimpleRectNod
 // Public Visibility=Default Availability=Available
 // [-2] void QSGSimpleRectNode(const QRectF &, const QColor &)
 func NewQSGSimpleRectNode(rect qtcore.QRectF_ITF, color qtgui.QColor_ITF) *QSGSimpleRectNode {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
-	var convArg1 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg1 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNodeC2ERK6QRectFRK6QColor", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGSimpleRectNodeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -93,7 +100,10 @@ func NewQSGSimpleRectNode_1() *QSGSimpleRectNode {
 // Public Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
 func (this *QSGSimpleRectNode) SetRect(rect qtcore.QRectF_ITF) {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNode7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -124,7 +134,10 @@ func (this *QSGSimpleRectNode) Rect() *qtcore.QRectF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
 func (this *QSGSimpleRectNode) SetColor(color qtgui.QColor_ITF) {
-	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNode8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -160,6 +173,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

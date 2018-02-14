@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 32
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -91,7 +92,10 @@ func NewQStringMatcher_1(pattern string, cs int) *QStringMatcher {
 // Public Visibility=Default Availability=Available
 // [-2] void QStringMatcher(const QChar *, int, Qt::CaseSensitivity)
 func NewQStringMatcher_2(uc QChar_ITF /*777 const QChar **/, len int, cs int) *QStringMatcher {
-	var convArg0 = uc.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if uc != nil && uc.QChar_PTR() != nil {
+		convArg0 = uc.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherC2EPK5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, len, cs)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -108,6 +112,22 @@ func DeleteQStringMatcher(this *QStringMatcher) {
 	qtrt.Cmemset(this.GetCthis(), 9, 1048)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
+}
+
+// /usr/include/qt/QtCore/qstringmatcher.h:61
+// index:0
+// Public Visibility=Default Availability=Available
+// [1048] QStringMatcher & operator=(const QStringMatcher &)
+func (this *QStringMatcher) Operator_equal(other QStringMatcher_ITF) *QStringMatcher {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QStringMatcher_PTR() != nil {
+		convArg0 = other.QStringMatcher_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcheraSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringMatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringMatcher)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qstringmatcher.h:63
@@ -147,7 +167,10 @@ func (this *QStringMatcher) IndexIn(str string, from int) int {
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const QChar *, int, int)
 func (this *QStringMatcher) IndexIn_1(str QChar_ITF /*777 const QChar **/, length int, from int) int {
-	var convArg0 = str.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if str != nil && str.QChar_PTR() != nil {
+		convArg0 = str.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInEPK5QCharii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, length, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -189,6 +212,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

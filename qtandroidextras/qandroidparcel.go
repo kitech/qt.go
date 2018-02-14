@@ -24,6 +24,7 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,7 +79,10 @@ func NewQAndroidParcel() *QAndroidParcel {
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidParcel(const QAndroidJniObject &)
 func NewQAndroidParcel_1(parcel QAndroidJniObject_ITF) *QAndroidParcel {
-	var convArg0 = parcel.QAndroidJniObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parcel != nil && parcel.QAndroidJniObject_PTR() != nil {
+		convArg0 = parcel.QAndroidJniObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidParcelC2ERK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidParcelFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,7 +106,10 @@ func DeleteQAndroidParcel(this *QAndroidParcel) {
 // Public Visibility=Default Availability=Available
 // [-2] void writeData(const QByteArray &)
 func (this *QAndroidParcel) WriteData(data qtcore.QByteArray_ITF) {
-	var convArg0 = data.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel9writeDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -112,7 +119,10 @@ func (this *QAndroidParcel) WriteData(data qtcore.QByteArray_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void writeVariant(const QVariant &)
 func (this *QAndroidParcel) WriteVariant(value qtcore.QVariant_ITF) {
-	var convArg0 = value.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg0 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel12writeVariantERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -122,7 +132,10 @@ func (this *QAndroidParcel) WriteVariant(value qtcore.QVariant_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void writeBinder(const QAndroidBinder &)
 func (this *QAndroidParcel) WriteBinder(binder QAndroidBinder_ITF) {
-	var convArg0 = binder.QAndroidBinder_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if binder != nil && binder.QAndroidBinder_PTR() != nil {
+		convArg0 = binder.QAndroidBinder_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel11writeBinderERK14QAndroidBinder", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -207,6 +220,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

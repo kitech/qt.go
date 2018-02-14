@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -66,7 +67,10 @@ func (*QAccessibleEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleEvent 
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleEvent(QObject *, QAccessible::Event)
 func NewQAccessibleEvent(obj qtcore.QObject_ITF /*777 QObject **/, typ int) *QAccessibleEvent {
-	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg0 = obj.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAccessibleEventC2EP7QObjectN11QAccessible5EventE", qtrt.FFI_TYPE_POINTER, convArg0, typ)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -79,7 +83,10 @@ func NewQAccessibleEvent(obj qtcore.QObject_ITF /*777 QObject **/, typ int) *QAc
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleEvent(QAccessibleInterface *, QAccessible::Event)
 func NewQAccessibleEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
-	var convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
+		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAccessibleEventC2EP20QAccessibleInterfaceN11QAccessible5EventE", qtrt.FFI_TYPE_POINTER, convArg0, typ)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -170,6 +177,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

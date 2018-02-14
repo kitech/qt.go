@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -66,7 +67,10 @@ func (*QAccessible) NewFromPointer(cthis unsafe.Pointer) *QAccessible {
 // Public static Visibility=Default Availability=Available
 // [8] QAccessibleInterface * queryAccessibleInterface(QObject *)
 func (this *QAccessible) QueryAccessibleInterface(arg0 qtcore.QObject_ITF /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible24queryAccessibleInterfaceEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -82,7 +86,10 @@ func QAccessible_QueryAccessibleInterface(arg0 qtcore.QObject_ITF /*777 QObject 
 // Public static Visibility=Default Availability=Available
 // [4] QAccessible::Id uniqueId(QAccessibleInterface *)
 func (this *QAccessible) UniqueId(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/) uint {
-	var convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
+		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible8uniqueIdEP20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -113,7 +120,10 @@ func QAccessible_AccessibleInterface(uniqueId uint) *QAccessibleInterface /*777 
 // Public static Visibility=Default Availability=Available
 // [4] QAccessible::Id registerAccessibleInterface(QAccessibleInterface *)
 func (this *QAccessible) RegisterAccessibleInterface(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/) uint {
-	var convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
+		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -142,7 +152,10 @@ func QAccessible_DeleteAccessibleInterface(uniqueId uint) {
 // Public static Visibility=Default Availability=Available
 // [-2] void updateAccessibility(QAccessibleEvent *)
 func (this *QAccessible) UpdateAccessibility(event QAccessibleEvent_ITF /*777 QAccessibleEvent **/) {
-	var convArg0 = event.QAccessibleEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QAccessibleEvent_PTR() != nil {
+		convArg0 = event.QAccessibleEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible19updateAccessibilityEP16QAccessibleEvent", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -184,7 +197,10 @@ func QAccessible_SetActive(active bool) {
 // Public static Visibility=Default Availability=Available
 // [-2] void setRootObject(QObject *)
 func (this *QAccessible) SetRootObject(object qtcore.QObject_ITF /*777 QObject **/) {
-	var convArg0 = object.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible13setRootObjectEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -413,6 +429,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

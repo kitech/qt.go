@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -78,6 +79,7 @@ func NewQStackedLayout() *QStackedLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStackedLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QStackedLayout")
 	return gothis
 }
 
@@ -86,10 +88,14 @@ func NewQStackedLayout() *QStackedLayout {
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedLayout(QWidget *)
 func NewQStackedLayout_1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStackedLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QStackedLayout")
 	return gothis
 }
 
@@ -98,10 +104,14 @@ func NewQStackedLayout_1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedLayout(QLayout *)
 func NewQStackedLayout_2(parentLayout QLayout_ITF /*777 QLayout **/) *QStackedLayout {
-	var convArg0 = parentLayout.QLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parentLayout != nil && parentLayout.QLayout_PTR() != nil {
+		convArg0 = parentLayout.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QLayout", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStackedLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QStackedLayout")
 	return gothis
 }
 
@@ -121,7 +131,10 @@ func DeleteQStackedLayout(this *QStackedLayout) {
 // Public Visibility=Default Availability=Available
 // [4] int addWidget(QWidget *)
 func (this *QStackedLayout) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
-	var convArg0 = w.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout9addWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -132,7 +145,10 @@ func (this *QStackedLayout) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
 // Public Visibility=Default Availability=Available
 // [4] int insertWidget(int, QWidget *)
 func (this *QStackedLayout) InsertWidget(index int, w QWidget_ITF /*777 QWidget **/) int {
-	var convArg1 = w.QWidget_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg1 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout12insertWidgetEiP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -202,7 +218,10 @@ func (this *QStackedLayout) SetStackingMode(stackingMode int) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void addItem(QLayoutItem *)
 func (this *QStackedLayout) AddItem(item QLayoutItem_ITF /*777 QLayoutItem **/) {
-	var convArg0 = item.QLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QLayoutItem_PTR() != nil {
+		convArg0 = item.QLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout7addItemEP11QLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -256,7 +275,10 @@ func (this *QStackedLayout) TakeAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ 
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
 func (this *QStackedLayout) SetGeometry(rect qtcore.QRect_ITF) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -313,7 +335,10 @@ func (this *QStackedLayout) SetCurrentIndex(index int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWidget(QWidget *)
 func (this *QStackedLayout) SetCurrentWidget(w QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = w.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout16setCurrentWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -336,6 +361,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

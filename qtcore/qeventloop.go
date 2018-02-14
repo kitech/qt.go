@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -73,10 +74,14 @@ func (this *QEventLoop) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void QEventLoop(QObject *)
 func NewQEventLoop(parent QObject_ITF /*777 QObject **/) *QEventLoop {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoopC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventLoopFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QEventLoop")
 	return gothis
 }
 
@@ -153,7 +158,10 @@ func (this *QEventLoop) WakeUp() {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QEventLoop) Event(event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -191,6 +199,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -130,7 +131,10 @@ func DeleteQSGNodeVisitor(this *QSGNodeVisitor) {
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterTransformNode(QSGTransformNode *)
 func (this *QSGNodeVisitor) EnterTransformNode(arg0 QSGTransformNode_ITF /*777 QSGTransformNode **/) {
-	var convArg0 = arg0.QSGTransformNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSGTransformNode_PTR() != nil {
+		convArg0 = arg0.QSGTransformNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor18enterTransformNodeEP16QSGTransformNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -140,7 +144,10 @@ func (this *QSGNodeVisitor) EnterTransformNode(arg0 QSGTransformNode_ITF /*777 Q
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveTransformNode(QSGTransformNode *)
 func (this *QSGNodeVisitor) LeaveTransformNode(arg0 QSGTransformNode_ITF /*777 QSGTransformNode **/) {
-	var convArg0 = arg0.QSGTransformNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSGTransformNode_PTR() != nil {
+		convArg0 = arg0.QSGTransformNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor18leaveTransformNodeEP16QSGTransformNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -150,7 +157,10 @@ func (this *QSGNodeVisitor) LeaveTransformNode(arg0 QSGTransformNode_ITF /*777 Q
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterClipNode(QSGClipNode *)
 func (this *QSGNodeVisitor) EnterClipNode(arg0 QSGClipNode_ITF /*777 QSGClipNode **/) {
-	var convArg0 = arg0.QSGClipNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSGClipNode_PTR() != nil {
+		convArg0 = arg0.QSGClipNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor13enterClipNodeEP11QSGClipNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -160,7 +170,10 @@ func (this *QSGNodeVisitor) EnterClipNode(arg0 QSGClipNode_ITF /*777 QSGClipNode
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveClipNode(QSGClipNode *)
 func (this *QSGNodeVisitor) LeaveClipNode(arg0 QSGClipNode_ITF /*777 QSGClipNode **/) {
-	var convArg0 = arg0.QSGClipNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSGClipNode_PTR() != nil {
+		convArg0 = arg0.QSGClipNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor13leaveClipNodeEP11QSGClipNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -170,7 +183,10 @@ func (this *QSGNodeVisitor) LeaveClipNode(arg0 QSGClipNode_ITF /*777 QSGClipNode
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterGeometryNode(QSGGeometryNode *)
 func (this *QSGNodeVisitor) EnterGeometryNode(arg0 QSGGeometryNode_ITF /*777 QSGGeometryNode **/) {
-	var convArg0 = arg0.QSGGeometryNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSGGeometryNode_PTR() != nil {
+		convArg0 = arg0.QSGGeometryNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor17enterGeometryNodeEP15QSGGeometryNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -180,7 +196,10 @@ func (this *QSGNodeVisitor) EnterGeometryNode(arg0 QSGGeometryNode_ITF /*777 QSG
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveGeometryNode(QSGGeometryNode *)
 func (this *QSGNodeVisitor) LeaveGeometryNode(arg0 QSGGeometryNode_ITF /*777 QSGGeometryNode **/) {
-	var convArg0 = arg0.QSGGeometryNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSGGeometryNode_PTR() != nil {
+		convArg0 = arg0.QSGGeometryNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor17leaveGeometryNodeEP15QSGGeometryNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -190,7 +209,10 @@ func (this *QSGNodeVisitor) LeaveGeometryNode(arg0 QSGGeometryNode_ITF /*777 QSG
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterOpacityNode(QSGOpacityNode *)
 func (this *QSGNodeVisitor) EnterOpacityNode(arg0 QSGOpacityNode_ITF /*777 QSGOpacityNode **/) {
-	var convArg0 = arg0.QSGOpacityNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSGOpacityNode_PTR() != nil {
+		convArg0 = arg0.QSGOpacityNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor16enterOpacityNodeEP14QSGOpacityNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -200,7 +222,10 @@ func (this *QSGNodeVisitor) EnterOpacityNode(arg0 QSGOpacityNode_ITF /*777 QSGOp
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveOpacityNode(QSGOpacityNode *)
 func (this *QSGNodeVisitor) LeaveOpacityNode(arg0 QSGOpacityNode_ITF /*777 QSGOpacityNode **/) {
-	var convArg0 = arg0.QSGOpacityNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSGOpacityNode_PTR() != nil {
+		convArg0 = arg0.QSGOpacityNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor16leaveOpacityNodeEP14QSGOpacityNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -210,7 +235,10 @@ func (this *QSGNodeVisitor) LeaveOpacityNode(arg0 QSGOpacityNode_ITF /*777 QSGOp
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void visitNode(QSGNode *)
 func (this *QSGNodeVisitor) VisitNode(n QSGNode_ITF /*777 QSGNode **/) {
-	var convArg0 = n.QSGNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if n != nil && n.QSGNode_PTR() != nil {
+		convArg0 = n.QSGNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor9visitNodeEP7QSGNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -220,7 +248,10 @@ func (this *QSGNodeVisitor) VisitNode(n QSGNode_ITF /*777 QSGNode **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void visitChildren(QSGNode *)
 func (this *QSGNodeVisitor) VisitChildren(n QSGNode_ITF /*777 QSGNode **/) {
-	var convArg0 = n.QSGNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if n != nil && n.QSGNode_PTR() != nil {
+		convArg0 = n.QSGNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitor13visitChildrenEP7QSGNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -238,6 +269,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

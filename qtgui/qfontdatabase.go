@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -104,7 +105,10 @@ func (this *QFontDatabase) Styles(family string) *qtcore.QStringList /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString styleString(const QFont &)
 func (this *QFontDatabase) StyleString(font QFont_ITF) string {
-	var convArg0 = font.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if font != nil && font.QFont_PTR() != nil {
+		convArg0 = font.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -118,7 +122,10 @@ func (this *QFontDatabase) StyleString(font QFont_ITF) string {
 // Public Visibility=Default Availability=Available
 // [8] QString styleString(const QFontInfo &)
 func (this *QFontDatabase) StyleString_1(fontInfo QFontInfo_ITF) string {
-	var convArg0 = fontInfo.QFontInfo_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if fontInfo != nil && fontInfo.QFontInfo_PTR() != nil {
+		convArg0 = fontInfo.QFontInfo_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK9QFontInfo", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -323,7 +330,10 @@ func QFontDatabase_AddApplicationFont(fileName string) int {
 // Public static Visibility=Default Availability=Available
 // [4] int addApplicationFontFromData(const QByteArray &)
 func (this *QFontDatabase) AddApplicationFontFromData(fontData qtcore.QByteArray_ITF) int {
-	var convArg0 = fontData.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if fontData != nil && fontData.QByteArray_PTR() != nil {
+		convArg0 = fontData.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -478,6 +488,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

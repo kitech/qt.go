@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -114,6 +115,18 @@ func (this *QStringView) Utf16() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView5utf16Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qstringview.h:220
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [2] QChar operator[](qsizetype)
+func (this *QStringView) Operator_get_index(n int64) *QChar /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringViewixEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qstringview.h:227
@@ -259,7 +272,10 @@ func (this *QStringView) Trimmed() *QStringView /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith(s QStringView_ITF /*123*/, cs int) bool {
-	var convArg0 = s.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringView_PTR() != nil {
+		convArg0 = s.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithES_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -270,7 +286,10 @@ func (this *QStringView) StartsWith(s QStringView_ITF /*123*/, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
-	var convArg0 = s.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -281,7 +300,10 @@ func (this *QStringView) StartsWith_1(s QLatin1String_ITF /*123*/, cs int) bool 
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QChar)
 func (this *QStringView) StartsWith_2(c QChar_ITF /*123*/) bool {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -292,7 +314,10 @@ func (this *QStringView) StartsWith_2(c QChar_ITF /*123*/) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QChar, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith_3(c QChar_ITF /*123*/, cs int) bool {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -303,7 +328,10 @@ func (this *QStringView) StartsWith_3(c QChar_ITF /*123*/, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith(s QStringView_ITF /*123*/, cs int) bool {
-	var convArg0 = s.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringView_PTR() != nil {
+		convArg0 = s.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithES_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -314,7 +342,10 @@ func (this *QStringView) EndsWith(s QStringView_ITF /*123*/, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
-	var convArg0 = s.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -325,7 +356,10 @@ func (this *QStringView) EndsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QChar)
 func (this *QStringView) EndsWith_2(c QChar_ITF /*123*/) bool {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -336,7 +370,10 @@ func (this *QStringView) EndsWith_2(c QChar_ITF /*123*/) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QChar, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith_3(c QChar_ITF /*123*/, cs int) bool {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -493,6 +530,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

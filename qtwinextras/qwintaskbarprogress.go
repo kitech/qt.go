@@ -24,6 +24,7 @@ package qtwinextras
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -75,10 +76,14 @@ func (this *QWinTaskbarProgress) MetaObject() *qtcore.QMetaObject /*777 const QM
 // Public Visibility=Default Availability=Available
 // [-2] void QWinTaskbarProgress(QObject *)
 func NewQWinTaskbarProgress(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTaskbarProgress {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QWinTaskbarProgressC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinTaskbarProgressFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QWinTaskbarProgress")
 	return gothis
 }
 
@@ -328,6 +333,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -73,10 +74,14 @@ func (this *QAbstractTableModel) MetaObject() *QMetaObject /*777 const QMetaObje
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractTableModel(QObject *)
 func NewQAbstractTableModel(parent QObject_ITF /*777 QObject **/) *QAbstractTableModel {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTableModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractTableModelFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractTableModel")
 	return gothis
 }
 
@@ -96,7 +101,10 @@ func DeleteQAbstractTableModel(this *QAbstractTableModel) {
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &)
 func (this *QAbstractTableModel) Index(row int, column int, parent QModelIndex_ITF) *QModelIndex /*123*/ {
-	var convArg2 = parent.QModelIndex_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg2 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTableModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -109,7 +117,10 @@ func (this *QAbstractTableModel) Index(row int, column int, parent QModelIndex_I
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &)
 func (this *QAbstractTableModel) Sibling(row int, column int, idx QModelIndex_ITF) *QModelIndex /*123*/ {
-	var convArg2 = idx.QModelIndex_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if idx != nil && idx.QModelIndex_PTR() != nil {
+		convArg2 = idx.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTableModel7siblingEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -122,8 +133,14 @@ func (this *QAbstractTableModel) Sibling(row int, column int, idx QModelIndex_IT
 // Public virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
 func (this *QAbstractTableModel) DropMimeData(data QMimeData_ITF /*777 const QMimeData **/, action int, row int, column int, parent QModelIndex_ITF) bool {
-	var convArg0 = data.QMimeData_PTR().GetCthis()
-	var convArg4 = parent.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QMimeData_PTR() != nil {
+		convArg0 = data.QMimeData_PTR().GetCthis()
+	}
+	var convArg4 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg4 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTableModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -134,7 +151,10 @@ func (this *QAbstractTableModel) DropMimeData(data QMimeData_ITF /*777 const QMi
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &)
 func (this *QAbstractTableModel) Flags(index QModelIndex_ITF) int {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTableModel5flagsERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -153,6 +173,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,8 +65,14 @@ func (*QHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QHoverEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QHoverEvent(enum QEvent::Type, const QPointF &, const QPointF &, Qt::KeyboardModifiers)
 func NewQHoverEvent(type_ int, pos qtcore.QPointF_ITF, oldPos qtcore.QPointF_ITF, modifiers int) *QHoverEvent {
-	var convArg1 = pos.QPointF_PTR().GetCthis()
-	var convArg2 = oldPos.QPointF_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg1 = pos.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if oldPos != nil && oldPos.QPointF_PTR() != nil {
+		convArg2 = oldPos.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHoverEventC2EN6QEvent4TypeERK7QPointFS4_6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, modifiers)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHoverEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -145,6 +152,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

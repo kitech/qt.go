@@ -18,12 +18,13 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 9
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -75,7 +76,10 @@ func (this *QScroller) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // Public static Visibility=Default Availability=Available
 // [1] bool hasScroller(QObject *)
 func (this *QScroller) HasScroller(target qtcore.QObject_ITF /*777 QObject **/) bool {
-	var convArg0 = target.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QObject_PTR() != nil {
+		convArg0 = target.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller11hasScrollerEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -91,7 +95,10 @@ func QScroller_HasScroller(target qtcore.QObject_ITF /*777 QObject **/) bool {
 // Public static Visibility=Default Availability=Available
 // [8] QScroller * scroller(QObject *)
 func (this *QScroller) Scroller(target qtcore.QObject_ITF /*777 QObject **/) *QScroller /*777 QScroller **/ {
-	var convArg0 = target.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QObject_PTR() != nil {
+		convArg0 = target.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller8scrollerEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQScrollerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -107,7 +114,10 @@ func QScroller_Scroller(target qtcore.QObject_ITF /*777 QObject **/) *QScroller 
 // Public static Visibility=Default Availability=Available
 // [8] const QScroller * scroller(const QObject *)
 func (this *QScroller) Scroller_1(target qtcore.QObject_ITF /*777 const QObject **/) *QScroller /*777 const QScroller **/ {
-	var convArg0 = target.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QObject_PTR() != nil {
+		convArg0 = target.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller8scrollerEPK7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQScrollerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -123,7 +133,10 @@ func QScroller_Scroller_1(target qtcore.QObject_ITF /*777 const QObject **/) *QS
 // Public static Visibility=Default Availability=Available
 // [4] Qt::GestureType grabGesture(QObject *, enum QScroller::ScrollerGestureType)
 func (this *QScroller) GrabGesture(target qtcore.QObject_ITF /*777 QObject **/, gestureType int) int {
-	var convArg0 = target.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QObject_PTR() != nil {
+		convArg0 = target.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller11grabGestureEP7QObjectNS_19ScrollerGestureTypeE", qtrt.FFI_TYPE_POINTER, convArg0, gestureType)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -139,7 +152,10 @@ func QScroller_GrabGesture(target qtcore.QObject_ITF /*777 QObject **/, gestureT
 // Public static Visibility=Default Availability=Available
 // [4] Qt::GestureType grabbedGesture(QObject *)
 func (this *QScroller) GrabbedGesture(target qtcore.QObject_ITF /*777 QObject **/) int {
-	var convArg0 = target.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QObject_PTR() != nil {
+		convArg0 = target.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller14grabbedGestureEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -155,7 +171,10 @@ func QScroller_GrabbedGesture(target qtcore.QObject_ITF /*777 QObject **/) int {
 // Public static Visibility=Default Availability=Available
 // [-2] void ungrabGesture(QObject *)
 func (this *QScroller) UngrabGesture(target qtcore.QObject_ITF /*777 QObject **/) {
-	var convArg0 = target.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QObject_PTR() != nil {
+		convArg0 = target.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller13ungrabGestureEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -189,7 +208,10 @@ func (this *QScroller) State() int {
 // Public Visibility=Default Availability=Available
 // [1] bool handleInput(enum QScroller::Input, const QPointF &, qint64)
 func (this *QScroller) HandleInput(input int, position qtcore.QPointF_ITF, timestamp int64) bool {
-	var convArg1 = position.QPointF_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if position != nil && position.QPointF_PTR() != nil {
+		convArg1 = position.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller11handleInputENS_5InputERK7QPointFx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), input, convArg1, timestamp)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -275,7 +297,10 @@ func (this *QScroller) SetSnapPositionsY(first float64, interval float64) {
 // Public Visibility=Default Availability=Available
 // [-2] void setScrollerProperties(const QScrollerProperties &)
 func (this *QScroller) SetScrollerProperties(prop QScrollerProperties_ITF) {
-	var convArg0 = prop.QScrollerProperties_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if prop != nil && prop.QScrollerProperties_PTR() != nil {
+		convArg0 = prop.QScrollerProperties_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller21setScrollerPropertiesERK19QScrollerProperties", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -285,7 +310,10 @@ func (this *QScroller) SetScrollerProperties(prop QScrollerProperties_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void scrollTo(const QPointF &)
 func (this *QScroller) ScrollTo(pos qtcore.QPointF_ITF) {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller8scrollToERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -295,7 +323,10 @@ func (this *QScroller) ScrollTo(pos qtcore.QPointF_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void scrollTo(const QPointF &, int)
 func (this *QScroller) ScrollTo_1(pos qtcore.QPointF_ITF, scrollTime int) {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller8scrollToERK7QPointFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, scrollTime)
 	qtrt.ErrPrint(err, rv)
 }
@@ -305,7 +336,10 @@ func (this *QScroller) ScrollTo_1(pos qtcore.QPointF_ITF, scrollTime int) {
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(const QRectF &, qreal, qreal)
 func (this *QScroller) EnsureVisible(rect qtcore.QRectF_ITF, xmargin float64, ymargin float64) {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller13ensureVisibleERK6QRectFdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
 }
@@ -315,7 +349,10 @@ func (this *QScroller) EnsureVisible(rect qtcore.QRectF_ITF, xmargin float64, ym
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(const QRectF &, qreal, qreal, int)
 func (this *QScroller) EnsureVisible_1(rect qtcore.QRectF_ITF, xmargin float64, ymargin float64, scrollTime int) {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller13ensureVisibleERK6QRectFddi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin, scrollTime)
 	qtrt.ErrPrint(err, rv)
 }
@@ -343,7 +380,10 @@ func (this *QScroller) StateChanged(newstate int) {
 // Public Visibility=Default Availability=Available
 // [-2] void scrollerPropertiesChanged(const QScrollerProperties &)
 func (this *QScroller) ScrollerPropertiesChanged(arg0 QScrollerProperties_ITF) {
-	var convArg0 = arg0.QScrollerProperties_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QScrollerProperties_PTR() != nil {
+		convArg0 = arg0.QScrollerProperties_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller25scrollerPropertiesChangedERK19QScrollerProperties", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -387,6 +427,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

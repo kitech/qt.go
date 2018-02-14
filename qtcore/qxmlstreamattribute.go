@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -104,6 +105,34 @@ func NewQXmlStreamAttribute_2(namespaceUri string, name string, value string) *Q
 	gothis := NewQXmlStreamAttributeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamAttribute)
 	return gothis
+}
+
+// /usr/include/qt/QtCore/qxmlstream.h:125
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [80] QXmlStreamAttribute & operator=(QXmlStreamAttribute &&)
+func (this *QXmlStreamAttribute) Operator_equal(other unsafe.Pointer /*333*/) *QXmlStreamAttribute {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamAttributeaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQXmlStreamAttributeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQXmlStreamAttribute)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qxmlstream.h:136
+// index:1
+// Public Visibility=Default Availability=Available
+// [80] QXmlStreamAttribute & operator=(const QXmlStreamAttribute &)
+func (this *QXmlStreamAttribute) Operator_equal_1(arg0 QXmlStreamAttribute_ITF) *QXmlStreamAttribute {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QXmlStreamAttribute_PTR() != nil {
+		convArg0 = arg0.QXmlStreamAttribute_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamAttributeaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQXmlStreamAttributeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQXmlStreamAttribute)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:137
@@ -187,6 +216,34 @@ func (this *QXmlStreamAttribute) IsDefault() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qxmlstream.h:150
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QXmlStreamAttribute &)
+func (this *QXmlStreamAttribute) Operator_equal_equal(other QXmlStreamAttribute_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QXmlStreamAttribute_PTR() != nil {
+		convArg0 = other.QXmlStreamAttribute_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamAttributeeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qxmlstream.h:155
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QXmlStreamAttribute &)
+func (this *QXmlStreamAttribute) Operator_not_equal(other QXmlStreamAttribute_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QXmlStreamAttribute_PTR() != nil {
+		convArg0 = other.QXmlStreamAttribute_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamAttributeneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 //  body block end
 
 //  keep block begin
@@ -200,6 +257,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

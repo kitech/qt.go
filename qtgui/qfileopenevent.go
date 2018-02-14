@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,7 +79,10 @@ func NewQFileOpenEvent(file string) *QFileOpenEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QFileOpenEvent(const QUrl &)
 func NewQFileOpenEvent_1(url qtcore.QUrl_ITF) *QFileOpenEvent {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QFileOpenEventC2ERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileOpenEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -127,7 +131,10 @@ func (this *QFileOpenEvent) Url() *qtcore.QUrl /*123*/ {
 // Public Visibility=Default Availability=Available
 // [1] bool openFile(QFile &, QIODevice::OpenMode)
 func (this *QFileOpenEvent) OpenFile(file qtcore.QFile_ITF, flags int) bool {
-	var convArg0 = file.QFile_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if file != nil && file.QFile_PTR() != nil {
+		convArg0 = file.QFile_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QFileOpenEvent8openFileER5QFile6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -146,6 +153,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

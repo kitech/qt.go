@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 25
+// extern C begin: 29
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -117,7 +118,10 @@ func QNetworkProxyFactory_SetUseSystemConfiguration(enable bool) {
 // Public static Visibility=Default Availability=Available
 // [-2] void setApplicationProxyFactory(QNetworkProxyFactory *)
 func (this *QNetworkProxyFactory) SetApplicationProxyFactory(factory QNetworkProxyFactory_ITF /*777 QNetworkProxyFactory **/) {
-	var convArg0 = factory.QNetworkProxyFactory_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if factory != nil && factory.QNetworkProxyFactory_PTR() != nil {
+		convArg0 = factory.QNetworkProxyFactory_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactory26setApplicationProxyFactoryEPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -139,6 +143,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

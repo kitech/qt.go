@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -76,7 +77,10 @@ func NewQConicalGradient() *QConicalGradient {
 // Public Visibility=Default Availability=Available
 // [-2] void QConicalGradient(const QPointF &, qreal)
 func NewQConicalGradient_1(center qtcore.QPointF_ITF, startAngle float64) *QConicalGradient {
-	var convArg0 = center.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if center != nil && center.QPointF_PTR() != nil {
+		convArg0 = center.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QConicalGradientC2ERK7QPointFd", qtrt.FFI_TYPE_POINTER, convArg0, startAngle)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQConicalGradientFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -113,7 +117,10 @@ func (this *QConicalGradient) Center() *qtcore.QPointF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setCenter(const QPointF &)
 func (this *QConicalGradient) SetCenter(center qtcore.QPointF_ITF) {
-	var convArg0 = center.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if center != nil && center.QPointF_PTR() != nil {
+		convArg0 = center.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QConicalGradient9setCenterERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -165,6 +172,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

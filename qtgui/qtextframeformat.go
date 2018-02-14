@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -76,7 +77,10 @@ func NewQTextFrameFormat() *QTextFrameFormat {
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextFrameFormat(const QTextFormat &)
 func NewQTextFrameFormat_1(fmt QTextFormat_ITF) *QTextFrameFormat {
-	var convArg0 = fmt.QTextFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if fmt != nil && fmt.QTextFormat_PTR() != nil {
+		convArg0 = fmt.QTextFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextFrameFormatFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -137,7 +141,10 @@ func (this *QTextFrameFormat) Border() float64 {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBorderBrush(const QBrush &)
 func (this *QTextFrameFormat) SetBorderBrush(brush QBrush_ITF) {
-	var convArg0 = brush.QBrush_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat14setBorderBrushERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -301,7 +308,10 @@ func (this *QTextFrameFormat) SetWidth(width float64) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWidth(const QTextLength &)
 func (this *QTextFrameFormat) SetWidth_1(length QTextLength_ITF) {
-	var convArg0 = length.QTextLength_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if length != nil && length.QTextLength_PTR() != nil {
+		convArg0 = length.QTextLength_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat8setWidthERK11QTextLength", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -332,7 +342,10 @@ func (this *QTextFrameFormat) SetHeight(height float64) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHeight(const QTextLength &)
 func (this *QTextFrameFormat) SetHeight_1(height QTextLength_ITF) {
-	var convArg0 = height.QTextLength_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if height != nil && height.QTextLength_PTR() != nil {
+		convArg0 = height.QTextLength_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat9setHeightERK11QTextLength", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -407,6 +420,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

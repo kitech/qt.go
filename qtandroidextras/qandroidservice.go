@@ -24,6 +24,7 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -68,6 +69,7 @@ func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidServiceC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidServiceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAndroidService")
 	return gothis
 }
 
@@ -87,7 +89,10 @@ func DeleteQAndroidService(this *QAndroidService) {
 // Public virtual Visibility=Default Availability=Available
 // [8] QAndroidBinder * onBind(const QAndroidIntent &)
 func (this *QAndroidService) OnBind(intent QAndroidIntent_ITF) *QAndroidBinder /*777 QAndroidBinder **/ {
-	var convArg0 = intent.QAndroidIntent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if intent != nil && intent.QAndroidIntent_PTR() != nil {
+		convArg0 = intent.QAndroidIntent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidService6onBindERK14QAndroidIntent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAndroidBinderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -106,6 +111,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

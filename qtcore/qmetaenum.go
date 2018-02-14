@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -146,10 +147,10 @@ func (this *QMetaEnum) Scope() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyToValue(const char *, _Bool *)
-func (this *QMetaEnum) KeyToValue(key string, ok unsafe.Pointer /*666*/) int {
+func (this *QMetaEnum) KeyToValue(key string, ok *bool) int {
 	var convArg0 = qtrt.CString(key)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum10keyToValueEPKcPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum10keyToValueEPKcPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -168,10 +169,10 @@ func (this *QMetaEnum) ValueToKey(value int) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keysToValue(const char *, _Bool *)
-func (this *QMetaEnum) KeysToValue(keys string, ok unsafe.Pointer /*666*/) int {
+func (this *QMetaEnum) KeysToValue(keys string, ok *bool) int {
 	var convArg0 = qtrt.CString(keys)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum11keysToValueEPKcPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum11keysToValueEPKcPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -227,6 +228,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

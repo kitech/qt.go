@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -92,8 +93,14 @@ func NewQFont_1(family string, pointSize int, weight int, italic bool) *QFont {
 // Public Visibility=Default Availability=Available
 // [-2] void QFont(const QFont &, QPaintDevice *)
 func NewQFont_2(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFont {
-	var convArg0 = arg0.QFont_PTR().GetCthis()
-	var convArg1 = pd.QPaintDevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pd != nil && pd.QPaintDevice_PTR() != nil {
+		convArg1 = pd.QPaintDevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontC2ERKS_P12QPaintDevice", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,7 +124,10 @@ func DeleteQFont(this *QFont) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QFont &)
 func (this *QFont) Swap(other QFont_ITF) {
-	var convArg0 = other.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QFont_PTR() != nil {
+		convArg0 = other.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -570,12 +580,85 @@ func (this *QFont) ExactMatch() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qfont.h:249
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QFont & operator=(const QFont &)
+func (this *QFont) Operator_equal(arg0 QFont_ITF) *QFont {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qfont.h:256
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [16] QFont & operator=(QFont &&)
+func (this *QFont) Operator_equal_1(other unsafe.Pointer /*333*/) *QFont {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qfont.h:250
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QFont &)
+func (this *QFont) Operator_equal_equal(arg0 QFont_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFonteqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qfont.h:251
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator!=(const QFont &)
+func (this *QFont) Operator_not_equal(arg0 QFont_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFontneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qfont.h:252
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator<(const QFont &)
+func (this *QFont) Operator_less_than(arg0 QFont_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFontltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qfont.h:254
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCopyOf(const QFont &)
 func (this *QFont) IsCopyOf(arg0 QFont_ITF) bool {
-	var convArg0 = arg0.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFont8isCopyOfERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -723,7 +806,10 @@ func QFont_InsertSubstitution(arg0 string, arg1 string) {
 func (this *QFont) InsertSubstitutions(arg0 string, arg1 qtcore.QStringList_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = arg1.QStringList_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QStringList_PTR() != nil {
+		convArg1 = arg1.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont19insertSubstitutionsERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -830,7 +916,10 @@ func (this *QFont) LastResortFont() string {
 // Public Visibility=Default Availability=Available
 // [16] QFont resolve(const QFont &)
 func (this *QFont) Resolve(arg0 QFont_ITF) *QFont /*123*/ {
-	var convArg0 = arg0.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFont7resolveERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -975,6 +1064,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

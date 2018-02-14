@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -74,10 +75,14 @@ func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // Public Visibility=Default Availability=Available
 // [-2] void QImageIOPlugin(QObject *)
 func NewQImageIOPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QImageIOPlugin {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QImageIOPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageIOPluginFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QImageIOPlugin")
 	return gothis
 }
 
@@ -97,8 +102,14 @@ func DeleteQImageIOPlugin(this *QImageIOPlugin) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QImageIOPlugin::Capabilities capabilities(QIODevice *, const QByteArray &)
 func (this *QImageIOPlugin) Capabilities(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) int {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
-	var convArg1 = format.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg1 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QImageIOPlugin12capabilitiesEP9QIODeviceRK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -109,8 +120,14 @@ func (this *QImageIOPlugin) Capabilities(device qtcore.QIODevice_ITF /*777 QIODe
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QImageIOHandler * create(QIODevice *, const QByteArray &)
 func (this *QImageIOPlugin) Create(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageIOHandler /*777 QImageIOHandler **/ {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
-	var convArg1 = format.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg1 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQImageIOHandlerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -135,6 +152,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

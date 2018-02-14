@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 24
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -114,7 +115,10 @@ func NewQColor_3(rgb uint) *QColor {
 // Public Visibility=Default Availability=Available
 // [-2] void QColor(QRgba64)
 func NewQColor_4(rgba64 QRgba64_ITF /*123*/) *QColor {
-	var convArg0 = rgba64.QRgba64_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rgba64 != nil && rgba64.QRgba64_PTR() != nil {
+		convArg0 = rgba64.QRgba64_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2E7QRgba64", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -141,7 +145,10 @@ func NewQColor_5(name string) *QColor {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QColor(QStringView)
 func NewQColor_6(name qtcore.QStringView_ITF /*123*/) *QColor {
-	var convArg0 = name.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if name != nil && name.QStringView_PTR() != nil {
+		convArg0 = name.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2E11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -168,7 +175,10 @@ func NewQColor_7(aname string) *QColor {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QColor(QLatin1String)
 func NewQColor_8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
-	var convArg0 = name.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if name != nil && name.QLatin1String_PTR() != nil {
+		convArg0 = name.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2E13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -186,6 +196,46 @@ func NewQColor_9(spec int) *QColor {
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
 	return gothis
+}
+
+// /usr/include/qt/QtGui/qcolor.h:87
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QColor & operator=(QColor &&)
+func (this *QColor) Operator_equal(other unsafe.Pointer /*333*/) *QColor {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColoraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qcolor.h:90
+// index:1
+// Public Visibility=Default Availability=Available
+// [16] QColor & operator=(const QColor &)
+func (this *QColor) Operator_equal_1(arg0 QColor_ITF) *QColor {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QColor_PTR() != nil {
+		convArg0 = arg0.QColor_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColoraSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qcolor.h:93
+// index:2
+// Public Visibility=Default Availability=Available
+// [16] QColor & operator=(Qt::GlobalColor)
+func (this *QColor) Operator_equal_2(color int) *QColor {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColoraSEN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), color)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qcolor.h:95
@@ -240,7 +290,10 @@ func (this *QColor) SetNamedColor(name string) {
 // Public Visibility=Default Availability=Available
 // [-2] void setNamedColor(QStringView)
 func (this *QColor) SetNamedColor_1(name qtcore.QStringView_ITF /*123*/) {
-	var convArg0 = name.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if name != nil && name.QStringView_PTR() != nil {
+		convArg0 = name.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor13setNamedColorE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -250,7 +303,10 @@ func (this *QColor) SetNamedColor_1(name qtcore.QStringView_ITF /*123*/) {
 // Public Visibility=Default Availability=Available
 // [-2] void setNamedColor(QLatin1String)
 func (this *QColor) SetNamedColor_2(name qtcore.QLatin1String_ITF /*123*/) {
-	var convArg0 = name.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if name != nil && name.QLatin1String_PTR() != nil {
+		convArg0 = name.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor13setNamedColorE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -439,7 +495,7 @@ func (this *QColor) SetBlueF(blue float64) {
 // Public Visibility=Default Availability=Available
 // [-2] void getRgb(int *, int *, int *, int *)
 func (this *QColor) GetRgb(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, b unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getRgbEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &r, &g, &b, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getRgbEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -466,7 +522,7 @@ func (this *QColor) SetRgb_1(rgb uint) {
 // Public Visibility=Default Availability=Available
 // [-2] void getRgbF(qreal *, qreal *, qreal *, qreal *)
 func (this *QColor) GetRgbF(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, b unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getRgbFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &r, &g, &b, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getRgbFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -496,7 +552,10 @@ func (this *QColor) Rgba64() *QRgba64 /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setRgba64(QRgba64)
 func (this *QColor) SetRgba64(rgba QRgba64_ITF /*123*/) {
-	var convArg0 = rgba.QRgba64_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rgba != nil && rgba.QRgba64_PTR() != nil {
+		convArg0 = rgba.QRgba64_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor9setRgba64E7QRgba64", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -635,7 +694,7 @@ func (this *QColor) ValueF() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void getHsv(int *, int *, int *, int *)
 func (this *QColor) GetHsv(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, v unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getHsvEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &v, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getHsvEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -653,7 +712,7 @@ func (this *QColor) SetHsv(h int, s int, v int, a int) {
 // Public Visibility=Default Availability=Available
 // [-2] void getHsvF(qreal *, qreal *, qreal *, qreal *)
 func (this *QColor) GetHsvF(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, v unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getHsvFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &v, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getHsvFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -751,7 +810,7 @@ func (this *QColor) BlackF() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void getCmyk(int *, int *, int *, int *, int *)
 func (this *QColor) GetCmyk(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, k unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7getCmykEPiS0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &c, &m, &y, &k, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7getCmykEPiS0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -769,7 +828,7 @@ func (this *QColor) SetCmyk(c int, m int, y int, k int, a int) {
 // Public Visibility=Default Availability=Available
 // [-2] void getCmykF(qreal *, qreal *, qreal *, qreal *, qreal *)
 func (this *QColor) GetCmykF(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, k unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8getCmykFEPdS0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &c, &m, &y, &k, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8getCmykFEPdS0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -847,7 +906,7 @@ func (this *QColor) LightnessF() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void getHsl(int *, int *, int *, int *)
 func (this *QColor) GetHsl(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, l unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getHslEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &l, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getHslEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -865,7 +924,7 @@ func (this *QColor) SetHsl(h int, s int, l int, a int) {
 // Public Visibility=Default Availability=Available
 // [-2] void getHslF(qreal *, qreal *, qreal *, qreal *)
 func (this *QColor) GetHslF(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, l unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getHslFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &l, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getHslFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -1028,7 +1087,10 @@ func QColor_FromRgba64(r uint16, g uint16, b uint16, a uint16) *QColor /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgba64(QRgba64)
 func (this *QColor) FromRgba64_1(rgba QRgba64_ITF /*123*/) *QColor /*123*/ {
-	var convArg0 = rgba.QRgba64_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rgba != nil && rgba.QRgba64_PTR() != nil {
+		convArg0 = rgba.QRgba64_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor10fromRgba64E7QRgba64", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1191,6 +1253,34 @@ func (this *QColor) Darker(f int) *QColor /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtGui/qcolor.h:225
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QColor &)
+func (this *QColor) Operator_equal_equal(c QColor_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QColor_PTR() != nil {
+		convArg0 = c.QColor_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColoreqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qcolor.h:226
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator!=(const QColor &)
+func (this *QColor) Operator_not_equal(c QColor_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QColor_PTR() != nil {
+		convArg0 = c.QColor_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColorneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qcolor.h:231
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -1213,7 +1303,10 @@ func QColor_IsValidColor(name string) bool {
 // Public static Visibility=Default Availability=Available
 // [1] bool isValidColor(QStringView)
 func (this *QColor) IsValidColor_1(arg0 qtcore.QStringView_ITF /*123*/) bool {
-	var convArg0 = arg0.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QStringView_PTR() != nil {
+		convArg0 = arg0.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor12isValidColorE11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1229,7 +1322,10 @@ func QColor_IsValidColor_1(arg0 qtcore.QStringView_ITF /*123*/) bool {
 // Public static Visibility=Default Availability=Available
 // [1] bool isValidColor(QLatin1String)
 func (this *QColor) IsValidColor_2(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
-	var convArg0 = arg0.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QLatin1String_PTR() != nil {
+		convArg0 = arg0.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor12isValidColorE13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1272,6 +1368,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

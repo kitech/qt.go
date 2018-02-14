@@ -24,6 +24,7 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -67,7 +68,10 @@ func (*QJSValueIterator) NewFromPointer(cthis unsafe.Pointer) *QJSValueIterator 
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValueIterator(const QJSValue &)
 func NewQJSValueIterator(value QJSValue_ITF) *QJSValueIterator {
-	var convArg0 = value.QJSValue_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QJSValue_PTR() != nil {
+		convArg0 = value.QJSValue_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QJSValueIteratorC2ERK8QJSValue", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSValueIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -131,6 +135,22 @@ func (this *QJSValueIterator) Value() *QJSValue /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtQml/qjsvalueiterator.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QJSValueIterator & operator=(QJSValue &)
+func (this *QJSValueIterator) Operator_equal(value QJSValue_ITF) *QJSValueIterator {
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QJSValue_PTR() != nil {
+		convArg0 = value.QJSValue_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QJSValueIteratoraSER8QJSValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQJSValueIteratorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValueIterator)
+	return rv2
+}
+
 //  body block end
 
 //  keep block begin
@@ -144,6 +164,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

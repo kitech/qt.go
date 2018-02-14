@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 31
+// extern C begin: 33
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,14 +79,51 @@ func NewQPageLayout() *QPageLayout {
 // Public Visibility=Default Availability=Available
 // [-2] void QPageLayout(const QPageSize &, enum QPageLayout::Orientation, const QMarginsF &, enum QPageLayout::Unit, const QMarginsF &)
 func NewQPageLayout_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int, minMargins qtcore.QMarginsF_ITF) *QPageLayout {
-	var convArg0 = pageSize.QPageSize_PTR().GetCthis()
-	var convArg2 = margins.QMarginsF_PTR().GetCthis()
-	var convArg4 = minMargins.QMarginsF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pageSize != nil && pageSize.QPageSize_PTR() != nil {
+		convArg0 = pageSize.QPageSize_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if margins != nil && margins.QMarginsF_PTR() != nil {
+		convArg2 = margins.QMarginsF_PTR().GetCthis()
+	}
+	var convArg4 unsafe.Pointer
+	if minMargins != nil && minMargins.QMarginsF_PTR() != nil {
+		convArg4 = minMargins.QMarginsF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayoutC2ERK9QPageSizeNS_11OrientationERK9QMarginsFNS_4UnitES6_", qtrt.FFI_TYPE_POINTER, convArg0, orientation, convArg2, units, convArg4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPageLayout)
 	return gothis
+}
+
+// /usr/include/qt/QtGui/qpagelayout.h:86
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QPageLayout & operator=(QPageLayout &&)
+func (this *QPageLayout) Operator_equal(other unsafe.Pointer /*333*/) *QPageLayout {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayoutaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPageLayout)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qpagelayout.h:88
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QPageLayout & operator=(const QPageLayout &)
+func (this *QPageLayout) Operator_equal_1(other QPageLayout_ITF) *QPageLayout {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QPageLayout_PTR() != nil {
+		convArg0 = other.QPageLayout_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayoutaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPageLayout)
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpagelayout.h:89
@@ -104,7 +142,10 @@ func DeleteQPageLayout(this *QPageLayout) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPageLayout &)
 func (this *QPageLayout) Swap(other QPageLayout_ITF) {
-	var convArg0 = other.QPageLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QPageLayout_PTR() != nil {
+		convArg0 = other.QPageLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -114,7 +155,10 @@ func (this *QPageLayout) Swap(other QPageLayout_ITF) {
 // Public Visibility=Default Availability=Available
 // [1] bool isEquivalentTo(const QPageLayout &)
 func (this *QPageLayout) IsEquivalentTo(other QPageLayout_ITF) bool {
-	var convArg0 = other.QPageLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QPageLayout_PTR() != nil {
+		convArg0 = other.QPageLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout14isEquivalentToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -154,8 +198,14 @@ func (this *QPageLayout) Mode() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setPageSize(const QPageSize &, const QMarginsF &)
 func (this *QPageLayout) SetPageSize(pageSize QPageSize_ITF, minMargins qtcore.QMarginsF_ITF) {
-	var convArg0 = pageSize.QPageSize_PTR().GetCthis()
-	var convArg1 = minMargins.QMarginsF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pageSize != nil && pageSize.QPageSize_PTR() != nil {
+		convArg0 = pageSize.QPageSize_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if minMargins != nil && minMargins.QMarginsF_PTR() != nil {
+		convArg1 = minMargins.QMarginsF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -215,7 +265,10 @@ func (this *QPageLayout) Units() int {
 // Public Visibility=Default Availability=Available
 // [1] bool setMargins(const QMarginsF &)
 func (this *QPageLayout) SetMargins(margins qtcore.QMarginsF_ITF) bool {
-	var convArg0 = margins.QMarginsF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if margins != nil && margins.QMarginsF_PTR() != nil {
+		convArg0 = margins.QMarginsF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout10setMarginsERK9QMarginsF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -314,7 +367,10 @@ func (this *QPageLayout) MarginsPixels(resolution int) *qtcore.QMargins /*123*/ 
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumMargins(const QMarginsF &)
 func (this *QPageLayout) SetMinimumMargins(minMargins qtcore.QMarginsF_ITF) {
-	var convArg0 = minMargins.QMarginsF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if minMargins != nil && minMargins.QMarginsF_PTR() != nil {
+		convArg0 = minMargins.QMarginsF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -471,6 +527,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -65,7 +66,10 @@ func (*QSignalBlocker) NewFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSignalBlocker(QObject *)
 func NewQSignalBlocker(o QObject_ITF /*777 QObject **/) *QSignalBlocker {
-	var convArg0 = o.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QObject_PTR() != nil {
+		convArg0 = o.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlockerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -78,7 +82,10 @@ func NewQSignalBlocker(o QObject_ITF /*777 QObject **/) *QSignalBlocker {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSignalBlocker(QObject &)
 func NewQSignalBlocker_1(o QObject_ITF) *QSignalBlocker {
-	var convArg0 = o.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QObject_PTR() != nil {
+		convArg0 = o.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlockerC2ER7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -128,6 +135,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

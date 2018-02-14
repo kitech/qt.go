@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -78,10 +79,14 @@ func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject *
 // Public Visibility=Default Availability=Available
 // [-2] void QSocketNotifier(qintptr, enum QSocketNotifier::Type, QObject *)
 func NewQSocketNotifier(socket int64, arg1 int, parent QObject_ITF /*777 QObject **/) *QSocketNotifier {
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifierC2ExNS_4TypeEP7QObject", qtrt.FFI_TYPE_POINTER, socket, arg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSocketNotifierFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSocketNotifier")
 	return gothis
 }
 
@@ -140,7 +145,10 @@ func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QSocketNotifier) Event(arg0 QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifier5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -165,6 +173,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

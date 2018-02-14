@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -66,7 +67,10 @@ func (*QBackingStore) NewFromPointer(cthis unsafe.Pointer) *QBackingStore {
 // Public Visibility=Default Availability=Available
 // [-2] void QBackingStore(QWindow *)
 func NewQBackingStore(window QWindow_ITF /*777 QWindow **/) *QBackingStore {
-	var convArg0 = window.QWindow_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWindow_PTR() != nil {
+		convArg0 = window.QWindow_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStoreC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBackingStoreFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,9 +114,18 @@ func (this *QBackingStore) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void flush(const QRegion &, QWindow *, const QPoint &)
 func (this *QBackingStore) Flush(region QRegion_ITF, window QWindow_ITF /*777 QWindow **/, offset qtcore.QPoint_ITF) {
-	var convArg0 = region.QRegion_PTR().GetCthis()
-	var convArg1 = window.QWindow_PTR().GetCthis()
-	var convArg2 = offset.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if region != nil && region.QRegion_PTR() != nil {
+		convArg0 = region.QRegion_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if window != nil && window.QWindow_PTR() != nil {
+		convArg1 = window.QWindow_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if offset != nil && offset.QPoint_PTR() != nil {
+		convArg2 = offset.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -122,7 +135,10 @@ func (this *QBackingStore) Flush(region QRegion_ITF, window QWindow_ITF /*777 QW
 // Public Visibility=Default Availability=Available
 // [-2] void resize(const QSize &)
 func (this *QBackingStore) Resize(size qtcore.QSize_ITF) {
-	var convArg0 = size.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg0 = size.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore6resizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -144,7 +160,10 @@ func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 // Public Visibility=Default Availability=Available
 // [1] bool scroll(const QRegion &, int, int)
 func (this *QBackingStore) Scroll(area QRegion_ITF, dx int, dy int) bool {
-	var convArg0 = area.QRegion_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if area != nil && area.QRegion_PTR() != nil {
+		convArg0 = area.QRegion_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore6scrollERK7QRegionii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, dx, dy)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -155,7 +174,10 @@ func (this *QBackingStore) Scroll(area QRegion_ITF, dx int, dy int) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void beginPaint(const QRegion &)
 func (this *QBackingStore) BeginPaint(arg0 QRegion_ITF) {
-	var convArg0 = arg0.QRegion_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QRegion_PTR() != nil {
+		convArg0 = arg0.QRegion_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore10beginPaintERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -174,7 +196,10 @@ func (this *QBackingStore) EndPaint() {
 // Public Visibility=Default Availability=Available
 // [-2] void setStaticContents(const QRegion &)
 func (this *QBackingStore) SetStaticContents(region QRegion_ITF) {
-	var convArg0 = region.QRegion_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if region != nil && region.QRegion_PTR() != nil {
+		convArg0 = region.QRegion_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore17setStaticContentsERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -214,6 +239,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

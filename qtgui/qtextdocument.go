@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -84,10 +85,14 @@ func (this *QTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDocument(QObject *)
 func NewQTextDocument(parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocumentC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTextDocument")
 	return gothis
 }
 
@@ -98,10 +103,14 @@ func NewQTextDocument(parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocumen
 func NewQTextDocument_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocumentC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTextDocument")
 	return gothis
 }
 
@@ -121,7 +130,10 @@ func DeleteQTextDocument(this *QTextDocument) {
 // Public Visibility=Default Availability=Available
 // [8] QTextDocument * clone(QObject *)
 func (this *QTextDocument) Clone(parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument /*777 QTextDocument **/ {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument5cloneEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -220,7 +232,10 @@ func (this *QTextDocument) Revision() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setDocumentLayout(QAbstractTextDocumentLayout *)
 func (this *QTextDocument) SetDocumentLayout(layout QAbstractTextDocumentLayout_ITF /*777 QAbstractTextDocumentLayout **/) {
-	var convArg0 = layout.QAbstractTextDocumentLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if layout != nil && layout.QAbstractTextDocumentLayout_PTR() != nil {
+		convArg0 = layout.QAbstractTextDocumentLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument17setDocumentLayoutEP27QAbstractTextDocumentLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -264,7 +279,10 @@ func (this *QTextDocument) MetaInformation(info int) string {
 // Public Visibility=Default Availability=Available
 // [8] QString toHtml(const QByteArray &)
 func (this *QTextDocument) ToHtml(encoding qtcore.QByteArray_ITF) string {
-	var convArg0 = encoding.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if encoding != nil && encoding.QByteArray_PTR() != nil {
+		convArg0 = encoding.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument6toHtmlERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -354,7 +372,10 @@ func (this *QTextDocument) Find(subString string, from int, options int) *QTextC
 func (this *QTextDocument) Find_1(subString string, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(subString)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = cursor.QTextCursor_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if cursor != nil && cursor.QTextCursor_PTR() != nil {
+		convArg1 = cursor.QTextCursor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QStringRK11QTextCursor6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, options)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -367,7 +388,10 @@ func (this *QTextDocument) Find_1(subString string, cursor QTextCursor_ITF, opti
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor find(const QRegExp &, int, QTextDocument::FindFlags)
 func (this *QTextDocument) Find_2(expr qtcore.QRegExp_ITF, from int, options int) *QTextCursor /*123*/ {
-	var convArg0 = expr.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if expr != nil && expr.QRegExp_PTR() != nil {
+		convArg0 = expr.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QRegExpi6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -380,8 +404,14 @@ func (this *QTextDocument) Find_2(expr qtcore.QRegExp_ITF, from int, options int
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor find(const QRegExp &, const QTextCursor &, QTextDocument::FindFlags)
 func (this *QTextDocument) Find_3(expr qtcore.QRegExp_ITF, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
-	var convArg0 = expr.QRegExp_PTR().GetCthis()
-	var convArg1 = cursor.QTextCursor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if expr != nil && expr.QRegExp_PTR() != nil {
+		convArg0 = expr.QRegExp_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if cursor != nil && cursor.QTextCursor_PTR() != nil {
+		convArg1 = cursor.QTextCursor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QRegExpRK11QTextCursor6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, options)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -394,7 +424,10 @@ func (this *QTextDocument) Find_3(expr qtcore.QRegExp_ITF, cursor QTextCursor_IT
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor find(const QRegularExpression &, int, QTextDocument::FindFlags)
 func (this *QTextDocument) Find_4(expr qtcore.QRegularExpression_ITF, from int, options int) *QTextCursor /*123*/ {
-	var convArg0 = expr.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if expr != nil && expr.QRegularExpression_PTR() != nil {
+		convArg0 = expr.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK18QRegularExpressioni6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -407,8 +440,14 @@ func (this *QTextDocument) Find_4(expr qtcore.QRegularExpression_ITF, from int, 
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor find(const QRegularExpression &, const QTextCursor &, QTextDocument::FindFlags)
 func (this *QTextDocument) Find_5(expr qtcore.QRegularExpression_ITF, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
-	var convArg0 = expr.QRegularExpression_PTR().GetCthis()
-	var convArg1 = cursor.QTextCursor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if expr != nil && expr.QRegularExpression_PTR() != nil {
+		convArg0 = expr.QRegularExpression_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if cursor != nil && cursor.QTextCursor_PTR() != nil {
+		convArg1 = cursor.QTextCursor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK18QRegularExpressionRK11QTextCursor6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, options)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -451,7 +490,10 @@ func (this *QTextDocument) Object(objectIndex int) *QTextObject /*777 QTextObjec
 // Public Visibility=Default Availability=Available
 // [8] QTextObject * objectForFormat(const QTextFormat &)
 func (this *QTextDocument) ObjectForFormat(arg0 QTextFormat_ITF) *QTextObject /*777 QTextObject **/ {
-	var convArg0 = arg0.QTextFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QTextFormat_PTR() != nil {
+		convArg0 = arg0.QTextFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument15objectForFormatERK11QTextFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -546,7 +588,10 @@ func (this *QTextDocument) LastBlock() *QTextBlock /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setPageSize(const QSizeF &)
 func (this *QTextDocument) SetPageSize(size qtcore.QSizeF_ITF) {
-	var convArg0 = size.QSizeF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSizeF_PTR() != nil {
+		convArg0 = size.QSizeF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument11setPageSizeERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -568,7 +613,10 @@ func (this *QTextDocument) PageSize() *qtcore.QSizeF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultFont(const QFont &)
 func (this *QTextDocument) SetDefaultFont(font QFont_ITF) {
-	var convArg0 = font.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if font != nil && font.QFont_PTR() != nil {
+		convArg0 = font.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument14setDefaultFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -610,7 +658,10 @@ func (this *QTextDocument) IsModified() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void print(QPagedPaintDevice *)
 func (this *QTextDocument) Print(printer QPagedPaintDevice_ITF /*777 QPagedPaintDevice **/) {
-	var convArg0 = printer.QPagedPaintDevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if printer != nil && printer.QPagedPaintDevice_PTR() != nil {
+		convArg0 = printer.QPagedPaintDevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument5printEP17QPagedPaintDevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -620,7 +671,10 @@ func (this *QTextDocument) Print(printer QPagedPaintDevice_ITF /*777 QPagedPaint
 // Public Visibility=Default Availability=Available
 // [16] QVariant resource(int, const QUrl &)
 func (this *QTextDocument) Resource(type_ int, name qtcore.QUrl_ITF) *qtcore.QVariant /*123*/ {
-	var convArg1 = name.QUrl_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if name != nil && name.QUrl_PTR() != nil {
+		convArg1 = name.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument8resourceEiRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -633,8 +687,14 @@ func (this *QTextDocument) Resource(type_ int, name qtcore.QUrl_ITF) *qtcore.QVa
 // Public Visibility=Default Availability=Available
 // [-2] void addResource(int, const QUrl &, const QVariant &)
 func (this *QTextDocument) AddResource(type_ int, name qtcore.QUrl_ITF, resource qtcore.QVariant_ITF) {
-	var convArg1 = name.QUrl_PTR().GetCthis()
-	var convArg2 = resource.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if name != nil && name.QUrl_PTR() != nil {
+		convArg1 = name.QUrl_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if resource != nil && resource.QVariant_PTR() != nil {
+		convArg2 = resource.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument11addResourceEiRK4QUrlRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -672,8 +732,14 @@ func (this *QTextDocument) UseDesignMetrics() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void drawContents(QPainter *, const QRectF &)
 func (this *QTextDocument) DrawContents(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRectF_ITF) {
-	var convArg0 = painter.QPainter_PTR().GetCthis()
-	var convArg1 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg1 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -825,7 +891,10 @@ func (this *QTextDocument) DefaultStyleSheet() string {
 // Public Visibility=Default Availability=Available
 // [-2] void undo(QTextCursor *)
 func (this *QTextDocument) Undo(cursor QTextCursor_ITF /*777 QTextCursor **/) {
-	var convArg0 = cursor.QTextCursor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if cursor != nil && cursor.QTextCursor_PTR() != nil {
+		convArg0 = cursor.QTextCursor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument4undoEP11QTextCursor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -844,7 +913,10 @@ func (this *QTextDocument) Undo_1() {
 // Public Visibility=Default Availability=Available
 // [-2] void redo(QTextCursor *)
 func (this *QTextDocument) Redo(cursor QTextCursor_ITF /*777 QTextCursor **/) {
-	var convArg0 = cursor.QTextCursor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if cursor != nil && cursor.QTextCursor_PTR() != nil {
+		convArg0 = cursor.QTextCursor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument4redoEP11QTextCursor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -903,7 +975,10 @@ func (this *QTextDocument) DefaultTextOption() *QTextOption /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultTextOption(const QTextOption &)
 func (this *QTextDocument) SetDefaultTextOption(option QTextOption_ITF) {
-	var convArg0 = option.QTextOption_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if option != nil && option.QTextOption_PTR() != nil {
+		convArg0 = option.QTextOption_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument20setDefaultTextOptionERK11QTextOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -925,7 +1000,10 @@ func (this *QTextDocument) BaseUrl() *qtcore.QUrl /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setBaseUrl(const QUrl &)
 func (this *QTextDocument) SetBaseUrl(url qtcore.QUrl_ITF) {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument10setBaseUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1008,7 +1086,10 @@ func (this *QTextDocument) ModificationChanged(m bool) {
 // Public Visibility=Default Availability=Available
 // [-2] void cursorPositionChanged(const QTextCursor &)
 func (this *QTextDocument) CursorPositionChanged(cursor QTextCursor_ITF) {
-	var convArg0 = cursor.QTextCursor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if cursor != nil && cursor.QTextCursor_PTR() != nil {
+		convArg0 = cursor.QTextCursor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument21cursorPositionChangedERK11QTextCursor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1027,7 +1108,10 @@ func (this *QTextDocument) BlockCountChanged(newBlockCount int) {
 // Public Visibility=Default Availability=Available
 // [-2] void baseUrlChanged(const QUrl &)
 func (this *QTextDocument) BaseUrlChanged(url qtcore.QUrl_ITF) {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument14baseUrlChangedERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1046,7 +1130,10 @@ func (this *QTextDocument) DocumentLayoutChanged() {
 // Public Visibility=Default Availability=Available
 // [-2] void appendUndoItem(QAbstractUndoItem *)
 func (this *QTextDocument) AppendUndoItem(arg0 QAbstractUndoItem_ITF /*777 QAbstractUndoItem **/) {
-	var convArg0 = arg0.QAbstractUndoItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAbstractUndoItem_PTR() != nil {
+		convArg0 = arg0.QAbstractUndoItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument14appendUndoItemEP17QAbstractUndoItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1065,7 +1152,10 @@ func (this *QTextDocument) SetModified(m bool) {
 // Protected virtual Visibility=Default Availability=Available
 // [8] QTextObject * createObject(const QTextFormat &)
 func (this *QTextDocument) CreateObject(f QTextFormat_ITF) *QTextObject /*777 QTextObject **/ {
-	var convArg0 = f.QTextFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if f != nil && f.QTextFormat_PTR() != nil {
+		convArg0 = f.QTextFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument12createObjectERK11QTextFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -1076,7 +1166,10 @@ func (this *QTextDocument) CreateObject(f QTextFormat_ITF) *QTextObject /*777 QT
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant loadResource(int, const QUrl &)
 func (this *QTextDocument) LoadResource(type_ int, name qtcore.QUrl_ITF) *qtcore.QVariant /*123*/ {
-	var convArg1 = name.QUrl_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if name != nil && name.QUrl_PTR() != nil {
+		convArg1 = name.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument12loadResourceEiRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1121,6 +1214,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

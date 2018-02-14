@@ -18,12 +18,13 @@ package qtqml
 
 /*
 #include <stdlib.h>
-// extern C begin: 44
+// extern C begin: 46
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -78,6 +79,7 @@ func NewQJSEngine() *QJSEngine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngineC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSEngineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QJSEngine")
 	return gothis
 }
 
@@ -86,10 +88,14 @@ func NewQJSEngine() *QJSEngine {
 // Public Visibility=Default Availability=Available
 // [-2] void QJSEngine(QObject *)
 func NewQJSEngine_1(parent qtcore.QObject_ITF /*777 QObject **/) *QJSEngine {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSEngineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QJSEngine")
 	return gothis
 }
 
@@ -161,7 +167,10 @@ func (this *QJSEngine) NewArray(length uint) *QJSValue /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QJSValue newQObject(QObject *)
 func (this *QJSEngine) NewQObject(object qtcore.QObject_ITF /*777 QObject **/) *QJSValue /*123*/ {
-	var convArg0 = object.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine10newQObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -183,7 +192,10 @@ func (this *QJSEngine) CollectGarbage() {
 // Public Visibility=Default Availability=Available
 // [-2] void installTranslatorFunctions(const QJSValue &)
 func (this *QJSEngine) InstallTranslatorFunctions(object QJSValue_ITF) {
-	var convArg0 = object.QJSValue_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QJSValue_PTR() != nil {
+		convArg0 = object.QJSValue_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine26installTranslatorFunctionsERK8QJSValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -193,7 +205,10 @@ func (this *QJSEngine) InstallTranslatorFunctions(object QJSValue_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void installExtensions(QJSEngine::Extensions, const QJSValue &)
 func (this *QJSEngine) InstallExtensions(extensions int, object QJSValue_ITF) {
-	var convArg1 = object.QJSValue_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if object != nil && object.QJSValue_PTR() != nil {
+		convArg1 = object.QJSValue_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine17installExtensionsE6QFlagsINS_9ExtensionEERK8QJSValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extensions, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -228,6 +243,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

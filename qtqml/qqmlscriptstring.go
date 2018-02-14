@@ -24,6 +24,7 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -85,6 +86,50 @@ func DeleteQQmlScriptString(this *QQmlScriptString) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtQml/qqmlscriptstring.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QQmlScriptString & operator=(const QQmlScriptString &)
+func (this *QQmlScriptString) Operator_equal(arg0 QQmlScriptString_ITF) *QQmlScriptString {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
+		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlScriptStringaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQQmlScriptStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQmlScriptString)
+	return rv2
+}
+
+// /usr/include/qt/QtQml/qqmlscriptstring.h:67
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QQmlScriptString &)
+func (this *QQmlScriptString) Operator_equal_equal(arg0 QQmlScriptString_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
+		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptStringeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtQml/qqmlscriptstring.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator!=(const QQmlScriptString &)
+func (this *QQmlScriptString) Operator_not_equal(arg0 QQmlScriptString_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
+		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptStringneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtQml/qqmlscriptstring.h:70
 // index:0
 // Public Visibility=Default Availability=Available
@@ -132,8 +177,8 @@ func (this *QQmlScriptString) StringLiteral() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal numberLiteral(_Bool *)
-func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13numberLiteralEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
+func (this *QQmlScriptString) NumberLiteral(ok *bool) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13numberLiteralEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
@@ -142,8 +187,8 @@ func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool booleanLiteral(_Bool *)
-func (this *QQmlScriptString) BooleanLiteral(ok unsafe.Pointer /*666*/) bool {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString14booleanLiteralEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
+func (this *QQmlScriptString) BooleanLiteral(ok *bool) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString14booleanLiteralEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -161,6 +206,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

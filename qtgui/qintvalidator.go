@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -74,10 +75,14 @@ func (this *QIntValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(QObject *)
 func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIntValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QIntValidator")
 	return gothis
 }
 
@@ -86,10 +91,14 @@ func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidato
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(int, int, QObject *)
 func NewQIntValidator_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EiiP7QObject", qtrt.FFI_TYPE_POINTER, bottom, top, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIntValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QIntValidator")
 	return gothis
 }
 
@@ -205,6 +214,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

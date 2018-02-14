@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -80,7 +81,10 @@ func (*QGraphicsPolygonItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPoly
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPolygonItem(QGraphicsItem *)
 func NewQGraphicsPolygonItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPolygonItem {
-	var convArg0 = parent.QGraphicsItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QGraphicsItem_PTR() != nil {
+		convArg0 = parent.QGraphicsItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsPolygonItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsPolygonItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -93,8 +97,14 @@ func NewQGraphicsPolygonItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPolygonItem(const QPolygonF &, QGraphicsItem *)
 func NewQGraphicsPolygonItem_1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPolygonItem {
-	var convArg0 = polygon.QPolygonF_PTR().GetCthis()
-	var convArg1 = parent.QGraphicsItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if polygon != nil && polygon.QPolygonF_PTR() != nil {
+		convArg0 = polygon.QPolygonF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QGraphicsItem_PTR() != nil {
+		convArg1 = parent.QGraphicsItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsPolygonItemC2ERK9QPolygonFP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsPolygonItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,7 +140,10 @@ func (this *QGraphicsPolygonItem) Polygon() *qtgui.QPolygonF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setPolygon(const QPolygonF &)
 func (this *QGraphicsPolygonItem) SetPolygon(polygon qtgui.QPolygonF_ITF) {
-	var convArg0 = polygon.QPolygonF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if polygon != nil && polygon.QPolygonF_PTR() != nil {
+		convArg0 = polygon.QPolygonF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -183,7 +196,10 @@ func (this *QGraphicsPolygonItem) Shape() *qtgui.QPainterPath /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &)
 func (this *QGraphicsPolygonItem) Contains(point qtcore.QPointF_ITF) bool {
-	var convArg0 = point.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if point != nil && point.QPointF_PTR() != nil {
+		convArg0 = point.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem8containsERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -194,9 +210,18 @@ func (this *QGraphicsPolygonItem) Contains(point qtcore.QPointF_ITF) bool {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
 func (this *QGraphicsPolygonItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/, widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = painter.QPainter_PTR().GetCthis()
-	var convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
-	var convArg2 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOptionGraphicsItem_PTR() != nil {
+		convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg2 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -206,7 +231,10 @@ func (this *QGraphicsPolygonItem) Paint(painter qtgui.QPainter_ITF /*777 QPainte
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *)
 func (this *QGraphicsPolygonItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
-	var convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsItem_PTR() != nil {
+		convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -249,7 +277,10 @@ func (this *QGraphicsPolygonItem) SupportsExtension(extension int) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setExtension(enum QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsPolygonItem) SetExtension(extension int, variant qtcore.QVariant_ITF) {
-	var convArg1 = variant.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if variant != nil && variant.QVariant_PTR() != nil {
+		convArg1 = variant.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsPolygonItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -259,7 +290,10 @@ func (this *QGraphicsPolygonItem) SetExtension(extension int, variant qtcore.QVa
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant extension(const QVariant &)
 func (this *QGraphicsPolygonItem) Extension(variant qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
-	var convArg0 = variant.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if variant != nil && variant.QVariant_PTR() != nil {
+		convArg0 = variant.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem9extensionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -284,6 +318,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

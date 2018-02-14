@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -113,7 +114,10 @@ func QPixmapCache_Find(key string) *QPixmap /*777 QPixmap **/ {
 func (this *QPixmapCache) Find_1(key string, pixmap QPixmap_ITF) bool {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringR7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -131,7 +135,10 @@ func QPixmapCache_Find_1(key string, pixmap QPixmap_ITF) bool {
 func (this *QPixmapCache) Find_2(key string, pixmap QPixmap_ITF /*777 QPixmap **/) bool {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringP7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -189,6 +196,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

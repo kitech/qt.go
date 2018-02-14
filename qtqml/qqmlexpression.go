@@ -18,12 +18,13 @@ package qtqml
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -78,6 +79,7 @@ func NewQQmlExpression() *QQmlExpression {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlExpressionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlExpression")
 	return gothis
 }
 
@@ -86,14 +88,24 @@ func NewQQmlExpression() *QQmlExpression {
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(QQmlContext *, QObject *, const QString &, QObject *)
 func NewQQmlExpression_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
-	var convArg0 = arg0.QQmlContext_PTR().GetCthis()
-	var convArg1 = arg1.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlContext_PTR() != nil {
+		convArg0 = arg0.QQmlContext_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QObject_PTR() != nil {
+		convArg1 = arg1.QObject_PTR().GetCthis()
+	}
 	var tmpArg2 = qtcore.NewQString_5(arg2)
 	var convArg2 = tmpArg2.GetCthis()
-	var convArg3 = arg3.QObject_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if arg3 != nil && arg3.QObject_PTR() != nil {
+		convArg3 = arg3.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2EP11QQmlContextP7QObjectRK7QStringS3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlExpressionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlExpression")
 	return gothis
 }
 
@@ -102,13 +114,26 @@ func NewQQmlExpression_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(const QQmlScriptString &, QQmlContext *, QObject *, QObject *)
 func NewQQmlExpression_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
-	var convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
-	var convArg1 = arg1.QQmlContext_PTR().GetCthis()
-	var convArg2 = arg2.QObject_PTR().GetCthis()
-	var convArg3 = arg3.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
+		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QQmlContext_PTR() != nil {
+		convArg1 = arg1.QQmlContext_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if arg2 != nil && arg2.QObject_PTR() != nil {
+		convArg2 = arg2.QObject_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if arg3 != nil && arg3.QObject_PTR() != nil {
+		convArg3 = arg3.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2ERK16QQmlScriptStringP11QQmlContextP7QObjectS6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlExpressionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlExpression")
 	return gothis
 }
 
@@ -275,8 +300,8 @@ func (this *QQmlExpression) Error() *QQmlError /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant evaluate(_Bool *)
-func (this *QQmlExpression) Evaluate(valueIsUndefined unsafe.Pointer /*666*/) *qtcore.QVariant /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression8evaluateEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &valueIsUndefined)
+func (this *QQmlExpression) Evaluate(valueIsUndefined *bool) *qtcore.QVariant /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression8evaluateEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), valueIsUndefined)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
@@ -305,6 +330,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

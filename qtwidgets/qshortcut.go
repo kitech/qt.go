@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -80,10 +81,14 @@ func (this *QShortcut) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcut(QWidget *)
 func NewQShortcut(parent QWidget_ITF /*777 QWidget **/) *QShortcut {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQShortcutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QShortcut")
 	return gothis
 }
 
@@ -92,8 +97,14 @@ func NewQShortcut(parent QWidget_ITF /*777 QWidget **/) *QShortcut {
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcut(const QKeySequence &, QWidget *, const char *, const char *, Qt::ShortcutContext)
 func NewQShortcut_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
-	var convArg0 = key.QKeySequence_PTR().GetCthis()
-	var convArg1 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QKeySequence_PTR() != nil {
+		convArg0 = key.QKeySequence_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg1 = parent.QWidget_PTR().GetCthis()
+	}
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
 	var convArg3 = qtrt.CString(ambiguousMember)
@@ -101,6 +112,7 @@ func NewQShortcut_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcutC2ERK12QKeySequenceP7QWidgetPKcS6_N2Qt15ShortcutContextE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, context)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQShortcutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QShortcut")
 	return gothis
 }
 
@@ -120,7 +132,10 @@ func DeleteQShortcut(this *QShortcut) {
 // Public Visibility=Default Availability=Available
 // [-2] void setKey(const QKeySequence &)
 func (this *QShortcut) SetKey(key qtgui.QKeySequence_ITF) {
-	var convArg0 = key.QKeySequence_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QKeySequence_PTR() != nil {
+		convArg0 = key.QKeySequence_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut6setKeyERK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -261,7 +276,10 @@ func (this *QShortcut) ActivatedAmbiguously() {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QShortcut) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -280,6 +298,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

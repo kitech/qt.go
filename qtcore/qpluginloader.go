@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -73,10 +74,14 @@ func (this *QPluginLoader) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // Public Visibility=Default Availability=Available
 // [-2] void QPluginLoader(QObject *)
 func NewQPluginLoader(parent QObject_ITF /*777 QObject **/) *QPluginLoader {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoaderC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPluginLoaderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPluginLoader")
 	return gothis
 }
 
@@ -87,10 +92,14 @@ func NewQPluginLoader(parent QObject_ITF /*777 QObject **/) *QPluginLoader {
 func NewQPluginLoader_1(fileName string, parent QObject_ITF /*777 QObject **/) *QPluginLoader {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoaderC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPluginLoaderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPluginLoader")
 	return gothis
 }
 
@@ -242,6 +251,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

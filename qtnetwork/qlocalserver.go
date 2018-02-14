@@ -24,6 +24,7 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -88,10 +89,14 @@ func (this *QLocalServer) NewConnection() {
 // Public Visibility=Default Availability=Available
 // [-2] void QLocalServer(QObject *)
 func NewQLocalServer(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalServer {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLocalServerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QLocalServer")
 	return gothis
 }
 
@@ -256,8 +261,8 @@ func (this *QLocalServer) SetMaxPendingConnections(numConnections int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForNewConnection(int, _Bool *)
-func (this *QLocalServer) WaitForNewConnection(msec int, timedOut unsafe.Pointer /*666*/) bool {
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, &timedOut)
+func (this *QLocalServer) WaitForNewConnection(msec int, timedOut *bool) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timedOut)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -321,6 +326,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

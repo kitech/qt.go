@@ -24,6 +24,7 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -73,6 +74,34 @@ func NewQNetworkConfiguration() *QNetworkConfiguration {
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qnetworkconfiguration.h:59
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QNetworkConfiguration & operator=(QNetworkConfiguration &&)
+func (this *QNetworkConfiguration) Operator_equal(other unsafe.Pointer /*333*/) *QNetworkConfiguration {
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkConfigurationaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQNetworkConfigurationFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkConfiguration)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qnetworkconfiguration.h:61
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QNetworkConfiguration & operator=(const QNetworkConfiguration &)
+func (this *QNetworkConfiguration) Operator_equal_1(other QNetworkConfiguration_ITF) *QNetworkConfiguration {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkConfiguration_PTR() != nil {
+		convArg0 = other.QNetworkConfiguration_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkConfigurationaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQNetworkConfigurationFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkConfiguration)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:62
 // index:0
 // Public Visibility=Default Availability=Available
@@ -89,9 +118,40 @@ func DeleteQNetworkConfiguration(this *QNetworkConfiguration) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkConfiguration &)
 func (this *QNetworkConfiguration) Swap(other QNetworkConfiguration_ITF) {
-	var convArg0 = other.QNetworkConfiguration_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkConfiguration_PTR() != nil {
+		convArg0 = other.QNetworkConfiguration_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkConfiguration4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qnetworkconfiguration.h:66
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QNetworkConfiguration &)
+func (this *QNetworkConfiguration) Operator_equal_equal(other QNetworkConfiguration_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkConfiguration_PTR() != nil {
+		convArg0 = other.QNetworkConfiguration_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfigurationeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qnetworkconfiguration.h:67
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QNetworkConfiguration &)
+func (this *QNetworkConfiguration) Operator_not_equal(other QNetworkConfiguration_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkConfiguration_PTR() != nil {
+		convArg0 = other.QNetworkConfiguration_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfigurationneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:108
@@ -273,6 +333,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

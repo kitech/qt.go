@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -80,6 +81,7 @@ func NewQSGTexture() *QSGTexture {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTextureC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSGTexture")
 	return gothis
 }
 
@@ -286,7 +288,10 @@ func (this *QSGTexture) VerticalWrapMode() int {
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF convertToNormalizedSourceRect(const QRectF &)
 func (this *QSGTexture) ConvertToNormalizedSourceRect(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture29convertToNormalizedSourceRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -327,6 +332,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

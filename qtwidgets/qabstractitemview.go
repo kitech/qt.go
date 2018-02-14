@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -365,10 +366,14 @@ func (this *QAbstractItemView) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractItemView(QWidget *)
 func NewQAbstractItemView(parent QWidget_ITF /*777 QWidget **/) *QAbstractItemView {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractItemViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractItemView")
 	return gothis
 }
 
@@ -388,7 +393,10 @@ func DeleteQAbstractItemView(this *QAbstractItemView) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
 func (this *QAbstractItemView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
-	var convArg0 = model.QAbstractItemModel_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if model != nil && model.QAbstractItemModel_PTR() != nil {
+		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView8setModelEP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -408,7 +416,10 @@ func (this *QAbstractItemView) Model() *qtcore.QAbstractItemModel /*777 QAbstrac
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSelectionModel(QItemSelectionModel *)
 func (this *QAbstractItemView) SetSelectionModel(selectionModel qtcore.QItemSelectionModel_ITF /*777 QItemSelectionModel **/) {
-	var convArg0 = selectionModel.QItemSelectionModel_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if selectionModel != nil && selectionModel.QItemSelectionModel_PTR() != nil {
+		convArg0 = selectionModel.QItemSelectionModel_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -428,7 +439,10 @@ func (this *QAbstractItemView) SelectionModel() *qtcore.QItemSelectionModel /*77
 // Public Visibility=Default Availability=Available
 // [-2] void setItemDelegate(QAbstractItemDelegate *)
 func (this *QAbstractItemView) SetItemDelegate(delegate QAbstractItemDelegate_ITF /*777 QAbstractItemDelegate **/) {
-	var convArg0 = delegate.QAbstractItemDelegate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if delegate != nil && delegate.QAbstractItemDelegate_PTR() != nil {
+		convArg0 = delegate.QAbstractItemDelegate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -448,7 +462,10 @@ func (this *QAbstractItemView) ItemDelegate() *QAbstractItemDelegate /*777 QAbst
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemDelegate * itemDelegate(const QModelIndex &)
 func (this *QAbstractItemView) ItemDelegate_1(index qtcore.QModelIndex_ITF) *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView12itemDelegateERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractItemDelegateFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -767,7 +784,10 @@ func (this *QAbstractItemView) AlternatingRowColors() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
 func (this *QAbstractItemView) SetIconSize(size qtcore.QSize_ITF) {
-	var convArg0 = size.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg0 = size.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView11setIconSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -819,7 +839,10 @@ func (this *QAbstractItemView) KeyboardSearch(search string) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QRect visualRect(const QModelIndex &)
 func (this *QAbstractItemView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*123*/ {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView10visualRectERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -832,7 +855,10 @@ func (this *QAbstractItemView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
 func (this *QAbstractItemView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView8scrollToERK11QModelIndexNS_10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)
 }
@@ -842,7 +868,10 @@ func (this *QAbstractItemView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) 
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [24] QModelIndex indexAt(const QPoint &)
 func (this *QAbstractItemView) IndexAt(point qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*/ {
-	var convArg0 = point.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if point != nil && point.QPoint_PTR() != nil {
+		convArg0 = point.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView7indexAtERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -855,7 +884,10 @@ func (this *QAbstractItemView) IndexAt(point qtcore.QPoint_ITF) *qtcore.QModelIn
 // Public Visibility=Default Availability=Available
 // [8] QSize sizeHintForIndex(const QModelIndex &)
 func (this *QAbstractItemView) SizeHintForIndex(index qtcore.QModelIndex_ITF) *qtcore.QSize /*123*/ {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -888,7 +920,10 @@ func (this *QAbstractItemView) SizeHintForColumn(column int) int {
 // Public Visibility=Default Availability=Available
 // [-2] void openPersistentEditor(const QModelIndex &)
 func (this *QAbstractItemView) OpenPersistentEditor(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -898,7 +933,10 @@ func (this *QAbstractItemView) OpenPersistentEditor(index qtcore.QModelIndex_ITF
 // Public Visibility=Default Availability=Available
 // [-2] void closePersistentEditor(const QModelIndex &)
 func (this *QAbstractItemView) ClosePersistentEditor(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -908,7 +946,10 @@ func (this *QAbstractItemView) ClosePersistentEditor(index qtcore.QModelIndex_IT
 // Public Visibility=Default Availability=Available
 // [1] bool isPersistentEditorOpen(const QModelIndex &)
 func (this *QAbstractItemView) IsPersistentEditorOpen(index qtcore.QModelIndex_ITF) bool {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView22isPersistentEditorOpenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -919,8 +960,14 @@ func (this *QAbstractItemView) IsPersistentEditorOpen(index qtcore.QModelIndex_I
 // Public Visibility=Default Availability=Available
 // [-2] void setIndexWidget(const QModelIndex &, QWidget *)
 func (this *QAbstractItemView) SetIndexWidget(index qtcore.QModelIndex_ITF, widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
-	var convArg1 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg1 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView14setIndexWidgetERK11QModelIndexP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -930,7 +977,10 @@ func (this *QAbstractItemView) SetIndexWidget(index qtcore.QModelIndex_ITF, widg
 // Public Visibility=Default Availability=Available
 // [8] QWidget * indexWidget(const QModelIndex &)
 func (this *QAbstractItemView) IndexWidget(index qtcore.QModelIndex_ITF) *QWidget /*777 QWidget **/ {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView11indexWidgetERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -941,7 +991,10 @@ func (this *QAbstractItemView) IndexWidget(index qtcore.QModelIndex_ITF) *QWidge
 // Public Visibility=Default Availability=Available
 // [-2] void setItemDelegateForRow(int, QAbstractItemDelegate *)
 func (this *QAbstractItemView) SetItemDelegateForRow(row int, delegate QAbstractItemDelegate_ITF /*777 QAbstractItemDelegate **/) {
-	var convArg1 = delegate.QAbstractItemDelegate_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if delegate != nil && delegate.QAbstractItemDelegate_PTR() != nil {
+		convArg1 = delegate.QAbstractItemDelegate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -961,7 +1014,10 @@ func (this *QAbstractItemView) ItemDelegateForRow(row int) *QAbstractItemDelegat
 // Public Visibility=Default Availability=Available
 // [-2] void setItemDelegateForColumn(int, QAbstractItemDelegate *)
 func (this *QAbstractItemView) SetItemDelegateForColumn(column int, delegate QAbstractItemDelegate_ITF /*777 QAbstractItemDelegate **/) {
-	var convArg1 = delegate.QAbstractItemDelegate_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if delegate != nil && delegate.QAbstractItemDelegate_PTR() != nil {
+		convArg1 = delegate.QAbstractItemDelegate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1002,7 +1058,10 @@ func (this *QAbstractItemView) Reset() {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRootIndex(const QModelIndex &)
 func (this *QAbstractItemView) SetRootIndex(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView12setRootIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1030,7 +1089,10 @@ func (this *QAbstractItemView) SelectAll() {
 // Public Visibility=Default Availability=Available
 // [-2] void edit(const QModelIndex &)
 func (this *QAbstractItemView) Edit(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView4editERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1040,8 +1102,14 @@ func (this *QAbstractItemView) Edit(index qtcore.QModelIndex_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool edit(const QModelIndex &, enum QAbstractItemView::EditTrigger, QEvent *)
 func (this *QAbstractItemView) Edit_1(index qtcore.QModelIndex_ITF, trigger int, event qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
-	var convArg2 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg2 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView4editERK11QModelIndexNS_11EditTriggerEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, trigger, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1061,7 +1129,10 @@ func (this *QAbstractItemView) ClearSelection() {
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentIndex(const QModelIndex &)
 func (this *QAbstractItemView) SetCurrentIndex(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1089,7 +1160,10 @@ func (this *QAbstractItemView) ScrollToBottom() {
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QModelIndex &)
 func (this *QAbstractItemView) Update(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView6updateERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1099,7 +1173,10 @@ func (this *QAbstractItemView) Update(index qtcore.QModelIndex_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void rowsInserted(const QModelIndex &, int, int)
 func (this *QAbstractItemView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end int) {
-	var convArg0 = parent.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg0 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1109,7 +1186,10 @@ func (this *QAbstractItemView) RowsInserted(parent qtcore.QModelIndex_ITF, start
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void rowsAboutToBeRemoved(const QModelIndex &, int, int)
 func (this *QAbstractItemView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start int, end int) {
-	var convArg0 = parent.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg0 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView20rowsAboutToBeRemovedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1119,8 +1199,14 @@ func (this *QAbstractItemView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_IT
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void selectionChanged(const QItemSelection &, const QItemSelection &)
 func (this *QAbstractItemView) SelectionChanged(selected qtcore.QItemSelection_ITF, deselected qtcore.QItemSelection_ITF) {
-	var convArg0 = selected.QItemSelection_PTR().GetCthis()
-	var convArg1 = deselected.QItemSelection_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if selected != nil && selected.QItemSelection_PTR() != nil {
+		convArg0 = selected.QItemSelection_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if deselected != nil && deselected.QItemSelection_PTR() != nil {
+		convArg1 = deselected.QItemSelection_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView16selectionChangedERK14QItemSelectionS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1130,8 +1216,14 @@ func (this *QAbstractItemView) SelectionChanged(selected qtcore.QItemSelection_I
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QAbstractItemView) CurrentChanged(current qtcore.QModelIndex_ITF, previous qtcore.QModelIndex_ITF) {
-	var convArg0 = current.QModelIndex_PTR().GetCthis()
-	var convArg1 = previous.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if current != nil && current.QModelIndex_PTR() != nil {
+		convArg0 = current.QModelIndex_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if previous != nil && previous.QModelIndex_PTR() != nil {
+		convArg1 = previous.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView14currentChangedERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1204,7 +1296,10 @@ func (this *QAbstractItemView) HorizontalScrollbarValueChanged(value int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEditor(QWidget *, QAbstractItemDelegate::EndEditHint)
 func (this *QAbstractItemView) CloseEditor(editor QWidget_ITF /*777 QWidget **/, hint int) {
-	var convArg0 = editor.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if editor != nil && editor.QWidget_PTR() != nil {
+		convArg0 = editor.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView11closeEditorEP7QWidgetN21QAbstractItemDelegate11EndEditHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1214,7 +1309,10 @@ func (this *QAbstractItemView) CloseEditor(editor QWidget_ITF /*777 QWidget **/,
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void commitData(QWidget *)
 func (this *QAbstractItemView) CommitData(editor QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = editor.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if editor != nil && editor.QWidget_PTR() != nil {
+		convArg0 = editor.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView10commitDataEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1224,7 +1322,10 @@ func (this *QAbstractItemView) CommitData(editor QWidget_ITF /*777 QWidget **/) 
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void editorDestroyed(QObject *)
 func (this *QAbstractItemView) EditorDestroyed(editor qtcore.QObject_ITF /*777 QObject **/) {
-	var convArg0 = editor.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if editor != nil && editor.QObject_PTR() != nil {
+		convArg0 = editor.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView15editorDestroyedEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1234,7 +1335,10 @@ func (this *QAbstractItemView) EditorDestroyed(editor qtcore.QObject_ITF /*777 Q
 // Public Visibility=Default Availability=Available
 // [-2] void pressed(const QModelIndex &)
 func (this *QAbstractItemView) Pressed(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView7pressedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1244,7 +1348,10 @@ func (this *QAbstractItemView) Pressed(index qtcore.QModelIndex_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void clicked(const QModelIndex &)
 func (this *QAbstractItemView) Clicked(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView7clickedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1254,7 +1361,10 @@ func (this *QAbstractItemView) Clicked(index qtcore.QModelIndex_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void doubleClicked(const QModelIndex &)
 func (this *QAbstractItemView) DoubleClicked(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView13doubleClickedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1264,7 +1374,10 @@ func (this *QAbstractItemView) DoubleClicked(index qtcore.QModelIndex_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void activated(const QModelIndex &)
 func (this *QAbstractItemView) Activated(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView9activatedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1274,7 +1387,10 @@ func (this *QAbstractItemView) Activated(index qtcore.QModelIndex_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void entered(const QModelIndex &)
 func (this *QAbstractItemView) Entered(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView7enteredERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1293,7 +1409,10 @@ func (this *QAbstractItemView) ViewportEntered() {
 // Public Visibility=Default Availability=Available
 // [-2] void iconSizeChanged(const QSize &)
 func (this *QAbstractItemView) IconSizeChanged(size qtcore.QSize_ITF) {
-	var convArg0 = size.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg0 = size.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView15iconSizeChangedERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1373,7 +1492,10 @@ func (this *QAbstractItemView) VerticalOffset() int {
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [1] bool isIndexHidden(const QModelIndex &)
 func (this *QAbstractItemView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView13isIndexHiddenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1384,7 +1506,10 @@ func (this *QAbstractItemView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool 
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QAbstractItemView) SetSelection(rect qtcore.QRect_ITF, command int) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1394,7 +1519,10 @@ func (this *QAbstractItemView) SetSelection(rect qtcore.QRect_ITF, command int) 
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [8] QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QAbstractItemView) VisualRegionForSelection(selection qtcore.QItemSelection_ITF) *qtgui.QRegion /*123*/ {
-	var convArg0 = selection.QItemSelection_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if selection != nil && selection.QItemSelection_PTR() != nil {
+		convArg0 = selection.QItemSelection_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView24visualRegionForSelectionERK14QItemSelection", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1418,8 +1546,14 @@ func (this *QAbstractItemView) SelectedIndexes() *qtcore.QModelIndexList /*667*/
 // Protected virtual Visibility=Default Availability=Available
 // [4] QItemSelectionModel::SelectionFlags selectionCommand(const QModelIndex &, const QEvent *)
 func (this *QAbstractItemView) SelectionCommand(index qtcore.QModelIndex_ITF, event qtcore.QEvent_ITF /*777 const QEvent **/) int {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
-	var convArg1 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg1 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView16selectionCommandERK11QModelIndexPK6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1488,7 +1622,10 @@ func (this *QAbstractItemView) ExecuteDelayedItemsLayout() {
 // Protected Visibility=Default Availability=Available
 // [-2] void setDirtyRegion(const QRegion &)
 func (this *QAbstractItemView) SetDirtyRegion(region qtgui.QRegion_ITF) {
-	var convArg0 = region.QRegion_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if region != nil && region.QRegion_PTR() != nil {
+		convArg0 = region.QRegion_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView14setDirtyRegionERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1556,7 +1693,10 @@ func (this *QAbstractItemView) FocusNextPrevChild(next bool) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QAbstractItemView) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1567,7 +1707,10 @@ func (this *QAbstractItemView) Event(event qtcore.QEvent_ITF /*777 QEvent **/) b
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool viewportEvent(QEvent *)
 func (this *QAbstractItemView) ViewportEvent(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView13viewportEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1578,7 +1721,10 @@ func (this *QAbstractItemView) ViewportEvent(event qtcore.QEvent_ITF /*777 QEven
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
 func (this *QAbstractItemView) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = event.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QMouseEvent_PTR() != nil {
+		convArg0 = event.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1588,7 +1734,10 @@ func (this *QAbstractItemView) MousePressEvent(event qtgui.QMouseEvent_ITF /*777
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
 func (this *QAbstractItemView) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = event.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QMouseEvent_PTR() != nil {
+		convArg0 = event.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1598,7 +1747,10 @@ func (this *QAbstractItemView) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 func (this *QAbstractItemView) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = event.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QMouseEvent_PTR() != nil {
+		convArg0 = event.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1608,7 +1760,10 @@ func (this *QAbstractItemView) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*7
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QAbstractItemView) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = event.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QMouseEvent_PTR() != nil {
+		convArg0 = event.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView21mouseDoubleClickEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1618,7 +1773,10 @@ func (this *QAbstractItemView) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QDragEnterEvent *)
 func (this *QAbstractItemView) DragEnterEvent(event qtgui.QDragEnterEvent_ITF /*777 QDragEnterEvent **/) {
-	var convArg0 = event.QDragEnterEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QDragEnterEvent_PTR() != nil {
+		convArg0 = event.QDragEnterEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView14dragEnterEventEP15QDragEnterEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1628,7 +1786,10 @@ func (this *QAbstractItemView) DragEnterEvent(event qtgui.QDragEnterEvent_ITF /*
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
 func (this *QAbstractItemView) DragMoveEvent(event qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
-	var convArg0 = event.QDragMoveEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QDragMoveEvent_PTR() != nil {
+		convArg0 = event.QDragMoveEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView13dragMoveEventEP14QDragMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1638,7 +1799,10 @@ func (this *QAbstractItemView) DragMoveEvent(event qtgui.QDragMoveEvent_ITF /*77
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QAbstractItemView) DragLeaveEvent(event qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
-	var convArg0 = event.QDragLeaveEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QDragLeaveEvent_PTR() != nil {
+		convArg0 = event.QDragLeaveEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView14dragLeaveEventEP15QDragLeaveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1648,7 +1812,10 @@ func (this *QAbstractItemView) DragLeaveEvent(event qtgui.QDragLeaveEvent_ITF /*
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
 func (this *QAbstractItemView) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
-	var convArg0 = event.QDropEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QDropEvent_PTR() != nil {
+		convArg0 = event.QDropEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1658,7 +1825,10 @@ func (this *QAbstractItemView) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropE
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
 func (this *QAbstractItemView) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
-	var convArg0 = event.QFocusEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QFocusEvent_PTR() != nil {
+		convArg0 = event.QFocusEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1668,7 +1838,10 @@ func (this *QAbstractItemView) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QF
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
 func (this *QAbstractItemView) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
-	var convArg0 = event.QFocusEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QFocusEvent_PTR() != nil {
+		convArg0 = event.QFocusEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1678,7 +1851,10 @@ func (this *QAbstractItemView) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 Q
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
 func (this *QAbstractItemView) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
-	var convArg0 = event.QKeyEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QKeyEvent_PTR() != nil {
+		convArg0 = event.QKeyEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1688,7 +1864,10 @@ func (this *QAbstractItemView) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKe
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
 func (this *QAbstractItemView) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
-	var convArg0 = event.QResizeEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QResizeEvent_PTR() != nil {
+		convArg0 = event.QResizeEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1698,7 +1877,10 @@ func (this *QAbstractItemView) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QR
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QAbstractItemView) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
-	var convArg0 = event.QTimerEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QTimerEvent_PTR() != nil {
+		convArg0 = event.QTimerEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1708,7 +1890,10 @@ func (this *QAbstractItemView) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTi
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void inputMethodEvent(QInputMethodEvent *)
 func (this *QAbstractItemView) InputMethodEvent(event qtgui.QInputMethodEvent_ITF /*777 QInputMethodEvent **/) {
-	var convArg0 = event.QInputMethodEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QInputMethodEvent_PTR() != nil {
+		convArg0 = event.QInputMethodEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView16inputMethodEventEP17QInputMethodEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1822,6 +2007,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

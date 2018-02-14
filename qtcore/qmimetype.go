@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -72,12 +73,43 @@ func NewQMimeType() *QMimeType {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qmimetype.h:80
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QMimeType & operator=(const QMimeType &)
+func (this *QMimeType) Operator_equal(other QMimeType_ITF) *QMimeType {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QMimeType_PTR() != nil {
+		convArg0 = other.QMimeType_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeTypeaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMimeType)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:82
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QMimeType & operator=(QMimeType &&)
+func (this *QMimeType) Operator_equal_1(other unsafe.Pointer /*333*/) *QMimeType {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeTypeaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMimeType)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qmimetype.h:84
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QMimeType &)
 func (this *QMimeType) Swap(other QMimeType_ITF) {
-	var convArg0 = other.QMimeType_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QMimeType_PTR() != nil {
+		convArg0 = other.QMimeType_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeType4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -91,6 +123,34 @@ func DeleteQMimeType(this *QMimeType) {
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:91
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QMimeType &)
+func (this *QMimeType) Operator_equal_equal(other QMimeType_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QMimeType_PTR() != nil {
+		convArg0 = other.QMimeType_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeTypeeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:93
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QMimeType &)
+func (this *QMimeType) Operator_not_equal(other QMimeType_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QMimeType_PTR() != nil {
+		convArg0 = other.QMimeType_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeTypeneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:98
@@ -276,6 +336,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

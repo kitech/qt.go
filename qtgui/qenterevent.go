@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,9 +65,18 @@ func (*QEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QEnterEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QEnterEvent(const QPointF &, const QPointF &, const QPointF &)
 func NewQEnterEvent(localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF) *QEnterEvent {
-	var convArg0 = localPos.QPointF_PTR().GetCthis()
-	var convArg1 = windowPos.QPointF_PTR().GetCthis()
-	var convArg2 = screenPos.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if localPos != nil && localPos.QPointF_PTR() != nil {
+		convArg0 = localPos.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if windowPos != nil && windowPos.QPointF_PTR() != nil {
+		convArg1 = windowPos.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if screenPos != nil && screenPos.QPointF_PTR() != nil {
+		convArg2 = screenPos.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QEnterEventC2ERK7QPointFS2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEnterEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -198,6 +208,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

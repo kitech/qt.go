@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 12
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -182,7 +183,10 @@ func (this *QClipboard) MimeData(mode int) *qtcore.QMimeData /*777 const QMimeDa
 // Public Visibility=Default Availability=Available
 // [-2] void setMimeData(QMimeData *, enum QClipboard::Mode)
 func (this *QClipboard) SetMimeData(data qtcore.QMimeData_ITF /*777 QMimeData **/, mode int) {
-	var convArg0 = data.QMimeData_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QMimeData_PTR() != nil {
+		convArg0 = data.QMimeData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard11setMimeDataEP9QMimeDataNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -216,7 +220,10 @@ func (this *QClipboard) Pixmap(mode int) *QPixmap /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setImage(const QImage &, enum QClipboard::Mode)
 func (this *QClipboard) SetImage(arg0 QImage_ITF, mode int) {
-	var convArg0 = arg0.QImage_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QImage_PTR() != nil {
+		convArg0 = arg0.QImage_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard8setImageERK6QImageNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -226,7 +233,10 @@ func (this *QClipboard) SetImage(arg0 QImage_ITF, mode int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setPixmap(const QPixmap &, enum QClipboard::Mode)
 func (this *QClipboard) SetPixmap(arg0 QPixmap_ITF, mode int) {
-	var convArg0 = arg0.QPixmap_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPixmap_PTR() != nil {
+		convArg0 = arg0.QPixmap_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard9setPixmapERK7QPixmapNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -293,6 +303,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

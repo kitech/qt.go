@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 65
+// extern C begin: 77
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,7 +79,10 @@ func NewQPainterPathStroker() *QPainterPathStroker {
 // Public Visibility=Default Availability=Available
 // [-2] void QPainterPathStroker(const QPen &)
 func NewQPainterPathStroker_1(pen QPen_ITF) *QPainterPathStroker {
-	var convArg0 = pen.QPen_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pen != nil && pen.QPen_PTR() != nil {
+		convArg0 = pen.QPen_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QPainterPathStrokerC2ERK4QPen", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPainterPathStrokerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -225,7 +229,10 @@ func (this *QPainterPathStroker) DashOffset() float64 {
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath createStroke(const QPainterPath &)
 func (this *QPainterPathStroker) CreateStroke(path QPainterPath_ITF) *QPainterPath /*123*/ {
-	var convArg0 = path.QPainterPath_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if path != nil && path.QPainterPath_PTR() != nil {
+		convArg0 = path.QPainterPath_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -246,6 +253,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

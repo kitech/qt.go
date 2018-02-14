@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -91,12 +92,31 @@ func NewQTextBoundaryFinder_1(type_ int, string string) *QTextBoundaryFinder {
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
 func NewQTextBoundaryFinder_2(type_ int, chars QChar_ITF /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
-	var convArg1 = chars.QChar_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if chars != nil && chars.QChar_PTR() != nil {
+		convArg1 = chars.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", qtrt.FFI_TYPE_POINTER, type_, convArg1, length, buffer, bufferSize)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextBoundaryFinderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextBoundaryFinder)
 	return gothis
+}
+
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [48] QTextBoundaryFinder & operator=(const QTextBoundaryFinder &)
+func (this *QTextBoundaryFinder) Operator_equal(other QTextBoundaryFinder_ITF) *QTextBoundaryFinder {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTextBoundaryFinder_PTR() != nil {
+		convArg0 = other.QTextBoundaryFinder_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTextBoundaryFinderFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBoundaryFinder)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:57
@@ -249,6 +269,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

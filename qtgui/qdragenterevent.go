@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,8 +65,14 @@ func (*QDragEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QDragEnterEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QDragEnterEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers)
 func NewQDragEnterEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragEnterEvent {
-	var convArg0 = pos.QPoint_PTR().GetCthis()
-	var convArg2 = data.QMimeData_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if data != nil && data.QMimeData_PTR() != nil {
+		convArg2 = data.QMimeData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QDragEnterEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDragEnterEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -97,6 +104,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

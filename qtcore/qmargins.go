@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -170,6 +171,110 @@ func (this *QMargins) SetBottom(bottom int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qmargins.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QMargins & operator+=(const QMargins &)
+func (this *QMargins) Operator_add_equal(margins QMargins_ITF) *QMargins {
+	var convArg0 unsafe.Pointer
+	if margins != nil && margins.QMargins_PTR() != nil {
+		convArg0 = margins.QMargins_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginspLERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMargins)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmargins.h:71
+// index:1
+// Public Visibility=Default Availability=Available
+// [16] QMargins & operator+=(int)
+func (this *QMargins) Operator_add_equal_1(arg0 int) *QMargins {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginspLEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMargins)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmargins.h:70
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QMargins & operator-=(const QMargins &)
+func (this *QMargins) Operator_minus_equal(margins QMargins_ITF) *QMargins {
+	var convArg0 unsafe.Pointer
+	if margins != nil && margins.QMargins_PTR() != nil {
+		convArg0 = margins.QMargins_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsmIERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMargins)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmargins.h:72
+// index:1
+// Public Visibility=Default Availability=Available
+// [16] QMargins & operator-=(int)
+func (this *QMargins) Operator_minus_equal_1(arg0 int) *QMargins {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsmIEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMargins)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmargins.h:73
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QMargins & operator*=(int)
+func (this *QMargins) Operator_mul_equal(arg0 int) *QMargins {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsmLEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMargins)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmargins.h:75
+// index:1
+// Public Visibility=Default Availability=Available
+// [16] QMargins & operator*=(qreal)
+func (this *QMargins) Operator_mul_equal_1(arg0 float64) *QMargins {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsmLEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMargins)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmargins.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QMargins & operator/=(int)
+func (this *QMargins) Operator_div_equal(arg0 int) *QMargins {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsdVEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMargins)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmargins.h:76
+// index:1
+// Public Visibility=Default Availability=Available
+// [16] QMargins & operator/=(qreal)
+func (this *QMargins) Operator_div_equal_1(arg0 float64) *QMargins {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsdVEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMargins)
+	return rv2
+}
+
 func DeleteQMargins(this *QMargins) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,6 +294,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -75,10 +76,14 @@ func (this *QAbstractEventDispatcher) MetaObject() *QMetaObject /*777 const QMet
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractEventDispatcher(QObject *)
 func NewQAbstractEventDispatcher(parent QObject_ITF /*777 QObject **/) *QAbstractEventDispatcher {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractEventDispatcher")
 	return gothis
 }
 
@@ -98,7 +103,10 @@ func DeleteQAbstractEventDispatcher(this *QAbstractEventDispatcher) {
 // Public static Visibility=Default Availability=Available
 // [8] QAbstractEventDispatcher * instance(QThread *)
 func (this *QAbstractEventDispatcher) Instance(thread QThread_ITF /*777 QThread **/) *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
-	var convArg0 = thread.QThread_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if thread != nil && thread.QThread_PTR() != nil {
+		convArg0 = thread.QThread_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher8instanceEP7QThread", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -134,7 +142,10 @@ func (this *QAbstractEventDispatcher) HasPendingEvents() bool {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void registerSocketNotifier(QSocketNotifier *)
 func (this *QAbstractEventDispatcher) RegisterSocketNotifier(notifier QSocketNotifier_ITF /*777 QSocketNotifier **/) {
-	var convArg0 = notifier.QSocketNotifier_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if notifier != nil && notifier.QSocketNotifier_PTR() != nil {
+		convArg0 = notifier.QSocketNotifier_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher22registerSocketNotifierEP15QSocketNotifier", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -144,7 +155,10 @@ func (this *QAbstractEventDispatcher) RegisterSocketNotifier(notifier QSocketNot
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void unregisterSocketNotifier(QSocketNotifier *)
 func (this *QAbstractEventDispatcher) UnregisterSocketNotifier(notifier QSocketNotifier_ITF /*777 QSocketNotifier **/) {
-	var convArg0 = notifier.QSocketNotifier_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if notifier != nil && notifier.QSocketNotifier_PTR() != nil {
+		convArg0 = notifier.QSocketNotifier_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher24unregisterSocketNotifierEP15QSocketNotifier", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -154,7 +168,10 @@ func (this *QAbstractEventDispatcher) UnregisterSocketNotifier(notifier QSocketN
 // Public Visibility=Default Availability=Available
 // [4] int registerTimer(int, Qt::TimerType, QObject *)
 func (this *QAbstractEventDispatcher) RegisterTimer(interval int, timerType int, object QObject_ITF /*777 QObject **/) int {
-	var convArg2 = object.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg2 = object.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiN2Qt9TimerTypeEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), interval, timerType, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -165,7 +182,10 @@ func (this *QAbstractEventDispatcher) RegisterTimer(interval int, timerType int,
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void registerTimer(int, int, Qt::TimerType, QObject *)
 func (this *QAbstractEventDispatcher) RegisterTimer_1(timerId int, interval int, timerType int, object QObject_ITF /*777 QObject **/) {
-	var convArg3 = object.QObject_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg3 = object.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiiN2Qt9TimerTypeEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timerId, interval, timerType, convArg3)
 	qtrt.ErrPrint(err, rv)
 }
@@ -185,7 +205,10 @@ func (this *QAbstractEventDispatcher) UnregisterTimer(timerId int) bool {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool unregisterTimers(QObject *)
 func (this *QAbstractEventDispatcher) UnregisterTimers(object QObject_ITF /*777 QObject **/) bool {
-	var convArg0 = object.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher16unregisterTimersEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -251,7 +274,10 @@ func (this *QAbstractEventDispatcher) ClosingDown() {
 // Public Visibility=Default Availability=Available
 // [-2] void installNativeEventFilter(QAbstractNativeEventFilter *)
 func (this *QAbstractEventDispatcher) InstallNativeEventFilter(filterObj QAbstractNativeEventFilter_ITF /*777 QAbstractNativeEventFilter **/) {
-	var convArg0 = filterObj.QAbstractNativeEventFilter_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if filterObj != nil && filterObj.QAbstractNativeEventFilter_PTR() != nil {
+		convArg0 = filterObj.QAbstractNativeEventFilter_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -261,7 +287,10 @@ func (this *QAbstractEventDispatcher) InstallNativeEventFilter(filterObj QAbstra
 // Public Visibility=Default Availability=Available
 // [-2] void removeNativeEventFilter(QAbstractNativeEventFilter *)
 func (this *QAbstractEventDispatcher) RemoveNativeEventFilter(filterObj QAbstractNativeEventFilter_ITF /*777 QAbstractNativeEventFilter **/) {
-	var convArg0 = filterObj.QAbstractNativeEventFilter_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if filterObj != nil && filterObj.QAbstractNativeEventFilter_PTR() != nil {
+		convArg0 = filterObj.QAbstractNativeEventFilter_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -271,8 +300,11 @@ func (this *QAbstractEventDispatcher) RemoveNativeEventFilter(filterObj QAbstrac
 // Public Visibility=Default Availability=Available
 // [1] bool filterNativeEvent(const QByteArray &, void *, long *)
 func (this *QAbstractEventDispatcher) FilterNativeEvent(eventType QByteArray_ITF, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
-	var convArg0 = eventType.QByteArray_PTR().GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, &result)
+	var convArg0 unsafe.Pointer
+	if eventType != nil && eventType.QByteArray_PTR() != nil {
+		convArg0 = eventType.QByteArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, result)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -308,6 +340,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

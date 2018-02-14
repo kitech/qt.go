@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -80,10 +81,14 @@ func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*777 const QM
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsBlurEffect(QObject *)
 func NewQGraphicsBlurEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsBlurEffect {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsBlurEffectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsBlurEffect")
 	return gothis
 }
 
@@ -103,7 +108,10 @@ func DeleteQGraphicsBlurEffect(this *QGraphicsBlurEffect) {
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRectFor(const QRectF &)
 func (this *QGraphicsBlurEffect) BoundingRectFor(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -172,7 +180,10 @@ func (this *QGraphicsBlurEffect) BlurHintsChanged(hints int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
 func (this *QGraphicsBlurEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
-	var convArg0 = painter.QPainter_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect4drawEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -196,6 +207,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 34
+// extern C begin: 38
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -66,7 +67,10 @@ func (*QFontMetricsF) NewFromPointer(cthis unsafe.Pointer) *QFontMetricsF {
 // Public Visibility=Default Availability=Available
 // [-2] void QFontMetricsF(const QFont &)
 func NewQFontMetricsF(arg0 QFont_ITF) *QFontMetricsF {
-	var convArg0 = arg0.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontMetricsFC2ERK5QFont", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontMetricsFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -79,8 +83,14 @@ func NewQFontMetricsF(arg0 QFont_ITF) *QFontMetricsF {
 // Public Visibility=Default Availability=Available
 // [-2] void QFontMetricsF(const QFont &, QPaintDevice *)
 func NewQFontMetricsF_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFontMetricsF {
-	var convArg0 = arg0.QFont_PTR().GetCthis()
-	var convArg1 = pd.QPaintDevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pd != nil && pd.QPaintDevice_PTR() != nil {
+		convArg1 = pd.QPaintDevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontMetricsFC2ERK5QFontP12QPaintDevice", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontMetricsFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -93,7 +103,10 @@ func NewQFontMetricsF_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice *
 // Public Visibility=Default Availability=Available
 // [-2] void QFontMetricsF(const QFontMetrics &)
 func NewQFontMetricsF_2(arg0 QFontMetrics_ITF) *QFontMetricsF {
-	var convArg0 = arg0.QFontMetrics_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFontMetrics_PTR() != nil {
+		convArg0 = arg0.QFontMetrics_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontMetricsFC2ERK12QFontMetrics", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontMetricsFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -112,12 +125,59 @@ func DeleteQFontMetricsF(this *QFontMetricsF) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtGui/qfontmetrics.h:140
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QFontMetricsF & operator=(const QFontMetricsF &)
+func (this *QFontMetricsF) Operator_equal(arg0 QFontMetricsF_ITF) *QFontMetricsF {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFontMetricsF_PTR() != nil {
+		convArg0 = arg0.QFontMetricsF_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontMetricsFaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFontMetricsFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFontMetricsF)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qfontmetrics.h:141
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QFontMetricsF & operator=(const QFontMetrics &)
+func (this *QFontMetricsF) Operator_equal_1(arg0 QFontMetrics_ITF) *QFontMetricsF {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFontMetrics_PTR() != nil {
+		convArg0 = arg0.QFontMetrics_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontMetricsFaSERK12QFontMetrics", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFontMetricsFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFontMetricsF)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qfontmetrics.h:143
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [8] QFontMetricsF & operator=(QFontMetricsF &&)
+func (this *QFontMetricsF) Operator_equal_2(other unsafe.Pointer /*333*/) *QFontMetricsF {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontMetricsFaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFontMetricsFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFontMetricsF)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qfontmetrics.h:147
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QFontMetricsF &)
 func (this *QFontMetricsF) Swap(other QFontMetricsF_ITF) {
-	var convArg0 = other.QFontMetricsF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QFontMetricsF_PTR() != nil {
+		convArg0 = other.QFontMetricsF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontMetricsF4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -237,7 +297,10 @@ func (this *QFontMetricsF) AverageCharWidth() float64 {
 // Public Visibility=Default Availability=Available
 // [1] bool inFont(QChar)
 func (this *QFontMetricsF) InFont(arg0 qtcore.QChar_ITF /*123*/) bool {
-	var convArg0 = arg0.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QChar_PTR() != nil {
+		convArg0 = arg0.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsF6inFontE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -258,7 +321,10 @@ func (this *QFontMetricsF) InFontUcs4(ucs4 uint) bool {
 // Public Visibility=Default Availability=Available
 // [8] qreal leftBearing(QChar)
 func (this *QFontMetricsF) LeftBearing(arg0 qtcore.QChar_ITF /*123*/) float64 {
-	var convArg0 = arg0.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QChar_PTR() != nil {
+		convArg0 = arg0.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsF11leftBearingE5QChar", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -269,7 +335,10 @@ func (this *QFontMetricsF) LeftBearing(arg0 qtcore.QChar_ITF /*123*/) float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal rightBearing(QChar)
 func (this *QFontMetricsF) RightBearing(arg0 qtcore.QChar_ITF /*123*/) float64 {
-	var convArg0 = arg0.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QChar_PTR() != nil {
+		convArg0 = arg0.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsF12rightBearingE5QChar", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -292,7 +361,10 @@ func (this *QFontMetricsF) Width(string string) float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal width(QChar)
 func (this *QFontMetricsF) Width_1(arg0 qtcore.QChar_ITF /*123*/) float64 {
-	var convArg0 = arg0.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QChar_PTR() != nil {
+		convArg0 = arg0.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsF5widthE5QChar", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -317,7 +389,10 @@ func (this *QFontMetricsF) BoundingRect(string string) *qtcore.QRectF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [32] QRectF boundingRect(QChar)
 func (this *QFontMetricsF) BoundingRect_1(arg0 qtcore.QChar_ITF /*123*/) *qtcore.QRectF /*123*/ {
-	var convArg0 = arg0.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QChar_PTR() != nil {
+		convArg0 = arg0.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsF12boundingRectE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -330,10 +405,13 @@ func (this *QFontMetricsF) BoundingRect_1(arg0 qtcore.QChar_ITF /*123*/) *qtcore
 // Public Visibility=Default Availability=Available
 // [32] QRectF boundingRect(const QRectF &, int, const QString &, int, int *)
 func (this *QFontMetricsF) BoundingRect_2(r qtcore.QRectF_ITF, flags int, string string, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QRectF /*123*/ {
-	var convArg0 = r.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRectF_PTR() != nil {
+		convArg0 = r.QRectF_PTR().GetCthis()
+	}
 	var tmpArg2 = qtcore.NewQString_5(string)
 	var convArg2 = tmpArg2.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsF12boundingRectERK6QRectFiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, tabstops, &tabarray)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsF12boundingRectERK6QRectFiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
@@ -347,7 +425,7 @@ func (this *QFontMetricsF) BoundingRect_2(r qtcore.QRectF_ITF, flags int, string
 func (this *QFontMetricsF) Size(flags int, str string, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QSizeF /*123*/ {
 	var tmpArg1 = qtcore.NewQString_5(str)
 	var convArg1 = tmpArg1.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsF4sizeEiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, convArg1, tabstops, &tabarray)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsF4sizeEiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, convArg1, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
@@ -423,6 +501,34 @@ func (this *QFontMetricsF) LineWidth() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
+// /usr/include/qt/QtGui/qfontmetrics.h:185
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QFontMetricsF &)
+func (this *QFontMetricsF) Operator_equal_equal(other QFontMetricsF_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QFontMetricsF_PTR() != nil {
+		convArg0 = other.QFontMetricsF_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsFeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qfontmetrics.h:186
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QFontMetricsF &)
+func (this *QFontMetricsF) Operator_not_equal(other QFontMetricsF_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QFontMetricsF_PTR() != nil {
+		convArg0 = other.QFontMetricsF_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontMetricsFneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 //  body block end
 
 //  keep block begin
@@ -436,6 +542,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

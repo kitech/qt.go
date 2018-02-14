@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -78,6 +79,7 @@ func NewQFile() *QFile {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFile")
 	return gothis
 }
 
@@ -91,6 +93,7 @@ func NewQFile_1(name string) *QFile {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFile")
 	return gothis
 }
 
@@ -99,10 +102,14 @@ func NewQFile_1(name string) *QFile {
 // Public Visibility=Default Availability=Available
 // [-2] void QFile(QObject *)
 func NewQFile_2(parent QObject_ITF /*777 QObject **/) *QFile {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFile")
 	return gothis
 }
 
@@ -113,10 +120,14 @@ func NewQFile_2(parent QObject_ITF /*777 QObject **/) *QFile {
 func NewQFile_3(name string, parent QObject_ITF /*777 QObject **/) *QFile {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFile")
 	return gothis
 }
 
@@ -179,7 +190,10 @@ func QFile_EncodeName(fileName string) *QByteArray /*123*/ {
 // Public static inline Visibility=Default Availability=Available
 // [8] QString decodeName(const QByteArray &)
 func (this *QFile) DecodeName(localFileName QByteArray_ITF) string {
-	var convArg0 = localFileName.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if localFileName != nil && localFileName.QByteArray_PTR() != nil {
+		convArg0 = localFileName.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile10decodeNameERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -550,6 +564,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

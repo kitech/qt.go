@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 22
+// extern C begin: 26
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -90,7 +91,10 @@ func NewQSslError_1(error int) *QSslError {
 // Public Visibility=Default Availability=Available
 // [-2] void QSslError(enum QSslError::SslError, const QSslCertificate &)
 func NewQSslError_2(error int, certificate QSslCertificate_ITF) *QSslError {
-	var convArg1 = certificate.QSslCertificate_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if certificate != nil && certificate.QSslCertificate_PTR() != nil {
+		convArg1 = certificate.QSslCertificate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorERK15QSslCertificate", qtrt.FFI_TYPE_POINTER, error, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,7 +107,10 @@ func NewQSslError_2(error int, certificate QSslCertificate_ITF) *QSslError {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslError &)
 func (this *QSslError) Swap(other QSslError_ITF) {
-	var convArg0 = other.QSslError_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslError_PTR() != nil {
+		convArg0 = other.QSslError_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslError4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -117,6 +124,62 @@ func DeleteQSslError(this *QSslError) {
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
+}
+
+// /usr/include/qt/QtNetwork/qsslerror.h:99
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QSslError & operator=(QSslError &&)
+func (this *QSslError) Operator_equal(other unsafe.Pointer /*333*/) *QSslError {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErroraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslError)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qsslerror.h:101
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QSslError & operator=(const QSslError &)
+func (this *QSslError) Operator_equal_1(other QSslError_ITF) *QSslError {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslError_PTR() != nil {
+		convArg0 = other.QSslError_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErroraSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslError)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qsslerror.h:102
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QSslError &)
+func (this *QSslError) Operator_equal_equal(other QSslError_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslError_PTR() != nil {
+		convArg0 = other.QSslError_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslErroreqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslerror.h:103
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QSslError &)
+func (this *QSslError) Operator_not_equal(other QSslError_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslError_PTR() != nil {
+		convArg0 = other.QSslError_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslErrorneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtNetwork/qsslerror.h:106
@@ -196,6 +259,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

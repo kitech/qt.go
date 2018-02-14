@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -116,6 +117,22 @@ func DeleteQColormap(this *QColormap) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtWidgets/qcolormap.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QColormap & operator=(const QColormap &)
+func (this *QColormap) Operator_equal(colormap QColormap_ITF) *QColormap {
+	var convArg0 unsafe.Pointer
+	if colormap != nil && colormap.QColormap_PTR() != nil {
+		convArg0 = colormap.QColormap_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormapaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQColormapFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColormap)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qcolormap.h:70
 // index:0
 // Public Visibility=Default Availability=Available
@@ -151,7 +168,10 @@ func (this *QColormap) Size() int {
 // Public Visibility=Default Availability=Available
 // [4] uint pixel(const QColor &)
 func (this *QColormap) Pixel(color qtgui.QColor_ITF) uint {
-	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap5pixelERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -188,6 +208,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

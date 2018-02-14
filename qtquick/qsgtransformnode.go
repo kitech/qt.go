@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -90,7 +91,10 @@ func DeleteQSGTransformNode(this *QSGTransformNode) {
 // Public Visibility=Default Availability=Available
 // [-2] void setMatrix(const QMatrix4x4 &)
 func (this *QSGTransformNode) SetMatrix(matrix qtgui.QMatrix4x4_ITF) {
-	var convArg0 = matrix.QMatrix4x4_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {
+		convArg0 = matrix.QMatrix4x4_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGTransformNode9setMatrixERK10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -112,7 +116,10 @@ func (this *QSGTransformNode) Matrix() *qtgui.QMatrix4x4 {
 // Public Visibility=Default Availability=Available
 // [-2] void setCombinedMatrix(const QMatrix4x4 &)
 func (this *QSGTransformNode) SetCombinedMatrix(matrix qtgui.QMatrix4x4_ITF) {
-	var convArg0 = matrix.QMatrix4x4_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {
+		convArg0 = matrix.QMatrix4x4_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGTransformNode17setCombinedMatrixERK10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -142,6 +149,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

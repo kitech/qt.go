@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -83,14 +84,73 @@ func DeleteQEasingCurve(this *QEasingCurve) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qeasingcurve.h:81
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QEasingCurve & operator=(const QEasingCurve &)
+func (this *QEasingCurve) Operator_equal(other QEasingCurve_ITF) *QEasingCurve {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QEasingCurve_PTR() != nil {
+		convArg0 = other.QEasingCurve_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QEasingCurveaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQEasingCurve)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qeasingcurve.h:85
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QEasingCurve & operator=(QEasingCurve &&)
+func (this *QEasingCurve) Operator_equal_1(other unsafe.Pointer /*333*/) *QEasingCurve {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QEasingCurveaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQEasingCurve)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qeasingcurve.h:89
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QEasingCurve &)
 func (this *QEasingCurve) Swap(other QEasingCurve_ITF) {
-	var convArg0 = other.QEasingCurve_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QEasingCurve_PTR() != nil {
+		convArg0 = other.QEasingCurve_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QEasingCurve4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qeasingcurve.h:91
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QEasingCurve &)
+func (this *QEasingCurve) Operator_equal_equal(other QEasingCurve_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QEasingCurve_PTR() != nil {
+		convArg0 = other.QEasingCurve_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurveeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qeasingcurve.h:92
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QEasingCurve &)
+func (this *QEasingCurve) Operator_not_equal(other QEasingCurve_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QEasingCurve_PTR() != nil {
+		convArg0 = other.QEasingCurve_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurveneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qeasingcurve.h:95
@@ -155,9 +215,18 @@ func (this *QEasingCurve) SetOvershoot(overshoot float64) {
 // Public Visibility=Default Availability=Available
 // [-2] void addCubicBezierSegment(const QPointF &, const QPointF &, const QPointF &)
 func (this *QEasingCurve) AddCubicBezierSegment(c1 QPointF_ITF, c2 QPointF_ITF, endPoint QPointF_ITF) {
-	var convArg0 = c1.QPointF_PTR().GetCthis()
-	var convArg1 = c2.QPointF_PTR().GetCthis()
-	var convArg2 = endPoint.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c1 != nil && c1.QPointF_PTR() != nil {
+		convArg0 = c1.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if c2 != nil && c2.QPointF_PTR() != nil {
+		convArg1 = c2.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if endPoint != nil && endPoint.QPointF_PTR() != nil {
+		convArg2 = endPoint.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -167,7 +236,10 @@ func (this *QEasingCurve) AddCubicBezierSegment(c1 QPointF_ITF, c2 QPointF_ITF, 
 // Public Visibility=Default Availability=Available
 // [-2] void addTCBSegment(const QPointF &, qreal, qreal, qreal)
 func (this *QEasingCurve) AddTCBSegment(nextPoint QPointF_ITF, t float64, c float64, b float64) {
-	var convArg0 = nextPoint.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if nextPoint != nil && nextPoint.QPointF_PTR() != nil {
+		convArg0 = nextPoint.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QEasingCurve13addTCBSegmentERK7QPointFddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, t, c, b)
 	qtrt.ErrPrint(err, rv)
 }
@@ -276,6 +348,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

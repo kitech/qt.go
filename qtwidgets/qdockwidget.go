@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -102,10 +103,14 @@ func (this *QDockWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 func NewQDockWidget(title string, parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.QWidget_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg1 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidgetC2ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDockWidget")
 	return gothis
 }
 
@@ -114,10 +119,14 @@ func NewQDockWidget(title string, parent QWidget_ITF /*777 QWidget **/, flags in
 // Public Visibility=Default Availability=Available
 // [-2] void QDockWidget(QWidget *, Qt::WindowFlags)
 func NewQDockWidget_1(parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidgetC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDockWidget")
 	return gothis
 }
 
@@ -147,7 +156,10 @@ func (this *QDockWidget) Widget() *QWidget /*777 QWidget **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
 func (this *QDockWidget) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget9setWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -214,7 +226,10 @@ func (this *QDockWidget) AllowedAreas() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setTitleBarWidget(QWidget *)
 func (this *QDockWidget) SetTitleBarWidget(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget17setTitleBarWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -299,7 +314,10 @@ func (this *QDockWidget) DockLocationChanged(area int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
 func (this *QDockWidget) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -309,7 +327,10 @@ func (this *QDockWidget) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
 func (this *QDockWidget) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEvent **/) {
-	var convArg0 = event.QCloseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QCloseEvent_PTR() != nil {
+		convArg0 = event.QCloseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget10closeEventEP11QCloseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -319,7 +340,10 @@ func (this *QDockWidget) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEven
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QDockWidget) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = event.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QPaintEvent_PTR() != nil {
+		convArg0 = event.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -329,7 +353,10 @@ func (this *QDockWidget) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEven
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QDockWidget) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -340,7 +367,10 @@ func (this *QDockWidget) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionDockWidget *)
 func (this *QDockWidget) InitStyleOption(option QStyleOptionDockWidget_ITF /*777 QStyleOptionDockWidget **/) {
-	var convArg0 = option.QStyleOptionDockWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if option != nil && option.QStyleOptionDockWidget_PTR() != nil {
+		convArg0 = option.QStyleOptionDockWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDockWidget15initStyleOptionEP22QStyleOptionDockWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -369,6 +399,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

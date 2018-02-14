@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -65,7 +66,10 @@ func (*QReadLocker) NewFromPointer(cthis unsafe.Pointer) *QReadLocker {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QReadLocker(QReadWriteLock *)
 func NewQReadLocker(readWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) *QReadLocker {
-	var convArg0 = readWriteLock.QReadWriteLock_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if readWriteLock != nil && readWriteLock.QReadWriteLock_PTR() != nil {
+		convArg0 = readWriteLock.QReadWriteLock_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QReadLockerC2EP14QReadWriteLock", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQReadLockerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -125,6 +129,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

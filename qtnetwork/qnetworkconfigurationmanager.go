@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 19
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -76,10 +77,14 @@ func (this *QNetworkConfigurationManager) MetaObject() *qtcore.QMetaObject /*777
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkConfigurationManager(QObject *)
 func NewQNetworkConfigurationManager(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkConfigurationManager {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManagerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkConfigurationManagerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QNetworkConfigurationManager")
 	return gothis
 }
 
@@ -154,7 +159,10 @@ func (this *QNetworkConfigurationManager) UpdateConfigurations() {
 // Public Visibility=Default Availability=Available
 // [-2] void configurationAdded(const QNetworkConfiguration &)
 func (this *QNetworkConfigurationManager) ConfigurationAdded(config QNetworkConfiguration_ITF) {
-	var convArg0 = config.QNetworkConfiguration_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if config != nil && config.QNetworkConfiguration_PTR() != nil {
+		convArg0 = config.QNetworkConfiguration_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManager18configurationAddedERK21QNetworkConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -164,7 +172,10 @@ func (this *QNetworkConfigurationManager) ConfigurationAdded(config QNetworkConf
 // Public Visibility=Default Availability=Available
 // [-2] void configurationRemoved(const QNetworkConfiguration &)
 func (this *QNetworkConfigurationManager) ConfigurationRemoved(config QNetworkConfiguration_ITF) {
-	var convArg0 = config.QNetworkConfiguration_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if config != nil && config.QNetworkConfiguration_PTR() != nil {
+		convArg0 = config.QNetworkConfiguration_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManager20configurationRemovedERK21QNetworkConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -174,7 +185,10 @@ func (this *QNetworkConfigurationManager) ConfigurationRemoved(config QNetworkCo
 // Public Visibility=Default Availability=Available
 // [-2] void configurationChanged(const QNetworkConfiguration &)
 func (this *QNetworkConfigurationManager) ConfigurationChanged(config QNetworkConfiguration_ITF) {
-	var convArg0 = config.QNetworkConfiguration_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if config != nil && config.QNetworkConfiguration_PTR() != nil {
+		convArg0 = config.QNetworkConfiguration_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManager20configurationChangedERK21QNetworkConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -220,6 +234,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -112,7 +113,10 @@ func (this *QSGMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShad
 // Public virtual Visibility=Default Availability=Available
 // [4] int compare(const QSGMaterial *)
 func (this *QSGMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
-	var convArg0 = other.QSGMaterial_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSGMaterial_PTR() != nil {
+		convArg0 = other.QSGMaterial_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial7compareEPKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -158,6 +162,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

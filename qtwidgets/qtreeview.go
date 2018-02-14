@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -250,10 +251,14 @@ func (this *QTreeView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // Public Visibility=Default Availability=Available
 // [-2] void QTreeView(QWidget *)
 func NewQTreeView(parent QWidget_ITF /*777 QWidget **/) *QTreeView {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTreeViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTreeView")
 	return gothis
 }
 
@@ -273,7 +278,10 @@ func DeleteQTreeView(this *QTreeView) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
 func (this *QTreeView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
-	var convArg0 = model.QAbstractItemModel_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if model != nil && model.QAbstractItemModel_PTR() != nil {
+		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView8setModelEP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -283,7 +291,10 @@ func (this *QTreeView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstr
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRootIndex(const QModelIndex &)
 func (this *QTreeView) SetRootIndex(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView12setRootIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -293,7 +304,10 @@ func (this *QTreeView) SetRootIndex(index qtcore.QModelIndex_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSelectionModel(QItemSelectionModel *)
 func (this *QTreeView) SetSelectionModel(selectionModel qtcore.QItemSelectionModel_ITF /*777 QItemSelectionModel **/) {
-	var convArg0 = selectionModel.QItemSelectionModel_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if selectionModel != nil && selectionModel.QItemSelectionModel_PTR() != nil {
+		convArg0 = selectionModel.QItemSelectionModel_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView17setSelectionModelEP19QItemSelectionModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -313,7 +327,10 @@ func (this *QTreeView) Header() *QHeaderView /*777 QHeaderView **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setHeader(QHeaderView *)
 func (this *QTreeView) SetHeader(header QHeaderView_ITF /*777 QHeaderView **/) {
-	var convArg0 = header.QHeaderView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if header != nil && header.QHeaderView_PTR() != nil {
+		convArg0 = header.QHeaderView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView9setHeaderEP11QHeaderView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -523,7 +540,10 @@ func (this *QTreeView) SetHeaderHidden(hide bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool isRowHidden(int, const QModelIndex &)
 func (this *QTreeView) IsRowHidden(row int, parent qtcore.QModelIndex_ITF) bool {
-	var convArg1 = parent.QModelIndex_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg1 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView11isRowHiddenEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -534,7 +554,10 @@ func (this *QTreeView) IsRowHidden(row int, parent qtcore.QModelIndex_ITF) bool 
 // Public Visibility=Default Availability=Available
 // [-2] void setRowHidden(int, const QModelIndex &, _Bool)
 func (this *QTreeView) SetRowHidden(row int, parent qtcore.QModelIndex_ITF, hide bool) {
-	var convArg1 = parent.QModelIndex_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg1 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView12setRowHiddenEiRK11QModelIndexb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1, hide)
 	qtrt.ErrPrint(err, rv)
 }
@@ -544,7 +567,10 @@ func (this *QTreeView) SetRowHidden(row int, parent qtcore.QModelIndex_ITF, hide
 // Public Visibility=Default Availability=Available
 // [1] bool isFirstColumnSpanned(int, const QModelIndex &)
 func (this *QTreeView) IsFirstColumnSpanned(row int, parent qtcore.QModelIndex_ITF) bool {
-	var convArg1 = parent.QModelIndex_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg1 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -555,7 +581,10 @@ func (this *QTreeView) IsFirstColumnSpanned(row int, parent qtcore.QModelIndex_I
 // Public Visibility=Default Availability=Available
 // [-2] void setFirstColumnSpanned(int, const QModelIndex &, _Bool)
 func (this *QTreeView) SetFirstColumnSpanned(row int, parent qtcore.QModelIndex_ITF, span bool) {
-	var convArg1 = parent.QModelIndex_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg1 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1, span)
 	qtrt.ErrPrint(err, rv)
 }
@@ -565,7 +594,10 @@ func (this *QTreeView) SetFirstColumnSpanned(row int, parent qtcore.QModelIndex_
 // Public Visibility=Default Availability=Available
 // [1] bool isExpanded(const QModelIndex &)
 func (this *QTreeView) IsExpanded(index qtcore.QModelIndex_ITF) bool {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView10isExpandedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -576,7 +608,10 @@ func (this *QTreeView) IsExpanded(index qtcore.QModelIndex_ITF) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setExpanded(const QModelIndex &, _Bool)
 func (this *QTreeView) SetExpanded(index qtcore.QModelIndex_ITF, expand bool) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView11setExpandedERK11QModelIndexb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, expand)
 	qtrt.ErrPrint(err, rv)
 }
@@ -692,7 +727,10 @@ func (this *QTreeView) KeyboardSearch(search string) {
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect visualRect(const QModelIndex &)
 func (this *QTreeView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*123*/ {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView10visualRectERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -705,7 +743,10 @@ func (this *QTreeView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*
 // Public virtual Visibility=Default Availability=Available
 // [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
 func (this *QTreeView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)
 }
@@ -715,7 +756,10 @@ func (this *QTreeView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex indexAt(const QPoint &)
 func (this *QTreeView) IndexAt(p qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*/ {
-	var convArg0 = p.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPoint_PTR() != nil {
+		convArg0 = p.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView7indexAtERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -728,7 +772,10 @@ func (this *QTreeView) IndexAt(p qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*/ 
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex indexAbove(const QModelIndex &)
 func (this *QTreeView) IndexAbove(index qtcore.QModelIndex_ITF) *qtcore.QModelIndex /*123*/ {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView10indexAboveERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -741,7 +788,10 @@ func (this *QTreeView) IndexAbove(index qtcore.QModelIndex_ITF) *qtcore.QModelIn
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex indexBelow(const QModelIndex &)
 func (this *QTreeView) IndexBelow(index qtcore.QModelIndex_ITF) *qtcore.QModelIndex /*123*/ {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView10indexBelowERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -799,7 +849,10 @@ func (this *QTreeView) SelectAll() {
 // Public Visibility=Default Availability=Available
 // [-2] void expanded(const QModelIndex &)
 func (this *QTreeView) Expanded(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView8expandedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -809,7 +862,10 @@ func (this *QTreeView) Expanded(index qtcore.QModelIndex_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void collapsed(const QModelIndex &)
 func (this *QTreeView) Collapsed(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView9collapsedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -837,7 +893,10 @@ func (this *QTreeView) ShowColumn(column int) {
 // Public Visibility=Default Availability=Available
 // [-2] void expand(const QModelIndex &)
 func (this *QTreeView) Expand(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView6expandERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -847,7 +906,10 @@ func (this *QTreeView) Expand(index qtcore.QModelIndex_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void collapse(const QModelIndex &)
 func (this *QTreeView) Collapse(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView8collapseERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -929,7 +991,10 @@ func (this *QTreeView) Reexpand() {
 // Protected Visibility=Default Availability=Available
 // [-2] void rowsRemoved(const QModelIndex &, int, int)
 func (this *QTreeView) RowsRemoved(parent qtcore.QModelIndex_ITF, first int, last int) {
-	var convArg0 = parent.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg0 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView11rowsRemovedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, first, last)
 	qtrt.ErrPrint(err, rv)
 }
@@ -948,7 +1013,10 @@ func (this *QTreeView) ScrollContentsBy(dx int, dy int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void rowsInserted(const QModelIndex &, int, int)
 func (this *QTreeView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end int) {
-	var convArg0 = parent.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg0 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
 	qtrt.ErrPrint(err, rv)
 }
@@ -958,7 +1026,10 @@ func (this *QTreeView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, en
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void rowsAboutToBeRemoved(const QModelIndex &, int, int)
 func (this *QTreeView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start int, end int) {
-	var convArg0 = parent.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QModelIndex_PTR() != nil {
+		convArg0 = parent.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView20rowsAboutToBeRemovedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1000,7 +1071,10 @@ func (this *QTreeView) VerticalOffset() int {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QTreeView) SetSelection(rect qtcore.QRect_ITF, command int) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1010,7 +1084,10 @@ func (this *QTreeView) SetSelection(rect qtcore.QRect_ITF, command int) {
 // Protected virtual Visibility=Default Availability=Available
 // [8] QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QTreeView) VisualRegionForSelection(selection qtcore.QItemSelection_ITF) *qtgui.QRegion /*123*/ {
-	var convArg0 = selection.QItemSelection_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if selection != nil && selection.QItemSelection_PTR() != nil {
+		convArg0 = selection.QItemSelection_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView24visualRegionForSelectionERK14QItemSelection", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1034,7 +1111,10 @@ func (this *QTreeView) SelectedIndexes() *qtcore.QModelIndexList /*667*/ {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QTreeView) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
-	var convArg0 = event.QTimerEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QTimerEvent_PTR() != nil {
+		convArg0 = event.QTimerEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1044,7 +1124,10 @@ func (this *QTreeView) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEvent
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QTreeView) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = event.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QPaintEvent_PTR() != nil {
+		convArg0 = event.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1054,8 +1137,14 @@ func (this *QTreeView) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent 
 // Protected Visibility=Default Availability=Available
 // [-2] void drawTree(QPainter *, const QRegion &)
 func (this *QTreeView) DrawTree(painter qtgui.QPainter_ITF /*777 QPainter **/, region qtgui.QRegion_ITF) {
-	var convArg0 = painter.QPainter_PTR().GetCthis()
-	var convArg1 = region.QRegion_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if region != nil && region.QRegion_PTR() != nil {
+		convArg1 = region.QRegion_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView8drawTreeEP8QPainterRK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1065,9 +1154,18 @@ func (this *QTreeView) DrawTree(painter qtgui.QPainter_ITF /*777 QPainter **/, r
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void drawRow(QPainter *, const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QTreeView) DrawRow(painter qtgui.QPainter_ITF /*777 QPainter **/, options QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) {
-	var convArg0 = painter.QPainter_PTR().GetCthis()
-	var convArg1 = options.QStyleOptionViewItem_PTR().GetCthis()
-	var convArg2 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if options != nil && options.QStyleOptionViewItem_PTR() != nil {
+		convArg1 = options.QStyleOptionViewItem_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg2 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView7drawRowEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1077,9 +1175,18 @@ func (this *QTreeView) DrawRow(painter qtgui.QPainter_ITF /*777 QPainter **/, op
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void drawBranches(QPainter *, const QRect &, const QModelIndex &)
 func (this *QTreeView) DrawBranches(painter qtgui.QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, index qtcore.QModelIndex_ITF) {
-	var convArg0 = painter.QPainter_PTR().GetCthis()
-	var convArg1 = rect.QRect_PTR().GetCthis()
-	var convArg2 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg1 = rect.QRect_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg2 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView12drawBranchesEP8QPainterRK5QRectRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1089,7 +1196,10 @@ func (this *QTreeView) DrawBranches(painter qtgui.QPainter_ITF /*777 QPainter **
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
 func (this *QTreeView) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = event.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QMouseEvent_PTR() != nil {
+		convArg0 = event.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1099,7 +1209,10 @@ func (this *QTreeView) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseE
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 func (this *QTreeView) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = event.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QMouseEvent_PTR() != nil {
+		convArg0 = event.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1109,7 +1222,10 @@ func (this *QTreeView) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMous
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QTreeView) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = event.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QMouseEvent_PTR() != nil {
+		convArg0 = event.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView21mouseDoubleClickEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1119,7 +1235,10 @@ func (this *QTreeView) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*777 Q
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
 func (this *QTreeView) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = event.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QMouseEvent_PTR() != nil {
+		convArg0 = event.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1129,7 +1248,10 @@ func (this *QTreeView) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEv
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
 func (this *QTreeView) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
-	var convArg0 = event.QKeyEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QKeyEvent_PTR() != nil {
+		convArg0 = event.QKeyEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1139,7 +1261,10 @@ func (this *QTreeView) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent *
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
 func (this *QTreeView) DragMoveEvent(event qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
-	var convArg0 = event.QDragMoveEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QDragMoveEvent_PTR() != nil {
+		convArg0 = event.QDragMoveEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView13dragMoveEventEP14QDragMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1149,7 +1274,10 @@ func (this *QTreeView) DragMoveEvent(event qtgui.QDragMoveEvent_ITF /*777 QDragM
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool viewportEvent(QEvent *)
 func (this *QTreeView) ViewportEvent(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView13viewportEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1191,7 +1319,10 @@ func (this *QTreeView) SizeHintForColumn(column int) int {
 // Protected Visibility=Default Availability=Available
 // [4] int indexRowSizeHint(const QModelIndex &)
 func (this *QTreeView) IndexRowSizeHint(index qtcore.QModelIndex_ITF) int {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView16indexRowSizeHintERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1202,7 +1333,10 @@ func (this *QTreeView) IndexRowSizeHint(index qtcore.QModelIndex_ITF) int {
 // Protected Visibility=Default Availability=Available
 // [4] int rowHeight(const QModelIndex &)
 func (this *QTreeView) RowHeight(index qtcore.QModelIndex_ITF) int {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView9rowHeightERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1222,7 +1356,10 @@ func (this *QTreeView) HorizontalScrollbarAction(action int) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool isIndexHidden(const QModelIndex &)
 func (this *QTreeView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView13isIndexHiddenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1233,8 +1370,14 @@ func (this *QTreeView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void selectionChanged(const QItemSelection &, const QItemSelection &)
 func (this *QTreeView) SelectionChanged(selected qtcore.QItemSelection_ITF, deselected qtcore.QItemSelection_ITF) {
-	var convArg0 = selected.QItemSelection_PTR().GetCthis()
-	var convArg1 = deselected.QItemSelection_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if selected != nil && selected.QItemSelection_PTR() != nil {
+		convArg0 = selected.QItemSelection_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if deselected != nil && deselected.QItemSelection_PTR() != nil {
+		convArg1 = deselected.QItemSelection_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView16selectionChangedERK14QItemSelectionS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1244,8 +1387,14 @@ func (this *QTreeView) SelectionChanged(selected qtcore.QItemSelection_ITF, dese
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QTreeView) CurrentChanged(current qtcore.QModelIndex_ITF, previous qtcore.QModelIndex_ITF) {
-	var convArg0 = current.QModelIndex_PTR().GetCthis()
-	var convArg1 = previous.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if current != nil && current.QModelIndex_PTR() != nil {
+		convArg0 = current.QModelIndex_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if previous != nil && previous.QModelIndex_PTR() != nil {
+		convArg1 = previous.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView14currentChangedERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1263,6 +1412,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

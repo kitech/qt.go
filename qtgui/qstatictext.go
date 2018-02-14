@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -87,6 +88,34 @@ func NewQStaticText_1(text string) *QStaticText {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qstatictext.h:68
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QStaticText & operator=(QStaticText &&)
+func (this *QStaticText) Operator_equal(other unsafe.Pointer /*333*/) *QStaticText {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticTextaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStaticTextFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStaticText)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qstatictext.h:70
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QStaticText & operator=(const QStaticText &)
+func (this *QStaticText) Operator_equal_1(arg0 QStaticText_ITF) *QStaticText {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QStaticText_PTR() != nil {
+		convArg0 = arg0.QStaticText_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticTextaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStaticTextFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStaticText)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qstatictext.h:71
 // index:0
 // Public Visibility=Default Availability=Available
@@ -103,7 +132,10 @@ func DeleteQStaticText(this *QStaticText) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QStaticText &)
 func (this *QStaticText) Swap(other QStaticText_ITF) {
-	var convArg0 = other.QStaticText_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QStaticText_PTR() != nil {
+		convArg0 = other.QStaticText_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -175,7 +207,10 @@ func (this *QStaticText) TextWidth() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setTextOption(const QTextOption &)
 func (this *QStaticText) SetTextOption(textOption QTextOption_ITF) {
-	var convArg0 = textOption.QTextOption_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if textOption != nil && textOption.QTextOption_PTR() != nil {
+		convArg0 = textOption.QTextOption_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText13setTextOptionERK11QTextOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -209,8 +244,14 @@ func (this *QStaticText) Size() *qtcore.QSizeF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void prepare(const QTransform &, const QFont &)
 func (this *QStaticText) Prepare(matrix QTransform_ITF, font QFont_ITF) {
-	var convArg0 = matrix.QTransform_PTR().GetCthis()
-	var convArg1 = font.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if matrix != nil && matrix.QTransform_PTR() != nil {
+		convArg0 = matrix.QTransform_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if font != nil && font.QFont_PTR() != nil {
+		convArg1 = font.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText7prepareERK10QTransformRK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -234,6 +275,34 @@ func (this *QStaticText) PerformanceHint() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtGui/qstatictext.h:94
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QStaticText &)
+func (this *QStaticText) Operator_equal_equal(arg0 QStaticText_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QStaticText_PTR() != nil {
+		convArg0 = arg0.QStaticText_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticTexteqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qstatictext.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator!=(const QStaticText &)
+func (this *QStaticText) Operator_not_equal(arg0 QStaticText_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QStaticText_PTR() != nil {
+		convArg0 = arg0.QStaticText_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticTextneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 type QStaticText__PerformanceHint = int
 
 const QStaticText__ModerateCaching QStaticText__PerformanceHint = 0
@@ -252,6 +321,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

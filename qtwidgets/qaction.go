@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -80,10 +81,14 @@ func (this *QAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(QObject *)
 func NewQAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQActionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAction")
 	return gothis
 }
 
@@ -94,10 +99,14 @@ func NewQAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 func NewQAction_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQActionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAction")
 	return gothis
 }
 
@@ -106,13 +115,20 @@ func NewQAction_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAc
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QIcon &, const QString &, QObject *)
 func NewQAction_2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionC2ERK5QIconRK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQActionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAction")
 	return gothis
 }
 
@@ -132,7 +148,10 @@ func DeleteQAction(this *QAction) {
 // Public Visibility=Default Availability=Available
 // [-2] void setActionGroup(QActionGroup *)
 func (this *QAction) SetActionGroup(group QActionGroup_ITF /*777 QActionGroup **/) {
-	var convArg0 = group.QActionGroup_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if group != nil && group.QActionGroup_PTR() != nil {
+		convArg0 = group.QActionGroup_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction14setActionGroupEP12QActionGroup", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -152,7 +171,10 @@ func (this *QAction) ActionGroup() *QActionGroup /*777 QActionGroup **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
 func (this *QAction) SetIcon(icon qtgui.QIcon_ITF) {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -323,7 +345,10 @@ func (this *QAction) Menu() *QMenu /*777 QMenu **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setMenu(QMenu *)
 func (this *QAction) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
-	var convArg0 = menu.QMenu_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if menu != nil && menu.QMenu_PTR() != nil {
+		convArg0 = menu.QMenu_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7setMenuEP5QMenu", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -352,7 +377,10 @@ func (this *QAction) IsSeparator() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcut(const QKeySequence &)
 func (this *QAction) SetShortcut(shortcut qtgui.QKeySequence_ITF) {
-	var convArg0 = shortcut.QKeySequence_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if shortcut != nil && shortcut.QKeySequence_PTR() != nil {
+		convArg0 = shortcut.QKeySequence_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction11setShortcutERK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -421,7 +449,10 @@ func (this *QAction) AutoRepeat() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
 func (this *QAction) SetFont(font qtgui.QFont_ITF) {
-	var convArg0 = font.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if font != nil && font.QFont_PTR() != nil {
+		convArg0 = font.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -474,7 +505,10 @@ func (this *QAction) Data() *qtcore.QVariant /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QVariant &)
 func (this *QAction) SetData(var_ qtcore.QVariant_ITF) {
-	var convArg0 = var_.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if var_ != nil && var_.QVariant_PTR() != nil {
+		convArg0 = var_.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7setDataERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -523,7 +557,10 @@ func (this *QAction) Activate(event int) {
 // Public Visibility=Default Availability=Available
 // [1] bool showStatusText(QWidget *)
 func (this *QAction) ShowStatusText(widget QWidget_ITF /*777 QWidget **/) bool {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction14showStatusTextEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -601,7 +638,10 @@ func (this *QAction) ParentWidget() *QWidget /*777 QWidget **/ {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QAction) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -740,6 +780,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

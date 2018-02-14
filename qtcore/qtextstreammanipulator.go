@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 46
+// extern C begin: 79
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -65,7 +66,10 @@ func (*QTextStreamManipulator) NewFromPointer(cthis unsafe.Pointer) *QTextStream
 // Public inline Visibility=Default Availability=Available
 // [-2] void exec(QTextStream &)
 func (this *QTextStreamManipulator) Exec(s QTextStream_ITF) {
-	var convArg0 = s.QTextStream_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QTextStream_PTR() != nil {
+		convArg0 = s.QTextStream_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QTextStreamManipulator4execER11QTextStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -89,6 +93,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

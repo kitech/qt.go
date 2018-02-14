@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -75,10 +76,14 @@ func (this *QInputDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // Public Visibility=Default Availability=Available
 // [-2] void QInputDialog(QWidget *, Qt::WindowFlags)
 func NewQInputDialog(parent QWidget_ITF /*777 QWidget **/, flags int) *QInputDialog {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQInputDialogFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QInputDialog")
 	return gothis
 }
 
@@ -241,7 +246,10 @@ func (this *QInputDialog) IsComboBoxEditable() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setComboBoxItems(const QStringList &)
 func (this *QInputDialog) SetComboBoxItems(items qtcore.QStringList_ITF) {
-	var convArg0 = items.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if items != nil && items.QStringList_PTR() != nil {
+		convArg0 = items.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16setComboBoxItemsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -481,7 +489,10 @@ func (this *QInputDialog) CancelButtonText() string {
 // Public Visibility=Default Availability=Available
 // [-2] void open(QObject *, const char *)
 func (this *QInputDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, member string) {
-	var convArg0 = receiver.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg0 = receiver.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog4openEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -525,22 +536,25 @@ func (this *QInputDialog) SetVisible(visible bool) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
-func (this *QInputDialog) GetText(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) string {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+func (this *QInputDialog) GetText(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok *bool, flags int, inputMethodHints int) string {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(text)
 	var convArg4 = tmpArg4.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getTextEP7QWidgetRK7QStringS4_N9QLineEdit8EchoModeES4_Pb6QFlagsIN2Qt10WindowTypeEES8_INS9_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, echo, convArg4, &ok, flags, inputMethodHints)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getTextEP7QWidgetRK7QStringS4_N9QLineEdit8EchoModeES4_Pb6QFlagsIN2Qt10WindowTypeEES8_INS9_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, echo, convArg4, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
-func QInputDialog_GetText(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) string {
+func QInputDialog_GetText(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok *bool, flags int, inputMethodHints int) string {
 	var nilthis *QInputDialog
 	rv := nilthis.GetText(parent, title, label, echo, text, ok, flags, inputMethodHints)
 	return rv
@@ -550,22 +564,25 @@ func QInputDialog_GetText(parent QWidget_ITF /*777 QWidget **/, title string, la
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
-func (this *QInputDialog) GetMultiLineText(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) string {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+func (this *QInputDialog) GetMultiLineText(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok *bool, flags int, inputMethodHints int) string {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16getMultiLineTextEP7QWidgetRK7QStringS4_S4_Pb6QFlagsIN2Qt10WindowTypeEES6_INS7_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, &ok, flags, inputMethodHints)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16getMultiLineTextEP7QWidgetRK7QStringS4_S4_Pb6QFlagsIN2Qt10WindowTypeEES6_INS7_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
-func QInputDialog_GetMultiLineText(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) string {
+func QInputDialog_GetMultiLineText(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok *bool, flags int, inputMethodHints int) string {
 	var nilthis *QInputDialog
 	rv := nilthis.GetMultiLineText(parent, title, label, text, ok, flags, inputMethodHints)
 	return rv
@@ -575,21 +592,27 @@ func QInputDialog_GetMultiLineText(parent QWidget_ITF /*777 QWidget **/, title s
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
-func (this *QInputDialog) GetItem(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) string {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+func (this *QInputDialog) GetItem(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok *bool, flags int, inputMethodHints int) string {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	var convArg3 = items.QStringList_PTR().GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getItemEP7QWidgetRK7QStringS4_RK11QStringListibPb6QFlagsIN2Qt10WindowTypeEES9_INSA_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, current, editable, &ok, flags, inputMethodHints)
+	var convArg3 unsafe.Pointer
+	if items != nil && items.QStringList_PTR() != nil {
+		convArg3 = items.QStringList_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getItemEP7QWidgetRK7QStringS4_RK11QStringListibPb6QFlagsIN2Qt10WindowTypeEES9_INSA_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, current, editable, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
-func QInputDialog_GetItem(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) string {
+func QInputDialog_GetItem(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok *bool, flags int, inputMethodHints int) string {
 	var nilthis *QInputDialog
 	rv := nilthis.GetItem(parent, title, label, items, current, editable, ok, flags, inputMethodHints)
 	return rv
@@ -599,17 +622,20 @@ func QInputDialog_GetItem(parent QWidget_ITF /*777 QWidget **/, title string, la
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
-func (this *QInputDialog) GetInt(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int, ok unsafe.Pointer /*666*/, flags int) int {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+func (this *QInputDialog) GetInt(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int, ok *bool, flags int) int {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, step, &ok, flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, step, ok, flags)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QInputDialog_GetInt(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int, ok unsafe.Pointer /*666*/, flags int) int {
+func QInputDialog_GetInt(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int, ok *bool, flags int) int {
 	var nilthis *QInputDialog
 	rv := nilthis.GetInt(parent, title, label, value, minValue, maxValue, step, ok, flags)
 	return rv
@@ -619,17 +645,20 @@ func QInputDialog_GetInt(parent QWidget_ITF /*777 QWidget **/, title string, lab
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
-func (this *QInputDialog) GetDouble(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int) float64 {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+func (this *QInputDialog) GetDouble(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int) float64 {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, &ok, flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
-func QInputDialog_GetDouble(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int) float64 {
+func QInputDialog_GetDouble(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int) float64 {
 	var nilthis *QInputDialog
 	rv := nilthis.GetDouble(parent, title, label, value, minValue, maxValue, decimals, ok, flags)
 	return rv
@@ -639,17 +668,20 @@ func QInputDialog_GetDouble(parent QWidget_ITF /*777 QWidget **/, title string, 
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags, double)
-func (this *QInputDialog) GetDouble_1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int, step float64) float64 {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+func (this *QInputDialog) GetDouble_1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int, step float64) float64 {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEEd", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, &ok, flags, step)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEEd", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags, step)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
-func QInputDialog_GetDouble_1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int, step float64) float64 {
+func QInputDialog_GetDouble_1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int, step float64) float64 {
 	var nilthis *QInputDialog
 	rv := nilthis.GetDouble_1(parent, title, label, value, minValue, maxValue, decimals, ok, flags, step)
 	return rv
@@ -766,6 +798,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

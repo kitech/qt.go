@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,7 +65,10 @@ func (*QWheelEvent) NewFromPointer(cthis unsafe.Pointer) *QWheelEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QWheelEvent(const QPointF &, int, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::Orientation)
 func NewQWheelEvent(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers int, orient int) *QWheelEvent {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFi6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE", qtrt.FFI_TYPE_POINTER, convArg0, delta, buttons, modifiers, orient)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -77,8 +81,14 @@ func NewQWheelEvent(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers in
 // Public Visibility=Default Availability=Available
 // [-2] void QWheelEvent(const QPointF &, const QPointF &, int, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::Orientation)
 func NewQWheelEvent_1(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, delta int, buttons int, modifiers int, orient int) *QWheelEvent {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
-	var convArg1 = globalPos.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if globalPos != nil && globalPos.QPointF_PTR() != nil {
+		convArg1 = globalPos.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_i6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, delta, buttons, modifiers, orient)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -91,10 +101,22 @@ func NewQWheelEvent_1(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, delt
 // Public Visibility=Default Availability=Available
 // [-2] void QWheelEvent(const QPointF &, const QPointF &, QPoint, QPoint, int, Qt::Orientation, Qt::MouseButtons, Qt::KeyboardModifiers)
 func NewQWheelEvent_2(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int) *QWheelEvent {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
-	var convArg1 = globalPos.QPointF_PTR().GetCthis()
-	var convArg2 = pixelDelta.QPoint_PTR().GetCthis()
-	var convArg3 = angleDelta.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if globalPos != nil && globalPos.QPointF_PTR() != nil {
+		convArg1 = globalPos.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if pixelDelta != nil && pixelDelta.QPoint_PTR() != nil {
+		convArg2 = pixelDelta.QPoint_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if angleDelta != nil && angleDelta.QPoint_PTR() != nil {
+		convArg3 = angleDelta.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, qt4Delta, qt4Orientation, buttons, modifiers)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -107,10 +129,22 @@ func NewQWheelEvent_2(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixe
 // Public Visibility=Default Availability=Available
 // [-2] void QWheelEvent(const QPointF &, const QPointF &, QPoint, QPoint, int, Qt::Orientation, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::ScrollPhase)
 func NewQWheelEvent_3(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int) *QWheelEvent {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
-	var convArg1 = globalPos.QPointF_PTR().GetCthis()
-	var convArg2 = pixelDelta.QPoint_PTR().GetCthis()
-	var convArg3 = angleDelta.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if globalPos != nil && globalPos.QPointF_PTR() != nil {
+		convArg1 = globalPos.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if pixelDelta != nil && pixelDelta.QPoint_PTR() != nil {
+		convArg2 = pixelDelta.QPoint_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if angleDelta != nil && angleDelta.QPoint_PTR() != nil {
+		convArg3 = angleDelta.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, qt4Delta, qt4Orientation, buttons, modifiers, phase)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -123,10 +157,22 @@ func NewQWheelEvent_3(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixe
 // Public Visibility=Default Availability=Available
 // [-2] void QWheelEvent(const QPointF &, const QPointF &, QPoint, QPoint, int, Qt::Orientation, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::ScrollPhase, Qt::MouseEventSource)
 func NewQWheelEvent_4(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int, source int) *QWheelEvent {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
-	var convArg1 = globalPos.QPointF_PTR().GetCthis()
-	var convArg2 = pixelDelta.QPoint_PTR().GetCthis()
-	var convArg3 = angleDelta.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if globalPos != nil && globalPos.QPointF_PTR() != nil {
+		convArg1 = globalPos.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if pixelDelta != nil && pixelDelta.QPoint_PTR() != nil {
+		convArg2 = pixelDelta.QPoint_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if angleDelta != nil && angleDelta.QPoint_PTR() != nil {
+		convArg3 = angleDelta.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseENS4_16MouseEventSourceE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, qt4Delta, qt4Orientation, buttons, modifiers, phase, source)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -139,10 +185,22 @@ func NewQWheelEvent_4(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixe
 // Public Visibility=Default Availability=Available
 // [-2] void QWheelEvent(const QPointF &, const QPointF &, QPoint, QPoint, int, Qt::Orientation, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::ScrollPhase, Qt::MouseEventSource, _Bool)
 func NewQWheelEvent_5(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int, source int, inverted bool) *QWheelEvent {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
-	var convArg1 = globalPos.QPointF_PTR().GetCthis()
-	var convArg2 = pixelDelta.QPoint_PTR().GetCthis()
-	var convArg3 = angleDelta.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if globalPos != nil && globalPos.QPointF_PTR() != nil {
+		convArg1 = globalPos.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if pixelDelta != nil && pixelDelta.QPoint_PTR() != nil {
+		convArg2 = pixelDelta.QPoint_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if angleDelta != nil && angleDelta.QPoint_PTR() != nil {
+		convArg3 = angleDelta.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseENS4_16MouseEventSourceEb", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, qt4Delta, qt4Orientation, buttons, modifiers, phase, source, inverted)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -350,6 +408,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 21
+// extern C begin: 23
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -77,8 +78,14 @@ func NewQLineF() *QLineF {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLineF(const QPointF &, const QPointF &)
 func NewQLineF_1(pt1 QPointF_ITF, pt2 QPointF_ITF) *QLineF {
-	var convArg0 = pt1.QPointF_PTR().GetCthis()
-	var convArg1 = pt2.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pt1 != nil && pt1.QPointF_PTR() != nil {
+		convArg0 = pt1.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pt2 != nil && pt2.QPointF_PTR() != nil {
+		convArg1 = pt2.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineFC2ERK7QPointFS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLineFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,7 +110,10 @@ func NewQLineF_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLineF(const QLine &)
 func NewQLineF_3(line QLine_ITF) *QLineF {
-	var convArg0 = line.QLine_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if line != nil && line.QLine_PTR() != nil {
+		convArg0 = line.QLine_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineFC2ERK5QLine", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLineFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -256,7 +266,10 @@ func (this *QLineF) Angle() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal angle(const QLineF &)
 func (this *QLineF) Angle_1(l QLineF_ITF) float64 {
-	var convArg0 = l.QLineF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if l != nil && l.QLineF_PTR() != nil {
+		convArg0 = l.QLineF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF5angleERKS_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -276,7 +289,10 @@ func (this *QLineF) SetAngle(angle float64) {
 // Public Visibility=Default Availability=Available
 // [8] qreal angleTo(const QLineF &)
 func (this *QLineF) AngleTo(l QLineF_ITF) float64 {
-	var convArg0 = l.QLineF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if l != nil && l.QLineF_PTR() != nil {
+		convArg0 = l.QLineF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF7angleToERKS_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -311,8 +327,14 @@ func (this *QLineF) NormalVector() *QLineF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] QLineF::IntersectType intersect(const QLineF &, QPointF *)
 func (this *QLineF) Intersect(l QLineF_ITF, intersectionPoint QPointF_ITF /*777 QPointF **/) int {
-	var convArg0 = l.QLineF_PTR().GetCthis()
-	var convArg1 = intersectionPoint.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if l != nil && l.QLineF_PTR() != nil {
+		convArg0 = l.QLineF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if intersectionPoint != nil && intersectionPoint.QPointF_PTR() != nil {
+		convArg1 = intersectionPoint.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF9intersectERKS_P7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -335,7 +357,10 @@ func (this *QLineF) PointAt(t float64) *QPointF /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void translate(const QPointF &)
 func (this *QLineF) Translate(p QPointF_ITF) {
-	var convArg0 = p.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPointF_PTR() != nil {
+		convArg0 = p.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF9translateERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -354,7 +379,10 @@ func (this *QLineF) Translate_1(dx float64, dy float64) {
 // Public inline Visibility=Default Availability=Available
 // [32] QLineF translated(const QPointF &)
 func (this *QLineF) Translated(p QPointF_ITF) *QLineF /*123*/ {
-	var convArg0 = p.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPointF_PTR() != nil {
+		convArg0 = p.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF10translatedERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -391,7 +419,10 @@ func (this *QLineF) Center() *QPointF /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setP1(const QPointF &)
 func (this *QLineF) SetP1(p1 QPointF_ITF) {
-	var convArg0 = p1.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p1 != nil && p1.QPointF_PTR() != nil {
+		convArg0 = p1.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF5setP1ERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -401,7 +432,10 @@ func (this *QLineF) SetP1(p1 QPointF_ITF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setP2(const QPointF &)
 func (this *QLineF) SetP2(p2 QPointF_ITF) {
-	var convArg0 = p2.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p2 != nil && p2.QPointF_PTR() != nil {
+		convArg0 = p2.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF5setP2ERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -411,8 +445,14 @@ func (this *QLineF) SetP2(p2 QPointF_ITF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPoints(const QPointF &, const QPointF &)
 func (this *QLineF) SetPoints(p1 QPointF_ITF, p2 QPointF_ITF) {
-	var convArg0 = p1.QPointF_PTR().GetCthis()
-	var convArg1 = p2.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p1 != nil && p1.QPointF_PTR() != nil {
+		convArg0 = p1.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if p2 != nil && p2.QPointF_PTR() != nil {
+		convArg1 = p2.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF9setPointsERK7QPointFS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -424,6 +464,34 @@ func (this *QLineF) SetPoints(p1 QPointF_ITF, p2 QPointF_ITF) {
 func (this *QLineF) SetLine(x1 float64, y1 float64, x2 float64, y2 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF7setLineEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qline.h:270
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QLineF &)
+func (this *QLineF) Operator_equal_equal(d QLineF_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if d != nil && d.QLineF_PTR() != nil {
+		convArg0 = d.QLineF_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineFeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qline.h:271
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QLineF &)
+func (this *QLineF) Operator_not_equal(d QLineF_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if d != nil && d.QLineF_PTR() != nil {
+		convArg0 = d.QLineF_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineFneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qline.h:273
@@ -463,6 +531,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 20
+// extern C begin: 22
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -68,6 +69,16 @@ func (this *QRandomGenerator64) Generate() uint64 {
 	return uint64(rv) // 222
 }
 
+// /usr/include/qt/QtCore/qrandom.h:212
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QRandomGenerator64::result_type operator()()
+func (this *QRandomGenerator64) Operator_fncall() uint64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64clEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return uint64(rv) // 222
+}
+
 // /usr/include/qt/QtCore/qrandom.h:215
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -85,7 +96,7 @@ func NewQRandomGenerator64(seedValue uint) *QRandomGenerator64 {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator64(const quint32 *, qsizetype)
 func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRandomGenerator64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", qtrt.FFI_TYPE_POINTER, &seedBuffer, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", qtrt.FFI_TYPE_POINTER, seedBuffer, len)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
@@ -97,7 +108,7 @@ func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRan
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator64(const quint32 *, const quint32 *)
 func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", qtrt.FFI_TYPE_POINTER, &begin, &end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", qtrt.FFI_TYPE_POINTER, begin, end)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
@@ -109,7 +120,10 @@ func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator64(const QRandomGenerator &)
 func NewQRandomGenerator64_3(other QRandomGenerator_ITF) *QRandomGenerator64 {
-	var convArg0 = other.QRandomGenerator_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QRandomGenerator_PTR() != nil {
+		convArg0 = other.QRandomGenerator_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2ERK16QRandomGenerator", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
@@ -222,6 +236,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

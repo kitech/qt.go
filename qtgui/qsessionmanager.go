@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -157,7 +158,10 @@ func (this *QSessionManager) RestartHint() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setRestartCommand(const QStringList &)
 func (this *QSessionManager) SetRestartCommand(arg0 qtcore.QStringList_ITF) {
-	var convArg0 = arg0.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QStringList_PTR() != nil {
+		convArg0 = arg0.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager17setRestartCommandERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -179,7 +183,10 @@ func (this *QSessionManager) RestartCommand() *qtcore.QStringList /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setDiscardCommand(const QStringList &)
 func (this *QSessionManager) SetDiscardCommand(arg0 qtcore.QStringList_ITF) {
-	var convArg0 = arg0.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QStringList_PTR() != nil {
+		convArg0 = arg0.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager17setDiscardCommandERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -216,7 +223,10 @@ func (this *QSessionManager) SetManagerProperty(name string, value string) {
 func (this *QSessionManager) SetManagerProperty_1(name string, value qtcore.QStringList_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.QStringList_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QStringList_PTR() != nil {
+		convArg1 = value.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -266,6 +276,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

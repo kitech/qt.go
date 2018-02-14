@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 27
+// extern C begin: 35
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -73,10 +74,14 @@ func (this *QLibrary) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void QLibrary(QObject *)
 func NewQLibrary(parent QObject_ITF /*777 QObject **/) *QLibrary {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QLibrary")
 	return gothis
 }
 
@@ -87,10 +92,14 @@ func NewQLibrary(parent QObject_ITF /*777 QObject **/) *QLibrary {
 func NewQLibrary_1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QLibrary")
 	return gothis
 }
 
@@ -101,10 +110,14 @@ func NewQLibrary_1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibr
 func NewQLibrary_2(fileName string, verNum int, parent QObject_ITF /*777 QObject **/) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringiP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, verNum, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QLibrary")
 	return gothis
 }
 
@@ -117,10 +130,14 @@ func NewQLibrary_3(fileName string, version string, parent QObject_ITF /*777 QOb
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(version)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringS2_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLibraryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QLibrary")
 	return gothis
 }
 
@@ -354,6 +371,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

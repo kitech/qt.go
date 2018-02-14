@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -85,10 +86,14 @@ func (this *QMouseEventTransition) MetaObject() *qtcore.QMetaObject /*777 const 
 // Public Visibility=Default Availability=Available
 // [-2] void QMouseEventTransition(QState *)
 func NewQMouseEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
-	var convArg0 = sourceState.QState_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sourceState != nil && sourceState.QState_PTR() != nil {
+		convArg0 = sourceState.QState_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMouseEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMouseEventTransition")
 	return gothis
 }
 
@@ -97,11 +102,18 @@ func NewQMouseEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *Q
 // Public Visibility=Default Availability=Available
 // [-2] void QMouseEventTransition(QObject *, QEvent::Type, Qt::MouseButton, QState *)
 func NewQMouseEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int, sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
-	var convArg0 = object.QObject_PTR().GetCthis()
-	var convArg3 = sourceState.QState_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if sourceState != nil && sourceState.QState_PTR() != nil {
+		convArg3 = sourceState.QState_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP7QObjectN6QEvent4TypeEN2Qt11MouseButtonEP6QState", qtrt.FFI_TYPE_POINTER, convArg0, type_, button, convArg3)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMouseEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMouseEventTransition")
 	return gothis
 }
 
@@ -171,7 +183,10 @@ func (this *QMouseEventTransition) HitTestPath() *qtgui.QPainterPath /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setHitTestPath(const QPainterPath &)
 func (this *QMouseEventTransition) SetHitTestPath(path qtgui.QPainterPath_ITF) {
-	var convArg0 = path.QPainterPath_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if path != nil && path.QPainterPath_PTR() != nil {
+		convArg0 = path.QPainterPath_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -181,7 +196,10 @@ func (this *QMouseEventTransition) SetHitTestPath(path qtgui.QPainterPath_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onTransition(QEvent *)
 func (this *QMouseEventTransition) OnTransition(event qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransition12onTransitionEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -191,7 +209,10 @@ func (this *QMouseEventTransition) OnTransition(event qtcore.QEvent_ITF /*777 QE
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventTest(QEvent *)
 func (this *QMouseEventTransition) EventTest(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransition9eventTestEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -210,6 +231,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

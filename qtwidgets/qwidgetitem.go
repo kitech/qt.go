@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -65,7 +66,10 @@ func (*QWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QWidgetItem {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QWidgetItem(QWidget *)
 func NewQWidgetItem(w QWidget_ITF /*777 QWidget **/) *QWidgetItem {
-	var convArg0 = w.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWidgetItemC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWidgetItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -145,7 +149,10 @@ func (this *QWidgetItem) IsEmpty() bool {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
 func (this *QWidgetItem) SetGeometry(arg0 qtcore.QRect_ITF) {
-	var convArg0 = arg0.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QRect_PTR() != nil {
+		convArg0 = arg0.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWidgetItem11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -215,6 +222,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

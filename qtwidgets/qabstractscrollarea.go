@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -175,10 +176,14 @@ func (this *QAbstractScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QM
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractScrollArea(QWidget *)
 func NewQAbstractScrollArea(parent QWidget_ITF /*777 QWidget **/) *QAbstractScrollArea {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollAreaC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractScrollAreaFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractScrollArea")
 	return gothis
 }
 
@@ -227,7 +232,10 @@ func (this *QAbstractScrollArea) VerticalScrollBar() *QScrollBar /*777 QScrollBa
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalScrollBar(QScrollBar *)
 func (this *QAbstractScrollArea) SetVerticalScrollBar(scrollbar QScrollBar_ITF /*777 QScrollBar **/) {
-	var convArg0 = scrollbar.QScrollBar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if scrollbar != nil && scrollbar.QScrollBar_PTR() != nil {
+		convArg0 = scrollbar.QScrollBar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -266,7 +274,10 @@ func (this *QAbstractScrollArea) HorizontalScrollBar() *QScrollBar /*777 QScroll
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalScrollBar(QScrollBar *)
 func (this *QAbstractScrollArea) SetHorizontalScrollBar(scrollbar QScrollBar_ITF /*777 QScrollBar **/) {
-	var convArg0 = scrollbar.QScrollBar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if scrollbar != nil && scrollbar.QScrollBar_PTR() != nil {
+		convArg0 = scrollbar.QScrollBar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea22setHorizontalScrollBarEP10QScrollBar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -286,7 +297,10 @@ func (this *QAbstractScrollArea) CornerWidget() *QWidget /*777 QWidget **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setCornerWidget(QWidget *)
 func (this *QAbstractScrollArea) SetCornerWidget(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -296,7 +310,10 @@ func (this *QAbstractScrollArea) SetCornerWidget(widget QWidget_ITF /*777 QWidge
 // Public Visibility=Default Availability=Available
 // [-2] void addScrollBarWidget(QWidget *, Qt::Alignment)
 func (this *QAbstractScrollArea) AddScrollBarWidget(widget QWidget_ITF /*777 QWidget **/, alignment int) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea18addScrollBarWidgetEP7QWidget6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
 	qtrt.ErrPrint(err, rv)
 }
@@ -327,7 +344,10 @@ func (this *QAbstractScrollArea) Viewport() *QWidget /*777 QWidget **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setViewport(QWidget *)
 func (this *QAbstractScrollArea) SetViewport(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea11setViewportEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -373,7 +393,10 @@ func (this *QAbstractScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setupViewport(QWidget *)
 func (this *QAbstractScrollArea) SetupViewport(viewport QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = viewport.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if viewport != nil && viewport.QWidget_PTR() != nil {
+		convArg0 = viewport.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea13setupViewportEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -411,7 +434,10 @@ func (this *QAbstractScrollArea) SetViewportMargins(left int, top int, right int
 // Protected Visibility=Default Availability=Available
 // [-2] void setViewportMargins(const QMargins &)
 func (this *QAbstractScrollArea) SetViewportMargins_1(margins qtcore.QMargins_ITF) {
-	var convArg0 = margins.QMargins_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if margins != nil && margins.QMargins_PTR() != nil {
+		convArg0 = margins.QMargins_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea18setViewportMarginsERK8QMargins", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -433,8 +459,14 @@ func (this *QAbstractScrollArea) ViewportMargins() *qtcore.QMargins /*123*/ {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
 func (this *QAbstractScrollArea) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
-	var convArg1 = arg1.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QEvent_PTR() != nil {
+		convArg1 = arg1.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -445,7 +477,10 @@ func (this *QAbstractScrollArea) EventFilter(arg0 qtcore.QObject_ITF /*777 QObje
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QAbstractScrollArea) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -456,7 +491,10 @@ func (this *QAbstractScrollArea) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) 
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool viewportEvent(QEvent *)
 func (this *QAbstractScrollArea) ViewportEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea13viewportEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -467,7 +505,10 @@ func (this *QAbstractScrollArea) ViewportEvent(arg0 qtcore.QEvent_ITF /*777 QEve
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
 func (this *QAbstractScrollArea) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
-	var convArg0 = arg0.QResizeEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QResizeEvent_PTR() != nil {
+		convArg0 = arg0.QResizeEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -477,7 +518,10 @@ func (this *QAbstractScrollArea) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 Q
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QAbstractScrollArea) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
+		convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -487,7 +531,10 @@ func (this *QAbstractScrollArea) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPa
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
 func (this *QAbstractScrollArea) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -497,7 +544,10 @@ func (this *QAbstractScrollArea) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*77
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 func (this *QAbstractScrollArea) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -507,7 +557,10 @@ func (this *QAbstractScrollArea) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QAbstractScrollArea) MouseDoubleClickEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea21mouseDoubleClickEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -517,7 +570,10 @@ func (this *QAbstractScrollArea) MouseDoubleClickEvent(arg0 qtgui.QMouseEvent_IT
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
 func (this *QAbstractScrollArea) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -527,7 +583,10 @@ func (this *QAbstractScrollArea) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
 func (this *QAbstractScrollArea) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 = arg0.QWheelEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QWheelEvent_PTR() != nil {
+		convArg0 = arg0.QWheelEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -537,7 +596,10 @@ func (this *QAbstractScrollArea) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWh
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
 func (this *QAbstractScrollArea) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
-	var convArg0 = arg0.QContextMenuEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QContextMenuEvent_PTR() != nil {
+		convArg0 = arg0.QContextMenuEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -547,7 +609,10 @@ func (this *QAbstractScrollArea) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_I
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QDragEnterEvent *)
 func (this *QAbstractScrollArea) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /*777 QDragEnterEvent **/) {
-	var convArg0 = arg0.QDragEnterEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QDragEnterEvent_PTR() != nil {
+		convArg0 = arg0.QDragEnterEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea14dragEnterEventEP15QDragEnterEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -557,7 +622,10 @@ func (this *QAbstractScrollArea) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
 func (this *QAbstractScrollArea) DragMoveEvent(arg0 qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
-	var convArg0 = arg0.QDragMoveEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QDragMoveEvent_PTR() != nil {
+		convArg0 = arg0.QDragMoveEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea13dragMoveEventEP14QDragMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -567,7 +635,10 @@ func (this *QAbstractScrollArea) DragMoveEvent(arg0 qtgui.QDragMoveEvent_ITF /*7
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QAbstractScrollArea) DragLeaveEvent(arg0 qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
-	var convArg0 = arg0.QDragLeaveEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QDragLeaveEvent_PTR() != nil {
+		convArg0 = arg0.QDragLeaveEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea14dragLeaveEventEP15QDragLeaveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -577,7 +648,10 @@ func (this *QAbstractScrollArea) DragLeaveEvent(arg0 qtgui.QDragLeaveEvent_ITF /
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
 func (this *QAbstractScrollArea) DropEvent(arg0 qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
-	var convArg0 = arg0.QDropEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QDropEvent_PTR() != nil {
+		convArg0 = arg0.QDropEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -587,7 +661,10 @@ func (this *QAbstractScrollArea) DropEvent(arg0 qtgui.QDropEvent_ITF /*777 QDrop
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
 func (this *QAbstractScrollArea) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
-	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QKeyEvent_PTR() != nil {
+		convArg0 = arg0.QKeyEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -632,6 +709,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

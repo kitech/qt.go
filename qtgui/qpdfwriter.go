@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -93,6 +94,7 @@ func NewQPdfWriter(filename string) *QPdfWriter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPdfWriterC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPdfWriterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPdfWriter")
 	return gothis
 }
 
@@ -101,10 +103,14 @@ func NewQPdfWriter(filename string) *QPdfWriter {
 // Public Visibility=Default Availability=Available
 // [-2] void QPdfWriter(QIODevice *)
 func NewQPdfWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QPdfWriter {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPdfWriterC2EP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPdfWriterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPdfWriter")
 	return gothis
 }
 
@@ -229,7 +235,10 @@ func (this *QPdfWriter) SetPageSize(size int) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setPageSizeMM(const QSizeF &)
 func (this *QPdfWriter) SetPageSizeMM(size qtcore.QSizeF_ITF) {
-	var convArg0 = size.QSizeF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSizeF_PTR() != nil {
+		convArg0 = size.QSizeF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPdfWriter13setPageSizeMMERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -267,6 +276,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

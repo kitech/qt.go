@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -65,7 +66,10 @@ func (*QDynamicPropertyChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QDynam
 // Public Visibility=Default Availability=Available
 // [-2] void QDynamicPropertyChangeEvent(const QByteArray &)
 func NewQDynamicPropertyChangeEvent(name QByteArray_ITF) *QDynamicPropertyChangeEvent {
-	var convArg0 = name.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if name != nil && name.QByteArray_PTR() != nil {
+		convArg0 = name.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDynamicPropertyChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -109,6 +113,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

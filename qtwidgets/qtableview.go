@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -200,10 +201,14 @@ func (this *QTableView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QTableView(QWidget *)
 func NewQTableView(parent QWidget_ITF /*777 QWidget **/) *QTableView {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTableViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTableView")
 	return gothis
 }
 
@@ -223,7 +228,10 @@ func DeleteQTableView(this *QTableView) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
 func (this *QTableView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
-	var convArg0 = model.QAbstractItemModel_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if model != nil && model.QAbstractItemModel_PTR() != nil {
+		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView8setModelEP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -233,7 +241,10 @@ func (this *QTableView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbst
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRootIndex(const QModelIndex &)
 func (this *QTableView) SetRootIndex(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView12setRootIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -243,7 +254,10 @@ func (this *QTableView) SetRootIndex(index qtcore.QModelIndex_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSelectionModel(QItemSelectionModel *)
 func (this *QTableView) SetSelectionModel(selectionModel qtcore.QItemSelectionModel_ITF /*777 QItemSelectionModel **/) {
-	var convArg0 = selectionModel.QItemSelectionModel_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if selectionModel != nil && selectionModel.QItemSelectionModel_PTR() != nil {
+		convArg0 = selectionModel.QItemSelectionModel_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView17setSelectionModelEP19QItemSelectionModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -282,7 +296,10 @@ func (this *QTableView) VerticalHeader() *QHeaderView /*777 QHeaderView **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalHeader(QHeaderView *)
 func (this *QTableView) SetHorizontalHeader(header QHeaderView_ITF /*777 QHeaderView **/) {
-	var convArg0 = header.QHeaderView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if header != nil && header.QHeaderView_PTR() != nil {
+		convArg0 = header.QHeaderView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView19setHorizontalHeaderEP11QHeaderView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -292,7 +309,10 @@ func (this *QTableView) SetHorizontalHeader(header QHeaderView_ITF /*777 QHeader
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalHeader(QHeaderView *)
 func (this *QTableView) SetVerticalHeader(header QHeaderView_ITF /*777 QHeaderView **/) {
-	var convArg0 = header.QHeaderView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if header != nil && header.QHeaderView_PTR() != nil {
+		convArg0 = header.QHeaderView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView17setVerticalHeaderEP11QHeaderView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -504,7 +524,10 @@ func (this *QTableView) IsCornerButtonEnabled() bool {
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect visualRect(const QModelIndex &)
 func (this *QTableView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*123*/ {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView10visualRectERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -517,7 +540,10 @@ func (this *QTableView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /
 // Public virtual Visibility=Default Availability=Available
 // [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
 func (this *QTableView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)
 }
@@ -527,7 +553,10 @@ func (this *QTableView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex indexAt(const QPoint &)
 func (this *QTableView) IndexAt(p qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*/ {
-	var convArg0 = p.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPoint_PTR() != nil {
+		convArg0 = p.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView7indexAtERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -770,7 +799,10 @@ func (this *QTableView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QTableView) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = e.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QPaintEvent_PTR() != nil {
+		convArg0 = e.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -780,7 +812,10 @@ func (this *QTableView) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QTableView) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
-	var convArg0 = event.QTimerEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QTimerEvent_PTR() != nil {
+		convArg0 = event.QTimerEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -822,7 +857,10 @@ func (this *QTableView) MoveCursor(cursorAction int, modifiers int) *qtcore.QMod
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QTableView) SetSelection(rect qtcore.QRect_ITF, command int) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
 	qtrt.ErrPrint(err, rv)
 }
@@ -832,7 +870,10 @@ func (this *QTableView) SetSelection(rect qtcore.QRect_ITF, command int) {
 // Protected virtual Visibility=Default Availability=Available
 // [8] QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QTableView) VisualRegionForSelection(selection qtcore.QItemSelection_ITF) *qtgui.QRegion /*123*/ {
-	var convArg0 = selection.QItemSelection_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if selection != nil && selection.QItemSelection_PTR() != nil {
+		convArg0 = selection.QItemSelection_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView24visualRegionForSelectionERK14QItemSelection", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -915,7 +956,10 @@ func (this *QTableView) HorizontalScrollbarAction(action int) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool isIndexHidden(const QModelIndex &)
 func (this *QTableView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView13isIndexHiddenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -926,8 +970,14 @@ func (this *QTableView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void selectionChanged(const QItemSelection &, const QItemSelection &)
 func (this *QTableView) SelectionChanged(selected qtcore.QItemSelection_ITF, deselected qtcore.QItemSelection_ITF) {
-	var convArg0 = selected.QItemSelection_PTR().GetCthis()
-	var convArg1 = deselected.QItemSelection_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if selected != nil && selected.QItemSelection_PTR() != nil {
+		convArg0 = selected.QItemSelection_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if deselected != nil && deselected.QItemSelection_PTR() != nil {
+		convArg1 = deselected.QItemSelection_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView16selectionChangedERK14QItemSelectionS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -937,8 +987,14 @@ func (this *QTableView) SelectionChanged(selected qtcore.QItemSelection_ITF, des
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QTableView) CurrentChanged(current qtcore.QModelIndex_ITF, previous qtcore.QModelIndex_ITF) {
-	var convArg0 = current.QModelIndex_PTR().GetCthis()
-	var convArg1 = previous.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if current != nil && current.QModelIndex_PTR() != nil {
+		convArg0 = current.QModelIndex_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if previous != nil && previous.QModelIndex_PTR() != nil {
+		convArg1 = previous.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView14currentChangedERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -956,6 +1012,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

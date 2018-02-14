@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -162,13 +163,99 @@ func (this *QPoint) Ry() int {
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
+// /usr/include/qt/QtCore/qpoint.h:70
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator+=(const QPoint &)
+func (this *QPoint) Operator_add_equal(p QPoint_ITF) *QPoint {
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPoint_PTR() != nil {
+		convArg0 = p.QPoint_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointpLERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qpoint.h:71
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator-=(const QPoint &)
+func (this *QPoint) Operator_minus_equal(p QPoint_ITF) *QPoint {
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPoint_PTR() != nil {
+		convArg0 = p.QPoint_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointmIERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qpoint.h:73
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator*=(float)
+func (this *QPoint) Operator_mul_equal(factor float32) *QPoint {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointmLEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qpoint.h:74
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator*=(double)
+func (this *QPoint) Operator_mul_equal_1(factor float64) *QPoint {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointmLEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qpoint.h:75
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator*=(int)
+func (this *QPoint) Operator_mul_equal_2(factor int) *QPoint {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointmLEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qpoint.h:77
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator/=(qreal)
+func (this *QPoint) Operator_div_equal(divisor float64) *QPoint {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointdVEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), divisor)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qpoint.h:79
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [4] int dotProduct(const QPoint &, const QPoint &)
 func (this *QPoint) DotProduct(p1 QPoint_ITF, p2 QPoint_ITF) int {
-	var convArg0 = p1.QPoint_PTR().GetCthis()
-	var convArg1 = p2.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p1 != nil && p1.QPoint_PTR() != nil {
+		convArg0 = p1.QPoint_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if p2 != nil && p2.QPoint_PTR() != nil {
+		convArg1 = p2.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPoint10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -198,6 +285,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

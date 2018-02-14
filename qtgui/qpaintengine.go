@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -108,7 +109,10 @@ func (this *QPaintEngine) SetActive(newState bool) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool begin(QPaintDevice *)
 func (this *QPaintEngine) Begin(pdev QPaintDevice_ITF /*777 QPaintDevice **/) bool {
-	var convArg0 = pdev.QPaintDevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pdev != nil && pdev.QPaintDevice_PTR() != nil {
+		convArg0 = pdev.QPaintDevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine5beginEP12QPaintDevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -129,7 +133,10 @@ func (this *QPaintEngine) End() bool {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void updateState(const QPaintEngineState &)
 func (this *QPaintEngine) UpdateState(state QPaintEngineState_ITF) {
-	var convArg0 = state.QPaintEngineState_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if state != nil && state.QPaintEngineState_PTR() != nil {
+		convArg0 = state.QPaintEngineState_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine11updateStateERK17QPaintEngineState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -139,7 +146,10 @@ func (this *QPaintEngine) UpdateState(state QPaintEngineState_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawRects(const QRect *, int)
 func (this *QPaintEngine) DrawRects(rects qtcore.QRect_ITF /*777 const QRect **/, rectCount int) {
-	var convArg0 = rects.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rects != nil && rects.QRect_PTR() != nil {
+		convArg0 = rects.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9drawRectsEPK5QRecti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, rectCount)
 	qtrt.ErrPrint(err, rv)
 }
@@ -149,7 +159,10 @@ func (this *QPaintEngine) DrawRects(rects qtcore.QRect_ITF /*777 const QRect **/
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawRects(const QRectF *, int)
 func (this *QPaintEngine) DrawRects_1(rects qtcore.QRectF_ITF /*777 const QRectF **/, rectCount int) {
-	var convArg0 = rects.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rects != nil && rects.QRectF_PTR() != nil {
+		convArg0 = rects.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9drawRectsEPK6QRectFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, rectCount)
 	qtrt.ErrPrint(err, rv)
 }
@@ -159,7 +172,10 @@ func (this *QPaintEngine) DrawRects_1(rects qtcore.QRectF_ITF /*777 const QRectF
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawLines(const QLine *, int)
 func (this *QPaintEngine) DrawLines(lines qtcore.QLine_ITF /*777 const QLine **/, lineCount int) {
-	var convArg0 = lines.QLine_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if lines != nil && lines.QLine_PTR() != nil {
+		convArg0 = lines.QLine_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9drawLinesEPK5QLinei", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, lineCount)
 	qtrt.ErrPrint(err, rv)
 }
@@ -169,7 +185,10 @@ func (this *QPaintEngine) DrawLines(lines qtcore.QLine_ITF /*777 const QLine **/
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawLines(const QLineF *, int)
 func (this *QPaintEngine) DrawLines_1(lines qtcore.QLineF_ITF /*777 const QLineF **/, lineCount int) {
-	var convArg0 = lines.QLineF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if lines != nil && lines.QLineF_PTR() != nil {
+		convArg0 = lines.QLineF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9drawLinesEPK6QLineFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, lineCount)
 	qtrt.ErrPrint(err, rv)
 }
@@ -179,7 +198,10 @@ func (this *QPaintEngine) DrawLines_1(lines qtcore.QLineF_ITF /*777 const QLineF
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawEllipse(const QRectF &)
 func (this *QPaintEngine) DrawEllipse(r qtcore.QRectF_ITF) {
-	var convArg0 = r.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRectF_PTR() != nil {
+		convArg0 = r.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine11drawEllipseERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -189,7 +211,10 @@ func (this *QPaintEngine) DrawEllipse(r qtcore.QRectF_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawEllipse(const QRect &)
 func (this *QPaintEngine) DrawEllipse_1(r qtcore.QRect_ITF) {
-	var convArg0 = r.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRect_PTR() != nil {
+		convArg0 = r.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine11drawEllipseERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -199,7 +224,10 @@ func (this *QPaintEngine) DrawEllipse_1(r qtcore.QRect_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPath(const QPainterPath &)
 func (this *QPaintEngine) DrawPath(path QPainterPath_ITF) {
-	var convArg0 = path.QPainterPath_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if path != nil && path.QPainterPath_PTR() != nil {
+		convArg0 = path.QPainterPath_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine8drawPathERK12QPainterPath", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -209,7 +237,10 @@ func (this *QPaintEngine) DrawPath(path QPainterPath_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPoints(const QPointF *, int)
 func (this *QPaintEngine) DrawPoints(points qtcore.QPointF_ITF /*777 const QPointF **/, pointCount int) {
-	var convArg0 = points.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if points != nil && points.QPointF_PTR() != nil {
+		convArg0 = points.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine10drawPointsEPK7QPointFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount)
 	qtrt.ErrPrint(err, rv)
 }
@@ -219,7 +250,10 @@ func (this *QPaintEngine) DrawPoints(points qtcore.QPointF_ITF /*777 const QPoin
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPoints(const QPoint *, int)
 func (this *QPaintEngine) DrawPoints_1(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
-	var convArg0 = points.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if points != nil && points.QPoint_PTR() != nil {
+		convArg0 = points.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine10drawPointsEPK6QPointi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount)
 	qtrt.ErrPrint(err, rv)
 }
@@ -229,7 +263,10 @@ func (this *QPaintEngine) DrawPoints_1(points qtcore.QPoint_ITF /*777 const QPoi
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPolygon(const QPointF *, int, enum QPaintEngine::PolygonDrawMode)
 func (this *QPaintEngine) DrawPolygon(points qtcore.QPointF_ITF /*777 const QPointF **/, pointCount int, mode int) {
-	var convArg0 = points.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if points != nil && points.QPointF_PTR() != nil {
+		convArg0 = points.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine11drawPolygonEPK7QPointFiNS_15PolygonDrawModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -239,7 +276,10 @@ func (this *QPaintEngine) DrawPolygon(points qtcore.QPointF_ITF /*777 const QPoi
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPolygon(const QPoint *, int, enum QPaintEngine::PolygonDrawMode)
 func (this *QPaintEngine) DrawPolygon_1(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int, mode int) {
-	var convArg0 = points.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if points != nil && points.QPoint_PTR() != nil {
+		convArg0 = points.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine11drawPolygonEPK6QPointiNS_15PolygonDrawModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -249,9 +289,18 @@ func (this *QPaintEngine) DrawPolygon_1(points qtcore.QPoint_ITF /*777 const QPo
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void drawPixmap(const QRectF &, const QPixmap &, const QRectF &)
 func (this *QPaintEngine) DrawPixmap(r qtcore.QRectF_ITF, pm QPixmap_ITF, sr qtcore.QRectF_ITF) {
-	var convArg0 = r.QRectF_PTR().GetCthis()
-	var convArg1 = pm.QPixmap_PTR().GetCthis()
-	var convArg2 = sr.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRectF_PTR() != nil {
+		convArg0 = r.QRectF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pm != nil && pm.QPixmap_PTR() != nil {
+		convArg1 = pm.QPixmap_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if sr != nil && sr.QRectF_PTR() != nil {
+		convArg2 = sr.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine10drawPixmapERK6QRectFRK7QPixmapS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -261,8 +310,14 @@ func (this *QPaintEngine) DrawPixmap(r qtcore.QRectF_ITF, pm QPixmap_ITF, sr qtc
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawTextItem(const QPointF &, const QTextItem &)
 func (this *QPaintEngine) DrawTextItem(p qtcore.QPointF_ITF, textItem QTextItem_ITF) {
-	var convArg0 = p.QPointF_PTR().GetCthis()
-	var convArg1 = textItem.QTextItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPointF_PTR() != nil {
+		convArg0 = p.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if textItem != nil && textItem.QTextItem_PTR() != nil {
+		convArg1 = textItem.QTextItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -272,9 +327,18 @@ func (this *QPaintEngine) DrawTextItem(p qtcore.QPointF_ITF, textItem QTextItem_
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawTiledPixmap(const QRectF &, const QPixmap &, const QPointF &)
 func (this *QPaintEngine) DrawTiledPixmap(r qtcore.QRectF_ITF, pixmap QPixmap_ITF, s qtcore.QPointF_ITF) {
-	var convArg0 = r.QRectF_PTR().GetCthis()
-	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
-	var convArg2 = s.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRectF_PTR() != nil {
+		convArg0 = r.QRectF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if s != nil && s.QPointF_PTR() != nil {
+		convArg2 = s.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -284,9 +348,18 @@ func (this *QPaintEngine) DrawTiledPixmap(r qtcore.QRectF_ITF, pixmap QPixmap_IT
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawImage(const QRectF &, const QImage &, const QRectF &, Qt::ImageConversionFlags)
 func (this *QPaintEngine) DrawImage(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtcore.QRectF_ITF, flags int) {
-	var convArg0 = r.QRectF_PTR().GetCthis()
-	var convArg1 = pm.QImage_PTR().GetCthis()
-	var convArg2 = sr.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRectF_PTR() != nil {
+		convArg0 = r.QRectF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pm != nil && pm.QImage_PTR() != nil {
+		convArg1 = pm.QImage_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if sr != nil && sr.QRectF_PTR() != nil {
+		convArg2 = sr.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9drawImageERK6QRectFRK6QImageS2_6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
 }
@@ -296,7 +369,10 @@ func (this *QPaintEngine) DrawImage(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtcor
 // Public Visibility=Default Availability=Available
 // [-2] void setPaintDevice(QPaintDevice *)
 func (this *QPaintEngine) SetPaintDevice(device QPaintDevice_ITF /*777 QPaintDevice **/) {
-	var convArg0 = device.QPaintDevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QPaintDevice_PTR() != nil {
+		convArg0 = device.QPaintDevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -316,7 +392,10 @@ func (this *QPaintEngine) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setSystemClip(const QRegion &)
 func (this *QPaintEngine) SetSystemClip(baseClip QRegion_ITF) {
-	var convArg0 = baseClip.QRegion_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if baseClip != nil && baseClip.QRegion_PTR() != nil {
+		convArg0 = baseClip.QRegion_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine13setSystemClipERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -338,7 +417,10 @@ func (this *QPaintEngine) SystemClip() *QRegion /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setSystemRect(const QRect &)
 func (this *QPaintEngine) SetSystemRect(rect qtcore.QRect_ITF) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine13setSystemRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -382,7 +464,7 @@ func (this *QPaintEngine) Type() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void fix_neg_rect(int *, int *, int *, int *)
 func (this *QPaintEngine) Fix_neg_rect(x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, w unsafe.Pointer /*666*/, h unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -536,6 +618,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

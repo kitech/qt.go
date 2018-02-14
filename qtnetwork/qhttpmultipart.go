@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 7
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -74,10 +75,14 @@ func (this *QHttpMultiPart) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(QObject *)
 func NewQHttpMultiPart(parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHttpMultiPartFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QHttpMultiPart")
 	return gothis
 }
 
@@ -86,10 +91,14 @@ func NewQHttpMultiPart(parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiP
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(enum QHttpMultiPart::ContentType, QObject *)
 func NewQHttpMultiPart_1(contentType int, parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2ENS_11ContentTypeEP7QObject", qtrt.FFI_TYPE_POINTER, contentType, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHttpMultiPartFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QHttpMultiPart")
 	return gothis
 }
 
@@ -130,7 +139,10 @@ func (this *QHttpMultiPart) Boundary() *qtcore.QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setBoundary(const QByteArray &)
 func (this *QHttpMultiPart) SetBoundary(boundary qtcore.QByteArray_ITF) {
-	var convArg0 = boundary.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if boundary != nil && boundary.QByteArray_PTR() != nil {
+		convArg0 = boundary.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPart11setBoundaryERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -155,6 +167,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

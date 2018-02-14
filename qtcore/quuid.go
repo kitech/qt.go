@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 22
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -117,7 +118,10 @@ func NewQUuid_3(arg0 string) *QUuid {
 // Public Visibility=Default Availability=Available
 // [-2] void QUuid(const QByteArray &)
 func NewQUuid_4(arg0 QByteArray_ITF) *QUuid {
-	var convArg0 = arg0.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QByteArray_PTR() != nil {
+		convArg0 = arg0.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuidC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,7 +134,10 @@ func NewQUuid_4(arg0 QByteArray_ITF) *QUuid {
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromString(QStringView)
 func (this *QUuid) FromString(string QStringView_ITF /*123*/) *QUuid /*123*/ {
-	var convArg0 = string.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if string != nil && string.QStringView_PTR() != nil {
+		convArg0 = string.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid10fromStringE11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -148,7 +155,10 @@ func QUuid_FromString(string QStringView_ITF /*123*/) *QUuid /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromString(QLatin1String)
 func (this *QUuid) FromString_1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
-	var convArg0 = string.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if string != nil && string.QLatin1String_PTR() != nil {
+		convArg0 = string.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid10fromStringE13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -203,7 +213,10 @@ func (this *QUuid) ToRfc4122() *QByteArray /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromRfc4122(const QByteArray &)
 func (this *QUuid) FromRfc4122(arg0 QByteArray_ITF) *QUuid /*123*/ {
-	var convArg0 = arg0.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QByteArray_PTR() != nil {
+		convArg0 = arg0.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid11fromRfc4122ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -222,6 +235,62 @@ func QUuid_FromRfc4122(arg0 QByteArray_ITF) *QUuid /*123*/ {
 // [1] bool isNull()
 func (this *QUuid) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/quuid.h:130
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QUuid &)
+func (this *QUuid) Operator_equal_equal(orig QUuid_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if orig != nil && orig.QUuid_PTR() != nil {
+		convArg0 = orig.QUuid_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuideqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/quuid.h:143
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QUuid &)
+func (this *QUuid) Operator_not_equal(orig QUuid_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if orig != nil && orig.QUuid_PTR() != nil {
+		convArg0 = orig.QUuid_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuidneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/quuid.h:148
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator<(const QUuid &)
+func (this *QUuid) Operator_less_than(other QUuid_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QUuid_PTR() != nil {
+		convArg0 = other.QUuid_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuidltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/quuid.h:149
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator>(const QUuid &)
+func (this *QUuid) Operator_greater_than(other QUuid_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QUuid_PTR() != nil {
+		convArg0 = other.QUuid_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuidgtERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -248,8 +317,14 @@ func QUuid_CreateUuid() *QUuid /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QUuid createUuidV3(const QUuid &, const QByteArray &)
 func (this *QUuid) CreateUuidV3(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
-	var convArg0 = ns.QUuid_PTR().GetCthis()
-	var convArg1 = baseData.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ns != nil && ns.QUuid_PTR() != nil {
+		convArg0 = ns.QUuid_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if baseData != nil && baseData.QByteArray_PTR() != nil {
+		convArg1 = baseData.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid12createUuidV3ERKS_RK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -267,7 +342,10 @@ func QUuid_CreateUuidV3(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
 // Public static inline Visibility=Default Availability=Available
 // [16] QUuid createUuidV3(const QUuid &, const QString &)
 func (this *QUuid) CreateUuidV3_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
-	var convArg0 = ns.QUuid_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ns != nil && ns.QUuid_PTR() != nil {
+		convArg0 = ns.QUuid_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(baseData)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid12createUuidV3ERKS_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -287,8 +365,14 @@ func QUuid_CreateUuidV3_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QUuid createUuidV5(const QUuid &, const QByteArray &)
 func (this *QUuid) CreateUuidV5(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
-	var convArg0 = ns.QUuid_PTR().GetCthis()
-	var convArg1 = baseData.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ns != nil && ns.QUuid_PTR() != nil {
+		convArg0 = ns.QUuid_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if baseData != nil && baseData.QByteArray_PTR() != nil {
+		convArg1 = baseData.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid12createUuidV5ERKS_RK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -306,7 +390,10 @@ func QUuid_CreateUuidV5(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
 // Public static inline Visibility=Default Availability=Available
 // [16] QUuid createUuidV5(const QUuid &, const QString &)
 func (this *QUuid) CreateUuidV5_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
-	var convArg0 = ns.QUuid_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ns != nil && ns.QUuid_PTR() != nil {
+		convArg0 = ns.QUuid_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(baseData)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid12createUuidV5ERKS_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -378,6 +465,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

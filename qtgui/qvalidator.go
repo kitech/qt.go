@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -74,10 +75,14 @@ func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QValidator(QObject *)
 func NewQValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QValidator {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QValidator")
 	return gothis
 }
 
@@ -97,7 +102,10 @@ func DeleteQValidator(this *QValidator) {
 // Public Visibility=Default Availability=Available
 // [-2] void setLocale(const QLocale &)
 func (this *QValidator) SetLocale(locale qtcore.QLocale_ITF) {
-	var convArg0 = locale.QLocale_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if locale != nil && locale.QLocale_PTR() != nil {
+		convArg0 = locale.QLocale_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidator9setLocaleERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -165,6 +173,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 32
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -94,6 +95,22 @@ func DeleteQTextOption(this *QTextOption) {
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
+}
+
+// /usr/include/qt/QtGui/qtextoption.h:90
+// index:0
+// Public Visibility=Default Availability=Available
+// [32] QTextOption & operator=(const QTextOption &)
+func (this *QTextOption) Operator_equal(o QTextOption_ITF) *QTextOption {
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QTextOption_PTR() != nil {
+		convArg0 = o.QTextOption_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextOptionaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTextOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextOption)
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:92
@@ -266,6 +283,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

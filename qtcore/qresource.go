@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -82,7 +83,10 @@ func (*QResource) NewFromPointer(cthis unsafe.Pointer) *QResource {
 func NewQResource(file string, locale QLocale_ITF) *QResource {
 	var tmpArg0 = NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = locale.QLocale_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if locale != nil && locale.QLocale_PTR() != nil {
+		convArg1 = locale.QLocale_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResourceC2ERK7QStringRK7QLocale", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQResourceFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -143,7 +147,10 @@ func (this *QResource) AbsoluteFilePath() string {
 // Public Visibility=Default Availability=Available
 // [-2] void setLocale(const QLocale &)
 func (this *QResource) SetLocale(locale QLocale_ITF) {
-	var convArg0 = locale.QLocale_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if locale != nil && locale.QLocale_PTR() != nil {
+		convArg0 = locale.QLocale_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource9setLocaleERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -270,7 +277,7 @@ func QResource_RegisterResource(rccFilename string, resourceRoot string) bool {
 func (this *QResource) RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
 	var tmpArg1 = NewQString_5(resourceRoot)
 	var convArg1 = tmpArg1.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource16registerResourceEPKhRK7QString", qtrt.FFI_TYPE_POINTER, &rccData, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource16registerResourceEPKhRK7QString", qtrt.FFI_TYPE_POINTER, rccData, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -306,7 +313,7 @@ func QResource_UnregisterResource(rccFilename string, resourceRoot string) bool 
 func (this *QResource) UnregisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
 	var tmpArg1 = NewQString_5(resourceRoot)
 	var convArg1 = tmpArg1.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource18unregisterResourceEPKhRK7QString", qtrt.FFI_TYPE_POINTER, &rccData, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource18unregisterResourceEPKhRK7QString", qtrt.FFI_TYPE_POINTER, rccData, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -361,6 +368,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

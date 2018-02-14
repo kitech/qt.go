@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -84,10 +85,14 @@ func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // Public Visibility=Default Availability=Available
 // [-2] void QRasterWindow(QWindow *)
 func NewQRasterWindow(parent QWindow_ITF /*777 QWindow **/) *QRasterWindow {
-	var convArg0 = parent.QWindow_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWindow_PTR() != nil {
+		convArg0 = parent.QWindow_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QRasterWindowC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRasterWindowFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QRasterWindow")
 	return gothis
 }
 
@@ -117,7 +122,10 @@ func (this *QRasterWindow) Metric(metric int) int {
 // Protected virtual Visibility=Default Availability=Available
 // [8] QPaintDevice * redirected(QPoint *)
 func (this *QRasterWindow) Redirected(arg0 qtcore.QPoint_ITF /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
-	var convArg0 = arg0.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPoint_PTR() != nil {
+		convArg0 = arg0.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QRasterWindow10redirectedEP6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -136,6 +144,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

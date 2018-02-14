@@ -24,12 +24,18 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
 //  ext block end
 
 //  body block begin
+
+// QStandardItem & operator=(const class QStandardItem &)
+func (this *QStandardItem) InheritOperator_equal(f func(other *QStandardItem) unsafe.Pointer /*555*/) {
+	qtrt.SetAllInheritCallback(this, "operator=", f)
+}
 
 // void emitDataChanged()
 func (this *QStandardItem) InheritEmitDataChanged(f func() /*void*/) {
@@ -97,7 +103,10 @@ func NewQStandardItem_1(text string) *QStandardItem {
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem(const QIcon &, const QString &)
 func NewQStandardItem_2(icon QIcon_ITF, text string) *QStandardItem {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2ERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -147,7 +156,10 @@ func (this *QStandardItem) Data(role int) *qtcore.QVariant /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setData(const QVariant &, int)
 func (this *QStandardItem) SetData(value qtcore.QVariant_ITF, role int) {
-	var convArg0 = value.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg0 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem7setDataERK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	qtrt.ErrPrint(err, rv)
 }
@@ -193,7 +205,10 @@ func (this *QStandardItem) Icon() *QIcon /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
 func (this *QStandardItem) SetIcon(icon QIcon_ITF) {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -287,7 +302,10 @@ func (this *QStandardItem) SizeHint() *qtcore.QSize /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSizeHint(const QSize &)
 func (this *QStandardItem) SetSizeHint(sizeHint qtcore.QSize_ITF) {
-	var convArg0 = sizeHint.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sizeHint != nil && sizeHint.QSize_PTR() != nil {
+		convArg0 = sizeHint.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem11setSizeHintERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -309,7 +327,10 @@ func (this *QStandardItem) Font() *QFont /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
 func (this *QStandardItem) SetFont(font QFont_ITF) {
-	var convArg0 = font.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if font != nil && font.QFont_PTR() != nil {
+		convArg0 = font.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -350,7 +371,10 @@ func (this *QStandardItem) Background() *QBrush /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
 func (this *QStandardItem) SetBackground(brush QBrush_ITF) {
-	var convArg0 = brush.QBrush_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem13setBackgroundERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -372,7 +396,10 @@ func (this *QStandardItem) Foreground() *QBrush /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setForeground(const QBrush &)
 func (this *QStandardItem) SetForeground(brush QBrush_ITF) {
-	var convArg0 = brush.QBrush_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem13setForegroundERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -749,7 +776,10 @@ func (this *QStandardItem) Child(row int, column int) *QStandardItem /*777 QStan
 // Public Visibility=Default Availability=Available
 // [-2] void setChild(int, int, QStandardItem *)
 func (this *QStandardItem) SetChild(row int, column int, item QStandardItem_ITF /*777 QStandardItem **/) {
-	var convArg2 = item.QStandardItem_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if item != nil && item.QStandardItem_PTR() != nil {
+		convArg2 = item.QStandardItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem8setChildEiiPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -759,7 +789,10 @@ func (this *QStandardItem) SetChild(row int, column int, item QStandardItem_ITF 
 // Public inline Visibility=Default Availability=Available
 // [-2] void setChild(int, QStandardItem *)
 func (this *QStandardItem) SetChild_1(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
-	var convArg1 = item.QStandardItem_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if item != nil && item.QStandardItem_PTR() != nil {
+		convArg1 = item.QStandardItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem8setChildEiPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -823,7 +856,10 @@ func (this *QStandardItem) RemoveColumns(column int, count int) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void insertRow(int, QStandardItem *)
 func (this *QStandardItem) InsertRow(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
-	var convArg1 = item.QStandardItem_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if item != nil && item.QStandardItem_PTR() != nil {
+		convArg1 = item.QStandardItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem9insertRowEiPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -833,7 +869,10 @@ func (this *QStandardItem) InsertRow(row int, item QStandardItem_ITF /*777 QStan
 // Public inline Visibility=Default Availability=Available
 // [-2] void appendRow(QStandardItem *)
 func (this *QStandardItem) AppendRow(item QStandardItem_ITF /*777 QStandardItem **/) {
-	var convArg0 = item.QStandardItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QStandardItem_PTR() != nil {
+		convArg0 = item.QStandardItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem9appendRowEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -882,7 +921,10 @@ func (this *QStandardItem) Type() int {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void read(QDataStream &)
 func (this *QStandardItem) Read(in qtcore.QDataStream_ITF) {
-	var convArg0 = in.QDataStream_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if in != nil && in.QDataStream_PTR() != nil {
+		convArg0 = in.QDataStream_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem4readER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -892,9 +934,42 @@ func (this *QStandardItem) Read(in qtcore.QDataStream_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void write(QDataStream &)
 func (this *QStandardItem) Write(out qtcore.QDataStream_ITF) {
-	var convArg0 = out.QDataStream_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if out != nil && out.QDataStream_PTR() != nil {
+		convArg0 = out.QDataStream_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem5writeER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstandarditemmodel.h:243
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool operator<(const QStandardItem &)
+func (this *QStandardItem) Operator_less_than(other QStandardItem_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QStandardItem_PTR() != nil {
+		convArg0 = other.QStandardItem_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItemltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qstandarditemmodel.h:248
+// index:0
+// Protected Visibility=Default Availability=Available
+// [16] QStandardItem & operator=(const QStandardItem &)
+func (this *QStandardItem) Operator_equal(other QStandardItem_ITF) *QStandardItem {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QStandardItem_PTR() != nil {
+		convArg0 = other.QStandardItem_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStandardItem)
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qstandarditemmodel.h:251
@@ -924,6 +999,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

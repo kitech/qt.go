@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -82,10 +83,14 @@ func NewQSettings(organization string, application string, parent QObject_ITF /*
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(application)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ERK7QStringS2_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSettingsFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSettings")
 	return gothis
 }
 
@@ -98,10 +103,14 @@ func NewQSettings_1(scope int, organization string, application string, parent Q
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(application)
 	var convArg2 = tmpArg2.GetCthis()
-	var convArg3 = parent.QObject_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg3 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ENS_5ScopeERK7QStringS3_P7QObject", qtrt.FFI_TYPE_POINTER, scope, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSettingsFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSettings")
 	return gothis
 }
 
@@ -114,10 +123,14 @@ func NewQSettings_2(format int, scope int, organization string, application stri
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = NewQString_5(application)
 	var convArg3 = tmpArg3.GetCthis()
-	var convArg4 = parent.QObject_PTR().GetCthis()
+	var convArg4 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg4 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ENS_6FormatENS_5ScopeERK7QStringS4_P7QObject", qtrt.FFI_TYPE_POINTER, format, scope, convArg2, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSettingsFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSettings")
 	return gothis
 }
 
@@ -128,10 +141,14 @@ func NewQSettings_2(format int, scope int, organization string, application stri
 func NewQSettings_3(fileName string, format int, parent QObject_ITF /*777 QObject **/) *QSettings {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ERK7QStringNS_6FormatEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, format, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSettingsFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSettings")
 	return gothis
 }
 
@@ -140,10 +157,14 @@ func NewQSettings_3(fileName string, format int, parent QObject_ITF /*777 QObjec
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(QObject *)
 func NewQSettings_4(parent QObject_ITF /*777 QObject **/) *QSettings {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSettingsFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSettings")
 	return gothis
 }
 
@@ -332,7 +353,10 @@ func (this *QSettings) IsWritable() bool {
 func (this *QSettings) SetValue(key string, value QVariant_ITF) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings8setValueERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -344,7 +368,10 @@ func (this *QSettings) SetValue(key string, value QVariant_ITF) {
 func (this *QSettings) Value(key string, defaultValue QVariant_ITF) *QVariant /*123*/ {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = defaultValue.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if defaultValue != nil && defaultValue.QVariant_PTR() != nil {
+		convArg1 = defaultValue.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSettings5valueERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -458,7 +485,10 @@ func (this *QSettings) ApplicationName() string {
 // Public Visibility=Default Availability=Available
 // [-2] void setIniCodec(QTextCodec *)
 func (this *QSettings) SetIniCodec(codec QTextCodec_ITF /*777 QTextCodec **/) {
-	var convArg0 = codec.QTextCodec_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if codec != nil && codec.QTextCodec_PTR() != nil {
+		convArg0 = codec.QTextCodec_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings11setIniCodecEP10QTextCodec", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -562,7 +592,10 @@ func QSettings_SetPath(format int, scope int, path string) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QSettings) Event(event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -614,6 +647,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

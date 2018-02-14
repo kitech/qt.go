@@ -27,7 +27,7 @@ func SetInheritCallback2c(name string, fnptr unsafe.Pointer) {
 	InvokeQtFunc6(symname, FFI_TYPE_VOID, fnptr)
 }
 
-func SetAllInheritCallback(cbobj CObjectIF, name string, f interface{}) {
+func SetAllInheritCallback(cbobj CObjectITF, name string, f interface{}) {
 	if cbobj.GetCthis() != nil {
 
 		if signal := qt.LendSignal(cbobj.GetCthis(), name); signal != nil {
@@ -163,7 +163,7 @@ func callbackAllInheritsGo(cbobj unsafe.Pointer, name string, handled *int, argc
 			return Float32AsInt(rv.(float32))
 		case reflect.UnsafePointer:
 			// impled
-			var co CObjectIF
+			var co CObjectITF
 			if retv.Type().Implements(reflect.TypeOf(co)) {
 				crvpx := retv.MethodByName("GetCthis").Call([]reflect.Value{})
 				return uint64(uintptr(crvpx[0].Interface().(unsafe.Pointer)))

@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -66,7 +67,10 @@ func (*QAccessibleTableModelChangeEvent) NewFromPointer(cthis unsafe.Pointer) *Q
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTableModelChangeEvent(QObject *, enum QAccessibleTableModelChangeEvent::ModelChangeType)
 func NewQAccessibleTableModelChangeEvent(obj qtcore.QObject_ITF /*777 QObject **/, changeType int) *QAccessibleTableModelChangeEvent {
-	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg0 = obj.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP7QObjectNS_15ModelChangeTypeE", qtrt.FFI_TYPE_POINTER, convArg0, changeType)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTableModelChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -79,7 +83,10 @@ func NewQAccessibleTableModelChangeEvent(obj qtcore.QObject_ITF /*777 QObject **
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTableModelChangeEvent(QAccessibleInterface *, enum QAccessibleTableModelChangeEvent::ModelChangeType)
 func NewQAccessibleTableModelChangeEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
-	var convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
+		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP20QAccessibleInterfaceNS_15ModelChangeTypeE", qtrt.FFI_TYPE_POINTER, convArg0, changeType)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTableModelChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -215,6 +222,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,8 +65,14 @@ func (*QContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QContextMenuEven
 // Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &, Qt::KeyboardModifiers)
 func NewQContextMenuEvent(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF, modifiers int) *QContextMenuEvent {
-	var convArg1 = pos.QPoint_PTR().GetCthis()
-	var convArg2 = globalPos.QPoint_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg1 = pos.QPoint_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if globalPos != nil && globalPos.QPoint_PTR() != nil {
+		convArg2 = globalPos.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, reason, convArg1, convArg2, modifiers)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQContextMenuEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -78,8 +85,14 @@ func NewQContextMenuEvent(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QP
 // Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &)
 func NewQContextMenuEvent_1(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF) *QContextMenuEvent {
-	var convArg1 = pos.QPoint_PTR().GetCthis()
-	var convArg2 = globalPos.QPoint_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg1 = pos.QPoint_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if globalPos != nil && globalPos.QPoint_PTR() != nil {
+		convArg2 = globalPos.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_", qtrt.FFI_TYPE_POINTER, reason, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQContextMenuEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -92,7 +105,10 @@ func NewQContextMenuEvent_1(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.
 // Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &)
 func NewQContextMenuEvent_2(reason int, pos qtcore.QPoint_ITF) *QContextMenuEvent {
-	var convArg1 = pos.QPoint_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg1 = pos.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPoint", qtrt.FFI_TYPE_POINTER, reason, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQContextMenuEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -204,6 +220,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

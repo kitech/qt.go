@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -155,10 +156,14 @@ func (this *QMenu) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 // Public Visibility=Default Availability=Available
 // [-2] void QMenu(QWidget *)
 func NewQMenu(parent QWidget_ITF /*777 QWidget **/) *QMenu {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenuC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMenuFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMenu")
 	return gothis
 }
 
@@ -169,10 +174,14 @@ func NewQMenu(parent QWidget_ITF /*777 QWidget **/) *QMenu {
 func NewQMenu_1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.QWidget_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg1 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenuC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMenuFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMenu")
 	return gothis
 }
 
@@ -204,7 +213,10 @@ func (this *QMenu) AddAction(text string) *QAction /*777 QAction **/ {
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &)
 func (this *QMenu) AddAction_1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu9addActionERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -219,10 +231,16 @@ func (this *QMenu) AddAction_1(icon qtgui.QIcon_ITF, text string) *QAction /*777
 func (this *QMenu) AddAction_2(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string, shortcut qtgui.QKeySequence_ITF) *QAction /*777 QAction **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = receiver.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg1 = receiver.QObject_PTR().GetCthis()
+	}
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
-	var convArg3 = shortcut.QKeySequence_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if shortcut != nil && shortcut.QKeySequence_PTR() != nil {
+		convArg3 = shortcut.QKeySequence_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -233,13 +251,22 @@ func (this *QMenu) AddAction_2(text string, receiver qtcore.QObject_ITF /*777 co
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &, const QObject *, const char *, const QKeySequence &)
 func (this *QMenu) AddAction_3(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string, shortcut qtgui.QKeySequence_ITF) *QAction /*777 QAction **/ {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = receiver.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg2 = receiver.QObject_PTR().GetCthis()
+	}
 	var convArg3 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg3)
-	var convArg4 = shortcut.QKeySequence_PTR().GetCthis()
+	var convArg4 unsafe.Pointer
+	if shortcut != nil && shortcut.QKeySequence_PTR() != nil {
+		convArg4 = shortcut.QKeySequence_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -250,7 +277,10 @@ func (this *QMenu) AddAction_3(icon qtgui.QIcon_ITF, text string, receiver qtcor
 // Public Visibility=Default Availability=Available
 // [8] QAction * addMenu(QMenu *)
 func (this *QMenu) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAction **/ {
-	var convArg0 = menu.QMenu_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if menu != nil && menu.QMenu_PTR() != nil {
+		convArg0 = menu.QMenu_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu7addMenuEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -273,7 +303,10 @@ func (this *QMenu) AddMenu_1(title string) *QMenu /*777 QMenu **/ {
 // Public Visibility=Default Availability=Available
 // [8] QMenu * addMenu(const QIcon &, const QString &)
 func (this *QMenu) AddMenu_2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 QMenu **/ {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu7addMenuERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -308,7 +341,10 @@ func (this *QMenu) AddSection(text string) *QAction /*777 QAction **/ {
 // Public Visibility=Default Availability=Available
 // [8] QAction * addSection(const QIcon &, const QString &)
 func (this *QMenu) AddSection_1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu10addSectionERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -321,8 +357,14 @@ func (this *QMenu) AddSection_1(icon qtgui.QIcon_ITF, text string) *QAction /*77
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertMenu(QAction *, QMenu *)
 func (this *QMenu) InsertMenu(before QAction_ITF /*777 QAction **/, menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAction **/ {
-	var convArg0 = before.QAction_PTR().GetCthis()
-	var convArg1 = menu.QMenu_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if before != nil && before.QAction_PTR() != nil {
+		convArg0 = before.QAction_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if menu != nil && menu.QMenu_PTR() != nil {
+		convArg1 = menu.QMenu_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu10insertMenuEP7QActionPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -333,7 +375,10 @@ func (this *QMenu) InsertMenu(before QAction_ITF /*777 QAction **/, menu QMenu_I
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSeparator(QAction *)
 func (this *QMenu) InsertSeparator(before QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
-	var convArg0 = before.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if before != nil && before.QAction_PTR() != nil {
+		convArg0 = before.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu15insertSeparatorEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -344,7 +389,10 @@ func (this *QMenu) InsertSeparator(before QAction_ITF /*777 QAction **/) *QActio
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSection(QAction *, const QString &)
 func (this *QMenu) InsertSection(before QAction_ITF /*777 QAction **/, text string) *QAction /*777 QAction **/ {
-	var convArg0 = before.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if before != nil && before.QAction_PTR() != nil {
+		convArg0 = before.QAction_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu13insertSectionEP7QActionRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -357,8 +405,14 @@ func (this *QMenu) InsertSection(before QAction_ITF /*777 QAction **/, text stri
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSection(QAction *, const QIcon &, const QString &)
 func (this *QMenu) InsertSection_1(before QAction_ITF /*777 QAction **/, icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
-	var convArg0 = before.QAction_PTR().GetCthis()
-	var convArg1 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if before != nil && before.QAction_PTR() != nil {
+		convArg0 = before.QAction_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg1 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
@@ -428,7 +482,10 @@ func (this *QMenu) ShowTearOffMenu() {
 // Public Visibility=Default Availability=Available
 // [-2] void showTearOffMenu(const QPoint &)
 func (this *QMenu) ShowTearOffMenu_1(pos qtcore.QPoint_ITF) {
-	var convArg0 = pos.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu15showTearOffMenuERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -447,7 +504,10 @@ func (this *QMenu) HideTearOffMenu() {
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultAction(QAction *)
 func (this *QMenu) SetDefaultAction(arg0 QAction_ITF /*777 QAction **/) {
-	var convArg0 = arg0.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAction_PTR() != nil {
+		convArg0 = arg0.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu16setDefaultActionEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -467,7 +527,10 @@ func (this *QMenu) DefaultAction() *QAction /*777 QAction **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setActiveAction(QAction *)
 func (this *QMenu) SetActiveAction(act QAction_ITF /*777 QAction **/) {
-	var convArg0 = act.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if act != nil && act.QAction_PTR() != nil {
+		convArg0 = act.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu15setActiveActionEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -487,8 +550,14 @@ func (this *QMenu) ActiveAction() *QAction /*777 QAction **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void popup(const QPoint &, QAction *)
 func (this *QMenu) Popup(pos qtcore.QPoint_ITF, at QAction_ITF /*777 QAction **/) {
-	var convArg0 = pos.QPoint_PTR().GetCthis()
-	var convArg1 = at.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if at != nil && at.QAction_PTR() != nil {
+		convArg1 = at.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu5popupERK6QPointP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -508,8 +577,14 @@ func (this *QMenu) Exec() *QAction /*777 QAction **/ {
 // Public Visibility=Default Availability=Available
 // [8] QAction * exec(const QPoint &, QAction *)
 func (this *QMenu) Exec_1(pos qtcore.QPoint_ITF, at QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
-	var convArg0 = pos.QPoint_PTR().GetCthis()
-	var convArg1 = at.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if at != nil && at.QAction_PTR() != nil {
+		convArg1 = at.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu4execERK6QPointP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -532,7 +607,10 @@ func (this *QMenu) SizeHint() *qtcore.QSize /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QRect actionGeometry(QAction *)
 func (this *QMenu) ActionGeometry(arg0 QAction_ITF /*777 QAction **/) *qtcore.QRect /*123*/ {
-	var convArg0 = arg0.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAction_PTR() != nil {
+		convArg0 = arg0.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu14actionGeometryEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -545,7 +623,10 @@ func (this *QMenu) ActionGeometry(arg0 QAction_ITF /*777 QAction **/) *qtcore.QR
 // Public Visibility=Default Availability=Available
 // [8] QAction * actionAt(const QPoint &)
 func (this *QMenu) ActionAt(arg0 qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
-	var convArg0 = arg0.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPoint_PTR() != nil {
+		convArg0 = arg0.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu8actionAtERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -602,7 +683,10 @@ func (this *QMenu) Icon() *qtgui.QIcon /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
 func (this *QMenu) SetIcon(icon qtgui.QIcon_ITF) {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -612,7 +696,10 @@ func (this *QMenu) SetIcon(icon qtgui.QIcon_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setNoReplayFor(QWidget *)
 func (this *QMenu) SetNoReplayFor(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu14setNoReplayForEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -678,7 +765,10 @@ func (this *QMenu) AboutToHide() {
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(QAction *)
 func (this *QMenu) Triggered(action QAction_ITF /*777 QAction **/) {
-	var convArg0 = action.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if action != nil && action.QAction_PTR() != nil {
+		convArg0 = action.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu9triggeredEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -688,7 +778,10 @@ func (this *QMenu) Triggered(action QAction_ITF /*777 QAction **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void hovered(QAction *)
 func (this *QMenu) Hovered(action QAction_ITF /*777 QAction **/) {
-	var convArg0 = action.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if action != nil && action.QAction_PTR() != nil {
+		convArg0 = action.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu7hoveredEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -708,7 +801,10 @@ func (this *QMenu) ColumnCount() int {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
 func (this *QMenu) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -718,7 +814,10 @@ func (this *QMenu) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
 func (this *QMenu) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
-	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QKeyEvent_PTR() != nil {
+		convArg0 = arg0.QKeyEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -728,7 +827,10 @@ func (this *QMenu) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 func (this *QMenu) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -738,7 +840,10 @@ func (this *QMenu) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEven
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
 func (this *QMenu) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -748,7 +853,10 @@ func (this *QMenu) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent 
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
 func (this *QMenu) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -758,7 +866,10 @@ func (this *QMenu) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent *
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
 func (this *QMenu) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 = arg0.QWheelEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QWheelEvent_PTR() != nil {
+		convArg0 = arg0.QWheelEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -768,7 +879,10 @@ func (this *QMenu) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) 
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void enterEvent(QEvent *)
 func (this *QMenu) EnterEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu10enterEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -778,7 +892,10 @@ func (this *QMenu) EnterEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void leaveEvent(QEvent *)
 func (this *QMenu) LeaveEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu10leaveEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -788,7 +905,10 @@ func (this *QMenu) LeaveEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
 func (this *QMenu) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
-	var convArg0 = arg0.QHideEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QHideEvent_PTR() != nil {
+		convArg0 = arg0.QHideEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu9hideEventEP10QHideEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -798,7 +918,10 @@ func (this *QMenu) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QMenu) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
+		convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -808,7 +931,10 @@ func (this *QMenu) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) 
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void actionEvent(QActionEvent *)
 func (this *QMenu) ActionEvent(arg0 qtgui.QActionEvent_ITF /*777 QActionEvent **/) {
-	var convArg0 = arg0.QActionEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QActionEvent_PTR() != nil {
+		convArg0 = arg0.QActionEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu11actionEventEP12QActionEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -818,7 +944,10 @@ func (this *QMenu) ActionEvent(arg0 qtgui.QActionEvent_ITF /*777 QActionEvent **
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QMenu) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
-	var convArg0 = arg0.QTimerEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QTimerEvent_PTR() != nil {
+		convArg0 = arg0.QTimerEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -828,7 +957,10 @@ func (this *QMenu) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/)
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QMenu) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -849,8 +981,14 @@ func (this *QMenu) FocusNextPrevChild(next bool) bool {
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionMenuItem *, const QAction *)
 func (this *QMenu) InitStyleOption(option QStyleOptionMenuItem_ITF /*777 QStyleOptionMenuItem **/, action QAction_ITF /*777 const QAction **/) {
-	var convArg0 = option.QStyleOptionMenuItem_PTR().GetCthis()
-	var convArg1 = action.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if option != nil && option.QStyleOptionMenuItem_PTR() != nil {
+		convArg0 = option.QStyleOptionMenuItem_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if action != nil && action.QAction_PTR() != nil {
+		convArg1 = action.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu15initStyleOptionEP20QStyleOptionMenuItemPK7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -868,6 +1006,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

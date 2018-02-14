@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -152,7 +153,7 @@ func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname string, 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(appname)
 	var convArg2 = tmpArg2.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &pid, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pid, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -197,6 +198,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

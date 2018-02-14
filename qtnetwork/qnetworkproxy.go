@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 27
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -91,6 +92,34 @@ func NewQNetworkProxy_1(type_ int, hostName string, port uint16, user string, pa
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:165
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QNetworkProxy & operator=(QNetworkProxy &&)
+func (this *QNetworkProxy) Operator_equal(other unsafe.Pointer /*333*/) *QNetworkProxy {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQNetworkProxyFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkProxy)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:167
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QNetworkProxy & operator=(const QNetworkProxy &)
+func (this *QNetworkProxy) Operator_equal_1(other QNetworkProxy_ITF) *QNetworkProxy {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkProxy_PTR() != nil {
+		convArg0 = other.QNetworkProxy_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQNetworkProxyFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkProxy)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:168
 // index:0
 // Public Visibility=Default Availability=Available
@@ -107,9 +136,40 @@ func DeleteQNetworkProxy(this *QNetworkProxy) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkProxy &)
 func (this *QNetworkProxy) Swap(other QNetworkProxy_ITF) {
-	var convArg0 = other.QNetworkProxy_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkProxy_PTR() != nil {
+		convArg0 = other.QNetworkProxy_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxy4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:172
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QNetworkProxy &)
+func (this *QNetworkProxy) Operator_equal_equal(other QNetworkProxy_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkProxy_PTR() != nil {
+		convArg0 = other.QNetworkProxy_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxyeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:173
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QNetworkProxy &)
+func (this *QNetworkProxy) Operator_not_equal(other QNetworkProxy_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkProxy_PTR() != nil {
+		convArg0 = other.QNetworkProxy_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxyneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:176
@@ -266,7 +326,10 @@ func (this *QNetworkProxy) Port() uint16 {
 // Public static Visibility=Default Availability=Available
 // [-2] void setApplicationProxy(const QNetworkProxy &)
 func (this *QNetworkProxy) SetApplicationProxy(proxy QNetworkProxy_ITF) {
-	var convArg0 = proxy.QNetworkProxy_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if proxy != nil && proxy.QNetworkProxy_PTR() != nil {
+		convArg0 = proxy.QNetworkProxy_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxy19setApplicationProxyERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -309,7 +372,10 @@ func (this *QNetworkProxy) Header(header int) *qtcore.QVariant /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
 func (this *QNetworkProxy) SetHeader(header int, value qtcore.QVariant_ITF) {
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxy9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), header, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -319,7 +385,10 @@ func (this *QNetworkProxy) SetHeader(header int, value qtcore.QVariant_ITF) {
 // Public Visibility=Default Availability=Available
 // [1] bool hasRawHeader(const QByteArray &)
 func (this *QNetworkProxy) HasRawHeader(headerName qtcore.QByteArray_ITF) bool {
-	var convArg0 = headerName.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if headerName != nil && headerName.QByteArray_PTR() != nil {
+		convArg0 = headerName.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy12hasRawHeaderERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -330,7 +399,10 @@ func (this *QNetworkProxy) HasRawHeader(headerName qtcore.QByteArray_ITF) bool {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray rawHeader(const QByteArray &)
 func (this *QNetworkProxy) RawHeader(headerName qtcore.QByteArray_ITF) *qtcore.QByteArray /*123*/ {
-	var convArg0 = headerName.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if headerName != nil && headerName.QByteArray_PTR() != nil {
+		convArg0 = headerName.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy9rawHeaderERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -343,8 +415,14 @@ func (this *QNetworkProxy) RawHeader(headerName qtcore.QByteArray_ITF) *qtcore.Q
 // Public Visibility=Default Availability=Available
 // [-2] void setRawHeader(const QByteArray &, const QByteArray &)
 func (this *QNetworkProxy) SetRawHeader(headerName qtcore.QByteArray_ITF, value qtcore.QByteArray_ITF) {
-	var convArg0 = headerName.QByteArray_PTR().GetCthis()
-	var convArg1 = value.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if headerName != nil && headerName.QByteArray_PTR() != nil {
+		convArg0 = headerName.QByteArray_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QByteArray_PTR() != nil {
+		convArg1 = value.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxy12setRawHeaderERK10QByteArrayS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -381,6 +459,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

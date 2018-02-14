@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -74,10 +75,14 @@ func (this *QDoubleValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(QObject *)
 func NewQDoubleValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleValidator {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDoubleValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDoubleValidator")
 	return gothis
 }
 
@@ -86,10 +91,14 @@ func NewQDoubleValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleVa
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(double, double, int, QObject *)
 func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleValidator {
-	var convArg3 = parent.QObject_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg3 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidatorC2EddiP7QObject", qtrt.FFI_TYPE_POINTER, bottom, top, decimals, convArg3)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDoubleValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDoubleValidator")
 	return gothis
 }
 
@@ -255,6 +264,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

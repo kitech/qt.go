@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -106,7 +107,10 @@ func (this *QCommandLineParser) SetOptionsAfterPositionalArgumentsMode(mode int)
 // Public Visibility=Default Availability=Available
 // [1] bool addOption(const QCommandLineOption &)
 func (this *QCommandLineParser) AddOption(commandLineOption QCommandLineOption_ITF) bool {
-	var convArg0 = commandLineOption.QCommandLineOption_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if commandLineOption != nil && commandLineOption.QCommandLineOption_PTR() != nil {
+		convArg0 = commandLineOption.QCommandLineOption_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser9addOptionERK18QCommandLineOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -189,7 +193,10 @@ func (this *QCommandLineParser) ClearPositionalArguments() {
 // Public Visibility=Default Availability=Available
 // [-2] void process(const QStringList &)
 func (this *QCommandLineParser) Process(arguments QStringList_ITF) {
-	var convArg0 = arguments.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arguments != nil && arguments.QStringList_PTR() != nil {
+		convArg0 = arguments.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser7processERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -199,7 +206,10 @@ func (this *QCommandLineParser) Process(arguments QStringList_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void process(const QCoreApplication &)
 func (this *QCommandLineParser) Process_1(app QCoreApplication_ITF) {
-	var convArg0 = app.QCoreApplication_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if app != nil && app.QCoreApplication_PTR() != nil {
+		convArg0 = app.QCoreApplication_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser7processERK16QCoreApplication", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -209,7 +219,10 @@ func (this *QCommandLineParser) Process_1(app QCoreApplication_ITF) {
 // Public Visibility=Default Availability=Available
 // [1] bool parse(const QStringList &)
 func (this *QCommandLineParser) Parse(arguments QStringList_ITF) bool {
-	var convArg0 = arguments.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arguments != nil && arguments.QStringList_PTR() != nil {
+		convArg0 = arguments.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser5parseERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -245,7 +258,10 @@ func (this *QCommandLineParser) IsSet(name string) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isSet(const QCommandLineOption &)
 func (this *QCommandLineParser) IsSet_1(option QCommandLineOption_ITF) bool {
-	var convArg0 = option.QCommandLineOption_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if option != nil && option.QCommandLineOption_PTR() != nil {
+		convArg0 = option.QCommandLineOption_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK18QCommandLineOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -271,7 +287,10 @@ func (this *QCommandLineParser) Value(name string) string {
 // Public Visibility=Default Availability=Available
 // [8] QString value(const QCommandLineOption &)
 func (this *QCommandLineParser) Value_1(option QCommandLineOption_ITF) string {
-	var convArg0 = option.QCommandLineOption_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if option != nil && option.QCommandLineOption_PTR() != nil {
+		convArg0 = option.QCommandLineOption_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK18QCommandLineOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -299,7 +318,10 @@ func (this *QCommandLineParser) Values(name string) *QStringList /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QStringList values(const QCommandLineOption &)
 func (this *QCommandLineParser) Values_1(option QCommandLineOption_ITF) *QStringList /*123*/ {
-	var convArg0 = option.QCommandLineOption_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if option != nil && option.QCommandLineOption_PTR() != nil {
+		convArg0 = option.QCommandLineOption_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser6valuesERK18QCommandLineOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -397,6 +419,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

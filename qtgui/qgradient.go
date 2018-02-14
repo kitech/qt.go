@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -107,7 +108,10 @@ func (this *QGradient) Spread() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setColorAt(qreal, const QColor &)
 func (this *QGradient) SetColorAt(pos float64, color QColor_ITF) {
-	var convArg1 = color.QColor_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg1 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient10setColorAtEdRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -148,6 +152,34 @@ func (this *QGradient) InterpolationMode() int {
 func (this *QGradient) SetInterpolationMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient20setInterpolationModeENS_17InterpolationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qbrush.h:224
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QGradient &)
+func (this *QGradient) Operator_equal_equal(gradient QGradient_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if gradient != nil && gradient.QGradient_PTR() != nil {
+		convArg0 = gradient.QGradient_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradienteqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qbrush.h:225
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QGradient &)
+func (this *QGradient) Operator_not_equal(other QGradient_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QGradient_PTR() != nil {
+		convArg0 = other.QGradient_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradientneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 func DeleteQGradient(this *QGradient) {
@@ -193,6 +225,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

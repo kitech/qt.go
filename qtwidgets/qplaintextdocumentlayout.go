@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -82,10 +83,14 @@ func (this *QPlainTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 con
 // Public Visibility=Default Availability=Available
 // [-2] void QPlainTextDocumentLayout(QTextDocument *)
 func NewQPlainTextDocumentLayout(document qtgui.QTextDocument_ITF /*777 QTextDocument **/) *QPlainTextDocumentLayout {
-	var convArg0 = document.QTextDocument_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if document != nil && document.QTextDocument_PTR() != nil {
+		convArg0 = document.QTextDocument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPlainTextDocumentLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPlainTextDocumentLayout")
 	return gothis
 }
 
@@ -105,7 +110,10 @@ func DeleteQPlainTextDocumentLayout(this *QPlainTextDocumentLayout) {
 // Public virtual Visibility=Default Availability=Available
 // [4] int hitTest(const QPointF &, Qt::HitTestAccuracy)
 func (this *QPlainTextDocumentLayout) HitTest(arg0 qtcore.QPointF_ITF, arg1 int) int {
-	var convArg0 = arg0.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPointF_PTR() != nil {
+		convArg0 = arg0.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout7hitTestERK7QPointFN2Qt15HitTestAccuracyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -138,7 +146,10 @@ func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF frameBoundingRect(QTextFrame *)
 func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 qtgui.QTextFrame_ITF /*777 QTextFrame **/) *qtcore.QRectF /*123*/ {
-	var convArg0 = arg0.QTextFrame_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QTextFrame_PTR() != nil {
+		convArg0 = arg0.QTextFrame_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -151,7 +162,10 @@ func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 qtgui.QTextFrame_IT
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF blockBoundingRect(const QTextBlock &)
 func (this *QPlainTextDocumentLayout) BlockBoundingRect(block qtgui.QTextBlock_ITF) *qtcore.QRectF /*123*/ {
-	var convArg0 = block.QTextBlock_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if block != nil && block.QTextBlock_PTR() != nil {
+		convArg0 = block.QTextBlock_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -164,7 +178,10 @@ func (this *QPlainTextDocumentLayout) BlockBoundingRect(block qtgui.QTextBlock_I
 // Public Visibility=Default Availability=Available
 // [-2] void ensureBlockLayout(const QTextBlock &)
 func (this *QPlainTextDocumentLayout) EnsureBlockLayout(block qtgui.QTextBlock_ITF) {
-	var convArg0 = block.QTextBlock_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if block != nil && block.QTextBlock_PTR() != nil {
+		convArg0 = block.QTextBlock_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -219,6 +236,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

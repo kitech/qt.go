@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -84,12 +85,31 @@ func DeleteQTextTableCell(this *QTextTableCell) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtGui/qtexttable.h:60
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QTextTableCell & operator=(const QTextTableCell &)
+func (this *QTextTableCell) Operator_equal(o QTextTableCell_ITF) *QTextTableCell {
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QTextTableCell_PTR() != nil {
+		convArg0 = o.QTextTableCell_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTextTableCellaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTextTableCellFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextTableCell)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qtexttable.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QTextCharFormat &)
 func (this *QTextTableCell) SetFormat(format QTextCharFormat_ITF) {
-	var convArg0 = format.QTextCharFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextCharFormat_PTR() != nil {
+		convArg0 = format.QTextCharFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTextTableCell9setFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -200,6 +220,34 @@ func (this *QTextTableCell) LastPosition() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtGui/qtexttable.h:79
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QTextTableCell &)
+func (this *QTextTableCell) Operator_equal_equal(other QTextTableCell_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTextTableCell_PTR() != nil {
+		convArg0 = other.QTextTableCell_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCelleqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtexttable.h:81
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QTextTableCell &)
+func (this *QTextTableCell) Operator_not_equal(other QTextTableCell_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTextTableCell_PTR() != nil {
+		convArg0 = other.QTextTableCell_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCellneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qtexttable.h:84
 // index:0
 // Public Visibility=Default Availability=Available
@@ -243,6 +291,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

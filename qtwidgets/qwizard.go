@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -105,10 +106,14 @@ func (this *QWizard) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // Public Visibility=Default Availability=Available
 // [-2] void QWizard(QWidget *, Qt::WindowFlags)
 func NewQWizard(parent QWidget_ITF /*777 QWidget **/, flags int) *QWizard {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizardC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWizardFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QWizard")
 	return gothis
 }
 
@@ -128,7 +133,10 @@ func DeleteQWizard(this *QWizard) {
 // Public Visibility=Default Availability=Available
 // [4] int addPage(QWizardPage *)
 func (this *QWizard) AddPage(page QWizardPage_ITF /*777 QWizardPage **/) int {
-	var convArg0 = page.QWizardPage_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if page != nil && page.QWizardPage_PTR() != nil {
+		convArg0 = page.QWizardPage_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard7addPageEP11QWizardPage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -139,7 +147,10 @@ func (this *QWizard) AddPage(page QWizardPage_ITF /*777 QWizardPage **/) int {
 // Public Visibility=Default Availability=Available
 // [-2] void setPage(int, QWizardPage *)
 func (this *QWizard) SetPage(id int, page QWizardPage_ITF /*777 QWizardPage **/) {
-	var convArg1 = page.QWizardPage_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if page != nil && page.QWizardPage_PTR() != nil {
+		convArg1 = page.QWizardPage_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard7setPageEiP11QWizardPage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -239,7 +250,10 @@ func (this *QWizard) NextId() int {
 func (this *QWizard) SetField(name string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard8setFieldERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -344,7 +358,10 @@ func (this *QWizard) ButtonText(which int) string {
 // Public Visibility=Default Availability=Available
 // [-2] void setButton(enum QWizard::WizardButton, QAbstractButton *)
 func (this *QWizard) SetButton(which int, button QAbstractButton_ITF /*777 QAbstractButton **/) {
-	var convArg1 = button.QAbstractButton_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if button != nil && button.QAbstractButton_PTR() != nil {
+		convArg1 = button.QAbstractButton_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard9setButtonENS_12WizardButtonEP15QAbstractButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -402,7 +419,10 @@ func (this *QWizard) SubTitleFormat() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setPixmap(enum QWizard::WizardPixmap, const QPixmap &)
 func (this *QWizard) SetPixmap(which int, pixmap qtgui.QPixmap_ITF) {
-	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard9setPixmapENS_12WizardPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -424,7 +444,10 @@ func (this *QWizard) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setSideWidget(QWidget *)
 func (this *QWizard) SetSideWidget(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard13setSideWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -552,7 +575,10 @@ func (this *QWizard) Restart() {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QWizard) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -563,7 +589,10 @@ func (this *QWizard) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
 func (this *QWizard) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
-	var convArg0 = event.QResizeEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QResizeEvent_PTR() != nil {
+		convArg0 = event.QResizeEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -573,7 +602,10 @@ func (this *QWizard) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QWizard) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = event.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QPaintEvent_PTR() != nil {
+		convArg0 = event.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -670,6 +702,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 18
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -79,7 +80,10 @@ func NewQCommandLineOption(name string) *QCommandLineOption {
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QStringList &)
 func NewQCommandLineOption_1(names QStringList_ITF) *QCommandLineOption {
-	var convArg0 = names.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if names != nil && names.QStringList_PTR() != nil {
+		convArg0 = names.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -112,7 +116,10 @@ func NewQCommandLineOption_2(name string, description string, valueName string, 
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QStringList &, const QString &, const QString &, const QString &)
 func NewQCommandLineOption_3(names QStringList_ITF, description string, valueName string, defaultValue string) *QCommandLineOption {
-	var convArg0 = names.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if names != nil && names.QStringList_PTR() != nil {
+		convArg0 = names.QStringList_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(description)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(valueName)
@@ -137,12 +144,43 @@ func DeleteQCommandLineOption(this *QCommandLineOption) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qcommandlineoption.h:73
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QCommandLineOption & operator=(const QCommandLineOption &)
+func (this *QCommandLineOption) Operator_equal(other QCommandLineOption_ITF) *QCommandLineOption {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QCommandLineOption_PTR() != nil {
+		convArg0 = other.QCommandLineOption_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCommandLineOption)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qcommandlineoption.h:75
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QCommandLineOption & operator=(QCommandLineOption &&)
+func (this *QCommandLineOption) Operator_equal_1(other unsafe.Pointer /*333*/) *QCommandLineOption {
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCommandLineOption)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qcommandlineoption.h:78
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QCommandLineOption &)
 func (this *QCommandLineOption) Swap(other QCommandLineOption_ITF) {
-	var convArg0 = other.QCommandLineOption_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QCommandLineOption_PTR() != nil {
+		convArg0 = other.QCommandLineOption_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOption4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -223,7 +261,10 @@ func (this *QCommandLineOption) SetDefaultValue(defaultValue string) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultValues(const QStringList &)
 func (this *QCommandLineOption) SetDefaultValues(defaultValues QStringList_ITF) {
-	var convArg0 = defaultValues.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if defaultValues != nil && defaultValues.QStringList_PTR() != nil {
+		convArg0 = defaultValues.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOption16setDefaultValuesERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -296,6 +337,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

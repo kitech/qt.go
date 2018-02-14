@@ -24,6 +24,7 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -79,15 +80,37 @@ func NewQQmlListReference() *QQmlListReference {
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlListReference(QObject *, const char *, QQmlEngine *)
 func NewQQmlListReference_1(arg0 qtcore.QObject_ITF /*777 QObject **/, property string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlListReference {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(property)
 	defer qtrt.FreeMem(convArg1)
-	var convArg2 = arg2.QQmlEngine_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if arg2 != nil && arg2.QQmlEngine_PTR() != nil {
+		convArg2 = arg2.QQmlEngine_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQmlListReferenceC2EP7QObjectPKcP10QQmlEngine", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlListReferenceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlListReference)
 	return gothis
+}
+
+// /usr/include/qt/QtQml/qqmllist.h:145
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QQmlListReference & operator=(const QQmlListReference &)
+func (this *QQmlListReference) Operator_equal(arg0 QQmlListReference_ITF) *QQmlListReference {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlListReference_PTR() != nil {
+		convArg0 = arg0.QQmlListReference_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QQmlListReferenceaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQQmlListReferenceFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQmlListReference)
+	return rv2
 }
 
 // /usr/include/qt/QtQml/qqmllist.h:146
@@ -234,6 +257,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

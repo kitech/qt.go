@@ -17,7 +17,7 @@ qtrt-:
 mock-:
 	CC=clang CXX=clang++ go install -v -x ./qtmock
 
-bases: core- gui- widgets-
+bases: qtrt- core- gui- widgets-
 core-:
 	CC=clang CXX=clang++ go install -v -x ./qtcore
 gui-:

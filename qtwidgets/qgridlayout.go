@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -80,10 +81,14 @@ func (this *QGridLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // Public Visibility=Default Availability=Available
 // [-2] void QGridLayout(QWidget *)
 func NewQGridLayout(parent QWidget_ITF /*777 QWidget **/) *QGridLayout {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGridLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGridLayout")
 	return gothis
 }
 
@@ -95,6 +100,7 @@ func NewQGridLayout_1() *QGridLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGridLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGridLayout")
 	return gothis
 }
 
@@ -364,7 +370,10 @@ func (this *QGridLayout) Invalidate() {
 // Public inline Visibility=Default Availability=Available
 // [-2] void addWidget(QWidget *)
 func (this *QGridLayout) AddWidget(w QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = w.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout9addWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -374,7 +383,10 @@ func (this *QGridLayout) AddWidget(w QWidget_ITF /*777 QWidget **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void addWidget(QWidget *, int, int, Qt::Alignment)
 func (this *QGridLayout) AddWidget_1(arg0 QWidget_ITF /*777 QWidget **/, row int, column int, arg3 int) {
-	var convArg0 = arg0.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QWidget_PTR() != nil {
+		convArg0 = arg0.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout9addWidgetEP7QWidgetii6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, arg3)
 	qtrt.ErrPrint(err, rv)
 }
@@ -384,7 +396,10 @@ func (this *QGridLayout) AddWidget_1(arg0 QWidget_ITF /*777 QWidget **/, row int
 // Public Visibility=Default Availability=Available
 // [-2] void addWidget(QWidget *, int, int, int, int, Qt::Alignment)
 func (this *QGridLayout) AddWidget_2(arg0 QWidget_ITF /*777 QWidget **/, row int, column int, rowSpan int, columnSpan int, arg5 int) {
-	var convArg0 = arg0.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QWidget_PTR() != nil {
+		convArg0 = arg0.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout9addWidgetEP7QWidgetiiii6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, rowSpan, columnSpan, arg5)
 	qtrt.ErrPrint(err, rv)
 }
@@ -394,7 +409,10 @@ func (this *QGridLayout) AddWidget_2(arg0 QWidget_ITF /*777 QWidget **/, row int
 // Public Visibility=Default Availability=Available
 // [-2] void addLayout(QLayout *, int, int, Qt::Alignment)
 func (this *QGridLayout) AddLayout(arg0 QLayout_ITF /*777 QLayout **/, row int, column int, arg3 int) {
-	var convArg0 = arg0.QLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QLayout_PTR() != nil {
+		convArg0 = arg0.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout9addLayoutEP7QLayoutii6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, arg3)
 	qtrt.ErrPrint(err, rv)
 }
@@ -404,7 +422,10 @@ func (this *QGridLayout) AddLayout(arg0 QLayout_ITF /*777 QLayout **/, row int, 
 // Public Visibility=Default Availability=Available
 // [-2] void addLayout(QLayout *, int, int, int, int, Qt::Alignment)
 func (this *QGridLayout) AddLayout_1(arg0 QLayout_ITF /*777 QLayout **/, row int, column int, rowSpan int, columnSpan int, arg5 int) {
-	var convArg0 = arg0.QLayout_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QLayout_PTR() != nil {
+		convArg0 = arg0.QLayout_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout9addLayoutEP7QLayoutiiii6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, rowSpan, columnSpan, arg5)
 	qtrt.ErrPrint(err, rv)
 }
@@ -473,7 +494,10 @@ func (this *QGridLayout) Count() int {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
 func (this *QGridLayout) SetGeometry(arg0 qtcore.QRect_ITF) {
-	var convArg0 = arg0.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QRect_PTR() != nil {
+		convArg0 = arg0.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -483,7 +507,10 @@ func (this *QGridLayout) SetGeometry(arg0 qtcore.QRect_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void addItem(QLayoutItem *, int, int, int, int, Qt::Alignment)
 func (this *QGridLayout) AddItem(item QLayoutItem_ITF /*777 QLayoutItem **/, row int, column int, rowSpan int, columnSpan int, arg5 int) {
-	var convArg0 = item.QLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QLayoutItem_PTR() != nil {
+		convArg0 = item.QLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout7addItemEP11QLayoutItemiiii6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, rowSpan, columnSpan, arg5)
 	qtrt.ErrPrint(err, rv)
 }
@@ -493,7 +520,10 @@ func (this *QGridLayout) AddItem(item QLayoutItem_ITF /*777 QLayoutItem **/, row
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void addItem(QLayoutItem *)
 func (this *QGridLayout) AddItem_1(arg0 QLayoutItem_ITF /*777 QLayoutItem **/) {
-	var convArg0 = arg0.QLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QLayoutItem_PTR() != nil {
+		convArg0 = arg0.QLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout7addItemEP11QLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -512,7 +542,7 @@ func (this *QGridLayout) SetDefaultPositioning(n int, orient int) {
 // Public Visibility=Default Availability=Available
 // [-2] void getItemPosition(int, int *, int *, int *, int *)
 func (this *QGridLayout) GetItemPosition(idx int, row unsafe.Pointer /*666*/, column unsafe.Pointer /*666*/, rowSpan unsafe.Pointer /*666*/, columnSpan unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), idx, &row, &column, &rowSpan, &columnSpan)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), idx, row, column, rowSpan, columnSpan)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -529,6 +559,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

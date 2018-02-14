@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -80,10 +81,14 @@ func (this *QStackedWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedWidget(QWidget *)
 func NewQStackedWidget(parent QWidget_ITF /*777 QWidget **/) *QStackedWidget {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStackedWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QStackedWidget")
 	return gothis
 }
 
@@ -103,7 +108,10 @@ func DeleteQStackedWidget(this *QStackedWidget) {
 // Public Visibility=Default Availability=Available
 // [4] int addWidget(QWidget *)
 func (this *QStackedWidget) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
-	var convArg0 = w.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidget9addWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -114,7 +122,10 @@ func (this *QStackedWidget) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
 // Public Visibility=Default Availability=Available
 // [4] int insertWidget(int, QWidget *)
 func (this *QStackedWidget) InsertWidget(index int, w QWidget_ITF /*777 QWidget **/) int {
-	var convArg1 = w.QWidget_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg1 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidget12insertWidgetEiP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -125,7 +136,10 @@ func (this *QStackedWidget) InsertWidget(index int, w QWidget_ITF /*777 QWidget 
 // Public Visibility=Default Availability=Available
 // [-2] void removeWidget(QWidget *)
 func (this *QStackedWidget) RemoveWidget(w QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = w.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidget12removeWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -155,7 +169,10 @@ func (this *QStackedWidget) CurrentIndex() int {
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QWidget *)
 func (this *QStackedWidget) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
-	var convArg0 = arg0.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QWidget_PTR() != nil {
+		convArg0 = arg0.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedWidget7indexOfEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -195,7 +212,10 @@ func (this *QStackedWidget) SetCurrentIndex(index int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWidget(QWidget *)
 func (this *QStackedWidget) SetCurrentWidget(w QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = w.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidget16setCurrentWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -223,7 +243,10 @@ func (this *QStackedWidget) WidgetRemoved(index int) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QStackedWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -242,6 +265,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

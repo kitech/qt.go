@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -91,7 +92,10 @@ func NewQStorageInfo_1(path string) *QStorageInfo {
 // Public Visibility=Default Availability=Available
 // [-2] void QStorageInfo(const QDir &)
 func NewQStorageInfo_2(dir QDir_ITF) *QStorageInfo {
-	var convArg0 = dir.QDir_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dir != nil && dir.QDir_PTR() != nil {
+		convArg0 = dir.QDir_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfoC2ERK4QDir", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStorageInfoFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,12 +114,43 @@ func DeleteQStorageInfo(this *QStorageInfo) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qstorageinfo.h:64
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStorageInfo & operator=(const QStorageInfo &)
+func (this *QStorageInfo) Operator_equal(other QStorageInfo_ITF) *QStorageInfo {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QStorageInfo_PTR() != nil {
+		convArg0 = other.QStorageInfo_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfoaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStorageInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStorageInfo)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstorageinfo.h:66
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QStorageInfo & operator=(QStorageInfo &&)
+func (this *QStorageInfo) Operator_equal_1(other unsafe.Pointer /*333*/) *QStorageInfo {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfoaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStorageInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStorageInfo)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qstorageinfo.h:69
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QStorageInfo &)
 func (this *QStorageInfo) Swap(other QStorageInfo_ITF) {
-	var convArg0 = other.QStorageInfo_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QStorageInfo_PTR() != nil {
+		convArg0 = other.QStorageInfo_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfo4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -325,6 +360,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

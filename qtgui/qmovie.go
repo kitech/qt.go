@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 52
+// extern C begin: 61
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -74,10 +75,14 @@ func (this *QMovie) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 // Public Visibility=Default Availability=Available
 // [-2] void QMovie(QObject *)
 func NewQMovie(parent qtcore.QObject_ITF /*777 QObject **/) *QMovie {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMovieFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMovie")
 	return gothis
 }
 
@@ -86,12 +91,22 @@ func NewQMovie(parent qtcore.QObject_ITF /*777 QObject **/) *QMovie {
 // Public Visibility=Default Availability=Available
 // [-2] void QMovie(QIODevice *, const QByteArray &, QObject *)
 func NewQMovie_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QMovie {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
-	var convArg1 = format.QByteArray_PTR().GetCthis()
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg1 = format.QByteArray_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMovieFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMovie")
 	return gothis
 }
 
@@ -102,11 +117,18 @@ func NewQMovie_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.
 func NewQMovie_2(fileName string, format qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QMovie {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = format.QByteArray_PTR().GetCthis()
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg1 = format.QByteArray_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMovieFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMovie")
 	return gothis
 }
 
@@ -126,7 +148,10 @@ func DeleteQMovie(this *QMovie) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
 func (this *QMovie) SetDevice(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -170,7 +195,10 @@ func (this *QMovie) FileName() string {
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QByteArray &)
 func (this *QMovie) SetFormat(format qtcore.QByteArray_ITF) {
-	var convArg0 = format.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg0 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -192,7 +220,10 @@ func (this *QMovie) Format() *qtcore.QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setBackgroundColor(const QColor &)
 func (this *QMovie) SetBackgroundColor(color QColor_ITF) {
-	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie18setBackgroundColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -365,7 +396,10 @@ func (this *QMovie) ScaledSize() *qtcore.QSize /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setScaledSize(const QSize &)
 func (this *QMovie) SetScaledSize(size qtcore.QSize_ITF) {
-	var convArg0 = size.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg0 = size.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie13setScaledSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -403,7 +437,10 @@ func (this *QMovie) Started() {
 // Public Visibility=Default Availability=Available
 // [-2] void resized(const QSize &)
 func (this *QMovie) Resized(size qtcore.QSize_ITF) {
-	var convArg0 = size.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg0 = size.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie7resizedERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -413,7 +450,10 @@ func (this *QMovie) Resized(size qtcore.QSize_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void updated(const QRect &)
 func (this *QMovie) Updated(rect qtcore.QRect_ITF) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie7updatedERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -524,6 +564,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

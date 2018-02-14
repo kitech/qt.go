@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 54
+// extern C begin: 64
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -274,7 +275,10 @@ func NewQPaintDevice() *QPaintDevice {
 // Private inline Visibility=Default Availability=NotAvailable
 // [-2] void QPaintDevice(const QPaintDevice &)
 func NewQPaintDevice_1(arg0 QPaintDevice_ITF) *QPaintDevice {
-	var convArg0 = arg0.QPaintDevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPaintDevice_PTR() != nil {
+		convArg0 = arg0.QPaintDevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDeviceC2ERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -297,7 +301,10 @@ func (this *QPaintDevice) Metric(metric int) int {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void initPainter(QPainter *)
 func (this *QPaintDevice) InitPainter(painter QPainter_ITF /*777 QPainter **/) {
-	var convArg0 = painter.QPainter_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice11initPainterEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -307,7 +314,10 @@ func (this *QPaintDevice) InitPainter(painter QPainter_ITF /*777 QPainter **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [8] QPaintDevice * redirected(QPoint *)
 func (this *QPaintDevice) Redirected(offset qtcore.QPoint_ITF /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
-	var convArg0 = offset.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if offset != nil && offset.QPoint_PTR() != nil {
+		convArg0 = offset.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice10redirectedEP6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -351,6 +361,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

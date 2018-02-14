@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -119,10 +120,14 @@ func (this *QSyntaxHighlighter) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // Public Visibility=Default Availability=Available
 // [-2] void QSyntaxHighlighter(QObject *)
 func NewQSyntaxHighlighter(parent qtcore.QObject_ITF /*777 QObject **/) *QSyntaxHighlighter {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighterC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSyntaxHighlighterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSyntaxHighlighter")
 	return gothis
 }
 
@@ -131,10 +136,14 @@ func NewQSyntaxHighlighter(parent qtcore.QObject_ITF /*777 QObject **/) *QSyntax
 // Public Visibility=Default Availability=Available
 // [-2] void QSyntaxHighlighter(QTextDocument *)
 func NewQSyntaxHighlighter_1(parent QTextDocument_ITF /*777 QTextDocument **/) *QSyntaxHighlighter {
-	var convArg0 = parent.QTextDocument_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QTextDocument_PTR() != nil {
+		convArg0 = parent.QTextDocument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighterC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSyntaxHighlighterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSyntaxHighlighter")
 	return gothis
 }
 
@@ -154,7 +163,10 @@ func DeleteQSyntaxHighlighter(this *QSyntaxHighlighter) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDocument(QTextDocument *)
 func (this *QSyntaxHighlighter) SetDocument(doc QTextDocument_ITF /*777 QTextDocument **/) {
-	var convArg0 = doc.QTextDocument_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if doc != nil && doc.QTextDocument_PTR() != nil {
+		convArg0 = doc.QTextDocument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -183,7 +195,10 @@ func (this *QSyntaxHighlighter) Rehighlight() {
 // Public Visibility=Default Availability=Available
 // [-2] void rehighlightBlock(const QTextBlock &)
 func (this *QSyntaxHighlighter) RehighlightBlock(block QTextBlock_ITF) {
-	var convArg0 = block.QTextBlock_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if block != nil && block.QTextBlock_PTR() != nil {
+		convArg0 = block.QTextBlock_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -204,7 +219,10 @@ func (this *QSyntaxHighlighter) HighlightBlock(text string) {
 // Protected Visibility=Default Availability=Available
 // [-2] void setFormat(int, int, const QTextCharFormat &)
 func (this *QSyntaxHighlighter) SetFormat(start int, count int, format QTextCharFormat_ITF) {
-	var convArg2 = format.QTextCharFormat_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if format != nil && format.QTextCharFormat_PTR() != nil {
+		convArg2 = format.QTextCharFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, count, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -214,7 +232,10 @@ func (this *QSyntaxHighlighter) SetFormat(start int, count int, format QTextChar
 // Protected Visibility=Default Availability=Available
 // [-2] void setFormat(int, int, const QColor &)
 func (this *QSyntaxHighlighter) SetFormat_1(start int, count int, color QColor_ITF) {
-	var convArg2 = color.QColor_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg2 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, count, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -224,7 +245,10 @@ func (this *QSyntaxHighlighter) SetFormat_1(start int, count int, color QColor_I
 // Protected Visibility=Default Availability=Available
 // [-2] void setFormat(int, int, const QFont &)
 func (this *QSyntaxHighlighter) SetFormat_2(start int, count int, font QFont_ITF) {
-	var convArg2 = font.QFont_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if font != nil && font.QFont_PTR() != nil {
+		convArg2 = font.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, count, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -275,7 +299,10 @@ func (this *QSyntaxHighlighter) SetCurrentBlockState(newState int) {
 // Protected Visibility=Default Availability=Available
 // [-2] void setCurrentBlockUserData(QTextBlockUserData *)
 func (this *QSyntaxHighlighter) SetCurrentBlockUserData(data QTextBlockUserData_ITF /*777 QTextBlockUserData **/) {
-	var convArg0 = data.QTextBlockUserData_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QTextBlockUserData_PTR() != nil {
+		convArg0 = data.QTextBlockUserData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighter23setCurrentBlockUserDataEP18QTextBlockUserData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -315,6 +342,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

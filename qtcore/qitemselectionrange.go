@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -77,8 +78,14 @@ func NewQItemSelectionRange() *QItemSelectionRange {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QItemSelectionRange(const QModelIndex &, const QModelIndex &)
 func NewQItemSelectionRange_1(topL QModelIndex_ITF, bottomR QModelIndex_ITF) *QItemSelectionRange {
-	var convArg0 = topL.QModelIndex_PTR().GetCthis()
-	var convArg1 = bottomR.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if topL != nil && topL.QModelIndex_PTR() != nil {
+		convArg0 = topL.QModelIndex_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if bottomR != nil && bottomR.QModelIndex_PTR() != nil {
+		convArg1 = bottomR.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQItemSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -91,7 +98,10 @@ func NewQItemSelectionRange_1(topL QModelIndex_ITF, bottomR QModelIndex_ITF) *QI
 // Public inline Visibility=Default Availability=Available
 // [-2] void QItemSelectionRange(const QModelIndex &)
 func NewQItemSelectionRange_2(index QModelIndex_ITF) *QItemSelectionRange {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionRangeC2ERK11QModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQItemSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -99,12 +109,43 @@ func NewQItemSelectionRange_2(index QModelIndex_ITF) *QItemSelectionRange {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qitemselectionmodel.h:64
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QItemSelectionRange & operator=(QItemSelectionRange &&)
+func (this *QItemSelectionRange) Operator_equal(other unsafe.Pointer /*333*/) *QItemSelectionRange {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionRangeaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQItemSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelectionRange)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:67
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [16] QItemSelectionRange & operator=(const QItemSelectionRange &)
+func (this *QItemSelectionRange) Operator_equal_1(other QItemSelectionRange_ITF) *QItemSelectionRange {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QItemSelectionRange_PTR() != nil {
+		convArg0 = other.QItemSelectionRange_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionRangeaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQItemSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelectionRange)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qitemselectionmodel.h:73
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QItemSelectionRange &)
 func (this *QItemSelectionRange) Swap(other QItemSelectionRange_ITF) {
-	var convArg0 = other.QItemSelectionRange_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QItemSelectionRange_PTR() != nil {
+		convArg0 = other.QItemSelectionRange_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionRange4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -220,7 +261,10 @@ func (this *QItemSelectionRange) Model() *QAbstractItemModel /*777 const QAbstra
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QModelIndex &)
 func (this *QItemSelectionRange) Contains(index QModelIndex_ITF) bool {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionRange8containsERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -231,7 +275,10 @@ func (this *QItemSelectionRange) Contains(index QModelIndex_ITF) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(int, int, const QModelIndex &)
 func (this *QItemSelectionRange) Contains_1(row int, column int, parentIndex QModelIndex_ITF) bool {
-	var convArg2 = parentIndex.QModelIndex_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if parentIndex != nil && parentIndex.QModelIndex_PTR() != nil {
+		convArg2 = parentIndex.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -242,7 +289,10 @@ func (this *QItemSelectionRange) Contains_1(row int, column int, parentIndex QMo
 // Public Visibility=Default Availability=Available
 // [1] bool intersects(const QItemSelectionRange &)
 func (this *QItemSelectionRange) Intersects(other QItemSelectionRange_ITF) bool {
-	var convArg0 = other.QItemSelectionRange_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QItemSelectionRange_PTR() != nil {
+		convArg0 = other.QItemSelectionRange_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionRange10intersectsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -253,12 +303,57 @@ func (this *QItemSelectionRange) Intersects(other QItemSelectionRange_ITF) bool 
 // Public Visibility=Default Availability=Available
 // [16] QItemSelectionRange intersected(const QItemSelectionRange &)
 func (this *QItemSelectionRange) Intersected(other QItemSelectionRange_ITF) *QItemSelectionRange /*123*/ {
-	var convArg0 = other.QItemSelectionRange_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QItemSelectionRange_PTR() != nil {
+		convArg0 = other.QItemSelectionRange_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionRange11intersectedERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQItemSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelectionRange)
 	return rv2
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:113
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QItemSelectionRange &)
+func (this *QItemSelectionRange) Operator_equal_equal(other QItemSelectionRange_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QItemSelectionRange_PTR() != nil {
+		convArg0 = other.QItemSelectionRange_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionRangeeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:115
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QItemSelectionRange &)
+func (this *QItemSelectionRange) Operator_not_equal(other QItemSelectionRange_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QItemSelectionRange_PTR() != nil {
+		convArg0 = other.QItemSelectionRange_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionRangeneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:117
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator<(const QItemSelectionRange &)
+func (this *QItemSelectionRange) Operator_less_than(other QItemSelectionRange_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QItemSelectionRange_PTR() != nil {
+		convArg0 = other.QItemSelectionRange_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionRangeltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:119
@@ -311,6 +406,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

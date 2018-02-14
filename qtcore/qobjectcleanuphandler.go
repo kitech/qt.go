@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -76,6 +77,7 @@ func NewQObjectCleanupHandler() *QObjectCleanupHandler {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQObjectCleanupHandlerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QObjectCleanupHandler")
 	return gothis
 }
 
@@ -95,7 +97,10 @@ func DeleteQObjectCleanupHandler(this *QObjectCleanupHandler) {
 // Public Visibility=Default Availability=Available
 // [8] QObject * add(QObject *)
 func (this *QObjectCleanupHandler) Add(object QObject_ITF /*777 QObject **/) *QObject /*777 QObject **/ {
-	var convArg0 = object.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -106,7 +111,10 @@ func (this *QObjectCleanupHandler) Add(object QObject_ITF /*777 QObject **/) *QO
 // Public Visibility=Default Availability=Available
 // [-2] void remove(QObject *)
 func (this *QObjectCleanupHandler) Remove(object QObject_ITF /*777 QObject **/) {
-	var convArg0 = object.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -143,6 +151,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

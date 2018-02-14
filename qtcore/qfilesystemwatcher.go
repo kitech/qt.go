@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -73,10 +74,14 @@ func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObjec
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSystemWatcher(QObject *)
 func NewQFileSystemWatcher(parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileSystemWatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFileSystemWatcher")
 	return gothis
 }
 
@@ -85,11 +90,18 @@ func NewQFileSystemWatcher(parent QObject_ITF /*777 QObject **/) *QFileSystemWat
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSystemWatcher(const QStringList &, QObject *)
 func NewQFileSystemWatcher_1(paths QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
-	var convArg0 = paths.QStringList_PTR().GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if paths != nil && paths.QStringList_PTR() != nil {
+		convArg0 = paths.QStringList_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileSystemWatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFileSystemWatcher")
 	return gothis
 }
 
@@ -121,7 +133,10 @@ func (this *QFileSystemWatcher) AddPath(file string) bool {
 // Public Visibility=Default Availability=Available
 // [8] QStringList addPaths(const QStringList &)
 func (this *QFileSystemWatcher) AddPaths(files QStringList_ITF) *QStringList /*123*/ {
-	var convArg0 = files.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if files != nil && files.QStringList_PTR() != nil {
+		convArg0 = files.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher8addPathsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -146,7 +161,10 @@ func (this *QFileSystemWatcher) RemovePath(file string) bool {
 // Public Visibility=Default Availability=Available
 // [8] QStringList removePaths(const QStringList &)
 func (this *QFileSystemWatcher) RemovePaths(files QStringList_ITF) *QStringList /*123*/ {
-	var convArg0 = files.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if files != nil && files.QStringList_PTR() != nil {
+		convArg0 = files.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher11removePathsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -191,6 +209,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

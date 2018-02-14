@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -363,8 +364,14 @@ func (this *QSGGeometry) SizeOfVertex() int {
 // Public static Visibility=Default Availability=Available
 // [-2] void updateRectGeometry(QSGGeometry *, const QRectF &)
 func (this *QSGGeometry) UpdateRectGeometry(g QSGGeometry_ITF /*777 QSGGeometry **/, rect qtcore.QRectF_ITF) {
-	var convArg0 = g.QSGGeometry_PTR().GetCthis()
-	var convArg1 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if g != nil && g.QSGGeometry_PTR() != nil {
+		convArg0 = g.QSGGeometry_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg1 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry18updateRectGeometryEPS_RK6QRectF", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -378,9 +385,18 @@ func QSGGeometry_UpdateRectGeometry(g QSGGeometry_ITF /*777 QSGGeometry **/, rec
 // Public static Visibility=Default Availability=Available
 // [-2] void updateTexturedRectGeometry(QSGGeometry *, const QRectF &, const QRectF &)
 func (this *QSGGeometry) UpdateTexturedRectGeometry(g QSGGeometry_ITF /*777 QSGGeometry **/, rect qtcore.QRectF_ITF, sourceRect qtcore.QRectF_ITF) {
-	var convArg0 = g.QSGGeometry_PTR().GetCthis()
-	var convArg1 = rect.QRectF_PTR().GetCthis()
-	var convArg2 = sourceRect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if g != nil && g.QSGGeometry_PTR() != nil {
+		convArg0 = g.QSGGeometry_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg1 = rect.QRectF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if sourceRect != nil && sourceRect.QRectF_PTR() != nil {
+		convArg2 = sourceRect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry26updateTexturedRectGeometryEPS_RK6QRectFS3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -394,8 +410,14 @@ func QSGGeometry_UpdateTexturedRectGeometry(g QSGGeometry_ITF /*777 QSGGeometry 
 // Public static Visibility=Default Availability=Available
 // [-2] void updateColoredRectGeometry(QSGGeometry *, const QRectF &)
 func (this *QSGGeometry) UpdateColoredRectGeometry(g QSGGeometry_ITF /*777 QSGGeometry **/, rect qtcore.QRectF_ITF) {
-	var convArg0 = g.QSGGeometry_PTR().GetCthis()
-	var convArg1 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if g != nil && g.QSGGeometry_PTR() != nil {
+		convArg0 = g.QSGGeometry_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg1 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry25updateColoredRectGeometryEPS_RK6QRectF", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -528,6 +550,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

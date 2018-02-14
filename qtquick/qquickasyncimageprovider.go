@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -94,7 +95,10 @@ func DeleteQQuickAsyncImageProvider(this *QQuickAsyncImageProvider) {
 func (this *QQuickAsyncImageProvider) RequestImageResponse(id string, requestedSize qtcore.QSize_ITF) *QQuickImageResponse /*777 QQuickImageResponse **/ {
 	var tmpArg0 = qtcore.NewQString_5(id)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = requestedSize.QSize_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if requestedSize != nil && requestedSize.QSize_PTR() != nil {
+		convArg1 = requestedSize.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQuickAsyncImageProvider20requestImageResponseERK7QStringRK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQuickImageResponseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -113,6 +117,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

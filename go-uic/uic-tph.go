@@ -245,6 +245,8 @@ func onSetupUi(line string) {
 			case "AutoRaise", "WidgetResizable", "AlternatingRowColors",
 				"AutoRepeat", "AutoExclusive", "DocumentMode":
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
+			case "Bold", "OpenExternalLinks", "WordWrap":
+				refmtval = untitle(refmtval) // True => true
 			case "ToolButtonStyle":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "Alignment", "FocusPolicy":
@@ -262,8 +264,6 @@ func onSetupUi(line string) {
 			case "Widget":
 				// refmtname = "this." + refmtname
 				refmtval = "this." + strings.Title(refmtval)
-			case "Bold", "OpenExternalLinks":
-				refmtval = untitle(refmtval) // True => true
 			case "Pixmap":
 				refmtval = fmt.Sprintf("qtgui.NewQPixmap_3(\"%s\", \"dummy123\", 0)", strings.Split(refmtval, "\"")[1])
 			case "Source": // QQuickWidget

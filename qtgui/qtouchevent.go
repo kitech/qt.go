@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -125,7 +126,10 @@ func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWindow(QWindow *)
 func (this *QTouchEvent) SetWindow(awindow QWindow_ITF /*777 QWindow **/) {
-	var convArg0 = awindow.QWindow_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if awindow != nil && awindow.QWindow_PTR() != nil {
+		convArg0 = awindow.QWindow_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setWindowEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -135,7 +139,10 @@ func (this *QTouchEvent) SetWindow(awindow QWindow_ITF /*777 QWindow **/) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTarget(QObject *)
 func (this *QTouchEvent) SetTarget(atarget qtcore.QObject_ITF /*777 QObject **/) {
-	var convArg0 = atarget.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if atarget != nil && atarget.QObject_PTR() != nil {
+		convArg0 = atarget.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setTargetEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -154,7 +161,10 @@ func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDevice(QTouchDevice *)
 func (this *QTouchEvent) SetDevice(adevice QTouchDevice_ITF /*777 QTouchDevice **/) {
-	var convArg0 = adevice.QTouchDevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if adevice != nil && adevice.QTouchDevice_PTR() != nil {
+		convArg0 = adevice.QTouchDevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setDeviceEP12QTouchDevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -172,6 +182,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

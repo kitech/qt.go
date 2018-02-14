@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,8 +65,14 @@ func (*QDropEvent) NewFromPointer(cthis unsafe.Pointer) *QDropEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QDropEvent(const QPointF &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
 func NewQDropEvent(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDropEvent {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
-	var convArg2 = data.QMimeData_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if data != nil && data.QMimeData_PTR() != nil {
+		convArg2 = data.QMimeData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDropEventC2ERK7QPointF6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers, type_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDropEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -209,6 +216,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,8 +79,14 @@ func NewQTextDocumentWriter() *QTextDocumentWriter {
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDocumentWriter(QIODevice *, const QByteArray &)
 func NewQTextDocumentWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QTextDocumentWriter {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
-	var convArg1 = format.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg1 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriterC2EP9QIODeviceRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDocumentWriterFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -94,7 +101,10 @@ func NewQTextDocumentWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, f
 func NewQTextDocumentWriter_2(fileName string, format qtcore.QByteArray_ITF) *QTextDocumentWriter {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = format.QByteArray_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg1 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDocumentWriterFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -118,7 +128,10 @@ func DeleteQTextDocumentWriter(this *QTextDocumentWriter) {
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QByteArray &)
 func (this *QTextDocumentWriter) SetFormat(format qtcore.QByteArray_ITF) {
-	var convArg0 = format.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg0 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -140,7 +153,10 @@ func (this *QTextDocumentWriter) Format() *qtcore.QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
 func (this *QTextDocumentWriter) SetDevice(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -184,7 +200,10 @@ func (this *QTextDocumentWriter) FileName() string {
 // Public Visibility=Default Availability=Available
 // [1] bool write(const QTextDocument *)
 func (this *QTextDocumentWriter) Write(document QTextDocument_ITF /*777 const QTextDocument **/) bool {
-	var convArg0 = document.QTextDocument_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if document != nil && document.QTextDocument_PTR() != nil {
+		convArg0 = document.QTextDocument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter5writeEPK13QTextDocument", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -195,7 +214,10 @@ func (this *QTextDocumentWriter) Write(document QTextDocument_ITF /*777 const QT
 // Public Visibility=Default Availability=Available
 // [1] bool write(const QTextDocumentFragment &)
 func (this *QTextDocumentWriter) Write_1(fragment QTextDocumentFragment_ITF) bool {
-	var convArg0 = fragment.QTextDocumentFragment_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if fragment != nil && fragment.QTextDocumentFragment_PTR() != nil {
+		convArg0 = fragment.QTextDocumentFragment_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -206,7 +228,10 @@ func (this *QTextDocumentWriter) Write_1(fragment QTextDocumentFragment_ITF) boo
 // Public Visibility=Default Availability=Available
 // [-2] void setCodec(QTextCodec *)
 func (this *QTextDocumentWriter) SetCodec(codec qtcore.QTextCodec_ITF /*777 QTextCodec **/) {
-	var convArg0 = codec.QTextCodec_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if codec != nil && codec.QTextCodec_PTR() != nil {
+		convArg0 = codec.QTextCodec_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter8setCodecEP10QTextCodec", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -234,6 +259,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

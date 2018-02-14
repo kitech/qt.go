@@ -24,6 +24,7 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -79,8 +80,14 @@ func NewQQmlFile() *QQmlFile {
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlFile(QQmlEngine *, const QUrl &)
 func NewQQmlFile_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_ITF) *QQmlFile {
-	var convArg0 = arg0.QQmlEngine_PTR().GetCthis()
-	var convArg1 = arg1.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
+		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QUrl_PTR() != nil {
+		convArg1 = arg1.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFileC2EP10QQmlEngineRK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlFileFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -93,7 +100,10 @@ func NewQQmlFile_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_IT
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlFile(QQmlEngine *, const QString &)
 func NewQQmlFile_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) *QQmlFile {
-	var convArg0 = arg0.QQmlEngine_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
+		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFileC2EP10QQmlEngineRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -226,8 +236,14 @@ func (this *QQmlFile) DataByteArray() *qtcore.QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void load(QQmlEngine *, const QUrl &)
 func (this *QQmlFile) Load(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_ITF) {
-	var convArg0 = arg0.QQmlEngine_PTR().GetCthis()
-	var convArg1 = arg1.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
+		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QUrl_PTR() != nil {
+		convArg1 = arg1.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile4loadEP10QQmlEngineRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -237,7 +253,10 @@ func (this *QQmlFile) Load(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore
 // Public Visibility=Default Availability=Available
 // [-2] void load(QQmlEngine *, const QString &)
 func (this *QQmlFile) Load_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) {
-	var convArg0 = arg0.QQmlEngine_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
+		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile4loadEP10QQmlEngineRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -258,7 +277,10 @@ func (this *QQmlFile) Clear() {
 // Public Visibility=Default Availability=Available
 // [-2] void clear(QObject *)
 func (this *QQmlFile) Clear_1(arg0 qtcore.QObject_ITF /*777 QObject **/) {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile5clearEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -268,7 +290,10 @@ func (this *QQmlFile) Clear_1(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 // Public Visibility=Default Availability=Available
 // [1] bool connectFinished(QObject *, const char *)
 func (this *QQmlFile) ConnectFinished(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) bool {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(arg1)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile15connectFinishedEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -281,7 +306,10 @@ func (this *QQmlFile) ConnectFinished(arg0 qtcore.QObject_ITF /*777 QObject **/,
 // Public Visibility=Default Availability=Available
 // [1] bool connectFinished(QObject *, int)
 func (this *QQmlFile) ConnectFinished_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 int) bool {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile15connectFinishedEP7QObjecti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -292,7 +320,10 @@ func (this *QQmlFile) ConnectFinished_1(arg0 qtcore.QObject_ITF /*777 QObject **
 // Public Visibility=Default Availability=Available
 // [1] bool connectDownloadProgress(QObject *, const char *)
 func (this *QQmlFile) ConnectDownloadProgress(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) bool {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(arg1)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile23connectDownloadProgressEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -305,7 +336,10 @@ func (this *QQmlFile) ConnectDownloadProgress(arg0 qtcore.QObject_ITF /*777 QObj
 // Public Visibility=Default Availability=Available
 // [1] bool connectDownloadProgress(QObject *, int)
 func (this *QQmlFile) ConnectDownloadProgress_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 int) bool {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile23connectDownloadProgressEP7QObjecti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -333,7 +367,10 @@ func QQmlFile_IsSynchronous(url string) bool {
 // Public static Visibility=Default Availability=Available
 // [1] bool isSynchronous(const QUrl &)
 func (this *QQmlFile) IsSynchronous_1(url qtcore.QUrl_ITF) bool {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile13isSynchronousERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -366,7 +403,10 @@ func QQmlFile_IsLocalFile(url string) bool {
 // Public static Visibility=Default Availability=Available
 // [1] bool isLocalFile(const QUrl &)
 func (this *QQmlFile) IsLocalFile_1(url qtcore.QUrl_ITF) bool {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile11isLocalFileERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -402,7 +442,10 @@ func QQmlFile_UrlToLocalFileOrQrc(arg0 string) string {
 // Public static Visibility=Default Availability=Available
 // [8] QString urlToLocalFileOrQrc(const QUrl &)
 func (this *QQmlFile) UrlToLocalFileOrQrc_1(arg0 qtcore.QUrl_ITF) string {
-	var convArg0 = arg0.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QUrl_PTR() != nil {
+		convArg0 = arg0.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile19urlToLocalFileOrQrcERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -436,6 +479,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

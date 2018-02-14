@@ -24,6 +24,7 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -82,6 +83,50 @@ func DeleteQAuthenticator(this *QAuthenticator) {
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
+}
+
+// /usr/include/qt/QtNetwork/qauthenticator.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QAuthenticator & operator=(const QAuthenticator &)
+func (this *QAuthenticator) Operator_equal(other QAuthenticator_ITF) *QAuthenticator {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QAuthenticator_PTR() != nil {
+		convArg0 = other.QAuthenticator_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QAuthenticatoraSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQAuthenticatorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAuthenticator)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qauthenticator.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QAuthenticator &)
+func (this *QAuthenticator) Operator_equal_equal(other QAuthenticator_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QAuthenticator_PTR() != nil {
+		convArg0 = other.QAuthenticator_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAuthenticatoreqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qauthenticator.h:63
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QAuthenticator &)
+func (this *QAuthenticator) Operator_not_equal(other QAuthenticator_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QAuthenticator_PTR() != nil {
+		convArg0 = other.QAuthenticator_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAuthenticatorneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtNetwork/qauthenticator.h:65
@@ -177,7 +222,10 @@ func (this *QAuthenticator) Option(opt string) *qtcore.QVariant /*123*/ {
 func (this *QAuthenticator) SetOption(opt string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(opt)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAuthenticator9setOptionERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -214,6 +262,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

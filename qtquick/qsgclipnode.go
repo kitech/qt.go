@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -109,7 +110,10 @@ func (this *QSGClipNode) IsRectangular() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setClipRect(const QRectF &)
 func (this *QSGClipNode) SetClipRect(arg0 qtcore.QRectF_ITF) {
-	var convArg0 = arg0.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QRectF_PTR() != nil {
+		convArg0 = arg0.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGClipNode11setClipRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -139,6 +143,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

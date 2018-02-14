@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -138,10 +139,14 @@ func (this *QAbstractState) ActiveChanged(active bool) {
 // Protected Visibility=Default Availability=Available
 // [-2] void QAbstractState(QState *)
 func NewQAbstractState(parent QState_ITF /*777 QState **/) *QAbstractState {
-	var convArg0 = parent.QState_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QState_PTR() != nil {
+		convArg0 = parent.QState_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractStateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractState")
 	return gothis
 }
 
@@ -150,7 +155,10 @@ func NewQAbstractState(parent QState_ITF /*777 QState **/) *QAbstractState {
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void onEntry(QEvent *)
 func (this *QAbstractState) OnEntry(event QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractState7onEntryEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -160,7 +168,10 @@ func (this *QAbstractState) OnEntry(event QEvent_ITF /*777 QEvent **/) {
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void onExit(QEvent *)
 func (this *QAbstractState) OnExit(event QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractState6onExitEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -170,7 +181,10 @@ func (this *QAbstractState) OnExit(event QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QAbstractState) Event(e QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractState5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -189,6 +203,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

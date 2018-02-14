@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -187,7 +188,10 @@ func (this *QSize) Scale(w int, h int, mode int) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void scale(const QSize &, Qt::AspectRatioMode)
 func (this *QSize) Scale_1(s QSize_ITF, mode int) {
-	var convArg0 = s.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QSize_PTR() != nil {
+		convArg0 = s.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSize5scaleERKS_N2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -209,7 +213,10 @@ func (this *QSize) Scaled(w int, h int, mode int) *QSize /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QSize scaled(const QSize &, Qt::AspectRatioMode)
 func (this *QSize) Scaled_1(s QSize_ITF, mode int) *QSize /*123*/ {
-	var convArg0 = s.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QSize_PTR() != nil {
+		convArg0 = s.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize6scaledERKS_N2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -222,7 +229,10 @@ func (this *QSize) Scaled_1(s QSize_ITF, mode int) *QSize /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QSize expandedTo(const QSize &)
 func (this *QSize) ExpandedTo(arg0 QSize_ITF) *QSize /*123*/ {
-	var convArg0 = arg0.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSize_PTR() != nil {
+		convArg0 = arg0.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize10expandedToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -235,7 +245,10 @@ func (this *QSize) ExpandedTo(arg0 QSize_ITF) *QSize /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QSize boundedTo(const QSize &)
 func (this *QSize) BoundedTo(arg0 QSize_ITF) *QSize /*123*/ {
-	var convArg0 = arg0.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSize_PTR() != nil {
+		convArg0 = arg0.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize9boundedToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -263,6 +276,62 @@ func (this *QSize) Rheight() int {
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
+// /usr/include/qt/QtCore/qsize.h:80
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QSize & operator+=(const QSize &)
+func (this *QSize) Operator_add_equal(arg0 QSize_ITF) *QSize {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSize_PTR() != nil {
+		convArg0 = arg0.QSize_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizepLERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qsize.h:81
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QSize & operator-=(const QSize &)
+func (this *QSize) Operator_minus_equal(arg0 QSize_ITF) *QSize {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QSize_PTR() != nil {
+		convArg0 = arg0.QSize_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizemIERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qsize.h:82
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QSize & operator*=(qreal)
+func (this *QSize) Operator_mul_equal(c float64) *QSize {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizemLEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qsize.h:83
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QSize & operator/=(qreal)
+func (this *QSize) Operator_div_equal(c float64) *QSize {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizedVEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
+	return rv2
+}
+
 func DeleteQSize(this *QSize) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -282,6 +351,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

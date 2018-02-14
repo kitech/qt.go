@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -135,10 +136,14 @@ func (this *QToolButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // Public Visibility=Default Availability=Available
 // [-2] void QToolButton(QWidget *)
 func NewQToolButton(parent QWidget_ITF /*777 QWidget **/) *QToolButton {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQToolButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QToolButton")
 	return gothis
 }
 
@@ -211,7 +216,10 @@ func (this *QToolButton) SetArrowType(type_ int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setMenu(QMenu *)
 func (this *QToolButton) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
-	var convArg0 = menu.QMenu_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if menu != nil && menu.QMenu_PTR() != nil {
+		convArg0 = menu.QMenu_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton7setMenuEP5QMenu", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -297,7 +305,10 @@ func (this *QToolButton) SetToolButtonStyle(style int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultAction(QAction *)
 func (this *QToolButton) SetDefaultAction(arg0 QAction_ITF /*777 QAction **/) {
-	var convArg0 = arg0.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAction_PTR() != nil {
+		convArg0 = arg0.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton16setDefaultActionEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -307,7 +318,10 @@ func (this *QToolButton) SetDefaultAction(arg0 QAction_ITF /*777 QAction **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(QAction *)
 func (this *QToolButton) Triggered(arg0 QAction_ITF /*777 QAction **/) {
-	var convArg0 = arg0.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAction_PTR() != nil {
+		convArg0 = arg0.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton9triggeredEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -317,7 +331,10 @@ func (this *QToolButton) Triggered(arg0 QAction_ITF /*777 QAction **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QToolButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -328,7 +345,10 @@ func (this *QToolButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
 func (this *QToolButton) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -338,7 +358,10 @@ func (this *QToolButton) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouse
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 func (this *QToolButton) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
+		convArg0 = arg0.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -348,7 +371,10 @@ func (this *QToolButton) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMou
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QToolButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
+		convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -358,7 +384,10 @@ func (this *QToolButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void actionEvent(QActionEvent *)
 func (this *QToolButton) ActionEvent(arg0 qtgui.QActionEvent_ITF /*777 QActionEvent **/) {
-	var convArg0 = arg0.QActionEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QActionEvent_PTR() != nil {
+		convArg0 = arg0.QActionEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton11actionEventEP12QActionEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -368,7 +397,10 @@ func (this *QToolButton) ActionEvent(arg0 qtgui.QActionEvent_ITF /*777 QActionEv
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void enterEvent(QEvent *)
 func (this *QToolButton) EnterEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton10enterEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -378,7 +410,10 @@ func (this *QToolButton) EnterEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void leaveEvent(QEvent *)
 func (this *QToolButton) LeaveEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton10leaveEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -388,7 +423,10 @@ func (this *QToolButton) LeaveEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QToolButton) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
-	var convArg0 = arg0.QTimerEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QTimerEvent_PTR() != nil {
+		convArg0 = arg0.QTimerEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -398,7 +436,10 @@ func (this *QToolButton) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEven
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
 func (this *QToolButton) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -408,7 +449,10 @@ func (this *QToolButton) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool hitButton(const QPoint &)
 func (this *QToolButton) HitButton(pos qtcore.QPoint_ITF) bool {
-	var convArg0 = pos.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton9hitButtonERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -428,7 +472,10 @@ func (this *QToolButton) NextCheckState() {
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionToolButton *)
 func (this *QToolButton) InitStyleOption(option QStyleOptionToolButton_ITF /*777 QStyleOptionToolButton **/) {
-	var convArg0 = option.QStyleOptionToolButton_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if option != nil && option.QStyleOptionToolButton_PTR() != nil {
+		convArg0 = option.QStyleOptionToolButton_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton15initStyleOptionEP22QStyleOptionToolButton", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -452,6 +499,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

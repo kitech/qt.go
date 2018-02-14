@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -83,10 +84,14 @@ func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject *
 // Public Visibility=Default Availability=Available
 // [-2] void QPauseAnimation(QObject *)
 func NewQPauseAnimation(parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPauseAnimation")
 	return gothis
 }
 
@@ -95,10 +100,14 @@ func NewQPauseAnimation(parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
 // Public Visibility=Default Availability=Available
 // [-2] void QPauseAnimation(int, QObject *)
 func NewQPauseAnimation_1(msecs int, parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", qtrt.FFI_TYPE_POINTER, msecs, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPauseAnimation")
 	return gothis
 }
 
@@ -137,7 +146,10 @@ func (this *QPauseAnimation) SetDuration(msecs int) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QPauseAnimation) Event(e QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimation5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -165,6 +177,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

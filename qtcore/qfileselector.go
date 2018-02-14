@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -73,10 +74,14 @@ func (this *QFileSelector) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSelector(QObject *)
 func NewQFileSelector(parent QObject_ITF /*777 QObject **/) *QFileSelector {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFileSelectorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileSelectorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFileSelector")
 	return gothis
 }
 
@@ -111,7 +116,10 @@ func (this *QFileSelector) Select(filePath string) string {
 // Public Visibility=Default Availability=Available
 // [8] QUrl select(const QUrl &)
 func (this *QFileSelector) Select_1(filePath QUrl_ITF) *QUrl /*123*/ {
-	var convArg0 = filePath.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if filePath != nil && filePath.QUrl_PTR() != nil {
+		convArg0 = filePath.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFileSelector6selectERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -136,7 +144,10 @@ func (this *QFileSelector) ExtraSelectors() *QStringList /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setExtraSelectors(const QStringList &)
 func (this *QFileSelector) SetExtraSelectors(list QStringList_ITF) {
-	var convArg0 = list.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if list != nil && list.QStringList_PTR() != nil {
+		convArg0 = list.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFileSelector17setExtraSelectorsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -166,6 +177,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

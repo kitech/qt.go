@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -73,12 +74,70 @@ func NewQTextBlock() *QTextBlock {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qtextobject.h:208
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QTextBlock & operator=(const QTextBlock &)
+func (this *QTextBlock) Operator_equal(o QTextBlock_ITF) *QTextBlock {
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QTextBlock_PTR() != nil {
+		convArg0 = o.QTextBlock_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextBlockaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qtextobject.h:210
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QTextBlock) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextBlock7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:212
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QTextBlock &)
+func (this *QTextBlock) Operator_equal_equal(o QTextBlock_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QTextBlock_PTR() != nil {
+		convArg0 = o.QTextBlock_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextBlockeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:213
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QTextBlock &)
+func (this *QTextBlock) Operator_not_equal(o QTextBlock_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QTextBlock_PTR() != nil {
+		convArg0 = o.QTextBlock_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextBlockneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:214
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(const QTextBlock &)
+func (this *QTextBlock) Operator_less_than(o QTextBlock_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QTextBlock_PTR() != nil {
+		convArg0 = o.QTextBlock_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextBlockltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -234,7 +293,10 @@ func (this *QTextBlock) UserData() *QTextBlockUserData /*777 QTextBlockUserData 
 // Public Visibility=Default Availability=Available
 // [-2] void setUserData(QTextBlockUserData *)
 func (this *QTextBlock) SetUserData(data QTextBlockUserData_ITF /*777 QTextBlockUserData **/) {
-	var convArg0 = data.QTextBlockUserData_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QTextBlockUserData_PTR() != nil {
+		convArg0 = data.QTextBlockUserData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextBlock11setUserDataEP18QTextBlockUserData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -408,6 +470,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

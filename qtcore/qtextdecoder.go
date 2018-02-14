@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -65,7 +66,10 @@ func (*QTextDecoder) NewFromPointer(cthis unsafe.Pointer) *QTextDecoder {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextDecoder(const QTextCodec *)
 func NewQTextDecoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextDecoder {
-	var convArg0 = codec.QTextCodec_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if codec != nil && codec.QTextCodec_PTR() != nil {
+		convArg0 = codec.QTextCodec_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDecoderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -78,7 +82,10 @@ func NewQTextDecoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextDeco
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDecoder(const QTextCodec *, QTextCodec::ConversionFlags)
 func NewQTextDecoder_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextDecoder {
-	var convArg0 = codec.QTextCodec_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if codec != nil && codec.QTextCodec_PTR() != nil {
+		convArg0 = codec.QTextCodec_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec6QFlagsINS0_14ConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDecoderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,7 +124,10 @@ func (this *QTextDecoder) ToUnicode(chars string, len int) string {
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const QByteArray &)
 func (this *QTextDecoder) ToUnicode_1(ba QByteArray_ITF) string {
-	var convArg0 = ba.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ba != nil && ba.QByteArray_PTR() != nil {
+		convArg0 = ba.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -162,6 +172,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

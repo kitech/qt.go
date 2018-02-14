@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 130
+// extern C begin: 147
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -60,6 +61,94 @@ func (*QByteRef) NewFromPointer(cthis unsafe.Pointer) *QByteRef {
 	return NewQByteRefFromPointer(cthis)
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:535
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QByteRef & operator=(char)
+func (this *QByteRef) Operator_equal(c byte) *QByteRef {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QByteRefaSEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteRef)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:538
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [16] QByteRef & operator=(const QByteRef &)
+func (this *QByteRef) Operator_equal_1(c QByteRef_ITF) *QByteRef {
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QByteRef_PTR() != nil {
+		convArg0 = c.QByteRef_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QByteRefaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteRef)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:541
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(char)
+func (this *QByteRef) Operator_equal_equal(c byte) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefeqEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:543
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(char)
+func (this *QByteRef) Operator_not_equal(c byte) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefneEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:545
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>(char)
+func (this *QByteRef) Operator_greater_than(c byte) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefgtEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:547
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(char)
+func (this *QByteRef) Operator_greater_than_equal(c byte) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefgeEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:549
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(char)
+func (this *QByteRef) Operator_less_than(c byte) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefltEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:551
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(char)
+func (this *QByteRef) Operator_less_than_equal(c byte) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefleEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 func DeleteQByteRef(this *QByteRef) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QByteRefD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +168,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

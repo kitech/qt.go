@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -85,7 +86,10 @@ func (this *QMetaObject) SuperClass() *QMetaObject /*777 const QMetaObject **/ {
 // Public Visibility=Default Availability=Available
 // [8] QObject * cast(QObject *)
 func (this *QMetaObject) Cast(obj QObject_ITF /*777 QObject **/) *QObject /*777 QObject **/ {
-	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg0 = obj.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject4castEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -96,7 +100,10 @@ func (this *QMetaObject) Cast(obj QObject_ITF /*777 QObject **/) *QObject /*777 
 // Public Visibility=Default Availability=Available
 // [8] const QObject * cast(const QObject *)
 func (this *QMetaObject) Cast_1(obj QObject_ITF /*777 const QObject **/) *QObject /*777 const QObject **/ {
-	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg0 = obj.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject4castEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -372,8 +379,14 @@ func QMetaObject_CheckConnectArgs(signal string, method string) bool {
 // Public static Visibility=Default Availability=Available
 // [1] bool checkConnectArgs(const QMetaMethod &, const QMetaMethod &)
 func (this *QMetaObject) CheckConnectArgs_1(signal QMetaMethod_ITF, method QMetaMethod_ITF) bool {
-	var convArg0 = signal.QMetaMethod_PTR().GetCthis()
-	var convArg1 = method.QMetaMethod_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if signal != nil && signal.QMetaMethod_PTR() != nil {
+		convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if method != nil && method.QMetaMethod_PTR() != nil {
+		convArg1 = method.QMetaMethod_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject16checkConnectArgsERK11QMetaMethodS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -427,9 +440,15 @@ func QMetaObject_NormalizedType(type_ string) *QByteArray /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, int, const QObject *, int, int, int *)
 func (this *QMetaObject) Connect(sender QObject_ITF /*777 const QObject **/, signal_index int, receiver QObject_ITF /*777 const QObject **/, method_index int, type_ int, types unsafe.Pointer /*666*/) unsafe.Pointer /*444*/ {
-	var convArg0 = sender.QObject_PTR().GetCthis()
-	var convArg2 = receiver.QObject_PTR().GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject7connectEPK7QObjectiS2_iiPi", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, convArg2, method_index, type_, &types)
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg2 = receiver.QObject_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject7connectEPK7QObjectiS2_iiPi", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, convArg2, method_index, type_, types)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
@@ -444,8 +463,14 @@ func QMetaObject_Connect(sender QObject_ITF /*777 const QObject **/, signal_inde
 // Public static Visibility=Default Availability=Available
 // [1] bool disconnect(const QObject *, int, const QObject *, int)
 func (this *QMetaObject) Disconnect(sender QObject_ITF /*777 const QObject **/, signal_index int, receiver QObject_ITF /*777 const QObject **/, method_index int) bool {
-	var convArg0 = sender.QObject_PTR().GetCthis()
-	var convArg2 = receiver.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg2 = receiver.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject10disconnectEPK7QObjectiS2_i", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, convArg2, method_index)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -461,8 +486,14 @@ func QMetaObject_Disconnect(sender QObject_ITF /*777 const QObject **/, signal_i
 // Public static Visibility=Default Availability=Available
 // [1] bool disconnectOne(const QObject *, int, const QObject *, int)
 func (this *QMetaObject) DisconnectOne(sender QObject_ITF /*777 const QObject **/, signal_index int, receiver QObject_ITF /*777 const QObject **/, method_index int) bool {
-	var convArg0 = sender.QObject_PTR().GetCthis()
-	var convArg2 = receiver.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg2 = receiver.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject13disconnectOneEPK7QObjectiS2_i", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, convArg2, method_index)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -478,7 +509,10 @@ func QMetaObject_DisconnectOne(sender QObject_ITF /*777 const QObject **/, signa
 // Public static Visibility=Default Availability=Available
 // [-2] void connectSlotsByName(QObject *)
 func (this *QMetaObject) ConnectSlotsByName(o QObject_ITF /*777 QObject **/) {
-	var convArg0 = o.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QObject_PTR() != nil {
+		convArg0 = o.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject18connectSlotsByNameEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -492,7 +526,10 @@ func QMetaObject_ConnectSlotsByName(o QObject_ITF /*777 QObject **/) {
 // Public static Visibility=Default Availability=Available
 // [-2] void activate(QObject *, int, void **)
 func (this *QMetaObject) Activate(sender QObject_ITF /*777 QObject **/, signal_index int, argv unsafe.Pointer /*666*/) {
-	var convArg0 = sender.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject8activateEP7QObjectiPPv", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, argv)
 	qtrt.ErrPrint(err, rv)
 }
@@ -506,7 +543,10 @@ func QMetaObject_Activate(sender QObject_ITF /*777 QObject **/, signal_index int
 // Public static Visibility=Default Availability=Available
 // [-2] void activate(QObject *, int, int, void **)
 func (this *QMetaObject) Activate_1(sender QObject_ITF /*777 QObject **/, signal_offset int, local_signal_index int, argv unsafe.Pointer /*666*/) {
-	var convArg0 = sender.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject8activateEP7QObjectiiPPv", qtrt.FFI_TYPE_POINTER, convArg0, signal_offset, local_signal_index, argv)
 	qtrt.ErrPrint(err, rv)
 }
@@ -520,20 +560,56 @@ func QMetaObject_Activate_1(sender QObject_ITF /*777 QObject **/, signal_offset 
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaObject) InvokeMethod(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/, val9 QGenericArgument_ITF /*123*/) bool {
-	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg0 = obj.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
-	var convArg3 = ret.QGenericReturnArgument_PTR().GetCthis()
-	var convArg4 = val0.QGenericArgument_PTR().GetCthis()
-	var convArg5 = val1.QGenericArgument_PTR().GetCthis()
-	var convArg6 = val2.QGenericArgument_PTR().GetCthis()
-	var convArg7 = val3.QGenericArgument_PTR().GetCthis()
-	var convArg8 = val4.QGenericArgument_PTR().GetCthis()
-	var convArg9 = val5.QGenericArgument_PTR().GetCthis()
-	var convArg10 = val6.QGenericArgument_PTR().GetCthis()
-	var convArg11 = val7.QGenericArgument_PTR().GetCthis()
-	var convArg12 = val8.QGenericArgument_PTR().GetCthis()
-	var convArg13 = val9.QGenericArgument_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if ret != nil && ret.QGenericReturnArgument_PTR() != nil {
+		convArg3 = ret.QGenericReturnArgument_PTR().GetCthis()
+	}
+	var convArg4 unsafe.Pointer
+	if val0 != nil && val0.QGenericArgument_PTR() != nil {
+		convArg4 = val0.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg5 unsafe.Pointer
+	if val1 != nil && val1.QGenericArgument_PTR() != nil {
+		convArg5 = val1.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg6 unsafe.Pointer
+	if val2 != nil && val2.QGenericArgument_PTR() != nil {
+		convArg6 = val2.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg7 unsafe.Pointer
+	if val3 != nil && val3.QGenericArgument_PTR() != nil {
+		convArg7 = val3.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg8 unsafe.Pointer
+	if val4 != nil && val4.QGenericArgument_PTR() != nil {
+		convArg8 = val4.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg9 unsafe.Pointer
+	if val5 != nil && val5.QGenericArgument_PTR() != nil {
+		convArg9 = val5.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg10 unsafe.Pointer
+	if val6 != nil && val6.QGenericArgument_PTR() != nil {
+		convArg10 = val6.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg11 unsafe.Pointer
+	if val7 != nil && val7.QGenericArgument_PTR() != nil {
+		convArg11 = val7.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg12 unsafe.Pointer
+	if val8 != nil && val8.QGenericArgument_PTR() != nil {
+		convArg12 = val8.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg13 unsafe.Pointer
+	if val9 != nil && val9.QGenericArgument_PTR() != nil {
+		convArg13 = val9.QGenericArgument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -549,20 +625,56 @@ func QMetaObject_InvokeMethod(obj QObject_ITF /*777 QObject **/, member string, 
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaObject) InvokeMethod_1(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/, val9 QGenericArgument_ITF /*123*/) bool {
-	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg0 = obj.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
-	var convArg2 = ret.QGenericReturnArgument_PTR().GetCthis()
-	var convArg3 = val0.QGenericArgument_PTR().GetCthis()
-	var convArg4 = val1.QGenericArgument_PTR().GetCthis()
-	var convArg5 = val2.QGenericArgument_PTR().GetCthis()
-	var convArg6 = val3.QGenericArgument_PTR().GetCthis()
-	var convArg7 = val4.QGenericArgument_PTR().GetCthis()
-	var convArg8 = val5.QGenericArgument_PTR().GetCthis()
-	var convArg9 = val6.QGenericArgument_PTR().GetCthis()
-	var convArg10 = val7.QGenericArgument_PTR().GetCthis()
-	var convArg11 = val8.QGenericArgument_PTR().GetCthis()
-	var convArg12 = val9.QGenericArgument_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if ret != nil && ret.QGenericReturnArgument_PTR() != nil {
+		convArg2 = ret.QGenericReturnArgument_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if val0 != nil && val0.QGenericArgument_PTR() != nil {
+		convArg3 = val0.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg4 unsafe.Pointer
+	if val1 != nil && val1.QGenericArgument_PTR() != nil {
+		convArg4 = val1.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg5 unsafe.Pointer
+	if val2 != nil && val2.QGenericArgument_PTR() != nil {
+		convArg5 = val2.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg6 unsafe.Pointer
+	if val3 != nil && val3.QGenericArgument_PTR() != nil {
+		convArg6 = val3.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg7 unsafe.Pointer
+	if val4 != nil && val4.QGenericArgument_PTR() != nil {
+		convArg7 = val4.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg8 unsafe.Pointer
+	if val5 != nil && val5.QGenericArgument_PTR() != nil {
+		convArg8 = val5.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg9 unsafe.Pointer
+	if val6 != nil && val6.QGenericArgument_PTR() != nil {
+		convArg9 = val6.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg10 unsafe.Pointer
+	if val7 != nil && val7.QGenericArgument_PTR() != nil {
+		convArg10 = val7.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg11 unsafe.Pointer
+	if val8 != nil && val8.QGenericArgument_PTR() != nil {
+		convArg11 = val8.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg12 unsafe.Pointer
+	if val9 != nil && val9.QGenericArgument_PTR() != nil {
+		convArg12 = val9.QGenericArgument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -578,19 +690,52 @@ func QMetaObject_InvokeMethod_1(obj QObject_ITF /*777 QObject **/, member string
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaObject) InvokeMethod_2(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/, val9 QGenericArgument_ITF /*123*/) bool {
-	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg0 = obj.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
-	var convArg3 = val0.QGenericArgument_PTR().GetCthis()
-	var convArg4 = val1.QGenericArgument_PTR().GetCthis()
-	var convArg5 = val2.QGenericArgument_PTR().GetCthis()
-	var convArg6 = val3.QGenericArgument_PTR().GetCthis()
-	var convArg7 = val4.QGenericArgument_PTR().GetCthis()
-	var convArg8 = val5.QGenericArgument_PTR().GetCthis()
-	var convArg9 = val6.QGenericArgument_PTR().GetCthis()
-	var convArg10 = val7.QGenericArgument_PTR().GetCthis()
-	var convArg11 = val8.QGenericArgument_PTR().GetCthis()
-	var convArg12 = val9.QGenericArgument_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if val0 != nil && val0.QGenericArgument_PTR() != nil {
+		convArg3 = val0.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg4 unsafe.Pointer
+	if val1 != nil && val1.QGenericArgument_PTR() != nil {
+		convArg4 = val1.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg5 unsafe.Pointer
+	if val2 != nil && val2.QGenericArgument_PTR() != nil {
+		convArg5 = val2.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg6 unsafe.Pointer
+	if val3 != nil && val3.QGenericArgument_PTR() != nil {
+		convArg6 = val3.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg7 unsafe.Pointer
+	if val4 != nil && val4.QGenericArgument_PTR() != nil {
+		convArg7 = val4.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg8 unsafe.Pointer
+	if val5 != nil && val5.QGenericArgument_PTR() != nil {
+		convArg8 = val5.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg9 unsafe.Pointer
+	if val6 != nil && val6.QGenericArgument_PTR() != nil {
+		convArg9 = val6.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg10 unsafe.Pointer
+	if val7 != nil && val7.QGenericArgument_PTR() != nil {
+		convArg10 = val7.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg11 unsafe.Pointer
+	if val8 != nil && val8.QGenericArgument_PTR() != nil {
+		convArg11 = val8.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg12 unsafe.Pointer
+	if val9 != nil && val9.QGenericArgument_PTR() != nil {
+		convArg12 = val9.QGenericArgument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -606,19 +751,52 @@ func QMetaObject_InvokeMethod_2(obj QObject_ITF /*777 QObject **/, member string
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaObject) InvokeMethod_3(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/, val9 QGenericArgument_ITF /*123*/) bool {
-	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg0 = obj.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
-	var convArg2 = val0.QGenericArgument_PTR().GetCthis()
-	var convArg3 = val1.QGenericArgument_PTR().GetCthis()
-	var convArg4 = val2.QGenericArgument_PTR().GetCthis()
-	var convArg5 = val3.QGenericArgument_PTR().GetCthis()
-	var convArg6 = val4.QGenericArgument_PTR().GetCthis()
-	var convArg7 = val5.QGenericArgument_PTR().GetCthis()
-	var convArg8 = val6.QGenericArgument_PTR().GetCthis()
-	var convArg9 = val7.QGenericArgument_PTR().GetCthis()
-	var convArg10 = val8.QGenericArgument_PTR().GetCthis()
-	var convArg11 = val9.QGenericArgument_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if val0 != nil && val0.QGenericArgument_PTR() != nil {
+		convArg2 = val0.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if val1 != nil && val1.QGenericArgument_PTR() != nil {
+		convArg3 = val1.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg4 unsafe.Pointer
+	if val2 != nil && val2.QGenericArgument_PTR() != nil {
+		convArg4 = val2.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg5 unsafe.Pointer
+	if val3 != nil && val3.QGenericArgument_PTR() != nil {
+		convArg5 = val3.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg6 unsafe.Pointer
+	if val4 != nil && val4.QGenericArgument_PTR() != nil {
+		convArg6 = val4.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg7 unsafe.Pointer
+	if val5 != nil && val5.QGenericArgument_PTR() != nil {
+		convArg7 = val5.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg8 unsafe.Pointer
+	if val6 != nil && val6.QGenericArgument_PTR() != nil {
+		convArg8 = val6.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg9 unsafe.Pointer
+	if val7 != nil && val7.QGenericArgument_PTR() != nil {
+		convArg9 = val7.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg10 unsafe.Pointer
+	if val8 != nil && val8.QGenericArgument_PTR() != nil {
+		convArg10 = val8.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg11 unsafe.Pointer
+	if val9 != nil && val9.QGenericArgument_PTR() != nil {
+		convArg11 = val9.QGenericArgument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -634,16 +812,46 @@ func QMetaObject_InvokeMethod_3(obj QObject_ITF /*777 QObject **/, member string
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaObject) NewInstance(val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/, val9 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
-	var convArg0 = val0.QGenericArgument_PTR().GetCthis()
-	var convArg1 = val1.QGenericArgument_PTR().GetCthis()
-	var convArg2 = val2.QGenericArgument_PTR().GetCthis()
-	var convArg3 = val3.QGenericArgument_PTR().GetCthis()
-	var convArg4 = val4.QGenericArgument_PTR().GetCthis()
-	var convArg5 = val5.QGenericArgument_PTR().GetCthis()
-	var convArg6 = val6.QGenericArgument_PTR().GetCthis()
-	var convArg7 = val7.QGenericArgument_PTR().GetCthis()
-	var convArg8 = val8.QGenericArgument_PTR().GetCthis()
-	var convArg9 = val9.QGenericArgument_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if val0 != nil && val0.QGenericArgument_PTR() != nil {
+		convArg0 = val0.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if val1 != nil && val1.QGenericArgument_PTR() != nil {
+		convArg1 = val1.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if val2 != nil && val2.QGenericArgument_PTR() != nil {
+		convArg2 = val2.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if val3 != nil && val3.QGenericArgument_PTR() != nil {
+		convArg3 = val3.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg4 unsafe.Pointer
+	if val4 != nil && val4.QGenericArgument_PTR() != nil {
+		convArg4 = val4.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg5 unsafe.Pointer
+	if val5 != nil && val5.QGenericArgument_PTR() != nil {
+		convArg5 = val5.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg6 unsafe.Pointer
+	if val6 != nil && val6.QGenericArgument_PTR() != nil {
+		convArg6 = val6.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg7 unsafe.Pointer
+	if val7 != nil && val7.QGenericArgument_PTR() != nil {
+		convArg7 = val7.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg8 unsafe.Pointer
+	if val8 != nil && val8.QGenericArgument_PTR() != nil {
+		convArg8 = val8.QGenericArgument_PTR().GetCthis()
+	}
+	var convArg9 unsafe.Pointer
+	if val9 != nil && val9.QGenericArgument_PTR() != nil {
+		convArg9 = val9.QGenericArgument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -664,7 +872,10 @@ func (this *QMetaObject) Static_metacall(arg0 int, arg1 int, arg2 unsafe.Pointer
 // Public static Visibility=Default Availability=Available
 // [4] int metacall(QObject *, enum QMetaObject::Call, int, void **)
 func (this *QMetaObject) Metacall(arg0 QObject_ITF /*777 QObject **/, arg1 int, arg2 int, arg3 unsafe.Pointer /*666*/) int {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject8metacallEP7QObjectNS_4CallEiPPv", qtrt.FFI_TYPE_POINTER, convArg0, arg1, arg2, arg3)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -710,6 +921,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

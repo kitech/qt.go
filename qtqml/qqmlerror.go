@@ -24,6 +24,7 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -74,6 +75,22 @@ func NewQQmlError() *QQmlError {
 	return gothis
 }
 
+// /usr/include/qt/QtQml/qqmlerror.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QQmlError & operator=(const QQmlError &)
+func (this *QQmlError) Operator_equal(arg0 QQmlError_ITF) *QQmlError {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlError_PTR() != nil {
+		convArg0 = arg0.QQmlError_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlErroraSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQQmlErrorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQmlError)
+	return rv2
+}
+
 // /usr/include/qt/QtQml/qqmlerror.h:59
 // index:0
 // Public Visibility=Default Availability=Available
@@ -112,7 +129,10 @@ func (this *QQmlError) Url() *qtcore.QUrl /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setUrl(const QUrl &)
 func (this *QQmlError) SetUrl(arg0 qtcore.QUrl_ITF) {
-	var convArg0 = arg0.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QUrl_PTR() != nil {
+		convArg0 = arg0.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError6setUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -194,7 +214,10 @@ func (this *QQmlError) Object() *qtcore.QObject /*777 QObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setObject(QObject *)
 func (this *QQmlError) SetObject(arg0 qtcore.QObject_ITF /*777 QObject **/) {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError9setObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -244,6 +267,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

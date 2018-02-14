@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -66,7 +67,10 @@ func (*QScreenOrientationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QScr
 // Public Visibility=Default Availability=Available
 // [-2] void QScreenOrientationChangeEvent(QScreen *, Qt::ScreenOrientation)
 func NewQScreenOrientationChangeEvent(screen QScreen_ITF /*777 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
-	var convArg0 = screen.QScreen_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if screen != nil && screen.QScreen_PTR() != nil {
+		convArg0 = screen.QScreen_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", qtrt.FFI_TYPE_POINTER, convArg0, orientation)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQScreenOrientationChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -118,6 +122,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

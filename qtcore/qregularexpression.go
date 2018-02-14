@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 68
+// extern C begin: 74
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -116,12 +117,43 @@ func DeleteQRegularExpression(this *QRegularExpression) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qregularexpression.h:88
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QRegularExpression & operator=(const QRegularExpression &)
+func (this *QRegularExpression) Operator_equal(re QRegularExpression_ITF) *QRegularExpression {
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpressionaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpression)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:91
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QRegularExpression & operator=(QRegularExpression &&)
+func (this *QRegularExpression) Operator_equal_1(re unsafe.Pointer /*333*/) *QRegularExpression {
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpressionaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), re)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpression)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qregularexpression.h:95
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QRegularExpression &)
 func (this *QRegularExpression) Swap(other QRegularExpression_ITF) {
-	var convArg0 = other.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QRegularExpression_PTR() != nil {
+		convArg0 = other.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpression4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -224,7 +256,10 @@ func (this *QRegularExpression) Match(subject string, offset int, matchType int,
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch match(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions)
 func (this *QRegularExpression) Match_1(subjectRef QStringRef_ITF, offset int, matchType int, matchOptions int) *QRegularExpressionMatch /*123*/ {
-	var convArg0 = subjectRef.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
+		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression5matchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -251,7 +286,10 @@ func (this *QRegularExpression) GlobalMatch(subject string, offset int, matchTyp
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions)
 func (this *QRegularExpression) GlobalMatch_1(subjectRef QStringRef_ITF, offset int, matchType int, matchOptions int) *QRegularExpressionMatchIterator /*123*/ {
-	var convArg0 = subjectRef.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
+		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegularExpressionMatchIteratorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -286,6 +324,34 @@ func QRegularExpression_Escape(str string) string {
 	var nilthis *QRegularExpression
 	rv := nilthis.Escape(str)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:145
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QRegularExpression &)
+func (this *QRegularExpression) Operator_equal_equal(re QRegularExpression_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpressioneqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:146
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QRegularExpression &)
+func (this *QRegularExpression) Operator_not_equal(re QRegularExpression_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpressionneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 type QRegularExpression__PatternOption = int
@@ -327,6 +393,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

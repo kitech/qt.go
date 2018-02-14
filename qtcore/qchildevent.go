@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -63,7 +64,10 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QChildEvent(enum QEvent::Type, QObject *)
 func NewQChildEvent(type_ int, child QObject_ITF /*777 QObject **/) *QChildEvent {
-	var convArg1 = child.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if child != nil && child.QObject_PTR() != nil {
+		convArg1 = child.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQChildEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -135,6 +139,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

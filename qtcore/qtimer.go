@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -78,10 +79,14 @@ func (this *QTimer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void QTimer(QObject *)
 func NewQTimer(parent QObject_ITF /*777 QObject **/) *QTimer {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTimer")
 	return gothis
 }
 
@@ -188,7 +193,10 @@ func (this *QTimer) IsSingleShot() bool {
 // Public static Visibility=Default Availability=Available
 // [-2] void singleShot(int, const QObject *, const char *)
 func (this *QTimer) SingleShot(msec int, receiver QObject_ITF /*777 const QObject **/, member string) {
-	var convArg1 = receiver.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg1 = receiver.QObject_PTR().GetCthis()
+	}
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer10singleShotEiPK7QObjectPKc", qtrt.FFI_TYPE_POINTER, msec, convArg1, convArg2)
@@ -204,7 +212,10 @@ func QTimer_SingleShot(msec int, receiver QObject_ITF /*777 const QObject **/, m
 // Public static Visibility=Default Availability=Available
 // [-2] void singleShot(int, Qt::TimerType, const QObject *, const char *)
 func (this *QTimer) SingleShot_1(msec int, timerType int, receiver QObject_ITF /*777 const QObject **/, member string) {
-	var convArg2 = receiver.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg2 = receiver.QObject_PTR().GetCthis()
+	}
 	var convArg3 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg3)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", qtrt.FFI_TYPE_POINTER, msec, timerType, convArg2, convArg3)
@@ -267,7 +278,10 @@ func (this *QTimer) RemainingTimeAsDuration() int {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QTimer) TimerEvent(arg0 QTimerEvent_ITF /*777 QTimerEvent **/) {
-	var convArg0 = arg0.QTimerEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QTimerEvent_PTR() != nil {
+		convArg0 = arg0.QTimerEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -285,6 +299,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

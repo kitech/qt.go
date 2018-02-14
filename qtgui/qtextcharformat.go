@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 47
+// extern C begin: 50
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -76,7 +77,10 @@ func NewQTextCharFormat() *QTextCharFormat {
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextCharFormat(const QTextFormat &)
 func NewQTextCharFormat_1(fmt QTextFormat_ITF) *QTextCharFormat {
-	var convArg0 = fmt.QTextFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if fmt != nil && fmt.QTextFormat_PTR() != nil {
+		convArg0 = fmt.QTextFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -99,7 +103,10 @@ func (this *QTextCharFormat) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &, enum QTextCharFormat::FontPropertiesInheritanceBehavior)
 func (this *QTextCharFormat) SetFont(font QFont_ITF, behavior int) {
-	var convArg0 = font.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if font != nil && font.QFont_PTR() != nil {
+		convArg0 = font.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat7setFontERK5QFontNS_33FontPropertiesInheritanceBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior)
 	qtrt.ErrPrint(err, rv)
 }
@@ -109,7 +116,10 @@ func (this *QTextCharFormat) SetFont(font QFont_ITF, behavior int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
 func (this *QTextCharFormat) SetFont_1(font QFont_ITF) {
-	var convArg0 = font.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if font != nil && font.QFont_PTR() != nil {
+		convArg0 = font.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -345,7 +355,10 @@ func (this *QTextCharFormat) FontStrikeOut() bool {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setUnderlineColor(const QColor &)
 func (this *QTextCharFormat) SetUnderlineColor(color QColor_ITF) {
-	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat17setUnderlineColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -519,7 +532,10 @@ func (this *QTextCharFormat) VerticalAlignment() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextOutline(const QPen &)
 func (this *QTextCharFormat) SetTextOutline(pen QPen_ITF) {
-	var convArg0 = pen.QPen_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pen != nil && pen.QPen_PTR() != nil {
+		convArg0 = pen.QPen_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat14setTextOutlineERK4QPen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -632,7 +648,10 @@ func (this *QTextCharFormat) AnchorName() string {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAnchorNames(const QStringList &)
 func (this *QTextCharFormat) SetAnchorNames(names qtcore.QStringList_ITF) {
-	var convArg0 = names.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if names != nil && names.QStringList_PTR() != nil {
+		convArg0 = names.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat14setAnchorNamesERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -732,6 +751,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

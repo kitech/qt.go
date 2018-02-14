@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -67,7 +68,10 @@ func (*QAbstractGraphicsShapeItem) NewFromPointer(cthis unsafe.Pointer) *QAbstra
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractGraphicsShapeItem(QGraphicsItem *)
 func NewQAbstractGraphicsShapeItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QAbstractGraphicsShapeItem {
-	var convArg0 = parent.QGraphicsItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QGraphicsItem_PTR() != nil {
+		convArg0 = parent.QGraphicsItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractGraphicsShapeItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,7 +107,10 @@ func (this *QAbstractGraphicsShapeItem) Pen() *qtgui.QPen /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setPen(const QPen &)
 func (this *QAbstractGraphicsShapeItem) SetPen(pen qtgui.QPen_ITF) {
-	var convArg0 = pen.QPen_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pen != nil && pen.QPen_PTR() != nil {
+		convArg0 = pen.QPen_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItem6setPenERK4QPen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -125,7 +132,10 @@ func (this *QAbstractGraphicsShapeItem) Brush() *qtgui.QBrush /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setBrush(const QBrush &)
 func (this *QAbstractGraphicsShapeItem) SetBrush(brush qtgui.QBrush_ITF) {
-	var convArg0 = brush.QBrush_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -135,7 +145,10 @@ func (this *QAbstractGraphicsShapeItem) SetBrush(brush qtgui.QBrush_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *)
 func (this *QAbstractGraphicsShapeItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
-	var convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsItem_PTR() != nil {
+		convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -166,6 +179,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

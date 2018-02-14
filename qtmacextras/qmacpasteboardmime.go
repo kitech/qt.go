@@ -24,6 +24,7 @@ package qtmacextras
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -147,7 +148,10 @@ func (this *QMacPasteboardMime) FlavorFor(mime string) string {
 // Public virtual Visibility=Default Availability=Available
 // [4] int count(QMimeData *)
 func (this *QMacPasteboardMime) Count(mimeData qtcore.QMimeData_ITF /*777 QMimeData **/) int {
-	var convArg0 = mimeData.QMimeData_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if mimeData != nil && mimeData.QMimeData_PTR() != nil {
+		convArg0 = mimeData.QMimeData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime5countEP9QMimeData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -174,6 +178,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

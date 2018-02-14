@@ -24,6 +24,7 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -73,6 +74,34 @@ func NewQNetworkAddressEntry() *QNetworkAddressEntry {
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:62
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QNetworkAddressEntry & operator=(QNetworkAddressEntry &&)
+func (this *QNetworkAddressEntry) Operator_equal(other unsafe.Pointer /*333*/) *QNetworkAddressEntry {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntryaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQNetworkAddressEntryFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkAddressEntry)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:64
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QNetworkAddressEntry & operator=(const QNetworkAddressEntry &)
+func (this *QNetworkAddressEntry) Operator_equal_1(other QNetworkAddressEntry_ITF) *QNetworkAddressEntry {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkAddressEntry_PTR() != nil {
+		convArg0 = other.QNetworkAddressEntry_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntryaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQNetworkAddressEntryFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkAddressEntry)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:65
 // index:0
 // Public Visibility=Default Availability=Available
@@ -89,9 +118,40 @@ func DeleteQNetworkAddressEntry(this *QNetworkAddressEntry) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkAddressEntry &)
 func (this *QNetworkAddressEntry) Swap(other QNetworkAddressEntry_ITF) {
-	var convArg0 = other.QNetworkAddressEntry_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkAddressEntry_PTR() != nil {
+		convArg0 = other.QNetworkAddressEntry_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QNetworkAddressEntry &)
+func (this *QNetworkAddressEntry) Operator_equal_equal(other QNetworkAddressEntry_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkAddressEntry_PTR() != nil {
+		convArg0 = other.QNetworkAddressEntry_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntryeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:70
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QNetworkAddressEntry &)
+func (this *QNetworkAddressEntry) Operator_not_equal(other QNetworkAddressEntry_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QNetworkAddressEntry_PTR() != nil {
+		convArg0 = other.QNetworkAddressEntry_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntryneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:73
@@ -111,7 +171,10 @@ func (this *QNetworkAddressEntry) Ip() *QHostAddress /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setIp(const QHostAddress &)
 func (this *QNetworkAddressEntry) SetIp(newIp QHostAddress_ITF) {
-	var convArg0 = newIp.QHostAddress_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if newIp != nil && newIp.QHostAddress_PTR() != nil {
+		convArg0 = newIp.QHostAddress_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry5setIpERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -133,7 +196,10 @@ func (this *QNetworkAddressEntry) Netmask() *QHostAddress /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setNetmask(const QHostAddress &)
 func (this *QNetworkAddressEntry) SetNetmask(newNetmask QHostAddress_ITF) {
-	var convArg0 = newNetmask.QHostAddress_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if newNetmask != nil && newNetmask.QHostAddress_PTR() != nil {
+		convArg0 = newNetmask.QHostAddress_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry10setNetmaskERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -174,7 +240,10 @@ func (this *QNetworkAddressEntry) Broadcast() *QHostAddress /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setBroadcast(const QHostAddress &)
 func (this *QNetworkAddressEntry) SetBroadcast(newBroadcast QHostAddress_ITF) {
-	var convArg0 = newBroadcast.QHostAddress_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if newBroadcast != nil && newBroadcast.QHostAddress_PTR() != nil {
+		convArg0 = newBroadcast.QHostAddress_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry12setBroadcastERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -192,6 +261,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -67,10 +68,16 @@ func (*QToolTip) NewFromPointer(cthis unsafe.Pointer) *QToolTip {
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *)
 func (this *QToolTip) ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = pos.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = w.QWidget_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg2 = w.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -84,11 +91,20 @@ func QToolTip_ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 Q
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *, const QRect &)
 func (this *QToolTip) ShowText_1(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF) {
-	var convArg0 = pos.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = w.QWidget_PTR().GetCthis()
-	var convArg3 = rect.QRect_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg2 = w.QWidget_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg3 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 }
@@ -102,11 +118,20 @@ func QToolTip_ShowText_1(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *, const QRect &, int)
 func (this *QToolTip) ShowText_2(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF, msecShowTime int) {
-	var convArg0 = pos.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = w.QWidget_PTR().GetCthis()
-	var convArg3 = rect.QRect_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg2 = w.QWidget_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg3 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, msecShowTime)
 	qtrt.ErrPrint(err, rv)
 }
@@ -183,7 +208,10 @@ func QToolTip_Palette() *qtgui.QPalette /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [-2] void setPalette(const QPalette &)
 func (this *QToolTip) SetPalette(arg0 qtgui.QPalette_ITF) {
-	var convArg0 = arg0.QPalette_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPalette_PTR() != nil {
+		convArg0 = arg0.QPalette_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip10setPaletteERK8QPalette", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -214,7 +242,10 @@ func QToolTip_Font() *qtgui.QFont /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
 func (this *QToolTip) SetFont(arg0 qtgui.QFont_ITF) {
-	var convArg0 = arg0.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -242,6 +273,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

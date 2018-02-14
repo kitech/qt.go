@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -98,7 +99,10 @@ func (this *QAccessibleApplication) ChildCount() int {
 // Public virtual Visibility=Default Availability=Available
 // [4] int indexOfChild(const QAccessibleInterface *)
 func (this *QAccessibleApplication) IndexOfChild(arg0 QAccessibleInterface_ITF /*777 const QAccessibleInterface **/) int {
-	var convArg0 = arg0.QAccessibleInterface_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAccessibleInterface_PTR() != nil {
+		convArg0 = arg0.QAccessibleInterface_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -186,6 +190,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

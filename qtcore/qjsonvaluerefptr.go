@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 3
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -65,7 +66,10 @@ func (*QJsonValueRefPtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValueRefPtr 
 // Public inline Visibility=Default Availability=Available
 // [-2] void QJsonValueRefPtr(QJsonArray *, int)
 func NewQJsonValueRefPtr(array QJsonArray_ITF /*777 QJsonArray **/, idx int) *QJsonValueRefPtr {
-	var convArg0 = array.QJsonArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if array != nil && array.QJsonArray_PTR() != nil {
+		convArg0 = array.QJsonArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP10QJsonArrayi", qtrt.FFI_TYPE_POINTER, convArg0, idx)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJsonValueRefPtrFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -78,12 +82,37 @@ func NewQJsonValueRefPtr(array QJsonArray_ITF /*777 QJsonArray **/, idx int) *QJ
 // Public inline Visibility=Default Availability=Available
 // [-2] void QJsonValueRefPtr(QJsonObject *, int)
 func NewQJsonValueRefPtr_1(object QJsonObject_ITF /*777 QJsonObject **/, idx int) *QJsonValueRefPtr {
-	var convArg0 = object.QJsonObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QJsonObject_PTR() != nil {
+		convArg0 = object.QJsonObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP11QJsonObjecti", qtrt.FFI_TYPE_POINTER, convArg0, idx)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJsonValueRefPtrFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQJsonValueRefPtr)
 	return gothis
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:242
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QJsonValueRef & operator*()
+func (this *QJsonValueRefPtr) Operator_mul() *QJsonValueRef {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QJsonValueRefPtrdeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQJsonValueRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValueRef)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:243
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QJsonValueRef * operator->()
+func (this *QJsonValueRefPtr) Operator_minus_greater() *QJsonValueRef /*777 QJsonValueRef **/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QJsonValueRefPtrptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQJsonValueRefFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 func DeleteQJsonValueRefPtr(this *QJsonValueRefPtr) {
@@ -105,6 +134,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

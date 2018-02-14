@@ -1665,7 +1665,10 @@ func Qt_getEnumName_81(arg0 int) string {
 func Qstrcmp(str1 string, str2 QByteArray_ITF) int {
 	var convArg0 = qtrt.CString(str1)
 	defer qtrt.FreeMem(convArg0)
-	var convArg1 = str2.QByteArray_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if str2 != nil && str2.QByteArray_PTR() != nil {
+		convArg1 = str2.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZL7qstrcmpPKcRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1805,7 +1808,10 @@ func QHashBits(p unsafe.Pointer /*666*/, size uint, seed uint) uint {
 // Invalid inline Visibility=Default Availability=Available
 // [8] QByteArray qCompress(const QByteArray &, int)
 func QCompress(data QByteArray_ITF, compressionLevel int) *QByteArray /*123*/ {
-	var convArg0 = data.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z9qCompressRK10QByteArrayi", qtrt.FFI_TYPE_POINTER, convArg0, compressionLevel)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1818,7 +1824,7 @@ func QCompress(data QByteArray_ITF, compressionLevel int) *QByteArray /*123*/ {
 // Invalid Visibility=Default Availability=Available
 // [8] QByteArray qCompress(const uchar *, int, int)
 func QCompress_1(data unsafe.Pointer /*666*/, nbytes int, compressionLevel int) *QByteArray /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_Z9qCompressPKhii", qtrt.FFI_TYPE_POINTER, &data, nbytes, compressionLevel)
+	rv, err := qtrt.InvokeQtFunc6("_Z9qCompressPKhii", qtrt.FFI_TYPE_POINTER, data, nbytes, compressionLevel)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -1999,7 +2005,10 @@ func Qt_noop() {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qt_hash(QStringView, uint)
 func Qt_hash(key QStringView_ITF /*123*/, chained uint) uint {
-	var convArg0 = key.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QStringView_PTR() != nil {
+		convArg0 = key.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z7qt_hash11QStringViewj", qtrt.FFI_TYPE_POINTER, convArg0, chained)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2048,8 +2057,14 @@ func Qstrcpy(dst string, src string) string {
 // Invalid Visibility=Default Availability=Available
 // [4] int qstrcmp(const QByteArray &, const QByteArray &)
 func Qstrcmp_1(str1 QByteArray_ITF, str2 QByteArray_ITF) int {
-	var convArg0 = str1.QByteArray_PTR().GetCthis()
-	var convArg1 = str2.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if str1 != nil && str1.QByteArray_PTR() != nil {
+		convArg0 = str1.QByteArray_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if str2 != nil && str2.QByteArray_PTR() != nil {
+		convArg1 = str2.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z7qstrcmpRK10QByteArrayS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -2060,7 +2075,10 @@ func Qstrcmp_1(str1 QByteArray_ITF, str2 QByteArray_ITF) int {
 // Invalid Visibility=Default Availability=Available
 // [4] int qstrcmp(const QByteArray &, const char *)
 func Qstrcmp_2(str1 QByteArray_ITF, str2 string) int {
-	var convArg0 = str1.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if str1 != nil && str1.QByteArray_PTR() != nil {
+		convArg0 = str1.QByteArray_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(str2)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_Z7qstrcmpRK10QByteArrayPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -2089,7 +2107,10 @@ func Qstrcmp_3(str1 string, str2 string) int {
 func Qputenv(varName string, value QByteArray_ITF) bool {
 	var convArg0 = qtrt.CString(varName)
 	defer qtrt.FreeMem(convArg0)
-	var convArg1 = value.QByteArray_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QByteArray_PTR() != nil {
+		convArg1 = value.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z7qputenvPKcRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -2398,7 +2419,10 @@ func QHash_13(key byte, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QUrlQuery &, uint)
 func QHash_14(key QUrlQuery_ITF, seed uint) uint {
-	var convArg0 = key.QUrlQuery_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QUrlQuery_PTR() != nil {
+		convArg0 = key.QUrlQuery_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QUrlQueryj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2409,7 +2433,10 @@ func QHash_14(key QUrlQuery_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QMimeType &, uint)
 func QHash_15(key QMimeType_ITF, seed uint) uint {
-	var convArg0 = key.QMimeType_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QMimeType_PTR() != nil {
+		convArg0 = key.QMimeType_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QMimeTypej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2420,7 +2447,10 @@ func QHash_15(key QMimeType_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QDateTime &, uint)
 func QHash_16(key QDateTime_ITF, seed uint) uint {
-	var convArg0 = key.QDateTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QDateTime_PTR() != nil {
+		convArg0 = key.QDateTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QDateTimej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2431,7 +2461,10 @@ func QHash_16(key QDateTime_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QBitArray &, uint)
 func QHash_17(key QBitArray_ITF, seed uint) uint {
-	var convArg0 = key.QBitArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QBitArray_PTR() != nil {
+		convArg0 = key.QBitArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QBitArrayj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2454,7 +2487,10 @@ func QHash_18(key string, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QRegExp &, uint)
 func QHash_19(key QRegExp_ITF, seed uint) uint {
-	var convArg0 = key.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QRegExp_PTR() != nil {
+		convArg0 = key.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK7QRegExpj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2465,7 +2501,10 @@ func QHash_19(key QRegExp_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QLocale &, uint)
 func QHash_20(key QLocale_ITF, seed uint) uint {
-	var convArg0 = key.QLocale_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QLocale_PTR() != nil {
+		convArg0 = key.QLocale_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK7QLocalej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2476,7 +2515,10 @@ func QHash_20(key QLocale_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QUuid &, uint)
 func QHash_21(uuid QUuid_ITF, seed uint) uint {
-	var convArg0 = uuid.QUuid_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if uuid != nil && uuid.QUuid_PTR() != nil {
+		convArg0 = uuid.QUuid_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK5QUuidj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2487,7 +2529,10 @@ func QHash_21(uuid QUuid_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QTime &, uint)
 func QHash_22(key QTime_ITF, seed uint) uint {
-	var convArg0 = key.QTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QTime_PTR() != nil {
+		convArg0 = key.QTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK5QTimej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2498,7 +2543,10 @@ func QHash_22(key QTime_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QDate &, uint)
 func QHash_23(key QDate_ITF, seed uint) uint {
-	var convArg0 = key.QDate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QDate_PTR() != nil {
+		convArg0 = key.QDate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK5QDatej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2509,7 +2557,10 @@ func QHash_23(key QDate_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QUrl &, uint)
 func QHash_24(url QUrl_ITF, seed uint) uint {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK4QUrlj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2520,7 +2571,10 @@ func QHash_24(url QUrl_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QPersistentModelIndex &, uint)
 func QHash_25(index QPersistentModelIndex_ITF, seed uint) uint {
-	var convArg0 = index.QPersistentModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QPersistentModelIndex_PTR() != nil {
+		convArg0 = index.QPersistentModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2531,7 +2585,10 @@ func QHash_25(index QPersistentModelIndex_ITF, seed uint) uint {
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QPersistentModelIndex &, uint)
 func QHash_26(index QPersistentModelIndex_ITF, seed uint) uint {
-	var convArg0 = index.QPersistentModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QPersistentModelIndex_PTR() != nil {
+		convArg0 = index.QPersistentModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2542,7 +2599,10 @@ func QHash_26(index QPersistentModelIndex_ITF, seed uint) uint {
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QItemSelectionRange &)
 func QHash_27(arg0 QItemSelectionRange_ITF) uint {
-	var convArg0 = arg0.QItemSelectionRange_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QItemSelectionRange_PTR() != nil {
+		convArg0 = arg0.QItemSelectionRange_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK19QItemSelectionRange", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2553,7 +2613,10 @@ func QHash_27(arg0 QItemSelectionRange_ITF) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QRegularExpression &, uint)
 func QHash_28(key QRegularExpression_ITF, seed uint) uint {
-	var convArg0 = key.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QRegularExpression_PTR() != nil {
+		convArg0 = key.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK18QRegularExpressionj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2564,7 +2627,10 @@ func QHash_28(key QRegularExpression_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QVersionNumber &, uint)
 func QHash_29(key QVersionNumber_ITF, seed uint) uint {
-	var convArg0 = key.QVersionNumber_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QVersionNumber_PTR() != nil {
+		convArg0 = key.QVersionNumber_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK14QVersionNumberj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2575,7 +2641,10 @@ func QHash_29(key QVersionNumber_ITF, seed uint) uint {
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QModelIndex &)
 func QHash_30(index QModelIndex_ITF) uint {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK11QModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2586,7 +2655,10 @@ func QHash_30(index QModelIndex_ITF) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QStringRef &, uint)
 func QHash_31(key QStringRef_ITF, seed uint) uint {
-	var convArg0 = key.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QStringRef_PTR() != nil {
+		convArg0 = key.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK10QStringRefj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2597,7 +2669,10 @@ func QHash_31(key QStringRef_ITF, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QByteArray &, uint)
 func QHash_32(key QByteArray_ITF, seed uint) uint {
-	var convArg0 = key.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QByteArray_PTR() != nil {
+		convArg0 = key.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK10QByteArrayj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2608,7 +2683,10 @@ func QHash_32(key QByteArray_ITF, seed uint) uint {
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QChar, uint)
 func QHash_33(key QChar_ITF /*123*/, seed uint) uint {
-	var convArg0 = key.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QChar_PTR() != nil {
+		convArg0 = key.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash5QCharj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2619,7 +2697,10 @@ func QHash_33(key QChar_ITF /*123*/, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(QLatin1String, uint)
 func QHash_34(key QLatin1String_ITF /*123*/, seed uint) uint {
-	var convArg0 = key.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QLatin1String_PTR() != nil {
+		convArg0 = key.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash13QLatin1Stringj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2630,7 +2711,10 @@ func QHash_34(key QLatin1String_ITF /*123*/, seed uint) uint {
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(QStringView, uint)
 func QHash_35(key QStringView_ITF /*123*/, seed uint) uint {
-	var convArg0 = key.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QStringView_PTR() != nil {
+		convArg0 = key.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash11QStringViewj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -2761,7 +2845,10 @@ func QLn(v float64) float64 {
 // Invalid Visibility=Default Availability=Available
 // [-2] void qRegisterStaticPluginFunction(struct QStaticPlugin)
 func QRegisterStaticPluginFunction(staticPlugin QStaticPlugin_ITF /*123*/) {
-	var convArg0 = staticPlugin.QStaticPlugin_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if staticPlugin != nil && staticPlugin.QStaticPlugin_PTR() != nil {
+		convArg0 = staticPlugin.QStaticPlugin_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z29qRegisterStaticPluginFunction13QStaticPlugin", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -2770,10 +2857,10 @@ func QRegisterStaticPluginFunction(staticPlugin QStaticPlugin_ITF /*123*/) {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qEnvironmentVariableIntValue(const char *, _Bool *)
-func QEnvironmentVariableIntValue(varName string, ok unsafe.Pointer /*666*/) int {
+func QEnvironmentVariableIntValue(varName string, ok *bool) int {
 	var convArg0 = qtrt.CString(varName)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_Z28qEnvironmentVariableIntValuePKcPb", qtrt.FFI_TYPE_POINTER, convArg0, &ok)
+	rv, err := qtrt.InvokeQtFunc6("_Z28qEnvironmentVariableIntValuePKcPb", qtrt.FFI_TYPE_POINTER, convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -2949,10 +3036,16 @@ func QCountLeadingZeroBits_4(v byte) uint {
 // Invalid Visibility=Default Availability=Available
 // [8] QObject * qt_qFindChild_helper(const QObject *, const QString &, const struct QMetaObject &, Qt::FindChildOptions)
 func Qt_qFindChild_helper(parent QObject_ITF /*777 const QObject **/, name string, mo QMetaObject_ITF, options int) *QObject /*777 QObject **/ {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = mo.QMetaObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if mo != nil && mo.QMetaObject_PTR() != nil {
+		convArg2 = mo.QMetaObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z20qt_qFindChild_helperPK7QObjectRK7QStringRK11QMetaObject6QFlagsIN2Qt15FindChildOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -3044,7 +3137,10 @@ func QRemovePostRoutine(arg0 unsafe.Pointer /*666*/) {
 // Invalid Visibility=Default Availability=Available
 // [-2] void qt_message_output(enum QtMsgType, const QMessageLogContext &, const QString &)
 func Qt_message_output(arg0 int, context QMessageLogContext_ITF, message string) {
-	var convArg1 = context.QMessageLogContext_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if context != nil && context.QMessageLogContext_PTR() != nil {
+		convArg1 = context.QMessageLogContext_PTR().GetCthis()
+	}
 	var tmpArg2 = NewQString_5(message)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z17qt_message_output9QtMsgTypeRK18QMessageLogContextRK7QString", qtrt.FFI_TYPE_POINTER, arg0, convArg1, convArg2)
@@ -3076,7 +3172,10 @@ func QRadiansToDegrees_1(radians float64) float64 {
 // Invalid Visibility=Default Availability=Available
 // [8] QString qFormatLogMessage(enum QtMsgType, const QMessageLogContext &, const QString &)
 func QFormatLogMessage(type_ int, context QMessageLogContext_ITF, buf string) string {
-	var convArg1 = context.QMessageLogContext_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if context != nil && context.QMessageLogContext_PTR() != nil {
+		convArg1 = context.QMessageLogContext_PTR().GetCthis()
+	}
 	var tmpArg2 = NewQString_5(buf)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z17qFormatLogMessage9QtMsgTypeRK18QMessageLogContextRK7QString", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
@@ -3352,7 +3451,10 @@ func Qt_assert_x(where string, what string, file string, line int) {
 // Invalid inline Visibility=Default Availability=Available
 // [8] QByteArray qUncompress(const QByteArray &)
 func QUncompress(data QByteArray_ITF) *QByteArray /*123*/ {
-	var convArg0 = data.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z11qUncompressRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -3365,7 +3467,7 @@ func QUncompress(data QByteArray_ITF) *QByteArray /*123*/ {
 // Invalid Visibility=Default Availability=Available
 // [8] QByteArray qUncompress(const uchar *, int)
 func QUncompress_1(data unsafe.Pointer /*666*/, nbytes int) *QByteArray /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_Z11qUncompressPKhi", qtrt.FFI_TYPE_POINTER, &data, nbytes)
+	rv, err := qtrt.InvokeQtFunc6("_Z11qUncompressPKhi", qtrt.FFI_TYPE_POINTER, data, nbytes)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -3377,7 +3479,10 @@ func QUncompress_1(data unsafe.Pointer /*666*/, nbytes int) *QByteArray /*123*/ 
 // Invalid inline Visibility=Default Availability=Available
 // [40] QTextStreamManipulator qSetPadChar(QChar)
 func QSetPadChar(ch QChar_ITF /*123*/) *QTextStreamManipulator /*123*/ {
-	var convArg0 = ch.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ch != nil && ch.QChar_PTR() != nil {
+		convArg0 = ch.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z11qSetPadChar5QChar", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamManipulatorFromPointer(unsafe.Pointer(uintptr(rv))) // 333

@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -66,7 +67,10 @@ func (*QFontInfo) NewFromPointer(cthis unsafe.Pointer) *QFontInfo {
 // Public Visibility=Default Availability=Available
 // [-2] void QFontInfo(const QFont &)
 func NewQFontInfo(arg0 QFont_ITF) *QFontInfo {
-	var convArg0 = arg0.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFont_PTR() != nil {
+		convArg0 = arg0.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFontInfoC2ERK5QFont", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontInfoFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -85,12 +89,31 @@ func DeleteQFontInfo(this *QFontInfo) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtGui/qfontinfo.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QFontInfo & operator=(const QFontInfo &)
+func (this *QFontInfo) Operator_equal(arg0 QFontInfo_ITF) *QFontInfo {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QFontInfo_PTR() != nil {
+		convArg0 = arg0.QFontInfo_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QFontInfoaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFontInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFontInfo)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qfontinfo.h:59
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QFontInfo &)
 func (this *QFontInfo) Swap(other QFontInfo_ITF) {
-	var convArg0 = other.QFontInfo_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QFontInfo_PTR() != nil {
+		convArg0 = other.QFontInfo_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFontInfo4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -274,6 +297,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

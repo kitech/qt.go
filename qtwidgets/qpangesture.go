@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -75,10 +76,14 @@ func (this *QPanGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // Public Visibility=Default Availability=Available
 // [-2] void QPanGesture(QObject *)
 func NewQPanGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPanGesture {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPanGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPanGestureFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPanGesture")
 	return gothis
 }
 
@@ -144,7 +149,10 @@ func (this *QPanGesture) Acceleration() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setLastOffset(const QPointF &)
 func (this *QPanGesture) SetLastOffset(value qtcore.QPointF_ITF) {
-	var convArg0 = value.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QPointF_PTR() != nil {
+		convArg0 = value.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPanGesture13setLastOffsetERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -154,7 +162,10 @@ func (this *QPanGesture) SetLastOffset(value qtcore.QPointF_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setOffset(const QPointF &)
 func (this *QPanGesture) SetOffset(value qtcore.QPointF_ITF) {
-	var convArg0 = value.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QPointF_PTR() != nil {
+		convArg0 = value.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPanGesture9setOffsetERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -181,6 +192,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

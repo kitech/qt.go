@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 29
+// extern C begin: 33
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -73,10 +74,14 @@ func (this *QTranslator) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void QTranslator(QObject *)
 func NewQTranslator(parent QObject_ITF /*777 QObject **/) *QTranslator {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTranslatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTranslator")
 	return gothis
 }
 
@@ -143,7 +148,10 @@ func (this *QTranslator) Load(filename string, directory string, search_delimite
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QLocale &, const QString &, const QString &, const QString &, const QString &)
 func (this *QTranslator) Load_1(locale QLocale_ITF, filename string, prefix string, directory string, suffix string) bool {
-	var convArg0 = locale.QLocale_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if locale != nil && locale.QLocale_PTR() != nil {
+		convArg0 = locale.QLocale_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(filename)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(prefix)
@@ -164,7 +172,7 @@ func (this *QTranslator) Load_1(locale QLocale_ITF, filename string, prefix stri
 func (this *QTranslator) Load_2(data unsafe.Pointer /*666*/, len int, directory string) bool {
 	var tmpArg2 = NewQString_5(directory)
 	var convArg2 = tmpArg2.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &data, len, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), data, len, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -182,6 +190,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

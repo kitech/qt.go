@@ -24,6 +24,7 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -75,10 +76,14 @@ func (this *QQmlApplicationEngine) MetaObject() *qtcore.QMetaObject /*777 const 
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlApplicationEngine(QObject *)
 func NewQQmlApplicationEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlApplicationEngineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlApplicationEngine")
 	return gothis
 }
 
@@ -87,11 +92,18 @@ func NewQQmlApplicationEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QQml
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlApplicationEngine(const QUrl &, QObject *)
 func NewQQmlApplicationEngine_1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
-	var convArg0 = url.QUrl_PTR().GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngineC2ERK4QUrlP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlApplicationEngineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlApplicationEngine")
 	return gothis
 }
 
@@ -102,10 +114,14 @@ func NewQQmlApplicationEngine_1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /
 func NewQQmlApplicationEngine_2(filePath string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngineC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlApplicationEngineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlApplicationEngine")
 	return gothis
 }
 
@@ -125,7 +141,10 @@ func DeleteQQmlApplicationEngine(this *QQmlApplicationEngine) {
 // Public Visibility=Default Availability=Available
 // [-2] void load(const QUrl &)
 func (this *QQmlApplicationEngine) Load(url qtcore.QUrl_ITF) {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngine4loadERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -146,8 +165,14 @@ func (this *QQmlApplicationEngine) Load_1(filePath string) {
 // Public Visibility=Default Availability=Available
 // [-2] void loadData(const QByteArray &, const QUrl &)
 func (this *QQmlApplicationEngine) LoadData(data qtcore.QByteArray_ITF, url qtcore.QUrl_ITF) {
-	var convArg0 = data.QByteArray_PTR().GetCthis()
-	var convArg1 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg1 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngine8loadDataERK10QByteArrayRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -157,8 +182,14 @@ func (this *QQmlApplicationEngine) LoadData(data qtcore.QByteArray_ITF, url qtco
 // Public Visibility=Default Availability=Available
 // [-2] void objectCreated(QObject *, const QUrl &)
 func (this *QQmlApplicationEngine) ObjectCreated(object qtcore.QObject_ITF /*777 QObject **/, url qtcore.QUrl_ITF) {
-	var convArg0 = object.QObject_PTR().GetCthis()
-	var convArg1 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg1 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngine13objectCreatedEP7QObjectRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -176,6 +207,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 41
+// extern C begin: 47
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -77,7 +78,10 @@ func NewQUrlQuery() *QUrlQuery {
 // Public Visibility=Default Availability=Available
 // [-2] void QUrlQuery(const QUrl &)
 func NewQUrlQuery_1(url QUrl_ITF) *QUrlQuery {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryC2ERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -99,6 +103,34 @@ func NewQUrlQuery_2(queryString string) *QUrlQuery {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qurlquery.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QUrlQuery & operator=(const QUrlQuery &)
+func (this *QUrlQuery) Operator_equal(other QUrlQuery_ITF) *QUrlQuery {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QUrlQuery_PTR() != nil {
+		convArg0 = other.QUrlQuery_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUrlQuery)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qurlquery.h:65
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QUrlQuery & operator=(QUrlQuery &&)
+func (this *QUrlQuery) Operator_equal_1(other unsafe.Pointer /*333*/) *QUrlQuery {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUrlQuery)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qurlquery.h:67
 // index:0
 // Public Visibility=Default Availability=Available
@@ -110,12 +142,43 @@ func DeleteQUrlQuery(this *QUrlQuery) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qurlquery.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QUrlQuery &)
+func (this *QUrlQuery) Operator_equal_equal(other QUrlQuery_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QUrlQuery_PTR() != nil {
+		convArg0 = other.QUrlQuery_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQueryeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qurlquery.h:70
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QUrlQuery &)
+func (this *QUrlQuery) Operator_not_equal(other QUrlQuery_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QUrlQuery_PTR() != nil {
+		convArg0 = other.QUrlQuery_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQueryneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qurlquery.h:73
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QUrlQuery &)
 func (this *QUrlQuery) Swap(other QUrlQuery_ITF) {
-	var convArg0 = other.QUrlQuery_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QUrlQuery_PTR() != nil {
+		convArg0 = other.QUrlQuery_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -165,8 +228,14 @@ func (this *QUrlQuery) SetQuery(queryString string) {
 // Public Visibility=Default Availability=Available
 // [-2] void setQueryDelimiters(QChar, QChar)
 func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter QChar_ITF /*123*/, pairDelimiter QChar_ITF /*123*/) {
-	var convArg0 = valueDelimiter.QChar_PTR().GetCthis()
-	var convArg1 = pairDelimiter.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if valueDelimiter != nil && valueDelimiter.QChar_PTR() != nil {
+		convArg0 = valueDelimiter.QChar_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pairDelimiter != nil && pairDelimiter.QChar_PTR() != nil {
+		convArg1 = pairDelimiter.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -289,6 +358,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

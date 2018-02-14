@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 22
+// extern C begin: 24
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,7 +79,10 @@ func NewQPictureIO() *QPictureIO {
 // Public Visibility=Default Availability=Available
 // [-2] void QPictureIO(QIODevice *, const char *)
 func NewQPictureIO_1(ioDevice qtcore.QIODevice_ITF /*777 QIODevice **/, format string) *QPictureIO {
-	var convArg0 = ioDevice.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ioDevice != nil && ioDevice.QIODevice_PTR() != nil {
+		convArg0 = ioDevice.QIODevice_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIOC2EP9QIODevicePKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -218,7 +222,10 @@ func (this *QPictureIO) Gamma() float32 {
 // Public Visibility=Default Availability=Available
 // [-2] void setPicture(const QPicture &)
 func (this *QPictureIO) SetPicture(arg0 QPicture_ITF) {
-	var convArg0 = arg0.QPicture_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPicture_PTR() != nil {
+		convArg0 = arg0.QPicture_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO10setPictureERK8QPicture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -248,7 +255,10 @@ func (this *QPictureIO) SetFormat(arg0 string) {
 // Public Visibility=Default Availability=Available
 // [-2] void setIODevice(QIODevice *)
 func (this *QPictureIO) SetIODevice(arg0 qtcore.QIODevice_ITF /*777 QIODevice **/) {
-	var convArg0 = arg0.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QIODevice_PTR() != nil {
+		convArg0 = arg0.QIODevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO11setIODeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -348,7 +358,10 @@ func QPictureIO_PictureFormat(fileName string) *qtcore.QByteArray /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray pictureFormat(QIODevice *)
 func (this *QPictureIO) PictureFormat_1(arg0 qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
-	var convArg0 = arg0.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QIODevice_PTR() != nil {
+		convArg0 = arg0.QIODevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO13pictureFormatEP9QIODevice", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -374,6 +387,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

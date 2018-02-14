@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -100,10 +101,14 @@ func (this *QToolBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBox(QWidget *, Qt::WindowFlags)
 func NewQToolBox(parent QWidget_ITF /*777 QWidget **/, f int) *QToolBox {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBoxC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQToolBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QToolBox")
 	return gothis
 }
 
@@ -123,7 +128,10 @@ func DeleteQToolBox(this *QToolBox) {
 // Public Visibility=Default Availability=Available
 // [4] int addItem(QWidget *, const QString &)
 func (this *QToolBox) AddItem(widget QWidget_ITF /*777 QWidget **/, text string) int {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox7addItemEP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -136,8 +144,14 @@ func (this *QToolBox) AddItem(widget QWidget_ITF /*777 QWidget **/, text string)
 // Public Visibility=Default Availability=Available
 // [4] int addItem(QWidget *, const QIcon &, const QString &)
 func (this *QToolBox) AddItem_1(widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, text string) int {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
-	var convArg1 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg1 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
@@ -150,7 +164,10 @@ func (this *QToolBox) AddItem_1(widget QWidget_ITF /*777 QWidget **/, icon qtgui
 // Public Visibility=Default Availability=Available
 // [4] int insertItem(int, QWidget *, const QString &)
 func (this *QToolBox) InsertItem(index int, widget QWidget_ITF /*777 QWidget **/, text string) int {
-	var convArg1 = widget.QWidget_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg1 = widget.QWidget_PTR().GetCthis()
+	}
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox10insertItemEiP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2)
@@ -163,8 +180,14 @@ func (this *QToolBox) InsertItem(index int, widget QWidget_ITF /*777 QWidget **/
 // Public Visibility=Default Availability=Available
 // [4] int insertItem(int, QWidget *, const QIcon &, const QString &)
 func (this *QToolBox) InsertItem_1(index int, widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, text string) int {
-	var convArg1 = widget.QWidget_PTR().GetCthis()
-	var convArg2 = icon.QIcon_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg1 = widget.QWidget_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg2 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2, convArg3)
@@ -229,7 +252,10 @@ func (this *QToolBox) ItemText(index int) string {
 // Public Visibility=Default Availability=Available
 // [-2] void setItemIcon(int, const QIcon &)
 func (this *QToolBox) SetItemIcon(index int, icon qtgui.QIcon_ITF) {
-	var convArg1 = icon.QIcon_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg1 = icon.QIcon_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox11setItemIconEiRK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -305,7 +331,10 @@ func (this *QToolBox) Widget(index int) *QWidget /*777 QWidget **/ {
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QWidget *)
 func (this *QToolBox) IndexOf(widget QWidget_ITF /*777 QWidget **/) int {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox7indexOfEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -335,7 +364,10 @@ func (this *QToolBox) SetCurrentIndex(index int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWidget(QWidget *)
 func (this *QToolBox) SetCurrentWidget(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox16setCurrentWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -354,7 +386,10 @@ func (this *QToolBox) CurrentChanged(index int) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QToolBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -383,7 +418,10 @@ func (this *QToolBox) ItemRemoved(index int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
 func (this *QToolBox) ShowEvent(e qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
-	var convArg0 = e.QShowEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QShowEvent_PTR() != nil {
+		convArg0 = e.QShowEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -393,7 +431,10 @@ func (this *QToolBox) ShowEvent(e qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
 func (this *QToolBox) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -411,6 +452,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

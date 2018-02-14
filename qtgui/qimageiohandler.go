@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -89,7 +90,10 @@ func DeleteQImageIOHandler(this *QImageIOHandler) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
 func (this *QImageIOHandler) SetDevice(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandler9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -109,7 +113,10 @@ func (this *QImageIOHandler) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QByteArray &)
 func (this *QImageIOHandler) SetFormat(format qtcore.QByteArray_ITF) {
-	var convArg0 = format.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg0 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandler9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -119,7 +126,10 @@ func (this *QImageIOHandler) SetFormat(format qtcore.QByteArray_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QByteArray &)
 func (this *QImageIOHandler) SetFormat_1(format qtcore.QByteArray_ITF) {
-	var convArg0 = format.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg0 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QImageIOHandler9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -163,7 +173,10 @@ func (this *QImageIOHandler) CanRead() bool {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool read(QImage *)
 func (this *QImageIOHandler) Read(image QImage_ITF /*777 QImage **/) bool {
-	var convArg0 = image.QImage_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QImage_PTR() != nil {
+		convArg0 = image.QImage_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandler4readEP6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -174,7 +187,10 @@ func (this *QImageIOHandler) Read(image QImage_ITF /*777 QImage **/) bool {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool write(const QImage &)
 func (this *QImageIOHandler) Write(image QImage_ITF) bool {
-	var convArg0 = image.QImage_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QImage_PTR() != nil {
+		convArg0 = image.QImage_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandler5writeERK6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -197,7 +213,10 @@ func (this *QImageIOHandler) Option(option int) *qtcore.QVariant /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setOption(enum QImageIOHandler::ImageOption, const QVariant &)
 func (this *QImageIOHandler) SetOption(option int, value qtcore.QVariant_ITF) {
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandler9setOptionENS_11ImageOptionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -331,6 +350,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

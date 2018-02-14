@@ -155,6 +155,7 @@ var libs = map[string]ffi.Library{}
 func SetDebugFFICall(on bool) { debugFFICall = on }
 func init() {
 	init_invoke()
+	init_destroyedDynSlot()
 	init_callack_inherit()
 }
 

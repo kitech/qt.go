@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -65,7 +66,10 @@ func (*QTextEncoder) NewFromPointer(cthis unsafe.Pointer) *QTextEncoder {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextEncoder(const QTextCodec *)
 func NewQTextEncoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextEncoder {
-	var convArg0 = codec.QTextCodec_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if codec != nil && codec.QTextCodec_PTR() != nil {
+		convArg0 = codec.QTextCodec_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoderC2EPK10QTextCodec", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextEncoderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -78,7 +82,10 @@ func NewQTextEncoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextEnco
 // Public Visibility=Default Availability=Available
 // [-2] void QTextEncoder(const QTextCodec *, QTextCodec::ConversionFlags)
 func NewQTextEncoder_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextEncoder {
-	var convArg0 = codec.QTextCodec_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if codec != nil && codec.QTextCodec_PTR() != nil {
+		convArg0 = codec.QTextCodec_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoderC2EPK10QTextCodec6QFlagsINS0_14ConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextEncoderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,7 +123,10 @@ func (this *QTextEncoder) FromUnicode(str string) *QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(QStringView)
 func (this *QTextEncoder) FromUnicode_1(str QStringView_ITF /*123*/) *QByteArray /*123*/ {
-	var convArg0 = str.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if str != nil && str.QStringView_PTR() != nil {
+		convArg0 = str.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -129,7 +139,10 @@ func (this *QTextEncoder) FromUnicode_1(str QStringView_ITF /*123*/) *QByteArray
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(const QChar *, int)
 func (this *QTextEncoder) FromUnicode_2(uc QChar_ITF /*777 const QChar **/, len int) *QByteArray /*123*/ {
-	var convArg0 = uc.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if uc != nil && uc.QChar_PTR() != nil {
+		convArg0 = uc.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeEPK5QChari", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -160,6 +173,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

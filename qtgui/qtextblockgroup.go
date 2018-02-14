@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -89,10 +90,14 @@ func (this *QTextBlockGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextBlockGroup(QTextDocument *)
 func NewQTextBlockGroup(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextBlockGroup {
-	var convArg0 = doc.QTextDocument_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if doc != nil && doc.QTextDocument_PTR() != nil {
+		convArg0 = doc.QTextDocument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextBlockGroupC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextBlockGroupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTextBlockGroup")
 	return gothis
 }
 
@@ -112,7 +117,10 @@ func DeleteQTextBlockGroup(this *QTextBlockGroup) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void blockInserted(const QTextBlock &)
 func (this *QTextBlockGroup) BlockInserted(block QTextBlock_ITF) {
-	var convArg0 = block.QTextBlock_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if block != nil && block.QTextBlock_PTR() != nil {
+		convArg0 = block.QTextBlock_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextBlockGroup13blockInsertedERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -122,7 +130,10 @@ func (this *QTextBlockGroup) BlockInserted(block QTextBlock_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void blockRemoved(const QTextBlock &)
 func (this *QTextBlockGroup) BlockRemoved(block QTextBlock_ITF) {
-	var convArg0 = block.QTextBlock_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if block != nil && block.QTextBlock_PTR() != nil {
+		convArg0 = block.QTextBlock_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextBlockGroup12blockRemovedERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -132,7 +143,10 @@ func (this *QTextBlockGroup) BlockRemoved(block QTextBlock_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void blockFormatChanged(const QTextBlock &)
 func (this *QTextBlockGroup) BlockFormatChanged(block QTextBlock_ITF) {
-	var convArg0 = block.QTextBlock_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if block != nil && block.QTextBlock_PTR() != nil {
+		convArg0 = block.QTextBlock_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextBlockGroup18blockFormatChangedERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -150,6 +164,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

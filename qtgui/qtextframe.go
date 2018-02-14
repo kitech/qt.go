@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -74,10 +75,14 @@ func (this *QTextFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QTextFrame(QTextDocument *)
 func NewQTextFrame(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextFrame {
-	var convArg0 = doc.QTextDocument_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if doc != nil && doc.QTextDocument_PTR() != nil {
+		convArg0 = doc.QTextDocument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextFrameC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextFrameFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTextFrame")
 	return gothis
 }
 
@@ -97,7 +102,10 @@ func DeleteQTextFrame(this *QTextFrame) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFrameFormat(const QTextFrameFormat &)
 func (this *QTextFrame) SetFrameFormat(format QTextFrameFormat_ITF) {
-	var convArg0 = format.QTextFrameFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextFrameFormat_PTR() != nil {
+		convArg0 = format.QTextFrameFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -173,7 +181,10 @@ func (this *QTextFrame) LayoutData() *QTextFrameLayoutData /*777 QTextFrameLayou
 // Public Visibility=Default Availability=Available
 // [-2] void setLayoutData(QTextFrameLayoutData *)
 func (this *QTextFrame) SetLayoutData(data QTextFrameLayoutData_ITF /*777 QTextFrameLayoutData **/) {
-	var convArg0 = data.QTextFrameLayoutData_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QTextFrameLayoutData_PTR() != nil {
+		convArg0 = data.QTextFrameLayoutData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -221,6 +232,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

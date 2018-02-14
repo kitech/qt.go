@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 5
+// extern C begin: 9
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -85,6 +86,34 @@ func DeleteQXmlStreamNotationDeclaration(this *QXmlStreamNotationDeclaration) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qxmlstream.h:253
+// index:0
+// Public Visibility=Default Availability=Available
+// [56] QXmlStreamNotationDeclaration & operator=(const QXmlStreamNotationDeclaration &)
+func (this *QXmlStreamNotationDeclaration) Operator_equal(arg0 QXmlStreamNotationDeclaration_ITF) *QXmlStreamNotationDeclaration {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QXmlStreamNotationDeclaration_PTR() != nil {
+		convArg0 = arg0.QXmlStreamNotationDeclaration_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQXmlStreamNotationDeclarationFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQXmlStreamNotationDeclaration)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qxmlstream.h:254
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [56] QXmlStreamNotationDeclaration & operator=(QXmlStreamNotationDeclaration &&)
+func (this *QXmlStreamNotationDeclaration) Operator_equal_1(other unsafe.Pointer /*333*/) *QXmlStreamNotationDeclaration {
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQXmlStreamNotationDeclarationFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQXmlStreamNotationDeclaration)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qxmlstream.h:264
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -121,6 +150,34 @@ func (this *QXmlStreamNotationDeclaration) PublicId() *QStringRef /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qxmlstream.h:267
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QXmlStreamNotationDeclaration &)
+func (this *QXmlStreamNotationDeclaration) Operator_equal_equal(other QXmlStreamNotationDeclaration_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QXmlStreamNotationDeclaration_PTR() != nil {
+		convArg0 = other.QXmlStreamNotationDeclaration_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclarationeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qxmlstream.h:271
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QXmlStreamNotationDeclaration &)
+func (this *QXmlStreamNotationDeclaration) Operator_not_equal(other QXmlStreamNotationDeclaration_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QXmlStreamNotationDeclaration_PTR() != nil {
+		convArg0 = other.QXmlStreamNotationDeclaration_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclarationneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 //  body block end
 
 //  keep block begin
@@ -134,6 +191,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

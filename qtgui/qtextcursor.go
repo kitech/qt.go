@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 21
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,7 +79,10 @@ func NewQTextCursor() *QTextCursor {
 // Public Visibility=Default Availability=Available
 // [-2] void QTextCursor(QTextDocument *)
 func NewQTextCursor_1(document QTextDocument_ITF /*777 QTextDocument **/) *QTextCursor {
-	var convArg0 = document.QTextDocument_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if document != nil && document.QTextDocument_PTR() != nil {
+		convArg0 = document.QTextDocument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursorC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -91,7 +95,10 @@ func NewQTextCursor_1(document QTextDocument_ITF /*777 QTextDocument **/) *QText
 // Public Visibility=Default Availability=Available
 // [-2] void QTextCursor(QTextFrame *)
 func NewQTextCursor_2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
-	var convArg0 = frame.QTextFrame_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if frame != nil && frame.QTextFrame_PTR() != nil {
+		convArg0 = frame.QTextFrame_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursorC2EP10QTextFrame", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -104,12 +111,43 @@ func NewQTextCursor_2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
 // Public Visibility=Default Availability=Available
 // [-2] void QTextCursor(const QTextBlock &)
 func NewQTextCursor_3(block QTextBlock_ITF) *QTextCursor {
-	var convArg0 = block.QTextBlock_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if block != nil && block.QTextBlock_PTR() != nil {
+		convArg0 = block.QTextBlock_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursorC2ERK10QTextBlock", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextCursor)
 	return gothis
+}
+
+// /usr/include/qt/QtGui/qtextcursor.h:77
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QTextCursor & operator=(QTextCursor &&)
+func (this *QTextCursor) Operator_equal(other unsafe.Pointer /*333*/) *QTextCursor {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursoraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qtextcursor.h:79
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QTextCursor & operator=(const QTextCursor &)
+func (this *QTextCursor) Operator_equal_1(other QTextCursor_ITF) *QTextCursor {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTextCursor_PTR() != nil {
+		convArg0 = other.QTextCursor_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursoraSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:80
@@ -128,7 +166,10 @@ func DeleteQTextCursor(this *QTextCursor) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QTextCursor &)
 func (this *QTextCursor) Swap(other QTextCursor_ITF) {
-	var convArg0 = other.QTextCursor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTextCursor_PTR() != nil {
+		convArg0 = other.QTextCursor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -200,7 +241,10 @@ func (this *QTextCursor) InsertText(text string) {
 func (this *QTextCursor) InsertText_1(text string, format QTextCharFormat_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = format.QTextCharFormat_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if format != nil && format.QTextCharFormat_PTR() != nil {
+		convArg1 = format.QTextCharFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -387,7 +431,7 @@ func (this *QTextCursor) Selection() *QTextDocumentFragment /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void selectedTableCells(int *, int *, int *, int *)
 func (this *QTextCursor) SelectedTableCells(firstRow unsafe.Pointer /*666*/, numRows unsafe.Pointer /*666*/, firstColumn unsafe.Pointer /*666*/, numColumns unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &firstRow, &numRows, &firstColumn, &numColumns)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), firstRow, numRows, firstColumn, numColumns)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -420,7 +464,10 @@ func (this *QTextCursor) CharFormat() *QTextCharFormat /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setCharFormat(const QTextCharFormat &)
 func (this *QTextCursor) SetCharFormat(format QTextCharFormat_ITF) {
-	var convArg0 = format.QTextCharFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextCharFormat_PTR() != nil {
+		convArg0 = format.QTextCharFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor13setCharFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -430,7 +477,10 @@ func (this *QTextCursor) SetCharFormat(format QTextCharFormat_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void mergeCharFormat(const QTextCharFormat &)
 func (this *QTextCursor) MergeCharFormat(modifier QTextCharFormat_ITF) {
-	var convArg0 = modifier.QTextCharFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if modifier != nil && modifier.QTextCharFormat_PTR() != nil {
+		convArg0 = modifier.QTextCharFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -452,7 +502,10 @@ func (this *QTextCursor) BlockFormat() *QTextBlockFormat /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setBlockFormat(const QTextBlockFormat &)
 func (this *QTextCursor) SetBlockFormat(format QTextBlockFormat_ITF) {
-	var convArg0 = format.QTextBlockFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextBlockFormat_PTR() != nil {
+		convArg0 = format.QTextBlockFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor14setBlockFormatERK16QTextBlockFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -462,7 +515,10 @@ func (this *QTextCursor) SetBlockFormat(format QTextBlockFormat_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void mergeBlockFormat(const QTextBlockFormat &)
 func (this *QTextCursor) MergeBlockFormat(modifier QTextBlockFormat_ITF) {
-	var convArg0 = modifier.QTextBlockFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if modifier != nil && modifier.QTextBlockFormat_PTR() != nil {
+		convArg0 = modifier.QTextBlockFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor16mergeBlockFormatERK16QTextBlockFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -484,7 +540,10 @@ func (this *QTextCursor) BlockCharFormat() *QTextCharFormat /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setBlockCharFormat(const QTextCharFormat &)
 func (this *QTextCursor) SetBlockCharFormat(format QTextCharFormat_ITF) {
-	var convArg0 = format.QTextCharFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextCharFormat_PTR() != nil {
+		convArg0 = format.QTextCharFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor18setBlockCharFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -494,7 +553,10 @@ func (this *QTextCursor) SetBlockCharFormat(format QTextCharFormat_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void mergeBlockCharFormat(const QTextCharFormat &)
 func (this *QTextCursor) MergeBlockCharFormat(modifier QTextCharFormat_ITF) {
-	var convArg0 = modifier.QTextCharFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if modifier != nil && modifier.QTextCharFormat_PTR() != nil {
+		convArg0 = modifier.QTextCharFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor20mergeBlockCharFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -553,7 +615,10 @@ func (this *QTextCursor) InsertBlock() {
 // Public Visibility=Default Availability=Available
 // [-2] void insertBlock(const QTextBlockFormat &)
 func (this *QTextCursor) InsertBlock_1(format QTextBlockFormat_ITF) {
-	var convArg0 = format.QTextBlockFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextBlockFormat_PTR() != nil {
+		convArg0 = format.QTextBlockFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertBlockERK16QTextBlockFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -563,8 +628,14 @@ func (this *QTextCursor) InsertBlock_1(format QTextBlockFormat_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void insertBlock(const QTextBlockFormat &, const QTextCharFormat &)
 func (this *QTextCursor) InsertBlock_2(format QTextBlockFormat_ITF, charFormat QTextCharFormat_ITF) {
-	var convArg0 = format.QTextBlockFormat_PTR().GetCthis()
-	var convArg1 = charFormat.QTextCharFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextBlockFormat_PTR() != nil {
+		convArg0 = format.QTextBlockFormat_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if charFormat != nil && charFormat.QTextCharFormat_PTR() != nil {
+		convArg1 = charFormat.QTextCharFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -574,7 +645,10 @@ func (this *QTextCursor) InsertBlock_2(format QTextBlockFormat_ITF, charFormat Q
 // Public Visibility=Default Availability=Available
 // [8] QTextList * insertList(const QTextListFormat &)
 func (this *QTextCursor) InsertList(format QTextListFormat_ITF) *QTextList /*777 QTextList **/ {
-	var convArg0 = format.QTextListFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextListFormat_PTR() != nil {
+		convArg0 = format.QTextListFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor10insertListERK15QTextListFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextListFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -595,7 +669,10 @@ func (this *QTextCursor) InsertList_1(style int) *QTextList /*777 QTextList **/ 
 // Public Visibility=Default Availability=Available
 // [8] QTextList * createList(const QTextListFormat &)
 func (this *QTextCursor) CreateList(format QTextListFormat_ITF) *QTextList /*777 QTextList **/ {
-	var convArg0 = format.QTextListFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextListFormat_PTR() != nil {
+		convArg0 = format.QTextListFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor10createListERK15QTextListFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextListFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -626,7 +703,10 @@ func (this *QTextCursor) CurrentList() *QTextList /*777 QTextList **/ {
 // Public Visibility=Default Availability=Available
 // [8] QTextTable * insertTable(int, int, const QTextTableFormat &)
 func (this *QTextCursor) InsertTable(rows int, cols int, format QTextTableFormat_ITF) *QTextTable /*777 QTextTable **/ {
-	var convArg2 = format.QTextTableFormat_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if format != nil && format.QTextTableFormat_PTR() != nil {
+		convArg2 = format.QTextTableFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rows, cols, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextTableFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -657,7 +737,10 @@ func (this *QTextCursor) CurrentTable() *QTextTable /*777 QTextTable **/ {
 // Public Visibility=Default Availability=Available
 // [8] QTextFrame * insertFrame(const QTextFrameFormat &)
 func (this *QTextCursor) InsertFrame(format QTextFrameFormat_ITF) *QTextFrame /*777 QTextFrame **/ {
-	var convArg0 = format.QTextFrameFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextFrameFormat_PTR() != nil {
+		convArg0 = format.QTextFrameFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertFrameERK16QTextFrameFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextFrameFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -678,7 +761,10 @@ func (this *QTextCursor) CurrentFrame() *QTextFrame /*777 QTextFrame **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void insertFragment(const QTextDocumentFragment &)
 func (this *QTextCursor) InsertFragment(fragment QTextDocumentFragment_ITF) {
-	var convArg0 = fragment.QTextDocumentFragment_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if fragment != nil && fragment.QTextDocumentFragment_PTR() != nil {
+		convArg0 = fragment.QTextDocumentFragment_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor14insertFragmentERK21QTextDocumentFragment", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -699,7 +785,10 @@ func (this *QTextCursor) InsertHtml(html string) {
 // Public Visibility=Default Availability=Available
 // [-2] void insertImage(const QTextImageFormat &, QTextFrameFormat::Position)
 func (this *QTextCursor) InsertImage(format QTextImageFormat_ITF, alignment int) {
-	var convArg0 = format.QTextImageFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextImageFormat_PTR() != nil {
+		convArg0 = format.QTextImageFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK16QTextImageFormatN16QTextFrameFormat8PositionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
 	qtrt.ErrPrint(err, rv)
 }
@@ -709,7 +798,10 @@ func (this *QTextCursor) InsertImage(format QTextImageFormat_ITF, alignment int)
 // Public Visibility=Default Availability=Available
 // [-2] void insertImage(const QTextImageFormat &)
 func (this *QTextCursor) InsertImage_1(format QTextImageFormat_ITF) {
-	var convArg0 = format.QTextImageFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextImageFormat_PTR() != nil {
+		convArg0 = format.QTextImageFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK16QTextImageFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -730,7 +822,10 @@ func (this *QTextCursor) InsertImage_2(name string) {
 // Public Visibility=Default Availability=Available
 // [-2] void insertImage(const QImage &, const QString &)
 func (this *QTextCursor) InsertImage_3(image QImage_ITF, name string) {
-	var convArg0 = image.QImage_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QImage_PTR() != nil {
+		convArg0 = image.QImage_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK6QImageRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -764,12 +859,99 @@ func (this *QTextCursor) EndEditBlock() {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qtextcursor.h:216
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator!=(const QTextCursor &)
+func (this *QTextCursor) Operator_not_equal(rhs QTextCursor_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QTextCursor_PTR() != nil {
+		convArg0 = rhs.QTextCursor_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursorneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextcursor.h:217
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator<(const QTextCursor &)
+func (this *QTextCursor) Operator_less_than(rhs QTextCursor_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QTextCursor_PTR() != nil {
+		convArg0 = rhs.QTextCursor_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursorltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextcursor.h:218
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator<=(const QTextCursor &)
+func (this *QTextCursor) Operator_less_than_equal(rhs QTextCursor_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QTextCursor_PTR() != nil {
+		convArg0 = rhs.QTextCursor_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursorleERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextcursor.h:219
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QTextCursor &)
+func (this *QTextCursor) Operator_equal_equal(rhs QTextCursor_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QTextCursor_PTR() != nil {
+		convArg0 = rhs.QTextCursor_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursoreqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextcursor.h:220
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator>=(const QTextCursor &)
+func (this *QTextCursor) Operator_greater_than_equal(rhs QTextCursor_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QTextCursor_PTR() != nil {
+		convArg0 = rhs.QTextCursor_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursorgeERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextcursor.h:221
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator>(const QTextCursor &)
+func (this *QTextCursor) Operator_greater_than(rhs QTextCursor_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QTextCursor_PTR() != nil {
+		convArg0 = rhs.QTextCursor_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursorgtERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qtextcursor.h:223
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCopyOf(const QTextCursor &)
 func (this *QTextCursor) IsCopyOf(other QTextCursor_ITF) bool {
-	var convArg0 = other.QTextCursor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTextCursor_PTR() != nil {
+		convArg0 = other.QTextCursor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor8isCopyOfERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -858,6 +1040,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

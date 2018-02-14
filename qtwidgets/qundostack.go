@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -75,10 +76,14 @@ func (this *QUndoStack) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoStack(QObject *)
 func NewQUndoStack(parent qtcore.QObject_ITF /*777 QObject **/) *QUndoStack {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStackC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUndoStackFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QUndoStack")
 	return gothis
 }
 
@@ -107,7 +112,10 @@ func (this *QUndoStack) Clear() {
 // Public Visibility=Default Availability=Available
 // [-2] void push(QUndoCommand *)
 func (this *QUndoStack) Push(cmd QUndoCommand_ITF /*777 QUndoCommand **/) {
-	var convArg0 = cmd.QUndoCommand_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if cmd != nil && cmd.QUndoCommand_PTR() != nil {
+		convArg0 = cmd.QUndoCommand_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStack4pushEP12QUndoCommand", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -196,7 +204,10 @@ func (this *QUndoStack) Text(idx int) string {
 // Public Visibility=Default Availability=Available
 // [8] QAction * createUndoAction(QObject *, const QString &)
 func (this *QUndoStack) CreateUndoAction(parent qtcore.QObject_ITF /*777 QObject **/, prefix string) *QAction /*777 QAction **/ {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(prefix)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -209,7 +220,10 @@ func (this *QUndoStack) CreateUndoAction(parent qtcore.QObject_ITF /*777 QObject
 // Public Visibility=Default Availability=Available
 // [8] QAction * createRedoAction(QObject *, const QString &)
 func (this *QUndoStack) CreateRedoAction(parent qtcore.QObject_ITF /*777 QObject **/, prefix string) *QAction /*777 QAction **/ {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(prefix)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -421,6 +435,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

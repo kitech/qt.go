@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -102,7 +103,10 @@ func NewQVector3D_2(xpos float32, ypos float32, zpos float32) *QVector3D {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector3D(const QPoint &)
 func NewQVector3D_3(point qtcore.QPoint_ITF) *QVector3D {
-	var convArg0 = point.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if point != nil && point.QPoint_PTR() != nil {
+		convArg0 = point.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2ERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -115,7 +119,10 @@ func NewQVector3D_3(point qtcore.QPoint_ITF) *QVector3D {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector3D(const QPointF &)
 func NewQVector3D_4(point qtcore.QPointF_ITF) *QVector3D {
-	var convArg0 = point.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if point != nil && point.QPointF_PTR() != nil {
+		convArg0 = point.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2ERK7QPointF", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -128,7 +135,10 @@ func NewQVector3D_4(point qtcore.QPointF_ITF) *QVector3D {
 // Public Visibility=Default Availability=Available
 // [-2] void QVector3D(const QVector2D &)
 func NewQVector3D_5(vector QVector2D_ITF) *QVector3D {
-	var convArg0 = vector.QVector2D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if vector != nil && vector.QVector2D_PTR() != nil {
+		convArg0 = vector.QVector2D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2ERK9QVector2D", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -141,7 +151,10 @@ func NewQVector3D_5(vector QVector2D_ITF) *QVector3D {
 // Public Visibility=Default Availability=Available
 // [-2] void QVector3D(const QVector2D &, float)
 func NewQVector3D_6(vector QVector2D_ITF, zpos float32) *QVector3D {
-	var convArg0 = vector.QVector2D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if vector != nil && vector.QVector2D_PTR() != nil {
+		convArg0 = vector.QVector2D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2ERK9QVector2Df", qtrt.FFI_TYPE_POINTER, convArg0, zpos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -154,7 +167,10 @@ func NewQVector3D_6(vector QVector2D_ITF, zpos float32) *QVector3D {
 // Public Visibility=Default Availability=Available
 // [-2] void QVector3D(const QVector4D &)
 func NewQVector3D_7(vector QVector4D_ITF) *QVector3D {
-	var convArg0 = vector.QVector4D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if vector != nil && vector.QVector4D_PTR() != nil {
+		convArg0 = vector.QVector4D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2ERK9QVector4D", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -229,6 +245,26 @@ func (this *QVector3D) SetZ(z float32) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qvector3d.h:84
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] float & operator[](int)
+func (this *QVector3D) Operator_get_index(i int) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cpretval2go("float32", rv).(float32) // 3331
+}
+
+// /usr/include/qt/QtGui/qvector3d.h:85
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] float operator[](int)
+func (this *QVector3D) Operator_get_index_1(i int) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3DixEi", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
 // /usr/include/qt/QtGui/qvector3d.h:87
 // index:0
 // Public Visibility=Default Availability=Available
@@ -270,13 +306,107 @@ func (this *QVector3D) Normalize() {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qvector3d.h:93
+// index:0
+// Public Visibility=Default Availability=Available
+// [12] QVector3D & operator+=(const QVector3D &)
+func (this *QVector3D) Operator_add_equal(vector QVector3D_ITF) *QVector3D {
+	var convArg0 unsafe.Pointer
+	if vector != nil && vector.QVector3D_PTR() != nil {
+		convArg0 = vector.QVector3D_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DpLERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qvector3d.h:94
+// index:0
+// Public Visibility=Default Availability=Available
+// [12] QVector3D & operator-=(const QVector3D &)
+func (this *QVector3D) Operator_minus_equal(vector QVector3D_ITF) *QVector3D {
+	var convArg0 unsafe.Pointer
+	if vector != nil && vector.QVector3D_PTR() != nil {
+		convArg0 = vector.QVector3D_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DmIERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qvector3d.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [12] QVector3D & operator*=(float)
+func (this *QVector3D) Operator_mul_equal(factor float32) *QVector3D {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DmLEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qvector3d.h:96
+// index:1
+// Public Visibility=Default Availability=Available
+// [12] QVector3D & operator*=(const QVector3D &)
+func (this *QVector3D) Operator_mul_equal_1(vector QVector3D_ITF) *QVector3D {
+	var convArg0 unsafe.Pointer
+	if vector != nil && vector.QVector3D_PTR() != nil {
+		convArg0 = vector.QVector3D_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DmLERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qvector3d.h:97
+// index:0
+// Public Visibility=Default Availability=Available
+// [12] QVector3D & operator/=(float)
+func (this *QVector3D) Operator_div_equal(divisor float32) *QVector3D {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DdVEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), divisor)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qvector3d.h:98
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [12] QVector3D & operator/=(const QVector3D &)
+func (this *QVector3D) Operator_div_equal_1(vector QVector3D_ITF) *QVector3D {
+	var convArg0 unsafe.Pointer
+	if vector != nil && vector.QVector3D_PTR() != nil {
+		convArg0 = vector.QVector3D_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DdVERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qvector3d.h:100
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] float dotProduct(const QVector3D &, const QVector3D &)
 func (this *QVector3D) DotProduct(v1 QVector3D_ITF, v2 QVector3D_ITF) float32 {
-	var convArg0 = v1.QVector3D_PTR().GetCthis()
-	var convArg1 = v2.QVector3D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if v1 != nil && v1.QVector3D_PTR() != nil {
+		convArg0 = v1.QVector3D_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if v2 != nil && v2.QVector3D_PTR() != nil {
+		convArg1 = v2.QVector3D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3D10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -292,8 +422,14 @@ func QVector3D_DotProduct(v1 QVector3D_ITF, v2 QVector3D_ITF) float32 {
 // Public static Visibility=Default Availability=Available
 // [12] QVector3D crossProduct(const QVector3D &, const QVector3D &)
 func (this *QVector3D) CrossProduct(v1 QVector3D_ITF, v2 QVector3D_ITF) *QVector3D /*123*/ {
-	var convArg0 = v1.QVector3D_PTR().GetCthis()
-	var convArg1 = v2.QVector3D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if v1 != nil && v1.QVector3D_PTR() != nil {
+		convArg0 = v1.QVector3D_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if v2 != nil && v2.QVector3D_PTR() != nil {
+		convArg1 = v2.QVector3D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3D12crossProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -311,8 +447,14 @@ func QVector3D_CrossProduct(v1 QVector3D_ITF, v2 QVector3D_ITF) *QVector3D /*123
 // Public static Visibility=Default Availability=Available
 // [12] QVector3D normal(const QVector3D &, const QVector3D &)
 func (this *QVector3D) Normal(v1 QVector3D_ITF, v2 QVector3D_ITF) *QVector3D /*123*/ {
-	var convArg0 = v1.QVector3D_PTR().GetCthis()
-	var convArg1 = v2.QVector3D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if v1 != nil && v1.QVector3D_PTR() != nil {
+		convArg0 = v1.QVector3D_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if v2 != nil && v2.QVector3D_PTR() != nil {
+		convArg1 = v2.QVector3D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3D6normalERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -330,9 +472,18 @@ func QVector3D_Normal(v1 QVector3D_ITF, v2 QVector3D_ITF) *QVector3D /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [12] QVector3D normal(const QVector3D &, const QVector3D &, const QVector3D &)
 func (this *QVector3D) Normal_1(v1 QVector3D_ITF, v2 QVector3D_ITF, v3 QVector3D_ITF) *QVector3D /*123*/ {
-	var convArg0 = v1.QVector3D_PTR().GetCthis()
-	var convArg1 = v2.QVector3D_PTR().GetCthis()
-	var convArg2 = v3.QVector3D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if v1 != nil && v1.QVector3D_PTR() != nil {
+		convArg0 = v1.QVector3D_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if v2 != nil && v2.QVector3D_PTR() != nil {
+		convArg1 = v2.QVector3D_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if v3 != nil && v3.QVector3D_PTR() != nil {
+		convArg2 = v3.QVector3D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3D6normalERKS_S1_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -350,9 +501,18 @@ func QVector3D_Normal_1(v1 QVector3D_ITF, v2 QVector3D_ITF, v3 QVector3D_ITF) *Q
 // Public Visibility=Default Availability=Available
 // [12] QVector3D project(const QMatrix4x4 &, const QMatrix4x4 &, const QRect &)
 func (this *QVector3D) Project(modelView QMatrix4x4_ITF, projection QMatrix4x4_ITF, viewport qtcore.QRect_ITF) *QVector3D /*123*/ {
-	var convArg0 = modelView.QMatrix4x4_PTR().GetCthis()
-	var convArg1 = projection.QMatrix4x4_PTR().GetCthis()
-	var convArg2 = viewport.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if modelView != nil && modelView.QMatrix4x4_PTR() != nil {
+		convArg0 = modelView.QMatrix4x4_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if projection != nil && projection.QMatrix4x4_PTR() != nil {
+		convArg1 = projection.QMatrix4x4_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if viewport != nil && viewport.QRect_PTR() != nil {
+		convArg2 = viewport.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -365,9 +525,18 @@ func (this *QVector3D) Project(modelView QMatrix4x4_ITF, projection QMatrix4x4_I
 // Public Visibility=Default Availability=Available
 // [12] QVector3D unproject(const QMatrix4x4 &, const QMatrix4x4 &, const QRect &)
 func (this *QVector3D) Unproject(modelView QMatrix4x4_ITF, projection QMatrix4x4_ITF, viewport qtcore.QRect_ITF) *QVector3D /*123*/ {
-	var convArg0 = modelView.QMatrix4x4_PTR().GetCthis()
-	var convArg1 = projection.QMatrix4x4_PTR().GetCthis()
-	var convArg2 = viewport.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if modelView != nil && modelView.QMatrix4x4_PTR() != nil {
+		convArg0 = modelView.QMatrix4x4_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if projection != nil && projection.QMatrix4x4_PTR() != nil {
+		convArg1 = projection.QMatrix4x4_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if viewport != nil && viewport.QRect_PTR() != nil {
+		convArg2 = viewport.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -380,7 +549,10 @@ func (this *QVector3D) Unproject(modelView QMatrix4x4_ITF, projection QMatrix4x4
 // Public Visibility=Default Availability=Available
 // [4] float distanceToPoint(const QVector3D &)
 func (this *QVector3D) DistanceToPoint(point QVector3D_ITF) float32 {
-	var convArg0 = point.QVector3D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if point != nil && point.QVector3D_PTR() != nil {
+		convArg0 = point.QVector3D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPointERKS_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -391,8 +563,14 @@ func (this *QVector3D) DistanceToPoint(point QVector3D_ITF) float32 {
 // Public Visibility=Default Availability=Available
 // [4] float distanceToPlane(const QVector3D &, const QVector3D &)
 func (this *QVector3D) DistanceToPlane(plane QVector3D_ITF, normal QVector3D_ITF) float32 {
-	var convArg0 = plane.QVector3D_PTR().GetCthis()
-	var convArg1 = normal.QVector3D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if plane != nil && plane.QVector3D_PTR() != nil {
+		convArg0 = plane.QVector3D_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if normal != nil && normal.QVector3D_PTR() != nil {
+		convArg1 = normal.QVector3D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPlaneERKS_S1_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -403,9 +581,18 @@ func (this *QVector3D) DistanceToPlane(plane QVector3D_ITF, normal QVector3D_ITF
 // Public Visibility=Default Availability=Available
 // [4] float distanceToPlane(const QVector3D &, const QVector3D &, const QVector3D &)
 func (this *QVector3D) DistanceToPlane_1(plane1 QVector3D_ITF, plane2 QVector3D_ITF, plane3 QVector3D_ITF) float32 {
-	var convArg0 = plane1.QVector3D_PTR().GetCthis()
-	var convArg1 = plane2.QVector3D_PTR().GetCthis()
-	var convArg2 = plane3.QVector3D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if plane1 != nil && plane1.QVector3D_PTR() != nil {
+		convArg0 = plane1.QVector3D_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if plane2 != nil && plane2.QVector3D_PTR() != nil {
+		convArg1 = plane2.QVector3D_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if plane3 != nil && plane3.QVector3D_PTR() != nil {
+		convArg2 = plane3.QVector3D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPlaneERKS_S1_S1_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -416,8 +603,14 @@ func (this *QVector3D) DistanceToPlane_1(plane1 QVector3D_ITF, plane2 QVector3D_
 // Public Visibility=Default Availability=Available
 // [4] float distanceToLine(const QVector3D &, const QVector3D &)
 func (this *QVector3D) DistanceToLine(point QVector3D_ITF, direction QVector3D_ITF) float32 {
-	var convArg0 = point.QVector3D_PTR().GetCthis()
-	var convArg1 = direction.QVector3D_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if point != nil && point.QVector3D_PTR() != nil {
+		convArg0 = point.QVector3D_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if direction != nil && direction.QVector3D_PTR() != nil {
+		convArg1 = direction.QVector3D_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3D14distanceToLineERKS_S1_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -490,6 +683,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

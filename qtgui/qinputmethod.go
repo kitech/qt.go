@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -86,7 +87,10 @@ func (this *QInputMethod) InputItemTransform() *QTransform /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setInputItemTransform(const QTransform &)
 func (this *QInputMethod) SetInputItemTransform(transform QTransform_ITF) {
-	var convArg0 = transform.QTransform_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if transform != nil && transform.QTransform_PTR() != nil {
+		convArg0 = transform.QTransform_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputMethod21setInputItemTransformERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -108,7 +112,10 @@ func (this *QInputMethod) InputItemRectangle() *qtcore.QRectF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setInputItemRectangle(const QRectF &)
 func (this *QInputMethod) SetInputItemRectangle(rect qtcore.QRectF_ITF) {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputMethod21setInputItemRectangleERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -217,7 +224,10 @@ func (this *QInputMethod) InputDirection() int {
 // Public static Visibility=Default Availability=Available
 // [16] QVariant queryFocusObject(Qt::InputMethodQuery, QVariant)
 func (this *QInputMethod) QueryFocusObject(query int, argument qtcore.QVariant_ITF /*123*/) *qtcore.QVariant /*123*/ {
-	var convArg1 = argument.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if argument != nil && argument.QVariant_PTR() != nil {
+		convArg1 = argument.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputMethod16queryFocusObjectEN2Qt16InputMethodQueryE8QVariant", qtrt.FFI_TYPE_POINTER, query, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -380,6 +390,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

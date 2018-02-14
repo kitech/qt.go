@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,7 +79,10 @@ func NewQTextDocumentFragment() *QTextDocumentFragment {
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDocumentFragment(const QTextDocument *)
 func NewQTextDocumentFragment_1(document QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment {
-	var convArg0 = document.QTextDocument_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if document != nil && document.QTextDocument_PTR() != nil {
+		convArg0 = document.QTextDocument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2EPK13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -91,12 +95,31 @@ func NewQTextDocumentFragment_1(document QTextDocument_ITF /*777 const QTextDocu
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDocumentFragment(const QTextCursor &)
 func NewQTextDocumentFragment_2(range_ QTextCursor_ITF) *QTextDocumentFragment {
-	var convArg0 = range_.QTextCursor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if range_ != nil && range_.QTextCursor_PTR() != nil {
+		convArg0 = range_.QTextCursor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2ERK11QTextCursor", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextDocumentFragment)
 	return gothis
+}
+
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:61
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QTextDocumentFragment & operator=(const QTextDocumentFragment &)
+func (this *QTextDocumentFragment) Operator_equal(rhs QTextDocumentFragment_ITF) *QTextDocumentFragment {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QTextDocumentFragment_PTR() != nil {
+		convArg0 = rhs.QTextDocumentFragment_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QTextDocumentFragmentaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextDocumentFragment)
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:62
@@ -138,7 +161,10 @@ func (this *QTextDocumentFragment) ToPlainText() string {
 // Public Visibility=Default Availability=Available
 // [8] QString toHtml(const QByteArray &)
 func (this *QTextDocumentFragment) ToHtml(encoding qtcore.QByteArray_ITF) string {
-	var convArg0 = encoding.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if encoding != nil && encoding.QByteArray_PTR() != nil {
+		convArg0 = encoding.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -192,7 +218,10 @@ func QTextDocumentFragment_FromHtml(html string) *QTextDocumentFragment /*123*/ 
 func (this *QTextDocumentFragment) FromHtml_1(html string, resourceProvider QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(html)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = resourceProvider.QTextDocument_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if resourceProvider != nil && resourceProvider.QTextDocument_PTR() != nil {
+		convArg1 = resourceProvider.QTextDocument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -218,6 +247,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

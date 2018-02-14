@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -74,10 +75,14 @@ func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*777 const Q
 // Public Visibility=Default Availability=Available
 // [-2] void QPictureFormatPlugin(QObject *)
 func NewQPictureFormatPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QPictureFormatPlugin {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPictureFormatPluginFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPictureFormatPlugin")
 	return gothis
 }
 
@@ -101,7 +106,10 @@ func (this *QPictureFormatPlugin) LoadPicture(format string, filename string, pi
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(filename)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = pic.QPicture_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if pic != nil && pic.QPicture_PTR() != nil {
+		convArg2 = pic.QPicture_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -116,7 +124,10 @@ func (this *QPictureFormatPlugin) SavePicture(format string, filename string, pi
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(filename)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = pic.QPicture_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if pic != nil && pic.QPicture_PTR() != nil {
+		convArg2 = pic.QPicture_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -147,6 +158,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

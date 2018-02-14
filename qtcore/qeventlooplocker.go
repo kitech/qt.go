@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -77,7 +78,10 @@ func NewQEventLoopLocker() *QEventLoopLocker {
 // Public Visibility=Default Availability=Available
 // [-2] void QEventLoopLocker(QEventLoop *)
 func NewQEventLoopLocker_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoopLocker {
-	var convArg0 = loop.QEventLoop_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if loop != nil && loop.QEventLoop_PTR() != nil {
+		convArg0 = loop.QEventLoop_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -90,7 +94,10 @@ func NewQEventLoopLocker_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoop
 // Public Visibility=Default Availability=Available
 // [-2] void QEventLoopLocker(QThread *)
 func NewQEventLoopLocker_2(thread QThread_ITF /*777 QThread **/) *QEventLoopLocker {
-	var convArg0 = thread.QThread_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if thread != nil && thread.QThread_PTR() != nil {
+		convArg0 = thread.QThread_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -122,6 +129,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 42
+// extern C begin: 45
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -93,10 +94,14 @@ func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObjec
 // Public Visibility=Default Availability=Available
 // [-2] void QFutureWatcherBase(QObject *)
 func NewQFutureWatcherBase(parent QObject_ITF /*777 QObject **/) *QFutureWatcherBase {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBaseC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFutureWatcherBaseFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFutureWatcherBase")
 	return gothis
 }
 
@@ -216,7 +221,10 @@ func (this *QFutureWatcherBase) SetPendingResultsLimit(limit int) {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QFutureWatcherBase) Event(event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -364,7 +372,10 @@ func (this *QFutureWatcherBase) TogglePaused() {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void connectNotify(const QMetaMethod &)
 func (this *QFutureWatcherBase) ConnectNotify(signal QMetaMethod_ITF) {
-	var convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if signal != nil && signal.QMetaMethod_PTR() != nil {
+		convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase13connectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -374,7 +385,10 @@ func (this *QFutureWatcherBase) ConnectNotify(signal QMetaMethod_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void disconnectNotify(const QMetaMethod &)
 func (this *QFutureWatcherBase) DisconnectNotify(signal QMetaMethod_ITF) {
-	var convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if signal != nil && signal.QMetaMethod_PTR() != nil {
+		convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase16disconnectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -416,6 +430,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 27
+// extern C begin: 49
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -194,7 +195,7 @@ func (this *QDate) DaysInYear() int {
 // Public Visibility=Default Availability=Available
 // [4] int weekNumber(int *)
 func (this *QDate) WeekNumber(yearNum unsafe.Pointer /*666*/) int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10weekNumberEPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &yearNum)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10weekNumberEPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), yearNum)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -304,7 +305,10 @@ func (this *QDate) ToString_1(format string) string {
 // Public Visibility=Default Availability=Available
 // [8] QString toString(QStringView)
 func (this *QDate) ToString_2(format QStringView_ITF /*123*/) string {
-	var convArg0 = format.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QStringView_PTR() != nil {
+		convArg0 = format.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -328,7 +332,7 @@ func (this *QDate) SetDate(year int, month int, day int) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void getDate(int *, int *, int *)
 func (this *QDate) GetDate(year unsafe.Pointer /*666*/, month unsafe.Pointer /*666*/, day unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate7getDateEPiS0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &year, &month, &day)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate7getDateEPiS0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), year, month, day)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -337,7 +341,7 @@ func (this *QDate) GetDate(year unsafe.Pointer /*666*/, month unsafe.Pointer /*6
 // Public Visibility=Default Availability=Available
 // [-2] void getDate(int *, int *, int *)
 func (this *QDate) GetDate_1(year unsafe.Pointer /*666*/, month unsafe.Pointer /*666*/, day unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7getDateEPiS0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &year, &month, &day)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7getDateEPiS0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), year, month, day)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -382,10 +386,97 @@ func (this *QDate) AddYears(years int) *QDate /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] qint64 daysTo(const QDate &)
 func (this *QDate) DaysTo(arg0 QDate_ITF) int64 {
-	var convArg0 = arg0.QDate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QDate_PTR() != nil {
+		convArg0 = arg0.QDate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate6daysToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:118
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QDate &)
+func (this *QDate) Operator_equal_equal(other QDate_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QDate_PTR() != nil {
+		convArg0 = other.QDate_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDateeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:119
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QDate &)
+func (this *QDate) Operator_not_equal(other QDate_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QDate_PTR() != nil {
+		convArg0 = other.QDate_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDateneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:120
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(const QDate &)
+func (this *QDate) Operator_less_than(other QDate_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QDate_PTR() != nil {
+		convArg0 = other.QDate_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDateltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:121
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(const QDate &)
+func (this *QDate) Operator_less_than_equal(other QDate_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QDate_PTR() != nil {
+		convArg0 = other.QDate_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDateleERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:122
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>(const QDate &)
+func (this *QDate) Operator_greater_than(other QDate_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QDate_PTR() != nil {
+		convArg0 = other.QDate_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDategtERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:123
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(const QDate &)
+func (this *QDate) Operator_greater_than_equal(other QDate_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QDate_PTR() != nil {
+		convArg0 = other.QDate_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDategeERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:125
@@ -511,6 +602,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

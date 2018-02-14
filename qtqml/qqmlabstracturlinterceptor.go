@@ -18,12 +18,13 @@ package qtqml
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -92,7 +93,10 @@ func DeleteQQmlAbstractUrlInterceptor(this *QQmlAbstractUrlInterceptor) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QUrl intercept(const QUrl &, enum QQmlAbstractUrlInterceptor::DataType)
 func (this *QQmlAbstractUrlInterceptor) Intercept(path qtcore.QUrl_ITF, type_ int) *qtcore.QUrl /*123*/ {
-	var convArg0 = path.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if path != nil && path.QUrl_PTR() != nil {
+		convArg0 = path.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptor9interceptERK4QUrlNS_8DataTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, type_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -120,6 +124,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

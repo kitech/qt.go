@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 35
+// extern C begin: 39
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -73,6 +74,34 @@ func NewQGlyphRun() *QGlyphRun {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qglyphrun.h:70
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QGlyphRun & operator=(QGlyphRun &&)
+func (this *QGlyphRun) Operator_equal(other unsafe.Pointer /*333*/) *QGlyphRun {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRunaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGlyphRunFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQGlyphRun)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qglyphrun.h:72
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QGlyphRun & operator=(const QGlyphRun &)
+func (this *QGlyphRun) Operator_equal_1(other QGlyphRun_ITF) *QGlyphRun {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QGlyphRun_PTR() != nil {
+		convArg0 = other.QGlyphRun_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRunaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGlyphRunFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQGlyphRun)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qglyphrun.h:73
 // index:0
 // Public Visibility=Default Availability=Available
@@ -89,7 +118,10 @@ func DeleteQGlyphRun(this *QGlyphRun) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QGlyphRun &)
 func (this *QGlyphRun) Swap(other QGlyphRun_ITF) {
-	var convArg0 = other.QGlyphRun_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QGlyphRun_PTR() != nil {
+		convArg0 = other.QGlyphRun_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -111,7 +143,10 @@ func (this *QGlyphRun) RawFont() *QRawFont /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setRawFont(const QRawFont &)
 func (this *QGlyphRun) SetRawFont(rawFont QRawFont_ITF) {
-	var convArg0 = rawFont.QRawFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rawFont != nil && rawFont.QRawFont_PTR() != nil {
+		convArg0 = rawFont.QRawFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun10setRawFontERK8QRawFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -121,8 +156,11 @@ func (this *QGlyphRun) SetRawFont(rawFont QRawFont_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setRawData(const quint32 *, const QPointF *, int)
 func (this *QGlyphRun) SetRawData(glyphIndexArray unsafe.Pointer /*666*/, glyphPositionArray qtcore.QPointF_ITF /*777 const QPointF **/, size int) {
-	var convArg1 = glyphPositionArray.QPointF_PTR().GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &glyphIndexArray, convArg1, size)
+	var convArg1 unsafe.Pointer
+	if glyphPositionArray != nil && glyphPositionArray.QPointF_PTR() != nil {
+		convArg1 = glyphPositionArray.QPointF_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), glyphIndexArray, convArg1, size)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -133,6 +171,34 @@ func (this *QGlyphRun) SetRawData(glyphIndexArray unsafe.Pointer /*666*/, glyphP
 func (this *QGlyphRun) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qglyphrun.h:92
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QGlyphRun &)
+func (this *QGlyphRun) Operator_equal_equal(other QGlyphRun_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QGlyphRun_PTR() != nil {
+		convArg0 = other.QGlyphRun_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRuneqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qglyphrun.h:93
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QGlyphRun &)
+func (this *QGlyphRun) Operator_not_equal(other QGlyphRun_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QGlyphRun_PTR() != nil {
+		convArg0 = other.QGlyphRun_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRunneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qglyphrun.h:96
@@ -244,7 +310,10 @@ func (this *QGlyphRun) Flags() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setBoundingRect(const QRectF &)
 func (this *QGlyphRun) SetBoundingRect(boundingRect qtcore.QRectF_ITF) {
-	var convArg0 = boundingRect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if boundingRect != nil && boundingRect.QRectF_PTR() != nil {
+		convArg0 = boundingRect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun15setBoundingRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -292,6 +361,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

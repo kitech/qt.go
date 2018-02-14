@@ -24,6 +24,7 @@ package qtwinextras
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -75,10 +76,14 @@ func (this *QWinThumbnailToolButton) MetaObject() *qtcore.QMetaObject /*777 cons
 // Public Visibility=Default Availability=Available
 // [-2] void QWinThumbnailToolButton(QObject *)
 func NewQWinThumbnailToolButton(parent qtcore.QObject_ITF /*777 QObject **/) *QWinThumbnailToolButton {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWinThumbnailToolButtonC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinThumbnailToolButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QWinThumbnailToolButton")
 	return gothis
 }
 
@@ -122,7 +127,10 @@ func (this *QWinThumbnailToolButton) ToolTip() string {
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
 func (this *QWinThumbnailToolButton) SetIcon(icon qtgui.QIcon_ITF) {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWinThumbnailToolButton7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -274,6 +282,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

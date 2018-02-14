@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 22
+// extern C begin: 24
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -77,7 +78,10 @@ func (*QAbstractConcatenable) NewFromPointer(cthis unsafe.Pointer) *QAbstractCon
 func (this *QAbstractConcatenable) ConvertFromAscii(a string, len int, out QChar_ITF) {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
-	var convArg2 = out.QChar_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if out != nil && out.QChar_PTR() != nil {
+		convArg2 = out.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEPKciRP5QChar", qtrt.FFI_TYPE_POINTER, convArg0, len, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -91,7 +95,10 @@ func QAbstractConcatenable_ConvertFromAscii(a string, len int, out QChar_ITF) {
 // Protected static inline Visibility=Default Availability=Available
 // [-2] void convertFromAscii(char, QChar *&)
 func (this *QAbstractConcatenable) ConvertFromAscii_1(a byte, out QChar_ITF) {
-	var convArg1 = out.QChar_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if out != nil && out.QChar_PTR() != nil {
+		convArg1 = out.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEcRP5QChar", qtrt.FFI_TYPE_POINTER, a, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -107,7 +114,10 @@ func QAbstractConcatenable_ConvertFromAscii_1(a byte, out QChar_ITF) {
 func (this *QAbstractConcatenable) AppendLatin1To(a string, len int, out QChar_ITF /*777 QChar **/) {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
-	var convArg2 = out.QChar_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if out != nil && out.QChar_PTR() != nil {
+		convArg2 = out.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractConcatenable14appendLatin1ToEPKciP5QChar", qtrt.FFI_TYPE_POINTER, convArg0, len, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -135,6 +145,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

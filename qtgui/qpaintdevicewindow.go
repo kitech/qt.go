@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -98,7 +99,10 @@ func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRect &)
 func (this *QPaintDeviceWindow) Update(rect qtcore.QRect_ITF) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -108,7 +112,10 @@ func (this *QPaintDeviceWindow) Update(rect qtcore.QRect_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRegion &)
 func (this *QPaintDeviceWindow) Update_1(region QRegion_ITF) {
-	var convArg0 = region.QRegion_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if region != nil && region.QRegion_PTR() != nil {
+		convArg0 = region.QRegion_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -127,7 +134,10 @@ func (this *QPaintDeviceWindow) Update_2() {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QPaintDeviceWindow) PaintEvent(event QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = event.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QPaintEvent_PTR() != nil {
+		convArg0 = event.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -147,7 +157,10 @@ func (this *QPaintDeviceWindow) Metric(metric int) int {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void exposeEvent(QExposeEvent *)
 func (this *QPaintDeviceWindow) ExposeEvent(arg0 QExposeEvent_ITF /*777 QExposeEvent **/) {
-	var convArg0 = arg0.QExposeEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QExposeEvent_PTR() != nil {
+		convArg0 = arg0.QExposeEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow11exposeEventEP12QExposeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -157,7 +170,10 @@ func (this *QPaintDeviceWindow) ExposeEvent(arg0 QExposeEvent_ITF /*777 QExposeE
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QPaintDeviceWindow) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -182,6 +198,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

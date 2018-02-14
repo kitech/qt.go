@@ -24,6 +24,7 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,7 +79,10 @@ func NewQAndroidIntent() *QAndroidIntent {
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidIntent(const QAndroidJniObject &)
 func NewQAndroidIntent_1(intent QAndroidJniObject_ITF) *QAndroidIntent {
-	var convArg0 = intent.QAndroidJniObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if intent != nil && intent.QAndroidJniObject_PTR() != nil {
+		convArg0 = intent.QAndroidJniObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntentC2ERK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidIntentFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -105,7 +109,10 @@ func NewQAndroidIntent_2(action string) *QAndroidIntent {
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidIntent(const QAndroidJniObject &, const char *)
 func NewQAndroidIntent_3(packageContext QAndroidJniObject_ITF, className string) *QAndroidIntent {
-	var convArg0 = packageContext.QAndroidJniObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if packageContext != nil && packageContext.QAndroidJniObject_PTR() != nil {
+		convArg0 = packageContext.QAndroidJniObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntentC2ERK17QAndroidJniObjectPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -133,7 +140,10 @@ func DeleteQAndroidIntent(this *QAndroidIntent) {
 func (this *QAndroidIntent) PutExtra(key string, data qtcore.QByteArray_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = data.QByteArray_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg1 = data.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntent8putExtraERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -145,7 +155,10 @@ func (this *QAndroidIntent) PutExtra(key string, data qtcore.QByteArray_ITF) {
 func (this *QAndroidIntent) PutExtra_1(key string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntent8putExtraERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -203,6 +216,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

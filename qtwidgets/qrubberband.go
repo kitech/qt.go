@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -110,10 +111,14 @@ func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // Public Visibility=Default Availability=Available
 // [-2] void QRubberBand(enum QRubberBand::Shape, QWidget *)
 func NewQRubberBand(arg0 int, arg1 QWidget_ITF /*777 QWidget **/) *QRubberBand {
-	var convArg1 = arg1.QWidget_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QWidget_PTR() != nil {
+		convArg1 = arg1.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBandC2ENS_5ShapeEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRubberBandFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QRubberBand")
 	return gothis
 }
 
@@ -143,7 +148,10 @@ func (this *QRubberBand) Shape() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
 func (this *QRubberBand) SetGeometry(r qtcore.QRect_ITF) {
-	var convArg0 = r.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRect_PTR() != nil {
+		convArg0 = r.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -171,7 +179,10 @@ func (this *QRubberBand) Move(x int, y int) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void move(const QPoint &)
 func (this *QRubberBand) Move_1(p qtcore.QPoint_ITF) {
-	var convArg0 = p.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPoint_PTR() != nil {
+		convArg0 = p.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand4moveERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -190,7 +201,10 @@ func (this *QRubberBand) Resize(w int, h int) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void resize(const QSize &)
 func (this *QRubberBand) Resize_1(s qtcore.QSize_ITF) {
-	var convArg0 = s.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QSize_PTR() != nil {
+		convArg0 = s.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand6resizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -200,7 +214,10 @@ func (this *QRubberBand) Resize_1(s qtcore.QSize_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QRubberBand) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -211,7 +228,10 @@ func (this *QRubberBand) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QRubberBand) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
+		convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -221,7 +241,10 @@ func (this *QRubberBand) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
 func (this *QRubberBand) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -231,7 +254,10 @@ func (this *QRubberBand) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
 func (this *QRubberBand) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
-	var convArg0 = arg0.QShowEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QShowEvent_PTR() != nil {
+		convArg0 = arg0.QShowEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -241,7 +267,10 @@ func (this *QRubberBand) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
 func (this *QRubberBand) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
-	var convArg0 = arg0.QResizeEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QResizeEvent_PTR() != nil {
+		convArg0 = arg0.QResizeEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -251,7 +280,10 @@ func (this *QRubberBand) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEv
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void moveEvent(QMoveEvent *)
 func (this *QRubberBand) MoveEvent(arg0 qtgui.QMoveEvent_ITF /*777 QMoveEvent **/) {
-	var convArg0 = arg0.QMoveEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMoveEvent_PTR() != nil {
+		convArg0 = arg0.QMoveEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand9moveEventEP10QMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -261,7 +293,10 @@ func (this *QRubberBand) MoveEvent(arg0 qtgui.QMoveEvent_ITF /*777 QMoveEvent **
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionRubberBand *)
 func (this *QRubberBand) InitStyleOption(option QStyleOptionRubberBand_ITF /*777 QStyleOptionRubberBand **/) {
-	var convArg0 = option.QStyleOptionRubberBand_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if option != nil && option.QStyleOptionRubberBand_PTR() != nil {
+		convArg0 = option.QStyleOptionRubberBand_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QRubberBand15initStyleOptionEP22QStyleOptionRubberBand", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -284,6 +319,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

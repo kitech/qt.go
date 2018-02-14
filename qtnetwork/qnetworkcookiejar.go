@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 21
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -79,10 +80,14 @@ func (this *QNetworkCookieJar) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkCookieJar(QObject *)
 func NewQNetworkCookieJar(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkCookieJar {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkCookieJarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QNetworkCookieJar")
 	return gothis
 }
 
@@ -102,7 +107,10 @@ func DeleteQNetworkCookieJar(this *QNetworkCookieJar) {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertCookie(const QNetworkCookie &)
 func (this *QNetworkCookieJar) InsertCookie(cookie QNetworkCookie_ITF) bool {
-	var convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
+		convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJar12insertCookieERK14QNetworkCookie", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -113,7 +121,10 @@ func (this *QNetworkCookieJar) InsertCookie(cookie QNetworkCookie_ITF) bool {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool updateCookie(const QNetworkCookie &)
 func (this *QNetworkCookieJar) UpdateCookie(cookie QNetworkCookie_ITF) bool {
-	var convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
+		convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJar12updateCookieERK14QNetworkCookie", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -124,7 +135,10 @@ func (this *QNetworkCookieJar) UpdateCookie(cookie QNetworkCookie_ITF) bool {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool deleteCookie(const QNetworkCookie &)
 func (this *QNetworkCookieJar) DeleteCookie(cookie QNetworkCookie_ITF) bool {
-	var convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
+		convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJar12deleteCookieERK14QNetworkCookie", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -135,8 +149,14 @@ func (this *QNetworkCookieJar) DeleteCookie(cookie QNetworkCookie_ITF) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool validateCookie(const QNetworkCookie &, const QUrl &)
 func (this *QNetworkCookieJar) ValidateCookie(cookie QNetworkCookie_ITF, url qtcore.QUrl_ITF) bool {
-	var convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
-	var convArg1 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
+		convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg1 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkCookieJar14validateCookieERK14QNetworkCookieRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -155,6 +175,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

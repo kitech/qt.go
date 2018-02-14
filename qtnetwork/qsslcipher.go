@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 10
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -101,6 +102,34 @@ func NewQSslCipher_2(name string, protocol int) *QSslCipher {
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qsslcipher.h:63
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QSslCipher & operator=(QSslCipher &&)
+func (this *QSslCipher) Operator_equal(other unsafe.Pointer /*333*/) *QSslCipher {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslCipheraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslCipherFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslCipher)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qsslcipher.h:65
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QSslCipher & operator=(const QSslCipher &)
+func (this *QSslCipher) Operator_equal_1(other QSslCipher_ITF) *QSslCipher {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslCipher_PTR() != nil {
+		convArg0 = other.QSslCipher_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslCipheraSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslCipherFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslCipher)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qsslcipher.h:66
 // index:0
 // Public Visibility=Default Availability=Available
@@ -117,9 +146,40 @@ func DeleteQSslCipher(this *QSslCipher) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslCipher &)
 func (this *QSslCipher) Swap(other QSslCipher_ITF) {
-	var convArg0 = other.QSslCipher_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslCipher_PTR() != nil {
+		convArg0 = other.QSslCipher_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslCipher4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslcipher.h:71
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QSslCipher &)
+func (this *QSslCipher) Operator_equal_equal(other QSslCipher_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslCipher_PTR() != nil {
+		convArg0 = other.QSslCipher_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCiphereqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslcipher.h:72
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QSslCipher &)
+func (this *QSslCipher) Operator_not_equal(other QSslCipher_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslCipher_PTR() != nil {
+		convArg0 = other.QSslCipher_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCipherneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtNetwork/qsslcipher.h:74
@@ -240,6 +300,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

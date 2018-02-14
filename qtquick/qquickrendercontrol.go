@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -77,10 +78,14 @@ func (this *QQuickRenderControl) MetaObject() *qtcore.QMetaObject /*777 const QM
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickRenderControl(QObject *)
 func NewQQuickRenderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickRenderControl {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickRenderControlFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickRenderControl")
 	return gothis
 }
 
@@ -100,7 +105,10 @@ func DeleteQQuickRenderControl(this *QQuickRenderControl) {
 // Public Visibility=Default Availability=Available
 // [-2] void prepareThread(QThread *)
 func (this *QQuickRenderControl) PrepareThread(targetThread qtcore.QThread_ITF /*777 QThread **/) {
-	var convArg0 = targetThread.QThread_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if targetThread != nil && targetThread.QThread_PTR() != nil {
+		convArg0 = targetThread.QThread_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl13prepareThreadEP7QThread", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -159,8 +167,14 @@ func (this *QQuickRenderControl) Grab() *qtgui.QImage /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QWindow * renderWindowFor(QQuickWindow *, QPoint *)
 func (this *QQuickRenderControl) RenderWindowFor(win QQuickWindow_ITF /*777 QQuickWindow **/, offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
-	var convArg0 = win.QQuickWindow_PTR().GetCthis()
-	var convArg1 = offset.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if win != nil && win.QQuickWindow_PTR() != nil {
+		convArg0 = win.QQuickWindow_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if offset != nil && offset.QPoint_PTR() != nil {
+		convArg1 = offset.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl15renderWindowForEP12QQuickWindowP6QPoint", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtgui.NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -176,7 +190,10 @@ func QQuickRenderControl_RenderWindowFor(win QQuickWindow_ITF /*777 QQuickWindow
 // Public inline virtual Visibility=Default Availability=Available
 // [8] QWindow * renderWindow(QPoint *)
 func (this *QQuickRenderControl) RenderWindow(offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
-	var convArg0 = offset.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if offset != nil && offset.QPoint_PTR() != nil {
+		convArg0 = offset.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl12renderWindowEP6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtgui.NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -213,6 +230,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

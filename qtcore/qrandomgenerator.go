@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -77,7 +78,7 @@ func NewQRandomGenerator(seedValue uint) *QRandomGenerator {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator(const quint32 *, qsizetype)
 func NewQRandomGenerator_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRandomGenerator {
-	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjx", qtrt.FFI_TYPE_POINTER, &seedBuffer, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjx", qtrt.FFI_TYPE_POINTER, seedBuffer, len)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGeneratorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator)
@@ -89,7 +90,7 @@ func NewQRandomGenerator_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRando
 // Public Visibility=Default Availability=Available
 // [-2] void QRandomGenerator(const quint32 *, const quint32 *)
 func NewQRandomGenerator_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator {
-	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjS1_", qtrt.FFI_TYPE_POINTER, &begin, &end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjS1_", qtrt.FFI_TYPE_POINTER, begin, end)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGeneratorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator)
@@ -108,6 +109,22 @@ func NewQRandomGenerator_3(arg0 int) *QRandomGenerator {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qrandom.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [2512] QRandomGenerator & operator=(const QRandomGenerator &)
+func (this *QRandomGenerator) Operator_equal(other QRandomGenerator_ITF) *QRandomGenerator {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QRandomGenerator_PTR() != nil {
+		convArg0 = other.QRandomGenerator_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratoraSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQRandomGeneratorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRandomGenerator)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qrandom.h:77
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -123,7 +140,7 @@ func (this *QRandomGenerator) Generate() uint {
 // Public inline Visibility=Default Availability=Available
 // [-2] void generate(quint32 *, quint32 *)
 func (this *QRandomGenerator) Generate_1(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator8generateEPjS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &begin, &end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator8generateEPjS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), begin, end)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -195,6 +212,16 @@ func (this *QRandomGenerator) Bounded_4(lowest int, highest int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), lowest, highest)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qrandom.h:159
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] QRandomGenerator::result_type operator()()
+func (this *QRandomGenerator) Operator_fncall() uint {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorclEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:160
@@ -313,6 +340,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

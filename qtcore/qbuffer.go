@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -93,10 +94,14 @@ func (this *QBuffer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void QBuffer(QObject *)
 func NewQBuffer(parent QObject_ITF /*777 QObject **/) *QBuffer {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBufferFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QBuffer")
 	return gothis
 }
 
@@ -105,11 +110,18 @@ func NewQBuffer(parent QObject_ITF /*777 QObject **/) *QBuffer {
 // Public Visibility=Default Availability=Available
 // [-2] void QBuffer(QByteArray *, QObject *)
 func NewQBuffer_1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*777 QObject **/) *QBuffer {
-	var convArg0 = buf.QByteArray_PTR().GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if buf != nil && buf.QByteArray_PTR() != nil {
+		convArg0 = buf.QByteArray_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferC2EP10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBufferFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QBuffer")
 	return gothis
 }
 
@@ -153,7 +165,10 @@ func (this *QBuffer) Buffer_1() *QByteArray {
 // Public Visibility=Default Availability=Available
 // [-2] void setBuffer(QByteArray *)
 func (this *QBuffer) SetBuffer(a QByteArray_ITF /*777 QByteArray **/) {
-	var convArg0 = a.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QByteArray_PTR() != nil {
+		convArg0 = a.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer9setBufferEP10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -163,7 +178,10 @@ func (this *QBuffer) SetBuffer(a QByteArray_ITF /*777 QByteArray **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QByteArray &)
 func (this *QBuffer) SetData(data QByteArray_ITF) {
-	var convArg0 = data.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer7setDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -265,7 +283,10 @@ func (this *QBuffer) CanReadLine() bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void connectNotify(const QMetaMethod &)
 func (this *QBuffer) ConnectNotify(arg0 QMetaMethod_ITF) {
-	var convArg0 = arg0.QMetaMethod_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMetaMethod_PTR() != nil {
+		convArg0 = arg0.QMetaMethod_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer13connectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -275,7 +296,10 @@ func (this *QBuffer) ConnectNotify(arg0 QMetaMethod_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void disconnectNotify(const QMetaMethod &)
 func (this *QBuffer) DisconnectNotify(arg0 QMetaMethod_ITF) {
-	var convArg0 = arg0.QMetaMethod_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QMetaMethod_PTR() != nil {
+		convArg0 = arg0.QMetaMethod_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer16disconnectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -317,6 +341,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

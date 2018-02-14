@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 5
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -74,10 +75,14 @@ func (this *QDnsLookup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(QObject *)
 func NewQDnsLookup(parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDnsLookup")
 	return gothis
 }
 
@@ -88,10 +93,14 @@ func NewQDnsLookup(parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 func NewQDnsLookup_1(type_ int, name string, parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDnsLookup")
 	return gothis
 }
 
@@ -102,11 +111,18 @@ func NewQDnsLookup_1(type_ int, name string, parent qtcore.QObject_ITF /*777 QOb
 func NewQDnsLookup_2(type_ int, name string, nameserver QHostAddress_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = nameserver.QHostAddress_PTR().GetCthis()
-	var convArg3 = parent.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if nameserver != nil && nameserver.QHostAddress_PTR() != nil {
+		convArg2 = nameserver.QHostAddress_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg3 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringRK12QHostAddressP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDnsLookup")
 	return gothis
 }
 
@@ -214,7 +230,10 @@ func (this *QDnsLookup) Nameserver() *QHostAddress /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setNameserver(const QHostAddress &)
 func (this *QDnsLookup) SetNameserver(nameserver QHostAddress_ITF) {
-	var convArg0 = nameserver.QHostAddress_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if nameserver != nil && nameserver.QHostAddress_PTR() != nil {
+		convArg0 = nameserver.QHostAddress_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup13setNameserverERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -271,7 +290,10 @@ func (this *QDnsLookup) TypeChanged(type_ int) {
 // Public Visibility=Default Availability=Available
 // [-2] void nameserverChanged(const QHostAddress &)
 func (this *QDnsLookup) NameserverChanged(nameserver QHostAddress_ITF) {
-	var convArg0 = nameserver.QHostAddress_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if nameserver != nil && nameserver.QHostAddress_PTR() != nil {
+		convArg0 = nameserver.QHostAddress_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup17nameserverChangedERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -312,6 +334,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

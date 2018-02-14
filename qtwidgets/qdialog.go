@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -110,10 +111,14 @@ func (this *QDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // Public Visibility=Default Availability=Available
 // [-2] void QDialog(QWidget *, Qt::WindowFlags)
 func NewQDialog(parent QWidget_ITF /*777 QWidget **/, f int) *QDialog {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDialogFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDialog")
 	return gothis
 }
 
@@ -171,7 +176,10 @@ func (this *QDialog) Orientation() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setExtension(QWidget *)
 func (this *QDialog) SetExtension(extension QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = extension.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if extension != nil && extension.QWidget_PTR() != nil {
+		convArg0 = extension.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialog12setExtensionEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -334,7 +342,10 @@ func (this *QDialog) ShowExtension(arg0 bool) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
 func (this *QDialog) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
-	var convArg0 = arg0.QKeyEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QKeyEvent_PTR() != nil {
+		convArg0 = arg0.QKeyEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialog13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -344,7 +355,10 @@ func (this *QDialog) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/)
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
 func (this *QDialog) CloseEvent(arg0 qtgui.QCloseEvent_ITF /*777 QCloseEvent **/) {
-	var convArg0 = arg0.QCloseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QCloseEvent_PTR() != nil {
+		convArg0 = arg0.QCloseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialog10closeEventEP11QCloseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -354,7 +368,10 @@ func (this *QDialog) CloseEvent(arg0 qtgui.QCloseEvent_ITF /*777 QCloseEvent **/
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
 func (this *QDialog) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
-	var convArg0 = arg0.QShowEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QShowEvent_PTR() != nil {
+		convArg0 = arg0.QShowEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialog9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -364,7 +381,10 @@ func (this *QDialog) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
 func (this *QDialog) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
-	var convArg0 = arg0.QResizeEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QResizeEvent_PTR() != nil {
+		convArg0 = arg0.QResizeEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialog11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -374,7 +394,10 @@ func (this *QDialog) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent 
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
 func (this *QDialog) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
-	var convArg0 = arg0.QContextMenuEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QContextMenuEvent_PTR() != nil {
+		convArg0 = arg0.QContextMenuEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialog16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -384,8 +407,14 @@ func (this *QDialog) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*777 QCo
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
 func (this *QDialog) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
-	var convArg1 = arg1.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QEvent_PTR() != nil {
+		convArg1 = arg1.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialog11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -396,7 +425,10 @@ func (this *QDialog) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1
 // Protected Visibility=Default Availability=Available
 // [-2] void adjustPosition(QWidget *)
 func (this *QDialog) AdjustPosition(arg0 QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = arg0.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QWidget_PTR() != nil {
+		convArg0 = arg0.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialog14adjustPositionEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -419,6 +451,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

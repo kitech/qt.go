@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -77,10 +78,14 @@ func (this *QQuickTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickTextDocument(QQuickItem *)
 func NewQQuickTextDocument(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickTextDocument {
-	var convArg0 = parent.QQuickItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QQuickItem_PTR() != nil {
+		convArg0 = parent.QQuickItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QQuickTextDocumentC2EP10QQuickItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickTextDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickTextDocument")
 	return gothis
 }
 
@@ -113,6 +118,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

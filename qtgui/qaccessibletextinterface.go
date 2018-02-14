@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -79,7 +80,7 @@ func DeleteQAccessibleTextInterface(this *QAccessibleTextInterface) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void selection(int, int *, int *)
 func (this *QAccessibleTextInterface) Selection(selectionIndex int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface9selectionEiPiS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), selectionIndex, &startOffset, &endOffset)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface9selectionEiPiS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), selectionIndex, startOffset, endOffset)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -157,7 +158,7 @@ func (this *QAccessibleTextInterface) Text(startOffset int, endOffset int) strin
 // Public virtual Visibility=Default Availability=Available
 // [8] QString textBeforeOffset(int, QAccessible::TextBoundaryType, int *, int *)
 func (this *QAccessibleTextInterface) TextBeforeOffset(offset int, boundaryType int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface16textBeforeOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, boundaryType, &startOffset, &endOffset)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface16textBeforeOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, boundaryType, startOffset, endOffset)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
@@ -170,7 +171,7 @@ func (this *QAccessibleTextInterface) TextBeforeOffset(offset int, boundaryType 
 // Public virtual Visibility=Default Availability=Available
 // [8] QString textAfterOffset(int, QAccessible::TextBoundaryType, int *, int *)
 func (this *QAccessibleTextInterface) TextAfterOffset(offset int, boundaryType int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface15textAfterOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, boundaryType, &startOffset, &endOffset)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface15textAfterOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, boundaryType, startOffset, endOffset)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
@@ -183,7 +184,7 @@ func (this *QAccessibleTextInterface) TextAfterOffset(offset int, boundaryType i
 // Public virtual Visibility=Default Availability=Available
 // [8] QString textAtOffset(int, QAccessible::TextBoundaryType, int *, int *)
 func (this *QAccessibleTextInterface) TextAtOffset(offset int, boundaryType int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface12textAtOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, boundaryType, &startOffset, &endOffset)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface12textAtOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, boundaryType, startOffset, endOffset)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
@@ -218,7 +219,10 @@ func (this *QAccessibleTextInterface) CharacterRect(offset int) *qtcore.QRect /*
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int offsetAtPoint(const QPoint &)
 func (this *QAccessibleTextInterface) OffsetAtPoint(point qtcore.QPoint_ITF) int {
-	var convArg0 = point.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if point != nil && point.QPoint_PTR() != nil {
+		convArg0 = point.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface13offsetAtPointERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -238,7 +242,7 @@ func (this *QAccessibleTextInterface) ScrollToSubstring(startIndex int, endIndex
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QString attributes(int, int *, int *)
 func (this *QAccessibleTextInterface) Attributes(offset int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface10attributesEiPiS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, &startOffset, &endOffset)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface10attributesEiPiS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, startOffset, endOffset)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
@@ -259,6 +263,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -100,10 +101,14 @@ func (this *QFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 // Public Visibility=Default Availability=Available
 // [-2] void QFrame(QWidget *, Qt::WindowFlags)
 func NewQFrame(parent QWidget_ITF /*777 QWidget **/, f int) *QFrame {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrameC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFrameFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFrame")
 	return gothis
 }
 
@@ -252,7 +257,10 @@ func (this *QFrame) FrameRect() *qtcore.QRect /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setFrameRect(const QRect &)
 func (this *QFrame) SetFrameRect(arg0 qtcore.QRect_ITF) {
-	var convArg0 = arg0.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QRect_PTR() != nil {
+		convArg0 = arg0.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame12setFrameRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -262,7 +270,10 @@ func (this *QFrame) SetFrameRect(arg0 qtcore.QRect_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QFrame) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -273,7 +284,10 @@ func (this *QFrame) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QFrame) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
+		convArg0 = arg0.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -283,7 +297,10 @@ func (this *QFrame) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/)
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
 func (this *QFrame) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -293,7 +310,10 @@ func (this *QFrame) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // Protected Visibility=Default Availability=Available
 // [-2] void drawFrame(QPainter *)
 func (this *QFrame) DrawFrame(arg0 qtgui.QPainter_ITF /*777 QPainter **/) {
-	var convArg0 = arg0.QPainter_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPainter_PTR() != nil {
+		convArg0 = arg0.QPainter_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QFrame9drawFrameEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -303,7 +323,10 @@ func (this *QFrame) DrawFrame(arg0 qtgui.QPainter_ITF /*777 QPainter **/) {
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionFrame *)
 func (this *QFrame) InitStyleOption(option QStyleOptionFrame_ITF /*777 QStyleOptionFrame **/) {
-	var convArg0 = option.QStyleOptionFrame_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if option != nil && option.QStyleOptionFrame_PTR() != nil {
+		convArg0 = option.QStyleOptionFrame_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QFrame15initStyleOptionEP17QStyleOptionFrame", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -342,6 +365,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

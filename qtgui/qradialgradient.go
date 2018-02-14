@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -76,8 +77,14 @@ func NewQRadialGradient() *QRadialGradient {
 // Public Visibility=Default Availability=Available
 // [-2] void QRadialGradient(const QPointF &, qreal, const QPointF &)
 func NewQRadialGradient_1(center qtcore.QPointF_ITF, radius float64, focalPoint qtcore.QPointF_ITF) *QRadialGradient {
-	var convArg0 = center.QPointF_PTR().GetCthis()
-	var convArg2 = focalPoint.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if center != nil && center.QPointF_PTR() != nil {
+		convArg0 = center.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if focalPoint != nil && focalPoint.QPointF_PTR() != nil {
+		convArg2 = focalPoint.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QRadialGradientC2ERK7QPointFdS2_", qtrt.FFI_TYPE_POINTER, convArg0, radius, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,7 +109,10 @@ func NewQRadialGradient_2(cx float64, cy float64, radius float64, fx float64, fy
 // Public Visibility=Default Availability=Available
 // [-2] void QRadialGradient(const QPointF &, qreal)
 func NewQRadialGradient_3(center qtcore.QPointF_ITF, radius float64) *QRadialGradient {
-	var convArg0 = center.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if center != nil && center.QPointF_PTR() != nil {
+		convArg0 = center.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QRadialGradientC2ERK7QPointFd", qtrt.FFI_TYPE_POINTER, convArg0, radius)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -127,8 +137,14 @@ func NewQRadialGradient_4(cx float64, cy float64, radius float64) *QRadialGradie
 // Public Visibility=Default Availability=Available
 // [-2] void QRadialGradient(const QPointF &, qreal, const QPointF &, qreal)
 func NewQRadialGradient_5(center qtcore.QPointF_ITF, centerRadius float64, focalPoint qtcore.QPointF_ITF, focalRadius float64) *QRadialGradient {
-	var convArg0 = center.QPointF_PTR().GetCthis()
-	var convArg2 = focalPoint.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if center != nil && center.QPointF_PTR() != nil {
+		convArg0 = center.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if focalPoint != nil && focalPoint.QPointF_PTR() != nil {
+		convArg2 = focalPoint.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QRadialGradientC2ERK7QPointFdS2_d", qtrt.FFI_TYPE_POINTER, convArg0, centerRadius, convArg2, focalRadius)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -165,7 +181,10 @@ func (this *QRadialGradient) Center() *qtcore.QPointF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setCenter(const QPointF &)
 func (this *QRadialGradient) SetCenter(center qtcore.QPointF_ITF) {
-	var convArg0 = center.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if center != nil && center.QPointF_PTR() != nil {
+		convArg0 = center.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QRadialGradient9setCenterERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -196,7 +215,10 @@ func (this *QRadialGradient) FocalPoint() *qtcore.QPointF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setFocalPoint(const QPointF &)
 func (this *QRadialGradient) SetFocalPoint(focalPoint qtcore.QPointF_ITF) {
-	var convArg0 = focalPoint.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if focalPoint != nil && focalPoint.QPointF_PTR() != nil {
+		convArg0 = focalPoint.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QRadialGradient13setFocalPointERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -286,6 +308,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

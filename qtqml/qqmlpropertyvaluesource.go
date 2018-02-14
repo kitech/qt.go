@@ -24,6 +24,7 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -90,7 +91,10 @@ func DeleteQQmlPropertyValueSource(this *QQmlPropertyValueSource) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setTarget(const QQmlProperty &)
 func (this *QQmlPropertyValueSource) SetTarget(arg0 QQmlProperty_ITF) {
-	var convArg0 = arg0.QQmlProperty_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlProperty_PTR() != nil {
+		convArg0 = arg0.QQmlProperty_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQmlPropertyValueSource9setTargetERK12QQmlProperty", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -108,6 +112,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

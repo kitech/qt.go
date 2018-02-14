@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 33
+// extern C begin: 52
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -77,7 +78,10 @@ func NewQString() *QString {
 // Public Visibility=Default Availability=Available
 // [-2] void QString(const QChar *, int)
 func NewQString_1(unicode QChar_ITF /*777 const QChar **/, size int) *QString {
-	var convArg0 = unicode.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if unicode != nil && unicode.QChar_PTR() != nil {
+		convArg0 = unicode.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringC2EPK5QChari", qtrt.FFI_TYPE_POINTER, convArg0, size)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -90,7 +94,10 @@ func NewQString_1(unicode QChar_ITF /*777 const QChar **/, size int) *QString {
 // Public Visibility=Default Availability=Available
 // [-2] void QString(QChar)
 func NewQString_2(c QChar_ITF /*123*/) *QString {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringC2E5QChar", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,7 +110,10 @@ func NewQString_2(c QChar_ITF /*123*/) *QString {
 // Public Visibility=Default Availability=Available
 // [-2] void QString(int, QChar)
 func NewQString_3(size int, c QChar_ITF /*123*/) *QString {
-	var convArg1 = c.QChar_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg1 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringC2Ei5QChar", qtrt.FFI_TYPE_POINTER, size, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,7 +126,10 @@ func NewQString_3(size int, c QChar_ITF /*123*/) *QString {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QString(QLatin1String)
 func NewQString_4(latin1 QLatin1String_ITF /*123*/) *QString {
-	var convArg0 = latin1.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if latin1 != nil && latin1.QLatin1String_PTR() != nil {
+		convArg0 = latin1.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringC2E13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -143,7 +156,10 @@ func NewQString_5(ch string) *QString {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QString(const QByteArray &)
 func NewQString_6(a QByteArray_ITF) *QString {
-	var convArg0 = a.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QByteArray_PTR() != nil {
+		convArg0 = a.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -172,6 +188,113 @@ func DeleteQString(this *QString) {
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
+}
+
+// /usr/include/qt/QtCore/qstring.h:224
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString & operator=(QChar)
+func (this *QString) Operator_equal(c QChar_ITF /*123*/) string {
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringaSE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:225
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QString & operator=(const QString &)
+func (this *QString) Operator_equal_1(arg0 string) string {
+	var tmpArg0 = NewQString_5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:226
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QString & operator=(QLatin1String)
+func (this *QString) Operator_equal_2(latin1 QLatin1String_ITF /*123*/) string {
+	var convArg0 unsafe.Pointer
+	if latin1 != nil && latin1.QLatin1String_PTR() != nil {
+		convArg0 = latin1.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringaSE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:229
+// index:3
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator=(QString &&)
+func (this *QString) Operator_equal_3(other unsafe.Pointer /*333*/) string {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:688
+// index:4
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator=(const char *)
+func (this *QString) Operator_equal_4(ch string) string {
+	var convArg0 = qtrt.CString(ch)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringaSEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:690
+// index:5
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator=(const QByteArray &)
+func (this *QString) Operator_equal_5(a QByteArray_ITF) string {
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QByteArray_PTR() != nil {
+		convArg0 = a.QByteArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringaSERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:692
+// index:6
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator=(char)
+func (this *QString) Operator_equal_6(c byte) string {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringaSEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qstring.h:232
@@ -210,7 +333,10 @@ func (this *QString) Count() int {
 // Public Visibility=Default Availability=Available
 // [4] int count(QChar, Qt::CaseSensitivity)
 func (this *QString) Count_1(c QChar_ITF /*123*/, cs int) int {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5countE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -233,7 +359,10 @@ func (this *QString) Count_2(s string, cs int) int {
 // Public Visibility=Default Availability=Available
 // [4] int count(const QStringRef &, Qt::CaseSensitivity)
 func (this *QString) Count_3(s QStringRef_ITF, cs int) int {
-	var convArg0 = s.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringRef_PTR() != nil {
+		convArg0 = s.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5countERK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -244,7 +373,10 @@ func (this *QString) Count_3(s QStringRef_ITF, cs int) int {
 // Public Visibility=Default Availability=Available
 // [4] int count(const QRegExp &)
 func (this *QString) Count_4(arg0 QRegExp_ITF) int {
-	var convArg0 = arg0.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QRegExp_PTR() != nil {
+		convArg0 = arg0.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5countERK7QRegExp", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -255,7 +387,10 @@ func (this *QString) Count_4(arg0 QRegExp_ITF) int {
 // Public Visibility=Default Availability=Available
 // [4] int count(const QRegularExpression &)
 func (this *QString) Count_5(re QRegularExpression_ITF) int {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5countERK18QRegularExpression", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -295,7 +430,10 @@ func (this *QString) Resize(size int) {
 // Public Visibility=Default Availability=Available
 // [-2] void resize(int, QChar)
 func (this *QString) Resize_1(size int, fillChar QChar_ITF /*123*/) {
-	var convArg1 = fillChar.QChar_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg1 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6resizeEi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -305,7 +443,10 @@ func (this *QString) Resize_1(size int, fillChar QChar_ITF /*123*/) {
 // Public Visibility=Default Availability=Available
 // [8] QString & fill(QChar, int)
 func (this *QString) Fill(c QChar_ITF /*123*/, size int) string {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString4fillE5QChari", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -452,6 +593,54 @@ func (this *QString) At(i int) *QChar /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qstring.h:259
+// index:0
+// Public Visibility=Default Availability=Available
+// [2] const QChar operator[](int)
+func (this *QString) Operator_get_index(i int) *QChar /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstring.h:260
+// index:1
+// Public Visibility=Default Availability=Available
+// [16] QCharRef operator[](int)
+func (this *QString) Operator_get_index_1(i int) *QCharRef /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCharRef)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstring.h:261
+// index:2
+// Public Visibility=Default Availability=Available
+// [2] const QChar operator[](uint)
+func (this *QString) Operator_get_index_2(i uint) *QChar /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringixEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstring.h:262
+// index:3
+// Public Visibility=Default Availability=Available
+// [16] QCharRef operator[](uint)
+func (this *QString) Operator_get_index_3(i uint) *QCharRef /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringixEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCharRef)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qstring.h:264
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -505,7 +694,10 @@ func (this *QString) Back_1() *QCharRef /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString arg(qlonglong, int, int, QChar)
 func (this *QString) Arg(a int64, fieldwidth int, base int, fillChar QChar_ITF /*123*/) string {
-	var convArg3 = fillChar.QChar_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg3 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argExii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -519,7 +711,10 @@ func (this *QString) Arg(a int64, fieldwidth int, base int, fillChar QChar_ITF /
 // Public Visibility=Default Availability=Available
 // [8] QString arg(qulonglong, int, int, QChar)
 func (this *QString) Arg_1(a uint64, fieldwidth int, base int, fillChar QChar_ITF /*123*/) string {
-	var convArg3 = fillChar.QChar_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg3 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEyii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -533,7 +728,10 @@ func (this *QString) Arg_1(a uint64, fieldwidth int, base int, fillChar QChar_IT
 // Public Visibility=Default Availability=Available
 // [8] QString arg(long, int, int, QChar)
 func (this *QString) Arg_2(a int, fieldwidth int, base int, fillChar QChar_ITF /*123*/) string {
-	var convArg3 = fillChar.QChar_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg3 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argElii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -547,7 +745,10 @@ func (this *QString) Arg_2(a int, fieldwidth int, base int, fillChar QChar_ITF /
 // Public Visibility=Default Availability=Available
 // [8] QString arg(ulong, int, int, QChar)
 func (this *QString) Arg_3(a uint, fieldwidth int, base int, fillChar QChar_ITF /*123*/) string {
-	var convArg3 = fillChar.QChar_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg3 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEmii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -561,7 +762,10 @@ func (this *QString) Arg_3(a uint, fieldwidth int, base int, fillChar QChar_ITF 
 // Public Visibility=Default Availability=Available
 // [8] QString arg(int, int, int, QChar)
 func (this *QString) Arg_4(a int, fieldWidth int, base int, fillChar QChar_ITF /*123*/) string {
-	var convArg3 = fillChar.QChar_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg3 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEiii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -575,7 +779,10 @@ func (this *QString) Arg_4(a int, fieldWidth int, base int, fillChar QChar_ITF /
 // Public Visibility=Default Availability=Available
 // [8] QString arg(uint, int, int, QChar)
 func (this *QString) Arg_5(a uint, fieldWidth int, base int, fillChar QChar_ITF /*123*/) string {
-	var convArg3 = fillChar.QChar_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg3 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEjii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -589,7 +796,10 @@ func (this *QString) Arg_5(a uint, fieldWidth int, base int, fillChar QChar_ITF 
 // Public Visibility=Default Availability=Available
 // [8] QString arg(short, int, int, QChar)
 func (this *QString) Arg_6(a int16, fieldWidth int, base int, fillChar QChar_ITF /*123*/) string {
-	var convArg3 = fillChar.QChar_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg3 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEsii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -603,7 +813,10 @@ func (this *QString) Arg_6(a int16, fieldWidth int, base int, fillChar QChar_ITF
 // Public Visibility=Default Availability=Available
 // [8] QString arg(ushort, int, int, QChar)
 func (this *QString) Arg_7(a uint16, fieldWidth int, base int, fillChar QChar_ITF /*123*/) string {
-	var convArg3 = fillChar.QChar_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg3 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEtii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -617,7 +830,10 @@ func (this *QString) Arg_7(a uint16, fieldWidth int, base int, fillChar QChar_IT
 // Public Visibility=Default Availability=Available
 // [8] QString arg(double, int, char, int, QChar)
 func (this *QString) Arg_8(a float64, fieldWidth int, fmt byte, prec int, fillChar QChar_ITF /*123*/) string {
-	var convArg4 = fillChar.QChar_PTR().GetCthis()
+	var convArg4 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg4 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEdici5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, fmt, prec, convArg4)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -631,7 +847,10 @@ func (this *QString) Arg_8(a float64, fieldWidth int, fmt byte, prec int, fillCh
 // Public Visibility=Default Availability=Available
 // [8] QString arg(char, int, QChar)
 func (this *QString) Arg_9(a byte, fieldWidth int, fillChar QChar_ITF /*123*/) string {
-	var convArg2 = fillChar.QChar_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg2 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEci5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -645,8 +864,14 @@ func (this *QString) Arg_9(a byte, fieldWidth int, fillChar QChar_ITF /*123*/) s
 // Public Visibility=Default Availability=Available
 // [8] QString arg(QChar, int, QChar)
 func (this *QString) Arg_10(a QChar_ITF /*123*/, fieldWidth int, fillChar QChar_ITF /*123*/) string {
-	var convArg0 = a.QChar_PTR().GetCthis()
-	var convArg2 = fillChar.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QChar_PTR() != nil {
+		convArg0 = a.QChar_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg2 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE5QChariS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -662,7 +887,10 @@ func (this *QString) Arg_10(a QChar_ITF /*123*/, fieldWidth int, fillChar QChar_
 func (this *QString) Arg_11(a string, fieldWidth int, fillChar QChar_ITF /*123*/) string {
 	var tmpArg0 = NewQString_5(a)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg2 = fillChar.QChar_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg2 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argERKS_i5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -676,8 +904,14 @@ func (this *QString) Arg_11(a string, fieldWidth int, fillChar QChar_ITF /*123*/
 // Public Visibility=Default Availability=Available
 // [8] QString arg(QStringView, int, QChar)
 func (this *QString) Arg_12(a QStringView_ITF /*123*/, fieldWidth int, fillChar QChar_ITF /*123*/) string {
-	var convArg0 = a.QStringView_PTR().GetCthis()
-	var convArg2 = fillChar.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QStringView_PTR() != nil {
+		convArg0 = a.QStringView_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg2 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE11QStringViewi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -691,8 +925,14 @@ func (this *QString) Arg_12(a QStringView_ITF /*123*/, fieldWidth int, fillChar 
 // Public Visibility=Default Availability=Available
 // [8] QString arg(QLatin1String, int, QChar)
 func (this *QString) Arg_13(a QLatin1String_ITF /*123*/, fieldWidth int, fillChar QChar_ITF /*123*/) string {
-	var convArg0 = a.QLatin1String_PTR().GetCthis()
-	var convArg2 = fillChar.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QLatin1String_PTR() != nil {
+		convArg0 = a.QLatin1String_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if fillChar != nil && fillChar.QChar_PTR() != nil {
+		convArg2 = fillChar.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE13QLatin1Stringi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -898,7 +1138,10 @@ func (this *QString) Arg_21(a1 string, a2 string, a3 string, a4 string, a5 strin
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QChar, int, Qt::CaseSensitivity)
 func (this *QString) IndexOf(c QChar_ITF /*123*/, from int, cs int) int {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfE5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -921,7 +1164,10 @@ func (this *QString) IndexOf_1(s string, from int, cs int) int {
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QLatin1String, int, Qt::CaseSensitivity)
 func (this *QString) IndexOf_2(s QLatin1String_ITF /*123*/, from int, cs int) int {
-	var convArg0 = s.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfE13QLatin1StringiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -932,7 +1178,10 @@ func (this *QString) IndexOf_2(s QLatin1String_ITF /*123*/, from int, cs int) in
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QStringRef &, int, Qt::CaseSensitivity)
 func (this *QString) IndexOf_3(s QStringRef_ITF, from int, cs int) int {
-	var convArg0 = s.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringRef_PTR() != nil {
+		convArg0 = s.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfERK10QStringRefiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -943,7 +1192,10 @@ func (this *QString) IndexOf_3(s QStringRef_ITF, from int, cs int) int {
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QRegExp &, int)
 func (this *QString) IndexOf_4(arg0 QRegExp_ITF, from int) int {
-	var convArg0 = arg0.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QRegExp_PTR() != nil {
+		convArg0 = arg0.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -954,7 +1206,10 @@ func (this *QString) IndexOf_4(arg0 QRegExp_ITF, from int) int {
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QRegExp &, int)
 func (this *QString) IndexOf_5(arg0 QRegExp_ITF, from int) int {
-	var convArg0 = arg0.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QRegExp_PTR() != nil {
+		convArg0 = arg0.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -965,7 +1220,10 @@ func (this *QString) IndexOf_5(arg0 QRegExp_ITF, from int) int {
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QRegularExpression &, int)
 func (this *QString) IndexOf_6(re QRegularExpression_ITF, from int) int {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -976,8 +1234,14 @@ func (this *QString) IndexOf_6(re QRegularExpression_ITF, from int) int {
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QRegularExpression &, int, QRegularExpressionMatch *)
 func (this *QString) IndexOf_7(re QRegularExpression_ITF, from int, rmatch QRegularExpressionMatch_ITF /*777 QRegularExpressionMatch **/) int {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
-	var convArg2 = rmatch.QRegularExpressionMatch_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if rmatch != nil && rmatch.QRegularExpressionMatch_PTR() != nil {
+		convArg2 = rmatch.QRegularExpressionMatch_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfERK18QRegularExpressioniP23QRegularExpressionMatch", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -988,7 +1252,10 @@ func (this *QString) IndexOf_7(re QRegularExpression_ITF, from int, rmatch QRegu
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QChar, int, Qt::CaseSensitivity)
 func (this *QString) LastIndexOf(c QChar_ITF /*123*/, from int, cs int) int {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfE5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1011,7 +1278,10 @@ func (this *QString) LastIndexOf_1(s string, from int, cs int) int {
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QLatin1String, int, Qt::CaseSensitivity)
 func (this *QString) LastIndexOf_2(s QLatin1String_ITF /*123*/, from int, cs int) int {
-	var convArg0 = s.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfE13QLatin1StringiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1022,7 +1292,10 @@ func (this *QString) LastIndexOf_2(s QLatin1String_ITF /*123*/, from int, cs int
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QStringRef &, int, Qt::CaseSensitivity)
 func (this *QString) LastIndexOf_3(s QStringRef_ITF, from int, cs int) int {
-	var convArg0 = s.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringRef_PTR() != nil {
+		convArg0 = s.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK10QStringRefiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1033,7 +1306,10 @@ func (this *QString) LastIndexOf_3(s QStringRef_ITF, from int, cs int) int {
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegExp &, int)
 func (this *QString) LastIndexOf_4(arg0 QRegExp_ITF, from int) int {
-	var convArg0 = arg0.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QRegExp_PTR() != nil {
+		convArg0 = arg0.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1044,7 +1320,10 @@ func (this *QString) LastIndexOf_4(arg0 QRegExp_ITF, from int) int {
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QRegExp &, int)
 func (this *QString) LastIndexOf_5(arg0 QRegExp_ITF, from int) int {
-	var convArg0 = arg0.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QRegExp_PTR() != nil {
+		convArg0 = arg0.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1055,7 +1334,10 @@ func (this *QString) LastIndexOf_5(arg0 QRegExp_ITF, from int) int {
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegularExpression &, int)
 func (this *QString) LastIndexOf_6(re QRegularExpression_ITF, from int) int {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1066,8 +1348,14 @@ func (this *QString) LastIndexOf_6(re QRegularExpression_ITF, from int) int {
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegularExpression &, int, QRegularExpressionMatch *)
 func (this *QString) LastIndexOf_7(re QRegularExpression_ITF, from int, rmatch QRegularExpressionMatch_ITF /*777 QRegularExpressionMatch **/) int {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
-	var convArg2 = rmatch.QRegularExpressionMatch_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if rmatch != nil && rmatch.QRegularExpressionMatch_PTR() != nil {
+		convArg2 = rmatch.QRegularExpressionMatch_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK18QRegularExpressioniP23QRegularExpressionMatch", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1078,7 +1366,10 @@ func (this *QString) LastIndexOf_7(re QRegularExpression_ITF, from int, rmatch Q
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QChar, Qt::CaseSensitivity)
 func (this *QString) Contains(c QChar_ITF /*123*/, cs int) bool {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1101,7 +1392,10 @@ func (this *QString) Contains_1(s string, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity)
 func (this *QString) Contains_2(s QLatin1String_ITF /*123*/, cs int) bool {
-	var convArg0 = s.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1112,7 +1406,10 @@ func (this *QString) Contains_2(s QLatin1String_ITF /*123*/, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QStringRef &, Qt::CaseSensitivity)
 func (this *QString) Contains_3(s QStringRef_ITF, cs int) bool {
-	var convArg0 = s.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringRef_PTR() != nil {
+		convArg0 = s.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsERK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1123,7 +1420,10 @@ func (this *QString) Contains_3(s QStringRef_ITF, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QRegExp &)
 func (this *QString) Contains_4(rx QRegExp_ITF) bool {
-	var convArg0 = rx.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsERK7QRegExp", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1134,7 +1434,10 @@ func (this *QString) Contains_4(rx QRegExp_ITF) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QRegExp &)
 func (this *QString) Contains_5(rx QRegExp_ITF) bool {
-	var convArg0 = rx.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsER7QRegExp", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1145,7 +1448,10 @@ func (this *QString) Contains_5(rx QRegExp_ITF) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QRegularExpression &)
 func (this *QString) Contains_6(re QRegularExpression_ITF) bool {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsERK18QRegularExpression", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1156,8 +1462,14 @@ func (this *QString) Contains_6(re QRegularExpression_ITF) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QRegularExpression &, QRegularExpressionMatch *)
 func (this *QString) Contains_7(re QRegularExpression_ITF, match_ QRegularExpressionMatch_ITF /*777 QRegularExpressionMatch **/) bool {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
-	var convArg1 = match_.QRegularExpressionMatch_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if match_ != nil && match_.QRegularExpressionMatch_PTR() != nil {
+		convArg1 = match_.QRegularExpressionMatch_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsERK18QRegularExpressionP23QRegularExpressionMatch", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1168,7 +1480,10 @@ func (this *QString) Contains_7(re QRegularExpression_ITF, match_ QRegularExpres
 // Public Visibility=Default Availability=Available
 // [8] QString section(QChar, int, int, QString::SectionFlags)
 func (this *QString) Section(sep QChar_ITF /*123*/, start int, end int, flags int) string {
-	var convArg0 = sep.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sep != nil && sep.QChar_PTR() != nil {
+		convArg0 = sep.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionE5QCharii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1197,7 +1512,10 @@ func (this *QString) Section_1(in_sep string, start int, end int, flags int) str
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QRegExp &, int, int, QString::SectionFlags)
 func (this *QString) Section_2(reg QRegExp_ITF, start int, end int, flags int) string {
-	var convArg0 = reg.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if reg != nil && reg.QRegExp_PTR() != nil {
+		convArg0 = reg.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionERK7QRegExpii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1211,7 +1529,10 @@ func (this *QString) Section_2(reg QRegExp_ITF, start int, end int, flags int) s
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QRegularExpression &, int, int, QString::SectionFlags)
 func (this *QString) Section_3(re QRegularExpression_ITF, start int, end int, flags int) string {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionERK18QRegularExpressionii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1325,7 +1646,10 @@ func (this *QString) StartsWith(s string, cs int) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QStringRef &, Qt::CaseSensitivity)
 func (this *QString) StartsWith_1(s QStringRef_ITF, cs int) bool {
-	var convArg0 = s.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringRef_PTR() != nil {
+		convArg0 = s.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithERK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1336,7 +1660,10 @@ func (this *QString) StartsWith_1(s QStringRef_ITF, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity)
 func (this *QString) StartsWith_2(s QStringView_ITF /*123*/, cs int) bool {
-	var convArg0 = s.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringView_PTR() != nil {
+		convArg0 = s.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1347,7 +1674,10 @@ func (this *QString) StartsWith_2(s QStringView_ITF /*123*/, cs int) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity)
 func (this *QString) StartsWith_3(s QLatin1String_ITF /*123*/, cs int) bool {
-	var convArg0 = s.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1358,7 +1688,10 @@ func (this *QString) StartsWith_3(s QLatin1String_ITF /*123*/, cs int) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QChar, Qt::CaseSensitivity)
 func (this *QString) StartsWith_4(c QChar_ITF /*123*/, cs int) bool {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1381,7 +1714,10 @@ func (this *QString) EndsWith(s string, cs int) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QStringRef &, Qt::CaseSensitivity)
 func (this *QString) EndsWith_1(s QStringRef_ITF, cs int) bool {
-	var convArg0 = s.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringRef_PTR() != nil {
+		convArg0 = s.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithERK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1392,7 +1728,10 @@ func (this *QString) EndsWith_1(s QStringRef_ITF, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity)
 func (this *QString) EndsWith_2(s QStringView_ITF /*123*/, cs int) bool {
-	var convArg0 = s.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringView_PTR() != nil {
+		convArg0 = s.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1403,7 +1742,10 @@ func (this *QString) EndsWith_2(s QStringView_ITF /*123*/, cs int) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity)
 func (this *QString) EndsWith_3(s QLatin1String_ITF /*123*/, cs int) bool {
-	var convArg0 = s.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1414,7 +1756,10 @@ func (this *QString) EndsWith_3(s QLatin1String_ITF /*123*/, cs int) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QChar, Qt::CaseSensitivity)
 func (this *QString) EndsWith_4(c QChar_ITF /*123*/, cs int) bool {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1425,7 +1770,10 @@ func (this *QString) EndsWith_4(c QChar_ITF /*123*/, cs int) bool {
 // Public Visibility=Default Availability=Available
 // [8] QString leftJustified(int, QChar, _Bool)
 func (this *QString) LeftJustified(width int, fill QChar_ITF /*123*/, trunc bool) string {
-	var convArg1 = fill.QChar_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if fill != nil && fill.QChar_PTR() != nil {
+		convArg1 = fill.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString13leftJustifiedEi5QCharb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, convArg1, trunc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1439,7 +1787,10 @@ func (this *QString) LeftJustified(width int, fill QChar_ITF /*123*/, trunc bool
 // Public Visibility=Default Availability=Available
 // [8] QString rightJustified(int, QChar, _Bool)
 func (this *QString) RightJustified(width int, fill QChar_ITF /*123*/, trunc bool) string {
-	var convArg1 = fill.QChar_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if fill != nil && fill.QChar_PTR() != nil {
+		convArg1 = fill.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString14rightJustifiedEi5QCharb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, convArg1, trunc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1591,6 +1942,130 @@ func (this *QString) ToHtmlEscaped() string {
 	return rv3
 }
 
+// /usr/include/qt/QtCore/qstring.h:465
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(QChar)
+func (this *QString) Operator_add_equal(c QChar_ITF /*123*/) string {
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringpLE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:473
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(QChar::SpecialCharacter)
+func (this *QString) Operator_add_equal_1(c int) string {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringpLEN5QChar16SpecialCharacterE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:474
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(const QString &)
+func (this *QString) Operator_add_equal_2(s string) string {
+	var tmpArg0 = NewQString_5(s)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringpLERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:475
+// index:3
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(const QStringRef &)
+func (this *QString) Operator_add_equal_3(s QStringRef_ITF) string {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringRef_PTR() != nil {
+		convArg0 = s.QStringRef_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringpLERK10QStringRef", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:476
+// index:4
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(QLatin1String)
+func (this *QString) Operator_add_equal_4(s QLatin1String_ITF /*123*/) string {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringpLE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:708
+// index:5
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(const char *)
+func (this *QString) Operator_add_equal_5(s string) string {
+	var convArg0 = qtrt.CString(s)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringpLEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:710
+// index:6
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(const QByteArray &)
+func (this *QString) Operator_add_equal_6(s QByteArray_ITF) string {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QByteArray_PTR() != nil {
+		convArg0 = s.QByteArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringpLERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:712
+// index:7
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(char)
+func (this *QString) Operator_add_equal_7(c byte) string {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringpLEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
 // /usr/include/qt/QtCore/qstring.h:478
 // index:0
 // Public Visibility=Default Availability=Available
@@ -1609,7 +2084,10 @@ func (this *QString) Remove(i int, len int) string {
 // Public Visibility=Default Availability=Available
 // [8] QString & remove(QChar, Qt::CaseSensitivity)
 func (this *QString) Remove_1(c QChar_ITF /*123*/, cs int) string {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6removeE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1638,7 +2116,10 @@ func (this *QString) Remove_2(s string, cs int) string {
 // Public inline Visibility=Default Availability=Available
 // [8] QString & remove(const QRegExp &)
 func (this *QString) Remove_3(rx QRegExp_ITF) string {
-	var convArg0 = rx.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6removeERK7QRegExp", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1652,7 +2133,10 @@ func (this *QString) Remove_3(rx QRegExp_ITF) string {
 // Public inline Visibility=Default Availability=Available
 // [8] QString & remove(const QRegularExpression &)
 func (this *QString) Remove_4(re QRegularExpression_ITF) string {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6removeERK18QRegularExpression", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1666,7 +2150,10 @@ func (this *QString) Remove_4(re QRegularExpression_ITF) string {
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(int, int, QChar)
 func (this *QString) Replace(i int, len int, after QChar_ITF /*123*/) string {
-	var convArg2 = after.QChar_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if after != nil && after.QChar_PTR() != nil {
+		convArg2 = after.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceEii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, len, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1680,7 +2167,10 @@ func (this *QString) Replace(i int, len int, after QChar_ITF /*123*/) string {
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(int, int, const QChar *, int)
 func (this *QString) Replace_1(i int, len int, s QChar_ITF /*777 const QChar **/, slen int) string {
-	var convArg2 = s.QChar_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if s != nil && s.QChar_PTR() != nil {
+		convArg2 = s.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceEiiPK5QChari", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, len, convArg2, slen)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1709,8 +2199,14 @@ func (this *QString) Replace_2(i int, len int, after string) string {
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QChar, QChar, Qt::CaseSensitivity)
 func (this *QString) Replace_3(before QChar_ITF /*123*/, after QChar_ITF /*123*/, cs int) string {
-	var convArg0 = before.QChar_PTR().GetCthis()
-	var convArg1 = after.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if before != nil && before.QChar_PTR() != nil {
+		convArg0 = before.QChar_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if after != nil && after.QChar_PTR() != nil {
+		convArg1 = after.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceE5QCharS0_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1724,8 +2220,14 @@ func (this *QString) Replace_3(before QChar_ITF /*123*/, after QChar_ITF /*123*/
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QChar *, int, const QChar *, int, Qt::CaseSensitivity)
 func (this *QString) Replace_4(before QChar_ITF /*777 const QChar **/, blen int, after QChar_ITF /*777 const QChar **/, alen int, cs int) string {
-	var convArg0 = before.QChar_PTR().GetCthis()
-	var convArg2 = after.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if before != nil && before.QChar_PTR() != nil {
+		convArg0 = before.QChar_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if after != nil && after.QChar_PTR() != nil {
+		convArg2 = after.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceEPK5QChariS2_iN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, blen, convArg2, alen, cs)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1739,8 +2241,14 @@ func (this *QString) Replace_4(before QChar_ITF /*777 const QChar **/, blen int,
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QLatin1String, QLatin1String, Qt::CaseSensitivity)
 func (this *QString) Replace_5(before QLatin1String_ITF /*123*/, after QLatin1String_ITF /*123*/, cs int) string {
-	var convArg0 = before.QLatin1String_PTR().GetCthis()
-	var convArg1 = after.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if before != nil && before.QLatin1String_PTR() != nil {
+		convArg0 = before.QLatin1String_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if after != nil && after.QLatin1String_PTR() != nil {
+		convArg1 = after.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceE13QLatin1StringS0_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1754,7 +2262,10 @@ func (this *QString) Replace_5(before QLatin1String_ITF /*123*/, after QLatin1St
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QLatin1String, const QString &, Qt::CaseSensitivity)
 func (this *QString) Replace_6(before QLatin1String_ITF /*123*/, after string, cs int) string {
-	var convArg0 = before.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if before != nil && before.QLatin1String_PTR() != nil {
+		convArg0 = before.QLatin1String_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(after)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceE13QLatin1StringRKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
@@ -1772,7 +2283,10 @@ func (this *QString) Replace_6(before QLatin1String_ITF /*123*/, after string, c
 func (this *QString) Replace_7(before string, after QLatin1String_ITF /*123*/, cs int) string {
 	var tmpArg0 = NewQString_5(before)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = after.QLatin1String_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if after != nil && after.QLatin1String_PTR() != nil {
+		convArg1 = after.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceERKS_13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1803,7 +2317,10 @@ func (this *QString) Replace_8(before string, after string, cs int) string {
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QChar, const QString &, Qt::CaseSensitivity)
 func (this *QString) Replace_9(c QChar_ITF /*123*/, after string, cs int) string {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(after)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceE5QCharRKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
@@ -1819,8 +2336,14 @@ func (this *QString) Replace_9(c QChar_ITF /*123*/, after string, cs int) string
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QChar, QLatin1String, Qt::CaseSensitivity)
 func (this *QString) Replace_10(c QChar_ITF /*123*/, after QLatin1String_ITF /*123*/, cs int) string {
-	var convArg0 = c.QChar_PTR().GetCthis()
-	var convArg1 = after.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if after != nil && after.QLatin1String_PTR() != nil {
+		convArg1 = after.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceE5QChar13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1834,7 +2357,10 @@ func (this *QString) Replace_10(c QChar_ITF /*123*/, after QLatin1String_ITF /*1
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QRegExp &, const QString &)
 func (this *QString) Replace_11(rx QRegExp_ITF, after string) string {
-	var convArg0 = rx.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(after)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceERK7QRegExpRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -1850,7 +2376,10 @@ func (this *QString) Replace_11(rx QRegExp_ITF, after string) string {
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QRegularExpression &, const QString &)
 func (this *QString) Replace_12(re QRegularExpression_ITF, after string) string {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(after)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceERK18QRegularExpressionRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -1880,7 +2409,10 @@ func (this *QString) Split(sep string, behavior int, cs int) *QStringList /*123*
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(QChar, enum QString::SplitBehavior, Qt::CaseSensitivity)
 func (this *QString) Split_1(sep QChar_ITF /*123*/, behavior int, cs int) *QStringList /*123*/ {
-	var convArg0 = sep.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sep != nil && sep.QChar_PTR() != nil {
+		convArg0 = sep.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitE5QCharNS_13SplitBehaviorEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior, cs)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1893,7 +2425,10 @@ func (this *QString) Split_1(sep QChar_ITF /*123*/, behavior int, cs int) *QStri
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(const QRegExp &, enum QString::SplitBehavior)
 func (this *QString) Split_2(sep QRegExp_ITF, behavior int) *QStringList /*123*/ {
-	var convArg0 = sep.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sep != nil && sep.QRegExp_PTR() != nil {
+		convArg0 = sep.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitERK7QRegExpNS_13SplitBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1906,7 +2441,10 @@ func (this *QString) Split_2(sep QRegExp_ITF, behavior int) *QStringList /*123*/
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(const QRegularExpression &, enum QString::SplitBehavior)
 func (this *QString) Split_3(sep QRegularExpression_ITF, behavior int) *QStringList /*123*/ {
-	var convArg0 = sep.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sep != nil && sep.QRegularExpression_PTR() != nil {
+		convArg0 = sep.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitERK18QRegularExpressionNS_13SplitBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -2047,7 +2585,10 @@ func QString_FromLatin1(str string, size int) string {
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromLatin1(const QByteArray &)
 func (this *QString) FromLatin1_1(str QByteArray_ITF) string {
-	var convArg0 = str.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if str != nil && str.QByteArray_PTR() != nil {
+		convArg0 = str.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString10fromLatin1ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -2086,7 +2627,10 @@ func QString_FromUtf8(str string, size int) string {
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromUtf8(const QByteArray &)
 func (this *QString) FromUtf8_1(str QByteArray_ITF) string {
-	var convArg0 = str.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if str != nil && str.QByteArray_PTR() != nil {
+		convArg0 = str.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString8fromUtf8ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -2125,7 +2669,10 @@ func QString_FromLocal8Bit(str string, size int) string {
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromLocal8Bit(const QByteArray &)
 func (this *QString) FromLocal8Bit_1(str QByteArray_ITF) string {
-	var convArg0 = str.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if str != nil && str.QByteArray_PTR() != nil {
+		convArg0 = str.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString13fromLocal8BitERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -2144,7 +2691,7 @@ func QString_FromLocal8Bit_1(str QByteArray_ITF) string {
 // Public static Visibility=Default Availability=Available
 // [8] QString fromUtf16(const ushort *, int)
 func (this *QString) FromUtf16(arg0 unsafe.Pointer /*666*/, size int) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QString9fromUtf16EPKti", qtrt.FFI_TYPE_POINTER, &arg0, size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QString9fromUtf16EPKti", qtrt.FFI_TYPE_POINTER, arg0, size)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
@@ -2162,7 +2709,7 @@ func QString_FromUtf16(arg0 unsafe.Pointer /*666*/, size int) string {
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromUtf16(const char16_t *, int)
 func (this *QString) FromUtf16_1(str unsafe.Pointer /*666*/, size int) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QString9fromUtf16EPKDsi", qtrt.FFI_TYPE_POINTER, &str, size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QString9fromUtf16EPKDsi", qtrt.FFI_TYPE_POINTER, str, size)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
@@ -2180,7 +2727,7 @@ func QString_FromUtf16_1(str unsafe.Pointer /*666*/, size int) string {
 // Public static Visibility=Default Availability=Available
 // [8] QString fromUcs4(const uint *, int)
 func (this *QString) FromUcs4(arg0 unsafe.Pointer /*666*/, size int) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QString8fromUcs4EPKji", qtrt.FFI_TYPE_POINTER, &arg0, size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QString8fromUcs4EPKji", qtrt.FFI_TYPE_POINTER, arg0, size)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
@@ -2216,7 +2763,10 @@ func QString_FromUcs4_1(str unsafe.Pointer /*666*/, size int) string {
 // Public static Visibility=Default Availability=Available
 // [8] QString fromRawData(const QChar *, int)
 func (this *QString) FromRawData(arg0 QChar_ITF /*777 const QChar **/, size int) string {
-	var convArg0 = arg0.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QChar_PTR() != nil {
+		convArg0 = arg0.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString11fromRawDataEPK5QChari", qtrt.FFI_TYPE_POINTER, convArg0, size)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -2263,7 +2813,10 @@ func QString_FromWCharArray(string unsafe.Pointer /*666*/, size int) string {
 // Public Visibility=Default Availability=Available
 // [8] QString & setRawData(const QChar *, int)
 func (this *QString) SetRawData(unicode QChar_ITF /*777 const QChar **/, size int) string {
-	var convArg0 = unicode.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if unicode != nil && unicode.QChar_PTR() != nil {
+		convArg0 = unicode.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString10setRawDataEPK5QChari", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -2277,7 +2830,10 @@ func (this *QString) SetRawData(unicode QChar_ITF /*777 const QChar **/, size in
 // Public Visibility=Default Availability=Available
 // [8] QString & setUnicode(const QChar *, int)
 func (this *QString) SetUnicode(unicode QChar_ITF /*777 const QChar **/, size int) string {
-	var convArg0 = unicode.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if unicode != nil && unicode.QChar_PTR() != nil {
+		convArg0 = unicode.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString10setUnicodeEPK5QChari", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -2291,7 +2847,7 @@ func (this *QString) SetUnicode(unicode QChar_ITF /*777 const QChar **/, size in
 // Public inline Visibility=Default Availability=Available
 // [8] QString & setUtf16(const ushort *, int)
 func (this *QString) SetUtf16(utf16 unsafe.Pointer /*666*/, size int) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QString8setUtf16EPKti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &utf16, size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QString8setUtf16EPKti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), utf16, size)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
@@ -2316,7 +2872,10 @@ func (this *QString) Compare(s string, cs int) int {
 // Public Visibility=Default Availability=Available
 // [4] int compare(QLatin1String, Qt::CaseSensitivity)
 func (this *QString) Compare_1(other QLatin1String_ITF /*123*/, cs int) int {
-	var convArg0 = other.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QLatin1String_PTR() != nil {
+		convArg0 = other.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7compareE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -2348,7 +2907,10 @@ func QString_Compare_2(s1 string, s2 string, cs int) int {
 func (this *QString) Compare_3(s1 string, s2 QLatin1String_ITF /*123*/, cs int) int {
 	var tmpArg0 = NewQString_5(s1)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = s2.QLatin1String_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if s2 != nil && s2.QLatin1String_PTR() != nil {
+		convArg1 = s2.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7compareERKS_13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -2364,7 +2926,10 @@ func QString_Compare_3(s1 string, s2 QLatin1String_ITF /*123*/, cs int) int {
 // Public static inline Visibility=Default Availability=Available
 // [4] int compare(QLatin1String, const QString &, Qt::CaseSensitivity)
 func (this *QString) Compare_4(s1 QLatin1String_ITF /*123*/, s2 string, cs int) int {
-	var convArg0 = s1.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s1 != nil && s1.QLatin1String_PTR() != nil {
+		convArg0 = s1.QLatin1String_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7compareE13QLatin1StringRKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, cs)
@@ -2382,7 +2947,10 @@ func QString_Compare_4(s1 QLatin1String_ITF /*123*/, s2 string, cs int) int {
 // Public inline Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, Qt::CaseSensitivity)
 func (this *QString) Compare_5(s QStringRef_ITF, cs int) int {
-	var convArg0 = s.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringRef_PTR() != nil {
+		convArg0 = s.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7compareERK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -2395,7 +2963,10 @@ func (this *QString) Compare_5(s QStringRef_ITF, cs int) int {
 func (this *QString) Compare_6(s1 string, s2 QStringRef_ITF, arg2 int) int {
 	var tmpArg0 = NewQString_5(s1)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = s2.QStringRef_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if s2 != nil && s2.QStringRef_PTR() != nil {
+		convArg1 = s2.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7compareERKS_RK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -2442,7 +3013,10 @@ func QString_LocaleAwareCompare_1(s1 string, s2 string) int {
 // Public Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QStringRef &)
 func (this *QString) LocaleAwareCompare_2(s QStringRef_ITF) int {
-	var convArg0 = s.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringRef_PTR() != nil {
+		convArg0 = s.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString18localeAwareCompareERK10QStringRef", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -2455,7 +3029,10 @@ func (this *QString) LocaleAwareCompare_2(s QStringRef_ITF) int {
 func (this *QString) LocaleAwareCompare_3(s1 string, s2 QStringRef_ITF) int {
 	var tmpArg0 = NewQString_5(s1)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = s2.QStringRef_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if s2 != nil && s2.QStringRef_PTR() != nil {
+		convArg1 = s2.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString18localeAwareCompareERKS_RK10QStringRef", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -2470,8 +3047,8 @@ func QString_LocaleAwareCompare_3(s1 string, s2 QStringRef_ITF) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(_Bool *, int)
-func (this *QString) ToShort(ok unsafe.Pointer /*666*/, base int) int16 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+func (this *QString) ToShort(ok *bool, base int) int16 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
@@ -2480,8 +3057,8 @@ func (this *QString) ToShort(ok unsafe.Pointer /*666*/, base int) int16 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(_Bool *, int)
-func (this *QString) ToUShort(ok unsafe.Pointer /*666*/, base int) uint16 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+func (this *QString) ToUShort(ok *bool, base int) uint16 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
@@ -2490,8 +3067,8 @@ func (this *QString) ToUShort(ok unsafe.Pointer /*666*/, base int) uint16 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(_Bool *, int)
-func (this *QString) ToInt(ok unsafe.Pointer /*666*/, base int) int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5toIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+func (this *QString) ToInt(ok *bool, base int) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5toIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -2500,8 +3077,8 @@ func (this *QString) ToInt(ok unsafe.Pointer /*666*/, base int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(_Bool *, int)
-func (this *QString) ToUInt(ok unsafe.Pointer /*666*/, base int) uint {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+func (this *QString) ToUInt(ok *bool, base int) uint {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
@@ -2510,8 +3087,8 @@ func (this *QString) ToUInt(ok unsafe.Pointer /*666*/, base int) uint {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] long toLong(_Bool *, int)
-func (this *QString) ToLong(ok unsafe.Pointer /*666*/, base int) int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+func (this *QString) ToLong(ok *bool, base int) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -2520,8 +3097,8 @@ func (this *QString) ToLong(ok unsafe.Pointer /*666*/, base int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(_Bool *, int)
-func (this *QString) ToULong(ok unsafe.Pointer /*666*/, base int) uint {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+func (this *QString) ToULong(ok *bool, base int) uint {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
@@ -2530,8 +3107,8 @@ func (this *QString) ToULong(ok unsafe.Pointer /*666*/, base int) uint {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(_Bool *, int)
-func (this *QString) ToLongLong(ok unsafe.Pointer /*666*/, base int) int64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+func (this *QString) ToLongLong(ok *bool, base int) int64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
@@ -2540,8 +3117,8 @@ func (this *QString) ToLongLong(ok unsafe.Pointer /*666*/, base int) int64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(_Bool *, int)
-func (this *QString) ToULongLong(ok unsafe.Pointer /*666*/, base int) uint64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+func (this *QString) ToULongLong(ok *bool, base int) uint64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
 }
@@ -2550,8 +3127,8 @@ func (this *QString) ToULongLong(ok unsafe.Pointer /*666*/, base int) uint64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(_Bool *)
-func (this *QString) ToFloat(ok unsafe.Pointer /*666*/) float32 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
+func (this *QString) ToFloat(ok *bool) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
@@ -2560,8 +3137,8 @@ func (this *QString) ToFloat(ok unsafe.Pointer /*666*/) float32 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(_Bool *)
-func (this *QString) ToDouble(ok unsafe.Pointer /*666*/) float64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
+func (this *QString) ToDouble(ok *bool) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
@@ -2822,6 +3399,246 @@ func QString_Number_6(arg0 float64, f byte, prec int) string {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qstring.h:664
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(QLatin1String)
+func (this *QString) Operator_equal_equal(s QLatin1String_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringeqE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:715
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const char *)
+func (this *QString) Operator_equal_equal_1(s string) bool {
+	var convArg0 = qtrt.CString(s)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringeqEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:722
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QByteArray &)
+func (this *QString) Operator_equal_equal_2(s QByteArray_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QByteArray_PTR() != nil {
+		convArg0 = s.QByteArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringeqERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:665
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator<(QLatin1String)
+func (this *QString) Operator_less_than(s QLatin1String_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringltE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:717
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(const char *)
+func (this *QString) Operator_less_than_1(s string) bool {
+	var convArg0 = qtrt.CString(s)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringltEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:724
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(const QByteArray &)
+func (this *QString) Operator_less_than_2(s QByteArray_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QByteArray_PTR() != nil {
+		convArg0 = s.QByteArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringltERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:666
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator>(QLatin1String)
+func (this *QString) Operator_greater_than(s QLatin1String_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringgtE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:719
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>(const char *)
+func (this *QString) Operator_greater_than_1(s string) bool {
+	var convArg0 = qtrt.CString(s)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringgtEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:725
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>(const QByteArray &)
+func (this *QString) Operator_greater_than_2(s QByteArray_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QByteArray_PTR() != nil {
+		convArg0 = s.QByteArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringgtERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:667
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(QLatin1String)
+func (this *QString) Operator_not_equal(s QLatin1String_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringneE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:716
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const char *)
+func (this *QString) Operator_not_equal_1(s string) bool {
+	var convArg0 = qtrt.CString(s)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringneEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:723
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QByteArray &)
+func (this *QString) Operator_not_equal_2(s QByteArray_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QByteArray_PTR() != nil {
+		convArg0 = s.QByteArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringneERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:668
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(QLatin1String)
+func (this *QString) Operator_less_than_equal(s QLatin1String_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringleE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:718
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(const char *)
+func (this *QString) Operator_less_than_equal_1(s string) bool {
+	var convArg0 = qtrt.CString(s)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringleEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:726
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(const QByteArray &)
+func (this *QString) Operator_less_than_equal_2(s QByteArray_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QByteArray_PTR() != nil {
+		convArg0 = s.QByteArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringleERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:669
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(QLatin1String)
+func (this *QString) Operator_greater_than_equal(s QLatin1String_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringgeE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:720
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(const char *)
+func (this *QString) Operator_greater_than_equal_1(s string) bool {
+	var convArg0 = qtrt.CString(s)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringgeEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:727
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(const QByteArray &)
+func (this *QString) Operator_greater_than_equal_2(s QByteArray_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QByteArray_PTR() != nil {
+		convArg0 = s.QByteArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QStringgeERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qstring.h:750
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -2915,7 +3732,10 @@ func (this *QString) ConstEnd() *QChar /*777 const QChar **/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_back(QChar)
 func (this *QString) Push_back(c QChar_ITF /*123*/) {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString9push_backE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -2936,7 +3756,10 @@ func (this *QString) Push_back_1(s string) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_front(QChar)
 func (this *QString) Push_front(c QChar_ITF /*123*/) {
-	var convArg0 = c.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QChar_PTR() != nil {
+		convArg0 = c.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString10push_frontE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -3064,6 +3887,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

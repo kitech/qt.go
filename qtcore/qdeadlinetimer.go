@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 13
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -101,7 +102,10 @@ func NewQDeadlineTimer_2(msecs int64, type_ int) *QDeadlineTimer {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDeadlineTimer &)
 func (this *QDeadlineTimer) Swap(other QDeadlineTimer_ITF) {
-	var convArg0 = other.QDeadlineTimer_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QDeadlineTimer_PTR() != nil {
+		convArg0 = other.QDeadlineTimer_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -226,7 +230,10 @@ func (this *QDeadlineTimer) SetPreciseDeadline(secs int64, nsecs int64, type_ in
 // Public static Visibility=Default Availability=Available
 // [16] QDeadlineTimer addNSecs(QDeadlineTimer, qint64)
 func (this *QDeadlineTimer) AddNSecs(dt QDeadlineTimer_ITF /*123*/, nsecs int64) *QDeadlineTimer /*123*/ {
-	var convArg0 = dt.QDeadlineTimer_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dt != nil && dt.QDeadlineTimer_PTR() != nil {
+		convArg0 = dt.QDeadlineTimer_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer8addNSecsES_x", qtrt.FFI_TYPE_POINTER, convArg0, nsecs)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -254,6 +261,30 @@ func QDeadlineTimer_Current(timerType int) *QDeadlineTimer /*123*/ {
 	var nilthis *QDeadlineTimer
 	rv := nilthis.Current(timerType)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qdeadlinetimer.h:118
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QDeadlineTimer & operator+=(qint64)
+func (this *QDeadlineTimer) Operator_add_equal(msecs int64) *QDeadlineTimer {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimerpLEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDeadlineTimer)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdeadlinetimer.h:120
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QDeadlineTimer & operator-=(qint64)
+func (this *QDeadlineTimer) Operator_minus_equal(msecs int64) *QDeadlineTimer {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimermIEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDeadlineTimer)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:162
@@ -289,6 +320,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

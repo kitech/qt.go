@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -80,7 +81,10 @@ func (*QGraphicsEllipseItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsElli
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEllipseItem(QGraphicsItem *)
 func NewQGraphicsEllipseItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
-	var convArg0 = parent.QGraphicsItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QGraphicsItem_PTR() != nil {
+		convArg0 = parent.QGraphicsItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsEllipseItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -93,8 +97,14 @@ func NewQGraphicsEllipseItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEllipseItem(const QRectF &, QGraphicsItem *)
 func NewQGraphicsEllipseItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
-	var convArg1 = parent.QGraphicsItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QGraphicsItem_PTR() != nil {
+		convArg1 = parent.QGraphicsItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2ERK6QRectFP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsEllipseItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -107,7 +117,10 @@ func NewQGraphicsEllipseItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF 
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEllipseItem(qreal, qreal, qreal, qreal, QGraphicsItem *)
 func NewQGraphicsEllipseItem_2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
-	var convArg4 = parent.QGraphicsItem_PTR().GetCthis()
+	var convArg4 unsafe.Pointer
+	if parent != nil && parent.QGraphicsItem_PTR() != nil {
+		convArg4 = parent.QGraphicsItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, x, y, w, h, convArg4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsEllipseItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -143,7 +156,10 @@ func (this *QGraphicsEllipseItem) Rect() *qtcore.QRectF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
 func (this *QGraphicsEllipseItem) SetRect(rect qtcore.QRectF_ITF) {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -224,7 +240,10 @@ func (this *QGraphicsEllipseItem) Shape() *qtgui.QPainterPath /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &)
 func (this *QGraphicsEllipseItem) Contains(point qtcore.QPointF_ITF) bool {
-	var convArg0 = point.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if point != nil && point.QPointF_PTR() != nil {
+		convArg0 = point.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem8containsERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -235,9 +254,18 @@ func (this *QGraphicsEllipseItem) Contains(point qtcore.QPointF_ITF) bool {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
 func (this *QGraphicsEllipseItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/, widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = painter.QPainter_PTR().GetCthis()
-	var convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
-	var convArg2 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOptionGraphicsItem_PTR() != nil {
+		convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg2 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -247,7 +275,10 @@ func (this *QGraphicsEllipseItem) Paint(painter qtgui.QPainter_ITF /*777 QPainte
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *)
 func (this *QGraphicsEllipseItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
-	var convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsItem_PTR() != nil {
+		convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -290,7 +321,10 @@ func (this *QGraphicsEllipseItem) SupportsExtension(extension int) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setExtension(enum QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsEllipseItem) SetExtension(extension int, variant qtcore.QVariant_ITF) {
-	var convArg1 = variant.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if variant != nil && variant.QVariant_PTR() != nil {
+		convArg1 = variant.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -300,7 +334,10 @@ func (this *QGraphicsEllipseItem) SetExtension(extension int, variant qtcore.QVa
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant extension(const QVariant &)
 func (this *QGraphicsEllipseItem) Extension(variant qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
-	var convArg0 = variant.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if variant != nil && variant.QVariant_PTR() != nil {
+		convArg0 = variant.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem9extensionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -325,6 +362,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

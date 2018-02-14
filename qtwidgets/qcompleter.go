@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -85,10 +86,14 @@ func (this *QCompleter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QCompleter(QObject *)
 func NewQCompleter(parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleterC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCompleterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QCompleter")
 	return gothis
 }
 
@@ -97,11 +102,18 @@ func NewQCompleter(parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
 // Public Visibility=Default Availability=Available
 // [-2] void QCompleter(QAbstractItemModel *, QObject *)
 func NewQCompleter_1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
-	var convArg0 = model.QAbstractItemModel_PTR().GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if model != nil && model.QAbstractItemModel_PTR() != nil {
+		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleterC2EP18QAbstractItemModelP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCompleterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QCompleter")
 	return gothis
 }
 
@@ -110,11 +122,18 @@ func NewQCompleter_1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemMode
 // Public Visibility=Default Availability=Available
 // [-2] void QCompleter(const QStringList &, QObject *)
 func NewQCompleter_2(completions qtcore.QStringList_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
-	var convArg0 = completions.QStringList_PTR().GetCthis()
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if completions != nil && completions.QStringList_PTR() != nil {
+		convArg0 = completions.QStringList_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleterC2ERK11QStringListP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCompleterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QCompleter")
 	return gothis
 }
 
@@ -134,7 +153,10 @@ func DeleteQCompleter(this *QCompleter) {
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
 func (this *QCompleter) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 = widget.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter9setWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -154,7 +176,10 @@ func (this *QCompleter) Widget() *QWidget /*777 QWidget **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
 func (this *QCompleter) SetModel(c qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
-	var convArg0 = c.QAbstractItemModel_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QAbstractItemModel_PTR() != nil {
+		convArg0 = c.QAbstractItemModel_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter8setModelEP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -222,7 +247,10 @@ func (this *QCompleter) Popup() *QAbstractItemView /*777 QAbstractItemView **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setPopup(QAbstractItemView *)
 func (this *QCompleter) SetPopup(popup QAbstractItemView_ITF /*777 QAbstractItemView **/) {
-	var convArg0 = popup.QAbstractItemView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if popup != nil && popup.QAbstractItemView_PTR() != nil {
+		convArg0 = popup.QAbstractItemView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter8setPopupEP17QAbstractItemView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -426,7 +454,10 @@ func (this *QCompleter) SetCompletionPrefix(prefix string) {
 // Public Visibility=Default Availability=Available
 // [-2] void complete(const QRect &)
 func (this *QCompleter) Complete(rect qtcore.QRect_ITF) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter8completeERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -445,7 +476,10 @@ func (this *QCompleter) SetWrapAround(wrap bool) {
 // Public virtual Visibility=Default Availability=Available
 // [8] QString pathFromIndex(const QModelIndex &)
 func (this *QCompleter) PathFromIndex(index qtcore.QModelIndex_ITF) string {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QCompleter13pathFromIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -473,8 +507,14 @@ func (this *QCompleter) SplitPath(path string) *qtcore.QStringList /*123*/ {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
 func (this *QCompleter) EventFilter(o qtcore.QObject_ITF /*777 QObject **/, e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = o.QObject_PTR().GetCthis()
-	var convArg1 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QObject_PTR() != nil {
+		convArg0 = o.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg1 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -485,7 +525,10 @@ func (this *QCompleter) EventFilter(o qtcore.QObject_ITF /*777 QObject **/, e qt
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QCompleter) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -507,7 +550,10 @@ func (this *QCompleter) Activated(text string) {
 // Public Visibility=Default Availability=Available
 // [-2] void activated(const QModelIndex &)
 func (this *QCompleter) Activated_1(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter9activatedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -528,7 +574,10 @@ func (this *QCompleter) Highlighted(text string) {
 // Public Visibility=Default Availability=Available
 // [-2] void highlighted(const QModelIndex &)
 func (this *QCompleter) Highlighted_1(index qtcore.QModelIndex_ITF) {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter11highlightedERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -558,6 +607,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

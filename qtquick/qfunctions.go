@@ -39,7 +39,10 @@ func init() {
 // Invalid Visibility=Default Availability=Available
 // [-2] void qsgnode_set_description(QSGNode *, const QString &)
 func Qsgnode_set_description(node QSGNode_ITF /*777 QSGNode **/, description string) {
-	var convArg0 = node.QSGNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if node != nil && node.QSGNode_PTR() != nil {
+		convArg0 = node.QSGNode_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(description)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z23qsgnode_set_descriptionP7QSGNodeRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)

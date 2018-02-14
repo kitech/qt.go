@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -384,7 +385,10 @@ func (this *QScreen) AngleBetween(a int, b int) int {
 // Public Visibility=Default Availability=Available
 // [88] QTransform transformBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &)
 func (this *QScreen) TransformBetween(a int, b int, target qtcore.QRect_ITF) *QTransform /*123*/ {
-	var convArg2 = target.QRect_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if target != nil && target.QRect_PTR() != nil {
+		convArg2 = target.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen16transformBetweenEN2Qt17ScreenOrientationES1_RK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, b, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -397,7 +401,10 @@ func (this *QScreen) TransformBetween(a int, b int, target qtcore.QRect_ITF) *QT
 // Public Visibility=Default Availability=Available
 // [16] QRect mapBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &)
 func (this *QScreen) MapBetween(a int, b int, rect qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
-	var convArg2 = rect.QRect_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg2 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen10mapBetweenEN2Qt17ScreenOrientationES1_RK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, b, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -452,7 +459,10 @@ func (this *QScreen) RefreshRate() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void geometryChanged(const QRect &)
 func (this *QScreen) GeometryChanged(geometry qtcore.QRect_ITF) {
-	var convArg0 = geometry.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if geometry != nil && geometry.QRect_PTR() != nil {
+		convArg0 = geometry.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen15geometryChangedERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -462,7 +472,10 @@ func (this *QScreen) GeometryChanged(geometry qtcore.QRect_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void availableGeometryChanged(const QRect &)
 func (this *QScreen) AvailableGeometryChanged(geometry qtcore.QRect_ITF) {
-	var convArg0 = geometry.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if geometry != nil && geometry.QRect_PTR() != nil {
+		convArg0 = geometry.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen24availableGeometryChangedERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -472,7 +485,10 @@ func (this *QScreen) AvailableGeometryChanged(geometry qtcore.QRect_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void physicalSizeChanged(const QSizeF &)
 func (this *QScreen) PhysicalSizeChanged(size qtcore.QSizeF_ITF) {
-	var convArg0 = size.QSizeF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSizeF_PTR() != nil {
+		convArg0 = size.QSizeF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen19physicalSizeChangedERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -500,7 +516,10 @@ func (this *QScreen) LogicalDotsPerInchChanged(dpi float64) {
 // Public Visibility=Default Availability=Available
 // [-2] void virtualGeometryChanged(const QRect &)
 func (this *QScreen) VirtualGeometryChanged(rect qtcore.QRect_ITF) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen22virtualGeometryChangedERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -545,6 +564,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

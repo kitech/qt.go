@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 101
+// extern C begin: 109
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -67,7 +68,10 @@ func (*QVariantComparisonHelper) NewFromPointer(cthis unsafe.Pointer) *QVariantC
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVariantComparisonHelper(const QVariant &)
 func NewQVariantComparisonHelper(var_ QVariant_ITF) *QVariantComparisonHelper {
-	var convArg0 = var_.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if var_ != nil && var_.QVariant_PTR() != nil {
+		convArg0 = var_.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QVariantComparisonHelperC2ERK8QVariant", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantComparisonHelperFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -94,6 +98,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

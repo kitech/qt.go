@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 0
+// extern C begin: 3
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -101,6 +102,7 @@ func NewQIODevice() *QIODevice {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODeviceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QIODevice")
 	return gothis
 }
 
@@ -109,10 +111,14 @@ func NewQIODevice() *QIODevice {
 // Public Visibility=Default Availability=Available
 // [-2] void QIODevice(QObject *)
 func NewQIODevice_1(parent QObject_ITF /*777 QObject **/) *QIODevice {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODeviceC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QIODevice")
 	return gothis
 }
 
@@ -479,7 +485,10 @@ func (this *QIODevice) Write_1(data string) int64 {
 // Public inline Visibility=Default Availability=Available
 // [8] qint64 write(const QByteArray &)
 func (this *QIODevice) Write_2(data QByteArray_ITF) int64 {
-	var convArg0 = data.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice5writeERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -717,6 +726,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

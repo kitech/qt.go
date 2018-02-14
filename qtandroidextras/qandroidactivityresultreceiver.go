@@ -24,6 +24,7 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -91,7 +92,10 @@ func DeleteQAndroidActivityResultReceiver(this *QAndroidActivityResultReceiver) 
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void handleActivityResult(int, int, const QAndroidJniObject &)
 func (this *QAndroidActivityResultReceiver) HandleActivityResult(receiverRequestCode int, resultCode int, data QAndroidJniObject_ITF) {
-	var convArg2 = data.QAndroidJniObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if data != nil && data.QAndroidJniObject_PTR() != nil {
+		convArg2 = data.QAndroidJniObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QAndroidActivityResultReceiver20handleActivityResultEiiRK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), receiverRequestCode, resultCode, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -109,6 +113,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

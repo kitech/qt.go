@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 17
+// extern C begin: 18
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -115,6 +116,34 @@ func (this *QTextLength) RawValue() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
+// /usr/include/qt/QtGui/qtextformat.h:106
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QTextLength &)
+func (this *QTextLength) Operator_equal_equal(other QTextLength_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTextLength_PTR() != nil {
+		convArg0 = other.QTextLength_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLengtheqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextformat.h:109
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QTextLength &)
+func (this *QTextLength) Operator_not_equal(other QTextLength_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTextLength_PTR() != nil {
+		convArg0 = other.QTextLength_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLengthneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 func DeleteQTextLength(this *QTextLength) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLengthD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +169,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

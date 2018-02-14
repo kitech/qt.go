@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -81,6 +82,7 @@ func NewQMimeData() *QMimeData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeDataC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMimeDataFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMimeData")
 	return gothis
 }
 
@@ -190,7 +192,10 @@ func (this *QMimeData) ImageData() *QVariant /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setImageData(const QVariant &)
 func (this *QMimeData) SetImageData(image QVariant_ITF) {
-	var convArg0 = image.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QVariant_PTR() != nil {
+		convArg0 = image.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData12setImageDataERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -222,7 +227,10 @@ func (this *QMimeData) ColorData() *QVariant /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setColorData(const QVariant &)
 func (this *QMimeData) SetColorData(color QVariant_ITF) {
-	var convArg0 = color.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QVariant_PTR() != nil {
+		convArg0 = color.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData12setColorDataERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -258,7 +266,10 @@ func (this *QMimeData) Data(mimetype string) *QByteArray /*123*/ {
 func (this *QMimeData) SetData(mimetype string, data QByteArray_ITF) {
 	var tmpArg0 = NewQString_5(mimetype)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = data.QByteArray_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg1 = data.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData7setDataERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -334,6 +345,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

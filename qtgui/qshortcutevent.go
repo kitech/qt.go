@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,7 +65,10 @@ func (*QShortcutEvent) NewFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcutEvent(const QKeySequence &, int, _Bool)
 func NewQShortcutEvent(key QKeySequence_ITF, id int, ambiguous bool) *QShortcutEvent {
-	var convArg0 = key.QKeySequence_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QKeySequence_PTR() != nil {
+		convArg0 = key.QKeySequence_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QShortcutEventC2ERK12QKeySequenceib", qtrt.FFI_TYPE_POINTER, convArg0, id, ambiguous)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQShortcutEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -128,6 +132,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

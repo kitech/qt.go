@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -90,7 +91,10 @@ func DeleteQItemEditorFactory(this *QItemEditorFactory) {
 // Public virtual Visibility=Default Availability=Available
 // [8] QWidget * createEditor(int, QWidget *)
 func (this *QItemEditorFactory) CreateEditor(userType int, parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
-	var convArg1 = parent.QWidget_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg1 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QItemEditorFactory12createEditorEiP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), userType, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -113,7 +117,10 @@ func (this *QItemEditorFactory) ValuePropertyName(userType int) *qtcore.QByteArr
 // Public Visibility=Default Availability=Available
 // [-2] void registerEditor(int, QItemEditorCreatorBase *)
 func (this *QItemEditorFactory) RegisterEditor(userType int, creator QItemEditorCreatorBase_ITF /*777 QItemEditorCreatorBase **/) {
-	var convArg1 = creator.QItemEditorCreatorBase_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if creator != nil && creator.QItemEditorCreatorBase_PTR() != nil {
+		convArg1 = creator.QItemEditorCreatorBase_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase", qtrt.FFI_TYPE_POINTER, this.GetCthis(), userType, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -138,7 +145,10 @@ func QItemEditorFactory_DefaultFactory() *QItemEditorFactory /*777 const QItemEd
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultFactory(QItemEditorFactory *)
 func (this *QItemEditorFactory) SetDefaultFactory(factory QItemEditorFactory_ITF /*777 QItemEditorFactory **/) {
-	var convArg0 = factory.QItemEditorFactory_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if factory != nil && factory.QItemEditorFactory_PTR() != nil {
+		convArg0 = factory.QItemEditorFactory_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QItemEditorFactory17setDefaultFactoryEPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -160,6 +170,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 20
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -81,6 +82,22 @@ func DeleteQEvent(this *QEvent) {
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
+}
+
+// /usr/include/qt/QtCore/qcoreevent.h:300
+// index:0
+// Public Visibility=Default Availability=Available
+// [24] QEvent & operator=(const QEvent &)
+func (this *QEvent) Operator_equal(other QEvent_ITF) *QEvent {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QEvent_PTR() != nil {
+		convArg0 = other.QEvent_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QEventaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQEventFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQEvent)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:301
@@ -343,6 +360,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

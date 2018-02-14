@@ -24,6 +24,7 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -80,7 +81,10 @@ func NewQAndroidServiceConnection() *QAndroidServiceConnection {
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidServiceConnection(const QAndroidJniObject &)
 func NewQAndroidServiceConnection_1(serviceConnection QAndroidJniObject_ITF) *QAndroidServiceConnection {
-	var convArg0 = serviceConnection.QAndroidJniObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if serviceConnection != nil && serviceConnection.QAndroidJniObject_PTR() != nil {
+		convArg0 = serviceConnection.QAndroidJniObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnectionC2ERK17QAndroidJniObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidServiceConnectionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -106,7 +110,10 @@ func DeleteQAndroidServiceConnection(this *QAndroidServiceConnection) {
 func (this *QAndroidServiceConnection) OnServiceConnected(name string, serviceBinder QAndroidBinder_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = serviceBinder.QAndroidBinder_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if serviceBinder != nil && serviceBinder.QAndroidBinder_PTR() != nil {
+		convArg1 = serviceBinder.QAndroidBinder_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnection18onServiceConnectedERK7QStringRK14QAndroidBinder", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -147,6 +154,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

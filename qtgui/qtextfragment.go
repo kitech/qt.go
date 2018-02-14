@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 32
+// extern C begin: 36
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -73,12 +74,70 @@ func NewQTextFragment() *QTextFragment {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qtextobject.h:309
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QTextFragment & operator=(const QTextFragment &)
+func (this *QTextFragment) Operator_equal(o QTextFragment_ITF) *QTextFragment {
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QTextFragment_PTR() != nil {
+		convArg0 = o.QTextFragment_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextFragmentaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTextFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFragment)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qtextobject.h:311
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QTextFragment) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:313
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QTextFragment &)
+func (this *QTextFragment) Operator_equal_equal(o QTextFragment_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QTextFragment_PTR() != nil {
+		convArg0 = o.QTextFragment_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragmenteqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:314
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QTextFragment &)
+func (this *QTextFragment) Operator_not_equal(o QTextFragment_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QTextFragment_PTR() != nil {
+		convArg0 = o.QTextFragment_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragmentneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextobject.h:315
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(const QTextFragment &)
+func (this *QTextFragment) Operator_less_than(o QTextFragment_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QTextFragment_PTR() != nil {
+		convArg0 = o.QTextFragment_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragmentltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -167,6 +226,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

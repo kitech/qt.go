@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -91,7 +92,10 @@ func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
 // Public static Visibility=Default Availability=Available
 // [8] qreal levelOfDetailFromTransform(const QTransform &)
 func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform(worldTransform qtgui.QTransform_ITF) float64 {
-	var convArg0 = worldTransform.QTransform_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if worldTransform != nil && worldTransform.QTransform_PTR() != nil {
+		convArg0 = worldTransform.QTransform_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -129,6 +133,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

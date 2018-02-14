@@ -31,7 +31,10 @@ func init() {
 // Invalid Visibility=Default Availability=Available
 // [-2] void qRegisterDraggedTypes(const QStringList &)
 func QRegisterDraggedTypes(types qtcore.QStringList_ITF) {
-	var convArg0 = types.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if types != nil && types.QStringList_PTR() != nil {
+		convArg0 = types.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z21qRegisterDraggedTypesRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }

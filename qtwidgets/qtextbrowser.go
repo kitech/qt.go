@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -115,10 +116,14 @@ func (this *QTextBrowser) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBrowser(QWidget *)
 func NewQTextBrowser(parent QWidget_ITF /*777 QWidget **/) *QTextBrowser {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowserC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextBrowserFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTextBrowser")
 	return gothis
 }
 
@@ -162,7 +167,10 @@ func (this *QTextBrowser) SearchPaths() *qtcore.QStringList /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setSearchPaths(const QStringList &)
 func (this *QTextBrowser) SetSearchPaths(paths qtcore.QStringList_ITF) {
-	var convArg0 = paths.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if paths != nil && paths.QStringList_PTR() != nil {
+		convArg0 = paths.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser14setSearchPathsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -172,7 +180,10 @@ func (this *QTextBrowser) SetSearchPaths(paths qtcore.QStringList_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant loadResource(int, const QUrl &)
 func (this *QTextBrowser) LoadResource(type_ int, name qtcore.QUrl_ITF) *qtcore.QVariant /*123*/ {
-	var convArg1 = name.QUrl_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if name != nil && name.QUrl_PTR() != nil {
+		convArg1 = name.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser12loadResourceEiRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -297,7 +308,10 @@ func (this *QTextBrowser) SetOpenLinks(open bool) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSource(const QUrl &)
 func (this *QTextBrowser) SetSource(name qtcore.QUrl_ITF) {
-	var convArg0 = name.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if name != nil && name.QUrl_PTR() != nil {
+		convArg0 = name.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser9setSourceERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -370,7 +384,10 @@ func (this *QTextBrowser) HistoryChanged() {
 // Public Visibility=Default Availability=Available
 // [-2] void sourceChanged(const QUrl &)
 func (this *QTextBrowser) SourceChanged(arg0 qtcore.QUrl_ITF) {
-	var convArg0 = arg0.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QUrl_PTR() != nil {
+		convArg0 = arg0.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser13sourceChangedERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -380,7 +397,10 @@ func (this *QTextBrowser) SourceChanged(arg0 qtcore.QUrl_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void highlighted(const QUrl &)
 func (this *QTextBrowser) Highlighted(arg0 qtcore.QUrl_ITF) {
-	var convArg0 = arg0.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QUrl_PTR() != nil {
+		convArg0 = arg0.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser11highlightedERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -401,7 +421,10 @@ func (this *QTextBrowser) Highlighted_1(arg0 string) {
 // Public Visibility=Default Availability=Available
 // [-2] void anchorClicked(const QUrl &)
 func (this *QTextBrowser) AnchorClicked(arg0 qtcore.QUrl_ITF) {
-	var convArg0 = arg0.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QUrl_PTR() != nil {
+		convArg0 = arg0.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser13anchorClickedERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -411,7 +434,10 @@ func (this *QTextBrowser) AnchorClicked(arg0 qtcore.QUrl_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QTextBrowser) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -422,7 +448,10 @@ func (this *QTextBrowser) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
 func (this *QTextBrowser) KeyPressEvent(ev qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
-	var convArg0 = ev.QKeyEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ev != nil && ev.QKeyEvent_PTR() != nil {
+		convArg0 = ev.QKeyEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -432,7 +461,10 @@ func (this *QTextBrowser) KeyPressEvent(ev qtgui.QKeyEvent_ITF /*777 QKeyEvent *
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
 func (this *QTextBrowser) MouseMoveEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = ev.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ev != nil && ev.QMouseEvent_PTR() != nil {
+		convArg0 = ev.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -442,7 +474,10 @@ func (this *QTextBrowser) MouseMoveEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEv
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
 func (this *QTextBrowser) MousePressEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = ev.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ev != nil && ev.QMouseEvent_PTR() != nil {
+		convArg0 = ev.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -452,7 +487,10 @@ func (this *QTextBrowser) MousePressEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseE
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 func (this *QTextBrowser) MouseReleaseEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = ev.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ev != nil && ev.QMouseEvent_PTR() != nil {
+		convArg0 = ev.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -462,7 +500,10 @@ func (this *QTextBrowser) MouseReleaseEvent(ev qtgui.QMouseEvent_ITF /*777 QMous
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
 func (this *QTextBrowser) FocusOutEvent(ev qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
-	var convArg0 = ev.QFocusEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ev != nil && ev.QFocusEvent_PTR() != nil {
+		convArg0 = ev.QFocusEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -482,7 +523,10 @@ func (this *QTextBrowser) FocusNextPrevChild(next bool) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QTextBrowser) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = e.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QPaintEvent_PTR() != nil {
+		convArg0 = e.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -500,6 +544,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

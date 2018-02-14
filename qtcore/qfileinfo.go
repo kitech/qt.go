@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -91,7 +92,10 @@ func NewQFileInfo_1(file string) *QFileInfo {
 // Public Visibility=Default Availability=Available
 // [-2] void QFileInfo(const QFile &)
 func NewQFileInfo_2(file QFile_ITF) *QFileInfo {
-	var convArg0 = file.QFile_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if file != nil && file.QFile_PTR() != nil {
+		convArg0 = file.QFile_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfoC2ERK5QFile", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -104,7 +108,10 @@ func NewQFileInfo_2(file QFile_ITF) *QFileInfo {
 // Public Visibility=Default Availability=Available
 // [-2] void QFileInfo(const QDir &, const QString &)
 func NewQFileInfo_3(dir QDir_ITF, file string) *QFileInfo {
-	var convArg0 = dir.QDir_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dir != nil && dir.QDir_PTR() != nil {
+		convArg0 = dir.QDir_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(file)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfoC2ERK4QDirRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
@@ -125,14 +132,73 @@ func DeleteQFileInfo(this *QFileInfo) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qfileinfo.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QFileInfo & operator=(const QFileInfo &)
+func (this *QFileInfo) Operator_equal(fileinfo QFileInfo_ITF) *QFileInfo {
+	var convArg0 unsafe.Pointer
+	if fileinfo != nil && fileinfo.QFileInfo_PTR() != nil {
+		convArg0 = fileinfo.QFileInfo_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfoaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFileInfo)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:71
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QFileInfo & operator=(QFileInfo &&)
+func (this *QFileInfo) Operator_equal_1(other unsafe.Pointer /*333*/) *QFileInfo {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfoaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFileInfo)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qfileinfo.h:74
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QFileInfo &)
 func (this *QFileInfo) Swap(other QFileInfo_ITF) {
-	var convArg0 = other.QFileInfo_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QFileInfo_PTR() != nil {
+		convArg0 = other.QFileInfo_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfo4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QFileInfo &)
+func (this *QFileInfo) Operator_equal_equal(fileinfo QFileInfo_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if fileinfo != nil && fileinfo.QFileInfo_PTR() != nil {
+		convArg0 = fileinfo.QFileInfo_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfoeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:78
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QFileInfo &)
+func (this *QFileInfo) Operator_not_equal(fileinfo QFileInfo_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if fileinfo != nil && fileinfo.QFileInfo_PTR() != nil {
+		convArg0 = fileinfo.QFileInfo_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfoneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qfileinfo.h:80
@@ -151,7 +217,10 @@ func (this *QFileInfo) SetFile(file string) {
 // Public Visibility=Default Availability=Available
 // [-2] void setFile(const QFile &)
 func (this *QFileInfo) SetFile_1(file QFile_ITF) {
-	var convArg0 = file.QFile_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if file != nil && file.QFile_PTR() != nil {
+		convArg0 = file.QFile_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK5QFile", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -161,7 +230,10 @@ func (this *QFileInfo) SetFile_1(file QFile_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setFile(const QDir &, const QString &)
 func (this *QFileInfo) SetFile_2(dir QDir_ITF, file string) {
-	var convArg0 = dir.QDir_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dir != nil && dir.QDir_PTR() != nil {
+		convArg0 = dir.QDir_PTR().GetCthis()
+	}
 	var tmpArg1 = NewQString_5(file)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK4QDirRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -720,6 +792,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

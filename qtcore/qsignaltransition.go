@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -88,10 +89,14 @@ func (this *QSignalTransition) MetaObject() *QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QSignalTransition(QState *)
 func NewQSignalTransition(sourceState QState_ITF /*777 QState **/) *QSignalTransition {
-	var convArg0 = sourceState.QState_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sourceState != nil && sourceState.QState_PTR() != nil {
+		convArg0 = sourceState.QState_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSignalTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSignalTransition")
 	return gothis
 }
 
@@ -100,13 +105,20 @@ func NewQSignalTransition(sourceState QState_ITF /*777 QState **/) *QSignalTrans
 // Public Visibility=Default Availability=Available
 // [-2] void QSignalTransition(const QObject *, const char *, QState *)
 func NewQSignalTransition_1(sender QObject_ITF /*777 const QObject **/, signal string, sourceState QState_ITF /*777 QState **/) *QSignalTransition {
-	var convArg0 = sender.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg1)
-	var convArg2 = sourceState.QState_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if sourceState != nil && sourceState.QState_PTR() != nil {
+		convArg2 = sourceState.QState_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSignalTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSignalTransition")
 	return gothis
 }
 
@@ -136,7 +148,10 @@ func (this *QSignalTransition) SenderObject() *QObject /*777 QObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setSenderObject(const QObject *)
 func (this *QSignalTransition) SetSenderObject(sender QObject_ITF /*777 const QObject **/) {
-	var convArg0 = sender.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransition15setSenderObjectEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -158,7 +173,10 @@ func (this *QSignalTransition) Signal() *QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setSignal(const QByteArray &)
 func (this *QSignalTransition) SetSignal(signal QByteArray_ITF) {
-	var convArg0 = signal.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if signal != nil && signal.QByteArray_PTR() != nil {
+		convArg0 = signal.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransition9setSignalERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -168,7 +186,10 @@ func (this *QSignalTransition) SetSignal(signal QByteArray_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventTest(QEvent *)
 func (this *QSignalTransition) EventTest(event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransition9eventTestEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -179,7 +200,10 @@ func (this *QSignalTransition) EventTest(event QEvent_ITF /*777 QEvent **/) bool
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onTransition(QEvent *)
 func (this *QSignalTransition) OnTransition(event QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransition12onTransitionEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -189,7 +213,10 @@ func (this *QSignalTransition) OnTransition(event QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QSignalTransition) Event(e QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransition5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -208,6 +235,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

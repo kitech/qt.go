@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -114,7 +115,10 @@ func (this *QSGNode) Parent() *QSGNode /*777 QSGNode **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void removeChildNode(QSGNode *)
 func (this *QSGNode) RemoveChildNode(node QSGNode_ITF /*777 QSGNode **/) {
-	var convArg0 = node.QSGNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if node != nil && node.QSGNode_PTR() != nil {
+		convArg0 = node.QSGNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode15removeChildNodeEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -133,7 +137,10 @@ func (this *QSGNode) RemoveAllChildNodes() {
 // Public Visibility=Default Availability=Available
 // [-2] void prependChildNode(QSGNode *)
 func (this *QSGNode) PrependChildNode(node QSGNode_ITF /*777 QSGNode **/) {
-	var convArg0 = node.QSGNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if node != nil && node.QSGNode_PTR() != nil {
+		convArg0 = node.QSGNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode16prependChildNodeEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -143,7 +150,10 @@ func (this *QSGNode) PrependChildNode(node QSGNode_ITF /*777 QSGNode **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void appendChildNode(QSGNode *)
 func (this *QSGNode) AppendChildNode(node QSGNode_ITF /*777 QSGNode **/) {
-	var convArg0 = node.QSGNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if node != nil && node.QSGNode_PTR() != nil {
+		convArg0 = node.QSGNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode15appendChildNodeEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -153,8 +163,14 @@ func (this *QSGNode) AppendChildNode(node QSGNode_ITF /*777 QSGNode **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void insertChildNodeBefore(QSGNode *, QSGNode *)
 func (this *QSGNode) InsertChildNodeBefore(node QSGNode_ITF /*777 QSGNode **/, before QSGNode_ITF /*777 QSGNode **/) {
-	var convArg0 = node.QSGNode_PTR().GetCthis()
-	var convArg1 = before.QSGNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if node != nil && node.QSGNode_PTR() != nil {
+		convArg0 = node.QSGNode_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if before != nil && before.QSGNode_PTR() != nil {
+		convArg1 = before.QSGNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode21insertChildNodeBeforeEPS_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -164,8 +180,14 @@ func (this *QSGNode) InsertChildNodeBefore(node QSGNode_ITF /*777 QSGNode **/, b
 // Public Visibility=Default Availability=Available
 // [-2] void insertChildNodeAfter(QSGNode *, QSGNode *)
 func (this *QSGNode) InsertChildNodeAfter(node QSGNode_ITF /*777 QSGNode **/, after QSGNode_ITF /*777 QSGNode **/) {
-	var convArg0 = node.QSGNode_PTR().GetCthis()
-	var convArg1 = after.QSGNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if node != nil && node.QSGNode_PTR() != nil {
+		convArg0 = node.QSGNode_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if after != nil && after.QSGNode_PTR() != nil {
+		convArg1 = after.QSGNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode20insertChildNodeAfterEPS_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -175,7 +197,10 @@ func (this *QSGNode) InsertChildNodeAfter(node QSGNode_ITF /*777 QSGNode **/, af
 // Public Visibility=Default Availability=Available
 // [-2] void reparentChildNodesTo(QSGNode *)
 func (this *QSGNode) ReparentChildNodesTo(newParent QSGNode_ITF /*777 QSGNode **/) {
-	var convArg0 = newParent.QSGNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if newParent != nil && newParent.QSGNode_PTR() != nil {
+		convArg0 = newParent.QSGNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode20reparentChildNodesToEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -370,6 +395,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

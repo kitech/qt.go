@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -1126,8 +1127,14 @@ func QChar_SurrogateToUcs4(high uint16, low uint16) uint {
 // Public static inline Visibility=Default Availability=Available
 // [4] uint surrogateToUcs4(QChar, QChar)
 func (this *QChar) SurrogateToUcs4_1(high QChar_ITF /*123*/, low QChar_ITF /*123*/) uint {
-	var convArg0 = high.QChar_PTR().GetCthis()
-	var convArg1 = low.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if high != nil && high.QChar_PTR() != nil {
+		convArg0 = high.QChar_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if low != nil && low.QChar_PTR() != nil {
+		convArg1 = low.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4ES_S_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -1494,6 +1501,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -88,10 +89,14 @@ func (this *QHistoryState) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // Public Visibility=Default Availability=Available
 // [-2] void QHistoryState(QState *)
 func NewQHistoryState(parent QState_ITF /*777 QState **/) *QHistoryState {
-	var convArg0 = parent.QState_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QState_PTR() != nil {
+		convArg0 = parent.QState_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHistoryStateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QHistoryState")
 	return gothis
 }
 
@@ -100,10 +105,14 @@ func NewQHistoryState(parent QState_ITF /*777 QState **/) *QHistoryState {
 // Public Visibility=Default Availability=Available
 // [-2] void QHistoryState(enum QHistoryState::HistoryType, QState *)
 func NewQHistoryState_1(type_ int, parent QState_ITF /*777 QState **/) *QHistoryState {
-	var convArg1 = parent.QState_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QState_PTR() != nil {
+		convArg1 = parent.QState_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2ENS_11HistoryTypeEP6QState", qtrt.FFI_TYPE_POINTER, type_, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHistoryStateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QHistoryState")
 	return gothis
 }
 
@@ -133,7 +142,10 @@ func (this *QHistoryState) DefaultTransition() *QAbstractTransition /*777 QAbstr
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultTransition(QAbstractTransition *)
 func (this *QHistoryState) SetDefaultTransition(transition QAbstractTransition_ITF /*777 QAbstractTransition **/) {
-	var convArg0 = transition.QAbstractTransition_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if transition != nil && transition.QAbstractTransition_PTR() != nil {
+		convArg0 = transition.QAbstractTransition_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState20setDefaultTransitionEP19QAbstractTransition", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -153,7 +165,10 @@ func (this *QHistoryState) DefaultState() *QAbstractState /*777 QAbstractState *
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultState(QAbstractState *)
 func (this *QHistoryState) SetDefaultState(state QAbstractState_ITF /*777 QAbstractState **/) {
-	var convArg0 = state.QAbstractState_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if state != nil && state.QAbstractState_PTR() != nil {
+		convArg0 = state.QAbstractState_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState15setDefaultStateEP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -182,7 +197,10 @@ func (this *QHistoryState) SetHistoryType(type_ int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onEntry(QEvent *)
 func (this *QHistoryState) OnEntry(event QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState7onEntryEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -192,7 +210,10 @@ func (this *QHistoryState) OnEntry(event QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onExit(QEvent *)
 func (this *QHistoryState) OnExit(event QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState6onExitEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -202,7 +223,10 @@ func (this *QHistoryState) OnExit(event QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QHistoryState) Event(e QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -226,6 +250,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

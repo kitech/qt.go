@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -114,8 +115,14 @@ func (this *QQuickImageProvider) Flags() int {
 func (this *QQuickImageProvider) RequestImage(id string, size qtcore.QSize_ITF /*777 QSize **/, requestedSize qtcore.QSize_ITF) *qtgui.QImage /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(id)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = size.QSize_PTR().GetCthis()
-	var convArg2 = requestedSize.QSize_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg1 = size.QSize_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if requestedSize != nil && requestedSize.QSize_PTR() != nil {
+		convArg2 = requestedSize.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProvider12requestImageERK7QStringP5QSizeRKS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -130,8 +137,14 @@ func (this *QQuickImageProvider) RequestImage(id string, size qtcore.QSize_ITF /
 func (this *QQuickImageProvider) RequestPixmap(id string, size qtcore.QSize_ITF /*777 QSize **/, requestedSize qtcore.QSize_ITF) *qtgui.QPixmap /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(id)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = size.QSize_PTR().GetCthis()
-	var convArg2 = requestedSize.QSize_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg1 = size.QSize_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if requestedSize != nil && requestedSize.QSize_PTR() != nil {
+		convArg2 = requestedSize.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProvider13requestPixmapERK7QStringP5QSizeRKS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -146,8 +159,14 @@ func (this *QQuickImageProvider) RequestPixmap(id string, size qtcore.QSize_ITF 
 func (this *QQuickImageProvider) RequestTexture(id string, size qtcore.QSize_ITF /*777 QSize **/, requestedSize qtcore.QSize_ITF) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
 	var tmpArg0 = qtcore.NewQString_5(id)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = size.QSize_PTR().GetCthis()
-	var convArg2 = requestedSize.QSize_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg1 = size.QSize_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if requestedSize != nil && requestedSize.QSize_PTR() != nil {
+		convArg2 = requestedSize.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProvider14requestTextureERK7QStringP5QSizeRKS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -166,6 +185,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

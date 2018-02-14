@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -78,7 +79,10 @@ func DeleteQSGNinePatchNode(this *QSGNinePatchNode) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setTexture(QSGTexture *)
 func (this *QSGNinePatchNode) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/) {
-	var convArg0 = texture.QSGTexture_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if texture != nil && texture.QSGTexture_PTR() != nil {
+		convArg0 = texture.QSGTexture_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGNinePatchNode10setTextureEP10QSGTexture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -88,7 +92,10 @@ func (this *QSGNinePatchNode) SetTexture(texture QSGTexture_ITF /*777 QSGTexture
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setBounds(const QRectF &)
 func (this *QSGNinePatchNode) SetBounds(bounds qtcore.QRectF_ITF) {
-	var convArg0 = bounds.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if bounds != nil && bounds.QRectF_PTR() != nil {
+		convArg0 = bounds.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGNinePatchNode9setBoundsERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -125,10 +132,22 @@ func (this *QSGNinePatchNode) Update() {
 // Public static Visibility=Default Availability=Available
 // [-2] void rebuildGeometry(QSGTexture *, QSGGeometry *, const QVector4D &, const QRectF &, qreal)
 func (this *QSGNinePatchNode) RebuildGeometry(texture QSGTexture_ITF /*777 QSGTexture **/, geometry QSGGeometry_ITF /*777 QSGGeometry **/, padding qtgui.QVector4D_ITF, bounds qtcore.QRectF_ITF, dpr float64) {
-	var convArg0 = texture.QSGTexture_PTR().GetCthis()
-	var convArg1 = geometry.QSGGeometry_PTR().GetCthis()
-	var convArg2 = padding.QVector4D_PTR().GetCthis()
-	var convArg3 = bounds.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if texture != nil && texture.QSGTexture_PTR() != nil {
+		convArg0 = texture.QSGTexture_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if geometry != nil && geometry.QSGGeometry_PTR() != nil {
+		convArg1 = geometry.QSGGeometry_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if padding != nil && padding.QVector4D_PTR() != nil {
+		convArg2 = padding.QVector4D_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if bounds != nil && bounds.QRectF_PTR() != nil {
+		convArg3 = bounds.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGNinePatchNode15rebuildGeometryEP10QSGTextureP11QSGGeometryRK9QVector4DRK6QRectFd", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, dpr)
 	qtrt.ErrPrint(err, rv)
 }
@@ -150,6 +169,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

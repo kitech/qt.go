@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -65,7 +66,10 @@ func (*QGraphicsGridLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsGridL
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsGridLayout(QGraphicsLayoutItem *)
 func NewQGraphicsGridLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsGridLayout {
-	var convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsGridLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsGridLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -89,7 +93,10 @@ func DeleteQGraphicsGridLayout(this *QGraphicsGridLayout) {
 // Public Visibility=Default Availability=Available
 // [-2] void addItem(QGraphicsLayoutItem *, int, int, int, int, Qt::Alignment)
 func (this *QGraphicsGridLayout) AddItem(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, row int, column int, rowSpan int, columnSpan int, alignment int) {
-	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsGridLayout7addItemEP19QGraphicsLayoutItemiiii6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, rowSpan, columnSpan, alignment)
 	qtrt.ErrPrint(err, rv)
 }
@@ -99,7 +106,10 @@ func (this *QGraphicsGridLayout) AddItem(item QGraphicsLayoutItem_ITF /*777 QGra
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(QGraphicsLayoutItem *, int, int, Qt::Alignment)
 func (this *QGraphicsGridLayout) AddItem_1(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, row int, column int, alignment int) {
-	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsGridLayout7addItemEP19QGraphicsLayoutItemii6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, alignment)
 	qtrt.ErrPrint(err, rv)
 }
@@ -402,7 +412,10 @@ func (this *QGraphicsGridLayout) ColumnAlignment(column int) int {
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(QGraphicsLayoutItem *, Qt::Alignment)
 func (this *QGraphicsGridLayout) SetAlignment(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, alignment int) {
-	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsGridLayout12setAlignmentEP19QGraphicsLayoutItem6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
 	qtrt.ErrPrint(err, rv)
 }
@@ -412,7 +425,10 @@ func (this *QGraphicsGridLayout) SetAlignment(item QGraphicsLayoutItem_ITF /*777
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment(QGraphicsLayoutItem *)
 func (this *QGraphicsGridLayout) Alignment(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) int {
-	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout9alignmentEP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -482,7 +498,10 @@ func (this *QGraphicsGridLayout) RemoveAt(index int) {
 // Public Visibility=Default Availability=Available
 // [-2] void removeItem(QGraphicsLayoutItem *)
 func (this *QGraphicsGridLayout) RemoveItem(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) {
-	var convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsGridLayout10removeItemEP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -501,7 +520,10 @@ func (this *QGraphicsGridLayout) Invalidate() {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
 func (this *QGraphicsGridLayout) SetGeometry(rect qtcore.QRectF_ITF) {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsGridLayout11setGeometryERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -511,7 +533,10 @@ func (this *QGraphicsGridLayout) SetGeometry(rect qtcore.QRectF_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsGridLayout) SizeHint(which int, constraint qtcore.QSizeF_ITF) *qtcore.QSizeF /*123*/ {
-	var convArg1 = constraint.QSizeF_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if constraint != nil && constraint.QSizeF_PTR() != nil {
+		convArg1 = constraint.QSizeF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -532,6 +557,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

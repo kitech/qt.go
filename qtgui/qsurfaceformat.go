@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -83,6 +84,22 @@ func NewQSurfaceFormat_1(options int) *QSurfaceFormat {
 	gothis := NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSurfaceFormat)
 	return gothis
+}
+
+// /usr/include/qt/QtGui/qsurfaceformat.h:97
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QSurfaceFormat & operator=(const QSurfaceFormat &)
+func (this *QSurfaceFormat) Operator_equal(other QSurfaceFormat_ITF) *QSurfaceFormat {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSurfaceFormat_PTR() != nil {
+		convArg0 = other.QSurfaceFormat_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormataSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSurfaceFormat)
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:98
@@ -462,7 +479,10 @@ func (this *QSurfaceFormat) SetColorSpace(colorSpace int) {
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultFormat(const QSurfaceFormat &)
 func (this *QSurfaceFormat) SetDefaultFormat(format QSurfaceFormat_ITF) {
-	var convArg0 = format.QSurfaceFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QSurfaceFormat_PTR() != nil {
+		convArg0 = format.QSurfaceFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat16setDefaultFormatERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -533,6 +553,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -65,7 +66,10 @@ func (*QMutexLocker) NewFromPointer(cthis unsafe.Pointer) *QMutexLocker {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMutexLocker(QBasicMutex *)
 func NewQMutexLocker(m QBasicMutex_ITF /*777 QBasicMutex **/) *QMutexLocker {
-	var convArg0 = m.QBasicMutex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if m != nil && m.QBasicMutex_PTR() != nil {
+		convArg0 = m.QBasicMutex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMutexLockerC2EP11QBasicMutex", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMutexLockerFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -125,6 +129,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,8 +65,14 @@ func (*QScrollEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollEvent(const QPointF &, const QPointF &, enum QScrollEvent::ScrollState)
 func NewQScrollEvent(contentPos qtcore.QPointF_ITF, overshoot qtcore.QPointF_ITF, scrollState int) *QScrollEvent {
-	var convArg0 = contentPos.QPointF_PTR().GetCthis()
-	var convArg1 = overshoot.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if contentPos != nil && contentPos.QPointF_PTR() != nil {
+		convArg0 = contentPos.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if overshoot != nil && overshoot.QPointF_PTR() != nil {
+		convArg1 = overshoot.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QScrollEventC2ERK7QPointFS2_NS_11ScrollStateE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, scrollState)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQScrollEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -137,6 +144,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

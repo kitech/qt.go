@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -78,10 +79,14 @@ func (this *QTimeLine) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeLine(int, QObject *)
 func NewQTimeLine(duration int, parent QObject_ITF /*777 QObject **/) *QTimeLine {
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", qtrt.FFI_TYPE_POINTER, duration, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimeLineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTimeLine")
 	return gothis
 }
 
@@ -265,7 +270,10 @@ func (this *QTimeLine) EasingCurve() *QEasingCurve /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setEasingCurve(const QEasingCurve &)
 func (this *QTimeLine) SetEasingCurve(curve QEasingCurve_ITF) {
-	var convArg0 = curve.QEasingCurve_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if curve != nil && curve.QEasingCurve_PTR() != nil {
+		convArg0 = curve.QEasingCurve_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine14setEasingCurveERK12QEasingCurve", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -379,7 +387,10 @@ func (this *QTimeLine) ToggleDirection() {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QTimeLine) TimerEvent(event QTimerEvent_ITF /*777 QTimerEvent **/) {
-	var convArg0 = event.QTimerEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QTimerEvent_PTR() != nil {
+		convArg0 = event.QTimerEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -417,6 +428,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

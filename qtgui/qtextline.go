@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -221,7 +222,7 @@ func (this *QTextLine) NaturalTextRect() *qtcore.QRectF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] qreal cursorToX(int *, enum QTextLine::Edge)
 func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) float64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEPiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), &cursorPos, edge)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEPiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), cursorPos, edge)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
@@ -278,7 +279,10 @@ func (this *QTextLine) SetNumColumns_1(columns int, alignmentWidth float64) {
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(const QPointF &)
 func (this *QTextLine) SetPosition(pos qtcore.QPointF_ITF) {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextLine11setPositionERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -354,6 +358,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -66,7 +67,10 @@ func (*QDesktopServices) NewFromPointer(cthis unsafe.Pointer) *QDesktopServices 
 // Public static Visibility=Default Availability=Available
 // [1] bool openUrl(const QUrl &)
 func (this *QDesktopServices) OpenUrl(url qtcore.QUrl_ITF) bool {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices7openUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -84,7 +88,10 @@ func QDesktopServices_OpenUrl(url qtcore.QUrl_ITF) bool {
 func (this *QDesktopServices) SetUrlHandler(scheme string, receiver qtcore.QObject_ITF /*777 QObject **/, method string) {
 	var tmpArg0 = qtcore.NewQString_5(scheme)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = receiver.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg1 = receiver.QObject_PTR().GetCthis()
+	}
 	var convArg2 = qtrt.CString(method)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
@@ -129,6 +136,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

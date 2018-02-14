@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -108,7 +109,10 @@ func (this *QBasicTimer) TimerId() int {
 // Public Visibility=Default Availability=Available
 // [-2] void start(int, QObject *)
 func (this *QBasicTimer) Start(msec int, obj QObject_ITF /*777 QObject **/) {
-	var convArg1 = obj.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg1 = obj.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimer5startEiP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -118,7 +122,10 @@ func (this *QBasicTimer) Start(msec int, obj QObject_ITF /*777 QObject **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void start(int, Qt::TimerType, QObject *)
 func (this *QBasicTimer) Start_1(msec int, timerType int, obj QObject_ITF /*777 QObject **/) {
-	var convArg2 = obj.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg2 = obj.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timerType, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -145,6 +152,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -124,10 +125,14 @@ func (this *QAbstractSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractSocket(enum QAbstractSocket::SocketType, QObject *)
 func NewQAbstractSocket(socketType int, parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractSocket {
-	var convArg1 = parent.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg1 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocketC2ENS_10SocketTypeEP7QObject", qtrt.FFI_TYPE_POINTER, socketType, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractSocketFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractSocket")
 	return gothis
 }
 
@@ -175,7 +180,10 @@ func (this *QAbstractSocket) SetPauseMode(pauseMode int) {
 // Public Visibility=Default Availability=Available
 // [1] bool bind(const QHostAddress &, quint16, QAbstractSocket::BindMode)
 func (this *QAbstractSocket) Bind(address QHostAddress_ITF, port uint16, mode int) bool {
-	var convArg0 = address.QHostAddress_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if address != nil && address.QHostAddress_PTR() != nil {
+		convArg0 = address.QHostAddress_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindERK12QHostAddresst6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -207,7 +215,10 @@ func (this *QAbstractSocket) ConnectToHost(hostName string, port uint16, mode in
 // Public virtual Visibility=Default Availability=Available
 // [-2] void connectToHost(const QHostAddress &, quint16, QIODevice::OpenMode)
 func (this *QAbstractSocket) ConnectToHost_1(address QHostAddress_ITF, port uint16, mode int) {
-	var convArg0 = address.QHostAddress_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if address != nil && address.QHostAddress_PTR() != nil {
+		convArg0 = address.QHostAddress_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket13connectToHostERK12QHostAddresst6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -371,7 +382,10 @@ func (this *QAbstractSocket) SetSocketDescriptor(socketDescriptor int64, state i
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSocketOption(QAbstractSocket::SocketOption, const QVariant &)
 func (this *QAbstractSocket) SetSocketOption(option int, value qtcore.QVariant_ITF) {
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket15setSocketOptionENS_12SocketOptionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -511,7 +525,10 @@ func (this *QAbstractSocket) WaitForDisconnected(msecs int) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setProxy(const QNetworkProxy &)
 func (this *QAbstractSocket) SetProxy(networkProxy QNetworkProxy_ITF) {
-	var convArg0 = networkProxy.QNetworkProxy_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if networkProxy != nil && networkProxy.QNetworkProxy_PTR() != nil {
+		convArg0 = networkProxy.QNetworkProxy_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket8setProxyERK13QNetworkProxy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -569,8 +586,14 @@ func (this *QAbstractSocket) StateChanged(arg0 int) {
 // Public Visibility=Default Availability=Available
 // [-2] void proxyAuthenticationRequired(const QNetworkProxy &, QAuthenticator *)
 func (this *QAbstractSocket) ProxyAuthenticationRequired(proxy QNetworkProxy_ITF, authenticator QAuthenticator_ITF /*777 QAuthenticator **/) {
-	var convArg0 = proxy.QNetworkProxy_PTR().GetCthis()
-	var convArg1 = authenticator.QAuthenticator_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if proxy != nil && proxy.QNetworkProxy_PTR() != nil {
+		convArg0 = proxy.QNetworkProxy_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if authenticator != nil && authenticator.QAuthenticator_PTR() != nil {
+		convArg1 = authenticator.QAuthenticator_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket27proxyAuthenticationRequiredERK13QNetworkProxyP14QAuthenticator", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -643,7 +666,10 @@ func (this *QAbstractSocket) SetLocalPort(port uint16) {
 // Protected Visibility=Default Availability=Available
 // [-2] void setLocalAddress(const QHostAddress &)
 func (this *QAbstractSocket) SetLocalAddress(address QHostAddress_ITF) {
-	var convArg0 = address.QHostAddress_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if address != nil && address.QHostAddress_PTR() != nil {
+		convArg0 = address.QHostAddress_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket15setLocalAddressERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -662,7 +688,10 @@ func (this *QAbstractSocket) SetPeerPort(port uint16) {
 // Protected Visibility=Default Availability=Available
 // [-2] void setPeerAddress(const QHostAddress &)
 func (this *QAbstractSocket) SetPeerAddress(address QHostAddress_ITF) {
-	var convArg0 = address.QHostAddress_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if address != nil && address.QHostAddress_PTR() != nil {
+		convArg0 = address.QHostAddress_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket14setPeerAddressERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -764,6 +793,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

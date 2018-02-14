@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -77,7 +78,10 @@ func DeleteQAccessibleBridge(this *QAccessibleBridge) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setRootObject(QAccessibleInterface *)
 func (this *QAccessibleBridge) SetRootObject(arg0 QAccessibleInterface_ITF /*777 QAccessibleInterface **/) {
-	var convArg0 = arg0.QAccessibleInterface_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAccessibleInterface_PTR() != nil {
+		convArg0 = arg0.QAccessibleInterface_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -87,7 +91,10 @@ func (this *QAccessibleBridge) SetRootObject(arg0 QAccessibleInterface_ITF /*777
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void notifyAccessibilityUpdate(QAccessibleEvent *)
 func (this *QAccessibleBridge) NotifyAccessibilityUpdate(event QAccessibleEvent_ITF /*777 QAccessibleEvent **/) {
-	var convArg0 = event.QAccessibleEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QAccessibleEvent_PTR() != nil {
+		convArg0 = event.QAccessibleEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -105,6 +112,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

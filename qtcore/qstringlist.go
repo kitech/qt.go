@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -103,10 +104,59 @@ func (this *QStringList) Contains(str string, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity)
 func (this *QStringList) Contains_1(str QLatin1String_ITF /*123*/, cs int) bool {
-	var convArg0 = str.QLatin1String_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if str != nil && str.QLatin1String_PTR() != nil {
+		convArg0 = str.QLatin1String_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList8containsE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:125
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QStringList operator+(const QStringList &)
+func (this *QStringList) Operator_add(other QStringList_ITF) *QStringList /*123*/ {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QStringList_PTR() != nil {
+		convArg0 = other.QStringList_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringListplERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:127
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QStringList & operator<<(const QString &)
+func (this *QStringList) Operator_left_shift(str string) *QStringList {
+	var tmpArg0 = NewQString_5(str)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListlsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:129
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QStringList & operator<<(const QStringList &)
+func (this *QStringList) Operator_left_shift_1(l QStringList_ITF) *QStringList {
+	var convArg0 unsafe.Pointer
+	if l != nil && l.QStringList_PTR() != nil {
+		convArg0 = l.QStringList_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListlsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qstringlist.h:135
@@ -114,7 +164,10 @@ func (this *QStringList) Contains_1(str QLatin1String_ITF /*123*/, cs int) bool 
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(const QRegExp &, int)
 func (this *QStringList) IndexOf(rx QRegExp_ITF, from int) int {
-	var convArg0 = rx.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -125,7 +178,10 @@ func (this *QStringList) IndexOf(rx QRegExp_ITF, from int) int {
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(QRegExp &, int)
 func (this *QStringList) IndexOf_1(rx QRegExp_ITF, from int) int {
-	var convArg0 = rx.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -136,7 +192,10 @@ func (this *QStringList) IndexOf_1(rx QRegExp_ITF, from int) int {
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(const QRegularExpression &, int)
 func (this *QStringList) IndexOf_2(re QRegularExpression_ITF, from int) int {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -147,7 +206,10 @@ func (this *QStringList) IndexOf_2(re QRegularExpression_ITF, from int) int {
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegExp &, int)
 func (this *QStringList) LastIndexOf(rx QRegExp_ITF, from int) int {
-	var convArg0 = rx.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -158,7 +220,10 @@ func (this *QStringList) LastIndexOf(rx QRegExp_ITF, from int) int {
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(QRegExp &, int)
 func (this *QStringList) LastIndexOf_1(rx QRegExp_ITF, from int) int {
-	var convArg0 = rx.QRegExp_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -169,7 +234,10 @@ func (this *QStringList) LastIndexOf_1(rx QRegExp_ITF, from int) int {
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegularExpression &, int)
 func (this *QStringList) LastIndexOf_2(re QRegularExpression_ITF, from int) int {
-	var convArg0 = re.QRegularExpression_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if re != nil && re.QRegularExpression_PTR() != nil {
+		convArg0 = re.QRegularExpression_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -194,6 +262,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

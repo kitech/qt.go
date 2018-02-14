@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -79,10 +80,14 @@ func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextObject(QTextDocument *)
 func NewQTextObject(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextObject {
-	var convArg0 = doc.QTextDocument_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if doc != nil && doc.QTextDocument_PTR() != nil {
+		convArg0 = doc.QTextDocument_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextObjectC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextObjectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTextObject")
 	return gothis
 }
 
@@ -102,7 +107,10 @@ func DeleteQTextObject(this *QTextObject) {
 // Protected Visibility=Default Availability=Available
 // [-2] void setFormat(const QTextFormat &)
 func (this *QTextObject) SetFormat(format QTextFormat_ITF) {
-	var convArg0 = format.QTextFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextFormat_PTR() != nil {
+		convArg0 = format.QTextFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextObject9setFormatERK11QTextFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -162,6 +170,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -82,6 +83,7 @@ func NewQCoreApplication(argc int, argv []string, arg2 int) *QCoreApplication {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCoreApplicationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QCoreApplication")
 	return gothis
 }
 
@@ -375,8 +377,14 @@ func QCoreApplication_Exit(retcode int) {
 // Public static Visibility=Default Availability=Available
 // [1] bool sendEvent(QObject *, QEvent *)
 func (this *QCoreApplication) SendEvent(receiver QObject_ITF /*777 QObject **/, event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = receiver.QObject_PTR().GetCthis()
-	var convArg1 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg0 = receiver.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg1 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -392,8 +400,14 @@ func QCoreApplication_SendEvent(receiver QObject_ITF /*777 QObject **/, event QE
 // Public static Visibility=Default Availability=Available
 // [-2] void postEvent(QObject *, QEvent *, int)
 func (this *QCoreApplication) PostEvent(receiver QObject_ITF /*777 QObject **/, event QEvent_ITF /*777 QEvent **/, priority int) {
-	var convArg0 = receiver.QObject_PTR().GetCthis()
-	var convArg1 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg0 = receiver.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg1 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9postEventEP7QObjectP6QEventi", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, priority)
 	qtrt.ErrPrint(err, rv)
 }
@@ -407,7 +421,10 @@ func QCoreApplication_PostEvent(receiver QObject_ITF /*777 QObject **/, event QE
 // Public static Visibility=Default Availability=Available
 // [-2] void sendPostedEvents(QObject *, int)
 func (this *QCoreApplication) SendPostedEvents(receiver QObject_ITF /*777 QObject **/, event_type int) {
-	var convArg0 = receiver.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg0 = receiver.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16sendPostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, event_type)
 	qtrt.ErrPrint(err, rv)
 }
@@ -421,7 +438,10 @@ func QCoreApplication_SendPostedEvents(receiver QObject_ITF /*777 QObject **/, e
 // Public static Visibility=Default Availability=Available
 // [-2] void removePostedEvents(QObject *, int)
 func (this *QCoreApplication) RemovePostedEvents(receiver QObject_ITF /*777 QObject **/, eventType int) {
-	var convArg0 = receiver.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg0 = receiver.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18removePostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, eventType)
 	qtrt.ErrPrint(err, rv)
 }
@@ -465,7 +485,10 @@ func QCoreApplication_EventDispatcher() *QAbstractEventDispatcher /*777 QAbstrac
 // Public static Visibility=Default Availability=Available
 // [-2] void setEventDispatcher(QAbstractEventDispatcher *)
 func (this *QCoreApplication) SetEventDispatcher(eventDispatcher QAbstractEventDispatcher_ITF /*777 QAbstractEventDispatcher **/) {
-	var convArg0 = eventDispatcher.QAbstractEventDispatcher_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if eventDispatcher != nil && eventDispatcher.QAbstractEventDispatcher_PTR() != nil {
+		convArg0 = eventDispatcher.QAbstractEventDispatcher_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18setEventDispatcherEP24QAbstractEventDispatcher", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -479,8 +502,14 @@ func QCoreApplication_SetEventDispatcher(eventDispatcher QAbstractEventDispatche
 // Public virtual Visibility=Default Availability=Available
 // [1] bool notify(QObject *, QEvent *)
 func (this *QCoreApplication) Notify(arg0 QObject_ITF /*777 QObject **/, arg1 QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
-	var convArg1 = arg1.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QEvent_PTR() != nil {
+		convArg1 = arg1.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication6notifyEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -572,7 +601,10 @@ func QCoreApplication_ApplicationPid() int64 {
 // Public static Visibility=Default Availability=Available
 // [-2] void setLibraryPaths(const QStringList &)
 func (this *QCoreApplication) SetLibraryPaths(arg0 QStringList_ITF) {
-	var convArg0 = arg0.QStringList_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QStringList_PTR() != nil {
+		convArg0 = arg0.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication15setLibraryPathsERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -633,7 +665,10 @@ func QCoreApplication_RemoveLibraryPath(arg0 string) {
 // Public static Visibility=Default Availability=Available
 // [1] bool installTranslator(QTranslator *)
 func (this *QCoreApplication) InstallTranslator(messageFile QTranslator_ITF /*777 QTranslator **/) bool {
-	var convArg0 = messageFile.QTranslator_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if messageFile != nil && messageFile.QTranslator_PTR() != nil {
+		convArg0 = messageFile.QTranslator_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication17installTranslatorEP11QTranslator", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -649,7 +684,10 @@ func QCoreApplication_InstallTranslator(messageFile QTranslator_ITF /*777 QTrans
 // Public static Visibility=Default Availability=Available
 // [1] bool removeTranslator(QTranslator *)
 func (this *QCoreApplication) RemoveTranslator(messageFile QTranslator_ITF /*777 QTranslator **/) bool {
-	var convArg0 = messageFile.QTranslator_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if messageFile != nil && messageFile.QTranslator_PTR() != nil {
+		convArg0 = messageFile.QTranslator_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16removeTranslatorEP11QTranslator", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -702,7 +740,10 @@ func QCoreApplication_Flush() {
 // Public Visibility=Default Availability=Available
 // [-2] void installNativeEventFilter(QAbstractNativeEventFilter *)
 func (this *QCoreApplication) InstallNativeEventFilter(filterObj QAbstractNativeEventFilter_ITF /*777 QAbstractNativeEventFilter **/) {
-	var convArg0 = filterObj.QAbstractNativeEventFilter_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if filterObj != nil && filterObj.QAbstractNativeEventFilter_PTR() != nil {
+		convArg0 = filterObj.QAbstractNativeEventFilter_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication24installNativeEventFilterEP26QAbstractNativeEventFilter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -712,7 +753,10 @@ func (this *QCoreApplication) InstallNativeEventFilter(filterObj QAbstractNative
 // Public Visibility=Default Availability=Available
 // [-2] void removeNativeEventFilter(QAbstractNativeEventFilter *)
 func (this *QCoreApplication) RemoveNativeEventFilter(filterObj QAbstractNativeEventFilter_ITF /*777 QAbstractNativeEventFilter **/) {
-	var convArg0 = filterObj.QAbstractNativeEventFilter_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if filterObj != nil && filterObj.QAbstractNativeEventFilter_PTR() != nil {
+		convArg0 = filterObj.QAbstractNativeEventFilter_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEventFilter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -799,7 +843,10 @@ func (this *QCoreApplication) ApplicationVersionChanged() {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QCoreApplication) Event(arg0 QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = arg0.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QEvent_PTR() != nil {
+		convArg0 = arg0.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -822,6 +869,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 5
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -85,6 +86,22 @@ func NewQTextFormat_1(type_ int) *QTextFormat {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qtextformat.h:293
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QTextFormat & operator=(const QTextFormat &)
+func (this *QTextFormat) Operator_equal(rhs QTextFormat_ITF) *QTextFormat {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QTextFormat_PTR() != nil {
+		convArg0 = rhs.QTextFormat_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormataSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFormat)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qtextformat.h:294
 // index:0
 // Public Visibility=Default Availability=Available
@@ -101,7 +118,10 @@ func DeleteQTextFormat(this *QTextFormat) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QTextFormat &)
 func (this *QTextFormat) Swap(other QTextFormat_ITF) {
-	var convArg0 = other.QTextFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTextFormat_PTR() != nil {
+		convArg0 = other.QTextFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormat4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -111,7 +131,10 @@ func (this *QTextFormat) Swap(other QTextFormat_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void merge(const QTextFormat &)
 func (this *QTextFormat) Merge(other QTextFormat_ITF) {
-	var convArg0 = other.QTextFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTextFormat_PTR() != nil {
+		convArg0 = other.QTextFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormat5mergeERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -182,7 +205,10 @@ func (this *QTextFormat) Property(propertyId int) *qtcore.QVariant /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setProperty(int, const QVariant &)
 func (this *QTextFormat) SetProperty(propertyId int, value qtcore.QVariant_ITF) {
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormat11setPropertyEiRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), propertyId, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -480,6 +506,34 @@ func (this *QTextFormat) ToTableCellFormat() *QTextTableCellFormat /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtGui/qtextformat.h:349
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QTextFormat &)
+func (this *QTextFormat) Operator_equal_equal(rhs QTextFormat_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QTextFormat_PTR() != nil {
+		convArg0 = rhs.QTextFormat_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextFormateqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextformat.h:350
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QTextFormat &)
+func (this *QTextFormat) Operator_not_equal(rhs QTextFormat_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QTextFormat_PTR() != nil {
+		convArg0 = rhs.QTextFormat_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextFormatneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qtextformat.h:353
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -504,7 +558,10 @@ func (this *QTextFormat) LayoutDirection() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
 func (this *QTextFormat) SetBackground(brush QBrush_ITF) {
-	var convArg0 = brush.QBrush_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormat13setBackgroundERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -535,7 +592,10 @@ func (this *QTextFormat) ClearBackground() {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setForeground(const QBrush &)
 func (this *QTextFormat) SetForeground(brush QBrush_ITF) {
-	var convArg0 = brush.QBrush_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormat13setForegroundERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -683,6 +743,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -67,7 +68,10 @@ func (*QUndoCommand) NewFromPointer(cthis unsafe.Pointer) *QUndoCommand {
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoCommand(QUndoCommand *)
 func NewQUndoCommand(parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
-	var convArg0 = parent.QUndoCommand_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QUndoCommand_PTR() != nil {
+		convArg0 = parent.QUndoCommand_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -82,7 +86,10 @@ func NewQUndoCommand(parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoComma
 func NewQUndoCommand_1(text string, parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = parent.QUndoCommand_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QUndoCommand_PTR() != nil {
+		convArg1 = parent.QUndoCommand_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandC2ERK7QStringPS_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -190,7 +197,10 @@ func (this *QUndoCommand) Id() int {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool mergeWith(const QUndoCommand *)
 func (this *QUndoCommand) MergeWith(other QUndoCommand_ITF /*777 const QUndoCommand **/) bool {
-	var convArg0 = other.QUndoCommand_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QUndoCommand_PTR() != nil {
+		convArg0 = other.QUndoCommand_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand9mergeWithEPKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -229,6 +239,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -84,10 +85,14 @@ func (this *QSslSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QSslSocket(QObject *)
 func NewQSslSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QSslSocket {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslSocketFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSslSocket")
 	return gothis
 }
 
@@ -170,7 +175,10 @@ func (this *QSslSocket) DisconnectFromHost() {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSocketOption(QAbstractSocket::SocketOption, const QVariant &)
 func (this *QSslSocket) SetSocketOption(option int, value qtcore.QVariant_ITF) {
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket15setSocketOptionEN15QAbstractSocket12SocketOptionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -402,7 +410,10 @@ func (this *QSslSocket) SslConfiguration() *QSslConfiguration /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setSslConfiguration(const QSslConfiguration &)
 func (this *QSslSocket) SetSslConfiguration(config QSslConfiguration_ITF) {
-	var convArg0 = config.QSslConfiguration_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if config != nil && config.QSslConfiguration_PTR() != nil {
+		convArg0 = config.QSslConfiguration_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19setSslConfigurationERK17QSslConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -412,7 +423,10 @@ func (this *QSslSocket) SetSslConfiguration(config QSslConfiguration_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setLocalCertificate(const QSslCertificate &)
 func (this *QSslSocket) SetLocalCertificate(certificate QSslCertificate_ITF) {
-	var convArg0 = certificate.QSslCertificate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if certificate != nil && certificate.QSslCertificate_PTR() != nil {
+		convArg0 = certificate.QSslCertificate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19setLocalCertificateERK15QSslCertificate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -479,7 +493,10 @@ func (this *QSslSocket) SessionProtocol() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setPrivateKey(const QSslKey &)
 func (this *QSslSocket) SetPrivateKey(key QSslKey_ITF) {
-	var convArg0 = key.QSslKey_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QSslKey_PTR() != nil {
+		convArg0 = key.QSslKey_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket13setPrivateKeyERK7QSslKey", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -491,7 +508,10 @@ func (this *QSslSocket) SetPrivateKey(key QSslKey_ITF) {
 func (this *QSslSocket) SetPrivateKey_1(fileName string, algorithm int, format int, passPhrase qtcore.QByteArray_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg3 = passPhrase.QByteArray_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if passPhrase != nil && passPhrase.QByteArray_PTR() != nil {
+		convArg3 = passPhrase.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket13setPrivateKeyERK7QStringN4QSsl12KeyAlgorithmENS3_14EncodingFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, algorithm, format, convArg3)
 	qtrt.ErrPrint(err, rv)
 }
@@ -536,7 +556,10 @@ func (this *QSslSocket) AddCaCertificates(path string, format int, syntax int) b
 // Public Visibility=Default Availability=Available
 // [-2] void addCaCertificate(const QSslCertificate &)
 func (this *QSslSocket) AddCaCertificate(certificate QSslCertificate_ITF) {
-	var convArg0 = certificate.QSslCertificate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if certificate != nil && certificate.QSslCertificate_PTR() != nil {
+		convArg0 = certificate.QSslCertificate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket16addCaCertificateERK15QSslCertificate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -563,7 +586,10 @@ func QSslSocket_AddDefaultCaCertificates(path string, format int, syntax int) bo
 // Public static Visibility=Default Availability=Available
 // [-2] void addDefaultCaCertificate(const QSslCertificate &)
 func (this *QSslSocket) AddDefaultCaCertificate(certificate QSslCertificate_ITF) {
-	var convArg0 = certificate.QSslCertificate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if certificate != nil && certificate.QSslCertificate_PTR() != nil {
+		convArg0 = certificate.QSslCertificate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket23addDefaultCaCertificateERK15QSslCertificate", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -744,7 +770,10 @@ func (this *QSslSocket) Encrypted() {
 // Public Visibility=Default Availability=Available
 // [-2] void peerVerifyError(const QSslError &)
 func (this *QSslSocket) PeerVerifyError(error QSslError_ITF) {
-	var convArg0 = error.QSslError_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if error != nil && error.QSslError_PTR() != nil {
+		convArg0 = error.QSslError_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket15peerVerifyErrorERK9QSslError", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -772,7 +801,10 @@ func (this *QSslSocket) EncryptedBytesWritten(totalBytes int64) {
 // Public Visibility=Default Availability=Available
 // [-2] void preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator *)
 func (this *QSslSocket) PreSharedKeyAuthenticationRequired(authenticator QSslPreSharedKeyAuthenticator_ITF /*777 QSslPreSharedKeyAuthenticator **/) {
-	var convArg0 = authenticator.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if authenticator != nil && authenticator.QSslPreSharedKeyAuthenticator_PTR() != nil {
+		convArg0 = authenticator.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket34preSharedKeyAuthenticationRequiredEP29QSslPreSharedKeyAuthenticator", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -827,6 +859,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

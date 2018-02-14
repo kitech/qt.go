@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 12
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -77,7 +78,10 @@ func NewQPersistentModelIndex() *QPersistentModelIndex {
 // Public Visibility=Default Availability=Available
 // [-2] void QPersistentModelIndex(const QModelIndex &)
 func NewQPersistentModelIndex_1(index QModelIndex_ITF) *QPersistentModelIndex {
-	var convArg0 = index.QModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPersistentModelIndexC2ERK11QModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -96,12 +100,129 @@ func DeleteQPersistentModelIndex(this *QPersistentModelIndex) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qabstractitemmodel.h:111
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator<(const QPersistentModelIndex &)
+func (this *QPersistentModelIndex) Operator_less_than(other QPersistentModelIndex_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QPersistentModelIndex_PTR() != nil {
+		convArg0 = other.QPersistentModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndexltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:112
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QPersistentModelIndex &)
+func (this *QPersistentModelIndex) Operator_equal_equal(other QPersistentModelIndex_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QPersistentModelIndex_PTR() != nil {
+		convArg0 = other.QPersistentModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndexeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:123
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QModelIndex &)
+func (this *QPersistentModelIndex) Operator_equal_equal_1(other QModelIndex_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QModelIndex_PTR() != nil {
+		convArg0 = other.QModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndexeqERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:113
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QPersistentModelIndex &)
+func (this *QPersistentModelIndex) Operator_not_equal(other QPersistentModelIndex_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QPersistentModelIndex_PTR() != nil {
+		convArg0 = other.QPersistentModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndexneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:124
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool operator!=(const QModelIndex &)
+func (this *QPersistentModelIndex) Operator_not_equal_1(other QModelIndex_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QModelIndex_PTR() != nil {
+		convArg0 = other.QModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndexneERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:115
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QPersistentModelIndex & operator=(const QPersistentModelIndex &)
+func (this *QPersistentModelIndex) Operator_equal(other QPersistentModelIndex_ITF) *QPersistentModelIndex {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QPersistentModelIndex_PTR() != nil {
+		convArg0 = other.QPersistentModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QPersistentModelIndexaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPersistentModelIndex)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:119
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QPersistentModelIndex & operator=(QPersistentModelIndex &&)
+func (this *QPersistentModelIndex) Operator_equal_1(other unsafe.Pointer /*333*/) *QPersistentModelIndex {
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QPersistentModelIndexaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPersistentModelIndex)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:125
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QPersistentModelIndex & operator=(const QModelIndex &)
+func (this *QPersistentModelIndex) Operator_equal_2(other QModelIndex_ITF) *QPersistentModelIndex {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QModelIndex_PTR() != nil {
+		convArg0 = other.QModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QPersistentModelIndexaSERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPersistentModelIndex)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qabstractitemmodel.h:122
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPersistentModelIndex &)
 func (this *QPersistentModelIndex) Swap(other QPersistentModelIndex_ITF) {
-	var convArg0 = other.QPersistentModelIndex_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QPersistentModelIndex_PTR() != nil {
+		convArg0 = other.QPersistentModelIndex_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPersistentModelIndex4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -237,6 +358,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

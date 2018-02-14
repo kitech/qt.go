@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,7 +65,10 @@ func (*QExposeEvent) NewFromPointer(cthis unsafe.Pointer) *QExposeEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QExposeEvent(const QRegion &)
 func NewQExposeEvent(rgn QRegion_ITF) *QExposeEvent {
-	var convArg0 = rgn.QRegion_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rgn != nil && rgn.QRegion_PTR() != nil {
+		convArg0 = rgn.QRegion_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QExposeEventC2ERK7QRegion", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQExposeEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -108,6 +112,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

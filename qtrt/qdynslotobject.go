@@ -20,7 +20,7 @@ type QDynSlotObject struct {
 
 	//state
 	sigsrc unsafe.Pointer
-	sigobj interface{} // 保存类型信息
+	sigobj CObjectITF // 保存类型信息
 }
 
 func (this *QDynSlotObject) GetCthis() unsafe.Pointer {
@@ -53,17 +53,18 @@ func DeleteQDynSlotObject(o *QDynSlotObject) {
 	ErrPrint(err, rv)
 }
 
-type CObjectIF interface {
+type CObjectITF interface {
 	GetCthis() unsafe.Pointer
 	SetCthis(unsafe.Pointer)
 }
 
 // 可以是signal的完整函数原型，也可以是名字
-func Connect(cobj CObjectIF, signame string, f interface{}) {
+func Connect(cobj CObjectITF, signame string, f interface{}) {
 	((*QDynSlotObject)(nil))._Connect(cobj, signame, f)
 }
 
-func (*QDynSlotObject) _Connect(cobj CObjectIF, signame string, f interface{}) {
+// cobj sender
+func (*QDynSlotObject) _Connect(cobj CObjectITF, signame string, f interface{}) {
 	cptr := cobj.GetCthis()
 	NilPrint(cptr, "cptr nil")
 
@@ -98,11 +99,11 @@ func (*QDynSlotObject) _Connect(cobj CObjectIF, signame string, f interface{}) {
 }
 
 // 可以是signal的完整函数原型，也可以是名字
-func ConnectSwitch(src unsafe.Pointer, signame string, on bool, cobj CObjectIF) {
+func ConnectSwitch(src unsafe.Pointer, signame string, on bool, cobj CObjectITF) {
 	((*QDynSlotObject)(nil))._ConnectSwitch(src, signame, on, cobj)
 }
 
-func (*QDynSlotObject) _ConnectSwitch(src unsafe.Pointer, signame string, on bool, cobj CObjectIF) {
+func (*QDynSlotObject) _ConnectSwitch(src unsafe.Pointer, signame string, on bool, cobj CObjectITF) {
 	signamep := QSIGNAL(signame)
 	signame_ := C.CString(signamep)
 	if debugDynSlot {
@@ -134,12 +135,13 @@ func (*QDynSlotObject) _ConnectSwitch(src unsafe.Pointer, signame string, on boo
 }
 
 // TODO
-func Disconnect(cobj CObjectIF, signame string) {
+func Disconnect(cobj CObjectITF, signame string) {
 	qt.DisconnectAllSignals(cobj.GetCthis(), signame)
 }
 
 // or direct use qtcore.QObject_Connect
-func ConnectSignal(sender CObjectIF, signal string, receiver CObjectIF, member string) {
+// only for support signal to signal
+func ConnectSignal(sender CObjectITF, signal string, receiver CObjectITF, member string) {
 	if !strings.Contains(signal, "(") {
 		s, err := QObjectGetSignatureByName(sender, signal)
 		ErrPrint(err)
@@ -164,7 +166,7 @@ func ConnectSignal(sender CObjectIF, signal string, receiver CObjectIF, member s
 }
 
 // 这个可以简化connect时的书写。仅在只有一个同名的情况下适用。
-func QObjectGetSignatureByName(qobj CObjectIF, name string) (string, error) {
+func QObjectGetSignatureByName(qobj CObjectITF, name string) (string, error) {
 	var convArg1 = CString(name)
 	defer FreeMem(convArg1)
 	rv, err := InvokeQtFunc6("QObject_get_meta_signature_by_name", FFI_TYPE_POINTER, qobj.GetCthis(), convArg1)
@@ -180,6 +182,55 @@ func QObjectGetSignatureByName(qobj CObjectIF, name string) (string, error) {
 	}
 }
 
+// 可以是signal的完整函数原型，也可以是名字
+// 仅供内部使用
+// TODO use only one QDynSlotObject
+var destroyedDynSlot *QDynSlotObject
+var destroyedSingalName = "destroyed(QObject *)"
+var destroyedSingalNamep = QSIGNAL("destroyed(QObject *)")
+
+func init_destroyedDynSlot() { destroyedDynSlot = NewQDynSlotObject("destroyed(QObject*)", 0) }
+func ConnectDestroyed(senderCobj CObjectITF, className string) {
+	f := getOnQObjectDestroyed(senderCobj, className)
+	((*QDynSlotObject)(nil))._Connect(senderCobj, destroyedSingalName, f)
+}
+
+// disconnect obj's connected signal and cleanup
+func getOnQObjectDestroyed(senderCobj CObjectITF, className string) func(unsafe.Pointer) {
+	return func(senderCobj1 unsafe.Pointer) {
+		beforeDestroyedQObject(senderCobj.GetCthis(), nil, className)
+		if senderCobj1 != senderCobj.GetCthis() {
+			log.Println("wtf")
+		}
+		var subDynSlot *QDynSlotObject
+		var subDynSlotCthis unsafe.Pointer
+		if signal := qt.LendSignal(senderCobj.GetCthis(), destroyedSingalNamep); signal != nil {
+			subDynSlot = signal.(*QDynSlotObject)
+			subDynSlotCthis = subDynSlot.GetCthis()
+			if false { // because it's automatically when new, not need
+				DeleteQDynSlotObject(subDynSlot)
+			}
+			subDynSlot.sigobj.SetCthis(nil)
+		} else {
+			log.Println("wtf")
+		}
+		qt.DisconnectAllSignals(senderCobj.GetCthis(), destroyedSingalNamep)
+		afterDestroyedQObject(senderCobj1, subDynSlotCthis, className)
+	}
+}
+
+var beforeDestroyedQObject = func(senderCobj, recverCobj unsafe.Pointer, className string) {
+	if debugDynSlot {
+		log.Println(senderCobj, recverCobj, className)
+	}
+}
+var afterDestroyedQObject = func(senderCobj, recverCobj unsafe.Pointer, className string) {
+	if debugDynSlot {
+		log.Println(senderCobj, recverCobj, className)
+	}
+}
+
+//
 var debugDynSlot bool = false
 
 func SetDebugDynSlot(on bool) {

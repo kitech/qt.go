@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -101,7 +102,10 @@ func (this *QSGOpaqueTextureMaterial) CreateShader() *QSGMaterialShader /*777 QS
 // Public virtual Visibility=Default Availability=Available
 // [4] int compare(const QSGMaterial *)
 func (this *QSGOpaqueTextureMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
-	var convArg0 = other.QSGMaterial_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSGMaterial_PTR() != nil {
+		convArg0 = other.QSGMaterial_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSGOpaqueTextureMaterial7compareEPK11QSGMaterial", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -112,7 +116,10 @@ func (this *QSGOpaqueTextureMaterial) Compare(other QSGMaterial_ITF /*777 const 
 // Public Visibility=Default Availability=Available
 // [-2] void setTexture(QSGTexture *)
 func (this *QSGOpaqueTextureMaterial) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/) {
-	var convArg0 = texture.QSGTexture_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if texture != nil && texture.QSGTexture_PTR() != nil {
+		convArg0 = texture.QSGTexture_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSGOpaqueTextureMaterial10setTextureEP10QSGTexture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -241,6 +248,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

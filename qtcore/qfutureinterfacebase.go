@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -134,7 +135,10 @@ func (this *QFutureInterfaceBase) ReportResultsReady(beginIndex int, endIndex in
 // Public Visibility=Default Availability=Available
 // [-2] void setRunnable(QRunnable *)
 func (this *QFutureInterfaceBase) SetRunnable(runnable QRunnable_ITF /*777 QRunnable **/) {
-	var convArg0 = runnable.QRunnable_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if runnable != nil && runnable.QRunnable_PTR() != nil {
+		convArg0 = runnable.QRunnable_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QFutureInterfaceBase11setRunnableEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -144,7 +148,10 @@ func (this *QFutureInterfaceBase) SetRunnable(runnable QRunnable_ITF /*777 QRunn
 // Public Visibility=Default Availability=Available
 // [-2] void setThreadPool(QThreadPool *)
 func (this *QFutureInterfaceBase) SetThreadPool(pool QThreadPool_ITF /*777 QThreadPool **/) {
-	var convArg0 = pool.QThreadPool_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pool != nil && pool.QThreadPool_PTR() != nil {
+		convArg0 = pool.QThreadPool_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -462,6 +469,50 @@ func (this *QFutureInterfaceBase) ResultStoreBase_1() int {
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
+// /usr/include/qt/QtCore/qfutureinterface.h:126
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QFutureInterfaceBase &)
+func (this *QFutureInterfaceBase) Operator_equal_equal(other QFutureInterfaceBase_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QFutureInterfaceBase_PTR() != nil {
+		convArg0 = other.QFutureInterfaceBase_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QFutureInterfaceBaseeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfutureinterface.h:127
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QFutureInterfaceBase &)
+func (this *QFutureInterfaceBase) Operator_not_equal(other QFutureInterfaceBase_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QFutureInterfaceBase_PTR() != nil {
+		convArg0 = other.QFutureInterfaceBase_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QFutureInterfaceBaseneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfutureinterface.h:128
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QFutureInterfaceBase & operator=(const QFutureInterfaceBase &)
+func (this *QFutureInterfaceBase) Operator_equal(other QFutureInterfaceBase_ITF) *QFutureInterfaceBase {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QFutureInterfaceBase_PTR() != nil {
+		convArg0 = other.QFutureInterfaceBase_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFutureInterfaceBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFutureInterfaceBase)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qfutureinterface.h:131
 // index:0
 // Protected Visibility=Default Availability=Available
@@ -505,6 +556,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -75,10 +76,14 @@ func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeEdit(QWidget *)
 func NewQTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTimeEdit")
 	return gothis
 }
 
@@ -87,11 +92,18 @@ func NewQTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeEdit(const QTime &, QWidget *)
 func NewQTimeEdit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
-	var convArg0 = time.QTime_PTR().GetCthis()
-	var convArg1 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if time != nil && time.QTime_PTR() != nil {
+		convArg0 = time.QTime_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg1 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEditC2ERK5QTimeP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTimeEdit")
 	return gothis
 }
 
@@ -111,7 +123,10 @@ func DeleteQTimeEdit(this *QTimeEdit) {
 // Public Visibility=Default Availability=Available
 // [-2] void userTimeChanged(const QTime &)
 func (this *QTimeEdit) UserTimeChanged(time qtcore.QTime_ITF) {
-	var convArg0 = time.QTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if time != nil && time.QTime_PTR() != nil {
+		convArg0 = time.QTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEdit15userTimeChangedERK5QTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -129,6 +144,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

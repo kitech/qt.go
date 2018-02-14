@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -80,10 +81,14 @@ func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*777 cons
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsColorizeEffect(QObject *)
 func NewQGraphicsColorizeEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsColorizeEffect {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsColorizeEffectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsColorizeEffect")
 	return gothis
 }
 
@@ -125,7 +130,10 @@ func (this *QGraphicsColorizeEffect) Strength() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
 func (this *QGraphicsColorizeEffect) SetColor(c qtgui.QColor_ITF) {
-	var convArg0 = c.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if c != nil && c.QColor_PTR() != nil {
+		convArg0 = c.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -144,7 +152,10 @@ func (this *QGraphicsColorizeEffect) SetStrength(strength float64) {
 // Public Visibility=Default Availability=Available
 // [-2] void colorChanged(const QColor &)
 func (this *QGraphicsColorizeEffect) ColorChanged(color qtgui.QColor_ITF) {
-	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect12colorChangedERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -163,7 +174,10 @@ func (this *QGraphicsColorizeEffect) StrengthChanged(strength float64) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
 func (this *QGraphicsColorizeEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
-	var convArg0 = painter.QPainter_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect4drawEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -181,6 +195,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

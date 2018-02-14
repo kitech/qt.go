@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,8 +65,14 @@ func (*QMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QMoveEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QMoveEvent(const QPoint &, const QPoint &)
 func NewQMoveEvent(pos qtcore.QPoint_ITF, oldPos qtcore.QPoint_ITF) *QMoveEvent {
-	var convArg0 = pos.QPoint_PTR().GetCthis()
-	var convArg1 = oldPos.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if oldPos != nil && oldPos.QPoint_PTR() != nil {
+		convArg1 = oldPos.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMoveEventC2ERK6QPointS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -121,6 +128,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

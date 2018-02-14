@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -135,10 +136,14 @@ func (this *QDateTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTimeEdit(QWidget *)
 func NewQDateTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDateTimeEdit")
 	return gothis
 }
 
@@ -147,11 +152,18 @@ func NewQDateTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTimeEdit(const QDateTime &, QWidget *)
 func NewQDateTimeEdit_1(dt qtcore.QDateTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
-	var convArg0 = dt.QDateTime_PTR().GetCthis()
-	var convArg1 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dt != nil && dt.QDateTime_PTR() != nil {
+		convArg0 = dt.QDateTime_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg1 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDateTimeEdit")
 	return gothis
 }
 
@@ -160,11 +172,18 @@ func NewQDateTimeEdit_1(dt qtcore.QDateTime_ITF, parent QWidget_ITF /*777 QWidge
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTimeEdit(const QDate &, QWidget *)
 func NewQDateTimeEdit_2(d qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
-	var convArg0 = d.QDate_PTR().GetCthis()
-	var convArg1 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if d != nil && d.QDate_PTR() != nil {
+		convArg0 = d.QDate_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg1 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK5QDateP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDateTimeEdit")
 	return gothis
 }
 
@@ -173,11 +192,18 @@ func NewQDateTimeEdit_2(d qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTimeEdit(const QTime &, QWidget *)
 func NewQDateTimeEdit_3(t qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
-	var convArg0 = t.QTime_PTR().GetCthis()
-	var convArg1 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if t != nil && t.QTime_PTR() != nil {
+		convArg0 = t.QTime_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg1 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK5QTimeP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDateTimeEdit")
 	return gothis
 }
 
@@ -186,11 +212,18 @@ func NewQDateTimeEdit_3(t qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/
 // Protected Visibility=Default Availability=Available
 // [-2] void QDateTimeEdit(const QVariant &, QVariant::Type, QWidget *)
 func NewQDateTimeEdit_4(val qtcore.QVariant_ITF, parserType int, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
-	var convArg0 = val.QVariant_PTR().GetCthis()
-	var convArg2 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if val != nil && val.QVariant_PTR() != nil {
+		convArg0 = val.QVariant_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg2 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEditC2ERK8QVariantNS0_4TypeEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, parserType, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDateTimeEdit")
 	return gothis
 }
 
@@ -267,7 +300,10 @@ func (this *QDateTimeEdit) ClearMinimumDateTime() {
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumDateTime(const QDateTime &)
 func (this *QDateTimeEdit) SetMinimumDateTime(dt qtcore.QDateTime_ITF) {
-	var convArg0 = dt.QDateTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dt != nil && dt.QDateTime_PTR() != nil {
+		convArg0 = dt.QDateTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -298,7 +334,10 @@ func (this *QDateTimeEdit) ClearMaximumDateTime() {
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumDateTime(const QDateTime &)
 func (this *QDateTimeEdit) SetMaximumDateTime(dt qtcore.QDateTime_ITF) {
-	var convArg0 = dt.QDateTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dt != nil && dt.QDateTime_PTR() != nil {
+		convArg0 = dt.QDateTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -308,8 +347,14 @@ func (this *QDateTimeEdit) SetMaximumDateTime(dt qtcore.QDateTime_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDateTimeRange(const QDateTime &, const QDateTime &)
 func (this *QDateTimeEdit) SetDateTimeRange(min qtcore.QDateTime_ITF, max qtcore.QDateTime_ITF) {
-	var convArg0 = min.QDateTime_PTR().GetCthis()
-	var convArg1 = max.QDateTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if min != nil && min.QDateTime_PTR() != nil {
+		convArg0 = min.QDateTime_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if max != nil && max.QDateTime_PTR() != nil {
+		convArg1 = max.QDateTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -331,7 +376,10 @@ func (this *QDateTimeEdit) MinimumDate() *qtcore.QDate /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumDate(const QDate &)
 func (this *QDateTimeEdit) SetMinimumDate(min qtcore.QDate_ITF) {
-	var convArg0 = min.QDate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if min != nil && min.QDate_PTR() != nil {
+		convArg0 = min.QDate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMinimumDateERK5QDate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -362,7 +410,10 @@ func (this *QDateTimeEdit) MaximumDate() *qtcore.QDate /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumDate(const QDate &)
 func (this *QDateTimeEdit) SetMaximumDate(max qtcore.QDate_ITF) {
-	var convArg0 = max.QDate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if max != nil && max.QDate_PTR() != nil {
+		convArg0 = max.QDate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMaximumDateERK5QDate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -381,8 +432,14 @@ func (this *QDateTimeEdit) ClearMaximumDate() {
 // Public Visibility=Default Availability=Available
 // [-2] void setDateRange(const QDate &, const QDate &)
 func (this *QDateTimeEdit) SetDateRange(min qtcore.QDate_ITF, max qtcore.QDate_ITF) {
-	var convArg0 = min.QDate_PTR().GetCthis()
-	var convArg1 = max.QDate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if min != nil && min.QDate_PTR() != nil {
+		convArg0 = min.QDate_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if max != nil && max.QDate_PTR() != nil {
+		convArg1 = max.QDate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit12setDateRangeERK5QDateS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -404,7 +461,10 @@ func (this *QDateTimeEdit) MinimumTime() *qtcore.QTime /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumTime(const QTime &)
 func (this *QDateTimeEdit) SetMinimumTime(min qtcore.QTime_ITF) {
-	var convArg0 = min.QTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if min != nil && min.QTime_PTR() != nil {
+		convArg0 = min.QTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMinimumTimeERK5QTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -435,7 +495,10 @@ func (this *QDateTimeEdit) MaximumTime() *qtcore.QTime /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumTime(const QTime &)
 func (this *QDateTimeEdit) SetMaximumTime(max qtcore.QTime_ITF) {
-	var convArg0 = max.QTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if max != nil && max.QTime_PTR() != nil {
+		convArg0 = max.QTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMaximumTimeERK5QTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -454,8 +517,14 @@ func (this *QDateTimeEdit) ClearMaximumTime() {
 // Public Visibility=Default Availability=Available
 // [-2] void setTimeRange(const QTime &, const QTime &)
 func (this *QDateTimeEdit) SetTimeRange(min qtcore.QTime_ITF, max qtcore.QTime_ITF) {
-	var convArg0 = min.QTime_PTR().GetCthis()
-	var convArg1 = max.QTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if min != nil && min.QTime_PTR() != nil {
+		convArg0 = min.QTime_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if max != nil && max.QTime_PTR() != nil {
+		convArg1 = max.QTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit12setTimeRangeERK5QTimeS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -533,7 +602,10 @@ func (this *QDateTimeEdit) CalendarWidget() *QCalendarWidget /*777 QCalendarWidg
 // Public Visibility=Default Availability=Available
 // [-2] void setCalendarWidget(QCalendarWidget *)
 func (this *QDateTimeEdit) SetCalendarWidget(calendarWidget QCalendarWidget_ITF /*777 QCalendarWidget **/) {
-	var convArg0 = calendarWidget.QCalendarWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if calendarWidget != nil && calendarWidget.QCalendarWidget_PTR() != nil {
+		convArg0 = calendarWidget.QCalendarWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -667,7 +739,10 @@ func (this *QDateTimeEdit) StepBy(steps int) {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QDateTimeEdit) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -678,7 +753,10 @@ func (this *QDateTimeEdit) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool 
 // Public Visibility=Default Availability=Available
 // [-2] void dateTimeChanged(const QDateTime &)
 func (this *QDateTimeEdit) DateTimeChanged(dateTime qtcore.QDateTime_ITF) {
-	var convArg0 = dateTime.QDateTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
+		convArg0 = dateTime.QDateTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -688,7 +766,10 @@ func (this *QDateTimeEdit) DateTimeChanged(dateTime qtcore.QDateTime_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void timeChanged(const QTime &)
 func (this *QDateTimeEdit) TimeChanged(time qtcore.QTime_ITF) {
-	var convArg0 = time.QTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if time != nil && time.QTime_PTR() != nil {
+		convArg0 = time.QTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit11timeChangedERK5QTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -698,7 +779,10 @@ func (this *QDateTimeEdit) TimeChanged(time qtcore.QTime_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void dateChanged(const QDate &)
 func (this *QDateTimeEdit) DateChanged(date qtcore.QDate_ITF) {
-	var convArg0 = date.QDate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if date != nil && date.QDate_PTR() != nil {
+		convArg0 = date.QDate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit11dateChangedERK5QDate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -708,7 +792,10 @@ func (this *QDateTimeEdit) DateChanged(date qtcore.QDate_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDateTime(const QDateTime &)
 func (this *QDateTimeEdit) SetDateTime(dateTime qtcore.QDateTime_ITF) {
-	var convArg0 = dateTime.QDateTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
+		convArg0 = dateTime.QDateTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit11setDateTimeERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -718,7 +805,10 @@ func (this *QDateTimeEdit) SetDateTime(dateTime qtcore.QDateTime_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDate(const QDate &)
 func (this *QDateTimeEdit) SetDate(date qtcore.QDate_ITF) {
-	var convArg0 = date.QDate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if date != nil && date.QDate_PTR() != nil {
+		convArg0 = date.QDate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit7setDateERK5QDate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -728,7 +818,10 @@ func (this *QDateTimeEdit) SetDate(date qtcore.QDate_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setTime(const QTime &)
 func (this *QDateTimeEdit) SetTime(time qtcore.QTime_ITF) {
-	var convArg0 = time.QTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if time != nil && time.QTime_PTR() != nil {
+		convArg0 = time.QTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit7setTimeERK5QTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -738,7 +831,10 @@ func (this *QDateTimeEdit) SetTime(time qtcore.QTime_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
 func (this *QDateTimeEdit) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
-	var convArg0 = event.QKeyEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QKeyEvent_PTR() != nil {
+		convArg0 = event.QKeyEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -748,7 +844,10 @@ func (this *QDateTimeEdit) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEve
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
 func (this *QDateTimeEdit) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 = event.QWheelEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QWheelEvent_PTR() != nil {
+		convArg0 = event.QWheelEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -758,7 +857,10 @@ func (this *QDateTimeEdit) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEv
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
 func (this *QDateTimeEdit) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
-	var convArg0 = event.QFocusEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QFocusEvent_PTR() != nil {
+		convArg0 = event.QFocusEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -815,7 +917,10 @@ func (this *QDateTimeEdit) DateTimeFromText(text string) *qtcore.QDateTime /*123
 // Protected virtual Visibility=Default Availability=Available
 // [8] QString textFromDateTime(const QDateTime &)
 func (this *QDateTimeEdit) TextFromDateTime(dt qtcore.QDateTime_ITF) string {
-	var convArg0 = dt.QDateTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dt != nil && dt.QDateTime_PTR() != nil {
+		convArg0 = dt.QDateTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QDateTimeEdit16textFromDateTimeERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -839,7 +944,10 @@ func (this *QDateTimeEdit) StepEnabled() int {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
 func (this *QDateTimeEdit) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
-	var convArg0 = event.QMouseEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QMouseEvent_PTR() != nil {
+		convArg0 = event.QMouseEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -849,7 +957,10 @@ func (this *QDateTimeEdit) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMo
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QDateTimeEdit) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
-	var convArg0 = event.QPaintEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QPaintEvent_PTR() != nil {
+		convArg0 = event.QPaintEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -859,7 +970,10 @@ func (this *QDateTimeEdit) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEv
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSpinBox *)
 func (this *QDateTimeEdit) InitStyleOption(option QStyleOptionSpinBox_ITF /*777 QStyleOptionSpinBox **/) {
-	var convArg0 = option.QStyleOptionSpinBox_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if option != nil && option.QStyleOptionSpinBox_PTR() != nil {
+		convArg0 = option.QStyleOptionSpinBox_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QDateTimeEdit15initStyleOptionEP19QStyleOptionSpinBox", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -891,6 +1005,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,8 +79,14 @@ func NewQImageWriter() *QImageWriter {
 // Public Visibility=Default Availability=Available
 // [-2] void QImageWriter(QIODevice *, const QByteArray &)
 func NewQImageWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageWriter {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
-	var convArg1 = format.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg1 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriterC2EP9QIODeviceRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageWriterFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -94,7 +101,10 @@ func NewQImageWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format q
 func NewQImageWriter_2(fileName string, format qtcore.QByteArray_ITF) *QImageWriter {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = format.QByteArray_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg1 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriterC2ERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageWriterFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -118,7 +128,10 @@ func DeleteQImageWriter(this *QImageWriter) {
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QByteArray &)
 func (this *QImageWriter) SetFormat(format qtcore.QByteArray_ITF) {
-	var convArg0 = format.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QByteArray_PTR() != nil {
+		convArg0 = format.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter9setFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -140,7 +153,10 @@ func (this *QImageWriter) Format() *qtcore.QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
 func (this *QImageWriter) SetDevice(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter9setDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -241,7 +257,10 @@ func (this *QImageWriter) Gamma() float32 {
 // Public Visibility=Default Availability=Available
 // [-2] void setSubType(const QByteArray &)
 func (this *QImageWriter) SetSubType(type_ qtcore.QByteArray_ITF) {
-	var convArg0 = type_.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if type_ != nil && type_.QByteArray_PTR() != nil {
+		convArg0 = type_.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter10setSubTypeERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -367,7 +386,10 @@ func (this *QImageWriter) CanWrite() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool write(const QImage &)
 func (this *QImageWriter) Write(image QImage_ITF) bool {
-	var convArg0 = image.QImage_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QImage_PTR() != nil {
+		convArg0 = image.QImage_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter5writeERK6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -426,6 +448,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

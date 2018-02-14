@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -93,7 +94,10 @@ func DeleteQSGAbstractRenderer(this *QSGAbstractRenderer) {
 // Public Visibility=Default Availability=Available
 // [-2] void setRootNode(QSGRootNode *)
 func (this *QSGAbstractRenderer) SetRootNode(node QSGRootNode_ITF /*777 QSGRootNode **/) {
-	var convArg0 = node.QSGRootNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if node != nil && node.QSGRootNode_PTR() != nil {
+		convArg0 = node.QSGRootNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer11setRootNodeEP11QSGRootNode", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -113,7 +117,10 @@ func (this *QSGAbstractRenderer) RootNode() *QSGRootNode /*777 QSGRootNode **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setDeviceRect(const QRect &)
 func (this *QSGAbstractRenderer) SetDeviceRect(rect qtcore.QRect_ITF) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer13setDeviceRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -123,7 +130,10 @@ func (this *QSGAbstractRenderer) SetDeviceRect(rect qtcore.QRect_ITF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDeviceRect(const QSize &)
 func (this *QSGAbstractRenderer) SetDeviceRect_1(size qtcore.QSize_ITF) {
-	var convArg0 = size.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg0 = size.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer13setDeviceRectERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -145,7 +155,10 @@ func (this *QSGAbstractRenderer) DeviceRect() *qtcore.QRect /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setViewportRect(const QRect &)
 func (this *QSGAbstractRenderer) SetViewportRect(rect qtcore.QRect_ITF) {
-	var convArg0 = rect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer15setViewportRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -155,7 +168,10 @@ func (this *QSGAbstractRenderer) SetViewportRect(rect qtcore.QRect_ITF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setViewportRect(const QSize &)
 func (this *QSGAbstractRenderer) SetViewportRect_1(size qtcore.QSize_ITF) {
-	var convArg0 = size.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg0 = size.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer15setViewportRectERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -177,7 +193,10 @@ func (this *QSGAbstractRenderer) ViewportRect() *qtcore.QRect /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setProjectionMatrixToRect(const QRectF &)
 func (this *QSGAbstractRenderer) SetProjectionMatrixToRect(rect qtcore.QRectF_ITF) {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer25setProjectionMatrixToRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -187,7 +206,10 @@ func (this *QSGAbstractRenderer) SetProjectionMatrixToRect(rect qtcore.QRectF_IT
 // Public Visibility=Default Availability=Available
 // [-2] void setProjectionMatrix(const QMatrix4x4 &)
 func (this *QSGAbstractRenderer) SetProjectionMatrix(matrix qtgui.QMatrix4x4_ITF) {
-	var convArg0 = matrix.QMatrix4x4_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {
+		convArg0 = matrix.QMatrix4x4_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer19setProjectionMatrixERK10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -209,7 +231,10 @@ func (this *QSGAbstractRenderer) ProjectionMatrix() *qtgui.QMatrix4x4 /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setClearColor(const QColor &)
 func (this *QSGAbstractRenderer) SetClearColor(color qtgui.QColor_ITF) {
-	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer13setClearColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -268,10 +293,14 @@ func (this *QSGAbstractRenderer) SceneGraphChanged() {
 // Protected Visibility=Default Availability=Available
 // [-2] void QSGAbstractRenderer(QObject *)
 func NewQSGAbstractRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSGAbstractRenderer {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRendererC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGAbstractRendererFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSGAbstractRenderer")
 	return gothis
 }
 
@@ -280,7 +309,10 @@ func NewQSGAbstractRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSGAbs
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void nodeChanged(QSGNode *, QSGNode::DirtyState)
 func (this *QSGAbstractRenderer) NodeChanged(node QSGNode_ITF /*777 QSGNode **/, state int) {
-	var convArg0 = node.QSGNode_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if node != nil && node.QSGNode_PTR() != nil {
+		convArg0 = node.QSGNode_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer11nodeChangedEP7QSGNode6QFlagsINS0_13DirtyStateBitEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, state)
 	qtrt.ErrPrint(err, rv)
 }
@@ -304,6 +336,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

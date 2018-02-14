@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,7 +65,10 @@ func (*QPaintEvent) NewFromPointer(cthis unsafe.Pointer) *QPaintEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEvent(const QRegion &)
 func NewQPaintEvent(paintRegion QRegion_ITF) *QPaintEvent {
-	var convArg0 = paintRegion.QRegion_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if paintRegion != nil && paintRegion.QRegion_PTR() != nil {
+		convArg0 = paintRegion.QRegion_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventC2ERK7QRegion", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaintEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -77,7 +81,10 @@ func NewQPaintEvent(paintRegion QRegion_ITF) *QPaintEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEvent(const QRect &)
 func NewQPaintEvent_1(paintRect qtcore.QRect_ITF) *QPaintEvent {
-	var convArg0 = paintRect.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if paintRect != nil && paintRect.QRect_PTR() != nil {
+		convArg0 = paintRect.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventC2ERK5QRect", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaintEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -133,6 +140,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

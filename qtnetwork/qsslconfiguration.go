@@ -24,6 +24,7 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -84,14 +85,73 @@ func DeleteQSslConfiguration(this *QSslConfiguration) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:83
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QSslConfiguration & operator=(QSslConfiguration &&)
+func (this *QSslConfiguration) Operator_equal(other unsafe.Pointer /*333*/) *QSslConfiguration {
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfigurationaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslConfigurationFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslConfiguration)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:85
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QSslConfiguration & operator=(const QSslConfiguration &)
+func (this *QSslConfiguration) Operator_equal_1(other QSslConfiguration_ITF) *QSslConfiguration {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslConfiguration_PTR() != nil {
+		convArg0 = other.QSslConfiguration_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfigurationaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslConfigurationFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslConfiguration)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:87
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslConfiguration &)
 func (this *QSslConfiguration) Swap(other QSslConfiguration_ITF) {
-	var convArg0 = other.QSslConfiguration_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslConfiguration_PTR() != nil {
+		convArg0 = other.QSslConfiguration_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:90
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QSslConfiguration &)
+func (this *QSslConfiguration) Operator_equal_equal(other QSslConfiguration_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslConfiguration_PTR() != nil {
+		convArg0 = other.QSslConfiguration_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfigurationeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:91
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QSslConfiguration &)
+func (this *QSslConfiguration) Operator_not_equal(other QSslConfiguration_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslConfiguration_PTR() != nil {
+		convArg0 = other.QSslConfiguration_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfigurationneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:94
@@ -178,7 +238,10 @@ func (this *QSslConfiguration) LocalCertificate() *QSslCertificate /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setLocalCertificate(const QSslCertificate &)
 func (this *QSslConfiguration) SetLocalCertificate(certificate QSslCertificate_ITF) {
-	var convArg0 = certificate.QSslCertificate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if certificate != nil && certificate.QSslCertificate_PTR() != nil {
+		convArg0 = certificate.QSslCertificate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration19setLocalCertificateERK15QSslCertificate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -234,7 +297,10 @@ func (this *QSslConfiguration) PrivateKey() *QSslKey /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setPrivateKey(const QSslKey &)
 func (this *QSslConfiguration) SetPrivateKey(key QSslKey_ITF) {
-	var convArg0 = key.QSslKey_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QSslKey_PTR() != nil {
+		convArg0 = key.QSslKey_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration13setPrivateKeyERK7QSslKey", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -275,7 +341,10 @@ func (this *QSslConfiguration) SessionTicket() *qtcore.QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setSessionTicket(const QByteArray &)
 func (this *QSslConfiguration) SetSessionTicket(sessionTicket qtcore.QByteArray_ITF) {
-	var convArg0 = sessionTicket.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sessionTicket != nil && sessionTicket.QByteArray_PTR() != nil {
+		convArg0 = sessionTicket.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration16setSessionTicketERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -319,7 +388,10 @@ func (this *QSslConfiguration) PreSharedKeyIdentityHint() *qtcore.QByteArray /*1
 // Public Visibility=Default Availability=Available
 // [-2] void setPreSharedKeyIdentityHint(const QByteArray &)
 func (this *QSslConfiguration) SetPreSharedKeyIdentityHint(hint qtcore.QByteArray_ITF) {
-	var convArg0 = hint.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if hint != nil && hint.QByteArray_PTR() != nil {
+		convArg0 = hint.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration27setPreSharedKeyIdentityHintERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -341,7 +413,10 @@ func (this *QSslConfiguration) DiffieHellmanParameters() *QSslDiffieHellmanParam
 // Public Visibility=Default Availability=Available
 // [-2] void setDiffieHellmanParameters(const QSslDiffieHellmanParameters &)
 func (this *QSslConfiguration) SetDiffieHellmanParameters(dhparams QSslDiffieHellmanParameters_ITF) {
-	var convArg0 = dhparams.QSslDiffieHellmanParameters_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dhparams != nil && dhparams.QSslDiffieHellmanParameters_PTR() != nil {
+		convArg0 = dhparams.QSslDiffieHellmanParameters_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration26setDiffieHellmanParametersERK27QSslDiffieHellmanParameters", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -368,7 +443,10 @@ func QSslConfiguration_DefaultConfiguration() *QSslConfiguration /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultConfiguration(const QSslConfiguration &)
 func (this *QSslConfiguration) SetDefaultConfiguration(configuration QSslConfiguration_ITF) {
-	var convArg0 = configuration.QSslConfiguration_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if configuration != nil && configuration.QSslConfiguration_PTR() != nil {
+		convArg0 = configuration.QSslConfiguration_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration23setDefaultConfigurationERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -418,6 +496,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

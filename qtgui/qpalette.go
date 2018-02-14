@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,7 +79,10 @@ func NewQPalette() *QPalette {
 // Public Visibility=Default Availability=Available
 // [-2] void QPalette(const QColor &)
 func NewQPalette_1(button QColor_ITF) *QPalette {
-	var convArg0 = button.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if button != nil && button.QColor_PTR() != nil {
+		convArg0 = button.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColor", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,8 +107,14 @@ func NewQPalette_2(button int) *QPalette {
 // Public Visibility=Default Availability=Available
 // [-2] void QPalette(const QColor &, const QColor &)
 func NewQPalette_3(button QColor_ITF, window QColor_ITF) *QPalette {
-	var convArg0 = button.QColor_PTR().GetCthis()
-	var convArg1 = window.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if button != nil && button.QColor_PTR() != nil {
+		convArg0 = button.QColor_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if window != nil && window.QColor_PTR() != nil {
+		convArg1 = window.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColorS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,15 +127,42 @@ func NewQPalette_3(button QColor_ITF, window QColor_ITF) *QPalette {
 // Public Visibility=Default Availability=Available
 // [-2] void QPalette(const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &)
 func NewQPalette_4(windowText QBrush_ITF, button QBrush_ITF, light QBrush_ITF, dark QBrush_ITF, mid QBrush_ITF, text QBrush_ITF, bright_text QBrush_ITF, base QBrush_ITF, window QBrush_ITF) *QPalette {
-	var convArg0 = windowText.QBrush_PTR().GetCthis()
-	var convArg1 = button.QBrush_PTR().GetCthis()
-	var convArg2 = light.QBrush_PTR().GetCthis()
-	var convArg3 = dark.QBrush_PTR().GetCthis()
-	var convArg4 = mid.QBrush_PTR().GetCthis()
-	var convArg5 = text.QBrush_PTR().GetCthis()
-	var convArg6 = bright_text.QBrush_PTR().GetCthis()
-	var convArg7 = base.QBrush_PTR().GetCthis()
-	var convArg8 = window.QBrush_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if windowText != nil && windowText.QBrush_PTR() != nil {
+		convArg0 = windowText.QBrush_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if button != nil && button.QBrush_PTR() != nil {
+		convArg1 = button.QBrush_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if light != nil && light.QBrush_PTR() != nil {
+		convArg2 = light.QBrush_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if dark != nil && dark.QBrush_PTR() != nil {
+		convArg3 = dark.QBrush_PTR().GetCthis()
+	}
+	var convArg4 unsafe.Pointer
+	if mid != nil && mid.QBrush_PTR() != nil {
+		convArg4 = mid.QBrush_PTR().GetCthis()
+	}
+	var convArg5 unsafe.Pointer
+	if text != nil && text.QBrush_PTR() != nil {
+		convArg5 = text.QBrush_PTR().GetCthis()
+	}
+	var convArg6 unsafe.Pointer
+	if bright_text != nil && bright_text.QBrush_PTR() != nil {
+		convArg6 = bright_text.QBrush_PTR().GetCthis()
+	}
+	var convArg7 unsafe.Pointer
+	if base != nil && base.QBrush_PTR() != nil {
+		convArg7 = base.QBrush_PTR().GetCthis()
+	}
+	var convArg8 unsafe.Pointer
+	if window != nil && window.QBrush_PTR() != nil {
+		convArg8 = window.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -138,13 +175,34 @@ func NewQPalette_4(windowText QBrush_ITF, button QBrush_ITF, light QBrush_ITF, d
 // Public Visibility=Default Availability=Available
 // [-2] void QPalette(const QColor &, const QColor &, const QColor &, const QColor &, const QColor &, const QColor &, const QColor &)
 func NewQPalette_5(windowText QColor_ITF, window QColor_ITF, light QColor_ITF, dark QColor_ITF, mid QColor_ITF, text QColor_ITF, base QColor_ITF) *QPalette {
-	var convArg0 = windowText.QColor_PTR().GetCthis()
-	var convArg1 = window.QColor_PTR().GetCthis()
-	var convArg2 = light.QColor_PTR().GetCthis()
-	var convArg3 = dark.QColor_PTR().GetCthis()
-	var convArg4 = mid.QColor_PTR().GetCthis()
-	var convArg5 = text.QColor_PTR().GetCthis()
-	var convArg6 = base.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if windowText != nil && windowText.QColor_PTR() != nil {
+		convArg0 = windowText.QColor_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if window != nil && window.QColor_PTR() != nil {
+		convArg1 = window.QColor_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if light != nil && light.QColor_PTR() != nil {
+		convArg2 = light.QColor_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if dark != nil && dark.QColor_PTR() != nil {
+		convArg3 = dark.QColor_PTR().GetCthis()
+	}
+	var convArg4 unsafe.Pointer
+	if mid != nil && mid.QColor_PTR() != nil {
+		convArg4 = mid.QColor_PTR().GetCthis()
+	}
+	var convArg5 unsafe.Pointer
+	if text != nil && text.QColor_PTR() != nil {
+		convArg5 = text.QColor_PTR().GetCthis()
+	}
+	var convArg6 unsafe.Pointer
+	if base != nil && base.QColor_PTR() != nil {
+		convArg6 = base.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -163,12 +221,43 @@ func DeleteQPalette(this *QPalette) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtGui/qpalette.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QPalette & operator=(const QPalette &)
+func (this *QPalette) Operator_equal(palette QPalette_ITF) *QPalette {
+	var convArg0 unsafe.Pointer
+	if palette != nil && palette.QPalette_PTR() != nil {
+		convArg0 = palette.QPalette_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPalette)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qpalette.h:74
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [16] QPalette & operator=(QPalette &&)
+func (this *QPalette) Operator_equal_1(other unsafe.Pointer /*333*/) *QPalette {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPalette)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qpalette.h:81
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPalette &)
 func (this *QPalette) Swap(other QPalette_ITF) {
-	var convArg0 = other.QPalette_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QPalette_PTR() != nil {
+		convArg0 = other.QPalette_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -245,7 +334,10 @@ func (this *QPalette) Brush_1(cr int) *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColor(enum QPalette::ColorGroup, enum QPalette::ColorRole, const QColor &)
 func (this *QPalette) SetColor(cg int, cr int, color QColor_ITF) {
-	var convArg2 = color.QColor_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg2 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette8setColorENS_10ColorGroupENS_9ColorRoleERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -255,7 +347,10 @@ func (this *QPalette) SetColor(cg int, cr int, color QColor_ITF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColor(enum QPalette::ColorRole, const QColor &)
 func (this *QPalette) SetColor_1(cr int, color QColor_ITF) {
-	var convArg1 = color.QColor_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg1 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette8setColorENS_9ColorRoleERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -265,7 +360,10 @@ func (this *QPalette) SetColor_1(cr int, color QColor_ITF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBrush(enum QPalette::ColorRole, const QBrush &)
 func (this *QPalette) SetBrush(cr int, brush QBrush_ITF) {
-	var convArg1 = brush.QBrush_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg1 = brush.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette8setBrushENS_9ColorRoleERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -275,7 +373,10 @@ func (this *QPalette) SetBrush(cr int, brush QBrush_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setBrush(enum QPalette::ColorGroup, enum QPalette::ColorRole, const QBrush &)
 func (this *QPalette) SetBrush_1(cg int, cr int, brush QBrush_ITF) {
-	var convArg2 = brush.QBrush_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg2 = brush.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette8setBrushENS_10ColorGroupENS_9ColorRoleERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -295,15 +396,42 @@ func (this *QPalette) IsBrushSet(cg int, cr int) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setColorGroup(enum QPalette::ColorGroup, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &)
 func (this *QPalette) SetColorGroup(cr int, windowText QBrush_ITF, button QBrush_ITF, light QBrush_ITF, dark QBrush_ITF, mid QBrush_ITF, text QBrush_ITF, bright_text QBrush_ITF, base QBrush_ITF, window QBrush_ITF) {
-	var convArg1 = windowText.QBrush_PTR().GetCthis()
-	var convArg2 = button.QBrush_PTR().GetCthis()
-	var convArg3 = light.QBrush_PTR().GetCthis()
-	var convArg4 = dark.QBrush_PTR().GetCthis()
-	var convArg5 = mid.QBrush_PTR().GetCthis()
-	var convArg6 = text.QBrush_PTR().GetCthis()
-	var convArg7 = bright_text.QBrush_PTR().GetCthis()
-	var convArg8 = base.QBrush_PTR().GetCthis()
-	var convArg9 = window.QBrush_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if windowText != nil && windowText.QBrush_PTR() != nil {
+		convArg1 = windowText.QBrush_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if button != nil && button.QBrush_PTR() != nil {
+		convArg2 = button.QBrush_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if light != nil && light.QBrush_PTR() != nil {
+		convArg3 = light.QBrush_PTR().GetCthis()
+	}
+	var convArg4 unsafe.Pointer
+	if dark != nil && dark.QBrush_PTR() != nil {
+		convArg4 = dark.QBrush_PTR().GetCthis()
+	}
+	var convArg5 unsafe.Pointer
+	if mid != nil && mid.QBrush_PTR() != nil {
+		convArg5 = mid.QBrush_PTR().GetCthis()
+	}
+	var convArg6 unsafe.Pointer
+	if text != nil && text.QBrush_PTR() != nil {
+		convArg6 = text.QBrush_PTR().GetCthis()
+	}
+	var convArg7 unsafe.Pointer
+	if bright_text != nil && bright_text.QBrush_PTR() != nil {
+		convArg7 = bright_text.QBrush_PTR().GetCthis()
+	}
+	var convArg8 unsafe.Pointer
+	if base != nil && base.QBrush_PTR() != nil {
+		convArg8 = base.QBrush_PTR().GetCthis()
+	}
+	var convArg9 unsafe.Pointer
+	if window != nil && window.QBrush_PTR() != nil {
+		convArg9 = window.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette13setColorGroupENS_10ColorGroupERK6QBrushS3_S3_S3_S3_S3_S3_S3_S3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
 }
@@ -570,12 +698,43 @@ func (this *QPalette) LinkVisited() *QBrush {
 	return rv2
 }
 
+// /usr/include/qt/QtGui/qpalette.h:145
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QPalette &)
+func (this *QPalette) Operator_equal_equal(p QPalette_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPalette_PTR() != nil {
+		convArg0 = p.QPalette_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPaletteeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qpalette.h:146
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QPalette &)
+func (this *QPalette) Operator_not_equal(p QPalette_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPalette_PTR() != nil {
+		convArg0 = p.QPalette_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPaletteneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qpalette.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCopyOf(const QPalette &)
 func (this *QPalette) IsCopyOf(p QPalette_ITF) bool {
-	var convArg0 = p.QPalette_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPalette_PTR() != nil {
+		convArg0 = p.QPalette_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette8isCopyOfERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -596,7 +755,10 @@ func (this *QPalette) CacheKey() int64 {
 // Public Visibility=Default Availability=Available
 // [16] QPalette resolve(const QPalette &)
 func (this *QPalette) Resolve(arg0 QPalette_ITF) *QPalette /*123*/ {
-	var convArg0 = arg0.QPalette_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPalette_PTR() != nil {
+		convArg0 = arg0.QPalette_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette7resolveERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -672,6 +834,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -93,7 +94,10 @@ func NewQTableWidgetItem_1(text string, type_ int) *QTableWidgetItem {
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetItem(const QIcon &, const QString &, int)
 func NewQTableWidgetItem_2(icon qtgui.QIcon_ITF, text string, type_ int) *QTableWidgetItem {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
@@ -233,7 +237,10 @@ func (this *QTableWidgetItem) Icon() *qtgui.QIcon /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
 func (this *QTableWidgetItem) SetIcon(icon qtgui.QIcon_ITF) {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -327,7 +334,10 @@ func (this *QTableWidgetItem) Font() *qtgui.QFont /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
 func (this *QTableWidgetItem) SetFont(font qtgui.QFont_ITF) {
-	var convArg0 = font.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if font != nil && font.QFont_PTR() != nil {
+		convArg0 = font.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -368,7 +378,10 @@ func (this *QTableWidgetItem) BackgroundColor() *qtgui.QColor /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackgroundColor(const QColor &)
 func (this *QTableWidgetItem) SetBackgroundColor(color qtgui.QColor_ITF) {
-	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem18setBackgroundColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -390,7 +403,10 @@ func (this *QTableWidgetItem) Background() *qtgui.QBrush /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
 func (this *QTableWidgetItem) SetBackground(brush qtgui.QBrush_ITF) {
-	var convArg0 = brush.QBrush_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem13setBackgroundERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -412,7 +428,10 @@ func (this *QTableWidgetItem) TextColor() *qtgui.QColor /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextColor(const QColor &)
 func (this *QTableWidgetItem) SetTextColor(color qtgui.QColor_ITF) {
-	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem12setTextColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -434,7 +453,10 @@ func (this *QTableWidgetItem) Foreground() *qtgui.QBrush /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setForeground(const QBrush &)
 func (this *QTableWidgetItem) SetForeground(brush qtgui.QBrush_ITF) {
-	var convArg0 = brush.QBrush_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem13setForegroundERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -475,7 +497,10 @@ func (this *QTableWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSizeHint(const QSize &)
 func (this *QTableWidgetItem) SetSizeHint(size qtcore.QSize_ITF) {
-	var convArg0 = size.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg0 = size.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem11setSizeHintERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -497,9 +522,26 @@ func (this *QTableWidgetItem) Data(role int) *qtcore.QVariant /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setData(int, const QVariant &)
 func (this *QTableWidgetItem) SetData(role int, value qtcore.QVariant_ITF) {
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem7setDataEiRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role, convArg1)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:167
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool operator<(const QTableWidgetItem &)
+func (this *QTableWidgetItem) Operator_less_than(other QTableWidgetItem_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTableWidgetItem_PTR() != nil {
+		convArg0 = other.QTableWidgetItem_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTableWidgetItemltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:170
@@ -507,7 +549,10 @@ func (this *QTableWidgetItem) SetData(role int, value qtcore.QVariant_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void read(QDataStream &)
 func (this *QTableWidgetItem) Read(in qtcore.QDataStream_ITF) {
-	var convArg0 = in.QDataStream_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if in != nil && in.QDataStream_PTR() != nil {
+		convArg0 = in.QDataStream_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem4readER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -517,9 +562,28 @@ func (this *QTableWidgetItem) Read(in qtcore.QDataStream_ITF) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void write(QDataStream &)
 func (this *QTableWidgetItem) Write(out qtcore.QDataStream_ITF) {
-	var convArg0 = out.QDataStream_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if out != nil && out.QDataStream_PTR() != nil {
+		convArg0 = out.QDataStream_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTableWidgetItem5writeER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:173
+// index:0
+// Public Visibility=Default Availability=Available
+// [48] QTableWidgetItem & operator=(const QTableWidgetItem &)
+func (this *QTableWidgetItem) Operator_equal(other QTableWidgetItem_ITF) *QTableWidgetItem {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTableWidgetItem_PTR() != nil {
+		convArg0 = other.QTableWidgetItem_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItemaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTableWidgetItem)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:175
@@ -550,6 +614,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

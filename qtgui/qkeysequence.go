@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 30
+// extern C begin: 48
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -179,7 +180,10 @@ func QKeySequence_FromString(str string, format int) *QKeySequence /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] QKeySequence::SequenceMatch matches(const QKeySequence &)
 func (this *QKeySequence) Matches(seq QKeySequence_ITF) int {
-	var convArg0 = seq.QKeySequence_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if seq != nil && seq.QKeySequence_PTR() != nil {
+		convArg0 = seq.QKeySequence_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence7matchesERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -204,14 +208,139 @@ func QKeySequence_Mnemonic(text string) *QKeySequence /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtGui/qkeysequence.h:187
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int operator[](uint)
+func (this *QKeySequence) Operator_get_index(i uint) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequenceixEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:188
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QKeySequence & operator=(const QKeySequence &)
+func (this *QKeySequence) Operator_equal(other QKeySequence_ITF) *QKeySequence {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QKeySequence_PTR() != nil {
+		convArg0 = other.QKeySequence_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQKeySequence)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:190
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QKeySequence & operator=(QKeySequence &&)
+func (this *QKeySequence) Operator_equal_1(other unsafe.Pointer /*333*/) *QKeySequence {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQKeySequence)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qkeysequence.h:192
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QKeySequence &)
 func (this *QKeySequence) Swap(other QKeySequence_ITF) {
-	var convArg0 = other.QKeySequence_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QKeySequence_PTR() != nil {
+		convArg0 = other.QKeySequence_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequence4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:194
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QKeySequence &)
+func (this *QKeySequence) Operator_equal_equal(other QKeySequence_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QKeySequence_PTR() != nil {
+		convArg0 = other.QKeySequence_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequenceeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:195
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QKeySequence &)
+func (this *QKeySequence) Operator_not_equal(other QKeySequence_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QKeySequence_PTR() != nil {
+		convArg0 = other.QKeySequence_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequenceneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:197
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator<(const QKeySequence &)
+func (this *QKeySequence) Operator_less_than(ks QKeySequence_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if ks != nil && ks.QKeySequence_PTR() != nil {
+		convArg0 = ks.QKeySequence_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequenceltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:198
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>(const QKeySequence &)
+func (this *QKeySequence) Operator_greater_than(other QKeySequence_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QKeySequence_PTR() != nil {
+		convArg0 = other.QKeySequence_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequencegtERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:200
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(const QKeySequence &)
+func (this *QKeySequence) Operator_less_than_equal(other QKeySequence_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QKeySequence_PTR() != nil {
+		convArg0 = other.QKeySequence_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequenceleERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:202
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(const QKeySequence &)
+func (this *QKeySequence) Operator_greater_than_equal(other QKeySequence_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QKeySequence_PTR() != nil {
+		convArg0 = other.QKeySequence_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequencegeERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qkeysequence.h:205
@@ -322,6 +451,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

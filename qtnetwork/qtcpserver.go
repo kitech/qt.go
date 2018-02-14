@@ -24,6 +24,7 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -84,10 +85,14 @@ func (this *QTcpServer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QTcpServer(QObject *)
 func NewQTcpServer(parent qtcore.QObject_ITF /*777 QObject **/) *QTcpServer {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTcpServerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTcpServer")
 	return gothis
 }
 
@@ -107,7 +112,10 @@ func DeleteQTcpServer(this *QTcpServer) {
 // Public Visibility=Default Availability=Available
 // [1] bool listen(const QHostAddress &, quint16)
 func (this *QTcpServer) Listen(address QHostAddress_ITF, port uint16) bool {
-	var convArg0 = address.QHostAddress_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if address != nil && address.QHostAddress_PTR() != nil {
+		convArg0 = address.QHostAddress_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer6listenERK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -197,8 +205,8 @@ func (this *QTcpServer) SetSocketDescriptor(socketDescriptor int64) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForNewConnection(int, _Bool *)
-func (this *QTcpServer) WaitForNewConnection(msec int, timedOut unsafe.Pointer /*666*/) bool {
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, &timedOut)
+func (this *QTcpServer) WaitForNewConnection(msec int, timedOut *bool) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timedOut)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -269,7 +277,10 @@ func (this *QTcpServer) ResumeAccepting() {
 // Public Visibility=Default Availability=Available
 // [-2] void setProxy(const QNetworkProxy &)
 func (this *QTcpServer) SetProxy(networkProxy QNetworkProxy_ITF) {
-	var convArg0 = networkProxy.QNetworkProxy_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if networkProxy != nil && networkProxy.QNetworkProxy_PTR() != nil {
+		convArg0 = networkProxy.QNetworkProxy_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer8setProxyERK13QNetworkProxy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -300,7 +311,10 @@ func (this *QTcpServer) IncomingConnection(handle int64) {
 // Protected Visibility=Default Availability=Available
 // [-2] void addPendingConnection(QTcpSocket *)
 func (this *QTcpServer) AddPendingConnection(socket QTcpSocket_ITF /*777 QTcpSocket **/) {
-	var convArg0 = socket.QTcpSocket_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if socket != nil && socket.QTcpSocket_PTR() != nil {
+		convArg0 = socket.QTcpSocket_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer20addPendingConnectionEP10QTcpSocket", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -336,6 +350,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

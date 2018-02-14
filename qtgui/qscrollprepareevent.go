@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,7 +65,10 @@ func (*QScrollPrepareEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollPrepare
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollPrepareEvent(const QPointF &)
 func NewQScrollPrepareEvent(startPos qtcore.QPointF_ITF) *QScrollPrepareEvent {
-	var convArg0 = startPos.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if startPos != nil && startPos.QPointF_PTR() != nil {
+		convArg0 = startPos.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollPrepareEventC2ERK7QPointF", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQScrollPrepareEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -136,7 +140,10 @@ func (this *QScrollPrepareEvent) ContentPos() *qtcore.QPointF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setViewportSize(const QSizeF &)
 func (this *QScrollPrepareEvent) SetViewportSize(size qtcore.QSizeF_ITF) {
-	var convArg0 = size.QSizeF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSizeF_PTR() != nil {
+		convArg0 = size.QSizeF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -146,7 +153,10 @@ func (this *QScrollPrepareEvent) SetViewportSize(size qtcore.QSizeF_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setContentPosRange(const QRectF &)
 func (this *QScrollPrepareEvent) SetContentPosRange(rect qtcore.QRectF_ITF) {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -156,7 +166,10 @@ func (this *QScrollPrepareEvent) SetContentPosRange(rect qtcore.QRectF_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setContentPos(const QPointF &)
 func (this *QScrollPrepareEvent) SetContentPos(pos qtcore.QPointF_ITF) {
-	var convArg0 = pos.QPointF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollPrepareEvent13setContentPosERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -174,6 +187,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

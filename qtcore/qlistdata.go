@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -75,7 +76,7 @@ func (this *QListData) Detach(alloc int) unsafe.Pointer /*666*/ {
 // Public Visibility=Default Availability=Available
 // [8] QListData::Data * detach_grow(int *, int)
 func (this *QListData) Detach_grow(i unsafe.Pointer /*666*/, n int) unsafe.Pointer /*666*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QListData11detach_growEPii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i, n)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QListData11detach_growEPii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, n)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
@@ -217,6 +218,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

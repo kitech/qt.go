@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -70,7 +71,10 @@ func (*QGraphicsAnchorLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnc
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsAnchorLayout(QGraphicsLayoutItem *)
 func NewQGraphicsAnchorLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsAnchorLayout {
-	var convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsAnchorLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -94,8 +98,14 @@ func DeleteQGraphicsAnchorLayout(this *QGraphicsAnchorLayout) {
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsAnchor * addAnchor(QGraphicsLayoutItem *, Qt::AnchorPoint, QGraphicsLayoutItem *, Qt::AnchorPoint)
 func (this *QGraphicsAnchorLayout) AddAnchor(firstItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, firstEdge int, secondItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*777 QGraphicsAnchor **/ {
-	var convArg0 = firstItem.QGraphicsLayoutItem_PTR().GetCthis()
-	var convArg2 = secondItem.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if firstItem != nil && firstItem.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = firstItem.QGraphicsLayoutItem_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if secondItem != nil && secondItem.QGraphicsLayoutItem_PTR() != nil {
+		convArg2 = secondItem.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout9addAnchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, firstEdge, convArg2, secondEdge)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQGraphicsAnchorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -106,8 +116,14 @@ func (this *QGraphicsAnchorLayout) AddAnchor(firstItem QGraphicsLayoutItem_ITF /
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsAnchor * anchor(QGraphicsLayoutItem *, Qt::AnchorPoint, QGraphicsLayoutItem *, Qt::AnchorPoint)
 func (this *QGraphicsAnchorLayout) Anchor(firstItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, firstEdge int, secondItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*777 QGraphicsAnchor **/ {
-	var convArg0 = firstItem.QGraphicsLayoutItem_PTR().GetCthis()
-	var convArg2 = secondItem.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if firstItem != nil && firstItem.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = firstItem.QGraphicsLayoutItem_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if secondItem != nil && secondItem.QGraphicsLayoutItem_PTR() != nil {
+		convArg2 = secondItem.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout6anchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, firstEdge, convArg2, secondEdge)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQGraphicsAnchorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -118,8 +134,14 @@ func (this *QGraphicsAnchorLayout) Anchor(firstItem QGraphicsLayoutItem_ITF /*77
 // Public Visibility=Default Availability=Available
 // [-2] void addCornerAnchors(QGraphicsLayoutItem *, Qt::Corner, QGraphicsLayoutItem *, Qt::Corner)
 func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, firstCorner int, secondItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, secondCorner int) {
-	var convArg0 = firstItem.QGraphicsLayoutItem_PTR().GetCthis()
-	var convArg2 = secondItem.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if firstItem != nil && firstItem.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = firstItem.QGraphicsLayoutItem_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if secondItem != nil && secondItem.QGraphicsLayoutItem_PTR() != nil {
+		convArg2 = secondItem.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout16addCornerAnchorsEP19QGraphicsLayoutItemN2Qt6CornerES1_S3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, firstCorner, convArg2, secondCorner)
 	qtrt.ErrPrint(err, rv)
 }
@@ -129,8 +151,14 @@ func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem QGraphicsLayoutIte
 // Public Visibility=Default Availability=Available
 // [-2] void addAnchors(QGraphicsLayoutItem *, QGraphicsLayoutItem *, Qt::Orientations)
 func (this *QGraphicsAnchorLayout) AddAnchors(firstItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, secondItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, orientations int) {
-	var convArg0 = firstItem.QGraphicsLayoutItem_PTR().GetCthis()
-	var convArg1 = secondItem.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if firstItem != nil && firstItem.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = firstItem.QGraphicsLayoutItem_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if secondItem != nil && secondItem.QGraphicsLayoutItem_PTR() != nil {
+		convArg1 = secondItem.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout10addAnchorsEP19QGraphicsLayoutItemS1_6QFlagsIN2Qt11OrientationEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, orientations)
 	qtrt.ErrPrint(err, rv)
 }
@@ -196,7 +224,10 @@ func (this *QGraphicsAnchorLayout) RemoveAt(index int) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
 func (this *QGraphicsAnchorLayout) SetGeometry(rect qtcore.QRectF_ITF) {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -235,7 +266,10 @@ func (this *QGraphicsAnchorLayout) Invalidate() {
 // Protected virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsAnchorLayout) SizeHint(which int, constraint qtcore.QSizeF_ITF) *qtcore.QSizeF /*123*/ {
-	var convArg1 = constraint.QSizeF_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if constraint != nil && constraint.QSizeF_PTR() != nil {
+		convArg1 = constraint.QSizeF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -256,6 +290,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -73,6 +74,34 @@ func NewQDnsHostAddressRecord() *QDnsHostAddressRecord {
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qdnslookup.h:90
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QDnsHostAddressRecord & operator=(QDnsHostAddressRecord &&)
+func (this *QDnsHostAddressRecord) Operator_equal(other unsafe.Pointer /*333*/) *QDnsHostAddressRecord {
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QDnsHostAddressRecordaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQDnsHostAddressRecordFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDnsHostAddressRecord)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qdnslookup.h:92
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QDnsHostAddressRecord & operator=(const QDnsHostAddressRecord &)
+func (this *QDnsHostAddressRecord) Operator_equal_1(other QDnsHostAddressRecord_ITF) *QDnsHostAddressRecord {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QDnsHostAddressRecord_PTR() != nil {
+		convArg0 = other.QDnsHostAddressRecord_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QDnsHostAddressRecordaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQDnsHostAddressRecordFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDnsHostAddressRecord)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qdnslookup.h:93
 // index:0
 // Public Visibility=Default Availability=Available
@@ -89,7 +118,10 @@ func DeleteQDnsHostAddressRecord(this *QDnsHostAddressRecord) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsHostAddressRecord &)
 func (this *QDnsHostAddressRecord) Swap(other QDnsHostAddressRecord_ITF) {
-	var convArg0 = other.QDnsHostAddressRecord_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QDnsHostAddressRecord_PTR() != nil {
+		convArg0 = other.QDnsHostAddressRecord_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QDnsHostAddressRecord4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -142,6 +174,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtandroidextras
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -99,6 +100,16 @@ func QAndroidJniEnvironment_JavaVM() unsafe.Pointer /*666*/ {
 	return rv
 }
 
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] int * operator->()
+func (this *QAndroidJniEnvironment) Operator_minus_greater() unsafe.Pointer /*666*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironmentptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
 //  body block end
 
 //  keep block begin
@@ -112,6 +123,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -90,7 +91,10 @@ func DeleteQSGSimpleTextureNode(this *QSGSimpleTextureNode) {
 // Public Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
 func (this *QSGSimpleTextureNode) SetRect(rect qtcore.QRectF_ITF) {
-	var convArg0 = rect.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -121,7 +125,10 @@ func (this *QSGSimpleTextureNode) Rect() *qtcore.QRectF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setSourceRect(const QRectF &)
 func (this *QSGSimpleTextureNode) SetSourceRect(r qtcore.QRectF_ITF) {
-	var convArg0 = r.QRectF_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRectF_PTR() != nil {
+		convArg0 = r.QRectF_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode13setSourceRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -152,7 +159,10 @@ func (this *QSGSimpleTextureNode) SourceRect() *qtcore.QRectF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setTexture(QSGTexture *)
 func (this *QSGSimpleTextureNode) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/) {
-	var convArg0 = texture.QSGTexture_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if texture != nil && texture.QSGTexture_PTR() != nil {
+		convArg0 = texture.QSGTexture_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode10setTextureEP10QSGTexture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -243,6 +253,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

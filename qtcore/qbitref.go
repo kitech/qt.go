@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 21
+// extern C begin: 33
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -60,6 +61,44 @@ func (*QBitRef) NewFromPointer(cthis unsafe.Pointer) *QBitRef {
 	return NewQBitRefFromPointer(cthis)
 }
 
+// /usr/include/qt/QtCore/qbitarray.h:152
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!()
+func (this *QBitRef) Operator_not() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBitRefntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:153
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QBitRef & operator=(const QBitRef &)
+func (this *QBitRef) Operator_equal(val QBitRef_ITF) *QBitRef {
+	var convArg0 unsafe.Pointer
+	if val != nil && val.QBitRef_PTR() != nil {
+		convArg0 = val.QBitRef_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitRefaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQBitRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitRef)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:154
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [16] QBitRef & operator=(_Bool)
+func (this *QBitRef) Operator_equal_1(val bool) *QBitRef {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitRefaSEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQBitRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitRef)
+	return rv2
+}
+
 func DeleteQBitRef(this *QBitRef) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitRefD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +118,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -95,10 +96,14 @@ func (this *QSequentialAnimationGroup) MetaObject() *QMetaObject /*777 const QMe
 // Public Visibility=Default Availability=Available
 // [-2] void QSequentialAnimationGroup(QObject *)
 func NewQSequentialAnimationGroup(parent QObject_ITF /*777 QObject **/) *QSequentialAnimationGroup {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSequentialAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSequentialAnimationGroup")
 	return gothis
 }
 
@@ -158,7 +163,10 @@ func (this *QSequentialAnimationGroup) Duration() int {
 // Public Visibility=Default Availability=Available
 // [-2] void currentAnimationChanged(QAbstractAnimation *)
 func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
-	var convArg0 = current.QAbstractAnimation_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if current != nil && current.QAbstractAnimation_PTR() != nil {
+		convArg0 = current.QAbstractAnimation_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -168,7 +176,10 @@ func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current QAbstract
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QSequentialAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -214,6 +225,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 13
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -77,8 +78,14 @@ func NewQLine() *QLine {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLine(const QPoint &, const QPoint &)
 func NewQLine_1(pt1 QPoint_ITF, pt2 QPoint_ITF) *QLine {
-	var convArg0 = pt1.QPoint_PTR().GetCthis()
-	var convArg1 = pt2.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pt1 != nil && pt1.QPoint_PTR() != nil {
+		convArg0 = pt1.QPoint_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pt2 != nil && pt2.QPoint_PTR() != nil {
+		convArg1 = pt2.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLineC2ERK6QPointS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLineFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -197,7 +204,10 @@ func (this *QLine) Dy() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void translate(const QPoint &)
 func (this *QLine) Translate(p QPoint_ITF) {
-	var convArg0 = p.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPoint_PTR() != nil {
+		convArg0 = p.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLine9translateERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -216,7 +226,10 @@ func (this *QLine) Translate_1(dx int, dy int) {
 // Public inline Visibility=Default Availability=Available
 // [16] QLine translated(const QPoint &)
 func (this *QLine) Translated(p QPoint_ITF) *QLine /*123*/ {
-	var convArg0 = p.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPoint_PTR() != nil {
+		convArg0 = p.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine10translatedERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -253,7 +266,10 @@ func (this *QLine) Center() *QPoint /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setP1(const QPoint &)
 func (this *QLine) SetP1(p1 QPoint_ITF) {
-	var convArg0 = p1.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p1 != nil && p1.QPoint_PTR() != nil {
+		convArg0 = p1.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLine5setP1ERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -263,7 +279,10 @@ func (this *QLine) SetP1(p1 QPoint_ITF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setP2(const QPoint &)
 func (this *QLine) SetP2(p2 QPoint_ITF) {
-	var convArg0 = p2.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p2 != nil && p2.QPoint_PTR() != nil {
+		convArg0 = p2.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLine5setP2ERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -273,8 +292,14 @@ func (this *QLine) SetP2(p2 QPoint_ITF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPoints(const QPoint &, const QPoint &)
 func (this *QLine) SetPoints(p1 QPoint_ITF, p2 QPoint_ITF) {
-	var convArg0 = p1.QPoint_PTR().GetCthis()
-	var convArg1 = p2.QPoint_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p1 != nil && p1.QPoint_PTR() != nil {
+		convArg0 = p1.QPoint_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if p2 != nil && p2.QPoint_PTR() != nil {
+		convArg1 = p2.QPoint_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLine9setPointsERK6QPointS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -286,6 +311,34 @@ func (this *QLine) SetPoints(p1 QPoint_ITF, p2 QPoint_ITF) {
 func (this *QLine) SetLine(x1 int, y1 int, x2 int, y2 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLine7setLineEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qline.h:86
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QLine &)
+func (this *QLine) Operator_equal_equal(d QLine_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if d != nil && d.QLine_PTR() != nil {
+		convArg0 = d.QLine_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLineeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qline.h:87
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QLine &)
+func (this *QLine) Operator_not_equal(d QLine_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if d != nil && d.QLine_PTR() != nil {
+		convArg0 = d.QLine_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLineneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 func DeleteQLine(this *QLine) {
@@ -307,6 +360,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

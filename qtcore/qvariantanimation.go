@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -98,10 +99,14 @@ func (this *QVariantAnimation) MetaObject() *QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QVariantAnimation(QObject *)
 func NewQVariantAnimation(parent QObject_ITF /*777 QObject **/) *QVariantAnimation {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QVariantAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVariantAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QVariantAnimation")
 	return gothis
 }
 
@@ -133,7 +138,10 @@ func (this *QVariantAnimation) StartValue() *QVariant /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setStartValue(const QVariant &)
 func (this *QVariantAnimation) SetStartValue(value QVariant_ITF) {
-	var convArg0 = value.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg0 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QVariantAnimation13setStartValueERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -155,7 +163,10 @@ func (this *QVariantAnimation) EndValue() *QVariant /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setEndValue(const QVariant &)
 func (this *QVariantAnimation) SetEndValue(value QVariant_ITF) {
-	var convArg0 = value.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg0 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QVariantAnimation11setEndValueERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -177,7 +188,10 @@ func (this *QVariantAnimation) KeyValueAt(step float64) *QVariant /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setKeyValueAt(qreal, const QVariant &)
 func (this *QVariantAnimation) SetKeyValueAt(step float64, value QVariant_ITF) {
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -230,7 +244,10 @@ func (this *QVariantAnimation) EasingCurve() *QEasingCurve /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setEasingCurve(const QEasingCurve &)
 func (this *QVariantAnimation) SetEasingCurve(easing QEasingCurve_ITF) {
-	var convArg0 = easing.QEasingCurve_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if easing != nil && easing.QEasingCurve_PTR() != nil {
+		convArg0 = easing.QEasingCurve_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -240,7 +257,10 @@ func (this *QVariantAnimation) SetEasingCurve(easing QEasingCurve_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(const QVariant &)
 func (this *QVariantAnimation) ValueChanged(value QVariant_ITF) {
-	var convArg0 = value.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg0 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QVariantAnimation12valueChangedERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -250,7 +270,10 @@ func (this *QVariantAnimation) ValueChanged(value QVariant_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QVariantAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QVariantAnimation5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -279,7 +302,10 @@ func (this *QVariantAnimation) UpdateState(newState int, oldState int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentValue(const QVariant &)
 func (this *QVariantAnimation) UpdateCurrentValue(value QVariant_ITF) {
-	var convArg0 = value.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg0 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QVariantAnimation18updateCurrentValueERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -289,8 +315,14 @@ func (this *QVariantAnimation) UpdateCurrentValue(value QVariant_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant interpolated(const QVariant &, const QVariant &, qreal)
 func (this *QVariantAnimation) Interpolated(from QVariant_ITF, to QVariant_ITF, progress float64) *QVariant /*123*/ {
-	var convArg0 = from.QVariant_PTR().GetCthis()
-	var convArg1 = to.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if from != nil && from.QVariant_PTR() != nil {
+		convArg0 = from.QVariant_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if to != nil && to.QVariant_PTR() != nil {
+		convArg1 = to.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QVariantAnimation12interpolatedERK8QVariantS2_d", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, progress)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -311,6 +343,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

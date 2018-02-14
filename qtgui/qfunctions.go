@@ -154,7 +154,7 @@ func QAccessibleRoleString(role int) string {
 func Qt_findAtNxFile(baseFileName string, targetDevicePixelRatio float64, sourceDevicePixelRatio unsafe.Pointer /*666*/) string {
 	var tmpArg0 = qtcore.NewQString_5(baseFileName)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_Z15qt_findAtNxFileRK7QStringdPd", qtrt.FFI_TYPE_POINTER, convArg0, targetDevicePixelRatio, &sourceDevicePixelRatio)
+	rv, err := qtrt.InvokeQtFunc6("_Z15qt_findAtNxFileRK7QStringdPd", qtrt.FFI_TYPE_POINTER, convArg0, targetDevicePixelRatio, sourceDevicePixelRatio)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
@@ -177,8 +177,14 @@ func QUnpremultiply(p uint) uint {
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyCompare(const QQuaternion &, const QQuaternion &)
 func QFuzzyCompare_2(q1 QQuaternion_ITF, q2 QQuaternion_ITF) bool {
-	var convArg0 = q1.QQuaternion_PTR().GetCthis()
-	var convArg1 = q2.QQuaternion_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if q1 != nil && q1.QQuaternion_PTR() != nil {
+		convArg0 = q1.QQuaternion_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if q2 != nil && q2.QQuaternion_PTR() != nil {
+		convArg1 = q2.QQuaternion_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_Z13qFuzzyCompareRK11QQuaternionS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

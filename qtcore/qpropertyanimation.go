@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -88,10 +89,14 @@ func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *)
 func NewQPropertyAnimation(parent QObject_ITF /*777 QObject **/) *QPropertyAnimation {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPropertyAnimation")
 	return gothis
 }
 
@@ -100,12 +105,22 @@ func NewQPropertyAnimation(parent QObject_ITF /*777 QObject **/) *QPropertyAnima
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *, const QByteArray &, QObject *)
 func NewQPropertyAnimation_1(target QObject_ITF /*777 QObject **/, propertyName QByteArray_ITF, parent QObject_ITF /*777 QObject **/) *QPropertyAnimation {
-	var convArg0 = target.QObject_PTR().GetCthis()
-	var convArg1 = propertyName.QByteArray_PTR().GetCthis()
-	var convArg2 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QObject_PTR() != nil {
+		convArg0 = target.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if propertyName != nil && propertyName.QByteArray_PTR() != nil {
+		convArg1 = propertyName.QByteArray_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg2 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPropertyAnimation")
 	return gothis
 }
 
@@ -135,7 +150,10 @@ func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setTargetObject(QObject *)
 func (this *QPropertyAnimation) SetTargetObject(target QObject_ITF /*777 QObject **/) {
-	var convArg0 = target.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QObject_PTR() != nil {
+		convArg0 = target.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation15setTargetObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -157,7 +175,10 @@ func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setPropertyName(const QByteArray &)
 func (this *QPropertyAnimation) SetPropertyName(propertyName QByteArray_ITF) {
-	var convArg0 = propertyName.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if propertyName != nil && propertyName.QByteArray_PTR() != nil {
+		convArg0 = propertyName.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -167,7 +188,10 @@ func (this *QPropertyAnimation) SetPropertyName(propertyName QByteArray_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QPropertyAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -178,7 +202,10 @@ func (this *QPropertyAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentValue(const QVariant &)
 func (this *QPropertyAnimation) UpdateCurrentValue(value QVariant_ITF) {
-	var convArg0 = value.QVariant_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg0 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation18updateCurrentValueERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -205,6 +232,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

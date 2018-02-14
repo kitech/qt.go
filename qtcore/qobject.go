@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -120,7 +121,10 @@ func (this *QObject) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void QObject(QObject *)
 func NewQObject(parent QObject_ITF /*777 QObject **/) *QObject {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObjectC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQObjectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -144,7 +148,10 @@ func DeleteQObject(this *QObject) {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QObject) Event(event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -155,8 +162,14 @@ func (this *QObject) Event(event QEvent_ITF /*777 QEvent **/) bool {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
 func (this *QObject) EventFilter(watched QObject_ITF /*777 QObject **/, event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = watched.QObject_PTR().GetCthis()
-	var convArg1 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if watched != nil && watched.QObject_PTR() != nil {
+		convArg0 = watched.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg1 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject11eventFilterEPS_P6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -241,7 +254,10 @@ func (this *QObject) Thread() *QThread /*777 QThread **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void moveToThread(QThread *)
 func (this *QObject) MoveToThread(thread QThread_ITF /*777 QThread **/) {
-	var convArg0 = thread.QThread_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if thread != nil && thread.QThread_PTR() != nil {
+		convArg0 = thread.QThread_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject12moveToThreadEP7QThread", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -282,7 +298,10 @@ func (this *QObject) Children() *QObjectList {
 // Public Visibility=Default Availability=Available
 // [-2] void setParent(QObject *)
 func (this *QObject) SetParent(parent QObject_ITF /*777 QObject **/) {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject9setParentEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -292,7 +311,10 @@ func (this *QObject) SetParent(parent QObject_ITF /*777 QObject **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void installEventFilter(QObject *)
 func (this *QObject) InstallEventFilter(filterObj QObject_ITF /*777 QObject **/) {
-	var convArg0 = filterObj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if filterObj != nil && filterObj.QObject_PTR() != nil {
+		convArg0 = filterObj.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject18installEventFilterEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -302,7 +324,10 @@ func (this *QObject) InstallEventFilter(filterObj QObject_ITF /*777 QObject **/)
 // Public Visibility=Default Availability=Available
 // [-2] void removeEventFilter(QObject *)
 func (this *QObject) RemoveEventFilter(obj QObject_ITF /*777 QObject **/) {
-	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg0 = obj.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject17removeEventFilterEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -312,10 +337,16 @@ func (this *QObject) RemoveEventFilter(obj QObject_ITF /*777 QObject **/) {
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, const char *, const QObject *, const char *, Qt::ConnectionType)
 func (this *QObject) Connect(sender QObject_ITF /*777 const QObject **/, signal string, receiver QObject_ITF /*777 const QObject **/, member string, arg4 int) int {
-	var convArg0 = sender.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg1)
-	var convArg2 = receiver.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg2 = receiver.QObject_PTR().GetCthis()
+	}
 	var convArg3 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg3)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
@@ -333,10 +364,22 @@ func QObject_Connect(sender QObject_ITF /*777 const QObject **/, signal string, 
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, const QMetaMethod &, const QObject *, const QMetaMethod &, Qt::ConnectionType)
 func (this *QObject) Connect_1(sender QObject_ITF /*777 const QObject **/, signal QMetaMethod_ITF, receiver QObject_ITF /*777 const QObject **/, method QMetaMethod_ITF, type_ int) int {
-	var convArg0 = sender.QObject_PTR().GetCthis()
-	var convArg1 = signal.QMetaMethod_PTR().GetCthis()
-	var convArg2 = receiver.QObject_PTR().GetCthis()
-	var convArg3 = method.QMetaMethod_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if signal != nil && signal.QMetaMethod_PTR() != nil {
+		convArg1 = signal.QMetaMethod_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg2 = receiver.QObject_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if method != nil && method.QMetaMethod_PTR() != nil {
+		convArg3 = method.QMetaMethod_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject7connectEPKS_RK11QMetaMethodS1_S4_N2Qt14ConnectionTypeE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, type_)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -352,7 +395,10 @@ func QObject_Connect_1(sender QObject_ITF /*777 const QObject **/, signal QMetaM
 // Public inline Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, const char *, const char *, Qt::ConnectionType)
 func (this *QObject) Connect_2(sender QObject_ITF /*777 const QObject **/, signal string, member string, type_ int) int {
-	var convArg0 = sender.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg1)
 	var convArg2 = qtrt.CString(member)
@@ -367,10 +413,16 @@ func (this *QObject) Connect_2(sender QObject_ITF /*777 const QObject **/, signa
 // Public static Visibility=Default Availability=Available
 // [1] bool disconnect(const QObject *, const char *, const QObject *, const char *)
 func (this *QObject) Disconnect(sender QObject_ITF /*777 const QObject **/, signal string, receiver QObject_ITF /*777 const QObject **/, member string) bool {
-	var convArg0 = sender.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg1)
-	var convArg2 = receiver.QObject_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg2 = receiver.QObject_PTR().GetCthis()
+	}
 	var convArg3 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg3)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject10disconnectEPKS_PKcS1_S3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
@@ -388,10 +440,22 @@ func QObject_Disconnect(sender QObject_ITF /*777 const QObject **/, signal strin
 // Public static Visibility=Default Availability=Available
 // [1] bool disconnect(const QObject *, const QMetaMethod &, const QObject *, const QMetaMethod &)
 func (this *QObject) Disconnect_1(sender QObject_ITF /*777 const QObject **/, signal QMetaMethod_ITF, receiver QObject_ITF /*777 const QObject **/, member QMetaMethod_ITF) bool {
-	var convArg0 = sender.QObject_PTR().GetCthis()
-	var convArg1 = signal.QMetaMethod_PTR().GetCthis()
-	var convArg2 = receiver.QObject_PTR().GetCthis()
-	var convArg3 = member.QMetaMethod_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if signal != nil && signal.QMetaMethod_PTR() != nil {
+		convArg1 = signal.QMetaMethod_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg2 = receiver.QObject_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if member != nil && member.QMetaMethod_PTR() != nil {
+		convArg3 = member.QMetaMethod_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -409,7 +473,10 @@ func QObject_Disconnect_1(sender QObject_ITF /*777 const QObject **/, signal QMe
 func (this *QObject) Disconnect_2(signal string, receiver QObject_ITF /*777 const QObject **/, member string) bool {
 	var convArg0 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg0)
-	var convArg1 = receiver.QObject_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg1 = receiver.QObject_PTR().GetCthis()
+	}
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject10disconnectEPKcPKS_S1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
@@ -422,7 +489,10 @@ func (this *QObject) Disconnect_2(signal string, receiver QObject_ITF /*777 cons
 // Public inline Visibility=Default Availability=Available
 // [1] bool disconnect(const QObject *, const char *)
 func (this *QObject) Disconnect_3(receiver QObject_ITF /*777 const QObject **/, member string) bool {
-	var convArg0 = receiver.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg0 = receiver.QObject_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject10disconnectEPKS_PKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -473,7 +543,10 @@ func (this *QObject) DumpObjectInfo_1() {
 func (this *QObject) SetProperty(name string, value QVariant_ITF) bool {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject11setPropertyEPKcRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -513,7 +586,10 @@ func QObject_RegisterUserData() uint {
 // Public Visibility=Default Availability=Available
 // [-2] void setUserData(uint, QObjectUserData *)
 func (this *QObject) SetUserData(id uint, data QObjectUserData_ITF /*777 QObjectUserData **/) {
-	var convArg1 = data.QObjectUserData_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if data != nil && data.QObjectUserData_PTR() != nil {
+		convArg1 = data.QObjectUserData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject11setUserDataEjP15QObjectUserData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -533,7 +609,10 @@ func (this *QObject) UserData(id uint) *QObjectUserData /*777 QObjectUserData **
 // Public Visibility=Default Availability=Available
 // [-2] void destroyed(QObject *)
 func (this *QObject) Destroyed(arg0 QObject_ITF /*777 QObject **/) {
-	var convArg0 = arg0.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QObject_PTR() != nil {
+		convArg0 = arg0.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject9destroyedEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -606,7 +685,10 @@ func (this *QObject) Receivers(signal string) int {
 // Protected Visibility=Default Availability=Available
 // [1] bool isSignalConnected(const QMetaMethod &)
 func (this *QObject) IsSignalConnected(signal QMetaMethod_ITF) bool {
-	var convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if signal != nil && signal.QMetaMethod_PTR() != nil {
+		convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject17isSignalConnectedERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -617,7 +699,10 @@ func (this *QObject) IsSignalConnected(signal QMetaMethod_ITF) bool {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QObject) TimerEvent(event QTimerEvent_ITF /*777 QTimerEvent **/) {
-	var convArg0 = event.QTimerEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QTimerEvent_PTR() != nil {
+		convArg0 = event.QTimerEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -627,7 +712,10 @@ func (this *QObject) TimerEvent(event QTimerEvent_ITF /*777 QTimerEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void childEvent(QChildEvent *)
 func (this *QObject) ChildEvent(event QChildEvent_ITF /*777 QChildEvent **/) {
-	var convArg0 = event.QChildEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QChildEvent_PTR() != nil {
+		convArg0 = event.QChildEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject10childEventEP11QChildEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -637,7 +725,10 @@ func (this *QObject) ChildEvent(event QChildEvent_ITF /*777 QChildEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void customEvent(QEvent *)
 func (this *QObject) CustomEvent(event QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject11customEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -647,7 +738,10 @@ func (this *QObject) CustomEvent(event QEvent_ITF /*777 QEvent **/) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void connectNotify(const QMetaMethod &)
 func (this *QObject) ConnectNotify(signal QMetaMethod_ITF) {
-	var convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if signal != nil && signal.QMetaMethod_PTR() != nil {
+		convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject13connectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -657,7 +751,10 @@ func (this *QObject) ConnectNotify(signal QMetaMethod_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void disconnectNotify(const QMetaMethod &)
 func (this *QObject) DisconnectNotify(signal QMetaMethod_ITF) {
-	var convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if signal != nil && signal.QMetaMethod_PTR() != nil {
+		convArg0 = signal.QMetaMethod_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject16disconnectNotifyERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -675,6 +772,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

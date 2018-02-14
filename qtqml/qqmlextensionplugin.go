@@ -24,6 +24,7 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtnetwork"
@@ -79,10 +80,14 @@ func (this *QQmlExtensionPlugin) MetaObject() *qtcore.QMetaObject /*777 const QM
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExtensionPlugin(QObject *)
 func NewQQmlExtensionPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlExtensionPlugin {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQmlExtensionPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlExtensionPluginFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlExtensionPlugin")
 	return gothis
 }
 
@@ -125,7 +130,10 @@ func (this *QQmlExtensionPlugin) RegisterTypes(uri string) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void initializeEngine(QQmlEngine *, const char *)
 func (this *QQmlExtensionPlugin) InitializeEngine(engine QQmlEngine_ITF /*777 QQmlEngine **/, uri string) {
-	var convArg0 = engine.QQmlEngine_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if engine != nil && engine.QQmlEngine_PTR() != nil {
+		convArg0 = engine.QQmlEngine_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQmlExtensionPlugin16initializeEngineEP10QQmlEnginePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -145,6 +153,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

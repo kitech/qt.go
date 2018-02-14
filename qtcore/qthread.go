@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -146,10 +147,14 @@ func QThread_YieldCurrentThread() {
 // Public Visibility=Default Availability=Available
 // [-2] void QThread(QObject *)
 func NewQThread(parent QObject_ITF /*777 QObject **/) *QThread {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThreadC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQThreadFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QThread")
 	return gothis
 }
 
@@ -265,7 +270,10 @@ func (this *QThread) EventDispatcher() *QAbstractEventDispatcher /*777 QAbstract
 // Public Visibility=Default Availability=Available
 // [-2] void setEventDispatcher(QAbstractEventDispatcher *)
 func (this *QThread) SetEventDispatcher(eventDispatcher QAbstractEventDispatcher_ITF /*777 QAbstractEventDispatcher **/) {
-	var convArg0 = eventDispatcher.QAbstractEventDispatcher_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if eventDispatcher != nil && eventDispatcher.QAbstractEventDispatcher_PTR() != nil {
+		convArg0 = eventDispatcher.QAbstractEventDispatcher_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -275,7 +283,10 @@ func (this *QThread) SetEventDispatcher(eventDispatcher QAbstractEventDispatcher
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QThread) Event(event QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = event.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -423,6 +434,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 3
+// extern C begin: 5
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -65,7 +66,10 @@ func (*QCollator) NewFromPointer(cthis unsafe.Pointer) *QCollator {
 // Public Visibility=Default Availability=Available
 // [-2] void QCollator(const QLocale &)
 func NewQCollator(locale QLocale_ITF) *QCollator {
-	var convArg0 = locale.QLocale_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if locale != nil && locale.QLocale_PTR() != nil {
+		convArg0 = locale.QLocale_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollatorC2ERK7QLocale", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCollatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -84,12 +88,43 @@ func DeleteQCollator(this *QCollator) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qcollator.h:89
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QCollator & operator=(const QCollator &)
+func (this *QCollator) Operator_equal(arg0 QCollator_ITF) *QCollator {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QCollator_PTR() != nil {
+		convArg0 = arg0.QCollator_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollatoraSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQCollatorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCollator)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qcollator.h:93
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QCollator & operator=(QCollator &&)
+func (this *QCollator) Operator_equal_1(other unsafe.Pointer /*333*/) *QCollator {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollatoraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQCollatorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCollator)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qcollator.h:97
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QCollator &)
 func (this *QCollator) Swap(other QCollator_ITF) {
-	var convArg0 = other.QCollator_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QCollator_PTR() != nil {
+		convArg0 = other.QCollator_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollator4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -99,7 +134,10 @@ func (this *QCollator) Swap(other QCollator_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void setLocale(const QLocale &)
 func (this *QCollator) SetLocale(locale QLocale_ITF) {
-	var convArg0 = locale.QLocale_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if locale != nil && locale.QLocale_PTR() != nil {
+		convArg0 = locale.QLocale_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollator9setLocaleERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -192,8 +230,14 @@ func (this *QCollator) Compare(s1 string, s2 string) int {
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, const QStringRef &)
 func (this *QCollator) Compare_1(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
-	var convArg0 = s1.QStringRef_PTR().GetCthis()
-	var convArg1 = s2.QStringRef_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s1 != nil && s1.QStringRef_PTR() != nil {
+		convArg0 = s1.QStringRef_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if s2 != nil && s2.QStringRef_PTR() != nil {
+		convArg1 = s2.QStringRef_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator7compareERK10QStringRefS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -204,11 +248,31 @@ func (this *QCollator) Compare_1(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QChar *, int, const QChar *, int)
 func (this *QCollator) Compare_2(s1 QChar_ITF /*777 const QChar **/, len1 int, s2 QChar_ITF /*777 const QChar **/, len2 int) int {
-	var convArg0 = s1.QChar_PTR().GetCthis()
-	var convArg2 = s2.QChar_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if s1 != nil && s1.QChar_PTR() != nil {
+		convArg0 = s1.QChar_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if s2 != nil && s2.QChar_PTR() != nil {
+		convArg2 = s2.QChar_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator7compareEPK5QChariS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len1, convArg2, len2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qcollator.h:116
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator()(const QString &, const QString &)
+func (this *QCollator) Operator_fncall(s1 string, s2 string) bool {
+	var tmpArg0 = NewQString_5(s1)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(s2)
+	var convArg1 = tmpArg1.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollatorclERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qcollator.h:119
@@ -238,6 +302,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

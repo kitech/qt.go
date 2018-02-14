@@ -24,6 +24,7 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -159,7 +160,10 @@ func QStandardPaths_DisplayName(type_ int) string {
 func (this *QStandardPaths) FindExecutable(executableName string, paths QStringList_ITF) string {
 	var tmpArg0 = NewQString_5(executableName)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = paths.QStringList_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if paths != nil && paths.QStringList_PTR() != nil {
+		convArg1 = paths.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -261,6 +265,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

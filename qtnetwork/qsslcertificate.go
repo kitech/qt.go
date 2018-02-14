@@ -24,6 +24,7 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -66,7 +67,10 @@ func (*QSslCertificate) NewFromPointer(cthis unsafe.Pointer) *QSslCertificate {
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCertificate(QIODevice *, QSsl::EncodingFormat)
 func NewQSslCertificate(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslCertificate {
-	var convArg0 = device.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2EP9QIODeviceN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -79,7 +83,10 @@ func NewQSslCertificate(device qtcore.QIODevice_ITF /*777 QIODevice **/, format 
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCertificate(const QByteArray &, QSsl::EncodingFormat)
 func NewQSslCertificate_1(data qtcore.QByteArray_ITF, format int) *QSslCertificate {
-	var convArg0 = data.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2ERK10QByteArrayN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -98,14 +105,73 @@ func DeleteQSslCertificate(this *QSslCertificate) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtNetwork/qsslcertificate.h:94
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QSslCertificate & operator=(QSslCertificate &&)
+func (this *QSslCertificate) Operator_equal(other unsafe.Pointer /*333*/) *QSslCertificate {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslCertificate)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qsslcertificate.h:96
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QSslCertificate & operator=(const QSslCertificate &)
+func (this *QSslCertificate) Operator_equal_1(other QSslCertificate_ITF) *QSslCertificate {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslCertificate_PTR() != nil {
+		convArg0 = other.QSslCertificate_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslCertificate)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qsslcertificate.h:98
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslCertificate &)
 func (this *QSslCertificate) Swap(other QSslCertificate_ITF) {
-	var convArg0 = other.QSslCertificate_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslCertificate_PTR() != nil {
+		convArg0 = other.QSslCertificate_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificate4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslcertificate.h:101
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QSslCertificate &)
+func (this *QSslCertificate) Operator_equal_equal(other QSslCertificate_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslCertificate_PTR() != nil {
+		convArg0 = other.QSslCertificate_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificateeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslcertificate.h:102
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QSslCertificate &)
+func (this *QSslCertificate) Operator_not_equal(other QSslCertificate_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslCertificate_PTR() != nil {
+		convArg0 = other.QSslCertificate_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificateneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtNetwork/qsslcertificate.h:104
@@ -200,7 +266,10 @@ func (this *QSslCertificate) IssuerInfo(info int) *qtcore.QStringList /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QStringList issuerInfo(const QByteArray &)
 func (this *QSslCertificate) IssuerInfo_1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
-	var convArg0 = attribute.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if attribute != nil && attribute.QByteArray_PTR() != nil {
+		convArg0 = attribute.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate10issuerInfoERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -225,7 +294,10 @@ func (this *QSslCertificate) SubjectInfo(info int) *qtcore.QStringList /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QStringList subjectInfo(const QByteArray &)
 func (this *QSslCertificate) SubjectInfo_1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
-	var convArg0 = attribute.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if attribute != nil && attribute.QByteArray_PTR() != nil {
+		convArg0 = attribute.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate11subjectInfoERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -341,6 +413,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

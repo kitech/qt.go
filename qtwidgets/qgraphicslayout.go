@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -70,7 +71,10 @@ func (*QGraphicsLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayout(QGraphicsLayoutItem *)
 func NewQGraphicsLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayout {
-	var convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -103,7 +107,7 @@ func (this *QGraphicsLayout) SetContentsMargins(left float64, top float64, right
 // Public virtual Visibility=Default Availability=Available
 // [-2] void getContentsMargins(qreal *, qreal *, qreal *, qreal *)
 func (this *QGraphicsLayout) GetContentsMargins(left unsafe.Pointer /*666*/, top unsafe.Pointer /*666*/, right unsafe.Pointer /*666*/, bottom unsafe.Pointer /*666*/) {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &left, &top, &right, &bottom)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -149,7 +153,10 @@ func (this *QGraphicsLayout) UpdateGeometry() {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void widgetEvent(QEvent *)
 func (this *QGraphicsLayout) WidgetEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayout11widgetEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -216,7 +223,10 @@ func QGraphicsLayout_InstantInvalidatePropagation() bool {
 // Protected Visibility=Default Availability=Available
 // [-2] void addChildLayoutItem(QGraphicsLayoutItem *)
 func (this *QGraphicsLayout) AddChildLayoutItem(layoutItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) {
-	var convArg0 = layoutItem.QGraphicsLayoutItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if layoutItem != nil && layoutItem.QGraphicsLayoutItem_PTR() != nil {
+		convArg0 = layoutItem.QGraphicsLayoutItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayout18addChildLayoutItemEP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -234,6 +244,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

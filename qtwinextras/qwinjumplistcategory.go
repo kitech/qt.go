@@ -24,6 +24,7 @@ package qtwinextras
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -165,7 +166,10 @@ func (this *QWinJumpListCategory) IsEmpty() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void addItem(QWinJumpListItem *)
 func (this *QWinJumpListCategory) AddItem(item QWinJumpListItem_ITF /*777 QWinJumpListItem **/) {
-	var convArg0 = item.QWinJumpListItem_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QWinJumpListItem_PTR() != nil {
+		convArg0 = item.QWinJumpListItem_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategory7addItemEP16QWinJumpListItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -191,7 +195,10 @@ func (this *QWinJumpListCategory) AddLink(title string, executablePath string, a
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(executablePath)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 = arguments.QStringList_PTR().GetCthis()
+	var convArg2 unsafe.Pointer
+	if arguments != nil && arguments.QStringList_PTR() != nil {
+		convArg2 = arguments.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategory7addLinkERK7QStringS2_RK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWinJumpListItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -202,12 +209,18 @@ func (this *QWinJumpListCategory) AddLink(title string, executablePath string, a
 // Public Visibility=Default Availability=Available
 // [8] QWinJumpListItem * addLink(const QIcon &, const QString &, const QString &, const QStringList &)
 func (this *QWinJumpListCategory) AddLink_1(icon qtgui.QIcon_ITF, title string, executablePath string, arguments qtcore.QStringList_ITF) *QWinJumpListItem /*777 QWinJumpListItem **/ {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(executablePath)
 	var convArg2 = tmpArg2.GetCthis()
-	var convArg3 = arguments.QStringList_PTR().GetCthis()
+	var convArg3 unsafe.Pointer
+	if arguments != nil && arguments.QStringList_PTR() != nil {
+		convArg3 = arguments.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategory7addLinkERK5QIconRK7QStringS5_RK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWinJumpListItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -252,6 +265,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

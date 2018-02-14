@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -75,10 +76,14 @@ func (this *QActionGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // Public Visibility=Default Availability=Available
 // [-2] void QActionGroup(QObject *)
 func NewQActionGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QActionGroup {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQActionGroupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QActionGroup")
 	return gothis
 }
 
@@ -98,7 +103,10 @@ func DeleteQActionGroup(this *QActionGroup) {
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(QAction *)
 func (this *QActionGroup) AddAction(a QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
-	var convArg0 = a.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QAction_PTR() != nil {
+		convArg0 = a.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup9addActionEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -121,7 +129,10 @@ func (this *QActionGroup) AddAction_1(text string) *QAction /*777 QAction **/ {
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &)
 func (this *QActionGroup) AddAction_2(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
-	var convArg0 = icon.QIcon_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -134,7 +145,10 @@ func (this *QActionGroup) AddAction_2(icon qtgui.QIcon_ITF, text string) *QActio
 // Public Visibility=Default Availability=Available
 // [-2] void removeAction(QAction *)
 func (this *QActionGroup) RemoveAction(a QAction_ITF /*777 QAction **/) {
-	var convArg0 = a.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QAction_PTR() != nil {
+		convArg0 = a.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup12removeActionEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -220,7 +234,10 @@ func (this *QActionGroup) SetExclusive(arg0 bool) {
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(QAction *)
 func (this *QActionGroup) Triggered(arg0 QAction_ITF /*777 QAction **/) {
-	var convArg0 = arg0.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAction_PTR() != nil {
+		convArg0 = arg0.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup9triggeredEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -230,7 +247,10 @@ func (this *QActionGroup) Triggered(arg0 QAction_ITF /*777 QAction **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void hovered(QAction *)
 func (this *QActionGroup) Hovered(arg0 QAction_ITF /*777 QAction **/) {
-	var convArg0 = arg0.QAction_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAction_PTR() != nil {
+		convArg0 = arg0.QAction_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup7hoveredEP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -248,6 +268,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -64,8 +65,14 @@ func (*QResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QResizeEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QResizeEvent(const QSize &, const QSize &)
 func NewQResizeEvent(size qtcore.QSize_ITF, oldSize qtcore.QSize_ITF) *QResizeEvent {
-	var convArg0 = size.QSize_PTR().GetCthis()
-	var convArg1 = oldSize.QSize_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg0 = size.QSize_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if oldSize != nil && oldSize.QSize_PTR() != nil {
+		convArg1 = oldSize.QSize_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QResizeEventC2ERK5QSizeS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQResizeEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -121,6 +128,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

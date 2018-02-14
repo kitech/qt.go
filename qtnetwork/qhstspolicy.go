@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 16
+// extern C begin: 18
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -78,7 +79,10 @@ func NewQHstsPolicy() *QHstsPolicy {
 // Public Visibility=Default Availability=Available
 // [-2] void QHstsPolicy(const QDateTime &, QHstsPolicy::PolicyFlags, const QString &, QUrl::ParsingMode)
 func NewQHstsPolicy_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode int) *QHstsPolicy {
-	var convArg0 = expiry.QDateTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if expiry != nil && expiry.QDateTime_PTR() != nil {
+		convArg0 = expiry.QDateTime_PTR().GetCthis()
+	}
 	var tmpArg2 = qtcore.NewQString_5(host)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyC2ERK9QDateTime6QFlagsINS_10PolicyFlagEERK7QStringN4QUrl11ParsingModeE", qtrt.FFI_TYPE_POINTER, convArg0, flags, convArg2, mode)
@@ -86,6 +90,34 @@ func NewQHstsPolicy_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode 
 	gothis := NewQHstsPolicyFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQHstsPolicy)
 	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qhstspolicy.h:67
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QHstsPolicy & operator=(const QHstsPolicy &)
+func (this *QHstsPolicy) Operator_equal(rhs QHstsPolicy_ITF) *QHstsPolicy {
+	var convArg0 unsafe.Pointer
+	if rhs != nil && rhs.QHstsPolicy_PTR() != nil {
+		convArg0 = rhs.QHstsPolicy_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQHstsPolicyFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHstsPolicy)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qhstspolicy.h:68
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QHstsPolicy & operator=(QHstsPolicy &&)
+func (this *QHstsPolicy) Operator_equal_1(other unsafe.Pointer /*333*/) *QHstsPolicy {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQHstsPolicyFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHstsPolicy)
+	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qhstspolicy.h:69
@@ -104,7 +136,10 @@ func DeleteQHstsPolicy(this *QHstsPolicy) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QHstsPolicy &)
 func (this *QHstsPolicy) Swap(other QHstsPolicy_ITF) {
-	var convArg0 = other.QHstsPolicy_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QHstsPolicy_PTR() != nil {
+		convArg0 = other.QHstsPolicy_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -125,7 +160,10 @@ func (this *QHstsPolicy) SetHost(host string, mode int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setExpiry(const QDateTime &)
 func (this *QHstsPolicy) SetExpiry(expiry qtcore.QDateTime_ITF) {
-	var convArg0 = expiry.QDateTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if expiry != nil && expiry.QDateTime_PTR() != nil {
+		convArg0 = expiry.QDateTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy9setExpiryERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -188,6 +226,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

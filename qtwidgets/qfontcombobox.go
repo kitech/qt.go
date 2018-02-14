@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -80,10 +81,14 @@ func (this *QFontComboBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // Public Visibility=Default Availability=Available
 // [-2] void QFontComboBox(QWidget *)
 func NewQFontComboBox(parent QWidget_ITF /*777 QWidget **/) *QFontComboBox {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontComboBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFontComboBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFontComboBox")
 	return gothis
 }
 
@@ -165,7 +170,10 @@ func (this *QFontComboBox) SizeHint() *qtcore.QSize /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentFont(const QFont &)
 func (this *QFontComboBox) SetCurrentFont(f qtgui.QFont_ITF) {
-	var convArg0 = f.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if f != nil && f.QFont_PTR() != nil {
+		convArg0 = f.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontComboBox14setCurrentFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -175,7 +183,10 @@ func (this *QFontComboBox) SetCurrentFont(f qtgui.QFont_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void currentFontChanged(const QFont &)
 func (this *QFontComboBox) CurrentFontChanged(f qtgui.QFont_ITF) {
-	var convArg0 = f.QFont_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if f != nil && f.QFont_PTR() != nil {
+		convArg0 = f.QFont_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontComboBox18currentFontChangedERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -185,7 +196,10 @@ func (this *QFontComboBox) CurrentFontChanged(f qtgui.QFont_ITF) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QFontComboBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontComboBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -212,6 +226,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

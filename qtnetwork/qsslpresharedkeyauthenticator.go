@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 31
+// extern C begin: 35
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -86,12 +87,43 @@ func DeleteQSslPreSharedKeyAuthenticator(this *QSslPreSharedKeyAuthenticator) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QSslPreSharedKeyAuthenticator & operator=(const QSslPreSharedKeyAuthenticator &)
+func (this *QSslPreSharedKeyAuthenticator) Operator_equal(authenticator QSslPreSharedKeyAuthenticator_ITF) *QSslPreSharedKeyAuthenticator {
+	var convArg0 unsafe.Pointer
+	if authenticator != nil && authenticator.QSslPreSharedKeyAuthenticator_PTR() != nil {
+		convArg0 = authenticator.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticatoraSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslPreSharedKeyAuthenticatorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslPreSharedKeyAuthenticator)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:61
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QSslPreSharedKeyAuthenticator & operator=(QSslPreSharedKeyAuthenticator &&)
+func (this *QSslPreSharedKeyAuthenticator) Operator_equal_1(other unsafe.Pointer /*333*/) *QSslPreSharedKeyAuthenticator {
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticatoraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslPreSharedKeyAuthenticatorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslPreSharedKeyAuthenticator)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:64
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslPreSharedKeyAuthenticator &)
 func (this *QSslPreSharedKeyAuthenticator) Swap(other QSslPreSharedKeyAuthenticator_ITF) {
-	var convArg0 = other.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QSslPreSharedKeyAuthenticator_PTR() != nil {
+		convArg0 = other.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -113,7 +145,10 @@ func (this *QSslPreSharedKeyAuthenticator) IdentityHint() *qtcore.QByteArray /*1
 // Public Visibility=Default Availability=Available
 // [-2] void setIdentity(const QByteArray &)
 func (this *QSslPreSharedKeyAuthenticator) SetIdentity(identity qtcore.QByteArray_ITF) {
-	var convArg0 = identity.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if identity != nil && identity.QByteArray_PTR() != nil {
+		convArg0 = identity.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator11setIdentityERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -145,7 +180,10 @@ func (this *QSslPreSharedKeyAuthenticator) MaximumIdentityLength() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setPreSharedKey(const QByteArray &)
 func (this *QSslPreSharedKeyAuthenticator) SetPreSharedKey(preSharedKey qtcore.QByteArray_ITF) {
-	var convArg0 = preSharedKey.QByteArray_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if preSharedKey != nil && preSharedKey.QByteArray_PTR() != nil {
+		convArg0 = preSharedKey.QByteArray_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator15setPreSharedKeyERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -185,6 +223,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

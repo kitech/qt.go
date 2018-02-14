@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 65
+// extern C begin: 71
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -65,7 +66,10 @@ func (*QDirIterator) NewFromPointer(cthis unsafe.Pointer) *QDirIterator {
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QDir &, QDirIterator::IteratorFlags)
 func NewQDirIterator(dir QDir_ITF, flags int) *QDirIterator {
-	var convArg0 = dir.QDir_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dir != nil && dir.QDir_PTR() != nil {
+		convArg0 = dir.QDir_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK4QDir6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -108,7 +112,10 @@ func NewQDirIterator_2(path string, filter int, flags int) *QDirIterator {
 func NewQDirIterator_3(path string, nameFilters QStringList_ITF, filters int, flags int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 = nameFilters.QStringList_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
+		convArg1 = nameFilters.QStringList_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QStringRK11QStringList6QFlagsIN4QDir6FilterEES6_INS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, filters, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -220,6 +227,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

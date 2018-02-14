@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -66,7 +67,10 @@ func (*QAccessibleTextCursorEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextCursorEvent(QObject *, int)
 func NewQAccessibleTextCursorEvent(obj qtcore.QObject_ITF /*777 QObject **/, cursorPos int) *QAccessibleTextCursorEvent {
-	var convArg0 = obj.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if obj != nil && obj.QObject_PTR() != nil {
+		convArg0 = obj.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, cursorPos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextCursorEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -79,7 +83,10 @@ func NewQAccessibleTextCursorEvent(obj qtcore.QObject_ITF /*777 QObject **/, cur
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextCursorEvent(QAccessibleInterface *, int)
 func NewQAccessibleTextCursorEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
-	var convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
+		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei", qtrt.FFI_TYPE_POINTER, convArg0, cursorPos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextCursorEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,6 +137,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

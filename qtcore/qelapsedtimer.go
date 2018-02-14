@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 59
+// extern C begin: 67
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -185,7 +186,10 @@ func (this *QElapsedTimer) MsecsSinceReference() int64 {
 // Public Visibility=Default Availability=Available
 // [8] qint64 msecsTo(const QElapsedTimer &)
 func (this *QElapsedTimer) MsecsTo(other QElapsedTimer_ITF) int64 {
-	var convArg0 = other.QElapsedTimer_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QElapsedTimer_PTR() != nil {
+		convArg0 = other.QElapsedTimer_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -196,10 +200,41 @@ func (this *QElapsedTimer) MsecsTo(other QElapsedTimer_ITF) int64 {
 // Public Visibility=Default Availability=Available
 // [8] qint64 secsTo(const QElapsedTimer &)
 func (this *QElapsedTimer) SecsTo(other QElapsedTimer_ITF) int64 {
-	var convArg0 = other.QElapsedTimer_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QElapsedTimer_PTR() != nil {
+		convArg0 = other.QElapsedTimer_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qelapsedtimer.h:81
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QElapsedTimer &)
+func (this *QElapsedTimer) Operator_equal_equal(other QElapsedTimer_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QElapsedTimer_PTR() != nil {
+		convArg0 = other.QElapsedTimer_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimereqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qelapsedtimer.h:83
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QElapsedTimer &)
+func (this *QElapsedTimer) Operator_not_equal(other QElapsedTimer_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QElapsedTimer_PTR() != nil {
+		convArg0 = other.QElapsedTimer_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimerneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 func DeleteQElapsedTimer(this *QElapsedTimer) {
@@ -229,6 +264,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -143,7 +144,10 @@ func (this *QPicture) SetData(data string, size uint) {
 // Public Visibility=Default Availability=Available
 // [1] bool play(QPainter *)
 func (this *QPicture) Play(p QPainter_ITF /*777 QPainter **/) bool {
-	var convArg0 = p.QPainter_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPainter_PTR() != nil {
+		convArg0 = p.QPainter_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4playEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -154,7 +158,10 @@ func (this *QPicture) Play(p QPainter_ITF /*777 QPainter **/) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool load(QIODevice *, const char *)
 func (this *QPicture) Load(dev qtcore.QIODevice_ITF /*777 QIODevice **/, format string) bool {
-	var convArg0 = dev.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dev != nil && dev.QIODevice_PTR() != nil {
+		convArg0 = dev.QIODevice_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4loadEP9QIODevicePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -181,7 +188,10 @@ func (this *QPicture) Load_1(fileName string, format string) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool save(QIODevice *, const char *)
 func (this *QPicture) Save(dev qtcore.QIODevice_ITF /*777 QIODevice **/, format string) bool {
-	var convArg0 = dev.QIODevice_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if dev != nil && dev.QIODevice_PTR() != nil {
+		convArg0 = dev.QIODevice_PTR().GetCthis()
+	}
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4saveEP9QIODevicePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -220,9 +230,40 @@ func (this *QPicture) BoundingRect() *qtcore.QRect /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setBoundingRect(const QRect &)
 func (this *QPicture) SetBoundingRect(r qtcore.QRect_ITF) {
-	var convArg0 = r.QRect_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRect_PTR() != nil {
+		convArg0 = r.QRect_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture15setBoundingRectERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpicture.h:80
+// index:0
+// Public Visibility=Default Availability=Available
+// [32] QPicture & operator=(const QPicture &)
+func (this *QPicture) Operator_equal(p QPicture_ITF) *QPicture {
+	var convArg0 unsafe.Pointer
+	if p != nil && p.QPicture_PTR() != nil {
+		convArg0 = p.QPicture_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPictureaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPictureFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPicture)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qpicture.h:82
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [32] QPicture & operator=(QPicture &&)
+func (this *QPicture) Operator_equal_1(other unsafe.Pointer /*333*/) *QPicture {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPictureaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPictureFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPicture)
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qpicture.h:85
@@ -230,7 +271,10 @@ func (this *QPicture) SetBoundingRect(r qtcore.QRect_ITF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPicture &)
 func (this *QPicture) Swap(other QPicture_ITF) {
-	var convArg0 = other.QPicture_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QPicture_PTR() != nil {
+		convArg0 = other.QPicture_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -338,6 +382,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

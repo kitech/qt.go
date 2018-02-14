@@ -24,6 +24,7 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -76,7 +77,10 @@ func NewQTextImageFormat() *QTextImageFormat {
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextImageFormat(const QTextFormat &)
 func NewQTextImageFormat_1(format QTextFormat_ITF) *QTextImageFormat {
-	var convArg0 = format.QTextFormat_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QTextFormat_PTR() != nil {
+		convArg0 = format.QTextFormat_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextImageFormatFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -175,6 +179,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

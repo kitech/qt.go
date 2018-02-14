@@ -18,12 +18,13 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 33
+// extern C begin: 39
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 
 //  ext block end
@@ -192,7 +193,10 @@ func (this *QTime) ToString_1(format string) string {
 // Public Visibility=Default Availability=Available
 // [8] QString toString(QStringView)
 func (this *QTime) ToString_2(format QStringView_ITF /*123*/) string {
-	var convArg0 = format.QStringView_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if format != nil && format.QStringView_PTR() != nil {
+		convArg0 = format.QStringView_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -228,7 +232,10 @@ func (this *QTime) AddSecs(secs int) *QTime /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] int secsTo(const QTime &)
 func (this *QTime) SecsTo(arg0 QTime_ITF) int {
-	var convArg0 = arg0.QTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QTime_PTR() != nil {
+		convArg0 = arg0.QTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -251,10 +258,97 @@ func (this *QTime) AddMSecs(ms int) *QTime /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] int msecsTo(const QTime &)
 func (this *QTime) MsecsTo(arg0 QTime_ITF) int {
-	var convArg0 = arg0.QTime_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QTime_PTR() != nil {
+		convArg0 = arg0.QTime_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:184
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QTime &)
+func (this *QTime) Operator_equal_equal(other QTime_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTime_PTR() != nil {
+		convArg0 = other.QTime_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTimeeqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:185
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QTime &)
+func (this *QTime) Operator_not_equal(other QTime_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTime_PTR() != nil {
+		convArg0 = other.QTime_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTimeneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:186
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(const QTime &)
+func (this *QTime) Operator_less_than(other QTime_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTime_PTR() != nil {
+		convArg0 = other.QTime_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTimeltERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:187
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(const QTime &)
+func (this *QTime) Operator_less_than_equal(other QTime_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTime_PTR() != nil {
+		convArg0 = other.QTime_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTimeleERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:188
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>(const QTime &)
+func (this *QTime) Operator_greater_than(other QTime_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTime_PTR() != nil {
+		convArg0 = other.QTime_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTimegtERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:189
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(const QTime &)
+func (this *QTime) Operator_greater_than_equal(other QTime_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QTime_PTR() != nil {
+		convArg0 = other.QTime_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTimegeERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:191
@@ -393,6 +487,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

@@ -18,12 +18,13 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 58
+// extern C begin: 61
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -90,7 +91,10 @@ func NewQBrush_1(bs int) *QBrush {
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(const QColor &, Qt::BrushStyle)
 func NewQBrush_2(color QColor_ITF, bs int) *QBrush {
-	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorN2Qt10BrushStyleE", qtrt.FFI_TYPE_POINTER, convArg0, bs)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -115,8 +119,14 @@ func NewQBrush_3(color int, bs int) *QBrush {
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(const QColor &, const QPixmap &)
 func NewQBrush_4(color QColor_ITF, pixmap QPixmap_ITF) *QBrush {
-	var convArg0 = color.QColor_PTR().GetCthis()
-	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorRK7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -129,7 +139,10 @@ func NewQBrush_4(color QColor_ITF, pixmap QPixmap_ITF) *QBrush {
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(Qt::GlobalColor, const QPixmap &)
 func NewQBrush_5(color int, pixmap QPixmap_ITF) *QBrush {
-	var convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorERK7QPixmap", qtrt.FFI_TYPE_POINTER, color, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -142,7 +155,10 @@ func NewQBrush_5(color int, pixmap QPixmap_ITF) *QBrush {
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(const QPixmap &)
 func NewQBrush_6(pixmap QPixmap_ITF) *QBrush {
-	var convArg0 = pixmap.QPixmap_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg0 = pixmap.QPixmap_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -155,7 +171,10 @@ func NewQBrush_6(pixmap QPixmap_ITF) *QBrush {
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(const QImage &)
 func NewQBrush_7(image QImage_ITF) *QBrush {
-	var convArg0 = image.QImage_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QImage_PTR() != nil {
+		convArg0 = image.QImage_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK6QImage", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -168,7 +187,10 @@ func NewQBrush_7(image QImage_ITF) *QBrush {
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(const QGradient &)
 func NewQBrush_8(gradient QGradient_ITF) *QBrush {
-	var convArg0 = gradient.QGradient_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if gradient != nil && gradient.QGradient_PTR() != nil {
+		convArg0 = gradient.QGradient_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK9QGradient", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -187,12 +209,43 @@ func DeleteQBrush(this *QBrush) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtGui/qbrush.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QBrush & operator=(const QBrush &)
+func (this *QBrush) Operator_equal(brush QBrush_ITF) *QBrush {
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qbrush.h:83
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QBrush & operator=(QBrush &&)
+func (this *QBrush) Operator_equal_1(other unsafe.Pointer /*333*/) *QBrush {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qbrush.h:86
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QBrush &)
 func (this *QBrush) Swap(other QBrush_ITF) {
-	var convArg0 = other.QBrush_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QBrush_PTR() != nil {
+		convArg0 = other.QBrush_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -233,7 +286,10 @@ func (this *QBrush) Matrix() *QMatrix {
 // Public Visibility=Default Availability=Available
 // [-2] void setMatrix(const QMatrix &)
 func (this *QBrush) SetMatrix(mat QMatrix_ITF) {
-	var convArg0 = mat.QMatrix_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if mat != nil && mat.QMatrix_PTR() != nil {
+		convArg0 = mat.QMatrix_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush9setMatrixERK7QMatrix", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -255,7 +311,10 @@ func (this *QBrush) Transform() *QTransform /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setTransform(const QTransform &)
 func (this *QBrush) SetTransform(arg0 QTransform_ITF) {
-	var convArg0 = arg0.QTransform_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QTransform_PTR() != nil {
+		convArg0 = arg0.QTransform_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush12setTransformERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -277,7 +336,10 @@ func (this *QBrush) Texture() *QPixmap /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setTexture(const QPixmap &)
 func (this *QBrush) SetTexture(pixmap QPixmap_ITF) {
-	var convArg0 = pixmap.QPixmap_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg0 = pixmap.QPixmap_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush10setTextureERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -299,7 +361,10 @@ func (this *QBrush) TextureImage() *QImage /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setTextureImage(const QImage &)
 func (this *QBrush) SetTextureImage(image QImage_ITF) {
-	var convArg0 = image.QImage_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QImage_PTR() != nil {
+		convArg0 = image.QImage_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush15setTextureImageERK6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -321,7 +386,10 @@ func (this *QBrush) Color() *QColor {
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
 func (this *QBrush) SetColor(color QColor_ITF) {
-	var convArg0 = color.QColor_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -355,6 +423,34 @@ func (this *QBrush) IsOpaque() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qbrush.h:114
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QBrush &)
+func (this *QBrush) Operator_equal_equal(b QBrush_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if b != nil && b.QBrush_PTR() != nil {
+		convArg0 = b.QBrush_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrusheqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qbrush.h:115
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QBrush &)
+func (this *QBrush) Operator_not_equal(b QBrush_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if b != nil && b.QBrush_PTR() != nil {
+		convArg0 = b.QBrush_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrushneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qbrush.h:129
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -378,6 +474,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

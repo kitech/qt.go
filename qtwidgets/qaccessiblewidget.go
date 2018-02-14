@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -82,7 +83,10 @@ func (*QAccessibleWidget) NewFromPointer(cthis unsafe.Pointer) *QAccessibleWidge
 // Public Visibility=Default Availability=Available
 // [-2] void QAccessibleWidget(QWidget *, QAccessible::Role, const QString &)
 func NewQAccessibleWidget(o QWidget_ITF /*777 QWidget **/, r int, name string) *QAccessibleWidget {
-	var convArg0 = o.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if o != nil && o.QWidget_PTR() != nil {
+		convArg0 = o.QWidget_PTR().GetCthis()
+	}
 	var tmpArg2 = qtcore.NewQString_5(name)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleWidgetC2EP7QWidgetN11QAccessible4RoleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0, r, convArg2)
@@ -127,7 +131,10 @@ func (this *QAccessibleWidget) ChildCount() int {
 // Public virtual Visibility=Default Availability=Available
 // [4] int indexOfChild(const QAccessibleInterface *)
 func (this *QAccessibleWidget) IndexOfChild(child qtgui.QAccessibleInterface_ITF /*777 const QAccessibleInterface **/) int {
-	var convArg0 = child.QAccessibleInterface_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if child != nil && child.QAccessibleInterface_PTR() != nil {
+		convArg0 = child.QAccessibleInterface_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -334,6 +341,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

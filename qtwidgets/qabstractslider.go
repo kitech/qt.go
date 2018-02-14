@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -115,10 +116,14 @@ func (this *QAbstractSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractSlider(QWidget *)
 func NewQAbstractSlider(parent QWidget_ITF /*777 QWidget **/) *QAbstractSlider {
-	var convArg0 = parent.QWidget_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSliderC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractSliderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractSlider")
 	return gothis
 }
 
@@ -419,7 +424,10 @@ func (this *QAbstractSlider) ActionTriggered(action int) {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 func (this *QAbstractSlider) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -458,7 +466,10 @@ func (this *QAbstractSlider) SliderChange(change int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
 func (this *QAbstractSlider) KeyPressEvent(ev qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
-	var convArg0 = ev.QKeyEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if ev != nil && ev.QKeyEvent_PTR() != nil {
+		convArg0 = ev.QKeyEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -468,7 +479,10 @@ func (this *QAbstractSlider) KeyPressEvent(ev qtgui.QKeyEvent_ITF /*777 QKeyEven
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QAbstractSlider) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
-	var convArg0 = arg0.QTimerEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QTimerEvent_PTR() != nil {
+		convArg0 = arg0.QTimerEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -478,7 +492,10 @@ func (this *QAbstractSlider) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimer
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
 func (this *QAbstractSlider) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 = e.QWheelEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QWheelEvent_PTR() != nil {
+		convArg0 = e.QWheelEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -488,7 +505,10 @@ func (this *QAbstractSlider) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEven
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
 func (this *QAbstractSlider) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
-	var convArg0 = e.QEvent_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if e != nil && e.QEvent_PTR() != nil {
+		convArg0 = e.QEvent_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -524,6 +544,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

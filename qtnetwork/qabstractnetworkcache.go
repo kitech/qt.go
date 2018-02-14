@@ -18,12 +18,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 12
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
@@ -85,7 +86,10 @@ func DeleteQAbstractNetworkCache(this *QAbstractNetworkCache) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QNetworkCacheMetaData metaData(const QUrl &)
 func (this *QAbstractNetworkCache) MetaData(url qtcore.QUrl_ITF) *QNetworkCacheMetaData /*123*/ {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCache8metaDataERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQNetworkCacheMetaDataFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -98,7 +102,10 @@ func (this *QAbstractNetworkCache) MetaData(url qtcore.QUrl_ITF) *QNetworkCacheM
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void updateMetaData(const QNetworkCacheMetaData &)
 func (this *QAbstractNetworkCache) UpdateMetaData(metaData QNetworkCacheMetaData_ITF) {
-	var convArg0 = metaData.QNetworkCacheMetaData_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if metaData != nil && metaData.QNetworkCacheMetaData_PTR() != nil {
+		convArg0 = metaData.QNetworkCacheMetaData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCache14updateMetaDataERK21QNetworkCacheMetaData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -108,7 +115,10 @@ func (this *QAbstractNetworkCache) UpdateMetaData(metaData QNetworkCacheMetaData
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIODevice * data(const QUrl &)
 func (this *QAbstractNetworkCache) Data(url qtcore.QUrl_ITF) *qtcore.QIODevice /*777 QIODevice **/ {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCache4dataERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -119,7 +129,10 @@ func (this *QAbstractNetworkCache) Data(url qtcore.QUrl_ITF) *qtcore.QIODevice /
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool remove(const QUrl &)
 func (this *QAbstractNetworkCache) Remove(url qtcore.QUrl_ITF) bool {
-	var convArg0 = url.QUrl_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if url != nil && url.QUrl_PTR() != nil {
+		convArg0 = url.QUrl_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCache6removeERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -140,7 +153,10 @@ func (this *QAbstractNetworkCache) CacheSize() int64 {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIODevice * prepare(const QNetworkCacheMetaData &)
 func (this *QAbstractNetworkCache) Prepare(metaData QNetworkCacheMetaData_ITF) *qtcore.QIODevice /*777 QIODevice **/ {
-	var convArg0 = metaData.QNetworkCacheMetaData_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if metaData != nil && metaData.QNetworkCacheMetaData_PTR() != nil {
+		convArg0 = metaData.QNetworkCacheMetaData_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCache7prepareERK21QNetworkCacheMetaData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -160,10 +176,14 @@ func (this *QAbstractNetworkCache) Clear() {
 // Protected Visibility=Default Availability=Available
 // [-2] void QAbstractNetworkCache(QObject *)
 func NewQAbstractNetworkCache(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractNetworkCache {
-	var convArg0 = parent.QObject_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCacheC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractNetworkCacheFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractNetworkCache")
 	return gothis
 }
 
@@ -180,6 +200,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()

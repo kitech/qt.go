@@ -24,6 +24,7 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
+import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
@@ -74,6 +75,22 @@ func NewQScrollerProperties() *QScrollerProperties {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qscrollerproperties.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QScrollerProperties & operator=(const QScrollerProperties &)
+func (this *QScrollerProperties) Operator_equal(sp QScrollerProperties_ITF) *QScrollerProperties {
+	var convArg0 unsafe.Pointer
+	if sp != nil && sp.QScrollerProperties_PTR() != nil {
+		convArg0 = sp.QScrollerProperties_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerPropertiesaSERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQScrollerPropertiesFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQScrollerProperties)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -85,12 +102,43 @@ func DeleteQScrollerProperties(this *QScrollerProperties) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtWidgets/qscrollerproperties.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QScrollerProperties &)
+func (this *QScrollerProperties) Operator_equal_equal(sp QScrollerProperties_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if sp != nil && sp.QScrollerProperties_PTR() != nil {
+		convArg0 = sp.QScrollerProperties_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QScrollerPropertieseqERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qscrollerproperties.h:66
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator!=(const QScrollerProperties &)
+func (this *QScrollerProperties) Operator_not_equal(sp QScrollerProperties_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if sp != nil && sp.QScrollerProperties_PTR() != nil {
+		convArg0 = sp.QScrollerProperties_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QScrollerPropertiesneERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:68
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultScrollerProperties(const QScrollerProperties &)
 func (this *QScrollerProperties) SetDefaultScrollerProperties(sp QScrollerProperties_ITF) {
-	var convArg0 = sp.QScrollerProperties_PTR().GetCthis()
+	var convArg0 unsafe.Pointer
+	if sp != nil && sp.QScrollerProperties_PTR() != nil {
+		convArg0 = sp.QScrollerProperties_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -129,7 +177,10 @@ func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123
 // Public Visibility=Default Availability=Available
 // [-2] void setScrollMetric(enum QScrollerProperties::ScrollMetric, const QVariant &)
 func (this *QScrollerProperties) SetScrollMetric(metric int, value qtcore.QVariant_ITF) {
-	var convArg1 = value.QVariant_PTR().GetCthis()
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerProperties15setScrollMetricENS_12ScrollMetricERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -184,6 +235,9 @@ func init() {
 	}
 	if false {
 		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
 	}
 	if false {
 		qtrt.KeepMe()
