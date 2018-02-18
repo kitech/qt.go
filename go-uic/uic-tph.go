@@ -97,6 +97,7 @@ func main() {
 		if strings.HasPrefix(line, "namespace Ui {") {
 			cp.APf("retranslateUi", "}")
 			insection = INSEC_DONE
+			onDone()
 			break
 		}
 
@@ -115,21 +116,25 @@ func main() {
 	saveCode()
 }
 
+// 记录每一个member的类型。 member name => type name
+var memberTypes = map[string]string{}
+
 func transformMember(line string, class string) {
 	if line == "" {
 		return
 	}
 
 	parts := strings.Split(line, "*")
-	mname := parts[1][:len(parts[1])-1]
+	memname := parts[1][:len(parts[1])-1]
 	memcls := strings.TrimSpace(parts[0])
-	log.Println("transform member...", memcls, mname, line)
+	log.Println("transform member...", memcls, memname, line)
+	memberTypes[strings.Title(memname)] = memcls
 
 	switch memcls {
 	case "QQuickWidget":
-		cp.APf("struct", "  %s *qtquickwidgets.%s", strings.Title(mname), memcls)
+		cp.APf("struct", "  %s *qtquickwidgets.%s", strings.Title(memname), memcls)
 	default:
-		cp.APf("struct", "  %s *qtwidgets.%s", strings.Title(mname), memcls)
+		cp.APf("struct", "  %s *qtwidgets.%s", strings.Title(memname), memcls)
 	}
 
 	// var reline string
@@ -144,6 +149,7 @@ func onClass(class string) {
 	cp.APf("struct", "func New%s() *%s{", class, class)
 	cp.APf("struct", "  return &%s{}", class)
 	cp.APf("struct", "}")
+
 	cp.APf("struct", "type %s struct{", class)
 }
 
@@ -198,7 +204,7 @@ func onSetupUi(line string) {
 					refmtval = fmt.Sprintf("this.%s", refmtval)
 					refmtsuf = "_1"
 				}
-			case "QLabel":
+			case "QLabel", "QFrame":
 				refmtval = "this." + refmtval + ", 0"
 			case "QQuickWidget":
 				pkgname = "qtquickwidgets"
@@ -243,19 +249,21 @@ func onSetupUi(line string) {
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 				refmtval = strings.Replace(refmtval, "|", "|qtcore.", -1)
 			case "AutoRaise", "WidgetResizable", "AlternatingRowColors",
-				"AutoRepeat", "AutoExclusive", "DocumentMode":
+				"AutoRepeat", "AutoExclusive", "DocumentMode",
+				"Checked", "Flat", "AutoFillBackground":
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
-			case "Bold", "OpenExternalLinks", "WordWrap":
+			case "Bold", "OpenExternalLinks", "WordWrap", "Frame":
 				refmtval = untitle(refmtval) // True => true
 			case "ToolButtonStyle":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "Alignment", "FocusPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
+				refmtval = strings.Replace(refmtval, "|", "|qtcore.", -1)
 			case "Geometry":
 				refmtval = strings.TrimRight(refmtval[6:], ")")
-			case "HorizontalScrollBarPolicy":
+			case "HorizontalScrollBarPolicy", "ContextMenuPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
-			case "SizeAdjustPolicy", "SizeConstraint":
+			case "SizeAdjustPolicy", "SizeConstraint", "FrameShape", "FrameShadow":
 				refmtval = "qtwidgets." + strings.Replace(refmtval, ":", "_", -1)
 			case "ResizeMode":
 				refmtval = "qtquickwidgets." + strings.Replace(refmtval, ":", "_", -1)
@@ -265,6 +273,7 @@ func onSetupUi(line string) {
 				// refmtname = "this." + refmtname
 				refmtval = "this." + strings.Title(refmtval)
 			case "Pixmap":
+				refmtval = mats[0][3]
 				refmtval = fmt.Sprintf("qtgui.NewQPixmap_3(\"%s\", \"dummy123\", 0)", strings.Split(refmtval, "\"")[1])
 			case "Source": // QQuickWidget
 				refmtval = mats[0][3]
@@ -285,16 +294,27 @@ func onSetupUi(line string) {
 			log.Println(mats)
 			refmtname := strings.Title(mats[0][2])
 			refmtval := strings.Title(mats[0][3])
+			memty := memberTypes[strings.Title(mats[0][1])]
 			switch mats[0][2] {
 			case "addWidget":
-				if strings.Contains(mats[0][1], "Layout") {
-					refmtname = "Layout()." + refmtname
+				log.Println(line, memty, mats[0][1], refmtname)
+				if memty == "QGridLayout" {
+					refmtname += "_2"
+					refmtval = fmt.Sprintf("this.%s, 0", refmtval)
+				} else {
+					if strings.Contains(mats[0][1], "Layout") {
+						refmtname = "Layout()." + refmtname
+					}
+					refmtval = fmt.Sprintf("this.%s", refmtval)
 				}
-				refmtval = fmt.Sprintf("this.%s", refmtval)
 			case "addLayout":
 				refmtval = fmt.Sprintf("this.%s, 0", refmtval)
 			case "addItem":
-				refmtval = fmt.Sprintf("this.%s", refmtval)
+				if strings.HasPrefix(refmtval, "QString") { // QComboBox
+					refmtval = fmt.Sprintf("\"\", qtcore.NewQVariant_12(\"wtf\")")
+				} else {
+					refmtval = fmt.Sprintf("this.%s", refmtval)
+				}
 			case "addFile":
 				parts := strings.Split(refmtval, ", ")
 				alst := []string{}
@@ -344,13 +364,44 @@ func onSetupUi(line string) {
 func onRetranslateUi(line string) {
 	log.Println(line)
 	reg1 := regexp.MustCompile(`(.+)->(.+)\(QApplication::translate\(\"(.+)\", \"(.+)\", nullptr\)\);`)
+	reg2 := regexp.MustCompile(`(.+)->(.+)\(([0-9]+), QApplication::translate\(\"(.+)\", \"(.+)\", nullptr\)\);`)
 	if reg1.MatchString(line) {
 		mats := reg1.FindAllStringSubmatch(line, -1)
 		log.Println(mats)
 		cp.APf("retranslateUi",
 			"this.%s.%s(qtcore.QCoreApplication_Translate(\"%s\", \"%s\", \"dummy123\", 0))",
 			strings.Title(mats[0][1]), strings.Title(mats[0][2]), mats[0][3], mats[0][4])
+	} else if reg2.MatchString(line) {
+		mats := reg2.FindAllStringSubmatch(line, -1)
+		log.Println(mats)
+		cp.APf("retranslateUi",
+			"this.%s.%s(%s, qtcore.QCoreApplication_Translate(\"%s\", \"%s\", \"dummy123\", 0))",
+			strings.Title(mats[0][1]), strings.Title(mats[0][2]), mats[0][3], mats[0][4], mats[0][5])
+	} else {
+		log.Println("what not matched:", line)
 	}
+	// TODO 多行tooltip的情况
+}
+
+func onDone() {
+
+	cp.APf("new2", "func New%s2() *%s{", class, class)
+	cp.APf("new2", "  this := &%s{}", class)
+	switch wclass {
+	case "QWidget", "QMainWindow", "QDialog":
+		cp.APf("new2", "  w := qtwidgets.New%s(nil, 0)", wclass)
+	default:
+		log.Println("wtf...", wclass)
+	}
+	cp.APf("new2", "  this.SetupUi(w)")
+	cp.APf("new2", "  return this")
+	cp.APf("new2", "}")
+
+	cp.APf("done", "")
+	cp.APf("done", "func (this *%s) QWidget_PTR() *qtwidgets.QWidget {", class)
+	cp.APf("done", "  return this.%s.QWidget_PTR()", woname)
+	cp.APf("done", "}")
+	cp.APf("done", "")
 }
 
 func saveCode() {

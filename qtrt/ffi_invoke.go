@@ -98,7 +98,7 @@ func itype2stype(itype byte) *C.ffi_type {
 	case FFI_TYPE_POINTER:
 		return &C.ffi_type_pointer
 	case FFI_TYPE_INT:
-		return &C.ffi_type_sint
+		return &C.ffi_type_sint32
 	case FFI_TYPE_FLOAT:
 		return &C.ffi_type_float
 	case FFI_TYPE_DOUBLE:
@@ -416,8 +416,8 @@ func onCtorAlloc1(symname string) {
 }
 
 func GetCtorAllocStack(clsname string) []uintptr {
-	// ctorAllocStacksMu.Lock()
-	// defer ctorAllocStacksMu.Unlock()
+	ctorAllocStacksMu.Lock()
+	defer ctorAllocStacksMu.Unlock()
 	if stk, ok := ctorAllocStacks[clsname]; ok {
 		return stk
 	}

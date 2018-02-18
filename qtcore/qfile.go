@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
@@ -32,9 +32,10 @@ import "github.com/kitech/qt.go/qtrt"
 //  body block begin
 
 type QFile struct {
-	*qtrt.CObject
+	*QFileDevice
 }
 type QFile_ITF interface {
+	QFileDevice_ITF
 	QFile_PTR() *QFile
 }
 
@@ -44,18 +45,15 @@ func (this *QFile) GetCthis() unsafe.Pointer {
 	if this == nil {
 		return nil
 	} else {
-		return this.Cthis
+		return this.QFileDevice.GetCthis()
 	}
 }
 func (this *QFile) SetCthis(cthis unsafe.Pointer) {
-	if this.CObject == nil {
-		this.CObject = &qtrt.CObject{cthis}
-	} else {
-		this.CObject.Cthis = cthis
-	}
+	this.QFileDevice = NewQFileDeviceFromPointer(cthis)
 }
 func NewQFileFromPointer(cthis unsafe.Pointer) *QFile {
-	return &QFile{&qtrt.CObject{cthis}}
+	bcthis0 := NewQFileDeviceFromPointer(cthis)
+	return &QFile{bcthis0}
 }
 func (*QFile) NewFromPointer(cthis unsafe.Pointer) *QFile {
 	return NewQFileFromPointer(cthis)

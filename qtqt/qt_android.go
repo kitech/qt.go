@@ -20,6 +20,7 @@ adb logcat GoLog:I *:S
 
 #include <android/log.h>
 #include <string.h>
+#include <stdlib.h>
 */
 import "C"
 
