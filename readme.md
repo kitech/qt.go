@@ -1,25 +1,22 @@
 
 ### qt.go
 
-Qt5 binding for Go (Golang) but without CGO aims get go's compile speed again. Instead of common binding using CGO and include heavy C++ wrapper code and compile and link these time and time again.
+Qt5 binding for Go (Golang) without CGO that aims to achieve Go's native compile speeds. Instead of using common bindings and heavy C++ wrapper code that forces you to compile and link time and time again, Qt.Go uses FFI so there's only a runtime dependency.
 
 [![GoDoc](https://godoc.org/github.com/kitech/qt.go?status.svg)](https://godoc.org/github.com/kitech/qt.go)
 
 
 ### Features
 
-* binding code no CGO compile cost
-* populate qt5 packages (widgets/qml/extras) support
+* Binding code with no CGO compile cost
+* Popular Qt5 packages (widgets/QML/extras) support
 * go-uic, go-rcc tools
 * full signal/slot support
 * protected method override support
-* default arguments value wrapper functions
+* default arguments and value wrapper functions
 
 ### Multiple platforms support
-
-It's should be support all platforms.
-
-Now only tested Linux/Android.
+All platforms should be supported, but for now only Linux/Android is tested.
 
 ### Installation
 
@@ -52,9 +49,6 @@ Now only tested Linux/Android.
 
 ### Internals
 
-The main idea is using FFI to call wrapped qt functions/methods.
+Qt.Go uses FFI to call wrapped Qt functions and methods, so there is no compile/link time dependency on Qt, only a run time dependency.
 
-So there is no compile and link time dependency of qt lib, only runtime dependency.
-
-When develop use qt.go, compile/test step can be very quickly.
-
+This should make the development and testing phases much faster.
