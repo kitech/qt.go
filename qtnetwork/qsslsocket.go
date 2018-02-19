@@ -860,7 +860,7 @@ func (this *QSslSocket) WaitForConnected(msecs int) bool {
 // [1] bool waitForConnected(int)
 func (this *QSslSocket) WaitForConnected__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket16waitForConnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -882,7 +882,7 @@ func (this *QSslSocket) WaitForEncrypted(msecs int) bool {
 // [1] bool waitForEncrypted(int)
 func (this *QSslSocket) WaitForEncrypted__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket16waitForEncryptedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -904,7 +904,7 @@ func (this *QSslSocket) WaitForReadyRead(msecs int) bool {
 // [1] bool waitForReadyRead(int)
 func (this *QSslSocket) WaitForReadyRead__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -926,7 +926,7 @@ func (this *QSslSocket) WaitForBytesWritten(msecs int) bool {
 // [1] bool waitForBytesWritten(int)
 func (this *QSslSocket) WaitForBytesWritten__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -948,7 +948,7 @@ func (this *QSslSocket) WaitForDisconnected(msecs int) bool {
 // [1] bool waitForDisconnected(int)
 func (this *QSslSocket) WaitForDisconnected__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19waitForDisconnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

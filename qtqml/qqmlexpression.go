@@ -359,7 +359,7 @@ func (this *QQmlExpression) SetSourceLocation__(fileName string, line int) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression17setSourceLocationERK7QStringii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, line, column)
 	qtrt.ErrPrint(err, rv)
 }

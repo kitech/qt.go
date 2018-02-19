@@ -1268,7 +1268,7 @@ func (this *QTextEdit) ZoomIn(range_ int) {
 // [-2] void zoomIn(int)
 func (this *QTextEdit) ZoomIn__() {
 	// arg: 0, int=Int, =Invalid,
-	range_ := 1
+	range_ := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit6zoomInEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), range_)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1288,7 +1288,7 @@ func (this *QTextEdit) ZoomOut(range_ int) {
 // [-2] void zoomOut(int)
 func (this *QTextEdit) ZoomOut__() {
 	// arg: 0, int=Int, =Invalid,
-	range_ := 1
+	range_ := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit7zoomOutEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), range_)
 	qtrt.ErrPrint(err, rv)
 }

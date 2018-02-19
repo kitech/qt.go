@@ -1046,7 +1046,7 @@ func (this *QLocale) ToString_6_(i float64) string {
 	// arg: 1, char=Char_S, =Invalid,
 	f := 'g'
 	// arg: 2, int=Int, =Invalid,
-	prec := 6
+	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1061,7 +1061,7 @@ func (this *QLocale) ToString_6_(i float64) string {
 // [8] QString toString(double, char, int) const
 func (this *QLocale) ToString_6_1(i float64, f byte) string {
 	// arg: 2, int=Int, =Invalid,
-	prec := 6
+	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1091,7 +1091,7 @@ func (this *QLocale) ToString_7_(i float32) string {
 	// arg: 1, char=Char_S, =Invalid,
 	f := 'g'
 	// arg: 2, int=Int, =Invalid,
-	prec := 6
+	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1106,7 +1106,7 @@ func (this *QLocale) ToString_7_(i float32) string {
 // [8] QString toString(float, char, int) const
 func (this *QLocale) ToString_7_1(i float32, f byte) string {
 	// arg: 2, int=Int, =Invalid,
-	prec := 6
+	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -2164,7 +2164,7 @@ func (this *QLocale) FormattedDataSize(bytes int64, precision int, format int) s
 // [8] QString formattedDataSize(qint64, int, QLocale::DataSizeFormats)
 func (this *QLocale) FormattedDataSize__(bytes int64) string {
 	// arg: 1, int=Int, =Invalid,
-	precision := 2
+	precision := int(2)
 	// arg: 2, QLocale::DataSizeFormats=Typedef, QLocale::DataSizeFormats=Typedef, QFlags<QLocale::DataSizeFormat>
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bytes, precision, format)

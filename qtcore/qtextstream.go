@@ -459,7 +459,7 @@ func (this *QTextStream) ReadLine(maxlen int64) string {
 // [8] QString readLine(qint64)
 func (this *QTextStream) ReadLine__() string {
 	// arg: 0, qint64=Typedef, qint64=Typedef, long long
-	maxlen := 0
+	maxlen := int64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream8readLineEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -488,7 +488,7 @@ func (this *QTextStream) ReadLineInto__(line string) bool {
 	var tmpArg0 = NewQString_5(line)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, qint64=Typedef, qint64=Typedef, long long
-	maxlen := 0
+	maxlen := int64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream12readLineIntoEP7QStringx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

@@ -178,7 +178,7 @@ func (this *QEventLoop) Exit(returnCode int) {
 // [-2] void exit(int)
 func (this *QEventLoop) Exit__() {
 	// arg: 0, int=Int, =Invalid,
-	returnCode := 0
+	returnCode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop4exitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), returnCode)
 	qtrt.ErrPrint(err, rv)
 }

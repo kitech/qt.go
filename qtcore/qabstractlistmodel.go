@@ -132,7 +132,7 @@ func (this *QAbstractListModel) Index(row int, column int, parent QModelIndex_IT
 // [24] QModelIndex index(int, int, const QModelIndex &) const
 func (this *QAbstractListModel) Index__(row int) *QModelIndex /*123*/ {
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractListModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)

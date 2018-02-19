@@ -1832,9 +1832,9 @@ func (this *QPainter) DrawRoundRect__(r qtcore.QRectF_ITF) {
 		convArg0 = r.QRectF_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	xround := 25
+	xround := int(25)
 	// arg: 2, int=Int, =Invalid,
-	yround := 25
+	yround := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xround, yround)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1849,7 +1849,7 @@ func (this *QPainter) DrawRoundRect__1(r qtcore.QRectF_ITF, xround int) {
 		convArg0 = r.QRectF_PTR().GetCthis()
 	}
 	// arg: 2, int=Int, =Invalid,
-	yround := 25
+	yround := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xround, yround)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1869,9 +1869,9 @@ func (this *QPainter) DrawRoundRect_1(x int, y int, w int, h int, arg4 int, arg5
 // [-2] void drawRoundRect(int, int, int, int, int, int)
 func (this *QPainter) DrawRoundRect_1_(x int, y int, w int, h int) {
 	// arg: 4, int=Int, =Invalid,
-	arg4 := 25
+	arg4 := int(25)
 	// arg: 5, int=Int, =Invalid,
-	arg5 := 25
+	arg5 := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectEiiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, arg4, arg5)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1882,7 +1882,7 @@ func (this *QPainter) DrawRoundRect_1_(x int, y int, w int, h int) {
 // [-2] void drawRoundRect(int, int, int, int, int, int)
 func (this *QPainter) DrawRoundRect_1_1(x int, y int, w int, h int, arg4 int) {
 	// arg: 5, int=Int, =Invalid,
-	arg5 := 25
+	arg5 := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectEiiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, arg4, arg5)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1910,9 +1910,9 @@ func (this *QPainter) DrawRoundRect_2_(r qtcore.QRect_ITF) {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	xround := 25
+	xround := int(25)
 	// arg: 2, int=Int, =Invalid,
-	yround := 25
+	yround := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectERK5QRectii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xround, yround)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1927,7 +1927,7 @@ func (this *QPainter) DrawRoundRect_2_1(r qtcore.QRect_ITF, xround int) {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
 	// arg: 2, int=Int, =Invalid,
-	yround := 25
+	yround := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectERK5QRectii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xround, yround)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1995,9 +1995,9 @@ func (this *QPainter) DrawTiledPixmap_1_(x int, y int, w int, h int, arg4 QPixma
 		convArg4 = arg4.QPixmap_PTR().GetCthis()
 	}
 	// arg: 5, int=Int, =Invalid,
-	sx := 0
+	sx := int(0)
 	// arg: 6, int=Int, =Invalid,
-	sy := 0
+	sy := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, convArg4, sx, sy)
 	qtrt.ErrPrint(err, rv)
 }
@@ -2012,7 +2012,7 @@ func (this *QPainter) DrawTiledPixmap_1_1(x int, y int, w int, h int, arg4 QPixm
 		convArg4 = arg4.QPixmap_PTR().GetCthis()
 	}
 	// arg: 6, int=Int, =Invalid,
-	sy := 0
+	sy := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, convArg4, sx, sy)
 	qtrt.ErrPrint(err, rv)
 }
@@ -2558,13 +2558,13 @@ func (this *QPainter) DrawImage_8_(x int, y int, image QImage_ITF) {
 		convArg2 = image.QImage_PTR().GetCthis()
 	}
 	// arg: 3, int=Int, =Invalid,
-	sx := 0
+	sx := int(0)
 	// arg: 4, int=Int, =Invalid,
-	sy := 0
+	sy := int(0)
 	// arg: 5, int=Int, =Invalid,
-	sw := -1
+	sw := int(-1)
 	// arg: 6, int=Int, =Invalid,
-	sh := -1
+	sh := int(-1)
 	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageEiiRK6QImageiiii6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, sx, sy, sw, sh, flags)
@@ -2581,11 +2581,11 @@ func (this *QPainter) DrawImage_8_1(x int, y int, image QImage_ITF, sx int) {
 		convArg2 = image.QImage_PTR().GetCthis()
 	}
 	// arg: 4, int=Int, =Invalid,
-	sy := 0
+	sy := int(0)
 	// arg: 5, int=Int, =Invalid,
-	sw := -1
+	sw := int(-1)
 	// arg: 6, int=Int, =Invalid,
-	sh := -1
+	sh := int(-1)
 	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageEiiRK6QImageiiii6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, sx, sy, sw, sh, flags)
@@ -2602,9 +2602,9 @@ func (this *QPainter) DrawImage_8_2(x int, y int, image QImage_ITF, sx int, sy i
 		convArg2 = image.QImage_PTR().GetCthis()
 	}
 	// arg: 5, int=Int, =Invalid,
-	sw := -1
+	sw := int(-1)
 	// arg: 6, int=Int, =Invalid,
-	sh := -1
+	sh := int(-1)
 	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageEiiRK6QImageiiii6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, sx, sy, sw, sh, flags)
@@ -2621,7 +2621,7 @@ func (this *QPainter) DrawImage_8_3(x int, y int, image QImage_ITF, sx int, sy i
 		convArg2 = image.QImage_PTR().GetCthis()
 	}
 	// arg: 6, int=Int, =Invalid,
-	sh := -1
+	sh := int(-1)
 	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageEiiRK6QImageiiii6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, sx, sy, sw, sh, flags)

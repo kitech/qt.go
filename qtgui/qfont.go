@@ -96,9 +96,9 @@ func NewQFont_1_(family string) *QFont {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid,
-	pointSize := -1
+	pointSize := int(-1)
 	// arg: 2, int=Int, =Invalid,
-	weight := -1
+	weight := int(-1)
 	// arg: 3, bool=Bool, =Invalid,
 	italic := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontC2ERK7QStringiib", qtrt.FFI_TYPE_POINTER, convArg0, pointSize, weight, italic)
@@ -116,7 +116,7 @@ func NewQFont_1_1(family string, pointSize int) *QFont {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, int=Int, =Invalid,
-	weight := -1
+	weight := int(-1)
 	// arg: 3, bool=Bool, =Invalid,
 	italic := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontC2ERK7QStringiib", qtrt.FFI_TYPE_POINTER, convArg0, pointSize, weight, italic)

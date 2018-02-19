@@ -275,7 +275,7 @@ func (this *QRegularExpression) Match__(subject string) *QRegularExpressionMatch
 	var tmpArg0 = NewQString_5(subject)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid,
-	offset := 0
+	offset := int(0)
 	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
 	matchType := 0
 	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
@@ -347,7 +347,7 @@ func (this *QRegularExpression) Match_1_(subjectRef QStringRef_ITF) *QRegularExp
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	offset := 0
+	offset := int(0)
 	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
 	matchType := 0
 	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
@@ -419,7 +419,7 @@ func (this *QRegularExpression) GlobalMatch__(subject string) *QRegularExpressio
 	var tmpArg0 = NewQString_5(subject)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid,
-	offset := 0
+	offset := int(0)
 	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
 	matchType := 0
 	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
@@ -491,7 +491,7 @@ func (this *QRegularExpression) GlobalMatch_1_(subjectRef QStringRef_ITF) *QRegu
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	offset := 0
+	offset := int(0)
 	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
 	matchType := 0
 	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>

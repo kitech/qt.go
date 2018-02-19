@@ -278,7 +278,7 @@ func (this *QTextCursor) MovePosition__(op int) bool {
 	// arg: 1, QTextCursor::MoveMode=Enum, QTextCursor::MoveMode=Enum,
 	arg1 := 0
 	// arg: 2, int=Int, =Invalid,
-	n := 1
+	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor12movePositionENS_13MoveOperationENS_8MoveModeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), op, arg1, n)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -290,7 +290,7 @@ func (this *QTextCursor) MovePosition__(op int) bool {
 // [1] bool movePosition(enum QTextCursor::MoveOperation, enum QTextCursor::MoveMode, int)
 func (this *QTextCursor) MovePosition__1(op int, arg1 int) bool {
 	// arg: 2, int=Int, =Invalid,
-	n := 1
+	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor12movePositionENS_13MoveOperationENS_8MoveModeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), op, arg1, n)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

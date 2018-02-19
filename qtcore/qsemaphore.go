@@ -79,7 +79,7 @@ func NewQSemaphore(n int) *QSemaphore {
 // [-2] void QSemaphore(int)
 func NewQSemaphore__() *QSemaphore {
 	// arg: 0, int=Int, =Invalid,
-	n := 0
+	n := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphoreC2Ei", qtrt.FFI_TYPE_POINTER, n)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -113,7 +113,7 @@ func (this *QSemaphore) Acquire(n int) {
 // [-2] void acquire(int)
 func (this *QSemaphore) Acquire__() {
 	// arg: 0, int=Int, =Invalid,
-	n := 1
+	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7acquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
 }
@@ -134,7 +134,7 @@ func (this *QSemaphore) TryAcquire(n int) bool {
 // [1] bool tryAcquire(int)
 func (this *QSemaphore) TryAcquire__() bool {
 	// arg: 0, int=Int, =Invalid,
-	n := 1
+	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -165,7 +165,7 @@ func (this *QSemaphore) Release(n int) {
 // [-2] void release(int)
 func (this *QSemaphore) Release__() {
 	// arg: 0, int=Int, =Invalid,
-	n := 1
+	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
 }

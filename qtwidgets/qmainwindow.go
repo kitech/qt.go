@@ -688,7 +688,7 @@ func (this *QMainWindow) SaveState(version int) *qtcore.QByteArray /*123*/ {
 // [8] QByteArray saveState(int) const
 func (this *QMainWindow) SaveState__() *qtcore.QByteArray /*123*/ {
 	// arg: 0, int=Int, =Invalid,
-	version := 0
+	version := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow9saveStateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), version)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -720,7 +720,7 @@ func (this *QMainWindow) RestoreState__(state qtcore.QByteArray_ITF) bool {
 		convArg0 = state.QByteArray_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	version := 0
+	version := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow12restoreStateERK10QByteArrayi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, version)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

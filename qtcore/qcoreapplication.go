@@ -415,7 +415,7 @@ func QCoreApplication_Exit(retcode int) {
 // [-2] void exit(int)
 func (this *QCoreApplication) Exit__() {
 	// arg: 0, int=Int, =Invalid,
-	retcode := 0
+	retcode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication4exitEi", qtrt.FFI_TYPE_POINTER, retcode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -508,7 +508,7 @@ func (this *QCoreApplication) SendPostedEvents__() {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
 	// arg: 1, int=Int, =Invalid,
-	event_type := 0
+	event_type := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16sendPostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, event_type)
 	qtrt.ErrPrint(err, rv)
 }
@@ -523,7 +523,7 @@ func (this *QCoreApplication) SendPostedEvents__1(receiver QObject_ITF /*777 QOb
 		convArg0 = receiver.QObject_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	event_type := 0
+	event_type := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16sendPostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, event_type)
 	qtrt.ErrPrint(err, rv)
 }
@@ -555,7 +555,7 @@ func (this *QCoreApplication) RemovePostedEvents__(receiver QObject_ITF /*777 QO
 		convArg0 = receiver.QObject_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	eventType := 0
+	eventType := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18removePostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, eventType)
 	qtrt.ErrPrint(err, rv)
 }
@@ -844,7 +844,7 @@ func (this *QCoreApplication) Translate__(context string, key string) string {
 	// arg: 2, const char *=Pointer, =Invalid,
 	var convArg2 unsafe.Pointer
 	// arg: 3, int=Int, =Invalid,
-	n := -1
+	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -865,7 +865,7 @@ func (this *QCoreApplication) Translate__1(context string, key string, disambigu
 	var convArg2 = qtrt.CString(disambiguation)
 	defer qtrt.FreeMem(convArg2)
 	// arg: 3, int=Int, =Invalid,
-	n := -1
+	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))

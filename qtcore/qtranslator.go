@@ -141,7 +141,7 @@ func (this *QTranslator) Translate__(context string, sourceText string) string {
 	// arg: 2, const char *=Pointer, =Invalid,
 	var convArg2 unsafe.Pointer
 	// arg: 3, int=Int, =Invalid,
-	n := -1
+	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTranslator9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -162,7 +162,7 @@ func (this *QTranslator) Translate__1(context string, sourceText string, disambi
 	var convArg2 = qtrt.CString(disambiguation)
 	defer qtrt.FreeMem(convArg2)
 	// arg: 3, int=Int, =Invalid,
-	n := -1
+	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTranslator9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))

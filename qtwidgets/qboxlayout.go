@@ -155,7 +155,7 @@ func (this *QBoxLayout) AddStretch(stretch int) {
 // [-2] void addStretch(int)
 func (this *QBoxLayout) AddStretch__() {
 	// arg: 0, int=Int, =Invalid,
-	stretch := 0
+	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout10addStretchEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -196,7 +196,7 @@ func (this *QBoxLayout) AddWidget__(arg0 QWidget_ITF /*777 QWidget **/) {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	stretch := 0
+	stretch := int(0)
 	// arg: 2, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
 	alignment := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch, alignment)
@@ -241,7 +241,7 @@ func (this *QBoxLayout) AddLayout__(layout QLayout_ITF /*777 QLayout **/) {
 		convArg0 = layout.QLayout_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	stretch := 0
+	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout9addLayoutEP7QLayouti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -292,7 +292,7 @@ func (this *QBoxLayout) InsertStretch(index int, stretch int) {
 // [-2] void insertStretch(int, int)
 func (this *QBoxLayout) InsertStretch__(index int) {
 	// arg: 1, int=Int, =Invalid,
-	stretch := 0
+	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout13insertStretchEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -333,7 +333,7 @@ func (this *QBoxLayout) InsertWidget__(index int, widget QWidget_ITF /*777 QWidg
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
 	// arg: 2, int=Int, =Invalid,
-	stretch := 0
+	stretch := int(0)
 	// arg: 3, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
 	alignment := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout12insertWidgetEiP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch, alignment)
@@ -378,7 +378,7 @@ func (this *QBoxLayout) InsertLayout__(index int, layout QLayout_ITF /*777 QLayo
 		convArg1 = layout.QLayout_PTR().GetCthis()
 	}
 	// arg: 2, int=Int, =Invalid,
-	stretch := 0
+	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout12insertLayoutEiP7QLayouti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	qtrt.ErrPrint(err, rv)
 }

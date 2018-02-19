@@ -84,7 +84,7 @@ func NewQKeyEvent__(type_ int, key int, modifiers int) *QKeyEvent {
 	// arg: 4, bool=Bool, =Invalid,
 	autorep := false
 	// arg: 5, ushort=Typedef, ushort=Typedef, unsigned short
-	count := 1
+	count := uint16(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt", qtrt.FFI_TYPE_POINTER, type_, key, modifiers, convArg3, autorep, count)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,7 +102,7 @@ func NewQKeyEvent__1(type_ int, key int, modifiers int, text string) *QKeyEvent 
 	// arg: 4, bool=Bool, =Invalid,
 	autorep := false
 	// arg: 5, ushort=Typedef, ushort=Typedef, unsigned short
-	count := 1
+	count := uint16(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt", qtrt.FFI_TYPE_POINTER, type_, key, modifiers, convArg3, autorep, count)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -118,7 +118,7 @@ func NewQKeyEvent__2(type_ int, key int, modifiers int, text string, autorep boo
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 5, ushort=Typedef, ushort=Typedef, unsigned short
-	count := 1
+	count := uint16(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt", qtrt.FFI_TYPE_POINTER, type_, key, modifiers, convArg3, autorep, count)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -150,7 +150,7 @@ func NewQKeyEvent_1_(type_ int, key int, modifiers int, nativeScanCode uint, nat
 	// arg: 7, bool=Bool, =Invalid,
 	autorep := false
 	// arg: 8, ushort=Typedef, ushort=Typedef, unsigned short
-	count := 1
+	count := uint16(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEEjjjRK7QStringbt", qtrt.FFI_TYPE_POINTER, type_, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, convArg6, autorep, count)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -168,7 +168,7 @@ func NewQKeyEvent_1_1(type_ int, key int, modifiers int, nativeScanCode uint, na
 	// arg: 7, bool=Bool, =Invalid,
 	autorep := false
 	// arg: 8, ushort=Typedef, ushort=Typedef, unsigned short
-	count := 1
+	count := uint16(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEEjjjRK7QStringbt", qtrt.FFI_TYPE_POINTER, type_, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, convArg6, autorep, count)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -184,7 +184,7 @@ func NewQKeyEvent_1_2(type_ int, key int, modifiers int, nativeScanCode uint, na
 	var tmpArg6 = qtcore.NewQString_5(text)
 	var convArg6 = tmpArg6.GetCthis()
 	// arg: 8, ushort=Typedef, ushort=Typedef, unsigned short
-	count := 1
+	count := uint16(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEEjjjRK7QStringbt", qtrt.FFI_TYPE_POINTER, type_, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, convArg6, autorep, count)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventFromPointer(unsafe.Pointer(uintptr(rv)))

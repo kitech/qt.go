@@ -428,7 +428,7 @@ func (this *QSettings) BeginWriteArray__(prefix string) {
 	var tmpArg0 = NewQString_5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid,
-	size := -1
+	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings15beginWriteArrayERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	qtrt.ErrPrint(err, rv)
 }

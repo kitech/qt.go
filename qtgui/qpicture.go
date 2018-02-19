@@ -83,7 +83,7 @@ func NewQPicture(formatVersion int) *QPicture {
 // [-2] void QPicture(int)
 func NewQPicture__() *QPicture {
 	// arg: 0, int=Int, =Invalid,
-	formatVersion := -1
+	formatVersion := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPictureC2Ei", qtrt.FFI_TYPE_POINTER, formatVersion)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPictureFromPointer(unsafe.Pointer(uintptr(rv)))

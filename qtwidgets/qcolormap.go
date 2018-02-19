@@ -112,7 +112,7 @@ func QColormap_Instance(screen int) *QColormap /*123*/ {
 // [8] QColormap instance(int)
 func (this *QColormap) Instance__() *QColormap /*123*/ {
 	// arg: 0, int=Int, =Invalid,
-	screen := -1
+	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormap8instanceEi", qtrt.FFI_TYPE_POINTER, screen)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColormapFromPointer(unsafe.Pointer(uintptr(rv))) // 333

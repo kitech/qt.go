@@ -612,7 +612,7 @@ func (this *QStandardItemModel) Item(row int, column int) *QStandardItem /*777 Q
 // [8] QStandardItem * item(int, int) const
 func (this *QStandardItemModel) Item__(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel4itemEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -838,7 +838,7 @@ func (this *QStandardItemModel) TakeItem(row int, column int) *QStandardItem /*7
 // [8] QStandardItem * takeItem(int, int)
 func (this *QStandardItemModel) TakeItem__(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel8takeItemEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444

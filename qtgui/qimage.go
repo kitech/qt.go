@@ -1447,7 +1447,7 @@ func (this *QImage) Save__(fileName string) bool {
 	// arg: 1, const char *=Pointer, =Invalid,
 	var convArg1 unsafe.Pointer
 	// arg: 2, int=Int, =Invalid,
-	quality := -1
+	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4saveERK7QStringPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1463,7 +1463,7 @@ func (this *QImage) Save__1(fileName string, format string) bool {
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	// arg: 2, int=Int, =Invalid,
-	quality := -1
+	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4saveERK7QStringPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1497,7 +1497,7 @@ func (this *QImage) Save_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) boo
 	// arg: 1, const char *=Pointer, =Invalid,
 	var convArg1 unsafe.Pointer
 	// arg: 2, int=Int, =Invalid,
-	quality := -1
+	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4saveEP9QIODevicePKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1515,7 +1515,7 @@ func (this *QImage) Save_1_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, fo
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
 	// arg: 2, int=Int, =Invalid,
-	quality := -1
+	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4saveEP9QIODevicePKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

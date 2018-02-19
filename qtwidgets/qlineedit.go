@@ -513,7 +513,7 @@ func (this *QLineEdit) CursorForward(mark bool, steps int) {
 // [-2] void cursorForward(_Bool, int)
 func (this *QLineEdit) CursorForward__(mark bool) {
 	// arg: 1, int=Int, =Invalid,
-	steps := 1
+	steps := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit13cursorForwardEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mark, steps)
 	qtrt.ErrPrint(err, rv)
 }
@@ -533,7 +533,7 @@ func (this *QLineEdit) CursorBackward(mark bool, steps int) {
 // [-2] void cursorBackward(_Bool, int)
 func (this *QLineEdit) CursorBackward__(mark bool) {
 	// arg: 1, int=Int, =Invalid,
-	steps := 1
+	steps := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit14cursorBackwardEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mark, steps)
 	qtrt.ErrPrint(err, rv)
 }

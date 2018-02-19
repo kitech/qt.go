@@ -640,7 +640,7 @@ func (this *QApplication) Alert__(widget QWidget_ITF /*777 QWidget **/) {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	duration := 0
+	duration := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication5alertEP7QWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, duration)
 	qtrt.ErrPrint(err, rv)
 }

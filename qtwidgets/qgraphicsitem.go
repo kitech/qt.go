@@ -1077,9 +1077,9 @@ func (this *QGraphicsItem) EnsureVisible__() {
 	// arg: 0, const QRectF &=LValueReference, QRectF=Record,
 	var convArg0 unsafe.Pointer
 	// arg: 1, int=Int, =Invalid,
-	xmargin := 50
+	xmargin := int(50)
 	// arg: 2, int=Int, =Invalid,
-	ymargin := 50
+	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1094,9 +1094,9 @@ func (this *QGraphicsItem) EnsureVisible__1(rect qtcore.QRectF_ITF) {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	xmargin := 50
+	xmargin := int(50)
 	// arg: 2, int=Int, =Invalid,
-	ymargin := 50
+	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1111,7 +1111,7 @@ func (this *QGraphicsItem) EnsureVisible__2(rect qtcore.QRectF_ITF, xmargin int)
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
 	// arg: 2, int=Int, =Invalid,
-	ymargin := 50
+	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1131,9 +1131,9 @@ func (this *QGraphicsItem) EnsureVisible_1(x float64, y float64, w float64, h fl
 // [-2] void ensureVisible(qreal, qreal, qreal, qreal, int, int)
 func (this *QGraphicsItem) EnsureVisible_1_(x float64, y float64, w float64, h float64) {
 	// arg: 4, int=Int, =Invalid,
-	xmargin := 50
+	xmargin := int(50)
 	// arg: 5, int=Int, =Invalid,
-	ymargin := 50
+	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1144,7 +1144,7 @@ func (this *QGraphicsItem) EnsureVisible_1_(x float64, y float64, w float64, h f
 // [-2] void ensureVisible(qreal, qreal, qreal, qreal, int, int)
 func (this *QGraphicsItem) EnsureVisible_1_1(x float64, y float64, w float64, h float64, xmargin int) {
 	// arg: 5, int=Int, =Invalid,
-	ymargin := 50
+	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
 }

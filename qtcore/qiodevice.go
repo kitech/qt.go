@@ -415,7 +415,7 @@ func (this *QIODevice) ReadLine_1(maxlen int64) *QByteArray /*123*/ {
 // [8] QByteArray readLine(qint64)
 func (this *QIODevice) ReadLine_1_() *QByteArray /*123*/ {
 	// arg: 0, qint64=Typedef, qint64=Typedef, long long
-	maxlen := 0
+	maxlen := int64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice8readLineEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333

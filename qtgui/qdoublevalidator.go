@@ -168,7 +168,7 @@ func (this *QDoubleValidator) SetRange(bottom float64, top float64, decimals int
 // [-2] void setRange(double, double, int)
 func (this *QDoubleValidator) SetRange__(bottom float64, top float64) {
 	// arg: 2, int=Int, =Invalid,
-	decimals := 0
+	decimals := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator8setRangeEddi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bottom, top, decimals)
 	qtrt.ErrPrint(err, rv)
 }

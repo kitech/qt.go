@@ -154,7 +154,7 @@ func (this *QButtonGroup) AddButton__(arg0 QAbstractButton_ITF /*777 QAbstractBu
 		convArg0 = arg0.QAbstractButton_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	id := -1
+	id := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroup9addButtonEP15QAbstractButtoni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, id)
 	qtrt.ErrPrint(err, rv)
 }

@@ -1083,7 +1083,7 @@ func (this *QPlainTextEdit) ZoomIn(range_ int) {
 // [-2] void zoomIn(int)
 func (this *QPlainTextEdit) ZoomIn__() {
 	// arg: 0, int=Int, =Invalid,
-	range_ := 1
+	range_ := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit6zoomInEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), range_)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1103,7 +1103,7 @@ func (this *QPlainTextEdit) ZoomOut(range_ int) {
 // [-2] void zoomOut(int)
 func (this *QPlainTextEdit) ZoomOut__() {
 	// arg: 0, int=Int, =Invalid,
-	range_ := 1
+	range_ := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit7zoomOutEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), range_)
 	qtrt.ErrPrint(err, rv)
 }

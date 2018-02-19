@@ -134,7 +134,7 @@ func NewQStandardItem_3(rows int, columns int) *QStandardItem {
 // [-2] void QStandardItem(int, int)
 func NewQStandardItem_3_(rows int) *QStandardItem {
 	// arg: 1, int=Int, =Invalid,
-	columns := 1
+	columns := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2Eii", qtrt.FFI_TYPE_POINTER, rows, columns)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -820,7 +820,7 @@ func (this *QStandardItem) Child(row int, column int) *QStandardItem /*777 QStan
 // [8] QStandardItem * child(int, int) const
 func (this *QStandardItem) Child__(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem5childEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -948,7 +948,7 @@ func (this *QStandardItem) TakeChild(row int, column int) *QStandardItem /*777 Q
 // [8] QStandardItem * takeChild(int, int)
 func (this *QStandardItem) TakeChild__(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem9takeChildEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444

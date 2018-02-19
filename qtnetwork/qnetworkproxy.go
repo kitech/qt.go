@@ -100,7 +100,7 @@ func NewQNetworkProxy_1_(type_ int) *QNetworkProxy {
 	// arg: 1, const QString &=LValueReference, QString=Record,
 	var convArg1 = qtcore.NewQString()
 	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short
-	port := 0
+	port := uint16(0)
 	// arg: 3, const QString &=LValueReference, QString=Record,
 	var convArg3 = qtcore.NewQString()
 	// arg: 4, const QString &=LValueReference, QString=Record,
@@ -120,7 +120,7 @@ func NewQNetworkProxy_1_1(type_ int, hostName string) *QNetworkProxy {
 	var tmpArg1 = qtcore.NewQString_5(hostName)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short
-	port := 0
+	port := uint16(0)
 	// arg: 3, const QString &=LValueReference, QString=Record,
 	var convArg3 = qtcore.NewQString()
 	// arg: 4, const QString &=LValueReference, QString=Record,

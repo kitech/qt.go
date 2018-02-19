@@ -199,7 +199,7 @@ func (this *QAbstractSocket) Bind__(address QHostAddress_ITF) bool {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
 	}
 	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
-	port := 0
+	port := uint16(0)
 	// arg: 2, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindERK12QHostAddresst6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode)
@@ -239,7 +239,7 @@ func (this *QAbstractSocket) Bind_1(port uint16, mode int) bool {
 // [1] bool bind(quint16, QAbstractSocket::BindMode)
 func (this *QAbstractSocket) Bind_1_() bool {
 	// arg: 0, quint16=Typedef, quint16=Typedef, unsigned short
-	port := 0
+	port := uint16(0)
 	// arg: 1, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindEt6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), port, mode)
@@ -625,7 +625,7 @@ func (this *QAbstractSocket) WaitForConnected(msecs int) bool {
 // [1] bool waitForConnected(int)
 func (this *QAbstractSocket) WaitForConnected__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket16waitForConnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -647,7 +647,7 @@ func (this *QAbstractSocket) WaitForReadyRead(msecs int) bool {
 // [1] bool waitForReadyRead(int)
 func (this *QAbstractSocket) WaitForReadyRead__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -669,7 +669,7 @@ func (this *QAbstractSocket) WaitForBytesWritten(msecs int) bool {
 // [1] bool waitForBytesWritten(int)
 func (this *QAbstractSocket) WaitForBytesWritten__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -691,7 +691,7 @@ func (this *QAbstractSocket) WaitForDisconnected(msecs int) bool {
 // [1] bool waitForDisconnected(int)
 func (this *QAbstractSocket) WaitForDisconnected__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19waitForDisconnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

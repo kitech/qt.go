@@ -102,9 +102,9 @@ func (this *QInputMethodEvent) SetCommitString__(commitString string) {
 	var tmpArg0 = qtcore.NewQString_5(commitString)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid,
-	replaceFrom := 0
+	replaceFrom := int(0)
 	// arg: 2, int=Int, =Invalid,
-	replaceLength := 0
+	replaceLength := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QInputMethodEvent15setCommitStringERK7QStringii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, replaceFrom, replaceLength)
 	qtrt.ErrPrint(err, rv)
 }
@@ -117,7 +117,7 @@ func (this *QInputMethodEvent) SetCommitString__1(commitString string, replaceFr
 	var tmpArg0 = qtcore.NewQString_5(commitString)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, int=Int, =Invalid,
-	replaceLength := 0
+	replaceLength := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QInputMethodEvent15setCommitStringERK7QStringii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, replaceFrom, replaceLength)
 	qtrt.ErrPrint(err, rv)
 }

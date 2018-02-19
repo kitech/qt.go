@@ -120,9 +120,9 @@ func NewQCursor_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
 		convArg1 = mask.QBitmap_PTR().GetCthis()
 	}
 	// arg: 2, int=Int, =Invalid,
-	hotX := -1
+	hotX := int(-1)
 	// arg: 3, int=Int, =Invalid,
-	hotY := -1
+	hotY := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QBitmapS2_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, hotX, hotY)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCursorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -144,7 +144,7 @@ func NewQCursor_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
 		convArg1 = mask.QBitmap_PTR().GetCthis()
 	}
 	// arg: 3, int=Int, =Invalid,
-	hotY := -1
+	hotY := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QBitmapS2_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, hotX, hotY)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCursorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -178,9 +178,9 @@ func NewQCursor_3_(pixmap QPixmap_ITF) *QCursor {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	hotX := -1
+	hotX := int(-1)
 	// arg: 2, int=Int, =Invalid,
-	hotY := -1
+	hotY := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QPixmapii", qtrt.FFI_TYPE_POINTER, convArg0, hotX, hotY)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCursorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -198,7 +198,7 @@ func NewQCursor_3_1(pixmap QPixmap_ITF, hotX int) *QCursor {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	}
 	// arg: 2, int=Int, =Invalid,
-	hotY := -1
+	hotY := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QPixmapii", qtrt.FFI_TYPE_POINTER, convArg0, hotX, hotY)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCursorFromPointer(unsafe.Pointer(uintptr(rv)))

@@ -104,7 +104,7 @@ func NewQColor_2(r int, g int, b int, a int) *QColor {
 // [-2] void QColor(int, int, int, int)
 func NewQColor_2_(r int, g int, b int) *QColor {
 	// arg: 3, int=Int, =Invalid,
-	a := 255
+	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2Eiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -539,7 +539,7 @@ func (this *QColor) SetRgb(r int, g int, b int, a int) {
 // [-2] void setRgb(int, int, int, int)
 func (this *QColor) SetRgb__(r int, g int, b int) {
 	// arg: 3, int=Int, =Invalid,
-	a := 255
+	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setRgbEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
 	qtrt.ErrPrint(err, rv)
 }
@@ -588,7 +588,7 @@ func (this *QColor) SetRgbF(r float64, g float64, b float64, a float64) {
 // [-2] void setRgbF(qreal, qreal, qreal, qreal)
 func (this *QColor) SetRgbF__(r float64, g float64, b float64) {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double
-	a := 1.0
+	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setRgbFEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
 	qtrt.ErrPrint(err, rv)
 }
@@ -782,7 +782,7 @@ func (this *QColor) SetHsv(h int, s int, v int, a int) {
 // [-2] void setHsv(int, int, int, int)
 func (this *QColor) SetHsv__(h int, s int, v int) {
 	// arg: 3, int=Int, =Invalid,
-	a := 255
+	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setHsvEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
 	qtrt.ErrPrint(err, rv)
 }
@@ -822,7 +822,7 @@ func (this *QColor) SetHsvF(h float64, s float64, v float64, a float64) {
 // [-2] void setHsvF(qreal, qreal, qreal, qreal)
 func (this *QColor) SetHsvF__(h float64, s float64, v float64) {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double
-	a := 1.0
+	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setHsvFEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
 	qtrt.ErrPrint(err, rv)
 }
@@ -942,7 +942,7 @@ func (this *QColor) SetCmyk(c int, m int, y int, k int, a int) {
 // [-2] void setCmyk(int, int, int, int, int)
 func (this *QColor) SetCmyk__(c int, m int, y int, k int) {
 	// arg: 4, int=Int, =Invalid,
-	a := 255
+	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setCmykEiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
 	qtrt.ErrPrint(err, rv)
 }
@@ -982,7 +982,7 @@ func (this *QColor) SetCmykF(c float64, m float64, y float64, k float64, a float
 // [-2] void setCmykF(qreal, qreal, qreal, qreal, qreal)
 func (this *QColor) SetCmykF__(c float64, m float64, y float64, k float64) {
 	// arg: 4, qreal=Typedef, qreal=Typedef, double
-	a := 1.0
+	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8setCmykFEddddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1082,7 +1082,7 @@ func (this *QColor) SetHsl(h int, s int, l int, a int) {
 // [-2] void setHsl(int, int, int, int)
 func (this *QColor) SetHsl__(h int, s int, l int) {
 	// arg: 3, int=Int, =Invalid,
-	a := 255
+	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setHslEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1122,7 +1122,7 @@ func (this *QColor) SetHslF(h float64, s float64, l float64, a float64) {
 // [-2] void setHslF(qreal, qreal, qreal, qreal)
 func (this *QColor) SetHslF__(h float64, s float64, l float64) {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double
-	a := 1.0
+	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setHslFEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1227,7 +1227,7 @@ func QColor_FromRgb_1(r int, g int, b int, a int) *QColor /*123*/ {
 // [16] QColor fromRgb(int, int, int, int)
 func (this *QColor) FromRgb_1_(r int, g int, b int) *QColor /*123*/ {
 	// arg: 3, int=Int, =Invalid,
-	a := 255
+	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromRgbEiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1275,7 +1275,7 @@ func QColor_FromRgbF(r float64, g float64, b float64, a float64) *QColor /*123*/
 // [16] QColor fromRgbF(qreal, qreal, qreal, qreal)
 func (this *QColor) FromRgbF__(r float64, g float64, b float64) *QColor /*123*/ {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double
-	a := 1.0
+	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromRgbFEdddd", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1358,7 +1358,7 @@ func QColor_FromHsv(h int, s int, v int, a int) *QColor /*123*/ {
 // [16] QColor fromHsv(int, int, int, int)
 func (this *QColor) FromHsv__(h int, s int, v int) *QColor /*123*/ {
 	// arg: 3, int=Int, =Invalid,
-	a := 255
+	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromHsvEiiii", qtrt.FFI_TYPE_POINTER, h, s, v, a)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1389,7 +1389,7 @@ func QColor_FromHsvF(h float64, s float64, v float64, a float64) *QColor /*123*/
 // [16] QColor fromHsvF(qreal, qreal, qreal, qreal)
 func (this *QColor) FromHsvF__(h float64, s float64, v float64) *QColor /*123*/ {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double
-	a := 1.0
+	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromHsvFEdddd", qtrt.FFI_TYPE_POINTER, h, s, v, a)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1420,7 +1420,7 @@ func QColor_FromCmyk(c int, m int, y int, k int, a int) *QColor /*123*/ {
 // [16] QColor fromCmyk(int, int, int, int, int)
 func (this *QColor) FromCmyk__(c int, m int, y int, k int) *QColor /*123*/ {
 	// arg: 4, int=Int, =Invalid,
-	a := 255
+	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromCmykEiiiii", qtrt.FFI_TYPE_POINTER, c, m, y, k, a)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1451,7 +1451,7 @@ func QColor_FromCmykF(c float64, m float64, y float64, k float64, a float64) *QC
 // [16] QColor fromCmykF(qreal, qreal, qreal, qreal, qreal)
 func (this *QColor) FromCmykF__(c float64, m float64, y float64, k float64) *QColor /*123*/ {
 	// arg: 4, qreal=Typedef, qreal=Typedef, double
-	a := 1.0
+	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor9fromCmykFEddddd", qtrt.FFI_TYPE_POINTER, c, m, y, k, a)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1482,7 +1482,7 @@ func QColor_FromHsl(h int, s int, l int, a int) *QColor /*123*/ {
 // [16] QColor fromHsl(int, int, int, int)
 func (this *QColor) FromHsl__(h int, s int, l int) *QColor /*123*/ {
 	// arg: 3, int=Int, =Invalid,
-	a := 255
+	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromHslEiiii", qtrt.FFI_TYPE_POINTER, h, s, l, a)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1513,7 +1513,7 @@ func QColor_FromHslF(h float64, s float64, l float64, a float64) *QColor /*123*/
 // [16] QColor fromHslF(qreal, qreal, qreal, qreal)
 func (this *QColor) FromHslF__(h float64, s float64, l float64) *QColor /*123*/ {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double
-	a := 1.0
+	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromHslFEdddd", qtrt.FFI_TYPE_POINTER, h, s, l, a)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1539,7 +1539,7 @@ func (this *QColor) Light(f int) *QColor /*123*/ {
 // [16] QColor light(int) const
 func (this *QColor) Light__() *QColor /*123*/ {
 	// arg: 0, int=Int, =Invalid,
-	f := 150
+	f := int(150)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5lightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1565,7 +1565,7 @@ func (this *QColor) Lighter(f int) *QColor /*123*/ {
 // [16] QColor lighter(int) const
 func (this *QColor) Lighter__() *QColor /*123*/ {
 	// arg: 0, int=Int, =Invalid,
-	f := 150
+	f := int(150)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7lighterEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1591,7 +1591,7 @@ func (this *QColor) Dark(f int) *QColor /*123*/ {
 // [16] QColor dark(int) const
 func (this *QColor) Dark__() *QColor /*123*/ {
 	// arg: 0, int=Int, =Invalid,
-	f := 200
+	f := int(200)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4darkEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1617,7 +1617,7 @@ func (this *QColor) Darker(f int) *QColor /*123*/ {
 // [16] QColor darker(int) const
 func (this *QColor) Darker__() *QColor /*123*/ {
 	// arg: 0, int=Int, =Invalid,
-	f := 200
+	f := int(200)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6darkerEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333

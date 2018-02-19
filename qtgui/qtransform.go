@@ -104,7 +104,7 @@ func NewQTransform_2(h11 float64, h12 float64, h13 float64, h21 float64, h22 flo
 // [-2] void QTransform(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
 func NewQTransform_2_(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64) *QTransform {
 	// arg: 8, qreal=Typedef, qreal=Typedef, double
-	h33 := 1.0
+	h33 := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2Eddddddddd", qtrt.FFI_TYPE_POINTER, h11, h12, h13, h21, h22, h23, h31, h32, h33)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))

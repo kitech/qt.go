@@ -275,7 +275,7 @@ func (this *QThread) Exit(retcode int) {
 // [-2] void exit(int)
 func (this *QThread) Exit__() {
 	// arg: 0, int=Int, =Invalid,
-	retcode := 0
+	retcode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread4exitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), retcode)
 	qtrt.ErrPrint(err, rv)
 }

@@ -246,7 +246,7 @@ func (this *QDeadlineTimer) SetPreciseRemainingTime(secs int64, nsecs int64, typ
 // [-2] void setPreciseRemainingTime(qint64, qint64, Qt::TimerType)
 func (this *QDeadlineTimer) SetPreciseRemainingTime__(secs int64) {
 	// arg: 1, qint64=Typedef, qint64=Typedef, long long
-	nsecs := 0
+	nsecs := int64(0)
 	// arg: 2, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer23setPreciseRemainingTimeExxN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), secs, nsecs, type_)
@@ -319,7 +319,7 @@ func (this *QDeadlineTimer) SetPreciseDeadline(secs int64, nsecs int64, type_ in
 // [-2] void setPreciseDeadline(qint64, qint64, Qt::TimerType)
 func (this *QDeadlineTimer) SetPreciseDeadline__(secs int64) {
 	// arg: 1, qint64=Typedef, qint64=Typedef, long long
-	nsecs := 0
+	nsecs := int64(0)
 	// arg: 2, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer18setPreciseDeadlineExxN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), secs, nsecs, type_)

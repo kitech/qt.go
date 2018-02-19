@@ -243,7 +243,7 @@ func (this *QScroller) HandleInput__(input int, position qtcore.QPointF_ITF) boo
 		convArg1 = position.QPointF_PTR().GetCthis()
 	}
 	// arg: 2, qint64=Typedef, qint64=Typedef, long long
-	timestamp := 0
+	timestamp := int64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller11handleInputENS_5InputERK7QPointFx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), input, convArg1, timestamp)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

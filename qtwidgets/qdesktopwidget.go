@@ -195,7 +195,7 @@ func (this *QDesktopWidget) Screen(screen int) *QWidget /*777 QWidget **/ {
 // [8] QWidget * screen(int)
 func (this *QDesktopWidget) Screen__() *QWidget /*777 QWidget **/ {
 	// arg: 0, int=Int, =Invalid,
-	screen := -1
+	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidget6screenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -219,7 +219,7 @@ func (this *QDesktopWidget) ScreenGeometry(screen int) *qtcore.QRect /*123*/ {
 // [16] const QRect screenGeometry(int) const
 func (this *QDesktopWidget) ScreenGeometry__() *qtcore.QRect /*123*/ {
 	// arg: 0, int=Int, =Invalid,
-	screen := -1
+	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget14screenGeometryEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -277,7 +277,7 @@ func (this *QDesktopWidget) AvailableGeometry(screen int) *qtcore.QRect /*123*/ 
 // [16] const QRect availableGeometry(int) const
 func (this *QDesktopWidget) AvailableGeometry__() *qtcore.QRect /*123*/ {
 	// arg: 0, int=Int, =Invalid,
-	screen := -1
+	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget17availableGeometryEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333

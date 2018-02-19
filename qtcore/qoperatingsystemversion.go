@@ -79,9 +79,9 @@ func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) 
 // [-2] void QOperatingSystemVersion(enum QOperatingSystemVersion::OSType, int, int, int)
 func NewQOperatingSystemVersion__(osType int, vmajor int) *QOperatingSystemVersion {
 	// arg: 2, int=Int, =Invalid,
-	vminor := -1
+	vminor := int(-1)
 	// arg: 3, int=Int, =Invalid,
-	vmicro := -1
+	vmicro := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", qtrt.FFI_TYPE_POINTER, osType, vmajor, vminor, vmicro)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQOperatingSystemVersionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -95,7 +95,7 @@ func NewQOperatingSystemVersion__(osType int, vmajor int) *QOperatingSystemVersi
 // [-2] void QOperatingSystemVersion(enum QOperatingSystemVersion::OSType, int, int, int)
 func NewQOperatingSystemVersion__1(osType int, vmajor int, vminor int) *QOperatingSystemVersion {
 	// arg: 3, int=Int, =Invalid,
-	vmicro := -1
+	vmicro := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", qtrt.FFI_TYPE_POINTER, osType, vmajor, vminor, vmicro)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQOperatingSystemVersionFromPointer(unsafe.Pointer(uintptr(rv)))

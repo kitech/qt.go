@@ -434,7 +434,7 @@ func (this *QTreeWidget) EditItem__(item QTreeWidgetItem_ITF /*777 QTreeWidgetIt
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget8editItemEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -462,7 +462,7 @@ func (this *QTreeWidget) OpenPersistentEditor__(item QTreeWidgetItem_ITF /*777 Q
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -490,7 +490,7 @@ func (this *QTreeWidget) ClosePersistentEditor__(item QTreeWidgetItem_ITF /*777 
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 }
@@ -519,7 +519,7 @@ func (this *QTreeWidget) IsPersistentEditorOpen__(item QTreeWidgetItem_ITF /*777
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget22isPersistentEditorOpenEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -991,7 +991,7 @@ func (this *QTreeWidget) IndexFromItem__(item QTreeWidgetItem_ITF /*777 const QT
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget13indexFromItemEPK15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1025,7 +1025,7 @@ func (this *QTreeWidget) IndexFromItem_1_(item QTreeWidgetItem_ITF /*777 QTreeWi
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget13indexFromItemEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333

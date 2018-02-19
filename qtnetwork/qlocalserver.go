@@ -287,7 +287,7 @@ func (this *QLocalServer) WaitForNewConnection(msec int, timedOut *bool) bool {
 // [1] bool waitForNewConnection(int, _Bool *)
 func (this *QLocalServer) WaitForNewConnection__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msec := 0
+	msec := int(0)
 	// arg: 1, bool *=Pointer, =Invalid,
 	var timedOut unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timedOut)

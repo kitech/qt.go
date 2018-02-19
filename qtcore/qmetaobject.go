@@ -472,7 +472,7 @@ func (this *QMetaObject) Connect__(sender QObject_ITF /*777 const QObject **/, s
 		convArg2 = receiver.QObject_PTR().GetCthis()
 	}
 	// arg: 4, int=Int, =Invalid,
-	type_ := 0
+	type_ := int(0)
 	// arg: 5, int *=Pointer, =Invalid,
 	var types unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject7connectEPK7QObjectiS2_iiPi", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, convArg2, method_index, type_, types)

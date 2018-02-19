@@ -213,7 +213,7 @@ func (this *QStringList) IndexOf__(rx QRegExp_ITF) int {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	from := 0
+	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -243,7 +243,7 @@ func (this *QStringList) IndexOf_1_(rx QRegExp_ITF) int {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	from := 0
+	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -273,7 +273,7 @@ func (this *QStringList) IndexOf_2_(re QRegularExpression_ITF) int {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	from := 0
+	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -303,7 +303,7 @@ func (this *QStringList) LastIndexOf__(rx QRegExp_ITF) int {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	from := -1
+	from := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -333,7 +333,7 @@ func (this *QStringList) LastIndexOf_1_(rx QRegExp_ITF) int {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	from := -1
+	from := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -363,7 +363,7 @@ func (this *QStringList) LastIndexOf_2_(re QRegularExpression_ITF) int {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	from := -1
+	from := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

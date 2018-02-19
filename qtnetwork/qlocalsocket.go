@@ -421,7 +421,7 @@ func (this *QLocalSocket) WaitForBytesWritten(msecs int) bool {
 // [1] bool waitForBytesWritten(int)
 func (this *QLocalSocket) WaitForBytesWritten__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -443,7 +443,7 @@ func (this *QLocalSocket) WaitForConnected(msecs int) bool {
 // [1] bool waitForConnected(int)
 func (this *QLocalSocket) WaitForConnected__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket16waitForConnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -465,7 +465,7 @@ func (this *QLocalSocket) WaitForDisconnected(msecs int) bool {
 // [1] bool waitForDisconnected(int)
 func (this *QLocalSocket) WaitForDisconnected__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket19waitForDisconnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -487,7 +487,7 @@ func (this *QLocalSocket) WaitForReadyRead(msecs int) bool {
 // [1] bool waitForReadyRead(int)
 func (this *QLocalSocket) WaitForReadyRead__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

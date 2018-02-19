@@ -39,12 +39,12 @@ static void ffi_call_0(void*fn) {
 
    if (ffi_prep_cif(&cif, FFI_DEFAULT_ABI, 4, &ffi_type_void, args) == FFI_OK) {
        printf("hehehhee: %p\n", fn);
-       int n = 0;
-       printf("finish: %d, %d, %p, \n", rc, n, a2);
-       printf("finish: %d, %d, %p, %s\n", rc, n, a2, a2[0]);
+       int64_t n = 0;
+       printf("finish: %d, %ld, %p, \n", (int)rc, n, a2);
+       printf("finish: %d, %ld, %p, %s\n", (int)rc, n, a2, a2[0]);
        // n = ((int (*)(int, int, int, int))(fn))(s, a1, &a2, a1); // ok
        ffi_call(&cif, fn, &rc, values);
-       printf("finish: %d, %p\n", rc, n);
+       printf("finish: %d, %p\n", (int)rc, (void*)n);
     }
 }
 
@@ -79,16 +79,17 @@ static void ffi_call_1(void*fn) {
 import "C"
 
 import (
+	"bytes"
 	"fmt"
+	"io/ioutil"
 	"log"
+	"os"
 	"reflect"
 	"regexp"
 	"runtime"
 	"strings"
 	"sync"
 	"unsafe"
-
-	"github.com/gonuts/ffi"
 )
 
 func itype2stype(itype byte) *C.ffi_type {
@@ -145,58 +146,76 @@ func InvokeQtFuncByName(symname string, args []uint64, types []int) uint64 {
 }
 
 ////////
-
-type Type = ffi.Type
 type VRetype = uint64 // interface{}
 
 var debugFFICall = false
-var libs = map[string]ffi.Library{}
+var qtlibs = map[string]FFILibrary{}
 
 func SetDebugFFICall(on bool) { debugFFICall = on }
 func init() {
-	init_invoke()
+	init_ffi_invoke()
 	init_destroyedDynSlot()
 	init_callack_inherit()
 }
 
-func init_invoke() {
+func init_ffi_invoke() {
 	loadModule := func(libpath string, modname string) error {
 		var err error
-		var lib ffi.Library
-		lib, err = ffi.NewLibrary(libpath)
+		var lib FFILibrary
+		lib, err = NewFFILibrary(libpath)
 		ErrPrint(err, lib)
 		// log.Println(lib)
 		if err == nil {
-			libs[modname] = lib
+			qtlibs[modname] = lib
 		}
 		return err
 	}
 
-	dirp := "/usr/lib"
-	switch runtime.GOOS {
-	case "android":
-		for i := 1; i < 9; i++ {
-			d := fmt.Sprintf("/data/app/org.qtproject.example.go-%d/lib/arm", i)
-			if FileExist(d) {
-				dirp = d
-				break
+	// lib dir prefix
+	// go arch name => android lib name
+	archs := map[string]string{"386": "x86", "amd64": "x86_64", "arm": "arm", "mips": "mips"}
+	oslibexts := map[string]string{"linux": "so", "darwin": "dylib", "windows": "dll"}
+
+	getLibDirp := func() string {
+		switch runtime.GOOS {
+		case "android":
+			bcc, err := ioutil.ReadFile(fmt.Sprintf("/proc/%d/cmdline", os.Getpid()))
+			ErrPrint(err)
+			appdir := string(bcc[:bytes.IndexByte(bcc, 0)])
+			for i := 0; i < 9; i++ {
+				d := fmt.Sprintf("/data/app/%s%s/lib/%s/", appdir,
+					IfElseStr(i == 0, "", fmt.Sprintf("-%d", i)), archs[runtime.GOARCH])
+				if FileExist(d) {
+					return d
+				}
 			}
 		}
+		return ""
+	}
+	// dirp must endsWith / or ""
+	getLibFile := func(dirp, modname string) string {
+		switch runtime.GOOS {
+		case "darwin":
+			return fmt.Sprintf("%slibQt5%s.%s", dirp, modname, oslibexts[runtime.GOOS])
+		case "windows": // best put libs in current directory
+			return fmt.Sprintf("%sQt5%s.%s", dirp, modname, oslibexts[runtime.GOOS])
+		}
+		// case "linux", "freebsd", "netbsd", "openbsd", "android", ...:
+		return fmt.Sprintf("%slibQt5%s.%s", dirp, modname, oslibexts["linux"])
 	}
 
-	for _, modname := range []string{"Core", "Gui", "Widgets", "Network", "Inline"} {
-		libpath := fmt.Sprintf("%s/libQt5%s.so", dirp, modname)
+	for _, modname := range []string{"Core", "Gui", "Widgets", "Network", "Inline",
+		"Qml", "Quick", "QuickControls2", "QuickWidgets"} {
+		libpath := getLibFile(getLibDirp(), modname)
 		loadModule(libpath, modname)
 	}
-
-	// loadModule("./tsym.so", "tsym")
 }
 
 func deinit() {}
 
 func InvokeQtFunc(symname string, retype byte, types []byte, args ...interface{}) (VRetype, error) {
 
-	for modname, lib := range libs {
+	for modname, lib := range qtlibs {
 		addr, err := lib.Symbol(symname)
 		ErrPrint(err)
 		if err != nil {
@@ -266,7 +285,7 @@ func refmtSymbolName(symname string) string {
 
 func GetQtSymAddr(symname string) unsafe.Pointer {
 	symname = refmtSymbolName(symname)
-	for _, lib := range libs {
+	for _, lib := range qtlibs {
 		addr, err := lib.Symbol(symname)
 		if !isUndefinedSymbolErr(err) {
 			ErrPrint(err, "")

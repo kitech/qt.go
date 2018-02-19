@@ -334,7 +334,7 @@ func (this *QRegExp) IndexIn__(str string) int {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid,
-	offset := 0
+	offset := int(0)
 	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum,
 	caretMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp7indexInERK7QStringiNS_9CaretModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
@@ -376,7 +376,7 @@ func (this *QRegExp) LastIndexIn__(str string) int {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid,
-	offset := -1
+	offset := int(-1)
 	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum,
 	caretMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp11lastIndexInERK7QStringiNS_9CaretModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
@@ -461,7 +461,7 @@ func (this *QRegExp) Cap(nth int) string {
 // [8] QString cap(int) const
 func (this *QRegExp) Cap__() string {
 	// arg: 0, int=Int, =Invalid,
-	nth := 0
+	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp3capEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -489,7 +489,7 @@ func (this *QRegExp) Cap_1(nth int) string {
 // [8] QString cap(int)
 func (this *QRegExp) Cap_1_() string {
 	// arg: 0, int=Int, =Invalid,
-	nth := 0
+	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp3capEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -514,7 +514,7 @@ func (this *QRegExp) Pos(nth int) int {
 // [4] int pos(int) const
 func (this *QRegExp) Pos__() int {
 	// arg: 0, int=Int, =Invalid,
-	nth := 0
+	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp3posEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -536,7 +536,7 @@ func (this *QRegExp) Pos_1(nth int) int {
 // [4] int pos(int)
 func (this *QRegExp) Pos_1_() int {
 	// arg: 0, int=Int, =Invalid,
-	nth := 0
+	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp3posEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

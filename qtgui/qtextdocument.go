@@ -430,7 +430,7 @@ func (this *QTextDocument) Find__(subString string) *QTextCursor /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(subString)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid,
-	from := 0
+	from := int(0)
 	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QStringi6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
@@ -520,7 +520,7 @@ func (this *QTextDocument) Find_2_(expr qtcore.QRegExp_ITF) *QTextCursor /*123*/
 		convArg0 = expr.QRegExp_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	from := 0
+	from := int(0)
 	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QRegExpi6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
@@ -616,7 +616,7 @@ func (this *QTextDocument) Find_4_(expr qtcore.QRegularExpression_ITF) *QTextCur
 		convArg0 = expr.QRegularExpression_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	from := 0
+	from := int(0)
 	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK18QRegularExpressioni6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)

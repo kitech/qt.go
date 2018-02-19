@@ -165,7 +165,7 @@ func (this *QStatusBar) AddWidget__(widget QWidget_ITF /*777 QWidget **/) {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	stretch := 0
+	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar9addWidgetEP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -194,7 +194,7 @@ func (this *QStatusBar) InsertWidget__(index int, widget QWidget_ITF /*777 QWidg
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
 	// arg: 2, int=Int, =Invalid,
-	stretch := 0
+	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar12insertWidgetEiP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -223,7 +223,7 @@ func (this *QStatusBar) AddPermanentWidget__(widget QWidget_ITF /*777 QWidget **
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	stretch := 0
+	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -252,7 +252,7 @@ func (this *QStatusBar) InsertPermanentWidget__(index int, widget QWidget_ITF /*
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
 	// arg: 2, int=Int, =Invalid,
-	stretch := 0
+	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -322,7 +322,7 @@ func (this *QStatusBar) ShowMessage__(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid,
-	timeout := 0
+	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar11showMessageERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, timeout)
 	qtrt.ErrPrint(err, rv)
 }

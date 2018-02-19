@@ -430,7 +430,7 @@ func (this *QAbstractButton) AnimateClick(msec int) {
 // [-2] void animateClick(int)
 func (this *QAbstractButton) AnimateClick__() {
 	// arg: 0, int=Int, =Invalid,
-	msec := 100
+	msec := int(100)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton12animateClickEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	qtrt.ErrPrint(err, rv)
 }

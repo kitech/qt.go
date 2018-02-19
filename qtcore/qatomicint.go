@@ -79,7 +79,7 @@ func NewQAtomicInt(value int) *QAtomicInt {
 // [-2] void QAtomicInt(int)
 func NewQAtomicInt__() *QAtomicInt {
 	// arg: 0, int=Int, =Invalid,
-	value := 0
+	value := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QAtomicIntC2Ei", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAtomicIntFromPointer(unsafe.Pointer(uintptr(rv)))

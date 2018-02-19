@@ -148,7 +148,7 @@ func (this *QJSEngine) Evaluate__(program string) *QJSValue /*123*/ {
 	// arg: 1, const QString &=LValueReference, QString=Record,
 	var convArg1 = qtcore.NewQString()
 	// arg: 2, int=Int, =Invalid,
-	lineNumber := 1
+	lineNumber := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine8evaluateERK7QStringS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, lineNumber)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -166,7 +166,7 @@ func (this *QJSEngine) Evaluate__1(program string, fileName string) *QJSValue /*
 	var tmpArg1 = qtcore.NewQString_5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, int=Int, =Invalid,
-	lineNumber := 1
+	lineNumber := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine8evaluateERK7QStringS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, lineNumber)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -204,7 +204,7 @@ func (this *QJSEngine) NewArray(length uint) *QJSValue /*123*/ {
 // [8] QJSValue newArray(uint)
 func (this *QJSEngine) NewArray__() *QJSValue /*123*/ {
 	// arg: 0, uint=Typedef, uint=Typedef, unsigned int
-	length := 0
+	length := uint(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine8newArrayEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), length)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333

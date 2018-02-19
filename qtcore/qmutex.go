@@ -121,7 +121,7 @@ func (this *QMutex) TryLock(timeout int) bool {
 // [1] bool tryLock(int)
 func (this *QMutex) TryLock__() bool {
 	// arg: 0, int=Int, =Invalid,
-	timeout := 0
+	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMutex7tryLockEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

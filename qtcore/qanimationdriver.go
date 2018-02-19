@@ -224,7 +224,7 @@ func (this *QAnimationDriver) AdvanceAnimation(timeStep int64) {
 // [-2] void advanceAnimation(qint64)
 func (this *QAnimationDriver) AdvanceAnimation__() {
 	// arg: 0, qint64=Typedef, qint64=Typedef, long long
-	timeStep := -1
+	timeStep := int64(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeStep)
 	qtrt.ErrPrint(err, rv)
 }

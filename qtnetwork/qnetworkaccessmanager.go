@@ -611,7 +611,7 @@ func (this *QNetworkAccessManager) ConnectToHostEncrypted__(hostName string) {
 	var tmpArg0 = qtcore.NewQString_5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
-	port := 443
+	port := uint16(443)
 	// arg: 2, const QSslConfiguration &=LValueReference, QSslConfiguration=Record,
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager22connectToHostEncryptedERK7QStringtRK17QSslConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, convArg2)
@@ -650,7 +650,7 @@ func (this *QNetworkAccessManager) ConnectToHost__(hostName string) {
 	var tmpArg0 = qtcore.NewQString_5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
-	port := 80
+	port := uint16(80)
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager13connectToHostERK7QStringt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	qtrt.ErrPrint(err, rv)
 }

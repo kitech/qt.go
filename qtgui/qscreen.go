@@ -450,13 +450,13 @@ func (this *QScreen) GrabWindow(window uint64, x int, y int, w int, h int) *QPix
 // [32] QPixmap grabWindow(WId, int, int, int, int)
 func (this *QScreen) GrabWindow__(window uint64) *QPixmap /*123*/ {
 	// arg: 1, int=Int, =Invalid,
-	x := 0
+	x := int(0)
 	// arg: 2, int=Int, =Invalid,
-	y := 0
+	y := int(0)
 	// arg: 3, int=Int, =Invalid,
-	w := -1
+	w := int(-1)
 	// arg: 4, int=Int, =Invalid,
-	h := -1
+	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -470,11 +470,11 @@ func (this *QScreen) GrabWindow__(window uint64) *QPixmap /*123*/ {
 // [32] QPixmap grabWindow(WId, int, int, int, int)
 func (this *QScreen) GrabWindow__1(window uint64, x int) *QPixmap /*123*/ {
 	// arg: 2, int=Int, =Invalid,
-	y := 0
+	y := int(0)
 	// arg: 3, int=Int, =Invalid,
-	w := -1
+	w := int(-1)
 	// arg: 4, int=Int, =Invalid,
-	h := -1
+	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -488,9 +488,9 @@ func (this *QScreen) GrabWindow__1(window uint64, x int) *QPixmap /*123*/ {
 // [32] QPixmap grabWindow(WId, int, int, int, int)
 func (this *QScreen) GrabWindow__2(window uint64, x int, y int) *QPixmap /*123*/ {
 	// arg: 3, int=Int, =Invalid,
-	w := -1
+	w := int(-1)
 	// arg: 4, int=Int, =Invalid,
-	h := -1
+	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -504,7 +504,7 @@ func (this *QScreen) GrabWindow__2(window uint64, x int, y int) *QPixmap /*123*/
 // [32] QPixmap grabWindow(WId, int, int, int, int)
 func (this *QScreen) GrabWindow__3(window uint64, x int, y int, w int) *QPixmap /*123*/ {
 	// arg: 4, int=Int, =Invalid,
-	h := -1
+	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333

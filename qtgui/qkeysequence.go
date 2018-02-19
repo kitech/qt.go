@@ -122,11 +122,11 @@ func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 // [-2] void QKeySequence(int, int, int, int)
 func NewQKeySequence_2_(k1 int) *QKeySequence {
 	// arg: 1, int=Int, =Invalid,
-	k2 := 0
+	k2 := int(0)
 	// arg: 2, int=Int, =Invalid,
-	k3 := 0
+	k3 := int(0)
 	// arg: 3, int=Int, =Invalid,
-	k4 := 0
+	k4 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -140,9 +140,9 @@ func NewQKeySequence_2_(k1 int) *QKeySequence {
 // [-2] void QKeySequence(int, int, int, int)
 func NewQKeySequence_2_1(k1 int, k2 int) *QKeySequence {
 	// arg: 2, int=Int, =Invalid,
-	k3 := 0
+	k3 := int(0)
 	// arg: 3, int=Int, =Invalid,
-	k4 := 0
+	k4 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -156,7 +156,7 @@ func NewQKeySequence_2_1(k1 int, k2 int) *QKeySequence {
 // [-2] void QKeySequence(int, int, int, int)
 func NewQKeySequence_2_2(k1 int, k2 int, k3 int) *QKeySequence {
 	// arg: 3, int=Int, =Invalid,
-	k4 := 0
+	k4 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))

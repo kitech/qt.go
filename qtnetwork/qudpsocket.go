@@ -238,7 +238,7 @@ func (this *QUdpSocket) ReceiveDatagram(maxSize int64) *QNetworkDatagram /*123*/
 // [8] QNetworkDatagram receiveDatagram(qint64)
 func (this *QUdpSocket) ReceiveDatagram__() *QNetworkDatagram /*123*/ {
 	// arg: 0, qint64=Typedef, qint64=Typedef, long long
-	maxSize := -1
+	maxSize := int64(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket15receiveDatagramEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxSize)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQNetworkDatagramFromPointer(unsafe.Pointer(uintptr(rv))) // 333

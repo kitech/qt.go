@@ -148,7 +148,7 @@ func (this *QThreadPool) Start__(runnable QRunnable_ITF /*777 QRunnable **/) {
 		convArg0 = runnable.QRunnable_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	priority := 0
+	priority := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
 	qtrt.ErrPrint(err, rv)
 }
@@ -268,7 +268,7 @@ func (this *QThreadPool) WaitForDone(msecs int) bool {
 // [1] bool waitForDone(int)
 func (this *QThreadPool) WaitForDone__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := -1
+	msecs := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool11waitForDoneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

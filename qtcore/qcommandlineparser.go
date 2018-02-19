@@ -404,7 +404,7 @@ func (this *QCommandLineParser) ShowHelp(exitCode int) {
 // [-2] void showHelp(int)
 func (this *QCommandLineParser) ShowHelp__() {
 	// arg: 0, int=Int, =Invalid,
-	exitCode := 0
+	exitCode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser8showHelpEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), exitCode)
 	qtrt.ErrPrint(err, rv)
 }

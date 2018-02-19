@@ -501,7 +501,7 @@ func (this *QUrl) Port(defaultPort int) int {
 // [4] int port(int) const
 func (this *QUrl) Port__() int {
 	// arg: 0, int=Int, =Invalid,
-	defaultPort := -1
+	defaultPort := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QUrl4portEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultPort)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

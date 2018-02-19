@@ -91,9 +91,9 @@ func NewQTime_1(h int, m int, s int, ms int) *QTime {
 // [-2] void QTime(int, int, int, int)
 func NewQTime_1_(h int, m int) *QTime {
 	// arg: 2, int=Int, =Invalid,
-	s := 0
+	s := int(0)
 	// arg: 3, int=Int, =Invalid,
-	ms := 0
+	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -107,7 +107,7 @@ func NewQTime_1_(h int, m int) *QTime {
 // [-2] void QTime(int, int, int, int)
 func NewQTime_1_1(h int, m int, s int) *QTime {
 	// arg: 3, int=Int, =Invalid,
-	ms := 0
+	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -156,7 +156,7 @@ func QTime_IsValid_1(h int, m int, s int, ms int) bool {
 // [1] bool isValid(int, int, int, int)
 func (this *QTime) IsValid_1_(h int, m int, s int) bool {
 	// arg: 3, int=Int, =Invalid,
-	ms := 0
+	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime7isValidEiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -278,7 +278,7 @@ func (this *QTime) SetHMS(h int, m int, s int, ms int) bool {
 // [1] bool setHMS(int, int, int, int)
 func (this *QTime) SetHMS__(h int, m int, s int) bool {
 	// arg: 3, int=Int, =Invalid,
-	ms := 0
+	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime6setHMSEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

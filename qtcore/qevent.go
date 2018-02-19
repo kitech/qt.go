@@ -178,7 +178,7 @@ func QEvent_RegisterEventType(hint int) int {
 // [4] int registerEventType(int)
 func (this *QEvent) RegisterEventType__() int {
 	// arg: 0, int=Int, =Invalid,
-	hint := -1
+	hint := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", qtrt.FFI_TYPE_POINTER, hint)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

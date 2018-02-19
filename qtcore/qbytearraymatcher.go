@@ -167,7 +167,7 @@ func (this *QByteArrayMatcher) IndexIn__(ba QByteArray_ITF) int {
 		convArg0 = ba.QByteArray_PTR().GetCthis()
 	}
 	// arg: 1, int=Int, =Invalid,
-	from := 0
+	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -193,7 +193,7 @@ func (this *QByteArrayMatcher) IndexIn_1_(str string, len_ int) int {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
 	// arg: 2, int=Int, =Invalid,
-	from := 0
+	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInEPKcii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

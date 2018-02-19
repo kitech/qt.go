@@ -957,7 +957,7 @@ func (this *QAbstractItemModel) Match__(start QModelIndex_ITF, role int, value Q
 		convArg2 = value.QVariant_PTR().GetCthis()
 	}
 	// arg: 3, int=Int, =Invalid,
-	hits := 1
+	hits := int(1)
 	// arg: 4, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)

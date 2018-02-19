@@ -412,7 +412,7 @@ func QColorDialog_GetRgba(rgba uint, ok *bool, parent QWidget_ITF /*777 QWidget 
 // [4] QRgb getRgba(QRgb, _Bool *, QWidget *)
 func (this *QColorDialog) GetRgba__() uint {
 	// arg: 0, QRgb=Typedef, QRgb=Typedef, unsigned int
-	rgba := 0xffffffff
+	rgba := uint(0xffffffff)
 	// arg: 1, bool *=Pointer, =Invalid,
 	var ok unsafe.Pointer
 	// arg: 2, QWidget *=Pointer, QWidget=Record,

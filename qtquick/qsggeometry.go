@@ -155,7 +155,7 @@ func (this *QSGGeometry) Allocate(vertexCount int, indexCount int) {
 // [-2] void allocate(int, int)
 func (this *QSGGeometry) Allocate__(vertexCount int) {
 	// arg: 1, int=Int, =Invalid,
-	indexCount := 0
+	indexCount := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry8allocateEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), vertexCount, indexCount)
 	qtrt.ErrPrint(err, rv)
 }

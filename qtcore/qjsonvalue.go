@@ -414,7 +414,7 @@ func (this *QJsonValue) ToInt(defaultValue int) int {
 // [4] int toInt(int) const
 func (this *QJsonValue) ToInt__() int {
 	// arg: 0, int=Int, =Invalid,
-	defaultValue := 0
+	defaultValue := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValue5toIntEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -436,7 +436,7 @@ func (this *QJsonValue) ToDouble(defaultValue float64) float64 {
 // [8] double toDouble(double) const
 func (this *QJsonValue) ToDouble__() float64 {
 	// arg: 0, double=Double, =Invalid,
-	defaultValue := 0
+	defaultValue := float64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValue8toDoubleEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111

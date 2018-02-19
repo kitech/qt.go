@@ -96,7 +96,7 @@ func NewQTimeLine(duration int, parent QObject_ITF /*777 QObject **/) *QTimeLine
 // [-2] void QTimeLine(int, QObject *)
 func NewQTimeLine__() *QTimeLine {
 	// arg: 0, int=Int, =Invalid,
-	duration := 1000
+	duration := int(1000)
 	// arg: 1, QObject *=Pointer, QObject=Record,
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", qtrt.FFI_TYPE_POINTER, duration, convArg1)

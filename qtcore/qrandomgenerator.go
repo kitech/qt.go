@@ -79,7 +79,7 @@ func NewQRandomGenerator(seedValue uint) *QRandomGenerator {
 // [-2] void QRandomGenerator(quint32)
 func NewQRandomGenerator__() *QRandomGenerator {
 	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int
-	seedValue := 1
+	seedValue := uint(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2Ej", qtrt.FFI_TYPE_POINTER, seedValue)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGeneratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -253,7 +253,7 @@ func (this *QRandomGenerator) Seed(s uint) {
 // [-2] void seed(quint32)
 func (this *QRandomGenerator) Seed__() {
 	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int
-	s := 1
+	s := uint(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator4seedEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), s)
 	qtrt.ErrPrint(err, rv)
 }

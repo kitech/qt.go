@@ -290,7 +290,7 @@ func (this *QNetworkSession) WaitForOpened(msecs int) bool {
 // [1] bool waitForOpened(int)
 func (this *QNetworkSession) WaitForOpened__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSession13waitForOpenedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

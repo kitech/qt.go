@@ -899,7 +899,7 @@ func QDateTime_FromTime_t_1(secsSince1Jan1970UTC uint, spec int, offsetFromUtc i
 // [8] QDateTime fromTime_t(uint, Qt::TimeSpec, int)
 func (this *QDateTime) FromTime_t_1_(secsSince1Jan1970UTC uint, spec int) *QDateTime /*123*/ {
 	// arg: 2, int=Int, =Invalid,
-	offsetFromUtc := 0
+	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime10fromTime_tEjN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, secsSince1Jan1970UTC, spec, offsetFromUtc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -968,7 +968,7 @@ func QDateTime_FromMSecsSinceEpoch_1(msecs int64, spec int, offsetFromUtc int) *
 // [8] QDateTime fromMSecsSinceEpoch(qint64, Qt::TimeSpec, int)
 func (this *QDateTime) FromMSecsSinceEpoch_1_(msecs int64, spec int) *QDateTime /*123*/ {
 	// arg: 2, int=Int, =Invalid,
-	offsetFromUtc := 0
+	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime19fromMSecsSinceEpochExN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, msecs, spec, offsetFromUtc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1022,7 +1022,7 @@ func (this *QDateTime) FromSecsSinceEpoch__(secs int64) *QDateTime /*123*/ {
 	// arg: 1, Qt::TimeSpec=Elaborated, Qt::TimeSpec=Enum,
 	spe := 0
 	// arg: 2, int=Int, =Invalid,
-	offsetFromUtc := 0
+	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime18fromSecsSinceEpochExN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, secs, spe, offsetFromUtc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1036,7 +1036,7 @@ func (this *QDateTime) FromSecsSinceEpoch__(secs int64) *QDateTime /*123*/ {
 // [8] QDateTime fromSecsSinceEpoch(qint64, Qt::TimeSpec, int)
 func (this *QDateTime) FromSecsSinceEpoch__1(secs int64, spe int) *QDateTime /*123*/ {
 	// arg: 2, int=Int, =Invalid,
-	offsetFromUtc := 0
+	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime18fromSecsSinceEpochExN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, secs, spe, offsetFromUtc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333

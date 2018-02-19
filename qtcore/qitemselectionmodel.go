@@ -255,7 +255,7 @@ func (this *QItemSelectionModel) SelectedRows(column int) *QModelIndexList /*667
 // [8] QModelIndexList selectedRows(int) const
 func (this *QItemSelectionModel) SelectedRows__() *QModelIndexList /*667*/ {
 	// arg: 0, int=Int, =Invalid,
-	column := 0
+	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12selectedRowsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
@@ -279,7 +279,7 @@ func (this *QItemSelectionModel) SelectedColumns(row int) *QModelIndexList /*667
 // [8] QModelIndexList selectedColumns(int) const
 func (this *QItemSelectionModel) SelectedColumns__() *QModelIndexList /*667*/ {
 	// arg: 0, int=Int, =Invalid,
-	row := 0
+	row := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedColumnsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551

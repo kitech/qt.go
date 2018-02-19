@@ -509,7 +509,7 @@ func (this *QMatrix4x4) Rotate_1(angle float32, x float32, y float32, z float32)
 // [-2] void rotate(float, float, float, float)
 func (this *QMatrix4x4) Rotate_1_(angle float32, x float32, y float32) {
 	// arg: 3, float=Float, =Invalid,
-	z := 0.0
+	z := float32(0.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), angle, x, y, z)
 	qtrt.ErrPrint(err, rv)
 }
@@ -629,9 +629,9 @@ func (this *QMatrix4x4) Viewport_1(left float32, bottom float32, width float32, 
 // [-2] void viewport(float, float, float, float, float, float)
 func (this *QMatrix4x4) Viewport_1_(left float32, bottom float32, width float32, height float32) {
 	// arg: 4, float=Float, =Invalid,
-	nearPlane := 0.0
+	nearPlane := float32(0.0)
 	// arg: 5, float=Float, =Invalid,
-	farPlane := 1.0
+	farPlane := float32(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48viewportEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, bottom, width, height, nearPlane, farPlane)
 	qtrt.ErrPrint(err, rv)
 }
@@ -642,7 +642,7 @@ func (this *QMatrix4x4) Viewport_1_(left float32, bottom float32, width float32,
 // [-2] void viewport(float, float, float, float, float, float)
 func (this *QMatrix4x4) Viewport_1_1(left float32, bottom float32, width float32, height float32, nearPlane float32) {
 	// arg: 5, float=Float, =Invalid,
-	farPlane := 1.0
+	farPlane := float32(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48viewportEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, bottom, width, height, nearPlane, farPlane)
 	qtrt.ErrPrint(err, rv)
 }

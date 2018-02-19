@@ -462,9 +462,9 @@ func (this *QAbstractSlider) SetRepeatAction(action int, thresholdTime int, repe
 // [-2] void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
 func (this *QAbstractSlider) SetRepeatAction__(action int) {
 	// arg: 1, int=Int, =Invalid,
-	thresholdTime := 500
+	thresholdTime := int(500)
 	// arg: 2, int=Int, =Invalid,
-	repeatTime := 50
+	repeatTime := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider15setRepeatActionENS_12SliderActionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action, thresholdTime, repeatTime)
 	qtrt.ErrPrint(err, rv)
 }
@@ -475,7 +475,7 @@ func (this *QAbstractSlider) SetRepeatAction__(action int) {
 // [-2] void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
 func (this *QAbstractSlider) SetRepeatAction__1(action int, thresholdTime int) {
 	// arg: 2, int=Int, =Invalid,
-	repeatTime := 50
+	repeatTime := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider15setRepeatActionENS_12SliderActionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action, thresholdTime, repeatTime)
 	qtrt.ErrPrint(err, rv)
 }

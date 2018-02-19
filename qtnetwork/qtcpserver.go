@@ -143,7 +143,7 @@ func (this *QTcpServer) Listen__() bool {
 	// arg: 0, const QHostAddress &=LValueReference, QHostAddress=Record,
 	var convArg0 unsafe.Pointer
 	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
-	port := 0
+	port := uint16(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer6listenERK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -159,7 +159,7 @@ func (this *QTcpServer) Listen__1(address QHostAddress_ITF) bool {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
 	}
 	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
-	port := 0
+	port := uint16(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer6listenERK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -261,7 +261,7 @@ func (this *QTcpServer) WaitForNewConnection(msec int, timedOut *bool) bool {
 // [1] bool waitForNewConnection(int, _Bool *)
 func (this *QTcpServer) WaitForNewConnection__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msec := 0
+	msec := int(0)
 	// arg: 1, bool *=Pointer, =Invalid,
 	var timedOut unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timedOut)

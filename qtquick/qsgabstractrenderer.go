@@ -285,7 +285,7 @@ func (this *QSGAbstractRenderer) RenderScene(fboId uint) {
 // [-2] void renderScene(uint)
 func (this *QSGAbstractRenderer) RenderScene__() {
 	// arg: 0, uint=Typedef, uint=Typedef, unsigned int
-	fboId := 0
+	fboId := uint(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer11renderSceneEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fboId)
 	qtrt.ErrPrint(err, rv)
 }

@@ -932,7 +932,7 @@ func (this *QInputDialog) GetItem__(parent QWidget_ITF /*777 QWidget **/, title 
 		convArg3 = items.QStringList_PTR().GetCthis()
 	}
 	// arg: 4, int=Int, =Invalid,
-	current := 0
+	current := int(0)
 	// arg: 5, bool=Bool, =Invalid,
 	editable := true
 	// arg: 6, bool *=Pointer, =Invalid,
@@ -1106,13 +1106,13 @@ func (this *QInputDialog) GetInt__(parent QWidget_ITF /*777 QWidget **/, title s
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, int=Int, =Invalid,
-	value := 0
+	value := int(0)
 	// arg: 4, int=Int, =Invalid,
-	minValue := -2147483647
+	minValue := int(-2147483647)
 	// arg: 5, int=Int, =Invalid,
-	maxValue := 2147483647
+	maxValue := int(2147483647)
 	// arg: 6, int=Int, =Invalid,
-	step := 1
+	step := int(1)
 	// arg: 7, bool *=Pointer, =Invalid,
 	var ok unsafe.Pointer
 	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
@@ -1136,11 +1136,11 @@ func (this *QInputDialog) GetInt__1(parent QWidget_ITF /*777 QWidget **/, title 
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, int=Int, =Invalid,
-	minValue := -2147483647
+	minValue := int(-2147483647)
 	// arg: 5, int=Int, =Invalid,
-	maxValue := 2147483647
+	maxValue := int(2147483647)
 	// arg: 6, int=Int, =Invalid,
-	step := 1
+	step := int(1)
 	// arg: 7, bool *=Pointer, =Invalid,
 	var ok unsafe.Pointer
 	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
@@ -1164,9 +1164,9 @@ func (this *QInputDialog) GetInt__2(parent QWidget_ITF /*777 QWidget **/, title 
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 5, int=Int, =Invalid,
-	maxValue := 2147483647
+	maxValue := int(2147483647)
 	// arg: 6, int=Int, =Invalid,
-	step := 1
+	step := int(1)
 	// arg: 7, bool *=Pointer, =Invalid,
 	var ok unsafe.Pointer
 	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
@@ -1190,7 +1190,7 @@ func (this *QInputDialog) GetInt__3(parent QWidget_ITF /*777 QWidget **/, title 
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 6, int=Int, =Invalid,
-	step := 1
+	step := int(1)
 	// arg: 7, bool *=Pointer, =Invalid,
 	var ok unsafe.Pointer
 	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
@@ -1279,13 +1279,13 @@ func (this *QInputDialog) GetDouble__(parent QWidget_ITF /*777 QWidget **/, titl
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, double=Double, =Invalid,
-	value := 0
+	value := float64(0)
 	// arg: 4, double=Double, =Invalid,
-	minValue := -2147483647
+	minValue := float64(-2147483647)
 	// arg: 5, double=Double, =Invalid,
-	maxValue := 2147483647
+	maxValue := float64(2147483647)
 	// arg: 6, int=Int, =Invalid,
-	decimals := 1
+	decimals := int(1)
 	// arg: 7, bool *=Pointer, =Invalid,
 	var ok unsafe.Pointer
 	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
@@ -1309,11 +1309,11 @@ func (this *QInputDialog) GetDouble__1(parent QWidget_ITF /*777 QWidget **/, tit
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, double=Double, =Invalid,
-	minValue := -2147483647
+	minValue := float64(-2147483647)
 	// arg: 5, double=Double, =Invalid,
-	maxValue := 2147483647
+	maxValue := float64(2147483647)
 	// arg: 6, int=Int, =Invalid,
-	decimals := 1
+	decimals := int(1)
 	// arg: 7, bool *=Pointer, =Invalid,
 	var ok unsafe.Pointer
 	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
@@ -1337,9 +1337,9 @@ func (this *QInputDialog) GetDouble__2(parent QWidget_ITF /*777 QWidget **/, tit
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 5, double=Double, =Invalid,
-	maxValue := 2147483647
+	maxValue := float64(2147483647)
 	// arg: 6, int=Int, =Invalid,
-	decimals := 1
+	decimals := int(1)
 	// arg: 7, bool *=Pointer, =Invalid,
 	var ok unsafe.Pointer
 	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
@@ -1363,7 +1363,7 @@ func (this *QInputDialog) GetDouble__3(parent QWidget_ITF /*777 QWidget **/, tit
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 6, int=Int, =Invalid,
-	decimals := 1
+	decimals := int(1)
 	// arg: 7, bool *=Pointer, =Invalid,
 	var ok unsafe.Pointer
 	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>

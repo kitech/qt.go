@@ -94,7 +94,7 @@ func NewQPixelFormat_1_(colorModel int, firstSize byte, secondSize byte, thirdSi
 	// arg: 11, QPixelFormat::ByteOrder=Enum, QPixelFormat::ByteOrder=Enum,
 	byteOrder := 0
 	// arg: 12, uchar=Typedef, uchar=Typedef, unsigned char
-	subEnum := 0
+	subEnum := byte(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixelFormatC2ENS_10ColorModelEhhhhhhNS_10AlphaUsageENS_13AlphaPositionENS_18AlphaPremultipliedENS_18TypeInterpretationENS_9ByteOrderEh", qtrt.FFI_TYPE_POINTER, colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation, byteOrder, subEnum)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPixelFormatFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -108,7 +108,7 @@ func NewQPixelFormat_1_(colorModel int, firstSize byte, secondSize byte, thirdSi
 // [-2] void QPixelFormat(enum QPixelFormat::ColorModel, uchar, uchar, uchar, uchar, uchar, uchar, enum QPixelFormat::AlphaUsage, enum QPixelFormat::AlphaPosition, enum QPixelFormat::AlphaPremultiplied, enum QPixelFormat::TypeInterpretation, enum QPixelFormat::ByteOrder, uchar)
 func NewQPixelFormat_1_1(colorModel int, firstSize byte, secondSize byte, thirdSize byte, fourthSize byte, fifthSize byte, alphaSize byte, alphaUsage int, alphaPosition int, premultiplied int, typeInterpretation int, byteOrder int) *QPixelFormat {
 	// arg: 12, uchar=Typedef, uchar=Typedef, unsigned char
-	subEnum := 0
+	subEnum := byte(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixelFormatC2ENS_10ColorModelEhhhhhhNS_10AlphaUsageENS_13AlphaPositionENS_18AlphaPremultipliedENS_18TypeInterpretationENS_9ByteOrderEh", qtrt.FFI_TYPE_POINTER, colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation, byteOrder, subEnum)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPixelFormatFromPointer(unsafe.Pointer(uintptr(rv)))

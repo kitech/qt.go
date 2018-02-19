@@ -432,7 +432,7 @@ func (this *QBitArray) Fill(val bool, size int) bool {
 // [1] bool fill(_Bool, int)
 func (this *QBitArray) Fill__(val bool) bool {
 	// arg: 1, int=Int, =Invalid,
-	size := -1
+	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArray4fillEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val, size)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

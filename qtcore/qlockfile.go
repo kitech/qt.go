@@ -112,7 +112,7 @@ func (this *QLockFile) TryLock(timeout int) bool {
 // [1] bool tryLock(int)
 func (this *QLockFile) TryLock__() bool {
 	// arg: 0, int=Int, =Invalid,
-	timeout := 0
+	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

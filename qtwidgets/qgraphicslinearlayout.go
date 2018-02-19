@@ -179,7 +179,7 @@ func (this *QGraphicsLinearLayout) AddStretch(stretch int) {
 // [-2] void addStretch(int)
 func (this *QGraphicsLinearLayout) AddStretch__() {
 	// arg: 0, int=Int, =Invalid,
-	stretch := 1
+	stretch := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout10addStretchEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -212,7 +212,7 @@ func (this *QGraphicsLinearLayout) InsertStretch(index int, stretch int) {
 // [-2] void insertStretch(int, int)
 func (this *QGraphicsLinearLayout) InsertStretch__(index int) {
 	// arg: 1, int=Int, =Invalid,
-	stretch := 1
+	stretch := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout13insertStretchEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, stretch)
 	qtrt.ErrPrint(err, rv)
 }
@@ -418,7 +418,7 @@ func (this *QGraphicsLinearLayout) Dump(indent int) {
 // [-2] void dump(int) const
 func (this *QGraphicsLinearLayout) Dump__() {
 	// arg: 0, int=Int, =Invalid,
-	indent := 0
+	indent := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout4dumpEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), indent)
 	qtrt.ErrPrint(err, rv)
 }

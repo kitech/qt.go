@@ -685,7 +685,7 @@ func (this *QProcess) WaitForStarted(msecs int) bool {
 // [1] bool waitForStarted(int)
 func (this *QProcess) WaitForStarted__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess14waitForStartedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -707,7 +707,7 @@ func (this *QProcess) WaitForReadyRead(msecs int) bool {
 // [1] bool waitForReadyRead(int)
 func (this *QProcess) WaitForReadyRead__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -729,7 +729,7 @@ func (this *QProcess) WaitForBytesWritten(msecs int) bool {
 // [1] bool waitForBytesWritten(int)
 func (this *QProcess) WaitForBytesWritten__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -751,7 +751,7 @@ func (this *QProcess) WaitForFinished(msecs int) bool {
 // [1] bool waitForFinished(int)
 func (this *QProcess) WaitForFinished__() bool {
 	// arg: 0, int=Int, =Invalid,
-	msecs := 30000
+	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess15waitForFinishedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

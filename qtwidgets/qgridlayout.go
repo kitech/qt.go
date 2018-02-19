@@ -585,9 +585,9 @@ func (this *QGridLayout) AddItem__(item QLayoutItem_ITF /*777 QLayoutItem **/, r
 		convArg0 = item.QLayoutItem_PTR().GetCthis()
 	}
 	// arg: 3, int=Int, =Invalid,
-	rowSpan := 1
+	rowSpan := int(1)
 	// arg: 4, int=Int, =Invalid,
-	columnSpan := 1
+	columnSpan := int(1)
 	// arg: 5, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
 	arg5 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout7addItemEP11QLayoutItemiiii6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, rowSpan, columnSpan, arg5)
@@ -604,7 +604,7 @@ func (this *QGridLayout) AddItem__1(item QLayoutItem_ITF /*777 QLayoutItem **/, 
 		convArg0 = item.QLayoutItem_PTR().GetCthis()
 	}
 	// arg: 4, int=Int, =Invalid,
-	columnSpan := 1
+	columnSpan := int(1)
 	// arg: 5, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
 	arg5 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout7addItemEP11QLayoutItemiiii6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, rowSpan, columnSpan, arg5)

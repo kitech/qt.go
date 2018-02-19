@@ -337,7 +337,7 @@ func (this *QSystemTrayIcon) ShowMessage__(title string, msg string, icon qtgui.
 		convArg2 = icon.QIcon_PTR().GetCthis()
 	}
 	// arg: 3, int=Int, =Invalid,
-	msecs := 10000
+	msecs := int(10000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_RK5QIconi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, msecs)
 	qtrt.ErrPrint(err, rv)
 }
@@ -367,7 +367,7 @@ func (this *QSystemTrayIcon) ShowMessage_1_(title string, msg string) {
 	// arg: 2, QSystemTrayIcon::MessageIcon=Elaborated, QSystemTrayIcon::MessageIcon=Enum,
 	icon := 0
 	// arg: 3, int=Int, =Invalid,
-	msecs := 10000
+	msecs := int(10000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_NS_11MessageIconEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, icon, msecs)
 	qtrt.ErrPrint(err, rv)
 }
@@ -382,7 +382,7 @@ func (this *QSystemTrayIcon) ShowMessage_1_1(title string, msg string, icon int)
 	var tmpArg1 = qtcore.NewQString_5(msg)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 3, int=Int, =Invalid,
-	msecs := 10000
+	msecs := int(10000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_NS_11MessageIconEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, icon, msecs)
 	qtrt.ErrPrint(err, rv)
 }
