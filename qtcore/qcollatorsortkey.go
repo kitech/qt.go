@@ -116,7 +116,7 @@ func (this *QCollatorSortKey) Swap(other QCollatorSortKey_ITF) {
 // /usr/include/qt/QtCore/qcollator.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int compare(const QCollatorSortKey &)
+// [4] int compare(const QCollatorSortKey &) const
 func (this *QCollatorSortKey) Compare(key QCollatorSortKey_ITF) int {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QCollatorSortKey_PTR() != nil {

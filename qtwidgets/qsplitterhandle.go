@@ -104,7 +104,7 @@ func (*QSplitterHandle) NewFromPointer(cthis unsafe.Pointer) *QSplitterHandle {
 // /usr/include/qt/QtWidgets/qsplitter.h:138
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSplitterHandle) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,7 +150,7 @@ func (this *QSplitterHandle) SetOrientation(o int) {
 // /usr/include/qt/QtWidgets/qsplitter.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Orientation orientation()
+// [4] Qt::Orientation orientation() const
 func (this *QSplitterHandle) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ func (this *QSplitterHandle) Orientation() int {
 // /usr/include/qt/QtWidgets/qsplitter.h:145
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool opaqueResize()
+// [1] bool opaqueResize() const
 func (this *QSplitterHandle) OpaqueResize() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle12opaqueResizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +170,7 @@ func (this *QSplitterHandle) OpaqueResize() bool {
 // /usr/include/qt/QtWidgets/qsplitter.h:146
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSplitter * splitter()
+// [8] QSplitter * splitter() const
 func (this *QSplitterHandle) Splitter() *QSplitter /*777 QSplitter **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle8splitterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,7 +180,7 @@ func (this *QSplitterHandle) Splitter() *QSplitter /*777 QSplitter **/ {
 // /usr/include/qt/QtWidgets/qsplitter.h:148
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QSplitterHandle) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

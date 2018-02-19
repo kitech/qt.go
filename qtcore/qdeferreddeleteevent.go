@@ -85,7 +85,7 @@ func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
 // /usr/include/qt/QtCore/qcoreevent.h:379
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int loopLevel()
+// [4] int loopLevel() const
 func (this *QDeferredDeleteEvent) LoopLevel() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

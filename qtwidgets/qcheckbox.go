@@ -99,7 +99,7 @@ func (*QCheckBox) NewFromPointer(cthis unsafe.Pointer) *QCheckBox {
 // /usr/include/qt/QtWidgets/qcheckbox.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QCheckBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,6 +115,20 @@ func NewQCheckBox(parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQCheckBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QCheckBox")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qcheckbox.h:61
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QCheckBox(QWidget *)
+func NewQCheckBox__() *QCheckBox {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCheckBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -140,6 +154,22 @@ func NewQCheckBox_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBo
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qcheckbox.h:62
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QCheckBox(const QString &, QWidget *)
+func NewQCheckBox_1_(text string) *QCheckBox {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBoxC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQCheckBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QCheckBox")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qcheckbox.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -154,7 +184,7 @@ func DeleteQCheckBox(this *QCheckBox) {
 // /usr/include/qt/QtWidgets/qcheckbox.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,7 +196,7 @@ func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qcheckbox.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,10 +214,21 @@ func (this *QCheckBox) SetTristate(y bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qcheckbox.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTristate(_Bool)
+func (this *QCheckBox) SetTristate__() {
+	// arg: 0, bool=Bool, =Invalid,
+	y := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox11setTristateEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), y)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qcheckbox.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isTristate()
+// [1] bool isTristate() const
 func (this *QCheckBox) IsTristate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox10isTristateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +238,7 @@ func (this *QCheckBox) IsTristate() bool {
 // /usr/include/qt/QtWidgets/qcheckbox.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::CheckState checkState()
+// [4] Qt::CheckState checkState() const
 func (this *QCheckBox) CheckState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox10checkStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -239,7 +280,7 @@ func (this *QCheckBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qcheckbox.h:79
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool hitButton(const QPoint &)
+// [1] bool hitButton(const QPoint &) const
 func (this *QCheckBox) HitButton(pos qtcore.QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -297,7 +338,7 @@ func (this *QCheckBox) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEve
 // /usr/include/qt/QtWidgets/qcheckbox.h:84
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionButton *)
+// [-2] void initStyleOption(QStyleOptionButton *) const
 func (this *QCheckBox) InitStyleOption(option QStyleOptionButton_ITF /*777 QStyleOptionButton **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionButton_PTR() != nil {

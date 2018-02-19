@@ -68,7 +68,7 @@ func (*QNetworkCookieJar) NewFromPointer(cthis unsafe.Pointer) *QNetworkCookieJa
 // /usr/include/qt/QtNetwork/qnetworkcookiejar.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QNetworkCookieJar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkCookieJar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -84,6 +84,20 @@ func NewQNetworkCookieJar(parent qtcore.QObject_ITF /*777 QObject **/) *QNetwork
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQNetworkCookieJarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QNetworkCookieJar")
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qnetworkcookiejar.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QNetworkCookieJar(QObject *)
+func NewQNetworkCookieJar__() *QNetworkCookieJar {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQNetworkCookieJarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -147,7 +161,7 @@ func (this *QNetworkCookieJar) DeleteCookie(cookie QNetworkCookie_ITF) bool {
 // /usr/include/qt/QtNetwork/qnetworkcookiejar.h:70
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool validateCookie(const QNetworkCookie &, const QUrl &)
+// [1] bool validateCookie(const QNetworkCookie &, const QUrl &) const
 func (this *QNetworkCookieJar) ValidateCookie(cookie QNetworkCookie_ITF, url qtcore.QUrl_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {

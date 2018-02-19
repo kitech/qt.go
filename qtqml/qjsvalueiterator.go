@@ -93,7 +93,7 @@ func DeleteQJSValueIterator(this *QJSValueIterator) {
 // /usr/include/qt/QtQml/qjsvalueiterator.h:59
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasNext()
+// [1] bool hasNext() const
 func (this *QJSValueIterator) HasNext() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QJSValueIterator7hasNextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -113,7 +113,7 @@ func (this *QJSValueIterator) Next() bool {
 // /usr/include/qt/QtQml/qjsvalueiterator.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QJSValueIterator) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QJSValueIterator4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -126,7 +126,7 @@ func (this *QJSValueIterator) Name() string {
 // /usr/include/qt/QtQml/qjsvalueiterator.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QJSValue value()
+// [8] QJSValue value() const
 func (this *QJSValueIterator) Value() *QJSValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QJSValueIterator5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

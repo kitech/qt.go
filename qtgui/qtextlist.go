@@ -63,7 +63,7 @@ func (*QTextList) NewFromPointer(cthis unsafe.Pointer) *QTextList {
 // /usr/include/qt/QtGui/qtextlist.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTextList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,7 +100,7 @@ func DeleteQTextList(this *QTextList) {
 // /usr/include/qt/QtGui/qtextlist.h:60
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QTextList) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,7 +110,7 @@ func (this *QTextList) Count() int {
 // /usr/include/qt/QtGui/qtextlist.h:62
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QTextList) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,7 +120,7 @@ func (this *QTextList) IsEmpty() bool {
 // /usr/include/qt/QtGui/qtextlist.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QTextBlock item(int)
+// [16] QTextBlock item(int) const
 func (this *QTextList) Item(i int) *QTextBlock /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList4itemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QTextList) Item(i int) *QTextBlock /*123*/ {
 // /usr/include/qt/QtGui/qtextlist.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int itemNumber(const QTextBlock &)
+// [4] int itemNumber(const QTextBlock &) const
 func (this *QTextList) ItemNumber(arg0 QTextBlock_ITF) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTextBlock_PTR() != nil {
@@ -146,7 +146,7 @@ func (this *QTextList) ItemNumber(arg0 QTextBlock_ITF) int {
 // /usr/include/qt/QtGui/qtextlist.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString itemText(const QTextBlock &)
+// [8] QString itemText(const QTextBlock &) const
 func (this *QTextList) ItemText(arg0 QTextBlock_ITF) string {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTextBlock_PTR() != nil {
@@ -211,7 +211,7 @@ func (this *QTextList) SetFormat(format QTextListFormat_ITF) {
 // /usr/include/qt/QtGui/qtextlist.h:76
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QTextListFormat format()
+// [16] QTextListFormat format() const
 func (this *QTextList) Format() *QTextListFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

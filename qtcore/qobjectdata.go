@@ -72,10 +72,10 @@ func DeleteQObjectData(this *QObjectData) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qobject.h:112
+// /usr/include/qt/QtCore/qobject.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QMetaObject * dynamicMetaObject()
+// [8] QMetaObject * dynamicMetaObject() const
 func (this *QObjectData) DynamicMetaObject() *QMetaObject /*777 QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QObjectData17dynamicMetaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

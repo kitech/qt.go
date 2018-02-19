@@ -127,6 +127,23 @@ func QWhatsThis_ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777
 	nilthis.ShowText(pos, text, w)
 }
 
+// /usr/include/qt/QtWidgets/qwhatsthis.h:62
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void showText(const QPoint &, const QString &, QWidget *)
+func (this *QWhatsThis) ShowText__(pos qtcore.QPoint_ITF, text string) {
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString_5(text)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qwhatsthis.h:63
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -157,6 +174,18 @@ func QWhatsThis_CreateAction(parent qtcore.QObject_ITF /*777 QObject **/) *QActi
 	var nilthis *QWhatsThis
 	rv := nilthis.CreateAction(parent)
 	return rv
+}
+
+// /usr/include/qt/QtWidgets/qwhatsthis.h:65
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QAction * createAction(QObject *)
+func (this *QWhatsThis) CreateAction__() *QAction /*777 QAction **/ {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 func DeleteQWhatsThis(this *QWhatsThis) {

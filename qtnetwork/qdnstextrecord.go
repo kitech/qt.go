@@ -129,7 +129,7 @@ func (this *QDnsTextRecord) Swap(other QDnsTextRecord_ITF) {
 // /usr/include/qt/QtNetwork/qdnslookup.h:173
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QDnsTextRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDnsTextRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,7 +142,7 @@ func (this *QDnsTextRecord) Name() string {
 // /usr/include/qt/QtNetwork/qdnslookup.h:174
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] quint32 timeToLive()
+// [4] quint32 timeToLive() const
 func (this *QDnsTextRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDnsTextRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

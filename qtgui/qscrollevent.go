@@ -94,7 +94,7 @@ func DeleteQScrollEvent(this *QScrollEvent) {
 // /usr/include/qt/QtGui/qevent.h:1025
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF contentPos()
+// [16] QPointF contentPos() const
 func (this *QScrollEvent) ContentPos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QScrollEvent10contentPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,7 +106,7 @@ func (this *QScrollEvent) ContentPos() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:1026
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF overshootDistance()
+// [16] QPointF overshootDistance() const
 func (this *QScrollEvent) OvershootDistance() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QScrollEvent17overshootDistanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QScrollEvent) OvershootDistance() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:1027
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QScrollEvent::ScrollState scrollState()
+// [4] QScrollEvent::ScrollState scrollState() const
 func (this *QScrollEvent) ScrollState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QScrollEvent11scrollStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

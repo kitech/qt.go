@@ -68,7 +68,7 @@ func (*QNetworkDiskCache) NewFromPointer(cthis unsafe.Pointer) *QNetworkDiskCach
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QNetworkDiskCache) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +91,20 @@ func NewQNetworkDiskCache(parent qtcore.QObject_ITF /*777 QObject **/) *QNetwork
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QNetworkDiskCache(QObject *)
+func NewQNetworkDiskCache__() *QNetworkDiskCache {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCacheC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQNetworkDiskCacheFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QNetworkDiskCache")
+	return gothis
+}
+
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -105,7 +119,7 @@ func DeleteQNetworkDiskCache(this *QNetworkDiskCache) {
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:59
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString cacheDirectory()
+// [8] QString cacheDirectory() const
 func (this *QNetworkDiskCache) CacheDirectory() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache14cacheDirectoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,7 +143,7 @@ func (this *QNetworkDiskCache) SetCacheDirectory(cacheDir string) {
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 maximumCacheSize()
+// [8] qint64 maximumCacheSize() const
 func (this *QNetworkDiskCache) MaximumCacheSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache16maximumCacheSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,7 +162,7 @@ func (this *QNetworkDiskCache) SetMaximumCacheSize(size int64) {
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 cacheSize()
+// [8] qint64 cacheSize() const
 func (this *QNetworkDiskCache) CacheSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache9cacheSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -229,7 +243,7 @@ func (this *QNetworkDiskCache) Prepare(metaData QNetworkCacheMetaData_ITF) *qtco
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QNetworkCacheMetaData fileMetaData(const QString &)
+// [8] QNetworkCacheMetaData fileMetaData(const QString &) const
 func (this *QNetworkDiskCache) FileMetaData(fileName string) *QNetworkCacheMetaData /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

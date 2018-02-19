@@ -64,7 +64,7 @@ func (*QWinThumbnailToolButton) NewFromPointer(cthis unsafe.Pointer) *QWinThumbn
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QWinThumbnailToolButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +80,20 @@ func NewQWinThumbnailToolButton(parent qtcore.QObject_ITF /*777 QObject **/) *QW
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QWinThumbnailToolButtonC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQWinThumbnailToolButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QWinThumbnailToolButton")
+	return gothis
+}
+
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:64
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QWinThumbnailToolButton(QObject *)
+func NewQWinThumbnailToolButton__() *QWinThumbnailToolButton {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWinThumbnailToolButtonC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWinThumbnailToolButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -112,7 +126,7 @@ func (this *QWinThumbnailToolButton) SetToolTip(toolTip string) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toolTip()
+// [8] QString toolTip() const
 func (this *QWinThumbnailToolButton) ToolTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -138,7 +152,7 @@ func (this *QWinThumbnailToolButton) SetIcon(icon qtgui.QIcon_ITF) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QIcon icon()
+// [8] QIcon icon() const
 func (this *QWinThumbnailToolButton) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,7 +173,7 @@ func (this *QWinThumbnailToolButton) SetEnabled(enabled bool) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEnabled()
+// [1] bool isEnabled() const
 func (this *QWinThumbnailToolButton) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,7 +192,7 @@ func (this *QWinThumbnailToolButton) SetInteractive(interactive bool) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isInteractive()
+// [1] bool isInteractive() const
 func (this *QWinThumbnailToolButton) IsInteractive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton13isInteractiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +211,7 @@ func (this *QWinThumbnailToolButton) SetVisible(visible bool) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isVisible()
+// [1] bool isVisible() const
 func (this *QWinThumbnailToolButton) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +230,7 @@ func (this *QWinThumbnailToolButton) SetDismissOnClick(dismiss bool) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool dismissOnClick()
+// [1] bool dismissOnClick() const
 func (this *QWinThumbnailToolButton) DismissOnClick() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton14dismissOnClickEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -235,7 +249,7 @@ func (this *QWinThumbnailToolButton) SetFlat(flat bool) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isFlat()
+// [1] bool isFlat() const
 func (this *QWinThumbnailToolButton) IsFlat() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton6isFlatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

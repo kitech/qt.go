@@ -69,7 +69,7 @@ func (*QGraphicsBlurEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsBlurE
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:157
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +92,20 @@ func NewQGraphicsBlurEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraph
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:170
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsBlurEffect(QObject *)
+func NewQGraphicsBlurEffect__() *QGraphicsBlurEffect {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsBlurEffectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsBlurEffect")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:171
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -106,7 +120,7 @@ func DeleteQGraphicsBlurEffect(this *QGraphicsBlurEffect) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:173
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QRectF boundingRectFor(const QRectF &)
+// [32] QRectF boundingRectFor(const QRectF &) const
 func (this *QGraphicsBlurEffect) BoundingRectFor(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -122,7 +136,7 @@ func (this *QGraphicsBlurEffect) BoundingRectFor(rect qtcore.QRectF_ITF) *qtcore
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:174
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal blurRadius()
+// [8] qreal blurRadius() const
 func (this *QGraphicsBlurEffect) BlurRadius() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10blurRadiusEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -132,7 +146,7 @@ func (this *QGraphicsBlurEffect) BlurRadius() float64 {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:175
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGraphicsBlurEffect::BlurHints blurHints()
+// [4] QGraphicsBlurEffect::BlurHints blurHints() const
 func (this *QGraphicsBlurEffect) BlurHints() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect9blurHintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

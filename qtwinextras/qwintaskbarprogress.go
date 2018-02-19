@@ -64,7 +64,7 @@ func (*QWinTaskbarProgress) NewFromPointer(cthis unsafe.Pointer) *QWinTaskbarPro
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QWinTaskbarProgress) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +87,20 @@ func NewQWinTaskbarProgress(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTa
 	return gothis
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QWinTaskbarProgress(QObject *)
+func NewQWinTaskbarProgress__() *QWinTaskbarProgress {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QWinTaskbarProgressC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQWinTaskbarProgressFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QWinTaskbarProgress")
+	return gothis
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -101,7 +115,7 @@ func DeleteQWinTaskbarProgress(this *QWinTaskbarProgress) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int value()
+// [4] int value() const
 func (this *QWinTaskbarProgress) Value() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +125,7 @@ func (this *QWinTaskbarProgress) Value() int {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int minimum()
+// [4] int minimum() const
 func (this *QWinTaskbarProgress) Minimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress7minimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,7 +135,7 @@ func (this *QWinTaskbarProgress) Minimum() int {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int maximum()
+// [4] int maximum() const
 func (this *QWinTaskbarProgress) Maximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress7maximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -131,7 +145,7 @@ func (this *QWinTaskbarProgress) Maximum() int {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isVisible()
+// [1] bool isVisible() const
 func (this *QWinTaskbarProgress) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,7 +155,7 @@ func (this *QWinTaskbarProgress) IsVisible() bool {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isPaused()
+// [1] bool isPaused() const
 func (this *QWinTaskbarProgress) IsPaused() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress8isPausedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +165,7 @@ func (this *QWinTaskbarProgress) IsPaused() bool {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isStopped()
+// [1] bool isStopped() const
 func (this *QWinTaskbarProgress) IsStopped() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress9isStoppedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

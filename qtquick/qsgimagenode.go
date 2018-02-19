@@ -99,7 +99,7 @@ func (this *QSGImageNode) SetRect_1(x float64, y float64, w float64, h float64) 
 // /usr/include/qt/QtQuick/qsgimagenode.h:55
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [32] QRectF rect()
+// [32] QRectF rect() const
 func (this *QSGImageNode) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,7 +133,7 @@ func (this *QSGImageNode) SetSourceRect_1(x float64, y float64, w float64, h flo
 // /usr/include/qt/QtQuick/qsgimagenode.h:59
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [32] QRectF sourceRect()
+// [32] QRectF sourceRect() const
 func (this *QSGImageNode) SourceRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode10sourceRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func (this *QSGImageNode) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/
 // /usr/include/qt/QtQuick/qsgimagenode.h:62
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSGTexture * texture()
+// [8] QSGTexture * texture() const
 func (this *QSGImageNode) Texture() *QSGTexture /*777 QSGTexture **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode7textureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QSGImageNode) SetFiltering(filtering int) {
 // /usr/include/qt/QtQuick/qsgimagenode.h:65
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] QSGTexture::Filtering filtering()
+// [4] QSGTexture::Filtering filtering() const
 func (this *QSGImageNode) Filtering() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode9filteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -196,7 +196,7 @@ func (this *QSGImageNode) SetMipmapFiltering(filtering int) {
 // /usr/include/qt/QtQuick/qsgimagenode.h:68
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] QSGTexture::Filtering mipmapFiltering()
+// [4] QSGTexture::Filtering mipmapFiltering() const
 func (this *QSGImageNode) MipmapFiltering() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode15mipmapFilteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -215,7 +215,7 @@ func (this *QSGImageNode) SetTextureCoordinatesTransform(mode int) {
 // /usr/include/qt/QtQuick/qsgimagenode.h:80
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] QSGImageNode::TextureCoordinatesTransformMode textureCoordinatesTransform()
+// [4] QSGImageNode::TextureCoordinatesTransformMode textureCoordinatesTransform() const
 func (this *QSGImageNode) TextureCoordinatesTransform() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode27textureCoordinatesTransformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -234,7 +234,7 @@ func (this *QSGImageNode) SetOwnsTexture(owns bool) {
 // /usr/include/qt/QtQuick/qsgimagenode.h:83
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [1] bool ownsTexture()
+// [1] bool ownsTexture() const
 func (this *QSGImageNode) OwnsTexture() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode11ownsTextureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

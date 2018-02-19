@@ -68,7 +68,7 @@ func (*QTextObject) NewFromPointer(cthis unsafe.Pointer) *QTextObject {
 // /usr/include/qt/QtGui/qtextobject.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QTextObject) SetFormat(format QTextFormat_ITF) {
 // /usr/include/qt/QtGui/qtextobject.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QTextFormat format()
+// [16] QTextFormat format() const
 func (this *QTextObject) Format() *QTextFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,7 +130,7 @@ func (this *QTextObject) Format() *QTextFormat /*123*/ {
 // /usr/include/qt/QtGui/qtextobject.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int formatIndex()
+// [4] int formatIndex() const
 func (this *QTextObject) FormatIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject11formatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,7 +140,7 @@ func (this *QTextObject) FormatIndex() int {
 // /usr/include/qt/QtGui/qtextobject.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextDocument * document()
+// [8] QTextDocument * document() const
 func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject8documentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,7 +150,7 @@ func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 // /usr/include/qt/QtGui/qtextobject.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int objectIndex()
+// [4] int objectIndex() const
 func (this *QTextObject) ObjectIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject11objectIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

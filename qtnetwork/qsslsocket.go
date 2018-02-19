@@ -38,7 +38,7 @@ func (this *QSslSocket) InheritReadData(f func(data string, maxlen int64) int64)
 }
 
 // long long writeData(const char *, qint64)
-func (this *QSslSocket) InheritWriteData(f func(data string, len int64) int64) {
+func (this *QSslSocket) InheritWriteData(f func(data string, len_ int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
 
@@ -73,7 +73,7 @@ func (*QSslSocket) NewFromPointer(cthis unsafe.Pointer) *QSslSocket {
 // /usr/include/qt/QtNetwork/qsslsocket.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSslSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +89,20 @@ func NewQSslSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QSslSocket {
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSslSocketFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSslSocket")
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:82
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSslSocket(QObject *)
+func NewQSslSocket__() *QSslSocket {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslSocketFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -127,6 +141,34 @@ func (this *QSslSocket) ConnectToHostEncrypted(hostName string, port uint16, mod
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtNetwork/qsslsocket.h:87
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void connectToHostEncrypted(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+func (this *QSslSocket) ConnectToHostEncrypted__(hostName string, port uint16) {
+	var tmpArg0 = qtcore.NewQString_5(hostName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	mode := 0
+	// arg: 3, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum,
+	protocol := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket22connectToHostEncryptedERK7QStringt6QFlagsIN9QIODevice12OpenModeFlagEEN15QAbstractSocket20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode, protocol)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:87
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void connectToHostEncrypted(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+func (this *QSslSocket) ConnectToHostEncrypted__1(hostName string, port uint16, mode int) {
+	var tmpArg0 = qtcore.NewQString_5(hostName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 3, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum,
+	protocol := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket22connectToHostEncryptedERK7QStringt6QFlagsIN9QIODevice12OpenModeFlagEEN15QAbstractSocket20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode, protocol)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtNetwork/qsslsocket.h:88
 // index:1
 // Public Visibility=Default Availability=Available
@@ -136,6 +178,38 @@ func (this *QSslSocket) ConnectToHostEncrypted_1(hostName string, port uint16, s
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(sslPeerName)
 	var convArg2 = tmpArg2.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket22connectToHostEncryptedERK7QStringtS2_6QFlagsIN9QIODevice12OpenModeFlagEEN15QAbstractSocket20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, convArg2, mode, protocol)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:88
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void connectToHostEncrypted(const QString &, quint16, const QString &, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+func (this *QSslSocket) ConnectToHostEncrypted_1_(hostName string, port uint16, sslPeerName string) {
+	var tmpArg0 = qtcore.NewQString_5(hostName)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg2 = qtcore.NewQString_5(sslPeerName)
+	var convArg2 = tmpArg2.GetCthis()
+	// arg: 3, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	mode := 0
+	// arg: 4, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum,
+	protocol := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket22connectToHostEncryptedERK7QStringtS2_6QFlagsIN9QIODevice12OpenModeFlagEEN15QAbstractSocket20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, convArg2, mode, protocol)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:88
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void connectToHostEncrypted(const QString &, quint16, const QString &, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+func (this *QSslSocket) ConnectToHostEncrypted_1_1(hostName string, port uint16, sslPeerName string, mode int) {
+	var tmpArg0 = qtcore.NewQString_5(hostName)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg2 = qtcore.NewQString_5(sslPeerName)
+	var convArg2 = tmpArg2.GetCthis()
+	// arg: 4, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum,
+	protocol := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket22connectToHostEncryptedERK7QStringtS2_6QFlagsIN9QIODevice12OpenModeFlagEEN15QAbstractSocket20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, convArg2, mode, protocol)
 	qtrt.ErrPrint(err, rv)
 }
@@ -150,6 +224,32 @@ func (this *QSslSocket) SetSocketDescriptor(socketDescriptor int64, state int, o
 	return rv != 0
 }
 
+// /usr/include/qt/QtNetwork/qsslsocket.h:89
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool setSocketDescriptor(qintptr, enum QAbstractSocket::SocketState, QIODevice::OpenMode)
+func (this *QSslSocket) SetSocketDescriptor__(socketDescriptor int64) bool {
+	// arg: 1, QAbstractSocket::SocketState=Enum, QAbstractSocket::SocketState=Enum,
+	state := 0
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	openMode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19setSocketDescriptorExN15QAbstractSocket11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor, state, openMode)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:89
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool setSocketDescriptor(qintptr, enum QAbstractSocket::SocketState, QIODevice::OpenMode)
+func (this *QSslSocket) SetSocketDescriptor__1(socketDescriptor int64, state int) bool {
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	openMode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19setSocketDescriptorExN15QAbstractSocket11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor, state, openMode)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtNetwork/qsslsocket.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -157,6 +257,34 @@ func (this *QSslSocket) SetSocketDescriptor(socketDescriptor int64, state int, o
 func (this *QSslSocket) ConnectToHost(hostName string, port uint16, openMode int, protocol int) {
 	var tmpArg0 = qtcore.NewQString_5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket13connectToHostERK7QStringt6QFlagsIN9QIODevice12OpenModeFlagEEN15QAbstractSocket20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, openMode, protocol)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:93
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void connectToHost(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+func (this *QSslSocket) ConnectToHost__(hostName string, port uint16) {
+	var tmpArg0 = qtcore.NewQString_5(hostName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	openMode := 0
+	// arg: 3, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum,
+	protocol := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket13connectToHostERK7QStringt6QFlagsIN9QIODevice12OpenModeFlagEEN15QAbstractSocket20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, openMode, protocol)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:93
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void connectToHost(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+func (this *QSslSocket) ConnectToHost__1(hostName string, port uint16, openMode int) {
+	var tmpArg0 = qtcore.NewQString_5(hostName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 3, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum,
+	protocol := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket13connectToHostERK7QStringt6QFlagsIN9QIODevice12OpenModeFlagEEN15QAbstractSocket20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, openMode, protocol)
 	qtrt.ErrPrint(err, rv)
 }
@@ -198,7 +326,7 @@ func (this *QSslSocket) SocketOption(option int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtNetwork/qsslsocket.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSslSocket::SslMode mode()
+// [4] QSslSocket::SslMode mode() const
 func (this *QSslSocket) Mode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket4modeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -208,7 +336,7 @@ func (this *QSslSocket) Mode() int {
 // /usr/include/qt/QtNetwork/qsslsocket.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEncrypted()
+// [1] bool isEncrypted() const
 func (this *QSslSocket) IsEncrypted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket11isEncryptedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,7 +346,7 @@ func (this *QSslSocket) IsEncrypted() bool {
 // /usr/include/qt/QtNetwork/qsslsocket.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSsl::SslProtocol protocol()
+// [4] QSsl::SslProtocol protocol() const
 func (this *QSslSocket) Protocol() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket8protocolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -237,7 +365,7 @@ func (this *QSslSocket) SetProtocol(protocol int) {
 // /usr/include/qt/QtNetwork/qsslsocket.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSslSocket::PeerVerifyMode peerVerifyMode()
+// [4] QSslSocket::PeerVerifyMode peerVerifyMode() const
 func (this *QSslSocket) PeerVerifyMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket14peerVerifyModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -256,7 +384,7 @@ func (this *QSslSocket) SetPeerVerifyMode(mode int) {
 // /usr/include/qt/QtNetwork/qsslsocket.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int peerVerifyDepth()
+// [4] int peerVerifyDepth() const
 func (this *QSslSocket) PeerVerifyDepth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket15peerVerifyDepthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -275,7 +403,7 @@ func (this *QSslSocket) SetPeerVerifyDepth(depth int) {
 // /usr/include/qt/QtNetwork/qsslsocket.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString peerVerifyName()
+// [8] QString peerVerifyName() const
 func (this *QSslSocket) PeerVerifyName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket14peerVerifyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -299,7 +427,7 @@ func (this *QSslSocket) SetPeerVerifyName(hostName string) {
 // /usr/include/qt/QtNetwork/qsslsocket.h:115
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 bytesAvailable()
+// [8] qint64 bytesAvailable() const
 func (this *QSslSocket) BytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket14bytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -309,7 +437,7 @@ func (this *QSslSocket) BytesAvailable() int64 {
 // /usr/include/qt/QtNetwork/qsslsocket.h:116
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 bytesToWrite()
+// [8] qint64 bytesToWrite() const
 func (this *QSslSocket) BytesToWrite() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket12bytesToWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -319,7 +447,7 @@ func (this *QSslSocket) BytesToWrite() int64 {
 // /usr/include/qt/QtNetwork/qsslsocket.h:117
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool canReadLine()
+// [1] bool canReadLine() const
 func (this *QSslSocket) CanReadLine() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket11canReadLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -338,7 +466,7 @@ func (this *QSslSocket) Close() {
 // /usr/include/qt/QtNetwork/qsslsocket.h:119
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool atEnd()
+// [1] bool atEnd() const
 func (this *QSslSocket) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -376,7 +504,7 @@ func (this *QSslSocket) SetReadBufferSize(size int64) {
 // /usr/include/qt/QtNetwork/qsslsocket.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 encryptedBytesAvailable()
+// [8] qint64 encryptedBytesAvailable() const
 func (this *QSslSocket) EncryptedBytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket23encryptedBytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -386,7 +514,7 @@ func (this *QSslSocket) EncryptedBytesAvailable() int64 {
 // /usr/include/qt/QtNetwork/qsslsocket.h:128
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 encryptedBytesToWrite()
+// [8] qint64 encryptedBytesToWrite() const
 func (this *QSslSocket) EncryptedBytesToWrite() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket21encryptedBytesToWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -396,7 +524,7 @@ func (this *QSslSocket) EncryptedBytesToWrite() int64 {
 // /usr/include/qt/QtNetwork/qsslsocket.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslConfiguration sslConfiguration()
+// [8] QSslConfiguration sslConfiguration() const
 func (this *QSslSocket) SslConfiguration() *QSslConfiguration /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket16sslConfigurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -442,10 +570,23 @@ func (this *QSslSocket) SetLocalCertificate_1(fileName string, format int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtNetwork/qsslsocket.h:139
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void setLocalCertificate(const QString &, QSsl::EncodingFormat)
+func (this *QSslSocket) SetLocalCertificate_1_(fileName string) {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	format := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19setLocalCertificateERK7QStringN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtNetwork/qsslsocket.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslCertificate localCertificate()
+// [8] QSslCertificate localCertificate() const
 func (this *QSslSocket) LocalCertificate() *QSslCertificate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket16localCertificateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -457,7 +598,7 @@ func (this *QSslSocket) LocalCertificate() *QSslCertificate /*123*/ {
 // /usr/include/qt/QtNetwork/qsslsocket.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslCertificate peerCertificate()
+// [8] QSslCertificate peerCertificate() const
 func (this *QSslSocket) PeerCertificate() *QSslCertificate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket15peerCertificateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -469,7 +610,7 @@ func (this *QSslSocket) PeerCertificate() *QSslCertificate /*123*/ {
 // /usr/include/qt/QtNetwork/qsslsocket.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslCipher sessionCipher()
+// [8] QSslCipher sessionCipher() const
 func (this *QSslSocket) SessionCipher() *QSslCipher /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket13sessionCipherEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -481,7 +622,7 @@ func (this *QSslSocket) SessionCipher() *QSslCipher /*123*/ {
 // /usr/include/qt/QtNetwork/qsslsocket.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSsl::SslProtocol sessionProtocol()
+// [4] QSsl::SslProtocol sessionProtocol() const
 func (this *QSslSocket) SessionProtocol() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket15sessionProtocolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -516,10 +657,55 @@ func (this *QSslSocket) SetPrivateKey_1(fileName string, algorithm int, format i
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtNetwork/qsslsocket.h:148
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void setPrivateKey(const QString &, QSsl::KeyAlgorithm, QSsl::EncodingFormat, const QByteArray &)
+func (this *QSslSocket) SetPrivateKey_1_(fileName string) {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QSsl::KeyAlgorithm=Elaborated, QSsl::KeyAlgorithm=Enum,
+	algorithm := 0
+	// arg: 2, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	format := 0
+	// arg: 3, const QByteArray &=LValueReference, QByteArray=Record,
+	var convArg3 = qtcore.NewQByteArray()
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket13setPrivateKeyERK7QStringN4QSsl12KeyAlgorithmENS3_14EncodingFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, algorithm, format, convArg3)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:148
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void setPrivateKey(const QString &, QSsl::KeyAlgorithm, QSsl::EncodingFormat, const QByteArray &)
+func (this *QSslSocket) SetPrivateKey_1_1(fileName string, algorithm int) {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	format := 0
+	// arg: 3, const QByteArray &=LValueReference, QByteArray=Record,
+	var convArg3 = qtcore.NewQByteArray()
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket13setPrivateKeyERK7QStringN4QSsl12KeyAlgorithmENS3_14EncodingFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, algorithm, format, convArg3)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:148
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void setPrivateKey(const QString &, QSsl::KeyAlgorithm, QSsl::EncodingFormat, const QByteArray &)
+func (this *QSslSocket) SetPrivateKey_1_2(fileName string, algorithm int, format int) {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 3, const QByteArray &=LValueReference, QByteArray=Record,
+	var convArg3 = qtcore.NewQByteArray()
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket13setPrivateKeyERK7QStringN4QSsl12KeyAlgorithmENS3_14EncodingFormatERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, algorithm, format, convArg3)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtNetwork/qsslsocket.h:151
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslKey privateKey()
+// [8] QSslKey privateKey() const
 func (this *QSslSocket) PrivateKey() *QSslKey /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket10privateKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -546,6 +732,36 @@ func (this *QSslSocket) SetCiphers(ciphers string) {
 func (this *QSslSocket) AddCaCertificates(path string, format int, syntax int) bool {
 	var tmpArg0 = qtcore.NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket17addCaCertificatesERK7QStringN4QSsl14EncodingFormatEN7QRegExp13PatternSyntaxE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format, syntax)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:164
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool addCaCertificates(const QString &, QSsl::EncodingFormat, QRegExp::PatternSyntax)
+func (this *QSslSocket) AddCaCertificates__(path string) bool {
+	var tmpArg0 = qtcore.NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	format := 0
+	// arg: 2, QRegExp::PatternSyntax=Elaborated, QRegExp::PatternSyntax=Enum,
+	syntax := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket17addCaCertificatesERK7QStringN4QSsl14EncodingFormatEN7QRegExp13PatternSyntaxE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format, syntax)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:164
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool addCaCertificates(const QString &, QSsl::EncodingFormat, QRegExp::PatternSyntax)
+func (this *QSslSocket) AddCaCertificates__1(path string, format int) bool {
+	var tmpArg0 = qtcore.NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, QRegExp::PatternSyntax=Elaborated, QRegExp::PatternSyntax=Enum,
+	syntax := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket17addCaCertificatesERK7QStringN4QSsl14EncodingFormatEN7QRegExp13PatternSyntaxE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format, syntax)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -581,6 +797,36 @@ func QSslSocket_AddDefaultCaCertificates(path string, format int, syntax int) bo
 	return rv
 }
 
+// /usr/include/qt/QtNetwork/qsslsocket.h:172
+// index:0
+// Public static Visibility=Default Availability=Available
+// [1] bool addDefaultCaCertificates(const QString &, QSsl::EncodingFormat, QRegExp::PatternSyntax)
+func (this *QSslSocket) AddDefaultCaCertificates__(path string) bool {
+	var tmpArg0 = qtcore.NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	format := 0
+	// arg: 2, QRegExp::PatternSyntax=Elaborated, QRegExp::PatternSyntax=Enum,
+	syntax := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket24addDefaultCaCertificatesERK7QStringN4QSsl14EncodingFormatEN7QRegExp13PatternSyntaxE", qtrt.FFI_TYPE_POINTER, convArg0, format, syntax)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:172
+// index:0
+// Public static Visibility=Default Availability=Available
+// [1] bool addDefaultCaCertificates(const QString &, QSsl::EncodingFormat, QRegExp::PatternSyntax)
+func (this *QSslSocket) AddDefaultCaCertificates__1(path string, format int) bool {
+	var tmpArg0 = qtcore.NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, QRegExp::PatternSyntax=Elaborated, QRegExp::PatternSyntax=Enum,
+	syntax := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket24addDefaultCaCertificatesERK7QStringN4QSsl14EncodingFormatEN7QRegExp13PatternSyntaxE", qtrt.FFI_TYPE_POINTER, convArg0, format, syntax)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtNetwork/qsslsocket.h:174
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -608,11 +854,35 @@ func (this *QSslSocket) WaitForConnected(msecs int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtNetwork/qsslsocket.h:182
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool waitForConnected(int)
+func (this *QSslSocket) WaitForConnected__() bool {
+	// arg: 0, int=Int, =Invalid,
+	msecs := 30000
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket16waitForConnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtNetwork/qsslsocket.h:183
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForEncrypted(int)
 func (this *QSslSocket) WaitForEncrypted(msecs int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket16waitForEncryptedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:183
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool waitForEncrypted(int)
+func (this *QSslSocket) WaitForEncrypted__() bool {
+	// arg: 0, int=Int, =Invalid,
+	msecs := 30000
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket16waitForEncryptedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -628,6 +898,18 @@ func (this *QSslSocket) WaitForReadyRead(msecs int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtNetwork/qsslsocket.h:184
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool waitForReadyRead(int)
+func (this *QSslSocket) WaitForReadyRead__() bool {
+	// arg: 0, int=Int, =Invalid,
+	msecs := 30000
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtNetwork/qsslsocket.h:185
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -638,11 +920,35 @@ func (this *QSslSocket) WaitForBytesWritten(msecs int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtNetwork/qsslsocket.h:185
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool waitForBytesWritten(int)
+func (this *QSslSocket) WaitForBytesWritten__() bool {
+	// arg: 0, int=Int, =Invalid,
+	msecs := 30000
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtNetwork/qsslsocket.h:186
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForDisconnected(int)
 func (this *QSslSocket) WaitForDisconnected(msecs int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19waitForDisconnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslsocket.h:186
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool waitForDisconnected(int)
+func (this *QSslSocket) WaitForDisconnected__() bool {
+	// arg: 0, int=Int, =Invalid,
+	msecs := 30000
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19waitForDisconnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -825,10 +1131,10 @@ func (this *QSslSocket) ReadData(data string, maxlen int64) int64 {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)
-func (this *QSslSocket) WriteData(data string, len int64) int64 {
+func (this *QSslSocket) WriteData(data string, len_ int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }

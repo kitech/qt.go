@@ -195,7 +195,7 @@ func (this *QPolygonF) Translate_1(offset qtcore.QPointF_ITF) {
 // /usr/include/qt/QtGui/qpolygon.h:166
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPolygonF translated(qreal, qreal)
+// [8] QPolygonF translated(qreal, qreal) const
 func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF10translatedEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:167
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF translated(const QPointF &)
+// [8] QPolygonF translated(const QPointF &) const
 func (this *QPolygonF) Translated_1(offset qtcore.QPointF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPointF_PTR() != nil {
@@ -223,7 +223,7 @@ func (this *QPolygonF) Translated_1(offset qtcore.QPointF_ITF) *QPolygonF /*123*
 // /usr/include/qt/QtGui/qpolygon.h:169
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPolygon toPolygon()
+// [8] QPolygon toPolygon() const
 func (this *QPolygonF) ToPolygon() *QPolygon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF9toPolygonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ func (this *QPolygonF) ToPolygon() *QPolygon /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:171
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isClosed()
+// [1] bool isClosed() const
 func (this *QPolygonF) IsClosed() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF8isClosedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -245,7 +245,7 @@ func (this *QPolygonF) IsClosed() bool {
 // /usr/include/qt/QtGui/qpolygon.h:173
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF boundingRect()
+// [32] QRectF boundingRect() const
 func (this *QPolygonF) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +257,7 @@ func (this *QPolygonF) BoundingRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:175
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool containsPoint(const QPointF &, Qt::FillRule)
+// [1] bool containsPoint(const QPointF &, Qt::FillRule) const
 func (this *QPolygonF) ContainsPoint(pt qtcore.QPointF_ITF, fillRule int) bool {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPointF_PTR() != nil {
@@ -271,7 +271,7 @@ func (this *QPolygonF) ContainsPoint(pt qtcore.QPointF_ITF, fillRule int) bool {
 // /usr/include/qt/QtGui/qpolygon.h:177
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF united(const QPolygonF &)
+// [8] QPolygonF united(const QPolygonF &) const
 func (this *QPolygonF) United(r QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygonF_PTR() != nil {
@@ -287,7 +287,7 @@ func (this *QPolygonF) United(r QPolygonF_ITF) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:178
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF intersected(const QPolygonF &)
+// [8] QPolygonF intersected(const QPolygonF &) const
 func (this *QPolygonF) Intersected(r QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygonF_PTR() != nil {
@@ -303,7 +303,7 @@ func (this *QPolygonF) Intersected(r QPolygonF_ITF) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:179
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF subtracted(const QPolygonF &)
+// [8] QPolygonF subtracted(const QPolygonF &) const
 func (this *QPolygonF) Subtracted(r QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygonF_PTR() != nil {
@@ -319,7 +319,7 @@ func (this *QPolygonF) Subtracted(r QPolygonF_ITF) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:181
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool intersects(const QPolygonF &)
+// [1] bool intersects(const QPolygonF &) const
 func (this *QPolygonF) Intersects(r QPolygonF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygonF_PTR() != nil {

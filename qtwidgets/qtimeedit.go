@@ -64,7 +64,7 @@ func (*QTimeEdit) NewFromPointer(cthis unsafe.Pointer) *QTimeEdit {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:204
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeEdit10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +87,20 @@ func NewQTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:207
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTimeEdit(QWidget *)
+func NewQTimeEdit__() *QTimeEdit {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTimeEdit")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:208
 // index:1
 // Public Visibility=Default Availability=Available
@@ -100,6 +114,24 @@ func NewQTimeEdit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/)
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEditC2ERK5QTimeP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTimeEdit")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:208
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QTimeEdit(const QTime &, QWidget *)
+func NewQTimeEdit_1_(time qtcore.QTime_ITF) *QTimeEdit {
+	var convArg0 unsafe.Pointer
+	if time != nil && time.QTime_PTR() != nil {
+		convArg0 = time.QTime_PTR().GetCthis()
+	}
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEditC2ERK5QTimeP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))

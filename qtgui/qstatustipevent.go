@@ -88,7 +88,7 @@ func DeleteQStatusTipEvent(this *QStatusTipEvent) {
 // /usr/include/qt/QtGui/qevent.h:703
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QString tip()
+// [8] QString tip() const
 func (this *QStatusTipEvent) Tip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QStatusTipEvent3tipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -105,7 +105,7 @@ func DeleteQScrollerProperties(this *QScrollerProperties) {
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QScrollerProperties &)
+// [1] bool operator==(const QScrollerProperties &) const
 func (this *QScrollerProperties) Operator_equal_equal(sp QScrollerProperties_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if sp != nil && sp.QScrollerProperties_PTR() != nil {
@@ -119,7 +119,7 @@ func (this *QScrollerProperties) Operator_equal_equal(sp QScrollerProperties_ITF
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator!=(const QScrollerProperties &)
+// [1] bool operator!=(const QScrollerProperties &) const
 func (this *QScrollerProperties) Operator_not_equal(sp QScrollerProperties_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if sp != nil && sp.QScrollerProperties_PTR() != nil {
@@ -163,7 +163,7 @@ func QScrollerProperties_UnsetDefaultScrollerProperties() {
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant scrollMetric(enum QScrollerProperties::ScrollMetric)
+// [16] QVariant scrollMetric(enum QScrollerProperties::ScrollMetric) const
 func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	qtrt.ErrPrint(err, rv)

@@ -139,7 +139,7 @@ func (*QMenuBar) NewFromPointer(cthis unsafe.Pointer) *QMenuBar {
 // /usr/include/qt/QtWidgets/qmenubar.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QMenuBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -155,6 +155,20 @@ func NewQMenuBar(parent QWidget_ITF /*777 QWidget **/) *QMenuBar {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMenuBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQMenuBarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMenuBar")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QMenuBar(QWidget *)
+func NewQMenuBar__() *QMenuBar {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMenuBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMenuBarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -299,7 +313,7 @@ func (this *QMenuBar) Clear() {
 // /usr/include/qt/QtWidgets/qmenubar.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAction * activeAction()
+// [8] QAction * activeAction() const
 func (this *QMenuBar) ActiveAction() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar12activeActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -331,7 +345,7 @@ func (this *QMenuBar) SetDefaultUp(arg0 bool) {
 // /usr/include/qt/QtWidgets/qmenubar.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isDefaultUp()
+// [1] bool isDefaultUp() const
 func (this *QMenuBar) IsDefaultUp() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar11isDefaultUpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -341,7 +355,7 @@ func (this *QMenuBar) IsDefaultUp() bool {
 // /usr/include/qt/QtWidgets/qmenubar.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QMenuBar) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -353,7 +367,7 @@ func (this *QMenuBar) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qmenubar.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QMenuBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -365,7 +379,7 @@ func (this *QMenuBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qmenubar.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int heightForWidth(int)
+// [4] int heightForWidth(int) const
 func (this *QMenuBar) HeightForWidth(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -375,7 +389,7 @@ func (this *QMenuBar) HeightForWidth(arg0 int) int {
 // /usr/include/qt/QtWidgets/qmenubar.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect actionGeometry(QAction *)
+// [16] QRect actionGeometry(QAction *) const
 func (this *QMenuBar) ActionGeometry(arg0 QAction_ITF /*777 QAction **/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QAction_PTR() != nil {
@@ -391,7 +405,7 @@ func (this *QMenuBar) ActionGeometry(arg0 QAction_ITF /*777 QAction **/) *qtcore
 // /usr/include/qt/QtWidgets/qmenubar.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAction * actionAt(const QPoint &)
+// [8] QAction * actionAt(const QPoint &) const
 func (this *QMenuBar) ActionAt(arg0 qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
@@ -415,11 +429,38 @@ func (this *QMenuBar) SetCornerWidget(w QWidget_ITF /*777 QWidget **/, corner in
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qmenubar.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setCornerWidget(QWidget *, Qt::Corner)
+func (this *QMenuBar) SetCornerWidget__(w QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, Qt::Corner=Elaborated, Qt::Corner=Enum,
+	corner := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMenuBar15setCornerWidgetEP7QWidgetN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, corner)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qmenubar.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * cornerWidget(Qt::Corner)
+// [8] QWidget * cornerWidget(Qt::Corner) const
 func (this *QMenuBar) CornerWidget(corner int) *QWidget /*777 QWidget **/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar12cornerWidgetEN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), corner)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:96
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QWidget * cornerWidget(Qt::Corner) const
+func (this *QMenuBar) CornerWidget__() *QWidget /*777 QWidget **/ {
+	// arg: 0, Qt::Corner=Elaborated, Qt::Corner=Enum,
+	corner := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar12cornerWidgetEN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), corner)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -428,7 +469,7 @@ func (this *QMenuBar) CornerWidget(corner int) *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qmenubar.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNativeMenuBar()
+// [1] bool isNativeMenuBar() const
 func (this *QMenuBar) IsNativeMenuBar() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar15isNativeMenuBarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -670,7 +711,7 @@ func (this *QMenuBar) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qmenubar.h:127
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionMenuItem *, const QAction *)
+// [-2] void initStyleOption(QStyleOptionMenuItem *, const QAction *) const
 func (this *QMenuBar) InitStyleOption(option QStyleOptionMenuItem_ITF /*777 QStyleOptionMenuItem **/, action QAction_ITF /*777 const QAction **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionMenuItem_PTR() != nil {

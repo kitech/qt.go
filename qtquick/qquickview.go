@@ -101,7 +101,7 @@ func (*QQuickView) NewFromPointer(cthis unsafe.Pointer) *QQuickView {
 // /usr/include/qt/QtQuick/qquickview.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQuickView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -117,6 +117,20 @@ func NewQQuickView(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
 	if parent != nil && parent.QWindow_PTR() != nil {
 		convArg0 = parent.QWindow_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQuickViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickView")
+	return gothis
+}
+
+// /usr/include/qt/QtQuick/qquickview.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickView(QWindow *)
+func NewQQuickView__() *QQuickView {
+	// arg: 0, QWindow *=Pointer, QWindow=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -164,6 +178,24 @@ func NewQQuickView_2(source qtcore.QUrl_ITF, parent qtgui.QWindow_ITF /*777 QWin
 	return gothis
 }
 
+// /usr/include/qt/QtQuick/qquickview.h:65
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickView(const QUrl &, QWindow *)
+func NewQQuickView_2_(source qtcore.QUrl_ITF) *QQuickView {
+	var convArg0 unsafe.Pointer
+	if source != nil && source.QUrl_PTR() != nil {
+		convArg0 = source.QUrl_PTR().GetCthis()
+	}
+	// arg: 1, QWindow *=Pointer, QWindow=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2ERK4QUrlP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQuickViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickView")
+	return gothis
+}
+
 // /usr/include/qt/QtQuick/qquickview.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -178,7 +210,7 @@ func DeleteQQuickView(this *QQuickView) {
 // /usr/include/qt/QtQuick/qquickview.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl source()
+// [8] QUrl source() const
 func (this *QQuickView) Source() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,7 +222,7 @@ func (this *QQuickView) Source() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtQuick/qquickview.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlEngine * engine()
+// [8] QQmlEngine * engine() const
 func (this *QQuickView) Engine() *qtqml.QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,7 +232,7 @@ func (this *QQuickView) Engine() *qtqml.QQmlEngine /*777 QQmlEngine **/ {
 // /usr/include/qt/QtQuick/qquickview.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlContext * rootContext()
+// [8] QQmlContext * rootContext() const
 func (this *QQuickView) RootContext() *qtqml.QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView11rootContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -210,7 +242,7 @@ func (this *QQuickView) RootContext() *qtqml.QQmlContext /*777 QQmlContext **/ {
 // /usr/include/qt/QtQuick/qquickview.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQuickItem * rootObject()
+// [8] QQuickItem * rootObject() const
 func (this *QQuickView) RootObject() *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView10rootObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,7 +252,7 @@ func (this *QQuickView) RootObject() *QQuickItem /*777 QQuickItem **/ {
 // /usr/include/qt/QtQuick/qquickview.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QQuickView::ResizeMode resizeMode()
+// [4] QQuickView::ResizeMode resizeMode() const
 func (this *QQuickView) ResizeMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView10resizeModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -239,7 +271,7 @@ func (this *QQuickView) SetResizeMode(arg0 int) {
 // /usr/include/qt/QtQuick/qquickview.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QQuickView::Status status()
+// [4] QQuickView::Status status() const
 func (this *QQuickView) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -249,7 +281,7 @@ func (this *QQuickView) Status() int {
 // /usr/include/qt/QtQuick/qquickview.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QQuickView) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -261,7 +293,7 @@ func (this *QQuickView) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtQuick/qquickview.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize initialSize()
+// [8] QSize initialSize() const
 func (this *QQuickView) InitialSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView11initialSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

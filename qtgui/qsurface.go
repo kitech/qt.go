@@ -76,7 +76,7 @@ func DeleteQSurface(this *QSurface) {
 // /usr/include/qt/QtGui/qsurface.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSurface::SurfaceClass surfaceClass()
+// [4] QSurface::SurfaceClass surfaceClass() const
 func (this *QSurface) SurfaceClass() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface12surfaceClassEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -86,7 +86,7 @@ func (this *QSurface) SurfaceClass() int {
 // /usr/include/qt/QtGui/qsurface.h:76
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSurfaceFormat format()
+// [8] QSurfaceFormat format() const
 func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,7 +98,7 @@ func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
 // /usr/include/qt/QtGui/qsurface.h:79
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] QSurface::SurfaceType surfaceType()
+// [4] QSurface::SurfaceType surfaceType() const
 func (this *QSurface) SurfaceType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface11surfaceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -108,7 +108,7 @@ func (this *QSurface) SurfaceType() int {
 // /usr/include/qt/QtGui/qsurface.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool supportsOpenGL()
+// [1] bool supportsOpenGL() const
 func (this *QSurface) SupportsOpenGL() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface14supportsOpenGLEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QSurface) SupportsOpenGL() bool {
 // /usr/include/qt/QtGui/qsurface.h:82
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSize size()
+// [8] QSize size() const
 func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

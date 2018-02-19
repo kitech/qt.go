@@ -146,7 +146,7 @@ func (this *QXmlStreamWriter) SetDevice(device QIODevice_ITF /*777 QIODevice **/
 // /usr/include/qt/QtCore/qxmlstream.h:479
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QIODevice * device()
+// [8] QIODevice * device() const
 func (this *QXmlStreamWriter) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,7 +180,7 @@ func (this *QXmlStreamWriter) SetCodec_1(codecName string) {
 // /usr/include/qt/QtCore/qxmlstream.h:484
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextCodec * codec()
+// [8] QTextCodec * codec() const
 func (this *QXmlStreamWriter) Codec() *QTextCodec /*777 QTextCodec **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter5codecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,7 +199,7 @@ func (this *QXmlStreamWriter) SetAutoFormatting(arg0 bool) {
 // /usr/include/qt/QtCore/qxmlstream.h:488
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool autoFormatting()
+// [1] bool autoFormatting() const
 func (this *QXmlStreamWriter) AutoFormatting() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter14autoFormattingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,7 +218,7 @@ func (this *QXmlStreamWriter) SetAutoFormattingIndent(spacesOrTabs int) {
 // /usr/include/qt/QtCore/qxmlstream.h:491
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int autoFormattingIndent()
+// [4] int autoFormattingIndent() const
 func (this *QXmlStreamWriter) AutoFormattingIndent() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter20autoFormattingIndentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -417,6 +417,19 @@ func (this *QXmlStreamWriter) WriteNamespace(namespaceUri string, prefix string)
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qxmlstream.h:514
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void writeNamespace(const QString &, const QString &)
+func (this *QXmlStreamWriter) WriteNamespace__(namespaceUri string) {
+	var tmpArg0 = NewQString_5(namespaceUri)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qxmlstream.h:515
 // index:0
 // Public Visibility=Default Availability=Available
@@ -437,6 +450,19 @@ func (this *QXmlStreamWriter) WriteProcessingInstruction(target string, data str
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(data)
 	var convArg1 = tmpArg1.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qxmlstream.h:516
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void writeProcessingInstruction(const QString &, const QString &)
+func (this *QXmlStreamWriter) WriteProcessingInstruction__(target string) {
+	var tmpArg0 = NewQString_5(target)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -512,7 +538,7 @@ func (this *QXmlStreamWriter) WriteCurrentToken(reader QXmlStreamReader_ITF) {
 // /usr/include/qt/QtCore/qxmlstream.h:528
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasError()
+// [1] bool hasError() const
 func (this *QXmlStreamWriter) HasError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter8hasErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

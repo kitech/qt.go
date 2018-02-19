@@ -103,7 +103,7 @@ func DeleteQSGNode(this *QSGNode) {
 // /usr/include/qt/QtQuick/qsgnode.h:133
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSGNode * parent()
+// [8] QSGNode * parent() const
 func (this *QSGNode) Parent() *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -208,7 +208,7 @@ func (this *QSGNode) ReparentChildNodesTo(newParent QSGNode_ITF /*777 QSGNode **
 // /usr/include/qt/QtQuick/qsgnode.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int childCount()
+// [4] int childCount() const
 func (this *QSGNode) ChildCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode10childCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,7 +218,7 @@ func (this *QSGNode) ChildCount() int {
 // /usr/include/qt/QtQuick/qsgnode.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSGNode * childAtIndex(int)
+// [8] QSGNode * childAtIndex(int) const
 func (this *QSGNode) ChildAtIndex(i int) *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode12childAtIndexEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -228,7 +228,7 @@ func (this *QSGNode) ChildAtIndex(i int) *QSGNode /*777 QSGNode **/ {
 // /usr/include/qt/QtQuick/qsgnode.h:145
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSGNode * firstChild()
+// [8] QSGNode * firstChild() const
 func (this *QSGNode) FirstChild() *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode10firstChildEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,7 +238,7 @@ func (this *QSGNode) FirstChild() *QSGNode /*777 QSGNode **/ {
 // /usr/include/qt/QtQuick/qsgnode.h:146
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSGNode * lastChild()
+// [8] QSGNode * lastChild() const
 func (this *QSGNode) LastChild() *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode9lastChildEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -248,7 +248,7 @@ func (this *QSGNode) LastChild() *QSGNode /*777 QSGNode **/ {
 // /usr/include/qt/QtQuick/qsgnode.h:147
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSGNode * nextSibling()
+// [8] QSGNode * nextSibling() const
 func (this *QSGNode) NextSibling() *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode11nextSiblingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,7 +258,7 @@ func (this *QSGNode) NextSibling() *QSGNode /*777 QSGNode **/ {
 // /usr/include/qt/QtQuick/qsgnode.h:148
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSGNode * previousSibling()
+// [8] QSGNode * previousSibling() const
 func (this *QSGNode) PreviousSibling() *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode15previousSiblingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +268,7 @@ func (this *QSGNode) PreviousSibling() *QSGNode /*777 QSGNode **/ {
 // /usr/include/qt/QtQuick/qsgnode.h:150
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QSGNode::NodeType type()
+// [4] QSGNode::NodeType type() const
 func (this *QSGNode) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -296,7 +296,7 @@ func (this *QSGNode) MarkDirty(bits int) {
 // /usr/include/qt/QtQuick/qsgnode.h:154
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QSGNode::DirtyState dirtyState()
+// [4] QSGNode::DirtyState dirtyState() const
 func (this *QSGNode) DirtyState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode10dirtyStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -306,7 +306,7 @@ func (this *QSGNode) DirtyState() int {
 // /usr/include/qt/QtQuick/qsgnode.h:156
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isSubtreeBlocked()
+// [1] bool isSubtreeBlocked() const
 func (this *QSGNode) IsSubtreeBlocked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode16isSubtreeBlockedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -316,7 +316,7 @@ func (this *QSGNode) IsSubtreeBlocked() bool {
 // /usr/include/qt/QtQuick/qsgnode.h:158
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QSGNode::Flags flags()
+// [4] QSGNode::Flags flags() const
 func (this *QSGNode) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -332,11 +332,33 @@ func (this *QSGNode) SetFlag(arg0 int, arg1 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtQuick/qsgnode.h:159
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFlag(enum QSGNode::Flag, _Bool)
+func (this *QSGNode) SetFlag__(arg0 int) {
+	// arg: 1, bool=Bool, =Invalid,
+	arg1 := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode7setFlagENS_4FlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtQuick/qsgnode.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(QSGNode::Flags, _Bool)
 func (this *QSGNode) SetFlags(arg0 int, arg1 bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode8setFlagsE6QFlagsINS_4FlagEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQuick/qsgnode.h:160
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFlags(QSGNode::Flags, _Bool)
+func (this *QSGNode) SetFlags__(arg0 int) {
+	// arg: 1, bool=Bool, =Invalid,
+	arg1 := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode8setFlagsE6QFlagsINS_4FlagEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	qtrt.ErrPrint(err, rv)
 }

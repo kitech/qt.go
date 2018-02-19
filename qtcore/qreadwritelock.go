@@ -73,6 +73,20 @@ func NewQReadWriteLock(recursionMode int) *QReadWriteLock {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qreadwritelock.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QReadWriteLock(enum QReadWriteLock::RecursionMode)
+func NewQReadWriteLock__() *QReadWriteLock {
+	// arg: 0, QReadWriteLock::RecursionMode=Enum, QReadWriteLock::RecursionMode=Enum,
+	recursionMode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLockC2ENS_13RecursionModeE", qtrt.FFI_TYPE_POINTER, recursionMode)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQReadWriteLockFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQReadWriteLock)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qreadwritelock.h:58
 // index:0
 // Public Visibility=Default Availability=Available

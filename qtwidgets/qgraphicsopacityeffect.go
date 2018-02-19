@@ -69,7 +69,7 @@ func (*QGraphicsOpacityEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsOp
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:254
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGraphicsOpacityEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsOpacityEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +92,20 @@ func NewQGraphicsOpacityEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGr
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:258
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsOpacityEffect(QObject *)
+func NewQGraphicsOpacityEffect__() *QGraphicsOpacityEffect {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsOpacityEffectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsOpacityEffect")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:259
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -106,7 +120,7 @@ func DeleteQGraphicsOpacityEffect(this *QGraphicsOpacityEffect) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:261
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal opacity()
+// [8] qreal opacity() const
 func (this *QGraphicsOpacityEffect) Opacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsOpacityEffect7opacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,7 +130,7 @@ func (this *QGraphicsOpacityEffect) Opacity() float64 {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:262
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QBrush opacityMask()
+// [8] QBrush opacityMask() const
 func (this *QGraphicsOpacityEffect) OpacityMask() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsOpacityEffect11opacityMaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

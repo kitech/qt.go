@@ -166,6 +166,24 @@ func QSslDiffieHellmanParameters_FromEncoded(encoded qtcore.QByteArray_ITF, form
 	return rv
 }
 
+// /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:94
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QSslDiffieHellmanParameters fromEncoded(const QByteArray &, QSsl::EncodingFormat)
+func (this *QSslDiffieHellmanParameters) FromEncoded__(encoded qtcore.QByteArray_ITF) *QSslDiffieHellmanParameters /*123*/ {
+	var convArg0 unsafe.Pointer
+	if encoded != nil && encoded.QByteArray_PTR() != nil {
+		convArg0 = encoded.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	format := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters11fromEncodedERK10QByteArrayN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslDiffieHellmanParametersFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslDiffieHellmanParameters)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:95
 // index:1
 // Public static Visibility=Default Availability=Available
@@ -187,10 +205,28 @@ func QSslDiffieHellmanParameters_FromEncoded_1(device qtcore.QIODevice_ITF /*777
 	return rv
 }
 
+// /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:95
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QSslDiffieHellmanParameters fromEncoded(QIODevice *, QSsl::EncodingFormat)
+func (this *QSslDiffieHellmanParameters) FromEncoded_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslDiffieHellmanParameters /*123*/ {
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	format := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters11fromEncodedEP9QIODeviceN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslDiffieHellmanParametersFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslDiffieHellmanParameters)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QSslDiffieHellmanParameters) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,7 +236,7 @@ func (this *QSslDiffieHellmanParameters) IsEmpty() bool {
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QSslDiffieHellmanParameters) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -210,7 +246,7 @@ func (this *QSslDiffieHellmanParameters) IsValid() bool {
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSslDiffieHellmanParameters::Error error()
+// [4] QSslDiffieHellmanParameters::Error error() const
 func (this *QSslDiffieHellmanParameters) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,7 +256,7 @@ func (this *QSslDiffieHellmanParameters) Error() int {
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString errorString()
+// [8] QString errorString() const
 func (this *QSslDiffieHellmanParameters) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

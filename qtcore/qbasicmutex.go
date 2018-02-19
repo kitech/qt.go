@@ -124,7 +124,7 @@ func (this *QBasicMutex) IsRecursive() bool {
 // /usr/include/qt/QtCore/qmutex.h:97
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool isRecursive()
+// [1] bool isRecursive() const
 func (this *QBasicMutex) IsRecursive_1() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicMutex11isRecursiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

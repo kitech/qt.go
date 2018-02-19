@@ -76,6 +76,24 @@ func NewQWheelEvent(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers in
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qevent.h:178
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QWheelEvent(const QPointF &, int, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::Orientation)
+func NewQWheelEvent__(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers int) *QWheelEvent {
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	// arg: 4, Qt::Orientation=Elaborated, Qt::Orientation=Enum,
+	orient := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFi6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE", qtrt.FFI_TYPE_POINTER, convArg0, delta, buttons, modifiers, orient)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQWheelEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:181
 // index:1
 // Public Visibility=Default Availability=Available
@@ -89,6 +107,28 @@ func NewQWheelEvent_1(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, delt
 	if globalPos != nil && globalPos.QPointF_PTR() != nil {
 		convArg1 = globalPos.QPointF_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_i6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, delta, buttons, modifiers, orient)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQWheelEvent)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qevent.h:181
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QWheelEvent(const QPointF &, const QPointF &, int, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::Orientation)
+func NewQWheelEvent_1_(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, delta int, buttons int, modifiers int) *QWheelEvent {
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if globalPos != nil && globalPos.QPointF_PTR() != nil {
+		convArg1 = globalPos.QPointF_PTR().GetCthis()
+	}
+	// arg: 5, Qt::Orientation=Elaborated, Qt::Orientation=Enum,
+	orient := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_i6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, delta, buttons, modifiers, orient)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -222,7 +262,7 @@ func DeleteQWheelEvent(this *QWheelEvent) {
 // /usr/include/qt/QtGui/qevent.h:199
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint pixelDelta()
+// [8] QPoint pixelDelta() const
 func (this *QWheelEvent) PixelDelta() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent10pixelDeltaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -234,7 +274,7 @@ func (this *QWheelEvent) PixelDelta() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:200
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint angleDelta()
+// [8] QPoint angleDelta() const
 func (this *QWheelEvent) AngleDelta() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent10angleDeltaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -246,7 +286,7 @@ func (this *QWheelEvent) AngleDelta() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:202
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int delta()
+// [4] int delta() const
 func (this *QWheelEvent) Delta() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent5deltaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -256,7 +296,7 @@ func (this *QWheelEvent) Delta() int {
 // /usr/include/qt/QtGui/qevent.h:203
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::Orientation orientation()
+// [4] Qt::Orientation orientation() const
 func (this *QWheelEvent) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -266,7 +306,7 @@ func (this *QWheelEvent) Orientation() int {
 // /usr/include/qt/QtGui/qevent.h:206
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint pos()
+// [8] QPoint pos() const
 func (this *QWheelEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -278,7 +318,7 @@ func (this *QWheelEvent) Pos() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:207
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint globalPos()
+// [8] QPoint globalPos() const
 func (this *QWheelEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent9globalPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -290,7 +330,7 @@ func (this *QWheelEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:208
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int x()
+// [4] int x() const
 func (this *QWheelEvent) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -300,7 +340,7 @@ func (this *QWheelEvent) X() int {
 // /usr/include/qt/QtGui/qevent.h:209
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int y()
+// [4] int y() const
 func (this *QWheelEvent) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -310,7 +350,7 @@ func (this *QWheelEvent) Y() int {
 // /usr/include/qt/QtGui/qevent.h:210
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int globalX()
+// [4] int globalX() const
 func (this *QWheelEvent) GlobalX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent7globalXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -320,7 +360,7 @@ func (this *QWheelEvent) GlobalX() int {
 // /usr/include/qt/QtGui/qevent.h:211
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int globalY()
+// [4] int globalY() const
 func (this *QWheelEvent) GlobalY() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent7globalYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -330,7 +370,7 @@ func (this *QWheelEvent) GlobalY() int {
 // /usr/include/qt/QtGui/qevent.h:213
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] const QPointF & posF()
+// [16] const QPointF & posF() const
 func (this *QWheelEvent) PosF() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent4posFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -342,7 +382,7 @@ func (this *QWheelEvent) PosF() *qtcore.QPointF {
 // /usr/include/qt/QtGui/qevent.h:214
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] const QPointF & globalPosF()
+// [16] const QPointF & globalPosF() const
 func (this *QWheelEvent) GlobalPosF() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent10globalPosFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -354,7 +394,7 @@ func (this *QWheelEvent) GlobalPosF() *qtcore.QPointF {
 // /usr/include/qt/QtGui/qevent.h:216
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::MouseButtons buttons()
+// [4] Qt::MouseButtons buttons() const
 func (this *QWheelEvent) Buttons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent7buttonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -364,7 +404,7 @@ func (this *QWheelEvent) Buttons() int {
 // /usr/include/qt/QtGui/qevent.h:218
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::ScrollPhase phase()
+// [4] Qt::ScrollPhase phase() const
 func (this *QWheelEvent) Phase() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent5phaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -374,7 +414,7 @@ func (this *QWheelEvent) Phase() int {
 // /usr/include/qt/QtGui/qevent.h:219
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool inverted()
+// [1] bool inverted() const
 func (this *QWheelEvent) Inverted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent8invertedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -384,7 +424,7 @@ func (this *QWheelEvent) Inverted() bool {
 // /usr/include/qt/QtGui/qevent.h:221
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::MouseEventSource source()
+// [4] Qt::MouseEventSource source() const
 func (this *QWheelEvent) Source() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWheelEvent6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

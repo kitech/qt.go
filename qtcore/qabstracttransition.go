@@ -77,7 +77,7 @@ func (*QAbstractTransition) NewFromPointer(cthis unsafe.Pointer) *QAbstractTrans
 // /usr/include/qt/QtCore/qabstracttransition.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAbstractTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +100,20 @@ func NewQAbstractTransition(sourceState QState_ITF /*777 QState **/) *QAbstractT
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qabstracttransition.h:75
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAbstractTransition(QState *)
+func NewQAbstractTransition__() *QAbstractTransition {
+	// arg: 0, QState *=Pointer, QState=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAbstractTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractTransition")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qabstracttransition.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -114,7 +128,7 @@ func DeleteQAbstractTransition(this *QAbstractTransition) {
 // /usr/include/qt/QtCore/qabstracttransition.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QState * sourceState()
+// [8] QState * sourceState() const
 func (this *QAbstractTransition) SourceState() *QState /*777 QState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition11sourceStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,7 +138,7 @@ func (this *QAbstractTransition) SourceState() *QState /*777 QState **/ {
 // /usr/include/qt/QtCore/qabstracttransition.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractState * targetState()
+// [8] QAbstractState * targetState() const
 func (this *QAbstractTransition) TargetState() *QAbstractState /*777 QAbstractState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition11targetStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,7 +161,7 @@ func (this *QAbstractTransition) SetTargetState(target QAbstractState_ITF /*777 
 // /usr/include/qt/QtCore/qabstracttransition.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QAbstractTransition::TransitionType transitionType()
+// [4] QAbstractTransition::TransitionType transitionType() const
 func (this *QAbstractTransition) TransitionType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition14transitionTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,7 +180,7 @@ func (this *QAbstractTransition) SetTransitionType(type_ int) {
 // /usr/include/qt/QtCore/qabstracttransition.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStateMachine * machine()
+// [8] QStateMachine * machine() const
 func (this *QAbstractTransition) Machine() *QStateMachine /*777 QStateMachine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition7machineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

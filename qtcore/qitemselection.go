@@ -113,7 +113,7 @@ func (this *QItemSelection) Select(topLeft QModelIndex_ITF, bottomRight QModelIn
 // /usr/include/qt/QtCore/qitemselectionmodel.h:256
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QModelIndex &)
+// [1] bool contains(const QModelIndex &) const
 func (this *QItemSelection) Contains(index QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -127,7 +127,7 @@ func (this *QItemSelection) Contains(index QModelIndex_ITF) bool {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:257
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QModelIndexList indexes()
+// [8] QModelIndexList indexes() const
 func (this *QItemSelection) Indexes() *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QItemSelection7indexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -73,6 +73,20 @@ func NewQGraphicsSceneHelpEvent(type_ int) *QGraphicsSceneHelpEvent {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:234
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsSceneHelpEvent(enum QEvent::Type)
+func NewQGraphicsSceneHelpEvent__() *QGraphicsSceneHelpEvent {
+	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum,
+	type_ := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSceneHelpEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsSceneHelpEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsSceneHelpEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:235
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -87,7 +101,7 @@ func DeleteQGraphicsSceneHelpEvent(this *QGraphicsSceneHelpEvent) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:237
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF scenePos()
+// [16] QPointF scenePos() const
 func (this *QGraphicsSceneHelpEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSceneHelpEvent8scenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,7 +126,7 @@ func (this *QGraphicsSceneHelpEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:240
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint screenPos()
+// [8] QPoint screenPos() const
 func (this *QGraphicsSceneHelpEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSceneHelpEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

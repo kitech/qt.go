@@ -108,10 +108,10 @@ func DeleteQTextDecoder(this *QTextDecoder) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const char *, int)
-func (this *QTextDecoder) ToUnicode(chars string, len int) string {
+func (this *QTextDecoder) ToUnicode(chars string, len_ int) string {
 	var convArg0 = qtrt.CString(chars)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	rv3 := rv2.ToLocal8Bit().Data()
@@ -140,19 +140,19 @@ func (this *QTextDecoder) ToUnicode_1(ba QByteArray_ITF) string {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void toUnicode(QString *, const char *, int)
-func (this *QTextDecoder) ToUnicode_2(target string, chars string, len int) {
+func (this *QTextDecoder) ToUnicode_2(target string, chars string, len_ int) {
 	var tmpArg0 = NewQString_5(target)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(chars)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEP7QStringPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEP7QStringPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, len_)
 	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:164
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasFailure()
+// [1] bool hasFailure() const
 func (this *QTextDecoder) HasFailure() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextDecoder10hasFailureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

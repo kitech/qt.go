@@ -298,7 +298,7 @@ func (this *QPainterPath) QuadTo_1(ctrlPtx float64, ctrlPty float64, endPtx floa
 // /usr/include/qt/QtGui/qpainterpath.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF currentPosition()
+// [16] QPointF currentPosition() const
 func (this *QPainterPath) CurrentPosition() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath15currentPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -450,11 +450,37 @@ func (this *QPainterPath) AddRoundedRect(rect qtcore.QRectF_ITF, xRadius float64
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qpainterpath.h:135
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addRoundedRect(const QRectF &, qreal, qreal, Qt::SizeMode)
+func (this *QPainterPath) AddRoundedRect__(rect qtcore.QRectF_ITF, xRadius float64, yRadius float64) {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	// arg: 3, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectERK6QRectFddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xRadius, yRadius, mode)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qpainterpath.h:137
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void addRoundedRect(qreal, qreal, qreal, qreal, qreal, qreal, Qt::SizeMode)
 func (this *QPainterPath) AddRoundedRect_1(x float64, y float64, w float64, h float64, xRadius float64, yRadius float64, mode int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectEddddddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRadius, yRadius, mode)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainterpath.h:137
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void addRoundedRect(qreal, qreal, qreal, qreal, qreal, qreal, Qt::SizeMode)
+func (this *QPainterPath) AddRoundedRect_1_(x float64, y float64, w float64, h float64, xRadius float64, yRadius float64) {
+	// arg: 6, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum,
+	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectEddddddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRadius, yRadius, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -519,7 +545,7 @@ func (this *QPainterPath) ConnectPath(path QPainterPath_ITF) {
 // /usr/include/qt/QtGui/qpainterpath.h:150
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QPointF &)
+// [1] bool contains(const QPointF &) const
 func (this *QPainterPath) Contains(pt qtcore.QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPointF_PTR() != nil {
@@ -533,7 +559,7 @@ func (this *QPainterPath) Contains(pt qtcore.QPointF_ITF) bool {
 // /usr/include/qt/QtGui/qpainterpath.h:151
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QRectF &)
+// [1] bool contains(const QRectF &) const
 func (this *QPainterPath) Contains_1(rect qtcore.QRectF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -547,7 +573,7 @@ func (this *QPainterPath) Contains_1(rect qtcore.QRectF_ITF) bool {
 // /usr/include/qt/QtGui/qpainterpath.h:187
 // index:2
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QPainterPath &)
+// [1] bool contains(const QPainterPath &) const
 func (this *QPainterPath) Contains_2(p QPainterPath_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainterPath_PTR() != nil {
@@ -561,7 +587,7 @@ func (this *QPainterPath) Contains_2(p QPainterPath_ITF) bool {
 // /usr/include/qt/QtGui/qpainterpath.h:152
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool intersects(const QRectF &)
+// [1] bool intersects(const QRectF &) const
 func (this *QPainterPath) Intersects(rect qtcore.QRectF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -575,7 +601,7 @@ func (this *QPainterPath) Intersects(rect qtcore.QRectF_ITF) bool {
 // /usr/include/qt/QtGui/qpainterpath.h:186
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool intersects(const QPainterPath &)
+// [1] bool intersects(const QPainterPath &) const
 func (this *QPainterPath) Intersects_1(p QPainterPath_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainterPath_PTR() != nil {
@@ -611,7 +637,7 @@ func (this *QPainterPath) Translate_1(offset qtcore.QPointF_ITF) {
 // /usr/include/qt/QtGui/qpainterpath.h:157
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath translated(qreal, qreal)
+// [8] QPainterPath translated(qreal, qreal) const
 func (this *QPainterPath) Translated(dx float64, dy float64) *QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath10translatedEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -623,7 +649,7 @@ func (this *QPainterPath) Translated(dx float64, dy float64) *QPainterPath /*123
 // /usr/include/qt/QtGui/qpainterpath.h:158
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] QPainterPath translated(const QPointF &)
+// [8] QPainterPath translated(const QPointF &) const
 func (this *QPainterPath) Translated_1(offset qtcore.QPointF_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPointF_PTR() != nil {
@@ -639,7 +665,7 @@ func (this *QPainterPath) Translated_1(offset qtcore.QPointF_ITF) *QPainterPath 
 // /usr/include/qt/QtGui/qpainterpath.h:160
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF boundingRect()
+// [32] QRectF boundingRect() const
 func (this *QPainterPath) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -651,7 +677,7 @@ func (this *QPainterPath) BoundingRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qpainterpath.h:161
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF controlPointRect()
+// [32] QRectF controlPointRect() const
 func (this *QPainterPath) ControlPointRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath16controlPointRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -663,7 +689,7 @@ func (this *QPainterPath) ControlPointRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qpainterpath.h:163
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::FillRule fillRule()
+// [4] Qt::FillRule fillRule() const
 func (this *QPainterPath) FillRule() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath8fillRuleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -682,7 +708,7 @@ func (this *QPainterPath) SetFillRule(fillRule int) {
 // /usr/include/qt/QtGui/qpainterpath.h:166
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QPainterPath) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -692,7 +718,7 @@ func (this *QPainterPath) IsEmpty() bool {
 // /usr/include/qt/QtGui/qpainterpath.h:168
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath toReversed()
+// [8] QPainterPath toReversed() const
 func (this *QPainterPath) ToReversed() *QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath10toReversedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -704,7 +730,7 @@ func (this *QPainterPath) ToReversed() *QPainterPath /*123*/ {
 // /usr/include/qt/QtGui/qpainterpath.h:171
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF toFillPolygon(const QMatrix &)
+// [8] QPolygonF toFillPolygon(const QMatrix &) const
 func (this *QPainterPath) ToFillPolygon(matrix QMatrix_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
@@ -717,10 +743,24 @@ func (this *QPainterPath) ToFillPolygon(matrix QMatrix_ITF) *QPolygonF /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtGui/qpainterpath.h:171
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QPolygonF toFillPolygon(const QMatrix &) const
+func (this *QPainterPath) ToFillPolygon__() *QPolygonF /*123*/ {
+	// arg: 0, const QMatrix &=LValueReference, QMatrix=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath13toFillPolygonERK7QMatrix", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qpainterpath.h:174
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF toFillPolygon(const QTransform &)
+// [8] QPolygonF toFillPolygon(const QTransform &) const
 func (this *QPainterPath) ToFillPolygon_1(matrix QTransform_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {
@@ -736,7 +776,7 @@ func (this *QPainterPath) ToFillPolygon_1(matrix QTransform_ITF) *QPolygonF /*12
 // /usr/include/qt/QtGui/qpainterpath.h:176
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int elementCount()
+// [4] int elementCount() const
 func (this *QPainterPath) ElementCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath12elementCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -746,7 +786,7 @@ func (this *QPainterPath) ElementCount() int {
 // /usr/include/qt/QtGui/qpainterpath.h:177
 // index:0
 // Public Visibility=Default Availability=Available
-// [24] QPainterPath::Element elementAt(int)
+// [24] QPainterPath::Element elementAt(int) const
 func (this *QPainterPath) ElementAt(i int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath9elementAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -765,7 +805,7 @@ func (this *QPainterPath) SetElementPositionAt(i int, x float64, y float64) {
 // /usr/include/qt/QtGui/qpainterpath.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal length()
+// [8] qreal length() const
 func (this *QPainterPath) Length() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath6lengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -775,7 +815,7 @@ func (this *QPainterPath) Length() float64 {
 // /usr/include/qt/QtGui/qpainterpath.h:181
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal percentAtLength(qreal)
+// [8] qreal percentAtLength(qreal) const
 func (this *QPainterPath) PercentAtLength(t float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath15percentAtLengthEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -785,7 +825,7 @@ func (this *QPainterPath) PercentAtLength(t float64) float64 {
 // /usr/include/qt/QtGui/qpainterpath.h:182
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF pointAtPercent(qreal)
+// [16] QPointF pointAtPercent(qreal) const
 func (this *QPainterPath) PointAtPercent(t float64) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath14pointAtPercentEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -797,7 +837,7 @@ func (this *QPainterPath) PointAtPercent(t float64) *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qpainterpath.h:183
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal angleAtPercent(qreal)
+// [8] qreal angleAtPercent(qreal) const
 func (this *QPainterPath) AngleAtPercent(t float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath14angleAtPercentEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -807,7 +847,7 @@ func (this *QPainterPath) AngleAtPercent(t float64) float64 {
 // /usr/include/qt/QtGui/qpainterpath.h:184
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal slopeAtPercent(qreal)
+// [8] qreal slopeAtPercent(qreal) const
 func (this *QPainterPath) SlopeAtPercent(t float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath14slopeAtPercentEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -817,7 +857,7 @@ func (this *QPainterPath) SlopeAtPercent(t float64) float64 {
 // /usr/include/qt/QtGui/qpainterpath.h:188
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath united(const QPainterPath &)
+// [8] QPainterPath united(const QPainterPath &) const
 func (this *QPainterPath) United(r QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPainterPath_PTR() != nil {
@@ -833,7 +873,7 @@ func (this *QPainterPath) United(r QPainterPath_ITF) *QPainterPath /*123*/ {
 // /usr/include/qt/QtGui/qpainterpath.h:189
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath intersected(const QPainterPath &)
+// [8] QPainterPath intersected(const QPainterPath &) const
 func (this *QPainterPath) Intersected(r QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPainterPath_PTR() != nil {
@@ -849,7 +889,7 @@ func (this *QPainterPath) Intersected(r QPainterPath_ITF) *QPainterPath /*123*/ 
 // /usr/include/qt/QtGui/qpainterpath.h:190
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath subtracted(const QPainterPath &)
+// [8] QPainterPath subtracted(const QPainterPath &) const
 func (this *QPainterPath) Subtracted(r QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPainterPath_PTR() != nil {
@@ -865,7 +905,7 @@ func (this *QPainterPath) Subtracted(r QPainterPath_ITF) *QPainterPath /*123*/ {
 // /usr/include/qt/QtGui/qpainterpath.h:191
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath subtractedInverted(const QPainterPath &)
+// [8] QPainterPath subtractedInverted(const QPainterPath &) const
 func (this *QPainterPath) SubtractedInverted(r QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPainterPath_PTR() != nil {
@@ -881,7 +921,7 @@ func (this *QPainterPath) SubtractedInverted(r QPainterPath_ITF) *QPainterPath /
 // /usr/include/qt/QtGui/qpainterpath.h:193
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath simplified()
+// [8] QPainterPath simplified() const
 func (this *QPainterPath) Simplified() *QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath10simplifiedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -893,7 +933,7 @@ func (this *QPainterPath) Simplified() *QPainterPath /*123*/ {
 // /usr/include/qt/QtGui/qpainterpath.h:195
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QPainterPath &)
+// [1] bool operator==(const QPainterPath &) const
 func (this *QPainterPath) Operator_equal_equal(other QPainterPath_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPainterPath_PTR() != nil {
@@ -907,7 +947,7 @@ func (this *QPainterPath) Operator_equal_equal(other QPainterPath_ITF) bool {
 // /usr/include/qt/QtGui/qpainterpath.h:196
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator!=(const QPainterPath &)
+// [1] bool operator!=(const QPainterPath &) const
 func (this *QPainterPath) Operator_not_equal(other QPainterPath_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPainterPath_PTR() != nil {
@@ -921,7 +961,7 @@ func (this *QPainterPath) Operator_not_equal(other QPainterPath_ITF) bool {
 // /usr/include/qt/QtGui/qpainterpath.h:198
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath operator&(const QPainterPath &)
+// [8] QPainterPath operator&(const QPainterPath &) const
 func (this *QPainterPath) Operator_and(other QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPainterPath_PTR() != nil {
@@ -937,7 +977,7 @@ func (this *QPainterPath) Operator_and(other QPainterPath_ITF) *QPainterPath /*1
 // /usr/include/qt/QtGui/qpainterpath.h:199
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath operator|(const QPainterPath &)
+// [8] QPainterPath operator|(const QPainterPath &) const
 func (this *QPainterPath) Operator_or(other QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPainterPath_PTR() != nil {
@@ -953,7 +993,7 @@ func (this *QPainterPath) Operator_or(other QPainterPath_ITF) *QPainterPath /*12
 // /usr/include/qt/QtGui/qpainterpath.h:200
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath operator+(const QPainterPath &)
+// [8] QPainterPath operator+(const QPainterPath &) const
 func (this *QPainterPath) Operator_add(other QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPainterPath_PTR() != nil {
@@ -969,7 +1009,7 @@ func (this *QPainterPath) Operator_add(other QPainterPath_ITF) *QPainterPath /*1
 // /usr/include/qt/QtGui/qpainterpath.h:201
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath operator-(const QPainterPath &)
+// [8] QPainterPath operator-(const QPainterPath &) const
 func (this *QPainterPath) Operator_minus(other QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPainterPath_PTR() != nil {

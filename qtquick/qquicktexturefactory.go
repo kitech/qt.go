@@ -89,7 +89,7 @@ func DeleteQQuickTextureFactory(this *QQuickTextureFactory) {
 // /usr/include/qt/QtQuick/qquickimageprovider.h:63
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSGTexture * createTexture(QQuickWindow *)
+// [8] QSGTexture * createTexture(QQuickWindow *) const
 func (this *QQuickTextureFactory) CreateTexture(window QQuickWindow_ITF /*777 QQuickWindow **/) *QSGTexture /*777 QSGTexture **/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QQuickWindow_PTR() != nil {
@@ -103,7 +103,7 @@ func (this *QQuickTextureFactory) CreateTexture(window QQuickWindow_ITF /*777 QQ
 // /usr/include/qt/QtQuick/qquickimageprovider.h:64
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSize textureSize()
+// [8] QSize textureSize() const
 func (this *QQuickTextureFactory) TextureSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickTextureFactory11textureSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,7 +115,7 @@ func (this *QQuickTextureFactory) TextureSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtQuick/qquickimageprovider.h:65
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int textureByteCount()
+// [4] int textureByteCount() const
 func (this *QQuickTextureFactory) TextureByteCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickTextureFactory16textureByteCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,7 +125,7 @@ func (this *QQuickTextureFactory) TextureByteCount() int {
 // /usr/include/qt/QtQuick/qquickimageprovider.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QImage image()
+// [32] QImage image() const
 func (this *QQuickTextureFactory) Image() *qtgui.QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickTextureFactory5imageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

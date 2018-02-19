@@ -88,7 +88,7 @@ func NewQDate_1(y int, m int, d int) *QDate {
 // /usr/include/qt/QtCore/qdatetime.h:72
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QDate) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,7 +98,7 @@ func (this *QDate) IsNull() bool {
 // /usr/include/qt/QtCore/qdatetime.h:73
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QDate) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -123,7 +123,7 @@ func QDate_IsValid_1(y int, m int, d int) bool {
 // /usr/include/qt/QtCore/qdatetime.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int year()
+// [4] int year() const
 func (this *QDate) Year() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate4yearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,7 +133,7 @@ func (this *QDate) Year() int {
 // /usr/include/qt/QtCore/qdatetime.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int month()
+// [4] int month() const
 func (this *QDate) Month() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate5monthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +143,7 @@ func (this *QDate) Month() int {
 // /usr/include/qt/QtCore/qdatetime.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int day()
+// [4] int day() const
 func (this *QDate) Day() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate3dayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func (this *QDate) Day() int {
 // /usr/include/qt/QtCore/qdatetime.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int dayOfWeek()
+// [4] int dayOfWeek() const
 func (this *QDate) DayOfWeek() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate9dayOfWeekEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,7 +163,7 @@ func (this *QDate) DayOfWeek() int {
 // /usr/include/qt/QtCore/qdatetime.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int dayOfYear()
+// [4] int dayOfYear() const
 func (this *QDate) DayOfYear() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate9dayOfYearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,7 +173,7 @@ func (this *QDate) DayOfYear() int {
 // /usr/include/qt/QtCore/qdatetime.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int daysInMonth()
+// [4] int daysInMonth() const
 func (this *QDate) DaysInMonth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate11daysInMonthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,7 +183,7 @@ func (this *QDate) DaysInMonth() int {
 // /usr/include/qt/QtCore/qdatetime.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int daysInYear()
+// [4] int daysInYear() const
 func (this *QDate) DaysInYear() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10daysInYearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -193,8 +193,20 @@ func (this *QDate) DaysInYear() int {
 // /usr/include/qt/QtCore/qdatetime.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int weekNumber(int *)
+// [4] int weekNumber(int *) const
 func (this *QDate) WeekNumber(yearNum unsafe.Pointer /*666*/) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10weekNumberEPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), yearNum)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:82
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int weekNumber(int *) const
+func (this *QDate) WeekNumber__() int {
+	// arg: 0, int *=Pointer, =Invalid,
+	var yearNum unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10weekNumberEPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), yearNum)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -218,6 +230,21 @@ func QDate_ShortMonthName(month int, type_ int) string {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qdatetime.h:86
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString shortMonthName(int, enum QDate::MonthNameType)
+func (this *QDate) ShortMonthName__(month int) string {
+	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
+	type_ := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate14shortMonthNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, month, type_)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
 // /usr/include/qt/QtCore/qdatetime.h:88
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -234,6 +261,21 @@ func QDate_ShortDayName(weekday int, type_ int) string {
 	var nilthis *QDate
 	rv := nilthis.ShortDayName(weekday, type_)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:88
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString shortDayName(int, enum QDate::MonthNameType)
+func (this *QDate) ShortDayName__(weekday int) string {
+	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
+	type_ := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate12shortDayNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, weekday, type_)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:90
@@ -254,6 +296,21 @@ func QDate_LongMonthName(month int, type_ int) string {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qdatetime.h:90
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString longMonthName(int, enum QDate::MonthNameType)
+func (this *QDate) LongMonthName__(month int) string {
+	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
+	type_ := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate13longMonthNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, month, type_)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
 // /usr/include/qt/QtCore/qdatetime.h:92
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -272,11 +329,41 @@ func QDate_LongDayName(weekday int, type_ int) string {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qdatetime.h:92
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString longDayName(int, enum QDate::MonthNameType)
+func (this *QDate) LongDayName__(weekday int) string {
+	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
+	type_ := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate11longDayNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, weekday, type_)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
 // /usr/include/qt/QtCore/qdatetime.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toString(Qt::DateFormat)
+// [8] QString toString(Qt::DateFormat) const
 func (this *QDate) ToString(f int) string {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString toString(Qt::DateFormat) const
+func (this *QDate) ToString__() string {
+	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
+	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -288,7 +375,7 @@ func (this *QDate) ToString(f int) string {
 // /usr/include/qt/QtCore/qdatetime.h:97
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QString toString(const QString &)
+// [8] QString toString(const QString &) const
 func (this *QDate) ToString_1(format string) string {
 	var tmpArg0 = NewQString_5(format)
 	var convArg0 = tmpArg0.GetCthis()
@@ -303,7 +390,7 @@ func (this *QDate) ToString_1(format string) string {
 // /usr/include/qt/QtCore/qdatetime.h:99
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] QString toString(QStringView)
+// [8] QString toString(QStringView) const
 func (this *QDate) ToString_2(format QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QStringView_PTR() != nil {
@@ -339,7 +426,7 @@ func (this *QDate) GetDate(year unsafe.Pointer /*666*/, month unsafe.Pointer /*6
 // /usr/include/qt/QtCore/qdatetime.h:111
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void getDate(int *, int *, int *)
+// [-2] void getDate(int *, int *, int *) const
 func (this *QDate) GetDate_1(year unsafe.Pointer /*666*/, month unsafe.Pointer /*666*/, day unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7getDateEPiS0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), year, month, day)
 	qtrt.ErrPrint(err, rv)
@@ -348,7 +435,7 @@ func (this *QDate) GetDate_1(year unsafe.Pointer /*666*/, month unsafe.Pointer /
 // /usr/include/qt/QtCore/qdatetime.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDate addDays(qint64)
+// [8] QDate addDays(qint64) const
 func (this *QDate) AddDays(days int64) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7addDaysEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), days)
 	qtrt.ErrPrint(err, rv)
@@ -360,7 +447,7 @@ func (this *QDate) AddDays(days int64) *QDate /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDate addMonths(int)
+// [8] QDate addMonths(int) const
 func (this *QDate) AddMonths(months int) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate9addMonthsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), months)
 	qtrt.ErrPrint(err, rv)
@@ -372,7 +459,7 @@ func (this *QDate) AddMonths(months int) *QDate /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDate addYears(int)
+// [8] QDate addYears(int) const
 func (this *QDate) AddYears(years int) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8addYearsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), years)
 	qtrt.ErrPrint(err, rv)
@@ -384,7 +471,7 @@ func (this *QDate) AddYears(years int) *QDate /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 daysTo(const QDate &)
+// [8] qint64 daysTo(const QDate &) const
 func (this *QDate) DaysTo(arg0 QDate_ITF) int64 {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDate_PTR() != nil {
@@ -398,7 +485,7 @@ func (this *QDate) DaysTo(arg0 QDate_ITF) int64 {
 // /usr/include/qt/QtCore/qdatetime.h:118
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QDate &)
+// [1] bool operator==(const QDate &) const
 func (this *QDate) Operator_equal_equal(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -412,7 +499,7 @@ func (this *QDate) Operator_equal_equal(other QDate_ITF) bool {
 // /usr/include/qt/QtCore/qdatetime.h:119
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QDate &)
+// [1] bool operator!=(const QDate &) const
 func (this *QDate) Operator_not_equal(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -426,7 +513,7 @@ func (this *QDate) Operator_not_equal(other QDate_ITF) bool {
 // /usr/include/qt/QtCore/qdatetime.h:120
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<(const QDate &)
+// [1] bool operator<(const QDate &) const
 func (this *QDate) Operator_less_than(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -440,7 +527,7 @@ func (this *QDate) Operator_less_than(other QDate_ITF) bool {
 // /usr/include/qt/QtCore/qdatetime.h:121
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<=(const QDate &)
+// [1] bool operator<=(const QDate &) const
 func (this *QDate) Operator_less_than_equal(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -454,7 +541,7 @@ func (this *QDate) Operator_less_than_equal(other QDate_ITF) bool {
 // /usr/include/qt/QtCore/qdatetime.h:122
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>(const QDate &)
+// [1] bool operator>(const QDate &) const
 func (this *QDate) Operator_greater_than(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -468,7 +555,7 @@ func (this *QDate) Operator_greater_than(other QDate_ITF) bool {
 // /usr/include/qt/QtCore/qdatetime.h:123
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>=(const QDate &)
+// [1] bool operator>=(const QDate &) const
 func (this *QDate) Operator_greater_than_equal(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -513,6 +600,22 @@ func QDate_FromString(s string, f int) *QDate /*123*/ {
 	var nilthis *QDate
 	rv := nilthis.FromString(s, f)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:127
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QDate fromString(const QString &, Qt::DateFormat)
+func (this *QDate) FromString__(s string) *QDate /*123*/ {
+	var tmpArg0 = NewQString_5(s)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
+	f := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate10fromStringERK7QStringN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, convArg0, f)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:128
@@ -571,7 +674,7 @@ func QDate_FromJulianDay(jd_ int64) *QDate /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:135
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qint64 toJulianDay()
+// [8] qint64 toJulianDay() const
 func (this *QDate) ToJulianDay() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate11toJulianDayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

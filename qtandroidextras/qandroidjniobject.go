@@ -126,7 +126,7 @@ func DeleteQAndroidJniObject(this *QAndroidJniObject) {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:66
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int object()
+// [4] int object() const
 func (this *QAndroidJniObject) Object() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAndroidJniObject6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,7 +136,7 @@ func (this *QAndroidJniObject) Object() int {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] QAndroidJniObject getObjectField(const char *, const char *)
+// [1] QAndroidJniObject getObjectField(const char *, const char *) const
 func (this *QAndroidJniObject) GetObjectField(fieldName string, sig string) *QAndroidJniObject /*123*/ {
 	var convArg0 = qtrt.CString(fieldName)
 	defer qtrt.FreeMem(convArg0)
@@ -215,7 +215,7 @@ func QAndroidJniObject_FromString(string string) *QAndroidJniObject /*123*/ {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:159
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toString()
+// [8] QString toString() const
 func (this *QAndroidJniObject) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAndroidJniObject8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -245,7 +245,7 @@ func QAndroidJniObject_IsClassAvailable(className string) bool {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:162
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QAndroidJniObject) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAndroidJniObject7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

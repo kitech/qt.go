@@ -128,7 +128,7 @@ func DeleteQMimeType(this *QMimeType) {
 // /usr/include/qt/QtCore/qmimetype.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QMimeType &)
+// [1] bool operator==(const QMimeType &) const
 func (this *QMimeType) Operator_equal_equal(other QMimeType_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QMimeType_PTR() != nil {
@@ -142,7 +142,7 @@ func (this *QMimeType) Operator_equal_equal(other QMimeType_ITF) bool {
 // /usr/include/qt/QtCore/qmimetype.h:93
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QMimeType &)
+// [1] bool operator!=(const QMimeType &) const
 func (this *QMimeType) Operator_not_equal(other QMimeType_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QMimeType_PTR() != nil {
@@ -156,7 +156,7 @@ func (this *QMimeType) Operator_not_equal(other QMimeType_ITF) bool {
 // /usr/include/qt/QtCore/qmimetype.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QMimeType) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,7 +166,7 @@ func (this *QMimeType) IsValid() bool {
 // /usr/include/qt/QtCore/qmimetype.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isDefault()
+// [1] bool isDefault() const
 func (this *QMimeType) IsDefault() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType9isDefaultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +176,7 @@ func (this *QMimeType) IsDefault() bool {
 // /usr/include/qt/QtCore/qmimetype.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QMimeType) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,7 +189,7 @@ func (this *QMimeType) Name() string {
 // /usr/include/qt/QtCore/qmimetype.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString comment()
+// [8] QString comment() const
 func (this *QMimeType) Comment() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType7commentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func (this *QMimeType) Comment() string {
 // /usr/include/qt/QtCore/qmimetype.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString genericIconName()
+// [8] QString genericIconName() const
 func (this *QMimeType) GenericIconName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType15genericIconNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -215,7 +215,7 @@ func (this *QMimeType) GenericIconName() string {
 // /usr/include/qt/QtCore/qmimetype.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString iconName()
+// [8] QString iconName() const
 func (this *QMimeType) IconName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType8iconNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,7 +228,7 @@ func (this *QMimeType) IconName() string {
 // /usr/include/qt/QtCore/qmimetype.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList globPatterns()
+// [8] QStringList globPatterns() const
 func (this *QMimeType) GlobPatterns() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType12globPatternsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -240,7 +240,7 @@ func (this *QMimeType) GlobPatterns() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qmimetype.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList parentMimeTypes()
+// [8] QStringList parentMimeTypes() const
 func (this *QMimeType) ParentMimeTypes() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType15parentMimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -252,7 +252,7 @@ func (this *QMimeType) ParentMimeTypes() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qmimetype.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList allAncestors()
+// [8] QStringList allAncestors() const
 func (this *QMimeType) AllAncestors() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType12allAncestorsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -264,7 +264,7 @@ func (this *QMimeType) AllAncestors() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qmimetype.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList aliases()
+// [8] QStringList aliases() const
 func (this *QMimeType) Aliases() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType7aliasesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -276,7 +276,7 @@ func (this *QMimeType) Aliases() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qmimetype.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList suffixes()
+// [8] QStringList suffixes() const
 func (this *QMimeType) Suffixes() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType8suffixesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func (this *QMimeType) Suffixes() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qmimetype.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString preferredSuffix()
+// [8] QString preferredSuffix() const
 func (this *QMimeType) PreferredSuffix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType15preferredSuffixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -301,7 +301,7 @@ func (this *QMimeType) PreferredSuffix() string {
 // /usr/include/qt/QtCore/qmimetype.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool inherits(const QString &)
+// [1] bool inherits(const QString &) const
 func (this *QMimeType) Inherits(mimeTypeName string) bool {
 	var tmpArg0 = NewQString_5(mimeTypeName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -313,7 +313,7 @@ func (this *QMimeType) Inherits(mimeTypeName string) bool {
 // /usr/include/qt/QtCore/qmimetype.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString filterString()
+// [8] QString filterString() const
 func (this *QMimeType) FilterString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType12filterStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

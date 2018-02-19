@@ -116,7 +116,7 @@ func DeleteQAccessibleTextUpdateEvent(this *QAccessibleTextUpdateEvent) {
 // /usr/include/qt/QtGui/qaccessible.h:879
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QString textRemoved()
+// [8] QString textRemoved() const
 func (this *QAccessibleTextUpdateEvent) TextRemoved() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent11textRemovedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,7 +129,7 @@ func (this *QAccessibleTextUpdateEvent) TextRemoved() string {
 // /usr/include/qt/QtGui/qaccessible.h:882
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QString textInserted()
+// [8] QString textInserted() const
 func (this *QAccessibleTextUpdateEvent) TextInserted() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent12textInsertedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,7 +142,7 @@ func (this *QAccessibleTextUpdateEvent) TextInserted() string {
 // /usr/include/qt/QtGui/qaccessible.h:885
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int changePosition()
+// [4] int changePosition() const
 func (this *QAccessibleTextUpdateEvent) ChangePosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent14changePositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

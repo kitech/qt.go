@@ -77,7 +77,7 @@ func (*QAbstractState) NewFromPointer(cthis unsafe.Pointer) *QAbstractState {
 // /usr/include/qt/QtCore/qabstractstate.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAbstractState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAbstractState10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,7 +98,7 @@ func DeleteQAbstractState(this *QAbstractState) {
 // /usr/include/qt/QtCore/qabstractstate.h:60
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QState * parentState()
+// [8] QState * parentState() const
 func (this *QAbstractState) ParentState() *QState /*777 QState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAbstractState11parentStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -108,7 +108,7 @@ func (this *QAbstractState) ParentState() *QState /*777 QState **/ {
 // /usr/include/qt/QtCore/qabstractstate.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStateMachine * machine()
+// [8] QStateMachine * machine() const
 func (this *QAbstractState) Machine() *QStateMachine /*777 QStateMachine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAbstractState7machineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QAbstractState) Machine() *QStateMachine /*777 QStateMachine **/ {
 // /usr/include/qt/QtCore/qabstractstate.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool active()
+// [1] bool active() const
 func (this *QAbstractState) Active() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAbstractState6activeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +143,20 @@ func NewQAbstractState(parent QState_ITF /*777 QState **/) *QAbstractState {
 	if parent != nil && parent.QState_PTR() != nil {
 		convArg0 = parent.QState_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAbstractStateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractState")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qabstractstate.h:71
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void QAbstractState(QState *)
+func NewQAbstractState__() *QAbstractState {
+	// arg: 0, QState *=Pointer, QState=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractStateFromPointer(unsafe.Pointer(uintptr(rv)))

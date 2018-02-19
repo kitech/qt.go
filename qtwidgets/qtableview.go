@@ -189,7 +189,7 @@ func (*QTableView) NewFromPointer(cthis unsafe.Pointer) *QTableView {
 // /usr/include/qt/QtWidgets/qtableview.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTableView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -205,6 +205,20 @@ func NewQTableView(parent QWidget_ITF /*777 QWidget **/) *QTableView {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTableViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTableView")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qtableview.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTableView(QWidget *)
+func NewQTableView__() *QTableView {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTableViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -274,7 +288,7 @@ func (this *QTableView) DoItemsLayout() {
 // /usr/include/qt/QtWidgets/qtableview.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QHeaderView * horizontalHeader()
+// [8] QHeaderView * horizontalHeader() const
 func (this *QTableView) HorizontalHeader() *QHeaderView /*777 QHeaderView **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView16horizontalHeaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -284,7 +298,7 @@ func (this *QTableView) HorizontalHeader() *QHeaderView /*777 QHeaderView **/ {
 // /usr/include/qt/QtWidgets/qtableview.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QHeaderView * verticalHeader()
+// [8] QHeaderView * verticalHeader() const
 func (this *QTableView) VerticalHeader() *QHeaderView /*777 QHeaderView **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView14verticalHeaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -320,7 +334,7 @@ func (this *QTableView) SetVerticalHeader(header QHeaderView_ITF /*777 QHeaderVi
 // /usr/include/qt/QtWidgets/qtableview.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int rowViewportPosition(int)
+// [4] int rowViewportPosition(int) const
 func (this *QTableView) RowViewportPosition(row int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView19rowViewportPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -330,7 +344,7 @@ func (this *QTableView) RowViewportPosition(row int) int {
 // /usr/include/qt/QtWidgets/qtableview.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int rowAt(int)
+// [4] int rowAt(int) const
 func (this *QTableView) RowAt(y int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView5rowAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	qtrt.ErrPrint(err, rv)
@@ -349,7 +363,7 @@ func (this *QTableView) SetRowHeight(row int, height int) {
 // /usr/include/qt/QtWidgets/qtableview.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int rowHeight(int)
+// [4] int rowHeight(int) const
 func (this *QTableView) RowHeight(row int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView9rowHeightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -359,7 +373,7 @@ func (this *QTableView) RowHeight(row int) int {
 // /usr/include/qt/QtWidgets/qtableview.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int columnViewportPosition(int)
+// [4] int columnViewportPosition(int) const
 func (this *QTableView) ColumnViewportPosition(column int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView22columnViewportPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -369,7 +383,7 @@ func (this *QTableView) ColumnViewportPosition(column int) int {
 // /usr/include/qt/QtWidgets/qtableview.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int columnAt(int)
+// [4] int columnAt(int) const
 func (this *QTableView) ColumnAt(x int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView8columnAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	qtrt.ErrPrint(err, rv)
@@ -388,7 +402,7 @@ func (this *QTableView) SetColumnWidth(column int, width int) {
 // /usr/include/qt/QtWidgets/qtableview.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int columnWidth(int)
+// [4] int columnWidth(int) const
 func (this *QTableView) ColumnWidth(column int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView11columnWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -398,7 +412,7 @@ func (this *QTableView) ColumnWidth(column int) int {
 // /usr/include/qt/QtWidgets/qtableview.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRowHidden(int)
+// [1] bool isRowHidden(int) const
 func (this *QTableView) IsRowHidden(row int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView11isRowHiddenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -417,7 +431,7 @@ func (this *QTableView) SetRowHidden(row int, hide bool) {
 // /usr/include/qt/QtWidgets/qtableview.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isColumnHidden(int)
+// [1] bool isColumnHidden(int) const
 func (this *QTableView) IsColumnHidden(column int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView14isColumnHiddenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -445,7 +459,7 @@ func (this *QTableView) SetSortingEnabled(enable bool) {
 // /usr/include/qt/QtWidgets/qtableview.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSortingEnabled()
+// [1] bool isSortingEnabled() const
 func (this *QTableView) IsSortingEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView16isSortingEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -455,7 +469,7 @@ func (this *QTableView) IsSortingEnabled() bool {
 // /usr/include/qt/QtWidgets/qtableview.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool showGrid()
+// [1] bool showGrid() const
 func (this *QTableView) ShowGrid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView8showGridEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -465,7 +479,7 @@ func (this *QTableView) ShowGrid() bool {
 // /usr/include/qt/QtWidgets/qtableview.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::PenStyle gridStyle()
+// [4] Qt::PenStyle gridStyle() const
 func (this *QTableView) GridStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView9gridStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -493,7 +507,7 @@ func (this *QTableView) SetWordWrap(on bool) {
 // /usr/include/qt/QtWidgets/qtableview.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool wordWrap()
+// [1] bool wordWrap() const
 func (this *QTableView) WordWrap() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView8wordWrapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -512,7 +526,7 @@ func (this *QTableView) SetCornerButtonEnabled(enable bool) {
 // /usr/include/qt/QtWidgets/qtableview.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isCornerButtonEnabled()
+// [1] bool isCornerButtonEnabled() const
 func (this *QTableView) IsCornerButtonEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView21isCornerButtonEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -522,7 +536,7 @@ func (this *QTableView) IsCornerButtonEnabled() bool {
 // /usr/include/qt/QtWidgets/qtableview.h:112
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect visualRect(const QModelIndex &)
+// [16] QRect visualRect(const QModelIndex &) const
 func (this *QTableView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -548,10 +562,25 @@ func (this *QTableView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qtableview.h:113
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+func (this *QTableView) ScrollTo__(index qtcore.QModelIndex_ITF) {
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
+	// arg: 1, QAbstractItemView::ScrollHint=Enum, QAbstractItemView::ScrollHint=Enum,
+	hint := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qtableview.h:114
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [24] QModelIndex indexAt(const QPoint &)
+// [24] QModelIndex indexAt(const QPoint &) const
 func (this *QTableView) IndexAt(p qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -576,7 +605,7 @@ func (this *QTableView) SetSpan(row int, column int, rowSpan int, columnSpan int
 // /usr/include/qt/QtWidgets/qtableview.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int rowSpan(int, int)
+// [4] int rowSpan(int, int) const
 func (this *QTableView) RowSpan(row int, column int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView7rowSpanEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -586,7 +615,7 @@ func (this *QTableView) RowSpan(row int, column int) int {
 // /usr/include/qt/QtWidgets/qtableview.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int columnSpan(int, int)
+// [4] int columnSpan(int, int) const
 func (this *QTableView) ColumnSpan(row int, column int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView10columnSpanEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -785,7 +814,7 @@ func (this *QTableView) ScrollContentsBy(dx int, dy int) {
 // /usr/include/qt/QtWidgets/qtableview.h:149
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [192] QStyleOptionViewItem viewOptions()
+// [192] QStyleOptionViewItem viewOptions() const
 func (this *QTableView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView11viewOptionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -823,7 +852,7 @@ func (this *QTableView) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEven
 // /usr/include/qt/QtWidgets/qtableview.h:154
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int horizontalOffset()
+// [4] int horizontalOffset() const
 func (this *QTableView) HorizontalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView16horizontalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -833,7 +862,7 @@ func (this *QTableView) HorizontalOffset() int {
 // /usr/include/qt/QtWidgets/qtableview.h:155
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int verticalOffset()
+// [4] int verticalOffset() const
 func (this *QTableView) VerticalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView14verticalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -868,7 +897,7 @@ func (this *QTableView) SetSelection(rect qtcore.QRect_ITF, command int) {
 // /usr/include/qt/QtWidgets/qtableview.h:159
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QRegion visualRegionForSelection(const QItemSelection &)
+// [8] QRegion visualRegionForSelection(const QItemSelection &) const
 func (this *QTableView) VisualRegionForSelection(selection qtcore.QItemSelection_ITF) *qtgui.QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if selection != nil && selection.QItemSelection_PTR() != nil {
@@ -884,7 +913,7 @@ func (this *QTableView) VisualRegionForSelection(selection qtcore.QItemSelection
 // /usr/include/qt/QtWidgets/qtableview.h:160
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QModelIndexList selectedIndexes()
+// [8] QModelIndexList selectedIndexes() const
 func (this *QTableView) SelectedIndexes() *qtcore.QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView15selectedIndexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -904,7 +933,7 @@ func (this *QTableView) UpdateGeometries() {
 // /usr/include/qt/QtWidgets/qtableview.h:164
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QSize viewportSizeHint()
+// [8] QSize viewportSizeHint() const
 func (this *QTableView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -916,7 +945,7 @@ func (this *QTableView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qtableview.h:166
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int sizeHintForRow(int)
+// [4] int sizeHintForRow(int) const
 func (this *QTableView) SizeHintForRow(row int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView14sizeHintForRowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -926,7 +955,7 @@ func (this *QTableView) SizeHintForRow(row int) int {
 // /usr/include/qt/QtWidgets/qtableview.h:167
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int sizeHintForColumn(int)
+// [4] int sizeHintForColumn(int) const
 func (this *QTableView) SizeHintForColumn(column int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView17sizeHintForColumnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -954,7 +983,7 @@ func (this *QTableView) HorizontalScrollbarAction(action int) {
 // /usr/include/qt/QtWidgets/qtableview.h:172
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool isIndexHidden(const QModelIndex &)
+// [1] bool isIndexHidden(const QModelIndex &) const
 func (this *QTableView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {

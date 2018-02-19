@@ -107,7 +107,7 @@ func NewQLinearGradient_2(xStart float64, yStart float64, xFinalStop float64, yF
 // /usr/include/qt/QtGui/qbrush.h:261
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF start()
+// [16] QPointF start() const
 func (this *QLinearGradient) Start() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QLinearGradient5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,7 +141,7 @@ func (this *QLinearGradient) SetStart_1(x float64, y float64) {
 // /usr/include/qt/QtGui/qbrush.h:265
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF finalStop()
+// [16] QPointF finalStop() const
 func (this *QLinearGradient) FinalStop() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QLinearGradient9finalStopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

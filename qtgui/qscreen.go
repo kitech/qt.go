@@ -63,7 +63,7 @@ func (*QScreen) NewFromPointer(cthis unsafe.Pointer) *QScreen {
 // /usr/include/qt/QtGui/qscreen.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QScreen) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -84,7 +84,7 @@ func DeleteQScreen(this *QScreen) {
 // /usr/include/qt/QtGui/qscreen.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QScreen) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -97,7 +97,7 @@ func (this *QScreen) Name() string {
 // /usr/include/qt/QtGui/qscreen.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString manufacturer()
+// [8] QString manufacturer() const
 func (this *QScreen) Manufacturer() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen12manufacturerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,7 +110,7 @@ func (this *QScreen) Manufacturer() string {
 // /usr/include/qt/QtGui/qscreen.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString model()
+// [8] QString model() const
 func (this *QScreen) Model() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -123,7 +123,7 @@ func (this *QScreen) Model() string {
 // /usr/include/qt/QtGui/qscreen.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString serialNumber()
+// [8] QString serialNumber() const
 func (this *QScreen) SerialNumber() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen12serialNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,7 +136,7 @@ func (this *QScreen) SerialNumber() string {
 // /usr/include/qt/QtGui/qscreen.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int depth()
+// [4] int depth() const
 func (this *QScreen) Depth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen5depthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,7 +146,7 @@ func (this *QScreen) Depth() int {
 // /usr/include/qt/QtGui/qscreen.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize size()
+// [8] QSize size() const
 func (this *QScreen) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func (this *QScreen) Size() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qscreen.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect geometry()
+// [16] QRect geometry() const
 func (this *QScreen) Geometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +170,7 @@ func (this *QScreen) Geometry() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qscreen.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QSizeF physicalSize()
+// [16] QSizeF physicalSize() const
 func (this *QScreen) PhysicalSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen12physicalSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +182,7 @@ func (this *QScreen) PhysicalSize() *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtGui/qscreen.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal physicalDotsPerInchX()
+// [8] qreal physicalDotsPerInchX() const
 func (this *QScreen) PhysicalDotsPerInchX() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen20physicalDotsPerInchXEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func (this *QScreen) PhysicalDotsPerInchX() float64 {
 // /usr/include/qt/QtGui/qscreen.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal physicalDotsPerInchY()
+// [8] qreal physicalDotsPerInchY() const
 func (this *QScreen) PhysicalDotsPerInchY() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen20physicalDotsPerInchYEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func (this *QScreen) PhysicalDotsPerInchY() float64 {
 // /usr/include/qt/QtGui/qscreen.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal physicalDotsPerInch()
+// [8] qreal physicalDotsPerInch() const
 func (this *QScreen) PhysicalDotsPerInch() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen19physicalDotsPerInchEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -212,7 +212,7 @@ func (this *QScreen) PhysicalDotsPerInch() float64 {
 // /usr/include/qt/QtGui/qscreen.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal logicalDotsPerInchX()
+// [8] qreal logicalDotsPerInchX() const
 func (this *QScreen) LogicalDotsPerInchX() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen19logicalDotsPerInchXEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -222,7 +222,7 @@ func (this *QScreen) LogicalDotsPerInchX() float64 {
 // /usr/include/qt/QtGui/qscreen.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal logicalDotsPerInchY()
+// [8] qreal logicalDotsPerInchY() const
 func (this *QScreen) LogicalDotsPerInchY() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen19logicalDotsPerInchYEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -232,7 +232,7 @@ func (this *QScreen) LogicalDotsPerInchY() float64 {
 // /usr/include/qt/QtGui/qscreen.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal logicalDotsPerInch()
+// [8] qreal logicalDotsPerInch() const
 func (this *QScreen) LogicalDotsPerInch() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen18logicalDotsPerInchEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,7 +242,7 @@ func (this *QScreen) LogicalDotsPerInch() float64 {
 // /usr/include/qt/QtGui/qscreen.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal devicePixelRatio()
+// [8] qreal devicePixelRatio() const
 func (this *QScreen) DevicePixelRatio() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen16devicePixelRatioEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -252,7 +252,7 @@ func (this *QScreen) DevicePixelRatio() float64 {
 // /usr/include/qt/QtGui/qscreen.h:124
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize availableSize()
+// [8] QSize availableSize() const
 func (this *QScreen) AvailableSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen13availableSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -264,7 +264,7 @@ func (this *QScreen) AvailableSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qscreen.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect availableGeometry()
+// [16] QRect availableGeometry() const
 func (this *QScreen) AvailableGeometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen17availableGeometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -276,7 +276,7 @@ func (this *QScreen) AvailableGeometry() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qscreen.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize virtualSize()
+// [8] QSize virtualSize() const
 func (this *QScreen) VirtualSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen11virtualSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func (this *QScreen) VirtualSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qscreen.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect virtualGeometry()
+// [16] QRect virtualGeometry() const
 func (this *QScreen) VirtualGeometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen15virtualGeometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -300,7 +300,7 @@ func (this *QScreen) VirtualGeometry() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qscreen.h:132
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize availableVirtualSize()
+// [8] QSize availableVirtualSize() const
 func (this *QScreen) AvailableVirtualSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen20availableVirtualSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -312,7 +312,7 @@ func (this *QScreen) AvailableVirtualSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qscreen.h:133
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect availableVirtualGeometry()
+// [16] QRect availableVirtualGeometry() const
 func (this *QScreen) AvailableVirtualGeometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen24availableVirtualGeometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -324,7 +324,7 @@ func (this *QScreen) AvailableVirtualGeometry() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qscreen.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ScreenOrientation primaryOrientation()
+// [4] Qt::ScreenOrientation primaryOrientation() const
 func (this *QScreen) PrimaryOrientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen18primaryOrientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -334,7 +334,7 @@ func (this *QScreen) PrimaryOrientation() int {
 // /usr/include/qt/QtGui/qscreen.h:136
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ScreenOrientation orientation()
+// [4] Qt::ScreenOrientation orientation() const
 func (this *QScreen) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,7 +344,7 @@ func (this *QScreen) Orientation() int {
 // /usr/include/qt/QtGui/qscreen.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ScreenOrientation nativeOrientation()
+// [4] Qt::ScreenOrientation nativeOrientation() const
 func (this *QScreen) NativeOrientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen17nativeOrientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -354,7 +354,7 @@ func (this *QScreen) NativeOrientation() int {
 // /usr/include/qt/QtGui/qscreen.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ScreenOrientations orientationUpdateMask()
+// [4] Qt::ScreenOrientations orientationUpdateMask() const
 func (this *QScreen) OrientationUpdateMask() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen21orientationUpdateMaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -373,7 +373,7 @@ func (this *QScreen) SetOrientationUpdateMask(mask int) {
 // /usr/include/qt/QtGui/qscreen.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int angleBetween(Qt::ScreenOrientation, Qt::ScreenOrientation)
+// [4] int angleBetween(Qt::ScreenOrientation, Qt::ScreenOrientation) const
 func (this *QScreen) AngleBetween(a int, b int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen12angleBetweenEN2Qt17ScreenOrientationES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, b)
 	qtrt.ErrPrint(err, rv)
@@ -383,7 +383,7 @@ func (this *QScreen) AngleBetween(a int, b int) int {
 // /usr/include/qt/QtGui/qscreen.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform transformBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &)
+// [88] QTransform transformBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &) const
 func (this *QScreen) TransformBetween(a int, b int, target qtcore.QRect_ITF) *QTransform /*123*/ {
 	var convArg2 unsafe.Pointer
 	if target != nil && target.QRect_PTR() != nil {
@@ -399,7 +399,7 @@ func (this *QScreen) TransformBetween(a int, b int, target qtcore.QRect_ITF) *QT
 // /usr/include/qt/QtGui/qscreen.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect mapBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &)
+// [16] QRect mapBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &) const
 func (this *QScreen) MapBetween(a int, b int, rect qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
 	var convArg2 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -415,7 +415,7 @@ func (this *QScreen) MapBetween(a int, b int, rect qtcore.QRect_ITF) *qtcore.QRe
 // /usr/include/qt/QtGui/qscreen.h:146
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isPortrait(Qt::ScreenOrientation)
+// [1] bool isPortrait(Qt::ScreenOrientation) const
 func (this *QScreen) IsPortrait(orientation int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen10isPortraitEN2Qt17ScreenOrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	qtrt.ErrPrint(err, rv)
@@ -425,7 +425,7 @@ func (this *QScreen) IsPortrait(orientation int) bool {
 // /usr/include/qt/QtGui/qscreen.h:147
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isLandscape(Qt::ScreenOrientation)
+// [1] bool isLandscape(Qt::ScreenOrientation) const
 func (this *QScreen) IsLandscape(orientation int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen11isLandscapeEN2Qt17ScreenOrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	qtrt.ErrPrint(err, rv)
@@ -444,10 +444,78 @@ func (this *QScreen) GrabWindow(window uint64, x int, y int, w int, h int) *QPix
 	return rv2
 }
 
+// /usr/include/qt/QtGui/qscreen.h:149
+// index:0
+// Public Visibility=Default Availability=Available
+// [32] QPixmap grabWindow(WId, int, int, int, int)
+func (this *QScreen) GrabWindow__(window uint64) *QPixmap /*123*/ {
+	// arg: 1, int=Int, =Invalid,
+	x := 0
+	// arg: 2, int=Int, =Invalid,
+	y := 0
+	// arg: 3, int=Int, =Invalid,
+	w := -1
+	// arg: 4, int=Int, =Invalid,
+	h := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPixmap)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qscreen.h:149
+// index:0
+// Public Visibility=Default Availability=Available
+// [32] QPixmap grabWindow(WId, int, int, int, int)
+func (this *QScreen) GrabWindow__1(window uint64, x int) *QPixmap /*123*/ {
+	// arg: 2, int=Int, =Invalid,
+	y := 0
+	// arg: 3, int=Int, =Invalid,
+	w := -1
+	// arg: 4, int=Int, =Invalid,
+	h := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPixmap)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qscreen.h:149
+// index:0
+// Public Visibility=Default Availability=Available
+// [32] QPixmap grabWindow(WId, int, int, int, int)
+func (this *QScreen) GrabWindow__2(window uint64, x int, y int) *QPixmap /*123*/ {
+	// arg: 3, int=Int, =Invalid,
+	w := -1
+	// arg: 4, int=Int, =Invalid,
+	h := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPixmap)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qscreen.h:149
+// index:0
+// Public Visibility=Default Availability=Available
+// [32] QPixmap grabWindow(WId, int, int, int, int)
+func (this *QScreen) GrabWindow__3(window uint64, x int, y int, w int) *QPixmap /*123*/ {
+	// arg: 4, int=Int, =Invalid,
+	h := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPixmap)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qscreen.h:151
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal refreshRate()
+// [8] qreal refreshRate() const
 func (this *QScreen) RefreshRate() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QScreen11refreshRateEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

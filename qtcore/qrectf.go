@@ -144,7 +144,7 @@ func NewQRectF_4(rect QRect_ITF) *QRectF {
 // /usr/include/qt/QtCore/qrect.h:520
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QRectF) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,7 +154,7 @@ func (this *QRectF) IsNull() bool {
 // /usr/include/qt/QtCore/qrect.h:521
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QRectF) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ func (this *QRectF) IsEmpty() bool {
 // /usr/include/qt/QtCore/qrect.h:522
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QRectF) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +174,7 @@ func (this *QRectF) IsValid() bool {
 // /usr/include/qt/QtCore/qrect.h:523
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF normalized()
+// [32] QRectF normalized() const
 func (this *QRectF) Normalized() *QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF10normalizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +186,7 @@ func (this *QRectF) Normalized() *QRectF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:525
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal left()
+// [8] qreal left() const
 func (this *QRectF) Left() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF4leftEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -196,7 +196,7 @@ func (this *QRectF) Left() float64 {
 // /usr/include/qt/QtCore/qrect.h:526
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal top()
+// [8] qreal top() const
 func (this *QRectF) Top() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF3topEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -206,7 +206,7 @@ func (this *QRectF) Top() float64 {
 // /usr/include/qt/QtCore/qrect.h:527
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal right()
+// [8] qreal right() const
 func (this *QRectF) Right() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF5rightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +216,7 @@ func (this *QRectF) Right() float64 {
 // /usr/include/qt/QtCore/qrect.h:528
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal bottom()
+// [8] qreal bottom() const
 func (this *QRectF) Bottom() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF6bottomEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -226,7 +226,7 @@ func (this *QRectF) Bottom() float64 {
 // /usr/include/qt/QtCore/qrect.h:530
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal x()
+// [8] qreal x() const
 func (this *QRectF) X() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -236,7 +236,7 @@ func (this *QRectF) X() float64 {
 // /usr/include/qt/QtCore/qrect.h:531
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal y()
+// [8] qreal y() const
 func (this *QRectF) Y() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -300,7 +300,7 @@ func (this *QRectF) SetY(pos float64) {
 // /usr/include/qt/QtCore/qrect.h:539
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QPointF topLeft()
+// [16] QPointF topLeft() const
 func (this *QRectF) TopLeft() *QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF7topLeftEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -312,7 +312,7 @@ func (this *QRectF) TopLeft() *QPointF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:540
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QPointF bottomRight()
+// [16] QPointF bottomRight() const
 func (this *QRectF) BottomRight() *QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF11bottomRightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -324,7 +324,7 @@ func (this *QRectF) BottomRight() *QPointF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:541
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QPointF topRight()
+// [16] QPointF topRight() const
 func (this *QRectF) TopRight() *QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF8topRightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -336,7 +336,7 @@ func (this *QRectF) TopRight() *QPointF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:542
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QPointF bottomLeft()
+// [16] QPointF bottomLeft() const
 func (this *QRectF) BottomLeft() *QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF10bottomLeftEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -348,7 +348,7 @@ func (this *QRectF) BottomLeft() *QPointF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:543
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QPointF center()
+// [16] QPointF center() const
 func (this *QRectF) Center() *QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF6centerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -535,7 +535,7 @@ func (this *QRectF) Translate_1(p QPointF_ITF) {
 // /usr/include/qt/QtCore/qrect.h:563
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QRectF translated(qreal, qreal)
+// [32] QRectF translated(qreal, qreal) const
 func (this *QRectF) Translated(dx float64, dy float64) *QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF10translatedEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -547,7 +547,7 @@ func (this *QRectF) Translated(dx float64, dy float64) *QRectF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:564
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [32] QRectF translated(const QPointF &)
+// [32] QRectF translated(const QPointF &) const
 func (this *QRectF) Translated_1(p QPointF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
@@ -563,7 +563,7 @@ func (this *QRectF) Translated_1(p QPointF_ITF) *QRectF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:566
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QRectF transposed()
+// [32] QRectF transposed() const
 func (this *QRectF) Transposed() *QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF10transposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -606,7 +606,7 @@ func (this *QRectF) SetRect(x float64, y float64, w float64, h float64) {
 // /usr/include/qt/QtCore/qrect.h:572
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void getRect(qreal *, qreal *, qreal *, qreal *)
+// [-2] void getRect(qreal *, qreal *, qreal *, qreal *) const
 func (this *QRectF) GetRect(x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, w unsafe.Pointer /*666*/, h unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF7getRectEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -624,7 +624,7 @@ func (this *QRectF) SetCoords(x1 float64, y1 float64, x2 float64, y2 float64) {
 // /usr/include/qt/QtCore/qrect.h:575
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void getCoords(qreal *, qreal *, qreal *, qreal *)
+// [-2] void getCoords(qreal *, qreal *, qreal *, qreal *) const
 func (this *QRectF) GetCoords(x1 unsafe.Pointer /*666*/, y1 unsafe.Pointer /*666*/, x2 unsafe.Pointer /*666*/, y2 unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF9getCoordsEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
@@ -642,7 +642,7 @@ func (this *QRectF) Adjust(x1 float64, y1 float64, x2 float64, y2 float64) {
 // /usr/include/qt/QtCore/qrect.h:578
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QRectF adjusted(qreal, qreal, qreal, qreal)
+// [32] QRectF adjusted(qreal, qreal, qreal, qreal) const
 func (this *QRectF) Adjusted(x1 float64, y1 float64, x2 float64, y2 float64) *QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF8adjustedEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
@@ -654,7 +654,7 @@ func (this *QRectF) Adjusted(x1 float64, y1 float64, x2 float64, y2 float64) *QR
 // /usr/include/qt/QtCore/qrect.h:580
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QSizeF size()
+// [16] QSizeF size() const
 func (this *QRectF) Size() *QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -666,7 +666,7 @@ func (this *QRectF) Size() *QSizeF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:581
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal width()
+// [8] qreal width() const
 func (this *QRectF) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -676,7 +676,7 @@ func (this *QRectF) Width() float64 {
 // /usr/include/qt/QtCore/qrect.h:582
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal height()
+// [8] qreal height() const
 func (this *QRectF) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -717,7 +717,7 @@ func (this *QRectF) SetSize(s QSizeF_ITF) {
 // /usr/include/qt/QtCore/qrect.h:587
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF operator|(const QRectF &)
+// [32] QRectF operator|(const QRectF &) const
 func (this *QRectF) Operator_or(r QRectF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -733,7 +733,7 @@ func (this *QRectF) Operator_or(r QRectF_ITF) *QRectF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:588
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF operator&(const QRectF &)
+// [32] QRectF operator&(const QRectF &) const
 func (this *QRectF) Operator_and(r QRectF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -781,7 +781,7 @@ func (this *QRectF) Operator_and_equal(r QRectF_ITF) *QRectF {
 // /usr/include/qt/QtCore/qrect.h:592
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QRectF &)
+// [1] bool contains(const QRectF &) const
 func (this *QRectF) Contains(r QRectF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -795,7 +795,7 @@ func (this *QRectF) Contains(r QRectF_ITF) bool {
 // /usr/include/qt/QtCore/qrect.h:593
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QPointF &)
+// [1] bool contains(const QPointF &) const
 func (this *QRectF) Contains_1(p QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
@@ -809,7 +809,7 @@ func (this *QRectF) Contains_1(p QPointF_ITF) bool {
 // /usr/include/qt/QtCore/qrect.h:594
 // index:2
 // Public inline Visibility=Default Availability=Available
-// [1] bool contains(qreal, qreal)
+// [1] bool contains(qreal, qreal) const
 func (this *QRectF) Contains_2(x float64, y float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF8containsEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -819,7 +819,7 @@ func (this *QRectF) Contains_2(x float64, y float64) bool {
 // /usr/include/qt/QtCore/qrect.h:595
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QRectF united(const QRectF &)
+// [32] QRectF united(const QRectF &) const
 func (this *QRectF) United(other QRectF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QRectF_PTR() != nil {
@@ -835,7 +835,7 @@ func (this *QRectF) United(other QRectF_ITF) *QRectF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:596
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QRectF intersected(const QRectF &)
+// [32] QRectF intersected(const QRectF &) const
 func (this *QRectF) Intersected(other QRectF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QRectF_PTR() != nil {
@@ -851,7 +851,7 @@ func (this *QRectF) Intersected(other QRectF_ITF) *QRectF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:597
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool intersects(const QRectF &)
+// [1] bool intersects(const QRectF &) const
 func (this *QRectF) Intersects(r QRectF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -865,7 +865,7 @@ func (this *QRectF) Intersects(r QRectF_ITF) bool {
 // /usr/include/qt/QtCore/qrect.h:599
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QRectF marginsAdded(const QMarginsF &)
+// [32] QRectF marginsAdded(const QMarginsF &) const
 func (this *QRectF) MarginsAdded(margins QMarginsF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMarginsF_PTR() != nil {
@@ -881,7 +881,7 @@ func (this *QRectF) MarginsAdded(margins QMarginsF_ITF) *QRectF /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:600
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QRectF marginsRemoved(const QMarginsF &)
+// [32] QRectF marginsRemoved(const QMarginsF &) const
 func (this *QRectF) MarginsRemoved(margins QMarginsF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMarginsF_PTR() != nil {
@@ -929,7 +929,7 @@ func (this *QRectF) Operator_minus_equal(margins QMarginsF_ITF) *QRectF {
 // /usr/include/qt/QtCore/qrect.h:612
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QRect toRect()
+// [16] QRect toRect() const
 func (this *QRectF) ToRect() *QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF6toRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -941,7 +941,7 @@ func (this *QRectF) ToRect() *QRect /*123*/ {
 // /usr/include/qt/QtCore/qrect.h:613
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect toAlignedRect()
+// [16] QRect toAlignedRect() const
 func (this *QRectF) ToAlignedRect() *QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF13toAlignedRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

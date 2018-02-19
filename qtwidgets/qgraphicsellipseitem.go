@@ -92,6 +92,20 @@ func NewQGraphicsEllipseItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:699
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsEllipseItem(QGraphicsItem *)
+func NewQGraphicsEllipseItem__() *QGraphicsEllipseItem {
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsEllipseItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsEllipseItem)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:700
 // index:1
 // Public Visibility=Default Availability=Available
@@ -105,6 +119,24 @@ func NewQGraphicsEllipseItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF 
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg1 = parent.QGraphicsItem_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2ERK6QRectFP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsEllipseItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsEllipseItem)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:700
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsEllipseItem(const QRectF &, QGraphicsItem *)
+func NewQGraphicsEllipseItem_1_(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2ERK6QRectFP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsEllipseItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -128,6 +160,20 @@ func NewQGraphicsEllipseItem_2(x float64, y float64, w float64, h float64, paren
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:701
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsEllipseItem(qreal, qreal, qreal, qreal, QGraphicsItem *)
+func NewQGraphicsEllipseItem_2_(x float64, y float64, w float64, h float64) *QGraphicsEllipseItem {
+	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg4 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, x, y, w, h, convArg4)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsEllipseItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsEllipseItem)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:702
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -142,7 +188,7 @@ func DeleteQGraphicsEllipseItem(this *QGraphicsEllipseItem) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:704
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF rect()
+// [32] QRectF rect() const
 func (this *QGraphicsEllipseItem) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +222,7 @@ func (this *QGraphicsEllipseItem) SetRect_1(x float64, y float64, w float64, h f
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:708
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int startAngle()
+// [4] int startAngle() const
 func (this *QGraphicsEllipseItem) StartAngle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem10startAngleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,7 +241,7 @@ func (this *QGraphicsEllipseItem) SetStartAngle(angle int) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:711
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int spanAngle()
+// [4] int spanAngle() const
 func (this *QGraphicsEllipseItem) SpanAngle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem9spanAngleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,7 +260,7 @@ func (this *QGraphicsEllipseItem) SetSpanAngle(angle int) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:714
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QRectF boundingRect()
+// [32] QRectF boundingRect() const
 func (this *QGraphicsEllipseItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -226,7 +272,7 @@ func (this *QGraphicsEllipseItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:715
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPainterPath shape()
+// [8] QPainterPath shape() const
 func (this *QGraphicsEllipseItem) Shape() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem5shapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,7 +284,7 @@ func (this *QGraphicsEllipseItem) Shape() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:716
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool contains(const QPointF &)
+// [1] bool contains(const QPointF &) const
 func (this *QGraphicsEllipseItem) Contains(point qtcore.QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -270,10 +316,29 @@ func (this *QGraphicsEllipseItem) Paint(painter qtgui.QPainter_ITF /*777 QPainte
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:718
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
+func (this *QGraphicsEllipseItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOptionGraphicsItem_PTR() != nil {
+		convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
+	}
+	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:720
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isObscuredBy(const QGraphicsItem *)
+// [1] bool isObscuredBy(const QGraphicsItem *) const
 func (this *QGraphicsEllipseItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
@@ -287,7 +352,7 @@ func (this *QGraphicsEllipseItem) IsObscuredBy(item QGraphicsItem_ITF /*777 cons
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:721
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPainterPath opaqueArea()
+// [8] QPainterPath opaqueArea() const
 func (this *QGraphicsEllipseItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem10opaqueAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -299,7 +364,7 @@ func (this *QGraphicsEllipseItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:724
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int type()
+// [4] int type() const
 func (this *QGraphicsEllipseItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -309,7 +374,7 @@ func (this *QGraphicsEllipseItem) Type() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:727
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool supportsExtension(enum QGraphicsItem::Extension)
+// [1] bool supportsExtension(enum QGraphicsItem::Extension) const
 func (this *QGraphicsEllipseItem) SupportsExtension(extension int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem17supportsExtensionEN13QGraphicsItem9ExtensionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	qtrt.ErrPrint(err, rv)
@@ -332,7 +397,7 @@ func (this *QGraphicsEllipseItem) SetExtension(extension int, variant qtcore.QVa
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:729
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QVariant extension(const QVariant &)
+// [16] QVariant extension(const QVariant &) const
 func (this *QGraphicsEllipseItem) Extension(variant qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if variant != nil && variant.QVariant_PTR() != nil {

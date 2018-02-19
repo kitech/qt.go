@@ -59,7 +59,7 @@ func (*QRandomGenerator64) NewFromPointer(cthis unsafe.Pointer) *QRandomGenerato
 	return NewQRandomGenerator64FromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qrandom.h:209
+// /usr/include/qt/QtCore/qrandom.h:216
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] quint64 generate()
@@ -69,7 +69,7 @@ func (this *QRandomGenerator64) Generate() uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qrandom.h:212
+// /usr/include/qt/QtCore/qrandom.h:219
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QRandomGenerator64::result_type operator()()
@@ -79,7 +79,7 @@ func (this *QRandomGenerator64) Operator_fncall() uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qrandom.h:215
+// /usr/include/qt/QtCore/qrandom.h:222
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator64(quint32)
@@ -91,19 +91,33 @@ func NewQRandomGenerator64(seedValue uint) *QRandomGenerator64 {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qrandom.h:221
-// index:1
+// /usr/include/qt/QtCore/qrandom.h:222
+// index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void QRandomGenerator64(const quint32 *, qsizetype)
-func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRandomGenerator64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", qtrt.FFI_TYPE_POINTER, seedBuffer, len)
+// [-2] void QRandomGenerator64(quint32)
+func NewQRandomGenerator64__() *QRandomGenerator64 {
+	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int
+	seedValue := 1
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2Ej", qtrt.FFI_TYPE_POINTER, seedValue)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qrandom.h:227
+// /usr/include/qt/QtCore/qrandom.h:228
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void QRandomGenerator64(const quint32 *, qsizetype)
+func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRandomGenerator64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", qtrt.FFI_TYPE_POINTER, seedBuffer, len_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qrandom.h:234
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator64(const quint32 *, const quint32 *)
@@ -115,7 +129,7 @@ func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qrandom.h:230
+// /usr/include/qt/QtCore/qrandom.h:237
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator64(const QRandomGenerator &)
@@ -131,7 +145,7 @@ func NewQRandomGenerator64_3(other QRandomGenerator_ITF) *QRandomGenerator64 {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qrandom.h:232
+// /usr/include/qt/QtCore/qrandom.h:239
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void discard(unsigned long long)
@@ -140,7 +154,7 @@ func (this *QRandomGenerator64) Discard(z uint64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qrandom.h:239
+// /usr/include/qt/QtCore/qrandom.h:246
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QRandomGenerator64::result_type min()
@@ -155,7 +169,7 @@ func QRandomGenerator64_Min() uint64 {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qrandom.h:240
+// /usr/include/qt/QtCore/qrandom.h:247
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QRandomGenerator64::result_type max()
@@ -170,7 +184,7 @@ func QRandomGenerator64_Max() uint64 {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qrandom.h:241
+// /usr/include/qt/QtCore/qrandom.h:248
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QRandomGenerator64 * system()
@@ -185,7 +199,7 @@ func QRandomGenerator64_System() *QRandomGenerator64 /*777 QRandomGenerator64 **
 	return rv
 }
 
-// /usr/include/qt/QtCore/qrandom.h:242
+// /usr/include/qt/QtCore/qrandom.h:249
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QRandomGenerator64 * global()
@@ -200,7 +214,7 @@ func QRandomGenerator64_Global() *QRandomGenerator64 /*777 QRandomGenerator64 **
 	return rv
 }
 
-// /usr/include/qt/QtCore/qrandom.h:243
+// /usr/include/qt/QtCore/qrandom.h:250
 // index:0
 // Public static Visibility=Default Availability=Available
 // [2512] QRandomGenerator64 securelySeeded()

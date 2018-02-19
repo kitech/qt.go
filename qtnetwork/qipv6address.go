@@ -75,7 +75,7 @@ func (this *QIPv6Address) Operator_get_index(index int) byte {
 // /usr/include/qt/QtNetwork/qhostaddress.h:61
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [1] quint8 operator[](int)
+// [1] quint8 operator[](int) const
 func (this *QIPv6Address) Operator_get_index_1(index int) byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QIPv6AddressixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)

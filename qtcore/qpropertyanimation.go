@@ -77,7 +77,7 @@ func (*QPropertyAnimation) NewFromPointer(cthis unsafe.Pointer) *QPropertyAnimat
 // /usr/include/qt/QtCore/qpropertyanimation.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +93,20 @@ func NewQPropertyAnimation(parent QObject_ITF /*777 QObject **/) *QPropertyAnima
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPropertyAnimation")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qpropertyanimation.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QPropertyAnimation(QObject *)
+func NewQPropertyAnimation__() *QPropertyAnimation {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -124,6 +138,28 @@ func NewQPropertyAnimation_1(target QObject_ITF /*777 QObject **/, propertyName 
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qpropertyanimation.h:59
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QPropertyAnimation(QObject *, const QByteArray &, QObject *)
+func NewQPropertyAnimation_1_(target QObject_ITF /*777 QObject **/, propertyName QByteArray_ITF) *QPropertyAnimation {
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QObject_PTR() != nil {
+		convArg0 = target.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if propertyName != nil && propertyName.QByteArray_PTR() != nil {
+		convArg1 = propertyName.QByteArray_PTR().GetCthis()
+	}
+	// arg: 2, QObject *=Pointer, QObject=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPropertyAnimation")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qpropertyanimation.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -138,7 +174,7 @@ func DeleteQPropertyAnimation(this *QPropertyAnimation) {
 // /usr/include/qt/QtCore/qpropertyanimation.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QObject * targetObject()
+// [8] QObject * targetObject() const
 func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation12targetObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,7 +197,7 @@ func (this *QPropertyAnimation) SetTargetObject(target QObject_ITF /*777 QObject
 // /usr/include/qt/QtCore/qpropertyanimation.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray propertyName()
+// [8] QByteArray propertyName() const
 func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation12propertyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

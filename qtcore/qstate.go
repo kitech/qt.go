@@ -77,7 +77,7 @@ func (*QState) NewFromPointer(cthis unsafe.Pointer) *QState {
 // /usr/include/qt/QtCore/qstate.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QState10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +93,20 @@ func NewQState(parent QState_ITF /*777 QState **/) *QState {
 	if parent != nil && parent.QState_PTR() != nil {
 		convArg0 = parent.QState_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QStateC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QState")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qstate.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QState(QState *)
+func NewQState__() *QState {
+	// arg: 0, QState *=Pointer, QState=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QStateC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,6 +130,20 @@ func NewQState_1(childMode int, parent QState_ITF /*777 QState **/) *QState {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qstate.h:75
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QState(enum QState::ChildMode, QState *)
+func NewQState_1_(childMode int) *QState {
+	// arg: 1, QState *=Pointer, QState=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QStateC2ENS_9ChildModeEPS_", qtrt.FFI_TYPE_POINTER, childMode, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QState")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qstate.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -130,7 +158,7 @@ func DeleteQState(this *QState) {
 // /usr/include/qt/QtCore/qstate.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractState * errorState()
+// [8] QAbstractState * errorState() const
 func (this *QState) ErrorState() *QAbstractState /*777 QAbstractState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QState10errorStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -213,7 +241,7 @@ func (this *QState) RemoveTransition(transition QAbstractTransition_ITF /*777 QA
 // /usr/include/qt/QtCore/qstate.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractState * initialState()
+// [8] QAbstractState * initialState() const
 func (this *QState) InitialState() *QAbstractState /*777 QAbstractState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QState12initialStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -236,7 +264,7 @@ func (this *QState) SetInitialState(state QAbstractState_ITF /*777 QAbstractStat
 // /usr/include/qt/QtCore/qstate.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QState::ChildMode childMode()
+// [4] QState::ChildMode childMode() const
 func (this *QState) ChildMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QState9childModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

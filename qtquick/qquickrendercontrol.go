@@ -66,7 +66,7 @@ func (*QQuickRenderControl) NewFromPointer(cthis unsafe.Pointer) *QQuickRenderCo
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQuickRenderControl) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickRenderControl10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -82,6 +82,20 @@ func NewQQuickRenderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QQuick
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQuickRenderControlFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickRenderControl")
+	return gothis
+}
+
+// /usr/include/qt/QtQuick/qquickrendercontrol.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickRenderControl(QObject *)
+func NewQQuickRenderControl__() *QQuickRenderControl {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickRenderControlFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -183,6 +197,22 @@ func QQuickRenderControl_RenderWindowFor(win QQuickWindow_ITF /*777 QQuickWindow
 	var nilthis *QQuickRenderControl
 	rv := nilthis.RenderWindowFor(win, offset)
 	return rv
+}
+
+// /usr/include/qt/QtQuick/qquickrendercontrol.h:71
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QWindow * renderWindowFor(QQuickWindow *, QPoint *)
+func (this *QQuickRenderControl) RenderWindowFor__(win QQuickWindow_ITF /*777 QQuickWindow **/) *qtgui.QWindow /*777 QWindow **/ {
+	var convArg0 unsafe.Pointer
+	if win != nil && win.QQuickWindow_PTR() != nil {
+		convArg0 = win.QQuickWindow_PTR().GetCthis()
+	}
+	// arg: 1, QPoint *=Pointer, QPoint=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl15renderWindowForEP12QQuickWindowP6QPoint", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return qtgui.NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:72

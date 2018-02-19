@@ -105,7 +105,7 @@ func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:223
 // index:0
 // Protected Visibility=Default Availability=Available
-// [1] bool isInitialized()
+// [1] bool isInitialized() const
 func (this *QAbstractOpenGLFunctions) IsInitialized() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13isInitializedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

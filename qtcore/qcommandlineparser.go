@@ -154,7 +154,7 @@ func (this *QCommandLineParser) SetApplicationDescription(description string) {
 // /usr/include/qt/QtCore/qcommandlineparser.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString applicationDescription()
+// [8] QString applicationDescription() const
 func (this *QCommandLineParser) ApplicationDescription() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser22applicationDescriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +175,21 @@ func (this *QCommandLineParser) AddPositionalArgument(name string, description s
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(syntax)
 	var convArg2 = tmpArg2.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qcommandlineparser.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addPositionalArgument(const QString &, const QString &, const QString &)
+func (this *QCommandLineParser) AddPositionalArgument__(name string, description string) {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(description)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, const QString &=LValueReference, QString=Record,
+	var convArg2 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -231,7 +246,7 @@ func (this *QCommandLineParser) Parse(arguments QStringList_ITF) bool {
 // /usr/include/qt/QtCore/qcommandlineparser.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString errorText()
+// [8] QString errorText() const
 func (this *QCommandLineParser) ErrorText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser9errorTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -244,7 +259,7 @@ func (this *QCommandLineParser) ErrorText() string {
 // /usr/include/qt/QtCore/qcommandlineparser.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSet(const QString &)
+// [1] bool isSet(const QString &) const
 func (this *QCommandLineParser) IsSet(name string) bool {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -256,7 +271,7 @@ func (this *QCommandLineParser) IsSet(name string) bool {
 // /usr/include/qt/QtCore/qcommandlineparser.h:94
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool isSet(const QCommandLineOption &)
+// [1] bool isSet(const QCommandLineOption &) const
 func (this *QCommandLineParser) IsSet_1(option QCommandLineOption_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QCommandLineOption_PTR() != nil {
@@ -270,7 +285,7 @@ func (this *QCommandLineParser) IsSet_1(option QCommandLineOption_ITF) bool {
 // /usr/include/qt/QtCore/qcommandlineparser.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString value(const QString &)
+// [8] QString value(const QString &) const
 func (this *QCommandLineParser) Value(name string) string {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -285,7 +300,7 @@ func (this *QCommandLineParser) Value(name string) string {
 // /usr/include/qt/QtCore/qcommandlineparser.h:95
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QString value(const QCommandLineOption &)
+// [8] QString value(const QCommandLineOption &) const
 func (this *QCommandLineParser) Value_1(option QCommandLineOption_ITF) string {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QCommandLineOption_PTR() != nil {
@@ -302,7 +317,7 @@ func (this *QCommandLineParser) Value_1(option QCommandLineOption_ITF) string {
 // /usr/include/qt/QtCore/qcommandlineparser.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList values(const QString &)
+// [8] QStringList values(const QString &) const
 func (this *QCommandLineParser) Values(name string) *QStringList /*123*/ {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -316,7 +331,7 @@ func (this *QCommandLineParser) Values(name string) *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qcommandlineparser.h:96
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QStringList values(const QCommandLineOption &)
+// [8] QStringList values(const QCommandLineOption &) const
 func (this *QCommandLineParser) Values_1(option QCommandLineOption_ITF) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QCommandLineOption_PTR() != nil {
@@ -332,7 +347,7 @@ func (this *QCommandLineParser) Values_1(option QCommandLineOption_ITF) *QString
 // /usr/include/qt/QtCore/qcommandlineparser.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList positionalArguments()
+// [8] QStringList positionalArguments() const
 func (this *QCommandLineParser) PositionalArguments() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser19positionalArgumentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,7 +359,7 @@ func (this *QCommandLineParser) PositionalArguments() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qcommandlineparser.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList optionNames()
+// [8] QStringList optionNames() const
 func (this *QCommandLineParser) OptionNames() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser11optionNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -356,7 +371,7 @@ func (this *QCommandLineParser) OptionNames() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qcommandlineparser.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList unknownOptionNames()
+// [8] QStringList unknownOptionNames() const
 func (this *QCommandLineParser) UnknownOptionNames() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser18unknownOptionNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -383,10 +398,21 @@ func (this *QCommandLineParser) ShowHelp(exitCode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qcommandlineparser.h:103
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void showHelp(int)
+func (this *QCommandLineParser) ShowHelp__() {
+	// arg: 0, int=Int, =Invalid,
+	exitCode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser8showHelpEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), exitCode)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qcommandlineparser.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString helpText()
+// [8] QString helpText() const
 func (this *QCommandLineParser) HelpText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser8helpTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

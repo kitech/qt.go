@@ -106,6 +106,20 @@ func QColormap_Instance(screen int) *QColormap /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtWidgets/qcolormap.h:63
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QColormap instance(int)
+func (this *QColormap) Instance__() *QColormap /*123*/ {
+	// arg: 0, int=Int, =Invalid,
+	screen := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormap8instanceEi", qtrt.FFI_TYPE_POINTER, screen)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQColormapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColormap)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qcolormap.h:66
 // index:0
 // Public Visibility=Default Availability=Available
@@ -136,7 +150,7 @@ func (this *QColormap) Operator_equal(colormap QColormap_ITF) *QColormap {
 // /usr/include/qt/QtWidgets/qcolormap.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QColormap::Mode mode()
+// [4] QColormap::Mode mode() const
 func (this *QColormap) Mode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap4modeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,7 +160,7 @@ func (this *QColormap) Mode() int {
 // /usr/include/qt/QtWidgets/qcolormap.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int depth()
+// [4] int depth() const
 func (this *QColormap) Depth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap5depthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -156,7 +170,7 @@ func (this *QColormap) Depth() int {
 // /usr/include/qt/QtWidgets/qcolormap.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int size()
+// [4] int size() const
 func (this *QColormap) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,7 +180,7 @@ func (this *QColormap) Size() int {
 // /usr/include/qt/QtWidgets/qcolormap.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint pixel(const QColor &)
+// [4] uint pixel(const QColor &) const
 func (this *QColormap) Pixel(color qtgui.QColor_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -180,7 +194,7 @@ func (this *QColormap) Pixel(color qtgui.QColor_ITF) uint {
 // /usr/include/qt/QtWidgets/qcolormap.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] const QColor colorAt(uint)
+// [16] const QColor colorAt(uint) const
 func (this *QColormap) ColorAt(pixel uint) *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap7colorAtEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pixel)
 	qtrt.ErrPrint(err, rv)

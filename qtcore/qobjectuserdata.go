@@ -61,7 +61,7 @@ func (*QObjectUserData) NewFromPointer(cthis unsafe.Pointer) *QObjectUserData {
 	return NewQObjectUserDataFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qobject.h:478
+// /usr/include/qt/QtCore/qobject.h:479
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QObjectUserData()

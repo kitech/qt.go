@@ -63,7 +63,7 @@ func (*QAbstractNetworkCache) NewFromPointer(cthis unsafe.Pointer) *QAbstractNet
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:116
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAbstractNetworkCache) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractNetworkCache10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,7 +141,7 @@ func (this *QAbstractNetworkCache) Remove(url qtcore.QUrl_ITF) bool {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:125
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] qint64 cacheSize()
+// [8] qint64 cacheSize() const
 func (this *QAbstractNetworkCache) CacheSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractNetworkCache9cacheSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,6 +180,20 @@ func NewQAbstractNetworkCache(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCacheC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAbstractNetworkCacheFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractNetworkCache")
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qabstractnetworkcache.h:134
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void QAbstractNetworkCache(QObject *)
+func NewQAbstractNetworkCache__() *QAbstractNetworkCache {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCacheC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractNetworkCacheFromPointer(unsafe.Pointer(uintptr(rv)))

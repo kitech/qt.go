@@ -75,6 +75,20 @@ func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 	return gothis
 }
 
+// /usr/include/qt/QtQml/qqmldebug.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlDebuggingEnabler(_Bool)
+func NewQQmlDebuggingEnabler__() *QQmlDebuggingEnabler {
+	// arg: 0, bool=Bool, =Invalid,
+	printWarning := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnablerC2Eb", qtrt.FFI_TYPE_POINTER, printWarning)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlDebuggingEnablerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQmlDebuggingEnabler)
+	return gothis
+}
+
 // /usr/include/qt/QtQml/qqmldebug.h:60
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -177,6 +191,32 @@ func QQmlDebuggingEnabler_StartTcpDebugServer(port int, mode int, hostName strin
 	return rv
 }
 
+// /usr/include/qt/QtQml/qqmldebug.h:67
+// index:0
+// Public static Visibility=Default Availability=Available
+// [1] bool startTcpDebugServer(int, enum QQmlDebuggingEnabler::StartMode, const QString &)
+func (this *QQmlDebuggingEnabler) StartTcpDebugServer__(port int) bool {
+	// arg: 1, QQmlDebuggingEnabler::StartMode=Enum, QQmlDebuggingEnabler::StartMode=Enum,
+	mode := 0
+	// arg: 2, const QString &=LValueReference, QString=Record,
+	var convArg2 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler19startTcpDebugServerEiNS_9StartModeERK7QString", qtrt.FFI_TYPE_POINTER, port, mode, convArg2)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtQml/qqmldebug.h:67
+// index:0
+// Public static Visibility=Default Availability=Available
+// [1] bool startTcpDebugServer(int, enum QQmlDebuggingEnabler::StartMode, const QString &)
+func (this *QQmlDebuggingEnabler) StartTcpDebugServer__1(port int, mode int) bool {
+	// arg: 2, const QString &=LValueReference, QString=Record,
+	var convArg2 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler19startTcpDebugServerEiNS_9StartModeERK7QString", qtrt.FFI_TYPE_POINTER, port, mode, convArg2)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtQml/qqmldebug.h:69
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -192,6 +232,20 @@ func QQmlDebuggingEnabler_ConnectToLocalDebugger(socketFileName string, mode int
 	var nilthis *QQmlDebuggingEnabler
 	rv := nilthis.ConnectToLocalDebugger(socketFileName, mode)
 	return rv
+}
+
+// /usr/include/qt/QtQml/qqmldebug.h:69
+// index:0
+// Public static Visibility=Default Availability=Available
+// [1] bool connectToLocalDebugger(const QString &, enum QQmlDebuggingEnabler::StartMode)
+func (this *QQmlDebuggingEnabler) ConnectToLocalDebugger__(socketFileName string) bool {
+	var tmpArg0 = qtcore.NewQString_5(socketFileName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QQmlDebuggingEnabler::StartMode=Enum, QQmlDebuggingEnabler::StartMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler22connectToLocalDebuggerERK7QStringNS_9StartModeE", qtrt.FFI_TYPE_POINTER, convArg0, mode)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 func DeleteQQmlDebuggingEnabler(this *QQmlDebuggingEnabler) {

@@ -63,7 +63,7 @@ func (*QHttpMultiPart) NewFromPointer(cthis unsafe.Pointer) *QHttpMultiPart {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QHttpMultiPart) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QHttpMultiPart10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -86,6 +86,20 @@ func NewQHttpMultiPart(parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiP
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:101
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QHttpMultiPart(QObject *)
+func NewQHttpMultiPart__() *QHttpMultiPart {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQHttpMultiPartFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QHttpMultiPart")
+	return gothis
+}
+
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:102
 // index:1
 // Public Visibility=Default Availability=Available
@@ -95,6 +109,20 @@ func NewQHttpMultiPart_1(contentType int, parent qtcore.QObject_ITF /*777 QObjec
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg1 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2ENS_11ContentTypeEP7QObject", qtrt.FFI_TYPE_POINTER, contentType, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQHttpMultiPartFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QHttpMultiPart")
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:102
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QHttpMultiPart(enum QHttpMultiPart::ContentType, QObject *)
+func NewQHttpMultiPart_1_(contentType int) *QHttpMultiPart {
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2ENS_11ContentTypeEP7QObject", qtrt.FFI_TYPE_POINTER, contentType, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHttpMultiPartFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -125,7 +153,7 @@ func (this *QHttpMultiPart) SetContentType(contentType int) {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray boundary()
+// [8] QByteArray boundary() const
 func (this *QHttpMultiPart) Boundary() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QHttpMultiPart8boundaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

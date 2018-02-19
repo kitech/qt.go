@@ -77,7 +77,7 @@ func (*QFileDevice) NewFromPointer(cthis unsafe.Pointer) *QFileDevice {
 // /usr/include/qt/QtCore/qfiledevice.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QFileDevice) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,7 +98,7 @@ func DeleteQFileDevice(this *QFileDevice) {
 // /usr/include/qt/QtCore/qfiledevice.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QFileDevice::FileError error()
+// [4] QFileDevice::FileError error() const
 func (this *QFileDevice) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -126,7 +126,7 @@ func (this *QFileDevice) Close() {
 // /usr/include/qt/QtCore/qfiledevice.h:105
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isSequential()
+// [1] bool isSequential() const
 func (this *QFileDevice) IsSequential() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice12isSequentialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,7 +136,7 @@ func (this *QFileDevice) IsSequential() bool {
 // /usr/include/qt/QtCore/qfiledevice.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int handle()
+// [4] int handle() const
 func (this *QFileDevice) Handle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,7 +146,7 @@ func (this *QFileDevice) Handle() int {
 // /usr/include/qt/QtCore/qfiledevice.h:108
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QString fileName()
+// [8] QString fileName() const
 func (this *QFileDevice) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,7 +159,7 @@ func (this *QFileDevice) FileName() string {
 // /usr/include/qt/QtCore/qfiledevice.h:110
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 pos()
+// [8] qint64 pos() const
 func (this *QFileDevice) Pos() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ func (this *QFileDevice) Seek(offset int64) bool {
 // /usr/include/qt/QtCore/qfiledevice.h:112
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool atEnd()
+// [1] bool atEnd() const
 func (this *QFileDevice) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,7 +199,7 @@ func (this *QFileDevice) Flush() bool {
 // /usr/include/qt/QtCore/qfiledevice.h:115
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 size()
+// [8] qint64 size() const
 func (this *QFileDevice) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -219,7 +219,7 @@ func (this *QFileDevice) Resize(sz int64) bool {
 // /usr/include/qt/QtCore/qfiledevice.h:118
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QFileDevice::Permissions permissions()
+// [4] QFileDevice::Permissions permissions() const
 func (this *QFileDevice) Permissions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice11permissionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -246,6 +246,18 @@ func (this *QFileDevice) Map(offset int64, size int64, flags int) unsafe.Pointer
 	return unsafe.Pointer(uintptr(rv))
 }
 
+// /usr/include/qt/QtCore/qfiledevice.h:127
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] uchar * map(qint64, qint64, enum QFileDevice::MemoryMapFlags)
+func (this *QFileDevice) Map__(offset int64, size int64) unsafe.Pointer /*666*/ {
+	// arg: 2, QFileDevice::MemoryMapFlags=Enum, QFileDevice::MemoryMapFlags=Enum,
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDevice3mapExxNS_14MemoryMapFlagsE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, size, flags)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
 // /usr/include/qt/QtCore/qfiledevice.h:128
 // index:0
 // Public Visibility=Default Availability=Available
@@ -259,7 +271,7 @@ func (this *QFileDevice) Unmap(address unsafe.Pointer /*666*/) bool {
 // /usr/include/qt/QtCore/qfiledevice.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime fileTime(QFileDevice::FileTime)
+// [8] QDateTime fileTime(QFileDevice::FileTime) const
 func (this *QFileDevice) FileTime(time int) *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice8fileTimeENS_8FileTimeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), time)
 	qtrt.ErrPrint(err, rv)

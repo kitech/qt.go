@@ -129,7 +129,7 @@ func (this *QAccessibleValueChangeEvent) SetValue(val qtcore.QVariant_ITF) {
 // /usr/include/qt/QtGui/qaccessible.h:914
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QVariant value()
+// [16] QVariant value() const
 func (this *QAccessibleValueChangeEvent) Value() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAccessibleValueChangeEvent5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

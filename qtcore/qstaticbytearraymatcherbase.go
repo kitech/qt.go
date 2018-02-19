@@ -85,7 +85,7 @@ func NewQStaticByteArrayMatcherBase(pattern string, n uint) *QStaticByteArrayMat
 // /usr/include/qt/QtCore/qbytearraymatcher.h:98
 // index:0
 // Protected Visibility=Default Availability=Available
-// [4] int indexOfIn(const char *, uint, const char *, int, int)
+// [4] int indexOfIn(const char *, uint, const char *, int, int) const
 func (this *QStaticByteArrayMatcherBase) IndexOfIn(needle string, nlen uint, haystack string, hlen int, from int) int {
 	var convArg0 = qtrt.CString(needle)
 	defer qtrt.FreeMem(convArg0)

@@ -96,7 +96,7 @@ func DeleteQRunnable(this *QRunnable) {
 // /usr/include/qt/QtCore/qrunnable.h:63
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool autoDelete()
+// [1] bool autoDelete() const
 func (this *QRunnable) AutoDelete() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QRunnable10autoDeleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -78,6 +78,24 @@ func NewQSslCertificate(device qtcore.QIODevice_ITF /*777 QIODevice **/, format 
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qsslcertificate.h:89
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSslCertificate(QIODevice *, QSsl::EncodingFormat)
+func NewQSslCertificate__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslCertificate {
+	var convArg0 unsafe.Pointer
+	if device != nil && device.QIODevice_PTR() != nil {
+		convArg0 = device.QIODevice_PTR().GetCthis()
+	}
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	format := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2EP9QIODeviceN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslCertificate)
+	return gothis
+}
+
 // /usr/include/qt/QtNetwork/qsslcertificate.h:90
 // index:1
 // Public Visibility=Default Availability=Available
@@ -87,6 +105,40 @@ func NewQSslCertificate_1(data qtcore.QByteArray_ITF, format int) *QSslCertifica
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2ERK10QByteArrayN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslCertificate)
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qsslcertificate.h:90
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QSslCertificate(const QByteArray &, QSsl::EncodingFormat)
+func NewQSslCertificate_1_() *QSslCertificate {
+	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
+	var convArg0 = qtcore.NewQByteArray()
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	format := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2ERK10QByteArrayN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslCertificate)
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qsslcertificate.h:90
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QSslCertificate(const QByteArray &, QSsl::EncodingFormat)
+func NewQSslCertificate_1_1(data qtcore.QByteArray_ITF) *QSslCertificate {
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2ERK10QByteArrayN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -149,7 +201,7 @@ func (this *QSslCertificate) Swap(other QSslCertificate_ITF) {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QSslCertificate &)
+// [1] bool operator==(const QSslCertificate &) const
 func (this *QSslCertificate) Operator_equal_equal(other QSslCertificate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslCertificate_PTR() != nil {
@@ -163,7 +215,7 @@ func (this *QSslCertificate) Operator_equal_equal(other QSslCertificate_ITF) boo
 // /usr/include/qt/QtNetwork/qsslcertificate.h:102
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QSslCertificate &)
+// [1] bool operator!=(const QSslCertificate &) const
 func (this *QSslCertificate) Operator_not_equal(other QSslCertificate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslCertificate_PTR() != nil {
@@ -177,7 +229,7 @@ func (this *QSslCertificate) Operator_not_equal(other QSslCertificate_ITF) bool 
 // /usr/include/qt/QtNetwork/qsslcertificate.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QSslCertificate) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +239,7 @@ func (this *QSslCertificate) IsNull() bool {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isBlacklisted()
+// [1] bool isBlacklisted() const
 func (this *QSslCertificate) IsBlacklisted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate13isBlacklistedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +249,7 @@ func (this *QSslCertificate) IsBlacklisted() bool {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSelfSigned()
+// [1] bool isSelfSigned() const
 func (this *QSslCertificate) IsSelfSigned() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate12isSelfSignedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +268,7 @@ func (this *QSslCertificate) Clear() {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray version()
+// [8] QByteArray version() const
 func (this *QSslCertificate) Version() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate7versionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,7 +280,7 @@ func (this *QSslCertificate) Version() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray serialNumber()
+// [8] QByteArray serialNumber() const
 func (this *QSslCertificate) SerialNumber() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate12serialNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -240,8 +292,22 @@ func (this *QSslCertificate) SerialNumber() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray digest(QCryptographicHash::Algorithm)
+// [8] QByteArray digest(QCryptographicHash::Algorithm) const
 func (this *QSslCertificate) Digest(algorithm int) *qtcore.QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6digestEN18QCryptographicHash9AlgorithmE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), algorithm)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qsslcertificate.h:120
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray digest(QCryptographicHash::Algorithm) const
+func (this *QSslCertificate) Digest__() *qtcore.QByteArray /*123*/ {
+	// arg: 0, QCryptographicHash::Algorithm=Elaborated, QCryptographicHash::Algorithm=Enum,
+	algorithm := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6digestEN18QCryptographicHash9AlgorithmE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), algorithm)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -252,7 +318,7 @@ func (this *QSslCertificate) Digest(algorithm int) *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList issuerInfo(enum QSslCertificate::SubjectInfo)
+// [8] QStringList issuerInfo(enum QSslCertificate::SubjectInfo) const
 func (this *QSslCertificate) IssuerInfo(info int) *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate10issuerInfoENS_11SubjectInfoE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), info)
 	qtrt.ErrPrint(err, rv)
@@ -264,7 +330,7 @@ func (this *QSslCertificate) IssuerInfo(info int) *qtcore.QStringList /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:122
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QStringList issuerInfo(const QByteArray &)
+// [8] QStringList issuerInfo(const QByteArray &) const
 func (this *QSslCertificate) IssuerInfo_1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if attribute != nil && attribute.QByteArray_PTR() != nil {
@@ -280,7 +346,7 @@ func (this *QSslCertificate) IssuerInfo_1(attribute qtcore.QByteArray_ITF) *qtco
 // /usr/include/qt/QtNetwork/qsslcertificate.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList subjectInfo(enum QSslCertificate::SubjectInfo)
+// [8] QStringList subjectInfo(enum QSslCertificate::SubjectInfo) const
 func (this *QSslCertificate) SubjectInfo(info int) *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate11subjectInfoENS_11SubjectInfoE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), info)
 	qtrt.ErrPrint(err, rv)
@@ -292,7 +358,7 @@ func (this *QSslCertificate) SubjectInfo(info int) *qtcore.QStringList /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:124
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QStringList subjectInfo(const QByteArray &)
+// [8] QStringList subjectInfo(const QByteArray &) const
 func (this *QSslCertificate) SubjectInfo_1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if attribute != nil && attribute.QByteArray_PTR() != nil {
@@ -308,7 +374,7 @@ func (this *QSslCertificate) SubjectInfo_1(attribute qtcore.QByteArray_ITF) *qtc
 // /usr/include/qt/QtNetwork/qsslcertificate.h:132
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime effectiveDate()
+// [8] QDateTime effectiveDate() const
 func (this *QSslCertificate) EffectiveDate() *qtcore.QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate13effectiveDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -320,7 +386,7 @@ func (this *QSslCertificate) EffectiveDate() *qtcore.QDateTime /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:133
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime expiryDate()
+// [8] QDateTime expiryDate() const
 func (this *QSslCertificate) ExpiryDate() *qtcore.QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate10expiryDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -332,7 +398,7 @@ func (this *QSslCertificate) ExpiryDate() *qtcore.QDateTime /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslKey publicKey()
+// [8] QSslKey publicKey() const
 func (this *QSslCertificate) PublicKey() *QSslKey /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate9publicKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,7 +410,7 @@ func (this *QSslCertificate) PublicKey() *QSslKey /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toPem()
+// [8] QByteArray toPem() const
 func (this *QSslCertificate) ToPem() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate5toPemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -356,7 +422,7 @@ func (this *QSslCertificate) ToPem() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toDer()
+// [8] QByteArray toDer() const
 func (this *QSslCertificate) ToDer() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate5toDerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -368,7 +434,7 @@ func (this *QSslCertificate) ToDer() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toText()
+// [8] QString toText() const
 func (this *QSslCertificate) ToText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6toTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -381,7 +447,7 @@ func (this *QSslCertificate) ToText() string {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:160
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] Qt::HANDLE handle()
+// [8] Qt::HANDLE handle() const
 func (this *QSslCertificate) Handle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -64,7 +64,7 @@ func (*QQmlContext) NewFromPointer(cthis unsafe.Pointer) *QQmlContext {
 // /usr/include/qt/QtQml/qqmlcontext.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQmlContext) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -84,6 +84,24 @@ func NewQQmlContext(parent QQmlEngine_ITF /*777 QQmlEngine **/, objParent qtcore
 	if objParent != nil && objParent.QObject_PTR() != nil {
 		convArg1 = objParent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContextC2EP10QQmlEngineP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlContext")
+	return gothis
+}
+
+// /usr/include/qt/QtQml/qqmlcontext.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlContext(QQmlEngine *, QObject *)
+func NewQQmlContext__(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QQmlEngine_PTR() != nil {
+		convArg0 = parent.QQmlEngine_PTR().GetCthis()
+	}
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContextC2EP10QQmlEngineP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,6 +129,24 @@ func NewQQmlContext_1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qt
 	return gothis
 }
 
+// /usr/include/qt/QtQml/qqmlcontext.h:66
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlContext(QQmlContext *, QObject *)
+func NewQQmlContext_1_(parent QQmlContext_ITF /*777 QQmlContext **/) *QQmlContext {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QQmlContext_PTR() != nil {
+		convArg0 = parent.QQmlContext_PTR().GetCthis()
+	}
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContextC2EPS_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlContext")
+	return gothis
+}
+
 // /usr/include/qt/QtQml/qqmlcontext.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -125,7 +161,7 @@ func DeleteQQmlContext(this *QQmlContext) {
 // /usr/include/qt/QtQml/qqmlcontext.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QQmlContext) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,7 +171,7 @@ func (this *QQmlContext) IsValid() bool {
 // /usr/include/qt/QtQml/qqmlcontext.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlEngine * engine()
+// [8] QQmlEngine * engine() const
 func (this *QQmlContext) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,7 +181,7 @@ func (this *QQmlContext) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 // /usr/include/qt/QtQml/qqmlcontext.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlContext * parentContext()
+// [8] QQmlContext * parentContext() const
 func (this *QQmlContext) ParentContext() *QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext13parentContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -155,7 +191,7 @@ func (this *QQmlContext) ParentContext() *QQmlContext /*777 QQmlContext **/ {
 // /usr/include/qt/QtQml/qqmlcontext.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QObject * contextObject()
+// [8] QObject * contextObject() const
 func (this *QQmlContext) ContextObject() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext13contextObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,7 +214,7 @@ func (this *QQmlContext) SetContextObject(arg0 qtcore.QObject_ITF /*777 QObject 
 // /usr/include/qt/QtQml/qqmlcontext.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant contextProperty(const QString &)
+// [16] QVariant contextProperty(const QString &) const
 func (this *QQmlContext) ContextProperty(arg0 string) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -222,7 +258,7 @@ func (this *QQmlContext) SetContextProperty_1(arg0 string, arg1 qtcore.QVariant_
 // /usr/include/qt/QtQml/qqmlcontext.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString nameForObject(QObject *)
+// [8] QString nameForObject(QObject *) const
 func (this *QQmlContext) NameForObject(arg0 qtcore.QObject_ITF /*777 QObject **/) string {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -268,7 +304,7 @@ func (this *QQmlContext) SetBaseUrl(arg0 qtcore.QUrl_ITF) {
 // /usr/include/qt/QtQml/qqmlcontext.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl baseUrl()
+// [8] QUrl baseUrl() const
 func (this *QQmlContext) BaseUrl() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext7baseUrlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

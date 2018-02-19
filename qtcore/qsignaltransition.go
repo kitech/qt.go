@@ -77,7 +77,7 @@ func (*QSignalTransition) NewFromPointer(cthis unsafe.Pointer) *QSignalTransitio
 // /usr/include/qt/QtCore/qsignaltransition.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSignalTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSignalTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +93,20 @@ func NewQSignalTransition(sourceState QState_ITF /*777 QState **/) *QSignalTrans
 	if sourceState != nil && sourceState.QState_PTR() != nil {
 		convArg0 = sourceState.QState_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSignalTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSignalTransition")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qsignaltransition.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSignalTransition(QState *)
+func NewQSignalTransition__() *QSignalTransition {
+	// arg: 0, QState *=Pointer, QState=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSignalTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -122,6 +136,26 @@ func NewQSignalTransition_1(sender QObject_ITF /*777 const QObject **/, signal s
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qsignaltransition.h:59
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QSignalTransition(const QObject *, const char *, QState *)
+func NewQSignalTransition_1_(sender QObject_ITF /*777 const QObject **/, signal string) *QSignalTransition {
+	var convArg0 unsafe.Pointer
+	if sender != nil && sender.QObject_PTR() != nil {
+		convArg0 = sender.QObject_PTR().GetCthis()
+	}
+	var convArg1 = qtrt.CString(signal)
+	defer qtrt.FreeMem(convArg1)
+	// arg: 2, QState *=Pointer, QState=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSignalTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSignalTransition")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qsignaltransition.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -136,7 +170,7 @@ func DeleteQSignalTransition(this *QSignalTransition) {
 // /usr/include/qt/QtCore/qsignaltransition.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QObject * senderObject()
+// [8] QObject * senderObject() const
 func (this *QSignalTransition) SenderObject() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSignalTransition12senderObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,7 +193,7 @@ func (this *QSignalTransition) SetSenderObject(sender QObject_ITF /*777 const QO
 // /usr/include/qt/QtCore/qsignaltransition.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray signal()
+// [8] QByteArray signal() const
 func (this *QSignalTransition) Signal() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSignalTransition6signalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

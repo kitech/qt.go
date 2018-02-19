@@ -104,6 +104,46 @@ func NewQPageSize_2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *Q
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qpagesize.h:232
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QPageSize(const QSize &, const QString &, enum QPageSize::SizeMatchPolicy)
+func NewQPageSize_2_(pointSize qtcore.QSize_ITF) *QPageSize {
+	var convArg0 unsafe.Pointer
+	if pointSize != nil && pointSize.QSize_PTR() != nil {
+		convArg0 = pointSize.QSize_PTR().GetCthis()
+	}
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = qtcore.NewQString()
+	// arg: 2, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	matchPolicy := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK5QSizeRK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, matchPolicy)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPageSize)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:232
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QPageSize(const QSize &, const QString &, enum QPageSize::SizeMatchPolicy)
+func NewQPageSize_2_1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
+	var convArg0 unsafe.Pointer
+	if pointSize != nil && pointSize.QSize_PTR() != nil {
+		convArg0 = pointSize.QSize_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString_5(name)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	matchPolicy := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK5QSizeRK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, matchPolicy)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPageSize)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qpagesize.h:235
 // index:3
 // Public Visibility=Default Availability=Available
@@ -115,6 +155,46 @@ func NewQPageSize_3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy 
 	}
 	var tmpArg2 = qtcore.NewQString_5(name)
 	var convArg2 = tmpArg2.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, units, convArg2, matchPolicy)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPageSize)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:235
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QPageSize(const QSizeF &, enum QPageSize::Unit, const QString &, enum QPageSize::SizeMatchPolicy)
+func NewQPageSize_3_(size qtcore.QSizeF_ITF, units int) *QPageSize {
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSizeF_PTR() != nil {
+		convArg0 = size.QSizeF_PTR().GetCthis()
+	}
+	// arg: 2, const QString &=LValueReference, QString=Record,
+	var convArg2 = qtcore.NewQString()
+	// arg: 3, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	matchPolicy := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, units, convArg2, matchPolicy)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPageSize)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:235
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QPageSize(const QSizeF &, enum QPageSize::Unit, const QString &, enum QPageSize::SizeMatchPolicy)
+func NewQPageSize_3_1(size qtcore.QSizeF_ITF, units int, name string) *QPageSize {
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSizeF_PTR() != nil {
+		convArg0 = size.QSizeF_PTR().GetCthis()
+	}
+	var tmpArg2 = qtcore.NewQString_5(name)
+	var convArg2 = tmpArg2.GetCthis()
+	// arg: 3, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	matchPolicy := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, units, convArg2, matchPolicy)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -177,7 +257,7 @@ func (this *QPageSize) Swap(other QPageSize_ITF) {
 // /usr/include/qt/QtGui/qpagesize.h:249
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEquivalentTo(const QPageSize &)
+// [1] bool isEquivalentTo(const QPageSize &) const
 func (this *QPageSize) IsEquivalentTo(other QPageSize_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPageSize_PTR() != nil {
@@ -191,7 +271,7 @@ func (this *QPageSize) IsEquivalentTo(other QPageSize_ITF) bool {
 // /usr/include/qt/QtGui/qpagesize.h:251
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QPageSize) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -201,7 +281,7 @@ func (this *QPageSize) IsValid() bool {
 // /usr/include/qt/QtGui/qpagesize.h:253
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString key()
+// [8] QString key() const
 func (this *QPageSize) Key() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -232,7 +312,7 @@ func QPageSize_Key_1(pageSizeId int) string {
 // /usr/include/qt/QtGui/qpagesize.h:254
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QPageSize) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -263,7 +343,7 @@ func QPageSize_Name_1(pageSizeId int) string {
 // /usr/include/qt/QtGui/qpagesize.h:256
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QPageSize::PageSizeId id()
+// [4] QPageSize::PageSizeId id() const
 func (this *QPageSize) Id() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize2idEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -289,6 +369,22 @@ func QPageSize_Id_1(pointSize qtcore.QSize_ITF, matchPolicy int) int {
 	return rv
 }
 
+// /usr/include/qt/QtGui/qpagesize.h:274
+// index:1
+// Public static Visibility=Default Availability=Available
+// [4] QPageSize::PageSizeId id(const QSize &, enum QPageSize::SizeMatchPolicy)
+func (this *QPageSize) Id_1_(pointSize qtcore.QSize_ITF) int {
+	var convArg0 unsafe.Pointer
+	if pointSize != nil && pointSize.QSize_PTR() != nil {
+		convArg0 = pointSize.QSize_PTR().GetCthis()
+	}
+	// arg: 1, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	matchPolicy := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize2idERK5QSizeNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, matchPolicy)
+	qtrt.ErrPrint(err, rv)
+	return int(rv)
+}
+
 // /usr/include/qt/QtGui/qpagesize.h:276
 // index:2
 // Public static Visibility=Default Availability=Available
@@ -306,6 +402,22 @@ func QPageSize_Id_2(size qtcore.QSizeF_ITF, units int, matchPolicy int) int {
 	var nilthis *QPageSize
 	rv := nilthis.Id_2(size, units, matchPolicy)
 	return rv
+}
+
+// /usr/include/qt/QtGui/qpagesize.h:276
+// index:2
+// Public static Visibility=Default Availability=Available
+// [4] QPageSize::PageSizeId id(const QSizeF &, enum QPageSize::Unit, enum QPageSize::SizeMatchPolicy)
+func (this *QPageSize) Id_2_(size qtcore.QSizeF_ITF, units int) int {
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSizeF_PTR() != nil {
+		convArg0 = size.QSizeF_PTR().GetCthis()
+	}
+	// arg: 2, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	matchPolicy := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize2idERK6QSizeFNS_4UnitENS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, units, matchPolicy)
+	qtrt.ErrPrint(err, rv)
+	return int(rv)
 }
 
 // /usr/include/qt/QtGui/qpagesize.h:279
@@ -326,7 +438,7 @@ func QPageSize_Id_3(windowsId int) int {
 // /usr/include/qt/QtGui/qpagesize.h:258
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int windowsId()
+// [4] int windowsId() const
 func (this *QPageSize) WindowsId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize9windowsIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -351,7 +463,7 @@ func QPageSize_WindowsId_1(pageSizeId int) int {
 // /usr/include/qt/QtGui/qpagesize.h:260
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QSizeF definitionSize()
+// [16] QSizeF definitionSize() const
 func (this *QPageSize) DefinitionSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize14definitionSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -380,7 +492,7 @@ func QPageSize_DefinitionSize_1(pageSizeId int) *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:261
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QPageSize::Unit definitionUnits()
+// [4] QPageSize::Unit definitionUnits() const
 func (this *QPageSize) DefinitionUnits() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize15definitionUnitsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -405,7 +517,7 @@ func QPageSize_DefinitionUnits_1(pageSizeId int) int {
 // /usr/include/qt/QtGui/qpagesize.h:263
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QSizeF size(enum QPageSize::Unit)
+// [16] QSizeF size(enum QPageSize::Unit) const
 func (this *QPageSize) Size(units int) *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize4sizeENS_4UnitE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), units)
 	qtrt.ErrPrint(err, rv)
@@ -434,7 +546,7 @@ func QPageSize_Size_1(pageSizeId int, units int) *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:264
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize sizePoints()
+// [8] QSize sizePoints() const
 func (this *QPageSize) SizePoints() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize10sizePointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -463,7 +575,7 @@ func QPageSize_SizePoints_1(pageSizeId int) *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:265
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize sizePixels(int)
+// [8] QSize sizePixels(int) const
 func (this *QPageSize) SizePixels(resolution int) *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize10sizePixelsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), resolution)
 	qtrt.ErrPrint(err, rv)
@@ -492,7 +604,7 @@ func QPageSize_SizePixels_1(pageSizeId int, resolution int) *qtcore.QSize /*123*
 // /usr/include/qt/QtGui/qpagesize.h:267
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF rect(enum QPageSize::Unit)
+// [32] QRectF rect(enum QPageSize::Unit) const
 func (this *QPageSize) Rect(units int) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize4rectENS_4UnitE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), units)
 	qtrt.ErrPrint(err, rv)
@@ -504,7 +616,7 @@ func (this *QPageSize) Rect(units int) *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:268
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect rectPoints()
+// [16] QRect rectPoints() const
 func (this *QPageSize) RectPoints() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize10rectPointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -516,7 +628,7 @@ func (this *QPageSize) RectPoints() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:269
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect rectPixels(int)
+// [16] QRect rectPixels(int) const
 func (this *QPageSize) RectPixels(resolution int) *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPageSize10rectPixelsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), resolution)
 	qtrt.ErrPrint(err, rv)

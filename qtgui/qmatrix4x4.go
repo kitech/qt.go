@@ -157,7 +157,7 @@ func NewQMatrix4x4_6(matrix QMatrix_ITF) *QMatrix4x4 {
 // /usr/include/qt/QtGui/qmatrix4x4.h:77
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] const float & operator()(int, int)
+// [4] const float & operator()(int, int) const
 func (this *QMatrix4x4) Operator_fncall(row int, column int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x4clEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QMatrix4x4) Operator_fncall_1(row int, column int) float32 {
 // /usr/include/qt/QtGui/qmatrix4x4.h:81
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QVector4D column(int)
+// [16] QVector4D column(int) const
 func (this *QMatrix4x4) Column(index int) *QVector4D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x46columnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func (this *QMatrix4x4) SetColumn(index int, value QVector4D_ITF) {
 // /usr/include/qt/QtGui/qmatrix4x4.h:84
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QVector4D row(int)
+// [16] QVector4D row(int) const
 func (this *QMatrix4x4) Row(index int) *QVector4D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x43rowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +227,7 @@ func (this *QMatrix4x4) SetRow(index int, value QVector4D_ITF) {
 // /usr/include/qt/QtGui/qmatrix4x4.h:88
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isAffine()
+// [1] bool isAffine() const
 func (this *QMatrix4x4) IsAffine() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x48isAffineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -237,7 +237,7 @@ func (this *QMatrix4x4) IsAffine() bool {
 // /usr/include/qt/QtGui/qmatrix4x4.h:90
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isIdentity()
+// [1] bool isIdentity() const
 func (this *QMatrix4x4) IsIdentity() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x410isIdentityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -265,7 +265,7 @@ func (this *QMatrix4x4) Fill(value float32) {
 // /usr/include/qt/QtGui/qmatrix4x4.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double determinant()
+// [8] double determinant() const
 func (this *QMatrix4x4) Determinant() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x411determinantEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -275,8 +275,22 @@ func (this *QMatrix4x4) Determinant() float64 {
 // /usr/include/qt/QtGui/qmatrix4x4.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [68] QMatrix4x4 inverted(_Bool *)
+// [68] QMatrix4x4 inverted(_Bool *) const
 func (this *QMatrix4x4) Inverted(invertible *bool) *QMatrix4x4 /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x48invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMatrix4x4)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:96
+// index:0
+// Public Visibility=Default Availability=Available
+// [68] QMatrix4x4 inverted(_Bool *) const
+func (this *QMatrix4x4) Inverted__() *QMatrix4x4 /*123*/ {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var invertible unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x48invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -287,7 +301,7 @@ func (this *QMatrix4x4) Inverted(invertible *bool) *QMatrix4x4 /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [68] QMatrix4x4 transposed()
+// [68] QMatrix4x4 transposed() const
 func (this *QMatrix4x4) Transposed() *QMatrix4x4 /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x410transposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -371,7 +385,7 @@ func (this *QMatrix4x4) Operator_div_equal(divisor float32) *QMatrix4x4 {
 // /usr/include/qt/QtGui/qmatrix4x4.h:105
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QMatrix4x4 &)
+// [1] bool operator==(const QMatrix4x4 &) const
 func (this *QMatrix4x4) Operator_equal_equal(other QMatrix4x4_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QMatrix4x4_PTR() != nil {
@@ -385,7 +399,7 @@ func (this *QMatrix4x4) Operator_equal_equal(other QMatrix4x4_ITF) bool {
 // /usr/include/qt/QtGui/qmatrix4x4.h:106
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QMatrix4x4 &)
+// [1] bool operator!=(const QMatrix4x4 &) const
 func (this *QMatrix4x4) Operator_not_equal(other QMatrix4x4_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QMatrix4x4_PTR() != nil {
@@ -485,6 +499,17 @@ func (this *QMatrix4x4) Rotate(angle float32, vector QVector3D_ITF) {
 // Public Visibility=Default Availability=Available
 // [-2] void rotate(float, float, float, float)
 func (this *QMatrix4x4) Rotate_1(angle float32, x float32, y float32, z float32) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), angle, x, y, z)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:140
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void rotate(float, float, float, float)
+func (this *QMatrix4x4) Rotate_1_(angle float32, x float32, y float32) {
+	// arg: 3, float=Float, =Invalid,
+	z := 0.0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), angle, x, y, z)
 	qtrt.ErrPrint(err, rv)
 }
@@ -598,6 +623,30 @@ func (this *QMatrix4x4) Viewport_1(left float32, bottom float32, width float32, 
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qmatrix4x4.h:154
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void viewport(float, float, float, float, float, float)
+func (this *QMatrix4x4) Viewport_1_(left float32, bottom float32, width float32, height float32) {
+	// arg: 4, float=Float, =Invalid,
+	nearPlane := 0.0
+	// arg: 5, float=Float, =Invalid,
+	farPlane := 1.0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48viewportEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, bottom, width, height, nearPlane, farPlane)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qmatrix4x4.h:154
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void viewport(float, float, float, float, float, float)
+func (this *QMatrix4x4) Viewport_1_1(left float32, bottom float32, width float32, height float32, nearPlane float32) {
+	// arg: 5, float=Float, =Invalid,
+	farPlane := 1.0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48viewportEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, bottom, width, height, nearPlane, farPlane)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qmatrix4x4.h:155
 // index:0
 // Public Visibility=Default Availability=Available
@@ -610,7 +659,7 @@ func (this *QMatrix4x4) FlipCoordinates() {
 // /usr/include/qt/QtGui/qmatrix4x4.h:157
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void copyDataTo(float *)
+// [-2] void copyDataTo(float *) const
 func (this *QMatrix4x4) CopyDataTo(values unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x410copyDataToEPf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), values)
 	qtrt.ErrPrint(err, rv)
@@ -619,7 +668,7 @@ func (this *QMatrix4x4) CopyDataTo(values unsafe.Pointer /*666*/) {
 // /usr/include/qt/QtGui/qmatrix4x4.h:159
 // index:0
 // Public Visibility=Default Availability=Available
-// [48] QMatrix toAffine()
+// [48] QMatrix toAffine() const
 func (this *QMatrix4x4) ToAffine() *QMatrix /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x48toAffineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -631,7 +680,7 @@ func (this *QMatrix4x4) ToAffine() *QMatrix /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:160
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform toTransform()
+// [88] QTransform toTransform() const
 func (this *QMatrix4x4) ToTransform() *QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x411toTransformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -643,7 +692,7 @@ func (this *QMatrix4x4) ToTransform() *QTransform /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:161
 // index:1
 // Public Visibility=Default Availability=Available
-// [88] QTransform toTransform(float)
+// [88] QTransform toTransform(float) const
 func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) *QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x411toTransformEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), distanceToPlane)
 	qtrt.ErrPrint(err, rv)
@@ -655,7 +704,7 @@ func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) *QTransform /*123
 // /usr/include/qt/QtGui/qmatrix4x4.h:163
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint map(const QPoint &)
+// [8] QPoint map(const QPoint &) const
 func (this *QMatrix4x4) Map(point qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
@@ -671,7 +720,7 @@ func (this *QMatrix4x4) Map(point qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:164
 // index:1
 // Public Visibility=Default Availability=Available
-// [16] QPointF map(const QPointF &)
+// [16] QPointF map(const QPointF &) const
 func (this *QMatrix4x4) Map_1(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -687,7 +736,7 @@ func (this *QMatrix4x4) Map_1(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ 
 // /usr/include/qt/QtGui/qmatrix4x4.h:166
 // index:2
 // Public Visibility=Default Availability=Available
-// [12] QVector3D map(const QVector3D &)
+// [12] QVector3D map(const QVector3D &) const
 func (this *QMatrix4x4) Map_2(point QVector3D_ITF) *QVector3D /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector3D_PTR() != nil {
@@ -703,7 +752,7 @@ func (this *QMatrix4x4) Map_2(point QVector3D_ITF) *QVector3D /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:170
 // index:3
 // Public Visibility=Default Availability=Available
-// [16] QVector4D map(const QVector4D &)
+// [16] QVector4D map(const QVector4D &) const
 func (this *QMatrix4x4) Map_3(point QVector4D_ITF) *QVector4D /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector4D_PTR() != nil {
@@ -719,7 +768,7 @@ func (this *QMatrix4x4) Map_3(point QVector4D_ITF) *QVector4D /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:167
 // index:0
 // Public Visibility=Default Availability=Available
-// [12] QVector3D mapVector(const QVector3D &)
+// [12] QVector3D mapVector(const QVector3D &) const
 func (this *QMatrix4x4) MapVector(vector QVector3D_ITF) *QVector3D /*123*/ {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
@@ -735,7 +784,7 @@ func (this *QMatrix4x4) MapVector(vector QVector3D_ITF) *QVector3D /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect mapRect(const QRect &)
+// [16] QRect mapRect(const QRect &) const
 func (this *QMatrix4x4) MapRect(rect qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -751,7 +800,7 @@ func (this *QMatrix4x4) MapRect(rect qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:173
 // index:1
 // Public Visibility=Default Availability=Available
-// [32] QRectF mapRect(const QRectF &)
+// [32] QRectF mapRect(const QRectF &) const
 func (this *QMatrix4x4) MapRect_1(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -777,7 +826,7 @@ func (this *QMatrix4x4) Data() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:179
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] const float * data()
+// [8] const float * data() const
 func (this *QMatrix4x4) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x44dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -787,7 +836,7 @@ func (this *QMatrix4x4) Data_1() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:180
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const float * constData()
+// [8] const float * constData() const
 func (this *QMatrix4x4) ConstData() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x49constDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

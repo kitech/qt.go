@@ -87,7 +87,7 @@ func DeleteQGraphicsSceneEvent(this *QGraphicsSceneEvent) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * widget()
+// [8] QWidget * widget() const
 func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsSceneEvent6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

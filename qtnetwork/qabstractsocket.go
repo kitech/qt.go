@@ -43,7 +43,7 @@ func (this *QAbstractSocket) InheritReadLineData(f func(data string, maxlen int6
 }
 
 // long long writeData(const char *, qint64)
-func (this *QAbstractSocket) InheritWriteData(f func(data string, len int64) int64) {
+func (this *QAbstractSocket) InheritWriteData(f func(data string, len_ int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
 
@@ -113,7 +113,7 @@ func (*QAbstractSocket) NewFromPointer(cthis unsafe.Pointer) *QAbstractSocket {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAbstractSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,7 +159,7 @@ func (this *QAbstractSocket) Resume() {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QAbstractSocket::PauseModes pauseMode()
+// [4] QAbstractSocket::PauseModes pauseMode() const
 func (this *QAbstractSocket) PauseMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket9pauseModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,11 +189,71 @@ func (this *QAbstractSocket) Bind(address QHostAddress_ITF, port uint16, mode in
 	return rv != 0
 }
 
+// /usr/include/qt/QtNetwork/qabstractsocket.h:147
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool bind(const QHostAddress &, quint16, QAbstractSocket::BindMode)
+func (this *QAbstractSocket) Bind__(address QHostAddress_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if address != nil && address.QHostAddress_PTR() != nil {
+		convArg0 = address.QHostAddress_PTR().GetCthis()
+	}
+	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
+	port := 0
+	// arg: 2, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindERK12QHostAddresst6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qabstractsocket.h:147
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool bind(const QHostAddress &, quint16, QAbstractSocket::BindMode)
+func (this *QAbstractSocket) Bind__1(address QHostAddress_ITF, port uint16) bool {
+	var convArg0 unsafe.Pointer
+	if address != nil && address.QHostAddress_PTR() != nil {
+		convArg0 = address.QHostAddress_PTR().GetCthis()
+	}
+	// arg: 2, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindERK12QHostAddresst6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtNetwork/qabstractsocket.h:148
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool bind(quint16, QAbstractSocket::BindMode)
 func (this *QAbstractSocket) Bind_1(port uint16, mode int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindEt6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), port, mode)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qabstractsocket.h:148
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool bind(quint16, QAbstractSocket::BindMode)
+func (this *QAbstractSocket) Bind_1_() bool {
+	// arg: 0, quint16=Typedef, quint16=Typedef, unsigned short
+	port := 0
+	// arg: 1, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindEt6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), port, mode)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qabstractsocket.h:148
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool bind(quint16, QAbstractSocket::BindMode)
+func (this *QAbstractSocket) Bind_1_1(port uint16) bool {
+	// arg: 1, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>
+	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindEt6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), port, mode)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -206,6 +266,34 @@ func (this *QAbstractSocket) Bind_1(port uint16, mode int) bool {
 func (this *QAbstractSocket) ConnectToHost(hostName string, port uint16, mode int, protocol int) {
 	var tmpArg0 = qtcore.NewQString_5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket13connectToHostERK7QStringt6QFlagsIN9QIODevice12OpenModeFlagEENS_20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode, protocol)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qabstractsocket.h:151
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void connectToHost(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+func (this *QAbstractSocket) ConnectToHost__(hostName string, port uint16) {
+	var tmpArg0 = qtcore.NewQString_5(hostName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	mode := 0
+	// arg: 3, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum,
+	protocol := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket13connectToHostERK7QStringt6QFlagsIN9QIODevice12OpenModeFlagEENS_20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode, protocol)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qabstractsocket.h:151
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void connectToHost(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+func (this *QAbstractSocket) ConnectToHost__1(hostName string, port uint16, mode int) {
+	var tmpArg0 = qtcore.NewQString_5(hostName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 3, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum,
+	protocol := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket13connectToHostERK7QStringt6QFlagsIN9QIODevice12OpenModeFlagEENS_20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode, protocol)
 	qtrt.ErrPrint(err, rv)
 }
@@ -223,6 +311,21 @@ func (this *QAbstractSocket) ConnectToHost_1(address QHostAddress_ITF, port uint
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtNetwork/qabstractsocket.h:152
+// index:1
+// Public virtual Visibility=Default Availability=Available
+// [-2] void connectToHost(const QHostAddress &, quint16, QIODevice::OpenMode)
+func (this *QAbstractSocket) ConnectToHost_1_(address QHostAddress_ITF, port uint16) {
+	var convArg0 unsafe.Pointer
+	if address != nil && address.QHostAddress_PTR() != nil {
+		convArg0 = address.QHostAddress_PTR().GetCthis()
+	}
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket13connectToHostERK12QHostAddresst6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtNetwork/qabstractsocket.h:153
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -235,7 +338,7 @@ func (this *QAbstractSocket) DisconnectFromHost() {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:155
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QAbstractSocket) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -245,7 +348,7 @@ func (this *QAbstractSocket) IsValid() bool {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:157
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 bytesAvailable()
+// [8] qint64 bytesAvailable() const
 func (this *QAbstractSocket) BytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket14bytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,7 +358,7 @@ func (this *QAbstractSocket) BytesAvailable() int64 {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:158
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 bytesToWrite()
+// [8] qint64 bytesToWrite() const
 func (this *QAbstractSocket) BytesToWrite() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket12bytesToWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -265,7 +368,7 @@ func (this *QAbstractSocket) BytesToWrite() int64 {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:160
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool canReadLine()
+// [1] bool canReadLine() const
 func (this *QAbstractSocket) CanReadLine() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket11canReadLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -275,7 +378,7 @@ func (this *QAbstractSocket) CanReadLine() bool {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:162
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] quint16 localPort()
+// [2] quint16 localPort() const
 func (this *QAbstractSocket) LocalPort() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket9localPortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -285,7 +388,7 @@ func (this *QAbstractSocket) LocalPort() uint16 {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:163
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QHostAddress localAddress()
+// [8] QHostAddress localAddress() const
 func (this *QAbstractSocket) LocalAddress() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket12localAddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -297,7 +400,7 @@ func (this *QAbstractSocket) LocalAddress() *QHostAddress /*123*/ {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:164
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] quint16 peerPort()
+// [2] quint16 peerPort() const
 func (this *QAbstractSocket) PeerPort() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket8peerPortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -307,7 +410,7 @@ func (this *QAbstractSocket) PeerPort() uint16 {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:165
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QHostAddress peerAddress()
+// [8] QHostAddress peerAddress() const
 func (this *QAbstractSocket) PeerAddress() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket11peerAddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -319,7 +422,7 @@ func (this *QAbstractSocket) PeerAddress() *QHostAddress /*123*/ {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:166
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString peerName()
+// [8] QString peerName() const
 func (this *QAbstractSocket) PeerName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket8peerNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -332,7 +435,7 @@ func (this *QAbstractSocket) PeerName() string {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:168
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 readBufferSize()
+// [8] qint64 readBufferSize() const
 func (this *QAbstractSocket) ReadBufferSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket14readBufferSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -360,7 +463,7 @@ func (this *QAbstractSocket) Abort() {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:173
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qintptr socketDescriptor()
+// [8] qintptr socketDescriptor() const
 func (this *QAbstractSocket) SocketDescriptor() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket16socketDescriptorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -372,6 +475,32 @@ func (this *QAbstractSocket) SocketDescriptor() int64 {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setSocketDescriptor(qintptr, enum QAbstractSocket::SocketState, QIODevice::OpenMode)
 func (this *QAbstractSocket) SetSocketDescriptor(socketDescriptor int64, state int, openMode int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19setSocketDescriptorExNS_11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor, state, openMode)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qabstractsocket.h:174
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool setSocketDescriptor(qintptr, enum QAbstractSocket::SocketState, QIODevice::OpenMode)
+func (this *QAbstractSocket) SetSocketDescriptor__(socketDescriptor int64) bool {
+	// arg: 1, QAbstractSocket::SocketState=Enum, QAbstractSocket::SocketState=Enum,
+	state := 0
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	openMode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19setSocketDescriptorExNS_11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor, state, openMode)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qabstractsocket.h:174
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool setSocketDescriptor(qintptr, enum QAbstractSocket::SocketState, QIODevice::OpenMode)
+func (this *QAbstractSocket) SetSocketDescriptor__1(socketDescriptor int64, state int) bool {
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19setSocketDescriptorExNS_11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor, state, openMode)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -405,7 +534,7 @@ func (this *QAbstractSocket) SocketOption(option int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QAbstractSocket::SocketType socketType()
+// [4] QAbstractSocket::SocketType socketType() const
 func (this *QAbstractSocket) SocketType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket10socketTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -415,7 +544,7 @@ func (this *QAbstractSocket) SocketType() int {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:181
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QAbstractSocket::SocketState state()
+// [4] QAbstractSocket::SocketState state() const
 func (this *QAbstractSocket) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -425,7 +554,7 @@ func (this *QAbstractSocket) State() int {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:182
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QAbstractSocket::SocketError error()
+// [4] QAbstractSocket::SocketError error() const
 func (this *QAbstractSocket) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -453,7 +582,7 @@ func (this *QAbstractSocket) Close() {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:186
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isSequential()
+// [1] bool isSequential() const
 func (this *QAbstractSocket) IsSequential() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket12isSequentialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -463,7 +592,7 @@ func (this *QAbstractSocket) IsSequential() bool {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:187
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool atEnd()
+// [1] bool atEnd() const
 func (this *QAbstractSocket) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -490,11 +619,35 @@ func (this *QAbstractSocket) WaitForConnected(msecs int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtNetwork/qabstractsocket.h:191
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool waitForConnected(int)
+func (this *QAbstractSocket) WaitForConnected__() bool {
+	// arg: 0, int=Int, =Invalid,
+	msecs := 30000
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket16waitForConnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtNetwork/qabstractsocket.h:192
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForReadyRead(int)
 func (this *QAbstractSocket) WaitForReadyRead(msecs int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qabstractsocket.h:192
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool waitForReadyRead(int)
+func (this *QAbstractSocket) WaitForReadyRead__() bool {
+	// arg: 0, int=Int, =Invalid,
+	msecs := 30000
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -510,11 +663,35 @@ func (this *QAbstractSocket) WaitForBytesWritten(msecs int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtNetwork/qabstractsocket.h:193
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool waitForBytesWritten(int)
+func (this *QAbstractSocket) WaitForBytesWritten__() bool {
+	// arg: 0, int=Int, =Invalid,
+	msecs := 30000
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtNetwork/qabstractsocket.h:194
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForDisconnected(int)
 func (this *QAbstractSocket) WaitForDisconnected(msecs int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19waitForDisconnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qabstractsocket.h:194
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool waitForDisconnected(int)
+func (this *QAbstractSocket) WaitForDisconnected__() bool {
+	// arg: 0, int=Int, =Invalid,
+	msecs := 30000
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19waitForDisconnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -536,7 +713,7 @@ func (this *QAbstractSocket) SetProxy(networkProxy QNetworkProxy_ITF) {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:198
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QNetworkProxy proxy()
+// [8] QNetworkProxy proxy() const
 func (this *QAbstractSocket) Proxy() *QNetworkProxy /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSocket5proxyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -626,10 +803,10 @@ func (this *QAbstractSocket) ReadLineData(data string, maxlen int64) int64 {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)
-func (this *QAbstractSocket) WriteData(data string, len int64) int64 {
+func (this *QAbstractSocket) WriteData(data string, len_ int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }

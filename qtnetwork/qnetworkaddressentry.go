@@ -129,7 +129,7 @@ func (this *QNetworkAddressEntry) Swap(other QNetworkAddressEntry_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QNetworkAddressEntry &)
+// [1] bool operator==(const QNetworkAddressEntry &) const
 func (this *QNetworkAddressEntry) Operator_equal_equal(other QNetworkAddressEntry_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkAddressEntry_PTR() != nil {
@@ -143,7 +143,7 @@ func (this *QNetworkAddressEntry) Operator_equal_equal(other QNetworkAddressEntr
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:70
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QNetworkAddressEntry &)
+// [1] bool operator!=(const QNetworkAddressEntry &) const
 func (this *QNetworkAddressEntry) Operator_not_equal(other QNetworkAddressEntry_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkAddressEntry_PTR() != nil {
@@ -157,7 +157,7 @@ func (this *QNetworkAddressEntry) Operator_not_equal(other QNetworkAddressEntry_
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QHostAddress ip()
+// [8] QHostAddress ip() const
 func (this *QNetworkAddressEntry) Ip() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry2ipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +182,7 @@ func (this *QNetworkAddressEntry) SetIp(newIp QHostAddress_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QHostAddress netmask()
+// [8] QHostAddress netmask() const
 func (this *QNetworkAddressEntry) Netmask() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry7netmaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QNetworkAddressEntry) SetNetmask(newNetmask QHostAddress_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int prefixLength()
+// [4] int prefixLength() const
 func (this *QNetworkAddressEntry) PrefixLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry12prefixLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -226,7 +226,7 @@ func (this *QNetworkAddressEntry) SetPrefixLength(length int) {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QHostAddress broadcast()
+// [8] QHostAddress broadcast() const
 func (this *QNetworkAddressEntry) Broadcast() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry9broadcastEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -97,7 +97,7 @@ func (*QStateMachine) NewFromPointer(cthis unsafe.Pointer) *QStateMachine {
 // /usr/include/qt/QtCore/qstatemachine.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QStateMachine) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,6 +120,20 @@ func NewQStateMachine(parent QObject_ITF /*777 QObject **/) *QStateMachine {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qstatemachine.h:112
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStateMachine(QObject *)
+func NewQStateMachine__() *QStateMachine {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStateMachineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QStateMachine")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qstatemachine.h:113
 // index:1
 // Public Visibility=Default Availability=Available
@@ -129,6 +143,20 @@ func NewQStateMachine_1(childMode int, parent QObject_ITF /*777 QObject **/) *QS
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg1 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachineC2EN6QState9ChildModeEP7QObject", qtrt.FFI_TYPE_POINTER, childMode, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStateMachineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QStateMachine")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:113
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QStateMachine(QState::ChildMode, QObject *)
+func NewQStateMachine_1_(childMode int) *QStateMachine {
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachineC2EN6QState9ChildModeEP7QObject", qtrt.FFI_TYPE_POINTER, childMode, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStateMachineFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -176,7 +204,7 @@ func (this *QStateMachine) RemoveState(state QAbstractState_ITF /*777 QAbstractS
 // /usr/include/qt/QtCore/qstatemachine.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QStateMachine::Error error()
+// [4] QStateMachine::Error error() const
 func (this *QStateMachine) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +214,7 @@ func (this *QStateMachine) Error() int {
 // /usr/include/qt/QtCore/qstatemachine.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString errorString()
+// [8] QString errorString() const
 func (this *QStateMachine) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -208,7 +236,7 @@ func (this *QStateMachine) ClearError() {
 // /usr/include/qt/QtCore/qstatemachine.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRunning()
+// [1] bool isRunning() const
 func (this *QStateMachine) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,7 +246,7 @@ func (this *QStateMachine) IsRunning() bool {
 // /usr/include/qt/QtCore/qstatemachine.h:126
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isAnimated()
+// [1] bool isAnimated() const
 func (this *QStateMachine) IsAnimated() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine10isAnimatedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -263,7 +291,7 @@ func (this *QStateMachine) RemoveDefaultAnimation(animation QAbstractAnimation_I
 // /usr/include/qt/QtCore/qstatemachine.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QState::RestorePolicy globalRestorePolicy()
+// [4] QState::RestorePolicy globalRestorePolicy() const
 func (this *QStateMachine) GlobalRestorePolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine19globalRestorePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -288,6 +316,21 @@ func (this *QStateMachine) PostEvent(event QEvent_ITF /*777 QEvent **/, priority
 	if event != nil && event.QEvent_PTR() != nil {
 		convArg0 = event.QEvent_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine9postEventEP6QEventNS_13EventPriorityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:137
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void postEvent(QEvent *, enum QStateMachine::EventPriority)
+func (this *QStateMachine) PostEvent__(event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg0 = event.QEvent_PTR().GetCthis()
+	}
+	// arg: 1, QStateMachine::EventPriority=Enum, QStateMachine::EventPriority=Enum,
+	priority := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine9postEventEP6QEventNS_13EventPriorityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
 	qtrt.ErrPrint(err, rv)
 }

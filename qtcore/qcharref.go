@@ -168,7 +168,7 @@ func (this *QCharRef) Operator_equal_7(rc int) *QCharRef {
 // /usr/include/qt/QtCore/qstring.h:1054
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QCharRef) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,7 +178,7 @@ func (this *QCharRef) IsNull() bool {
 // /usr/include/qt/QtCore/qstring.h:1055
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isPrint()
+// [1] bool isPrint() const
 func (this *QCharRef) IsPrint() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7isPrintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,7 +188,7 @@ func (this *QCharRef) IsPrint() bool {
 // /usr/include/qt/QtCore/qstring.h:1056
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isPunct()
+// [1] bool isPunct() const
 func (this *QCharRef) IsPunct() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7isPunctEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,7 +198,7 @@ func (this *QCharRef) IsPunct() bool {
 // /usr/include/qt/QtCore/qstring.h:1057
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isSpace()
+// [1] bool isSpace() const
 func (this *QCharRef) IsSpace() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7isSpaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -208,7 +208,7 @@ func (this *QCharRef) IsSpace() bool {
 // /usr/include/qt/QtCore/qstring.h:1058
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isMark()
+// [1] bool isMark() const
 func (this *QCharRef) IsMark() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef6isMarkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,7 +218,7 @@ func (this *QCharRef) IsMark() bool {
 // /usr/include/qt/QtCore/qstring.h:1059
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isLetter()
+// [1] bool isLetter() const
 func (this *QCharRef) IsLetter() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef8isLetterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,7 +228,7 @@ func (this *QCharRef) IsLetter() bool {
 // /usr/include/qt/QtCore/qstring.h:1060
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNumber()
+// [1] bool isNumber() const
 func (this *QCharRef) IsNumber() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef8isNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -248,7 +248,7 @@ func (this *QCharRef) IsLetterOrNumber() bool {
 // /usr/include/qt/QtCore/qstring.h:1062
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isDigit()
+// [1] bool isDigit() const
 func (this *QCharRef) IsDigit() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7isDigitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,7 +258,7 @@ func (this *QCharRef) IsDigit() bool {
 // /usr/include/qt/QtCore/qstring.h:1063
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isLower()
+// [1] bool isLower() const
 func (this *QCharRef) IsLower() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7isLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +268,7 @@ func (this *QCharRef) IsLower() bool {
 // /usr/include/qt/QtCore/qstring.h:1064
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isUpper()
+// [1] bool isUpper() const
 func (this *QCharRef) IsUpper() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7isUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -278,7 +278,7 @@ func (this *QCharRef) IsUpper() bool {
 // /usr/include/qt/QtCore/qstring.h:1065
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isTitleCase()
+// [1] bool isTitleCase() const
 func (this *QCharRef) IsTitleCase() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef11isTitleCaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func (this *QCharRef) IsTitleCase() bool {
 // /usr/include/qt/QtCore/qstring.h:1067
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int digitValue()
+// [4] int digitValue() const
 func (this *QCharRef) DigitValue() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef10digitValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -298,7 +298,7 @@ func (this *QCharRef) DigitValue() int {
 // /usr/include/qt/QtCore/qstring.h:1068
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] QChar toLower()
+// [2] QChar toLower() const
 func (this *QCharRef) ToLower() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7toLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -310,7 +310,7 @@ func (this *QCharRef) ToLower() *QChar /*123*/ {
 // /usr/include/qt/QtCore/qstring.h:1069
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] QChar toUpper()
+// [2] QChar toUpper() const
 func (this *QCharRef) ToUpper() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7toUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -322,7 +322,7 @@ func (this *QCharRef) ToUpper() *QChar /*123*/ {
 // /usr/include/qt/QtCore/qstring.h:1070
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] QChar toTitleCase()
+// [2] QChar toTitleCase() const
 func (this *QCharRef) ToTitleCase() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef11toTitleCaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -334,7 +334,7 @@ func (this *QCharRef) ToTitleCase() *QChar /*123*/ {
 // /usr/include/qt/QtCore/qstring.h:1072
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QChar::Category category()
+// [4] QChar::Category category() const
 func (this *QCharRef) Category() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef8categoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,7 +344,7 @@ func (this *QCharRef) Category() int {
 // /usr/include/qt/QtCore/qstring.h:1073
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QChar::Direction direction()
+// [4] QChar::Direction direction() const
 func (this *QCharRef) Direction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef9directionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -354,7 +354,7 @@ func (this *QCharRef) Direction() int {
 // /usr/include/qt/QtCore/qstring.h:1074
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QChar::JoiningType joiningType()
+// [4] QChar::JoiningType joiningType() const
 func (this *QCharRef) JoiningType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef11joiningTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -364,7 +364,7 @@ func (this *QCharRef) JoiningType() int {
 // /usr/include/qt/QtCore/qstring.h:1076
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QChar::Joining joining()
+// [4] QChar::Joining joining() const
 func (this *QCharRef) Joining() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7joiningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -374,7 +374,7 @@ func (this *QCharRef) Joining() int {
 // /usr/include/qt/QtCore/qstring.h:1089
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool hasMirrored()
+// [1] bool hasMirrored() const
 func (this *QCharRef) HasMirrored() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef11hasMirroredEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -384,7 +384,7 @@ func (this *QCharRef) HasMirrored() bool {
 // /usr/include/qt/QtCore/qstring.h:1090
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] QChar mirroredChar()
+// [2] QChar mirroredChar() const
 func (this *QCharRef) MirroredChar() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef12mirroredCharEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -396,7 +396,7 @@ func (this *QCharRef) MirroredChar() *QChar /*123*/ {
 // /usr/include/qt/QtCore/qstring.h:1091
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QString decomposition()
+// [8] QString decomposition() const
 func (this *QCharRef) Decomposition() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef13decompositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -409,7 +409,7 @@ func (this *QCharRef) Decomposition() string {
 // /usr/include/qt/QtCore/qstring.h:1092
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QChar::Decomposition decompositionTag()
+// [4] QChar::Decomposition decompositionTag() const
 func (this *QCharRef) DecompositionTag() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef16decompositionTagEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -419,7 +419,7 @@ func (this *QCharRef) DecompositionTag() int {
 // /usr/include/qt/QtCore/qstring.h:1093
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] uchar combiningClass()
+// [1] uchar combiningClass() const
 func (this *QCharRef) CombiningClass() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef14combiningClassEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -429,7 +429,7 @@ func (this *QCharRef) CombiningClass() byte {
 // /usr/include/qt/QtCore/qstring.h:1095
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QChar::Script script()
+// [4] QChar::Script script() const
 func (this *QCharRef) Script() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef6scriptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -439,7 +439,7 @@ func (this *QCharRef) Script() int {
 // /usr/include/qt/QtCore/qstring.h:1097
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QChar::UnicodeVersion unicodeVersion()
+// [4] QChar::UnicodeVersion unicodeVersion() const
 func (this *QCharRef) UnicodeVersion() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef14unicodeVersionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -449,7 +449,7 @@ func (this *QCharRef) UnicodeVersion() int {
 // /usr/include/qt/QtCore/qstring.h:1099
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] uchar cell()
+// [1] uchar cell() const
 func (this *QCharRef) Cell() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef4cellEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -459,7 +459,7 @@ func (this *QCharRef) Cell() byte {
 // /usr/include/qt/QtCore/qstring.h:1100
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] uchar row()
+// [1] uchar row() const
 func (this *QCharRef) Row() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef3rowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -487,7 +487,7 @@ func (this *QCharRef) SetRow(row byte) {
 // /usr/include/qt/QtCore/qstring.h:1107
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] char toLatin1()
+// [1] char toLatin1() const
 func (this *QCharRef) ToLatin1() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -497,7 +497,7 @@ func (this *QCharRef) ToLatin1() byte {
 // /usr/include/qt/QtCore/qstring.h:1108
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] ushort unicode()
+// [2] ushort unicode() const
 func (this *QCharRef) Unicode() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

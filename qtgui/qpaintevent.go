@@ -106,7 +106,7 @@ func DeleteQPaintEvent(this *QPaintEvent) {
 // /usr/include/qt/QtGui/qevent.h:409
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] const QRect & rect()
+// [16] const QRect & rect() const
 func (this *QPaintEvent) Rect() *qtcore.QRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPaintEvent4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QPaintEvent) Rect() *qtcore.QRect {
 // /usr/include/qt/QtGui/qevent.h:410
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QRegion & region()
+// [8] const QRegion & region() const
 func (this *QPaintEvent) Region() *QRegion {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPaintEvent6regionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

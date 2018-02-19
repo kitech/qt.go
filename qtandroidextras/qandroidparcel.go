@@ -104,7 +104,7 @@ func DeleteQAndroidParcel(this *QAndroidParcel) {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:58
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void writeData(const QByteArray &)
+// [-2] void writeData(const QByteArray &) const
 func (this *QAndroidParcel) WriteData(data qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -117,7 +117,7 @@ func (this *QAndroidParcel) WriteData(data qtcore.QByteArray_ITF) {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:59
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void writeVariant(const QVariant &)
+// [-2] void writeVariant(const QVariant &) const
 func (this *QAndroidParcel) WriteVariant(value qtcore.QVariant_ITF) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -130,7 +130,7 @@ func (this *QAndroidParcel) WriteVariant(value qtcore.QVariant_ITF) {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:60
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void writeBinder(const QAndroidBinder &)
+// [-2] void writeBinder(const QAndroidBinder &) const
 func (this *QAndroidParcel) WriteBinder(binder QAndroidBinder_ITF) {
 	var convArg0 unsafe.Pointer
 	if binder != nil && binder.QAndroidBinder_PTR() != nil {
@@ -143,7 +143,7 @@ func (this *QAndroidParcel) WriteBinder(binder QAndroidBinder_ITF) {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void writeFileDescriptor(int)
+// [-2] void writeFileDescriptor(int) const
 func (this *QAndroidParcel) WriteFileDescriptor(fd int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel19writeFileDescriptorEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fd)
 	qtrt.ErrPrint(err, rv)
@@ -152,7 +152,7 @@ func (this *QAndroidParcel) WriteFileDescriptor(fd int) {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray readData()
+// [8] QByteArray readData() const
 func (this *QAndroidParcel) ReadData() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel8readDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ func (this *QAndroidParcel) ReadData() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant readVariant()
+// [16] QVariant readVariant() const
 func (this *QAndroidParcel) ReadVariant() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel11readVariantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +176,7 @@ func (this *QAndroidParcel) ReadVariant() *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] QAndroidBinder readBinder()
+// [1] QAndroidBinder readBinder() const
 func (this *QAndroidParcel) ReadBinder() *QAndroidBinder /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel10readBinderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,7 +188,7 @@ func (this *QAndroidParcel) ReadBinder() *QAndroidBinder /*123*/ {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int readFileDescriptor()
+// [4] int readFileDescriptor() const
 func (this *QAndroidParcel) ReadFileDescriptor() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel18readFileDescriptorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,7 +198,7 @@ func (this *QAndroidParcel) ReadFileDescriptor() int {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidparcel.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] QAndroidJniObject handle()
+// [1] QAndroidJniObject handle() const
 func (this *QAndroidParcel) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidParcel6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

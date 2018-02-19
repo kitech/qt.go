@@ -87,7 +87,7 @@ func (*QPaintDeviceWindow) NewFromPointer(cthis unsafe.Pointer) *QPaintDeviceWin
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,7 +145,7 @@ func (this *QPaintDeviceWindow) PaintEvent(event QPaintEvent_ITF /*777 QPaintEve
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:71
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric)
+// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
 func (this *QPaintDeviceWindow) Metric(metric int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow6metricEN12QPaintDevice17PaintDeviceMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	qtrt.ErrPrint(err, rv)

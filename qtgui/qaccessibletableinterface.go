@@ -78,7 +78,7 @@ func DeleteQAccessibleTableInterface(this *QAccessibleTableInterface) {
 // /usr/include/qt/QtGui/qaccessible.h:597
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QAccessibleInterface * caption()
+// [8] QAccessibleInterface * caption() const
 func (this *QAccessibleTableInterface) Caption() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface7captionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,7 +88,7 @@ func (this *QAccessibleTableInterface) Caption() *QAccessibleInterface /*777 QAc
 // /usr/include/qt/QtGui/qaccessible.h:598
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QAccessibleInterface * summary()
+// [8] QAccessibleInterface * summary() const
 func (this *QAccessibleTableInterface) Summary() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface7summaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,7 +98,7 @@ func (this *QAccessibleTableInterface) Summary() *QAccessibleInterface /*777 QAc
 // /usr/include/qt/QtGui/qaccessible.h:600
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QAccessibleInterface * cellAt(int, int)
+// [8] QAccessibleInterface * cellAt(int, int) const
 func (this *QAccessibleTableInterface) CellAt(row int, column int) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface6cellAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -108,7 +108,7 @@ func (this *QAccessibleTableInterface) CellAt(row int, column int) *QAccessibleI
 // /usr/include/qt/QtGui/qaccessible.h:601
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int selectedCellCount()
+// [4] int selectedCellCount() const
 func (this *QAccessibleTableInterface) SelectedCellCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface17selectedCellCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QAccessibleTableInterface) SelectedCellCount() int {
 // /usr/include/qt/QtGui/qaccessible.h:604
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QString columnDescription(int)
+// [8] QString columnDescription(int) const
 func (this *QAccessibleTableInterface) ColumnDescription(column int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface17columnDescriptionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -131,7 +131,7 @@ func (this *QAccessibleTableInterface) ColumnDescription(column int) string {
 // /usr/include/qt/QtGui/qaccessible.h:605
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QString rowDescription(int)
+// [8] QString rowDescription(int) const
 func (this *QAccessibleTableInterface) RowDescription(row int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface14rowDescriptionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func (this *QAccessibleTableInterface) RowDescription(row int) string {
 // /usr/include/qt/QtGui/qaccessible.h:606
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int selectedColumnCount()
+// [4] int selectedColumnCount() const
 func (this *QAccessibleTableInterface) SelectedColumnCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface19selectedColumnCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,7 +154,7 @@ func (this *QAccessibleTableInterface) SelectedColumnCount() int {
 // /usr/include/qt/QtGui/qaccessible.h:607
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int selectedRowCount()
+// [4] int selectedRowCount() const
 func (this *QAccessibleTableInterface) SelectedRowCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface16selectedRowCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ func (this *QAccessibleTableInterface) SelectedRowCount() int {
 // /usr/include/qt/QtGui/qaccessible.h:608
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int columnCount()
+// [4] int columnCount() const
 func (this *QAccessibleTableInterface) ColumnCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface11columnCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +174,7 @@ func (this *QAccessibleTableInterface) ColumnCount() int {
 // /usr/include/qt/QtGui/qaccessible.h:609
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int rowCount()
+// [4] int rowCount() const
 func (this *QAccessibleTableInterface) RowCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface8rowCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,7 +184,7 @@ func (this *QAccessibleTableInterface) RowCount() int {
 // /usr/include/qt/QtGui/qaccessible.h:612
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [1] bool isColumnSelected(int)
+// [1] bool isColumnSelected(int) const
 func (this *QAccessibleTableInterface) IsColumnSelected(column int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface16isColumnSelectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +194,7 @@ func (this *QAccessibleTableInterface) IsColumnSelected(column int) bool {
 // /usr/include/qt/QtGui/qaccessible.h:613
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [1] bool isRowSelected(int)
+// [1] bool isRowSelected(int) const
 func (this *QAccessibleTableInterface) IsRowSelected(row int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface13isRowSelectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)

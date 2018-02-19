@@ -67,7 +67,7 @@ func (*QOffscreenSurface) NewFromPointer(cthis unsafe.Pointer) *QOffscreenSurfac
 // /usr/include/qt/QtGui/qoffscreensurface.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QOffscreenSurface) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +110,20 @@ func NewQOffscreenSurface_1(screen QScreen_ITF /*777 QScreen **/) *QOffscreenSur
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qoffscreensurface.h:62
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QOffscreenSurface(QScreen *)
+func NewQOffscreenSurface_1_() *QOffscreenSurface {
+	// arg: 0, QScreen *=Pointer, QScreen=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QOffscreenSurfaceC2EP7QScreen", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQOffscreenSurfaceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QOffscreenSurface")
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qoffscreensurface.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -124,7 +138,7 @@ func DeleteQOffscreenSurface(this *QOffscreenSurface) {
 // /usr/include/qt/QtGui/qoffscreensurface.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QSurface::SurfaceType surfaceType()
+// [4] QSurface::SurfaceType surfaceType() const
 func (this *QOffscreenSurface) SurfaceType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface11surfaceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -152,7 +166,7 @@ func (this *QOffscreenSurface) Destroy() {
 // /usr/include/qt/QtGui/qoffscreensurface.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QOffscreenSurface) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +189,7 @@ func (this *QOffscreenSurface) SetFormat(format QSurfaceFormat_ITF) {
 // /usr/include/qt/QtGui/qoffscreensurface.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSurfaceFormat format()
+// [8] QSurfaceFormat format() const
 func (this *QOffscreenSurface) Format() *QSurfaceFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +201,7 @@ func (this *QOffscreenSurface) Format() *QSurfaceFormat /*123*/ {
 // /usr/include/qt/QtGui/qoffscreensurface.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSurfaceFormat requestedFormat()
+// [8] QSurfaceFormat requestedFormat() const
 func (this *QOffscreenSurface) RequestedFormat() *QSurfaceFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface15requestedFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,7 +213,7 @@ func (this *QOffscreenSurface) RequestedFormat() *QSurfaceFormat /*123*/ {
 // /usr/include/qt/QtGui/qoffscreensurface.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize size()
+// [8] QSize size() const
 func (this *QOffscreenSurface) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -211,7 +225,7 @@ func (this *QOffscreenSurface) Size() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qoffscreensurface.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QScreen * screen()
+// [8] QScreen * screen() const
 func (this *QOffscreenSurface) Screen() *QScreen /*777 QScreen **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface6screenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -234,7 +248,7 @@ func (this *QOffscreenSurface) SetScreen(screen QScreen_ITF /*777 QScreen **/) {
 // /usr/include/qt/QtGui/qoffscreensurface.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] void * nativeHandle()
+// [8] void * nativeHandle() const
 func (this *QOffscreenSurface) NativeHandle() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface12nativeHandleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

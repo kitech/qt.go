@@ -94,7 +94,7 @@ func (*QPushButton) NewFromPointer(cthis unsafe.Pointer) *QPushButton {
 // /usr/include/qt/QtWidgets/qpushbutton.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QPushButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -117,6 +117,20 @@ func NewQPushButton(parent QWidget_ITF /*777 QWidget **/) *QPushButton {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qpushbutton.h:64
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QPushButton(QWidget *)
+func NewQPushButton__() *QPushButton {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPushButton")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qpushbutton.h:65
 // index:1
 // Public Visibility=Default Availability=Available
@@ -128,6 +142,22 @@ func NewQPushButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushB
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButtonC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPushButton")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qpushbutton.h:65
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QPushButton(const QString &, QWidget *)
+func NewQPushButton_1_(text string) *QPushButton {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButtonC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -157,6 +187,26 @@ func NewQPushButton_2(icon qtgui.QIcon_ITF, text string, parent QWidget_ITF /*77
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qpushbutton.h:66
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QPushButton(const QIcon &, const QString &, QWidget *)
+func NewQPushButton_2_(icon qtgui.QIcon_ITF, text string) *QPushButton {
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString_5(text)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPushButton")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qpushbutton.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -171,7 +221,7 @@ func DeleteQPushButton(this *QPushButton) {
 // /usr/include/qt/QtWidgets/qpushbutton.h:69
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,7 +233,7 @@ func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qpushbutton.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QPushButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,7 +245,7 @@ func (this *QPushButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qpushbutton.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool autoDefault()
+// [1] bool autoDefault() const
 func (this *QPushButton) AutoDefault() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton11autoDefaultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,7 +264,7 @@ func (this *QPushButton) SetAutoDefault(arg0 bool) {
 // /usr/include/qt/QtWidgets/qpushbutton.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isDefault()
+// [1] bool isDefault() const
 func (this *QPushButton) IsDefault() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton9isDefaultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -246,7 +296,7 @@ func (this *QPushButton) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
 // /usr/include/qt/QtWidgets/qpushbutton.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QMenu * menu()
+// [8] QMenu * menu() const
 func (this *QPushButton) Menu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton4menuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -265,7 +315,7 @@ func (this *QPushButton) SetFlat(arg0 bool) {
 // /usr/include/qt/QtWidgets/qpushbutton.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isFlat()
+// [1] bool isFlat() const
 func (this *QPushButton) IsFlat() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton6isFlatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -350,7 +400,7 @@ func (this *QPushButton) FocusOutEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEv
 // /usr/include/qt/QtWidgets/qpushbutton.h:96
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionButton *)
+// [-2] void initStyleOption(QStyleOptionButton *) const
 func (this *QPushButton) InitStyleOption(option QStyleOptionButton_ITF /*777 QStyleOptionButton **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionButton_PTR() != nil {

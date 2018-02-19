@@ -63,7 +63,7 @@ func (*QUdpSocket) NewFromPointer(cthis unsafe.Pointer) *QUdpSocket {
 // /usr/include/qt/QtNetwork/qudpsocket.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QUdpSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUdpSocket10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +79,20 @@ func NewQUdpSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QUdpSocket {
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQUdpSocketFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QUdpSocket")
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qudpsocket.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QUdpSocket(QObject *)
+func NewQUdpSocket__() *QUdpSocket {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUdpSocketFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -164,7 +178,7 @@ func (this *QUdpSocket) LeaveMulticastGroup_1(groupAddress QHostAddress_ITF, ifa
 // /usr/include/qt/QtNetwork/qudpsocket.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QNetworkInterface multicastInterface()
+// [8] QNetworkInterface multicastInterface() const
 func (this *QUdpSocket) MulticastInterface() *QNetworkInterface /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUdpSocket18multicastInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,7 +203,7 @@ func (this *QUdpSocket) SetMulticastInterface(iface QNetworkInterface_ITF) {
 // /usr/include/qt/QtNetwork/qudpsocket.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasPendingDatagrams()
+// [1] bool hasPendingDatagrams() const
 func (this *QUdpSocket) HasPendingDatagrams() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUdpSocket19hasPendingDatagramsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,7 +213,7 @@ func (this *QUdpSocket) HasPendingDatagrams() bool {
 // /usr/include/qt/QtNetwork/qudpsocket.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 pendingDatagramSize()
+// [8] qint64 pendingDatagramSize() const
 func (this *QUdpSocket) PendingDatagramSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUdpSocket19pendingDatagramSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -211,6 +225,20 @@ func (this *QUdpSocket) PendingDatagramSize() int64 {
 // Public Visibility=Default Availability=Available
 // [8] QNetworkDatagram receiveDatagram(qint64)
 func (this *QUdpSocket) ReceiveDatagram(maxSize int64) *QNetworkDatagram /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket15receiveDatagramEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxSize)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQNetworkDatagramFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkDatagram)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qudpsocket.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QNetworkDatagram receiveDatagram(qint64)
+func (this *QUdpSocket) ReceiveDatagram__() *QNetworkDatagram /*123*/ {
+	// arg: 0, qint64=Typedef, qint64=Typedef, long long
+	maxSize := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket15receiveDatagramEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxSize)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQNetworkDatagramFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -234,6 +262,40 @@ func (this *QUdpSocket) ReadDatagram(data string, maxlen int64, host QHostAddres
 	return int64(rv) // 222
 }
 
+// /usr/include/qt/QtNetwork/qudpsocket.h:78
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qint64 readDatagram(char *, qint64, QHostAddress *, quint16 *)
+func (this *QUdpSocket) ReadDatagram__(data string, maxlen int64) int64 {
+	var convArg0 = qtrt.CString(data)
+	defer qtrt.FreeMem(convArg0)
+	// arg: 2, QHostAddress *=Pointer, QHostAddress=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, quint16 *=Pointer, quint16=Typedef, unsigned short
+	port := unsafe.Pointer(nil)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, port)
+	qtrt.ErrPrint(err, rv)
+	return int64(rv) // 222
+}
+
+// /usr/include/qt/QtNetwork/qudpsocket.h:78
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qint64 readDatagram(char *, qint64, QHostAddress *, quint16 *)
+func (this *QUdpSocket) ReadDatagram__1(data string, maxlen int64, host QHostAddress_ITF /*777 QHostAddress **/) int64 {
+	var convArg0 = qtrt.CString(data)
+	defer qtrt.FreeMem(convArg0)
+	var convArg2 unsafe.Pointer
+	if host != nil && host.QHostAddress_PTR() != nil {
+		convArg2 = host.QHostAddress_PTR().GetCthis()
+	}
+	// arg: 3, quint16 *=Pointer, quint16=Typedef, unsigned short
+	port := unsafe.Pointer(nil)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, port)
+	qtrt.ErrPrint(err, rv)
+	return int64(rv) // 222
+}
+
 // /usr/include/qt/QtNetwork/qudpsocket.h:80
 // index:0
 // Public Visibility=Default Availability=Available
@@ -252,14 +314,14 @@ func (this *QUdpSocket) WriteDatagram(datagram QNetworkDatagram_ITF) int64 {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] qint64 writeDatagram(const char *, qint64, const QHostAddress &, quint16)
-func (this *QUdpSocket) WriteDatagram_1(data string, len int64, host QHostAddress_ITF, port uint16) int64 {
+func (this *QUdpSocket) WriteDatagram_1(data string, len_ int64, host QHostAddress_ITF, port uint16) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 unsafe.Pointer
 	if host != nil && host.QHostAddress_PTR() != nil {
 		convArg2 = host.QHostAddress_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramEPKcxRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len, convArg2, port)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramEPKcxRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_, convArg2, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }

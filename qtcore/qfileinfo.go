@@ -176,7 +176,7 @@ func (this *QFileInfo) Swap(other QFileInfo_ITF) {
 // /usr/include/qt/QtCore/qfileinfo.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QFileInfo &)
+// [1] bool operator==(const QFileInfo &) const
 func (this *QFileInfo) Operator_equal_equal(fileinfo QFileInfo_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if fileinfo != nil && fileinfo.QFileInfo_PTR() != nil {
@@ -190,7 +190,7 @@ func (this *QFileInfo) Operator_equal_equal(fileinfo QFileInfo_ITF) bool {
 // /usr/include/qt/QtCore/qfileinfo.h:78
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QFileInfo &)
+// [1] bool operator!=(const QFileInfo &) const
 func (this *QFileInfo) Operator_not_equal(fileinfo QFileInfo_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if fileinfo != nil && fileinfo.QFileInfo_PTR() != nil {
@@ -243,7 +243,7 @@ func (this *QFileInfo) SetFile_2(dir QDir_ITF, file string) {
 // /usr/include/qt/QtCore/qfileinfo.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool exists()
+// [1] bool exists() const
 func (this *QFileInfo) Exists() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo6existsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -279,7 +279,7 @@ func (this *QFileInfo) Refresh() {
 // /usr/include/qt/QtCore/qfileinfo.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString filePath()
+// [8] QString filePath() const
 func (this *QFileInfo) FilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo8filePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -292,7 +292,7 @@ func (this *QFileInfo) FilePath() string {
 // /usr/include/qt/QtCore/qfileinfo.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString absoluteFilePath()
+// [8] QString absoluteFilePath() const
 func (this *QFileInfo) AbsoluteFilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo16absoluteFilePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -305,7 +305,7 @@ func (this *QFileInfo) AbsoluteFilePath() string {
 // /usr/include/qt/QtCore/qfileinfo.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString canonicalFilePath()
+// [8] QString canonicalFilePath() const
 func (this *QFileInfo) CanonicalFilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo17canonicalFilePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -318,7 +318,7 @@ func (this *QFileInfo) CanonicalFilePath() string {
 // /usr/include/qt/QtCore/qfileinfo.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString fileName()
+// [8] QString fileName() const
 func (this *QFileInfo) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -331,7 +331,7 @@ func (this *QFileInfo) FileName() string {
 // /usr/include/qt/QtCore/qfileinfo.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString baseName()
+// [8] QString baseName() const
 func (this *QFileInfo) BaseName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo8baseNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,7 +344,7 @@ func (this *QFileInfo) BaseName() string {
 // /usr/include/qt/QtCore/qfileinfo.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString completeBaseName()
+// [8] QString completeBaseName() const
 func (this *QFileInfo) CompleteBaseName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo16completeBaseNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -357,7 +357,7 @@ func (this *QFileInfo) CompleteBaseName() string {
 // /usr/include/qt/QtCore/qfileinfo.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString suffix()
+// [8] QString suffix() const
 func (this *QFileInfo) Suffix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo6suffixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -370,7 +370,7 @@ func (this *QFileInfo) Suffix() string {
 // /usr/include/qt/QtCore/qfileinfo.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString bundleName()
+// [8] QString bundleName() const
 func (this *QFileInfo) BundleName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo10bundleNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -383,7 +383,7 @@ func (this *QFileInfo) BundleName() string {
 // /usr/include/qt/QtCore/qfileinfo.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString completeSuffix()
+// [8] QString completeSuffix() const
 func (this *QFileInfo) CompleteSuffix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo14completeSuffixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -396,7 +396,7 @@ func (this *QFileInfo) CompleteSuffix() string {
 // /usr/include/qt/QtCore/qfileinfo.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString path()
+// [8] QString path() const
 func (this *QFileInfo) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo4pathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -409,7 +409,7 @@ func (this *QFileInfo) Path() string {
 // /usr/include/qt/QtCore/qfileinfo.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString absolutePath()
+// [8] QString absolutePath() const
 func (this *QFileInfo) AbsolutePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo12absolutePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -422,7 +422,7 @@ func (this *QFileInfo) AbsolutePath() string {
 // /usr/include/qt/QtCore/qfileinfo.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString canonicalPath()
+// [8] QString canonicalPath() const
 func (this *QFileInfo) CanonicalPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo13canonicalPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -435,7 +435,7 @@ func (this *QFileInfo) CanonicalPath() string {
 // /usr/include/qt/QtCore/qfileinfo.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDir dir()
+// [8] QDir dir() const
 func (this *QFileInfo) Dir() *QDir /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo3dirEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -447,7 +447,7 @@ func (this *QFileInfo) Dir() *QDir /*123*/ {
 // /usr/include/qt/QtCore/qfileinfo.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDir absoluteDir()
+// [8] QDir absoluteDir() const
 func (this *QFileInfo) AbsoluteDir() *QDir /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo11absoluteDirEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -459,7 +459,7 @@ func (this *QFileInfo) AbsoluteDir() *QDir /*123*/ {
 // /usr/include/qt/QtCore/qfileinfo.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isReadable()
+// [1] bool isReadable() const
 func (this *QFileInfo) IsReadable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo10isReadableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -469,7 +469,7 @@ func (this *QFileInfo) IsReadable() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isWritable()
+// [1] bool isWritable() const
 func (this *QFileInfo) IsWritable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo10isWritableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -479,7 +479,7 @@ func (this *QFileInfo) IsWritable() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isExecutable()
+// [1] bool isExecutable() const
 func (this *QFileInfo) IsExecutable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo12isExecutableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -489,7 +489,7 @@ func (this *QFileInfo) IsExecutable() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isHidden()
+// [1] bool isHidden() const
 func (this *QFileInfo) IsHidden() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo8isHiddenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -499,7 +499,7 @@ func (this *QFileInfo) IsHidden() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNativePath()
+// [1] bool isNativePath() const
 func (this *QFileInfo) IsNativePath() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo12isNativePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -509,7 +509,7 @@ func (this *QFileInfo) IsNativePath() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRelative()
+// [1] bool isRelative() const
 func (this *QFileInfo) IsRelative() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo10isRelativeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -519,7 +519,7 @@ func (this *QFileInfo) IsRelative() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:110
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isAbsolute()
+// [1] bool isAbsolute() const
 func (this *QFileInfo) IsAbsolute() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo10isAbsoluteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -539,7 +539,7 @@ func (this *QFileInfo) MakeAbsolute() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isFile()
+// [1] bool isFile() const
 func (this *QFileInfo) IsFile() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo6isFileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -549,7 +549,7 @@ func (this *QFileInfo) IsFile() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isDir()
+// [1] bool isDir() const
 func (this *QFileInfo) IsDir() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo5isDirEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -559,7 +559,7 @@ func (this *QFileInfo) IsDir() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSymLink()
+// [1] bool isSymLink() const
 func (this *QFileInfo) IsSymLink() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo9isSymLinkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -569,7 +569,7 @@ func (this *QFileInfo) IsSymLink() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRoot()
+// [1] bool isRoot() const
 func (this *QFileInfo) IsRoot() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo6isRootEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -579,7 +579,7 @@ func (this *QFileInfo) IsRoot() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isBundle()
+// [1] bool isBundle() const
 func (this *QFileInfo) IsBundle() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo8isBundleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -589,7 +589,7 @@ func (this *QFileInfo) IsBundle() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString readLink()
+// [8] QString readLink() const
 func (this *QFileInfo) ReadLink() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo8readLinkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -602,7 +602,7 @@ func (this *QFileInfo) ReadLink() string {
 // /usr/include/qt/QtCore/qfileinfo.h:120
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QString symLinkTarget()
+// [8] QString symLinkTarget() const
 func (this *QFileInfo) SymLinkTarget() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo13symLinkTargetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -615,7 +615,7 @@ func (this *QFileInfo) SymLinkTarget() string {
 // /usr/include/qt/QtCore/qfileinfo.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString owner()
+// [8] QString owner() const
 func (this *QFileInfo) Owner() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo5ownerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -628,7 +628,7 @@ func (this *QFileInfo) Owner() string {
 // /usr/include/qt/QtCore/qfileinfo.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint ownerId()
+// [4] uint ownerId() const
 func (this *QFileInfo) OwnerId() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo7ownerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -638,7 +638,7 @@ func (this *QFileInfo) OwnerId() uint {
 // /usr/include/qt/QtCore/qfileinfo.h:124
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString group()
+// [8] QString group() const
 func (this *QFileInfo) Group() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo5groupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -651,7 +651,7 @@ func (this *QFileInfo) Group() string {
 // /usr/include/qt/QtCore/qfileinfo.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint groupId()
+// [4] uint groupId() const
 func (this *QFileInfo) GroupId() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo7groupIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -661,7 +661,7 @@ func (this *QFileInfo) GroupId() uint {
 // /usr/include/qt/QtCore/qfileinfo.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool permission(QFile::Permissions)
+// [1] bool permission(QFile::Permissions) const
 func (this *QFileInfo) Permission(permissions int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo10permissionE6QFlagsIN11QFileDevice10PermissionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), permissions)
 	qtrt.ErrPrint(err, rv)
@@ -671,7 +671,7 @@ func (this *QFileInfo) Permission(permissions int) bool {
 // /usr/include/qt/QtCore/qfileinfo.h:128
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QFile::Permissions permissions()
+// [4] QFile::Permissions permissions() const
 func (this *QFileInfo) Permissions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo11permissionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -681,7 +681,7 @@ func (this *QFileInfo) Permissions() int {
 // /usr/include/qt/QtCore/qfileinfo.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 size()
+// [8] qint64 size() const
 func (this *QFileInfo) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -691,7 +691,7 @@ func (this *QFileInfo) Size() int64 {
 // /usr/include/qt/QtCore/qfileinfo.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime created()
+// [8] QDateTime created() const
 func (this *QFileInfo) Created() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo7createdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -703,7 +703,7 @@ func (this *QFileInfo) Created() *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qfileinfo.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime birthTime()
+// [8] QDateTime birthTime() const
 func (this *QFileInfo) BirthTime() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo9birthTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -715,7 +715,7 @@ func (this *QFileInfo) BirthTime() *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qfileinfo.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime metadataChangeTime()
+// [8] QDateTime metadataChangeTime() const
 func (this *QFileInfo) MetadataChangeTime() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo18metadataChangeTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -727,7 +727,7 @@ func (this *QFileInfo) MetadataChangeTime() *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qfileinfo.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime lastModified()
+// [8] QDateTime lastModified() const
 func (this *QFileInfo) LastModified() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo12lastModifiedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -739,7 +739,7 @@ func (this *QFileInfo) LastModified() *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qfileinfo.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime lastRead()
+// [8] QDateTime lastRead() const
 func (this *QFileInfo) LastRead() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo8lastReadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -751,7 +751,7 @@ func (this *QFileInfo) LastRead() *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qfileinfo.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime fileTime(QFile::FileTime)
+// [8] QDateTime fileTime(QFile::FileTime) const
 func (this *QFileInfo) FileTime(time int) *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo8fileTimeEN11QFileDevice8FileTimeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), time)
 	qtrt.ErrPrint(err, rv)
@@ -763,7 +763,7 @@ func (this *QFileInfo) FileTime(time int) *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qfileinfo.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool caching()
+// [1] bool caching() const
 func (this *QFileInfo) Caching() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo7cachingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

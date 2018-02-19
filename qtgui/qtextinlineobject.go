@@ -77,7 +77,7 @@ func NewQTextInlineObject() *QTextInlineObject {
 // /usr/include/qt/QtGui/qtextlayout.h:73
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QTextInlineObject) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,7 +87,7 @@ func (this *QTextInlineObject) IsValid() bool {
 // /usr/include/qt/QtGui/qtextlayout.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF rect()
+// [32] QRectF rect() const
 func (this *QTextInlineObject) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -99,7 +99,7 @@ func (this *QTextInlineObject) Rect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qtextlayout.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal width()
+// [8] qreal width() const
 func (this *QTextInlineObject) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,7 +109,7 @@ func (this *QTextInlineObject) Width() float64 {
 // /usr/include/qt/QtGui/qtextlayout.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal ascent()
+// [8] qreal ascent() const
 func (this *QTextInlineObject) Ascent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject6ascentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,7 +119,7 @@ func (this *QTextInlineObject) Ascent() float64 {
 // /usr/include/qt/QtGui/qtextlayout.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal descent()
+// [8] qreal descent() const
 func (this *QTextInlineObject) Descent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject7descentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,7 +129,7 @@ func (this *QTextInlineObject) Descent() float64 {
 // /usr/include/qt/QtGui/qtextlayout.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal height()
+// [8] qreal height() const
 func (this *QTextInlineObject) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,7 +139,7 @@ func (this *QTextInlineObject) Height() float64 {
 // /usr/include/qt/QtGui/qtextlayout.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::LayoutDirection textDirection()
+// [4] Qt::LayoutDirection textDirection() const
 func (this *QTextInlineObject) TextDirection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject13textDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +176,7 @@ func (this *QTextInlineObject) SetDescent(d float64) {
 // /usr/include/qt/QtGui/qtextlayout.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int textPosition()
+// [4] int textPosition() const
 func (this *QTextInlineObject) TextPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject12textPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +186,7 @@ func (this *QTextInlineObject) TextPosition() int {
 // /usr/include/qt/QtGui/qtextlayout.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int formatIndex()
+// [4] int formatIndex() const
 func (this *QTextInlineObject) FormatIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject11formatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -196,7 +196,7 @@ func (this *QTextInlineObject) FormatIndex() int {
 // /usr/include/qt/QtGui/qtextlayout.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QTextFormat format()
+// [16] QTextFormat format() const
 func (this *QTextInlineObject) Format() *QTextFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -117,7 +117,7 @@ func (this *QAccessibleTextSelectionEvent) SetSelection(start int, end int) {
 // /usr/include/qt/QtGui/qaccessible.h:793
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int selectionStart()
+// [4] int selectionStart() const
 func (this *QAccessibleTextSelectionEvent) SelectionStart() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTextSelectionEvent14selectionStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,7 +127,7 @@ func (this *QAccessibleTextSelectionEvent) SelectionStart() int {
 // /usr/include/qt/QtGui/qaccessible.h:794
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int selectionEnd()
+// [4] int selectionEnd() const
 func (this *QAccessibleTextSelectionEvent) SelectionEnd() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTextSelectionEvent12selectionEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

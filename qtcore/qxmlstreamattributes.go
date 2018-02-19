@@ -76,7 +76,7 @@ func NewQXmlStreamAttributes() *QXmlStreamAttributes {
 // /usr/include/qt/QtCore/qxmlstream.h:165
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QStringRef value(const QString &, const QString &)
+// [16] QStringRef value(const QString &, const QString &) const
 func (this *QXmlStreamAttributes) Value(namespaceUri string, name string) *QStringRef /*123*/ {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -92,7 +92,7 @@ func (this *QXmlStreamAttributes) Value(namespaceUri string, name string) *QStri
 // /usr/include/qt/QtCore/qxmlstream.h:166
 // index:1
 // Public Visibility=Default Availability=Available
-// [16] QStringRef value(const QString &, QLatin1String)
+// [16] QStringRef value(const QString &, QLatin1String) const
 func (this *QXmlStreamAttributes) Value_1(namespaceUri string, name QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -110,7 +110,7 @@ func (this *QXmlStreamAttributes) Value_1(namespaceUri string, name QLatin1Strin
 // /usr/include/qt/QtCore/qxmlstream.h:167
 // index:2
 // Public Visibility=Default Availability=Available
-// [16] QStringRef value(QLatin1String, QLatin1String)
+// [16] QStringRef value(QLatin1String, QLatin1String) const
 func (this *QXmlStreamAttributes) Value_2(namespaceUri QLatin1String_ITF /*123*/, name QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
 	var convArg0 unsafe.Pointer
 	if namespaceUri != nil && namespaceUri.QLatin1String_PTR() != nil {
@@ -130,7 +130,7 @@ func (this *QXmlStreamAttributes) Value_2(namespaceUri QLatin1String_ITF /*123*/
 // /usr/include/qt/QtCore/qxmlstream.h:168
 // index:3
 // Public Visibility=Default Availability=Available
-// [16] QStringRef value(const QString &)
+// [16] QStringRef value(const QString &) const
 func (this *QXmlStreamAttributes) Value_3(qualifiedName string) *QStringRef /*123*/ {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -144,7 +144,7 @@ func (this *QXmlStreamAttributes) Value_3(qualifiedName string) *QStringRef /*12
 // /usr/include/qt/QtCore/qxmlstream.h:169
 // index:4
 // Public Visibility=Default Availability=Available
-// [16] QStringRef value(QLatin1String)
+// [16] QStringRef value(QLatin1String) const
 func (this *QXmlStreamAttributes) Value_4(qualifiedName QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
 	var convArg0 unsafe.Pointer
 	if qualifiedName != nil && qualifiedName.QLatin1String_PTR() != nil {
@@ -160,7 +160,7 @@ func (this *QXmlStreamAttributes) Value_4(qualifiedName QLatin1String_ITF /*123*
 // /usr/include/qt/QtCore/qxmlstream.h:173
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool hasAttribute(const QString &)
+// [1] bool hasAttribute(const QString &) const
 func (this *QXmlStreamAttributes) HasAttribute(qualifiedName string) bool {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -172,7 +172,7 @@ func (this *QXmlStreamAttributes) HasAttribute(qualifiedName string) bool {
 // /usr/include/qt/QtCore/qxmlstream.h:178
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [1] bool hasAttribute(QLatin1String)
+// [1] bool hasAttribute(QLatin1String) const
 func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if qualifiedName != nil && qualifiedName.QLatin1String_PTR() != nil {
@@ -186,7 +186,7 @@ func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName QLatin1String_ITF
 // /usr/include/qt/QtCore/qxmlstream.h:183
 // index:2
 // Public inline Visibility=Default Availability=Available
-// [1] bool hasAttribute(const QString &, const QString &)
+// [1] bool hasAttribute(const QString &, const QString &) const
 func (this *QXmlStreamAttributes) HasAttribute_2(namespaceUri string, name string) bool {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()

@@ -179,7 +179,7 @@ func (this *QXmlStreamStringRef) Clear() {
 // /usr/include/qt/QtCore/qxmlstream.h:91
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QString * string()
+// [8] const QString * string() const
 func (this *QXmlStreamStringRef) String() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef6stringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func (this *QXmlStreamStringRef) String() string {
 // /usr/include/qt/QtCore/qxmlstream.h:92
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int position()
+// [4] int position() const
 func (this *QXmlStreamStringRef) Position() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func (this *QXmlStreamStringRef) Position() int {
 // /usr/include/qt/QtCore/qxmlstream.h:93
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int size()
+// [4] int size() const
 func (this *QXmlStreamStringRef) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

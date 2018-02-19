@@ -63,7 +63,7 @@ func (*QIconEnginePlugin) NewFromPointer(cthis unsafe.Pointer) *QIconEnginePlugi
 // /usr/include/qt/QtGui/qiconengineplugin.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QIconEnginePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +79,20 @@ func NewQIconEnginePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QIconEng
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQIconEnginePluginFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QIconEnginePlugin")
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qiconengineplugin.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QIconEnginePlugin(QObject *)
+func NewQIconEnginePlugin__() *QIconEnginePlugin {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIconEnginePluginFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -104,6 +118,18 @@ func DeleteQIconEnginePlugin(this *QIconEnginePlugin) {
 func (this *QIconEnginePlugin) Create(filename string) *QIconEngine /*777 QIconEngine **/ {
 	var tmpArg0 = qtcore.NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePlugin6createERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQIconEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtGui/qiconengineplugin.h:61
+// index:0
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QIconEngine * create(const QString &)
+func (this *QIconEnginePlugin) Create__() *QIconEngine /*777 QIconEngine **/ {
+	// arg: 0, const QString &=LValueReference, QString=Record,
+	var convArg0 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePlugin6createERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQIconEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444

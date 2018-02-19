@@ -164,7 +164,7 @@ func (*QMdiSubWindow) NewFromPointer(cthis unsafe.Pointer) *QMdiSubWindow {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QMdiSubWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,6 +187,40 @@ func NewQMdiSubWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMdiSubW
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QMdiSubWindow(QWidget *, Qt::WindowFlags)
+func NewQMdiSubWindow__() *QMdiSubWindow {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQMdiSubWindowFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMdiSubWindow")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QMdiSubWindow(QWidget *, Qt::WindowFlags)
+func NewQMdiSubWindow__1(parent QWidget_ITF /*777 QWidget **/) *QMdiSubWindow {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQMdiSubWindowFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMdiSubWindow")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -201,7 +235,7 @@ func DeleteQMdiSubWindow(this *QMdiSubWindow) {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QMdiSubWindow) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -213,7 +247,7 @@ func (this *QMdiSubWindow) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QMdiSubWindow) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,7 +272,7 @@ func (this *QMdiSubWindow) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * widget()
+// [8] QWidget * widget() const
 func (this *QMdiSubWindow) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -248,7 +282,7 @@ func (this *QMdiSubWindow) Widget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * maximizedButtonsWidget()
+// [8] QWidget * maximizedButtonsWidget() const
 func (this *QMdiSubWindow) MaximizedButtonsWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,7 +292,7 @@ func (this *QMdiSubWindow) MaximizedButtonsWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * maximizedSystemMenuIconWidget()
+// [8] QWidget * maximizedSystemMenuIconWidget() const
 func (this *QMdiSubWindow) MaximizedSystemMenuIconWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +302,7 @@ func (this *QMdiSubWindow) MaximizedSystemMenuIconWidget() *QWidget /*777 QWidge
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isShaded()
+// [1] bool isShaded() const
 func (this *QMdiSubWindow) IsShaded() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow8isShadedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -284,10 +318,21 @@ func (this *QMdiSubWindow) SetOption(option int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:83
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOption(enum QMdiSubWindow::SubWindowOption, _Bool)
+func (this *QMdiSubWindow) SetOption__(option int) {
+	// arg: 1, bool=Bool, =Invalid,
+	on := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow9setOptionENS_15SubWindowOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testOption(enum QMdiSubWindow::SubWindowOption)
+// [1] bool testOption(enum QMdiSubWindow::SubWindowOption) const
 func (this *QMdiSubWindow) TestOption(arg0 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow10testOptionENS_15SubWindowOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -306,7 +351,7 @@ func (this *QMdiSubWindow) SetKeyboardSingleStep(step int) {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int keyboardSingleStep()
+// [4] int keyboardSingleStep() const
 func (this *QMdiSubWindow) KeyboardSingleStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow18keyboardSingleStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -325,7 +370,7 @@ func (this *QMdiSubWindow) SetKeyboardPageStep(step int) {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int keyboardPageStep()
+// [4] int keyboardPageStep() const
 func (this *QMdiSubWindow) KeyboardPageStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow16keyboardPageStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -348,7 +393,7 @@ func (this *QMdiSubWindow) SetSystemMenu(systemMenu QMenu_ITF /*777 QMenu **/) {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QMenu * systemMenu()
+// [8] QMenu * systemMenu() const
 func (this *QMdiSubWindow) SystemMenu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow10systemMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -358,7 +403,7 @@ func (this *QMdiSubWindow) SystemMenu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QMdiArea * mdiArea()
+// [8] QMdiArea * mdiArea() const
 func (this *QMdiSubWindow) MdiArea() *QMdiArea /*777 QMdiArea **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow7mdiAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

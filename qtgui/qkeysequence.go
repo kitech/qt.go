@@ -88,11 +88,75 @@ func NewQKeySequence_1(key string, format int) *QKeySequence {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qkeysequence.h:157
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QKeySequence(const QString &, enum QKeySequence::SequenceFormat)
+func NewQKeySequence_1_(key string) *QKeySequence {
+	var tmpArg0 = qtcore.NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum,
+	format := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2ERK7QStringNS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQKeySequence)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qkeysequence.h:158
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QKeySequence(int, int, int, int)
 func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQKeySequence)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:158
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QKeySequence(int, int, int, int)
+func NewQKeySequence_2_(k1 int) *QKeySequence {
+	// arg: 1, int=Int, =Invalid,
+	k2 := 0
+	// arg: 2, int=Int, =Invalid,
+	k3 := 0
+	// arg: 3, int=Int, =Invalid,
+	k4 := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQKeySequence)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:158
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QKeySequence(int, int, int, int)
+func NewQKeySequence_2_1(k1 int, k2 int) *QKeySequence {
+	// arg: 2, int=Int, =Invalid,
+	k3 := 0
+	// arg: 3, int=Int, =Invalid,
+	k4 := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQKeySequence)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:158
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QKeySequence(int, int, int, int)
+func NewQKeySequence_2_2(k1 int, k2 int, k3 int) *QKeySequence {
+	// arg: 3, int=Int, =Invalid,
+	k4 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -126,7 +190,7 @@ func DeleteQKeySequence(this *QKeySequence) {
 // /usr/include/qt/QtGui/qkeysequence.h:163
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QKeySequence) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,7 +200,7 @@ func (this *QKeySequence) Count() int {
 // /usr/include/qt/QtGui/qkeysequence.h:164
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QKeySequence) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,8 +210,23 @@ func (this *QKeySequence) IsEmpty() bool {
 // /usr/include/qt/QtGui/qkeysequence.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toString(enum QKeySequence::SequenceFormat)
+// [8] QString toString(enum QKeySequence::SequenceFormat) const
 func (this *QKeySequence) ToString(format int) string {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence8toStringENS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtGui/qkeysequence.h:172
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString toString(enum QKeySequence::SequenceFormat) const
+func (this *QKeySequence) ToString__() string {
+	// arg: 0, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum,
+	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence8toStringENS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -175,10 +254,26 @@ func QKeySequence_FromString(str string, format int) *QKeySequence /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtGui/qkeysequence.h:173
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QKeySequence fromString(const QString &, enum QKeySequence::SequenceFormat)
+func (this *QKeySequence) FromString__(str string) *QKeySequence /*123*/ {
+	var tmpArg0 = qtcore.NewQString_5(str)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum,
+	format := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequence10fromStringERK7QStringNS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQKeySequence)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qkeysequence.h:178
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QKeySequence::SequenceMatch matches(const QKeySequence &)
+// [4] QKeySequence::SequenceMatch matches(const QKeySequence &) const
 func (this *QKeySequence) Matches(seq QKeySequence_ITF) int {
 	var convArg0 unsafe.Pointer
 	if seq != nil && seq.QKeySequence_PTR() != nil {
@@ -211,7 +306,7 @@ func QKeySequence_Mnemonic(text string) *QKeySequence /*123*/ {
 // /usr/include/qt/QtGui/qkeysequence.h:187
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int operator[](uint)
+// [4] int operator[](uint) const
 func (this *QKeySequence) Operator_get_index(i uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequenceixEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -262,7 +357,7 @@ func (this *QKeySequence) Swap(other QKeySequence_ITF) {
 // /usr/include/qt/QtGui/qkeysequence.h:194
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QKeySequence &)
+// [1] bool operator==(const QKeySequence &) const
 func (this *QKeySequence) Operator_equal_equal(other QKeySequence_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QKeySequence_PTR() != nil {
@@ -276,7 +371,7 @@ func (this *QKeySequence) Operator_equal_equal(other QKeySequence_ITF) bool {
 // /usr/include/qt/QtGui/qkeysequence.h:195
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QKeySequence &)
+// [1] bool operator!=(const QKeySequence &) const
 func (this *QKeySequence) Operator_not_equal(other QKeySequence_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QKeySequence_PTR() != nil {
@@ -290,7 +385,7 @@ func (this *QKeySequence) Operator_not_equal(other QKeySequence_ITF) bool {
 // /usr/include/qt/QtGui/qkeysequence.h:197
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator<(const QKeySequence &)
+// [1] bool operator<(const QKeySequence &) const
 func (this *QKeySequence) Operator_less_than(ks QKeySequence_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if ks != nil && ks.QKeySequence_PTR() != nil {
@@ -304,7 +399,7 @@ func (this *QKeySequence) Operator_less_than(ks QKeySequence_ITF) bool {
 // /usr/include/qt/QtGui/qkeysequence.h:198
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>(const QKeySequence &)
+// [1] bool operator>(const QKeySequence &) const
 func (this *QKeySequence) Operator_greater_than(other QKeySequence_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QKeySequence_PTR() != nil {
@@ -318,7 +413,7 @@ func (this *QKeySequence) Operator_greater_than(other QKeySequence_ITF) bool {
 // /usr/include/qt/QtGui/qkeysequence.h:200
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<=(const QKeySequence &)
+// [1] bool operator<=(const QKeySequence &) const
 func (this *QKeySequence) Operator_less_than_equal(other QKeySequence_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QKeySequence_PTR() != nil {
@@ -332,7 +427,7 @@ func (this *QKeySequence) Operator_less_than_equal(other QKeySequence_ITF) bool 
 // /usr/include/qt/QtGui/qkeysequence.h:202
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>=(const QKeySequence &)
+// [1] bool operator>=(const QKeySequence &) const
 func (this *QKeySequence) Operator_greater_than_equal(other QKeySequence_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QKeySequence_PTR() != nil {
@@ -346,7 +441,7 @@ func (this *QKeySequence) Operator_greater_than_equal(other QKeySequence_ITF) bo
 // /usr/include/qt/QtGui/qkeysequence.h:205
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isDetached()
+// [1] bool isDetached() const
 func (this *QKeySequence) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

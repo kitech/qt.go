@@ -63,7 +63,7 @@ func (*QSessionManager) NewFromPointer(cthis unsafe.Pointer) *QSessionManager {
 // /usr/include/qt/QtGui/qsessionmanager.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSessionManager) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -73,7 +73,7 @@ func (this *QSessionManager) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // /usr/include/qt/QtGui/qsessionmanager.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString sessionId()
+// [8] QString sessionId() const
 func (this *QSessionManager) SessionId() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager9sessionIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -86,7 +86,7 @@ func (this *QSessionManager) SessionId() string {
 // /usr/include/qt/QtGui/qsessionmanager.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString sessionKey()
+// [8] QString sessionKey() const
 func (this *QSessionManager) SessionKey() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager10sessionKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,7 +146,7 @@ func (this *QSessionManager) SetRestartHint(arg0 int) {
 // /usr/include/qt/QtGui/qsessionmanager.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSessionManager::RestartHint restartHint()
+// [4] QSessionManager::RestartHint restartHint() const
 func (this *QSessionManager) RestartHint() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager11restartHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -169,7 +169,7 @@ func (this *QSessionManager) SetRestartCommand(arg0 qtcore.QStringList_ITF) {
 // /usr/include/qt/QtGui/qsessionmanager.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList restartCommand()
+// [8] QStringList restartCommand() const
 func (this *QSessionManager) RestartCommand() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager14restartCommandEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +194,7 @@ func (this *QSessionManager) SetDiscardCommand(arg0 qtcore.QStringList_ITF) {
 // /usr/include/qt/QtGui/qsessionmanager.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList discardCommand()
+// [8] QStringList discardCommand() const
 func (this *QSessionManager) DiscardCommand() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager14discardCommandEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -234,7 +234,7 @@ func (this *QSessionManager) SetManagerProperty_1(name string, value qtcore.QStr
 // /usr/include/qt/QtGui/qsessionmanager.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isPhase2()
+// [1] bool isPhase2() const
 func (this *QSessionManager) IsPhase2() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager8isPhase2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

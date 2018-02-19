@@ -62,7 +62,7 @@ func (*QFileSystemWatcher) NewFromPointer(cthis unsafe.Pointer) *QFileSystemWatc
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +85,20 @@ func NewQFileSystemWatcher(parent QObject_ITF /*777 QObject **/) *QFileSystemWat
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFileSystemWatcher(QObject *)
+func NewQFileSystemWatcher__() *QFileSystemWatcher {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQFileSystemWatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFileSystemWatcher")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:59
 // index:1
 // Public Visibility=Default Availability=Available
@@ -98,6 +112,24 @@ func NewQFileSystemWatcher_1(paths QStringList_ITF, parent QObject_ITF /*777 QOb
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg1 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQFileSystemWatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFileSystemWatcher")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:59
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QFileSystemWatcher(const QStringList &, QObject *)
+func NewQFileSystemWatcher_1_(paths QStringList_ITF) *QFileSystemWatcher {
+	var convArg0 unsafe.Pointer
+	if paths != nil && paths.QStringList_PTR() != nil {
+		convArg0 = paths.QStringList_PTR().GetCthis()
+	}
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFileSystemWatcherFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -175,7 +207,7 @@ func (this *QFileSystemWatcher) RemovePaths(files QStringList_ITF) *QStringList 
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList files()
+// [8] QStringList files() const
 func (this *QFileSystemWatcher) Files() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher5filesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +219,7 @@ func (this *QFileSystemWatcher) Files() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList directories()
+// [8] QStringList directories() const
 func (this *QFileSystemWatcher) Directories() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher11directoriesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

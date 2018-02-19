@@ -63,7 +63,7 @@ func (*QAccessibleBridgePlugin) NewFromPointer(cthis unsafe.Pointer) *QAccessibl
 // /usr/include/qt/QtGui/qaccessiblebridge.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAccessibleBridgePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QAccessibleBridgePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +79,20 @@ func NewQAccessibleBridgePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QA
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAccessibleBridgePluginFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAccessibleBridgePlugin")
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qaccessiblebridge.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAccessibleBridgePlugin(QObject *)
+func NewQAccessibleBridgePlugin__() *QAccessibleBridgePlugin {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleBridgePluginFromPointer(unsafe.Pointer(uintptr(rv)))

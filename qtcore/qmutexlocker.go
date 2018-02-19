@@ -109,7 +109,7 @@ func (this *QMutexLocker) Relock() {
 // /usr/include/qt/QtCore/qmutex.h:238
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QMutex * mutex()
+// [8] QMutex * mutex() const
 func (this *QMutexLocker) Mutex() *QMutex /*777 QMutex **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMutexLocker5mutexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

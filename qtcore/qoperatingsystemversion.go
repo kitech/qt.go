@@ -73,6 +73,36 @@ func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) 
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:85
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QOperatingSystemVersion(enum QOperatingSystemVersion::OSType, int, int, int)
+func NewQOperatingSystemVersion__(osType int, vmajor int) *QOperatingSystemVersion {
+	// arg: 2, int=Int, =Invalid,
+	vminor := -1
+	// arg: 3, int=Int, =Invalid,
+	vmicro := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", qtrt.FFI_TYPE_POINTER, osType, vmajor, vminor, vmicro)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQOperatingSystemVersionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQOperatingSystemVersion)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:85
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QOperatingSystemVersion(enum QOperatingSystemVersion::OSType, int, int, int)
+func NewQOperatingSystemVersion__1(osType int, vmajor int, vminor int) *QOperatingSystemVersion {
+	// arg: 3, int=Int, =Invalid,
+	vmicro := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", qtrt.FFI_TYPE_POINTER, osType, vmajor, vminor, vmicro)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQOperatingSystemVersionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQOperatingSystemVersion)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:93
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -108,7 +138,7 @@ func QOperatingSystemVersion_CurrentType() int {
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:114
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int majorVersion()
+// [4] int majorVersion() const
 func (this *QOperatingSystemVersion) MajorVersion() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12majorVersionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +148,7 @@ func (this *QOperatingSystemVersion) MajorVersion() int {
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:115
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int minorVersion()
+// [4] int minorVersion() const
 func (this *QOperatingSystemVersion) MinorVersion() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12minorVersionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,7 +158,7 @@ func (this *QOperatingSystemVersion) MinorVersion() int {
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:116
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int microVersion()
+// [4] int microVersion() const
 func (this *QOperatingSystemVersion) MicroVersion() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12microVersionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -138,7 +168,7 @@ func (this *QOperatingSystemVersion) MicroVersion() int {
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:118
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int segmentCount()
+// [4] int segmentCount() const
 func (this *QOperatingSystemVersion) SegmentCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12segmentCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,7 +178,7 @@ func (this *QOperatingSystemVersion) SegmentCount() int {
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:124
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QOperatingSystemVersion::OSType type()
+// [4] QOperatingSystemVersion::OSType type() const
 func (this *QOperatingSystemVersion) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +188,7 @@ func (this *QOperatingSystemVersion) Type() int {
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QOperatingSystemVersion) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

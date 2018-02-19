@@ -75,6 +75,20 @@ func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:201
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsSceneHoverEvent(enum QEvent::Type)
+func NewQGraphicsSceneHoverEvent__() *QGraphicsSceneHoverEvent {
+	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum,
+	type_ := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsSceneHoverEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsSceneHoverEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:202
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -89,7 +103,7 @@ func DeleteQGraphicsSceneHoverEvent(this *QGraphicsSceneHoverEvent) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:204
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF pos()
+// [16] QPointF pos() const
 func (this *QGraphicsSceneHoverEvent) Pos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +128,7 @@ func (this *QGraphicsSceneHoverEvent) SetPos(pos qtcore.QPointF_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:207
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF scenePos()
+// [16] QPointF scenePos() const
 func (this *QGraphicsSceneHoverEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent8scenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,7 +153,7 @@ func (this *QGraphicsSceneHoverEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:210
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint screenPos()
+// [8] QPoint screenPos() const
 func (this *QGraphicsSceneHoverEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +178,7 @@ func (this *QGraphicsSceneHoverEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:213
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF lastPos()
+// [16] QPointF lastPos() const
 func (this *QGraphicsSceneHoverEvent) LastPos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent7lastPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,7 +203,7 @@ func (this *QGraphicsSceneHoverEvent) SetLastPos(pos qtcore.QPointF_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:216
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF lastScenePos()
+// [16] QPointF lastScenePos() const
 func (this *QGraphicsSceneHoverEvent) LastScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,7 +228,7 @@ func (this *QGraphicsSceneHoverEvent) SetLastScenePos(pos qtcore.QPointF_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:219
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint lastScreenPos()
+// [8] QPoint lastScreenPos() const
 func (this *QGraphicsSceneHoverEvent) LastScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -239,7 +253,7 @@ func (this *QGraphicsSceneHoverEvent) SetLastScreenPos(pos qtcore.QPoint_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:222
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::KeyboardModifiers modifiers()
+// [4] Qt::KeyboardModifiers modifiers() const
 func (this *QGraphicsSceneHoverEvent) Modifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent9modifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

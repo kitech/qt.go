@@ -136,7 +136,7 @@ func (*QQuickWindow) NewFromPointer(cthis unsafe.Pointer) *QQuickWindow {
 // /usr/include/qt/QtQuick/qquickwindow.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQuickWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -152,6 +152,20 @@ func NewQQuickWindow(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickWindow {
 	if parent != nil && parent.QWindow_PTR() != nil {
 		convArg0 = parent.QWindow_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWindowC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQuickWindowFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickWindow")
+	return gothis
+}
+
+// /usr/include/qt/QtQuick/qquickwindow.h:109
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickWindow(QWindow *)
+func NewQQuickWindow__() *QQuickWindow {
+	// arg: 0, QWindow *=Pointer, QWindow=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWindowC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickWindowFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -189,7 +203,7 @@ func DeleteQQuickWindow(this *QQuickWindow) {
 // /usr/include/qt/QtQuick/qquickwindow.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQuickItem * contentItem()
+// [8] QQuickItem * contentItem() const
 func (this *QQuickWindow) ContentItem() *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow11contentItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,7 +213,7 @@ func (this *QQuickWindow) ContentItem() *QQuickItem /*777 QQuickItem **/ {
 // /usr/include/qt/QtQuick/qquickwindow.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQuickItem * activeFocusItem()
+// [8] QQuickItem * activeFocusItem() const
 func (this *QQuickWindow) ActiveFocusItem() *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow15activeFocusItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -209,7 +223,7 @@ func (this *QQuickWindow) ActiveFocusItem() *QQuickItem /*777 QQuickItem **/ {
 // /usr/include/qt/QtQuick/qquickwindow.h:117
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QObject * focusObject()
+// [8] QObject * focusObject() const
 func (this *QQuickWindow) FocusObject() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow11focusObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -219,7 +233,7 @@ func (this *QQuickWindow) FocusObject() *qtcore.QObject /*777 QObject **/ {
 // /usr/include/qt/QtQuick/qquickwindow.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQuickItem * mouseGrabberItem()
+// [8] QQuickItem * mouseGrabberItem() const
 func (this *QQuickWindow) MouseGrabberItem() *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow16mouseGrabberItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -272,7 +286,7 @@ func (this *QQuickWindow) SetRenderTarget(fboId uint, size qtcore.QSize_ITF) {
 // /usr/include/qt/QtQuick/qquickwindow.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint renderTargetId()
+// [4] uint renderTargetId() const
 func (this *QQuickWindow) RenderTargetId() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow14renderTargetIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -282,7 +296,7 @@ func (this *QQuickWindow) RenderTargetId() uint {
 // /usr/include/qt/QtQuick/qquickwindow.h:132
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize renderTargetSize()
+// [8] QSize renderTargetSize() const
 func (this *QQuickWindow) RenderTargetSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow16renderTargetSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -303,7 +317,7 @@ func (this *QQuickWindow) ResetOpenGLState() {
 // /usr/include/qt/QtQuick/qquickwindow.h:136
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlIncubationController * incubationController()
+// [8] QQmlIncubationController * incubationController() const
 func (this *QQuickWindow) IncubationController() *qtqml.QQmlIncubationController /*777 QQmlIncubationController **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow20incubationControllerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -313,7 +327,7 @@ func (this *QQuickWindow) IncubationController() *qtqml.QQmlIncubationController
 // /usr/include/qt/QtQuick/qquickwindow.h:139
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QAccessibleInterface * accessibleRoot()
+// [8] QAccessibleInterface * accessibleRoot() const
 func (this *QQuickWindow) AccessibleRoot() *qtgui.QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow14accessibleRootEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -323,7 +337,7 @@ func (this *QQuickWindow) AccessibleRoot() *qtgui.QAccessibleInterface /*777 QAc
 // /usr/include/qt/QtQuick/qquickwindow.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSGTexture * createTextureFromImage(const QImage &)
+// [8] QSGTexture * createTextureFromImage(const QImage &) const
 func (this *QQuickWindow) CreateTextureFromImage(image qtgui.QImage_ITF) *QSGTexture /*777 QSGTexture **/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
@@ -337,7 +351,7 @@ func (this *QQuickWindow) CreateTextureFromImage(image qtgui.QImage_ITF) *QSGTex
 // /usr/include/qt/QtQuick/qquickwindow.h:144
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QSGTexture * createTextureFromImage(const QImage &, QQuickWindow::CreateTextureOptions)
+// [8] QSGTexture * createTextureFromImage(const QImage &, QQuickWindow::CreateTextureOptions) const
 func (this *QQuickWindow) CreateTextureFromImage_1(image qtgui.QImage_ITF, options int) *QSGTexture /*777 QSGTexture **/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
@@ -351,12 +365,28 @@ func (this *QQuickWindow) CreateTextureFromImage_1(image qtgui.QImage_ITF, optio
 // /usr/include/qt/QtQuick/qquickwindow.h:145
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSGTexture * createTextureFromId(uint, const QSize &, QQuickWindow::CreateTextureOptions)
+// [8] QSGTexture * createTextureFromId(uint, const QSize &, QQuickWindow::CreateTextureOptions) const
 func (this *QQuickWindow) CreateTextureFromId(id uint, size qtcore.QSize_ITF, options int) *QSGTexture /*777 QSGTexture **/ {
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow19createTextureFromIdEjRK5QSize6QFlagsINS_19CreateTextureOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1, options)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtQuick/qquickwindow.h:145
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QSGTexture * createTextureFromId(uint, const QSize &, QQuickWindow::CreateTextureOptions) const
+func (this *QQuickWindow) CreateTextureFromId__(id uint, size qtcore.QSize_ITF) *QSGTexture /*777 QSGTexture **/ {
+	var convArg1 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg1 = size.QSize_PTR().GetCthis()
+	}
+	// arg: 2, QQuickWindow::CreateTextureOptions=Typedef, QQuickWindow::CreateTextureOptions=Typedef, QFlags<QQuickWindow::CreateTextureOption>
+	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow19createTextureFromIdEjRK5QSize6QFlagsINS_19CreateTextureOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1, options)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -374,7 +404,7 @@ func (this *QQuickWindow) SetClearBeforeRendering(enabled bool) {
 // /usr/include/qt/QtQuick/qquickwindow.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool clearBeforeRendering()
+// [1] bool clearBeforeRendering() const
 func (this *QQuickWindow) ClearBeforeRendering() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow20clearBeforeRenderingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -397,7 +427,7 @@ func (this *QQuickWindow) SetColor(color qtgui.QColor_ITF) {
 // /usr/include/qt/QtQuick/qquickwindow.h:151
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QColor color()
+// [16] QColor color() const
 func (this *QQuickWindow) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -446,7 +476,7 @@ func (this *QQuickWindow) SetPersistentOpenGLContext(persistent bool) {
 // /usr/include/qt/QtQuick/qquickwindow.h:157
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isPersistentOpenGLContext()
+// [1] bool isPersistentOpenGLContext() const
 func (this *QQuickWindow) IsPersistentOpenGLContext() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow25isPersistentOpenGLContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -465,7 +495,7 @@ func (this *QQuickWindow) SetPersistentSceneGraph(persistent bool) {
 // /usr/include/qt/QtQuick/qquickwindow.h:160
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isPersistentSceneGraph()
+// [1] bool isPersistentSceneGraph() const
 func (this *QQuickWindow) IsPersistentSceneGraph() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow22isPersistentSceneGraphEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -475,7 +505,7 @@ func (this *QQuickWindow) IsPersistentSceneGraph() bool {
 // /usr/include/qt/QtQuick/qquickwindow.h:163
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSceneGraphInitialized()
+// [1] bool isSceneGraphInitialized() const
 func (this *QQuickWindow) IsSceneGraphInitialized() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow23isSceneGraphInitializedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -498,7 +528,7 @@ func (this *QQuickWindow) ScheduleRenderJob(job qtcore.QRunnable_ITF /*777 QRunn
 // /usr/include/qt/QtQuick/qquickwindow.h:167
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal effectiveDevicePixelRatio()
+// [8] qreal effectiveDevicePixelRatio() const
 func (this *QQuickWindow) EffectiveDevicePixelRatio() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow25effectiveDevicePixelRatioEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -508,7 +538,7 @@ func (this *QQuickWindow) EffectiveDevicePixelRatio() float64 {
 // /usr/include/qt/QtQuick/qquickwindow.h:169
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSGRendererInterface * rendererInterface()
+// [8] QSGRendererInterface * rendererInterface() const
 func (this *QQuickWindow) RendererInterface() *QSGRendererInterface /*777 QSGRendererInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow17rendererInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -564,7 +594,7 @@ func QQuickWindow_SceneGraphBackend() string {
 // /usr/include/qt/QtQuick/qquickwindow.h:175
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSGRectangleNode * createRectangleNode()
+// [8] QSGRectangleNode * createRectangleNode() const
 func (this *QQuickWindow) CreateRectangleNode() *QSGRectangleNode /*777 QSGRectangleNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow19createRectangleNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -574,7 +604,7 @@ func (this *QQuickWindow) CreateRectangleNode() *QSGRectangleNode /*777 QSGRecta
 // /usr/include/qt/QtQuick/qquickwindow.h:176
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSGImageNode * createImageNode()
+// [8] QSGImageNode * createImageNode() const
 func (this *QQuickWindow) CreateImageNode() *QSGImageNode /*777 QSGImageNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow15createImageNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -584,7 +614,7 @@ func (this *QQuickWindow) CreateImageNode() *QSGImageNode /*777 QSGImageNode **/
 // /usr/include/qt/QtQuick/qquickwindow.h:177
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSGNinePatchNode * createNinePatchNode()
+// [8] QSGNinePatchNode * createNinePatchNode() const
 func (this *QQuickWindow) CreateNinePatchNode() *QSGNinePatchNode /*777 QSGNinePatchNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow19createNinePatchNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

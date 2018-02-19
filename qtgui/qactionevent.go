@@ -72,6 +72,20 @@ func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Poi
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qevent.h:727
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QActionEvent(int, QAction *, QAction *)
+func NewQActionEvent__(type_ int, action unsafe.Pointer /*666*/) *QActionEvent {
+	// arg: 2, QAction *=Pointer, QAction=Record,
+	var before unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", qtrt.FFI_TYPE_POINTER, type_, action, before)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQActionEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQActionEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:728
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -86,7 +100,7 @@ func DeleteQActionEvent(this *QActionEvent) {
 // /usr/include/qt/QtGui/qevent.h:730
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QAction * action()
+// [8] QAction * action() const
 func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -96,7 +110,7 @@ func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtGui/qevent.h:731
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QAction * before()
+// [8] QAction * before() const
 func (this *QActionEvent) Before() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -67,7 +67,7 @@ func (*QAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QAnimationGroup {
 // /usr/include/qt/QtCore/qanimationgroup.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +90,20 @@ func NewQAnimationGroup(parent QObject_ITF /*777 QObject **/) *QAnimationGroup {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qanimationgroup.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAnimationGroup(QObject *)
+func NewQAnimationGroup__() *QAnimationGroup {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAnimationGroup")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qanimationgroup.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -104,7 +118,7 @@ func DeleteQAnimationGroup(this *QAnimationGroup) {
 // /usr/include/qt/QtCore/qanimationgroup.h:59
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractAnimation * animationAt(int)
+// [8] QAbstractAnimation * animationAt(int) const
 func (this *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation /*777 QAbstractAnimation **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup11animationAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +128,7 @@ func (this *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation /*777 QA
 // /usr/include/qt/QtCore/qanimationgroup.h:60
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int animationCount()
+// [4] int animationCount() const
 func (this *QAnimationGroup) AnimationCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup14animationCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,7 +138,7 @@ func (this *QAnimationGroup) AnimationCount() int {
 // /usr/include/qt/QtCore/qanimationgroup.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int indexOfAnimation(QAbstractAnimation *)
+// [4] int indexOfAnimation(QAbstractAnimation *) const
 func (this *QAnimationGroup) IndexOfAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) int {
 	var convArg0 unsafe.Pointer
 	if animation != nil && animation.QAbstractAnimation_PTR() != nil {

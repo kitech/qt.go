@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtcore"
 //  body block begin
 
 // long long writeData(const char *, qint64)
-func (this *QNetworkReply) InheritWriteData(f func(data string, len int64) int64) {
+func (this *QNetworkReply) InheritWriteData(f func(data string, len_ int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
 
@@ -118,7 +118,7 @@ func (*QNetworkReply) NewFromPointer(cthis unsafe.Pointer) *QNetworkReply {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QNetworkReply) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,7 +148,7 @@ func (this *QNetworkReply) Close() {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:118
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isSequential()
+// [1] bool isSequential() const
 func (this *QNetworkReply) IsSequential() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply12isSequentialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func (this *QNetworkReply) IsSequential() bool {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 readBufferSize()
+// [8] qint64 readBufferSize() const
 func (this *QNetworkReply) ReadBufferSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply14readBufferSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QNetworkReply) SetReadBufferSize(size int64) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:124
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QNetworkAccessManager * manager()
+// [8] QNetworkAccessManager * manager() const
 func (this *QNetworkReply) Manager() *QNetworkAccessManager /*777 QNetworkAccessManager **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply7managerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func (this *QNetworkReply) Manager() *QNetworkAccessManager /*777 QNetworkAccess
 // /usr/include/qt/QtNetwork/qnetworkreply.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QNetworkAccessManager::Operation operation()
+// [4] QNetworkAccessManager::Operation operation() const
 func (this *QNetworkReply) Operation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply9operationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +197,7 @@ func (this *QNetworkReply) Operation() int {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:126
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QNetworkRequest request()
+// [8] QNetworkRequest request() const
 func (this *QNetworkReply) Request() *QNetworkRequest /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply7requestEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ func (this *QNetworkReply) Request() *QNetworkRequest /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QNetworkReply::NetworkError error()
+// [4] QNetworkReply::NetworkError error() const
 func (this *QNetworkReply) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,7 +228,7 @@ func (this *QNetworkReply) Error_1(arg0 int) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:128
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isFinished()
+// [1] bool isFinished() const
 func (this *QNetworkReply) IsFinished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply10isFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,7 +238,7 @@ func (this *QNetworkReply) IsFinished() bool {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRunning()
+// [1] bool isRunning() const
 func (this *QNetworkReply) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -248,7 +248,7 @@ func (this *QNetworkReply) IsRunning() bool {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl url()
+// [8] QUrl url() const
 func (this *QNetworkReply) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -260,7 +260,7 @@ func (this *QNetworkReply) Url() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:133
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant header(QNetworkRequest::KnownHeaders)
+// [16] QVariant header(QNetworkRequest::KnownHeaders) const
 func (this *QNetworkReply) Header(header int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply6headerEN15QNetworkRequest12KnownHeadersE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), header)
 	qtrt.ErrPrint(err, rv)
@@ -272,7 +272,7 @@ func (this *QNetworkReply) Header(header int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:136
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasRawHeader(const QByteArray &)
+// [1] bool hasRawHeader(const QByteArray &) const
 func (this *QNetworkReply) HasRawHeader(headerName qtcore.QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if headerName != nil && headerName.QByteArray_PTR() != nil {
@@ -286,7 +286,7 @@ func (this *QNetworkReply) HasRawHeader(headerName qtcore.QByteArray_ITF) bool {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray rawHeader(const QByteArray &)
+// [8] QByteArray rawHeader(const QByteArray &) const
 func (this *QNetworkReply) RawHeader(headerName qtcore.QByteArray_ITF) *qtcore.QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if headerName != nil && headerName.QByteArray_PTR() != nil {
@@ -302,7 +302,7 @@ func (this *QNetworkReply) RawHeader(headerName qtcore.QByteArray_ITF) *qtcore.Q
 // /usr/include/qt/QtNetwork/qnetworkreply.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant attribute(QNetworkRequest::Attribute)
+// [16] QVariant attribute(QNetworkRequest::Attribute) const
 func (this *QNetworkReply) Attribute(code int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply9attributeEN15QNetworkRequest9AttributeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code)
 	qtrt.ErrPrint(err, rv)
@@ -314,7 +314,7 @@ func (this *QNetworkReply) Attribute(code int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:147
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslConfiguration sslConfiguration()
+// [8] QSslConfiguration sslConfiguration() const
 func (this *QNetworkReply) SslConfiguration() *QSslConfiguration /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply16sslConfigurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -450,14 +450,28 @@ func NewQNetworkReply(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkRepl
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qnetworkreply.h:172
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void QNetworkReply(QObject *)
+func NewQNetworkReply__() *QNetworkReply {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReplyC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QNetworkReply")
+	return gothis
+}
+
 // /usr/include/qt/QtNetwork/qnetworkreply.h:174
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)
-func (this *QNetworkReply) WriteData(data string, len int64) int64 {
+func (this *QNetworkReply) WriteData(data string, len_ int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }
@@ -563,7 +577,7 @@ func (this *QNetworkReply) SetAttribute(code int, value qtcore.QVariant_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:185
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void sslConfigurationImplementation(QSslConfiguration &)
+// [-2] void sslConfigurationImplementation(QSslConfiguration &) const
 func (this *QNetworkReply) SslConfigurationImplementation(arg0 QSslConfiguration_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSslConfiguration_PTR() != nil {

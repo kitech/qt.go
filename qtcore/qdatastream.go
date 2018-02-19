@@ -135,7 +135,7 @@ func DeleteQDataStream(this *QDataStream) {
 // /usr/include/qt/QtCore/qdatastream.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QIODevice * device()
+// [8] QIODevice * device() const
 func (this *QDataStream) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QDataStream) UnsetDevice() {
 // /usr/include/qt/QtCore/qdatastream.h:133
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool atEnd()
+// [1] bool atEnd() const
 func (this *QDataStream) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QDataStream) AtEnd() bool {
 // /usr/include/qt/QtCore/qdatastream.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QDataStream::Status status()
+// [4] QDataStream::Status status() const
 func (this *QDataStream) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -205,7 +205,7 @@ func (this *QDataStream) ResetStatus() {
 // /usr/include/qt/QtCore/qdatastream.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QDataStream::FloatingPointPrecision floatingPointPrecision()
+// [4] QDataStream::FloatingPointPrecision floatingPointPrecision() const
 func (this *QDataStream) FloatingPointPrecision() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream22floatingPointPrecisionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -224,7 +224,7 @@ func (this *QDataStream) SetFloatingPointPrecision(precision int) {
 // /usr/include/qt/QtCore/qdatastream.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QDataStream::ByteOrder byteOrder()
+// [4] QDataStream::ByteOrder byteOrder() const
 func (this *QDataStream) ByteOrder() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream9byteOrderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -243,7 +243,7 @@ func (this *QDataStream) SetByteOrder(arg0 int) {
 // /usr/include/qt/QtCore/qdatastream.h:145
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int version()
+// [4] int version() const
 func (this *QDataStream) Version() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream7versionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -529,8 +529,8 @@ func (this *QDataStream) Operator_left_shift_10(str string) *QDataStream {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & readBytes(char *&, uint &)
-func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len uint) *QDataStream {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream9readBytesERPcRj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, &len)
+func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len_ uint) *QDataStream {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream9readBytesERPcRj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, &len_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
@@ -541,10 +541,10 @@ func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len uint) *QData
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int readRawData(char *, int)
-func (this *QDataStream) ReadRawData(arg0 string, len int) int {
+func (this *QDataStream) ReadRawData(arg0 string, len_ int) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream11readRawDataEPci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream11readRawDataEPci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -553,10 +553,10 @@ func (this *QDataStream) ReadRawData(arg0 string, len int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & writeBytes(const char *, uint)
-func (this *QDataStream) WriteBytes(arg0 string, len uint) *QDataStream {
+func (this *QDataStream) WriteBytes(arg0 string, len_ uint) *QDataStream {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream10writeBytesEPKcj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream10writeBytesEPKcj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
@@ -567,10 +567,10 @@ func (this *QDataStream) WriteBytes(arg0 string, len uint) *QDataStream {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int writeRawData(const char *, int)
-func (this *QDataStream) WriteRawData(arg0 string, len int) int {
+func (this *QDataStream) WriteRawData(arg0 string, len_ int) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream12writeRawDataEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream12writeRawDataEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -579,8 +579,8 @@ func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int skipRawData(int)
-func (this *QDataStream) SkipRawData(len int) int {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream11skipRawDataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len)
+func (this *QDataStream) SkipRawData(len_ int) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream11skipRawDataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len_)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }

@@ -124,7 +124,7 @@ func (*QToolButton) NewFromPointer(cthis unsafe.Pointer) *QToolButton {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QToolButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,6 +147,20 @@ func NewQToolButton(parent QWidget_ITF /*777 QWidget **/) *QToolButton {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qtoolbutton.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QToolButton(QWidget *)
+func NewQToolButton__() *QToolButton {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQToolButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QToolButton")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qtoolbutton.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -161,7 +175,7 @@ func DeleteQToolButton(this *QToolButton) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QToolButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,7 +187,7 @@ func (this *QToolButton) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QToolButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,7 +199,7 @@ func (this *QToolButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ToolButtonStyle toolButtonStyle()
+// [4] Qt::ToolButtonStyle toolButtonStyle() const
 func (this *QToolButton) ToolButtonStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton15toolButtonStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,7 +209,7 @@ func (this *QToolButton) ToolButtonStyle() int {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ArrowType arrowType()
+// [4] Qt::ArrowType arrowType() const
 func (this *QToolButton) ArrowType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton9arrowTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +241,7 @@ func (this *QToolButton) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QMenu * menu()
+// [8] QMenu * menu() const
 func (this *QToolButton) Menu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton4menuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -246,7 +260,7 @@ func (this *QToolButton) SetPopupMode(mode int) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QToolButton::ToolButtonPopupMode popupMode()
+// [4] QToolButton::ToolButtonPopupMode popupMode() const
 func (this *QToolButton) PopupMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton9popupModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -256,7 +270,7 @@ func (this *QToolButton) PopupMode() int {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAction * defaultAction()
+// [8] QAction * defaultAction() const
 func (this *QToolButton) DefaultAction() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton13defaultActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -275,7 +289,7 @@ func (this *QToolButton) SetAutoRaise(enable bool) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool autoRaise()
+// [1] bool autoRaise() const
 func (this *QToolButton) AutoRaise() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton9autoRaiseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -447,7 +461,7 @@ func (this *QToolButton) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:120
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool hitButton(const QPoint &)
+// [1] bool hitButton(const QPoint &) const
 func (this *QToolButton) HitButton(pos qtcore.QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -470,7 +484,7 @@ func (this *QToolButton) NextCheckState() {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:122
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionToolButton *)
+// [-2] void initStyleOption(QStyleOptionToolButton *) const
 func (this *QToolButton) InitStyleOption(option QStyleOptionToolButton_ITF /*777 QStyleOptionToolButton **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionToolButton_PTR() != nil {

@@ -73,6 +73,20 @@ func NewQSemaphore(n int) *QSemaphore {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qsemaphore.h:55
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSemaphore(int)
+func NewQSemaphore__() *QSemaphore {
+	// arg: 0, int=Int, =Invalid,
+	n := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphoreC2Ei", qtrt.FFI_TYPE_POINTER, n)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSemaphore)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qsemaphore.h:56
 // index:0
 // Public Visibility=Default Availability=Available
@@ -93,11 +107,34 @@ func (this *QSemaphore) Acquire(n int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qsemaphore.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void acquire(int)
+func (this *QSemaphore) Acquire__() {
+	// arg: 0, int=Int, =Invalid,
+	n := 1
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7acquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qsemaphore.h:59
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryAcquire(int)
 func (this *QSemaphore) TryAcquire(n int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qsemaphore.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool tryAcquire(int)
+func (this *QSemaphore) TryAcquire__() bool {
+	// arg: 0, int=Int, =Invalid,
+	n := 1
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -122,10 +159,21 @@ func (this *QSemaphore) Release(n int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qsemaphore.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void release(int)
+func (this *QSemaphore) Release__() {
+	// arg: 0, int=Int, =Invalid,
+	n := 1
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qsemaphore.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int available()
+// [4] int available() const
 func (this *QSemaphore) Available() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSemaphore9availableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

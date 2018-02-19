@@ -90,7 +90,7 @@ func (this *QSGBasicGeometryNode) SetGeometry(geometry QSGGeometry_ITF /*777 QSG
 // /usr/include/qt/QtQuick/qsgnode.h:201
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QSGGeometry * geometry()
+// [8] const QSGGeometry * geometry() const
 func (this *QSGBasicGeometryNode) Geometry() *QSGGeometry /*777 const QSGGeometry **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,7 +110,7 @@ func (this *QSGBasicGeometryNode) Geometry_1() *QSGGeometry /*777 QSGGeometry **
 // /usr/include/qt/QtQuick/qsgnode.h:204
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QMatrix4x4 * matrix()
+// [8] const QMatrix4x4 * matrix() const
 func (this *QSGBasicGeometryNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,7 +120,7 @@ func (this *QSGBasicGeometryNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix
 // /usr/include/qt/QtQuick/qsgnode.h:205
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QSGClipNode * clipList()
+// [8] const QSGClipNode * clipList() const
 func (this *QSGBasicGeometryNode) ClipList() *QSGClipNode /*777 const QSGClipNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode8clipListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

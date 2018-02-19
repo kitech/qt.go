@@ -122,7 +122,7 @@ func (this *QAndroidBinder) OnTransact(code int, data QAndroidParcel_ITF, reply 
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType)
+// [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType) const
 func (this *QAndroidBinder) Transact(code int, data QAndroidParcel_ITF, reply QAndroidParcel_ITF /*777 QAndroidParcel **/, flags int) bool {
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QAndroidParcel_PTR() != nil {
@@ -137,10 +137,48 @@ func (this *QAndroidBinder) Transact(code int, data QAndroidParcel_ITF, reply QA
 	return rv != 0
 }
 
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType) const
+func (this *QAndroidBinder) Transact__(code int, data QAndroidParcel_ITF) bool {
+	var convArg1 unsafe.Pointer
+	if data != nil && data.QAndroidParcel_PTR() != nil {
+		convArg1 = data.QAndroidParcel_PTR().GetCthis()
+	}
+	// arg: 2, QAndroidParcel *=Pointer, QAndroidParcel=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, QAndroidBinder::CallType=Enum, QAndroidBinder::CallType=Enum,
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder8transactEiRK14QAndroidParcelPS0_NS_8CallTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1, convArg2, flags)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType) const
+func (this *QAndroidBinder) Transact__1(code int, data QAndroidParcel_ITF, reply QAndroidParcel_ITF /*777 QAndroidParcel **/) bool {
+	var convArg1 unsafe.Pointer
+	if data != nil && data.QAndroidParcel_PTR() != nil {
+		convArg1 = data.QAndroidParcel_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if reply != nil && reply.QAndroidParcel_PTR() != nil {
+		convArg2 = reply.QAndroidParcel_PTR().GetCthis()
+	}
+	// arg: 3, QAndroidBinder::CallType=Enum, QAndroidBinder::CallType=Enum,
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder8transactEiRK14QAndroidParcelPS0_NS_8CallTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1, convArg2, flags)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] QAndroidJniObject handle()
+// [1] QAndroidJniObject handle() const
 func (this *QAndroidBinder) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

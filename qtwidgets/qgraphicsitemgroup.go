@@ -77,6 +77,20 @@ func NewQGraphicsItemGroup(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QG
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1004
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsItemGroup(QGraphicsItem *)
+func NewQGraphicsItemGroup__() *QGraphicsItemGroup {
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsItemGroupC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsItemGroupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsItemGroup)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1005
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -117,7 +131,7 @@ func (this *QGraphicsItemGroup) RemoveFromGroup(item QGraphicsItem_ITF /*777 QGr
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1010
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QRectF boundingRect()
+// [32] QRectF boundingRect() const
 func (this *QGraphicsItemGroup) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,10 +161,29 @@ func (this *QGraphicsItemGroup) Paint(painter qtgui.QPainter_ITF /*777 QPainter 
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1011
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
+func (this *QGraphicsItemGroup) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOptionGraphicsItem_PTR() != nil {
+		convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
+	}
+	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1013
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isObscuredBy(const QGraphicsItem *)
+// [1] bool isObscuredBy(const QGraphicsItem *) const
 func (this *QGraphicsItemGroup) IsObscuredBy(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
@@ -164,7 +197,7 @@ func (this *QGraphicsItemGroup) IsObscuredBy(item QGraphicsItem_ITF /*777 const 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1014
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPainterPath opaqueArea()
+// [8] QPainterPath opaqueArea() const
 func (this *QGraphicsItemGroup) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup10opaqueAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +209,7 @@ func (this *QGraphicsItemGroup) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1017
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int type()
+// [4] int type() const
 func (this *QGraphicsItemGroup) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

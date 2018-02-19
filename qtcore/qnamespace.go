@@ -376,7 +376,8 @@ const Qt__WA_X11DoNotAcceptFocus Qt__WidgetAttribute = 126
 const Qt__WA_MacNoShadow Qt__WidgetAttribute = 127
 const Qt__WA_AlwaysStackOnTop Qt__WidgetAttribute = 128
 const Qt__WA_TabletTracking Qt__WidgetAttribute = 129
-const Qt__WA_AttributeCount Qt__WidgetAttribute = 130
+const Qt__WA_ContentsMarginsRespectsSafeArea Qt__WidgetAttribute = 130
+const Qt__WA_AttributeCount Qt__WidgetAttribute = 131
 
 type Qt__ApplicationAttribute = int // core
 const Qt__AA_ImmediateWidgetCreation Qt__ApplicationAttribute = 0

@@ -98,7 +98,7 @@ func (this *QSGClipNode) SetIsRectangular(rectHint bool) {
 // /usr/include/qt/QtQuick/qsgnode.h:268
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isRectangular()
+// [1] bool isRectangular() const
 func (this *QSGClipNode) IsRectangular() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGClipNode13isRectangularEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,7 +121,7 @@ func (this *QSGClipNode) SetClipRect(arg0 qtcore.QRectF_ITF) {
 // /usr/include/qt/QtQuick/qsgnode.h:271
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QRectF clipRect()
+// [32] QRectF clipRect() const
 func (this *QSGClipNode) ClipRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGClipNode8clipRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

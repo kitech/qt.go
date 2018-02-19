@@ -92,7 +92,7 @@ func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
 // /usr/include/qt/QtGui/qevent.h:1041
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QScreen * screen()
+// [8] QScreen * screen() const
 func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*777 QScreen **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent6screenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -102,7 +102,7 @@ func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*777 QScreen **/ {
 // /usr/include/qt/QtGui/qevent.h:1042
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ScreenOrientation orientation()
+// [4] Qt::ScreenOrientation orientation() const
 func (this *QScreenOrientationChangeEvent) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

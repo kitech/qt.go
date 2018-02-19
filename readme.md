@@ -8,11 +8,12 @@ Qt5 binding for Go (Golang) but without CGO aims get go's compile speed again. I
 
 ### Features
 
-* binding code no compile cost
+* binding code no CGO compile cost
 * populate qt5 packages (widgets/qml/extras) support
 * go-uic, go-rcc tools
 * full signal/slot support
 * protected method override support
+* default arguments value wrapper functions
 
 ### Multiple platforms support
 

@@ -115,7 +115,7 @@ func QSslEllipticCurve_FromLongName(name string) *QSslEllipticCurve /*123*/ {
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString shortName()
+// [8] QString shortName() const
 func (this *QSslEllipticCurve) ShortName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve9shortNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,7 +128,7 @@ func (this *QSslEllipticCurve) ShortName() string {
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString longName()
+// [8] QString longName() const
 func (this *QSslEllipticCurve) LongName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve8longNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,7 +141,7 @@ func (this *QSslEllipticCurve) LongName() string {
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:70
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QSslEllipticCurve) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func (this *QSslEllipticCurve) IsValid() bool {
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isTlsNamedCurve()
+// [1] bool isTlsNamedCurve() const
 func (this *QSslEllipticCurve) IsTlsNamedCurve() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve15isTlsNamedCurveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

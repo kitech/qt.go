@@ -146,7 +146,7 @@ func (this *QByteArrayMatcher) SetPattern(pattern QByteArray_ITF) {
 // /usr/include/qt/QtCore/qbytearraymatcher.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int indexIn(const QByteArray &, int)
+// [4] int indexIn(const QByteArray &, int) const
 func (this *QByteArrayMatcher) IndexIn(ba QByteArray_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
@@ -157,14 +157,44 @@ func (this *QByteArrayMatcher) IndexIn(ba QByteArray_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtCore/qbytearraymatcher.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int indexIn(const QByteArray &, int) const
+func (this *QByteArrayMatcher) IndexIn__(ba QByteArray_ITF) int {
+	var convArg0 unsafe.Pointer
+	if ba != nil && ba.QByteArray_PTR() != nil {
+		convArg0 = ba.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	from := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtCore/qbytearraymatcher.h:64
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] int indexIn(const char *, int, int)
-func (this *QByteArrayMatcher) IndexIn_1(str string, len int, from int) int {
+// [4] int indexIn(const char *, int, int) const
+func (this *QByteArrayMatcher) IndexIn_1(str string, len_ int, from int) int {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInEPKcii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInEPKcii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_, from)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearraymatcher.h:64
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] int indexIn(const char *, int, int) const
+func (this *QByteArrayMatcher) IndexIn_1_(str string, len_ int) int {
+	var convArg0 = qtrt.CString(str)
+	defer qtrt.FreeMem(convArg0)
+	// arg: 2, int=Int, =Invalid,
+	from := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInEPKcii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -172,7 +202,7 @@ func (this *QByteArrayMatcher) IndexIn_1(str string, len int, from int) int {
 // /usr/include/qt/QtCore/qbytearraymatcher.h:65
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray pattern()
+// [8] QByteArray pattern() const
 func (this *QByteArrayMatcher) Pattern() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7patternEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

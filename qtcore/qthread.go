@@ -77,7 +77,7 @@ func (*QThread) NewFromPointer(cthis unsafe.Pointer) *QThread {
 // /usr/include/qt/QtCore/qthread.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QThread) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,6 +158,20 @@ func NewQThread(parent QObject_ITF /*777 QObject **/) *QThread {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qthread.h:79
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QThread(QObject *)
+func NewQThread__() *QThread {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QThreadC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQThreadFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QThread")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qthread.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -181,7 +195,7 @@ func (this *QThread) SetPriority(priority int) {
 // /usr/include/qt/QtCore/qthread.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QThread::Priority priority()
+// [4] QThread::Priority priority() const
 func (this *QThread) Priority() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread8priorityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -191,7 +205,7 @@ func (this *QThread) Priority() int {
 // /usr/include/qt/QtCore/qthread.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isFinished()
+// [1] bool isFinished() const
 func (this *QThread) IsFinished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread10isFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -201,7 +215,7 @@ func (this *QThread) IsFinished() bool {
 // /usr/include/qt/QtCore/qthread.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRunning()
+// [1] bool isRunning() const
 func (this *QThread) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,7 +234,7 @@ func (this *QThread) RequestInterruption() {
 // /usr/include/qt/QtCore/qthread.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isInterruptionRequested()
+// [1] bool isInterruptionRequested() const
 func (this *QThread) IsInterruptionRequested() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread23isInterruptionRequestedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -239,7 +253,7 @@ func (this *QThread) SetStackSize(stackSize uint) {
 // /usr/include/qt/QtCore/qthread.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint stackSize()
+// [4] uint stackSize() const
 func (this *QThread) StackSize() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread9stackSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,10 +269,21 @@ func (this *QThread) Exit(retcode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qthread.h:108
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void exit(int)
+func (this *QThread) Exit__() {
+	// arg: 0, int=Int, =Invalid,
+	retcode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread4exitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), retcode)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qthread.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractEventDispatcher * eventDispatcher()
+// [8] QAbstractEventDispatcher * eventDispatcher() const
 func (this *QThread) EventDispatcher() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread15eventDispatcherEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -295,7 +320,7 @@ func (this *QThread) Event(event QEvent_ITF /*777 QEvent **/) bool {
 // /usr/include/qt/QtCore/qthread.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int loopLevel()
+// [4] int loopLevel() const
 func (this *QThread) LoopLevel() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread9loopLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -307,6 +332,17 @@ func (this *QThread) LoopLevel() int {
 // Public Visibility=Default Availability=Available
 // [-2] void start(enum QThread::Priority)
 func (this *QThread) Start(arg0 int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qthread.h:134
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void start(enum QThread::Priority)
+func (this *QThread) Start__() {
+	// arg: 0, QThread::Priority=Enum, QThread::Priority=Enum,
+	arg0 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -334,6 +370,18 @@ func (this *QThread) Quit() {
 // Public Visibility=Default Availability=Available
 // [1] bool wait(unsigned long)
 func (this *QThread) Wait(time uint) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread4waitEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), time)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qthread.h:140
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool wait(unsigned long)
+func (this *QThread) Wait__() bool {
+	// arg: 0, unsigned long=ULong, =Invalid,
+	time := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread4waitEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), time)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -408,6 +456,17 @@ func (this *QThread) SetTerminationEnabled(enabled bool) {
 func QThread_SetTerminationEnabled(enabled bool) {
 	var nilthis *QThread
 	nilthis.SetTerminationEnabled(enabled)
+}
+
+// /usr/include/qt/QtCore/qthread.h:154
+// index:0
+// Protected static Visibility=Default Availability=Available
+// [-2] void setTerminationEnabled(_Bool)
+func (this *QThread) SetTerminationEnabled__() {
+	// arg: 0, bool=Bool, =Invalid,
+	enabled := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread21setTerminationEnabledEb", qtrt.FFI_TYPE_POINTER, enabled)
+	qtrt.ErrPrint(err, rv)
 }
 
 type QThread__Priority = int

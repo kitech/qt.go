@@ -66,7 +66,7 @@ func (*QSGTexture) NewFromPointer(cthis unsafe.Pointer) *QSGTexture {
 // /usr/include/qt/QtQuick/qsgtexture.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSGTexture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -99,7 +99,7 @@ func DeleteQSGTexture(this *QSGTexture) {
 // /usr/include/qt/QtQuick/qsgtexture.h:79
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int textureId()
+// [4] int textureId() const
 func (this *QSGTexture) TextureId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture9textureIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,7 +109,7 @@ func (this *QSGTexture) TextureId() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:80
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSize textureSize()
+// [8] QSize textureSize() const
 func (this *QSGTexture) TextureSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture11textureSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,7 +121,7 @@ func (this *QSGTexture) TextureSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtQuick/qsgtexture.h:81
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [1] bool hasAlphaChannel()
+// [1] bool hasAlphaChannel() const
 func (this *QSGTexture) HasAlphaChannel() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture15hasAlphaChannelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -131,7 +131,7 @@ func (this *QSGTexture) HasAlphaChannel() bool {
 // /usr/include/qt/QtQuick/qsgtexture.h:82
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [1] bool hasMipmaps()
+// [1] bool hasMipmaps() const
 func (this *QSGTexture) HasMipmaps() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture10hasMipmapsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,7 +141,7 @@ func (this *QSGTexture) HasMipmaps() bool {
 // /usr/include/qt/QtQuick/qsgtexture.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QRectF normalizedTextureSubRect()
+// [32] QRectF normalizedTextureSubRect() const
 func (this *QSGTexture) NormalizedTextureSubRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture24normalizedTextureSubRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func (this *QSGTexture) NormalizedTextureSubRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtQuick/qsgtexture.h:86
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isAtlasTexture()
+// [1] bool isAtlasTexture() const
 func (this *QSGTexture) IsAtlasTexture() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture14isAtlasTextureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,7 +163,7 @@ func (this *QSGTexture) IsAtlasTexture() bool {
 // /usr/include/qt/QtQuick/qsgtexture.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSGTexture * removedFromAtlas()
+// [8] QSGTexture * removedFromAtlas() const
 func (this *QSGTexture) RemovedFromAtlas() *QSGTexture /*777 QSGTexture **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture16removedFromAtlasEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,6 +188,17 @@ func (this *QSGTexture) UpdateBindOptions(force bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtQuick/qsgtexture.h:91
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void updateBindOptions(_Bool)
+func (this *QSGTexture) UpdateBindOptions__() {
+	// arg: 0, bool=Bool, =Invalid,
+	force := false
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTexture17updateBindOptionsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), force)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtQuick/qsgtexture.h:93
 // index:0
 // Public Visibility=Default Availability=Available
@@ -200,7 +211,7 @@ func (this *QSGTexture) SetMipmapFiltering(filter int) {
 // /usr/include/qt/QtQuick/qsgtexture.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSGTexture::Filtering mipmapFiltering()
+// [4] QSGTexture::Filtering mipmapFiltering() const
 func (this *QSGTexture) MipmapFiltering() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture15mipmapFilteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -219,7 +230,7 @@ func (this *QSGTexture) SetFiltering(filter int) {
 // /usr/include/qt/QtQuick/qsgtexture.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSGTexture::Filtering filtering()
+// [4] QSGTexture::Filtering filtering() const
 func (this *QSGTexture) Filtering() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture9filteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,7 +249,7 @@ func (this *QSGTexture) SetAnisotropyLevel(level int) {
 // /usr/include/qt/QtQuick/qsgtexture.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSGTexture::AnisotropyLevel anisotropyLevel()
+// [4] QSGTexture::AnisotropyLevel anisotropyLevel() const
 func (this *QSGTexture) AnisotropyLevel() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture15anisotropyLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +268,7 @@ func (this *QSGTexture) SetHorizontalWrapMode(hwrap int) {
 // /usr/include/qt/QtQuick/qsgtexture.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSGTexture::WrapMode horizontalWrapMode()
+// [4] QSGTexture::WrapMode horizontalWrapMode() const
 func (this *QSGTexture) HorizontalWrapMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture18horizontalWrapModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -276,7 +287,7 @@ func (this *QSGTexture) SetVerticalWrapMode(vwrap int) {
 // /usr/include/qt/QtQuick/qsgtexture.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSGTexture::WrapMode verticalWrapMode()
+// [4] QSGTexture::WrapMode verticalWrapMode() const
 func (this *QSGTexture) VerticalWrapMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture16verticalWrapModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -286,7 +297,7 @@ func (this *QSGTexture) VerticalWrapMode() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:108
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QRectF convertToNormalizedSourceRect(const QRectF &)
+// [32] QRectF convertToNormalizedSourceRect(const QRectF &) const
 func (this *QSGTexture) ConvertToNormalizedSourceRect(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {

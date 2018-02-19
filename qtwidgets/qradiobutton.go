@@ -89,7 +89,7 @@ func (*QRadioButton) NewFromPointer(cthis unsafe.Pointer) *QRadioButton {
 // /usr/include/qt/QtWidgets/qradiobutton.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QRadioButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QRadioButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +105,20 @@ func NewQRadioButton(parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQRadioButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QRadioButton")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qradiobutton.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QRadioButton(QWidget *)
+func NewQRadioButton__() *QRadioButton {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRadioButtonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,6 +144,22 @@ func NewQRadioButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadi
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qradiobutton.h:60
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QRadioButton(const QString &, QWidget *)
+func NewQRadioButton_1_(text string) *QRadioButton {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButtonC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQRadioButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QRadioButton")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qradiobutton.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -144,7 +174,7 @@ func DeleteQRadioButton(this *QRadioButton) {
 // /usr/include/qt/QtWidgets/qradiobutton.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QRadioButton8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -156,7 +186,7 @@ func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qradiobutton.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QRadioButton15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +212,7 @@ func (this *QRadioButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qradiobutton.h:68
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool hitButton(const QPoint &)
+// [1] bool hitButton(const QPoint &) const
 func (this *QRadioButton) HitButton(arg0 qtcore.QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
@@ -222,7 +252,7 @@ func (this *QRadioButton) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouse
 // /usr/include/qt/QtWidgets/qradiobutton.h:71
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionButton *)
+// [-2] void initStyleOption(QStyleOptionButton *) const
 func (this *QRadioButton) InitStyleOption(button QStyleOptionButton_ITF /*777 QStyleOptionButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QStyleOptionButton_PTR() != nil {

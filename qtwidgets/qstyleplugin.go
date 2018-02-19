@@ -64,7 +64,7 @@ func (*QStylePlugin) NewFromPointer(cthis unsafe.Pointer) *QStylePlugin {
 // /usr/include/qt/QtWidgets/qstyleplugin.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QStylePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStylePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +80,20 @@ func NewQStylePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QStylePlugin 
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStylePluginFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QStylePlugin")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qstyleplugin.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStylePlugin(QObject *)
+func NewQStylePlugin__() *QStylePlugin {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStylePluginFromPointer(unsafe.Pointer(uintptr(rv)))

@@ -131,7 +131,7 @@ func (this *QSslPreSharedKeyAuthenticator) Swap(other QSslPreSharedKeyAuthentica
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray identityHint()
+// [8] QByteArray identityHint() const
 func (this *QSslPreSharedKeyAuthenticator) IdentityHint() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator12identityHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -156,7 +156,7 @@ func (this *QSslPreSharedKeyAuthenticator) SetIdentity(identity qtcore.QByteArra
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray identity()
+// [8] QByteArray identity() const
 func (this *QSslPreSharedKeyAuthenticator) Identity() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator8identityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -168,7 +168,7 @@ func (this *QSslPreSharedKeyAuthenticator) Identity() *qtcore.QByteArray /*123*/
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int maximumIdentityLength()
+// [4] int maximumIdentityLength() const
 func (this *QSslPreSharedKeyAuthenticator) MaximumIdentityLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator21maximumIdentityLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -191,7 +191,7 @@ func (this *QSslPreSharedKeyAuthenticator) SetPreSharedKey(preSharedKey qtcore.Q
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray preSharedKey()
+// [8] QByteArray preSharedKey() const
 func (this *QSslPreSharedKeyAuthenticator) PreSharedKey() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator12preSharedKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,7 +203,7 @@ func (this *QSslPreSharedKeyAuthenticator) PreSharedKey() *qtcore.QByteArray /*1
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int maximumPreSharedKeyLength()
+// [4] int maximumPreSharedKeyLength() const
 func (this *QSslPreSharedKeyAuthenticator) MaximumPreSharedKeyLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator25maximumPreSharedKeyLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

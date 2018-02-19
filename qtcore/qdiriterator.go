@@ -77,6 +77,24 @@ func NewQDirIterator(dir QDir_ITF, flags int) *QDirIterator {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qdiriterator.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDirIterator(const QDir &, QDirIterator::IteratorFlags)
+func NewQDirIterator__(dir QDir_ITF) *QDirIterator {
+	var convArg0 unsafe.Pointer
+	if dir != nil && dir.QDir_PTR() != nil {
+		convArg0 = dir.QDir_PTR().GetCthis()
+	}
+	// arg: 1, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK4QDir6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDirIterator)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qdiriterator.h:59
 // index:1
 // Public Visibility=Default Availability=Available
@@ -84,6 +102,22 @@ func NewQDirIterator(dir QDir_ITF, flags int) *QDirIterator {
 func NewQDirIterator_1(path string, flags int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QString6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDirIterator)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qdiriterator.h:59
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QDirIterator(const QString &, QDirIterator::IteratorFlags)
+func NewQDirIterator_1_(path string) *QDirIterator {
+	var tmpArg0 = NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>
+	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QString6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -105,6 +139,22 @@ func NewQDirIterator_2(path string, filter int, flags int) *QDirIterator {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qdiriterator.h:61
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QDirIterator(const QString &, QDir::Filters, QDirIterator::IteratorFlags)
+func NewQDirIterator_2_(path string, filter int) *QDirIterator {
+	var tmpArg0 = NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QString6QFlagsIN4QDir6FilterEES3_INS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, filter, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDirIterator)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qdiriterator.h:64
 // index:3
 // Public Visibility=Default Availability=Available
@@ -116,6 +166,48 @@ func NewQDirIterator_3(path string, nameFilters QStringList_ITF, filters int, fl
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg1 = nameFilters.QStringList_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QStringRK11QStringList6QFlagsIN4QDir6FilterEES6_INS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, filters, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDirIterator)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qdiriterator.h:64
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QDirIterator(const QString &, const QStringList &, QDir::Filters, QDirIterator::IteratorFlags)
+func NewQDirIterator_3_(path string, nameFilters QStringList_ITF) *QDirIterator {
+	var tmpArg0 = NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	var convArg1 unsafe.Pointer
+	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
+		convArg1 = nameFilters.QStringList_PTR().GetCthis()
+	}
+	// arg: 2, QDir::Filters=Elaborated, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	filters := 0
+	// arg: 3, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QStringRK11QStringList6QFlagsIN4QDir6FilterEES6_INS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, filters, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDirIterator)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qdiriterator.h:64
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QDirIterator(const QString &, const QStringList &, QDir::Filters, QDirIterator::IteratorFlags)
+func NewQDirIterator_3_1(path string, nameFilters QStringList_ITF, filters int) *QDirIterator {
+	var tmpArg0 = NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	var convArg1 unsafe.Pointer
+	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
+		convArg1 = nameFilters.QStringList_PTR().GetCthis()
+	}
+	// arg: 3, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>
+	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QStringRK11QStringList6QFlagsIN4QDir6FilterEES6_INS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, filters, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -150,7 +242,7 @@ func (this *QDirIterator) Next() string {
 // /usr/include/qt/QtCore/qdiriterator.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasNext()
+// [1] bool hasNext() const
 func (this *QDirIterator) HasNext() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QDirIterator7hasNextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +252,7 @@ func (this *QDirIterator) HasNext() bool {
 // /usr/include/qt/QtCore/qdiriterator.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString fileName()
+// [8] QString fileName() const
 func (this *QDirIterator) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QDirIterator8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,7 +265,7 @@ func (this *QDirIterator) FileName() string {
 // /usr/include/qt/QtCore/qdiriterator.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString filePath()
+// [8] QString filePath() const
 func (this *QDirIterator) FilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QDirIterator8filePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +278,7 @@ func (this *QDirIterator) FilePath() string {
 // /usr/include/qt/QtCore/qdiriterator.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QFileInfo fileInfo()
+// [8] QFileInfo fileInfo() const
 func (this *QDirIterator) FileInfo() *QFileInfo /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QDirIterator8fileInfoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,7 +290,7 @@ func (this *QDirIterator) FileInfo() *QFileInfo /*123*/ {
 // /usr/include/qt/QtCore/qdiriterator.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString path()
+// [8] QString path() const
 func (this *QDirIterator) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QDirIterator4pathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

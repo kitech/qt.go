@@ -89,7 +89,7 @@ func DeleteQGraphicsSceneResizeEvent(this *QGraphicsSceneResizeEvent) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:300
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QSizeF oldSize()
+// [16] QSizeF oldSize() const
 func (this *QGraphicsSceneResizeEvent) OldSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsSceneResizeEvent7oldSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +114,7 @@ func (this *QGraphicsSceneResizeEvent) SetOldSize(size qtcore.QSizeF_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:303
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QSizeF newSize()
+// [16] QSizeF newSize() const
 func (this *QGraphicsSceneResizeEvent) NewSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsSceneResizeEvent7newSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

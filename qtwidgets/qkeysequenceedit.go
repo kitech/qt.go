@@ -84,7 +84,7 @@ func (*QKeySequenceEdit) NewFromPointer(cthis unsafe.Pointer) *QKeySequenceEdit 
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QKeySequenceEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QKeySequenceEdit10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +100,20 @@ func NewQKeySequenceEdit(parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQKeySequenceEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QKeySequenceEdit")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qkeysequenceedit.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QKeySequenceEdit(QWidget *)
+func NewQKeySequenceEdit__() *QKeySequenceEdit {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceEditFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -127,6 +141,24 @@ func NewQKeySequenceEdit_1(keySequence qtgui.QKeySequence_ITF, parent QWidget_IT
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qkeysequenceedit.h:59
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QKeySequenceEdit(const QKeySequence &, QWidget *)
+func NewQKeySequenceEdit_1_(keySequence qtgui.QKeySequence_ITF) *QKeySequenceEdit {
+	var convArg0 unsafe.Pointer
+	if keySequence != nil && keySequence.QKeySequence_PTR() != nil {
+		convArg0 = keySequence.QKeySequence_PTR().GetCthis()
+	}
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQKeySequenceEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QKeySequenceEdit")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -141,7 +173,7 @@ func DeleteQKeySequenceEdit(this *QKeySequenceEdit) {
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QKeySequence keySequence()
+// [8] QKeySequence keySequence() const
 func (this *QKeySequenceEdit) KeySequence() *qtgui.QKeySequence /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QKeySequenceEdit11keySequenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

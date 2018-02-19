@@ -209,7 +209,7 @@ func (*QHeaderView) NewFromPointer(cthis unsafe.Pointer) *QHeaderView {
 // /usr/include/qt/QtWidgets/qheaderview.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QHeaderView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -225,6 +225,20 @@ func NewQHeaderView(orientation int, parent QWidget_ITF /*777 QWidget **/) *QHea
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderViewC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQHeaderViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QHeaderView")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qheaderview.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QHeaderView(Qt::Orientation, QWidget *)
+func NewQHeaderView__(orientation int) *QHeaderView {
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderViewC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHeaderViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -259,7 +273,7 @@ func (this *QHeaderView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbs
 // /usr/include/qt/QtWidgets/qheaderview.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Orientation orientation()
+// [4] Qt::Orientation orientation() const
 func (this *QHeaderView) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -269,7 +283,7 @@ func (this *QHeaderView) Orientation() int {
 // /usr/include/qt/QtWidgets/qheaderview.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int offset()
+// [4] int offset() const
 func (this *QHeaderView) Offset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView6offsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -279,7 +293,7 @@ func (this *QHeaderView) Offset() int {
 // /usr/include/qt/QtWidgets/qheaderview.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int length()
+// [4] int length() const
 func (this *QHeaderView) Length() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView6lengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -289,7 +303,7 @@ func (this *QHeaderView) Length() int {
 // /usr/include/qt/QtWidgets/qheaderview.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QHeaderView) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -310,7 +324,7 @@ func (this *QHeaderView) SetVisible(v bool) {
 // /usr/include/qt/QtWidgets/qheaderview.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int sectionSizeHint(int)
+// [4] int sectionSizeHint(int) const
 func (this *QHeaderView) SectionSizeHint(logicalIndex int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView15sectionSizeHintEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), logicalIndex)
 	qtrt.ErrPrint(err, rv)
@@ -320,7 +334,7 @@ func (this *QHeaderView) SectionSizeHint(logicalIndex int) int {
 // /usr/include/qt/QtWidgets/qheaderview.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int visualIndexAt(int)
+// [4] int visualIndexAt(int) const
 func (this *QHeaderView) VisualIndexAt(position int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView13visualIndexAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	qtrt.ErrPrint(err, rv)
@@ -330,7 +344,7 @@ func (this *QHeaderView) VisualIndexAt(position int) int {
 // /usr/include/qt/QtWidgets/qheaderview.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int logicalIndexAt(int)
+// [4] int logicalIndexAt(int) const
 func (this *QHeaderView) LogicalIndexAt(position int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView14logicalIndexAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	qtrt.ErrPrint(err, rv)
@@ -340,7 +354,7 @@ func (this *QHeaderView) LogicalIndexAt(position int) int {
 // /usr/include/qt/QtWidgets/qheaderview.h:92
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [4] int logicalIndexAt(int, int)
+// [4] int logicalIndexAt(int, int) const
 func (this *QHeaderView) LogicalIndexAt_1(x int, y int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView14logicalIndexAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -350,7 +364,7 @@ func (this *QHeaderView) LogicalIndexAt_1(x int, y int) int {
 // /usr/include/qt/QtWidgets/qheaderview.h:93
 // index:2
 // Public inline Visibility=Default Availability=Available
-// [4] int logicalIndexAt(const QPoint &)
+// [4] int logicalIndexAt(const QPoint &) const
 func (this *QHeaderView) LogicalIndexAt_2(pos qtcore.QPoint_ITF) int {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -364,7 +378,7 @@ func (this *QHeaderView) LogicalIndexAt_2(pos qtcore.QPoint_ITF) int {
 // /usr/include/qt/QtWidgets/qheaderview.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int sectionSize(int)
+// [4] int sectionSize(int) const
 func (this *QHeaderView) SectionSize(logicalIndex int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView11sectionSizeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), logicalIndex)
 	qtrt.ErrPrint(err, rv)
@@ -374,7 +388,7 @@ func (this *QHeaderView) SectionSize(logicalIndex int) int {
 // /usr/include/qt/QtWidgets/qheaderview.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int sectionPosition(int)
+// [4] int sectionPosition(int) const
 func (this *QHeaderView) SectionPosition(logicalIndex int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView15sectionPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), logicalIndex)
 	qtrt.ErrPrint(err, rv)
@@ -384,7 +398,7 @@ func (this *QHeaderView) SectionPosition(logicalIndex int) int {
 // /usr/include/qt/QtWidgets/qheaderview.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int sectionViewportPosition(int)
+// [4] int sectionViewportPosition(int) const
 func (this *QHeaderView) SectionViewportPosition(logicalIndex int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView23sectionViewportPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), logicalIndex)
 	qtrt.ErrPrint(err, rv)
@@ -439,7 +453,7 @@ func (this *QHeaderView) ResizeSections_1() {
 // /usr/include/qt/QtWidgets/qheaderview.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSectionHidden(int)
+// [1] bool isSectionHidden(int) const
 func (this *QHeaderView) IsSectionHidden(logicalIndex int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView15isSectionHiddenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), logicalIndex)
 	qtrt.ErrPrint(err, rv)
@@ -458,7 +472,7 @@ func (this *QHeaderView) SetSectionHidden(logicalIndex int, hide bool) {
 // /usr/include/qt/QtWidgets/qheaderview.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int hiddenSectionCount()
+// [4] int hiddenSectionCount() const
 func (this *QHeaderView) HiddenSectionCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView18hiddenSectionCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -486,7 +500,7 @@ func (this *QHeaderView) ShowSection(logicalIndex int) {
 // /usr/include/qt/QtWidgets/qheaderview.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QHeaderView) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -496,7 +510,7 @@ func (this *QHeaderView) Count() int {
 // /usr/include/qt/QtWidgets/qheaderview.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int visualIndex(int)
+// [4] int visualIndex(int) const
 func (this *QHeaderView) VisualIndex(logicalIndex int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView11visualIndexEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), logicalIndex)
 	qtrt.ErrPrint(err, rv)
@@ -506,7 +520,7 @@ func (this *QHeaderView) VisualIndex(logicalIndex int) int {
 // /usr/include/qt/QtWidgets/qheaderview.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int logicalIndex(int)
+// [4] int logicalIndex(int) const
 func (this *QHeaderView) LogicalIndex(visualIndex int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView12logicalIndexEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visualIndex)
 	qtrt.ErrPrint(err, rv)
@@ -525,7 +539,7 @@ func (this *QHeaderView) SetSectionsMovable(movable bool) {
 // /usr/include/qt/QtWidgets/qheaderview.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool sectionsMovable()
+// [1] bool sectionsMovable() const
 func (this *QHeaderView) SectionsMovable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView15sectionsMovableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -544,7 +558,7 @@ func (this *QHeaderView) SetSectionsClickable(clickable bool) {
 // /usr/include/qt/QtWidgets/qheaderview.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool sectionsClickable()
+// [1] bool sectionsClickable() const
 func (this *QHeaderView) SectionsClickable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView17sectionsClickableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -563,7 +577,7 @@ func (this *QHeaderView) SetHighlightSections(highlight bool) {
 // /usr/include/qt/QtWidgets/qheaderview.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool highlightSections()
+// [1] bool highlightSections() const
 func (this *QHeaderView) HighlightSections() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView17highlightSectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -573,7 +587,7 @@ func (this *QHeaderView) HighlightSections() bool {
 // /usr/include/qt/QtWidgets/qheaderview.h:132
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QHeaderView::ResizeMode sectionResizeMode(int)
+// [4] QHeaderView::ResizeMode sectionResizeMode(int) const
 func (this *QHeaderView) SectionResizeMode(logicalIndex int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView17sectionResizeModeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), logicalIndex)
 	qtrt.ErrPrint(err, rv)
@@ -610,7 +624,7 @@ func (this *QHeaderView) SetResizeContentsPrecision(precision int) {
 // /usr/include/qt/QtWidgets/qheaderview.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int resizeContentsPrecision()
+// [4] int resizeContentsPrecision() const
 func (this *QHeaderView) ResizeContentsPrecision() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView23resizeContentsPrecisionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -620,7 +634,7 @@ func (this *QHeaderView) ResizeContentsPrecision() int {
 // /usr/include/qt/QtWidgets/qheaderview.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int stretchSectionCount()
+// [4] int stretchSectionCount() const
 func (this *QHeaderView) StretchSectionCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView19stretchSectionCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -639,7 +653,7 @@ func (this *QHeaderView) SetSortIndicatorShown(show bool) {
 // /usr/include/qt/QtWidgets/qheaderview.h:151
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSortIndicatorShown()
+// [1] bool isSortIndicatorShown() const
 func (this *QHeaderView) IsSortIndicatorShown() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView20isSortIndicatorShownEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -658,7 +672,7 @@ func (this *QHeaderView) SetSortIndicator(logicalIndex int, order int) {
 // /usr/include/qt/QtWidgets/qheaderview.h:154
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int sortIndicatorSection()
+// [4] int sortIndicatorSection() const
 func (this *QHeaderView) SortIndicatorSection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView20sortIndicatorSectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -668,7 +682,7 @@ func (this *QHeaderView) SortIndicatorSection() int {
 // /usr/include/qt/QtWidgets/qheaderview.h:155
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::SortOrder sortIndicatorOrder()
+// [4] Qt::SortOrder sortIndicatorOrder() const
 func (this *QHeaderView) SortIndicatorOrder() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView18sortIndicatorOrderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -678,7 +692,7 @@ func (this *QHeaderView) SortIndicatorOrder() int {
 // /usr/include/qt/QtWidgets/qheaderview.h:157
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool stretchLastSection()
+// [1] bool stretchLastSection() const
 func (this *QHeaderView) StretchLastSection() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView18stretchLastSectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -697,7 +711,7 @@ func (this *QHeaderView) SetStretchLastSection(stretch bool) {
 // /usr/include/qt/QtWidgets/qheaderview.h:160
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool cascadingSectionResizes()
+// [1] bool cascadingSectionResizes() const
 func (this *QHeaderView) CascadingSectionResizes() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView23cascadingSectionResizesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -716,7 +730,7 @@ func (this *QHeaderView) SetCascadingSectionResizes(enable bool) {
 // /usr/include/qt/QtWidgets/qheaderview.h:163
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int defaultSectionSize()
+// [4] int defaultSectionSize() const
 func (this *QHeaderView) DefaultSectionSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView18defaultSectionSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -744,7 +758,7 @@ func (this *QHeaderView) ResetDefaultSectionSize() {
 // /usr/include/qt/QtWidgets/qheaderview.h:167
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int minimumSectionSize()
+// [4] int minimumSectionSize() const
 func (this *QHeaderView) MinimumSectionSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView18minimumSectionSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -763,7 +777,7 @@ func (this *QHeaderView) SetMinimumSectionSize(size int) {
 // /usr/include/qt/QtWidgets/qheaderview.h:169
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int maximumSectionSize()
+// [4] int maximumSectionSize() const
 func (this *QHeaderView) MaximumSectionSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView18maximumSectionSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -782,7 +796,7 @@ func (this *QHeaderView) SetMaximumSectionSize(size int) {
 // /usr/include/qt/QtWidgets/qheaderview.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Alignment defaultAlignment()
+// [4] Qt::Alignment defaultAlignment() const
 func (this *QHeaderView) DefaultAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView16defaultAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -810,7 +824,7 @@ func (this *QHeaderView) DoItemsLayout() {
 // /usr/include/qt/QtWidgets/qheaderview.h:176
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool sectionsMoved()
+// [1] bool sectionsMoved() const
 func (this *QHeaderView) SectionsMoved() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView13sectionsMovedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -820,7 +834,7 @@ func (this *QHeaderView) SectionsMoved() bool {
 // /usr/include/qt/QtWidgets/qheaderview.h:177
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool sectionsHidden()
+// [1] bool sectionsHidden() const
 func (this *QHeaderView) SectionsHidden() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView14sectionsHiddenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -830,7 +844,7 @@ func (this *QHeaderView) SectionsHidden() bool {
 // /usr/include/qt/QtWidgets/qheaderview.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray saveState()
+// [8] QByteArray saveState() const
 func (this *QHeaderView) SaveState() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView9saveStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1163,7 +1177,7 @@ func (this *QHeaderView) ViewportEvent(e qtcore.QEvent_ITF /*777 QEvent **/) boo
 // /usr/include/qt/QtWidgets/qheaderview.h:226
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void paintSection(QPainter *, const QRect &, int)
+// [-2] void paintSection(QPainter *, const QRect &, int) const
 func (this *QHeaderView) PaintSection(painter qtgui.QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, logicalIndex int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -1180,7 +1194,7 @@ func (this *QHeaderView) PaintSection(painter qtgui.QPainter_ITF /*777 QPainter 
 // /usr/include/qt/QtWidgets/qheaderview.h:227
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QSize sectionSizeFromContents(int)
+// [8] QSize sectionSizeFromContents(int) const
 func (this *QHeaderView) SectionSizeFromContents(logicalIndex int) *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView23sectionSizeFromContentsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), logicalIndex)
 	qtrt.ErrPrint(err, rv)
@@ -1192,7 +1206,7 @@ func (this *QHeaderView) SectionSizeFromContents(logicalIndex int) *qtcore.QSize
 // /usr/include/qt/QtWidgets/qheaderview.h:229
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int horizontalOffset()
+// [4] int horizontalOffset() const
 func (this *QHeaderView) HorizontalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView16horizontalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1202,7 +1216,7 @@ func (this *QHeaderView) HorizontalOffset() int {
 // /usr/include/qt/QtWidgets/qheaderview.h:230
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int verticalOffset()
+// [4] int verticalOffset() const
 func (this *QHeaderView) VerticalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView14verticalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1243,7 +1257,7 @@ func (this *QHeaderView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, 
 // /usr/include/qt/QtWidgets/qheaderview.h:237
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QRect visualRect(const QModelIndex &)
+// [16] QRect visualRect(const QModelIndex &) const
 func (this *QHeaderView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -1272,7 +1286,7 @@ func (this *QHeaderView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 // /usr/include/qt/QtWidgets/qheaderview.h:240
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [24] QModelIndex indexAt(const QPoint &)
+// [24] QModelIndex indexAt(const QPoint &) const
 func (this *QHeaderView) IndexAt(p qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -1288,7 +1302,7 @@ func (this *QHeaderView) IndexAt(p qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*
 // /usr/include/qt/QtWidgets/qheaderview.h:241
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool isIndexHidden(const QModelIndex &)
+// [1] bool isIndexHidden(const QModelIndex &) const
 func (this *QHeaderView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -1327,7 +1341,7 @@ func (this *QHeaderView) SetSelection(rect qtcore.QRect_ITF, flags int) {
 // /usr/include/qt/QtWidgets/qheaderview.h:245
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QRegion visualRegionForSelection(const QItemSelection &)
+// [8] QRegion visualRegionForSelection(const QItemSelection &) const
 func (this *QHeaderView) VisualRegionForSelection(selection qtcore.QItemSelection_ITF) *qtgui.QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if selection != nil && selection.QItemSelection_PTR() != nil {
@@ -1343,7 +1357,7 @@ func (this *QHeaderView) VisualRegionForSelection(selection qtcore.QItemSelectio
 // /usr/include/qt/QtWidgets/qheaderview.h:246
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionHeader *)
+// [-2] void initStyleOption(QStyleOptionHeader *) const
 func (this *QHeaderView) InitStyleOption(option QStyleOptionHeader_ITF /*777 QStyleOptionHeader **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionHeader_PTR() != nil {

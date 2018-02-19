@@ -167,7 +167,7 @@ func NewQRadialGradient_6(cx float64, cy float64, centerRadius float64, fx float
 // /usr/include/qt/QtGui/qbrush.h:284
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF center()
+// [16] QPointF center() const
 func (this *QRadialGradient) Center() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QRadialGradient6centerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -201,7 +201,7 @@ func (this *QRadialGradient) SetCenter_1(x float64, y float64) {
 // /usr/include/qt/QtGui/qbrush.h:288
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF focalPoint()
+// [16] QPointF focalPoint() const
 func (this *QRadialGradient) FocalPoint() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QRadialGradient10focalPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ func (this *QRadialGradient) SetFocalPoint_1(x float64, y float64) {
 // /usr/include/qt/QtGui/qbrush.h:292
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal radius()
+// [8] qreal radius() const
 func (this *QRadialGradient) Radius() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QRadialGradient6radiusEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -254,7 +254,7 @@ func (this *QRadialGradient) SetRadius(radius float64) {
 // /usr/include/qt/QtGui/qbrush.h:295
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal centerRadius()
+// [8] qreal centerRadius() const
 func (this *QRadialGradient) CenterRadius() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QRadialGradient12centerRadiusEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -273,7 +273,7 @@ func (this *QRadialGradient) SetCenterRadius(radius float64) {
 // /usr/include/qt/QtGui/qbrush.h:298
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal focalRadius()
+// [8] qreal focalRadius() const
 func (this *QRadialGradient) FocalRadius() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QRadialGradient11focalRadiusEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

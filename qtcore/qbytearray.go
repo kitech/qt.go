@@ -87,6 +87,22 @@ func NewQByteArray_1(arg0 string, size int) *QByteArray {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:171
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QByteArray(const char *, int)
+func NewQByteArray_1_(arg0 string) *QByteArray {
+	var convArg0 = qtrt.CString(arg0)
+	defer qtrt.FreeMem(convArg0)
+	// arg: 1, int=Int, =Invalid,
+	size := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2EPKci", qtrt.FFI_TYPE_POINTER, convArg0, size)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQByteArray)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:172
 // index:2
 // Public Visibility=Default Availability=Available
@@ -180,7 +196,7 @@ func (this *QByteArray) Swap(other QByteArray_ITF) {
 // /usr/include/qt/QtCore/qbytearray.h:188
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int size()
+// [4] int size() const
 func (this *QByteArray) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,7 +206,7 @@ func (this *QByteArray) Size() int {
 // /usr/include/qt/QtCore/qbytearray.h:189
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QByteArray) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,10 +234,24 @@ func (this *QByteArray) Fill(c byte, size int) *QByteArray {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:192
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray & fill(char, int)
+func (this *QByteArray) Fill__(c byte) *QByteArray {
+	// arg: 1, int=Int, =Invalid,
+	size := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray4fillEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, size)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:194
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int capacity()
+// [4] int capacity() const
 func (this *QByteArray) Capacity() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8capacityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -259,7 +289,7 @@ func (this *QByteArray) Data() string {
 // /usr/include/qt/QtCore/qbytearray.h:203
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] const char * data()
+// [8] const char * data() const
 func (this *QByteArray) Data_1() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -269,7 +299,7 @@ func (this *QByteArray) Data_1() string {
 // /usr/include/qt/QtCore/qbytearray.h:204
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const char * constData()
+// [8] const char * constData() const
 func (this *QByteArray) ConstData() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray9constDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -288,7 +318,7 @@ func (this *QByteArray) Detach() {
 // /usr/include/qt/QtCore/qbytearray.h:206
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isDetached()
+// [1] bool isDetached() const
 func (this *QByteArray) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -298,7 +328,7 @@ func (this *QByteArray) IsDetached() bool {
 // /usr/include/qt/QtCore/qbytearray.h:207
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isSharedWith(const QByteArray &)
+// [1] bool isSharedWith(const QByteArray &) const
 func (this *QByteArray) IsSharedWith(other QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QByteArray_PTR() != nil {
@@ -321,7 +351,7 @@ func (this *QByteArray) Clear() {
 // /usr/include/qt/QtCore/qbytearray.h:210
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] char at(int)
+// [1] char at(int) const
 func (this *QByteArray) At(i int) byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -331,7 +361,7 @@ func (this *QByteArray) At(i int) byte {
 // /usr/include/qt/QtCore/qbytearray.h:211
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] char operator[](int)
+// [1] char operator[](int) const
 func (this *QByteArray) Operator_get_index(i int) byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArrayixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -341,7 +371,7 @@ func (this *QByteArray) Operator_get_index(i int) byte {
 // /usr/include/qt/QtCore/qbytearray.h:212
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [1] char operator[](uint)
+// [1] char operator[](uint) const
 func (this *QByteArray) Operator_get_index_1(i uint) byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArrayixEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -375,7 +405,7 @@ func (this *QByteArray) Operator_get_index_3(i uint) *QByteRef /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:215
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] char front()
+// [1] char front() const
 func (this *QByteArray) Front() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5frontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -397,7 +427,7 @@ func (this *QByteArray) Front_1() *QByteRef /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:217
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] char back()
+// [1] char back() const
 func (this *QByteArray) Back() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4backEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -419,8 +449,20 @@ func (this *QByteArray) Back_1() *QByteRef /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:220
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int indexOf(char, int)
+// [4] int indexOf(char, int) const
 func (this *QByteArray) IndexOf(c byte, from int) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, from)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:220
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(char, int) const
+func (this *QByteArray) IndexOf__(c byte) int {
+	// arg: 1, int=Int, =Invalid,
+	from := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -429,7 +471,7 @@ func (this *QByteArray) IndexOf(c byte, from int) int {
 // /usr/include/qt/QtCore/qbytearray.h:221
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] int indexOf(const char *, int)
+// [4] int indexOf(const char *, int) const
 func (this *QByteArray) IndexOf_1(c string, from int) int {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
@@ -438,10 +480,24 @@ func (this *QByteArray) IndexOf_1(c string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:221
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(const char *, int) const
+func (this *QByteArray) IndexOf_1_(c string) int {
+	var convArg0 = qtrt.CString(c)
+	defer qtrt.FreeMem(convArg0)
+	// arg: 1, int=Int, =Invalid,
+	from := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:222
 // index:2
 // Public Visibility=Default Availability=Available
-// [4] int indexOf(const QByteArray &, int)
+// [4] int indexOf(const QByteArray &, int) const
 func (this *QByteArray) IndexOf_2(a QByteArray_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
@@ -452,10 +508,26 @@ func (this *QByteArray) IndexOf_2(a QByteArray_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:222
+// index:2
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(const QByteArray &, int) const
+func (this *QByteArray) IndexOf_2_(a QByteArray_ITF) int {
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QByteArray_PTR() != nil {
+		convArg0 = a.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	from := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfERKS_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:331
 // index:3
 // Public Visibility=Default Availability=Available
-// [4] int indexOf(const QString &, int)
+// [4] int indexOf(const QString &, int) const
 func (this *QByteArray) IndexOf_3(s string, from int) int {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -464,11 +536,37 @@ func (this *QByteArray) IndexOf_3(s string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:331
+// index:3
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(const QString &, int) const
+func (this *QByteArray) IndexOf_3_(s string) int {
+	var tmpArg0 = NewQString_5(s)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, int=Int, =Invalid,
+	from := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:223
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int lastIndexOf(char, int)
+// [4] int lastIndexOf(char, int) const
 func (this *QByteArray) LastIndexOf(c byte, from int) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, from)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:223
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(char, int) const
+func (this *QByteArray) LastIndexOf__(c byte) int {
+	// arg: 1, int=Int, =Invalid,
+	from := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -477,7 +575,7 @@ func (this *QByteArray) LastIndexOf(c byte, from int) int {
 // /usr/include/qt/QtCore/qbytearray.h:224
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] int lastIndexOf(const char *, int)
+// [4] int lastIndexOf(const char *, int) const
 func (this *QByteArray) LastIndexOf_1(c string, from int) int {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
@@ -486,10 +584,24 @@ func (this *QByteArray) LastIndexOf_1(c string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:224
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(const char *, int) const
+func (this *QByteArray) LastIndexOf_1_(c string) int {
+	var convArg0 = qtrt.CString(c)
+	defer qtrt.FreeMem(convArg0)
+	// arg: 1, int=Int, =Invalid,
+	from := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:225
 // index:2
 // Public Visibility=Default Availability=Available
-// [4] int lastIndexOf(const QByteArray &, int)
+// [4] int lastIndexOf(const QByteArray &, int) const
 func (this *QByteArray) LastIndexOf_2(a QByteArray_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
@@ -500,10 +612,26 @@ func (this *QByteArray) LastIndexOf_2(a QByteArray_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:225
+// index:2
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(const QByteArray &, int) const
+func (this *QByteArray) LastIndexOf_2_(a QByteArray_ITF) int {
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QByteArray_PTR() != nil {
+		convArg0 = a.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	from := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfERKS_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:332
 // index:3
 // Public Visibility=Default Availability=Available
-// [4] int lastIndexOf(const QString &, int)
+// [4] int lastIndexOf(const QString &, int) const
 func (this *QByteArray) LastIndexOf_3(s string, from int) int {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -512,10 +640,24 @@ func (this *QByteArray) LastIndexOf_3(s string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:332
+// index:3
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(const QString &, int) const
+func (this *QByteArray) LastIndexOf_3_(s string) int {
+	var tmpArg0 = NewQString_5(s)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, int=Int, =Invalid,
+	from := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:227
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool contains(char)
+// [1] bool contains(char) const
 func (this *QByteArray) Contains(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8containsEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -525,7 +667,7 @@ func (this *QByteArray) Contains(c byte) bool {
 // /usr/include/qt/QtCore/qbytearray.h:228
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [1] bool contains(const char *)
+// [1] bool contains(const char *) const
 func (this *QByteArray) Contains_1(a string) bool {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
@@ -537,7 +679,7 @@ func (this *QByteArray) Contains_1(a string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:229
 // index:2
 // Public inline Visibility=Default Availability=Available
-// [1] bool contains(const QByteArray &)
+// [1] bool contains(const QByteArray &) const
 func (this *QByteArray) Contains_2(a QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
@@ -551,7 +693,7 @@ func (this *QByteArray) Contains_2(a QByteArray_ITF) bool {
 // /usr/include/qt/QtCore/qbytearray.h:230
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int count(char)
+// [4] int count(char) const
 func (this *QByteArray) Count(c byte) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5countEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -561,7 +703,7 @@ func (this *QByteArray) Count(c byte) int {
 // /usr/include/qt/QtCore/qbytearray.h:231
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] int count(const char *)
+// [4] int count(const char *) const
 func (this *QByteArray) Count_1(a string) int {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
@@ -573,7 +715,7 @@ func (this *QByteArray) Count_1(a string) int {
 // /usr/include/qt/QtCore/qbytearray.h:232
 // index:2
 // Public Visibility=Default Availability=Available
-// [4] int count(const QByteArray &)
+// [4] int count(const QByteArray &) const
 func (this *QByteArray) Count_2(a QByteArray_ITF) int {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
@@ -587,7 +729,7 @@ func (this *QByteArray) Count_2(a QByteArray_ITF) int {
 // /usr/include/qt/QtCore/qbytearray.h:433
 // index:3
 // Public inline Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QByteArray) Count_3() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -597,9 +739,9 @@ func (this *QByteArray) Count_3() int {
 // /usr/include/qt/QtCore/qbytearray.h:234
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray left(int)
-func (this *QByteArray) Left(len int) *QByteArray /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4leftEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len)
+// [8] QByteArray left(int) const
+func (this *QByteArray) Left(len_ int) *QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4leftEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -609,9 +751,9 @@ func (this *QByteArray) Left(len int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:235
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray right(int)
-func (this *QByteArray) Right(len int) *QByteArray /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5rightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len)
+// [8] QByteArray right(int) const
+func (this *QByteArray) Right(len_ int) *QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5rightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -621,9 +763,23 @@ func (this *QByteArray) Right(len int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:236
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray mid(int, int)
-func (this *QByteArray) Mid(index int, len int) *QByteArray /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len)
+// [8] QByteArray mid(int, int) const
+func (this *QByteArray) Mid(index int, len_ int) *QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len_)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:236
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray mid(int, int) const
+func (this *QByteArray) Mid__(index int) *QByteArray /*123*/ {
+	// arg: 1, int=Int, =Invalid,
+	len_ := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -633,9 +789,9 @@ func (this *QByteArray) Mid(index int, len int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:237
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray chopped(int)
-func (this *QByteArray) Chopped(len int) *QByteArray /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7choppedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len)
+// [8] QByteArray chopped(int) const
+func (this *QByteArray) Chopped(len_ int) *QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7choppedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -645,7 +801,7 @@ func (this *QByteArray) Chopped(len int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:240
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool startsWith(const QByteArray &)
+// [1] bool startsWith(const QByteArray &) const
 func (this *QByteArray) StartsWith(a QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
@@ -659,7 +815,7 @@ func (this *QByteArray) StartsWith(a QByteArray_ITF) bool {
 // /usr/include/qt/QtCore/qbytearray.h:241
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool startsWith(char)
+// [1] bool startsWith(char) const
 func (this *QByteArray) StartsWith_1(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10startsWithEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -669,7 +825,7 @@ func (this *QByteArray) StartsWith_1(c byte) bool {
 // /usr/include/qt/QtCore/qbytearray.h:242
 // index:2
 // Public Visibility=Default Availability=Available
-// [1] bool startsWith(const char *)
+// [1] bool startsWith(const char *) const
 func (this *QByteArray) StartsWith_2(c string) bool {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
@@ -681,7 +837,7 @@ func (this *QByteArray) StartsWith_2(c string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:244
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool endsWith(const QByteArray &)
+// [1] bool endsWith(const QByteArray &) const
 func (this *QByteArray) EndsWith(a QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
@@ -695,7 +851,7 @@ func (this *QByteArray) EndsWith(a QByteArray_ITF) bool {
 // /usr/include/qt/QtCore/qbytearray.h:245
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool endsWith(char)
+// [1] bool endsWith(char) const
 func (this *QByteArray) EndsWith_1(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8endsWithEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -705,7 +861,7 @@ func (this *QByteArray) EndsWith_1(c byte) bool {
 // /usr/include/qt/QtCore/qbytearray.h:246
 // index:2
 // Public Visibility=Default Availability=Available
-// [1] bool endsWith(const char *)
+// [1] bool endsWith(const char *) const
 func (this *QByteArray) EndsWith_2(c string) bool {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
@@ -735,7 +891,7 @@ func (this *QByteArray) Chop(n int) {
 // /usr/include/qt/QtCore/qbytearray.h:259
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray toLower()
+// [8] QByteArray toLower() const
 func (this *QByteArray) ToLower() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR10QByteArray7toLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -759,7 +915,7 @@ func (this *QByteArray) ToLower_1() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:263
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray toUpper()
+// [8] QByteArray toUpper() const
 func (this *QByteArray) ToUpper() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR10QByteArray7toUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -783,7 +939,7 @@ func (this *QByteArray) ToUpper_1() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:267
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray trimmed()
+// [8] QByteArray trimmed() const
 func (this *QByteArray) Trimmed() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR10QByteArray7trimmedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -807,7 +963,7 @@ func (this *QByteArray) Trimmed_1() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:271
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray simplified()
+// [8] QByteArray simplified() const
 func (this *QByteArray) Simplified() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR10QByteArray10simplifiedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -831,8 +987,38 @@ func (this *QByteArray) Simplified_1() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:285
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray leftJustified(int, char, _Bool)
+// [8] QByteArray leftJustified(int, char, _Bool) const
 func (this *QByteArray) LeftJustified(width int, fill byte, truncate bool) *QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray13leftJustifiedEicb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:285
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray leftJustified(int, char, _Bool) const
+func (this *QByteArray) LeftJustified__(width int) *QByteArray /*123*/ {
+	// arg: 1, char=Char_S, =Invalid,
+	fill := ' '
+	// arg: 2, bool=Bool, =Invalid,
+	truncate := false
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray13leftJustifiedEicb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:285
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray leftJustified(int, char, _Bool) const
+func (this *QByteArray) LeftJustified__1(width int, fill byte) *QByteArray /*123*/ {
+	// arg: 2, bool=Bool, =Invalid,
+	truncate := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray13leftJustifiedEicb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -843,8 +1029,38 @@ func (this *QByteArray) LeftJustified(width int, fill byte, truncate bool) *QByt
 // /usr/include/qt/QtCore/qbytearray.h:286
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray rightJustified(int, char, _Bool)
+// [8] QByteArray rightJustified(int, char, _Bool) const
 func (this *QByteArray) RightJustified(width int, fill byte, truncate bool) *QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray14rightJustifiedEicb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:286
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray rightJustified(int, char, _Bool) const
+func (this *QByteArray) RightJustified__(width int) *QByteArray /*123*/ {
+	// arg: 1, char=Char_S, =Invalid,
+	fill := ' '
+	// arg: 2, bool=Bool, =Invalid,
+	truncate := false
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray14rightJustifiedEicb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:286
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray rightJustified(int, char, _Bool) const
+func (this *QByteArray) RightJustified__1(width int, fill byte) *QByteArray /*123*/ {
+	// arg: 2, bool=Bool, =Invalid,
+	truncate := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray14rightJustifiedEicb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -856,8 +1072,8 @@ func (this *QByteArray) RightJustified(width int, fill byte, truncate bool) *QBy
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & remove(int, int)
-func (this *QByteArray) Remove(index int, len int) *QByteArray {
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6removeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len)
+func (this *QByteArray) Remove(index int, len_ int) *QByteArray {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6removeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -868,10 +1084,10 @@ func (this *QByteArray) Remove(index int, len int) *QByteArray {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(int, int, const char *)
-func (this *QByteArray) Replace(index int, len int, s string) *QByteArray {
+func (this *QByteArray) Replace(index int, len_ int, s string) *QByteArray {
 	var convArg2 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len_, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -882,10 +1098,10 @@ func (this *QByteArray) Replace(index int, len int, s string) *QByteArray {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(int, int, const char *, int)
-func (this *QByteArray) Replace_1(index int, len int, s string, alen int) *QByteArray {
+func (this *QByteArray) Replace_1(index int, len_ int, s string, alen int) *QByteArray {
 	var convArg2 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2, alen)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len_, convArg2, alen)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -896,12 +1112,12 @@ func (this *QByteArray) Replace_1(index int, len int, s string, alen int) *QByte
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(int, int, const QByteArray &)
-func (this *QByteArray) Replace_2(index int, len int, s QByteArray_ITF) *QByteArray {
+func (this *QByteArray) Replace_2(index int, len_ int, s QByteArray_ITF) *QByteArray {
 	var convArg2 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg2 = s.QByteArray_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len_, convArg2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -1145,7 +1361,7 @@ func (this *QByteArray) Operator_add_equal_3(s string) *QByteArray {
 // /usr/include/qt/QtCore/qbytearray.h:321
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray repeated(int)
+// [8] QByteArray repeated(int) const
 func (this *QByteArray) Repeated(times int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8repeatedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), times)
 	qtrt.ErrPrint(err, rv)
@@ -1157,7 +1373,7 @@ func (this *QByteArray) Repeated(times int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:335
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QString &)
+// [1] bool operator==(const QString &) const
 func (this *QByteArray) Operator_equal_equal(s2 string) bool {
 	var tmpArg0 = NewQString_5(s2)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1169,7 +1385,7 @@ func (this *QByteArray) Operator_equal_equal(s2 string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:336
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QString &)
+// [1] bool operator!=(const QString &) const
 func (this *QByteArray) Operator_not_equal(s2 string) bool {
 	var tmpArg0 = NewQString_5(s2)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1181,7 +1397,7 @@ func (this *QByteArray) Operator_not_equal(s2 string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:337
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<(const QString &)
+// [1] bool operator<(const QString &) const
 func (this *QByteArray) Operator_less_than(s2 string) bool {
 	var tmpArg0 = NewQString_5(s2)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1193,7 +1409,7 @@ func (this *QByteArray) Operator_less_than(s2 string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:338
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>(const QString &)
+// [1] bool operator>(const QString &) const
 func (this *QByteArray) Operator_greater_than(s2 string) bool {
 	var tmpArg0 = NewQString_5(s2)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1205,7 +1421,7 @@ func (this *QByteArray) Operator_greater_than(s2 string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:339
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<=(const QString &)
+// [1] bool operator<=(const QString &) const
 func (this *QByteArray) Operator_less_than_equal(s2 string) bool {
 	var tmpArg0 = NewQString_5(s2)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1217,7 +1433,7 @@ func (this *QByteArray) Operator_less_than_equal(s2 string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:340
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>=(const QString &)
+// [1] bool operator>=(const QString &) const
 func (this *QByteArray) Operator_greater_than_equal(s2 string) bool {
 	var tmpArg0 = NewQString_5(s2)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1229,8 +1445,34 @@ func (this *QByteArray) Operator_greater_than_equal(s2 string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:343
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(_Bool *, int)
+// [2] short toShort(_Bool *, int) const
 func (this *QByteArray) ToShort(ok *bool, base int) int16 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int16", rv).(int16) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:343
+// index:0
+// Public Visibility=Default Availability=Available
+// [2] short toShort(_Bool *, int) const
+func (this *QByteArray) ToShort__() int16 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int16", rv).(int16) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:343
+// index:0
+// Public Visibility=Default Availability=Available
+// [2] short toShort(_Bool *, int) const
+func (this *QByteArray) ToShort__1(ok *bool) int16 {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
@@ -1239,8 +1481,34 @@ func (this *QByteArray) ToShort(ok *bool, base int) int16 {
 // /usr/include/qt/QtCore/qbytearray.h:344
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(_Bool *, int)
+// [2] ushort toUShort(_Bool *, int) const
 func (this *QByteArray) ToUShort(ok *bool, base int) uint16 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return uint16(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:344
+// index:0
+// Public Visibility=Default Availability=Available
+// [2] ushort toUShort(_Bool *, int) const
+func (this *QByteArray) ToUShort__() uint16 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return uint16(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:344
+// index:0
+// Public Visibility=Default Availability=Available
+// [2] ushort toUShort(_Bool *, int) const
+func (this *QByteArray) ToUShort__1(ok *bool) uint16 {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
@@ -1249,8 +1517,34 @@ func (this *QByteArray) ToUShort(ok *bool, base int) uint16 {
 // /usr/include/qt/QtCore/qbytearray.h:345
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *, int)
+// [4] int toInt(_Bool *, int) const
 func (this *QByteArray) ToInt(ok *bool, base int) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5toIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:345
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int toInt(_Bool *, int) const
+func (this *QByteArray) ToInt__() int {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5toIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:345
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int toInt(_Bool *, int) const
+func (this *QByteArray) ToInt__1(ok *bool) int {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5toIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1259,8 +1553,34 @@ func (this *QByteArray) ToInt(ok *bool, base int) int {
 // /usr/include/qt/QtCore/qbytearray.h:346
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *, int)
+// [4] uint toUInt(_Bool *, int) const
 func (this *QByteArray) ToUInt(ok *bool, base int) uint {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:346
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] uint toUInt(_Bool *, int) const
+func (this *QByteArray) ToUInt__() uint {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:346
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] uint toUInt(_Bool *, int) const
+func (this *QByteArray) ToUInt__1(ok *bool) uint {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -1269,8 +1589,34 @@ func (this *QByteArray) ToUInt(ok *bool, base int) uint {
 // /usr/include/qt/QtCore/qbytearray.h:347
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] long toLong(_Bool *, int)
+// [8] long toLong(_Bool *, int) const
 func (this *QByteArray) ToLong(ok *bool, base int) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:347
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] long toLong(_Bool *, int) const
+func (this *QByteArray) ToLong__() int {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:347
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] long toLong(_Bool *, int) const
+func (this *QByteArray) ToLong__1(ok *bool) int {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1279,8 +1625,34 @@ func (this *QByteArray) ToLong(ok *bool, base int) int {
 // /usr/include/qt/QtCore/qbytearray.h:348
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] ulong toULong(_Bool *, int)
+// [8] ulong toULong(_Bool *, int) const
 func (this *QByteArray) ToULong(ok *bool, base int) uint {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:348
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] ulong toULong(_Bool *, int) const
+func (this *QByteArray) ToULong__() uint {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:348
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] ulong toULong(_Bool *, int) const
+func (this *QByteArray) ToULong__1(ok *bool) uint {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -1289,8 +1661,34 @@ func (this *QByteArray) ToULong(ok *bool, base int) uint {
 // /usr/include/qt/QtCore/qbytearray.h:349
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *, int)
+// [8] qlonglong toLongLong(_Bool *, int) const
 func (this *QByteArray) ToLongLong(ok *bool, base int) int64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return int64(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:349
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(_Bool *, int) const
+func (this *QByteArray) ToLongLong__() int64 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return int64(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:349
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(_Bool *, int) const
+func (this *QByteArray) ToLongLong__1(ok *bool) int64 {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -1299,8 +1697,34 @@ func (this *QByteArray) ToLongLong(ok *bool, base int) int64 {
 // /usr/include/qt/QtCore/qbytearray.h:350
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *, int)
+// [8] qulonglong toULongLong(_Bool *, int) const
 func (this *QByteArray) ToULongLong(ok *bool, base int) uint64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return uint64(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:350
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(_Bool *, int) const
+func (this *QByteArray) ToULongLong__() uint64 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
+	qtrt.ErrPrint(err, rv)
+	return uint64(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:350
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(_Bool *, int) const
+func (this *QByteArray) ToULongLong__1(ok *bool) uint64 {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
@@ -1309,8 +1733,20 @@ func (this *QByteArray) ToULongLong(ok *bool, base int) uint64 {
 // /usr/include/qt/QtCore/qbytearray.h:351
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(_Bool *)
+// [4] float toFloat(_Bool *) const
 func (this *QByteArray) ToFloat(ok *bool) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:351
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] float toFloat(_Bool *) const
+func (this *QByteArray) ToFloat__() float32 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -1319,8 +1755,20 @@ func (this *QByteArray) ToFloat(ok *bool) float32 {
 // /usr/include/qt/QtCore/qbytearray.h:352
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(_Bool *)
+// [8] double toDouble(_Bool *) const
 func (this *QByteArray) ToDouble(ok *bool) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:352
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] double toDouble(_Bool *) const
+func (this *QByteArray) ToDouble__() float64 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -1329,7 +1777,7 @@ func (this *QByteArray) ToDouble(ok *bool) float64 {
 // /usr/include/qt/QtCore/qbytearray.h:353
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toBase64(QByteArray::Base64Options)
+// [8] QByteArray toBase64(QByteArray::Base64Options) const
 func (this *QByteArray) ToBase64(options int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toBase64E6QFlagsINS_12Base64OptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
 	qtrt.ErrPrint(err, rv)
@@ -1341,7 +1789,7 @@ func (this *QByteArray) ToBase64(options int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:354
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toBase64()
+// [8] QByteArray toBase64() const
 func (this *QByteArray) ToBase64_1() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toBase64Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1353,7 +1801,7 @@ func (this *QByteArray) ToBase64_1() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:355
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toHex()
+// [8] QByteArray toHex() const
 func (this *QByteArray) ToHex() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5toHexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1365,7 +1813,7 @@ func (this *QByteArray) ToHex() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:356
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toHex(char)
+// [8] QByteArray toHex(char) const
 func (this *QByteArray) ToHex_1(separator byte) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5toHexEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), separator)
 	qtrt.ErrPrint(err, rv)
@@ -1377,7 +1825,7 @@ func (this *QByteArray) ToHex_1(separator byte) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:357
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char)
+// [8] QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char) const
 func (this *QByteArray) ToPercentEncoding(exclude QByteArray_ITF, include QByteArray_ITF, percent byte) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if exclude != nil && exclude.QByteArray_PTR() != nil {
@@ -1387,6 +1835,66 @@ func (this *QByteArray) ToPercentEncoding(exclude QByteArray_ITF, include QByteA
 	if include != nil && include.QByteArray_PTR() != nil {
 		convArg1 = include.QByteArray_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray17toPercentEncodingERKS_S1_c", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, percent)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:357
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char) const
+func (this *QByteArray) ToPercentEncoding__() *QByteArray /*123*/ {
+	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
+	var convArg0 = NewQByteArray()
+	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record,
+	var convArg1 = NewQByteArray()
+	// arg: 2, char=Char_S, =Invalid,
+	percent := '%'
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray17toPercentEncodingERKS_S1_c", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, percent)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:357
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char) const
+func (this *QByteArray) ToPercentEncoding__1(exclude QByteArray_ITF) *QByteArray /*123*/ {
+	var convArg0 unsafe.Pointer
+	if exclude != nil && exclude.QByteArray_PTR() != nil {
+		convArg0 = exclude.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record,
+	var convArg1 = NewQByteArray()
+	// arg: 2, char=Char_S, =Invalid,
+	percent := '%'
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray17toPercentEncodingERKS_S1_c", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, percent)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:357
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char) const
+func (this *QByteArray) ToPercentEncoding__2(exclude QByteArray_ITF, include QByteArray_ITF) *QByteArray /*123*/ {
+	var convArg0 unsafe.Pointer
+	if exclude != nil && exclude.QByteArray_PTR() != nil {
+		convArg0 = exclude.QByteArray_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if include != nil && include.QByteArray_PTR() != nil {
+		convArg1 = include.QByteArray_PTR().GetCthis()
+	}
+	// arg: 2, char=Char_S, =Invalid,
+	percent := '%'
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray17toPercentEncodingERKS_S1_c", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, percent)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1406,11 +1914,39 @@ func (this *QByteArray) SetNum(arg0 int16, base int) *QByteArray {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:361
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray & setNum(short, int)
+func (this *QByteArray) SetNum__(arg0 int16) *QByteArray {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEsi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:362
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(ushort, int)
 func (this *QByteArray) SetNum_1(arg0 uint16, base int) *QByteArray {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:362
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray & setNum(ushort, int)
+func (this *QByteArray) SetNum_1_(arg0 uint16) *QByteArray {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1430,11 +1966,39 @@ func (this *QByteArray) SetNum_2(arg0 int, base int) *QByteArray {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:363
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray & setNum(int, int)
+func (this *QByteArray) SetNum_2_(arg0 int) *QByteArray {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:364
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(uint, int)
 func (this *QByteArray) SetNum_3(arg0 uint, base int) *QByteArray {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEji", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:364
+// index:3
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray & setNum(uint, int)
+func (this *QByteArray) SetNum_3_(arg0 uint) *QByteArray {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEji", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1454,11 +2018,39 @@ func (this *QByteArray) SetNum_4(arg0 int64, base int) *QByteArray {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:365
+// index:4
+// Public Visibility=Default Availability=Available
+// [8] QByteArray & setNum(qlonglong, int)
+func (this *QByteArray) SetNum_4_(arg0 int64) *QByteArray {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumExi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:366
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(qulonglong, int)
 func (this *QByteArray) SetNum_5(arg0 uint64, base int) *QByteArray {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEyi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:366
+// index:5
+// Public Visibility=Default Availability=Available
+// [8] QByteArray & setNum(qulonglong, int)
+func (this *QByteArray) SetNum_5_(arg0 uint64) *QByteArray {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEyi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1478,11 +2070,71 @@ func (this *QByteArray) SetNum_6(arg0 float32, f byte, prec int) *QByteArray {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:367
+// index:6
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray & setNum(float, char, int)
+func (this *QByteArray) SetNum_6_(arg0 float32) *QByteArray {
+	// arg: 1, char=Char_S, =Invalid,
+	f := 'g'
+	// arg: 2, int=Int, =Invalid,
+	prec := 6
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:367
+// index:6
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray & setNum(float, char, int)
+func (this *QByteArray) SetNum_6_1(arg0 float32, f byte) *QByteArray {
+	// arg: 2, int=Int, =Invalid,
+	prec := 6
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:368
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(double, char, int)
 func (this *QByteArray) SetNum_7(arg0 float64, f byte, prec int) *QByteArray {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:368
+// index:7
+// Public Visibility=Default Availability=Available
+// [8] QByteArray & setNum(double, char, int)
+func (this *QByteArray) SetNum_7_(arg0 float64) *QByteArray {
+	// arg: 1, char=Char_S, =Invalid,
+	f := 'g'
+	// arg: 2, int=Int, =Invalid,
+	prec := 6
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:368
+// index:7
+// Public Visibility=Default Availability=Available
+// [8] QByteArray & setNum(double, char, int)
+func (this *QByteArray) SetNum_7_1(arg0 float64, f byte) *QByteArray {
+	// arg: 2, int=Int, =Invalid,
+	prec := 6
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1521,6 +2173,20 @@ func QByteArray_Number(arg0 int, base int) *QByteArray /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:371
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QByteArray number(int, int)
+func (this *QByteArray) Number__(arg0 int) *QByteArray /*123*/ {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEii", qtrt.FFI_TYPE_POINTER, arg0, base)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:372
 // index:1
 // Public static Visibility=Default Availability=Available
@@ -1536,6 +2202,20 @@ func QByteArray_Number_1(arg0 uint, base int) *QByteArray /*123*/ {
 	var nilthis *QByteArray
 	rv := nilthis.Number_1(arg0, base)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:372
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QByteArray number(uint, int)
+func (this *QByteArray) Number_1_(arg0 uint) *QByteArray /*123*/ {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEji", qtrt.FFI_TYPE_POINTER, arg0, base)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:373
@@ -1555,6 +2235,20 @@ func QByteArray_Number_2(arg0 int64, base int) *QByteArray /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:373
+// index:2
+// Public static Visibility=Default Availability=Available
+// [8] QByteArray number(qlonglong, int)
+func (this *QByteArray) Number_2_(arg0 int64) *QByteArray /*123*/ {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberExi", qtrt.FFI_TYPE_POINTER, arg0, base)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:374
 // index:3
 // Public static Visibility=Default Availability=Available
@@ -1572,6 +2266,20 @@ func QByteArray_Number_3(arg0 uint64, base int) *QByteArray /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:374
+// index:3
+// Public static Visibility=Default Availability=Available
+// [8] QByteArray number(qulonglong, int)
+func (this *QByteArray) Number_3_(arg0 uint64) *QByteArray /*123*/ {
+	// arg: 1, int=Int, =Invalid,
+	base := 10
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEyi", qtrt.FFI_TYPE_POINTER, arg0, base)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:375
 // index:4
 // Public static Visibility=Default Availability=Available
@@ -1587,6 +2295,36 @@ func QByteArray_Number_4(arg0 float64, f byte, prec int) *QByteArray /*123*/ {
 	var nilthis *QByteArray
 	rv := nilthis.Number_4(arg0, f, prec)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:375
+// index:4
+// Public static Visibility=Default Availability=Available
+// [8] QByteArray number(double, char, int)
+func (this *QByteArray) Number_4_(arg0 float64) *QByteArray /*123*/ {
+	// arg: 1, char=Char_S, =Invalid,
+	f := 'g'
+	// arg: 2, int=Int, =Invalid,
+	prec := 6
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEdci", qtrt.FFI_TYPE_POINTER, arg0, f, prec)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:375
+// index:4
+// Public static Visibility=Default Availability=Available
+// [8] QByteArray number(double, char, int)
+func (this *QByteArray) Number_4_1(arg0 float64, f byte) *QByteArray /*123*/ {
+	// arg: 2, int=Int, =Invalid,
+	prec := 6
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEdci", qtrt.FFI_TYPE_POINTER, arg0, f, prec)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:376
@@ -1692,6 +2430,24 @@ func QByteArray_FromPercentEncoding(pctEncoded QByteArray_ITF, percent byte) *QB
 	return rv
 }
 
+// /usr/include/qt/QtCore/qbytearray.h:380
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QByteArray fromPercentEncoding(const QByteArray &, char)
+func (this *QByteArray) FromPercentEncoding__(pctEncoded QByteArray_ITF) *QByteArray /*123*/ {
+	var convArg0 unsafe.Pointer
+	if pctEncoded != nil && pctEncoded.QByteArray_PTR() != nil {
+		convArg0 = pctEncoded.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, char=Char_S, =Invalid,
+	percent := '%'
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray19fromPercentEncodingERKS_c", qtrt.FFI_TYPE_POINTER, convArg0, percent)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qbytearray.h:399
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -1705,7 +2461,7 @@ func (this *QByteArray) Begin() string {
 // /usr/include/qt/QtCore/qbytearray.h:400
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray::const_iterator begin()
+// [8] QByteArray::const_iterator begin() const
 func (this *QByteArray) Begin_1() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1715,7 +2471,7 @@ func (this *QByteArray) Begin_1() string {
 // /usr/include/qt/QtCore/qbytearray.h:401
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray::const_iterator cbegin()
+// [8] QByteArray::const_iterator cbegin() const
 func (this *QByteArray) Cbegin() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6cbeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1725,7 +2481,7 @@ func (this *QByteArray) Cbegin() string {
 // /usr/include/qt/QtCore/qbytearray.h:402
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray::const_iterator constBegin()
+// [8] QByteArray::const_iterator constBegin() const
 func (this *QByteArray) ConstBegin() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10constBeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1745,7 +2501,7 @@ func (this *QByteArray) End() string {
 // /usr/include/qt/QtCore/qbytearray.h:404
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray::const_iterator end()
+// [8] QByteArray::const_iterator end() const
 func (this *QByteArray) End_1() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1755,7 +2511,7 @@ func (this *QByteArray) End_1() string {
 // /usr/include/qt/QtCore/qbytearray.h:405
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray::const_iterator cend()
+// [8] QByteArray::const_iterator cend() const
 func (this *QByteArray) Cend() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4cendEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1765,7 +2521,7 @@ func (this *QByteArray) Cend() string {
 // /usr/include/qt/QtCore/qbytearray.h:406
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray::const_iterator constEnd()
+// [8] QByteArray::const_iterator constEnd() const
 func (this *QByteArray) ConstEnd() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8constEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1850,7 +2606,7 @@ func (this *QByteArray) Shrink_to_fit() {
 // /usr/include/qt/QtCore/qbytearray.h:431
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] std::string toStdString()
+// [32] std::string toStdString() const
 func (this *QByteArray) ToStdString() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11toStdStringB5cxx11Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1860,7 +2616,7 @@ func (this *QByteArray) ToStdString() int {
 // /usr/include/qt/QtCore/qbytearray.h:434
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int length()
+// [4] int length() const
 func (this *QByteArray) Length() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6lengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1870,7 +2626,7 @@ func (this *QByteArray) Length() int {
 // /usr/include/qt/QtCore/qbytearray.h:435
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QByteArray) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

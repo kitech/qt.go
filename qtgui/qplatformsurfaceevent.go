@@ -86,7 +86,7 @@ func DeleteQPlatformSurfaceEvent(this *QPlatformSurfaceEvent) {
 // /usr/include/qt/QtGui/qevent.h:454
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QPlatformSurfaceEvent::SurfaceEventType surfaceEventType()
+// [4] QPlatformSurfaceEvent::SurfaceEventType surfaceEventType() const
 func (this *QPlatformSurfaceEvent) SurfaceEventType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

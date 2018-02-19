@@ -86,7 +86,7 @@ func DeleteQInputMethodQueryEvent(this *QInputMethodQueryEvent) {
 // /usr/include/qt/QtGui/qevent.h:584
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::InputMethodQueries queries()
+// [4] Qt::InputMethodQueries queries() const
 func (this *QInputMethodQueryEvent) Queries() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent7queriesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,7 +109,7 @@ func (this *QInputMethodQueryEvent) SetValue(query int, value qtcore.QVariant_IT
 // /usr/include/qt/QtGui/qevent.h:587
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant value(Qt::InputMethodQuery)
+// [16] QVariant value(Qt::InputMethodQuery) const
 func (this *QInputMethodQueryEvent) Value(query int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent5valueEN2Qt16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), query)
 	qtrt.ErrPrint(err, rv)

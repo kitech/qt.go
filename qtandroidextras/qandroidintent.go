@@ -194,7 +194,7 @@ func (this *QAndroidIntent) ExtraVariant(key string) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] QAndroidJniObject handle()
+// [1] QAndroidJniObject handle() const
 func (this *QAndroidIntent) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidIntent6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

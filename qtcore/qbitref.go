@@ -64,7 +64,7 @@ func (*QBitRef) NewFromPointer(cthis unsafe.Pointer) *QBitRef {
 // /usr/include/qt/QtCore/qbitarray.h:152
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!()
+// [1] bool operator!() const
 func (this *QBitRef) Operator_not() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBitRefntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

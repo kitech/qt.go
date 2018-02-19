@@ -104,7 +104,7 @@ func NewQMarginsF_2(margins QMargins_ITF) *QMarginsF {
 // /usr/include/qt/QtCore/qmargins.h:292
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QMarginsF) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +114,7 @@ func (this *QMarginsF) IsNull() bool {
 // /usr/include/qt/QtCore/qmargins.h:294
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal left()
+// [8] qreal left() const
 func (this *QMarginsF) Left() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF4leftEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,7 +124,7 @@ func (this *QMarginsF) Left() float64 {
 // /usr/include/qt/QtCore/qmargins.h:295
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal top()
+// [8] qreal top() const
 func (this *QMarginsF) Top() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF3topEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func (this *QMarginsF) Top() float64 {
 // /usr/include/qt/QtCore/qmargins.h:296
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal right()
+// [8] qreal right() const
 func (this *QMarginsF) Right() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF5rightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func (this *QMarginsF) Right() float64 {
 // /usr/include/qt/QtCore/qmargins.h:297
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal bottom()
+// [8] qreal bottom() const
 func (this *QMarginsF) Bottom() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF6bottomEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -270,7 +270,7 @@ func (this *QMarginsF) Operator_div_equal(divisor float64) *QMarginsF {
 // /usr/include/qt/QtCore/qmargins.h:311
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QMargins toMargins()
+// [16] QMargins toMargins() const
 func (this *QMarginsF) ToMargins() *QMargins /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF9toMarginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

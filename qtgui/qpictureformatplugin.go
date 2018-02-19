@@ -63,7 +63,7 @@ func (*QPictureFormatPlugin) NewFromPointer(cthis unsafe.Pointer) *QPictureForma
 // /usr/include/qt/QtGui/qpictureformatplugin.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QPictureFormatPlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +79,20 @@ func NewQPictureFormatPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QPict
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPictureFormatPluginFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPictureFormatPlugin")
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qpictureformatplugin.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QPictureFormatPlugin(QObject *)
+func NewQPictureFormatPlugin__() *QPictureFormatPlugin {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPictureFormatPluginFromPointer(unsafe.Pointer(uintptr(rv)))

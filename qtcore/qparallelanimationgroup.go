@@ -82,7 +82,7 @@ func (*QParallelAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QParallelA
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +105,20 @@ func NewQParallelAnimationGroup(parent QObject_ITF /*777 QObject **/) *QParallel
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QParallelAnimationGroup(QObject *)
+func NewQParallelAnimationGroup__() *QParallelAnimationGroup {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQParallelAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QParallelAnimationGroup")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -119,7 +133,7 @@ func DeleteQParallelAnimationGroup(this *QParallelAnimationGroup) {
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int duration()
+// [4] int duration() const
 func (this *QParallelAnimationGroup) Duration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -90,7 +90,7 @@ func DeleteQExposeEvent(this *QExposeEvent) {
 // /usr/include/qt/QtGui/qevent.h:437
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QRegion & region()
+// [8] const QRegion & region() const
 func (this *QExposeEvent) Region() *QRegion {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

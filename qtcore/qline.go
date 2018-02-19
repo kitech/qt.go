@@ -108,7 +108,7 @@ func NewQLine_2(x1 int, y1 int, x2 int, y2 int) *QLine {
 // /usr/include/qt/QtCore/qline.h:59
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QLine) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QLine) IsNull() bool {
 // /usr/include/qt/QtCore/qline.h:61
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint p1()
+// [8] QPoint p1() const
 func (this *QLine) P1() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2p1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,7 +130,7 @@ func (this *QLine) P1() *QPoint /*123*/ {
 // /usr/include/qt/QtCore/qline.h:62
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint p2()
+// [8] QPoint p2() const
 func (this *QLine) P2() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2p2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,7 +142,7 @@ func (this *QLine) P2() *QPoint /*123*/ {
 // /usr/include/qt/QtCore/qline.h:64
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int x1()
+// [4] int x1() const
 func (this *QLine) X1() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2x1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -152,7 +152,7 @@ func (this *QLine) X1() int {
 // /usr/include/qt/QtCore/qline.h:65
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int y1()
+// [4] int y1() const
 func (this *QLine) Y1() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2y1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func (this *QLine) Y1() int {
 // /usr/include/qt/QtCore/qline.h:67
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int x2()
+// [4] int x2() const
 func (this *QLine) X2() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2x2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -172,7 +172,7 @@ func (this *QLine) X2() int {
 // /usr/include/qt/QtCore/qline.h:68
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int y2()
+// [4] int y2() const
 func (this *QLine) Y2() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2y2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +182,7 @@ func (this *QLine) Y2() int {
 // /usr/include/qt/QtCore/qline.h:70
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int dx()
+// [4] int dx() const
 func (this *QLine) Dx() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2dxEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func (this *QLine) Dx() int {
 // /usr/include/qt/QtCore/qline.h:71
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int dy()
+// [4] int dy() const
 func (this *QLine) Dy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2dyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -224,7 +224,7 @@ func (this *QLine) Translate_1(dx int, dy int) {
 // /usr/include/qt/QtCore/qline.h:76
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QLine translated(const QPoint &)
+// [16] QLine translated(const QPoint &) const
 func (this *QLine) Translated(p QPoint_ITF) *QLine /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -240,7 +240,7 @@ func (this *QLine) Translated(p QPoint_ITF) *QLine /*123*/ {
 // /usr/include/qt/QtCore/qline.h:77
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [16] QLine translated(int, int)
+// [16] QLine translated(int, int) const
 func (this *QLine) Translated_1(dx int, dy int) *QLine /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine10translatedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -252,7 +252,7 @@ func (this *QLine) Translated_1(dx int, dy int) *QLine /*123*/ {
 // /usr/include/qt/QtCore/qline.h:79
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint center()
+// [8] QPoint center() const
 func (this *QLine) Center() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine6centerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -316,7 +316,7 @@ func (this *QLine) SetLine(x1 int, y1 int, x2 int, y2 int) {
 // /usr/include/qt/QtCore/qline.h:86
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QLine &)
+// [1] bool operator==(const QLine &) const
 func (this *QLine) Operator_equal_equal(d QLine_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if d != nil && d.QLine_PTR() != nil {
@@ -330,7 +330,7 @@ func (this *QLine) Operator_equal_equal(d QLine_ITF) bool {
 // /usr/include/qt/QtCore/qline.h:87
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QLine &)
+// [1] bool operator!=(const QLine &) const
 func (this *QLine) Operator_not_equal(d QLine_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if d != nil && d.QLine_PTR() != nil {

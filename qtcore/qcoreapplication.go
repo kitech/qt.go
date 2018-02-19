@@ -67,7 +67,7 @@ func (*QCoreApplication) NewFromPointer(cthis unsafe.Pointer) *QCoreApplication 
 // /usr/include/qt/QtCore/qcoreapplication.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QCoreApplication) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QCoreApplication10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +80,21 @@ func (this *QCoreApplication) MetaObject() *QMetaObject /*777 const QMetaObject 
 // [-2] void QCoreApplication(int &, char **, int)
 func NewQCoreApplication(argc int, argv []string, arg2 int) *QCoreApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQCoreApplicationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QCoreApplication")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qcoreapplication.h:91
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QCoreApplication(int &, char **, int)
+func NewQCoreApplication__(argc int, argv []string) *QCoreApplication {
+	var convArg1 = qtrt.StringSliceToCCharPP(argv)
+	// arg: 2, int=Int, =Invalid,
+	arg2 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCoreApplicationFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -126,6 +141,17 @@ func (this *QCoreApplication) SetAttribute(attribute int, on bool) {
 func QCoreApplication_SetAttribute(attribute int, on bool) {
 	var nilthis *QCoreApplication
 	nilthis.SetAttribute(attribute, on)
+}
+
+// /usr/include/qt/QtCore/qcoreapplication.h:101
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void setAttribute(Qt::ApplicationAttribute, _Bool)
+func (this *QCoreApplication) SetAttribute__(attribute int) {
+	// arg: 1, bool=Bool, =Invalid,
+	on := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication12setAttributeEN2Qt20ApplicationAttributeEb", qtrt.FFI_TYPE_POINTER, attribute, on)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:102
@@ -346,6 +372,17 @@ func QCoreApplication_ProcessEvents(flags int) {
 	nilthis.ProcessEvents(flags)
 }
 
+// /usr/include/qt/QtCore/qcoreapplication.h:120
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void processEvents(QEventLoop::ProcessEventsFlags)
+func (this *QCoreApplication) ProcessEvents__() {
+	// arg: 0, QEventLoop::ProcessEventsFlags=Elaborated, QEventLoop::ProcessEventsFlags=Typedef, QFlags<QEventLoop::ProcessEventsFlag>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, flags)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qcoreapplication.h:121
 // index:1
 // Public static Visibility=Default Availability=Available
@@ -370,6 +407,17 @@ func (this *QCoreApplication) Exit(retcode int) {
 func QCoreApplication_Exit(retcode int) {
 	var nilthis *QCoreApplication
 	nilthis.Exit(retcode)
+}
+
+// /usr/include/qt/QtCore/qcoreapplication.h:122
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void exit(int)
+func (this *QCoreApplication) Exit__() {
+	// arg: 0, int=Int, =Invalid,
+	retcode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication4exitEi", qtrt.FFI_TYPE_POINTER, retcode)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:124
@@ -416,6 +464,25 @@ func QCoreApplication_PostEvent(receiver QObject_ITF /*777 QObject **/, event QE
 	nilthis.PostEvent(receiver, event, priority)
 }
 
+// /usr/include/qt/QtCore/qcoreapplication.h:125
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void postEvent(QObject *, QEvent *, int)
+func (this *QCoreApplication) PostEvent__(receiver QObject_ITF /*777 QObject **/, event QEvent_ITF /*777 QEvent **/) {
+	var convArg0 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg0 = receiver.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg1 = event.QEvent_PTR().GetCthis()
+	}
+	// arg: 2, int=Int, =Invalid,
+	priority := 0 /*Qt::NormalEventPriority*/
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9postEventEP7QObjectP6QEventi", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, priority)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qcoreapplication.h:126
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -433,6 +500,34 @@ func QCoreApplication_SendPostedEvents(receiver QObject_ITF /*777 QObject **/, e
 	nilthis.SendPostedEvents(receiver, event_type)
 }
 
+// /usr/include/qt/QtCore/qcoreapplication.h:126
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void sendPostedEvents(QObject *, int)
+func (this *QCoreApplication) SendPostedEvents__() {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	// arg: 1, int=Int, =Invalid,
+	event_type := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16sendPostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, event_type)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qcoreapplication.h:126
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void sendPostedEvents(QObject *, int)
+func (this *QCoreApplication) SendPostedEvents__1(receiver QObject_ITF /*777 QObject **/) {
+	var convArg0 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg0 = receiver.QObject_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	event_type := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16sendPostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, event_type)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qcoreapplication.h:127
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -448,6 +543,21 @@ func (this *QCoreApplication) RemovePostedEvents(receiver QObject_ITF /*777 QObj
 func QCoreApplication_RemovePostedEvents(receiver QObject_ITF /*777 QObject **/, eventType int) {
 	var nilthis *QCoreApplication
 	nilthis.RemovePostedEvents(receiver, eventType)
+}
+
+// /usr/include/qt/QtCore/qcoreapplication.h:127
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void removePostedEvents(QObject *, int)
+func (this *QCoreApplication) RemovePostedEvents__(receiver QObject_ITF /*777 QObject **/) {
+	var convArg0 unsafe.Pointer
+	if receiver != nil && receiver.QObject_PTR() != nil {
+		convArg0 = receiver.QObject_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	eventType := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18removePostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, eventType)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:129
@@ -722,6 +832,48 @@ func QCoreApplication_Translate(context string, key string, disambiguation strin
 	return rv
 }
 
+// /usr/include/qt/QtCore/qcoreapplication.h:156
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString translate(const char *, const char *, const char *, int)
+func (this *QCoreApplication) Translate__(context string, key string) string {
+	var convArg0 = qtrt.CString(context)
+	defer qtrt.FreeMem(convArg0)
+	var convArg1 = qtrt.CString(key)
+	defer qtrt.FreeMem(convArg1)
+	// arg: 2, const char *=Pointer, =Invalid,
+	var convArg2 unsafe.Pointer
+	// arg: 3, int=Int, =Invalid,
+	n := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, n)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qcoreapplication.h:156
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString translate(const char *, const char *, const char *, int)
+func (this *QCoreApplication) Translate__1(context string, key string, disambiguation string) string {
+	var convArg0 = qtrt.CString(context)
+	defer qtrt.FreeMem(convArg0)
+	var convArg1 = qtrt.CString(key)
+	defer qtrt.FreeMem(convArg1)
+	var convArg2 = qtrt.CString(disambiguation)
+	defer qtrt.FreeMem(convArg2)
+	// arg: 3, int=Int, =Invalid,
+	n := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, n)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
 // /usr/include/qt/QtCore/qcoreapplication.h:169
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -854,7 +1006,7 @@ func (this *QCoreApplication) Event(arg0 QEvent_ITF /*777 QEvent **/) bool {
 
 type QCoreApplication__ = int
 
-const QCoreApplication__ApplicationFlags QCoreApplication__ = 330240
+const QCoreApplication__ApplicationFlags QCoreApplication__ = 330241
 
 //  body block end
 

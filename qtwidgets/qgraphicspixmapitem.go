@@ -92,6 +92,20 @@ func NewQGraphicsPixmapItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *Q
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:825
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsPixmapItem(QGraphicsItem *)
+func NewQGraphicsPixmapItem__() *QGraphicsPixmapItem {
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsPixmapItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsPixmapItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsPixmapItem)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:826
 // index:1
 // Public Visibility=Default Availability=Available
@@ -105,6 +119,24 @@ func NewQGraphicsPixmapItem_1(pixmap qtgui.QPixmap_ITF, parent QGraphicsItem_ITF
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg1 = parent.QGraphicsItem_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsPixmapItemC2ERK7QPixmapP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsPixmapItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsPixmapItem)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:826
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsPixmapItem(const QPixmap &, QGraphicsItem *)
+func NewQGraphicsPixmapItem_1_(pixmap qtgui.QPixmap_ITF) *QGraphicsPixmapItem {
+	var convArg0 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg0 = pixmap.QPixmap_PTR().GetCthis()
+	}
+	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsPixmapItemC2ERK7QPixmapP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsPixmapItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -126,7 +158,7 @@ func DeleteQGraphicsPixmapItem(this *QGraphicsPixmapItem) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:829
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap()
+// [32] QPixmap pixmap() const
 func (this *QGraphicsPixmapItem) Pixmap() *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem6pixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +183,7 @@ func (this *QGraphicsPixmapItem) SetPixmap(pixmap qtgui.QPixmap_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:832
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::TransformationMode transformationMode()
+// [4] Qt::TransformationMode transformationMode() const
 func (this *QGraphicsPixmapItem) TransformationMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem18transformationModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +202,7 @@ func (this *QGraphicsPixmapItem) SetTransformationMode(mode int) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:835
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF offset()
+// [16] QPointF offset() const
 func (this *QGraphicsPixmapItem) Offset() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem6offsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -204,7 +236,7 @@ func (this *QGraphicsPixmapItem) SetOffset_1(x float64, y float64) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:839
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QRectF boundingRect()
+// [32] QRectF boundingRect() const
 func (this *QGraphicsPixmapItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +248,7 @@ func (this *QGraphicsPixmapItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:840
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPainterPath shape()
+// [8] QPainterPath shape() const
 func (this *QGraphicsPixmapItem) Shape() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem5shapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,7 +260,7 @@ func (this *QGraphicsPixmapItem) Shape() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:841
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool contains(const QPointF &)
+// [1] bool contains(const QPointF &) const
 func (this *QGraphicsPixmapItem) Contains(point qtcore.QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -263,7 +295,7 @@ func (this *QGraphicsPixmapItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:845
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isObscuredBy(const QGraphicsItem *)
+// [1] bool isObscuredBy(const QGraphicsItem *) const
 func (this *QGraphicsPixmapItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
@@ -277,7 +309,7 @@ func (this *QGraphicsPixmapItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:846
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPainterPath opaqueArea()
+// [8] QPainterPath opaqueArea() const
 func (this *QGraphicsPixmapItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem10opaqueAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -289,7 +321,7 @@ func (this *QGraphicsPixmapItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:849
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int type()
+// [4] int type() const
 func (this *QGraphicsPixmapItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -299,7 +331,7 @@ func (this *QGraphicsPixmapItem) Type() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:851
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGraphicsPixmapItem::ShapeMode shapeMode()
+// [4] QGraphicsPixmapItem::ShapeMode shapeMode() const
 func (this *QGraphicsPixmapItem) ShapeMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem9shapeModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -318,7 +350,7 @@ func (this *QGraphicsPixmapItem) SetShapeMode(mode int) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:855
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool supportsExtension(enum QGraphicsItem::Extension)
+// [1] bool supportsExtension(enum QGraphicsItem::Extension) const
 func (this *QGraphicsPixmapItem) SupportsExtension(extension int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem17supportsExtensionEN13QGraphicsItem9ExtensionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	qtrt.ErrPrint(err, rv)
@@ -341,7 +373,7 @@ func (this *QGraphicsPixmapItem) SetExtension(extension int, variant qtcore.QVar
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:857
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QVariant extension(const QVariant &)
+// [16] QVariant extension(const QVariant &) const
 func (this *QGraphicsPixmapItem) Extension(variant qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if variant != nil && variant.QVariant_PTR() != nil {

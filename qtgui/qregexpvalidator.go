@@ -63,7 +63,7 @@ func (*QRegExpValidator) NewFromPointer(cthis unsafe.Pointer) *QRegExpValidator 
 // /usr/include/qt/QtGui/qvalidator.h:173
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QRegExpValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QRegExpValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +79,20 @@ func NewQRegExpValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpVa
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QRegExpValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQRegExpValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QRegExpValidator")
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qvalidator.h:177
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QRegExpValidator(QObject *)
+func NewQRegExpValidator__() *QRegExpValidator {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRegExpValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegExpValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -106,6 +120,24 @@ func NewQRegExpValidator_1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*77
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qvalidator.h:178
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QRegExpValidator(const QRegExp &, QObject *)
+func NewQRegExpValidator_1_(rx qtcore.QRegExp_ITF) *QRegExpValidator {
+	var convArg0 unsafe.Pointer
+	if rx != nil && rx.QRegExp_PTR() != nil {
+		convArg0 = rx.QRegExp_PTR().GetCthis()
+	}
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QRegExpValidatorC2ERK7QRegExpP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQRegExpValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QRegExpValidator")
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qvalidator.h:179
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -120,7 +152,7 @@ func DeleteQRegExpValidator(this *QRegExpValidator) {
 // /usr/include/qt/QtGui/qvalidator.h:181
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QValidator::State validate(QString &, int &)
+// [4] QValidator::State validate(QString &, int &) const
 func (this *QRegExpValidator) Validate(input string, pos int) int {
 	var tmpArg0 = qtcore.NewQString_5(input)
 	var convArg0 = tmpArg0.GetCthis()
@@ -145,7 +177,7 @@ func (this *QRegExpValidator) SetRegExp(rx qtcore.QRegExp_ITF) {
 // /usr/include/qt/QtGui/qvalidator.h:184
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QRegExp & regExp()
+// [8] const QRegExp & regExp() const
 func (this *QRegExpValidator) RegExp() *qtcore.QRegExp {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QRegExpValidator6regExpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

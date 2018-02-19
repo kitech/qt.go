@@ -105,7 +105,7 @@ func DeleteQQmlError(this *QQmlError) {
 // /usr/include/qt/QtQml/qqmlerror.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QQmlError) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,7 +115,7 @@ func (this *QQmlError) IsValid() bool {
 // /usr/include/qt/QtQml/qqmlerror.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl url()
+// [8] QUrl url() const
 func (this *QQmlError) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,7 +140,7 @@ func (this *QQmlError) SetUrl(arg0 qtcore.QUrl_ITF) {
 // /usr/include/qt/QtQml/qqmlerror.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString description()
+// [8] QString description() const
 func (this *QQmlError) Description() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ func (this *QQmlError) SetDescription(arg0 string) {
 // /usr/include/qt/QtQml/qqmlerror.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int line()
+// [4] int line() const
 func (this *QQmlError) Line() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError4lineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,7 +183,7 @@ func (this *QQmlError) SetLine(arg0 int) {
 // /usr/include/qt/QtQml/qqmlerror.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int column()
+// [4] int column() const
 func (this *QQmlError) Column() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError6columnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func (this *QQmlError) SetColumn(arg0 int) {
 // /usr/include/qt/QtQml/qqmlerror.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QObject * object()
+// [8] QObject * object() const
 func (this *QQmlError) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -225,7 +225,7 @@ func (this *QQmlError) SetObject(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 // /usr/include/qt/QtQml/qqmlerror.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QtMsgType messageType()
+// [4] QtMsgType messageType() const
 func (this *QQmlError) MessageType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError11messageTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -244,7 +244,7 @@ func (this *QQmlError) SetMessageType(messageType int) {
 // /usr/include/qt/QtQml/qqmlerror.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toString()
+// [8] QString toString() const
 func (this *QQmlError) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

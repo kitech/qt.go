@@ -79,7 +79,7 @@ func (*QSplashScreen) NewFromPointer(cthis unsafe.Pointer) *QSplashScreen {
 // /usr/include/qt/QtWidgets/qsplashscreen.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSplashScreen) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSplashScreen10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +102,40 @@ func NewQSplashScreen(pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qsplashscreen.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSplashScreen(const QPixmap &, Qt::WindowFlags)
+func NewQSplashScreen__() *QSplashScreen {
+	// arg: 0, const QPixmap &=LValueReference, QPixmap=Record,
+	var convArg0 unsafe.Pointer
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	f := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreenC2ERK7QPixmap6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSplashScreenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSplashScreen")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qsplashscreen.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSplashScreen(const QPixmap &, Qt::WindowFlags)
+func NewQSplashScreen__1(pixmap qtgui.QPixmap_ITF) *QSplashScreen {
+	var convArg0 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg0 = pixmap.QPixmap_PTR().GetCthis()
+	}
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	f := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreenC2ERK7QPixmap6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSplashScreenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSplashScreen")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qsplashscreen.h:58
 // index:1
 // Public Visibility=Default Availability=Available
@@ -115,6 +149,48 @@ func NewQSplashScreen_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixm
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg1 = pixmap.QPixmap_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreenC2EP7QWidgetRK7QPixmap6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, f)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSplashScreenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSplashScreen")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qsplashscreen.h:58
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QSplashScreen(QWidget *, const QPixmap &, Qt::WindowFlags)
+func NewQSplashScreen_1_(parent QWidget_ITF /*777 QWidget **/) *QSplashScreen {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, const QPixmap &=LValueReference, QPixmap=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	f := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreenC2EP7QWidgetRK7QPixmap6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, f)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSplashScreenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSplashScreen")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qsplashscreen.h:58
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QSplashScreen(QWidget *, const QPixmap &, Qt::WindowFlags)
+func NewQSplashScreen_1_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF) *QSplashScreen {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg1 = pixmap.QPixmap_PTR().GetCthis()
+	}
+	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreenC2EP7QWidgetRK7QPixmap6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, f)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSplashScreenFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -149,7 +225,7 @@ func (this *QSplashScreen) SetPixmap(pixmap qtgui.QPixmap_ITF) {
 // /usr/include/qt/QtWidgets/qsplashscreen.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] const QPixmap pixmap()
+// [32] const QPixmap pixmap() const
 func (this *QSplashScreen) Pixmap() *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSplashScreen6pixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,7 +259,7 @@ func (this *QSplashScreen) Repaint() {
 // /usr/include/qt/QtWidgets/qsplashscreen.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString message()
+// [8] QString message() const
 func (this *QSplashScreen) Message() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSplashScreen7messageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -204,6 +280,34 @@ func (this *QSplashScreen) ShowMessage(message string, alignment int, color qtgu
 	if color != nil && color.QColor_PTR() != nil {
 		convArg2 = color.QColor_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment, convArg2)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qsplashscreen.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void showMessage(const QString &, int, const QColor &)
+func (this *QSplashScreen) ShowMessage__(message string) {
+	var tmpArg0 = qtcore.NewQString_5(message)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, int=Int, =Invalid,
+	alignment := 0 /*Qt::AlignLeft*/
+	// arg: 2, const QColor &=LValueReference, QColor=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment, convArg2)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qsplashscreen.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void showMessage(const QString &, int, const QColor &)
+func (this *QSplashScreen) ShowMessage__1(message string, alignment int) {
+	var tmpArg0 = qtcore.NewQString_5(message)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, const QColor &=LValueReference, QColor=Record,
+	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment, convArg2)
 	qtrt.ErrPrint(err, rv)
 }

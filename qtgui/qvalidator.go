@@ -63,7 +63,7 @@ func (*QValidator) NewFromPointer(cthis unsafe.Pointer) *QValidator {
 // /usr/include/qt/QtGui/qvalidator.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +79,20 @@ func NewQValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QValidator {
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QValidator")
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qvalidator.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QValidator(QObject *)
+func NewQValidator__() *QValidator {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -113,7 +127,7 @@ func (this *QValidator) SetLocale(locale qtcore.QLocale_ITF) {
 // /usr/include/qt/QtGui/qvalidator.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QLocale locale()
+// [8] QLocale locale() const
 func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator6localeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,7 +139,7 @@ func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
 // /usr/include/qt/QtGui/qvalidator.h:74
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] QValidator::State validate(QString &, int &)
+// [4] QValidator::State validate(QString &, int &) const
 func (this *QValidator) Validate(arg0 string, arg1 int) int {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -137,7 +151,7 @@ func (this *QValidator) Validate(arg0 string, arg1 int) int {
 // /usr/include/qt/QtGui/qvalidator.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void fixup(QString &)
+// [-2] void fixup(QString &) const
 func (this *QValidator) Fixup(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()

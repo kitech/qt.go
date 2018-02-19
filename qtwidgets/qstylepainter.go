@@ -199,6 +199,27 @@ func (this *QStylePainter) DrawItemText(r qtcore.QRect_ITF, flags int, pal qtgui
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qstylepainter.h:67
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void drawItemText(const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole)
+func (this *QStylePainter) DrawItemText__(r qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string) {
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRect_PTR() != nil {
+		convArg0 = r.QRect_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if pal != nil && pal.QPalette_PTR() != nil {
+		convArg2 = pal.QPalette_PTR().GetCthis()
+	}
+	var tmpArg4 = qtcore.NewQString_5(text)
+	var convArg4 = tmpArg4.GetCthis()
+	// arg: 5, QPalette::ColorRole=Elaborated, QPalette::ColorRole=Enum,
+	textRole := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainter12drawItemTextERK5QRectiRK8QPalettebRK7QStringNS3_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, enabled, convArg4, textRole)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qstylepainter.h:69
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -219,7 +240,7 @@ func (this *QStylePainter) DrawItemPixmap(r qtcore.QRect_ITF, flags int, pixmap 
 // /usr/include/qt/QtWidgets/qstylepainter.h:70
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QStyle * style()
+// [8] QStyle * style() const
 func (this *QStylePainter) Style() *QStyle /*777 QStyle **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStylePainter5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

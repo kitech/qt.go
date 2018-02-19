@@ -80,6 +80,28 @@ func NewQDragMoveEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qevent.h:642
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+func NewQDragMoveEvent__(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragMoveEvent {
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if data != nil && data.QMimeData_PTR() != nil {
+		convArg2 = data.QMimeData_PTR().GetCthis()
+	}
+	// arg: 5, QEvent::Type=Enum, QEvent::Type=Enum,
+	type_ := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDragMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDragMoveEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:644
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -94,7 +116,7 @@ func DeleteQDragMoveEvent(this *QDragMoveEvent) {
 // /usr/include/qt/QtGui/qevent.h:646
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QRect answerRect()
+// [16] QRect answerRect() const
 func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

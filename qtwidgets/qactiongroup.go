@@ -64,7 +64,7 @@ func (*QActionGroup) NewFromPointer(cthis unsafe.Pointer) *QActionGroup {
 // /usr/include/qt/QtWidgets/qactiongroup.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QActionGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -156,7 +156,7 @@ func (this *QActionGroup) RemoveAction(a QAction_ITF /*777 QAction **/) {
 // /usr/include/qt/QtWidgets/qactiongroup.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAction * checkedAction()
+// [8] QAction * checkedAction() const
 func (this *QActionGroup) CheckedAction() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionGroup13checkedActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,7 +166,7 @@ func (this *QActionGroup) CheckedAction() *QAction /*777 QAction **/ {
 // /usr/include/qt/QtWidgets/qactiongroup.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isExclusive()
+// [1] bool isExclusive() const
 func (this *QActionGroup) IsExclusive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionGroup11isExclusiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +176,7 @@ func (this *QActionGroup) IsExclusive() bool {
 // /usr/include/qt/QtWidgets/qactiongroup.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEnabled()
+// [1] bool isEnabled() const
 func (this *QActionGroup) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionGroup9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +186,7 @@ func (this *QActionGroup) IsEnabled() bool {
 // /usr/include/qt/QtWidgets/qactiongroup.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isVisible()
+// [1] bool isVisible() const
 func (this *QActionGroup) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionGroup9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

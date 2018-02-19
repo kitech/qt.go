@@ -139,7 +139,7 @@ func (this *QSGMaterialShader) Deactivate() {
 // /usr/include/qt/QtQuick/qsgmaterial.h:103
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] const char *const * attributeNames()
+// [8] const char *const * attributeNames() const
 func (this *QSGMaterialShader) AttributeNames() []string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader14attributeNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -191,7 +191,7 @@ func (this *QSGMaterialShader) Initialize() {
 // /usr/include/qt/QtQuick/qsgmaterial.h:121
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] const char * vertexShader()
+// [8] const char * vertexShader() const
 func (this *QSGMaterialShader) VertexShader() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader12vertexShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -201,7 +201,7 @@ func (this *QSGMaterialShader) VertexShader() string {
 // /usr/include/qt/QtQuick/qsgmaterial.h:122
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] const char * fragmentShader()
+// [8] const char * fragmentShader() const
 func (this *QSGMaterialShader) FragmentShader() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader14fragmentShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

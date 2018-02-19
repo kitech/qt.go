@@ -214,7 +214,7 @@ func (*QListView) NewFromPointer(cthis unsafe.Pointer) *QListView {
 // /usr/include/qt/QtWidgets/qlistview.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QListView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -230,6 +230,20 @@ func NewQListView(parent QWidget_ITF /*777 QWidget **/) *QListView {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QListViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQListViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QListView")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qlistview.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QListView(QWidget *)
+func NewQListView__() *QListView {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQListViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -260,7 +274,7 @@ func (this *QListView) SetMovement(movement int) {
 // /usr/include/qt/QtWidgets/qlistview.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QListView::Movement movement()
+// [4] QListView::Movement movement() const
 func (this *QListView) Movement() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView8movementEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -279,7 +293,7 @@ func (this *QListView) SetFlow(flow int) {
 // /usr/include/qt/QtWidgets/qlistview.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QListView::Flow flow()
+// [4] QListView::Flow flow() const
 func (this *QListView) Flow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView4flowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -298,7 +312,7 @@ func (this *QListView) SetWrapping(enable bool) {
 // /usr/include/qt/QtWidgets/qlistview.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isWrapping()
+// [1] bool isWrapping() const
 func (this *QListView) IsWrapping() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView10isWrappingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -317,7 +331,7 @@ func (this *QListView) SetResizeMode(mode int) {
 // /usr/include/qt/QtWidgets/qlistview.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QListView::ResizeMode resizeMode()
+// [4] QListView::ResizeMode resizeMode() const
 func (this *QListView) ResizeMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView10resizeModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -336,7 +350,7 @@ func (this *QListView) SetLayoutMode(mode int) {
 // /usr/include/qt/QtWidgets/qlistview.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QListView::LayoutMode layoutMode()
+// [4] QListView::LayoutMode layoutMode() const
 func (this *QListView) LayoutMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView10layoutModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -355,7 +369,7 @@ func (this *QListView) SetSpacing(space int) {
 // /usr/include/qt/QtWidgets/qlistview.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int spacing()
+// [4] int spacing() const
 func (this *QListView) Spacing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView7spacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -374,7 +388,7 @@ func (this *QListView) SetBatchSize(batchSize int) {
 // /usr/include/qt/QtWidgets/qlistview.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int batchSize()
+// [4] int batchSize() const
 func (this *QListView) BatchSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView9batchSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -397,7 +411,7 @@ func (this *QListView) SetGridSize(size qtcore.QSize_ITF) {
 // /usr/include/qt/QtWidgets/qlistview.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize gridSize()
+// [8] QSize gridSize() const
 func (this *QListView) GridSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView8gridSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -418,7 +432,7 @@ func (this *QListView) SetViewMode(mode int) {
 // /usr/include/qt/QtWidgets/qlistview.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QListView::ViewMode viewMode()
+// [4] QListView::ViewMode viewMode() const
 func (this *QListView) ViewMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView8viewModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -437,7 +451,7 @@ func (this *QListView) ClearPropertyFlags() {
 // /usr/include/qt/QtWidgets/qlistview.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRowHidden(int)
+// [1] bool isRowHidden(int) const
 func (this *QListView) IsRowHidden(row int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView11isRowHiddenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -465,7 +479,7 @@ func (this *QListView) SetModelColumn(column int) {
 // /usr/include/qt/QtWidgets/qlistview.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int modelColumn()
+// [4] int modelColumn() const
 func (this *QListView) ModelColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView11modelColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -484,7 +498,7 @@ func (this *QListView) SetUniformItemSizes(enable bool) {
 // /usr/include/qt/QtWidgets/qlistview.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool uniformItemSizes()
+// [1] bool uniformItemSizes() const
 func (this *QListView) UniformItemSizes() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView16uniformItemSizesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -503,7 +517,7 @@ func (this *QListView) SetWordWrap(on bool) {
 // /usr/include/qt/QtWidgets/qlistview.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool wordWrap()
+// [1] bool wordWrap() const
 func (this *QListView) WordWrap() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView8wordWrapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -522,7 +536,7 @@ func (this *QListView) SetSelectionRectVisible(show bool) {
 // /usr/include/qt/QtWidgets/qlistview.h:126
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSelectionRectVisible()
+// [1] bool isSelectionRectVisible() const
 func (this *QListView) IsSelectionRectVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView22isSelectionRectVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -532,7 +546,7 @@ func (this *QListView) IsSelectionRectVisible() bool {
 // /usr/include/qt/QtWidgets/qlistview.h:128
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect visualRect(const QModelIndex &)
+// [16] QRect visualRect(const QModelIndex &) const
 func (this *QListView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -558,10 +572,25 @@ func (this *QListView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qlistview.h:129
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+func (this *QListView) ScrollTo__(index qtcore.QModelIndex_ITF) {
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
+	// arg: 1, QAbstractItemView::ScrollHint=Enum, QAbstractItemView::ScrollHint=Enum,
+	hint := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qlistview.h:130
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [24] QModelIndex indexAt(const QPoint &)
+// [24] QModelIndex indexAt(const QPoint &) const
 func (this *QListView) IndexAt(p qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -640,7 +669,7 @@ func (this *QListView) ResizeContents(width int, height int) {
 // /usr/include/qt/QtWidgets/qlistview.h:147
 // index:0
 // Protected Visibility=Default Availability=Available
-// [8] QSize contentsSize()
+// [8] QSize contentsSize() const
 func (this *QListView) ContentsSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView12contentsSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -791,7 +820,7 @@ func (this *QListView) StartDrag(supportedActions int) {
 // /usr/include/qt/QtWidgets/qlistview.h:168
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [192] QStyleOptionViewItem viewOptions()
+// [192] QStyleOptionViewItem viewOptions() const
 func (this *QListView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView11viewOptionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -816,7 +845,7 @@ func (this *QListView) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/)
 // /usr/include/qt/QtWidgets/qlistview.h:171
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int horizontalOffset()
+// [4] int horizontalOffset() const
 func (this *QListView) HorizontalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView16horizontalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -826,7 +855,7 @@ func (this *QListView) HorizontalOffset() int {
 // /usr/include/qt/QtWidgets/qlistview.h:172
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int verticalOffset()
+// [4] int verticalOffset() const
 func (this *QListView) VerticalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView14verticalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -848,7 +877,7 @@ func (this *QListView) MoveCursor(cursorAction int, modifiers int) *qtcore.QMode
 // /usr/include/qt/QtWidgets/qlistview.h:174
 // index:0
 // Protected Visibility=Default Availability=Available
-// [16] QRect rectForIndex(const QModelIndex &)
+// [16] QRect rectForIndex(const QModelIndex &) const
 func (this *QListView) RectForIndex(index qtcore.QModelIndex_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -894,7 +923,7 @@ func (this *QListView) SetSelection(rect qtcore.QRect_ITF, command int) {
 // /usr/include/qt/QtWidgets/qlistview.h:178
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QRegion visualRegionForSelection(const QItemSelection &)
+// [8] QRegion visualRegionForSelection(const QItemSelection &) const
 func (this *QListView) VisualRegionForSelection(selection qtcore.QItemSelection_ITF) *qtgui.QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if selection != nil && selection.QItemSelection_PTR() != nil {
@@ -910,7 +939,7 @@ func (this *QListView) VisualRegionForSelection(selection qtcore.QItemSelection_
 // /usr/include/qt/QtWidgets/qlistview.h:179
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QModelIndexList selectedIndexes()
+// [8] QModelIndexList selectedIndexes() const
 func (this *QListView) SelectedIndexes() *qtcore.QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView15selectedIndexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -930,7 +959,7 @@ func (this *QListView) UpdateGeometries() {
 // /usr/include/qt/QtWidgets/qlistview.h:183
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool isIndexHidden(const QModelIndex &)
+// [1] bool isIndexHidden(const QModelIndex &) const
 func (this *QListView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -978,7 +1007,7 @@ func (this *QListView) CurrentChanged(current qtcore.QModelIndex_ITF, previous q
 // /usr/include/qt/QtWidgets/qlistview.h:188
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QSize viewportSizeHint()
+// [8] QSize viewportSizeHint() const
 func (this *QListView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

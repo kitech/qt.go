@@ -88,7 +88,7 @@ func NewQSize_1(w int, h int) *QSize {
 // /usr/include/qt/QtCore/qsize.h:58
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QSize) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,7 +98,7 @@ func (this *QSize) IsNull() bool {
 // /usr/include/qt/QtCore/qsize.h:59
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QSize) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -108,7 +108,7 @@ func (this *QSize) IsEmpty() bool {
 // /usr/include/qt/QtCore/qsize.h:60
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QSize) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QSize) IsValid() bool {
 // /usr/include/qt/QtCore/qsize.h:62
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int width()
+// [4] int width() const
 func (this *QSize) Width() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,7 +128,7 @@ func (this *QSize) Width() int {
 // /usr/include/qt/QtCore/qsize.h:63
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int height()
+// [4] int height() const
 func (this *QSize) Height() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize6heightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -165,7 +165,7 @@ func (this *QSize) Transpose() {
 // /usr/include/qt/QtCore/qsize.h:67
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSize transposed()
+// [8] QSize transposed() const
 func (this *QSize) Transposed() *QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize10transposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,7 +199,7 @@ func (this *QSize) Scale_1(s QSize_ITF, mode int) {
 // /usr/include/qt/QtCore/qsize.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize scaled(int, int, Qt::AspectRatioMode)
+// [8] QSize scaled(int, int, Qt::AspectRatioMode) const
 func (this *QSize) Scaled(w int, h int, mode int) *QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QSize6scaledEiiN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode)
 	qtrt.ErrPrint(err, rv)
@@ -211,7 +211,7 @@ func (this *QSize) Scaled(w int, h int, mode int) *QSize /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:72
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QSize scaled(const QSize &, Qt::AspectRatioMode)
+// [8] QSize scaled(const QSize &, Qt::AspectRatioMode) const
 func (this *QSize) Scaled_1(s QSize_ITF, mode int) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
@@ -227,7 +227,7 @@ func (this *QSize) Scaled_1(s QSize_ITF, mode int) *QSize /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:74
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSize expandedTo(const QSize &)
+// [8] QSize expandedTo(const QSize &) const
 func (this *QSize) ExpandedTo(arg0 QSize_ITF) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSize_PTR() != nil {
@@ -243,7 +243,7 @@ func (this *QSize) ExpandedTo(arg0 QSize_ITF) *QSize /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:75
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSize boundedTo(const QSize &)
+// [8] QSize boundedTo(const QSize &) const
 func (this *QSize) BoundedTo(arg0 QSize_ITF) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSize_PTR() != nil {

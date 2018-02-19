@@ -125,7 +125,7 @@ func (this *QTextOption) SetAlignment(alignment int) {
 // /usr/include/qt/QtGui/qtextoption.h:93
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::Alignment alignment()
+// [4] Qt::Alignment alignment() const
 func (this *QTextOption) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func (this *QTextOption) SetTextDirection(aDirection int) {
 // /usr/include/qt/QtGui/qtextoption.h:96
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::LayoutDirection textDirection()
+// [4] Qt::LayoutDirection textDirection() const
 func (this *QTextOption) TextDirection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption13textDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,7 +163,7 @@ func (this *QTextOption) SetWrapMode(wrap int) {
 // /usr/include/qt/QtGui/qtextoption.h:106
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QTextOption::WrapMode wrapMode()
+// [4] QTextOption::WrapMode wrapMode() const
 func (this *QTextOption) WrapMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption8wrapModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +182,7 @@ func (this *QTextOption) SetFlags(flags int) {
 // /usr/include/qt/QtGui/qtextoption.h:118
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QTextOption::Flags flags()
+// [4] QTextOption::Flags flags() const
 func (this *QTextOption) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -201,7 +201,7 @@ func (this *QTextOption) SetTabStop(tabStop float64) {
 // /usr/include/qt/QtGui/qtextoption.h:122
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal tabStop()
+// [8] qreal tabStop() const
 func (this *QTextOption) TabStop() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption7tabStopEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,7 +220,7 @@ func (this *QTextOption) SetTabStopDistance(tabStopDistance float64) {
 // /usr/include/qt/QtGui/qtextoption.h:126
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal tabStopDistance()
+// [8] qreal tabStopDistance() const
 func (this *QTextOption) TabStopDistance() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption15tabStopDistanceEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -239,7 +239,7 @@ func (this *QTextOption) SetUseDesignMetrics(b bool) {
 // /usr/include/qt/QtGui/qtextoption.h:135
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool useDesignMetrics()
+// [1] bool useDesignMetrics() const
 func (this *QTextOption) UseDesignMetrics() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption16useDesignMetricsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

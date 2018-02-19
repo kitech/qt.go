@@ -116,6 +116,23 @@ func QStandardPaths_Locate(type_ int, fileName string, options int) string {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qstandardpaths.h:91
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString locate(enum QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
+func (this *QStandardPaths) Locate__(type_ int, fileName string) string {
+	var tmpArg1 = NewQString_5(fileName)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, QStandardPaths::LocateOptions=Typedef, QStandardPaths::LocateOptions=Typedef, QFlags<QStandardPaths::LocateOption>
+	options := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths6locateENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, options)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
 // /usr/include/qt/QtCore/qstandardpaths.h:92
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -133,6 +150,22 @@ func QStandardPaths_LocateAll(type_ int, fileName string, options int) *QStringL
 	var nilthis *QStandardPaths
 	rv := nilthis.LocateAll(type_, fileName, options)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qstandardpaths.h:92
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList locateAll(enum QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
+func (this *QStandardPaths) LocateAll__(type_ int, fileName string) *QStringList /*123*/ {
+	var tmpArg1 = NewQString_5(fileName)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, QStandardPaths::LocateOptions=Typedef, QStandardPaths::LocateOptions=Typedef, QFlags<QStandardPaths::LocateOption>
+	options := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths9locateAllENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, options)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qstandardpaths.h:94
@@ -175,6 +208,23 @@ func QStandardPaths_FindExecutable(executableName string, paths QStringList_ITF)
 	var nilthis *QStandardPaths
 	rv := nilthis.FindExecutable(executableName, paths)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qstandardpaths.h:97
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString findExecutable(const QString &, const QStringList &)
+func (this *QStandardPaths) FindExecutable__(executableName string) string {
+	var tmpArg0 = NewQString_5(executableName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, const QStringList &=LValueReference, QStringList=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qstandardpaths.h:100

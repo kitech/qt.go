@@ -127,7 +127,7 @@ func DeleteQQmlFile(this *QQmlFile) {
 // /usr/include/qt/QtQml/qqmlfile.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QQmlFile) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func (this *QQmlFile) IsNull() bool {
 // /usr/include/qt/QtQml/qqmlfile.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isReady()
+// [1] bool isReady() const
 func (this *QQmlFile) IsReady() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile7isReadyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,7 +147,7 @@ func (this *QQmlFile) IsReady() bool {
 // /usr/include/qt/QtQml/qqmlfile.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isError()
+// [1] bool isError() const
 func (this *QQmlFile) IsError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile7isErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +157,7 @@ func (this *QQmlFile) IsError() bool {
 // /usr/include/qt/QtQml/qqmlfile.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isLoading()
+// [1] bool isLoading() const
 func (this *QQmlFile) IsLoading() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile9isLoadingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QQmlFile) IsLoading() bool {
 // /usr/include/qt/QtQml/qqmlfile.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl url()
+// [8] QUrl url() const
 func (this *QQmlFile) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ func (this *QQmlFile) Url() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtQml/qqmlfile.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QQmlFile::Status status()
+// [4] QQmlFile::Status status() const
 func (this *QQmlFile) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,7 +189,7 @@ func (this *QQmlFile) Status() int {
 // /usr/include/qt/QtQml/qqmlfile.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString error()
+// [8] QString error() const
 func (this *QQmlFile) Error() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func (this *QQmlFile) Error() string {
 // /usr/include/qt/QtQml/qqmlfile.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 size()
+// [8] qint64 size() const
 func (this *QQmlFile) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -212,7 +212,7 @@ func (this *QQmlFile) Size() int64 {
 // /usr/include/qt/QtQml/qqmlfile.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const char * data()
+// [8] const char * data() const
 func (this *QQmlFile) Data() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -222,7 +222,7 @@ func (this *QQmlFile) Data() string {
 // /usr/include/qt/QtQml/qqmlfile.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray dataByteArray()
+// [8] QByteArray dataByteArray() const
 func (this *QQmlFile) DataByteArray() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile13dataByteArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

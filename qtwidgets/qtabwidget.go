@@ -114,7 +114,7 @@ func (*QTabWidget) NewFromPointer(cthis unsafe.Pointer) *QTabWidget {
 // /usr/include/qt/QtWidgets/qtabwidget.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTabWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +130,20 @@ func NewQTabWidget(parent QWidget_ITF /*777 QWidget **/) *QTabWidget {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTabWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTabWidget")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:71
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTabWidget(QWidget *)
+func NewQTabWidget__() *QTabWidget {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTabWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -232,7 +246,7 @@ func (this *QTabWidget) RemoveTab(index int) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isTabEnabled(int)
+// [1] bool isTabEnabled(int) const
 func (this *QTabWidget) IsTabEnabled(index int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget12isTabEnabledEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -251,7 +265,7 @@ func (this *QTabWidget) SetTabEnabled(index int, arg1 bool) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString tabText(int)
+// [8] QString tabText(int) const
 func (this *QTabWidget) TabText(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget7tabTextEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -275,7 +289,7 @@ func (this *QTabWidget) SetTabText(index int, arg1 string) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QIcon tabIcon(int)
+// [8] QIcon tabIcon(int) const
 func (this *QTabWidget) TabIcon(index int) *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget7tabIconEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -311,7 +325,7 @@ func (this *QTabWidget) SetTabToolTip(index int, tip string) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString tabToolTip(int)
+// [8] QString tabToolTip(int) const
 func (this *QTabWidget) TabToolTip(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget10tabToolTipEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -335,7 +349,7 @@ func (this *QTabWidget) SetTabWhatsThis(index int, text string) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString tabWhatsThis(int)
+// [8] QString tabWhatsThis(int) const
 func (this *QTabWidget) TabWhatsThis(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget12tabWhatsThisEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -348,7 +362,7 @@ func (this *QTabWidget) TabWhatsThis(index int) string {
 // /usr/include/qt/QtWidgets/qtabwidget.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int currentIndex()
+// [4] int currentIndex() const
 func (this *QTabWidget) CurrentIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget12currentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -358,7 +372,7 @@ func (this *QTabWidget) CurrentIndex() int {
 // /usr/include/qt/QtWidgets/qtabwidget.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * currentWidget()
+// [8] QWidget * currentWidget() const
 func (this *QTabWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget13currentWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -368,7 +382,7 @@ func (this *QTabWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qtabwidget.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * widget(int)
+// [8] QWidget * widget(int) const
 func (this *QTabWidget) Widget(index int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget6widgetEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -378,7 +392,7 @@ func (this *QTabWidget) Widget(index int) *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qtabwidget.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int indexOf(QWidget *)
+// [4] int indexOf(QWidget *) const
 func (this *QTabWidget) IndexOf(widget QWidget_ITF /*777 QWidget **/) int {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -392,7 +406,7 @@ func (this *QTabWidget) IndexOf(widget QWidget_ITF /*777 QWidget **/) int {
 // /usr/include/qt/QtWidgets/qtabwidget.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QTabWidget) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -402,7 +416,7 @@ func (this *QTabWidget) Count() int {
 // /usr/include/qt/QtWidgets/qtabwidget.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTabWidget::TabPosition tabPosition()
+// [4] QTabWidget::TabPosition tabPosition() const
 func (this *QTabWidget) TabPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget11tabPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -421,7 +435,7 @@ func (this *QTabWidget) SetTabPosition(arg0 int) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool tabsClosable()
+// [1] bool tabsClosable() const
 func (this *QTabWidget) TabsClosable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget12tabsClosableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -440,7 +454,7 @@ func (this *QTabWidget) SetTabsClosable(closeable bool) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isMovable()
+// [1] bool isMovable() const
 func (this *QTabWidget) IsMovable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget9isMovableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -459,7 +473,7 @@ func (this *QTabWidget) SetMovable(movable bool) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTabWidget::TabShape tabShape()
+// [4] QTabWidget::TabShape tabShape() const
 func (this *QTabWidget) TabShape() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget8tabShapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -478,7 +492,7 @@ func (this *QTabWidget) SetTabShape(s int) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:123
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QTabWidget) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -490,7 +504,7 @@ func (this *QTabWidget) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qtabwidget.h:124
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QTabWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -502,7 +516,7 @@ func (this *QTabWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qtabwidget.h:125
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int heightForWidth(int)
+// [4] int heightForWidth(int) const
 func (this *QTabWidget) HeightForWidth(width int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
@@ -512,7 +526,7 @@ func (this *QTabWidget) HeightForWidth(width int) int {
 // /usr/include/qt/QtWidgets/qtabwidget.h:126
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool hasHeightForWidth()
+// [1] bool hasHeightForWidth() const
 func (this *QTabWidget) HasHeightForWidth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget17hasHeightForWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -532,11 +546,38 @@ func (this *QTabWidget) SetCornerWidget(w QWidget_ITF /*777 QWidget **/, corner 
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qtabwidget.h:128
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setCornerWidget(QWidget *, Qt::Corner)
+func (this *QTabWidget) SetCornerWidget__(w QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if w != nil && w.QWidget_PTR() != nil {
+		convArg0 = w.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, Qt::Corner=Elaborated, Qt::Corner=Enum,
+	corner := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget15setCornerWidgetEP7QWidgetN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, corner)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qtabwidget.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * cornerWidget(Qt::Corner)
+// [8] QWidget * cornerWidget(Qt::Corner) const
 func (this *QTabWidget) CornerWidget(corner int) *QWidget /*777 QWidget **/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget12cornerWidgetEN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), corner)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qtabwidget.h:129
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QWidget * cornerWidget(Qt::Corner) const
+func (this *QTabWidget) CornerWidget__() *QWidget /*777 QWidget **/ {
+	// arg: 0, Qt::Corner=Elaborated, Qt::Corner=Enum,
+	corner := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget12cornerWidgetEN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), corner)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -545,7 +586,7 @@ func (this *QTabWidget) CornerWidget(corner int) *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qtabwidget.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::TextElideMode elideMode()
+// [4] Qt::TextElideMode elideMode() const
 func (this *QTabWidget) ElideMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget9elideModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -564,7 +605,7 @@ func (this *QTabWidget) SetElideMode(arg0 int) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize iconSize()
+// [8] QSize iconSize() const
 func (this *QTabWidget) IconSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget8iconSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -589,7 +630,7 @@ func (this *QTabWidget) SetIconSize(size qtcore.QSize_ITF) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool usesScrollButtons()
+// [1] bool usesScrollButtons() const
 func (this *QTabWidget) UsesScrollButtons() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget17usesScrollButtonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -608,7 +649,7 @@ func (this *QTabWidget) SetUsesScrollButtons(useButtons bool) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool documentMode()
+// [1] bool documentMode() const
 func (this *QTabWidget) DocumentMode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget12documentModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -627,7 +668,7 @@ func (this *QTabWidget) SetDocumentMode(set bool) {
 // /usr/include/qt/QtWidgets/qtabwidget.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool tabBarAutoHide()
+// [1] bool tabBarAutoHide() const
 func (this *QTabWidget) TabBarAutoHide() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget14tabBarAutoHideEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -655,7 +696,7 @@ func (this *QTabWidget) Clear() {
 // /usr/include/qt/QtWidgets/qtabwidget.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTabBar * tabBar()
+// [8] QTabBar * tabBar() const
 func (this *QTabWidget) TabBar() *QTabBar /*777 QTabBar **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget6tabBarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -833,7 +874,7 @@ func (this *QTabWidget) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qtabwidget.h:171
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionTabWidgetFrame *)
+// [-2] void initStyleOption(QStyleOptionTabWidgetFrame *) const
 func (this *QTabWidget) InitStyleOption(option QStyleOptionTabWidgetFrame_ITF /*777 QStyleOptionTabWidgetFrame **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionTabWidgetFrame_PTR() != nil {

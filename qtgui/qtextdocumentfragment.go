@@ -136,7 +136,7 @@ func DeleteQTextDocumentFragment(this *QTextDocumentFragment) {
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QTextDocumentFragment) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QTextDocumentFragment7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,7 +146,7 @@ func (this *QTextDocumentFragment) IsEmpty() bool {
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toPlainText()
+// [8] QString toPlainText() const
 func (this *QTextDocumentFragment) ToPlainText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QTextDocumentFragment11toPlainTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,12 +159,27 @@ func (this *QTextDocumentFragment) ToPlainText() string {
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toHtml(const QByteArray &)
+// [8] QString toHtml(const QByteArray &) const
 func (this *QTextDocumentFragment) ToHtml(encoding qtcore.QByteArray_ITF) string {
 	var convArg0 unsafe.Pointer
 	if encoding != nil && encoding.QByteArray_PTR() != nil {
 		convArg0 = encoding.QByteArray_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtGui/qtextdocumentfragment.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString toHtml(const QByteArray &) const
+func (this *QTextDocumentFragment) ToHtml__() string {
+	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
+	var convArg0 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))

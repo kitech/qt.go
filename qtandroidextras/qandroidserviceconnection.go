@@ -132,7 +132,7 @@ func (this *QAndroidServiceConnection) OnServiceDisconnected(name string) {
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidserviceconnection.h:58
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] QAndroidJniObject handle()
+// [1] QAndroidJniObject handle() const
 func (this *QAndroidServiceConnection) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAndroidServiceConnection6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -75,6 +75,20 @@ func NewQGraphicsSceneDragDropEvent(type_ int) *QGraphicsSceneDragDropEvent {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:252
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsSceneDragDropEvent(enum QEvent::Type)
+func NewQGraphicsSceneDragDropEvent__() *QGraphicsSceneDragDropEvent {
+	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum,
+	type_ := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsSceneDragDropEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsSceneDragDropEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:253
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -89,7 +103,7 @@ func DeleteQGraphicsSceneDragDropEvent(this *QGraphicsSceneDragDropEvent) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:255
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF pos()
+// [16] QPointF pos() const
 func (this *QGraphicsSceneDragDropEvent) Pos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +128,7 @@ func (this *QGraphicsSceneDragDropEvent) SetPos(pos qtcore.QPointF_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:258
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF scenePos()
+// [16] QPointF scenePos() const
 func (this *QGraphicsSceneDragDropEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent8scenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,7 +153,7 @@ func (this *QGraphicsSceneDragDropEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:261
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint screenPos()
+// [8] QPoint screenPos() const
 func (this *QGraphicsSceneDragDropEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +178,7 @@ func (this *QGraphicsSceneDragDropEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:264
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::MouseButtons buttons()
+// [4] Qt::MouseButtons buttons() const
 func (this *QGraphicsSceneDragDropEvent) Buttons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent7buttonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,7 +197,7 @@ func (this *QGraphicsSceneDragDropEvent) SetButtons(buttons int) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:267
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::KeyboardModifiers modifiers()
+// [4] Qt::KeyboardModifiers modifiers() const
 func (this *QGraphicsSceneDragDropEvent) Modifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent9modifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +216,7 @@ func (this *QGraphicsSceneDragDropEvent) SetModifiers(modifiers int) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:270
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::DropActions possibleActions()
+// [4] Qt::DropActions possibleActions() const
 func (this *QGraphicsSceneDragDropEvent) PossibleActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -221,7 +235,7 @@ func (this *QGraphicsSceneDragDropEvent) SetPossibleActions(actions int) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:273
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::DropAction proposedAction()
+// [4] Qt::DropAction proposedAction() const
 func (this *QGraphicsSceneDragDropEvent) ProposedAction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent14proposedActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -249,7 +263,7 @@ func (this *QGraphicsSceneDragDropEvent) AcceptProposedAction() {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:277
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::DropAction dropAction()
+// [4] Qt::DropAction dropAction() const
 func (this *QGraphicsSceneDragDropEvent) DropAction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent10dropActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +282,7 @@ func (this *QGraphicsSceneDragDropEvent) SetDropAction(action int) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:280
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * source()
+// [8] QWidget * source() const
 func (this *QGraphicsSceneDragDropEvent) Source() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -291,7 +305,7 @@ func (this *QGraphicsSceneDragDropEvent) SetSource(source QWidget_ITF /*777 QWid
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:283
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const QMimeData * mimeData()
+// [8] const QMimeData * mimeData() const
 func (this *QGraphicsSceneDragDropEvent) MimeData() *qtcore.QMimeData /*777 const QMimeData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

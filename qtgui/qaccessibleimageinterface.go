@@ -78,7 +78,7 @@ func DeleteQAccessibleImageInterface(this *QAccessibleImageInterface) {
 // /usr/include/qt/QtGui/qaccessible.h:657
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QString imageDescription()
+// [8] QString imageDescription() const
 func (this *QAccessibleImageInterface) ImageDescription() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface16imageDescriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -91,7 +91,7 @@ func (this *QAccessibleImageInterface) ImageDescription() string {
 // /usr/include/qt/QtGui/qaccessible.h:658
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSize imageSize()
+// [8] QSize imageSize() const
 func (this *QAccessibleImageInterface) ImageSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface9imageSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -103,7 +103,7 @@ func (this *QAccessibleImageInterface) ImageSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qaccessible.h:659
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QPoint imagePosition()
+// [8] QPoint imagePosition() const
 func (this *QAccessibleImageInterface) ImagePosition() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface13imagePositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -63,7 +63,7 @@ func (*QGenericPlugin) NewFromPointer(cthis unsafe.Pointer) *QGenericPlugin {
 // /usr/include/qt/QtGui/qgenericplugin.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGenericPlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +79,20 @@ func NewQGenericPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QGenericPlu
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QGenericPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGenericPluginFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGenericPlugin")
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qgenericplugin.h:55
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGenericPlugin(QObject *)
+func NewQGenericPlugin__() *QGenericPlugin {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGenericPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGenericPluginFromPointer(unsafe.Pointer(uintptr(rv)))

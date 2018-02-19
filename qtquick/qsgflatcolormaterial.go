@@ -78,7 +78,7 @@ func NewQSGFlatColorMaterial() *QSGFlatColorMaterial {
 // /usr/include/qt/QtQuick/qsgflatcolormaterial.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSGMaterialType * type()
+// [8] QSGMaterialType * type() const
 func (this *QSGFlatColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,7 +88,7 @@ func (this *QSGFlatColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialType 
 // /usr/include/qt/QtQuick/qsgflatcolormaterial.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSGMaterialShader * createShader()
+// [8] QSGMaterialShader * createShader() const
 func (this *QSGFlatColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +111,7 @@ func (this *QSGFlatColorMaterial) SetColor(color qtgui.QColor_ITF) {
 // /usr/include/qt/QtQuick/qsgflatcolormaterial.h:56
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] const QColor & color()
+// [16] const QColor & color() const
 func (this *QSGFlatColorMaterial) Color() *qtgui.QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -123,7 +123,7 @@ func (this *QSGFlatColorMaterial) Color() *qtgui.QColor {
 // /usr/include/qt/QtQuick/qsgflatcolormaterial.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int compare(const QSGMaterial *)
+// [4] int compare(const QSGMaterial *) const
 func (this *QSGFlatColorMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSGMaterial_PTR() != nil {

@@ -134,7 +134,7 @@ func (this *QElapsedTimer) Invalidate() {
 // /usr/include/qt/QtCore/qelapsedtimer.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QElapsedTimer) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func (this *QElapsedTimer) IsValid() bool {
 // /usr/include/qt/QtCore/qelapsedtimer.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 nsecsElapsed()
+// [8] qint64 nsecsElapsed() const
 func (this *QElapsedTimer) NsecsElapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer12nsecsElapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,7 +154,7 @@ func (this *QElapsedTimer) NsecsElapsed() int64 {
 // /usr/include/qt/QtCore/qelapsedtimer.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 elapsed()
+// [8] qint64 elapsed() const
 func (this *QElapsedTimer) Elapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ func (this *QElapsedTimer) Elapsed() int64 {
 // /usr/include/qt/QtCore/qelapsedtimer.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasExpired(qint64)
+// [1] bool hasExpired(qint64) const
 func (this *QElapsedTimer) HasExpired(timeout int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer10hasExpiredEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +174,7 @@ func (this *QElapsedTimer) HasExpired(timeout int64) bool {
 // /usr/include/qt/QtCore/qelapsedtimer.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 msecsSinceReference()
+// [8] qint64 msecsSinceReference() const
 func (this *QElapsedTimer) MsecsSinceReference() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer19msecsSinceReferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,7 +184,7 @@ func (this *QElapsedTimer) MsecsSinceReference() int64 {
 // /usr/include/qt/QtCore/qelapsedtimer.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 msecsTo(const QElapsedTimer &)
+// [8] qint64 msecsTo(const QElapsedTimer &) const
 func (this *QElapsedTimer) MsecsTo(other QElapsedTimer_ITF) int64 {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QElapsedTimer_PTR() != nil {
@@ -198,7 +198,7 @@ func (this *QElapsedTimer) MsecsTo(other QElapsedTimer_ITF) int64 {
 // /usr/include/qt/QtCore/qelapsedtimer.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 secsTo(const QElapsedTimer &)
+// [8] qint64 secsTo(const QElapsedTimer &) const
 func (this *QElapsedTimer) SecsTo(other QElapsedTimer_ITF) int64 {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QElapsedTimer_PTR() != nil {
@@ -212,7 +212,7 @@ func (this *QElapsedTimer) SecsTo(other QElapsedTimer_ITF) int64 {
 // /usr/include/qt/QtCore/qelapsedtimer.h:81
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QElapsedTimer &)
+// [1] bool operator==(const QElapsedTimer &) const
 func (this *QElapsedTimer) Operator_equal_equal(other QElapsedTimer_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QElapsedTimer_PTR() != nil {
@@ -226,7 +226,7 @@ func (this *QElapsedTimer) Operator_equal_equal(other QElapsedTimer_ITF) bool {
 // /usr/include/qt/QtCore/qelapsedtimer.h:83
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QElapsedTimer &)
+// [1] bool operator!=(const QElapsedTimer &) const
 func (this *QElapsedTimer) Operator_not_equal(other QElapsedTimer_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QElapsedTimer_PTR() != nil {

@@ -63,7 +63,7 @@ func (*QInputMethod) NewFromPointer(cthis unsafe.Pointer) *QInputMethod {
 // /usr/include/qt/QtGui/qinputmethod.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QInputMethod) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -73,7 +73,7 @@ func (this *QInputMethod) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // /usr/include/qt/QtGui/qinputmethod.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform inputItemTransform()
+// [88] QTransform inputItemTransform() const
 func (this *QInputMethod) InputItemTransform() *QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod18inputItemTransformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,7 +98,7 @@ func (this *QInputMethod) SetInputItemTransform(transform QTransform_ITF) {
 // /usr/include/qt/QtGui/qinputmethod.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF inputItemRectangle()
+// [32] QRectF inputItemRectangle() const
 func (this *QInputMethod) InputItemRectangle() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod18inputItemRectangleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -123,7 +123,7 @@ func (this *QInputMethod) SetInputItemRectangle(rect qtcore.QRectF_ITF) {
 // /usr/include/qt/QtGui/qinputmethod.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF cursorRectangle()
+// [32] QRectF cursorRectangle() const
 func (this *QInputMethod) CursorRectangle() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod15cursorRectangleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,7 +135,7 @@ func (this *QInputMethod) CursorRectangle() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qinputmethod.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF anchorRectangle()
+// [32] QRectF anchorRectangle() const
 func (this *QInputMethod) AnchorRectangle() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod15anchorRectangleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,7 +147,7 @@ func (this *QInputMethod) AnchorRectangle() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qinputmethod.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF keyboardRectangle()
+// [32] QRectF keyboardRectangle() const
 func (this *QInputMethod) KeyboardRectangle() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod17keyboardRectangleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,7 +159,7 @@ func (this *QInputMethod) KeyboardRectangle() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qinputmethod.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF inputItemClipRectangle()
+// [32] QRectF inputItemClipRectangle() const
 func (this *QInputMethod) InputItemClipRectangle() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod22inputItemClipRectangleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ func (this *QInputMethod) InputItemClipRectangle() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qinputmethod.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isVisible()
+// [1] bool isVisible() const
 func (this *QInputMethod) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,7 +190,7 @@ func (this *QInputMethod) SetVisible(visible bool) {
 // /usr/include/qt/QtGui/qinputmethod.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isAnimating()
+// [1] bool isAnimating() const
 func (this *QInputMethod) IsAnimating() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod11isAnimatingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,7 +200,7 @@ func (this *QInputMethod) IsAnimating() bool {
 // /usr/include/qt/QtGui/qinputmethod.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QLocale locale()
+// [8] QLocale locale() const
 func (this *QInputMethod) Locale() *qtcore.QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod6localeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -212,7 +212,7 @@ func (this *QInputMethod) Locale() *qtcore.QLocale /*123*/ {
 // /usr/include/qt/QtGui/qinputmethod.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::LayoutDirection inputDirection()
+// [4] Qt::LayoutDirection inputDirection() const
 func (this *QInputMethod) InputDirection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputMethod14inputDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

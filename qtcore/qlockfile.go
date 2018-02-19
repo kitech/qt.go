@@ -106,6 +106,18 @@ func (this *QLockFile) TryLock(timeout int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qlockfile.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool tryLock(int)
+func (this *QLockFile) TryLock__() bool {
+	// arg: 0, int=Int, =Invalid,
+	timeout := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qlockfile.h:58
 // index:0
 // Public Visibility=Default Availability=Available
@@ -127,7 +139,7 @@ func (this *QLockFile) SetStaleLockTime(arg0 int) {
 // /usr/include/qt/QtCore/qlockfile.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int staleLockTime()
+// [4] int staleLockTime() const
 func (this *QLockFile) StaleLockTime() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile13staleLockTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -137,7 +149,7 @@ func (this *QLockFile) StaleLockTime() int {
 // /usr/include/qt/QtCore/qlockfile.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isLocked()
+// [1] bool isLocked() const
 func (this *QLockFile) IsLocked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile8isLockedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,7 +159,7 @@ func (this *QLockFile) IsLocked() bool {
 // /usr/include/qt/QtCore/qlockfile.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool getLockInfo(qint64 *, QString *, QString *)
+// [1] bool getLockInfo(qint64 *, QString *, QString *) const
 func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname string, appname string) bool {
 	var tmpArg1 = NewQString_5(hostname)
 	var convArg1 = tmpArg1.GetCthis()
@@ -171,7 +183,7 @@ func (this *QLockFile) RemoveStaleLockFile() bool {
 // /usr/include/qt/QtCore/qlockfile.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QLockFile::LockError error()
+// [4] QLockFile::LockError error() const
 func (this *QLockFile) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -92,7 +92,7 @@ func DeleteQBackingStore(this *QBackingStore) {
 // /usr/include/qt/QtGui/qbackingstore.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWindow * window()
+// [8] QWindow * window() const
 func (this *QBackingStore) Window() *QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +130,42 @@ func (this *QBackingStore) Flush(region QRegion_ITF, window QWindow_ITF /*777 QW
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qbackingstore.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void flush(const QRegion &, QWindow *, const QPoint &)
+func (this *QBackingStore) Flush__(region QRegion_ITF) {
+	var convArg0 unsafe.Pointer
+	if region != nil && region.QRegion_PTR() != nil {
+		convArg0 = region.QRegion_PTR().GetCthis()
+	}
+	// arg: 1, QWindow *=Pointer, QWindow=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, const QPoint &=LValueReference, QPoint=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qbackingstore.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void flush(const QRegion &, QWindow *, const QPoint &)
+func (this *QBackingStore) Flush__1(region QRegion_ITF, window QWindow_ITF /*777 QWindow **/) {
+	var convArg0 unsafe.Pointer
+	if region != nil && region.QRegion_PTR() != nil {
+		convArg0 = region.QRegion_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if window != nil && window.QWindow_PTR() != nil {
+		convArg1 = window.QWindow_PTR().GetCthis()
+	}
+	// arg: 2, const QPoint &=LValueReference, QPoint=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qbackingstore.h:71
 // index:0
 // Public Visibility=Default Availability=Available
@@ -146,7 +182,7 @@ func (this *QBackingStore) Resize(size qtcore.QSize_ITF) {
 // /usr/include/qt/QtGui/qbackingstore.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize size()
+// [8] QSize size() const
 func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +243,7 @@ func (this *QBackingStore) SetStaticContents(region QRegion_ITF) {
 // /usr/include/qt/QtGui/qbackingstore.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegion staticContents()
+// [8] QRegion staticContents() const
 func (this *QBackingStore) StaticContents() *QRegion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore14staticContentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -219,7 +255,7 @@ func (this *QBackingStore) StaticContents() *QRegion /*123*/ {
 // /usr/include/qt/QtGui/qbackingstore.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasStaticContents()
+// [1] bool hasStaticContents() const
 func (this *QBackingStore) HasStaticContents() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore17hasStaticContentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -64,7 +64,7 @@ func (*QQmlFileSelector) NewFromPointer(cthis unsafe.Pointer) *QQmlFileSelector 
 // /usr/include/qt/QtQml/qqmlfileselector.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQmlFileSelector) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlFileSelector10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +91,24 @@ func NewQQmlFileSelector(engine QQmlEngine_ITF /*777 QQmlEngine **/, parent qtco
 	return gothis
 }
 
+// /usr/include/qt/QtQml/qqmlfileselector.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlFileSelector(QQmlEngine *, QObject *)
+func NewQQmlFileSelector__(engine QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFileSelector {
+	var convArg0 unsafe.Pointer
+	if engine != nil && engine.QQmlEngine_PTR() != nil {
+		convArg0 = engine.QQmlEngine_PTR().GetCthis()
+	}
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlFileSelectorC2EP10QQmlEngineP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlFileSelectorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlFileSelector")
+	return gothis
+}
+
 // /usr/include/qt/QtQml/qqmlfileselector.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -105,7 +123,7 @@ func DeleteQQmlFileSelector(this *QQmlFileSelector) {
 // /usr/include/qt/QtQml/qqmlfileselector.h:59
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QFileSelector * selector()
+// [8] QFileSelector * selector() const
 func (this *QQmlFileSelector) Selector() *qtcore.QFileSelector /*777 QFileSelector **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlFileSelector8selectorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

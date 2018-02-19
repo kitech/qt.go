@@ -75,6 +75,36 @@ func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:710
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleHintReturn(int, int)
+func NewQStyleHintReturn__() *QStyleHintReturn {
+	// arg: 0, int=Int, =Invalid,
+	version := 0 /*QStyleOption::Version*/
+	// arg: 1, int=Int, =Invalid,
+	type_ := QStyleHintReturn__SH_Default
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStyleHintReturnFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleHintReturn)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:710
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleHintReturn(int, int)
+func NewQStyleHintReturn__1(version int) *QStyleHintReturn {
+	// arg: 1, int=Int, =Invalid,
+	type_ := QStyleHintReturn__SH_Default
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStyleHintReturnFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleHintReturn)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:711
 // index:0
 // Public Visibility=Default Availability=Available

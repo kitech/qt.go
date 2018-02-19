@@ -176,10 +176,26 @@ func QJsonDocument_FromRawData(data string, size int, validation int) *QJsonDocu
 	return rv
 }
 
+// /usr/include/qt/QtCore/qjsondocument.h:118
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QJsonDocument fromRawData(const char *, int, enum QJsonDocument::DataValidation)
+func (this *QJsonDocument) FromRawData__(data string, size int) *QJsonDocument /*123*/ {
+	var convArg0 = qtrt.CString(data)
+	defer qtrt.FreeMem(convArg0)
+	// arg: 2, QJsonDocument::DataValidation=Enum, QJsonDocument::DataValidation=Enum,
+	validation := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocument11fromRawDataEPKciNS_14DataValidationE", qtrt.FFI_TYPE_POINTER, convArg0, size, validation)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonDocument)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qjsondocument.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const char * rawData(int *)
+// [8] const char * rawData(int *) const
 func (this *QJsonDocument) RawData(size unsafe.Pointer /*666*/) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument7rawDataEPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	qtrt.ErrPrint(err, rv)
@@ -207,10 +223,28 @@ func QJsonDocument_FromBinaryData(data QByteArray_ITF, validation int) *QJsonDoc
 	return rv
 }
 
+// /usr/include/qt/QtCore/qjsondocument.h:121
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QJsonDocument fromBinaryData(const QByteArray &, enum QJsonDocument::DataValidation)
+func (this *QJsonDocument) FromBinaryData__(data QByteArray_ITF) *QJsonDocument /*123*/ {
+	var convArg0 unsafe.Pointer
+	if data != nil && data.QByteArray_PTR() != nil {
+		convArg0 = data.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, QJsonDocument::DataValidation=Enum, QJsonDocument::DataValidation=Enum,
+	validation := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocument14fromBinaryDataERK10QByteArrayNS_14DataValidationE", qtrt.FFI_TYPE_POINTER, convArg0, validation)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonDocument)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qjsondocument.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toBinaryData()
+// [8] QByteArray toBinaryData() const
 func (this *QJsonDocument) ToBinaryData() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument12toBinaryDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -243,7 +277,7 @@ func QJsonDocument_FromVariant(variant QVariant_ITF) *QJsonDocument /*123*/ {
 // /usr/include/qt/QtCore/qjsondocument.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant toVariant()
+// [16] QVariant toVariant() const
 func (this *QJsonDocument) ToVariant() *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument9toVariantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,7 +289,7 @@ func (this *QJsonDocument) ToVariant() *QVariant /*123*/ {
 // /usr/include/qt/QtCore/qjsondocument.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toJson()
+// [8] QByteArray toJson() const
 func (this *QJsonDocument) ToJson() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -267,7 +301,7 @@ func (this *QJsonDocument) ToJson() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qjsondocument.h:138
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toJson(enum QJsonDocument::JsonFormat)
+// [8] QByteArray toJson(enum QJsonDocument::JsonFormat) const
 func (this *QJsonDocument) ToJson_1(format int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonENS_10JsonFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
@@ -279,7 +313,7 @@ func (this *QJsonDocument) ToJson_1(format int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qjsondocument.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QJsonDocument) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -289,7 +323,7 @@ func (this *QJsonDocument) IsEmpty() bool {
 // /usr/include/qt/QtCore/qjsondocument.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isArray()
+// [1] bool isArray() const
 func (this *QJsonDocument) IsArray() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument7isArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -299,7 +333,7 @@ func (this *QJsonDocument) IsArray() bool {
 // /usr/include/qt/QtCore/qjsondocument.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isObject()
+// [1] bool isObject() const
 func (this *QJsonDocument) IsObject() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument8isObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -309,7 +343,7 @@ func (this *QJsonDocument) IsObject() bool {
 // /usr/include/qt/QtCore/qjsondocument.h:145
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QJsonObject object()
+// [16] QJsonObject object() const
 func (this *QJsonDocument) Object() *QJsonObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -321,7 +355,7 @@ func (this *QJsonDocument) Object() *QJsonObject /*123*/ {
 // /usr/include/qt/QtCore/qjsondocument.h:146
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QJsonArray array()
+// [16] QJsonArray array() const
 func (this *QJsonDocument) Array() *QJsonArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument5arrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -359,7 +393,7 @@ func (this *QJsonDocument) SetArray(array QJsonArray_ITF) {
 // /usr/include/qt/QtCore/qjsondocument.h:151
 // index:0
 // Public Visibility=Default Availability=Available
-// [24] const QJsonValue operator[](const QString &)
+// [24] const QJsonValue operator[](const QString &) const
 func (this *QJsonDocument) Operator_get_index(key string) *QJsonValue /*123*/ {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -373,7 +407,7 @@ func (this *QJsonDocument) Operator_get_index(key string) *QJsonValue /*123*/ {
 // /usr/include/qt/QtCore/qjsondocument.h:152
 // index:1
 // Public Visibility=Default Availability=Available
-// [24] const QJsonValue operator[](QLatin1String)
+// [24] const QJsonValue operator[](QLatin1String) const
 func (this *QJsonDocument) Operator_get_index_1(key QLatin1String_ITF /*123*/) *QJsonValue /*123*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
@@ -389,7 +423,7 @@ func (this *QJsonDocument) Operator_get_index_1(key QLatin1String_ITF /*123*/) *
 // /usr/include/qt/QtCore/qjsondocument.h:153
 // index:2
 // Public Visibility=Default Availability=Available
-// [24] const QJsonValue operator[](int)
+// [24] const QJsonValue operator[](int) const
 func (this *QJsonDocument) Operator_get_index_2(i int) *QJsonValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocumentixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -401,7 +435,7 @@ func (this *QJsonDocument) Operator_get_index_2(i int) *QJsonValue /*123*/ {
 // /usr/include/qt/QtCore/qjsondocument.h:155
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QJsonDocument &)
+// [1] bool operator==(const QJsonDocument &) const
 func (this *QJsonDocument) Operator_equal_equal(other QJsonDocument_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJsonDocument_PTR() != nil {
@@ -415,7 +449,7 @@ func (this *QJsonDocument) Operator_equal_equal(other QJsonDocument_ITF) bool {
 // /usr/include/qt/QtCore/qjsondocument.h:156
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QJsonDocument &)
+// [1] bool operator!=(const QJsonDocument &) const
 func (this *QJsonDocument) Operator_not_equal(other QJsonDocument_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJsonDocument_PTR() != nil {
@@ -429,7 +463,7 @@ func (this *QJsonDocument) Operator_not_equal(other QJsonDocument_ITF) bool {
 // /usr/include/qt/QtCore/qjsondocument.h:158
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QJsonDocument) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -98,7 +98,7 @@ func DeleteQEnterEvent(this *QEnterEvent) {
 // /usr/include/qt/QtGui/qevent.h:89
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint pos()
+// [8] QPoint pos() const
 func (this *QEnterEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,7 +110,7 @@ func (this *QEnterEvent) Pos() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:90
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint globalPos()
+// [8] QPoint globalPos() const
 func (this *QEnterEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent9globalPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func (this *QEnterEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:91
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int x()
+// [4] int x() const
 func (this *QEnterEvent) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QEnterEvent) X() int {
 // /usr/include/qt/QtGui/qevent.h:92
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int y()
+// [4] int y() const
 func (this *QEnterEvent) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,7 +142,7 @@ func (this *QEnterEvent) Y() int {
 // /usr/include/qt/QtGui/qevent.h:93
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int globalX()
+// [4] int globalX() const
 func (this *QEnterEvent) GlobalX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent7globalXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -152,7 +152,7 @@ func (this *QEnterEvent) GlobalX() int {
 // /usr/include/qt/QtGui/qevent.h:94
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int globalY()
+// [4] int globalY() const
 func (this *QEnterEvent) GlobalY() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent7globalYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func (this *QEnterEvent) GlobalY() int {
 // /usr/include/qt/QtGui/qevent.h:96
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] const QPointF & localPos()
+// [16] const QPointF & localPos() const
 func (this *QEnterEvent) LocalPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent8localPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +174,7 @@ func (this *QEnterEvent) LocalPos() *qtcore.QPointF {
 // /usr/include/qt/QtGui/qevent.h:97
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] const QPointF & windowPos()
+// [16] const QPointF & windowPos() const
 func (this *QEnterEvent) WindowPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent9windowPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +186,7 @@ func (this *QEnterEvent) WindowPos() *qtcore.QPointF {
 // /usr/include/qt/QtGui/qevent.h:98
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] const QPointF & screenPos()
+// [16] const QPointF & screenPos() const
 func (this *QEnterEvent) ScreenPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

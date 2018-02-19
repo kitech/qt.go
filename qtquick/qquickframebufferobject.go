@@ -71,7 +71,7 @@ func (*QQuickFramebufferObject) NewFromPointer(cthis unsafe.Pointer) *QQuickFram
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQuickFramebufferObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -94,10 +94,24 @@ func NewQQuickFramebufferObject(parent QQuickItem_ITF /*777 QQuickItem **/) *QQu
 	return gothis
 }
 
+// /usr/include/qt/QtQuick/qquickframebufferobject.h:78
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickFramebufferObject(QQuickItem *)
+func NewQQuickFramebufferObject__() *QQuickFramebufferObject {
+	// arg: 0, QQuickItem *=Pointer, QQuickItem=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObjectC2EP10QQuickItem", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQuickFramebufferObjectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickFramebufferObject")
+	return gothis
+}
+
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool textureFollowsItemSize()
+// [1] bool textureFollowsItemSize() const
 func (this *QQuickFramebufferObject) TextureFollowsItemSize() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject22textureFollowsItemSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,7 +130,7 @@ func (this *QQuickFramebufferObject) SetTextureFollowsItemSize(follows bool) {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool mirrorVertically()
+// [1] bool mirrorVertically() const
 func (this *QQuickFramebufferObject) MirrorVertically() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject16mirrorVerticallyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,7 +149,7 @@ func (this *QQuickFramebufferObject) SetMirrorVertically(enable bool) {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:86
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QQuickFramebufferObject::Renderer * createRenderer()
+// [8] QQuickFramebufferObject::Renderer * createRenderer() const
 func (this *QQuickFramebufferObject) CreateRenderer() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject14createRendererEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,7 +159,7 @@ func (this *QQuickFramebufferObject) CreateRenderer() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isTextureProvider()
+// [1] bool isTextureProvider() const
 func (this *QQuickFramebufferObject) IsTextureProvider() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject17isTextureProviderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -155,7 +169,7 @@ func (this *QQuickFramebufferObject) IsTextureProvider() bool {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSGTextureProvider * textureProvider()
+// [8] QSGTextureProvider * textureProvider() const
 func (this *QQuickFramebufferObject) TextureProvider() *QSGTextureProvider /*777 QSGTextureProvider **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QQuickFramebufferObject15textureProviderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

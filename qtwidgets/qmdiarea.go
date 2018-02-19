@@ -114,7 +114,7 @@ func (*QMdiArea) NewFromPointer(cthis unsafe.Pointer) *QMdiArea {
 // /usr/include/qt/QtWidgets/qmdiarea.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QMdiArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -137,6 +137,20 @@ func NewQMdiArea(parent QWidget_ITF /*777 QWidget **/) *QMdiArea {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qmdiarea.h:90
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QMdiArea(QWidget *)
+func NewQMdiArea__() *QMdiArea {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiAreaC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQMdiAreaFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMdiArea")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qmdiarea.h:91
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -151,7 +165,7 @@ func DeleteQMdiArea(this *QMdiArea) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,7 +177,7 @@ func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qmdiarea.h:94
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QMdiArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +189,7 @@ func (this *QMdiArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qmdiarea.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QMdiSubWindow * currentSubWindow()
+// [8] QMdiSubWindow * currentSubWindow() const
 func (this *QMdiArea) CurrentSubWindow() *QMdiSubWindow /*777 QMdiSubWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea16currentSubWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,7 +199,7 @@ func (this *QMdiArea) CurrentSubWindow() *QMdiSubWindow /*777 QMdiSubWindow **/ 
 // /usr/include/qt/QtWidgets/qmdiarea.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QMdiSubWindow * activeSubWindow()
+// [8] QMdiSubWindow * activeSubWindow() const
 func (this *QMdiArea) ActiveSubWindow() *QMdiSubWindow /*777 QMdiSubWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea15activeSubWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -201,6 +215,22 @@ func (this *QMdiArea) AddSubWindow(widget QWidget_ITF /*777 QWidget **/, flags i
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea12addSubWindowEP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQMdiSubWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmdiarea.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QMdiSubWindow * addSubWindow(QWidget *, Qt::WindowFlags)
+func (this *QMdiArea) AddSubWindow__(widget QWidget_ITF /*777 QWidget **/) *QMdiSubWindow /*777 QMdiSubWindow **/ {
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg0 = widget.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea12addSubWindowEP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMdiSubWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -222,7 +252,7 @@ func (this *QMdiArea) RemoveSubWindow(widget QWidget_ITF /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QBrush background()
+// [8] QBrush background() const
 func (this *QMdiArea) Background() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea10backgroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,7 +277,7 @@ func (this *QMdiArea) SetBackground(background qtgui.QBrush_ITF) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QMdiArea::WindowOrder activationOrder()
+// [4] QMdiArea::WindowOrder activationOrder() const
 func (this *QMdiArea) ActivationOrder() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea15activationOrderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -272,10 +302,21 @@ func (this *QMdiArea) SetOption(option int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qmdiarea.h:109
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOption(enum QMdiArea::AreaOption, _Bool)
+func (this *QMdiArea) SetOption__(option int) {
+	// arg: 1, bool=Bool, =Invalid,
+	on := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea9setOptionENS_10AreaOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qmdiarea.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testOption(enum QMdiArea::AreaOption)
+// [1] bool testOption(enum QMdiArea::AreaOption) const
 func (this *QMdiArea) TestOption(opton int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea10testOptionENS_10AreaOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opton)
 	qtrt.ErrPrint(err, rv)
@@ -294,7 +335,7 @@ func (this *QMdiArea) SetViewMode(mode int) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QMdiArea::ViewMode viewMode()
+// [4] QMdiArea::ViewMode viewMode() const
 func (this *QMdiArea) ViewMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea8viewModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -304,7 +345,7 @@ func (this *QMdiArea) ViewMode() int {
 // /usr/include/qt/QtWidgets/qmdiarea.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool documentMode()
+// [1] bool documentMode() const
 func (this *QMdiArea) DocumentMode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea12documentModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -332,7 +373,7 @@ func (this *QMdiArea) SetTabsClosable(closable bool) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool tabsClosable()
+// [1] bool tabsClosable() const
 func (this *QMdiArea) TabsClosable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea12tabsClosableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -351,7 +392,7 @@ func (this *QMdiArea) SetTabsMovable(movable bool) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool tabsMovable()
+// [1] bool tabsMovable() const
 func (this *QMdiArea) TabsMovable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea11tabsMovableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -370,7 +411,7 @@ func (this *QMdiArea) SetTabShape(shape int) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTabWidget::TabShape tabShape()
+// [4] QTabWidget::TabShape tabShape() const
 func (this *QMdiArea) TabShape() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea8tabShapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -389,7 +430,7 @@ func (this *QMdiArea) SetTabPosition(position int) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTabWidget::TabPosition tabPosition()
+// [4] QTabWidget::TabPosition tabPosition() const
 func (this *QMdiArea) TabPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea11tabPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

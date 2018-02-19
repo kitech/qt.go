@@ -194,7 +194,7 @@ func (*QGraphicsView) NewFromPointer(cthis unsafe.Pointer) *QGraphicsView {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGraphicsView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -210,6 +210,20 @@ func NewQGraphicsView(parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsView")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:117
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsView(QWidget *)
+func NewQGraphicsView__() *QGraphicsView {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -237,6 +251,24 @@ func NewQGraphicsView_1(scene QGraphicsScene_ITF /*777 QGraphicsScene **/, paren
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsview.h:118
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsView(QGraphicsScene *, QWidget *)
+func NewQGraphicsView_1_(scene QGraphicsScene_ITF /*777 QGraphicsScene **/) *QGraphicsView {
+	var convArg0 unsafe.Pointer
+	if scene != nil && scene.QGraphicsScene_PTR() != nil {
+		convArg0 = scene.QGraphicsScene_PTR().GetCthis()
+	}
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsView")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsview.h:119
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -251,7 +283,7 @@ func DeleteQGraphicsView(this *QGraphicsView) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:121
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QGraphicsView) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -263,7 +295,7 @@ func (this *QGraphicsView) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QPainter::RenderHints renderHints()
+// [4] QPainter::RenderHints renderHints() const
 func (this *QGraphicsView) RenderHints() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView11renderHintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -275,6 +307,17 @@ func (this *QGraphicsView) RenderHints() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderHint(QPainter::RenderHint, _Bool)
 func (this *QGraphicsView) SetRenderHint(hint int, enabled bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13setRenderHintEN8QPainter10RenderHintEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, enabled)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:124
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setRenderHint(QPainter::RenderHint, _Bool)
+func (this *QGraphicsView) SetRenderHint__(hint int) {
+	// arg: 1, bool=Bool, =Invalid,
+	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13setRenderHintEN8QPainter10RenderHintEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, enabled)
 	qtrt.ErrPrint(err, rv)
 }
@@ -291,7 +334,7 @@ func (this *QGraphicsView) SetRenderHints(hints int) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Alignment alignment()
+// [4] Qt::Alignment alignment() const
 func (this *QGraphicsView) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -310,7 +353,7 @@ func (this *QGraphicsView) SetAlignment(alignment int) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGraphicsView::ViewportAnchor transformationAnchor()
+// [4] QGraphicsView::ViewportAnchor transformationAnchor() const
 func (this *QGraphicsView) TransformationAnchor() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView20transformationAnchorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -329,7 +372,7 @@ func (this *QGraphicsView) SetTransformationAnchor(anchor int) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:133
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGraphicsView::ViewportAnchor resizeAnchor()
+// [4] QGraphicsView::ViewportAnchor resizeAnchor() const
 func (this *QGraphicsView) ResizeAnchor() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12resizeAnchorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -348,7 +391,7 @@ func (this *QGraphicsView) SetResizeAnchor(anchor int) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:136
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGraphicsView::ViewportUpdateMode viewportUpdateMode()
+// [4] QGraphicsView::ViewportUpdateMode viewportUpdateMode() const
 func (this *QGraphicsView) ViewportUpdateMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView18viewportUpdateModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -367,7 +410,7 @@ func (this *QGraphicsView) SetViewportUpdateMode(mode int) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGraphicsView::OptimizationFlags optimizationFlags()
+// [4] QGraphicsView::OptimizationFlags optimizationFlags() const
 func (this *QGraphicsView) OptimizationFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView17optimizationFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -379,6 +422,17 @@ func (this *QGraphicsView) OptimizationFlags() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setOptimizationFlag(enum QGraphicsView::OptimizationFlag, _Bool)
 func (this *QGraphicsView) SetOptimizationFlag(flag int, enabled bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView19setOptimizationFlagENS_16OptimizationFlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:140
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOptimizationFlag(enum QGraphicsView::OptimizationFlag, _Bool)
+func (this *QGraphicsView) SetOptimizationFlag__(flag int) {
+	// arg: 1, bool=Bool, =Invalid,
+	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView19setOptimizationFlagENS_16OptimizationFlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
 	qtrt.ErrPrint(err, rv)
 }
@@ -395,7 +449,7 @@ func (this *QGraphicsView) SetOptimizationFlags(flags int) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGraphicsView::DragMode dragMode()
+// [4] QGraphicsView::DragMode dragMode() const
 func (this *QGraphicsView) DragMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView8dragModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -414,7 +468,7 @@ func (this *QGraphicsView) SetDragMode(mode int) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:147
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ItemSelectionMode rubberBandSelectionMode()
+// [4] Qt::ItemSelectionMode rubberBandSelectionMode() const
 func (this *QGraphicsView) RubberBandSelectionMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView23rubberBandSelectionModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -433,7 +487,7 @@ func (this *QGraphicsView) SetRubberBandSelectionMode(mode int) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:149
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect rubberBandRect()
+// [16] QRect rubberBandRect() const
 func (this *QGraphicsView) RubberBandRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView14rubberBandRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -445,7 +499,7 @@ func (this *QGraphicsView) RubberBandRect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:152
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGraphicsView::CacheMode cacheMode()
+// [4] QGraphicsView::CacheMode cacheMode() const
 func (this *QGraphicsView) CacheMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView9cacheModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -473,7 +527,7 @@ func (this *QGraphicsView) ResetCachedContent() {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:156
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isInteractive()
+// [1] bool isInteractive() const
 func (this *QGraphicsView) IsInteractive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView13isInteractiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -492,7 +546,7 @@ func (this *QGraphicsView) SetInteractive(allowed bool) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:159
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QGraphicsScene * scene()
+// [8] QGraphicsScene * scene() const
 func (this *QGraphicsView) Scene() *QGraphicsScene /*777 QGraphicsScene **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5sceneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -515,7 +569,7 @@ func (this *QGraphicsView) SetScene(scene QGraphicsScene_ITF /*777 QGraphicsScen
 // /usr/include/qt/QtWidgets/qgraphicsview.h:162
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF sceneRect()
+// [32] QRectF sceneRect() const
 func (this *QGraphicsView) SceneRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView9sceneRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -549,7 +603,7 @@ func (this *QGraphicsView) SetSceneRect_1(x float64, y float64, w float64, h flo
 // /usr/include/qt/QtWidgets/qgraphicsview.h:166
 // index:0
 // Public Visibility=Default Availability=Available
-// [48] QMatrix matrix()
+// [48] QMatrix matrix() const
 func (this *QGraphicsView) Matrix() *qtgui.QMatrix /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -571,6 +625,21 @@ func (this *QGraphicsView) SetMatrix(matrix qtgui.QMatrix_ITF, combine bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsview.h:167
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setMatrix(const QMatrix &, _Bool)
+func (this *QGraphicsView) SetMatrix__(matrix qtgui.QMatrix_ITF) {
+	var convArg0 unsafe.Pointer
+	if matrix != nil && matrix.QMatrix_PTR() != nil {
+		convArg0 = matrix.QMatrix_PTR().GetCthis()
+	}
+	// arg: 1, bool=Bool, =Invalid,
+	combine := false
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9setMatrixERK7QMatrixb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsview.h:168
 // index:0
 // Public Visibility=Default Availability=Available
@@ -583,7 +652,7 @@ func (this *QGraphicsView) ResetMatrix() {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:169
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform transform()
+// [88] QTransform transform() const
 func (this *QGraphicsView) Transform() *qtgui.QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView9transformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -595,7 +664,7 @@ func (this *QGraphicsView) Transform() *qtgui.QTransform /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:170
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform viewportTransform()
+// [88] QTransform viewportTransform() const
 func (this *QGraphicsView) ViewportTransform() *qtgui.QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView17viewportTransformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -607,7 +676,7 @@ func (this *QGraphicsView) ViewportTransform() *qtgui.QTransform /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:171
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isTransformed()
+// [1] bool isTransformed() const
 func (this *QGraphicsView) IsTransformed() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView13isTransformedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -623,6 +692,21 @@ func (this *QGraphicsView) SetTransform(matrix qtgui.QTransform_ITF, combine boo
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView12setTransformERK10QTransformb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:172
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTransform(const QTransform &, _Bool)
+func (this *QGraphicsView) SetTransform__(matrix qtgui.QTransform_ITF) {
+	var convArg0 unsafe.Pointer
+	if matrix != nil && matrix.QTransform_PTR() != nil {
+		convArg0 = matrix.QTransform_PTR().GetCthis()
+	}
+	// arg: 1, bool=Bool, =Invalid,
+	combine := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView12setTransformERK10QTransformb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
 	qtrt.ErrPrint(err, rv)
 }
@@ -720,11 +804,67 @@ func (this *QGraphicsView) EnsureVisible(rect qtcore.QRectF_ITF, xmargin int, ym
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsview.h:182
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ensureVisible(const QRectF &, int, int)
+func (this *QGraphicsView) EnsureVisible__(rect qtcore.QRectF_ITF) {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	xmargin := 50
+	// arg: 2, int=Int, =Invalid,
+	ymargin := 50
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:182
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ensureVisible(const QRectF &, int, int)
+func (this *QGraphicsView) EnsureVisible__1(rect qtcore.QRectF_ITF, xmargin int) {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	// arg: 2, int=Int, =Invalid,
+	ymargin := 50
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsview.h:183
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void ensureVisible(qreal, qreal, qreal, qreal, int, int)
 func (this *QGraphicsView) EnsureVisible_1(x float64, y float64, w float64, h float64, xmargin int, ymargin int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:183
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void ensureVisible(qreal, qreal, qreal, qreal, int, int)
+func (this *QGraphicsView) EnsureVisible_1_(x float64, y float64, w float64, h float64) {
+	// arg: 4, int=Int, =Invalid,
+	xmargin := 50
+	// arg: 5, int=Int, =Invalid,
+	ymargin := 50
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:183
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void ensureVisible(qreal, qreal, qreal, qreal, int, int)
+func (this *QGraphicsView) EnsureVisible_1_1(x float64, y float64, w float64, h float64, xmargin int) {
+	// arg: 5, int=Int, =Invalid,
+	ymargin := 50
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
 }
@@ -742,6 +882,38 @@ func (this *QGraphicsView) EnsureVisible_2(item QGraphicsItem_ITF /*777 const QG
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsview.h:184
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void ensureVisible(const QGraphicsItem *, int, int)
+func (this *QGraphicsView) EnsureVisible_2_(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) {
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsItem_PTR() != nil {
+		convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	xmargin := 50
+	// arg: 2, int=Int, =Invalid,
+	ymargin := 50
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:184
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void ensureVisible(const QGraphicsItem *, int, int)
+func (this *QGraphicsView) EnsureVisible_2_1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, xmargin int) {
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsItem_PTR() != nil {
+		convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	}
+	// arg: 2, int=Int, =Invalid,
+	ymargin := 50
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsview.h:185
 // index:0
 // Public Visibility=Default Availability=Available
@@ -755,11 +927,37 @@ func (this *QGraphicsView) FitInView(rect qtcore.QRectF_ITF, aspectRadioMode int
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsview.h:185
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void fitInView(const QRectF &, Qt::AspectRatioMode)
+func (this *QGraphicsView) FitInView__(rect qtcore.QRectF_ITF) {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	// arg: 1, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	aspectRadioMode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewERK6QRectFN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, aspectRadioMode)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsview.h:186
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void fitInView(qreal, qreal, qreal, qreal, Qt::AspectRatioMode)
 func (this *QGraphicsView) FitInView_1(x float64, y float64, w float64, h float64, aspectRadioMode int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewEddddN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, aspectRadioMode)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:186
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void fitInView(qreal, qreal, qreal, qreal, Qt::AspectRatioMode)
+func (this *QGraphicsView) FitInView_1_(x float64, y float64, w float64, h float64) {
+	// arg: 4, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	aspectRadioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewEddddN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, aspectRadioMode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -773,6 +971,21 @@ func (this *QGraphicsView) FitInView_2(item QGraphicsItem_ITF /*777 const QGraph
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewEPK13QGraphicsItemN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, aspectRadioMode)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:188
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void fitInView(const QGraphicsItem *, Qt::AspectRatioMode)
+func (this *QGraphicsView) FitInView_2_(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) {
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsItem_PTR() != nil {
+		convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	}
+	// arg: 1, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	aspectRadioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewEPK13QGraphicsItemN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, aspectRadioMode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -798,10 +1011,73 @@ func (this *QGraphicsView) Render(painter qtgui.QPainter_ITF /*777 QPainter **/,
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsview.h:191
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void render(QPainter *, const QRectF &, const QRect &, Qt::AspectRatioMode)
+func (this *QGraphicsView) Render__(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	// arg: 1, const QRectF &=LValueReference, QRectF=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, const QRect &=LValueReference, QRect=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	aspectRatioMode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView6renderEP8QPainterRK6QRectFRK5QRectN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, aspectRatioMode)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:191
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void render(QPainter *, const QRectF &, const QRect &, Qt::AspectRatioMode)
+func (this *QGraphicsView) Render__1(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRectF_ITF) {
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if target != nil && target.QRectF_PTR() != nil {
+		convArg1 = target.QRectF_PTR().GetCthis()
+	}
+	// arg: 2, const QRect &=LValueReference, QRect=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	aspectRatioMode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView6renderEP8QPainterRK6QRectFRK5QRectN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, aspectRatioMode)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:191
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void render(QPainter *, const QRectF &, const QRect &, Qt::AspectRatioMode)
+func (this *QGraphicsView) Render__2(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRectF_ITF, source qtcore.QRect_ITF) {
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if target != nil && target.QRectF_PTR() != nil {
+		convArg1 = target.QRectF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if source != nil && source.QRect_PTR() != nil {
+		convArg2 = source.QRect_PTR().GetCthis()
+	}
+	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	aspectRatioMode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView6renderEP8QPainterRK6QRectFRK5QRectN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, aspectRatioMode)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsview.h:201
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QGraphicsItem * itemAt(const QPoint &)
+// [8] QGraphicsItem * itemAt(const QPoint &) const
 func (this *QGraphicsView) ItemAt(pos qtcore.QPoint_ITF) *QGraphicsItem /*777 QGraphicsItem **/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -815,7 +1091,7 @@ func (this *QGraphicsView) ItemAt(pos qtcore.QPoint_ITF) *QGraphicsItem /*777 QG
 // /usr/include/qt/QtWidgets/qgraphicsview.h:202
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] QGraphicsItem * itemAt(int, int)
+// [8] QGraphicsItem * itemAt(int, int) const
 func (this *QGraphicsView) ItemAt_1(x int, y int) *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView6itemAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -825,7 +1101,7 @@ func (this *QGraphicsView) ItemAt_1(x int, y int) *QGraphicsItem /*777 QGraphics
 // /usr/include/qt/QtWidgets/qgraphicsview.h:204
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF mapToScene(const QPoint &)
+// [16] QPointF mapToScene(const QPoint &) const
 func (this *QGraphicsView) MapToScene(point qtcore.QPoint_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
@@ -841,7 +1117,7 @@ func (this *QGraphicsView) MapToScene(point qtcore.QPoint_ITF) *qtcore.QPointF /
 // /usr/include/qt/QtWidgets/qgraphicsview.h:205
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF mapToScene(const QRect &)
+// [8] QPolygonF mapToScene(const QRect &) const
 func (this *QGraphicsView) MapToScene_1(rect qtcore.QRect_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -857,7 +1133,7 @@ func (this *QGraphicsView) MapToScene_1(rect qtcore.QRect_ITF) *qtgui.QPolygonF 
 // /usr/include/qt/QtWidgets/qgraphicsview.h:206
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF mapToScene(const QPolygon &)
+// [8] QPolygonF mapToScene(const QPolygon &) const
 func (this *QGraphicsView) MapToScene_2(polygon qtgui.QPolygon_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygon_PTR() != nil {
@@ -873,7 +1149,7 @@ func (this *QGraphicsView) MapToScene_2(polygon qtgui.QPolygon_ITF) *qtgui.QPoly
 // /usr/include/qt/QtWidgets/qgraphicsview.h:207
 // index:3
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath mapToScene(const QPainterPath &)
+// [8] QPainterPath mapToScene(const QPainterPath &) const
 func (this *QGraphicsView) MapToScene_3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
@@ -889,7 +1165,7 @@ func (this *QGraphicsView) MapToScene_3(path qtgui.QPainterPath_ITF) *qtgui.QPai
 // /usr/include/qt/QtWidgets/qgraphicsview.h:212
 // index:4
 // Public inline Visibility=Default Availability=Available
-// [16] QPointF mapToScene(int, int)
+// [16] QPointF mapToScene(int, int) const
 func (this *QGraphicsView) MapToScene_4(x int, y int) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -901,7 +1177,7 @@ func (this *QGraphicsView) MapToScene_4(x int, y int) *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:213
 // index:5
 // Public inline Visibility=Default Availability=Available
-// [8] QPolygonF mapToScene(int, int, int, int)
+// [8] QPolygonF mapToScene(int, int, int, int) const
 func (this *QGraphicsView) MapToScene_5(x int, y int, w int, h int) *qtgui.QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -913,7 +1189,7 @@ func (this *QGraphicsView) MapToScene_5(x int, y int, w int, h int) *qtgui.QPoly
 // /usr/include/qt/QtWidgets/qgraphicsview.h:208
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint mapFromScene(const QPointF &)
+// [8] QPoint mapFromScene(const QPointF &) const
 func (this *QGraphicsView) MapFromScene(point qtcore.QPointF_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -929,7 +1205,7 @@ func (this *QGraphicsView) MapFromScene(point qtcore.QPointF_ITF) *qtcore.QPoint
 // /usr/include/qt/QtWidgets/qgraphicsview.h:209
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QPolygon mapFromScene(const QRectF &)
+// [8] QPolygon mapFromScene(const QRectF &) const
 func (this *QGraphicsView) MapFromScene_1(rect qtcore.QRectF_ITF) *qtgui.QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -945,7 +1221,7 @@ func (this *QGraphicsView) MapFromScene_1(rect qtcore.QRectF_ITF) *qtgui.QPolygo
 // /usr/include/qt/QtWidgets/qgraphicsview.h:210
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] QPolygon mapFromScene(const QPolygonF &)
+// [8] QPolygon mapFromScene(const QPolygonF &) const
 func (this *QGraphicsView) MapFromScene_2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
@@ -961,7 +1237,7 @@ func (this *QGraphicsView) MapFromScene_2(polygon qtgui.QPolygonF_ITF) *qtgui.QP
 // /usr/include/qt/QtWidgets/qgraphicsview.h:211
 // index:3
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath mapFromScene(const QPainterPath &)
+// [8] QPainterPath mapFromScene(const QPainterPath &) const
 func (this *QGraphicsView) MapFromScene_3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
@@ -977,7 +1253,7 @@ func (this *QGraphicsView) MapFromScene_3(path qtgui.QPainterPath_ITF) *qtgui.QP
 // /usr/include/qt/QtWidgets/qgraphicsview.h:214
 // index:4
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint mapFromScene(qreal, qreal)
+// [8] QPoint mapFromScene(qreal, qreal) const
 func (this *QGraphicsView) MapFromScene_4(x float64, y float64) *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -989,7 +1265,7 @@ func (this *QGraphicsView) MapFromScene_4(x float64, y float64) *qtcore.QPoint /
 // /usr/include/qt/QtWidgets/qgraphicsview.h:215
 // index:5
 // Public inline Visibility=Default Availability=Available
-// [8] QPolygon mapFromScene(qreal, qreal, qreal, qreal)
+// [8] QPolygon mapFromScene(qreal, qreal, qreal, qreal) const
 func (this *QGraphicsView) MapFromScene_5(x float64, y float64, w float64, h float64) *qtgui.QPolygon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -1001,7 +1277,7 @@ func (this *QGraphicsView) MapFromScene_5(x float64, y float64, w float64, h flo
 // /usr/include/qt/QtWidgets/qgraphicsview.h:217
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QVariant inputMethodQuery(Qt::InputMethodQuery)
+// [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
 func (this *QGraphicsView) InputMethodQuery(query int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView16inputMethodQueryEN2Qt16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), query)
 	qtrt.ErrPrint(err, rv)
@@ -1013,7 +1289,7 @@ func (this *QGraphicsView) InputMethodQuery(query int) *qtcore.QVariant /*123*/ 
 // /usr/include/qt/QtWidgets/qgraphicsview.h:219
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QBrush backgroundBrush()
+// [8] QBrush backgroundBrush() const
 func (this *QGraphicsView) BackgroundBrush() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView15backgroundBrushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1038,7 +1314,7 @@ func (this *QGraphicsView) SetBackgroundBrush(brush qtgui.QBrush_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:222
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QBrush foregroundBrush()
+// [8] QBrush foregroundBrush() const
 func (this *QGraphicsView) ForegroundBrush() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView15foregroundBrushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1069,6 +1345,34 @@ func (this *QGraphicsView) InvalidateScene(rect qtcore.QRectF_ITF, layers int) {
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView15invalidateSceneERK6QRectF6QFlagsIN14QGraphicsScene10SceneLayerEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, layers)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:227
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void invalidateScene(const QRectF &, QGraphicsScene::SceneLayers)
+func (this *QGraphicsView) InvalidateScene__() {
+	// arg: 0, const QRectF &=LValueReference, QRectF=Record,
+	var convArg0 unsafe.Pointer
+	// arg: 1, QGraphicsScene::SceneLayers=Elaborated, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>
+	layers := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView15invalidateSceneERK6QRectF6QFlagsIN14QGraphicsScene10SceneLayerEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, layers)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:227
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void invalidateScene(const QRectF &, QGraphicsScene::SceneLayers)
+func (this *QGraphicsView) InvalidateScene__1(rect qtcore.QRectF_ITF) {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	// arg: 1, QGraphicsScene::SceneLayers=Elaborated, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>
+	layers := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView15invalidateSceneERK6QRectF6QFlagsIN14QGraphicsScene10SceneLayerEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, layers)
 	qtrt.ErrPrint(err, rv)
 }

@@ -89,7 +89,7 @@ func NewQTextLength_1(type_ int, value float64) *QTextLength {
 // /usr/include/qt/QtGui/qtextformat.h:93
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QTextLength::Type type()
+// [4] QTextLength::Type type() const
 func (this *QTextLength) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -99,7 +99,7 @@ func (this *QTextLength) Type() int {
 // /usr/include/qt/QtGui/qtextformat.h:94
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal value(qreal)
+// [8] qreal value(qreal) const
 func (this *QTextLength) Value(maximumLength float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), maximumLength)
 	qtrt.ErrPrint(err, rv)
@@ -109,7 +109,7 @@ func (this *QTextLength) Value(maximumLength float64) float64 {
 // /usr/include/qt/QtGui/qtextformat.h:104
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal rawValue()
+// [8] qreal rawValue() const
 func (this *QTextLength) RawValue() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength8rawValueEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,7 +119,7 @@ func (this *QTextLength) RawValue() float64 {
 // /usr/include/qt/QtGui/qtextformat.h:106
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QTextLength &)
+// [1] bool operator==(const QTextLength &) const
 func (this *QTextLength) Operator_equal_equal(other QTextLength_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTextLength_PTR() != nil {
@@ -133,7 +133,7 @@ func (this *QTextLength) Operator_equal_equal(other QTextLength_ITF) bool {
 // /usr/include/qt/QtGui/qtextformat.h:109
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QTextLength &)
+// [1] bool operator!=(const QTextLength &) const
 func (this *QTextLength) Operator_not_equal(other QTextLength_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTextLength_PTR() != nil {

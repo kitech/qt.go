@@ -98,7 +98,7 @@ func (this *QSGOpacityNode) SetOpacity(opacity float64) {
 // /usr/include/qt/QtQuick/qsgnode.h:323
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal opacity()
+// [8] qreal opacity() const
 func (this *QSGOpacityNode) Opacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode7opacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -117,7 +117,7 @@ func (this *QSGOpacityNode) SetCombinedOpacity(opacity float64) {
 // /usr/include/qt/QtQuick/qsgnode.h:326
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal combinedOpacity()
+// [8] qreal combinedOpacity() const
 func (this *QSGOpacityNode) CombinedOpacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode15combinedOpacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,7 +127,7 @@ func (this *QSGOpacityNode) CombinedOpacity() float64 {
 // /usr/include/qt/QtQuick/qsgnode.h:328
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isSubtreeBlocked()
+// [1] bool isSubtreeBlocked() const
 func (this *QSGOpacityNode) IsSubtreeBlocked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode16isSubtreeBlockedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

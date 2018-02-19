@@ -108,7 +108,7 @@ func DeleteQAccessibleEvent(this *QAccessibleEvent) {
 // /usr/include/qt/QtGui/qaccessible.h:701
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QAccessible::Event type()
+// [4] QAccessible::Event type() const
 func (this *QAccessibleEvent) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QAccessibleEvent) Type() int {
 // /usr/include/qt/QtGui/qaccessible.h:702
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QObject * object()
+// [8] QObject * object() const
 func (this *QAccessibleEvent) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,7 +128,7 @@ func (this *QAccessibleEvent) Object() *qtcore.QObject /*777 QObject **/ {
 // /usr/include/qt/QtGui/qaccessible.h:703
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QAccessible::Id uniqueId()
+// [4] QAccessible::Id uniqueId() const
 func (this *QAccessibleEvent) UniqueId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent8uniqueIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,7 +147,7 @@ func (this *QAccessibleEvent) SetChild(chld int) {
 // /usr/include/qt/QtGui/qaccessible.h:706
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int child()
+// [4] int child() const
 func (this *QAccessibleEvent) Child() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent5childEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +157,7 @@ func (this *QAccessibleEvent) Child() int {
 // /usr/include/qt/QtGui/qaccessible.h:708
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QAccessibleInterface * accessibleInterface()
+// [8] QAccessibleInterface * accessibleInterface() const
 func (this *QAccessibleEvent) AccessibleInterface() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent19accessibleInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -98,6 +98,22 @@ func (this *QWaitCondition) Wait(lockedMutex QMutex_ITF /*777 QMutex **/, time u
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qwaitcondition.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool wait(QMutex *, unsigned long)
+func (this *QWaitCondition) Wait__(lockedMutex QMutex_ITF /*777 QMutex **/) bool {
+	var convArg0 unsafe.Pointer
+	if lockedMutex != nil && lockedMutex.QMutex_PTR() != nil {
+		convArg0 = lockedMutex.QMutex_PTR().GetCthis()
+	}
+	// arg: 1, unsigned long=ULong, =Invalid,
+	time := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qwaitcondition.h:63
 // index:1
 // Public Visibility=Default Availability=Available
@@ -107,6 +123,22 @@ func (this *QWaitCondition) Wait_1(lockedReadWriteLock QReadWriteLock_ITF /*777 
 	if lockedReadWriteLock != nil && lockedReadWriteLock.QReadWriteLock_PTR() != nil {
 		convArg0 = lockedReadWriteLock.QReadWriteLock_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qwaitcondition.h:63
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool wait(QReadWriteLock *, unsigned long)
+func (this *QWaitCondition) Wait_1_(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) bool {
+	var convArg0 unsafe.Pointer
+	if lockedReadWriteLock != nil && lockedReadWriteLock.QReadWriteLock_PTR() != nil {
+		convArg0 = lockedReadWriteLock.QReadWriteLock_PTR().GetCthis()
+	}
+	// arg: 1, unsigned long=ULong, =Invalid,
+	time := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

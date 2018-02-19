@@ -62,7 +62,7 @@ func (*QAbstractListModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractListMo
 // /usr/include/qt/QtCore/qabstractitemmodel.h:393
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAbstractListModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractListModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +85,20 @@ func NewQAbstractListModel(parent QObject_ITF /*777 QObject **/) *QAbstractListM
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qabstractitemmodel.h:396
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAbstractListModel(QObject *)
+func NewQAbstractListModel__() *QAbstractListModel {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractListModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAbstractListModelFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractListModel")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qabstractitemmodel.h:397
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -99,7 +113,7 @@ func DeleteQAbstractListModel(this *QAbstractListModel) {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:399
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [24] QModelIndex index(int, int, const QModelIndex &)
+// [24] QModelIndex index(int, int, const QModelIndex &) const
 func (this *QAbstractListModel) Index(row int, column int, parent QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -112,10 +126,40 @@ func (this *QAbstractListModel) Index(row int, column int, parent QModelIndex_IT
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qabstractitemmodel.h:399
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [24] QModelIndex index(int, int, const QModelIndex &) const
+func (this *QAbstractListModel) Index__(row int) *QModelIndex /*123*/ {
+	// arg: 1, int=Int, =Invalid,
+	column := 0
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	var convArg2 = NewQModelIndex()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractListModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:399
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [24] QModelIndex index(int, int, const QModelIndex &) const
+func (this *QAbstractListModel) Index__1(row int, column int) *QModelIndex /*123*/ {
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	var convArg2 = NewQModelIndex()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractListModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qabstractitemmodel.h:400
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [24] QModelIndex sibling(int, int, const QModelIndex &)
+// [24] QModelIndex sibling(int, int, const QModelIndex &) const
 func (this *QAbstractListModel) Sibling(row int, column int, idx QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
 	if idx != nil && idx.QModelIndex_PTR() != nil {
@@ -149,7 +193,7 @@ func (this *QAbstractListModel) DropMimeData(data QMimeData_ITF /*777 const QMim
 // /usr/include/qt/QtCore/qabstractitemmodel.h:404
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] Qt::ItemFlags flags(const QModelIndex &)
+// [4] Qt::ItemFlags flags(const QModelIndex &) const
 func (this *QAbstractListModel) Flags(index QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {

@@ -117,7 +117,7 @@ func (this *QAccessibleTextCursorEvent) SetCursorPosition(position int) {
 // /usr/include/qt/QtGui/qaccessible.h:763
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int cursorPosition()
+// [4] int cursorPosition() const
 func (this *QAccessibleTextCursorEvent) CursorPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextCursorEvent14cursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

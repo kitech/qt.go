@@ -75,7 +75,7 @@ func DeleteQThreadStorageData(this *QThreadStorageData) {
 // /usr/include/qt/QtCore/qthreadstorage.h:56
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] void ** get()
+// [8] void ** get() const
 func (this *QThreadStorageData) Get() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

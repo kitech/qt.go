@@ -92,6 +92,82 @@ func NewQNetworkProxy_1(type_ int, hostName string, port uint16, user string, pa
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:161
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QNetworkProxy(enum QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
+func NewQNetworkProxy_1_(type_ int) *QNetworkProxy {
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = qtcore.NewQString()
+	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short
+	port := 0
+	// arg: 3, const QString &=LValueReference, QString=Record,
+	var convArg3 = qtcore.NewQString()
+	// arg: 4, const QString &=LValueReference, QString=Record,
+	var convArg4 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyC2ENS_9ProxyTypeERK7QStringtS3_S3_", qtrt.FFI_TYPE_POINTER, type_, convArg1, port, convArg3, convArg4)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQNetworkProxyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQNetworkProxy)
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:161
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QNetworkProxy(enum QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
+func NewQNetworkProxy_1_1(type_ int, hostName string) *QNetworkProxy {
+	var tmpArg1 = qtcore.NewQString_5(hostName)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short
+	port := 0
+	// arg: 3, const QString &=LValueReference, QString=Record,
+	var convArg3 = qtcore.NewQString()
+	// arg: 4, const QString &=LValueReference, QString=Record,
+	var convArg4 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyC2ENS_9ProxyTypeERK7QStringtS3_S3_", qtrt.FFI_TYPE_POINTER, type_, convArg1, port, convArg3, convArg4)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQNetworkProxyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQNetworkProxy)
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:161
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QNetworkProxy(enum QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
+func NewQNetworkProxy_1_2(type_ int, hostName string, port uint16) *QNetworkProxy {
+	var tmpArg1 = qtcore.NewQString_5(hostName)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 3, const QString &=LValueReference, QString=Record,
+	var convArg3 = qtcore.NewQString()
+	// arg: 4, const QString &=LValueReference, QString=Record,
+	var convArg4 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyC2ENS_9ProxyTypeERK7QStringtS3_S3_", qtrt.FFI_TYPE_POINTER, type_, convArg1, port, convArg3, convArg4)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQNetworkProxyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQNetworkProxy)
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:161
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QNetworkProxy(enum QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
+func NewQNetworkProxy_1_3(type_ int, hostName string, port uint16, user string) *QNetworkProxy {
+	var tmpArg1 = qtcore.NewQString_5(hostName)
+	var convArg1 = tmpArg1.GetCthis()
+	var tmpArg3 = qtcore.NewQString_5(user)
+	var convArg3 = tmpArg3.GetCthis()
+	// arg: 4, const QString &=LValueReference, QString=Record,
+	var convArg4 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyC2ENS_9ProxyTypeERK7QStringtS3_S3_", qtrt.FFI_TYPE_POINTER, type_, convArg1, port, convArg3, convArg4)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQNetworkProxyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQNetworkProxy)
+	return gothis
+}
+
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:165
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -147,7 +223,7 @@ func (this *QNetworkProxy) Swap(other QNetworkProxy_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QNetworkProxy &)
+// [1] bool operator==(const QNetworkProxy &) const
 func (this *QNetworkProxy) Operator_equal_equal(other QNetworkProxy_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkProxy_PTR() != nil {
@@ -161,7 +237,7 @@ func (this *QNetworkProxy) Operator_equal_equal(other QNetworkProxy_ITF) bool {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:173
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QNetworkProxy &)
+// [1] bool operator!=(const QNetworkProxy &) const
 func (this *QNetworkProxy) Operator_not_equal(other QNetworkProxy_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkProxy_PTR() != nil {
@@ -184,7 +260,7 @@ func (this *QNetworkProxy) SetType(type_ int) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:177
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QNetworkProxy::ProxyType type()
+// [4] QNetworkProxy::ProxyType type() const
 func (this *QNetworkProxy) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,7 +279,7 @@ func (this *QNetworkProxy) SetCapabilities(capab int) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QNetworkProxy::Capabilities capabilities()
+// [4] QNetworkProxy::Capabilities capabilities() const
 func (this *QNetworkProxy) Capabilities() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy12capabilitiesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -213,7 +289,7 @@ func (this *QNetworkProxy) Capabilities() int {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:181
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isCachingProxy()
+// [1] bool isCachingProxy() const
 func (this *QNetworkProxy) IsCachingProxy() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy14isCachingProxyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,7 +299,7 @@ func (this *QNetworkProxy) IsCachingProxy() bool {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:182
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isTransparentProxy()
+// [1] bool isTransparentProxy() const
 func (this *QNetworkProxy) IsTransparentProxy() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy18isTransparentProxyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -244,7 +320,7 @@ func (this *QNetworkProxy) SetUser(userName string) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:185
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString user()
+// [8] QString user() const
 func (this *QNetworkProxy) User() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy4userEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +344,7 @@ func (this *QNetworkProxy) SetPassword(password string) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:188
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString password()
+// [8] QString password() const
 func (this *QNetworkProxy) Password() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy8passwordEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -292,7 +368,7 @@ func (this *QNetworkProxy) SetHostName(hostName string) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:191
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString hostName()
+// [8] QString hostName() const
 func (this *QNetworkProxy) HostName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy8hostNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -314,7 +390,7 @@ func (this *QNetworkProxy) SetPort(port uint16) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:194
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] quint16 port()
+// [2] quint16 port() const
 func (this *QNetworkProxy) Port() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy4portEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -358,7 +434,7 @@ func QNetworkProxy_ApplicationProxy() *QNetworkProxy /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:200
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant header(QNetworkRequest::KnownHeaders)
+// [16] QVariant header(QNetworkRequest::KnownHeaders) const
 func (this *QNetworkProxy) Header(header int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy6headerEN15QNetworkRequest12KnownHeadersE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), header)
 	qtrt.ErrPrint(err, rv)
@@ -383,7 +459,7 @@ func (this *QNetworkProxy) SetHeader(header int, value qtcore.QVariant_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:204
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasRawHeader(const QByteArray &)
+// [1] bool hasRawHeader(const QByteArray &) const
 func (this *QNetworkProxy) HasRawHeader(headerName qtcore.QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if headerName != nil && headerName.QByteArray_PTR() != nil {
@@ -397,7 +473,7 @@ func (this *QNetworkProxy) HasRawHeader(headerName qtcore.QByteArray_ITF) bool {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:206
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray rawHeader(const QByteArray &)
+// [8] QByteArray rawHeader(const QByteArray &) const
 func (this *QNetworkProxy) RawHeader(headerName qtcore.QByteArray_ITF) *qtcore.QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if headerName != nil && headerName.QByteArray_PTR() != nil {

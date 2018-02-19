@@ -71,7 +71,7 @@ func (*QQuickTransform) NewFromPointer(cthis unsafe.Pointer) *QQuickTransform {
 // /usr/include/qt/QtQuick/qquickitem.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQuickTransform) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQuickTransform10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +87,20 @@ func NewQQuickTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickTran
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QQuickTransformC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQuickTransformFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickTransform")
+	return gothis
+}
+
+// /usr/include/qt/QtQuick/qquickitem.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickTransform(QObject *)
+func NewQQuickTransform__() *QQuickTransform {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQuickTransformC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickTransformFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -134,7 +148,7 @@ func (this *QQuickTransform) PrependToItem(arg0 QQuickItem_ITF /*777 QQuickItem 
 // /usr/include/qt/QtQuick/qquickitem.h:68
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [-2] void applyTo(QMatrix4x4 *)
+// [-2] void applyTo(QMatrix4x4 *) const
 func (this *QQuickTransform) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x4 **/) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {

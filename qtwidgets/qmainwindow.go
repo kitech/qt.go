@@ -74,7 +74,7 @@ func (*QMainWindow) NewFromPointer(cthis unsafe.Pointer) *QMainWindow {
 // /usr/include/qt/QtWidgets/qmainwindow.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QMainWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +97,40 @@ func NewQMainWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMainWindo
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qmainwindow.h:94
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QMainWindow(QWidget *, Qt::WindowFlags)
+func NewQMainWindow__() *QMainWindow {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQMainWindowFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMainWindow")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qmainwindow.h:94
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QMainWindow(QWidget *, Qt::WindowFlags)
+func NewQMainWindow__1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQMainWindowFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMainWindow")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qmainwindow.h:95
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -111,7 +145,7 @@ func DeleteQMainWindow(this *QMainWindow) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize iconSize()
+// [8] QSize iconSize() const
 func (this *QMainWindow) IconSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow8iconSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,7 +170,7 @@ func (this *QMainWindow) SetIconSize(iconSize qtcore.QSize_ITF) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ToolButtonStyle toolButtonStyle()
+// [4] Qt::ToolButtonStyle toolButtonStyle() const
 func (this *QMainWindow) ToolButtonStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow15toolButtonStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -155,7 +189,7 @@ func (this *QMainWindow) SetToolButtonStyle(toolButtonStyle int) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isAnimated()
+// [1] bool isAnimated() const
 func (this *QMainWindow) IsAnimated() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow10isAnimatedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -165,7 +199,7 @@ func (this *QMainWindow) IsAnimated() bool {
 // /usr/include/qt/QtWidgets/qmainwindow.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isDockNestingEnabled()
+// [1] bool isDockNestingEnabled() const
 func (this *QMainWindow) IsDockNestingEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow20isDockNestingEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +209,7 @@ func (this *QMainWindow) IsDockNestingEnabled() bool {
 // /usr/include/qt/QtWidgets/qmainwindow.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool documentMode()
+// [1] bool documentMode() const
 func (this *QMainWindow) DocumentMode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow12documentModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +228,7 @@ func (this *QMainWindow) SetDocumentMode(enabled bool) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTabWidget::TabShape tabShape()
+// [4] QTabWidget::TabShape tabShape() const
 func (this *QMainWindow) TabShape() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow8tabShapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -213,7 +247,7 @@ func (this *QMainWindow) SetTabShape(tabShape int) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTabWidget::TabPosition tabPosition(Qt::DockWidgetArea)
+// [4] QTabWidget::TabPosition tabPosition(Qt::DockWidgetArea) const
 func (this *QMainWindow) TabPosition(area int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow11tabPositionEN2Qt14DockWidgetAreaE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), area)
 	qtrt.ErrPrint(err, rv)
@@ -241,7 +275,7 @@ func (this *QMainWindow) SetDockOptions(options int) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QMainWindow::DockOptions dockOptions()
+// [4] QMainWindow::DockOptions dockOptions() const
 func (this *QMainWindow) DockOptions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow11dockOptionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -251,7 +285,7 @@ func (this *QMainWindow) DockOptions() int {
 // /usr/include/qt/QtWidgets/qmainwindow.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSeparator(const QPoint &)
+// [1] bool isSeparator(const QPoint &) const
 func (this *QMainWindow) IsSeparator(pos qtcore.QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -265,7 +299,7 @@ func (this *QMainWindow) IsSeparator(pos qtcore.QPoint_ITF) bool {
 // /usr/include/qt/QtWidgets/qmainwindow.h:126
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QMenuBar * menuBar()
+// [8] QMenuBar * menuBar() const
 func (this *QMainWindow) MenuBar() *QMenuBar /*777 QMenuBar **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow7menuBarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -288,7 +322,7 @@ func (this *QMainWindow) SetMenuBar(menubar QMenuBar_ITF /*777 QMenuBar **/) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * menuWidget()
+// [8] QWidget * menuWidget() const
 func (this *QMainWindow) MenuWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow10menuWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -311,7 +345,7 @@ func (this *QMainWindow) SetMenuWidget(menubar QWidget_ITF /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStatusBar * statusBar()
+// [8] QStatusBar * statusBar() const
 func (this *QMainWindow) StatusBar() *QStatusBar /*777 QStatusBar **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow9statusBarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -334,7 +368,7 @@ func (this *QMainWindow) SetStatusBar(statusbar QStatusBar_ITF /*777 QStatusBar 
 // /usr/include/qt/QtWidgets/qmainwindow.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * centralWidget()
+// [8] QWidget * centralWidget() const
 func (this *QMainWindow) CentralWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow13centralWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -376,7 +410,7 @@ func (this *QMainWindow) SetCorner(corner int, area int) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:145
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::DockWidgetArea corner(Qt::Corner)
+// [4] Qt::DockWidgetArea corner(Qt::Corner) const
 func (this *QMainWindow) Corner(corner int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow6cornerEN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), corner)
 	qtrt.ErrPrint(err, rv)
@@ -388,6 +422,17 @@ func (this *QMainWindow) Corner(corner int) int {
 // Public Visibility=Default Availability=Available
 // [-2] void addToolBarBreak(Qt::ToolBarArea)
 func (this *QMainWindow) AddToolBarBreak(area int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow15addToolBarBreakEN2Qt11ToolBarAreaE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), area)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmainwindow.h:149
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addToolBarBreak(Qt::ToolBarArea)
+func (this *QMainWindow) AddToolBarBreak__() {
+	// arg: 0, Qt::ToolBarArea=Elaborated, Qt::ToolBarArea=Enum,
+	area := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow15addToolBarBreakEN2Qt11ToolBarAreaE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), area)
 	qtrt.ErrPrint(err, rv)
 }
@@ -489,7 +534,7 @@ func (this *QMainWindow) RemoveToolBarBreak(before QToolBar_ITF /*777 QToolBar *
 // /usr/include/qt/QtWidgets/qmainwindow.h:159
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool unifiedTitleAndToolBarOnMac()
+// [1] bool unifiedTitleAndToolBarOnMac() const
 func (this *QMainWindow) UnifiedTitleAndToolBarOnMac() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -499,7 +544,7 @@ func (this *QMainWindow) UnifiedTitleAndToolBarOnMac() bool {
 // /usr/include/qt/QtWidgets/qmainwindow.h:161
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ToolBarArea toolBarArea(QToolBar *)
+// [4] Qt::ToolBarArea toolBarArea(QToolBar *) const
 func (this *QMainWindow) ToolBarArea(toolbar QToolBar_ITF /*777 QToolBar **/) int {
 	var convArg0 unsafe.Pointer
 	if toolbar != nil && toolbar.QToolBar_PTR() != nil {
@@ -513,7 +558,7 @@ func (this *QMainWindow) ToolBarArea(toolbar QToolBar_ITF /*777 QToolBar **/) in
 // /usr/include/qt/QtWidgets/qmainwindow.h:162
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool toolBarBreak(QToolBar *)
+// [1] bool toolBarBreak(QToolBar *) const
 func (this *QMainWindow) ToolBarBreak(toolbar QToolBar_ITF /*777 QToolBar **/) bool {
 	var convArg0 unsafe.Pointer
 	if toolbar != nil && toolbar.QToolBar_PTR() != nil {
@@ -614,7 +659,7 @@ func (this *QMainWindow) RestoreDockWidget(dockwidget QDockWidget_ITF /*777 QDoc
 // /usr/include/qt/QtWidgets/qmainwindow.h:175
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::DockWidgetArea dockWidgetArea(QDockWidget *)
+// [4] Qt::DockWidgetArea dockWidgetArea(QDockWidget *) const
 func (this *QMainWindow) DockWidgetArea(dockwidget QDockWidget_ITF /*777 QDockWidget **/) int {
 	var convArg0 unsafe.Pointer
 	if dockwidget != nil && dockwidget.QDockWidget_PTR() != nil {
@@ -628,8 +673,22 @@ func (this *QMainWindow) DockWidgetArea(dockwidget QDockWidget_ITF /*777 QDockWi
 // /usr/include/qt/QtWidgets/qmainwindow.h:181
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray saveState(int)
+// [8] QByteArray saveState(int) const
 func (this *QMainWindow) SaveState(version int) *qtcore.QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow9saveStateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), version)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qmainwindow.h:181
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray saveState(int) const
+func (this *QMainWindow) SaveState__() *qtcore.QByteArray /*123*/ {
+	// arg: 0, int=Int, =Invalid,
+	version := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow9saveStateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), version)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -646,6 +705,22 @@ func (this *QMainWindow) RestoreState(state qtcore.QByteArray_ITF, version int) 
 	if state != nil && state.QByteArray_PTR() != nil {
 		convArg0 = state.QByteArray_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow12restoreStateERK10QByteArrayi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, version)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qmainwindow.h:182
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool restoreState(const QByteArray &, int)
+func (this *QMainWindow) RestoreState__(state qtcore.QByteArray_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if state != nil && state.QByteArray_PTR() != nil {
+		convArg0 = state.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	version := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow12restoreStateERK10QByteArrayi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, version)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

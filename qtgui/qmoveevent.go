@@ -94,7 +94,7 @@ func DeleteQMoveEvent(this *QMoveEvent) {
 // /usr/include/qt/QtGui/qevent.h:424
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QPoint & pos()
+// [8] const QPoint & pos() const
 func (this *QMoveEvent) Pos() *qtcore.QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,7 +106,7 @@ func (this *QMoveEvent) Pos() *qtcore.QPoint {
 // /usr/include/qt/QtGui/qevent.h:425
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QPoint & oldPos()
+// [8] const QPoint & oldPos() const
 func (this *QMoveEvent) OldPos() *qtcore.QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

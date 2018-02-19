@@ -99,7 +99,7 @@ func (this *QSGRectangleNode) SetRect_1(x float64, y float64, w float64, h float
 // /usr/include/qt/QtQuick/qsgrectanglenode.h:54
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [32] QRectF rect()
+// [32] QRectF rect() const
 func (this *QSGRectangleNode) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGRectangleNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,7 +124,7 @@ func (this *QSGRectangleNode) SetColor(color qtgui.QColor_ITF) {
 // /usr/include/qt/QtQuick/qsgrectanglenode.h:57
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [16] QColor color()
+// [16] QColor color() const
 func (this *QSGRectangleNode) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGRectangleNode5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -169,7 +169,7 @@ func (this *QStorageInfo) SetPath(path string) {
 // /usr/include/qt/QtCore/qstorageinfo.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString rootPath()
+// [8] QString rootPath() const
 func (this *QStorageInfo) RootPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo8rootPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +182,7 @@ func (this *QStorageInfo) RootPath() string {
 // /usr/include/qt/QtCore/qstorageinfo.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray device()
+// [8] QByteArray device() const
 func (this *QStorageInfo) Device() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +194,7 @@ func (this *QStorageInfo) Device() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qstorageinfo.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray subvolume()
+// [8] QByteArray subvolume() const
 func (this *QStorageInfo) Subvolume() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo9subvolumeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -206,7 +206,7 @@ func (this *QStorageInfo) Subvolume() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qstorageinfo.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray fileSystemType()
+// [8] QByteArray fileSystemType() const
 func (this *QStorageInfo) FileSystemType() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo14fileSystemTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,7 +218,7 @@ func (this *QStorageInfo) FileSystemType() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qstorageinfo.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QStorageInfo) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -231,7 +231,7 @@ func (this *QStorageInfo) Name() string {
 // /usr/include/qt/QtCore/qstorageinfo.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString displayName()
+// [8] QString displayName() const
 func (this *QStorageInfo) DisplayName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo11displayNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -244,7 +244,7 @@ func (this *QStorageInfo) DisplayName() string {
 // /usr/include/qt/QtCore/qstorageinfo.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 bytesTotal()
+// [8] qint64 bytesTotal() const
 func (this *QStorageInfo) BytesTotal() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo10bytesTotalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -254,7 +254,7 @@ func (this *QStorageInfo) BytesTotal() int64 {
 // /usr/include/qt/QtCore/qstorageinfo.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 bytesFree()
+// [8] qint64 bytesFree() const
 func (this *QStorageInfo) BytesFree() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo9bytesFreeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -264,7 +264,7 @@ func (this *QStorageInfo) BytesFree() int64 {
 // /usr/include/qt/QtCore/qstorageinfo.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 bytesAvailable()
+// [8] qint64 bytesAvailable() const
 func (this *QStorageInfo) BytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo14bytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -274,7 +274,7 @@ func (this *QStorageInfo) BytesAvailable() int64 {
 // /usr/include/qt/QtCore/qstorageinfo.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int blockSize()
+// [4] int blockSize() const
 func (this *QStorageInfo) BlockSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo9blockSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -284,7 +284,7 @@ func (this *QStorageInfo) BlockSize() int {
 // /usr/include/qt/QtCore/qstorageinfo.h:86
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isRoot()
+// [1] bool isRoot() const
 func (this *QStorageInfo) IsRoot() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo6isRootEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -294,7 +294,7 @@ func (this *QStorageInfo) IsRoot() bool {
 // /usr/include/qt/QtCore/qstorageinfo.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isReadOnly()
+// [1] bool isReadOnly() const
 func (this *QStorageInfo) IsReadOnly() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo10isReadOnlyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -304,7 +304,7 @@ func (this *QStorageInfo) IsReadOnly() bool {
 // /usr/include/qt/QtCore/qstorageinfo.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isReady()
+// [1] bool isReady() const
 func (this *QStorageInfo) IsReady() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo7isReadyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -314,7 +314,7 @@ func (this *QStorageInfo) IsReady() bool {
 // /usr/include/qt/QtCore/qstorageinfo.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QStorageInfo) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

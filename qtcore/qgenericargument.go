@@ -75,10 +75,42 @@ func NewQGenericArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericAr
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qobjectdefs.h:297
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QGenericArgument(const char *, const void *)
+func NewQGenericArgument__() *QGenericArgument {
+	// arg: 0, const char *=Pointer, =Invalid,
+	var convArg0 unsafe.Pointer
+	// arg: 1, const void *=Pointer, =Invalid,
+	var aData unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QGenericArgumentC2EPKcPKv", qtrt.FFI_TYPE_POINTER, convArg0, aData)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGenericArgumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGenericArgument)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qobjectdefs.h:297
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QGenericArgument(const char *, const void *)
+func NewQGenericArgument__1(aName string) *QGenericArgument {
+	var convArg0 = qtrt.CString(aName)
+	defer qtrt.FreeMem(convArg0)
+	// arg: 1, const void *=Pointer, =Invalid,
+	var aData unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QGenericArgumentC2EPKcPKv", qtrt.FFI_TYPE_POINTER, convArg0, aData)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGenericArgumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGenericArgument)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qobjectdefs.h:299
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] void * data()
+// [8] void * data() const
 func (this *QGenericArgument) Data() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QGenericArgument4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,7 +120,7 @@ func (this *QGenericArgument) Data() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtCore/qobjectdefs.h:300
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const char * name()
+// [8] const char * name() const
 func (this *QGenericArgument) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QGenericArgument4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

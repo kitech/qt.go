@@ -71,7 +71,7 @@ func (*QPlainTextDocumentLayout) NewFromPointer(cthis unsafe.Pointer) *QPlainTex
 // /usr/include/qt/QtWidgets/qplaintextedit.h:297
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QPlainTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -108,7 +108,7 @@ func DeleteQPlainTextDocumentLayout(this *QPlainTextDocumentLayout) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:306
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int hitTest(const QPointF &, Qt::HitTestAccuracy)
+// [4] int hitTest(const QPointF &, Qt::HitTestAccuracy) const
 func (this *QPlainTextDocumentLayout) HitTest(arg0 qtcore.QPointF_ITF, arg1 int) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPointF_PTR() != nil {
@@ -122,7 +122,7 @@ func (this *QPlainTextDocumentLayout) HitTest(arg0 qtcore.QPointF_ITF, arg1 int)
 // /usr/include/qt/QtWidgets/qplaintextedit.h:308
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int pageCount()
+// [4] int pageCount() const
 func (this *QPlainTextDocumentLayout) PageCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout9pageCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QPlainTextDocumentLayout) PageCount() int {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:309
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QSizeF documentSize()
+// [16] QSizeF documentSize() const
 func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout12documentSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:311
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QRectF frameBoundingRect(QTextFrame *)
+// [32] QRectF frameBoundingRect(QTextFrame *) const
 func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 qtgui.QTextFrame_ITF /*777 QTextFrame **/) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTextFrame_PTR() != nil {
@@ -160,7 +160,7 @@ func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 qtgui.QTextFrame_IT
 // /usr/include/qt/QtWidgets/qplaintextedit.h:312
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QRectF blockBoundingRect(const QTextBlock &)
+// [32] QRectF blockBoundingRect(const QTextBlock &) const
 func (this *QPlainTextDocumentLayout) BlockBoundingRect(block qtgui.QTextBlock_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {
@@ -176,7 +176,7 @@ func (this *QPlainTextDocumentLayout) BlockBoundingRect(block qtgui.QTextBlock_I
 // /usr/include/qt/QtWidgets/qplaintextedit.h:314
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void ensureBlockLayout(const QTextBlock &)
+// [-2] void ensureBlockLayout(const QTextBlock &) const
 func (this *QPlainTextDocumentLayout) EnsureBlockLayout(block qtgui.QTextBlock_ITF) {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {
@@ -198,7 +198,7 @@ func (this *QPlainTextDocumentLayout) SetCursorWidth(width int) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:317
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int cursorWidth()
+// [4] int cursorWidth() const
 func (this *QPlainTextDocumentLayout) CursorWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout11cursorWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

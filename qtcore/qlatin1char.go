@@ -76,7 +76,7 @@ func NewQLatin1Char(c byte) *QLatin1Char {
 // /usr/include/qt/QtCore/qchar.h:54
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] char toLatin1()
+// [1] char toLatin1() const
 func (this *QLatin1Char) ToLatin1() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -86,7 +86,7 @@ func (this *QLatin1Char) ToLatin1() byte {
 // /usr/include/qt/QtCore/qchar.h:55
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] ushort unicode()
+// [2] ushort unicode() const
 func (this *QLatin1Char) Unicode() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

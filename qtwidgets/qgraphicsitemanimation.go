@@ -74,7 +74,7 @@ func (*QGraphicsItemAnimation) NewFromPointer(cthis unsafe.Pointer) *QGraphicsIt
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +97,20 @@ func NewQGraphicsItemAnimation(parent qtcore.QObject_ITF /*777 QObject **/) *QGr
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:61
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsItemAnimation(QObject *)
+func NewQGraphicsItemAnimation__() *QGraphicsItemAnimation {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsItemAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsItemAnimation")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -111,7 +125,7 @@ func DeleteQGraphicsItemAnimation(this *QGraphicsItemAnimation) {
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QGraphicsItem * item()
+// [8] QGraphicsItem * item() const
 func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation4itemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,7 +148,7 @@ func (this *QGraphicsItemAnimation) SetItem(item QGraphicsItem_ITF /*777 QGraphi
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTimeLine * timeLine()
+// [8] QTimeLine * timeLine() const
 func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*777 QTimeLine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation8timeLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +171,7 @@ func (this *QGraphicsItemAnimation) SetTimeLine(timeLine qtcore.QTimeLine_ITF /*
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF posAt(qreal)
+// [16] QPointF posAt(qreal) const
 func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation5posAtEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +196,7 @@ func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos qtcore.QPointF_IT
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [48] QMatrix matrixAt(qreal)
+// [48] QMatrix matrixAt(qreal) const
 func (this *QGraphicsItemAnimation) MatrixAt(step float64) *qtgui.QMatrix /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation8matrixAtEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +208,7 @@ func (this *QGraphicsItemAnimation) MatrixAt(step float64) *qtgui.QMatrix /*123*
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal rotationAt(qreal)
+// [8] qreal rotationAt(qreal) const
 func (this *QGraphicsItemAnimation) RotationAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10rotationAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -213,7 +227,7 @@ func (this *QGraphicsItemAnimation) SetRotationAt(step float64, angle float64) {
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal xTranslationAt(qreal)
+// [8] qreal xTranslationAt(qreal) const
 func (this *QGraphicsItemAnimation) XTranslationAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14xTranslationAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -223,7 +237,7 @@ func (this *QGraphicsItemAnimation) XTranslationAt(step float64) float64 {
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal yTranslationAt(qreal)
+// [8] qreal yTranslationAt(qreal) const
 func (this *QGraphicsItemAnimation) YTranslationAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14yTranslationAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -242,7 +256,7 @@ func (this *QGraphicsItemAnimation) SetTranslationAt(step float64, dx float64, d
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal verticalScaleAt(qreal)
+// [8] qreal verticalScaleAt(qreal) const
 func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalScaleAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -252,7 +266,7 @@ func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) float64 {
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal horizontalScaleAt(qreal)
+// [8] qreal horizontalScaleAt(qreal) const
 func (this *QGraphicsItemAnimation) HorizontalScaleAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -271,7 +285,7 @@ func (this *QGraphicsItemAnimation) SetScaleAt(step float64, sx float64, sy floa
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal verticalShearAt(qreal)
+// [8] qreal verticalShearAt(qreal) const
 func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalShearAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -281,7 +295,7 @@ func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) float64 {
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal horizontalShearAt(qreal)
+// [8] qreal horizontalShearAt(qreal) const
 func (this *QGraphicsItemAnimation) HorizontalShearAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalShearAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)

@@ -77,6 +77,20 @@ func NewQQuickImageProvider(type_ int, flags int) *QQuickImageProvider {
 	return gothis
 }
 
+// /usr/include/qt/QtQuick/qquickimageprovider.h:92
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickImageProvider(enum QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
+func NewQQuickImageProvider__(type_ int) *QQuickImageProvider {
+	// arg: 1, QQmlImageProviderBase::Flags=Typedef, QQmlImageProviderBase::Flags=Typedef, QFlags<QQmlImageProviderBase::Flag>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProviderC2EN21QQmlImageProviderBase9ImageTypeE6QFlagsINS0_4FlagEE", qtrt.FFI_TYPE_POINTER, type_, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQuickImageProviderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQuickImageProvider)
+	return gothis
+}
+
 // /usr/include/qt/QtQuick/qquickimageprovider.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -91,7 +105,7 @@ func DeleteQQuickImageProvider(this *QQuickImageProvider) {
 // /usr/include/qt/QtQuick/qquickimageprovider.h:95
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QQmlImageProviderBase::ImageType imageType()
+// [4] QQmlImageProviderBase::ImageType imageType() const
 func (this *QQuickImageProvider) ImageType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickImageProvider9imageTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -101,7 +115,7 @@ func (this *QQuickImageProvider) ImageType() int {
 // /usr/include/qt/QtQuick/qquickimageprovider.h:96
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QQmlImageProviderBase::Flags flags()
+// [4] QQmlImageProviderBase::Flags flags() const
 func (this *QQuickImageProvider) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickImageProvider5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

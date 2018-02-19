@@ -85,6 +85,20 @@ func NewQBitArray_1(size int, val bool) *QBitArray {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qbitarray.h:58
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QBitArray(int, _Bool)
+func NewQBitArray_1_(size int) *QBitArray {
+	// arg: 1, bool=Bool, =Invalid,
+	val := false
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArrayC2Eib", qtrt.FFI_TYPE_POINTER, size, val)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQBitArrayFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBitArray)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qbitarray.h:60
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -129,7 +143,7 @@ func (this *QBitArray) Swap(other QBitArray_ITF) {
 // /usr/include/qt/QtCore/qbitarray.h:69
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int size()
+// [4] int size() const
 func (this *QBitArray) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArray4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,7 +153,7 @@ func (this *QBitArray) Size() int {
 // /usr/include/qt/QtCore/qbitarray.h:70
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QBitArray) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArray5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -149,7 +163,7 @@ func (this *QBitArray) Count() int {
 // /usr/include/qt/QtCore/qbitarray.h:71
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] int count(_Bool)
+// [4] int count(_Bool) const
 func (this *QBitArray) Count_1(on bool) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArray5countEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	qtrt.ErrPrint(err, rv)
@@ -159,7 +173,7 @@ func (this *QBitArray) Count_1(on bool) int {
 // /usr/include/qt/QtCore/qbitarray.h:73
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QBitArray) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArray7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -169,7 +183,7 @@ func (this *QBitArray) IsEmpty() bool {
 // /usr/include/qt/QtCore/qbitarray.h:74
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QBitArray) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArray6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +211,7 @@ func (this *QBitArray) Detach() {
 // /usr/include/qt/QtCore/qbitarray.h:79
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isDetached()
+// [1] bool isDetached() const
 func (this *QBitArray) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArray10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +230,7 @@ func (this *QBitArray) Clear() {
 // /usr/include/qt/QtCore/qbitarray.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testBit(int)
+// [1] bool testBit(int) const
 func (this *QBitArray) TestBit(i int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArray7testBitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -263,7 +277,7 @@ func (this *QBitArray) ToggleBit(i int) bool {
 // /usr/include/qt/QtCore/qbitarray.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool at(int)
+// [1] bool at(int) const
 func (this *QBitArray) At(i int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArray2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -285,7 +299,7 @@ func (this *QBitArray) Operator_get_index(i int) *QBitRef /*123*/ {
 // /usr/include/qt/QtCore/qbitarray.h:90
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool operator[](int)
+// [1] bool operator[](int) const
 func (this *QBitArray) Operator_get_index_1(i int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArrayixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -307,7 +321,7 @@ func (this *QBitArray) Operator_get_index_2(i uint) *QBitRef /*123*/ {
 // /usr/include/qt/QtCore/qbitarray.h:92
 // index:3
 // Public Visibility=Default Availability=Available
-// [1] bool operator[](uint)
+// [1] bool operator[](uint) const
 func (this *QBitArray) Operator_get_index_3(i uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArrayixEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -365,7 +379,7 @@ func (this *QBitArray) Operator_caret_equal(arg0 QBitArray_ITF) *QBitArray {
 // /usr/include/qt/QtCore/qbitarray.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QBitArray operator~()
+// [8] QBitArray operator~() const
 func (this *QBitArray) Operator_around() *QBitArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArraycoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -377,7 +391,7 @@ func (this *QBitArray) Operator_around() *QBitArray /*123*/ {
 // /usr/include/qt/QtCore/qbitarray.h:99
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QBitArray &)
+// [1] bool operator==(const QBitArray &) const
 func (this *QBitArray) Operator_equal_equal(other QBitArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QBitArray_PTR() != nil {
@@ -391,7 +405,7 @@ func (this *QBitArray) Operator_equal_equal(other QBitArray_ITF) bool {
 // /usr/include/qt/QtCore/qbitarray.h:100
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QBitArray &)
+// [1] bool operator!=(const QBitArray &) const
 func (this *QBitArray) Operator_not_equal(other QBitArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QBitArray_PTR() != nil {
@@ -407,6 +421,18 @@ func (this *QBitArray) Operator_not_equal(other QBitArray_ITF) bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool fill(_Bool, int)
 func (this *QBitArray) Fill(val bool, size int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArray4fillEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val, size)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:102
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool fill(_Bool, int)
+func (this *QBitArray) Fill__(val bool) bool {
+	// arg: 1, int=Int, =Invalid,
+	size := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArray4fillEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val, size)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

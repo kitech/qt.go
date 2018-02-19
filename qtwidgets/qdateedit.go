@@ -64,7 +64,7 @@ func (*QDateEdit) NewFromPointer(cthis unsafe.Pointer) *QDateEdit {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:217
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateEdit10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +87,20 @@ func NewQDateEdit(parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:220
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDateEdit(QWidget *)
+func NewQDateEdit__() *QDateEdit {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDateEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDateEdit")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:221
 // index:1
 // Public Visibility=Default Availability=Available
@@ -100,6 +114,24 @@ func NewQDateEdit_1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/)
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateEditC2ERK5QDateP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDateEditFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDateEdit")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:221
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QDateEdit(const QDate &, QWidget *)
+func NewQDateEdit_1_(date qtcore.QDate_ITF) *QDateEdit {
+	var convArg0 unsafe.Pointer
+	if date != nil && date.QDate_PTR() != nil {
+		convArg0 = date.QDate_PTR().GetCthis()
+	}
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateEditC2ERK5QDateP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateEditFromPointer(unsafe.Pointer(uintptr(rv)))

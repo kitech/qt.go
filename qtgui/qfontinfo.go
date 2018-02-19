@@ -121,7 +121,7 @@ func (this *QFontInfo) Swap(other QFontInfo_ITF) {
 // /usr/include/qt/QtGui/qfontinfo.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString family()
+// [8] QString family() const
 func (this *QFontInfo) Family() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo6familyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func (this *QFontInfo) Family() string {
 // /usr/include/qt/QtGui/qfontinfo.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString styleName()
+// [8] QString styleName() const
 func (this *QFontInfo) StyleName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9styleNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,7 +147,7 @@ func (this *QFontInfo) StyleName() string {
 // /usr/include/qt/QtGui/qfontinfo.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int pixelSize()
+// [4] int pixelSize() const
 func (this *QFontInfo) PixelSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9pixelSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +157,7 @@ func (this *QFontInfo) PixelSize() int {
 // /usr/include/qt/QtGui/qfontinfo.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int pointSize()
+// [4] int pointSize() const
 func (this *QFontInfo) PointSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9pointSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QFontInfo) PointSize() int {
 // /usr/include/qt/QtGui/qfontinfo.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal pointSizeF()
+// [8] qreal pointSizeF() const
 func (this *QFontInfo) PointSizeF() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo10pointSizeFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QFontInfo) PointSizeF() float64 {
 // /usr/include/qt/QtGui/qfontinfo.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool italic()
+// [1] bool italic() const
 func (this *QFontInfo) Italic() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo6italicEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func (this *QFontInfo) Italic() bool {
 // /usr/include/qt/QtGui/qfontinfo.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QFont::Style style()
+// [4] QFont::Style style() const
 func (this *QFontInfo) Style() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +197,7 @@ func (this *QFontInfo) Style() int {
 // /usr/include/qt/QtGui/qfontinfo.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int weight()
+// [4] int weight() const
 func (this *QFontInfo) Weight() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo6weightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QFontInfo) Weight() int {
 // /usr/include/qt/QtGui/qfontinfo.h:69
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool bold()
+// [1] bool bold() const
 func (this *QFontInfo) Bold() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo4boldEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QFontInfo) Bold() bool {
 // /usr/include/qt/QtGui/qfontinfo.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool underline()
+// [1] bool underline() const
 func (this *QFontInfo) Underline() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9underlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +227,7 @@ func (this *QFontInfo) Underline() bool {
 // /usr/include/qt/QtGui/qfontinfo.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool overline()
+// [1] bool overline() const
 func (this *QFontInfo) Overline() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo8overlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -237,7 +237,7 @@ func (this *QFontInfo) Overline() bool {
 // /usr/include/qt/QtGui/qfontinfo.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool strikeOut()
+// [1] bool strikeOut() const
 func (this *QFontInfo) StrikeOut() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9strikeOutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,7 +247,7 @@ func (this *QFontInfo) StrikeOut() bool {
 // /usr/include/qt/QtGui/qfontinfo.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool fixedPitch()
+// [1] bool fixedPitch() const
 func (this *QFontInfo) FixedPitch() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo10fixedPitchEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +257,7 @@ func (this *QFontInfo) FixedPitch() bool {
 // /usr/include/qt/QtGui/qfontinfo.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QFont::StyleHint styleHint()
+// [4] QFont::StyleHint styleHint() const
 func (this *QFontInfo) StyleHint() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9styleHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -267,7 +267,7 @@ func (this *QFontInfo) StyleHint() int {
 // /usr/include/qt/QtGui/qfontinfo.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool rawMode()
+// [1] bool rawMode() const
 func (this *QFontInfo) RawMode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo7rawModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -277,7 +277,7 @@ func (this *QFontInfo) RawMode() bool {
 // /usr/include/qt/QtGui/qfontinfo.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool exactMatch()
+// [1] bool exactMatch() const
 func (this *QFontInfo) ExactMatch() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo10exactMatchEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

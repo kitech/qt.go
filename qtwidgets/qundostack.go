@@ -64,7 +64,7 @@ func (*QUndoStack) NewFromPointer(cthis unsafe.Pointer) *QUndoStack {
 // /usr/include/qt/QtWidgets/qundostack.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QUndoStack) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +80,20 @@ func NewQUndoStack(parent qtcore.QObject_ITF /*777 QObject **/) *QUndoStack {
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStackC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQUndoStackFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QUndoStack")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qundostack.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QUndoStack(QObject *)
+func NewQUndoStack__() *QUndoStack {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStackC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUndoStackFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -123,7 +137,7 @@ func (this *QUndoStack) Push(cmd QUndoCommand_ITF /*777 QUndoCommand **/) {
 // /usr/include/qt/QtWidgets/qundostack.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool canUndo()
+// [1] bool canUndo() const
 func (this *QUndoStack) CanUndo() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack7canUndoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,7 +147,7 @@ func (this *QUndoStack) CanUndo() bool {
 // /usr/include/qt/QtWidgets/qundostack.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool canRedo()
+// [1] bool canRedo() const
 func (this *QUndoStack) CanRedo() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack7canRedoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +157,7 @@ func (this *QUndoStack) CanRedo() bool {
 // /usr/include/qt/QtWidgets/qundostack.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString undoText()
+// [8] QString undoText() const
 func (this *QUndoStack) UndoText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack8undoTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -156,7 +170,7 @@ func (this *QUndoStack) UndoText() string {
 // /usr/include/qt/QtWidgets/qundostack.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString redoText()
+// [8] QString redoText() const
 func (this *QUndoStack) RedoText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack8redoTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -169,7 +183,7 @@ func (this *QUndoStack) RedoText() string {
 // /usr/include/qt/QtWidgets/qundostack.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QUndoStack) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,7 +193,7 @@ func (this *QUndoStack) Count() int {
 // /usr/include/qt/QtWidgets/qundostack.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int index()
+// [4] int index() const
 func (this *QUndoStack) Index() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack5indexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,7 +203,7 @@ func (this *QUndoStack) Index() int {
 // /usr/include/qt/QtWidgets/qundostack.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString text(int)
+// [8] QString text(int) const
 func (this *QUndoStack) Text(idx int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack4textEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), idx)
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +216,7 @@ func (this *QUndoStack) Text(idx int) string {
 // /usr/include/qt/QtWidgets/qundostack.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAction * createUndoAction(QObject *, const QString &)
+// [8] QAction * createUndoAction(QObject *, const QString &) const
 func (this *QUndoStack) CreateUndoAction(parent qtcore.QObject_ITF /*777 QObject **/, prefix string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -215,10 +229,26 @@ func (this *QUndoStack) CreateUndoAction(parent qtcore.QObject_ITF /*777 QObject
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
+// /usr/include/qt/QtWidgets/qundostack.h:111
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QAction * createUndoAction(QObject *, const QString &) const
+func (this *QUndoStack) CreateUndoAction__(parent qtcore.QObject_ITF /*777 QObject **/) *QAction /*777 QAction **/ {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
 // /usr/include/qt/QtWidgets/qundostack.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAction * createRedoAction(QObject *, const QString &)
+// [8] QAction * createRedoAction(QObject *, const QString &) const
 func (this *QUndoStack) CreateRedoAction(parent qtcore.QObject_ITF /*777 QObject **/, prefix string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -231,10 +261,26 @@ func (this *QUndoStack) CreateRedoAction(parent qtcore.QObject_ITF /*777 QObject
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
+// /usr/include/qt/QtWidgets/qundostack.h:113
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QAction * createRedoAction(QObject *, const QString &) const
+func (this *QUndoStack) CreateRedoAction__(parent qtcore.QObject_ITF /*777 QObject **/) *QAction /*777 QAction **/ {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QObject_PTR() != nil {
+		convArg0 = parent.QObject_PTR().GetCthis()
+	}
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
 // /usr/include/qt/QtWidgets/qundostack.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isActive()
+// [1] bool isActive() const
 func (this *QUndoStack) IsActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -244,7 +290,7 @@ func (this *QUndoStack) IsActive() bool {
 // /usr/include/qt/QtWidgets/qundostack.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isClean()
+// [1] bool isClean() const
 func (this *QUndoStack) IsClean() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack7isCleanEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -254,7 +300,7 @@ func (this *QUndoStack) IsClean() bool {
 // /usr/include/qt/QtWidgets/qundostack.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int cleanIndex()
+// [4] int cleanIndex() const
 func (this *QUndoStack) CleanIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack10cleanIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -293,7 +339,7 @@ func (this *QUndoStack) SetUndoLimit(limit int) {
 // /usr/include/qt/QtWidgets/qundostack.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int undoLimit()
+// [4] int undoLimit() const
 func (this *QUndoStack) UndoLimit() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack9undoLimitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -303,7 +349,7 @@ func (this *QUndoStack) UndoLimit() int {
 // /usr/include/qt/QtWidgets/qundostack.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const QUndoCommand * command(int)
+// [8] const QUndoCommand * command(int) const
 func (this *QUndoStack) Command(index int) *QUndoCommand /*777 const QUndoCommand **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack7commandEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -360,6 +406,17 @@ func (this *QUndoStack) Redo() {
 // Public Visibility=Default Availability=Available
 // [-2] void setActive(_Bool)
 func (this *QUndoStack) SetActive(active bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStack9setActiveEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), active)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qundostack.h:135
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setActive(_Bool)
+func (this *QUndoStack) SetActive__() {
+	// arg: 0, bool=Bool, =Invalid,
+	active := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStack9setActiveEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), active)
 	qtrt.ErrPrint(err, rv)
 }

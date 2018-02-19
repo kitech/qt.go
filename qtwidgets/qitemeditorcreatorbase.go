@@ -77,7 +77,7 @@ func DeleteQItemEditorCreatorBase(this *QItemEditorCreatorBase) {
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:60
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QWidget * createWidget(QWidget *)
+// [8] QWidget * createWidget(QWidget *) const
 func (this *QItemEditorCreatorBase) CreateWidget(parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -91,7 +91,7 @@ func (this *QItemEditorCreatorBase) CreateWidget(parent QWidget_ITF /*777 QWidge
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:61
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QByteArray valuePropertyName()
+// [8] QByteArray valuePropertyName() const
 func (this *QItemEditorCreatorBase) ValuePropertyName() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase17valuePropertyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

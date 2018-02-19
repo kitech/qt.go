@@ -87,7 +87,7 @@ func (*QVariantAnimation) NewFromPointer(cthis unsafe.Pointer) *QVariantAnimatio
 // /usr/include/qt/QtCore/qvariantanimation.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QVariantAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QVariantAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +110,20 @@ func NewQVariantAnimation(parent QObject_ITF /*777 QObject **/) *QVariantAnimati
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qvariantanimation.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QVariantAnimation(QObject *)
+func NewQVariantAnimation__() *QVariantAnimation {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QVariantAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQVariantAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QVariantAnimation")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qvariantanimation.h:69
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -124,7 +138,7 @@ func DeleteQVariantAnimation(this *QVariantAnimation) {
 // /usr/include/qt/QtCore/qvariantanimation.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant startValue()
+// [16] QVariant startValue() const
 func (this *QVariantAnimation) StartValue() *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QVariantAnimation10startValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -149,7 +163,7 @@ func (this *QVariantAnimation) SetStartValue(value QVariant_ITF) {
 // /usr/include/qt/QtCore/qvariantanimation.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant endValue()
+// [16] QVariant endValue() const
 func (this *QVariantAnimation) EndValue() *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QVariantAnimation8endValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +188,7 @@ func (this *QVariantAnimation) SetEndValue(value QVariant_ITF) {
 // /usr/include/qt/QtCore/qvariantanimation.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant keyValueAt(qreal)
+// [16] QVariant keyValueAt(qreal) const
 func (this *QVariantAnimation) KeyValueAt(step float64) *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QVariantAnimation10keyValueAtEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -199,7 +213,7 @@ func (this *QVariantAnimation) SetKeyValueAt(step float64, value QVariant_ITF) {
 // /usr/include/qt/QtCore/qvariantanimation.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant currentValue()
+// [16] QVariant currentValue() const
 func (this *QVariantAnimation) CurrentValue() *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QVariantAnimation12currentValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -211,7 +225,7 @@ func (this *QVariantAnimation) CurrentValue() *QVariant /*123*/ {
 // /usr/include/qt/QtCore/qvariantanimation.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int duration()
+// [4] int duration() const
 func (this *QVariantAnimation) Duration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QVariantAnimation8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -230,7 +244,7 @@ func (this *QVariantAnimation) SetDuration(msecs int) {
 // /usr/include/qt/QtCore/qvariantanimation.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QEasingCurve easingCurve()
+// [8] QEasingCurve easingCurve() const
 func (this *QVariantAnimation) EasingCurve() *QEasingCurve /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QVariantAnimation11easingCurveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -313,7 +327,7 @@ func (this *QVariantAnimation) UpdateCurrentValue(value QVariant_ITF) {
 // /usr/include/qt/QtCore/qvariantanimation.h:104
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QVariant interpolated(const QVariant &, const QVariant &, qreal)
+// [16] QVariant interpolated(const QVariant &, const QVariant &, qreal) const
 func (this *QVariantAnimation) Interpolated(from QVariant_ITF, to QVariant_ITF, progress float64) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if from != nil && from.QVariant_PTR() != nil {

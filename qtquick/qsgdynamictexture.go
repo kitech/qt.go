@@ -66,7 +66,7 @@ func (*QSGDynamicTexture) NewFromPointer(cthis unsafe.Pointer) *QSGDynamicTextur
 // /usr/include/qt/QtQuick/qsgtexture.h:131
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSGDynamicTexture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGDynamicTexture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

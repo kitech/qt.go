@@ -74,7 +74,7 @@ func (*QKeyEventTransition) NewFromPointer(cthis unsafe.Pointer) *QKeyEventTrans
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QKeyEventTransition) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QKeyEventTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +90,20 @@ func NewQKeyEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *QKe
 	if sourceState != nil && sourceState.QState_PTR() != nil {
 		convArg0 = sourceState.QState_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQKeyEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QKeyEventTransition")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QKeyEventTransition(QState *)
+func NewQKeyEventTransition__() *QKeyEventTransition {
+	// arg: 0, QState *=Pointer, QState=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeyEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,6 +131,24 @@ func NewQKeyEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, type_
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h:58
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QKeyEventTransition(QObject *, QEvent::Type, int, QState *)
+func NewQKeyEventTransition_1_(object qtcore.QObject_ITF /*777 QObject **/, type_ int, key int) *QKeyEventTransition {
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
+	// arg: 3, QState *=Pointer, QState=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP7QObjectN6QEvent4TypeEiP6QState", qtrt.FFI_TYPE_POINTER, convArg0, type_, key, convArg3)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQKeyEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QKeyEventTransition")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -131,7 +163,7 @@ func DeleteQKeyEventTransition(this *QKeyEventTransition) {
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int key()
+// [4] int key() const
 func (this *QKeyEventTransition) Key() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QKeyEventTransition3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,7 +182,7 @@ func (this *QKeyEventTransition) SetKey(key int) {
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::KeyboardModifiers modifierMask()
+// [4] Qt::KeyboardModifiers modifierMask() const
 func (this *QKeyEventTransition) ModifierMask() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QKeyEventTransition12modifierMaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

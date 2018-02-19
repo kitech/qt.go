@@ -79,7 +79,7 @@ func (*QStyledItemDelegate) NewFromPointer(cthis unsafe.Pointer) *QStyledItemDel
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QStyledItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QStyledItemDelegate10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +102,20 @@ func NewQStyledItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QStyle
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:61
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStyledItemDelegate(QObject *)
+func NewQStyledItemDelegate__() *QStyledItemDelegate {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyledItemDelegateC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStyledItemDelegateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QStyledItemDelegate")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -116,7 +130,7 @@ func DeleteQStyledItemDelegate(this *QStyledItemDelegate) {
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void paint(QPainter *, const QStyleOptionViewItem &, const QModelIndex &)
+// [-2] void paint(QPainter *, const QStyleOptionViewItem &, const QModelIndex &) const
 func (this *QStyledItemDelegate) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -137,7 +151,7 @@ func (this *QStyledItemDelegate) Paint(painter qtgui.QPainter_ITF /*777 QPainter
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &)
+// [8] QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &) const
 func (this *QStyledItemDelegate) SizeHint(option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionViewItem_PTR() != nil {
@@ -157,7 +171,7 @@ func (this *QStyledItemDelegate) SizeHint(option QStyleOptionViewItem_ITF, index
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QWidget * createEditor(QWidget *, const QStyleOptionViewItem &, const QModelIndex &)
+// [8] QWidget * createEditor(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
 func (this *QStyledItemDelegate) CreateEditor(parent QWidget_ITF /*777 QWidget **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -179,7 +193,7 @@ func (this *QStyledItemDelegate) CreateEditor(parent QWidget_ITF /*777 QWidget *
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setEditorData(QWidget *, const QModelIndex &)
+// [-2] void setEditorData(QWidget *, const QModelIndex &) const
 func (this *QStyledItemDelegate) SetEditorData(editor QWidget_ITF /*777 QWidget **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -196,7 +210,7 @@ func (this *QStyledItemDelegate) SetEditorData(editor QWidget_ITF /*777 QWidget 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setModelData(QWidget *, QAbstractItemModel *, const QModelIndex &)
+// [-2] void setModelData(QWidget *, QAbstractItemModel *, const QModelIndex &) const
 func (this *QStyledItemDelegate) SetModelData(editor QWidget_ITF /*777 QWidget **/, model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -217,7 +231,7 @@ func (this *QStyledItemDelegate) SetModelData(editor QWidget_ITF /*777 QWidget *
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void updateEditorGeometry(QWidget *, const QStyleOptionViewItem &, const QModelIndex &)
+// [-2] void updateEditorGeometry(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
 func (this *QStyledItemDelegate) UpdateEditorGeometry(editor QWidget_ITF /*777 QWidget **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -238,7 +252,7 @@ func (this *QStyledItemDelegate) UpdateEditorGeometry(editor QWidget_ITF /*777 Q
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QItemEditorFactory * itemEditorFactory()
+// [8] QItemEditorFactory * itemEditorFactory() const
 func (this *QStyledItemDelegate) ItemEditorFactory() *QItemEditorFactory /*777 QItemEditorFactory **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QStyledItemDelegate17itemEditorFactoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -261,7 +275,7 @@ func (this *QStyledItemDelegate) SetItemEditorFactory(factory QItemEditorFactory
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QString displayText(const QVariant &, const QLocale &)
+// [8] QString displayText(const QVariant &, const QLocale &) const
 func (this *QStyledItemDelegate) DisplayText(value qtcore.QVariant_ITF, locale qtcore.QLocale_ITF) string {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -282,7 +296,7 @@ func (this *QStyledItemDelegate) DisplayText(value qtcore.QVariant_ITF, locale q
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:91
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionViewItem *, const QModelIndex &)
+// [-2] void initStyleOption(QStyleOptionViewItem *, const QModelIndex &) const
 func (this *QStyledItemDelegate) InitStyleOption(option QStyleOptionViewItem_ITF /*777 QStyleOptionViewItem **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionViewItem_PTR() != nil {

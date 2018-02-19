@@ -136,7 +136,7 @@ func QJsonArray_FromStringList(list QStringList_ITF) *QJsonArray /*123*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QVariantList toVariantList()
+// [8] QVariantList toVariantList() const
 func (this *QJsonArray) ToVariantList() *QVariantList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray13toVariantListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,7 +147,7 @@ func (this *QJsonArray) ToVariantList() *QVariantList /*667*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int size()
+// [4] int size() const
 func (this *QJsonArray) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +157,7 @@ func (this *QJsonArray) Size() int {
 // /usr/include/qt/QtCore/qjsonarray.h:94
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QJsonArray) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QJsonArray) Count() int {
 // /usr/include/qt/QtCore/qjsonarray.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QJsonArray) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QJsonArray) IsEmpty() bool {
 // /usr/include/qt/QtCore/qjsonarray.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [24] QJsonValue at(int)
+// [24] QJsonValue at(int) const
 func (this *QJsonArray) At(i int) *QJsonValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -189,7 +189,7 @@ func (this *QJsonArray) At(i int) *QJsonValue /*123*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [24] QJsonValue first()
+// [24] QJsonValue first() const
 func (this *QJsonArray) First() *QJsonValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray5firstEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -201,7 +201,7 @@ func (this *QJsonArray) First() *QJsonValue /*123*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [24] QJsonValue last()
+// [24] QJsonValue last() const
 func (this *QJsonArray) Last() *QJsonValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray4lastEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -265,7 +265,7 @@ func (this *QJsonArray) Replace(i int, value QJsonValue_ITF) {
 // /usr/include/qt/QtCore/qjsonarray.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QJsonValue &)
+// [1] bool contains(const QJsonValue &) const
 func (this *QJsonArray) Contains(element QJsonValue_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if element != nil && element.QJsonValue_PTR() != nil {
@@ -291,7 +291,7 @@ func (this *QJsonArray) Operator_get_index(i int) *QJsonValueRef /*123*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:113
 // index:1
 // Public Visibility=Default Availability=Available
-// [24] QJsonValue operator[](int)
+// [24] QJsonValue operator[](int) const
 func (this *QJsonArray) Operator_get_index_1(i int) *QJsonValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArrayixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -303,7 +303,7 @@ func (this *QJsonArray) Operator_get_index_1(i int) *QJsonValue /*123*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QJsonArray &)
+// [1] bool operator==(const QJsonArray &) const
 func (this *QJsonArray) Operator_equal_equal(other QJsonArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJsonArray_PTR() != nil {
@@ -317,7 +317,7 @@ func (this *QJsonArray) Operator_equal_equal(other QJsonArray_ITF) bool {
 // /usr/include/qt/QtCore/qjsonarray.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator!=(const QJsonArray &)
+// [1] bool operator!=(const QJsonArray &) const
 func (this *QJsonArray) Operator_not_equal(other QJsonArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJsonArray_PTR() != nil {
@@ -354,7 +354,7 @@ func (this *QJsonArray) Begin() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:215
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [16] QJsonArray::const_iterator begin()
+// [16] QJsonArray::const_iterator begin() const
 func (this *QJsonArray) Begin_1() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -364,7 +364,7 @@ func (this *QJsonArray) Begin_1() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:216
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QJsonArray::const_iterator constBegin()
+// [16] QJsonArray::const_iterator constBegin() const
 func (this *QJsonArray) ConstBegin() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray10constBeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -384,7 +384,7 @@ func (this *QJsonArray) End() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:218
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [16] QJsonArray::const_iterator end()
+// [16] QJsonArray::const_iterator end() const
 func (this *QJsonArray) End_1() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -394,7 +394,7 @@ func (this *QJsonArray) End_1() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:219
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QJsonArray::const_iterator constEnd()
+// [16] QJsonArray::const_iterator constEnd() const
 func (this *QJsonArray) ConstEnd() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray8constEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -404,7 +404,7 @@ func (this *QJsonArray) ConstEnd() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:228
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QJsonArray operator+(const QJsonValue &)
+// [16] QJsonArray operator+(const QJsonValue &) const
 func (this *QJsonArray) Operator_add(v QJsonValue_ITF) *QJsonArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if v != nil && v.QJsonValue_PTR() != nil {
@@ -496,7 +496,7 @@ func (this *QJsonArray) Pop_back() {
 // /usr/include/qt/QtCore/qjsonarray.h:240
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool empty()
+// [1] bool empty() const
 func (this *QJsonArray) Empty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray5emptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

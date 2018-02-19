@@ -77,6 +77,20 @@ func NewQPicture(formatVersion int) *QPicture {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qpicture.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QPicture(int)
+func NewQPicture__() *QPicture {
+	// arg: 0, int=Int, =Invalid,
+	formatVersion := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPictureC2Ei", qtrt.FFI_TYPE_POINTER, formatVersion)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPictureFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPicture)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qpicture.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -91,7 +105,7 @@ func DeleteQPicture(this *QPicture) {
 // /usr/include/qt/QtGui/qpicture.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QPicture) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPicture6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -101,7 +115,7 @@ func (this *QPicture) IsNull() bool {
 // /usr/include/qt/QtGui/qpicture.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int devType()
+// [4] int devType() const
 func (this *QPicture) DevType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPicture7devTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +125,7 @@ func (this *QPicture) DevType() int {
 // /usr/include/qt/QtGui/qpicture.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint size()
+// [4] uint size() const
 func (this *QPicture) Size() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPicture4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,7 +135,7 @@ func (this *QPicture) Size() uint {
 // /usr/include/qt/QtGui/qpicture.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const char * data()
+// [8] const char * data() const
 func (this *QPicture) Data() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPicture4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -169,6 +183,22 @@ func (this *QPicture) Load(dev qtcore.QIODevice_ITF /*777 QIODevice **/, format 
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qpicture.h:72
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool load(QIODevice *, const char *)
+func (this *QPicture) Load__(dev qtcore.QIODevice_ITF /*777 QIODevice **/) bool {
+	var convArg0 unsafe.Pointer
+	if dev != nil && dev.QIODevice_PTR() != nil {
+		convArg0 = dev.QIODevice_PTR().GetCthis()
+	}
+	// arg: 1, const char *=Pointer, =Invalid,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4loadEP9QIODevicePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qpicture.h:73
 // index:1
 // Public Visibility=Default Availability=Available
@@ -178,6 +208,20 @@ func (this *QPicture) Load_1(fileName string, format string) bool {
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4loadERK7QStringPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qpicture.h:73
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool load(const QString &, const char *)
+func (this *QPicture) Load_1_(fileName string) bool {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, const char *=Pointer, =Invalid,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4loadERK7QStringPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -199,6 +243,22 @@ func (this *QPicture) Save(dev qtcore.QIODevice_ITF /*777 QIODevice **/, format 
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qpicture.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool save(QIODevice *, const char *)
+func (this *QPicture) Save__(dev qtcore.QIODevice_ITF /*777 QIODevice **/) bool {
+	var convArg0 unsafe.Pointer
+	if dev != nil && dev.QIODevice_PTR() != nil {
+		convArg0 = dev.QIODevice_PTR().GetCthis()
+	}
+	// arg: 1, const char *=Pointer, =Invalid,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4saveEP9QIODevicePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qpicture.h:75
 // index:1
 // Public Visibility=Default Availability=Available
@@ -213,10 +273,24 @@ func (this *QPicture) Save_1(fileName string, format string) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qpicture.h:75
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool save(const QString &, const char *)
+func (this *QPicture) Save_1_(fileName string) bool {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, const char *=Pointer, =Invalid,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture4saveERK7QStringPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qpicture.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect boundingRect()
+// [16] QRect boundingRect() const
 func (this *QPicture) BoundingRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPicture12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -291,7 +365,7 @@ func (this *QPicture) Detach() {
 // /usr/include/qt/QtGui/qpicture.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isDetached()
+// [1] bool isDetached() const
 func (this *QPicture) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPicture10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -352,7 +426,7 @@ func QPicture_OutputFormatList() *qtcore.QStringList /*123*/ {
 // /usr/include/qt/QtGui/qpicture.h:101
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPaintEngine * paintEngine()
+// [8] QPaintEngine * paintEngine() const
 func (this *QPicture) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPicture11paintEngineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -362,7 +436,7 @@ func (this *QPicture) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 // /usr/include/qt/QtGui/qpicture.h:106
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric)
+// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
 func (this *QPicture) Metric(m int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPicture6metricEN12QPaintDevice17PaintDeviceMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), m)
 	qtrt.ErrPrint(err, rv)

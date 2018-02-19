@@ -132,6 +132,22 @@ func NewQBitmap_4(fileName string, format string) *QBitmap {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qbitmap.h:58
+// index:4
+// Public Visibility=Default Availability=Available
+// [-2] void QBitmap(const QString &, const char *)
+func NewQBitmap_4_(fileName string) *QBitmap {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, const char *=Pointer, =Invalid,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2ERK7QStringPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBitmap)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qbitmap.h:63
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -230,6 +246,24 @@ func QBitmap_FromImage(image QImage_ITF, flags int) *QBitmap /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtGui/qbitmap.h:74
+// index:0
+// Public static Visibility=Default Availability=Available
+// [32] QBitmap fromImage(const QImage &, Qt::ImageConversionFlags)
+func (this *QBitmap) FromImage__(image QImage_ITF) *QBitmap /*123*/ {
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QImage_PTR() != nil {
+		convArg0 = image.QImage_PTR().GetCthis()
+	}
+	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitmap)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qbitmap.h:75
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -251,10 +285,28 @@ func QBitmap_FromData(size qtcore.QSize_ITF, bits unsafe.Pointer /*666*/, monoFo
 	return rv
 }
 
+// /usr/include/qt/QtGui/qbitmap.h:75
+// index:0
+// Public static Visibility=Default Availability=Available
+// [32] QBitmap fromData(const QSize &, const uchar *, QImage::Format)
+func (this *QBitmap) FromData__(size qtcore.QSize_ITF, bits unsafe.Pointer /*666*/) *QBitmap /*123*/ {
+	var convArg0 unsafe.Pointer
+	if size != nil && size.QSize_PTR() != nil {
+		convArg0 = size.QSize_PTR().GetCthis()
+	}
+	// arg: 2, QImage::Format=Elaborated, QImage::Format=Enum,
+	monoFormat := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap8fromDataERK5QSizePKhN6QImage6FormatE", qtrt.FFI_TYPE_POINTER, convArg0, bits, monoFormat)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitmap)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qbitmap.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QBitmap transformed(const QMatrix &)
+// [32] QBitmap transformed(const QMatrix &) const
 func (this *QBitmap) Transformed(arg0 QMatrix_ITF) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMatrix_PTR() != nil {
@@ -270,7 +322,7 @@ func (this *QBitmap) Transformed(arg0 QMatrix_ITF) *QBitmap /*123*/ {
 // /usr/include/qt/QtGui/qbitmap.h:79
 // index:1
 // Public Visibility=Default Availability=Available
-// [32] QBitmap transformed(const QTransform &)
+// [32] QBitmap transformed(const QTransform &) const
 func (this *QBitmap) Transformed_1(matrix QTransform_ITF) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {

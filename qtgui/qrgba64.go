@@ -145,7 +145,7 @@ func QRgba64_FromArgb32(rgb uint) *QRgba64 /*123*/ {
 // /usr/include/qt/QtGui/qrgba64.h:97
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isOpaque()
+// [1] bool isOpaque() const
 func (this *QRgba64) IsOpaque() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba648isOpaqueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func (this *QRgba64) IsOpaque() bool {
 // /usr/include/qt/QtGui/qrgba64.h:101
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isTransparent()
+// [1] bool isTransparent() const
 func (this *QRgba64) IsTransparent() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba6413isTransparentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -165,7 +165,7 @@ func (this *QRgba64) IsTransparent() bool {
 // /usr/include/qt/QtGui/qrgba64.h:106
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] quint16 red()
+// [2] quint16 red() const
 func (this *QRgba64) Red() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba643redEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +175,7 @@ func (this *QRgba64) Red() uint16 {
 // /usr/include/qt/QtGui/qrgba64.h:107
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] quint16 green()
+// [2] quint16 green() const
 func (this *QRgba64) Green() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba645greenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,7 +185,7 @@ func (this *QRgba64) Green() uint16 {
 // /usr/include/qt/QtGui/qrgba64.h:108
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] quint16 blue()
+// [2] quint16 blue() const
 func (this *QRgba64) Blue() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba644blueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,7 +195,7 @@ func (this *QRgba64) Blue() uint16 {
 // /usr/include/qt/QtGui/qrgba64.h:109
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] quint16 alpha()
+// [2] quint16 alpha() const
 func (this *QRgba64) Alpha() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba645alphaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -241,7 +241,7 @@ func (this *QRgba64) SetAlpha(_alpha uint16) {
 // /usr/include/qt/QtGui/qrgba64.h:115
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] quint8 red8()
+// [1] quint8 red8() const
 func (this *QRgba64) Red8() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba644red8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -251,7 +251,7 @@ func (this *QRgba64) Red8() byte {
 // /usr/include/qt/QtGui/qrgba64.h:116
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] quint8 green8()
+// [1] quint8 green8() const
 func (this *QRgba64) Green8() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba646green8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -261,7 +261,7 @@ func (this *QRgba64) Green8() byte {
 // /usr/include/qt/QtGui/qrgba64.h:117
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] quint8 blue8()
+// [1] quint8 blue8() const
 func (this *QRgba64) Blue8() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba645blue8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -271,7 +271,7 @@ func (this *QRgba64) Blue8() byte {
 // /usr/include/qt/QtGui/qrgba64.h:118
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] quint8 alpha8()
+// [1] quint8 alpha8() const
 func (this *QRgba64) Alpha8() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba646alpha8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -281,7 +281,7 @@ func (this *QRgba64) Alpha8() byte {
 // /usr/include/qt/QtGui/qrgba64.h:119
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] uint toArgb32()
+// [4] uint toArgb32() const
 func (this *QRgba64) ToArgb32() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba648toArgb32Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -291,7 +291,7 @@ func (this *QRgba64) ToArgb32() uint {
 // /usr/include/qt/QtGui/qrgba64.h:123
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [2] ushort toRgb16()
+// [2] ushort toRgb16() const
 func (this *QRgba64) ToRgb16() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba647toRgb16Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -301,7 +301,7 @@ func (this *QRgba64) ToRgb16() uint16 {
 // /usr/include/qt/QtGui/qrgba64.h:128
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QRgba64 premultiplied()
+// [8] QRgba64 premultiplied() const
 func (this *QRgba64) Premultiplied() *QRgba64 /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba6413premultipliedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -313,7 +313,7 @@ func (this *QRgba64) Premultiplied() *QRgba64 /*123*/ {
 // /usr/include/qt/QtGui/qrgba64.h:137
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QRgba64 unpremultiplied()
+// [8] QRgba64 unpremultiplied() const
 func (this *QRgba64) Unpremultiplied() *QRgba64 /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba6415unpremultipliedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

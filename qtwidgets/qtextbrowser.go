@@ -104,7 +104,7 @@ func (*QTextBrowser) NewFromPointer(cthis unsafe.Pointer) *QTextBrowser {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTextBrowser) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +127,20 @@ func NewQTextBrowser(parent QWidget_ITF /*777 QWidget **/) *QTextBrowser {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qtextbrowser.h:66
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTextBrowser(QWidget *)
+func NewQTextBrowser__() *QTextBrowser {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowserC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTextBrowserFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTextBrowser")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qtextbrowser.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -141,7 +155,7 @@ func DeleteQTextBrowser(this *QTextBrowser) {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl source()
+// [8] QUrl source() const
 func (this *QTextBrowser) Source() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +167,7 @@ func (this *QTextBrowser) Source() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList searchPaths()
+// [8] QStringList searchPaths() const
 func (this *QTextBrowser) SearchPaths() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser11searchPathsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +208,7 @@ func (this *QTextBrowser) LoadResource(type_ int, name qtcore.QUrl_ITF) *qtcore.
 // /usr/include/qt/QtWidgets/qtextbrowser.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isBackwardAvailable()
+// [1] bool isBackwardAvailable() const
 func (this *QTextBrowser) IsBackwardAvailable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser19isBackwardAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -204,7 +218,7 @@ func (this *QTextBrowser) IsBackwardAvailable() bool {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isForwardAvailable()
+// [1] bool isForwardAvailable() const
 func (this *QTextBrowser) IsForwardAvailable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser18isForwardAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,7 +237,7 @@ func (this *QTextBrowser) ClearHistory() {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString historyTitle(int)
+// [8] QString historyTitle(int) const
 func (this *QTextBrowser) HistoryTitle(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser12historyTitleEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -236,7 +250,7 @@ func (this *QTextBrowser) HistoryTitle(arg0 int) string {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl historyUrl(int)
+// [8] QUrl historyUrl(int) const
 func (this *QTextBrowser) HistoryUrl(arg0 int) *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser10historyUrlEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -248,7 +262,7 @@ func (this *QTextBrowser) HistoryUrl(arg0 int) *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int backwardHistoryCount()
+// [4] int backwardHistoryCount() const
 func (this *QTextBrowser) BackwardHistoryCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser20backwardHistoryCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,7 +272,7 @@ func (this *QTextBrowser) BackwardHistoryCount() int {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int forwardHistoryCount()
+// [4] int forwardHistoryCount() const
 func (this *QTextBrowser) ForwardHistoryCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser19forwardHistoryCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +282,7 @@ func (this *QTextBrowser) ForwardHistoryCount() int {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool openExternalLinks()
+// [1] bool openExternalLinks() const
 func (this *QTextBrowser) OpenExternalLinks() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser17openExternalLinksEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -287,7 +301,7 @@ func (this *QTextBrowser) SetOpenExternalLinks(open bool) {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool openLinks()
+// [1] bool openLinks() const
 func (this *QTextBrowser) OpenLinks() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser9openLinksEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

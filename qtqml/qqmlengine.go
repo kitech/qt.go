@@ -69,7 +69,7 @@ func (*QQmlEngine) NewFromPointer(cthis unsafe.Pointer) *QQmlEngine {
 // /usr/include/qt/QtQml/qqmlengine.h:98
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQmlEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +92,20 @@ func NewQQmlEngine(p qtcore.QObject_ITF /*777 QObject **/) *QQmlEngine {
 	return gothis
 }
 
+// /usr/include/qt/QtQml/qqmlengine.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlEngine(QObject *)
+func NewQQmlEngine__() *QQmlEngine {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QQmlEngineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlEngine")
+	return gothis
+}
+
 // /usr/include/qt/QtQml/qqmlengine.h:101
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -106,7 +120,7 @@ func DeleteQQmlEngine(this *QQmlEngine) {
 // /usr/include/qt/QtQml/qqmlengine.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlContext * rootContext()
+// [8] QQmlContext * rootContext() const
 func (this *QQmlEngine) RootContext() *QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine11rootContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,7 +148,7 @@ func (this *QQmlEngine) TrimComponentCache() {
 // /usr/include/qt/QtQml/qqmlengine.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList importPathList()
+// [8] QStringList importPathList() const
 func (this *QQmlEngine) ImportPathList() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine14importPathListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +184,7 @@ func (this *QQmlEngine) AddImportPath(dir string) {
 // /usr/include/qt/QtQml/qqmlengine.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList pluginPathList()
+// [8] QStringList pluginPathList() const
 func (this *QQmlEngine) PluginPathList() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine14pluginPathListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -233,7 +247,7 @@ func (this *QQmlEngine) SetNetworkAccessManagerFactory(arg0 QQmlNetworkAccessMan
 // /usr/include/qt/QtQml/qqmlengine.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlNetworkAccessManagerFactory * networkAccessManagerFactory()
+// [8] QQmlNetworkAccessManagerFactory * networkAccessManagerFactory() const
 func (this *QQmlEngine) NetworkAccessManagerFactory() *QQmlNetworkAccessManagerFactory /*777 QQmlNetworkAccessManagerFactory **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine27networkAccessManagerFactoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -243,7 +257,7 @@ func (this *QQmlEngine) NetworkAccessManagerFactory() *QQmlNetworkAccessManagerF
 // /usr/include/qt/QtQml/qqmlengine.h:124
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QNetworkAccessManager * networkAccessManager()
+// [8] QNetworkAccessManager * networkAccessManager() const
 func (this *QQmlEngine) NetworkAccessManager() *qtnetwork.QNetworkAccessManager /*777 QNetworkAccessManager **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine20networkAccessManagerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -266,7 +280,7 @@ func (this *QQmlEngine) SetUrlInterceptor(urlInterceptor QQmlAbstractUrlIntercep
 // /usr/include/qt/QtQml/qqmlengine.h:128
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlAbstractUrlInterceptor * urlInterceptor()
+// [8] QQmlAbstractUrlInterceptor * urlInterceptor() const
 func (this *QQmlEngine) UrlInterceptor() *QQmlAbstractUrlInterceptor /*777 QQmlAbstractUrlInterceptor **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine14urlInterceptorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -287,7 +301,7 @@ func (this *QQmlEngine) AddImageProvider(id string, arg1 unsafe.Pointer /*666*/)
 // /usr/include/qt/QtQml/qqmlengine.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlImageProviderBase * imageProvider(const QString &)
+// [8] QQmlImageProviderBase * imageProvider(const QString &) const
 func (this *QQmlEngine) ImageProvider(id string) unsafe.Pointer /*666*/ {
 	var tmpArg0 = qtcore.NewQString_5(id)
 	var convArg0 = tmpArg0.GetCthis()
@@ -323,7 +337,7 @@ func (this *QQmlEngine) SetIncubationController(arg0 QQmlIncubationController_IT
 // /usr/include/qt/QtQml/qqmlengine.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlIncubationController * incubationController()
+// [8] QQmlIncubationController * incubationController() const
 func (this *QQmlEngine) IncubationController() *QQmlIncubationController /*777 QQmlIncubationController **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine20incubationControllerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,7 +358,7 @@ func (this *QQmlEngine) SetOfflineStoragePath(dir string) {
 // /usr/include/qt/QtQml/qqmlengine.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString offlineStoragePath()
+// [8] QString offlineStoragePath() const
 func (this *QQmlEngine) OfflineStoragePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine18offlineStoragePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -357,7 +371,7 @@ func (this *QQmlEngine) OfflineStoragePath() string {
 // /usr/include/qt/QtQml/qqmlengine.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString offlineStorageDatabaseFilePath(const QString &)
+// [8] QString offlineStorageDatabaseFilePath(const QString &) const
 func (this *QQmlEngine) OfflineStorageDatabaseFilePath(databaseName string) string {
 	var tmpArg0 = qtcore.NewQString_5(databaseName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -372,7 +386,7 @@ func (this *QQmlEngine) OfflineStorageDatabaseFilePath(databaseName string) stri
 // /usr/include/qt/QtQml/qqmlengine.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl baseUrl()
+// [8] QUrl baseUrl() const
 func (this *QQmlEngine) BaseUrl() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine7baseUrlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -397,7 +411,7 @@ func (this *QQmlEngine) SetBaseUrl(arg0 qtcore.QUrl_ITF) {
 // /usr/include/qt/QtQml/qqmlengine.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool outputWarningsToStandardError()
+// [1] bool outputWarningsToStandardError() const
 func (this *QQmlEngine) OutputWarningsToStandardError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine29outputWarningsToStandardErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

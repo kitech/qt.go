@@ -68,7 +68,7 @@ func (*QQmlExtensionPlugin) NewFromPointer(cthis unsafe.Pointer) *QQmlExtensionP
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQmlExtensionPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQmlExtensionPlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +91,20 @@ func NewQQmlExtensionPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlEx
 	return gothis
 }
 
+// /usr/include/qt/QtQml/qqmlextensionplugin.h:61
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlExtensionPlugin(QObject *)
+func NewQQmlExtensionPlugin__() *QQmlExtensionPlugin {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQmlExtensionPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlExtensionPluginFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlExtensionPlugin")
+	return gothis
+}
+
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -105,7 +119,7 @@ func DeleteQQmlExtensionPlugin(this *QQmlExtensionPlugin) {
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl baseUrl()
+// [8] QUrl baseUrl() const
 func (this *QQmlExtensionPlugin) BaseUrl() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQmlExtensionPlugin7baseUrlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

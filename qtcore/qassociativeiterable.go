@@ -64,7 +64,7 @@ func (*QAssociativeIterable) NewFromPointer(cthis unsafe.Pointer) *QAssociativeI
 // /usr/include/qt/QtCore/qvariant.h:680
 // index:0
 // Public Visibility=Default Availability=Available
-// [120] QAssociativeIterable::const_iterator begin()
+// [120] QAssociativeIterable::const_iterator begin() const
 func (this *QAssociativeIterable) Begin() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAssociativeIterable5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,7 +74,7 @@ func (this *QAssociativeIterable) Begin() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qvariant.h:681
 // index:0
 // Public Visibility=Default Availability=Available
-// [120] QAssociativeIterable::const_iterator end()
+// [120] QAssociativeIterable::const_iterator end() const
 func (this *QAssociativeIterable) End() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAssociativeIterable3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -84,7 +84,7 @@ func (this *QAssociativeIterable) End() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qvariant.h:682
 // index:0
 // Public Visibility=Default Availability=Available
-// [120] QAssociativeIterable::const_iterator find(const QVariant &)
+// [120] QAssociativeIterable::const_iterator find(const QVariant &) const
 func (this *QAssociativeIterable) Find(key QVariant_ITF) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QVariant_PTR() != nil {
@@ -98,7 +98,7 @@ func (this *QAssociativeIterable) Find(key QVariant_ITF) unsafe.Pointer /*444*/ 
 // /usr/include/qt/QtCore/qvariant.h:684
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant value(const QVariant &)
+// [16] QVariant value(const QVariant &) const
 func (this *QAssociativeIterable) Value(key QVariant_ITF) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QVariant_PTR() != nil {
@@ -114,7 +114,7 @@ func (this *QAssociativeIterable) Value(key QVariant_ITF) *QVariant /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:686
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int size()
+// [4] int size() const
 func (this *QAssociativeIterable) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAssociativeIterable4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

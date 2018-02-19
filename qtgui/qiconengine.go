@@ -165,7 +165,7 @@ func (this *QIconEngine) AddFile(fileName string, size qtcore.QSize_ITF, mode in
 // /usr/include/qt/QtGui/qiconengine.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QString key()
+// [8] QString key() const
 func (this *QIconEngine) Key() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,7 +178,7 @@ func (this *QIconEngine) Key() string {
 // /usr/include/qt/QtGui/qiconengine.h:64
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QIconEngine * clone()
+// [8] QIconEngine * clone() const
 func (this *QIconEngine) Clone() *QIconEngine /*777 QIconEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine5cloneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func (this *QIconEngine) Read(in qtcore.QDataStream_ITF) bool {
 // /usr/include/qt/QtGui/qiconengine.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool write(QDataStream &)
+// [1] bool write(QDataStream &) const
 func (this *QIconEngine) Write(out qtcore.QDataStream_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if out != nil && out.QDataStream_PTR() != nil {
@@ -216,7 +216,7 @@ func (this *QIconEngine) Write(out qtcore.QDataStream_ITF) bool {
 // /usr/include/qt/QtGui/qiconengine.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QString iconName()
+// [8] QString iconName() const
 func (this *QIconEngine) IconName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine8iconNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -229,7 +229,7 @@ func (this *QIconEngine) IconName() string {
 // /usr/include/qt/QtGui/qiconengine.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QIconEngine) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

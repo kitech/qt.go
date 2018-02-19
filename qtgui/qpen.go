@@ -118,6 +118,66 @@ func NewQPen_3(brush QBrush_ITF, width float64, s int, c int, j int) *QPen {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qpen.h:66
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QPen(const QBrush &, qreal, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle)
+func NewQPen_3_(brush QBrush_ITF, width float64) *QPen {
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
+	// arg: 2, Qt::PenStyle=Elaborated, Qt::PenStyle=Enum,
+	s := 0
+	// arg: 3, Qt::PenCapStyle=Elaborated, Qt::PenCapStyle=Enum,
+	c := 0
+	// arg: 4, Qt::PenJoinStyle=Elaborated, Qt::PenJoinStyle=Enum,
+	j := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, convArg0, width, s, c, j)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPen)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qpen.h:66
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QPen(const QBrush &, qreal, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle)
+func NewQPen_3_1(brush QBrush_ITF, width float64, s int) *QPen {
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
+	// arg: 3, Qt::PenCapStyle=Elaborated, Qt::PenCapStyle=Enum,
+	c := 0
+	// arg: 4, Qt::PenJoinStyle=Elaborated, Qt::PenJoinStyle=Enum,
+	j := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, convArg0, width, s, c, j)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPen)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qpen.h:66
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QPen(const QBrush &, qreal, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle)
+func NewQPen_3_2(brush QBrush_ITF, width float64, s int, c int) *QPen {
+	var convArg0 unsafe.Pointer
+	if brush != nil && brush.QBrush_PTR() != nil {
+		convArg0 = brush.QBrush_PTR().GetCthis()
+	}
+	// arg: 4, Qt::PenJoinStyle=Elaborated, Qt::PenJoinStyle=Enum,
+	j := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, convArg0, width, s, c, j)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPen)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qpen.h:70
 // index:0
 // Public Visibility=Default Availability=Available
@@ -173,7 +233,7 @@ func (this *QPen) Swap(other QPen_ITF) {
 // /usr/include/qt/QtGui/qpen.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::PenStyle style()
+// [4] Qt::PenStyle style() const
 func (this *QPen) Style() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +252,7 @@ func (this *QPen) SetStyle(arg0 int) {
 // /usr/include/qt/QtGui/qpen.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal dashOffset()
+// [8] qreal dashOffset() const
 func (this *QPen) DashOffset() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen10dashOffsetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -211,7 +271,7 @@ func (this *QPen) SetDashOffset(doffset float64) {
 // /usr/include/qt/QtGui/qpen.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal miterLimit()
+// [8] qreal miterLimit() const
 func (this *QPen) MiterLimit() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen10miterLimitEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -230,7 +290,7 @@ func (this *QPen) SetMiterLimit(limit float64) {
 // /usr/include/qt/QtGui/qpen.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal widthF()
+// [8] qreal widthF() const
 func (this *QPen) WidthF() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen6widthFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -249,7 +309,7 @@ func (this *QPen) SetWidthF(width float64) {
 // /usr/include/qt/QtGui/qpen.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int width()
+// [4] int width() const
 func (this *QPen) Width() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +328,7 @@ func (this *QPen) SetWidth(width int) {
 // /usr/include/qt/QtGui/qpen.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QColor color()
+// [16] QColor color() const
 func (this *QPen) Color() *QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -293,7 +353,7 @@ func (this *QPen) SetColor(color QColor_ITF) {
 // /usr/include/qt/QtGui/qpen.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QBrush brush()
+// [8] QBrush brush() const
 func (this *QPen) Brush() *QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5brushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -318,7 +378,7 @@ func (this *QPen) SetBrush(brush QBrush_ITF) {
 // /usr/include/qt/QtGui/qpen.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSolid()
+// [1] bool isSolid() const
 func (this *QPen) IsSolid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen7isSolidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -328,7 +388,7 @@ func (this *QPen) IsSolid() bool {
 // /usr/include/qt/QtGui/qpen.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::PenCapStyle capStyle()
+// [4] Qt::PenCapStyle capStyle() const
 func (this *QPen) CapStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen8capStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -347,7 +407,7 @@ func (this *QPen) SetCapStyle(pcs int) {
 // /usr/include/qt/QtGui/qpen.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::PenJoinStyle joinStyle()
+// [4] Qt::PenJoinStyle joinStyle() const
 func (this *QPen) JoinStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen9joinStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -366,7 +426,7 @@ func (this *QPen) SetJoinStyle(pcs int) {
 // /usr/include/qt/QtGui/qpen.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isCosmetic()
+// [1] bool isCosmetic() const
 func (this *QPen) IsCosmetic() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen10isCosmeticEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -385,7 +445,7 @@ func (this *QPen) SetCosmetic(cosmetic bool) {
 // /usr/include/qt/QtGui/qpen.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QPen &)
+// [1] bool operator==(const QPen &) const
 func (this *QPen) Operator_equal_equal(p QPen_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPen_PTR() != nil {
@@ -399,7 +459,7 @@ func (this *QPen) Operator_equal_equal(p QPen_ITF) bool {
 // /usr/include/qt/QtGui/qpen.h:117
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QPen &)
+// [1] bool operator!=(const QPen &) const
 func (this *QPen) Operator_not_equal(p QPen_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPen_PTR() != nil {

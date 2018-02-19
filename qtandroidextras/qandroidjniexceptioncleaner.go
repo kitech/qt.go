@@ -76,6 +76,20 @@ func NewQAndroidJniExceptionCleaner(outputMode int) *QAndroidJniExceptionCleaner
 	return gothis
 }
 
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:75
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAndroidJniExceptionCleaner(enum QAndroidJniExceptionCleaner::OutputMode)
+func NewQAndroidJniExceptionCleaner__() *QAndroidJniExceptionCleaner {
+	// arg: 0, QAndroidJniExceptionCleaner::OutputMode=Enum, QAndroidJniExceptionCleaner::OutputMode=Enum,
+	outputMode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QAndroidJniExceptionCleanerC2ENS_10OutputModeE", qtrt.FFI_TYPE_POINTER, outputMode)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAndroidJniExceptionCleanerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAndroidJniExceptionCleaner)
+	return gothis
+}
+
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:76
 // index:0
 // Public Visibility=Default Availability=Available

@@ -89,7 +89,7 @@ func DeleteQWinCompositionChangeEvent(this *QWinCompositionChangeEvent) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinevent.h:82
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isCompositionEnabled()
+// [1] bool isCompositionEnabled() const
 func (this *QWinCompositionChangeEvent) IsCompositionEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QWinCompositionChangeEvent20isCompositionEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -82,6 +82,20 @@ func NewQGraphicsLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsLayout(QGraphicsLayoutItem *)
+func NewQGraphicsLayout__() *QGraphicsLayout {
+	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsLayout)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -105,7 +119,7 @@ func (this *QGraphicsLayout) SetContentsMargins(left float64, top float64, right
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void getContentsMargins(qreal *, qreal *, qreal *, qreal *)
+// [-2] void getContentsMargins(qreal *, qreal *, qreal *, qreal *) const
 func (this *QGraphicsLayout) GetContentsMargins(left unsafe.Pointer /*666*/, top unsafe.Pointer /*666*/, right unsafe.Pointer /*666*/, bottom unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)
@@ -123,7 +137,7 @@ func (this *QGraphicsLayout) Activate() {
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isActivated()
+// [1] bool isActivated() const
 func (this *QGraphicsLayout) IsActivated() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsLayout11isActivatedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +178,7 @@ func (this *QGraphicsLayout) WidgetEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:70
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QGraphicsLayout) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsLayout5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +188,7 @@ func (this *QGraphicsLayout) Count() int {
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:71
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QGraphicsLayoutItem * itemAt(int)
+// [8] QGraphicsLayoutItem * itemAt(int) const
 func (this *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsLayout6itemAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)

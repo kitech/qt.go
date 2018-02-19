@@ -64,7 +64,7 @@ func (*QButtonGroup) NewFromPointer(cthis unsafe.Pointer) *QButtonGroup {
 // /usr/include/qt/QtWidgets/qbuttongroup.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QButtonGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QButtonGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +80,20 @@ func NewQButtonGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QButtonGroup 
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQButtonGroupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QButtonGroup")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qbuttongroup.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QButtonGroup(QObject *)
+func NewQButtonGroup__() *QButtonGroup {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQButtonGroupFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,7 +124,7 @@ func (this *QButtonGroup) SetExclusive(arg0 bool) {
 // /usr/include/qt/QtWidgets/qbuttongroup.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool exclusive()
+// [1] bool exclusive() const
 func (this *QButtonGroup) Exclusive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QButtonGroup9exclusiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -126,6 +140,21 @@ func (this *QButtonGroup) AddButton(arg0 QAbstractButton_ITF /*777 QAbstractButt
 	if arg0 != nil && arg0.QAbstractButton_PTR() != nil {
 		convArg0 = arg0.QAbstractButton_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroup9addButtonEP15QAbstractButtoni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, id)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qbuttongroup.h:66
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addButton(QAbstractButton *, int)
+func (this *QButtonGroup) AddButton__(arg0 QAbstractButton_ITF /*777 QAbstractButton **/) {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAbstractButton_PTR() != nil {
+		convArg0 = arg0.QAbstractButton_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	id := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroup9addButtonEP15QAbstractButtoni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, id)
 	qtrt.ErrPrint(err, rv)
 }
@@ -146,7 +175,7 @@ func (this *QButtonGroup) RemoveButton(arg0 QAbstractButton_ITF /*777 QAbstractB
 // /usr/include/qt/QtWidgets/qbuttongroup.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractButton * checkedButton()
+// [8] QAbstractButton * checkedButton() const
 func (this *QButtonGroup) CheckedButton() *QAbstractButton /*777 QAbstractButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QButtonGroup13checkedButtonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -156,7 +185,7 @@ func (this *QButtonGroup) CheckedButton() *QAbstractButton /*777 QAbstractButton
 // /usr/include/qt/QtWidgets/qbuttongroup.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractButton * button(int)
+// [8] QAbstractButton * button(int) const
 func (this *QButtonGroup) Button(id int) *QAbstractButton /*777 QAbstractButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QButtonGroup6buttonEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	qtrt.ErrPrint(err, rv)
@@ -179,7 +208,7 @@ func (this *QButtonGroup) SetId(button QAbstractButton_ITF /*777 QAbstractButton
 // /usr/include/qt/QtWidgets/qbuttongroup.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int id(QAbstractButton *)
+// [4] int id(QAbstractButton *) const
 func (this *QButtonGroup) Id(button QAbstractButton_ITF /*777 QAbstractButton **/) int {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -193,7 +222,7 @@ func (this *QButtonGroup) Id(button QAbstractButton_ITF /*777 QAbstractButton **
 // /usr/include/qt/QtWidgets/qbuttongroup.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int checkedId()
+// [4] int checkedId() const
 func (this *QButtonGroup) CheckedId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QButtonGroup9checkedIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

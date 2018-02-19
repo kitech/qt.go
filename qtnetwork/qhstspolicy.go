@@ -92,6 +92,26 @@ func NewQHstsPolicy_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode 
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qhstspolicy.h:64
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QHstsPolicy(const QDateTime &, QHstsPolicy::PolicyFlags, const QString &, QUrl::ParsingMode)
+func NewQHstsPolicy_1_(expiry qtcore.QDateTime_ITF, flags int, host string) *QHstsPolicy {
+	var convArg0 unsafe.Pointer
+	if expiry != nil && expiry.QDateTime_PTR() != nil {
+		convArg0 = expiry.QDateTime_PTR().GetCthis()
+	}
+	var tmpArg2 = qtcore.NewQString_5(host)
+	var convArg2 = tmpArg2.GetCthis()
+	// arg: 3, QUrl::ParsingMode=Elaborated, QUrl::ParsingMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyC2ERK9QDateTime6QFlagsINS_10PolicyFlagEERK7QStringN4QUrl11ParsingModeE", qtrt.FFI_TYPE_POINTER, convArg0, flags, convArg2, mode)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQHstsPolicyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHstsPolicy)
+	return gothis
+}
+
 // /usr/include/qt/QtNetwork/qhstspolicy.h:67
 // index:0
 // Public Visibility=Default Availability=Available
@@ -155,6 +175,19 @@ func (this *QHstsPolicy) SetHost(host string, mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtNetwork/qhstspolicy.h:73
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setHost(const QString &, QUrl::ParsingMode)
+func (this *QHstsPolicy) SetHost__(host string) {
+	var tmpArg0 = qtcore.NewQString_5(host)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QUrl::ParsingMode=Elaborated, QUrl::ParsingMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy7setHostERK7QStringN4QUrl11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtNetwork/qhstspolicy.h:75
 // index:0
 // Public Visibility=Default Availability=Available
@@ -171,7 +204,7 @@ func (this *QHstsPolicy) SetExpiry(expiry qtcore.QDateTime_ITF) {
 // /usr/include/qt/QtNetwork/qhstspolicy.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime expiry()
+// [8] QDateTime expiry() const
 func (this *QHstsPolicy) Expiry() *qtcore.QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy6expiryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +225,7 @@ func (this *QHstsPolicy) SetIncludesSubDomains(include bool) {
 // /usr/include/qt/QtNetwork/qhstspolicy.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool includesSubDomains()
+// [1] bool includesSubDomains() const
 func (this *QHstsPolicy) IncludesSubDomains() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy18includesSubDomainsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +235,7 @@ func (this *QHstsPolicy) IncludesSubDomains() bool {
 // /usr/include/qt/QtNetwork/qhstspolicy.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isExpired()
+// [1] bool isExpired() const
 func (this *QHstsPolicy) IsExpired() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy9isExpiredEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

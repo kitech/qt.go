@@ -223,7 +223,7 @@ func (this *QQmlProperty) Operator_equal(arg0 QQmlProperty_ITF) *QQmlProperty {
 // /usr/include/qt/QtQml/qqmlproperty.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QQmlProperty &)
+// [1] bool operator==(const QQmlProperty &) const
 func (this *QQmlProperty) Operator_equal_equal(arg0 QQmlProperty_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlProperty_PTR() != nil {
@@ -237,7 +237,7 @@ func (this *QQmlProperty) Operator_equal_equal(arg0 QQmlProperty_ITF) bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QQmlProperty::Type type()
+// [4] QQmlProperty::Type type() const
 func (this *QQmlProperty) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,7 +247,7 @@ func (this *QQmlProperty) Type() int {
 // /usr/include/qt/QtQml/qqmlproperty.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QQmlProperty) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +257,7 @@ func (this *QQmlProperty) IsValid() bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isProperty()
+// [1] bool isProperty() const
 func (this *QQmlProperty) IsProperty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty10isPropertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -267,7 +267,7 @@ func (this *QQmlProperty) IsProperty() bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSignalProperty()
+// [1] bool isSignalProperty() const
 func (this *QQmlProperty) IsSignalProperty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty16isSignalPropertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -277,7 +277,7 @@ func (this *QQmlProperty) IsSignalProperty() bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int propertyType()
+// [4] int propertyType() const
 func (this *QQmlProperty) PropertyType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty12propertyTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -287,7 +287,7 @@ func (this *QQmlProperty) PropertyType() int {
 // /usr/include/qt/QtQml/qqmlproperty.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QQmlProperty::PropertyTypeCategory propertyTypeCategory()
+// [4] QQmlProperty::PropertyTypeCategory propertyTypeCategory() const
 func (this *QQmlProperty) PropertyTypeCategory() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty20propertyTypeCategoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -297,7 +297,7 @@ func (this *QQmlProperty) PropertyTypeCategory() int {
 // /usr/include/qt/QtQml/qqmlproperty.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const char * propertyTypeName()
+// [8] const char * propertyTypeName() const
 func (this *QQmlProperty) PropertyTypeName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty16propertyTypeNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -307,7 +307,7 @@ func (this *QQmlProperty) PropertyTypeName() string {
 // /usr/include/qt/QtQml/qqmlproperty.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QQmlProperty) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -320,7 +320,7 @@ func (this *QQmlProperty) Name() string {
 // /usr/include/qt/QtQml/qqmlproperty.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant read()
+// [16] QVariant read() const
 func (this *QQmlProperty) Read() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty4readEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -409,7 +409,7 @@ func QQmlProperty_Read_3(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 s
 // /usr/include/qt/QtQml/qqmlproperty.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool write(const QVariant &)
+// [1] bool write(const QVariant &) const
 func (this *QQmlProperty) Write(arg0 qtcore.QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QVariant_PTR() != nil {
@@ -506,7 +506,7 @@ func QQmlProperty_Write_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string
 // /usr/include/qt/QtQml/qqmlproperty.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool reset()
+// [1] bool reset() const
 func (this *QQmlProperty) Reset() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -516,7 +516,7 @@ func (this *QQmlProperty) Reset() bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasNotifySignal()
+// [1] bool hasNotifySignal() const
 func (this *QQmlProperty) HasNotifySignal() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty15hasNotifySignalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -526,7 +526,7 @@ func (this *QQmlProperty) HasNotifySignal() bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool needsNotifySignal()
+// [1] bool needsNotifySignal() const
 func (this *QQmlProperty) NeedsNotifySignal() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty17needsNotifySignalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -536,7 +536,7 @@ func (this *QQmlProperty) NeedsNotifySignal() bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool connectNotifySignal(QObject *, const char *)
+// [1] bool connectNotifySignal(QObject *, const char *) const
 func (this *QQmlProperty) ConnectNotifySignal(dest qtcore.QObject_ITF /*777 QObject **/, slot string) bool {
 	var convArg0 unsafe.Pointer
 	if dest != nil && dest.QObject_PTR() != nil {
@@ -552,7 +552,7 @@ func (this *QQmlProperty) ConnectNotifySignal(dest qtcore.QObject_ITF /*777 QObj
 // /usr/include/qt/QtQml/qqmlproperty.h:113
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool connectNotifySignal(QObject *, int)
+// [1] bool connectNotifySignal(QObject *, int) const
 func (this *QQmlProperty) ConnectNotifySignal_1(dest qtcore.QObject_ITF /*777 QObject **/, method int) bool {
 	var convArg0 unsafe.Pointer
 	if dest != nil && dest.QObject_PTR() != nil {
@@ -566,7 +566,7 @@ func (this *QQmlProperty) ConnectNotifySignal_1(dest qtcore.QObject_ITF /*777 QO
 // /usr/include/qt/QtQml/qqmlproperty.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isWritable()
+// [1] bool isWritable() const
 func (this *QQmlProperty) IsWritable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty10isWritableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -576,7 +576,7 @@ func (this *QQmlProperty) IsWritable() bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isDesignable()
+// [1] bool isDesignable() const
 func (this *QQmlProperty) IsDesignable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty12isDesignableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -586,7 +586,7 @@ func (this *QQmlProperty) IsDesignable() bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isResettable()
+// [1] bool isResettable() const
 func (this *QQmlProperty) IsResettable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty12isResettableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -596,7 +596,7 @@ func (this *QQmlProperty) IsResettable() bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QObject * object()
+// [8] QObject * object() const
 func (this *QQmlProperty) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -606,7 +606,7 @@ func (this *QQmlProperty) Object() *qtcore.QObject /*777 QObject **/ {
 // /usr/include/qt/QtQml/qqmlproperty.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int index()
+// [4] int index() const
 func (this *QQmlProperty) Index() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty5indexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -616,7 +616,7 @@ func (this *QQmlProperty) Index() int {
 // /usr/include/qt/QtQml/qqmlproperty.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QMetaProperty property()
+// [32] QMetaProperty property() const
 func (this *QQmlProperty) Property() *qtcore.QMetaProperty /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty8propertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -628,7 +628,7 @@ func (this *QQmlProperty) Property() *qtcore.QMetaProperty /*123*/ {
 // /usr/include/qt/QtQml/qqmlproperty.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QMetaMethod method()
+// [16] QMetaMethod method() const
 func (this *QQmlProperty) Method() *qtcore.QMetaMethod /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty6methodEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

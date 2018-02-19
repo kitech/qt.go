@@ -77,7 +77,7 @@ func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 // /usr/include/qt/QtGui/qevent.h:1053
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ApplicationState applicationState()
+// [4] Qt::ApplicationState applicationState() const
 func (this *QApplicationStateChangeEvent) ApplicationState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QApplicationStateChangeEvent16applicationStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

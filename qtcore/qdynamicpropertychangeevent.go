@@ -91,7 +91,7 @@ func DeleteQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
 // /usr/include/qt/QtCore/qcoreevent.h:368
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QByteArray propertyName()
+// [8] QByteArray propertyName() const
 func (this *QDynamicPropertyChangeEvent) PropertyName() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -102,7 +102,7 @@ func (this *QSGGeometryNode) SetMaterial(material QSGMaterial_ITF /*777 QSGMater
 // /usr/include/qt/QtQuick/qsgnode.h:235
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSGMaterial * material()
+// [8] QSGMaterial * material() const
 func (this *QSGGeometryNode) Material() *QSGMaterial /*777 QSGMaterial **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSGGeometryNode8materialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,7 +125,7 @@ func (this *QSGGeometryNode) SetOpaqueMaterial(material QSGMaterial_ITF /*777 QS
 // /usr/include/qt/QtQuick/qsgnode.h:238
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSGMaterial * opaqueMaterial()
+// [8] QSGMaterial * opaqueMaterial() const
 func (this *QSGGeometryNode) OpaqueMaterial() *QSGMaterial /*777 QSGMaterial **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSGGeometryNode14opaqueMaterialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,7 +135,7 @@ func (this *QSGGeometryNode) OpaqueMaterial() *QSGMaterial /*777 QSGMaterial **/
 // /usr/include/qt/QtQuick/qsgnode.h:240
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSGMaterial * activeMaterial()
+// [8] QSGMaterial * activeMaterial() const
 func (this *QSGGeometryNode) ActiveMaterial() *QSGMaterial /*777 QSGMaterial **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSGGeometryNode14activeMaterialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,7 +154,7 @@ func (this *QSGGeometryNode) SetRenderOrder(order int) {
 // /usr/include/qt/QtQuick/qsgnode.h:243
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int renderOrder()
+// [4] int renderOrder() const
 func (this *QSGGeometryNode) RenderOrder() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSGGeometryNode11renderOrderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,7 +173,7 @@ func (this *QSGGeometryNode) SetInheritedOpacity(opacity float64) {
 // /usr/include/qt/QtQuick/qsgnode.h:246
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal inheritedOpacity()
+// [8] qreal inheritedOpacity() const
 func (this *QSGGeometryNode) InheritedOpacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSGGeometryNode16inheritedOpacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

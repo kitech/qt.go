@@ -87,7 +87,7 @@ func DeleteQBasicTimer(this *QBasicTimer) {
 // /usr/include/qt/QtCore/qbasictimer.h:58
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isActive()
+// [1] bool isActive() const
 func (this *QBasicTimer) IsActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicTimer8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -97,7 +97,7 @@ func (this *QBasicTimer) IsActive() bool {
 // /usr/include/qt/QtCore/qbasictimer.h:59
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int timerId()
+// [4] int timerId() const
 func (this *QBasicTimer) TimerId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicTimer7timerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

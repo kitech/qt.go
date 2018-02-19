@@ -62,7 +62,7 @@ func (*QEventLoop) NewFromPointer(cthis unsafe.Pointer) *QEventLoop {
 // /usr/include/qt/QtCore/qeventloop.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QEventLoop) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QEventLoop10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +78,20 @@ func NewQEventLoop(parent QObject_ITF /*777 QObject **/) *QEventLoop {
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoopC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQEventLoopFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QEventLoop")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qeventloop.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QEventLoop(QObject *)
+func NewQEventLoop__() *QEventLoop {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoopC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventLoopFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -106,6 +120,18 @@ func (this *QEventLoop) ProcessEvents(flags int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qeventloop.h:70
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool processEvents(QEventLoop::ProcessEventsFlags)
+func (this *QEventLoop) ProcessEvents__() bool {
+	// arg: 0, QEventLoop::ProcessEventsFlags=Typedef, QEventLoop::ProcessEventsFlags=Typedef, QFlags<QEventLoop::ProcessEventsFlag>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qeventloop.h:71
 // index:1
 // Public Visibility=Default Availability=Available
@@ -125,6 +151,18 @@ func (this *QEventLoop) Exec(flags int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtCore/qeventloop.h:73
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int exec(QEventLoop::ProcessEventsFlags)
+func (this *QEventLoop) Exec__() int {
+	// arg: 0, QEventLoop::ProcessEventsFlags=Typedef, QEventLoop::ProcessEventsFlags=Typedef, QFlags<QEventLoop::ProcessEventsFlag>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtCore/qeventloop.h:74
 // index:0
 // Public Visibility=Default Availability=Available
@@ -134,10 +172,21 @@ func (this *QEventLoop) Exit(returnCode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qeventloop.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void exit(int)
+func (this *QEventLoop) Exit__() {
+	// arg: 0, int=Int, =Invalid,
+	returnCode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop4exitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), returnCode)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qeventloop.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRunning()
+// [1] bool isRunning() const
 func (this *QEventLoop) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QEventLoop9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

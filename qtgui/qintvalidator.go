@@ -63,7 +63,7 @@ func (*QIntValidator) NewFromPointer(cthis unsafe.Pointer) *QIntValidator {
 // /usr/include/qt/QtGui/qvalidator.h:91
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QIntValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +79,20 @@ func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidato
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQIntValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QIntValidator")
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qvalidator.h:96
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QIntValidator(QObject *)
+func NewQIntValidator__() *QIntValidator {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQIntValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -102,6 +116,20 @@ func NewQIntValidator_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QOb
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qvalidator.h:97
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QIntValidator(int, int, QObject *)
+func NewQIntValidator_1_(bottom int, top int) *QIntValidator {
+	// arg: 2, QObject *=Pointer, QObject=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EiiP7QObject", qtrt.FFI_TYPE_POINTER, bottom, top, convArg2)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQIntValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QIntValidator")
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qvalidator.h:98
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -116,7 +144,7 @@ func DeleteQIntValidator(this *QIntValidator) {
 // /usr/include/qt/QtGui/qvalidator.h:100
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QValidator::State validate(QString &, int &)
+// [4] QValidator::State validate(QString &, int &) const
 func (this *QIntValidator) Validate(arg0 string, arg1 int) int {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -128,7 +156,7 @@ func (this *QIntValidator) Validate(arg0 string, arg1 int) int {
 // /usr/include/qt/QtGui/qvalidator.h:101
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void fixup(QString &)
+// [-2] void fixup(QString &) const
 func (this *QIntValidator) Fixup(input string) {
 	var tmpArg0 = qtcore.NewQString_5(input)
 	var convArg0 = tmpArg0.GetCthis()
@@ -166,7 +194,7 @@ func (this *QIntValidator) SetRange(bottom int, top int) {
 // /usr/include/qt/QtGui/qvalidator.h:107
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int bottom()
+// [4] int bottom() const
 func (this *QIntValidator) Bottom() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator6bottomEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +204,7 @@ func (this *QIntValidator) Bottom() int {
 // /usr/include/qt/QtGui/qvalidator.h:108
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int top()
+// [4] int top() const
 func (this *QIntValidator) Top() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator3topEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

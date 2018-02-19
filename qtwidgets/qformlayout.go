@@ -64,7 +64,7 @@ func (*QFormLayout) NewFromPointer(cthis unsafe.Pointer) *QFormLayout {
 // /usr/include/qt/QtWidgets/qformlayout.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QFormLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +80,20 @@ func NewQFormLayout(parent QWidget_ITF /*777 QWidget **/) *QFormLayout {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQFormLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFormLayout")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qformlayout.h:91
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFormLayout(QWidget *)
+func NewQFormLayout__() *QFormLayout {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFormLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,7 +124,7 @@ func (this *QFormLayout) SetFieldGrowthPolicy(policy int) {
 // /usr/include/qt/QtWidgets/qformlayout.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QFormLayout::FieldGrowthPolicy fieldGrowthPolicy()
+// [4] QFormLayout::FieldGrowthPolicy fieldGrowthPolicy() const
 func (this *QFormLayout) FieldGrowthPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout17fieldGrowthPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,7 +143,7 @@ func (this *QFormLayout) SetRowWrapPolicy(policy int) {
 // /usr/include/qt/QtWidgets/qformlayout.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QFormLayout::RowWrapPolicy rowWrapPolicy()
+// [4] QFormLayout::RowWrapPolicy rowWrapPolicy() const
 func (this *QFormLayout) RowWrapPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout13rowWrapPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,7 +162,7 @@ func (this *QFormLayout) SetLabelAlignment(alignment int) {
 // /usr/include/qt/QtWidgets/qformlayout.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Alignment labelAlignment()
+// [4] Qt::Alignment labelAlignment() const
 func (this *QFormLayout) LabelAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout14labelAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +181,7 @@ func (this *QFormLayout) SetFormAlignment(alignment int) {
 // /usr/include/qt/QtWidgets/qformlayout.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Alignment formAlignment()
+// [4] Qt::Alignment formAlignment() const
 func (this *QFormLayout) FormAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout13formAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +200,7 @@ func (this *QFormLayout) SetHorizontalSpacing(spacing int) {
 // /usr/include/qt/QtWidgets/qformlayout.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int horizontalSpacing()
+// [4] int horizontalSpacing() const
 func (this *QFormLayout) HorizontalSpacing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout17horizontalSpacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -205,7 +219,7 @@ func (this *QFormLayout) SetVerticalSpacing(spacing int) {
 // /usr/include/qt/QtWidgets/qformlayout.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int verticalSpacing()
+// [4] int verticalSpacing() const
 func (this *QFormLayout) VerticalSpacing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout15verticalSpacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -215,7 +229,7 @@ func (this *QFormLayout) VerticalSpacing() int {
 // /usr/include/qt/QtWidgets/qformlayout.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int spacing()
+// [4] int spacing() const
 func (this *QFormLayout) Spacing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout7spacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -526,7 +540,7 @@ func (this *QFormLayout) SetLayout(row int, role int, layout QLayout_ITF /*777 Q
 // /usr/include/qt/QtWidgets/qformlayout.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QLayoutItem * itemAt(int, enum QFormLayout::ItemRole)
+// [8] QLayoutItem * itemAt(int, enum QFormLayout::ItemRole) const
 func (this *QFormLayout) ItemAt(row int, role int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout6itemAtEiNS_8ItemRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, role)
 	qtrt.ErrPrint(err, rv)
@@ -536,7 +550,7 @@ func (this *QFormLayout) ItemAt(row int, role int) *QLayoutItem /*777 QLayoutIte
 // /usr/include/qt/QtWidgets/qformlayout.h:146
 // index:1
 // Public virtual Visibility=Default Availability=Available
-// [8] QLayoutItem * itemAt(int)
+// [8] QLayoutItem * itemAt(int) const
 func (this *QFormLayout) ItemAt_1(index int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout6itemAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -546,7 +560,7 @@ func (this *QFormLayout) ItemAt_1(index int) *QLayoutItem /*777 QLayoutItem **/ 
 // /usr/include/qt/QtWidgets/qformlayout.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void getItemPosition(int, int *, enum QFormLayout::ItemRole *)
+// [-2] void getItemPosition(int, int *, enum QFormLayout::ItemRole *) const
 func (this *QFormLayout) GetItemPosition(index int, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout15getItemPositionEiPiPNS_8ItemRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, rowPtr, rolePtr)
 	qtrt.ErrPrint(err, rv)
@@ -555,7 +569,7 @@ func (this *QFormLayout) GetItemPosition(index int, rowPtr unsafe.Pointer /*666*
 // /usr/include/qt/QtWidgets/qformlayout.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void getWidgetPosition(QWidget *, int *, enum QFormLayout::ItemRole *)
+// [-2] void getWidgetPosition(QWidget *, int *, enum QFormLayout::ItemRole *) const
 func (this *QFormLayout) GetWidgetPosition(widget QWidget_ITF /*777 QWidget **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -568,7 +582,7 @@ func (this *QFormLayout) GetWidgetPosition(widget QWidget_ITF /*777 QWidget **/,
 // /usr/include/qt/QtWidgets/qformlayout.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void getLayoutPosition(QLayout *, int *, enum QFormLayout::ItemRole *)
+// [-2] void getLayoutPosition(QLayout *, int *, enum QFormLayout::ItemRole *) const
 func (this *QFormLayout) GetLayoutPosition(layout QLayout_ITF /*777 QLayout **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	var convArg0 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
@@ -581,7 +595,7 @@ func (this *QFormLayout) GetLayoutPosition(layout QLayout_ITF /*777 QLayout **/,
 // /usr/include/qt/QtWidgets/qformlayout.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * labelForField(QWidget *)
+// [8] QWidget * labelForField(QWidget *) const
 func (this *QFormLayout) LabelForField(field QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if field != nil && field.QWidget_PTR() != nil {
@@ -595,7 +609,7 @@ func (this *QFormLayout) LabelForField(field QWidget_ITF /*777 QWidget **/) *QWi
 // /usr/include/qt/QtWidgets/qformlayout.h:142
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QWidget * labelForField(QLayout *)
+// [8] QWidget * labelForField(QLayout *) const
 func (this *QFormLayout) LabelForField_1(field QLayout_ITF /*777 QLayout **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if field != nil && field.QLayout_PTR() != nil {
@@ -645,7 +659,7 @@ func (this *QFormLayout) SetGeometry(rect qtcore.QRect_ITF) {
 // /usr/include/qt/QtWidgets/qformlayout.h:150
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSize()
+// [8] QSize minimumSize() const
 func (this *QFormLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -657,7 +671,7 @@ func (this *QFormLayout) MinimumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qformlayout.h:151
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QFormLayout) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -678,7 +692,7 @@ func (this *QFormLayout) Invalidate() {
 // /usr/include/qt/QtWidgets/qformlayout.h:154
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool hasHeightForWidth()
+// [1] bool hasHeightForWidth() const
 func (this *QFormLayout) HasHeightForWidth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout17hasHeightForWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -688,7 +702,7 @@ func (this *QFormLayout) HasHeightForWidth() bool {
 // /usr/include/qt/QtWidgets/qformlayout.h:155
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int heightForWidth(int)
+// [4] int heightForWidth(int) const
 func (this *QFormLayout) HeightForWidth(width int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
@@ -698,7 +712,7 @@ func (this *QFormLayout) HeightForWidth(width int) int {
 // /usr/include/qt/QtWidgets/qformlayout.h:156
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] Qt::Orientations expandingDirections()
+// [4] Qt::Orientations expandingDirections() const
 func (this *QFormLayout) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -708,7 +722,7 @@ func (this *QFormLayout) ExpandingDirections() int {
 // /usr/include/qt/QtWidgets/qformlayout.h:157
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QFormLayout) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -718,7 +732,7 @@ func (this *QFormLayout) Count() int {
 // /usr/include/qt/QtWidgets/qformlayout.h:159
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int rowCount()
+// [4] int rowCount() const
 func (this *QFormLayout) RowCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout8rowCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

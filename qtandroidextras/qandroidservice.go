@@ -73,6 +73,21 @@ func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 	return gothis
 }
 
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h:54
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAndroidService(int &, char **, int)
+func NewQAndroidService__(argc int, argv []string) *QAndroidService {
+	var convArg1 = qtrt.StringSliceToCCharPP(argv)
+	// arg: 2, int=Int, =Invalid,
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidServiceC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAndroidServiceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAndroidService")
+	return gothis
+}
+
 // /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available

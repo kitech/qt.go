@@ -165,7 +165,7 @@ func NewQVector2D_6(vector QVector4D_ITF) *QVector2D {
 // /usr/include/qt/QtGui/qvector2d.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QVector2D) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +175,7 @@ func (this *QVector2D) IsNull() bool {
 // /usr/include/qt/QtGui/qvector2d.h:73
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] float x()
+// [4] float x() const
 func (this *QVector2D) X() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,7 +185,7 @@ func (this *QVector2D) X() float32 {
 // /usr/include/qt/QtGui/qvector2d.h:74
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] float y()
+// [4] float y() const
 func (this *QVector2D) Y() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,7 +223,7 @@ func (this *QVector2D) Operator_get_index(i int) float32 {
 // /usr/include/qt/QtGui/qvector2d.h:80
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] float operator[](int)
+// [4] float operator[](int) const
 func (this *QVector2D) Operator_get_index_1(i int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2DixEi", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -233,7 +233,7 @@ func (this *QVector2D) Operator_get_index_1(i int) float32 {
 // /usr/include/qt/QtGui/qvector2d.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float length()
+// [4] float length() const
 func (this *QVector2D) Length() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D6lengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -243,7 +243,7 @@ func (this *QVector2D) Length() float32 {
 // /usr/include/qt/QtGui/qvector2d.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float lengthSquared()
+// [4] float lengthSquared() const
 func (this *QVector2D) LengthSquared() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D13lengthSquaredEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func (this *QVector2D) LengthSquared() float32 {
 // /usr/include/qt/QtGui/qvector2d.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QVector2D normalized()
+// [8] QVector2D normalized() const
 func (this *QVector2D) Normalized() *QVector2D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D10normalizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -274,7 +274,7 @@ func (this *QVector2D) Normalize() {
 // /usr/include/qt/QtGui/qvector2d.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float distanceToPoint(const QVector2D &)
+// [4] float distanceToPoint(const QVector2D &) const
 func (this *QVector2D) DistanceToPoint(point QVector2D_ITF) float32 {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector2D_PTR() != nil {
@@ -288,7 +288,7 @@ func (this *QVector2D) DistanceToPoint(point QVector2D_ITF) float32 {
 // /usr/include/qt/QtGui/qvector2d.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float distanceToLine(const QVector2D &, const QVector2D &)
+// [4] float distanceToLine(const QVector2D &, const QVector2D &) const
 func (this *QVector2D) DistanceToLine(point QVector2D_ITF, direction QVector2D_ITF) float32 {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector2D_PTR() != nil {
@@ -417,7 +417,7 @@ func QVector2D_DotProduct(v1 QVector2D_ITF, v2 QVector2D_ITF) float32 {
 // /usr/include/qt/QtGui/qvector2d.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [12] QVector3D toVector3D()
+// [12] QVector3D toVector3D() const
 func (this *QVector2D) ToVector3D() *QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D10toVector3DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -429,7 +429,7 @@ func (this *QVector2D) ToVector3D() *QVector3D /*123*/ {
 // /usr/include/qt/QtGui/qvector2d.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVector4D toVector4D()
+// [16] QVector4D toVector4D() const
 func (this *QVector2D) ToVector4D() *QVector4D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D10toVector4DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -441,7 +441,7 @@ func (this *QVector2D) ToVector4D() *QVector4D /*123*/ {
 // /usr/include/qt/QtGui/qvector2d.h:120
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint toPoint()
+// [8] QPoint toPoint() const
 func (this *QVector2D) ToPoint() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D7toPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -453,7 +453,7 @@ func (this *QVector2D) ToPoint() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qvector2d.h:121
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QPointF toPointF()
+// [16] QPointF toPointF() const
 func (this *QVector2D) ToPointF() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D8toPointFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

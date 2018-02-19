@@ -69,7 +69,7 @@ func (*QGraphicsTransform) NewFromPointer(cthis unsafe.Pointer) *QGraphicsTransf
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGraphicsTransform) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsTransform10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +92,20 @@ func NewQGraphicsTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphi
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicstransform.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsTransform(QObject *)
+func NewQGraphicsTransform__() *QGraphicsTransform {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsTransformC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsTransformFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsTransform")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -106,7 +120,7 @@ func DeleteQGraphicsTransform(this *QGraphicsTransform) {
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:63
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [-2] void applyTo(QMatrix4x4 *)
+// [-2] void applyTo(QMatrix4x4 *) const
 func (this *QGraphicsTransform) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x4 **/) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {

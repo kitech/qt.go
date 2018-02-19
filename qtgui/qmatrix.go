@@ -138,7 +138,7 @@ func (this *QMatrix) SetMatrix(m11 float64, m12 float64, m21 float64, m22 float6
 // /usr/include/qt/QtGui/qmatrix.h:78
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal m11()
+// [8] qreal m11() const
 func (this *QMatrix) M11() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3m11Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,7 +148,7 @@ func (this *QMatrix) M11() float64 {
 // /usr/include/qt/QtGui/qmatrix.h:79
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal m12()
+// [8] qreal m12() const
 func (this *QMatrix) M12() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3m12Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func (this *QMatrix) M12() float64 {
 // /usr/include/qt/QtGui/qmatrix.h:80
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal m21()
+// [8] qreal m21() const
 func (this *QMatrix) M21() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3m21Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -168,7 +168,7 @@ func (this *QMatrix) M21() float64 {
 // /usr/include/qt/QtGui/qmatrix.h:81
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal m22()
+// [8] qreal m22() const
 func (this *QMatrix) M22() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3m22Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,7 +178,7 @@ func (this *QMatrix) M22() float64 {
 // /usr/include/qt/QtGui/qmatrix.h:82
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal dx()
+// [8] qreal dx() const
 func (this *QMatrix) Dx() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix2dxEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,7 +188,7 @@ func (this *QMatrix) Dx() float64 {
 // /usr/include/qt/QtGui/qmatrix.h:83
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal dy()
+// [8] qreal dy() const
 func (this *QMatrix) Dy() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix2dyEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,7 +198,7 @@ func (this *QMatrix) Dy() float64 {
 // /usr/include/qt/QtGui/qmatrix.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void map(int, int, int *, int *)
+// [-2] void map(int, int, int *, int *) const
 func (this *QMatrix) Map(x int, y int, tx unsafe.Pointer /*666*/, ty unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapEiiPiS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, tx, ty)
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QMatrix) Map(x int, y int, tx unsafe.Pointer /*666*/, ty unsafe.Poin
 // /usr/include/qt/QtGui/qmatrix.h:86
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void map(qreal, qreal, qreal *, qreal *)
+// [-2] void map(qreal, qreal, qreal *, qreal *) const
 func (this *QMatrix) Map_1(x float64, y float64, tx unsafe.Pointer /*666*/, ty unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapEddPdS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, tx, ty)
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +216,7 @@ func (this *QMatrix) Map_1(x float64, y float64, tx unsafe.Pointer /*666*/, ty u
 // /usr/include/qt/QtGui/qmatrix.h:90
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] QPoint map(const QPoint &)
+// [8] QPoint map(const QPoint &) const
 func (this *QMatrix) Map_2(p qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -232,7 +232,7 @@ func (this *QMatrix) Map_2(p qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:91
 // index:3
 // Public Visibility=Default Availability=Available
-// [16] QPointF map(const QPointF &)
+// [16] QPointF map(const QPointF &) const
 func (this *QMatrix) Map_3(p qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
@@ -248,7 +248,7 @@ func (this *QMatrix) Map_3(p qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:92
 // index:4
 // Public Visibility=Default Availability=Available
-// [16] QLine map(const QLine &)
+// [16] QLine map(const QLine &) const
 func (this *QMatrix) Map_4(l qtcore.QLine_ITF) *qtcore.QLine /*123*/ {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLine_PTR() != nil {
@@ -264,7 +264,7 @@ func (this *QMatrix) Map_4(l qtcore.QLine_ITF) *qtcore.QLine /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:93
 // index:5
 // Public Visibility=Default Availability=Available
-// [32] QLineF map(const QLineF &)
+// [32] QLineF map(const QLineF &) const
 func (this *QMatrix) Map_5(l qtcore.QLineF_ITF) *qtcore.QLineF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLineF_PTR() != nil {
@@ -280,7 +280,7 @@ func (this *QMatrix) Map_5(l qtcore.QLineF_ITF) *qtcore.QLineF /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:94
 // index:6
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF map(const QPolygonF &)
+// [8] QPolygonF map(const QPolygonF &) const
 func (this *QMatrix) Map_6(a QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygonF_PTR() != nil {
@@ -296,7 +296,7 @@ func (this *QMatrix) Map_6(a QPolygonF_ITF) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:95
 // index:7
 // Public Visibility=Default Availability=Available
-// [8] QPolygon map(const QPolygon &)
+// [8] QPolygon map(const QPolygon &) const
 func (this *QMatrix) Map_7(a QPolygon_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygon_PTR() != nil {
@@ -312,7 +312,7 @@ func (this *QMatrix) Map_7(a QPolygon_ITF) *QPolygon /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:96
 // index:8
 // Public Visibility=Default Availability=Available
-// [8] QRegion map(const QRegion &)
+// [8] QRegion map(const QRegion &) const
 func (this *QMatrix) Map_8(r QRegion_ITF) *QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRegion_PTR() != nil {
@@ -328,7 +328,7 @@ func (this *QMatrix) Map_8(r QRegion_ITF) *QRegion /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:97
 // index:9
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath map(const QPainterPath &)
+// [8] QPainterPath map(const QPainterPath &) const
 func (this *QMatrix) Map_9(p QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainterPath_PTR() != nil {
@@ -344,7 +344,7 @@ func (this *QMatrix) Map_9(p QPainterPath_ITF) *QPainterPath /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect mapRect(const QRect &)
+// [16] QRect mapRect(const QRect &) const
 func (this *QMatrix) MapRect(arg0 qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
@@ -360,7 +360,7 @@ func (this *QMatrix) MapRect(arg0 qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:88
 // index:1
 // Public Visibility=Default Availability=Available
-// [32] QRectF mapRect(const QRectF &)
+// [32] QRectF mapRect(const QRectF &) const
 func (this *QMatrix) MapRect_1(arg0 qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRectF_PTR() != nil {
@@ -376,7 +376,7 @@ func (this *QMatrix) MapRect_1(arg0 qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPolygon mapToPolygon(const QRect &)
+// [8] QPolygon mapToPolygon(const QRect &) const
 func (this *QMatrix) MapToPolygon(r qtcore.QRect_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -401,7 +401,7 @@ func (this *QMatrix) Reset() {
 // /usr/include/qt/QtGui/qmatrix.h:101
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isIdentity()
+// [1] bool isIdentity() const
 func (this *QMatrix) IsIdentity() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix10isIdentityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -459,7 +459,7 @@ func (this *QMatrix) Rotate(a float64) *QMatrix {
 // /usr/include/qt/QtGui/qmatrix.h:108
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isInvertible()
+// [1] bool isInvertible() const
 func (this *QMatrix) IsInvertible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix12isInvertibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -469,7 +469,7 @@ func (this *QMatrix) IsInvertible() bool {
 // /usr/include/qt/QtGui/qmatrix.h:109
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal determinant()
+// [8] qreal determinant() const
 func (this *QMatrix) Determinant() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix11determinantEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -479,8 +479,22 @@ func (this *QMatrix) Determinant() float64 {
 // /usr/include/qt/QtGui/qmatrix.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [48] QMatrix inverted(_Bool *)
+// [48] QMatrix inverted(_Bool *) const
 func (this *QMatrix) Inverted(invertible *bool) *QMatrix /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix8invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMatrix)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qmatrix.h:111
+// index:0
+// Public Visibility=Default Availability=Available
+// [48] QMatrix inverted(_Bool *) const
+func (this *QMatrix) Inverted__() *QMatrix /*123*/ {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var invertible unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix8invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -491,7 +505,7 @@ func (this *QMatrix) Inverted(invertible *bool) *QMatrix /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QMatrix &)
+// [1] bool operator==(const QMatrix &) const
 func (this *QMatrix) Operator_equal_equal(arg0 QMatrix_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMatrix_PTR() != nil {
@@ -505,7 +519,7 @@ func (this *QMatrix) Operator_equal_equal(arg0 QMatrix_ITF) bool {
 // /usr/include/qt/QtGui/qmatrix.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator!=(const QMatrix &)
+// [1] bool operator!=(const QMatrix &) const
 func (this *QMatrix) Operator_not_equal(arg0 QMatrix_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMatrix_PTR() != nil {
@@ -535,7 +549,7 @@ func (this *QMatrix) Operator_mul_equal(arg0 QMatrix_ITF) *QMatrix {
 // /usr/include/qt/QtGui/qmatrix.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [48] QMatrix operator*(const QMatrix &)
+// [48] QMatrix operator*(const QMatrix &) const
 func (this *QMatrix) Operator_mul(o QMatrix_ITF) *QMatrix /*123*/ {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QMatrix_PTR() != nil {

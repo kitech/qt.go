@@ -104,7 +104,7 @@ func NewQSizeF_2(w float64, h float64) *QSizeF {
 // /usr/include/qt/QtCore/qsize.h:222
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QSizeF) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +114,7 @@ func (this *QSizeF) IsNull() bool {
 // /usr/include/qt/QtCore/qsize.h:223
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QSizeF) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,7 +124,7 @@ func (this *QSizeF) IsEmpty() bool {
 // /usr/include/qt/QtCore/qsize.h:224
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QSizeF) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func (this *QSizeF) IsValid() bool {
 // /usr/include/qt/QtCore/qsize.h:226
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal width()
+// [8] qreal width() const
 func (this *QSizeF) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func (this *QSizeF) Width() float64 {
 // /usr/include/qt/QtCore/qsize.h:227
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal height()
+// [8] qreal height() const
 func (this *QSizeF) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -181,7 +181,7 @@ func (this *QSizeF) Transpose() {
 // /usr/include/qt/QtCore/qsize.h:231
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QSizeF transposed()
+// [16] QSizeF transposed() const
 func (this *QSizeF) Transposed() *QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF10transposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -215,7 +215,7 @@ func (this *QSizeF) Scale_1(s QSizeF_ITF, mode int) {
 // /usr/include/qt/QtCore/qsize.h:235
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QSizeF scaled(qreal, qreal, Qt::AspectRatioMode)
+// [16] QSizeF scaled(qreal, qreal, Qt::AspectRatioMode) const
 func (this *QSizeF) Scaled(w float64, h float64, mode int) *QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF6scaledEddN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode)
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +227,7 @@ func (this *QSizeF) Scaled(w float64, h float64, mode int) *QSizeF /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:236
 // index:1
 // Public Visibility=Default Availability=Available
-// [16] QSizeF scaled(const QSizeF &, Qt::AspectRatioMode)
+// [16] QSizeF scaled(const QSizeF &, Qt::AspectRatioMode) const
 func (this *QSizeF) Scaled_1(s QSizeF_ITF, mode int) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSizeF_PTR() != nil {
@@ -243,7 +243,7 @@ func (this *QSizeF) Scaled_1(s QSizeF_ITF, mode int) *QSizeF /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:238
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QSizeF expandedTo(const QSizeF &)
+// [16] QSizeF expandedTo(const QSizeF &) const
 func (this *QSizeF) ExpandedTo(arg0 QSizeF_ITF) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSizeF_PTR() != nil {
@@ -259,7 +259,7 @@ func (this *QSizeF) ExpandedTo(arg0 QSizeF_ITF) *QSizeF /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:239
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QSizeF boundedTo(const QSizeF &)
+// [16] QSizeF boundedTo(const QSizeF &) const
 func (this *QSizeF) BoundedTo(arg0 QSizeF_ITF) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSizeF_PTR() != nil {
@@ -351,7 +351,7 @@ func (this *QSizeF) Operator_div_equal(c float64) *QSizeF {
 // /usr/include/qt/QtCore/qsize.h:257
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSize toSize()
+// [8] QSize toSize() const
 func (this *QSizeF) ToSize() *QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF6toSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -760,7 +760,7 @@ func (this *QVariant) Swap(other QVariant_ITF) {
 // /usr/include/qt/QtCore/qvariant.h:272
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QVariant::Type type()
+// [4] QVariant::Type type() const
 func (this *QVariant) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -770,7 +770,7 @@ func (this *QVariant) Type() int {
 // /usr/include/qt/QtCore/qvariant.h:273
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int userType()
+// [4] int userType() const
 func (this *QVariant) UserType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8userTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -780,7 +780,7 @@ func (this *QVariant) UserType() int {
 // /usr/include/qt/QtCore/qvariant.h:274
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const char * typeName()
+// [8] const char * typeName() const
 func (this *QVariant) TypeName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8typeNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -790,7 +790,7 @@ func (this *QVariant) TypeName() string {
 // /usr/include/qt/QtCore/qvariant.h:276
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool canConvert(int)
+// [1] bool canConvert(int) const
 func (this *QVariant) CanConvert(targetTypeId int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10canConvertEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), targetTypeId)
 	qtrt.ErrPrint(err, rv)
@@ -810,7 +810,7 @@ func (this *QVariant) Convert(targetTypeId int) bool {
 // /usr/include/qt/QtCore/qvariant.h:467
 // index:1
 // Protected Visibility=Default Availability=Available
-// [1] bool convert(const int, void *)
+// [1] bool convert(const int, void *) const
 func (this *QVariant) Convert_1(t int, ptr unsafe.Pointer /*666*/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7convertEiPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t, ptr)
 	qtrt.ErrPrint(err, rv)
@@ -820,7 +820,7 @@ func (this *QVariant) Convert_1(t int, ptr unsafe.Pointer /*666*/) bool {
 // /usr/include/qt/QtCore/qvariant.h:279
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QVariant) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -830,7 +830,7 @@ func (this *QVariant) IsValid() bool {
 // /usr/include/qt/QtCore/qvariant.h:280
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QVariant) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -858,7 +858,7 @@ func (this *QVariant) Detach() {
 // /usr/include/qt/QtCore/qvariant.h:285
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isDetached()
+// [1] bool isDetached() const
 func (this *QVariant) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -868,8 +868,20 @@ func (this *QVariant) IsDetached() bool {
 // /usr/include/qt/QtCore/qvariant.h:287
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *)
+// [4] int toInt(_Bool *) const
 func (this *QVariant) ToInt(ok *bool) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant5toIntEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:287
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int toInt(_Bool *) const
+func (this *QVariant) ToInt__() int {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant5toIntEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -878,8 +890,20 @@ func (this *QVariant) ToInt(ok *bool) int {
 // /usr/include/qt/QtCore/qvariant.h:288
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *)
+// [4] uint toUInt(_Bool *) const
 func (this *QVariant) ToUInt(ok *bool) uint {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qvariant.h:288
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] uint toUInt(_Bool *) const
+func (this *QVariant) ToUInt__() uint {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -888,8 +912,20 @@ func (this *QVariant) ToUInt(ok *bool) uint {
 // /usr/include/qt/QtCore/qvariant.h:289
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *)
+// [8] qlonglong toLongLong(_Bool *) const
 func (this *QVariant) ToLongLong(ok *bool) int64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	qtrt.ErrPrint(err, rv)
+	return int64(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qvariant.h:289
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(_Bool *) const
+func (this *QVariant) ToLongLong__() int64 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -898,8 +934,20 @@ func (this *QVariant) ToLongLong(ok *bool) int64 {
 // /usr/include/qt/QtCore/qvariant.h:290
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *)
+// [8] qulonglong toULongLong(_Bool *) const
 func (this *QVariant) ToULongLong(ok *bool) uint64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	qtrt.ErrPrint(err, rv)
+	return uint64(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qvariant.h:290
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(_Bool *) const
+func (this *QVariant) ToULongLong__() uint64 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
@@ -908,7 +956,7 @@ func (this *QVariant) ToULongLong(ok *bool) uint64 {
 // /usr/include/qt/QtCore/qvariant.h:291
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool toBool()
+// [1] bool toBool() const
 func (this *QVariant) ToBool() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toBoolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -918,8 +966,20 @@ func (this *QVariant) ToBool() bool {
 // /usr/include/qt/QtCore/qvariant.h:292
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(_Bool *)
+// [8] double toDouble(_Bool *) const
 func (this *QVariant) ToDouble(ok *bool) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:292
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] double toDouble(_Bool *) const
+func (this *QVariant) ToDouble__() float64 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -928,8 +988,20 @@ func (this *QVariant) ToDouble(ok *bool) float64 {
 // /usr/include/qt/QtCore/qvariant.h:293
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(_Bool *)
+// [4] float toFloat(_Bool *) const
 func (this *QVariant) ToFloat(ok *bool) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:293
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] float toFloat(_Bool *) const
+func (this *QVariant) ToFloat__() float32 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -938,8 +1010,20 @@ func (this *QVariant) ToFloat(ok *bool) float32 {
 // /usr/include/qt/QtCore/qvariant.h:294
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal toReal(_Bool *)
+// [8] qreal toReal(_Bool *) const
 func (this *QVariant) ToReal(ok *bool) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toRealEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:294
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qreal toReal(_Bool *) const
+func (this *QVariant) ToReal__() float64 {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toRealEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -948,7 +1032,7 @@ func (this *QVariant) ToReal(ok *bool) float64 {
 // /usr/include/qt/QtCore/qvariant.h:295
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toByteArray()
+// [8] QByteArray toByteArray() const
 func (this *QVariant) ToByteArray() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toByteArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -960,7 +1044,7 @@ func (this *QVariant) ToByteArray() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:296
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QBitArray toBitArray()
+// [8] QBitArray toBitArray() const
 func (this *QVariant) ToBitArray() *QBitArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10toBitArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -972,7 +1056,7 @@ func (this *QVariant) ToBitArray() *QBitArray /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:297
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toString()
+// [8] QString toString() const
 func (this *QVariant) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -985,7 +1069,7 @@ func (this *QVariant) ToString() string {
 // /usr/include/qt/QtCore/qvariant.h:298
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList toStringList()
+// [8] QStringList toStringList() const
 func (this *QVariant) ToStringList() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant12toStringListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -997,7 +1081,7 @@ func (this *QVariant) ToStringList() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:299
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] QChar toChar()
+// [2] QChar toChar() const
 func (this *QVariant) ToChar() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toCharEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1009,7 +1093,7 @@ func (this *QVariant) ToChar() *QChar /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:300
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDate toDate()
+// [8] QDate toDate() const
 func (this *QVariant) ToDate() *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1021,7 +1105,7 @@ func (this *QVariant) ToDate() *QDate /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:301
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTime toTime()
+// [4] QTime toTime() const
 func (this *QVariant) ToTime() *QTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1033,7 +1117,7 @@ func (this *QVariant) ToTime() *QTime /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:302
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime toDateTime()
+// [8] QDateTime toDateTime() const
 func (this *QVariant) ToDateTime() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10toDateTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1045,7 +1129,7 @@ func (this *QVariant) ToDateTime() *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:308
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint toPoint()
+// [8] QPoint toPoint() const
 func (this *QVariant) ToPoint() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1057,7 +1141,7 @@ func (this *QVariant) ToPoint() *QPoint /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:309
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF toPointF()
+// [16] QPointF toPointF() const
 func (this *QVariant) ToPointF() *QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toPointFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1069,7 +1153,7 @@ func (this *QVariant) ToPointF() *QPointF /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:310
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect toRect()
+// [16] QRect toRect() const
 func (this *QVariant) ToRect() *QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1081,7 +1165,7 @@ func (this *QVariant) ToRect() *QRect /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:311
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize toSize()
+// [8] QSize toSize() const
 func (this *QVariant) ToSize() *QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1093,7 +1177,7 @@ func (this *QVariant) ToSize() *QSize /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:312
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QSizeF toSizeF()
+// [16] QSizeF toSizeF() const
 func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toSizeFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1105,7 +1189,7 @@ func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:313
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QLine toLine()
+// [16] QLine toLine() const
 func (this *QVariant) ToLine() *QLine /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1117,7 +1201,7 @@ func (this *QVariant) ToLine() *QLine /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:314
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QLineF toLineF()
+// [32] QLineF toLineF() const
 func (this *QVariant) ToLineF() *QLineF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toLineFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1129,7 +1213,7 @@ func (this *QVariant) ToLineF() *QLineF /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:315
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF toRectF()
+// [32] QRectF toRectF() const
 func (this *QVariant) ToRectF() *QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toRectFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1141,7 +1225,7 @@ func (this *QVariant) ToRectF() *QRectF /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:317
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QLocale toLocale()
+// [8] QLocale toLocale() const
 func (this *QVariant) ToLocale() *QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toLocaleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1153,7 +1237,7 @@ func (this *QVariant) ToLocale() *QLocale /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:319
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegExp toRegExp()
+// [8] QRegExp toRegExp() const
 func (this *QVariant) ToRegExp() *QRegExp /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toRegExpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1165,7 +1249,7 @@ func (this *QVariant) ToRegExp() *QRegExp /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:323
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpression toRegularExpression()
+// [8] QRegularExpression toRegularExpression() const
 func (this *QVariant) ToRegularExpression() *QRegularExpression /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant19toRegularExpressionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1177,7 +1261,7 @@ func (this *QVariant) ToRegularExpression() *QRegularExpression /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:325
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl toUrl()
+// [8] QUrl toUrl() const
 func (this *QVariant) ToUrl() *QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant5toUrlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1189,7 +1273,7 @@ func (this *QVariant) ToUrl() *QUrl /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:326
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QEasingCurve toEasingCurve()
+// [8] QEasingCurve toEasingCurve() const
 func (this *QVariant) ToEasingCurve() *QEasingCurve /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant13toEasingCurveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1201,7 +1285,7 @@ func (this *QVariant) ToEasingCurve() *QEasingCurve /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:327
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QUuid toUuid()
+// [16] QUuid toUuid() const
 func (this *QVariant) ToUuid() *QUuid /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toUuidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1213,7 +1297,7 @@ func (this *QVariant) ToUuid() *QUuid /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:328
 // index:0
 // Public Visibility=Default Availability=Available
-// [24] QModelIndex toModelIndex()
+// [24] QModelIndex toModelIndex() const
 func (this *QVariant) ToModelIndex() *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant12toModelIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1225,7 +1309,7 @@ func (this *QVariant) ToModelIndex() *QModelIndex /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:329
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPersistentModelIndex toPersistentModelIndex()
+// [8] QPersistentModelIndex toPersistentModelIndex() const
 func (this *QVariant) ToPersistentModelIndex() *QPersistentModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant22toPersistentModelIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1237,7 +1321,7 @@ func (this *QVariant) ToPersistentModelIndex() *QPersistentModelIndex /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:330
 // index:0
 // Public Visibility=Default Availability=Available
-// [24] QJsonValue toJsonValue()
+// [24] QJsonValue toJsonValue() const
 func (this *QVariant) ToJsonValue() *QJsonValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toJsonValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1249,7 +1333,7 @@ func (this *QVariant) ToJsonValue() *QJsonValue /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:331
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QJsonObject toJsonObject()
+// [16] QJsonObject toJsonObject() const
 func (this *QVariant) ToJsonObject() *QJsonObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant12toJsonObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1261,7 +1345,7 @@ func (this *QVariant) ToJsonObject() *QJsonObject /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:332
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QJsonArray toJsonArray()
+// [16] QJsonArray toJsonArray() const
 func (this *QVariant) ToJsonArray() *QJsonArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toJsonArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1273,7 +1357,7 @@ func (this *QVariant) ToJsonArray() *QJsonArray /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:333
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QJsonDocument toJsonDocument()
+// [8] QJsonDocument toJsonDocument() const
 func (this *QVariant) ToJsonDocument() *QJsonDocument /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant14toJsonDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1298,7 +1382,7 @@ func (this *QVariant) Load(ds QDataStream_ITF) {
 // /usr/include/qt/QtCore/qvariant.h:338
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void save(QDataStream &)
+// [-2] void save(QDataStream &) const
 func (this *QVariant) Save(ds QDataStream_ITF) {
 	var convArg0 unsafe.Pointer
 	if ds != nil && ds.QDataStream_PTR() != nil {
@@ -1353,7 +1437,7 @@ func (this *QVariant) Data() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtCore/qvariant.h:345
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] const void * data()
+// [8] const void * data() const
 func (this *QVariant) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1363,7 +1447,7 @@ func (this *QVariant) Data_1() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtCore/qvariant.h:344
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const void * constData()
+// [8] const void * constData() const
 func (this *QVariant) ConstData() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant9constDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1373,7 +1457,7 @@ func (this *QVariant) ConstData() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtCore/qvariant.h:436
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QVariant &)
+// [1] bool operator==(const QVariant &) const
 func (this *QVariant) Operator_equal_equal(v QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if v != nil && v.QVariant_PTR() != nil {
@@ -1387,7 +1471,7 @@ func (this *QVariant) Operator_equal_equal(v QVariant_ITF) bool {
 // /usr/include/qt/QtCore/qvariant.h:438
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QVariant &)
+// [1] bool operator!=(const QVariant &) const
 func (this *QVariant) Operator_not_equal(v QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if v != nil && v.QVariant_PTR() != nil {
@@ -1401,7 +1485,7 @@ func (this *QVariant) Operator_not_equal(v QVariant_ITF) bool {
 // /usr/include/qt/QtCore/qvariant.h:440
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<(const QVariant &)
+// [1] bool operator<(const QVariant &) const
 func (this *QVariant) Operator_less_than(v QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if v != nil && v.QVariant_PTR() != nil {
@@ -1415,7 +1499,7 @@ func (this *QVariant) Operator_less_than(v QVariant_ITF) bool {
 // /usr/include/qt/QtCore/qvariant.h:442
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<=(const QVariant &)
+// [1] bool operator<=(const QVariant &) const
 func (this *QVariant) Operator_less_than_equal(v QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if v != nil && v.QVariant_PTR() != nil {
@@ -1429,7 +1513,7 @@ func (this *QVariant) Operator_less_than_equal(v QVariant_ITF) bool {
 // /usr/include/qt/QtCore/qvariant.h:444
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>(const QVariant &)
+// [1] bool operator>(const QVariant &) const
 func (this *QVariant) Operator_greater_than(v QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if v != nil && v.QVariant_PTR() != nil {
@@ -1443,7 +1527,7 @@ func (this *QVariant) Operator_greater_than(v QVariant_ITF) bool {
 // /usr/include/qt/QtCore/qvariant.h:446
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>=(const QVariant &)
+// [1] bool operator>=(const QVariant &) const
 func (this *QVariant) Operator_greater_than_equal(v QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if v != nil && v.QVariant_PTR() != nil {
@@ -1466,7 +1550,7 @@ func (this *QVariant) Create(type_ int, copy unsafe.Pointer /*666*/) {
 // /usr/include/qt/QtCore/qvariant.h:465
 // index:0
 // Protected Visibility=Default Availability=Available
-// [1] bool cmp(const QVariant &)
+// [1] bool cmp(const QVariant &) const
 func (this *QVariant) Cmp(other QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QVariant_PTR() != nil {
@@ -1480,7 +1564,7 @@ func (this *QVariant) Cmp(other QVariant_ITF) bool {
 // /usr/include/qt/QtCore/qvariant.h:466
 // index:0
 // Protected Visibility=Default Availability=Available
-// [4] int compare(const QVariant &)
+// [4] int compare(const QVariant &) const
 func (this *QVariant) Compare(other QVariant_ITF) int {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QVariant_PTR() != nil {

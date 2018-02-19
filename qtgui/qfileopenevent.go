@@ -104,7 +104,7 @@ func DeleteQFileOpenEvent(this *QFileOpenEvent) {
 // /usr/include/qt/QtGui/qevent.h:742
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QString file()
+// [8] QString file() const
 func (this *QFileOpenEvent) File() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QFileOpenEvent4fileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -117,7 +117,7 @@ func (this *QFileOpenEvent) File() string {
 // /usr/include/qt/QtGui/qevent.h:743
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QUrl url()
+// [8] QUrl url() const
 func (this *QFileOpenEvent) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QFileOpenEvent3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,7 +129,7 @@ func (this *QFileOpenEvent) Url() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:744
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool openFile(QFile &, QIODevice::OpenMode)
+// [1] bool openFile(QFile &, QIODevice::OpenMode) const
 func (this *QFileOpenEvent) OpenFile(file qtcore.QFile_ITF, flags int) bool {
 	var convArg0 unsafe.Pointer
 	if file != nil && file.QFile_PTR() != nil {

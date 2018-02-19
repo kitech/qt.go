@@ -73,6 +73,38 @@ func NewQGenericReturnArgument(aName string, aData unsafe.Pointer /*666*/) *QGen
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qobjectdefs.h:310
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QGenericReturnArgument(const char *, void *)
+func NewQGenericReturnArgument__() *QGenericReturnArgument {
+	// arg: 0, const char *=Pointer, =Invalid,
+	var convArg0 unsafe.Pointer
+	// arg: 1, void *=Pointer, =Invalid,
+	var aData unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", qtrt.FFI_TYPE_POINTER, convArg0, aData)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGenericReturnArgumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGenericReturnArgument)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qobjectdefs.h:310
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QGenericReturnArgument(const char *, void *)
+func NewQGenericReturnArgument__1(aName string) *QGenericReturnArgument {
+	var convArg0 = qtrt.CString(aName)
+	defer qtrt.FreeMem(convArg0)
+	// arg: 1, void *=Pointer, =Invalid,
+	var aData unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", qtrt.FFI_TYPE_POINTER, convArg0, aData)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGenericReturnArgumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGenericReturnArgument)
+	return gothis
+}
+
 func DeleteQGenericReturnArgument(this *QGenericReturnArgument) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGenericReturnArgumentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

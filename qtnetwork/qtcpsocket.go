@@ -63,7 +63,7 @@ func (*QTcpSocket) NewFromPointer(cthis unsafe.Pointer) *QTcpSocket {
 // /usr/include/qt/QtNetwork/qtcpsocket.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTcpSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpSocket10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +79,20 @@ func NewQTcpSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QTcpSocket {
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTcpSocketFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTcpSocket")
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qtcpsocket.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTcpSocket(QObject *)
+func NewQTcpSocket__() *QTcpSocket {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTcpSocketFromPointer(unsafe.Pointer(uintptr(rv)))

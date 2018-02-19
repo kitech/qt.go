@@ -133,7 +133,7 @@ func NewQQuaternion_4(vector QVector4D_ITF) *QQuaternion {
 // /usr/include/qt/QtGui/qquaternion.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QQuaternion) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +143,7 @@ func (this *QQuaternion) IsNull() bool {
 // /usr/include/qt/QtGui/qquaternion.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isIdentity()
+// [1] bool isIdentity() const
 func (this *QQuaternion) IsIdentity() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion10isIdentityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func (this *QQuaternion) IsIdentity() bool {
 // /usr/include/qt/QtGui/qquaternion.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [12] QVector3D vector()
+// [12] QVector3D vector() const
 func (this *QQuaternion) Vector() *QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion6vectorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func (this *QQuaternion) SetVector_1(x float32, y float32, z float32) {
 // /usr/include/qt/QtGui/qquaternion.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float x()
+// [4] float x() const
 func (this *QQuaternion) X() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +197,7 @@ func (this *QQuaternion) X() float32 {
 // /usr/include/qt/QtGui/qquaternion.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float y()
+// [4] float y() const
 func (this *QQuaternion) Y() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QQuaternion) Y() float32 {
 // /usr/include/qt/QtGui/qquaternion.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float z()
+// [4] float z() const
 func (this *QQuaternion) Z() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion1zEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QQuaternion) Z() float32 {
 // /usr/include/qt/QtGui/qquaternion.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float scalar()
+// [4] float scalar() const
 func (this *QQuaternion) Scalar() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion6scalarEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -286,7 +286,7 @@ func QQuaternion_DotProduct(q1 QQuaternion_ITF, q2 QQuaternion_ITF) float32 {
 // /usr/include/qt/QtGui/qquaternion.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float length()
+// [4] float length() const
 func (this *QQuaternion) Length() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion6lengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -296,7 +296,7 @@ func (this *QQuaternion) Length() float32 {
 // /usr/include/qt/QtGui/qquaternion.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float lengthSquared()
+// [4] float lengthSquared() const
 func (this *QQuaternion) LengthSquared() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion13lengthSquaredEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -306,7 +306,7 @@ func (this *QQuaternion) LengthSquared() float32 {
 // /usr/include/qt/QtGui/qquaternion.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QQuaternion normalized()
+// [16] QQuaternion normalized() const
 func (this *QQuaternion) Normalized() *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion10normalizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -327,7 +327,7 @@ func (this *QQuaternion) Normalize() {
 // /usr/include/qt/QtGui/qquaternion.h:96
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QQuaternion inverted()
+// [16] QQuaternion inverted() const
 func (this *QQuaternion) Inverted() *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion8invertedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -339,7 +339,7 @@ func (this *QQuaternion) Inverted() *QQuaternion /*123*/ {
 // /usr/include/qt/QtGui/qquaternion.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QQuaternion conjugated()
+// [16] QQuaternion conjugated() const
 func (this *QQuaternion) Conjugated() *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion10conjugatedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -351,7 +351,7 @@ func (this *QQuaternion) Conjugated() *QQuaternion /*123*/ {
 // /usr/include/qt/QtGui/qquaternion.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QQuaternion conjugate()
+// [16] QQuaternion conjugate() const
 func (this *QQuaternion) Conjugate() *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion9conjugateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -363,7 +363,7 @@ func (this *QQuaternion) Conjugate() *QQuaternion /*123*/ {
 // /usr/include/qt/QtGui/qquaternion.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [12] QVector3D rotatedVector(const QVector3D &)
+// [12] QVector3D rotatedVector(const QVector3D &) const
 func (this *QQuaternion) RotatedVector(vector QVector3D_ITF) *QVector3D /*123*/ {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
@@ -451,7 +451,7 @@ func (this *QQuaternion) Operator_div_equal(divisor float32) *QQuaternion {
 // /usr/include/qt/QtGui/qquaternion.h:124
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVector4D toVector4D()
+// [16] QVector4D toVector4D() const
 func (this *QQuaternion) ToVector4D() *QVector4D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion10toVector4DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -463,7 +463,7 @@ func (this *QQuaternion) ToVector4D() *QVector4D /*123*/ {
 // /usr/include/qt/QtGui/qquaternion.h:130
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void getAxisAndAngle(QVector3D *, float *)
+// [-2] void getAxisAndAngle(QVector3D *, float *) const
 func (this *QQuaternion) GetAxisAndAngle(axis QVector3D_ITF /*777 QVector3D **/, angle unsafe.Pointer /*666*/) {
 	var convArg0 unsafe.Pointer
 	if axis != nil && axis.QVector3D_PTR() != nil {
@@ -476,7 +476,7 @@ func (this *QQuaternion) GetAxisAndAngle(axis QVector3D_ITF /*777 QVector3D **/,
 // /usr/include/qt/QtGui/qquaternion.h:133
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void getAxisAndAngle(float *, float *, float *, float *)
+// [-2] void getAxisAndAngle(float *, float *, float *, float *) const
 func (this *QQuaternion) GetAxisAndAngle_1(x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, z unsafe.Pointer /*666*/, angle unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion15getAxisAndAngleEPfS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, z, angle)
 	qtrt.ErrPrint(err, rv)
@@ -523,7 +523,7 @@ func QQuaternion_FromAxisAndAngle_1(x float32, y float32, z float32, angle float
 // /usr/include/qt/QtGui/qquaternion.h:138
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [12] QVector3D toEulerAngles()
+// [12] QVector3D toEulerAngles() const
 func (this *QQuaternion) ToEulerAngles() *QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion13toEulerAnglesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -573,7 +573,7 @@ func QQuaternion_FromEulerAngles_1(pitch float32, yaw float32, roll float32) *QQ
 // /usr/include/qt/QtGui/qquaternion.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void getEulerAngles(float *, float *, float *)
+// [-2] void getEulerAngles(float *, float *, float *) const
 func (this *QQuaternion) GetEulerAngles(pitch unsafe.Pointer /*666*/, yaw unsafe.Pointer /*666*/, roll unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion14getEulerAnglesEPfS0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pitch, yaw, roll)
 	qtrt.ErrPrint(err, rv)
@@ -582,7 +582,7 @@ func (this *QQuaternion) GetEulerAngles(pitch unsafe.Pointer /*666*/, yaw unsafe
 // /usr/include/qt/QtGui/qquaternion.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void getAxes(QVector3D *, QVector3D *, QVector3D *)
+// [-2] void getAxes(QVector3D *, QVector3D *, QVector3D *) const
 func (this *QQuaternion) GetAxes(xAxis QVector3D_ITF /*777 QVector3D **/, yAxis QVector3D_ITF /*777 QVector3D **/, zAxis QVector3D_ITF /*777 QVector3D **/) {
 	var convArg0 unsafe.Pointer
 	if xAxis != nil && xAxis.QVector3D_PTR() != nil {

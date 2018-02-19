@@ -66,7 +66,7 @@ func (*QQuickTextDocument) NewFromPointer(cthis unsafe.Pointer) *QQuickTextDocum
 // /usr/include/qt/QtQuick/qquicktextdocument.h:51
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQuickTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QQuickTextDocument10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -92,7 +92,7 @@ func NewQQuickTextDocument(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickTe
 // /usr/include/qt/QtQuick/qquicktextdocument.h:55
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextDocument * textDocument()
+// [8] QTextDocument * textDocument() const
 func (this *QQuickTextDocument) TextDocument() *qtgui.QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QQuickTextDocument12textDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

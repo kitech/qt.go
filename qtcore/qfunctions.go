@@ -18,7 +18,7 @@ func init() {
 //  header block end
 
 //  body block begin
-// /usr/include/qt/QtCore/qnamespace.h:1752
+// /usr/include/qt/QtCore/qnamespace.h:1754
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::TimerType)
@@ -28,7 +28,7 @@ func Qt_getEnumMetaObject(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1723
+// /usr/include/qt/QtCore/qnamespace.h:1725
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::SortOrder)
@@ -38,7 +38,7 @@ func Qt_getEnumMetaObject_1(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1708
+// /usr/include/qt/QtCore/qnamespace.h:1710
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::DayOfWeek)
@@ -48,7 +48,7 @@ func Qt_getEnumMetaObject_2(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1677
+// /usr/include/qt/QtCore/qnamespace.h:1679
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ArrowType)
@@ -58,7 +58,7 @@ func Qt_getEnumMetaObject_3(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1707
+// /usr/include/qt/QtCore/qnamespace.h:1709
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::TimeSpec)
@@ -68,7 +68,7 @@ func Qt_getEnumMetaObject_4(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1696
+// /usr/include/qt/QtCore/qnamespace.h:1698
 // index:5
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::TextFlag)
@@ -78,7 +78,7 @@ func Qt_getEnumMetaObject_5(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1687
+// /usr/include/qt/QtCore/qnamespace.h:1689
 // index:6
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::SizeMode)
@@ -88,7 +88,7 @@ func Qt_getEnumMetaObject_6(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1692
+// /usr/include/qt/QtCore/qnamespace.h:1694
 // index:7
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::SizeHint)
@@ -98,7 +98,7 @@ func Qt_getEnumMetaObject_7(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1679
+// /usr/include/qt/QtCore/qnamespace.h:1681
 // index:8
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::PenStyle)
@@ -108,7 +108,7 @@ func Qt_getEnumMetaObject_8(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1684
+// /usr/include/qt/QtCore/qnamespace.h:1686
 // index:9
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::MaskMode)
@@ -118,7 +118,7 @@ func Qt_getEnumMetaObject_9(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1683
+// /usr/include/qt/QtCore/qnamespace.h:1685
 // index:10
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::FillRule)
@@ -128,7 +128,7 @@ func Qt_getEnumMetaObject_10(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1689
+// /usr/include/qt/QtCore/qnamespace.h:1691
 // index:11
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::Corner)
@@ -138,7 +138,7 @@ func Qt_getEnumMetaObject_11(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1685
+// /usr/include/qt/QtCore/qnamespace.h:1687
 // index:12
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::BGMode)
@@ -148,7 +148,7 @@ func Qt_getEnumMetaObject_12(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1690
+// /usr/include/qt/QtCore/qnamespace.h:1692
 // index:13
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::Edge)
@@ -158,7 +158,7 @@ func Qt_getEnumMetaObject_13(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1688
+// /usr/include/qt/QtCore/qnamespace.h:1690
 // index:14
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::Axis)
@@ -168,7 +168,7 @@ func Qt_getEnumMetaObject_14(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1714
+// /usr/include/qt/QtCore/qnamespace.h:1716
 // index:15
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::Key)
@@ -178,7 +178,7 @@ func Qt_getEnumMetaObject_15(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1719
+// /usr/include/qt/QtCore/qnamespace.h:1721
 // index:16
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ItemSelectionOperation)
@@ -188,7 +188,7 @@ func Qt_getEnumMetaObject_16(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1732
+// /usr/include/qt/QtCore/qnamespace.h:1734
 // index:17
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ApplicationAttribute)
@@ -198,7 +198,7 @@ func Qt_getEnumMetaObject_17(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1716
+// /usr/include/qt/QtCore/qnamespace.h:1718
 // index:18
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::TextInteractionFlag)
@@ -208,7 +208,7 @@ func Qt_getEnumMetaObject_18(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1712
+// /usr/include/qt/QtCore/qnamespace.h:1714
 // index:19
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::TransformationMode)
@@ -218,7 +218,7 @@ func Qt_getEnumMetaObject_19(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1742
+// /usr/include/qt/QtCore/qnamespace.h:1744
 // index:20
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ScreenOrientation)
@@ -228,7 +228,7 @@ func Qt_getEnumMetaObject_20(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1749
+// /usr/include/qt/QtCore/qnamespace.h:1751
 // index:21
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::NativeGestureType)
@@ -238,7 +238,7 @@ func Qt_getEnumMetaObject_21(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1718
+// /usr/include/qt/QtCore/qnamespace.h:1720
 // index:22
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ItemSelectionMode)
@@ -248,7 +248,7 @@ func Qt_getEnumMetaObject_22(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1676
+// /usr/include/qt/QtCore/qnamespace.h:1678
 // index:23
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ContextMenuPolicy)
@@ -258,7 +258,7 @@ func Qt_getEnumMetaObject_23(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1757
+// /usr/include/qt/QtCore/qnamespace.h:1759
 // index:24
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::TabFocusBehavior)
@@ -268,7 +268,7 @@ func Qt_getEnumMetaObject_24(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1754
+// /usr/include/qt/QtCore/qnamespace.h:1756
 // index:25
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::MouseEventSource)
@@ -278,7 +278,7 @@ func Qt_getEnumMetaObject_25(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1737
+// /usr/include/qt/QtCore/qnamespace.h:1739
 // index:26
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::InputMethodQuery)
@@ -288,7 +288,7 @@ func Qt_getEnumMetaObject_26(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1745
+// /usr/include/qt/QtCore/qnamespace.h:1747
 // index:27
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ApplicationState)
@@ -298,7 +298,7 @@ func Qt_getEnumMetaObject_27(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1731
+// /usr/include/qt/QtCore/qnamespace.h:1733
 // index:28
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::WidgetAttribute)
@@ -308,7 +308,7 @@ func Qt_getEnumMetaObject_28(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1678
+// /usr/include/qt/QtCore/qnamespace.h:1680
 // index:29
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ToolButtonStyle)
@@ -318,7 +318,7 @@ func Qt_getEnumMetaObject_29(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1715
+// /usr/include/qt/QtCore/qnamespace.h:1717
 // index:30
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ShortcutContext)
@@ -328,7 +328,7 @@ func Qt_getEnumMetaObject_30(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1674
+// /usr/include/qt/QtCore/qnamespace.h:1676
 // index:31
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ScrollBarPolicy)
@@ -338,7 +338,7 @@ func Qt_getEnumMetaObject_31(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1691
+// /usr/include/qt/QtCore/qnamespace.h:1693
 // index:32
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::LayoutDirection)
@@ -348,7 +348,7 @@ func Qt_getEnumMetaObject_32(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1736
+// /usr/include/qt/QtCore/qnamespace.h:1738
 // index:33
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::InputMethodHint)
@@ -358,7 +358,7 @@ func Qt_getEnumMetaObject_33(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1751
+// /usr/include/qt/QtCore/qnamespace.h:1753
 // index:34
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::CursorMoveStyle)
@@ -368,7 +368,7 @@ func Qt_getEnumMetaObject_34(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1724
+// /usr/include/qt/QtCore/qnamespace.h:1726
 // index:35
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::CaseSensitivity)
@@ -378,7 +378,7 @@ func Qt_getEnumMetaObject_35(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1711
+// /usr/include/qt/QtCore/qnamespace.h:1713
 // index:36
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::AspectRatioMode)
@@ -388,7 +388,7 @@ func Qt_getEnumMetaObject_36(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1730
+// /usr/include/qt/QtCore/qnamespace.h:1732
 // index:37
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::WindowModality)
@@ -398,7 +398,7 @@ func Qt_getEnumMetaObject_37(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1755
+// /usr/include/qt/QtCore/qnamespace.h:1757
 // index:38
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::MouseEventFlag)
@@ -408,7 +408,7 @@ func Qt_getEnumMetaObject_38(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1702
+// /usr/include/qt/QtCore/qnamespace.h:1704
 // index:39
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::DockWidgetArea)
@@ -418,7 +418,7 @@ func Qt_getEnumMetaObject_39(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1744
+// /usr/include/qt/QtCore/qnamespace.h:1746
 // index:40
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ConnectionType)
@@ -428,7 +428,7 @@ func Qt_getEnumMetaObject_40(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1705
+// /usr/include/qt/QtCore/qnamespace.h:1707
 // index:41
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::TextElideMode)
@@ -438,7 +438,7 @@ func Qt_getEnumMetaObject_41(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1686
+// /usr/include/qt/QtCore/qnamespace.h:1688
 // index:42
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ClipOperation)
@@ -448,7 +448,7 @@ func Qt_getEnumMetaObject_42(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1681
+// /usr/include/qt/QtCore/qnamespace.h:1683
 // index:43
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::PenJoinStyle)
@@ -458,7 +458,7 @@ func Qt_getEnumMetaObject_43(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1722
+// /usr/include/qt/QtCore/qnamespace.h:1724
 // index:44
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ItemDataRole)
@@ -468,7 +468,7 @@ func Qt_getEnumMetaObject_44(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1747
+// /usr/include/qt/QtCore/qnamespace.h:1749
 // index:45
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::GestureState)
@@ -478,7 +478,7 @@ func Qt_getEnumMetaObject_45(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1739
+// /usr/include/qt/QtCore/qnamespace.h:1741
 // index:46
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::EnterKeyType)
@@ -488,7 +488,7 @@ func Qt_getEnumMetaObject_46(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1756
+// /usr/include/qt/QtCore/qnamespace.h:1758
 // index:47
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ChecksumType)
@@ -498,7 +498,7 @@ func Qt_getEnumMetaObject_47(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1729
+// /usr/include/qt/QtCore/qnamespace.h:1731
 // index:48
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::WindowState)
@@ -508,7 +508,7 @@ func Qt_getEnumMetaObject_48(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1703
+// /usr/include/qt/QtCore/qnamespace.h:1705
 // index:49
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ToolBarArea)
@@ -518,7 +518,7 @@ func Qt_getEnumMetaObject_49(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1753
+// /usr/include/qt/QtCore/qnamespace.h:1755
 // index:50
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::ScrollPhase)
@@ -528,7 +528,7 @@ func Qt_getEnumMetaObject_50(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1680
+// /usr/include/qt/QtCore/qnamespace.h:1682
 // index:51
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::PenCapStyle)
@@ -538,7 +538,7 @@ func Qt_getEnumMetaObject_51(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1693
+// /usr/include/qt/QtCore/qnamespace.h:1695
 // index:52
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::Orientation)
@@ -548,7 +548,7 @@ func Qt_getEnumMetaObject_52(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1710
+// /usr/include/qt/QtCore/qnamespace.h:1712
 // index:53
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::GlobalColor)
@@ -558,7 +558,7 @@ func Qt_getEnumMetaObject_53(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1748
+// /usr/include/qt/QtCore/qnamespace.h:1750
 // index:54
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::GestureType)
@@ -568,7 +568,7 @@ func Qt_getEnumMetaObject_54(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1735
+// /usr/include/qt/QtCore/qnamespace.h:1737
 // index:55
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::FocusReason)
@@ -578,7 +578,7 @@ func Qt_getEnumMetaObject_55(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1675
+// /usr/include/qt/QtCore/qnamespace.h:1677
 // index:56
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::FocusPolicy)
@@ -588,7 +588,7 @@ func Qt_getEnumMetaObject_56(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1709
+// /usr/include/qt/QtCore/qnamespace.h:1711
 // index:57
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::CursorShape)
@@ -598,7 +598,7 @@ func Qt_getEnumMetaObject_57(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1728
+// /usr/include/qt/QtCore/qnamespace.h:1730
 // index:58
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::WindowType)
@@ -608,7 +608,7 @@ func Qt_getEnumMetaObject_58(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1704
+// /usr/include/qt/QtCore/qnamespace.h:1706
 // index:59
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::TextFormat)
@@ -618,7 +618,7 @@ func Qt_getEnumMetaObject_59(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1694
+// /usr/include/qt/QtCore/qnamespace.h:1696
 // index:60
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::DropAction)
@@ -628,7 +628,7 @@ func Qt_getEnumMetaObject_60(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1706
+// /usr/include/qt/QtCore/qnamespace.h:1708
 // index:61
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::DateFormat)
@@ -638,7 +638,7 @@ func Qt_getEnumMetaObject_61(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1721
+// /usr/include/qt/QtCore/qnamespace.h:1723
 // index:62
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::CheckState)
@@ -648,7 +648,7 @@ func Qt_getEnumMetaObject_62(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1682
+// /usr/include/qt/QtCore/qnamespace.h:1684
 // index:63
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(enum Qt::BrushStyle)
@@ -658,7 +658,7 @@ func Qt_getEnumMetaObject_63(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1725
+// /usr/include/qt/QtCore/qnamespace.h:1727
 // index:64
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::MatchFlags)
@@ -668,7 +668,7 @@ func Qt_getEnumMetaObject_64(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1720
+// /usr/include/qt/QtCore/qnamespace.h:1722
 // index:65
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ItemFlags)
@@ -678,7 +678,7 @@ func Qt_getEnumMetaObject_65(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1699
+// /usr/include/qt/QtCore/qnamespace.h:1701
 // index:66
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Edges)
@@ -688,7 +688,7 @@ func Qt_getEnumMetaObject_66(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1717
+// /usr/include/qt/QtCore/qnamespace.h:1719
 // index:67
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TextInteractionFlags)
@@ -698,7 +698,7 @@ func Qt_getEnumMetaObject_67(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1713
+// /usr/include/qt/QtCore/qnamespace.h:1715
 // index:68
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ImageConversionFlags)
@@ -708,7 +708,7 @@ func Qt_getEnumMetaObject_68(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1743
+// /usr/include/qt/QtCore/qnamespace.h:1745
 // index:69
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ScreenOrientations)
@@ -718,7 +718,7 @@ func Qt_getEnumMetaObject_69(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1726
+// /usr/include/qt/QtCore/qnamespace.h:1728
 // index:70
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::KeyboardModifiers)
@@ -728,7 +728,7 @@ func Qt_getEnumMetaObject_70(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1740
+// /usr/include/qt/QtCore/qnamespace.h:1742
 // index:71
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::InputMethodQueries)
@@ -738,7 +738,7 @@ func Qt_getEnumMetaObject_71(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1741
+// /usr/include/qt/QtCore/qnamespace.h:1743
 // index:72
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TouchPointStates)
@@ -748,7 +748,7 @@ func Qt_getEnumMetaObject_72(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1738
+// /usr/include/qt/QtCore/qnamespace.h:1740
 // index:73
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::InputMethodHints)
@@ -758,7 +758,7 @@ func Qt_getEnumMetaObject_73(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1700
+// /usr/include/qt/QtCore/qnamespace.h:1702
 // index:74
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::DockWidgetAreas)
@@ -768,7 +768,7 @@ func Qt_getEnumMetaObject_74(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1695
+// /usr/include/qt/QtCore/qnamespace.h:1697
 // index:75
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Alignment)
@@ -778,7 +778,7 @@ func Qt_getEnumMetaObject_75(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1734
+// /usr/include/qt/QtCore/qnamespace.h:1736
 // index:76
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::WindowStates)
@@ -788,7 +788,7 @@ func Qt_getEnumMetaObject_76(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1701
+// /usr/include/qt/QtCore/qnamespace.h:1703
 // index:77
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ToolBarAreas)
@@ -798,7 +798,7 @@ func Qt_getEnumMetaObject_77(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1697
+// /usr/include/qt/QtCore/qnamespace.h:1699
 // index:78
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Orientations)
@@ -808,7 +808,7 @@ func Qt_getEnumMetaObject_78(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1727
+// /usr/include/qt/QtCore/qnamespace.h:1729
 // index:79
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::MouseButtons)
@@ -818,7 +818,7 @@ func Qt_getEnumMetaObject_79(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1733
+// /usr/include/qt/QtCore/qnamespace.h:1735
 // index:80
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::WindowFlags)
@@ -828,7 +828,7 @@ func Qt_getEnumMetaObject_80(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1698
+// /usr/include/qt/QtCore/qnamespace.h:1700
 // index:81
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::DropActions)
@@ -838,7 +838,7 @@ func Qt_getEnumMetaObject_81(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1752
+// /usr/include/qt/QtCore/qnamespace.h:1754
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::TimerType)
@@ -848,7 +848,7 @@ func Qt_getEnumName(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1723
+// /usr/include/qt/QtCore/qnamespace.h:1725
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::SortOrder)
@@ -858,7 +858,7 @@ func Qt_getEnumName_1(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1708
+// /usr/include/qt/QtCore/qnamespace.h:1710
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::DayOfWeek)
@@ -868,7 +868,7 @@ func Qt_getEnumName_2(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1677
+// /usr/include/qt/QtCore/qnamespace.h:1679
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ArrowType)
@@ -878,7 +878,7 @@ func Qt_getEnumName_3(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1707
+// /usr/include/qt/QtCore/qnamespace.h:1709
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::TimeSpec)
@@ -888,7 +888,7 @@ func Qt_getEnumName_4(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1696
+// /usr/include/qt/QtCore/qnamespace.h:1698
 // index:5
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::TextFlag)
@@ -898,7 +898,7 @@ func Qt_getEnumName_5(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1687
+// /usr/include/qt/QtCore/qnamespace.h:1689
 // index:6
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::SizeMode)
@@ -908,7 +908,7 @@ func Qt_getEnumName_6(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1692
+// /usr/include/qt/QtCore/qnamespace.h:1694
 // index:7
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::SizeHint)
@@ -918,7 +918,7 @@ func Qt_getEnumName_7(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1679
+// /usr/include/qt/QtCore/qnamespace.h:1681
 // index:8
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::PenStyle)
@@ -928,7 +928,7 @@ func Qt_getEnumName_8(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1684
+// /usr/include/qt/QtCore/qnamespace.h:1686
 // index:9
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::MaskMode)
@@ -938,7 +938,7 @@ func Qt_getEnumName_9(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1683
+// /usr/include/qt/QtCore/qnamespace.h:1685
 // index:10
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::FillRule)
@@ -948,7 +948,7 @@ func Qt_getEnumName_10(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1689
+// /usr/include/qt/QtCore/qnamespace.h:1691
 // index:11
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::Corner)
@@ -958,7 +958,7 @@ func Qt_getEnumName_11(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1685
+// /usr/include/qt/QtCore/qnamespace.h:1687
 // index:12
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::BGMode)
@@ -968,7 +968,7 @@ func Qt_getEnumName_12(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1690
+// /usr/include/qt/QtCore/qnamespace.h:1692
 // index:13
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::Edge)
@@ -978,7 +978,7 @@ func Qt_getEnumName_13(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1688
+// /usr/include/qt/QtCore/qnamespace.h:1690
 // index:14
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::Axis)
@@ -988,7 +988,7 @@ func Qt_getEnumName_14(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1714
+// /usr/include/qt/QtCore/qnamespace.h:1716
 // index:15
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::Key)
@@ -998,7 +998,7 @@ func Qt_getEnumName_15(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1719
+// /usr/include/qt/QtCore/qnamespace.h:1721
 // index:16
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ItemSelectionOperation)
@@ -1008,7 +1008,7 @@ func Qt_getEnumName_16(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1732
+// /usr/include/qt/QtCore/qnamespace.h:1734
 // index:17
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ApplicationAttribute)
@@ -1018,7 +1018,7 @@ func Qt_getEnumName_17(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1716
+// /usr/include/qt/QtCore/qnamespace.h:1718
 // index:18
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::TextInteractionFlag)
@@ -1028,7 +1028,7 @@ func Qt_getEnumName_18(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1712
+// /usr/include/qt/QtCore/qnamespace.h:1714
 // index:19
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::TransformationMode)
@@ -1038,7 +1038,7 @@ func Qt_getEnumName_19(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1742
+// /usr/include/qt/QtCore/qnamespace.h:1744
 // index:20
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ScreenOrientation)
@@ -1048,7 +1048,7 @@ func Qt_getEnumName_20(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1749
+// /usr/include/qt/QtCore/qnamespace.h:1751
 // index:21
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::NativeGestureType)
@@ -1058,7 +1058,7 @@ func Qt_getEnumName_21(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1718
+// /usr/include/qt/QtCore/qnamespace.h:1720
 // index:22
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ItemSelectionMode)
@@ -1068,7 +1068,7 @@ func Qt_getEnumName_22(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1676
+// /usr/include/qt/QtCore/qnamespace.h:1678
 // index:23
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ContextMenuPolicy)
@@ -1078,7 +1078,7 @@ func Qt_getEnumName_23(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1757
+// /usr/include/qt/QtCore/qnamespace.h:1759
 // index:24
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::TabFocusBehavior)
@@ -1088,7 +1088,7 @@ func Qt_getEnumName_24(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1754
+// /usr/include/qt/QtCore/qnamespace.h:1756
 // index:25
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::MouseEventSource)
@@ -1098,7 +1098,7 @@ func Qt_getEnumName_25(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1737
+// /usr/include/qt/QtCore/qnamespace.h:1739
 // index:26
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::InputMethodQuery)
@@ -1108,7 +1108,7 @@ func Qt_getEnumName_26(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1745
+// /usr/include/qt/QtCore/qnamespace.h:1747
 // index:27
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ApplicationState)
@@ -1118,7 +1118,7 @@ func Qt_getEnumName_27(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1731
+// /usr/include/qt/QtCore/qnamespace.h:1733
 // index:28
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::WidgetAttribute)
@@ -1128,7 +1128,7 @@ func Qt_getEnumName_28(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1678
+// /usr/include/qt/QtCore/qnamespace.h:1680
 // index:29
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ToolButtonStyle)
@@ -1138,7 +1138,7 @@ func Qt_getEnumName_29(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1715
+// /usr/include/qt/QtCore/qnamespace.h:1717
 // index:30
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ShortcutContext)
@@ -1148,7 +1148,7 @@ func Qt_getEnumName_30(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1674
+// /usr/include/qt/QtCore/qnamespace.h:1676
 // index:31
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ScrollBarPolicy)
@@ -1158,7 +1158,7 @@ func Qt_getEnumName_31(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1691
+// /usr/include/qt/QtCore/qnamespace.h:1693
 // index:32
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::LayoutDirection)
@@ -1168,7 +1168,7 @@ func Qt_getEnumName_32(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1736
+// /usr/include/qt/QtCore/qnamespace.h:1738
 // index:33
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::InputMethodHint)
@@ -1178,7 +1178,7 @@ func Qt_getEnumName_33(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1751
+// /usr/include/qt/QtCore/qnamespace.h:1753
 // index:34
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::CursorMoveStyle)
@@ -1188,7 +1188,7 @@ func Qt_getEnumName_34(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1724
+// /usr/include/qt/QtCore/qnamespace.h:1726
 // index:35
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::CaseSensitivity)
@@ -1198,7 +1198,7 @@ func Qt_getEnumName_35(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1711
+// /usr/include/qt/QtCore/qnamespace.h:1713
 // index:36
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::AspectRatioMode)
@@ -1208,7 +1208,7 @@ func Qt_getEnumName_36(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1730
+// /usr/include/qt/QtCore/qnamespace.h:1732
 // index:37
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::WindowModality)
@@ -1218,7 +1218,7 @@ func Qt_getEnumName_37(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1755
+// /usr/include/qt/QtCore/qnamespace.h:1757
 // index:38
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::MouseEventFlag)
@@ -1228,7 +1228,7 @@ func Qt_getEnumName_38(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1702
+// /usr/include/qt/QtCore/qnamespace.h:1704
 // index:39
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::DockWidgetArea)
@@ -1238,7 +1238,7 @@ func Qt_getEnumName_39(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1744
+// /usr/include/qt/QtCore/qnamespace.h:1746
 // index:40
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ConnectionType)
@@ -1248,7 +1248,7 @@ func Qt_getEnumName_40(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1705
+// /usr/include/qt/QtCore/qnamespace.h:1707
 // index:41
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::TextElideMode)
@@ -1258,7 +1258,7 @@ func Qt_getEnumName_41(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1686
+// /usr/include/qt/QtCore/qnamespace.h:1688
 // index:42
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ClipOperation)
@@ -1268,7 +1268,7 @@ func Qt_getEnumName_42(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1681
+// /usr/include/qt/QtCore/qnamespace.h:1683
 // index:43
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::PenJoinStyle)
@@ -1278,7 +1278,7 @@ func Qt_getEnumName_43(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1722
+// /usr/include/qt/QtCore/qnamespace.h:1724
 // index:44
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ItemDataRole)
@@ -1288,7 +1288,7 @@ func Qt_getEnumName_44(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1747
+// /usr/include/qt/QtCore/qnamespace.h:1749
 // index:45
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::GestureState)
@@ -1298,7 +1298,7 @@ func Qt_getEnumName_45(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1739
+// /usr/include/qt/QtCore/qnamespace.h:1741
 // index:46
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::EnterKeyType)
@@ -1308,7 +1308,7 @@ func Qt_getEnumName_46(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1756
+// /usr/include/qt/QtCore/qnamespace.h:1758
 // index:47
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ChecksumType)
@@ -1318,7 +1318,7 @@ func Qt_getEnumName_47(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1729
+// /usr/include/qt/QtCore/qnamespace.h:1731
 // index:48
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::WindowState)
@@ -1328,7 +1328,7 @@ func Qt_getEnumName_48(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1703
+// /usr/include/qt/QtCore/qnamespace.h:1705
 // index:49
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ToolBarArea)
@@ -1338,7 +1338,7 @@ func Qt_getEnumName_49(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1753
+// /usr/include/qt/QtCore/qnamespace.h:1755
 // index:50
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::ScrollPhase)
@@ -1348,7 +1348,7 @@ func Qt_getEnumName_50(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1680
+// /usr/include/qt/QtCore/qnamespace.h:1682
 // index:51
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::PenCapStyle)
@@ -1358,7 +1358,7 @@ func Qt_getEnumName_51(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1693
+// /usr/include/qt/QtCore/qnamespace.h:1695
 // index:52
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::Orientation)
@@ -1368,7 +1368,7 @@ func Qt_getEnumName_52(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1710
+// /usr/include/qt/QtCore/qnamespace.h:1712
 // index:53
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::GlobalColor)
@@ -1378,7 +1378,7 @@ func Qt_getEnumName_53(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1748
+// /usr/include/qt/QtCore/qnamespace.h:1750
 // index:54
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::GestureType)
@@ -1388,7 +1388,7 @@ func Qt_getEnumName_54(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1735
+// /usr/include/qt/QtCore/qnamespace.h:1737
 // index:55
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::FocusReason)
@@ -1398,7 +1398,7 @@ func Qt_getEnumName_55(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1675
+// /usr/include/qt/QtCore/qnamespace.h:1677
 // index:56
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::FocusPolicy)
@@ -1408,7 +1408,7 @@ func Qt_getEnumName_56(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1709
+// /usr/include/qt/QtCore/qnamespace.h:1711
 // index:57
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::CursorShape)
@@ -1418,7 +1418,7 @@ func Qt_getEnumName_57(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1728
+// /usr/include/qt/QtCore/qnamespace.h:1730
 // index:58
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::WindowType)
@@ -1428,7 +1428,7 @@ func Qt_getEnumName_58(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1704
+// /usr/include/qt/QtCore/qnamespace.h:1706
 // index:59
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::TextFormat)
@@ -1438,7 +1438,7 @@ func Qt_getEnumName_59(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1694
+// /usr/include/qt/QtCore/qnamespace.h:1696
 // index:60
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::DropAction)
@@ -1448,7 +1448,7 @@ func Qt_getEnumName_60(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1706
+// /usr/include/qt/QtCore/qnamespace.h:1708
 // index:61
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::DateFormat)
@@ -1458,7 +1458,7 @@ func Qt_getEnumName_61(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1721
+// /usr/include/qt/QtCore/qnamespace.h:1723
 // index:62
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::CheckState)
@@ -1468,7 +1468,7 @@ func Qt_getEnumName_62(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1682
+// /usr/include/qt/QtCore/qnamespace.h:1684
 // index:63
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(enum Qt::BrushStyle)
@@ -1478,7 +1478,7 @@ func Qt_getEnumName_63(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1725
+// /usr/include/qt/QtCore/qnamespace.h:1727
 // index:64
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::MatchFlags)
@@ -1488,7 +1488,7 @@ func Qt_getEnumName_64(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1720
+// /usr/include/qt/QtCore/qnamespace.h:1722
 // index:65
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ItemFlags)
@@ -1498,7 +1498,7 @@ func Qt_getEnumName_65(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1699
+// /usr/include/qt/QtCore/qnamespace.h:1701
 // index:66
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Edges)
@@ -1508,7 +1508,7 @@ func Qt_getEnumName_66(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1717
+// /usr/include/qt/QtCore/qnamespace.h:1719
 // index:67
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TextInteractionFlags)
@@ -1518,7 +1518,7 @@ func Qt_getEnumName_67(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1713
+// /usr/include/qt/QtCore/qnamespace.h:1715
 // index:68
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ImageConversionFlags)
@@ -1528,7 +1528,7 @@ func Qt_getEnumName_68(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1743
+// /usr/include/qt/QtCore/qnamespace.h:1745
 // index:69
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ScreenOrientations)
@@ -1538,7 +1538,7 @@ func Qt_getEnumName_69(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1726
+// /usr/include/qt/QtCore/qnamespace.h:1728
 // index:70
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::KeyboardModifiers)
@@ -1548,7 +1548,7 @@ func Qt_getEnumName_70(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1740
+// /usr/include/qt/QtCore/qnamespace.h:1742
 // index:71
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::InputMethodQueries)
@@ -1558,7 +1558,7 @@ func Qt_getEnumName_71(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1741
+// /usr/include/qt/QtCore/qnamespace.h:1743
 // index:72
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TouchPointStates)
@@ -1568,7 +1568,7 @@ func Qt_getEnumName_72(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1738
+// /usr/include/qt/QtCore/qnamespace.h:1740
 // index:73
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::InputMethodHints)
@@ -1578,7 +1578,7 @@ func Qt_getEnumName_73(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1700
+// /usr/include/qt/QtCore/qnamespace.h:1702
 // index:74
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::DockWidgetAreas)
@@ -1588,7 +1588,7 @@ func Qt_getEnumName_74(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1695
+// /usr/include/qt/QtCore/qnamespace.h:1697
 // index:75
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Alignment)
@@ -1598,7 +1598,7 @@ func Qt_getEnumName_75(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1734
+// /usr/include/qt/QtCore/qnamespace.h:1736
 // index:76
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::WindowStates)
@@ -1608,7 +1608,7 @@ func Qt_getEnumName_76(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1701
+// /usr/include/qt/QtCore/qnamespace.h:1703
 // index:77
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ToolBarAreas)
@@ -1618,7 +1618,7 @@ func Qt_getEnumName_77(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1697
+// /usr/include/qt/QtCore/qnamespace.h:1699
 // index:78
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Orientations)
@@ -1628,7 +1628,7 @@ func Qt_getEnumName_78(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1727
+// /usr/include/qt/QtCore/qnamespace.h:1729
 // index:79
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::MouseButtons)
@@ -1638,7 +1638,7 @@ func Qt_getEnumName_79(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1733
+// /usr/include/qt/QtCore/qnamespace.h:1735
 // index:80
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::WindowFlags)
@@ -1648,7 +1648,7 @@ func Qt_getEnumName_80(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1698
+// /usr/include/qt/QtCore/qnamespace.h:1700
 // index:81
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::DropActions)
@@ -1674,7 +1674,7 @@ func Qstrcmp(str1 string, str2 QByteArray_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:837
+// /usr/include/qt/QtCore/qglobal.h:843
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qIsNull(float)
@@ -1684,7 +1684,7 @@ func QIsNull(f float32) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:821
+// /usr/include/qt/QtCore/qglobal.h:827
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qIsNull(double)
@@ -1694,7 +1694,7 @@ func QIsNull_1(d float64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:801
+// /usr/include/qt/QtCore/qglobal.h:807
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyCompare(float, float)
@@ -1704,7 +1704,7 @@ func QFuzzyCompare(p1 float32, p2 float32) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:796
+// /usr/include/qt/QtCore/qglobal.h:802
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyCompare(double, double)
@@ -1714,7 +1714,7 @@ func QFuzzyCompare_1(p1 float64, p2 float64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:811
+// /usr/include/qt/QtCore/qglobal.h:817
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyIsNull(float)
@@ -1724,7 +1724,7 @@ func QFuzzyIsNull(f float32) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:806
+// /usr/include/qt/QtCore/qglobal.h:812
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyIsNull(double)
@@ -1734,7 +1734,7 @@ func QFuzzyIsNull_1(d float64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1137
+// /usr/include/qt/QtCore/qglobal.h:1143
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qunsetenv(const char *)
@@ -1746,7 +1746,7 @@ func Qunsetenv(varName string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:726
+// /usr/include/qt/QtCore/qglobal.h:732
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qt_assert(const char *, const char *, int)
@@ -1763,12 +1763,12 @@ func Qt_assert(assertion string, file string, line int) {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qstrnicmp(const char *, const char *, uint)
-func Qstrnicmp(arg0 string, arg1 string, len uint) int {
+func Qstrnicmp(arg0 string, arg1 string, len_ uint) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(arg1)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := qtrt.InvokeQtFunc6("_Z9qstrnicmpPKcS0_j", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, len)
+	rv, err := qtrt.InvokeQtFunc6("_Z9qstrnicmpPKcS0_j", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, len_)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -1835,10 +1835,10 @@ func QCompress_1(data unsafe.Pointer /*666*/, nbytes int, compressionLevel int) 
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [2] quint16 qChecksum(const char *, uint, Qt::ChecksumType)
-func QChecksum(s string, len uint, standard int) uint16 {
+func QChecksum(s string, len_ uint, standard int) uint16 {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_Z9qChecksumPKcjN2Qt12ChecksumTypeE", qtrt.FFI_TYPE_POINTER, convArg0, len, standard)
+	rv, err := qtrt.InvokeQtFunc6("_Z9qChecksumPKcjN2Qt12ChecksumTypeE", qtrt.FFI_TYPE_POINTER, convArg0, len_, standard)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
@@ -1847,15 +1847,15 @@ func QChecksum(s string, len uint, standard int) uint16 {
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [2] quint16 qChecksum(const char *, uint)
-func QChecksum_1(s string, len uint) uint16 {
+func QChecksum_1(s string, len_ uint) uint16 {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_Z9qChecksumPKcj", qtrt.FFI_TYPE_POINTER, convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_Z9qChecksumPKcj", qtrt.FFI_TYPE_POINTER, convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qglobal.h:775
+// /usr/include/qt/QtCore/qglobal.h:781
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qBadAlloc()
@@ -1880,12 +1880,12 @@ func Qstrnlen(str string, maxlen uint) uint {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] char * qstrncpy(char *, const char *, uint)
-func Qstrncpy(dst string, src string, len uint) string {
+func Qstrncpy(dst string, src string, len_ uint) string {
 	var convArg0 = qtrt.CString(dst)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(src)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := qtrt.InvokeQtFunc6("_Z8qstrncpyPcPKcj", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, len)
+	rv, err := qtrt.InvokeQtFunc6("_Z8qstrncpyPcPKcj", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, len_)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
 }
@@ -1894,12 +1894,12 @@ func Qstrncpy(dst string, src string, len uint) string {
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qstrncmp(const char *, const char *, uint)
-func Qstrncmp(str1 string, str2 string, len uint) int {
+func Qstrncmp(str1 string, str2 string, len_ uint) int {
 	var convArg0 = qtrt.CString(str1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(str2)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := qtrt.InvokeQtFunc6("_Z8qstrncmpPKcS0_j", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, len)
+	rv, err := qtrt.InvokeQtFunc6("_Z8qstrncmpPKcS0_j", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, len_)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -1918,7 +1918,7 @@ func Qstricmp(arg0 string, arg1 string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:538
+// /usr/include/qt/QtCore/qglobal.h:544
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [8] qint64 qRound64(float)
@@ -1928,7 +1928,7 @@ func QRound64(d float32) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qglobal.h:536
+// /usr/include/qt/QtCore/qglobal.h:542
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [8] qint64 qRound64(double)
@@ -1938,7 +1938,7 @@ func QRound64_1(d float64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1144
+// /usr/include/qt/QtCore/qglobal.h:1150
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qIntCast(float)
@@ -1948,7 +1948,7 @@ func QIntCast(f float32) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1143
+// /usr/include/qt/QtCore/qglobal.h:1149
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qIntCast(double)
@@ -1991,7 +1991,7 @@ func QAppName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qglobal.h:641
+// /usr/include/qt/QtCore/qglobal.h:647
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void qt_noop()
@@ -2100,7 +2100,7 @@ func Qstrcmp_3(str1 string, str2 string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1136
+// /usr/include/qt/QtCore/qglobal.h:1142
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qputenv(const char *, const QByteArray &)
@@ -2116,7 +2116,7 @@ func Qputenv(varName string, value QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1128
+// /usr/include/qt/QtCore/qglobal.h:1134
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QByteArray qgetenv(const char *)
@@ -2130,7 +2130,7 @@ func Qgetenv(varName string) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1045
+// /usr/include/qt/QtCore/qglobal.h:1051
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qtTrId(const char *, int)
@@ -2145,7 +2145,7 @@ func QtTrId(id string, n int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1149
+// /usr/include/qt/QtCore/qglobal.h:1155
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qsrand(uint)
@@ -2154,7 +2154,7 @@ func Qsrand(seed uint) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qglobal.h:533
+// /usr/include/qt/QtCore/qglobal.h:539
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qRound(float)
@@ -2164,7 +2164,7 @@ func QRound(d float32) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:531
+// /usr/include/qt/QtCore/qglobal.h:537
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qRound(double)
@@ -2234,7 +2234,7 @@ func QAtan2(y float64, x float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1150
+// /usr/include/qt/QtCore/qglobal.h:1156
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qrand()
@@ -2853,7 +2853,7 @@ func QRegisterStaticPluginFunction(staticPlugin QStaticPlugin_ITF /*123*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1141
+// /usr/include/qt/QtCore/qglobal.h:1147
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qEnvironmentVariableIntValue(const char *, _Bool *)
@@ -2865,7 +2865,7 @@ func QEnvironmentVariableIntValue(varName string, ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1139
+// /usr/include/qt/QtCore/qglobal.h:1145
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qEnvironmentVariableIsEmpty(const char *)
@@ -2877,7 +2877,7 @@ func QEnvironmentVariableIsEmpty(varName string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1140
+// /usr/include/qt/QtCore/qglobal.h:1146
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qEnvironmentVariableIsSet(const char *)
@@ -3051,7 +3051,7 @@ func Qt_qFindChild_helper(parent QObject_ITF /*777 const QObject **/, name strin
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1134
+// /usr/include/qt/QtCore/qglobal.h:1140
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qEnvironmentVariable(const char *, const QString &)
@@ -3068,7 +3068,7 @@ func QEnvironmentVariable(varName string, defaultValue string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1133
+// /usr/include/qt/QtCore/qglobal.h:1139
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [8] QString qEnvironmentVariable(const char *)
@@ -3102,7 +3102,7 @@ func Qt_getQtMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobject.h:472
+// /usr/include/qt/QtCore/qobject.h:473
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getQtMetaObject()
@@ -3206,7 +3206,7 @@ func QDegreesToRadians_1(degrees float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:774
+// /usr/include/qt/QtCore/qglobal.h:780
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qt_check_pointer(const char *, int)
@@ -3277,7 +3277,7 @@ func QGlobalQHashSeed() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:721
+// /usr/include/qt/QtCore/qglobal.h:727
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qt_error_string(int)
@@ -3290,7 +3290,7 @@ func Qt_error_string(errorCode int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qglobal.h:895
+// /usr/include/qt/QtCore/qglobal.h:901
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] void * qReallocAligned(void *, size_t, size_t, size_t)
@@ -3361,7 +3361,7 @@ func QSetFieldWidth(width int) *QTextStreamManipulator /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qglobal.h:894
+// /usr/include/qt/QtCore/qglobal.h:900
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] void * qMallocAligned(size_t, size_t)
@@ -3412,7 +3412,7 @@ func QFlagLocation(method string) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qglobal.h:681
+// /usr/include/qt/QtCore/qglobal.h:687
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qSharedBuild()
@@ -3422,7 +3422,7 @@ func QSharedBuild() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:896
+// /usr/include/qt/QtCore/qglobal.h:902
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qFreeAligned(void *)
@@ -3431,7 +3431,7 @@ func QFreeAligned(ptr unsafe.Pointer /*666*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qglobal.h:743
+// /usr/include/qt/QtCore/qglobal.h:749
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qt_assert_x(const char *, const char *, const char *, int)

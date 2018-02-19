@@ -89,7 +89,7 @@ func (*QScrollArea) NewFromPointer(cthis unsafe.Pointer) *QScrollArea {
 // /usr/include/qt/QtWidgets/qscrollarea.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +112,20 @@ func NewQScrollArea(parent QWidget_ITF /*777 QWidget **/) *QScrollArea {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qscrollarea.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QScrollArea(QWidget *)
+func NewQScrollArea__() *QScrollArea {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollAreaC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQScrollAreaFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QScrollArea")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qscrollarea.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -126,7 +140,7 @@ func DeleteQScrollArea(this *QScrollArea) {
 // /usr/include/qt/QtWidgets/qscrollarea.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * widget()
+// [8] QWidget * widget() const
 func (this *QScrollArea) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,7 +173,7 @@ func (this *QScrollArea) TakeWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qscrollarea.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool widgetResizable()
+// [1] bool widgetResizable() const
 func (this *QScrollArea) WidgetResizable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea15widgetResizableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,7 +192,7 @@ func (this *QScrollArea) SetWidgetResizable(resizable bool) {
 // /usr/include/qt/QtWidgets/qscrollarea.h:69
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,7 +214,7 @@ func (this *QScrollArea) FocusNextPrevChild(next bool) bool {
 // /usr/include/qt/QtWidgets/qscrollarea.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Alignment alignment()
+// [4] Qt::Alignment alignment() const
 func (this *QScrollArea) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -225,6 +239,30 @@ func (this *QScrollArea) EnsureVisible(x int, y int, xmargin int, ymargin int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qscrollarea.h:76
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ensureVisible(int, int, int, int)
+func (this *QScrollArea) EnsureVisible__(x int, y int) {
+	// arg: 2, int=Int, =Invalid,
+	xmargin := 50
+	// arg: 3, int=Int, =Invalid,
+	ymargin := 50
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea13ensureVisibleEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, xmargin, ymargin)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qscrollarea.h:76
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ensureVisible(int, int, int, int)
+func (this *QScrollArea) EnsureVisible__1(x int, y int, xmargin int) {
+	// arg: 3, int=Int, =Invalid,
+	ymargin := 50
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea13ensureVisibleEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, xmargin, ymargin)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qscrollarea.h:77
 // index:0
 // Public Visibility=Default Availability=Available
@@ -234,6 +272,38 @@ func (this *QScrollArea) EnsureWidgetVisible(childWidget QWidget_ITF /*777 QWidg
 	if childWidget != nil && childWidget.QWidget_PTR() != nil {
 		convArg0 = childWidget.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qscrollarea.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ensureWidgetVisible(QWidget *, int, int)
+func (this *QScrollArea) EnsureWidgetVisible__(childWidget QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if childWidget != nil && childWidget.QWidget_PTR() != nil {
+		convArg0 = childWidget.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	xmargin := 50
+	// arg: 2, int=Int, =Invalid,
+	ymargin := 50
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qscrollarea.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ensureWidgetVisible(QWidget *, int, int)
+func (this *QScrollArea) EnsureWidgetVisible__1(childWidget QWidget_ITF /*777 QWidget **/, xmargin int) {
+	var convArg0 unsafe.Pointer
+	if childWidget != nil && childWidget.QWidget_PTR() != nil {
+		convArg0 = childWidget.QWidget_PTR().GetCthis()
+	}
+	// arg: 2, int=Int, =Invalid,
+	ymargin := 50
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
 }
@@ -295,7 +365,7 @@ func (this *QScrollArea) ScrollContentsBy(dx int, dy int) {
 // /usr/include/qt/QtWidgets/qscrollarea.h:86
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QSize viewportSizeHint()
+// [8] QSize viewportSizeHint() const
 func (this *QScrollArea) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

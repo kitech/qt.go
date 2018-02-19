@@ -89,7 +89,7 @@ func (*QToolBox) NewFromPointer(cthis unsafe.Pointer) *QToolBox {
 // /usr/include/qt/QtWidgets/qtoolbox.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QToolBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +105,40 @@ func NewQToolBox(parent QWidget_ITF /*777 QWidget **/, f int) *QToolBox {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBoxC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQToolBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QToolBox")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qtoolbox.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QToolBox(QWidget *, Qt::WindowFlags)
+func NewQToolBox__() *QToolBox {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	f := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBoxC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQToolBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QToolBox")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qtoolbox.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QToolBox(QWidget *, Qt::WindowFlags)
+func NewQToolBox__1(parent QWidget_ITF /*777 QWidget **/) *QToolBox {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBoxC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQToolBoxFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -216,7 +250,7 @@ func (this *QToolBox) SetItemEnabled(index int, enabled bool) {
 // /usr/include/qt/QtWidgets/qtoolbox.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isItemEnabled(int)
+// [1] bool isItemEnabled(int) const
 func (this *QToolBox) IsItemEnabled(index int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox13isItemEnabledEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -237,7 +271,7 @@ func (this *QToolBox) SetItemText(index int, text string) {
 // /usr/include/qt/QtWidgets/qtoolbox.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString itemText(int)
+// [8] QString itemText(int) const
 func (this *QToolBox) ItemText(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox8itemTextEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -263,7 +297,7 @@ func (this *QToolBox) SetItemIcon(index int, icon qtgui.QIcon_ITF) {
 // /usr/include/qt/QtWidgets/qtoolbox.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QIcon itemIcon(int)
+// [8] QIcon itemIcon(int) const
 func (this *QToolBox) ItemIcon(index int) *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox8itemIconEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -286,7 +320,7 @@ func (this *QToolBox) SetItemToolTip(index int, toolTip string) {
 // /usr/include/qt/QtWidgets/qtoolbox.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString itemToolTip(int)
+// [8] QString itemToolTip(int) const
 func (this *QToolBox) ItemToolTip(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox11itemToolTipEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -299,7 +333,7 @@ func (this *QToolBox) ItemToolTip(index int) string {
 // /usr/include/qt/QtWidgets/qtoolbox.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int currentIndex()
+// [4] int currentIndex() const
 func (this *QToolBox) CurrentIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox12currentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -309,7 +343,7 @@ func (this *QToolBox) CurrentIndex() int {
 // /usr/include/qt/QtWidgets/qtoolbox.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * currentWidget()
+// [8] QWidget * currentWidget() const
 func (this *QToolBox) CurrentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox13currentWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -319,7 +353,7 @@ func (this *QToolBox) CurrentWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qtoolbox.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * widget(int)
+// [8] QWidget * widget(int) const
 func (this *QToolBox) Widget(index int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox6widgetEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -329,7 +363,7 @@ func (this *QToolBox) Widget(index int) *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qtoolbox.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int indexOf(QWidget *)
+// [4] int indexOf(QWidget *) const
 func (this *QToolBox) IndexOf(widget QWidget_ITF /*777 QWidget **/) int {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -343,7 +377,7 @@ func (this *QToolBox) IndexOf(widget QWidget_ITF /*777 QWidget **/) int {
 // /usr/include/qt/QtWidgets/qtoolbox.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QToolBox) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

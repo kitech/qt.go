@@ -76,6 +76,24 @@ func NewQShortcutEvent(key QKeySequence_ITF, id int, ambiguous bool) *QShortcutE
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qevent.h:767
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QShortcutEvent(const QKeySequence &, int, _Bool)
+func NewQShortcutEvent__(key QKeySequence_ITF, id int) *QShortcutEvent {
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QKeySequence_PTR() != nil {
+		convArg0 = key.QKeySequence_PTR().GetCthis()
+	}
+	// arg: 2, bool=Bool, =Invalid,
+	ambiguous := false
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QShortcutEventC2ERK12QKeySequenceib", qtrt.FFI_TYPE_POINTER, convArg0, id, ambiguous)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQShortcutEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQShortcutEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:768
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -90,7 +108,7 @@ func DeleteQShortcutEvent(this *QShortcutEvent) {
 // /usr/include/qt/QtGui/qevent.h:770
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QKeySequence & key()
+// [8] const QKeySequence & key() const
 func (this *QShortcutEvent) Key() *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QShortcutEvent3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -102,7 +120,7 @@ func (this *QShortcutEvent) Key() *QKeySequence {
 // /usr/include/qt/QtGui/qevent.h:771
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int shortcutId()
+// [4] int shortcutId() const
 func (this *QShortcutEvent) ShortcutId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QShortcutEvent10shortcutIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,7 +130,7 @@ func (this *QShortcutEvent) ShortcutId() int {
 // /usr/include/qt/QtGui/qevent.h:772
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isAmbiguous()
+// [1] bool isAmbiguous() const
 func (this *QShortcutEvent) IsAmbiguous() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QShortcutEvent11isAmbiguousEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

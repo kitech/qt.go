@@ -129,7 +129,7 @@ func (this *QNetworkCacheMetaData) Swap(other QNetworkCacheMetaData_ITF) {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QNetworkCacheMetaData &)
+// [1] bool operator==(const QNetworkCacheMetaData &) const
 func (this *QNetworkCacheMetaData) Operator_equal_equal(other QNetworkCacheMetaData_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkCacheMetaData_PTR() != nil {
@@ -143,7 +143,7 @@ func (this *QNetworkCacheMetaData) Operator_equal_equal(other QNetworkCacheMetaD
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:79
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QNetworkCacheMetaData &)
+// [1] bool operator!=(const QNetworkCacheMetaData &) const
 func (this *QNetworkCacheMetaData) Operator_not_equal(other QNetworkCacheMetaData_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkCacheMetaData_PTR() != nil {
@@ -157,7 +157,7 @@ func (this *QNetworkCacheMetaData) Operator_not_equal(other QNetworkCacheMetaDat
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QNetworkCacheMetaData) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QNetworkCacheMetaData) IsValid() bool {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl url()
+// [8] QUrl url() const
 func (this *QNetworkCacheMetaData) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func (this *QNetworkCacheMetaData) SetUrl(url qtcore.QUrl_ITF) {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime lastModified()
+// [8] QDateTime lastModified() const
 func (this *QNetworkCacheMetaData) LastModified() *qtcore.QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData12lastModifiedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QNetworkCacheMetaData) SetLastModified(dateTime qtcore.QDateTime_ITF
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime expirationDate()
+// [8] QDateTime expirationDate() const
 func (this *QNetworkCacheMetaData) ExpirationDate() *qtcore.QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData14expirationDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,7 +242,7 @@ func (this *QNetworkCacheMetaData) SetExpirationDate(dateTime qtcore.QDateTime_I
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool saveToDisk()
+// [1] bool saveToDisk() const
 func (this *QNetworkCacheMetaData) SaveToDisk() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData10saveToDiskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

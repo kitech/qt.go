@@ -74,7 +74,7 @@ func (this *QArrayData) Data() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtCore/qarraydata.h:64
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] const void * data()
+// [8] const void * data() const
 func (this *QArrayData) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -84,7 +84,7 @@ func (this *QArrayData) Data_1() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtCore/qarraydata.h:74
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isMutable()
+// [1] bool isMutable() const
 func (this *QArrayData) IsMutable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData9isMutableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -94,7 +94,7 @@ func (this *QArrayData) IsMutable() bool {
 // /usr/include/qt/QtCore/qarraydata.h:92
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] size_t detachCapacity(size_t)
+// [8] size_t detachCapacity(size_t) const
 func (this *QArrayData) DetachCapacity(newSize uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData14detachCapacityEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newSize)
 	qtrt.ErrPrint(err, rv)
@@ -104,7 +104,7 @@ func (this *QArrayData) DetachCapacity(newSize uint) uint {
 // /usr/include/qt/QtCore/qarraydata.h:99
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QArrayData::AllocationOptions detachFlags()
+// [4] QArrayData::AllocationOptions detachFlags() const
 func (this *QArrayData) DetachFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData11detachFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +114,7 @@ func (this *QArrayData) DetachFlags() int {
 // /usr/include/qt/QtCore/qarraydata.h:107
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QArrayData::AllocationOptions cloneFlags()
+// [4] QArrayData::AllocationOptions cloneFlags() const
 func (this *QArrayData) CloneFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData10cloneFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,6 +134,18 @@ func QArrayData_Allocate(objectSize uint, alignment uint, capacity uint, options
 	var nilthis *QArrayData
 	rv := nilthis.Allocate(objectSize, alignment, capacity, options)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qarraydata.h:115
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QArrayData * allocate(size_t, size_t, size_t, QArrayData::AllocationOptions)
+func (this *QArrayData) Allocate__(objectSize uint, alignment uint, capacity uint) *QArrayData /*777 QArrayData **/ {
+	// arg: 3, QArrayData::AllocationOptions=Typedef, QArrayData::AllocationOptions=Typedef, QFlags<QArrayData::AllocationOption>
+	options := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QArrayData8allocateEmmm6QFlagsINS_16AllocationOptionEE", qtrt.FFI_TYPE_POINTER, objectSize, alignment, capacity, options)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQArrayDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qarraydata.h:123

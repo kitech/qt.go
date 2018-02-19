@@ -103,7 +103,7 @@ func NewQConicalGradient_2(cx float64, cy float64, startAngle float64) *QConical
 // /usr/include/qt/QtGui/qbrush.h:310
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF center()
+// [16] QPointF center() const
 func (this *QConicalGradient) Center() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QConicalGradient6centerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func (this *QConicalGradient) SetCenter_1(x float64, y float64) {
 // /usr/include/qt/QtGui/qbrush.h:314
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal angle()
+// [8] qreal angle() const
 func (this *QConicalGradient) Angle() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QConicalGradient5angleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

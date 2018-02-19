@@ -77,7 +77,7 @@ func (*QEventTransition) NewFromPointer(cthis unsafe.Pointer) *QEventTransition 
 // /usr/include/qt/QtCore/qeventtransition.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QEventTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QEventTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +93,20 @@ func NewQEventTransition(sourceState QState_ITF /*777 QState **/) *QEventTransit
 	if sourceState != nil && sourceState.QState_PTR() != nil {
 		convArg0 = sourceState.QState_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QEventTransition")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qeventtransition.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QEventTransition(QState *)
+func NewQEventTransition__() *QEventTransition {
+	// arg: 0, QState *=Pointer, QState=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -120,6 +134,24 @@ func NewQEventTransition_1(object QObject_ITF /*777 QObject **/, type_ int, sour
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qeventtransition.h:58
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QEventTransition(QObject *, QEvent::Type, QState *)
+func NewQEventTransition_1_(object QObject_ITF /*777 QObject **/, type_ int) *QEventTransition {
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
+	// arg: 2, QState *=Pointer, QState=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionC2EP7QObjectN6QEvent4TypeEP6QState", qtrt.FFI_TYPE_POINTER, convArg0, type_, convArg2)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QEventTransition")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qeventtransition.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -134,7 +166,7 @@ func DeleteQEventTransition(this *QEventTransition) {
 // /usr/include/qt/QtCore/qeventtransition.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QObject * eventSource()
+// [8] QObject * eventSource() const
 func (this *QEventTransition) EventSource() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QEventTransition11eventSourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +189,7 @@ func (this *QEventTransition) SetEventSource(object QObject_ITF /*777 QObject **
 // /usr/include/qt/QtCore/qeventtransition.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QEvent::Type eventType()
+// [4] QEvent::Type eventType() const
 func (this *QEventTransition) EventType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QEventTransition9eventTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -103,6 +103,44 @@ func NewQTextBoundaryFinder_2(type_ int, chars QChar_ITF /*777 const QChar **/, 
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:77
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
+func NewQTextBoundaryFinder_2_(type_ int, chars QChar_ITF /*777 const QChar **/, length int) *QTextBoundaryFinder {
+	var convArg1 unsafe.Pointer
+	if chars != nil && chars.QChar_PTR() != nil {
+		convArg1 = chars.QChar_PTR().GetCthis()
+	}
+	// arg: 3, unsigned char *=Pointer, =Invalid,
+	var buffer unsafe.Pointer
+	// arg: 4, int=Int, =Invalid,
+	bufferSize := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", qtrt.FFI_TYPE_POINTER, type_, convArg1, length, buffer, bufferSize)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTextBoundaryFinderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextBoundaryFinder)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qtextboundaryfinder.h:77
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
+func NewQTextBoundaryFinder_2_1(type_ int, chars QChar_ITF /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/) *QTextBoundaryFinder {
+	var convArg1 unsafe.Pointer
+	if chars != nil && chars.QChar_PTR() != nil {
+		convArg1 = chars.QChar_PTR().GetCthis()
+	}
+	// arg: 4, int=Int, =Invalid,
+	bufferSize := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", qtrt.FFI_TYPE_POINTER, type_, convArg1, length, buffer, bufferSize)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTextBoundaryFinderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextBoundaryFinder)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:56
 // index:0
 // Public Visibility=Default Availability=Available
@@ -133,7 +171,7 @@ func DeleteQTextBoundaryFinder(this *QTextBoundaryFinder) {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:79
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QTextBoundaryFinder) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +181,7 @@ func (this *QTextBoundaryFinder) IsValid() bool {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:81
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QTextBoundaryFinder::BoundaryType type()
+// [4] QTextBoundaryFinder::BoundaryType type() const
 func (this *QTextBoundaryFinder) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +191,7 @@ func (this *QTextBoundaryFinder) Type() int {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString string()
+// [8] QString string() const
 func (this *QTextBoundaryFinder) String() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder6stringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,7 +222,7 @@ func (this *QTextBoundaryFinder) ToEnd() {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int position()
+// [4] int position() const
 func (this *QTextBoundaryFinder) Position() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,7 +261,7 @@ func (this *QTextBoundaryFinder) ToPreviousBoundary() int {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isAtBoundary()
+// [1] bool isAtBoundary() const
 func (this *QTextBoundaryFinder) IsAtBoundary() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder12isAtBoundaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -233,7 +271,7 @@ func (this *QTextBoundaryFinder) IsAtBoundary() bool {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTextBoundaryFinder::BoundaryReasons boundaryReasons()
+// [4] QTextBoundaryFinder::BoundaryReasons boundaryReasons() const
 func (this *QTextBoundaryFinder) BoundaryReasons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder15boundaryReasonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

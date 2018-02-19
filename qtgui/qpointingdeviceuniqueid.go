@@ -94,7 +94,7 @@ func QPointingDeviceUniqueId_FromNumericId(id int64) *QPointingDeviceUniqueId /*
 // /usr/include/qt/QtGui/qevent.h:815
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QPointingDeviceUniqueId) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -104,7 +104,7 @@ func (this *QPointingDeviceUniqueId) IsValid() bool {
 // /usr/include/qt/QtGui/qevent.h:816
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 numericId()
+// [8] qint64 numericId() const
 func (this *QPointingDeviceUniqueId) NumericId() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId9numericIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

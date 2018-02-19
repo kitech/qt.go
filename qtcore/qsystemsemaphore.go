@@ -75,6 +75,40 @@ func NewQSystemSemaphore(key string, initialValue int, mode int) *QSystemSemapho
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qsystemsemaphore.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSystemSemaphore(const QString &, int, enum QSystemSemaphore::AccessMode)
+func NewQSystemSemaphore__(key string) *QSystemSemaphore {
+	var tmpArg0 = NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, int=Int, =Invalid,
+	initialValue := 0
+	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, convArg0, initialValue, mode)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSystemSemaphoreFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSystemSemaphore)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qsystemsemaphore.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSystemSemaphore(const QString &, int, enum QSystemSemaphore::AccessMode)
+func NewQSystemSemaphore__1(key string, initialValue int) *QSystemSemaphore {
+	var tmpArg0 = NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, convArg0, initialValue, mode)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSystemSemaphoreFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSystemSemaphore)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qsystemsemaphore.h:75
 // index:0
 // Public Visibility=Default Availability=Available
@@ -97,10 +131,38 @@ func (this *QSystemSemaphore) SetKey(key string, initialValue int, mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qsystemsemaphore.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setKey(const QString &, int, enum QSystemSemaphore::AccessMode)
+func (this *QSystemSemaphore) SetKey__(key string) {
+	var tmpArg0 = NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, int=Int, =Invalid,
+	initialValue := 0
+	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, initialValue, mode)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qsystemsemaphore.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setKey(const QString &, int, enum QSystemSemaphore::AccessMode)
+func (this *QSystemSemaphore) SetKey__1(key string, initialValue int) {
+	var tmpArg0 = NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, initialValue, mode)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qsystemsemaphore.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString key()
+// [8] QString key() const
 func (this *QSystemSemaphore) Key() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSystemSemaphore3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,10 +192,22 @@ func (this *QSystemSemaphore) Release(n int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qsystemsemaphore.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool release(int)
+func (this *QSystemSemaphore) Release__() bool {
+	// arg: 0, int=Int, =Invalid,
+	n := 1
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qsystemsemaphore.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSystemSemaphore::SystemSemaphoreError error()
+// [4] QSystemSemaphore::SystemSemaphoreError error() const
 func (this *QSystemSemaphore) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSystemSemaphore5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +217,7 @@ func (this *QSystemSemaphore) Error() int {
 // /usr/include/qt/QtCore/qsystemsemaphore.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString errorString()
+// [8] QString errorString() const
 func (this *QSystemSemaphore) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSystemSemaphore11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

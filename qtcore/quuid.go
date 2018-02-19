@@ -174,7 +174,7 @@ func QUuid_FromString_1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
 // /usr/include/qt/QtCore/quuid.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toString()
+// [8] QString toString() const
 func (this *QUuid) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func (this *QUuid) ToString() string {
 // /usr/include/qt/QtCore/quuid.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toByteArray()
+// [8] QByteArray toByteArray() const
 func (this *QUuid) ToByteArray() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid11toByteArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,7 +199,7 @@ func (this *QUuid) ToByteArray() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/quuid.h:126
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toRfc4122()
+// [8] QByteArray toRfc4122() const
 func (this *QUuid) ToRfc4122() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid9toRfc4122Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -232,7 +232,7 @@ func QUuid_FromRfc4122(arg0 QByteArray_ITF) *QUuid /*123*/ {
 // /usr/include/qt/QtCore/quuid.h:128
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QUuid) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,7 +242,7 @@ func (this *QUuid) IsNull() bool {
 // /usr/include/qt/QtCore/quuid.h:130
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QUuid &)
+// [1] bool operator==(const QUuid &) const
 func (this *QUuid) Operator_equal_equal(orig QUuid_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if orig != nil && orig.QUuid_PTR() != nil {
@@ -256,7 +256,7 @@ func (this *QUuid) Operator_equal_equal(orig QUuid_ITF) bool {
 // /usr/include/qt/QtCore/quuid.h:143
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QUuid &)
+// [1] bool operator!=(const QUuid &) const
 func (this *QUuid) Operator_not_equal(orig QUuid_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if orig != nil && orig.QUuid_PTR() != nil {
@@ -270,7 +270,7 @@ func (this *QUuid) Operator_not_equal(orig QUuid_ITF) bool {
 // /usr/include/qt/QtCore/quuid.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator<(const QUuid &)
+// [1] bool operator<(const QUuid &) const
 func (this *QUuid) Operator_less_than(other QUuid_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUuid_PTR() != nil {
@@ -284,7 +284,7 @@ func (this *QUuid) Operator_less_than(other QUuid_ITF) bool {
 // /usr/include/qt/QtCore/quuid.h:149
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator>(const QUuid &)
+// [1] bool operator>(const QUuid &) const
 func (this *QUuid) Operator_greater_than(other QUuid_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUuid_PTR() != nil {
@@ -411,7 +411,7 @@ func QUuid_CreateUuidV5_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 // /usr/include/qt/QtCore/quuid.h:208
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QUuid::Variant variant()
+// [4] QUuid::Variant variant() const
 func (this *QUuid) Variant() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid7variantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -421,7 +421,7 @@ func (this *QUuid) Variant() int {
 // /usr/include/qt/QtCore/quuid.h:209
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QUuid::Version version()
+// [4] QUuid::Version version() const
 func (this *QUuid) Version() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid7versionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

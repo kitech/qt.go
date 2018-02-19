@@ -85,7 +85,7 @@ func DeleteQTimerEvent(this *QTimerEvent) {
 // /usr/include/qt/QtCore/qcoreevent.h:342
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int timerId()
+// [4] int timerId() const
 func (this *QTimerEvent) TimerId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTimerEvent7timerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

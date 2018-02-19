@@ -88,7 +88,7 @@ func NewQPoint_1(xpos int, ypos int) *QPoint {
 // /usr/include/qt/QtCore/qpoint.h:58
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QPoint) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,7 +98,7 @@ func (this *QPoint) IsNull() bool {
 // /usr/include/qt/QtCore/qpoint.h:60
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int x()
+// [4] int x() const
 func (this *QPoint) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -108,7 +108,7 @@ func (this *QPoint) X() int {
 // /usr/include/qt/QtCore/qpoint.h:61
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int y()
+// [4] int y() const
 func (this *QPoint) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,7 +136,7 @@ func (this *QPoint) SetY(y int) {
 // /usr/include/qt/QtCore/qpoint.h:65
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int manhattanLength()
+// [4] int manhattanLength() const
 func (this *QPoint) ManhattanLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint15manhattanLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

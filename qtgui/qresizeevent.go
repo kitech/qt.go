@@ -94,7 +94,7 @@ func DeleteQResizeEvent(this *QResizeEvent) {
 // /usr/include/qt/QtGui/qevent.h:466
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QSize & size()
+// [8] const QSize & size() const
 func (this *QResizeEvent) Size() *qtcore.QSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QResizeEvent4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,7 +106,7 @@ func (this *QResizeEvent) Size() *qtcore.QSize {
 // /usr/include/qt/QtGui/qevent.h:467
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QSize & oldSize()
+// [8] const QSize & oldSize() const
 func (this *QResizeEvent) OldSize() *qtcore.QSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QResizeEvent7oldSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

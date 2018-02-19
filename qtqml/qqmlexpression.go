@@ -64,7 +64,7 @@ func (*QQmlExpression) NewFromPointer(cthis unsafe.Pointer) *QQmlExpression {
 // /usr/include/qt/QtQml/qqmlexpression.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQmlExpression) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,6 +109,30 @@ func NewQQmlExpression_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore
 	return gothis
 }
 
+// /usr/include/qt/QtQml/qqmlexpression.h:63
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlExpression(QQmlContext *, QObject *, const QString &, QObject *)
+func NewQQmlExpression_1_(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string) *QQmlExpression {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlContext_PTR() != nil {
+		convArg0 = arg0.QQmlContext_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QObject_PTR() != nil {
+		convArg1 = arg1.QObject_PTR().GetCthis()
+	}
+	var tmpArg2 = qtcore.NewQString_5(arg2)
+	var convArg2 = tmpArg2.GetCthis()
+	// arg: 3, QObject *=Pointer, QObject=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2EP11QQmlContextP7QObjectRK7QStringS3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlExpressionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlExpression")
+	return gothis
+}
+
 // /usr/include/qt/QtQml/qqmlexpression.h:64
 // index:2
 // Public Visibility=Default Availability=Available
@@ -137,6 +161,78 @@ func NewQQmlExpression_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 Q
 	return gothis
 }
 
+// /usr/include/qt/QtQml/qqmlexpression.h:64
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlExpression(const QQmlScriptString &, QQmlContext *, QObject *, QObject *)
+func NewQQmlExpression_2_(arg0 QQmlScriptString_ITF) *QQmlExpression {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
+		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
+	}
+	// arg: 1, QQmlContext *=Pointer, QQmlContext=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, QObject *=Pointer, QObject=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, QObject *=Pointer, QObject=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2ERK16QQmlScriptStringP11QQmlContextP7QObjectS6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlExpressionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlExpression")
+	return gothis
+}
+
+// /usr/include/qt/QtQml/qqmlexpression.h:64
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlExpression(const QQmlScriptString &, QQmlContext *, QObject *, QObject *)
+func NewQQmlExpression_2_1(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlExpression {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
+		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QQmlContext_PTR() != nil {
+		convArg1 = arg1.QQmlContext_PTR().GetCthis()
+	}
+	// arg: 2, QObject *=Pointer, QObject=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, QObject *=Pointer, QObject=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2ERK16QQmlScriptStringP11QQmlContextP7QObjectS6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlExpressionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlExpression")
+	return gothis
+}
+
+// /usr/include/qt/QtQml/qqmlexpression.h:64
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlExpression(const QQmlScriptString &, QQmlContext *, QObject *, QObject *)
+func NewQQmlExpression_2_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
+		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if arg1 != nil && arg1.QQmlContext_PTR() != nil {
+		convArg1 = arg1.QQmlContext_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if arg2 != nil && arg2.QObject_PTR() != nil {
+		convArg2 = arg2.QObject_PTR().GetCthis()
+	}
+	// arg: 3, QObject *=Pointer, QObject=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2ERK16QQmlScriptStringP11QQmlContextP7QObjectS6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlExpressionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlExpression")
+	return gothis
+}
+
 // /usr/include/qt/QtQml/qqmlexpression.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -151,7 +247,7 @@ func DeleteQQmlExpression(this *QQmlExpression) {
 // /usr/include/qt/QtQml/qqmlexpression.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlEngine * engine()
+// [8] QQmlEngine * engine() const
 func (this *QQmlExpression) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,7 +257,7 @@ func (this *QQmlExpression) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 // /usr/include/qt/QtQml/qqmlexpression.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlContext * context()
+// [8] QQmlContext * context() const
 func (this *QQmlExpression) Context() *QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression7contextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,7 +267,7 @@ func (this *QQmlExpression) Context() *QQmlContext /*777 QQmlContext **/ {
 // /usr/include/qt/QtQml/qqmlexpression.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString expression()
+// [8] QString expression() const
 func (this *QQmlExpression) Expression() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10expressionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,7 +291,7 @@ func (this *QQmlExpression) SetExpression(arg0 string) {
 // /usr/include/qt/QtQml/qqmlexpression.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool notifyOnValueChanged()
+// [1] bool notifyOnValueChanged() const
 func (this *QQmlExpression) NotifyOnValueChanged() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression20notifyOnValueChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,7 +310,7 @@ func (this *QQmlExpression) SetNotifyOnValueChanged(arg0 bool) {
 // /usr/include/qt/QtQml/qqmlexpression.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString sourceFile()
+// [8] QString sourceFile() const
 func (this *QQmlExpression) SourceFile() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10sourceFileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +323,7 @@ func (this *QQmlExpression) SourceFile() string {
 // /usr/include/qt/QtQml/qqmlexpression.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int lineNumber()
+// [4] int lineNumber() const
 func (this *QQmlExpression) LineNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10lineNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -237,7 +333,7 @@ func (this *QQmlExpression) LineNumber() int {
 // /usr/include/qt/QtQml/qqmlexpression.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int columnNumber()
+// [4] int columnNumber() const
 func (this *QQmlExpression) ColumnNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression12columnNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,10 +351,23 @@ func (this *QQmlExpression) SetSourceLocation(fileName string, line int, column 
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtQml/qqmlexpression.h:79
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setSourceLocation(const QString &, int, int)
+func (this *QQmlExpression) SetSourceLocation__(fileName string, line int) {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 2, int=Int, =Invalid,
+	column := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression17setSourceLocationERK7QStringii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, line, column)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtQml/qqmlexpression.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QObject * scopeObject()
+// [8] QObject * scopeObject() const
 func (this *QQmlExpression) ScopeObject() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression11scopeObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +377,7 @@ func (this *QQmlExpression) ScopeObject() *qtcore.QObject /*777 QObject **/ {
 // /usr/include/qt/QtQml/qqmlexpression.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasError()
+// [1] bool hasError() const
 func (this *QQmlExpression) HasError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression8hasErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -287,7 +396,7 @@ func (this *QQmlExpression) ClearError() {
 // /usr/include/qt/QtQml/qqmlexpression.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlError error()
+// [8] QQmlError error() const
 func (this *QQmlExpression) Error() *QQmlError /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -301,6 +410,20 @@ func (this *QQmlExpression) Error() *QQmlError /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QVariant evaluate(_Bool *)
 func (this *QQmlExpression) Evaluate(valueIsUndefined *bool) *qtcore.QVariant /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression8evaluateEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), valueIsUndefined)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
+	return rv2
+}
+
+// /usr/include/qt/QtQml/qqmlexpression.h:87
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QVariant evaluate(_Bool *)
+func (this *QQmlExpression) Evaluate__() *qtcore.QVariant /*123*/ {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var valueIsUndefined unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression8evaluateEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), valueIsUndefined)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333

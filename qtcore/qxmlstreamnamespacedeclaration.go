@@ -133,7 +133,7 @@ func DeleteQXmlStreamNamespaceDeclaration(this *QXmlStreamNamespaceDeclaration) 
 // /usr/include/qt/QtCore/qxmlstream.h:221
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QStringRef prefix()
+// [16] QStringRef prefix() const
 func (this *QXmlStreamNamespaceDeclaration) Prefix() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration6prefixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,7 +145,7 @@ func (this *QXmlStreamNamespaceDeclaration) Prefix() *QStringRef /*123*/ {
 // /usr/include/qt/QtCore/qxmlstream.h:222
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QStringRef namespaceUri()
+// [16] QStringRef namespaceUri() const
 func (this *QXmlStreamNamespaceDeclaration) NamespaceUri() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +157,7 @@ func (this *QXmlStreamNamespaceDeclaration) NamespaceUri() *QStringRef /*123*/ {
 // /usr/include/qt/QtCore/qxmlstream.h:223
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QXmlStreamNamespaceDeclaration &)
+// [1] bool operator==(const QXmlStreamNamespaceDeclaration &) const
 func (this *QXmlStreamNamespaceDeclaration) Operator_equal_equal(other QXmlStreamNamespaceDeclaration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamNamespaceDeclaration_PTR() != nil {
@@ -171,7 +171,7 @@ func (this *QXmlStreamNamespaceDeclaration) Operator_equal_equal(other QXmlStrea
 // /usr/include/qt/QtCore/qxmlstream.h:226
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QXmlStreamNamespaceDeclaration &)
+// [1] bool operator!=(const QXmlStreamNamespaceDeclaration &) const
 func (this *QXmlStreamNamespaceDeclaration) Operator_not_equal(other QXmlStreamNamespaceDeclaration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamNamespaceDeclaration_PTR() != nil {

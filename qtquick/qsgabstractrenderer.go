@@ -71,7 +71,7 @@ func (*QSGAbstractRenderer) NewFromPointer(cthis unsafe.Pointer) *QSGAbstractRen
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSGAbstractRenderer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,7 +105,7 @@ func (this *QSGAbstractRenderer) SetRootNode(node QSGRootNode_ITF /*777 QSGRootN
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSGRootNode * rootNode()
+// [8] QSGRootNode * rootNode() const
 func (this *QSGAbstractRenderer) RootNode() *QSGRootNode /*777 QSGRootNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer8rootNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,7 +141,7 @@ func (this *QSGAbstractRenderer) SetDeviceRect_1(size qtcore.QSize_ITF) {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect deviceRect()
+// [16] QRect deviceRect() const
 func (this *QSGAbstractRenderer) DeviceRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer10deviceRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ func (this *QSGAbstractRenderer) SetViewportRect_1(size qtcore.QSize_ITF) {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect viewportRect()
+// [16] QRect viewportRect() const
 func (this *QSGAbstractRenderer) ViewportRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer12viewportRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QSGAbstractRenderer) SetProjectionMatrix(matrix qtgui.QMatrix4x4_ITF
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [68] QMatrix4x4 projectionMatrix()
+// [68] QMatrix4x4 projectionMatrix() const
 func (this *QSGAbstractRenderer) ProjectionMatrix() *qtgui.QMatrix4x4 /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer16projectionMatrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,7 +242,7 @@ func (this *QSGAbstractRenderer) SetClearColor(color qtgui.QColor_ITF) {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QColor clearColor()
+// [16] QColor clearColor() const
 func (this *QSGAbstractRenderer) ClearColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer10clearColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -263,7 +263,7 @@ func (this *QSGAbstractRenderer) SetClearMode(mode int) {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSGAbstractRenderer::ClearMode clearMode()
+// [4] QSGAbstractRenderer::ClearMode clearMode() const
 func (this *QSGAbstractRenderer) ClearMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer9clearModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -275,6 +275,17 @@ func (this *QSGAbstractRenderer) ClearMode() int {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void renderScene(uint)
 func (this *QSGAbstractRenderer) RenderScene(fboId uint) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer11renderSceneEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fboId)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQuick/qsgabstractrenderer.h:87
+// index:0
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void renderScene(uint)
+func (this *QSGAbstractRenderer) RenderScene__() {
+	// arg: 0, uint=Typedef, uint=Typedef, unsigned int
+	fboId := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer11renderSceneEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fboId)
 	qtrt.ErrPrint(err, rv)
 }
@@ -297,6 +308,20 @@ func NewQSGAbstractRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSGAbs
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRendererC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSGAbstractRendererFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSGAbstractRenderer")
+	return gothis
+}
+
+// /usr/include/qt/QtQuick/qsgabstractrenderer.h:93
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void QSGAbstractRenderer(QObject *)
+func NewQSGAbstractRenderer__() *QSGAbstractRenderer {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRendererC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGAbstractRendererFromPointer(unsafe.Pointer(uintptr(rv)))

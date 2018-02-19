@@ -131,7 +131,7 @@ func (this *QSslCertificateExtension) Swap(other QSslCertificateExtension_ITF) {
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString oid()
+// [8] QString oid() const
 func (this *QSslCertificateExtension) Oid() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSslCertificateExtension3oidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func (this *QSslCertificateExtension) Oid() string {
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QSslCertificateExtension) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSslCertificateExtension4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +157,7 @@ func (this *QSslCertificateExtension) Name() string {
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant value()
+// [16] QVariant value() const
 func (this *QSslCertificateExtension) Value() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSslCertificateExtension5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -169,7 +169,7 @@ func (this *QSslCertificateExtension) Value() *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isCritical()
+// [1] bool isCritical() const
 func (this *QSslCertificateExtension) IsCritical() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSslCertificateExtension10isCriticalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ func (this *QSslCertificateExtension) IsCritical() bool {
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSupported()
+// [1] bool isSupported() const
 func (this *QSslCertificateExtension) IsSupported() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSslCertificateExtension11isSupportedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

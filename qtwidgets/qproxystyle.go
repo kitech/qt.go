@@ -69,7 +69,7 @@ func (*QProxyStyle) NewFromPointer(cthis unsafe.Pointer) *QProxyStyle {
 // /usr/include/qt/QtWidgets/qproxystyle.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QProxyStyle) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +85,20 @@ func NewQProxyStyle(style QStyle_ITF /*777 QStyle **/) *QProxyStyle {
 	if style != nil && style.QStyle_PTR() != nil {
 		convArg0 = style.QStyle_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QProxyStyleC2EP6QStyle", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQProxyStyleFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QProxyStyle")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qproxystyle.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QProxyStyle(QStyle *)
+func NewQProxyStyle__() *QProxyStyle {
+	// arg: 0, QStyle *=Pointer, QStyle=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QProxyStyleC2EP6QStyle", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQProxyStyleFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -120,7 +134,7 @@ func DeleteQProxyStyle(this *QProxyStyle) {
 // /usr/include/qt/QtWidgets/qproxystyle.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStyle * baseStyle()
+// [8] QStyle * baseStyle() const
 func (this *QProxyStyle) BaseStyle() *QStyle /*777 QStyle **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle9baseStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +157,7 @@ func (this *QProxyStyle) SetBaseStyle(style QStyle_ITF /*777 QStyle **/) {
 // /usr/include/qt/QtWidgets/qproxystyle.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawPrimitive(enum QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *)
+// [-2] void drawPrimitive(enum QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
 func (this *QProxyStyle) DrawPrimitive(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/, widget QWidget_ITF /*777 const QWidget **/) {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
@@ -161,10 +175,29 @@ func (this *QProxyStyle) DrawPrimitive(element int, option QStyleOption_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qproxystyle.h:64
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void drawPrimitive(enum QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
+func (this *QProxyStyle) DrawPrimitive__(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOption_PTR() != nil {
+		convArg1 = option.QStyleOption_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg2 = painter.QPainter_PTR().GetCthis()
+	}
+	// arg: 3, const QWidget *=Pointer, QWidget=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle13drawPrimitiveEN6QStyle16PrimitiveElementEPK12QStyleOptionP8QPainterPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), element, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qproxystyle.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawControl(enum QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *)
+// [-2] void drawControl(enum QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
 func (this *QProxyStyle) DrawControl(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/, widget QWidget_ITF /*777 const QWidget **/) {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
@@ -182,10 +215,29 @@ func (this *QProxyStyle) DrawControl(element int, option QStyleOption_ITF /*777 
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qproxystyle.h:65
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void drawControl(enum QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
+func (this *QProxyStyle) DrawControl__(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOption_PTR() != nil {
+		convArg1 = option.QStyleOption_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg2 = painter.QPainter_PTR().GetCthis()
+	}
+	// arg: 3, const QWidget *=Pointer, QWidget=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle11drawControlEN6QStyle14ControlElementEPK12QStyleOptionP8QPainterPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), element, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qproxystyle.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *)
+// [-2] void drawComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
 func (this *QProxyStyle) DrawComplexControl(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, painter qtgui.QPainter_ITF /*777 QPainter **/, widget QWidget_ITF /*777 const QWidget **/) {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOptionComplex_PTR() != nil {
@@ -203,10 +255,29 @@ func (this *QProxyStyle) DrawComplexControl(control int, option QStyleOptionComp
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qproxystyle.h:66
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void drawComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
+func (this *QProxyStyle) DrawComplexControl__(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOptionComplex_PTR() != nil {
+		convArg1 = option.QStyleOptionComplex_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg2 = painter.QPainter_PTR().GetCthis()
+	}
+	// arg: 3, const QWidget *=Pointer, QWidget=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle18drawComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexP8QPainterPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), control, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qproxystyle.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole)
+// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole) const
 func (this *QProxyStyle) DrawItemText(painter qtgui.QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string, textRole int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -226,10 +297,35 @@ func (this *QProxyStyle) DrawItemText(painter qtgui.QPainter_ITF /*777 QPainter 
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qproxystyle.h:67
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole) const
+func (this *QProxyStyle) DrawItemText__(painter qtgui.QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string) {
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg1 = rect.QRect_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if pal != nil && pal.QPalette_PTR() != nil {
+		convArg3 = pal.QPalette_PTR().GetCthis()
+	}
+	var tmpArg5 = qtcore.NewQString_5(text)
+	var convArg5 = tmpArg5.GetCthis()
+	// arg: 6, QPalette::ColorRole=Elaborated, QPalette::ColorRole=Enum,
+	textRole := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle12drawItemTextEP8QPainterRK5QRectiRK8QPalettebRK7QStringNS5_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, flags, convArg3, enabled, convArg5, textRole)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qproxystyle.h:69
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawItemPixmap(QPainter *, const QRect &, int, const QPixmap &)
+// [-2] void drawItemPixmap(QPainter *, const QRect &, int, const QPixmap &) const
 func (this *QProxyStyle) DrawItemPixmap(painter qtgui.QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, alignment int, pixmap qtgui.QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -250,7 +346,7 @@ func (this *QProxyStyle) DrawItemPixmap(painter qtgui.QPainter_ITF /*777 QPainte
 // /usr/include/qt/QtWidgets/qproxystyle.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeFromContents(enum QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *)
+// [8] QSize sizeFromContents(enum QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *) const
 func (this *QProxyStyle) SizeFromContents(type_ int, option QStyleOption_ITF /*777 const QStyleOption **/, size qtcore.QSize_ITF, widget QWidget_ITF /*777 const QWidget **/) *qtcore.QSize /*123*/ {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
@@ -274,7 +370,7 @@ func (this *QProxyStyle) SizeFromContents(type_ int, option QStyleOption_ITF /*7
 // /usr/include/qt/QtWidgets/qproxystyle.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect subElementRect(enum QStyle::SubElement, const QStyleOption *, const QWidget *)
+// [16] QRect subElementRect(enum QStyle::SubElement, const QStyleOption *, const QWidget *) const
 func (this *QProxyStyle) SubElementRect(element int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
@@ -294,7 +390,7 @@ func (this *QProxyStyle) SubElementRect(element int, option QStyleOption_ITF /*7
 // /usr/include/qt/QtWidgets/qproxystyle.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect subControlRect(enum QStyle::ComplexControl, const QStyleOptionComplex *, enum QStyle::SubControl, const QWidget *)
+// [16] QRect subControlRect(enum QStyle::ComplexControl, const QStyleOptionComplex *, enum QStyle::SubControl, const QWidget *) const
 func (this *QProxyStyle) SubControlRect(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, sc int, widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
@@ -314,7 +410,7 @@ func (this *QProxyStyle) SubControlRect(cc int, opt QStyleOptionComplex_ITF /*77
 // /usr/include/qt/QtWidgets/qproxystyle.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect itemTextRect(const QFontMetrics &, const QRect &, int, _Bool, const QString &)
+// [16] QRect itemTextRect(const QFontMetrics &, const QRect &, int, _Bool, const QString &) const
 func (this *QProxyStyle) ItemTextRect(fm qtgui.QFontMetrics_ITF, r qtcore.QRect_ITF, flags int, enabled bool, text string) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if fm != nil && fm.QFontMetrics_PTR() != nil {
@@ -336,7 +432,7 @@ func (this *QProxyStyle) ItemTextRect(fm qtgui.QFontMetrics_ITF, r qtcore.QRect_
 // /usr/include/qt/QtWidgets/qproxystyle.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect itemPixmapRect(const QRect &, int, const QPixmap &)
+// [16] QRect itemPixmapRect(const QRect &, int, const QPixmap &) const
 func (this *QProxyStyle) ItemPixmapRect(r qtcore.QRect_ITF, flags int, pixmap qtgui.QPixmap_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -356,7 +452,7 @@ func (this *QProxyStyle) ItemPixmapRect(r qtcore.QRect_ITF, flags int, pixmap qt
 // /usr/include/qt/QtWidgets/qproxystyle.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QStyle::SubControl hitTestComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *)
+// [4] QStyle::SubControl hitTestComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
 func (this *QProxyStyle) HitTestComplexControl(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pos qtcore.QPoint_ITF, widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOptionComplex_PTR() != nil {
@@ -375,10 +471,30 @@ func (this *QProxyStyle) HitTestComplexControl(control int, option QStyleOptionC
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qproxystyle.h:78
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] QStyle::SubControl hitTestComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
+func (this *QProxyStyle) HitTestComplexControl__(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pos qtcore.QPoint_ITF) int {
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOptionComplex_PTR() != nil {
+		convArg1 = option.QStyleOptionComplex_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg2 = pos.QPoint_PTR().GetCthis()
+	}
+	// arg: 3, const QWidget *=Pointer, QWidget=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle21hitTestComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexRK6QPointPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), control, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+	return int(rv)
+}
+
 // /usr/include/qt/QtWidgets/qproxystyle.h:79
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *)
+// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 func (this *QProxyStyle) StyleHint(hint int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/, returnData QStyleHintReturn_ITF /*777 QStyleHintReturn **/) int {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
@@ -397,10 +513,64 @@ func (this *QProxyStyle) StyleHint(hint int, option QStyleOption_ITF /*777 const
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtWidgets/qproxystyle.h:79
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+func (this *QProxyStyle) StyleHint__(hint int) int {
+	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, QStyleHintReturn *=Pointer, QStyleHintReturn=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qproxystyle.h:79
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+func (this *QProxyStyle) StyleHint__1(hint int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOption_PTR() != nil {
+		convArg1 = option.QStyleOption_PTR().GetCthis()
+	}
+	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, QStyleHintReturn *=Pointer, QStyleHintReturn=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qproxystyle.h:79
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+func (this *QProxyStyle) StyleHint__2(hint int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOption_PTR() != nil {
+		convArg1 = option.QStyleOption_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if widget != nil && widget.QWidget_PTR() != nil {
+		convArg2 = widget.QWidget_PTR().GetCthis()
+	}
+	// arg: 3, QStyleHintReturn *=Pointer, QStyleHintReturn=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtWidgets/qproxystyle.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *)
+// [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
 func (this *QProxyStyle) PixelMetric(metric int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
@@ -415,10 +585,40 @@ func (this *QProxyStyle) PixelMetric(metric int, option QStyleOption_ITF /*777 c
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtWidgets/qproxystyle.h:80
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+func (this *QProxyStyle) PixelMetric__(metric int) int {
+	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qproxystyle.h:80
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+func (this *QProxyStyle) PixelMetric__1(metric int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOption_PTR() != nil {
+		convArg1 = option.QStyleOption_PTR().GetCthis()
+	}
+	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtWidgets/qproxystyle.h:81
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *)
+// [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
 func (this *QProxyStyle) LayoutSpacing(control1 int, control2 int, orientation int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg3 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
@@ -433,10 +633,40 @@ func (this *QProxyStyle) LayoutSpacing(control1 int, control2 int, orientation i
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtWidgets/qproxystyle.h:81
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
+func (this *QProxyStyle) LayoutSpacing__(control1 int, control2 int, orientation int) int {
+	// arg: 3, const QStyleOption *=Pointer, QStyleOption=Record,
+	var convArg3 unsafe.Pointer
+	// arg: 4, const QWidget *=Pointer, QWidget=Record,
+	var convArg4 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle13layoutSpacingEN11QSizePolicy11ControlTypeES1_N2Qt11OrientationEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), control1, control2, orientation, convArg3, convArg4)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qproxystyle.h:81
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
+func (this *QProxyStyle) LayoutSpacing__1(control1 int, control2 int, orientation int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
+	var convArg3 unsafe.Pointer
+	if option != nil && option.QStyleOption_PTR() != nil {
+		convArg3 = option.QStyleOption_PTR().GetCthis()
+	}
+	// arg: 4, const QWidget *=Pointer, QWidget=Record,
+	var convArg4 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle13layoutSpacingEN11QSizePolicy11ControlTypeES1_N2Qt11OrientationEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), control1, control2, orientation, convArg3, convArg4)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtWidgets/qproxystyle.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *)
+// [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 func (this *QProxyStyle) StandardIcon(standardIcon int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) *qtgui.QIcon /*123*/ {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
@@ -453,10 +683,44 @@ func (this *QProxyStyle) StandardIcon(standardIcon int, option QStyleOption_ITF 
 	return rv2
 }
 
+// /usr/include/qt/QtWidgets/qproxystyle.h:84
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+func (this *QProxyStyle) StandardIcon__(standardIcon int) *qtgui.QIcon /*123*/ {
+	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle12standardIconEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardIcon, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qproxystyle.h:84
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+func (this *QProxyStyle) StandardIcon__1(standardIcon int, option QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QIcon /*123*/ {
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOption_PTR() != nil {
+		convArg1 = option.QStyleOption_PTR().GetCthis()
+	}
+	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle12standardIconEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardIcon, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qproxystyle.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *)
+// [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 func (this *QProxyStyle) StandardPixmap(standardPixmap int, opt QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -473,10 +737,28 @@ func (this *QProxyStyle) StandardPixmap(standardPixmap int, opt QStyleOption_ITF
 	return rv2
 }
 
+// /usr/include/qt/QtWidgets/qproxystyle.h:85
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+func (this *QProxyStyle) StandardPixmap__(standardPixmap int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
+	var convArg1 unsafe.Pointer
+	if opt != nil && opt.QStyleOption_PTR() != nil {
+		convArg1 = opt.QStyleOption_PTR().GetCthis()
+	}
+	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle14standardPixmapEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardPixmap, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qproxystyle.h:86
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QPixmap generatedIconPixmap(QIcon::Mode, const QPixmap &, const QStyleOption *)
+// [32] QPixmap generatedIconPixmap(QIcon::Mode, const QPixmap &, const QStyleOption *) const
 func (this *QProxyStyle) GeneratedIconPixmap(iconMode int, pixmap qtgui.QPixmap_ITF, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -496,7 +778,7 @@ func (this *QProxyStyle) GeneratedIconPixmap(iconMode int, pixmap qtgui.QPixmap_
 // /usr/include/qt/QtWidgets/qproxystyle.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QPalette standardPalette()
+// [16] QPalette standardPalette() const
 func (this *QProxyStyle) StandardPalette() *qtgui.QPalette /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle15standardPaletteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -87,6 +87,20 @@ func NewQTileRules_1(rule int) *QTileRules {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qdrawutil.h:116
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void QTileRules(Qt::TileRule)
+func NewQTileRules_1_() *QTileRules {
+	// arg: 0, Qt::TileRule=Elaborated, Qt::TileRule=Enum,
+	rule := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleE", qtrt.FFI_TYPE_POINTER, rule)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTileRulesFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTileRules)
+	return gothis
+}
+
 func DeleteQTileRules(this *QTileRules) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTileRulesD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -64,7 +64,7 @@ func (*QUndoView) NewFromPointer(cthis unsafe.Pointer) *QUndoView {
 // /usr/include/qt/QtWidgets/qundoview.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QUndoView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +80,20 @@ func NewQUndoView(parent QWidget_ITF /*777 QWidget **/) *QUndoView {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQUndoViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QUndoView")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qundoview.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QUndoView(QWidget *)
+func NewQUndoView__() *QUndoView {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUndoViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -107,6 +121,24 @@ func NewQUndoView_1(stack QUndoStack_ITF /*777 QUndoStack **/, parent QWidget_IT
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qundoview.h:66
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QUndoView(QUndoStack *, QWidget *)
+func NewQUndoView_1_(stack QUndoStack_ITF /*777 QUndoStack **/) *QUndoView {
+	var convArg0 unsafe.Pointer
+	if stack != nil && stack.QUndoStack_PTR() != nil {
+		convArg0 = stack.QUndoStack_PTR().GetCthis()
+	}
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP10QUndoStackP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQUndoViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QUndoView")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qundoview.h:68
 // index:2
 // Public Visibility=Default Availability=Available
@@ -120,6 +152,24 @@ func NewQUndoView_2(group QUndoGroup_ITF /*777 QUndoGroup **/, parent QWidget_IT
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP10QUndoGroupP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQUndoViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QUndoView")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qundoview.h:68
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QUndoView(QUndoGroup *, QWidget *)
+func NewQUndoView_2_(group QUndoGroup_ITF /*777 QUndoGroup **/) *QUndoView {
+	var convArg0 unsafe.Pointer
+	if group != nil && group.QUndoGroup_PTR() != nil {
+		convArg0 = group.QUndoGroup_PTR().GetCthis()
+	}
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP10QUndoGroupP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUndoViewFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -141,7 +191,7 @@ func DeleteQUndoView(this *QUndoView) {
 // /usr/include/qt/QtWidgets/qundoview.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUndoStack * stack()
+// [8] QUndoStack * stack() const
 func (this *QUndoView) Stack() *QUndoStack /*777 QUndoStack **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView5stackEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +201,7 @@ func (this *QUndoView) Stack() *QUndoStack /*777 QUndoStack **/ {
 // /usr/include/qt/QtWidgets/qundoview.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUndoGroup * group()
+// [8] QUndoGroup * group() const
 func (this *QUndoView) Group() *QUndoGroup /*777 QUndoGroup **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView5groupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -172,7 +222,7 @@ func (this *QUndoView) SetEmptyLabel(label string) {
 // /usr/include/qt/QtWidgets/qundoview.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString emptyLabel()
+// [8] QString emptyLabel() const
 func (this *QUndoView) EmptyLabel() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView10emptyLabelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,7 +248,7 @@ func (this *QUndoView) SetCleanIcon(icon qtgui.QIcon_ITF) {
 // /usr/include/qt/QtWidgets/qundoview.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QIcon cleanIcon()
+// [8] QIcon cleanIcon() const
 func (this *QUndoView) CleanIcon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView9cleanIconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

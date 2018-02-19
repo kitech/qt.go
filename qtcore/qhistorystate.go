@@ -77,7 +77,7 @@ func (*QHistoryState) NewFromPointer(cthis unsafe.Pointer) *QHistoryState {
 // /usr/include/qt/QtCore/qhistorystate.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QHistoryState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QHistoryState10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +93,20 @@ func NewQHistoryState(parent QState_ITF /*777 QState **/) *QHistoryState {
 	if parent != nil && parent.QState_PTR() != nil {
 		convArg0 = parent.QState_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQHistoryStateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QHistoryState")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qhistorystate.h:64
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QHistoryState(QState *)
+func NewQHistoryState__() *QHistoryState {
+	// arg: 0, QState *=Pointer, QState=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHistoryStateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,6 +130,20 @@ func NewQHistoryState_1(type_ int, parent QState_ITF /*777 QState **/) *QHistory
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qhistorystate.h:65
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QHistoryState(enum QHistoryState::HistoryType, QState *)
+func NewQHistoryState_1_(type_ int) *QHistoryState {
+	// arg: 1, QState *=Pointer, QState=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2ENS_11HistoryTypeEP6QState", qtrt.FFI_TYPE_POINTER, type_, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQHistoryStateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QHistoryState")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qhistorystate.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -130,7 +158,7 @@ func DeleteQHistoryState(this *QHistoryState) {
 // /usr/include/qt/QtCore/qhistorystate.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractTransition * defaultTransition()
+// [8] QAbstractTransition * defaultTransition() const
 func (this *QHistoryState) DefaultTransition() *QAbstractTransition /*777 QAbstractTransition **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QHistoryState17defaultTransitionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +181,7 @@ func (this *QHistoryState) SetDefaultTransition(transition QAbstractTransition_I
 // /usr/include/qt/QtCore/qhistorystate.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractState * defaultState()
+// [8] QAbstractState * defaultState() const
 func (this *QHistoryState) DefaultState() *QAbstractState /*777 QAbstractState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QHistoryState12defaultStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +204,7 @@ func (this *QHistoryState) SetDefaultState(state QAbstractState_ITF /*777 QAbstr
 // /usr/include/qt/QtCore/qhistorystate.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QHistoryState::HistoryType historyType()
+// [4] QHistoryState::HistoryType historyType() const
 func (this *QHistoryState) HistoryType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QHistoryState11historyTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

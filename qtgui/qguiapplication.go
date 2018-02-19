@@ -68,7 +68,7 @@ func (*QGuiApplication) NewFromPointer(cthis unsafe.Pointer) *QGuiApplication {
 // /usr/include/qt/QtGui/qguiapplication.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGuiApplication) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGuiApplication10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -81,6 +81,21 @@ func (this *QGuiApplication) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // [-2] void QGuiApplication(int &, char **, int)
 func NewQGuiApplication(argc int, argv []string, arg2 int) *QGuiApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGuiApplicationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGuiApplication")
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qguiapplication.h:87
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGuiApplication(int &, char **, int)
+func NewQGuiApplication__(argc int, argv []string) *QGuiApplication {
+	var convArg1 = qtrt.StringSliceToCCharPP(argv)
+	// arg: 2, int=Int, =Invalid,
+	arg2 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGuiApplicationFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -350,7 +365,7 @@ func QGuiApplication_ScreenAt(point qtcore.QPoint_ITF) *QScreen /*777 QScreen **
 // /usr/include/qt/QtGui/qguiapplication.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal devicePixelRatio()
+// [8] qreal devicePixelRatio() const
 func (this *QGuiApplication) DevicePixelRatio() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGuiApplication16devicePixelRatioEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -761,7 +776,7 @@ func (this *QGuiApplication) Notify(arg0 qtcore.QObject_ITF /*777 QObject **/, a
 // /usr/include/qt/QtGui/qguiapplication.h:164
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSessionRestored()
+// [1] bool isSessionRestored() const
 func (this *QGuiApplication) IsSessionRestored() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGuiApplication17isSessionRestoredEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -771,7 +786,7 @@ func (this *QGuiApplication) IsSessionRestored() bool {
 // /usr/include/qt/QtGui/qguiapplication.h:165
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString sessionId()
+// [8] QString sessionId() const
 func (this *QGuiApplication) SessionId() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGuiApplication9sessionIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -784,7 +799,7 @@ func (this *QGuiApplication) SessionId() string {
 // /usr/include/qt/QtGui/qguiapplication.h:166
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString sessionKey()
+// [8] QString sessionKey() const
 func (this *QGuiApplication) SessionKey() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGuiApplication10sessionKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -797,7 +812,7 @@ func (this *QGuiApplication) SessionKey() string {
 // /usr/include/qt/QtGui/qguiapplication.h:167
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSavingSession()
+// [1] bool isSavingSession() const
 func (this *QGuiApplication) IsSavingSession() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGuiApplication15isSavingSessionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

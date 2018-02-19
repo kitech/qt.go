@@ -91,7 +91,7 @@ func DeleteQWidgetItemV2(this *QWidgetItemV2) {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:151
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QWidgetItemV2) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV28sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -103,7 +103,7 @@ func (this *QWidgetItemV2) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:152
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSize()
+// [8] QSize minimumSize() const
 func (this *QWidgetItemV2) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV211minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,7 +115,7 @@ func (this *QWidgetItemV2) MinimumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:153
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize maximumSize()
+// [8] QSize maximumSize() const
 func (this *QWidgetItemV2) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV211maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,7 +127,7 @@ func (this *QWidgetItemV2) MaximumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:154
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int heightForWidth(int)
+// [4] int heightForWidth(int) const
 func (this *QWidgetItemV2) HeightForWidth(width int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV214heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)

@@ -63,7 +63,7 @@ func (*QAccessiblePlugin) NewFromPointer(cthis unsafe.Pointer) *QAccessiblePlugi
 // /usr/include/qt/QtGui/qaccessibleplugin.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessiblePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +79,20 @@ func NewQAccessiblePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessi
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessiblePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAccessiblePluginFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAccessiblePlugin")
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qaccessibleplugin.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAccessiblePlugin(QObject *)
+func NewQAccessiblePlugin__() *QAccessiblePlugin {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessiblePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessiblePluginFromPointer(unsafe.Pointer(uintptr(rv)))

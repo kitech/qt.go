@@ -101,7 +101,7 @@ func DeleteQTemporaryDir(this *QTemporaryDir) {
 // /usr/include/qt/QtCore/qtemporarydir.h:60
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QTemporaryDir) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +111,7 @@ func (this *QTemporaryDir) IsValid() bool {
 // /usr/include/qt/QtCore/qtemporarydir.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString errorString()
+// [8] QString errorString() const
 func (this *QTemporaryDir) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,7 +124,7 @@ func (this *QTemporaryDir) ErrorString() string {
 // /usr/include/qt/QtCore/qtemporarydir.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool autoRemove()
+// [1] bool autoRemove() const
 func (this *QTemporaryDir) AutoRemove() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir10autoRemoveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func (this *QTemporaryDir) Remove() bool {
 // /usr/include/qt/QtCore/qtemporarydir.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString path()
+// [8] QString path() const
 func (this *QTemporaryDir) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir4pathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,7 +166,7 @@ func (this *QTemporaryDir) Path() string {
 // /usr/include/qt/QtCore/qtemporarydir.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString filePath(const QString &)
+// [8] QString filePath(const QString &) const
 func (this *QTemporaryDir) FilePath(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

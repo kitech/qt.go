@@ -104,7 +104,7 @@ func (*QAbstractSlider) NewFromPointer(cthis unsafe.Pointer) *QAbstractSlider {
 // /usr/include/qt/QtWidgets/qabstractslider.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAbstractSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +127,20 @@ func NewQAbstractSlider(parent QWidget_ITF /*777 QWidget **/) *QAbstractSlider {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qabstractslider.h:70
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAbstractSlider(QWidget *)
+func NewQAbstractSlider__() *QAbstractSlider {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSliderC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAbstractSliderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractSlider")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qabstractslider.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -141,7 +155,7 @@ func DeleteQAbstractSlider(this *QAbstractSlider) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Orientation orientation()
+// [4] Qt::Orientation orientation() const
 func (this *QAbstractSlider) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +174,7 @@ func (this *QAbstractSlider) SetMinimum(arg0 int) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int minimum()
+// [4] int minimum() const
 func (this *QAbstractSlider) Minimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider7minimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,7 +193,7 @@ func (this *QAbstractSlider) SetMaximum(arg0 int) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int maximum()
+// [4] int maximum() const
 func (this *QAbstractSlider) Maximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider7maximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,7 +212,7 @@ func (this *QAbstractSlider) SetSingleStep(arg0 int) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int singleStep()
+// [4] int singleStep() const
 func (this *QAbstractSlider) SingleStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider10singleStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,7 +231,7 @@ func (this *QAbstractSlider) SetPageStep(arg0 int) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int pageStep()
+// [4] int pageStep() const
 func (this *QAbstractSlider) PageStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider8pageStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -236,7 +250,7 @@ func (this *QAbstractSlider) SetTracking(enable bool) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasTracking()
+// [1] bool hasTracking() const
 func (this *QAbstractSlider) HasTracking() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider11hasTrackingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,7 +269,7 @@ func (this *QAbstractSlider) SetSliderDown(arg0 bool) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSliderDown()
+// [1] bool isSliderDown() const
 func (this *QAbstractSlider) IsSliderDown() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider12isSliderDownEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -274,7 +288,7 @@ func (this *QAbstractSlider) SetSliderPosition(arg0 int) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int sliderPosition()
+// [4] int sliderPosition() const
 func (this *QAbstractSlider) SliderPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider14sliderPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -293,7 +307,7 @@ func (this *QAbstractSlider) SetInvertedAppearance(arg0 bool) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool invertedAppearance()
+// [1] bool invertedAppearance() const
 func (this *QAbstractSlider) InvertedAppearance() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider18invertedAppearanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -312,7 +326,7 @@ func (this *QAbstractSlider) SetInvertedControls(arg0 bool) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool invertedControls()
+// [1] bool invertedControls() const
 func (this *QAbstractSlider) InvertedControls() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider16invertedControlsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -322,7 +336,7 @@ func (this *QAbstractSlider) InvertedControls() bool {
 // /usr/include/qt/QtWidgets/qabstractslider.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int value()
+// [4] int value() const
 func (this *QAbstractSlider) Value() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -442,10 +456,34 @@ func (this *QAbstractSlider) SetRepeatAction(action int, thresholdTime int, repe
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qabstractslider.h:136
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
+func (this *QAbstractSlider) SetRepeatAction__(action int) {
+	// arg: 1, int=Int, =Invalid,
+	thresholdTime := 500
+	// arg: 2, int=Int, =Invalid,
+	repeatTime := 50
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider15setRepeatActionENS_12SliderActionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action, thresholdTime, repeatTime)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractslider.h:136
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
+func (this *QAbstractSlider) SetRepeatAction__1(action int, thresholdTime int) {
+	// arg: 2, int=Int, =Invalid,
+	repeatTime := 50
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider15setRepeatActionENS_12SliderActionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action, thresholdTime, repeatTime)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qabstractslider.h:137
 // index:0
 // Protected Visibility=Default Availability=Available
-// [4] QAbstractSlider::SliderAction repeatAction()
+// [4] QAbstractSlider::SliderAction repeatAction() const
 func (this *QAbstractSlider) RepeatAction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider12repeatActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

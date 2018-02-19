@@ -77,7 +77,7 @@ func (*QFinalState) NewFromPointer(cthis unsafe.Pointer) *QFinalState {
 // /usr/include/qt/QtCore/qfinalstate.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFinalState10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +93,20 @@ func NewQFinalState(parent QState_ITF /*777 QState **/) *QFinalState {
 	if parent != nil && parent.QState_PTR() != nil {
 		convArg0 = parent.QState_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQFinalStateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFinalState")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qfinalstate.h:54
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFinalState(QState *)
+func NewQFinalState__() *QFinalState {
+	// arg: 0, QState *=Pointer, QState=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFinalStateFromPointer(unsafe.Pointer(uintptr(rv)))

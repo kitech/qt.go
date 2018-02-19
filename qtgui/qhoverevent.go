@@ -80,6 +80,28 @@ func NewQHoverEvent(type_ int, pos qtcore.QPointF_ITF, oldPos qtcore.QPointF_ITF
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qevent.h:157
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QHoverEvent(enum QEvent::Type, const QPointF &, const QPointF &, Qt::KeyboardModifiers)
+func NewQHoverEvent__(type_ int, pos qtcore.QPointF_ITF, oldPos qtcore.QPointF_ITF) *QHoverEvent {
+	var convArg1 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg1 = pos.QPointF_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if oldPos != nil && oldPos.QPointF_PTR() != nil {
+		convArg2 = oldPos.QPointF_PTR().GetCthis()
+	}
+	// arg: 3, Qt::KeyboardModifiers=Elaborated, Qt::KeyboardModifiers=Typedef, QFlags<Qt::KeyboardModifier>
+	modifiers := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHoverEventC2EN6QEvent4TypeERK7QPointFS4_6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, modifiers)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQHoverEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHoverEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:158
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -94,7 +116,7 @@ func DeleteQHoverEvent(this *QHoverEvent) {
 // /usr/include/qt/QtGui/qevent.h:161
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint pos()
+// [8] QPoint pos() const
 func (this *QHoverEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHoverEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,7 +128,7 @@ func (this *QHoverEvent) Pos() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:162
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint oldPos()
+// [8] QPoint oldPos() const
 func (this *QHoverEvent) OldPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHoverEvent6oldPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +140,7 @@ func (this *QHoverEvent) OldPos() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:165
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] const QPointF & posF()
+// [16] const QPointF & posF() const
 func (this *QHoverEvent) PosF() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHoverEvent4posFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,7 +152,7 @@ func (this *QHoverEvent) PosF() *qtcore.QPointF {
 // /usr/include/qt/QtGui/qevent.h:166
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] const QPointF & oldPosF()
+// [16] const QPointF & oldPosF() const
 func (this *QHoverEvent) OldPosF() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHoverEvent7oldPosFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

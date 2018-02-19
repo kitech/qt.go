@@ -73,7 +73,7 @@ func (*QRasterWindow) NewFromPointer(cthis unsafe.Pointer) *QRasterWindow {
 // /usr/include/qt/QtGui/qrasterwindow.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QRasterWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -96,6 +96,20 @@ func NewQRasterWindow(parent QWindow_ITF /*777 QWindow **/) *QRasterWindow {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qrasterwindow.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QRasterWindow(QWindow *)
+func NewQRasterWindow__() *QRasterWindow {
+	// arg: 0, QWindow *=Pointer, QWindow=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QRasterWindowC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQRasterWindowFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QRasterWindow")
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qrasterwindow.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -110,7 +124,7 @@ func DeleteQRasterWindow(this *QRasterWindow) {
 // /usr/include/qt/QtGui/qrasterwindow.h:60
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric)
+// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
 func (this *QRasterWindow) Metric(metric int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QRasterWindow6metricEN12QPaintDevice17PaintDeviceMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	qtrt.ErrPrint(err, rv)
@@ -120,7 +134,7 @@ func (this *QRasterWindow) Metric(metric int) int {
 // /usr/include/qt/QtGui/qrasterwindow.h:61
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QPaintDevice * redirected(QPoint *)
+// [8] QPaintDevice * redirected(QPoint *) const
 func (this *QRasterWindow) Redirected(arg0 qtcore.QPoint_ITF /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {

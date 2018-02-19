@@ -75,7 +75,7 @@ func DeleteQGestureEvent(this *QGestureEvent) {
 // /usr/include/qt/QtWidgets/qgesture.h:281
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QGesture * gesture(Qt::GestureType)
+// [8] QGesture * gesture(Qt::GestureType) const
 func (this *QGestureEvent) Gesture(type_ int) *QGesture /*777 QGesture **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGestureEvent7gestureEN2Qt11GestureTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func (this *QGestureEvent) Ignore_1(arg0 int) {
 // /usr/include/qt/QtWidgets/qgesture.h:294
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isAccepted(QGesture *)
+// [1] bool isAccepted(QGesture *) const
 func (this *QGestureEvent) IsAccepted(arg0 QGesture_ITF /*777 QGesture **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QGesture_PTR() != nil {
@@ -165,7 +165,7 @@ func (this *QGestureEvent) IsAccepted(arg0 QGesture_ITF /*777 QGesture **/) bool
 // /usr/include/qt/QtWidgets/qgesture.h:299
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool isAccepted(Qt::GestureType)
+// [1] bool isAccepted(Qt::GestureType) const
 func (this *QGestureEvent) IsAccepted_1(arg0 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEN2Qt11GestureTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -188,7 +188,7 @@ func (this *QGestureEvent) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qgesture.h:302
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * widget()
+// [8] QWidget * widget() const
 func (this *QGestureEvent) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGestureEvent6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,7 +198,7 @@ func (this *QGestureEvent) Widget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qgesture.h:305
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF mapToGraphicsScene(const QPointF &)
+// [16] QPointF mapToGraphicsScene(const QPointF &) const
 func (this *QGestureEvent) MapToGraphicsScene(gesturePoint qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if gesturePoint != nil && gesturePoint.QPointF_PTR() != nil {

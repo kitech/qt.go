@@ -72,6 +72,20 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qevent.h:389
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFocusEvent(enum QEvent::Type, Qt::FocusReason)
+func NewQFocusEvent__(type_ int) *QFocusEvent {
+	// arg: 1, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum,
+	reason := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, type_, reason)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQFocusEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFocusEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:390
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -86,7 +100,7 @@ func DeleteQFocusEvent(this *QFocusEvent) {
 // /usr/include/qt/QtGui/qevent.h:392
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool gotFocus()
+// [1] bool gotFocus() const
 func (this *QFocusEvent) GotFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent8gotFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -96,7 +110,7 @@ func (this *QFocusEvent) GotFocus() bool {
 // /usr/include/qt/QtGui/qevent.h:393
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool lostFocus()
+// [1] bool lostFocus() const
 func (this *QFocusEvent) LostFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent9lostFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,7 +120,7 @@ func (this *QFocusEvent) LostFocus() bool {
 // /usr/include/qt/QtGui/qevent.h:395
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::FocusReason reason()
+// [4] Qt::FocusReason reason() const
 func (this *QFocusEvent) Reason() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent6reasonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

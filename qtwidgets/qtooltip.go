@@ -86,6 +86,23 @@ func QToolTip_ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 Q
 	nilthis.ShowText(pos, text, w)
 }
 
+// /usr/include/qt/QtWidgets/qtooltip.h:56
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void showText(const QPoint &, const QString &, QWidget *)
+func (this *QToolTip) ShowText__(pos qtcore.QPoint_ITF, text string) {
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString_5(text)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qtooltip.h:57
 // index:1
 // Public static Visibility=Default Availability=Available

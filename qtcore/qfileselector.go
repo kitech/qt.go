@@ -62,7 +62,7 @@ func (*QFileSelector) NewFromPointer(cthis unsafe.Pointer) *QFileSelector {
 // /usr/include/qt/QtCore/qfileselector.h:51
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QFileSelector) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFileSelector10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +85,20 @@ func NewQFileSelector(parent QObject_ITF /*777 QObject **/) *QFileSelector {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qfileselector.h:53
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFileSelector(QObject *)
+func NewQFileSelector__() *QFileSelector {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QFileSelectorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQFileSelectorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFileSelector")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qfileselector.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -99,7 +113,7 @@ func DeleteQFileSelector(this *QFileSelector) {
 // /usr/include/qt/QtCore/qfileselector.h:56
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString select(const QString &)
+// [8] QString select(const QString &) const
 func (this *QFileSelector) Select(filePath string) string {
 	var tmpArg0 = NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
@@ -114,7 +128,7 @@ func (this *QFileSelector) Select(filePath string) string {
 // /usr/include/qt/QtCore/qfileselector.h:57
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QUrl select(const QUrl &)
+// [8] QUrl select(const QUrl &) const
 func (this *QFileSelector) Select_1(filePath QUrl_ITF) *QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if filePath != nil && filePath.QUrl_PTR() != nil {
@@ -130,7 +144,7 @@ func (this *QFileSelector) Select_1(filePath QUrl_ITF) *QUrl /*123*/ {
 // /usr/include/qt/QtCore/qfileselector.h:59
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList extraSelectors()
+// [8] QStringList extraSelectors() const
 func (this *QFileSelector) ExtraSelectors() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFileSelector14extraSelectorsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -155,7 +169,7 @@ func (this *QFileSelector) SetExtraSelectors(list QStringList_ITF) {
 // /usr/include/qt/QtCore/qfileselector.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList allSelectors()
+// [8] QStringList allSelectors() const
 func (this *QFileSelector) AllSelectors() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFileSelector12allSelectorsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

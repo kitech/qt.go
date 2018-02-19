@@ -72,7 +72,7 @@ func (*QPauseAnimation) NewFromPointer(cthis unsafe.Pointer) *QPauseAnimation {
 // /usr/include/qt/QtCore/qpauseanimation.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QPauseAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +88,20 @@ func NewQPauseAnimation(parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPauseAnimation")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qpauseanimation.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QPauseAnimation(QObject *)
+func NewQPauseAnimation__() *QPauseAnimation {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,6 +125,20 @@ func NewQPauseAnimation_1(msecs int, parent QObject_ITF /*777 QObject **/) *QPau
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qpauseanimation.h:58
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QPauseAnimation(int, QObject *)
+func NewQPauseAnimation_1_(msecs int) *QPauseAnimation {
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", qtrt.FFI_TYPE_POINTER, msecs, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QPauseAnimation")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qpauseanimation.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -125,7 +153,7 @@ func DeleteQPauseAnimation(this *QPauseAnimation) {
 // /usr/include/qt/QtCore/qpauseanimation.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int duration()
+// [4] int duration() const
 func (this *QPauseAnimation) Duration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QPauseAnimation8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

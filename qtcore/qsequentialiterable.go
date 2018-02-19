@@ -64,7 +64,7 @@ func (*QSequentialIterable) NewFromPointer(cthis unsafe.Pointer) *QSequentialIte
 // /usr/include/qt/QtCore/qvariant.h:623
 // index:0
 // Public Visibility=Default Availability=Available
-// [112] QSequentialIterable::const_iterator begin()
+// [112] QSequentialIterable::const_iterator begin() const
 func (this *QSequentialIterable) Begin() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,7 +74,7 @@ func (this *QSequentialIterable) Begin() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qvariant.h:624
 // index:0
 // Public Visibility=Default Availability=Available
-// [112] QSequentialIterable::const_iterator end()
+// [112] QSequentialIterable::const_iterator end() const
 func (this *QSequentialIterable) End() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -84,7 +84,7 @@ func (this *QSequentialIterable) End() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qvariant.h:626
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant at(int)
+// [16] QVariant at(int) const
 func (this *QSequentialIterable) At(idx int) *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), idx)
 	qtrt.ErrPrint(err, rv)
@@ -96,7 +96,7 @@ func (this *QSequentialIterable) At(idx int) *QVariant /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:627
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int size()
+// [4] int size() const
 func (this *QSequentialIterable) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,7 +106,7 @@ func (this *QSequentialIterable) Size() int {
 // /usr/include/qt/QtCore/qvariant.h:629
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool canReverseIterate()
+// [1] bool canReverseIterate() const
 func (this *QSequentialIterable) CanReverseIterate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable17canReverseIterateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

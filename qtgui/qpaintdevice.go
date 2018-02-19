@@ -96,7 +96,7 @@ func DeleteQPaintDevice(this *QPaintDevice) {
 // /usr/include/qt/QtGui/qpaintdevice.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int devType()
+// [4] int devType() const
 func (this *QPaintDevice) DevType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice7devTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,7 +106,7 @@ func (this *QPaintDevice) DevType() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool paintingActive()
+// [1] bool paintingActive() const
 func (this *QPaintDevice) PaintingActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice14paintingActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,7 +116,7 @@ func (this *QPaintDevice) PaintingActive() bool {
 // /usr/include/qt/QtGui/qpaintdevice.h:76
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QPaintEngine * paintEngine()
+// [8] QPaintEngine * paintEngine() const
 func (this *QPaintDevice) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice11paintEngineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -126,7 +126,7 @@ func (this *QPaintDevice) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 // /usr/include/qt/QtGui/qpaintdevice.h:78
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int width()
+// [4] int width() const
 func (this *QPaintDevice) Width() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,7 +136,7 @@ func (this *QPaintDevice) Width() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:79
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int height()
+// [4] int height() const
 func (this *QPaintDevice) Height() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice6heightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,7 +146,7 @@ func (this *QPaintDevice) Height() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:80
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int widthMM()
+// [4] int widthMM() const
 func (this *QPaintDevice) WidthMM() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice7widthMMEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -156,7 +156,7 @@ func (this *QPaintDevice) WidthMM() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:81
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int heightMM()
+// [4] int heightMM() const
 func (this *QPaintDevice) HeightMM() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice8heightMMEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,7 +166,7 @@ func (this *QPaintDevice) HeightMM() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:82
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int logicalDpiX()
+// [4] int logicalDpiX() const
 func (this *QPaintDevice) LogicalDpiX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice11logicalDpiXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +176,7 @@ func (this *QPaintDevice) LogicalDpiX() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:83
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int logicalDpiY()
+// [4] int logicalDpiY() const
 func (this *QPaintDevice) LogicalDpiY() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice11logicalDpiYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +186,7 @@ func (this *QPaintDevice) LogicalDpiY() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:84
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int physicalDpiX()
+// [4] int physicalDpiX() const
 func (this *QPaintDevice) PhysicalDpiX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice12physicalDpiXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -196,7 +196,7 @@ func (this *QPaintDevice) PhysicalDpiX() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:85
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int physicalDpiY()
+// [4] int physicalDpiY() const
 func (this *QPaintDevice) PhysicalDpiY() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice12physicalDpiYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -206,7 +206,7 @@ func (this *QPaintDevice) PhysicalDpiY() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:86
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int devicePixelRatio()
+// [4] int devicePixelRatio() const
 func (this *QPaintDevice) DevicePixelRatio() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice16devicePixelRatioEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +216,7 @@ func (this *QPaintDevice) DevicePixelRatio() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:87
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal devicePixelRatioF()
+// [8] qreal devicePixelRatioF() const
 func (this *QPaintDevice) DevicePixelRatioF() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice17devicePixelRatioFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -226,7 +226,7 @@ func (this *QPaintDevice) DevicePixelRatioF() float64 {
 // /usr/include/qt/QtGui/qpaintdevice.h:88
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int colorCount()
+// [4] int colorCount() const
 func (this *QPaintDevice) ColorCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice10colorCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -236,7 +236,7 @@ func (this *QPaintDevice) ColorCount() int {
 // /usr/include/qt/QtGui/qpaintdevice.h:89
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int depth()
+// [4] int depth() const
 func (this *QPaintDevice) Depth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice5depthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -289,7 +289,7 @@ func NewQPaintDevice_1(arg0 QPaintDevice_ITF) *QPaintDevice {
 // /usr/include/qt/QtGui/qpaintdevice.h:94
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric)
+// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
 func (this *QPaintDevice) Metric(metric int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice6metricENS_17PaintDeviceMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	qtrt.ErrPrint(err, rv)
@@ -299,7 +299,7 @@ func (this *QPaintDevice) Metric(metric int) int {
 // /usr/include/qt/QtGui/qpaintdevice.h:95
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void initPainter(QPainter *)
+// [-2] void initPainter(QPainter *) const
 func (this *QPaintDevice) InitPainter(painter QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -312,7 +312,7 @@ func (this *QPaintDevice) InitPainter(painter QPainter_ITF /*777 QPainter **/) {
 // /usr/include/qt/QtGui/qpaintdevice.h:96
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QPaintDevice * redirected(QPoint *)
+// [8] QPaintDevice * redirected(QPoint *) const
 func (this *QPaintDevice) Redirected(offset qtcore.QPoint_ITF /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
@@ -326,7 +326,7 @@ func (this *QPaintDevice) Redirected(offset qtcore.QPoint_ITF /*777 QPoint **/) 
 // /usr/include/qt/QtGui/qpaintdevice.h:97
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QPainter * sharedPainter()
+// [8] QPainter * sharedPainter() const
 func (this *QPaintDevice) SharedPainter() *QPainter /*777 QPainter **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice13sharedPainterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

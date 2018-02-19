@@ -75,6 +75,20 @@ func NewQDir(path string) *QDir {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qdir.h:102
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDir(const QString &)
+func NewQDir__() *QDir {
+	// arg: 0, const QString &=LValueReference, QString=Record,
+	var convArg0 = NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDirFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDir)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qdir.h:103
 // index:1
 // Public Visibility=Default Availability=Available
@@ -84,6 +98,44 @@ func NewQDir_1(path string, nameFilter string, sort int, filter int) *QDir {
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(nameFilter)
 	var convArg1 = tmpArg1.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QStringS2_6QFlagsINS_8SortFlagEES3_INS_6FilterEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, sort, filter)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDirFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDir)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qdir.h:103
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QDir(const QString &, const QString &, QDir::SortFlags, QDir::Filters)
+func NewQDir_1_(path string, nameFilter string) *QDir {
+	var tmpArg0 = NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(nameFilter)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	sort := 0
+	// arg: 3, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	filter := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QStringS2_6QFlagsINS_8SortFlagEES3_INS_6FilterEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, sort, filter)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDirFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDir)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qdir.h:103
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QDir(const QString &, const QString &, QDir::SortFlags, QDir::Filters)
+func NewQDir_1_1(path string, nameFilter string, sort int) *QDir {
+	var tmpArg0 = NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(nameFilter)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 3, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	filter := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QStringS2_6QFlagsINS_8SortFlagEES3_INS_6FilterEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, sort, filter)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDirFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -171,7 +223,7 @@ func (this *QDir) SetPath(path string) {
 // /usr/include/qt/QtCore/qdir.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString path()
+// [8] QString path() const
 func (this *QDir) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir4pathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,7 +236,7 @@ func (this *QDir) Path() string {
 // /usr/include/qt/QtCore/qdir.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString absolutePath()
+// [8] QString absolutePath() const
 func (this *QDir) AbsolutePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir12absolutePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +249,7 @@ func (this *QDir) AbsolutePath() string {
 // /usr/include/qt/QtCore/qdir.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString canonicalPath()
+// [8] QString canonicalPath() const
 func (this *QDir) CanonicalPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13canonicalPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -280,7 +332,7 @@ func QDir_SearchPaths(prefix string) *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qdir.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString dirName()
+// [8] QString dirName() const
 func (this *QDir) DirName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7dirNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -293,7 +345,7 @@ func (this *QDir) DirName() string {
 // /usr/include/qt/QtCore/qdir.h:128
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString filePath(const QString &)
+// [8] QString filePath(const QString &) const
 func (this *QDir) FilePath(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -308,7 +360,7 @@ func (this *QDir) FilePath(fileName string) string {
 // /usr/include/qt/QtCore/qdir.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString absoluteFilePath(const QString &)
+// [8] QString absoluteFilePath(const QString &) const
 func (this *QDir) AbsoluteFilePath(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -323,7 +375,7 @@ func (this *QDir) AbsoluteFilePath(fileName string) string {
 // /usr/include/qt/QtCore/qdir.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString relativeFilePath(const QString &)
+// [8] QString relativeFilePath(const QString &) const
 func (this *QDir) RelativeFilePath(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -400,7 +452,7 @@ func (this *QDir) CdUp() bool {
 // /usr/include/qt/QtCore/qdir.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList nameFilters()
+// [8] QStringList nameFilters() const
 func (this *QDir) NameFilters() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir11nameFiltersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -425,7 +477,7 @@ func (this *QDir) SetNameFilters(nameFilters QStringList_ITF) {
 // /usr/include/qt/QtCore/qdir.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QDir::Filters filter()
+// [4] QDir::Filters filter() const
 func (this *QDir) Filter() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6filterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -444,7 +496,7 @@ func (this *QDir) SetFilter(filter int) {
 // /usr/include/qt/QtCore/qdir.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QDir::SortFlags sorting()
+// [4] QDir::SortFlags sorting() const
 func (this *QDir) Sorting() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7sortingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -463,7 +515,7 @@ func (this *QDir) SetSorting(sort int) {
 // /usr/include/qt/QtCore/qdir.h:146
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint count()
+// [4] uint count() const
 func (this *QDir) Count() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -473,8 +525,20 @@ func (this *QDir) Count() uint {
 // /usr/include/qt/QtCore/qdir.h:147
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEmpty(QDir::Filters)
+// [1] bool isEmpty(QDir::Filters) const
 func (this *QDir) IsEmpty(filters int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7isEmptyE6QFlagsINS_6FilterEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qdir.h:147
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isEmpty(QDir::Filters) const
+func (this *QDir) IsEmpty__() bool {
+	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	filters := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7isEmptyE6QFlagsINS_6FilterEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -483,7 +547,7 @@ func (this *QDir) IsEmpty(filters int) bool {
 // /usr/include/qt/QtCore/qdir.h:149
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString operator[](int)
+// [8] QString operator[](int) const
 func (this *QDir) Operator_get_index(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDirixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -515,8 +579,38 @@ func QDir_NameFiltersFromString(nameFilter string) *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qdir.h:153
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList entryList(QDir::Filters, QDir::SortFlags)
+// [8] QStringList entryList(QDir::Filters, QDir::SortFlags) const
 func (this *QDir) EntryList(filters int, sort int) *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdir.h:153
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList entryList(QDir::Filters, QDir::SortFlags) const
+func (this *QDir) EntryList__() *QStringList /*123*/ {
+	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	filters := 0
+	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	sort := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdir.h:153
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList entryList(QDir::Filters, QDir::SortFlags) const
+func (this *QDir) EntryList__1(filters int) *QStringList /*123*/ {
+	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -527,7 +621,7 @@ func (this *QDir) EntryList(filters int, sort int) *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qdir.h:154
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QStringList entryList(const QStringList &, QDir::Filters, QDir::SortFlags)
+// [8] QStringList entryList(const QStringList &, QDir::Filters, QDir::SortFlags) const
 func (this *QDir) EntryList_1(nameFilters QStringList_ITF, filters int, sort int) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
@@ -540,11 +634,77 @@ func (this *QDir) EntryList_1(nameFilters QStringList_ITF, filters int, sort int
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qdir.h:154
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QStringList entryList(const QStringList &, QDir::Filters, QDir::SortFlags) const
+func (this *QDir) EntryList_1_(nameFilters QStringList_ITF) *QStringList /*123*/ {
+	var convArg0 unsafe.Pointer
+	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
+		convArg0 = nameFilters.QStringList_PTR().GetCthis()
+	}
+	// arg: 1, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	filters := 0
+	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	sort := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListERK11QStringList6QFlagsINS_6FilterEES3_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, filters, sort)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdir.h:154
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QStringList entryList(const QStringList &, QDir::Filters, QDir::SortFlags) const
+func (this *QDir) EntryList_1_1(nameFilters QStringList_ITF, filters int) *QStringList /*123*/ {
+	var convArg0 unsafe.Pointer
+	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
+		convArg0 = nameFilters.QStringList_PTR().GetCthis()
+	}
+	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	sort := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListERK11QStringList6QFlagsINS_6FilterEES3_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, filters, sort)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qdir.h:157
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] QFileInfoList entryInfoList(QDir::Filters, QDir::SortFlags)
+// [-2] QFileInfoList entryInfoList(QDir::Filters, QDir::SortFlags) const
 func (this *QDir) EntryInfoList(filters int, sort int) *QFileInfoList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFileInfoListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdir.h:157
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] QFileInfoList entryInfoList(QDir::Filters, QDir::SortFlags) const
+func (this *QDir) EntryInfoList__() *QFileInfoList /*667*/ {
+	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	filters := 0
+	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	sort := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFileInfoListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdir.h:157
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] QFileInfoList entryInfoList(QDir::Filters, QDir::SortFlags) const
+func (this *QDir) EntryInfoList__1(filters int) *QFileInfoList /*667*/ {
+	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFileInfoListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
@@ -554,7 +714,7 @@ func (this *QDir) EntryInfoList(filters int, sort int) *QFileInfoList /*667*/ {
 // /usr/include/qt/QtCore/qdir.h:158
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] QFileInfoList entryInfoList(const QStringList &, QDir::Filters, QDir::SortFlags)
+// [-2] QFileInfoList entryInfoList(const QStringList &, QDir::Filters, QDir::SortFlags) const
 func (this *QDir) EntryInfoList_1(nameFilters QStringList_ITF, filters int, sort int) *QFileInfoList /*667*/ {
 	var convArg0 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
@@ -566,10 +726,46 @@ func (this *QDir) EntryInfoList_1(nameFilters QStringList_ITF, filters int, sort
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qdir.h:158
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] QFileInfoList entryInfoList(const QStringList &, QDir::Filters, QDir::SortFlags) const
+func (this *QDir) EntryInfoList_1_(nameFilters QStringList_ITF) *QFileInfoList /*667*/ {
+	var convArg0 unsafe.Pointer
+	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
+		convArg0 = nameFilters.QStringList_PTR().GetCthis()
+	}
+	// arg: 1, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	filters := 0
+	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	sort := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListERK11QStringList6QFlagsINS_6FilterEES3_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, filters, sort)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFileInfoListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdir.h:158
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] QFileInfoList entryInfoList(const QStringList &, QDir::Filters, QDir::SortFlags) const
+func (this *QDir) EntryInfoList_1_1(nameFilters QStringList_ITF, filters int) *QFileInfoList /*667*/ {
+	var convArg0 unsafe.Pointer
+	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
+		convArg0 = nameFilters.QStringList_PTR().GetCthis()
+	}
+	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	sort := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListERK11QStringList6QFlagsINS_6FilterEES3_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, filters, sort)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQFileInfoListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qdir.h:161
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool mkdir(const QString &)
+// [1] bool mkdir(const QString &) const
 func (this *QDir) Mkdir(dirName string) bool {
 	var tmpArg0 = NewQString_5(dirName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -581,7 +777,7 @@ func (this *QDir) Mkdir(dirName string) bool {
 // /usr/include/qt/QtCore/qdir.h:162
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool rmdir(const QString &)
+// [1] bool rmdir(const QString &) const
 func (this *QDir) Rmdir(dirName string) bool {
 	var tmpArg0 = NewQString_5(dirName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -593,7 +789,7 @@ func (this *QDir) Rmdir(dirName string) bool {
 // /usr/include/qt/QtCore/qdir.h:163
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool mkpath(const QString &)
+// [1] bool mkpath(const QString &) const
 func (this *QDir) Mkpath(dirPath string) bool {
 	var tmpArg0 = NewQString_5(dirPath)
 	var convArg0 = tmpArg0.GetCthis()
@@ -605,7 +801,7 @@ func (this *QDir) Mkpath(dirPath string) bool {
 // /usr/include/qt/QtCore/qdir.h:164
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool rmpath(const QString &)
+// [1] bool rmpath(const QString &) const
 func (this *QDir) Rmpath(dirPath string) bool {
 	var tmpArg0 = NewQString_5(dirPath)
 	var convArg0 = tmpArg0.GetCthis()
@@ -627,7 +823,7 @@ func (this *QDir) RemoveRecursively() bool {
 // /usr/include/qt/QtCore/qdir.h:168
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isReadable()
+// [1] bool isReadable() const
 func (this *QDir) IsReadable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir10isReadableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -637,7 +833,7 @@ func (this *QDir) IsReadable() bool {
 // /usr/include/qt/QtCore/qdir.h:169
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool exists()
+// [1] bool exists() const
 func (this *QDir) Exists() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6existsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -647,7 +843,7 @@ func (this *QDir) Exists() bool {
 // /usr/include/qt/QtCore/qdir.h:183
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool exists(const QString &)
+// [1] bool exists(const QString &) const
 func (this *QDir) Exists_1(name string) bool {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -659,7 +855,7 @@ func (this *QDir) Exists_1(name string) bool {
 // /usr/include/qt/QtCore/qdir.h:170
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRoot()
+// [1] bool isRoot() const
 func (this *QDir) IsRoot() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6isRootEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -703,7 +899,7 @@ func QDir_IsAbsolutePath(path string) bool {
 // /usr/include/qt/QtCore/qdir.h:174
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRelative()
+// [1] bool isRelative() const
 func (this *QDir) IsRelative() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir10isRelativeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -713,7 +909,7 @@ func (this *QDir) IsRelative() bool {
 // /usr/include/qt/QtCore/qdir.h:175
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isAbsolute()
+// [1] bool isAbsolute() const
 func (this *QDir) IsAbsolute() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir10isAbsoluteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -733,7 +929,7 @@ func (this *QDir) MakeAbsolute() bool {
 // /usr/include/qt/QtCore/qdir.h:178
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QDir &)
+// [1] bool operator==(const QDir &) const
 func (this *QDir) Operator_equal_equal(dir QDir_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {
@@ -747,7 +943,7 @@ func (this *QDir) Operator_equal_equal(dir QDir_ITF) bool {
 // /usr/include/qt/QtCore/qdir.h:179
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QDir &)
+// [1] bool operator!=(const QDir &) const
 func (this *QDir) Operator_not_equal(dir QDir_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {
@@ -1054,7 +1250,7 @@ func QDir_CleanPath(path string) string {
 // /usr/include/qt/QtCore/qdir.h:215
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void refresh()
+// [-2] void refresh() const
 func (this *QDir) Refresh() {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7refreshEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -67,7 +67,7 @@ func (*QItemSelectionModel) NewFromPointer(cthis unsafe.Pointer) *QItemSelection
 // /usr/include/qt/QtCore/qitemselectionmodel.h:139
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QItemSelectionModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -83,6 +83,20 @@ func NewQItemSelectionModel(model QAbstractItemModel_ITF /*777 QAbstractItemMode
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
 		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModelC2EP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQItemSelectionModelFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QItemSelectionModel")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:167
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QItemSelectionModel(QAbstractItemModel *)
+func NewQItemSelectionModel__() *QItemSelectionModel {
+	// arg: 0, QAbstractItemModel *=Pointer, QAbstractItemModel=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModelC2EP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQItemSelectionModelFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -124,7 +138,7 @@ func DeleteQItemSelectionModel(this *QItemSelectionModel) {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:171
 // index:0
 // Public Visibility=Default Availability=Available
-// [24] QModelIndex currentIndex()
+// [24] QModelIndex currentIndex() const
 func (this *QItemSelectionModel) CurrentIndex() *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12currentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,7 +150,7 @@ func (this *QItemSelectionModel) CurrentIndex() *QModelIndex /*123*/ {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:173
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSelected(const QModelIndex &)
+// [1] bool isSelected(const QModelIndex &) const
 func (this *QItemSelectionModel) IsSelected(index QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -150,7 +164,7 @@ func (this *QItemSelectionModel) IsSelected(index QModelIndex_ITF) bool {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:174
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRowSelected(int, const QModelIndex &)
+// [1] bool isRowSelected(int, const QModelIndex &) const
 func (this *QItemSelectionModel) IsRowSelected(row int, parent QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -164,7 +178,7 @@ func (this *QItemSelectionModel) IsRowSelected(row int, parent QModelIndex_ITF) 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:175
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isColumnSelected(int, const QModelIndex &)
+// [1] bool isColumnSelected(int, const QModelIndex &) const
 func (this *QItemSelectionModel) IsColumnSelected(column int, parent QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -178,7 +192,7 @@ func (this *QItemSelectionModel) IsColumnSelected(column int, parent QModelIndex
 // /usr/include/qt/QtCore/qitemselectionmodel.h:177
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool rowIntersectsSelection(int, const QModelIndex &)
+// [1] bool rowIntersectsSelection(int, const QModelIndex &) const
 func (this *QItemSelectionModel) RowIntersectsSelection(row int, parent QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -192,7 +206,7 @@ func (this *QItemSelectionModel) RowIntersectsSelection(row int, parent QModelIn
 // /usr/include/qt/QtCore/qitemselectionmodel.h:178
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool columnIntersectsSelection(int, const QModelIndex &)
+// [1] bool columnIntersectsSelection(int, const QModelIndex &) const
 func (this *QItemSelectionModel) ColumnIntersectsSelection(column int, parent QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -206,7 +220,7 @@ func (this *QItemSelectionModel) ColumnIntersectsSelection(column int, parent QM
 // /usr/include/qt/QtCore/qitemselectionmodel.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasSelection()
+// [1] bool hasSelection() const
 func (this *QItemSelectionModel) HasSelection() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12hasSelectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +230,7 @@ func (this *QItemSelectionModel) HasSelection() bool {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:182
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QModelIndexList selectedIndexes()
+// [8] QModelIndexList selectedIndexes() const
 func (this *QItemSelectionModel) SelectedIndexes() *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedIndexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,8 +241,21 @@ func (this *QItemSelectionModel) SelectedIndexes() *QModelIndexList /*667*/ {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:183
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QModelIndexList selectedRows(int)
+// [8] QModelIndexList selectedRows(int) const
 func (this *QItemSelectionModel) SelectedRows(column int) *QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12selectedRowsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:183
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QModelIndexList selectedRows(int) const
+func (this *QItemSelectionModel) SelectedRows__() *QModelIndexList /*667*/ {
+	// arg: 0, int=Int, =Invalid,
+	column := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12selectedRowsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
@@ -238,8 +265,21 @@ func (this *QItemSelectionModel) SelectedRows(column int) *QModelIndexList /*667
 // /usr/include/qt/QtCore/qitemselectionmodel.h:184
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QModelIndexList selectedColumns(int)
+// [8] QModelIndexList selectedColumns(int) const
 func (this *QItemSelectionModel) SelectedColumns(row int) *QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedColumnsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:184
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QModelIndexList selectedColumns(int) const
+func (this *QItemSelectionModel) SelectedColumns__() *QModelIndexList /*667*/ {
+	// arg: 0, int=Int, =Invalid,
+	row := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedColumnsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
@@ -249,7 +289,7 @@ func (this *QItemSelectionModel) SelectedColumns(row int) *QModelIndexList /*667
 // /usr/include/qt/QtCore/qitemselectionmodel.h:185
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const QItemSelection selection()
+// [8] const QItemSelection selection() const
 func (this *QItemSelectionModel) Selection() *QItemSelection /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel9selectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -261,7 +301,7 @@ func (this *QItemSelectionModel) Selection() *QItemSelection /*123*/ {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:188
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const QAbstractItemModel * model()
+// [8] const QAbstractItemModel * model() const
 func (this *QItemSelectionModel) Model() *QAbstractItemModel /*777 const QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

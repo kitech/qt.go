@@ -89,6 +89,24 @@ func NewQSemaphoreReleaser_1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qsemaphore.h:76
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSemaphoreReleaser(QSemaphore &, int)
+func NewQSemaphoreReleaser_1_(sem QSemaphore_ITF) *QSemaphoreReleaser {
+	var convArg0 unsafe.Pointer
+	if sem != nil && sem.QSemaphore_PTR() != nil {
+		convArg0 = sem.QSemaphore_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	n := 1
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", qtrt.FFI_TYPE_POINTER, convArg0, n)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSemaphoreReleaserFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSemaphoreReleaser)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qsemaphore.h:78
 // index:2
 // Public inline Visibility=Default Availability=Available
@@ -98,6 +116,24 @@ func NewQSemaphoreReleaser_2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QS
 	if sem != nil && sem.QSemaphore_PTR() != nil {
 		convArg0 = sem.QSemaphore_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", qtrt.FFI_TYPE_POINTER, convArg0, n)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSemaphoreReleaserFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSemaphoreReleaser)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qsemaphore.h:78
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSemaphoreReleaser(QSemaphore *, int)
+func NewQSemaphoreReleaser_2_(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemaphoreReleaser {
+	var convArg0 unsafe.Pointer
+	if sem != nil && sem.QSemaphore_PTR() != nil {
+		convArg0 = sem.QSemaphore_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	n := 1
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", qtrt.FFI_TYPE_POINTER, convArg0, n)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSemaphoreReleaserFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -132,7 +168,7 @@ func (this *QSemaphoreReleaser) Swap(other QSemaphoreReleaser_ITF) {
 // /usr/include/qt/QtCore/qsemaphore.h:98
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QSemaphore * semaphore()
+// [8] QSemaphore * semaphore() const
 func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*777 QSemaphore **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

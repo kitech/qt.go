@@ -197,7 +197,7 @@ func NewQVector4D_8(vector QVector3D_ITF, wpos float32) *QVector4D {
 // /usr/include/qt/QtGui/qvector4d.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QVector4D) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QVector4D) IsNull() bool {
 // /usr/include/qt/QtGui/qvector4d.h:75
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] float x()
+// [4] float x() const
 func (this *QVector4D) X() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QVector4D) X() float32 {
 // /usr/include/qt/QtGui/qvector4d.h:76
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] float y()
+// [4] float y() const
 func (this *QVector4D) Y() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +227,7 @@ func (this *QVector4D) Y() float32 {
 // /usr/include/qt/QtGui/qvector4d.h:77
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] float z()
+// [4] float z() const
 func (this *QVector4D) Z() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D1zEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -237,7 +237,7 @@ func (this *QVector4D) Z() float32 {
 // /usr/include/qt/QtGui/qvector4d.h:78
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] float w()
+// [4] float w() const
 func (this *QVector4D) W() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D1wEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -293,7 +293,7 @@ func (this *QVector4D) Operator_get_index(i int) float32 {
 // /usr/include/qt/QtGui/qvector4d.h:86
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] float operator[](int)
+// [4] float operator[](int) const
 func (this *QVector4D) Operator_get_index_1(i int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4DixEi", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -303,7 +303,7 @@ func (this *QVector4D) Operator_get_index_1(i int) float32 {
 // /usr/include/qt/QtGui/qvector4d.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float length()
+// [4] float length() const
 func (this *QVector4D) Length() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D6lengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -313,7 +313,7 @@ func (this *QVector4D) Length() float32 {
 // /usr/include/qt/QtGui/qvector4d.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float lengthSquared()
+// [4] float lengthSquared() const
 func (this *QVector4D) LengthSquared() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D13lengthSquaredEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -323,7 +323,7 @@ func (this *QVector4D) LengthSquared() float32 {
 // /usr/include/qt/QtGui/qvector4d.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVector4D normalized()
+// [16] QVector4D normalized() const
 func (this *QVector4D) Normalized() *QVector4D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D10normalizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -455,7 +455,7 @@ func QVector4D_DotProduct(v1 QVector4D_ITF, v2 QVector4D_ITF) float32 {
 // /usr/include/qt/QtGui/qvector4d.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QVector2D toVector2D()
+// [8] QVector2D toVector2D() const
 func (this *QVector4D) ToVector2D() *QVector2D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D10toVector2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -467,7 +467,7 @@ func (this *QVector4D) ToVector2D() *QVector2D /*123*/ {
 // /usr/include/qt/QtGui/qvector4d.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QVector2D toVector2DAffine()
+// [8] QVector2D toVector2DAffine() const
 func (this *QVector4D) ToVector2DAffine() *QVector2D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D16toVector2DAffineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -479,7 +479,7 @@ func (this *QVector4D) ToVector2DAffine() *QVector2D /*123*/ {
 // /usr/include/qt/QtGui/qvector4d.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [12] QVector3D toVector3D()
+// [12] QVector3D toVector3D() const
 func (this *QVector4D) ToVector3D() *QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D10toVector3DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -491,7 +491,7 @@ func (this *QVector4D) ToVector3D() *QVector3D /*123*/ {
 // /usr/include/qt/QtGui/qvector4d.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [12] QVector3D toVector3DAffine()
+// [12] QVector3D toVector3DAffine() const
 func (this *QVector4D) ToVector3DAffine() *QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D16toVector3DAffineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -503,7 +503,7 @@ func (this *QVector4D) ToVector3DAffine() *QVector3D /*123*/ {
 // /usr/include/qt/QtGui/qvector4d.h:125
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QPoint toPoint()
+// [8] QPoint toPoint() const
 func (this *QVector4D) ToPoint() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D7toPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -515,7 +515,7 @@ func (this *QVector4D) ToPoint() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qvector4d.h:126
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QPointF toPointF()
+// [16] QPointF toPointF() const
 func (this *QVector4D) ToPointF() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D8toPointFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

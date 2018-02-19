@@ -63,7 +63,7 @@ func (*QTextTable) NewFromPointer(cthis unsafe.Pointer) *QTextTable {
 // /usr/include/qt/QtGui/qtexttable.h:100
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTextTable) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextTable10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +194,7 @@ func (this *QTextTable) SplitCell(row int, col int, numRows int, numCols int) {
 // /usr/include/qt/QtGui/qtexttable.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int rows()
+// [4] int rows() const
 func (this *QTextTable) Rows() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextTable4rowsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -204,7 +204,7 @@ func (this *QTextTable) Rows() int {
 // /usr/include/qt/QtGui/qtexttable.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int columns()
+// [4] int columns() const
 func (this *QTextTable) Columns() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextTable7columnsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,7 +214,7 @@ func (this *QTextTable) Columns() int {
 // /usr/include/qt/QtGui/qtexttable.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QTextTableCell cellAt(int, int)
+// [16] QTextTableCell cellAt(int, int) const
 func (this *QTextTable) CellAt(row int, col int) *QTextTableCell /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextTable6cellAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, col)
 	qtrt.ErrPrint(err, rv)
@@ -226,7 +226,7 @@ func (this *QTextTable) CellAt(row int, col int) *QTextTableCell /*123*/ {
 // /usr/include/qt/QtGui/qtexttable.h:121
 // index:1
 // Public Visibility=Default Availability=Available
-// [16] QTextTableCell cellAt(int)
+// [16] QTextTableCell cellAt(int) const
 func (this *QTextTable) CellAt_1(position int) *QTextTableCell /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextTable6cellAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	qtrt.ErrPrint(err, rv)
@@ -238,7 +238,7 @@ func (this *QTextTable) CellAt_1(position int) *QTextTableCell /*123*/ {
 // /usr/include/qt/QtGui/qtexttable.h:122
 // index:2
 // Public Visibility=Default Availability=Available
-// [16] QTextTableCell cellAt(const QTextCursor &)
+// [16] QTextTableCell cellAt(const QTextCursor &) const
 func (this *QTextTable) CellAt_2(c QTextCursor_ITF) *QTextTableCell /*123*/ {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QTextCursor_PTR() != nil {
@@ -254,7 +254,7 @@ func (this *QTextTable) CellAt_2(c QTextCursor_ITF) *QTextTableCell /*123*/ {
 // /usr/include/qt/QtGui/qtexttable.h:124
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextCursor rowStart(const QTextCursor &)
+// [8] QTextCursor rowStart(const QTextCursor &) const
 func (this *QTextTable) RowStart(c QTextCursor_ITF) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QTextCursor_PTR() != nil {
@@ -270,7 +270,7 @@ func (this *QTextTable) RowStart(c QTextCursor_ITF) *QTextCursor /*123*/ {
 // /usr/include/qt/QtGui/qtexttable.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextCursor rowEnd(const QTextCursor &)
+// [8] QTextCursor rowEnd(const QTextCursor &) const
 func (this *QTextTable) RowEnd(c QTextCursor_ITF) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QTextCursor_PTR() != nil {
@@ -299,7 +299,7 @@ func (this *QTextTable) SetFormat(format QTextTableFormat_ITF) {
 // /usr/include/qt/QtGui/qtexttable.h:128
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QTextTableFormat format()
+// [16] QTextTableFormat format() const
 func (this *QTextTable) Format() *QTextTableFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextTable6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -71,6 +71,20 @@ func NewQMutex(mode int) *QMutex {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qmutex.h:130
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QMutex(enum QMutex::RecursionMode)
+func NewQMutex__() *QMutex {
+	// arg: 0, QMutex::RecursionMode=Enum, QMutex::RecursionMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", qtrt.FFI_TYPE_POINTER, mode)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQMutexFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMutex)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qmutex.h:131
 // index:0
 // Public Visibility=Default Availability=Available
@@ -101,6 +115,18 @@ func (this *QMutex) TryLock(timeout int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qmutex.h:135
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool tryLock(int)
+func (this *QMutex) TryLock__() bool {
+	// arg: 0, int=Int, =Invalid,
+	timeout := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QMutex7tryLockEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qmutex.h:137
 // index:0
 // Public Visibility=Default Availability=Available
@@ -123,7 +149,7 @@ func (this *QMutex) Try_lock() bool {
 // /usr/include/qt/QtCore/qmutex.h:161
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isRecursive()
+// [1] bool isRecursive() const
 func (this *QMutex) IsRecursive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMutex11isRecursiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

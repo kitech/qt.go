@@ -69,7 +69,7 @@ func (*QGraphicsColorizeEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsC
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:128
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +92,20 @@ func NewQGraphicsColorizeEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QG
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:132
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsColorizeEffect(QObject *)
+func NewQGraphicsColorizeEffect__() *QGraphicsColorizeEffect {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsColorizeEffectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsColorizeEffect")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:133
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -106,7 +120,7 @@ func DeleteQGraphicsColorizeEffect(this *QGraphicsColorizeEffect) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QColor color()
+// [16] QColor color() const
 func (this *QGraphicsColorizeEffect) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +132,7 @@ func (this *QGraphicsColorizeEffect) Color() *qtgui.QColor /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:136
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal strength()
+// [8] qreal strength() const
 func (this *QGraphicsColorizeEffect) Strength() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect8strengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

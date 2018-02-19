@@ -103,7 +103,7 @@ func (this *QEvent) Operator_equal(other QEvent_ITF) *QEvent {
 // /usr/include/qt/QtCore/qcoreevent.h:301
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QEvent::Type type()
+// [4] QEvent::Type type() const
 func (this *QEvent) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -113,7 +113,7 @@ func (this *QEvent) Type() int {
 // /usr/include/qt/QtCore/qcoreevent.h:302
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool spontaneous()
+// [1] bool spontaneous() const
 func (this *QEvent) Spontaneous() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent11spontaneousEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QEvent) SetAccepted(accepted bool) {
 // /usr/include/qt/QtCore/qcoreevent.h:305
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isAccepted()
+// [1] bool isAccepted() const
 func (this *QEvent) IsAccepted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent10isAcceptedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,6 +170,18 @@ func QEvent_RegisterEventType(hint int) int {
 	var nilthis *QEvent
 	rv := nilthis.RegisterEventType(hint)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qcoreevent.h:310
+// index:0
+// Public static Visibility=Default Availability=Available
+// [4] int registerEventType(int)
+func (this *QEvent) RegisterEventType__() int {
+	// arg: 0, int=Int, =Invalid,
+	hint := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", qtrt.FFI_TYPE_POINTER, hint)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 type QEvent__Type = int

@@ -69,7 +69,7 @@ func (*QStackedWidget) NewFromPointer(cthis unsafe.Pointer) *QStackedWidget {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QStackedWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +85,20 @@ func NewQStackedWidget(parent QWidget_ITF /*777 QWidget **/) *QStackedWidget {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStackedWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QStackedWidget")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qstackedwidget.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStackedWidget(QWidget *)
+func NewQStackedWidget__() *QStackedWidget {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStackedWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -147,7 +161,7 @@ func (this *QStackedWidget) RemoveWidget(w QWidget_ITF /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * currentWidget()
+// [8] QWidget * currentWidget() const
 func (this *QStackedWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedWidget13currentWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +171,7 @@ func (this *QStackedWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int currentIndex()
+// [4] int currentIndex() const
 func (this *QStackedWidget) CurrentIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedWidget12currentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +181,7 @@ func (this *QStackedWidget) CurrentIndex() int {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int indexOf(QWidget *)
+// [4] int indexOf(QWidget *) const
 func (this *QStackedWidget) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
@@ -181,7 +195,7 @@ func (this *QStackedWidget) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * widget(int)
+// [8] QWidget * widget(int) const
 func (this *QStackedWidget) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedWidget6widgetEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -191,7 +205,7 @@ func (this *QStackedWidget) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QStackedWidget) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedWidget5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

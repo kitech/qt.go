@@ -76,7 +76,7 @@ func NewQModelIndex() *QModelIndex {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:60
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int row()
+// [4] int row() const
 func (this *QModelIndex) Row() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex3rowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -86,7 +86,7 @@ func (this *QModelIndex) Row() int {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:61
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int column()
+// [4] int column() const
 func (this *QModelIndex) Column() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex6columnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -96,7 +96,7 @@ func (this *QModelIndex) Column() int {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:62
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] quintptr internalId()
+// [8] quintptr internalId() const
 func (this *QModelIndex) InternalId() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex10internalIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,7 +106,7 @@ func (this *QModelIndex) InternalId() uint64 {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:63
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] void * internalPointer()
+// [8] void * internalPointer() const
 func (this *QModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex15internalPointerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,7 +116,7 @@ func (this *QModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:64
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [24] QModelIndex parent()
+// [24] QModelIndex parent() const
 func (this *QModelIndex) Parent() *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,7 +128,7 @@ func (this *QModelIndex) Parent() *QModelIndex /*123*/ {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:65
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [24] QModelIndex sibling(int, int)
+// [24] QModelIndex sibling(int, int) const
 func (this *QModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex7siblingEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -140,7 +140,7 @@ func (this *QModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:67
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [24] QModelIndex child(int, int)
+// [24] QModelIndex child(int, int) const
 func (this *QModelIndex) Child(row int, column int) *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex5childEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -152,8 +152,22 @@ func (this *QModelIndex) Child(row int, column int) *QModelIndex /*123*/ {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:69
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QVariant data(int)
+// [16] QVariant data(int) const
 func (this *QModelIndex) Data(role int) *QVariant /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:69
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [16] QVariant data(int) const
+func (this *QModelIndex) Data__() *QVariant /*123*/ {
+	// arg: 0, int=Int, =Invalid,
+	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -164,7 +178,7 @@ func (this *QModelIndex) Data(role int) *QVariant /*123*/ {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:70
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::ItemFlags flags()
+// [4] Qt::ItemFlags flags() const
 func (this *QModelIndex) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +188,7 @@ func (this *QModelIndex) Flags() int {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:71
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QAbstractItemModel * model()
+// [8] const QAbstractItemModel * model() const
 func (this *QModelIndex) Model() *QAbstractItemModel /*777 const QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,7 +198,7 @@ func (this *QModelIndex) Model() *QAbstractItemModel /*777 const QAbstractItemMo
 // /usr/include/qt/QtCore/qabstractitemmodel.h:72
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QModelIndex) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +208,7 @@ func (this *QModelIndex) IsValid() bool {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:73
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QModelIndex &)
+// [1] bool operator==(const QModelIndex &) const
 func (this *QModelIndex) Operator_equal_equal(other QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QModelIndex_PTR() != nil {
@@ -208,7 +222,7 @@ func (this *QModelIndex) Operator_equal_equal(other QModelIndex_ITF) bool {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:75
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QModelIndex &)
+// [1] bool operator!=(const QModelIndex &) const
 func (this *QModelIndex) Operator_not_equal(other QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QModelIndex_PTR() != nil {
@@ -222,7 +236,7 @@ func (this *QModelIndex) Operator_not_equal(other QModelIndex_ITF) bool {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:77
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<(const QModelIndex &)
+// [1] bool operator<(const QModelIndex &) const
 func (this *QModelIndex) Operator_less_than(other QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QModelIndex_PTR() != nil {

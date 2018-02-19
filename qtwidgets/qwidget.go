@@ -258,7 +258,7 @@ func (*QWidget) NewFromPointer(cthis unsafe.Pointer) *QWidget {
 // /usr/include/qt/QtWidgets/qwidget.h:130
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -281,6 +281,40 @@ func NewQWidget(parent QWidget_ITF /*777 QWidget **/, f int) *QWidget {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:214
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QWidget(QWidget *, Qt::WindowFlags)
+func NewQWidget__() *QWidget {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	f := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidgetC2EPS_6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QWidget")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:214
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QWidget(QWidget *, Qt::WindowFlags)
+func NewQWidget__1(parent QWidget_ITF /*777 QWidget **/) *QWidget {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	f := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidgetC2EPS_6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QWidget")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:215
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -295,7 +329,7 @@ func DeleteQWidget(this *QWidget) {
 // /usr/include/qt/QtWidgets/qwidget.h:217
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int devType()
+// [4] int devType() const
 func (this *QWidget) DevType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget7devTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -305,7 +339,7 @@ func (this *QWidget) DevType() int {
 // /usr/include/qt/QtWidgets/qwidget.h:219
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] WId winId()
+// [8] WId winId() const
 func (this *QWidget) WinId() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget5winIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -324,7 +358,7 @@ func (this *QWidget) CreateWinId() {
 // /usr/include/qt/QtWidgets/qwidget.h:221
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] WId internalWinId()
+// [8] WId internalWinId() const
 func (this *QWidget) InternalWinId() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13internalWinIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -334,7 +368,7 @@ func (this *QWidget) InternalWinId() uint64 {
 // /usr/include/qt/QtWidgets/qwidget.h:222
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] WId effectiveWinId()
+// [8] WId effectiveWinId() const
 func (this *QWidget) EffectiveWinId() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14effectiveWinIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,7 +378,7 @@ func (this *QWidget) EffectiveWinId() uint64 {
 // /usr/include/qt/QtWidgets/qwidget.h:225
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStyle * style()
+// [8] QStyle * style() const
 func (this *QWidget) Style() *QStyle /*777 QStyle **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -367,7 +401,7 @@ func (this *QWidget) SetStyle(arg0 QStyle_ITF /*777 QStyle **/) {
 // /usr/include/qt/QtWidgets/qwidget.h:229
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isTopLevel()
+// [1] bool isTopLevel() const
 func (this *QWidget) IsTopLevel() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget10isTopLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -377,7 +411,7 @@ func (this *QWidget) IsTopLevel() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:230
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isWindow()
+// [1] bool isWindow() const
 func (this *QWidget) IsWindow() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget8isWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -387,7 +421,7 @@ func (this *QWidget) IsWindow() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:232
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isModal()
+// [1] bool isModal() const
 func (this *QWidget) IsModal() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget7isModalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -397,7 +431,7 @@ func (this *QWidget) IsModal() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:233
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::WindowModality windowModality()
+// [4] Qt::WindowModality windowModality() const
 func (this *QWidget) WindowModality() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14windowModalityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -416,7 +450,7 @@ func (this *QWidget) SetWindowModality(windowModality int) {
 // /usr/include/qt/QtWidgets/qwidget.h:236
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEnabled()
+// [1] bool isEnabled() const
 func (this *QWidget) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -426,7 +460,7 @@ func (this *QWidget) IsEnabled() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:237
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEnabledTo(const QWidget *)
+// [1] bool isEnabledTo(const QWidget *) const
 func (this *QWidget) IsEnabledTo(arg0 QWidget_ITF /*777 const QWidget **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
@@ -440,7 +474,7 @@ func (this *QWidget) IsEnabledTo(arg0 QWidget_ITF /*777 const QWidget **/) bool 
 // /usr/include/qt/QtWidgets/qwidget.h:238
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEnabledToTLW()
+// [1] bool isEnabledToTLW() const
 func (this *QWidget) IsEnabledToTLW() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14isEnabledToTLWEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -477,7 +511,7 @@ func (this *QWidget) SetWindowModified(arg0 bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:248
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect frameGeometry()
+// [16] QRect frameGeometry() const
 func (this *QWidget) FrameGeometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13frameGeometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -489,7 +523,7 @@ func (this *QWidget) FrameGeometry() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:249
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] const QRect & geometry()
+// [16] const QRect & geometry() const
 func (this *QWidget) Geometry() *qtcore.QRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -501,7 +535,7 @@ func (this *QWidget) Geometry() *qtcore.QRect {
 // /usr/include/qt/QtWidgets/qwidget.h:250
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect normalGeometry()
+// [16] QRect normalGeometry() const
 func (this *QWidget) NormalGeometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14normalGeometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -513,7 +547,7 @@ func (this *QWidget) NormalGeometry() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:252
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int x()
+// [4] int x() const
 func (this *QWidget) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -523,7 +557,7 @@ func (this *QWidget) X() int {
 // /usr/include/qt/QtWidgets/qwidget.h:253
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int y()
+// [4] int y() const
 func (this *QWidget) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -533,7 +567,7 @@ func (this *QWidget) Y() int {
 // /usr/include/qt/QtWidgets/qwidget.h:254
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint pos()
+// [8] QPoint pos() const
 func (this *QWidget) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -545,7 +579,7 @@ func (this *QWidget) Pos() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:255
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize frameSize()
+// [8] QSize frameSize() const
 func (this *QWidget) FrameSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget9frameSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -557,7 +591,7 @@ func (this *QWidget) FrameSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:256
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize size()
+// [8] QSize size() const
 func (this *QWidget) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -569,7 +603,7 @@ func (this *QWidget) Size() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:257
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int width()
+// [4] int width() const
 func (this *QWidget) Width() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -579,7 +613,7 @@ func (this *QWidget) Width() int {
 // /usr/include/qt/QtWidgets/qwidget.h:258
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int height()
+// [4] int height() const
 func (this *QWidget) Height() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget6heightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -589,7 +623,7 @@ func (this *QWidget) Height() int {
 // /usr/include/qt/QtWidgets/qwidget.h:259
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] QRect rect()
+// [16] QRect rect() const
 func (this *QWidget) Rect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -601,7 +635,7 @@ func (this *QWidget) Rect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:260
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect childrenRect()
+// [16] QRect childrenRect() const
 func (this *QWidget) ChildrenRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget12childrenRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -613,7 +647,7 @@ func (this *QWidget) ChildrenRect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:261
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegion childrenRegion()
+// [8] QRegion childrenRegion() const
 func (this *QWidget) ChildrenRegion() *qtgui.QRegion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14childrenRegionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -625,7 +659,7 @@ func (this *QWidget) ChildrenRegion() *qtgui.QRegion /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:263
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize minimumSize()
+// [8] QSize minimumSize() const
 func (this *QWidget) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -637,7 +671,7 @@ func (this *QWidget) MinimumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:264
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize maximumSize()
+// [8] QSize maximumSize() const
 func (this *QWidget) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -649,7 +683,7 @@ func (this *QWidget) MaximumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:265
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int minimumWidth()
+// [4] int minimumWidth() const
 func (this *QWidget) MinimumWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget12minimumWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -659,7 +693,7 @@ func (this *QWidget) MinimumWidth() int {
 // /usr/include/qt/QtWidgets/qwidget.h:266
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int minimumHeight()
+// [4] int minimumHeight() const
 func (this *QWidget) MinimumHeight() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13minimumHeightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -669,7 +703,7 @@ func (this *QWidget) MinimumHeight() int {
 // /usr/include/qt/QtWidgets/qwidget.h:267
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int maximumWidth()
+// [4] int maximumWidth() const
 func (this *QWidget) MaximumWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget12maximumWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -679,7 +713,7 @@ func (this *QWidget) MaximumWidth() int {
 // /usr/include/qt/QtWidgets/qwidget.h:268
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int maximumHeight()
+// [4] int maximumHeight() const
 func (this *QWidget) MaximumHeight() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13maximumHeightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -769,7 +803,7 @@ func (this *QWidget) SetMaximumHeight(maxh int) {
 // /usr/include/qt/QtWidgets/qwidget.h:282
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize sizeIncrement()
+// [8] QSize sizeIncrement() const
 func (this *QWidget) SizeIncrement() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13sizeIncrementEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -803,7 +837,7 @@ func (this *QWidget) SetSizeIncrement_1(w int, h int) {
 // /usr/include/qt/QtWidgets/qwidget.h:285
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize baseSize()
+// [8] QSize baseSize() const
 func (this *QWidget) BaseSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget8baseSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -877,7 +911,7 @@ func (this *QWidget) SetFixedHeight(h int) {
 // /usr/include/qt/QtWidgets/qwidget.h:296
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint mapToGlobal(const QPoint &)
+// [8] QPoint mapToGlobal(const QPoint &) const
 func (this *QWidget) MapToGlobal(arg0 qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
@@ -893,7 +927,7 @@ func (this *QWidget) MapToGlobal(arg0 qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ 
 // /usr/include/qt/QtWidgets/qwidget.h:297
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint mapFromGlobal(const QPoint &)
+// [8] QPoint mapFromGlobal(const QPoint &) const
 func (this *QWidget) MapFromGlobal(arg0 qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
@@ -909,7 +943,7 @@ func (this *QWidget) MapFromGlobal(arg0 qtcore.QPoint_ITF) *qtcore.QPoint /*123*
 // /usr/include/qt/QtWidgets/qwidget.h:298
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint mapToParent(const QPoint &)
+// [8] QPoint mapToParent(const QPoint &) const
 func (this *QWidget) MapToParent(arg0 qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
@@ -925,7 +959,7 @@ func (this *QWidget) MapToParent(arg0 qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ 
 // /usr/include/qt/QtWidgets/qwidget.h:299
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint mapFromParent(const QPoint &)
+// [8] QPoint mapFromParent(const QPoint &) const
 func (this *QWidget) MapFromParent(arg0 qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
@@ -941,7 +975,7 @@ func (this *QWidget) MapFromParent(arg0 qtcore.QPoint_ITF) *qtcore.QPoint /*123*
 // /usr/include/qt/QtWidgets/qwidget.h:300
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint mapTo(const QWidget *, const QPoint &)
+// [8] QPoint mapTo(const QWidget *, const QPoint &) const
 func (this *QWidget) MapTo(arg0 QWidget_ITF /*777 const QWidget **/, arg1 qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
@@ -961,7 +995,7 @@ func (this *QWidget) MapTo(arg0 QWidget_ITF /*777 const QWidget **/, arg1 qtcore
 // /usr/include/qt/QtWidgets/qwidget.h:301
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint mapFrom(const QWidget *, const QPoint &)
+// [8] QPoint mapFrom(const QWidget *, const QPoint &) const
 func (this *QWidget) MapFrom(arg0 QWidget_ITF /*777 const QWidget **/, arg1 qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
@@ -981,7 +1015,7 @@ func (this *QWidget) MapFrom(arg0 QWidget_ITF /*777 const QWidget **/, arg1 qtco
 // /usr/include/qt/QtWidgets/qwidget.h:303
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * window()
+// [8] QWidget * window() const
 func (this *QWidget) Window() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -991,7 +1025,7 @@ func (this *QWidget) Window() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:304
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * nativeParentWidget()
+// [8] QWidget * nativeParentWidget() const
 func (this *QWidget) NativeParentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget18nativeParentWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1001,7 +1035,7 @@ func (this *QWidget) NativeParentWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:305
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QWidget * topLevelWidget()
+// [8] QWidget * topLevelWidget() const
 func (this *QWidget) TopLevelWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14topLevelWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1011,7 +1045,7 @@ func (this *QWidget) TopLevelWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:308
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] const QPalette & palette()
+// [16] const QPalette & palette() const
 func (this *QWidget) Palette() *qtgui.QPalette {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget7paletteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1045,7 +1079,7 @@ func (this *QWidget) SetBackgroundRole(arg0 int) {
 // /usr/include/qt/QtWidgets/qwidget.h:312
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QPalette::ColorRole backgroundRole()
+// [4] QPalette::ColorRole backgroundRole() const
 func (this *QWidget) BackgroundRole() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14backgroundRoleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1064,7 +1098,7 @@ func (this *QWidget) SetForegroundRole(arg0 int) {
 // /usr/include/qt/QtWidgets/qwidget.h:315
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QPalette::ColorRole foregroundRole()
+// [4] QPalette::ColorRole foregroundRole() const
 func (this *QWidget) ForegroundRole() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14foregroundRoleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1074,7 +1108,7 @@ func (this *QWidget) ForegroundRole() int {
 // /usr/include/qt/QtWidgets/qwidget.h:317
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] const QFont & font()
+// [16] const QFont & font() const
 func (this *QWidget) Font() *qtgui.QFont {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1099,7 +1133,7 @@ func (this *QWidget) SetFont(arg0 qtgui.QFont_ITF) {
 // /usr/include/qt/QtWidgets/qwidget.h:319
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QFontMetrics fontMetrics()
+// [8] QFontMetrics fontMetrics() const
 func (this *QWidget) FontMetrics() *qtgui.QFontMetrics /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11fontMetricsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1111,7 +1145,7 @@ func (this *QWidget) FontMetrics() *qtgui.QFontMetrics /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:320
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QFontInfo fontInfo()
+// [8] QFontInfo fontInfo() const
 func (this *QWidget) FontInfo() *qtgui.QFontInfo /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget8fontInfoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1123,7 +1157,7 @@ func (this *QWidget) FontInfo() *qtgui.QFontInfo /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:323
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QCursor cursor()
+// [8] QCursor cursor() const
 func (this *QWidget) Cursor() *qtgui.QCursor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget6cursorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1166,7 +1200,7 @@ func (this *QWidget) SetMouseTracking(enable bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:329
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasMouseTracking()
+// [1] bool hasMouseTracking() const
 func (this *QWidget) HasMouseTracking() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget16hasMouseTrackingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1176,7 +1210,7 @@ func (this *QWidget) HasMouseTracking() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:330
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool underMouse()
+// [1] bool underMouse() const
 func (this *QWidget) UnderMouse() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget10underMouseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1195,7 +1229,7 @@ func (this *QWidget) SetTabletTracking(enable bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:333
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasTabletTracking()
+// [1] bool hasTabletTracking() const
 func (this *QWidget) HasTabletTracking() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget17hasTabletTrackingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1231,7 +1265,7 @@ func (this *QWidget) SetMask_1(arg0 qtgui.QRegion_ITF) {
 // /usr/include/qt/QtWidgets/qwidget.h:337
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegion mask()
+// [8] QRegion mask() const
 func (this *QWidget) Mask() *qtgui.QRegion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget4maskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1270,6 +1304,69 @@ func (this *QWidget) Render(target qtgui.QPaintDevice_ITF /*777 QPaintDevice **/
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:340
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void render(QPaintDevice *, const QPoint &, const QRegion &, QWidget::RenderFlags)
+func (this *QWidget) Render__(target qtgui.QPaintDevice_ITF /*777 QPaintDevice **/) {
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QPaintDevice_PTR() != nil {
+		convArg0 = target.QPaintDevice_PTR().GetCthis()
+	}
+	// arg: 1, const QPoint &=LValueReference, QPoint=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, const QRegion &=LValueReference, QRegion=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	renderFlags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP12QPaintDeviceRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:340
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void render(QPaintDevice *, const QPoint &, const QRegion &, QWidget::RenderFlags)
+func (this *QWidget) Render__1(target qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, targetOffset qtcore.QPoint_ITF) {
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QPaintDevice_PTR() != nil {
+		convArg0 = target.QPaintDevice_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if targetOffset != nil && targetOffset.QPoint_PTR() != nil {
+		convArg1 = targetOffset.QPoint_PTR().GetCthis()
+	}
+	// arg: 2, const QRegion &=LValueReference, QRegion=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	renderFlags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP12QPaintDeviceRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:340
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void render(QPaintDevice *, const QPoint &, const QRegion &, QWidget::RenderFlags)
+func (this *QWidget) Render__2(target qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, targetOffset qtcore.QPoint_ITF, sourceRegion qtgui.QRegion_ITF) {
+	var convArg0 unsafe.Pointer
+	if target != nil && target.QPaintDevice_PTR() != nil {
+		convArg0 = target.QPaintDevice_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if targetOffset != nil && targetOffset.QPoint_PTR() != nil {
+		convArg1 = targetOffset.QPoint_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if sourceRegion != nil && sourceRegion.QRegion_PTR() != nil {
+		convArg2 = sourceRegion.QRegion_PTR().GetCthis()
+	}
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	renderFlags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP12QPaintDeviceRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:344
 // index:1
 // Public Visibility=Default Availability=Available
@@ -1291,6 +1388,69 @@ func (this *QWidget) Render_1(painter qtgui.QPainter_ITF /*777 QPainter **/, tar
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:344
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void render(QPainter *, const QPoint &, const QRegion &, QWidget::RenderFlags)
+func (this *QWidget) Render_1_(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	// arg: 1, const QPoint &=LValueReference, QPoint=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, const QRegion &=LValueReference, QRegion=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	renderFlags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP8QPainterRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:344
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void render(QPainter *, const QPoint &, const QRegion &, QWidget::RenderFlags)
+func (this *QWidget) Render_1_1(painter qtgui.QPainter_ITF /*777 QPainter **/, targetOffset qtcore.QPoint_ITF) {
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if targetOffset != nil && targetOffset.QPoint_PTR() != nil {
+		convArg1 = targetOffset.QPoint_PTR().GetCthis()
+	}
+	// arg: 2, const QRegion &=LValueReference, QRegion=Record,
+	var convArg2 unsafe.Pointer
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	renderFlags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP8QPainterRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:344
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void render(QPainter *, const QPoint &, const QRegion &, QWidget::RenderFlags)
+func (this *QWidget) Render_1_2(painter qtgui.QPainter_ITF /*777 QPainter **/, targetOffset qtcore.QPoint_ITF, sourceRegion qtgui.QRegion_ITF) {
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if targetOffset != nil && targetOffset.QPoint_PTR() != nil {
+		convArg1 = targetOffset.QPoint_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if sourceRegion != nil && sourceRegion.QRegion_PTR() != nil {
+		convArg2 = sourceRegion.QRegion_PTR().GetCthis()
+	}
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	renderFlags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP8QPainterRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:348
 // index:0
 // Public Visibility=Default Availability=Available
@@ -1307,10 +1467,24 @@ func (this *QWidget) Grab(rectangle qtcore.QRect_ITF) *qtgui.QPixmap /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:348
+// index:0
+// Public Visibility=Default Availability=Available
+// [32] QPixmap grab(const QRect &)
+func (this *QWidget) Grab__() *qtgui.QPixmap /*123*/ {
+	// arg: 0, const QRect &=LValueReference, QRect=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget4grabERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:351
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QGraphicsEffect * graphicsEffect()
+// [8] QGraphicsEffect * graphicsEffect() const
 func (this *QWidget) GraphicsEffect() *QGraphicsEffect /*777 QGraphicsEffect **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14graphicsEffectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1335,6 +1509,17 @@ func (this *QWidget) SetGraphicsEffect(effect QGraphicsEffect_ITF /*777 QGraphic
 // Public Visibility=Default Availability=Available
 // [-2] void grabGesture(Qt::GestureType, Qt::GestureFlags)
 func (this *QWidget) GrabGesture(type_ int, flags int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget11grabGestureEN2Qt11GestureTypeE6QFlagsINS0_11GestureFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, flags)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:356
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void grabGesture(Qt::GestureType, Qt::GestureFlags)
+func (this *QWidget) GrabGesture__(type_ int) {
+	// arg: 1, Qt::GestureFlags=Elaborated, Qt::GestureFlags=Typedef, QFlags<Qt::GestureFlag>
+	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget11grabGestureEN2Qt11GestureTypeE6QFlagsINS0_11GestureFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, flags)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1373,7 +1558,7 @@ func (this *QWidget) SetStyleSheet(styleSheet string) {
 // /usr/include/qt/QtWidgets/qwidget.h:367
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString styleSheet()
+// [8] QString styleSheet() const
 func (this *QWidget) StyleSheet() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget10styleSheetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1386,7 +1571,7 @@ func (this *QWidget) StyleSheet() string {
 // /usr/include/qt/QtWidgets/qwidget.h:369
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString windowTitle()
+// [8] QString windowTitle() const
 func (this *QWidget) WindowTitle() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11windowTitleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1412,7 +1597,7 @@ func (this *QWidget) SetWindowIcon(icon qtgui.QIcon_ITF) {
 // /usr/include/qt/QtWidgets/qwidget.h:371
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QIcon windowIcon()
+// [8] QIcon windowIcon() const
 func (this *QWidget) WindowIcon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget10windowIconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1435,7 +1620,7 @@ func (this *QWidget) SetWindowIconText(arg0 string) {
 // /usr/include/qt/QtWidgets/qwidget.h:373
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString windowIconText()
+// [8] QString windowIconText() const
 func (this *QWidget) WindowIconText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14windowIconTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1459,7 +1644,7 @@ func (this *QWidget) SetWindowRole(arg0 string) {
 // /usr/include/qt/QtWidgets/qwidget.h:375
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString windowRole()
+// [8] QString windowRole() const
 func (this *QWidget) WindowRole() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget10windowRoleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1483,7 +1668,7 @@ func (this *QWidget) SetWindowFilePath(filePath string) {
 // /usr/include/qt/QtWidgets/qwidget.h:377
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString windowFilePath()
+// [8] QString windowFilePath() const
 func (this *QWidget) WindowFilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14windowFilePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1505,7 +1690,7 @@ func (this *QWidget) SetWindowOpacity(level float64) {
 // /usr/include/qt/QtWidgets/qwidget.h:380
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal windowOpacity()
+// [8] qreal windowOpacity() const
 func (this *QWidget) WindowOpacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13windowOpacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1515,7 +1700,7 @@ func (this *QWidget) WindowOpacity() float64 {
 // /usr/include/qt/QtWidgets/qwidget.h:382
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isWindowModified()
+// [1] bool isWindowModified() const
 func (this *QWidget) IsWindowModified() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget16isWindowModifiedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1536,7 +1721,7 @@ func (this *QWidget) SetToolTip(arg0 string) {
 // /usr/include/qt/QtWidgets/qwidget.h:385
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toolTip()
+// [8] QString toolTip() const
 func (this *QWidget) ToolTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1558,7 +1743,7 @@ func (this *QWidget) SetToolTipDuration(msec int) {
 // /usr/include/qt/QtWidgets/qwidget.h:387
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toolTipDuration()
+// [4] int toolTipDuration() const
 func (this *QWidget) ToolTipDuration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget15toolTipDurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1579,7 +1764,7 @@ func (this *QWidget) SetStatusTip(arg0 string) {
 // /usr/include/qt/QtWidgets/qwidget.h:391
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString statusTip()
+// [8] QString statusTip() const
 func (this *QWidget) StatusTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget9statusTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1603,7 +1788,7 @@ func (this *QWidget) SetWhatsThis(arg0 string) {
 // /usr/include/qt/QtWidgets/qwidget.h:395
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString whatsThis()
+// [8] QString whatsThis() const
 func (this *QWidget) WhatsThis() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget9whatsThisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1616,7 +1801,7 @@ func (this *QWidget) WhatsThis() string {
 // /usr/include/qt/QtWidgets/qwidget.h:398
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString accessibleName()
+// [8] QString accessibleName() const
 func (this *QWidget) AccessibleName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14accessibleNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1640,7 +1825,7 @@ func (this *QWidget) SetAccessibleName(name string) {
 // /usr/include/qt/QtWidgets/qwidget.h:400
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString accessibleDescription()
+// [8] QString accessibleDescription() const
 func (this *QWidget) AccessibleDescription() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget21accessibleDescriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1673,7 +1858,7 @@ func (this *QWidget) SetLayoutDirection(direction int) {
 // /usr/include/qt/QtWidgets/qwidget.h:405
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::LayoutDirection layoutDirection()
+// [4] Qt::LayoutDirection layoutDirection() const
 func (this *QWidget) LayoutDirection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget15layoutDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1705,7 +1890,7 @@ func (this *QWidget) SetLocale(locale qtcore.QLocale_ITF) {
 // /usr/include/qt/QtWidgets/qwidget.h:409
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QLocale locale()
+// [8] QLocale locale() const
 func (this *QWidget) Locale() *qtcore.QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget6localeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1726,7 +1911,7 @@ func (this *QWidget) UnsetLocale() {
 // /usr/include/qt/QtWidgets/qwidget.h:412
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isRightToLeft()
+// [1] bool isRightToLeft() const
 func (this *QWidget) IsRightToLeft() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13isRightToLeftEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1736,7 +1921,7 @@ func (this *QWidget) IsRightToLeft() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:413
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isLeftToRight()
+// [1] bool isLeftToRight() const
 func (this *QWidget) IsLeftToRight() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13isLeftToRightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1764,7 +1949,7 @@ func (this *QWidget) SetFocus_1(reason int) {
 // /usr/include/qt/QtWidgets/qwidget.h:419
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isActiveWindow()
+// [1] bool isActiveWindow() const
 func (this *QWidget) IsActiveWindow() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14isActiveWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1792,7 +1977,7 @@ func (this *QWidget) ClearFocus() {
 // /usr/include/qt/QtWidgets/qwidget.h:424
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::FocusPolicy focusPolicy()
+// [4] Qt::FocusPolicy focusPolicy() const
 func (this *QWidget) FocusPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11focusPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1811,7 +1996,7 @@ func (this *QWidget) SetFocusPolicy(policy int) {
 // /usr/include/qt/QtWidgets/qwidget.h:426
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasFocus()
+// [1] bool hasFocus() const
 func (this *QWidget) HasFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget8hasFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1855,7 +2040,7 @@ func (this *QWidget) SetFocusProxy(arg0 QWidget_ITF /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qwidget.h:429
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * focusProxy()
+// [8] QWidget * focusProxy() const
 func (this *QWidget) FocusProxy() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget10focusProxyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1865,7 +2050,7 @@ func (this *QWidget) FocusProxy() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:430
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::ContextMenuPolicy contextMenuPolicy()
+// [4] Qt::ContextMenuPolicy contextMenuPolicy() const
 func (this *QWidget) ContextMenuPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget17contextMenuPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1944,6 +2129,22 @@ func (this *QWidget) GrabShortcut(key qtgui.QKeySequence_ITF, context int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:442
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int grabShortcut(const QKeySequence &, Qt::ShortcutContext)
+func (this *QWidget) GrabShortcut__(key qtgui.QKeySequence_ITF) int {
+	var convArg0 unsafe.Pointer
+	if key != nil && key.QKeySequence_PTR() != nil {
+		convArg0 = key.QKeySequence_PTR().GetCthis()
+	}
+	// arg: 1, Qt::ShortcutContext=Elaborated, Qt::ShortcutContext=Enum,
+	context := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget12grabShortcutERK12QKeySequenceN2Qt15ShortcutContextE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, context)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:443
 // index:0
 // Public Visibility=Default Availability=Available
@@ -1962,11 +2163,33 @@ func (this *QWidget) SetShortcutEnabled(id int, enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:444
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setShortcutEnabled(int, _Bool)
+func (this *QWidget) SetShortcutEnabled__(id int) {
+	// arg: 1, bool=Bool, =Invalid,
+	enable := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget18setShortcutEnabledEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, enable)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:445
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcutAutoRepeat(int, _Bool)
 func (this *QWidget) SetShortcutAutoRepeat(id int, enable bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget21setShortcutAutoRepeatEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, enable)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:445
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setShortcutAutoRepeat(int, _Bool)
+func (this *QWidget) SetShortcutAutoRepeat__(id int) {
+	// arg: 1, bool=Bool, =Invalid,
+	enable := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget21setShortcutAutoRepeatEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, enable)
 	qtrt.ErrPrint(err, rv)
 }
@@ -2004,7 +2227,7 @@ func QWidget_KeyboardGrabber() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:451
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool updatesEnabled()
+// [1] bool updatesEnabled() const
 func (this *QWidget) UpdatesEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14updatesEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2023,7 +2246,7 @@ func (this *QWidget) SetUpdatesEnabled(enable bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:455
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QGraphicsProxyWidget * graphicsProxyWidget()
+// [8] QGraphicsProxyWidget * graphicsProxyWidget() const
 func (this *QWidget) GraphicsProxyWidget() *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget19graphicsProxyWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2300,7 +2523,7 @@ func (this *QWidget) SetGeometry_1(arg0 qtcore.QRect_ITF) {
 // /usr/include/qt/QtWidgets/qwidget.h:496
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray saveGeometry()
+// [8] QByteArray saveGeometry() const
 func (this *QWidget) SaveGeometry() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget12saveGeometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2335,7 +2558,7 @@ func (this *QWidget) AdjustSize() {
 // /usr/include/qt/QtWidgets/qwidget.h:499
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isVisible()
+// [1] bool isVisible() const
 func (this *QWidget) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2345,7 +2568,7 @@ func (this *QWidget) IsVisible() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:500
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isVisibleTo(const QWidget *)
+// [1] bool isVisibleTo(const QWidget *) const
 func (this *QWidget) IsVisibleTo(arg0 QWidget_ITF /*777 const QWidget **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
@@ -2359,7 +2582,7 @@ func (this *QWidget) IsVisibleTo(arg0 QWidget_ITF /*777 const QWidget **/) bool 
 // /usr/include/qt/QtWidgets/qwidget.h:501
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isHidden()
+// [1] bool isHidden() const
 func (this *QWidget) IsHidden() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget8isHiddenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2369,7 +2592,7 @@ func (this *QWidget) IsHidden() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:503
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isMinimized()
+// [1] bool isMinimized() const
 func (this *QWidget) IsMinimized() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11isMinimizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2379,7 +2602,7 @@ func (this *QWidget) IsMinimized() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:504
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isMaximized()
+// [1] bool isMaximized() const
 func (this *QWidget) IsMaximized() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11isMaximizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2389,7 +2612,7 @@ func (this *QWidget) IsMaximized() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:505
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isFullScreen()
+// [1] bool isFullScreen() const
 func (this *QWidget) IsFullScreen() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget12isFullScreenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2399,7 +2622,7 @@ func (this *QWidget) IsFullScreen() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:507
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::WindowStates windowState()
+// [4] Qt::WindowStates windowState() const
 func (this *QWidget) WindowState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11windowStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2427,7 +2650,7 @@ func (this *QWidget) OverrideWindowState(state int) {
 // /usr/include/qt/QtWidgets/qwidget.h:511
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QWidget) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2439,7 +2662,7 @@ func (this *QWidget) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:512
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2451,7 +2674,7 @@ func (this *QWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:514
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSizePolicy sizePolicy()
+// [4] QSizePolicy sizePolicy() const
 func (this *QWidget) SizePolicy() *QSizePolicy /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget10sizePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2485,7 +2708,7 @@ func (this *QWidget) SetSizePolicy_1(horizontal int, vertical int) {
 // /usr/include/qt/QtWidgets/qwidget.h:517
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int heightForWidth(int)
+// [4] int heightForWidth(int) const
 func (this *QWidget) HeightForWidth(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -2495,7 +2718,7 @@ func (this *QWidget) HeightForWidth(arg0 int) int {
 // /usr/include/qt/QtWidgets/qwidget.h:518
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool hasHeightForWidth()
+// [1] bool hasHeightForWidth() const
 func (this *QWidget) HasHeightForWidth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget17hasHeightForWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2505,7 +2728,7 @@ func (this *QWidget) HasHeightForWidth() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:520
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegion visibleRegion()
+// [8] QRegion visibleRegion() const
 func (this *QWidget) VisibleRegion() *qtgui.QRegion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13visibleRegionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2539,7 +2762,7 @@ func (this *QWidget) SetContentsMargins_1(margins qtcore.QMargins_ITF) {
 // /usr/include/qt/QtWidgets/qwidget.h:524
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void getContentsMargins(int *, int *, int *, int *)
+// [-2] void getContentsMargins(int *, int *, int *, int *) const
 func (this *QWidget) GetContentsMargins(left unsafe.Pointer /*666*/, top unsafe.Pointer /*666*/, right unsafe.Pointer /*666*/, bottom unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget18getContentsMarginsEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)
@@ -2548,7 +2771,7 @@ func (this *QWidget) GetContentsMargins(left unsafe.Pointer /*666*/, top unsafe.
 // /usr/include/qt/QtWidgets/qwidget.h:525
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QMargins contentsMargins()
+// [16] QMargins contentsMargins() const
 func (this *QWidget) ContentsMargins() *qtcore.QMargins /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget15contentsMarginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2560,7 +2783,7 @@ func (this *QWidget) ContentsMargins() *qtcore.QMargins /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:527
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect contentsRect()
+// [16] QRect contentsRect() const
 func (this *QWidget) ContentsRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget12contentsRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2572,7 +2795,7 @@ func (this *QWidget) ContentsRect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:530
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QLayout * layout()
+// [8] QLayout * layout() const
 func (this *QWidget) Layout() *QLayout /*777 QLayout **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget6layoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2652,7 +2875,7 @@ func (this *QWidget) Scroll_1(dx int, dy int, arg2 qtcore.QRect_ITF) {
 // /usr/include/qt/QtWidgets/qwidget.h:542
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * focusWidget()
+// [8] QWidget * focusWidget() const
 func (this *QWidget) FocusWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11focusWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2662,7 +2885,7 @@ func (this *QWidget) FocusWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:543
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * nextInFocusChain()
+// [8] QWidget * nextInFocusChain() const
 func (this *QWidget) NextInFocusChain() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget16nextInFocusChainEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2672,7 +2895,7 @@ func (this *QWidget) NextInFocusChain() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:544
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * previousInFocusChain()
+// [8] QWidget * previousInFocusChain() const
 func (this *QWidget) PreviousInFocusChain() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget20previousInFocusChainEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2682,7 +2905,7 @@ func (this *QWidget) PreviousInFocusChain() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:547
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool acceptDrops()
+// [1] bool acceptDrops() const
 func (this *QWidget) AcceptDrops() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11acceptDropsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2744,7 +2967,7 @@ func (this *QWidget) RemoveAction(action QAction_ITF /*777 QAction **/) {
 // /usr/include/qt/QtWidgets/qwidget.h:565
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * parentWidget()
+// [8] QWidget * parentWidget() const
 func (this *QWidget) ParentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget12parentWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2763,7 +2986,7 @@ func (this *QWidget) SetWindowFlags(type_ int) {
 // /usr/include/qt/QtWidgets/qwidget.h:568
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::WindowFlags windowFlags()
+// [4] Qt::WindowFlags windowFlags() const
 func (this *QWidget) WindowFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11windowFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2775,6 +2998,17 @@ func (this *QWidget) WindowFlags() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setWindowFlag(Qt::WindowType, _Bool)
 func (this *QWidget) SetWindowFlag(arg0 int, on bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget13setWindowFlagEN2Qt10WindowTypeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:569
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setWindowFlag(Qt::WindowType, _Bool)
+func (this *QWidget) SetWindowFlag__(arg0 int) {
+	// arg: 1, bool=Bool, =Invalid,
+	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget13setWindowFlagEN2Qt10WindowTypeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
 	qtrt.ErrPrint(err, rv)
 }
@@ -2791,7 +3025,7 @@ func (this *QWidget) OverrideWindowFlags(type_ int) {
 // /usr/include/qt/QtWidgets/qwidget.h:572
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::WindowType windowType()
+// [4] Qt::WindowType windowType() const
 func (this *QWidget) WindowType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget10windowTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2816,7 +3050,7 @@ func QWidget_Find(arg0 uint64) *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:575
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QWidget * childAt(int, int)
+// [8] QWidget * childAt(int, int) const
 func (this *QWidget) ChildAt(x int, y int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget7childAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -2826,7 +3060,7 @@ func (this *QWidget) ChildAt(x int, y int) *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:576
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QWidget * childAt(const QPoint &)
+// [8] QWidget * childAt(const QPoint &) const
 func (this *QWidget) ChildAt_1(p qtcore.QPoint_ITF) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -2846,10 +3080,21 @@ func (this *QWidget) SetAttribute(arg0 int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:578
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAttribute(Qt::WidgetAttribute, _Bool)
+func (this *QWidget) SetAttribute__(arg0 int) {
+	// arg: 1, bool=Bool, =Invalid,
+	on := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget12setAttributeEN2Qt15WidgetAttributeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:579
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool testAttribute(Qt::WidgetAttribute)
+// [1] bool testAttribute(Qt::WidgetAttribute) const
 func (this *QWidget) TestAttribute(arg0 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13testAttributeEN2Qt15WidgetAttributeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -2859,7 +3104,7 @@ func (this *QWidget) TestAttribute(arg0 int) bool {
 // /usr/include/qt/QtWidgets/qwidget.h:581
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPaintEngine * paintEngine()
+// [8] QPaintEngine * paintEngine() const
 func (this *QWidget) PaintEngine() *qtgui.QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget11paintEngineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2869,7 +3114,7 @@ func (this *QWidget) PaintEngine() *qtgui.QPaintEngine /*777 QPaintEngine **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:583
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void ensurePolished()
+// [-2] void ensurePolished() const
 func (this *QWidget) EnsurePolished() {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14ensurePolishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2878,7 +3123,7 @@ func (this *QWidget) EnsurePolished() {
 // /usr/include/qt/QtWidgets/qwidget.h:585
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isAncestorOf(const QWidget *)
+// [1] bool isAncestorOf(const QWidget *) const
 func (this *QWidget) IsAncestorOf(child QWidget_ITF /*777 const QWidget **/) bool {
 	var convArg0 unsafe.Pointer
 	if child != nil && child.QWidget_PTR() != nil {
@@ -2892,7 +3137,7 @@ func (this *QWidget) IsAncestorOf(child QWidget_ITF /*777 const QWidget **/) boo
 // /usr/include/qt/QtWidgets/qwidget.h:592
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool autoFillBackground()
+// [1] bool autoFillBackground() const
 func (this *QWidget) AutoFillBackground() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget18autoFillBackgroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2911,7 +3156,7 @@ func (this *QWidget) SetAutoFillBackground(enabled bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:595
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QBackingStore * backingStore()
+// [8] QBackingStore * backingStore() const
 func (this *QWidget) BackingStore() *qtgui.QBackingStore /*777 QBackingStore **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget12backingStoreEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2921,7 +3166,7 @@ func (this *QWidget) BackingStore() *qtgui.QBackingStore /*777 QBackingStore **/
 // /usr/include/qt/QtWidgets/qwidget.h:597
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWindow * windowHandle()
+// [8] QWindow * windowHandle() const
 func (this *QWidget) WindowHandle() *qtgui.QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget12windowHandleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2949,6 +3194,44 @@ func QWidget_CreateWindowContainer(window qtgui.QWindow_ITF /*777 QWindow **/, p
 	var nilthis *QWidget
 	rv := nilthis.CreateWindowContainer(window, parent, flags)
 	return rv
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:599
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QWidget * createWindowContainer(QWindow *, QWidget *, Qt::WindowFlags)
+func (this *QWidget) CreateWindowContainer__(window qtgui.QWindow_ITF /*777 QWindow **/) *QWidget /*777 QWidget **/ {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWindow_PTR() != nil {
+		convArg0 = window.QWindow_PTR().GetCthis()
+	}
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget21createWindowContainerEP7QWindowPS_6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:599
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QWidget * createWindowContainer(QWindow *, QWidget *, Qt::WindowFlags)
+func (this *QWidget) CreateWindowContainer__1(window qtgui.QWindow_ITF /*777 QWindow **/, parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWindow_PTR() != nil {
+		convArg0 = window.QWindow_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg1 = parent.QWidget_PTR().GetCthis()
+	}
+	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget21createWindowContainerEP7QWindowPS_6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qwidget.h:604
@@ -3355,7 +3638,7 @@ func (this *QWidget) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qwidget.h:653
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric)
+// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
 func (this *QWidget) Metric(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -3365,7 +3648,7 @@ func (this *QWidget) Metric(arg0 int) int {
 // /usr/include/qt/QtWidgets/qwidget.h:654
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void initPainter(QPainter *)
+// [-2] void initPainter(QPainter *) const
 func (this *QWidget) InitPainter(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -3378,7 +3661,7 @@ func (this *QWidget) InitPainter(painter qtgui.QPainter_ITF /*777 QPainter **/) 
 // /usr/include/qt/QtWidgets/qwidget.h:655
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QPaintDevice * redirected(QPoint *)
+// [8] QPaintDevice * redirected(QPoint *) const
 func (this *QWidget) Redirected(offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
@@ -3392,7 +3675,7 @@ func (this *QWidget) Redirected(offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgu
 // /usr/include/qt/QtWidgets/qwidget.h:656
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QPainter * sharedPainter()
+// [8] QPainter * sharedPainter() const
 func (this *QWidget) SharedPainter() *qtgui.QPainter /*777 QPainter **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13sharedPainterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -3415,7 +3698,7 @@ func (this *QWidget) InputMethodEvent(arg0 qtgui.QInputMethodEvent_ITF /*777 QIn
 // /usr/include/qt/QtWidgets/qwidget.h:660
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QVariant inputMethodQuery(Qt::InputMethodQuery)
+// [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
 func (this *QWidget) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget16inputMethodQueryEN2Qt16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -3427,7 +3710,7 @@ func (this *QWidget) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtWidgets/qwidget.h:662
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::InputMethodHints inputMethodHints()
+// [4] Qt::InputMethodHints inputMethodHints() const
 func (this *QWidget) InputMethodHints() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget16inputMethodHintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -3461,11 +3744,74 @@ func (this *QWidget) Create(arg0 uint64, initializeWindow bool, destroyOldWindow
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:669
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void create(WId, _Bool, _Bool)
+func (this *QWidget) Create__() {
+	// arg: 0, WId=Typedef, WId=Typedef, ::quintptr
+	var arg0 unsafe.Pointer
+	// arg: 1, bool=Bool, =Invalid,
+	initializeWindow := true
+	// arg: 2, bool=Bool, =Invalid,
+	destroyOldWindow := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6createEybb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, initializeWindow, destroyOldWindow)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:669
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void create(WId, _Bool, _Bool)
+func (this *QWidget) Create__1(arg0 uint64) {
+	// arg: 1, bool=Bool, =Invalid,
+	initializeWindow := true
+	// arg: 2, bool=Bool, =Invalid,
+	destroyOldWindow := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6createEybb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, initializeWindow, destroyOldWindow)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:669
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void create(WId, _Bool, _Bool)
+func (this *QWidget) Create__2(arg0 uint64, initializeWindow bool) {
+	// arg: 2, bool=Bool, =Invalid,
+	destroyOldWindow := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6createEybb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, initializeWindow, destroyOldWindow)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:671
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void destroy(_Bool, _Bool)
 func (this *QWidget) Destroy(destroyWindow bool, destroySubWindows bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget7destroyEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), destroyWindow, destroySubWindows)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:671
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void destroy(_Bool, _Bool)
+func (this *QWidget) Destroy__() {
+	// arg: 0, bool=Bool, =Invalid,
+	destroyWindow := true
+	// arg: 1, bool=Bool, =Invalid,
+	destroySubWindows := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget7destroyEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), destroyWindow, destroySubWindows)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:671
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void destroy(_Bool, _Bool)
+func (this *QWidget) Destroy__1(destroyWindow bool) {
+	// arg: 1, bool=Bool, =Invalid,
+	destroySubWindows := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget7destroyEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), destroyWindow, destroySubWindows)
 	qtrt.ErrPrint(err, rv)
 }

@@ -63,7 +63,7 @@ func (*QDnsLookup) NewFromPointer(cthis unsafe.Pointer) *QDnsLookup {
 // /usr/include/qt/QtNetwork/qdnslookup.h:186
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QDnsLookup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -86,6 +86,20 @@ func NewQDnsLookup(parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qdnslookup.h:221
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDnsLookup(QObject *)
+func NewQDnsLookup__() *QDnsLookup {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDnsLookup")
+	return gothis
+}
+
 // /usr/include/qt/QtNetwork/qdnslookup.h:222
 // index:1
 // Public Visibility=Default Availability=Available
@@ -97,6 +111,22 @@ func NewQDnsLookup_1(type_ int, name string, parent qtcore.QObject_ITF /*777 QOb
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg2 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDnsLookup")
+	return gothis
+}
+
+// /usr/include/qt/QtNetwork/qdnslookup.h:222
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, QObject *)
+func NewQDnsLookup_1_(type_ int, name string) *QDnsLookup {
+	var tmpArg1 = qtcore.NewQString_5(name)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, QObject *=Pointer, QObject=Record,
+	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -126,6 +156,26 @@ func NewQDnsLookup_2(type_ int, name string, nameserver QHostAddress_ITF, parent
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qdnslookup.h:223
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
+func NewQDnsLookup_2_(type_ int, name string, nameserver QHostAddress_ITF) *QDnsLookup {
+	var tmpArg1 = qtcore.NewQString_5(name)
+	var convArg1 = tmpArg1.GetCthis()
+	var convArg2 unsafe.Pointer
+	if nameserver != nil && nameserver.QHostAddress_PTR() != nil {
+		convArg2 = nameserver.QHostAddress_PTR().GetCthis()
+	}
+	// arg: 3, QObject *=Pointer, QObject=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringRK12QHostAddressP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDnsLookupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDnsLookup")
+	return gothis
+}
+
 // /usr/include/qt/QtNetwork/qdnslookup.h:224
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -140,7 +190,7 @@ func DeleteQDnsLookup(this *QDnsLookup) {
 // /usr/include/qt/QtNetwork/qdnslookup.h:226
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QDnsLookup::Error error()
+// [4] QDnsLookup::Error error() const
 func (this *QDnsLookup) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,7 +200,7 @@ func (this *QDnsLookup) Error() int {
 // /usr/include/qt/QtNetwork/qdnslookup.h:227
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString errorString()
+// [8] QString errorString() const
 func (this *QDnsLookup) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,7 +213,7 @@ func (this *QDnsLookup) ErrorString() string {
 // /usr/include/qt/QtNetwork/qdnslookup.h:228
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isFinished()
+// [1] bool isFinished() const
 func (this *QDnsLookup) IsFinished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup10isFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,7 +223,7 @@ func (this *QDnsLookup) IsFinished() bool {
 // /usr/include/qt/QtNetwork/qdnslookup.h:230
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QDnsLookup) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +247,7 @@ func (this *QDnsLookup) SetName(name string) {
 // /usr/include/qt/QtNetwork/qdnslookup.h:233
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QDnsLookup::Type type()
+// [4] QDnsLookup::Type type() const
 func (this *QDnsLookup) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +266,7 @@ func (this *QDnsLookup) SetType(arg0 int) {
 // /usr/include/qt/QtNetwork/qdnslookup.h:236
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QHostAddress nameserver()
+// [8] QHostAddress nameserver() const
 func (this *QDnsLookup) Nameserver() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup10nameserverEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

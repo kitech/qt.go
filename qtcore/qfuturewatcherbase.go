@@ -82,7 +82,7 @@ func (*QFutureWatcherBase) NewFromPointer(cthis unsafe.Pointer) *QFutureWatcherB
 // /usr/include/qt/QtCore/qfuturewatcher.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,10 +105,24 @@ func NewQFutureWatcherBase(parent QObject_ITF /*777 QObject **/) *QFutureWatcher
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qfuturewatcher.h:61
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFutureWatcherBase(QObject *)
+func NewQFutureWatcherBase__() *QFutureWatcherBase {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBaseC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQFutureWatcherBaseFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFutureWatcherBase")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qfuturewatcher.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int progressValue()
+// [4] int progressValue() const
 func (this *QFutureWatcherBase) ProgressValue() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase13progressValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,7 +132,7 @@ func (this *QFutureWatcherBase) ProgressValue() int {
 // /usr/include/qt/QtCore/qfuturewatcher.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int progressMinimum()
+// [4] int progressMinimum() const
 func (this *QFutureWatcherBase) ProgressMinimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMinimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,7 +142,7 @@ func (this *QFutureWatcherBase) ProgressMinimum() int {
 // /usr/include/qt/QtCore/qfuturewatcher.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int progressMaximum()
+// [4] int progressMaximum() const
 func (this *QFutureWatcherBase) ProgressMaximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMaximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -138,7 +152,7 @@ func (this *QFutureWatcherBase) ProgressMaximum() int {
 // /usr/include/qt/QtCore/qfuturewatcher.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString progressText()
+// [8] QString progressText() const
 func (this *QFutureWatcherBase) ProgressText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase12progressTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +165,7 @@ func (this *QFutureWatcherBase) ProgressText() string {
 // /usr/include/qt/QtCore/qfuturewatcher.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isStarted()
+// [1] bool isStarted() const
 func (this *QFutureWatcherBase) IsStarted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase9isStartedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,7 +175,7 @@ func (this *QFutureWatcherBase) IsStarted() bool {
 // /usr/include/qt/QtCore/qfuturewatcher.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isFinished()
+// [1] bool isFinished() const
 func (this *QFutureWatcherBase) IsFinished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10isFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,7 +185,7 @@ func (this *QFutureWatcherBase) IsFinished() bool {
 // /usr/include/qt/QtCore/qfuturewatcher.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRunning()
+// [1] bool isRunning() const
 func (this *QFutureWatcherBase) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -181,7 +195,7 @@ func (this *QFutureWatcherBase) IsRunning() bool {
 // /usr/include/qt/QtCore/qfuturewatcher.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isCanceled()
+// [1] bool isCanceled() const
 func (this *QFutureWatcherBase) IsCanceled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10isCanceledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -191,7 +205,7 @@ func (this *QFutureWatcherBase) IsCanceled() bool {
 // /usr/include/qt/QtCore/qfuturewatcher.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isPaused()
+// [1] bool isPaused() const
 func (this *QFutureWatcherBase) IsPaused() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase8isPausedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -407,6 +421,17 @@ func (this *QFutureWatcherBase) ConnectOutputInterface() {
 // Protected Visibility=Default Availability=Available
 // [-2] void disconnectOutputInterface(_Bool)
 func (this *QFutureWatcherBase) DisconnectOutputInterface(pendingAssignment bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pendingAssignment)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfuturewatcher.h:106
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void disconnectOutputInterface(_Bool)
+func (this *QFutureWatcherBase) DisconnectOutputInterface__() {
+	// arg: 0, bool=Bool, =Invalid,
+	pendingAssignment := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pendingAssignment)
 	qtrt.ErrPrint(err, rv)
 }

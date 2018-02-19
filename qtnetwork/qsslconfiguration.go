@@ -129,7 +129,7 @@ func (this *QSslConfiguration) Swap(other QSslConfiguration_ITF) {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QSslConfiguration &)
+// [1] bool operator==(const QSslConfiguration &) const
 func (this *QSslConfiguration) Operator_equal_equal(other QSslConfiguration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslConfiguration_PTR() != nil {
@@ -143,7 +143,7 @@ func (this *QSslConfiguration) Operator_equal_equal(other QSslConfiguration_ITF)
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:91
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QSslConfiguration &)
+// [1] bool operator!=(const QSslConfiguration &) const
 func (this *QSslConfiguration) Operator_not_equal(other QSslConfiguration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslConfiguration_PTR() != nil {
@@ -157,7 +157,7 @@ func (this *QSslConfiguration) Operator_not_equal(other QSslConfiguration_ITF) b
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QSslConfiguration) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QSslConfiguration) IsNull() bool {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSsl::SslProtocol protocol()
+// [4] QSsl::SslProtocol protocol() const
 func (this *QSslConfiguration) Protocol() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration8protocolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +186,7 @@ func (this *QSslConfiguration) SetProtocol(protocol int) {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSslSocket::PeerVerifyMode peerVerifyMode()
+// [4] QSslSocket::PeerVerifyMode peerVerifyMode() const
 func (this *QSslConfiguration) PeerVerifyMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration14peerVerifyModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -205,7 +205,7 @@ func (this *QSslConfiguration) SetPeerVerifyMode(mode int) {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int peerVerifyDepth()
+// [4] int peerVerifyDepth() const
 func (this *QSslConfiguration) PeerVerifyDepth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration15peerVerifyDepthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -224,7 +224,7 @@ func (this *QSslConfiguration) SetPeerVerifyDepth(depth int) {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslCertificate localCertificate()
+// [8] QSslCertificate localCertificate() const
 func (this *QSslConfiguration) LocalCertificate() *QSslCertificate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration16localCertificateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -249,7 +249,7 @@ func (this *QSslConfiguration) SetLocalCertificate(certificate QSslCertificate_I
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslCertificate peerCertificate()
+// [8] QSslCertificate peerCertificate() const
 func (this *QSslConfiguration) PeerCertificate() *QSslCertificate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration15peerCertificateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -261,7 +261,7 @@ func (this *QSslConfiguration) PeerCertificate() *QSslCertificate /*123*/ {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslCipher sessionCipher()
+// [8] QSslCipher sessionCipher() const
 func (this *QSslConfiguration) SessionCipher() *QSslCipher /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration13sessionCipherEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -273,7 +273,7 @@ func (this *QSslConfiguration) SessionCipher() *QSslCipher /*123*/ {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSsl::SslProtocol sessionProtocol()
+// [4] QSsl::SslProtocol sessionProtocol() const
 func (this *QSslConfiguration) SessionProtocol() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration15sessionProtocolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -283,7 +283,7 @@ func (this *QSslConfiguration) SessionProtocol() int {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslKey privateKey()
+// [8] QSslKey privateKey() const
 func (this *QSslConfiguration) PrivateKey() *QSslKey /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration10privateKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -317,7 +317,7 @@ func (this *QSslConfiguration) SetSslOption(option int, on bool) {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:133
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testSslOption(QSsl::SslOption)
+// [1] bool testSslOption(QSsl::SslOption) const
 func (this *QSslConfiguration) TestSslOption(option int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration13testSslOptionEN4QSsl9SslOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	qtrt.ErrPrint(err, rv)
@@ -327,7 +327,7 @@ func (this *QSslConfiguration) TestSslOption(option int) bool {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray sessionTicket()
+// [8] QByteArray sessionTicket() const
 func (this *QSslConfiguration) SessionTicket() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration13sessionTicketEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -352,7 +352,7 @@ func (this *QSslConfiguration) SetSessionTicket(sessionTicket qtcore.QByteArray_
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int sessionTicketLifeTimeHint()
+// [4] int sessionTicketLifeTimeHint() const
 func (this *QSslConfiguration) SessionTicketLifeTimeHint() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration25sessionTicketLifeTimeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -362,7 +362,7 @@ func (this *QSslConfiguration) SessionTicketLifeTimeHint() int {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslKey ephemeralServerKey()
+// [8] QSslKey ephemeralServerKey() const
 func (this *QSslConfiguration) EphemeralServerKey() *QSslKey /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration18ephemeralServerKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -374,7 +374,7 @@ func (this *QSslConfiguration) EphemeralServerKey() *QSslKey /*123*/ {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:146
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray preSharedKeyIdentityHint()
+// [8] QByteArray preSharedKeyIdentityHint() const
 func (this *QSslConfiguration) PreSharedKeyIdentityHint() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration24preSharedKeyIdentityHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -399,7 +399,7 @@ func (this *QSslConfiguration) SetPreSharedKeyIdentityHint(hint qtcore.QByteArra
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:149
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslDiffieHellmanParameters diffieHellmanParameters()
+// [8] QSslDiffieHellmanParameters diffieHellmanParameters() const
 func (this *QSslConfiguration) DiffieHellmanParameters() *QSslDiffieHellmanParameters /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration23diffieHellmanParametersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -458,7 +458,7 @@ func QSslConfiguration_SetDefaultConfiguration(configuration QSslConfiguration_I
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:168
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray nextNegotiatedProtocol()
+// [8] QByteArray nextNegotiatedProtocol() const
 func (this *QSslConfiguration) NextNegotiatedProtocol() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration22nextNegotiatedProtocolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -470,7 +470,7 @@ func (this *QSslConfiguration) NextNegotiatedProtocol() *qtcore.QByteArray /*123
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:169
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSslConfiguration::NextProtocolNegotiationStatus nextProtocolNegotiationStatus()
+// [4] QSslConfiguration::NextProtocolNegotiationStatus nextProtocolNegotiationStatus() const
 func (this *QSslConfiguration) NextProtocolNegotiationStatus() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration29nextProtocolNegotiationStatusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

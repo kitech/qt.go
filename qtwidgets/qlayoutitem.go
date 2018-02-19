@@ -75,6 +75,20 @@ func NewQLayoutItem(alignment int) *QLayoutItem {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qlayoutitem.h:63
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QLayoutItem(Qt::Alignment)
+func NewQLayoutItem__() *QLayoutItem {
+	// arg: 0, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
+	alignment := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QLayoutItemC2E6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, alignment)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLayoutItem)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qlayoutitem.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -89,7 +103,7 @@ func DeleteQLayoutItem(this *QLayoutItem) {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:65
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QLayoutItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -101,7 +115,7 @@ func (this *QLayoutItem) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:66
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSize minimumSize()
+// [8] QSize minimumSize() const
 func (this *QLayoutItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -113,7 +127,7 @@ func (this *QLayoutItem) MinimumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:67
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSize maximumSize()
+// [8] QSize maximumSize() const
 func (this *QLayoutItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,7 +139,7 @@ func (this *QLayoutItem) MaximumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:68
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] Qt::Orientations expandingDirections()
+// [4] Qt::Orientations expandingDirections() const
 func (this *QLayoutItem) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,7 +162,7 @@ func (this *QLayoutItem) SetGeometry(arg0 qtcore.QRect_ITF) {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:70
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [16] QRect geometry()
+// [16] QRect geometry() const
 func (this *QLayoutItem) Geometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +174,7 @@ func (this *QLayoutItem) Geometry() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:71
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QLayoutItem) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +184,7 @@ func (this *QLayoutItem) IsEmpty() bool {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool hasHeightForWidth()
+// [1] bool hasHeightForWidth() const
 func (this *QLayoutItem) HasHeightForWidth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem17hasHeightForWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,7 +194,7 @@ func (this *QLayoutItem) HasHeightForWidth() bool {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int heightForWidth(int)
+// [4] int heightForWidth(int) const
 func (this *QLayoutItem) HeightForWidth(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -190,7 +204,7 @@ func (this *QLayoutItem) HeightForWidth(arg0 int) int {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int minimumHeightForWidth(int)
+// [4] int minimumHeightForWidth(int) const
 func (this *QLayoutItem) MinimumHeightForWidth(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem21minimumHeightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -239,7 +253,7 @@ func (this *QLayoutItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:81
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::Alignment alignment()
+// [4] Qt::Alignment alignment() const
 func (this *QLayoutItem) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,7 +272,7 @@ func (this *QLayoutItem) SetAlignment(a int) {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:83
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QSizePolicy::ControlTypes controlTypes()
+// [4] QSizePolicy::ControlTypes controlTypes() const
 func (this *QLayoutItem) ControlTypes() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem12controlTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

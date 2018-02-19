@@ -64,7 +64,7 @@ func (*QVBoxLayout) NewFromPointer(cthis unsafe.Pointer) *QVBoxLayout {
 // /usr/include/qt/QtWidgets/qboxlayout.h:128
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QVBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QVBoxLayout10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

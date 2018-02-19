@@ -91,7 +91,7 @@ func DeleteQSGMaterial(this *QSGMaterial) {
 // /usr/include/qt/QtQuick/qsgmaterial.h:149
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSGMaterialType * type()
+// [8] QSGMaterialType * type() const
 func (this *QSGMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -101,7 +101,7 @@ func (this *QSGMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 // /usr/include/qt/QtQuick/qsgmaterial.h:150
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSGMaterialShader * createShader()
+// [8] QSGMaterialShader * createShader() const
 func (this *QSGMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +111,7 @@ func (this *QSGMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShad
 // /usr/include/qt/QtQuick/qsgmaterial.h:151
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int compare(const QSGMaterial *)
+// [4] int compare(const QSGMaterial *) const
 func (this *QSGMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSGMaterial_PTR() != nil {
@@ -125,7 +125,7 @@ func (this *QSGMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial *
 // /usr/include/qt/QtQuick/qsgmaterial.h:153
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QSGMaterial::Flags flags()
+// [4] QSGMaterial::Flags flags() const
 func (this *QSGMaterial) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -137,6 +137,17 @@ func (this *QSGMaterial) Flags() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(QSGMaterial::Flags, _Bool)
 func (this *QSGMaterial) SetFlag(flags int, on bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGMaterial7setFlagE6QFlagsINS_4FlagEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, on)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQuick/qsgmaterial.h:154
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFlag(QSGMaterial::Flags, _Bool)
+func (this *QSGMaterial) SetFlag__(flags int) {
+	// arg: 1, bool=Bool, =Invalid,
+	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGMaterial7setFlagE6QFlagsINS_4FlagEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, on)
 	qtrt.ErrPrint(err, rv)
 }

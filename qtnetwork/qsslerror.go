@@ -157,7 +157,7 @@ func (this *QSslError) Operator_equal_1(other QSslError_ITF) *QSslError {
 // /usr/include/qt/QtNetwork/qsslerror.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QSslError &)
+// [1] bool operator==(const QSslError &) const
 func (this *QSslError) Operator_equal_equal(other QSslError_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslError_PTR() != nil {
@@ -171,7 +171,7 @@ func (this *QSslError) Operator_equal_equal(other QSslError_ITF) bool {
 // /usr/include/qt/QtNetwork/qsslerror.h:103
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QSslError &)
+// [1] bool operator!=(const QSslError &) const
 func (this *QSslError) Operator_not_equal(other QSslError_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslError_PTR() != nil {
@@ -185,7 +185,7 @@ func (this *QSslError) Operator_not_equal(other QSslError_ITF) bool {
 // /usr/include/qt/QtNetwork/qsslerror.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSslError::SslError error()
+// [4] QSslError::SslError error() const
 func (this *QSslError) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslError5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,7 +195,7 @@ func (this *QSslError) Error() int {
 // /usr/include/qt/QtNetwork/qsslerror.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString errorString()
+// [8] QString errorString() const
 func (this *QSslError) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslError11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -208,7 +208,7 @@ func (this *QSslError) ErrorString() string {
 // /usr/include/qt/QtNetwork/qsslerror.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSslCertificate certificate()
+// [8] QSslCertificate certificate() const
 func (this *QSslError) Certificate() *QSslCertificate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslError11certificateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

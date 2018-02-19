@@ -129,7 +129,7 @@ func (this *QNetworkInterface) Swap(other QNetworkInterface_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QNetworkInterface) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,7 +139,7 @@ func (this *QNetworkInterface) IsValid() bool {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int index()
+// [4] int index() const
 func (this *QNetworkInterface) Index() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface5indexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -149,7 +149,7 @@ func (this *QNetworkInterface) Index() int {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QNetworkInterface) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func (this *QNetworkInterface) Name() string {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString humanReadableName()
+// [8] QString humanReadableName() const
 func (this *QNetworkInterface) HumanReadableName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface17humanReadableNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +175,7 @@ func (this *QNetworkInterface) HumanReadableName() string {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QNetworkInterface::InterfaceFlags flags()
+// [4] QNetworkInterface::InterfaceFlags flags() const
 func (this *QNetworkInterface) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,7 +185,7 @@ func (this *QNetworkInterface) Flags() int {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString hardwareAddress()
+// [8] QString hardwareAddress() const
 func (this *QNetworkInterface) HardwareAddress() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface15hardwareAddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

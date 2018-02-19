@@ -91,7 +91,7 @@ func NewQTextImageFormat_1(format QTextFormat_ITF) *QTextImageFormat {
 // /usr/include/qt/QtGui/qtextformat.h:737
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QTextImageFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,7 +112,7 @@ func (this *QTextImageFormat) SetName(name string) {
 // /usr/include/qt/QtGui/qtextformat.h:740
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QTextImageFormat) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func (this *QTextImageFormat) SetWidth(width float64) {
 // /usr/include/qt/QtGui/qtextformat.h:744
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal width()
+// [8] qreal width() const
 func (this *QTextImageFormat) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func (this *QTextImageFormat) SetHeight(height float64) {
 // /usr/include/qt/QtGui/qtextformat.h:748
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal height()
+// [8] qreal height() const
 func (this *QTextImageFormat) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -64,7 +64,7 @@ func (*QAbstractEventDispatcher) NewFromPointer(cthis unsafe.Pointer) *QAbstract
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAbstractEventDispatcher) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAbstractEventDispatcher10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +80,20 @@ func NewQAbstractEventDispatcher(parent QObject_ITF /*777 QObject **/) *QAbstrac
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractEventDispatcher")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:73
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAbstractEventDispatcher(QObject *)
+func NewQAbstractEventDispatcher__() *QAbstractEventDispatcher {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -115,6 +129,18 @@ func QAbstractEventDispatcher_Instance(thread QThread_ITF /*777 QThread **/) *QA
 	var nilthis *QAbstractEventDispatcher
 	rv := nilthis.Instance(thread)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:76
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QAbstractEventDispatcher * instance(QThread *)
+func (this *QAbstractEventDispatcher) Instance__() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
+	// arg: 0, QThread *=Pointer, QThread=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher8instanceEP7QThread", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:78

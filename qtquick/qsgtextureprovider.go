@@ -66,7 +66,7 @@ func (*QSGTextureProvider) NewFromPointer(cthis unsafe.Pointer) *QSGTextureProvi
 // /usr/include/qt/QtQuick/qsgtextureprovider.h:50
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSGTextureProvider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSGTextureProvider10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -76,7 +76,7 @@ func (this *QSGTextureProvider) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // /usr/include/qt/QtQuick/qsgtextureprovider.h:52
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSGTexture * texture()
+// [8] QSGTexture * texture() const
 func (this *QSGTextureProvider) Texture() *QSGTexture /*777 QSGTexture **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSGTextureProvider7textureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

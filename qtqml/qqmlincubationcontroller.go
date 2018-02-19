@@ -96,7 +96,7 @@ func DeleteQQmlIncubationController(this *QQmlIncubationController) {
 // /usr/include/qt/QtQml/qqmlincubator.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlEngine * engine()
+// [8] QQmlEngine * engine() const
 func (this *QQmlIncubationController) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QQmlIncubationController6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,7 +106,7 @@ func (this *QQmlIncubationController) Engine() *QQmlEngine /*777 QQmlEngine **/ 
 // /usr/include/qt/QtQml/qqmlincubator.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int incubatingObjectCount()
+// [4] int incubatingObjectCount() const
 func (this *QQmlIncubationController) IncubatingObjectCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QQmlIncubationController21incubatingObjectCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +127,17 @@ func (this *QQmlIncubationController) IncubateFor(msecs int) {
 // Public Visibility=Default Availability=Available
 // [-2] void incubateWhile(volatile _Bool *, int)
 func (this *QQmlIncubationController) IncubateWhile(flag *bool, msecs int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QQmlIncubationController13incubateWhileEPVbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, msecs)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQml/qqmlincubator.h:110
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void incubateWhile(volatile _Bool *, int)
+func (this *QQmlIncubationController) IncubateWhile__(flag *bool) {
+	// arg: 1, int=Int, =Invalid,
+	msecs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQmlIncubationController13incubateWhileEPVbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, msecs)
 	qtrt.ErrPrint(err, rv)
 }

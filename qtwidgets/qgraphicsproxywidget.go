@@ -214,7 +214,7 @@ func (*QGraphicsProxyWidget) NewFromPointer(cthis unsafe.Pointer) *QGraphicsProx
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGraphicsProxyWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -230,6 +230,40 @@ func NewQGraphicsProxyWidget(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, w
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg0 = parent.QGraphicsItem_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidgetC2EP13QGraphicsItem6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, wFlags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsProxyWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsProxyWidget")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsProxyWidget(QGraphicsItem *, Qt::WindowFlags)
+func NewQGraphicsProxyWidget__() *QGraphicsProxyWidget {
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg0 unsafe.Pointer
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	wFlags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidgetC2EP13QGraphicsItem6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, wFlags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsProxyWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsProxyWidget")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsProxyWidget(QGraphicsItem *, Qt::WindowFlags)
+func NewQGraphicsProxyWidget__1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsProxyWidget {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QGraphicsItem_PTR() != nil {
+		convArg0 = parent.QGraphicsItem_PTR().GetCthis()
+	}
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	wFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidgetC2EP13QGraphicsItem6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, wFlags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsProxyWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -264,7 +298,7 @@ func (this *QGraphicsProxyWidget) SetWidget(widget QWidget_ITF /*777 QWidget **/
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:60
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * widget()
+// [8] QWidget * widget() const
 func (this *QGraphicsProxyWidget) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -274,7 +308,7 @@ func (this *QGraphicsProxyWidget) Widget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF subWidgetRect(const QWidget *)
+// [32] QRectF subWidgetRect(const QWidget *) const
 func (this *QGraphicsProxyWidget) SubWidgetRect(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -324,7 +358,7 @@ func (this *QGraphicsProxyWidget) Paint(painter qtgui.QPainter_ITF /*777 QPainte
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int type()
+// [4] int type() const
 func (this *QGraphicsProxyWidget) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -679,7 +713,7 @@ func (this *QGraphicsProxyWidget) FocusNextPrevChild(next bool) bool {
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:116
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QVariant inputMethodQuery(Qt::InputMethodQuery)
+// [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
 func (this *QGraphicsProxyWidget) InputMethodQuery(query int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget16inputMethodQueryEN2Qt16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), query)
 	qtrt.ErrPrint(err, rv)
@@ -704,12 +738,26 @@ func (this *QGraphicsProxyWidget) InputMethodEvent(event qtgui.QInputMethodEvent
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:119
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
+// [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
 func (this *QGraphicsProxyWidget) SizeHint(which int, constraint qtcore.QSizeF_ITF) *qtcore.QSizeF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if constraint != nil && constraint.QSizeF_PTR() != nil {
 		convArg1 = constraint.QSizeF_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:119
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
+func (this *QGraphicsProxyWidget) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
+	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333

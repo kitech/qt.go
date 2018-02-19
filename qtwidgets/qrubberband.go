@@ -99,7 +99,7 @@ func (*QRubberBand) NewFromPointer(cthis unsafe.Pointer) *QRubberBand {
 // /usr/include/qt/QtWidgets/qrubberband.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QRubberBand10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -122,6 +122,20 @@ func NewQRubberBand(arg0 int, arg1 QWidget_ITF /*777 QWidget **/) *QRubberBand {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qrubberband.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QRubberBand(enum QRubberBand::Shape, QWidget *)
+func NewQRubberBand__(arg0 int) *QRubberBand {
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBandC2ENS_5ShapeEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQRubberBandFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QRubberBand")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qrubberband.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -136,7 +150,7 @@ func DeleteQRubberBand(this *QRubberBand) {
 // /usr/include/qt/QtWidgets/qrubberband.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QRubberBand::Shape shape()
+// [4] QRubberBand::Shape shape() const
 func (this *QRubberBand) Shape() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QRubberBand5shapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -291,7 +305,7 @@ func (this *QRubberBand) MoveEvent(arg0 qtgui.QMoveEvent_ITF /*777 QMoveEvent **
 // /usr/include/qt/QtWidgets/qrubberband.h:82
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionRubberBand *)
+// [-2] void initStyleOption(QStyleOptionRubberBand *) const
 func (this *QRubberBand) InitStyleOption(option QStyleOptionRubberBand_ITF /*777 QStyleOptionRubberBand **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionRubberBand_PTR() != nil {

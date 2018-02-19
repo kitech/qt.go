@@ -104,7 +104,7 @@ func (*QDial) NewFromPointer(cthis unsafe.Pointer) *QDial {
 // /usr/include/qt/QtWidgets/qdial.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QDial) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +127,20 @@ func NewQDial(parent QWidget_ITF /*777 QWidget **/) *QDial {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qdial.h:64
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDial(QWidget *)
+func NewQDial__() *QDial {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDialC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDialFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDial")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qdial.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -141,7 +155,7 @@ func DeleteQDial(this *QDial) {
 // /usr/include/qt/QtWidgets/qdial.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool wrapping()
+// [1] bool wrapping() const
 func (this *QDial) Wrapping() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial8wrappingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +165,7 @@ func (this *QDial) Wrapping() bool {
 // /usr/include/qt/QtWidgets/qdial.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int notchSize()
+// [4] int notchSize() const
 func (this *QDial) NotchSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial9notchSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +184,7 @@ func (this *QDial) SetNotchTarget(target float64) {
 // /usr/include/qt/QtWidgets/qdial.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal notchTarget()
+// [8] qreal notchTarget() const
 func (this *QDial) NotchTarget() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial11notchTargetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,7 +194,7 @@ func (this *QDial) NotchTarget() float64 {
 // /usr/include/qt/QtWidgets/qdial.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool notchesVisible()
+// [1] bool notchesVisible() const
 func (this *QDial) NotchesVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial14notchesVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,7 +204,7 @@ func (this *QDial) NotchesVisible() bool {
 // /usr/include/qt/QtWidgets/qdial.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QDial) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +216,7 @@ func (this *QDial) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qdial.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QDial) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -320,7 +334,7 @@ func (this *QDial) SliderChange(change int) {
 // /usr/include/qt/QtWidgets/qdial.h:93
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionSlider *)
+// [-2] void initStyleOption(QStyleOptionSlider *) const
 func (this *QDial) InitStyleOption(option QStyleOptionSlider_ITF /*777 QStyleOptionSlider **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionSlider_PTR() != nil {

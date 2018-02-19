@@ -154,7 +154,7 @@ func (this *QStaticText) SetText(text string) {
 // /usr/include/qt/QtGui/qstatictext.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString text()
+// [8] QString text() const
 func (this *QStaticText) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +176,7 @@ func (this *QStaticText) SetTextFormat(textFormat int) {
 // /usr/include/qt/QtGui/qstatictext.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::TextFormat textFormat()
+// [4] Qt::TextFormat textFormat() const
 func (this *QStaticText) TextFormat() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText10textFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,7 +195,7 @@ func (this *QStaticText) SetTextWidth(textWidth float64) {
 // /usr/include/qt/QtGui/qstatictext.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal textWidth()
+// [8] qreal textWidth() const
 func (this *QStaticText) TextWidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText9textWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,7 +218,7 @@ func (this *QStaticText) SetTextOption(textOption QTextOption_ITF) {
 // /usr/include/qt/QtGui/qstatictext.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QTextOption textOption()
+// [32] QTextOption textOption() const
 func (this *QStaticText) TextOption() *QTextOption /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText10textOptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -230,7 +230,7 @@ func (this *QStaticText) TextOption() *QTextOption /*123*/ {
 // /usr/include/qt/QtGui/qstatictext.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QSizeF size()
+// [16] QSizeF size() const
 func (this *QStaticText) Size() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -256,6 +256,34 @@ func (this *QStaticText) Prepare(matrix QTransform_ITF, font QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qstatictext.h:89
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void prepare(const QTransform &, const QFont &)
+func (this *QStaticText) Prepare__() {
+	// arg: 0, const QTransform &=LValueReference, QTransform=Record,
+	var convArg0 unsafe.Pointer
+	// arg: 1, const QFont &=LValueReference, QFont=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText7prepareERK10QTransformRK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstatictext.h:89
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void prepare(const QTransform &, const QFont &)
+func (this *QStaticText) Prepare__1(matrix QTransform_ITF) {
+	var convArg0 unsafe.Pointer
+	if matrix != nil && matrix.QTransform_PTR() != nil {
+		convArg0 = matrix.QTransform_PTR().GetCthis()
+	}
+	// arg: 1, const QFont &=LValueReference, QFont=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText7prepareERK10QTransformRK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qstatictext.h:91
 // index:0
 // Public Visibility=Default Availability=Available
@@ -268,7 +296,7 @@ func (this *QStaticText) SetPerformanceHint(performanceHint int) {
 // /usr/include/qt/QtGui/qstatictext.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QStaticText::PerformanceHint performanceHint()
+// [4] QStaticText::PerformanceHint performanceHint() const
 func (this *QStaticText) PerformanceHint() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText15performanceHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -278,7 +306,7 @@ func (this *QStaticText) PerformanceHint() int {
 // /usr/include/qt/QtGui/qstatictext.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QStaticText &)
+// [1] bool operator==(const QStaticText &) const
 func (this *QStaticText) Operator_equal_equal(arg0 QStaticText_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QStaticText_PTR() != nil {
@@ -292,7 +320,7 @@ func (this *QStaticText) Operator_equal_equal(arg0 QStaticText_ITF) bool {
 // /usr/include/qt/QtGui/qstatictext.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator!=(const QStaticText &)
+// [1] bool operator!=(const QStaticText &) const
 func (this *QStaticText) Operator_not_equal(arg0 QStaticText_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QStaticText_PTR() != nil {

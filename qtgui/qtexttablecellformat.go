@@ -76,10 +76,10 @@ func NewQTextTableCellFormat() *QTextTableCellFormat {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextTableCellFormat(const QTextFormat &)
-func NewQTextTableCellFormat_1(fmt QTextFormat_ITF) *QTextTableCellFormat {
+func NewQTextTableCellFormat_1(fmt_ QTextFormat_ITF) *QTextTableCellFormat {
 	var convArg0 unsafe.Pointer
-	if fmt != nil && fmt.QTextFormat_PTR() != nil {
-		convArg0 = fmt.QTextFormat_PTR().GetCthis()
+	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {
+		convArg0 = fmt_.QTextFormat_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextTableCellFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -91,7 +91,7 @@ func NewQTextTableCellFormat_1(fmt QTextFormat_ITF) *QTextTableCellFormat {
 // /usr/include/qt/QtGui/qtextformat.h:947
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QTextTableCellFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,7 +110,7 @@ func (this *QTextTableCellFormat) SetTopPadding(padding float64) {
 // /usr/include/qt/QtGui/qtextformat.h:950
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal topPadding()
+// [8] qreal topPadding() const
 func (this *QTextTableCellFormat) TopPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat10topPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,7 +129,7 @@ func (this *QTextTableCellFormat) SetBottomPadding(padding float64) {
 // /usr/include/qt/QtGui/qtextformat.h:953
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal bottomPadding()
+// [8] qreal bottomPadding() const
 func (this *QTextTableCellFormat) BottomPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat13bottomPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,7 +148,7 @@ func (this *QTextTableCellFormat) SetLeftPadding(padding float64) {
 // /usr/include/qt/QtGui/qtextformat.h:956
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal leftPadding()
+// [8] qreal leftPadding() const
 func (this *QTextTableCellFormat) LeftPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat11leftPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QTextTableCellFormat) SetRightPadding(padding float64) {
 // /usr/include/qt/QtGui/qtextformat.h:959
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal rightPadding()
+// [8] qreal rightPadding() const
 func (this *QTextTableCellFormat) RightPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat12rightPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

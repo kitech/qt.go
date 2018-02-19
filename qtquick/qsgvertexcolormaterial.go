@@ -88,7 +88,7 @@ func NewQSGVertexColorMaterial() *QSGVertexColorMaterial {
 // /usr/include/qt/QtQuick/qsgvertexcolormaterial.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int compare(const QSGMaterial *)
+// [4] int compare(const QSGMaterial *) const
 func (this *QSGVertexColorMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSGMaterial_PTR() != nil {
@@ -102,7 +102,7 @@ func (this *QSGVertexColorMaterial) Compare(other QSGMaterial_ITF /*777 const QS
 // /usr/include/qt/QtQuick/qsgvertexcolormaterial.h:55
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QSGMaterialType * type()
+// [8] QSGMaterialType * type() const
 func (this *QSGVertexColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QSGVertexColorMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,7 +112,7 @@ func (this *QSGVertexColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialTyp
 // /usr/include/qt/QtQuick/qsgvertexcolormaterial.h:56
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QSGMaterialShader * createShader()
+// [8] QSGMaterialShader * createShader() const
 func (this *QSGVertexColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QSGVertexColorMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

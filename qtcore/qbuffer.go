@@ -47,7 +47,7 @@ func (this *QBuffer) InheritReadData(f func(data string, maxlen int64) int64) {
 }
 
 // long long writeData(const char *, qint64)
-func (this *QBuffer) InheritWriteData(f func(data string, len int64) int64) {
+func (this *QBuffer) InheritWriteData(f func(data string, len_ int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
 
@@ -82,7 +82,7 @@ func (*QBuffer) NewFromPointer(cthis unsafe.Pointer) *QBuffer {
 // /usr/include/qt/QtCore/qbuffer.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QBuffer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +105,20 @@ func NewQBuffer(parent QObject_ITF /*777 QObject **/) *QBuffer {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qbuffer.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QBuffer(QObject *)
+func NewQBuffer__() *QBuffer {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQBufferFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QBuffer")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qbuffer.h:61
 // index:1
 // Public Visibility=Default Availability=Available
@@ -118,6 +132,24 @@ func NewQBuffer_1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg1 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferC2EP10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQBufferFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QBuffer")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:61
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QBuffer(QByteArray *, QObject *)
+func NewQBuffer_1_(buf QByteArray_ITF /*777 QByteArray **/) *QBuffer {
+	var convArg0 unsafe.Pointer
+	if buf != nil && buf.QByteArray_PTR() != nil {
+		convArg0 = buf.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferC2EP10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBufferFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -151,7 +183,7 @@ func (this *QBuffer) Buffer() *QByteArray {
 // /usr/include/qt/QtCore/qbuffer.h:69
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] const QByteArray & buffer()
+// [8] const QByteArray & buffer() const
 func (this *QBuffer) Buffer_1() *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer6bufferEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,17 +222,17 @@ func (this *QBuffer) SetData(data QByteArray_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setData(const char *, int)
-func (this *QBuffer) SetData_1(data string, len int) {
+func (this *QBuffer) SetData_1(data string, len_ int) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer7setDataEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer7setDataEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const QByteArray & data()
+// [8] const QByteArray & data() const
 func (this *QBuffer) Data() *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -231,7 +263,7 @@ func (this *QBuffer) Close() {
 // /usr/include/qt/QtCore/qbuffer.h:79
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 size()
+// [8] qint64 size() const
 func (this *QBuffer) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -241,7 +273,7 @@ func (this *QBuffer) Size() int64 {
 // /usr/include/qt/QtCore/qbuffer.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 pos()
+// [8] qint64 pos() const
 func (this *QBuffer) Pos() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -261,7 +293,7 @@ func (this *QBuffer) Seek(off int64) bool {
 // /usr/include/qt/QtCore/qbuffer.h:82
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool atEnd()
+// [1] bool atEnd() const
 func (this *QBuffer) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -271,7 +303,7 @@ func (this *QBuffer) AtEnd() bool {
 // /usr/include/qt/QtCore/qbuffer.h:83
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool canReadLine()
+// [1] bool canReadLine() const
 func (this *QBuffer) CanReadLine() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer11canReadLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -320,10 +352,10 @@ func (this *QBuffer) ReadData(data string, maxlen int64) int64 {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)
-func (this *QBuffer) WriteData(data string, len int64) int64 {
+func (this *QBuffer) WriteData(data string, len_ int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }

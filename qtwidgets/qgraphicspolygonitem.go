@@ -92,6 +92,20 @@ func NewQGraphicsPolygonItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:743
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsPolygonItem(QGraphicsItem *)
+func NewQGraphicsPolygonItem__() *QGraphicsPolygonItem {
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsPolygonItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsPolygonItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsPolygonItem)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:744
 // index:1
 // Public Visibility=Default Availability=Available
@@ -105,6 +119,24 @@ func NewQGraphicsPolygonItem_1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg1 = parent.QGraphicsItem_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsPolygonItemC2ERK9QPolygonFP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsPolygonItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsPolygonItem)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:744
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsPolygonItem(const QPolygonF &, QGraphicsItem *)
+func NewQGraphicsPolygonItem_1_(polygon qtgui.QPolygonF_ITF) *QGraphicsPolygonItem {
+	var convArg0 unsafe.Pointer
+	if polygon != nil && polygon.QPolygonF_PTR() != nil {
+		convArg0 = polygon.QPolygonF_PTR().GetCthis()
+	}
+	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsPolygonItemC2ERK9QPolygonFP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsPolygonItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -126,7 +158,7 @@ func DeleteQGraphicsPolygonItem(this *QGraphicsPolygonItem) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:748
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF polygon()
+// [8] QPolygonF polygon() const
 func (this *QGraphicsPolygonItem) Polygon() *qtgui.QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem7polygonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +183,7 @@ func (this *QGraphicsPolygonItem) SetPolygon(polygon qtgui.QPolygonF_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:751
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::FillRule fillRule()
+// [4] Qt::FillRule fillRule() const
 func (this *QGraphicsPolygonItem) FillRule() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem8fillRuleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +202,7 @@ func (this *QGraphicsPolygonItem) SetFillRule(rule int) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:754
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QRectF boundingRect()
+// [32] QRectF boundingRect() const
 func (this *QGraphicsPolygonItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +214,7 @@ func (this *QGraphicsPolygonItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:755
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPainterPath shape()
+// [8] QPainterPath shape() const
 func (this *QGraphicsPolygonItem) Shape() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem5shapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +226,7 @@ func (this *QGraphicsPolygonItem) Shape() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:756
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool contains(const QPointF &)
+// [1] bool contains(const QPointF &) const
 func (this *QGraphicsPolygonItem) Contains(point qtcore.QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -226,10 +258,29 @@ func (this *QGraphicsPolygonItem) Paint(painter qtgui.QPainter_ITF /*777 QPainte
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:758
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
+func (this *QGraphicsPolygonItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+	var convArg0 unsafe.Pointer
+	if painter != nil && painter.QPainter_PTR() != nil {
+		convArg0 = painter.QPainter_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if option != nil && option.QStyleOptionGraphicsItem_PTR() != nil {
+		convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
+	}
+	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:760
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isObscuredBy(const QGraphicsItem *)
+// [1] bool isObscuredBy(const QGraphicsItem *) const
 func (this *QGraphicsPolygonItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
@@ -243,7 +294,7 @@ func (this *QGraphicsPolygonItem) IsObscuredBy(item QGraphicsItem_ITF /*777 cons
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:761
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPainterPath opaqueArea()
+// [8] QPainterPath opaqueArea() const
 func (this *QGraphicsPolygonItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem10opaqueAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,7 +306,7 @@ func (this *QGraphicsPolygonItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:764
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int type()
+// [4] int type() const
 func (this *QGraphicsPolygonItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -265,7 +316,7 @@ func (this *QGraphicsPolygonItem) Type() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:767
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool supportsExtension(enum QGraphicsItem::Extension)
+// [1] bool supportsExtension(enum QGraphicsItem::Extension) const
 func (this *QGraphicsPolygonItem) SupportsExtension(extension int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem17supportsExtensionEN13QGraphicsItem9ExtensionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	qtrt.ErrPrint(err, rv)
@@ -288,7 +339,7 @@ func (this *QGraphicsPolygonItem) SetExtension(extension int, variant qtcore.QVa
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:769
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QVariant extension(const QVariant &)
+// [16] QVariant extension(const QVariant &) const
 func (this *QGraphicsPolygonItem) Extension(variant qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if variant != nil && variant.QVariant_PTR() != nil {

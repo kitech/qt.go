@@ -109,7 +109,7 @@ func (*QScrollBar) NewFromPointer(cthis unsafe.Pointer) *QScrollBar {
 // /usr/include/qt/QtWidgets/qscrollbar.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QScrollBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QScrollBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,6 +125,20 @@ func NewQScrollBar(parent QWidget_ITF /*777 QWidget **/) *QScrollBar {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQScrollBarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QScrollBar")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qscrollbar.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QScrollBar(QWidget *)
+func NewQScrollBar__() *QScrollBar {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQScrollBarFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -148,6 +162,20 @@ func NewQScrollBar_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QScrollBar
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qscrollbar.h:60
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QScrollBar(Qt::Orientation, QWidget *)
+func NewQScrollBar_1_(arg0 int) *QScrollBar {
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBarC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQScrollBarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QScrollBar")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qscrollbar.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -162,7 +190,7 @@ func DeleteQScrollBar(this *QScrollBar) {
 // /usr/include/qt/QtWidgets/qscrollbar.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QScrollBar) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QScrollBar8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -288,7 +316,7 @@ func (this *QScrollBar) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*777 
 // /usr/include/qt/QtWidgets/qscrollbar.h:79
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionSlider *)
+// [-2] void initStyleOption(QStyleOptionSlider *) const
 func (this *QScrollBar) InitStyleOption(option QStyleOptionSlider_ITF /*777 QStyleOptionSlider **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionSlider_PTR() != nil {

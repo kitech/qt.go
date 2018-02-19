@@ -99,7 +99,7 @@ func (*QGraphicsEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsEffect {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGraphicsEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -122,6 +122,20 @@ func NewQGraphicsEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsE
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:82
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsEffect(QObject *)
+func NewQGraphicsEffect__() *QGraphicsEffect {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsEffectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGraphicsEffect")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:83
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -136,7 +150,7 @@ func DeleteQGraphicsEffect(this *QGraphicsEffect) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QRectF boundingRectFor(const QRectF &)
+// [32] QRectF boundingRectFor(const QRectF &) const
 func (this *QGraphicsEffect) BoundingRectFor(sourceRect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if sourceRect != nil && sourceRect.QRectF_PTR() != nil {
@@ -152,7 +166,7 @@ func (this *QGraphicsEffect) BoundingRectFor(sourceRect qtcore.QRectF_ITF) *qtco
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF boundingRect()
+// [32] QRectF boundingRect() const
 func (this *QGraphicsEffect) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +178,7 @@ func (this *QGraphicsEffect) BoundingRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEnabled()
+// [1] bool isEnabled() const
 func (this *QGraphicsEffect) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -232,7 +246,7 @@ func (this *QGraphicsEffect) UpdateBoundingRect() {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:103
 // index:0
 // Protected Visibility=Default Availability=Available
-// [1] bool sourceIsPixmap()
+// [1] bool sourceIsPixmap() const
 func (this *QGraphicsEffect) SourceIsPixmap() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect14sourceIsPixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,8 +256,22 @@ func (this *QGraphicsEffect) SourceIsPixmap() bool {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:104
 // index:0
 // Protected Visibility=Default Availability=Available
-// [32] QRectF sourceBoundingRect(Qt::CoordinateSystem)
+// [32] QRectF sourceBoundingRect(Qt::CoordinateSystem) const
 func (this *QGraphicsEffect) SourceBoundingRect(system int) *qtcore.QRectF /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect18sourceBoundingRectEN2Qt16CoordinateSystemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), system)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:104
+// index:0
+// Protected Visibility=Default Availability=Available
+// [32] QRectF sourceBoundingRect(Qt::CoordinateSystem) const
+func (this *QGraphicsEffect) SourceBoundingRect__() *qtcore.QRectF /*123*/ {
+	// arg: 0, Qt::CoordinateSystem=Elaborated, Qt::CoordinateSystem=Enum,
+	system := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect18sourceBoundingRectEN2Qt16CoordinateSystemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), system)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -267,12 +295,64 @@ func (this *QGraphicsEffect) DrawSource(painter qtgui.QPainter_ITF /*777 QPainte
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:106
 // index:0
 // Protected Visibility=Default Availability=Available
-// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode)
+// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
 func (this *QGraphicsEffect) SourcePixmap(system int, offset qtcore.QPoint_ITF /*777 QPoint **/, mode int) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
 		convArg1 = offset.QPoint_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect12sourcePixmapEN2Qt16CoordinateSystemEP6QPointNS_13PixmapPadModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), system, convArg1, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:106
+// index:0
+// Protected Visibility=Default Availability=Available
+// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+func (this *QGraphicsEffect) SourcePixmap__() *qtgui.QPixmap /*123*/ {
+	// arg: 0, Qt::CoordinateSystem=Elaborated, Qt::CoordinateSystem=Enum,
+	system := 0
+	// arg: 1, QPoint *=Pointer, QPoint=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, QGraphicsEffect::PixmapPadMode=Enum, QGraphicsEffect::PixmapPadMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect12sourcePixmapEN2Qt16CoordinateSystemEP6QPointNS_13PixmapPadModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), system, convArg1, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:106
+// index:0
+// Protected Visibility=Default Availability=Available
+// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+func (this *QGraphicsEffect) SourcePixmap__1(system int) *qtgui.QPixmap /*123*/ {
+	// arg: 1, QPoint *=Pointer, QPoint=Record,
+	var convArg1 unsafe.Pointer
+	// arg: 2, QGraphicsEffect::PixmapPadMode=Enum, QGraphicsEffect::PixmapPadMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect12sourcePixmapEN2Qt16CoordinateSystemEP6QPointNS_13PixmapPadModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), system, convArg1, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:106
+// index:0
+// Protected Visibility=Default Availability=Available
+// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+func (this *QGraphicsEffect) SourcePixmap__2(system int, offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QPixmap /*123*/ {
+	var convArg1 unsafe.Pointer
+	if offset != nil && offset.QPoint_PTR() != nil {
+		convArg1 = offset.QPoint_PTR().GetCthis()
+	}
+	// arg: 2, QGraphicsEffect::PixmapPadMode=Enum, QGraphicsEffect::PixmapPadMode=Enum,
+	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect12sourcePixmapEN2Qt16CoordinateSystemEP6QPointNS_13PixmapPadModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), system, convArg1, mode)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333

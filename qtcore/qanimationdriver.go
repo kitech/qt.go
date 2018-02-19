@@ -77,7 +77,7 @@ func (*QAnimationDriver) NewFromPointer(cthis unsafe.Pointer) *QAnimationDriver 
 // /usr/include/qt/QtCore/qabstractanimation.h:135
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAnimationDriver) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +93,20 @@ func NewQAnimationDriver(parent QObject_ITF /*777 QObject **/) *QAnimationDriver
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriverC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAnimationDriverFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAnimationDriver")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qabstractanimation.h:139
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAnimationDriver(QObject *)
+func NewQAnimationDriver__() *QAnimationDriver {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriverC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAnimationDriverFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -141,7 +155,7 @@ func (this *QAnimationDriver) Uninstall() {
 // /usr/include/qt/QtCore/qabstractanimation.h:147
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRunning()
+// [1] bool isRunning() const
 func (this *QAnimationDriver) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +165,7 @@ func (this *QAnimationDriver) IsRunning() bool {
 // /usr/include/qt/QtCore/qabstractanimation.h:149
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 elapsed()
+// [8] qint64 elapsed() const
 func (this *QAnimationDriver) Elapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +184,7 @@ func (this *QAnimationDriver) SetStartTime(startTime int64) {
 // /usr/include/qt/QtCore/qabstractanimation.h:153
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qint64 startTime()
+// [8] qint64 startTime() const
 func (this *QAnimationDriver) StartTime() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver9startTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,6 +214,17 @@ func (this *QAnimationDriver) Stopped() {
 // Protected Visibility=Default Availability=Available
 // [-2] void advanceAnimation(qint64)
 func (this *QAnimationDriver) AdvanceAnimation(timeStep int64) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeStep)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qabstractanimation.h:161
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void advanceAnimation(qint64)
+func (this *QAnimationDriver) AdvanceAnimation__() {
+	// arg: 0, qint64=Typedef, qint64=Typedef, long long
+	timeStep := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeStep)
 	qtrt.ErrPrint(err, rv)
 }

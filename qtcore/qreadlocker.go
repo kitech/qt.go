@@ -109,7 +109,7 @@ func (this *QReadLocker) Relock() {
 // /usr/include/qt/QtCore/qreadwritelock.h:112
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QReadWriteLock * readWriteLock()
+// [8] QReadWriteLock * readWriteLock() const
 func (this *QReadLocker) ReadWriteLock() *QReadWriteLock /*777 QReadWriteLock **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QReadLocker13readWriteLockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

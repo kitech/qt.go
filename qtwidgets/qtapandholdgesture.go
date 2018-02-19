@@ -64,7 +64,7 @@ func (*QTapAndHoldGesture) NewFromPointer(cthis unsafe.Pointer) *QTapAndHoldGest
 // /usr/include/qt/QtWidgets/qgesture.h:254
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTapAndHoldGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QTapAndHoldGesture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +87,20 @@ func NewQTapAndHoldGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QTapAnd
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgesture.h:260
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTapAndHoldGesture(QObject *)
+func NewQTapAndHoldGesture__() *QTapAndHoldGesture {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QTapAndHoldGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTapAndHoldGestureFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTapAndHoldGesture")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgesture.h:261
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -101,7 +115,7 @@ func DeleteQTapAndHoldGesture(this *QTapAndHoldGesture) {
 // /usr/include/qt/QtWidgets/qgesture.h:263
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF position()
+// [16] QPointF position() const
 func (this *QTapAndHoldGesture) Position() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QTapAndHoldGesture8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

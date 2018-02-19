@@ -67,7 +67,7 @@ func (*QSocketNotifier) NewFromPointer(cthis unsafe.Pointer) *QSocketNotifier {
 // /usr/include/qt/QtCore/qsocketnotifier.h:50
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +90,20 @@ func NewQSocketNotifier(socket int64, arg1 int, parent QObject_ITF /*777 QObject
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qsocketnotifier.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSocketNotifier(qintptr, enum QSocketNotifier::Type, QObject *)
+func NewQSocketNotifier__(socket int64, arg1 int) *QSocketNotifier {
+	// arg: 2, QObject *=Pointer, QObject=Record,
+	var convArg2 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifierC2ExNS_4TypeEP7QObject", qtrt.FFI_TYPE_POINTER, socket, arg1, convArg2)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSocketNotifierFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSocketNotifier")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qsocketnotifier.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -104,7 +118,7 @@ func DeleteQSocketNotifier(this *QSocketNotifier) {
 // /usr/include/qt/QtCore/qsocketnotifier.h:59
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qintptr socket()
+// [8] qintptr socket() const
 func (this *QSocketNotifier) Socket() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier6socketEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +128,7 @@ func (this *QSocketNotifier) Socket() int64 {
 // /usr/include/qt/QtCore/qsocketnotifier.h:60
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSocketNotifier::Type type()
+// [4] QSocketNotifier::Type type() const
 func (this *QSocketNotifier) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,7 +138,7 @@ func (this *QSocketNotifier) Type() int {
 // /usr/include/qt/QtCore/qsocketnotifier.h:62
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEnabled()
+// [1] bool isEnabled() const
 func (this *QSocketNotifier) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

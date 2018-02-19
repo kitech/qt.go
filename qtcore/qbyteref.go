@@ -92,7 +92,7 @@ func (this *QByteRef) Operator_equal_1(c QByteRef_ITF) *QByteRef {
 // /usr/include/qt/QtCore/qbytearray.h:541
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(char)
+// [1] bool operator==(char) const
 func (this *QByteRef) Operator_equal_equal(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefeqEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -102,7 +102,7 @@ func (this *QByteRef) Operator_equal_equal(c byte) bool {
 // /usr/include/qt/QtCore/qbytearray.h:543
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(char)
+// [1] bool operator!=(char) const
 func (this *QByteRef) Operator_not_equal(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefneEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -112,7 +112,7 @@ func (this *QByteRef) Operator_not_equal(c byte) bool {
 // /usr/include/qt/QtCore/qbytearray.h:545
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>(char)
+// [1] bool operator>(char) const
 func (this *QByteRef) Operator_greater_than(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefgtEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func (this *QByteRef) Operator_greater_than(c byte) bool {
 // /usr/include/qt/QtCore/qbytearray.h:547
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>=(char)
+// [1] bool operator>=(char) const
 func (this *QByteRef) Operator_greater_than_equal(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefgeEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QByteRef) Operator_greater_than_equal(c byte) bool {
 // /usr/include/qt/QtCore/qbytearray.h:549
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<(char)
+// [1] bool operator<(char) const
 func (this *QByteRef) Operator_less_than(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefltEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -142,7 +142,7 @@ func (this *QByteRef) Operator_less_than(c byte) bool {
 // /usr/include/qt/QtCore/qbytearray.h:551
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<=(char)
+// [1] bool operator<=(char) const
 func (this *QByteRef) Operator_less_than_equal(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefleEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)

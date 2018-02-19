@@ -176,7 +176,7 @@ func (this *QPagedPaintDevice) SetPageMargins_1(margins qtcore.QMarginsF_ITF, un
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:224
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPageLayout pageLayout()
+// [8] QPageLayout pageLayout() const
 func (this *QPagedPaintDevice) PageLayout() *QPageLayout /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,7 +188,7 @@ func (this *QPagedPaintDevice) PageLayout() *QPageLayout /*123*/ {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:227
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QPagedPaintDevice::PageSize pageSize()
+// [4] QPagedPaintDevice::PageSize pageSize() const
 func (this *QPagedPaintDevice) PageSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice8pageSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -211,7 +211,7 @@ func (this *QPagedPaintDevice) SetPageSizeMM(size qtcore.QSizeF_ITF) {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:230
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QSizeF pageSizeMM()
+// [16] QSizeF pageSizeMM() const
 func (this *QPagedPaintDevice) PageSizeMM() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageSizeMMEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,7 +223,7 @@ func (this *QPagedPaintDevice) PageSizeMM() *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:241
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QPagedPaintDevice::Margins margins()
+// [32] QPagedPaintDevice::Margins margins() const
 func (this *QPagedPaintDevice) Margins() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice7marginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -233,7 +233,7 @@ func (this *QPagedPaintDevice) Margins() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:246
 // index:0
 // Protected Visibility=Default Availability=Available
-// [8] QPageLayout devicePageLayout()
+// [8] QPageLayout devicePageLayout() const
 func (this *QPagedPaintDevice) DevicePageLayout() *QPageLayout /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice16devicePageLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

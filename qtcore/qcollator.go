@@ -77,6 +77,20 @@ func NewQCollator(locale QLocale_ITF) *QCollator {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qcollator.h:86
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QCollator(const QLocale &)
+func NewQCollator__() *QCollator {
+	// arg: 0, const QLocale &=LValueReference, QLocale=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollatorC2ERK7QLocale", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQCollatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCollator)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qcollator.h:88
 // index:0
 // Public Visibility=Default Availability=Available
@@ -145,7 +159,7 @@ func (this *QCollator) SetLocale(locale QLocale_ITF) {
 // /usr/include/qt/QtCore/qcollator.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QLocale locale()
+// [8] QLocale locale() const
 func (this *QCollator) Locale() *QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator6localeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +171,7 @@ func (this *QCollator) Locale() *QLocale /*123*/ {
 // /usr/include/qt/QtCore/qcollator.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::CaseSensitivity caseSensitivity()
+// [4] Qt::CaseSensitivity caseSensitivity() const
 func (this *QCollator) CaseSensitivity() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator15caseSensitivityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,7 +199,7 @@ func (this *QCollator) SetNumericMode(on bool) {
 // /usr/include/qt/QtCore/qcollator.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool numericMode()
+// [1] bool numericMode() const
 func (this *QCollator) NumericMode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator11numericModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -204,7 +218,7 @@ func (this *QCollator) SetIgnorePunctuation(on bool) {
 // /usr/include/qt/QtCore/qcollator.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool ignorePunctuation()
+// [1] bool ignorePunctuation() const
 func (this *QCollator) IgnorePunctuation() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator17ignorePunctuationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,7 +228,7 @@ func (this *QCollator) IgnorePunctuation() bool {
 // /usr/include/qt/QtCore/qcollator.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int compare(const QString &, const QString &)
+// [4] int compare(const QString &, const QString &) const
 func (this *QCollator) Compare(s1 string, s2 string) int {
 	var tmpArg0 = NewQString_5(s1)
 	var convArg0 = tmpArg0.GetCthis()
@@ -228,7 +242,7 @@ func (this *QCollator) Compare(s1 string, s2 string) int {
 // /usr/include/qt/QtCore/qcollator.h:113
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] int compare(const QStringRef &, const QStringRef &)
+// [4] int compare(const QStringRef &, const QStringRef &) const
 func (this *QCollator) Compare_1(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
@@ -246,7 +260,7 @@ func (this *QCollator) Compare_1(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 // /usr/include/qt/QtCore/qcollator.h:114
 // index:2
 // Public Visibility=Default Availability=Available
-// [4] int compare(const QChar *, int, const QChar *, int)
+// [4] int compare(const QChar *, int, const QChar *, int) const
 func (this *QCollator) Compare_2(s1 QChar_ITF /*777 const QChar **/, len1 int, s2 QChar_ITF /*777 const QChar **/, len2 int) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QChar_PTR() != nil {
@@ -264,7 +278,7 @@ func (this *QCollator) Compare_2(s1 QChar_ITF /*777 const QChar **/, len1 int, s
 // /usr/include/qt/QtCore/qcollator.h:116
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator()(const QString &, const QString &)
+// [1] bool operator()(const QString &, const QString &) const
 func (this *QCollator) Operator_fncall(s1 string, s2 string) bool {
 	var tmpArg0 = NewQString_5(s1)
 	var convArg0 = tmpArg0.GetCthis()
@@ -278,7 +292,7 @@ func (this *QCollator) Operator_fncall(s1 string, s2 string) bool {
 // /usr/include/qt/QtCore/qcollator.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QCollatorSortKey sortKey(const QString &)
+// [8] QCollatorSortKey sortKey(const QString &) const
 func (this *QCollator) SortKey(string string) *QCollatorSortKey /*123*/ {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()

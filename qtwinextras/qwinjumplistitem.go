@@ -98,7 +98,7 @@ func (this *QWinJumpListItem) SetType(type_ int) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QWinJumpListItem::Type type()
+// [4] QWinJumpListItem::Type type() const
 func (this *QWinJumpListItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,7 +119,7 @@ func (this *QWinJumpListItem) SetFilePath(filePath string) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString filePath()
+// [8] QString filePath() const
 func (this *QWinJumpListItem) FilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem8filePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +143,7 @@ func (this *QWinJumpListItem) SetWorkingDirectory(workingDirectory string) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString workingDirectory()
+// [8] QString workingDirectory() const
 func (this *QWinJumpListItem) WorkingDirectory() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem16workingDirectoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -169,7 +169,7 @@ func (this *QWinJumpListItem) SetIcon(icon qtgui.QIcon_ITF) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QIcon icon()
+// [8] QIcon icon() const
 func (this *QWinJumpListItem) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func (this *QWinJumpListItem) SetTitle(title string) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString title()
+// [8] QString title() const
 func (this *QWinJumpListItem) Title() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem5titleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +216,7 @@ func (this *QWinJumpListItem) SetDescription(description string) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString description()
+// [8] QString description() const
 func (this *QWinJumpListItem) Description() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,7 +242,7 @@ func (this *QWinJumpListItem) SetArguments(arguments qtcore.QStringList_ITF) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList arguments()
+// [8] QStringList arguments() const
 func (this *QWinJumpListItem) Arguments() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem9argumentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

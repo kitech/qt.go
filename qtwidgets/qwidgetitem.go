@@ -91,7 +91,7 @@ func DeleteQWidgetItem(this *QWidgetItem) {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:129
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -103,7 +103,7 @@ func (this *QWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:130
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSize()
+// [8] QSize minimumSize() const
 func (this *QWidgetItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,7 +115,7 @@ func (this *QWidgetItem) MinimumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:131
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize maximumSize()
+// [8] QSize maximumSize() const
 func (this *QWidgetItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,7 +127,7 @@ func (this *QWidgetItem) MaximumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:132
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] Qt::Orientations expandingDirections()
+// [4] Qt::Orientations expandingDirections() const
 func (this *QWidgetItem) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func (this *QWidgetItem) ExpandingDirections() int {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:133
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QWidgetItem) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ func (this *QWidgetItem) SetGeometry(arg0 qtcore.QRect_ITF) {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:135
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect geometry()
+// [16] QRect geometry() const
 func (this *QWidgetItem) Geometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +182,7 @@ func (this *QWidgetItem) Widget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:138
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool hasHeightForWidth()
+// [1] bool hasHeightForWidth() const
 func (this *QWidgetItem) HasHeightForWidth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem17hasHeightForWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func (this *QWidgetItem) HasHeightForWidth() bool {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:139
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int heightForWidth(int)
+// [4] int heightForWidth(int) const
 func (this *QWidgetItem) HeightForWidth(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func (this *QWidgetItem) HeightForWidth(arg0 int) int {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:140
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QSizePolicy::ControlTypes controlTypes()
+// [4] QSizePolicy::ControlTypes controlTypes() const
 func (this *QWidgetItem) ControlTypes() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWidgetItem12controlTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

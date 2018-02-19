@@ -129,7 +129,7 @@ func (this *QHttpPart) Swap(other QHttpPart_ITF) {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QHttpPart &)
+// [1] bool operator==(const QHttpPart &) const
 func (this *QHttpPart) Operator_equal_equal(other QHttpPart_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QHttpPart_PTR() != nil {
@@ -143,7 +143,7 @@ func (this *QHttpPart) Operator_equal_equal(other QHttpPart_ITF) bool {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:69
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QHttpPart &)
+// [1] bool operator!=(const QHttpPart &) const
 func (this *QHttpPart) Operator_not_equal(other QHttpPart_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QHttpPart_PTR() != nil {

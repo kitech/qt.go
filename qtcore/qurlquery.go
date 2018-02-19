@@ -145,7 +145,7 @@ func DeleteQUrlQuery(this *QUrlQuery) {
 // /usr/include/qt/QtCore/qurlquery.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QUrlQuery &)
+// [1] bool operator==(const QUrlQuery &) const
 func (this *QUrlQuery) Operator_equal_equal(other QUrlQuery_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUrlQuery_PTR() != nil {
@@ -159,7 +159,7 @@ func (this *QUrlQuery) Operator_equal_equal(other QUrlQuery_ITF) bool {
 // /usr/include/qt/QtCore/qurlquery.h:70
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QUrlQuery &)
+// [1] bool operator!=(const QUrlQuery &) const
 func (this *QUrlQuery) Operator_not_equal(other QUrlQuery_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUrlQuery_PTR() != nil {
@@ -186,7 +186,7 @@ func (this *QUrlQuery) Swap(other QUrlQuery_ITF) {
 // /usr/include/qt/QtCore/qurlquery.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QUrlQuery) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -196,7 +196,7 @@ func (this *QUrlQuery) IsEmpty() bool {
 // /usr/include/qt/QtCore/qurlquery.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isDetached()
+// [1] bool isDetached() const
 func (this *QUrlQuery) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -243,7 +243,7 @@ func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter QChar_ITF /*123*/, pair
 // /usr/include/qt/QtCore/qurlquery.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] QChar queryValueDelimiter()
+// [2] QChar queryValueDelimiter() const
 func (this *QUrlQuery) QueryValueDelimiter() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery19queryValueDelimiterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,7 +255,7 @@ func (this *QUrlQuery) QueryValueDelimiter() *QChar /*123*/ {
 // /usr/include/qt/QtCore/qurlquery.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] QChar queryPairDelimiter()
+// [2] QChar queryPairDelimiter() const
 func (this *QUrlQuery) QueryPairDelimiter() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery18queryPairDelimiterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -267,7 +267,7 @@ func (this *QUrlQuery) QueryPairDelimiter() *QChar /*123*/ {
 // /usr/include/qt/QtCore/qurlquery.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasQueryItem(const QString &)
+// [1] bool hasQueryItem(const QString &) const
 func (this *QUrlQuery) HasQueryItem(key string) bool {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()

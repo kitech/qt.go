@@ -120,7 +120,7 @@ func (this *QSGSimpleRectNode) SetRect_1(x float64, y float64, w float64, h floa
 // /usr/include/qt/QtQuick/qsgsimplerectnode.h:56
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF rect()
+// [32] QRectF rect() const
 func (this *QSGSimpleRectNode) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGSimpleRectNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,7 +145,7 @@ func (this *QSGSimpleRectNode) SetColor(color qtgui.QColor_ITF) {
 // /usr/include/qt/QtQuick/qsgsimplerectnode.h:59
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QColor color()
+// [16] QColor color() const
 func (this *QSGSimpleRectNode) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGSimpleRectNode5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

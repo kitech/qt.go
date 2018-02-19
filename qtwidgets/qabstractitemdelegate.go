@@ -64,7 +64,7 @@ func (*QAbstractItemDelegate) NewFromPointer(cthis unsafe.Pointer) *QAbstractIte
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAbstractItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +87,20 @@ func NewQAbstractItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:72
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAbstractItemDelegate(QObject *)
+func NewQAbstractItemDelegate__() *QAbstractItemDelegate {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegateC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAbstractItemDelegateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractItemDelegate")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -101,7 +115,7 @@ func DeleteQAbstractItemDelegate(this *QAbstractItemDelegate) {
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:76
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [-2] void paint(QPainter *, const QStyleOptionViewItem &, const QModelIndex &)
+// [-2] void paint(QPainter *, const QStyleOptionViewItem &, const QModelIndex &) const
 func (this *QAbstractItemDelegate) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -122,7 +136,7 @@ func (this *QAbstractItemDelegate) Paint(painter qtgui.QPainter_ITF /*777 QPaint
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:80
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &)
+// [8] QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &) const
 func (this *QAbstractItemDelegate) SizeHint(option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionViewItem_PTR() != nil {
@@ -142,7 +156,7 @@ func (this *QAbstractItemDelegate) SizeHint(option QStyleOptionViewItem_ITF, ind
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QWidget * createEditor(QWidget *, const QStyleOptionViewItem &, const QModelIndex &)
+// [8] QWidget * createEditor(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
 func (this *QAbstractItemDelegate) CreateEditor(parent QWidget_ITF /*777 QWidget **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -164,7 +178,7 @@ func (this *QAbstractItemDelegate) CreateEditor(parent QWidget_ITF /*777 QWidget
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void destroyEditor(QWidget *, const QModelIndex &)
+// [-2] void destroyEditor(QWidget *, const QModelIndex &) const
 func (this *QAbstractItemDelegate) DestroyEditor(editor QWidget_ITF /*777 QWidget **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -181,7 +195,7 @@ func (this *QAbstractItemDelegate) DestroyEditor(editor QWidget_ITF /*777 QWidge
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setEditorData(QWidget *, const QModelIndex &)
+// [-2] void setEditorData(QWidget *, const QModelIndex &) const
 func (this *QAbstractItemDelegate) SetEditorData(editor QWidget_ITF /*777 QWidget **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -198,7 +212,7 @@ func (this *QAbstractItemDelegate) SetEditorData(editor QWidget_ITF /*777 QWidge
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:92
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setModelData(QWidget *, QAbstractItemModel *, const QModelIndex &)
+// [-2] void setModelData(QWidget *, QAbstractItemModel *, const QModelIndex &) const
 func (this *QAbstractItemDelegate) SetModelData(editor QWidget_ITF /*777 QWidget **/, model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -219,7 +233,7 @@ func (this *QAbstractItemDelegate) SetModelData(editor QWidget_ITF /*777 QWidget
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:96
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void updateEditorGeometry(QWidget *, const QStyleOptionViewItem &, const QModelIndex &)
+// [-2] void updateEditorGeometry(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
 func (this *QAbstractItemDelegate) UpdateEditorGeometry(editor QWidget_ITF /*777 QWidget **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -335,6 +349,21 @@ func (this *QAbstractItemDelegate) CloseEditor(editor QWidget_ITF /*777 QWidget 
 	if editor != nil && editor.QWidget_PTR() != nil {
 		convArg0 = editor.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:118
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void closeEditor(QWidget *, QAbstractItemDelegate::EndEditHint)
+func (this *QAbstractItemDelegate) CloseEditor__(editor QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if editor != nil && editor.QWidget_PTR() != nil {
+		convArg0 = editor.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, QAbstractItemDelegate::EndEditHint=Elaborated, QAbstractItemDelegate::EndEditHint=Enum,
+	hint := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)
 }

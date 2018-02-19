@@ -177,7 +177,7 @@ func (this *QTextCursor) Swap(other QTextCursor_ITF) {
 // /usr/include/qt/QtGui/qtextcursor.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QTextCursor) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -193,10 +193,21 @@ func (this *QTextCursor) SetPosition(pos int, mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qtextcursor.h:91
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setPosition(int, enum QTextCursor::MoveMode)
+func (this *QTextCursor) SetPosition__(pos int) {
+	// arg: 1, QTextCursor::MoveMode=Enum, QTextCursor::MoveMode=Enum,
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11setPositionEiNS_8MoveModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, mode)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qtextcursor.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int position()
+// [4] int position() const
 func (this *QTextCursor) Position() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -206,7 +217,7 @@ func (this *QTextCursor) Position() int {
 // /usr/include/qt/QtGui/qtextcursor.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int positionInBlock()
+// [4] int positionInBlock() const
 func (this *QTextCursor) PositionInBlock() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor15positionInBlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +227,7 @@ func (this *QTextCursor) PositionInBlock() int {
 // /usr/include/qt/QtGui/qtextcursor.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int anchor()
+// [4] int anchor() const
 func (this *QTextCursor) Anchor() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor6anchorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -259,10 +270,36 @@ func (this *QTextCursor) MovePosition(op int, arg1 int, n int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qtextcursor.h:131
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool movePosition(enum QTextCursor::MoveOperation, enum QTextCursor::MoveMode, int)
+func (this *QTextCursor) MovePosition__(op int) bool {
+	// arg: 1, QTextCursor::MoveMode=Enum, QTextCursor::MoveMode=Enum,
+	arg1 := 0
+	// arg: 2, int=Int, =Invalid,
+	n := 1
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor12movePositionENS_13MoveOperationENS_8MoveModeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), op, arg1, n)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qtextcursor.h:131
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool movePosition(enum QTextCursor::MoveOperation, enum QTextCursor::MoveMode, int)
+func (this *QTextCursor) MovePosition__1(op int, arg1 int) bool {
+	// arg: 2, int=Int, =Invalid,
+	n := 1
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor12movePositionENS_13MoveOperationENS_8MoveModeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), op, arg1, n)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qtextcursor.h:133
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool visualNavigation()
+// [1] bool visualNavigation() const
 func (this *QTextCursor) VisualNavigation() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor16visualNavigationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -290,7 +327,7 @@ func (this *QTextCursor) SetVerticalMovementX(x int) {
 // /usr/include/qt/QtGui/qtextcursor.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int verticalMovementX()
+// [4] int verticalMovementX() const
 func (this *QTextCursor) VerticalMovementX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor17verticalMovementXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -309,7 +346,7 @@ func (this *QTextCursor) SetKeepPositionOnInsert(b bool) {
 // /usr/include/qt/QtGui/qtextcursor.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool keepPositionOnInsert()
+// [1] bool keepPositionOnInsert() const
 func (this *QTextCursor) KeepPositionOnInsert() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor20keepPositionOnInsertEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -346,7 +383,7 @@ func (this *QTextCursor) Select(selection int) {
 // /usr/include/qt/QtGui/qtextcursor.h:153
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasSelection()
+// [1] bool hasSelection() const
 func (this *QTextCursor) HasSelection() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor12hasSelectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -356,7 +393,7 @@ func (this *QTextCursor) HasSelection() bool {
 // /usr/include/qt/QtGui/qtextcursor.h:154
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasComplexSelection()
+// [1] bool hasComplexSelection() const
 func (this *QTextCursor) HasComplexSelection() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor19hasComplexSelectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -384,7 +421,7 @@ func (this *QTextCursor) ClearSelection() {
 // /usr/include/qt/QtGui/qtextcursor.h:157
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int selectionStart()
+// [4] int selectionStart() const
 func (this *QTextCursor) SelectionStart() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor14selectionStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -394,7 +431,7 @@ func (this *QTextCursor) SelectionStart() int {
 // /usr/include/qt/QtGui/qtextcursor.h:158
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int selectionEnd()
+// [4] int selectionEnd() const
 func (this *QTextCursor) SelectionEnd() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor12selectionEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -404,7 +441,7 @@ func (this *QTextCursor) SelectionEnd() int {
 // /usr/include/qt/QtGui/qtextcursor.h:160
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString selectedText()
+// [8] QString selectedText() const
 func (this *QTextCursor) SelectedText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor12selectedTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -417,7 +454,7 @@ func (this *QTextCursor) SelectedText() string {
 // /usr/include/qt/QtGui/qtextcursor.h:161
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextDocumentFragment selection()
+// [8] QTextDocumentFragment selection() const
 func (this *QTextCursor) Selection() *QTextDocumentFragment /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor9selectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -429,7 +466,7 @@ func (this *QTextCursor) Selection() *QTextDocumentFragment /*123*/ {
 // /usr/include/qt/QtGui/qtextcursor.h:162
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void selectedTableCells(int *, int *, int *, int *)
+// [-2] void selectedTableCells(int *, int *, int *, int *) const
 func (this *QTextCursor) SelectedTableCells(firstRow unsafe.Pointer /*666*/, numRows unsafe.Pointer /*666*/, firstColumn unsafe.Pointer /*666*/, numColumns unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), firstRow, numRows, firstColumn, numColumns)
 	qtrt.ErrPrint(err, rv)
@@ -438,7 +475,7 @@ func (this *QTextCursor) SelectedTableCells(firstRow unsafe.Pointer /*666*/, num
 // /usr/include/qt/QtGui/qtextcursor.h:164
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QTextBlock block()
+// [16] QTextBlock block() const
 func (this *QTextCursor) Block() *QTextBlock /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor5blockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -450,7 +487,7 @@ func (this *QTextCursor) Block() *QTextBlock /*123*/ {
 // /usr/include/qt/QtGui/qtextcursor.h:166
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QTextCharFormat charFormat()
+// [16] QTextCharFormat charFormat() const
 func (this *QTextCursor) CharFormat() *QTextCharFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor10charFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -488,7 +525,7 @@ func (this *QTextCursor) MergeCharFormat(modifier QTextCharFormat_ITF) {
 // /usr/include/qt/QtGui/qtextcursor.h:170
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QTextBlockFormat blockFormat()
+// [16] QTextBlockFormat blockFormat() const
 func (this *QTextCursor) BlockFormat() *QTextBlockFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor11blockFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -526,7 +563,7 @@ func (this *QTextCursor) MergeBlockFormat(modifier QTextBlockFormat_ITF) {
 // /usr/include/qt/QtGui/qtextcursor.h:174
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QTextCharFormat blockCharFormat()
+// [16] QTextCharFormat blockCharFormat() const
 func (this *QTextCursor) BlockCharFormat() *QTextCharFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor15blockCharFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -564,7 +601,7 @@ func (this *QTextCursor) MergeBlockCharFormat(modifier QTextCharFormat_ITF) {
 // /usr/include/qt/QtGui/qtextcursor.h:178
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool atBlockStart()
+// [1] bool atBlockStart() const
 func (this *QTextCursor) AtBlockStart() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor12atBlockStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -574,7 +611,7 @@ func (this *QTextCursor) AtBlockStart() bool {
 // /usr/include/qt/QtGui/qtextcursor.h:179
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool atBlockEnd()
+// [1] bool atBlockEnd() const
 func (this *QTextCursor) AtBlockEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor10atBlockEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -584,7 +621,7 @@ func (this *QTextCursor) AtBlockEnd() bool {
 // /usr/include/qt/QtGui/qtextcursor.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool atStart()
+// [1] bool atStart() const
 func (this *QTextCursor) AtStart() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor7atStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -594,7 +631,7 @@ func (this *QTextCursor) AtStart() bool {
 // /usr/include/qt/QtGui/qtextcursor.h:181
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool atEnd()
+// [1] bool atEnd() const
 func (this *QTextCursor) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -691,7 +728,7 @@ func (this *QTextCursor) CreateList_1(style int) *QTextList /*777 QTextList **/ 
 // /usr/include/qt/QtGui/qtextcursor.h:192
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextList * currentList()
+// [8] QTextList * currentList() const
 func (this *QTextCursor) CurrentList() *QTextList /*777 QTextList **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor11currentListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -725,7 +762,7 @@ func (this *QTextCursor) InsertTable_1(rows int, cols int) *QTextTable /*777 QTe
 // /usr/include/qt/QtGui/qtextcursor.h:196
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextTable * currentTable()
+// [8] QTextTable * currentTable() const
 func (this *QTextCursor) CurrentTable() *QTextTable /*777 QTextTable **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor12currentTableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -749,7 +786,7 @@ func (this *QTextCursor) InsertFrame(format QTextFrameFormat_ITF) *QTextFrame /*
 // /usr/include/qt/QtGui/qtextcursor.h:199
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextFrame * currentFrame()
+// [8] QTextFrame * currentFrame() const
 func (this *QTextCursor) CurrentFrame() *QTextFrame /*777 QTextFrame **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor12currentFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -832,6 +869,21 @@ func (this *QTextCursor) InsertImage_3(image QImage_ITF, name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qtextcursor.h:210
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void insertImage(const QImage &, const QString &)
+func (this *QTextCursor) InsertImage_3_(image QImage_ITF) {
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QImage_PTR() != nil {
+		convArg0 = image.QImage_PTR().GetCthis()
+	}
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK6QImageRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qtextcursor.h:212
 // index:0
 // Public Visibility=Default Availability=Available
@@ -862,7 +914,7 @@ func (this *QTextCursor) EndEditBlock() {
 // /usr/include/qt/QtGui/qtextcursor.h:216
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator!=(const QTextCursor &)
+// [1] bool operator!=(const QTextCursor &) const
 func (this *QTextCursor) Operator_not_equal(rhs QTextCursor_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if rhs != nil && rhs.QTextCursor_PTR() != nil {
@@ -876,7 +928,7 @@ func (this *QTextCursor) Operator_not_equal(rhs QTextCursor_ITF) bool {
 // /usr/include/qt/QtGui/qtextcursor.h:217
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator<(const QTextCursor &)
+// [1] bool operator<(const QTextCursor &) const
 func (this *QTextCursor) Operator_less_than(rhs QTextCursor_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if rhs != nil && rhs.QTextCursor_PTR() != nil {
@@ -890,7 +942,7 @@ func (this *QTextCursor) Operator_less_than(rhs QTextCursor_ITF) bool {
 // /usr/include/qt/QtGui/qtextcursor.h:218
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator<=(const QTextCursor &)
+// [1] bool operator<=(const QTextCursor &) const
 func (this *QTextCursor) Operator_less_than_equal(rhs QTextCursor_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if rhs != nil && rhs.QTextCursor_PTR() != nil {
@@ -904,7 +956,7 @@ func (this *QTextCursor) Operator_less_than_equal(rhs QTextCursor_ITF) bool {
 // /usr/include/qt/QtGui/qtextcursor.h:219
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QTextCursor &)
+// [1] bool operator==(const QTextCursor &) const
 func (this *QTextCursor) Operator_equal_equal(rhs QTextCursor_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if rhs != nil && rhs.QTextCursor_PTR() != nil {
@@ -918,7 +970,7 @@ func (this *QTextCursor) Operator_equal_equal(rhs QTextCursor_ITF) bool {
 // /usr/include/qt/QtGui/qtextcursor.h:220
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator>=(const QTextCursor &)
+// [1] bool operator>=(const QTextCursor &) const
 func (this *QTextCursor) Operator_greater_than_equal(rhs QTextCursor_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if rhs != nil && rhs.QTextCursor_PTR() != nil {
@@ -932,7 +984,7 @@ func (this *QTextCursor) Operator_greater_than_equal(rhs QTextCursor_ITF) bool {
 // /usr/include/qt/QtGui/qtextcursor.h:221
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator>(const QTextCursor &)
+// [1] bool operator>(const QTextCursor &) const
 func (this *QTextCursor) Operator_greater_than(rhs QTextCursor_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if rhs != nil && rhs.QTextCursor_PTR() != nil {
@@ -946,7 +998,7 @@ func (this *QTextCursor) Operator_greater_than(rhs QTextCursor_ITF) bool {
 // /usr/include/qt/QtGui/qtextcursor.h:223
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isCopyOf(const QTextCursor &)
+// [1] bool isCopyOf(const QTextCursor &) const
 func (this *QTextCursor) IsCopyOf(other QTextCursor_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTextCursor_PTR() != nil {
@@ -960,7 +1012,7 @@ func (this *QTextCursor) IsCopyOf(other QTextCursor_ITF) bool {
 // /usr/include/qt/QtGui/qtextcursor.h:225
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int blockNumber()
+// [4] int blockNumber() const
 func (this *QTextCursor) BlockNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor11blockNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -970,7 +1022,7 @@ func (this *QTextCursor) BlockNumber() int {
 // /usr/include/qt/QtGui/qtextcursor.h:226
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int columnNumber()
+// [4] int columnNumber() const
 func (this *QTextCursor) ColumnNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor12columnNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -980,7 +1032,7 @@ func (this *QTextCursor) ColumnNumber() int {
 // /usr/include/qt/QtGui/qtextcursor.h:228
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextDocument * document()
+// [8] QTextDocument * document() const
 func (this *QTextCursor) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextCursor8documentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

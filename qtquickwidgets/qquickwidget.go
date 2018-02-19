@@ -163,7 +163,7 @@ func (*QQuickWidget) NewFromPointer(cthis unsafe.Pointer) *QQuickWidget {
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQuickWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +179,20 @@ func NewQQuickWidget(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidg
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQuickWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickWidget")
+	return gothis
+}
+
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:67
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickWidget(QWidget *)
+func NewQQuickWidget__() *QQuickWidget {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -226,6 +240,24 @@ func NewQQuickWidget_2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*77
 	return gothis
 }
 
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:69
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickWidget(const QUrl &, QWidget *)
+func NewQQuickWidget_2_(source qtcore.QUrl_ITF) *QQuickWidget {
+	var convArg0 unsafe.Pointer
+	if source != nil && source.QUrl_PTR() != nil {
+		convArg0 = source.QUrl_PTR().GetCthis()
+	}
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidgetC2ERK4QUrlP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQuickWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickWidget")
+	return gothis
+}
+
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -240,7 +272,7 @@ func DeleteQQuickWidget(this *QQuickWidget) {
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QUrl source()
+// [8] QUrl source() const
 func (this *QQuickWidget) Source() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -252,7 +284,7 @@ func (this *QQuickWidget) Source() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlEngine * engine()
+// [8] QQmlEngine * engine() const
 func (this *QQuickWidget) Engine() *qtqml.QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -262,7 +294,7 @@ func (this *QQuickWidget) Engine() *qtqml.QQmlEngine /*777 QQmlEngine **/ {
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQmlContext * rootContext()
+// [8] QQmlContext * rootContext() const
 func (this *QQuickWidget) RootContext() *qtqml.QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget11rootContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -272,7 +304,7 @@ func (this *QQuickWidget) RootContext() *qtqml.QQmlContext /*777 QQmlContext **/
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQuickItem * rootObject()
+// [8] QQuickItem * rootObject() const
 func (this *QQuickWidget) RootObject() *qtquick.QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget10rootObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -282,7 +314,7 @@ func (this *QQuickWidget) RootObject() *qtquick.QQuickItem /*777 QQuickItem **/ 
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QQuickWidget::ResizeMode resizeMode()
+// [4] QQuickWidget::ResizeMode resizeMode() const
 func (this *QQuickWidget) ResizeMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget10resizeModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -301,7 +333,7 @@ func (this *QQuickWidget) SetResizeMode(arg0 int) {
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QQuickWidget::Status status()
+// [4] QQuickWidget::Status status() const
 func (this *QQuickWidget) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -311,7 +343,7 @@ func (this *QQuickWidget) Status() int {
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QQuickWidget) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -323,7 +355,7 @@ func (this *QQuickWidget) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize initialSize()
+// [8] QSize initialSize() const
 func (this *QQuickWidget) InitialSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget11initialSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -348,7 +380,7 @@ func (this *QQuickWidget) SetFormat(format qtgui.QSurfaceFormat_ITF) {
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSurfaceFormat format()
+// [8] QSurfaceFormat format() const
 func (this *QQuickWidget) Format() *qtgui.QSurfaceFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -360,7 +392,7 @@ func (this *QQuickWidget) Format() *qtgui.QSurfaceFormat /*123*/ {
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QImage grabFramebuffer()
+// [32] QImage grabFramebuffer() const
 func (this *QQuickWidget) GrabFramebuffer() *qtgui.QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget15grabFramebufferEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -385,7 +417,7 @@ func (this *QQuickWidget) SetClearColor(color qtgui.QColor_ITF) {
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQuickWindow * quickWindow()
+// [8] QQuickWindow * quickWindow() const
 func (this *QQuickWidget) QuickWindow() *qtquick.QQuickWindow /*777 QQuickWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget11quickWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

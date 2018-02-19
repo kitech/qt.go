@@ -75,6 +75,36 @@ func NewQStyleOption(version int, type_ int) *QStyleOption {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:102
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOption(int, int)
+func NewQStyleOption__() *QStyleOption {
+	// arg: 0, int=Int, =Invalid,
+	version := 0 /*QStyleOption::Version*/
+	// arg: 1, int=Int, =Invalid,
+	type_ := QStyleOption__SO_Default
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStyleOptionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOption)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:102
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOption(int, int)
+func NewQStyleOption__1(version int) *QStyleOption {
+	// arg: 1, int=Int, =Invalid,
+	type_ := QStyleOption__SO_Default
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStyleOptionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOption)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qstyleoption.h:104
 // index:0
 // Public Visibility=Default Availability=Available

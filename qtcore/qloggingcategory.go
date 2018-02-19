@@ -103,7 +103,7 @@ func DeleteQLoggingCategory(this *QLoggingCategory) {
 // /usr/include/qt/QtCore/qloggingcategory.h:57
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEnabled(enum QtMsgType)
+// [1] bool isEnabled(enum QtMsgType) const
 func (this *QLoggingCategory) IsEnabled(type_ int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	qtrt.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func (this *QLoggingCategory) SetEnabled(type_ int, enable bool) {
 // /usr/include/qt/QtCore/qloggingcategory.h:61
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isDebugEnabled()
+// [1] bool isDebugEnabled() const
 func (this *QLoggingCategory) IsDebugEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory14isDebugEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QLoggingCategory) IsDebugEnabled() bool {
 // /usr/include/qt/QtCore/qloggingcategory.h:62
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isInfoEnabled()
+// [1] bool isInfoEnabled() const
 func (this *QLoggingCategory) IsInfoEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory13isInfoEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,7 +142,7 @@ func (this *QLoggingCategory) IsInfoEnabled() bool {
 // /usr/include/qt/QtCore/qloggingcategory.h:63
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isWarningEnabled()
+// [1] bool isWarningEnabled() const
 func (this *QLoggingCategory) IsWarningEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory16isWarningEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -152,7 +152,7 @@ func (this *QLoggingCategory) IsWarningEnabled() bool {
 // /usr/include/qt/QtCore/qloggingcategory.h:64
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isCriticalEnabled()
+// [1] bool isCriticalEnabled() const
 func (this *QLoggingCategory) IsCriticalEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory17isCriticalEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func (this *QLoggingCategory) IsCriticalEnabled() bool {
 // /usr/include/qt/QtCore/qloggingcategory.h:71
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const char * categoryName()
+// [8] const char * categoryName() const
 func (this *QLoggingCategory) CategoryName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory12categoryNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

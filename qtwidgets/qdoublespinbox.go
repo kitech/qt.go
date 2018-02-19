@@ -64,7 +64,7 @@ func (*QDoubleSpinBox) NewFromPointer(cthis unsafe.Pointer) *QDoubleSpinBox {
 // /usr/include/qt/QtWidgets/qspinbox.h:115
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QDoubleSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +87,20 @@ func NewQDoubleSpinBox(parent QWidget_ITF /*777 QWidget **/) *QDoubleSpinBox {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qspinbox.h:126
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDoubleSpinBox(QWidget *)
+func NewQDoubleSpinBox__() *QDoubleSpinBox {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDoubleSpinBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDoubleSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDoubleSpinBox")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qspinbox.h:127
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -101,7 +115,7 @@ func DeleteQDoubleSpinBox(this *QDoubleSpinBox) {
 // /usr/include/qt/QtWidgets/qspinbox.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double value()
+// [8] double value() const
 func (this *QDoubleSpinBox) Value() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox5valueEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +125,7 @@ func (this *QDoubleSpinBox) Value() float64 {
 // /usr/include/qt/QtWidgets/qspinbox.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString prefix()
+// [8] QString prefix() const
 func (this *QDoubleSpinBox) Prefix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox6prefixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,7 +149,7 @@ func (this *QDoubleSpinBox) SetPrefix(prefix string) {
 // /usr/include/qt/QtWidgets/qspinbox.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString suffix()
+// [8] QString suffix() const
 func (this *QDoubleSpinBox) Suffix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox6suffixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,7 +173,7 @@ func (this *QDoubleSpinBox) SetSuffix(suffix string) {
 // /usr/include/qt/QtWidgets/qspinbox.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString cleanText()
+// [8] QString cleanText() const
 func (this *QDoubleSpinBox) CleanText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox9cleanTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -172,7 +186,7 @@ func (this *QDoubleSpinBox) CleanText() string {
 // /usr/include/qt/QtWidgets/qspinbox.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double singleStep()
+// [8] double singleStep() const
 func (this *QDoubleSpinBox) SingleStep() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox10singleStepEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -191,7 +205,7 @@ func (this *QDoubleSpinBox) SetSingleStep(val float64) {
 // /usr/include/qt/QtWidgets/qspinbox.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double minimum()
+// [8] double minimum() const
 func (this *QDoubleSpinBox) Minimum() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox7minimumEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -210,7 +224,7 @@ func (this *QDoubleSpinBox) SetMinimum(min float64) {
 // /usr/include/qt/QtWidgets/qspinbox.h:145
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double maximum()
+// [8] double maximum() const
 func (this *QDoubleSpinBox) Maximum() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox7maximumEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,7 +252,7 @@ func (this *QDoubleSpinBox) SetRange(min float64, max float64) {
 // /usr/include/qt/QtWidgets/qspinbox.h:150
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int decimals()
+// [4] int decimals() const
 func (this *QDoubleSpinBox) Decimals() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox8decimalsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +271,7 @@ func (this *QDoubleSpinBox) SetDecimals(prec int) {
 // /usr/include/qt/QtWidgets/qspinbox.h:153
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QValidator::State validate(QString &, int &)
+// [4] QValidator::State validate(QString &, int &) const
 func (this *QDoubleSpinBox) Validate(input string, pos int) int {
 	var tmpArg0 = qtcore.NewQString_5(input)
 	var convArg0 = tmpArg0.GetCthis()
@@ -269,7 +283,7 @@ func (this *QDoubleSpinBox) Validate(input string, pos int) int {
 // /usr/include/qt/QtWidgets/qspinbox.h:154
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] double valueFromText(const QString &)
+// [8] double valueFromText(const QString &) const
 func (this *QDoubleSpinBox) ValueFromText(text string) float64 {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -281,7 +295,7 @@ func (this *QDoubleSpinBox) ValueFromText(text string) float64 {
 // /usr/include/qt/QtWidgets/qspinbox.h:155
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QString textFromValue(double)
+// [8] QString textFromValue(double) const
 func (this *QDoubleSpinBox) TextFromValue(val float64) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox13textFromValueEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	qtrt.ErrPrint(err, rv)
@@ -294,7 +308,7 @@ func (this *QDoubleSpinBox) TextFromValue(val float64) string {
 // /usr/include/qt/QtWidgets/qspinbox.h:156
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void fixup(QString &)
+// [-2] void fixup(QString &) const
 func (this *QDoubleSpinBox) Fixup(str string) {
 	var tmpArg0 = qtcore.NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()

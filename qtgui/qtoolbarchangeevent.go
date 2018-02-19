@@ -86,7 +86,7 @@ func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 // /usr/include/qt/QtGui/qevent.h:757
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool toggle()
+// [1] bool toggle() const
 func (this *QToolBarChangeEvent) Toggle() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

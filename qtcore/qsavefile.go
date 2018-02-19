@@ -32,14 +32,15 @@ import "github.com/kitech/qt.go/qtrt"
 //  body block begin
 
 // long long writeData(const char *, qint64)
-func (this *QSaveFile) InheritWriteData(f func(data string, len int64) int64) {
+func (this *QSaveFile) InheritWriteData(f func(data string, len_ int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
 
 type QSaveFile struct {
-	*qtrt.CObject
+	*QFileDevice
 }
 type QSaveFile_ITF interface {
+	QFileDevice_ITF
 	QSaveFile_PTR() *QSaveFile
 }
 
@@ -49,18 +50,15 @@ func (this *QSaveFile) GetCthis() unsafe.Pointer {
 	if this == nil {
 		return nil
 	} else {
-		return this.Cthis
+		return this.QFileDevice.GetCthis()
 	}
 }
 func (this *QSaveFile) SetCthis(cthis unsafe.Pointer) {
-	if this.CObject == nil {
-		this.CObject = &qtrt.CObject{cthis}
-	} else {
-		this.CObject.Cthis = cthis
-	}
+	this.QFileDevice = NewQFileDeviceFromPointer(cthis)
 }
 func NewQSaveFileFromPointer(cthis unsafe.Pointer) *QSaveFile {
-	return &QSaveFile{&qtrt.CObject{cthis}}
+	bcthis0 := NewQFileDeviceFromPointer(cthis)
+	return &QSaveFile{bcthis0}
 }
 func (*QSaveFile) NewFromPointer(cthis unsafe.Pointer) *QSaveFile {
 	return NewQSaveFileFromPointer(cthis)
@@ -69,7 +67,7 @@ func (*QSaveFile) NewFromPointer(cthis unsafe.Pointer) *QSaveFile {
 // /usr/include/qt/QtCore/qsavefile.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSaveFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSaveFile10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +97,20 @@ func NewQSaveFile_1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSaveFileFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSaveFile")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qsavefile.h:70
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QSaveFile(QObject *)
+func NewQSaveFile_1_() *QSaveFile {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSaveFileFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -138,7 +150,7 @@ func DeleteQSaveFile(this *QSaveFile) {
 // /usr/include/qt/QtCore/qsavefile.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QString fileName()
+// [8] QString fileName() const
 func (this *QSaveFile) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSaveFile8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,7 +212,7 @@ func (this *QSaveFile) SetDirectWriteFallback(enabled bool) {
 // /usr/include/qt/QtCore/qsavefile.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool directWriteFallback()
+// [1] bool directWriteFallback() const
 func (this *QSaveFile) DirectWriteFallback() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSaveFile19directWriteFallbackEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -211,10 +223,10 @@ func (this *QSaveFile) DirectWriteFallback() bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)
-func (this *QSaveFile) WriteData(data string, len int64) int64 {
+func (this *QSaveFile) WriteData(data string, len_ int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFile9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFile9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
 }

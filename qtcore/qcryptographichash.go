@@ -134,7 +134,7 @@ func (this *QCryptographicHash) AddData_2(device QIODevice_ITF /*777 QIODevice *
 // /usr/include/qt/QtCore/qcryptographichash.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray result()
+// [8] QByteArray result() const
 func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCryptographicHash6resultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

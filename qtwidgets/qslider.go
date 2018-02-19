@@ -89,7 +89,7 @@ func (*QSlider) NewFromPointer(cthis unsafe.Pointer) *QSlider {
 // /usr/include/qt/QtWidgets/qslider.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +105,20 @@ func NewQSlider(parent QWidget_ITF /*777 QWidget **/) *QSlider {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSliderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSlider")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qslider.h:71
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSlider(QWidget *)
+func NewQSlider__() *QSlider {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSliderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -128,6 +142,20 @@ func NewQSlider_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlide
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qslider.h:72
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QSlider(Qt::Orientation, QWidget *)
+func NewQSlider_1_(orientation int) *QSlider {
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSliderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSlider")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qslider.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -142,7 +170,7 @@ func DeleteQSlider(this *QSlider) {
 // /usr/include/qt/QtWidgets/qslider.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QSlider) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,7 +182,7 @@ func (this *QSlider) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qslider.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QSlider) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +203,7 @@ func (this *QSlider) SetTickPosition(position int) {
 // /usr/include/qt/QtWidgets/qslider.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSlider::TickPosition tickPosition()
+// [4] QSlider::TickPosition tickPosition() const
 func (this *QSlider) TickPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider12tickPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +222,7 @@ func (this *QSlider) SetTickInterval(ti int) {
 // /usr/include/qt/QtWidgets/qslider.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int tickInterval()
+// [4] int tickInterval() const
 func (this *QSlider) TickInterval() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider12tickIntervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -270,7 +298,7 @@ func (this *QSlider) MouseMoveEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent *
 // /usr/include/qt/QtWidgets/qslider.h:92
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOptionSlider *)
+// [-2] void initStyleOption(QStyleOptionSlider *) const
 func (this *QSlider) InitStyleOption(option QStyleOptionSlider_ITF /*777 QStyleOptionSlider **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionSlider_PTR() != nil {

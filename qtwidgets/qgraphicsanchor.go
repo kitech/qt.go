@@ -64,7 +64,7 @@ func (*QGraphicsAnchor) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnchor {
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGraphicsAnchor) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -92,7 +92,7 @@ func (this *QGraphicsAnchor) UnsetSpacing() {
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal spacing()
+// [8] qreal spacing() const
 func (this *QGraphicsAnchor) Spacing() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor7spacingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +111,7 @@ func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QSizePolicy::Policy sizePolicy()
+// [4] QSizePolicy::Policy sizePolicy() const
 func (this *QGraphicsAnchor) SizePolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10sizePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

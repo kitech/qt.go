@@ -73,6 +73,20 @@ func NewQEasingCurve(type_ int) *QEasingCurve {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qeasingcurve.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QEasingCurve(enum QEasingCurve::Type)
+func NewQEasingCurve__() *QEasingCurve {
+	// arg: 0, QEasingCurve::Type=Enum, QEasingCurve::Type=Enum,
+	type_ := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QEasingCurveC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQEasingCurve)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qeasingcurve.h:79
 // index:0
 // Public Visibility=Default Availability=Available
@@ -128,7 +142,7 @@ func (this *QEasingCurve) Swap(other QEasingCurve_ITF) {
 // /usr/include/qt/QtCore/qeasingcurve.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QEasingCurve &)
+// [1] bool operator==(const QEasingCurve &) const
 func (this *QEasingCurve) Operator_equal_equal(other QEasingCurve_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QEasingCurve_PTR() != nil {
@@ -142,7 +156,7 @@ func (this *QEasingCurve) Operator_equal_equal(other QEasingCurve_ITF) bool {
 // /usr/include/qt/QtCore/qeasingcurve.h:92
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QEasingCurve &)
+// [1] bool operator!=(const QEasingCurve &) const
 func (this *QEasingCurve) Operator_not_equal(other QEasingCurve_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QEasingCurve_PTR() != nil {
@@ -156,7 +170,7 @@ func (this *QEasingCurve) Operator_not_equal(other QEasingCurve_ITF) bool {
 // /usr/include/qt/QtCore/qeasingcurve.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal amplitude()
+// [8] qreal amplitude() const
 func (this *QEasingCurve) Amplitude() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve9amplitudeEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +189,7 @@ func (this *QEasingCurve) SetAmplitude(amplitude float64) {
 // /usr/include/qt/QtCore/qeasingcurve.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal period()
+// [8] qreal period() const
 func (this *QEasingCurve) Period() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve6periodEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +208,7 @@ func (this *QEasingCurve) SetPeriod(period float64) {
 // /usr/include/qt/QtCore/qeasingcurve.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal overshoot()
+// [8] qreal overshoot() const
 func (this *QEasingCurve) Overshoot() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve9overshootEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,7 +261,7 @@ func (this *QEasingCurve) AddTCBSegment(nextPoint QPointF_ITF, t float64, c floa
 // /usr/include/qt/QtCore/qeasingcurve.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QEasingCurve::Type type()
+// [4] QEasingCurve::Type type() const
 func (this *QEasingCurve) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -266,7 +280,7 @@ func (this *QEasingCurve) SetType(type_ int) {
 // /usr/include/qt/QtCore/qeasingcurve.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QEasingCurve::EasingFunction customType()
+// [8] QEasingCurve::EasingFunction customType() const
 func (this *QEasingCurve) CustomType() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve10customTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -276,7 +290,7 @@ func (this *QEasingCurve) CustomType() unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtCore/qeasingcurve.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal valueForProgress(qreal)
+// [8] qreal valueForProgress(qreal) const
 func (this *QEasingCurve) ValueForProgress(progress float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve16valueForProgressEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), progress)
 	qtrt.ErrPrint(err, rv)

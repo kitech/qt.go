@@ -77,7 +77,7 @@ func NewQGradient() *QGradient {
 // /usr/include/qt/QtGui/qbrush.h:208
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QGradient::Type type()
+// [4] QGradient::Type type() const
 func (this *QGradient) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -96,7 +96,7 @@ func (this *QGradient) SetSpread(spread int) {
 // /usr/include/qt/QtGui/qbrush.h:211
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QGradient::Spread spread()
+// [4] QGradient::Spread spread() const
 func (this *QGradient) Spread() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient6spreadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,7 +119,7 @@ func (this *QGradient) SetColorAt(pos float64, color QColor_ITF) {
 // /usr/include/qt/QtGui/qbrush.h:218
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGradient::CoordinateMode coordinateMode()
+// [4] QGradient::CoordinateMode coordinateMode() const
 func (this *QGradient) CoordinateMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient14coordinateModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -138,7 +138,7 @@ func (this *QGradient) SetCoordinateMode(mode int) {
 // /usr/include/qt/QtGui/qbrush.h:221
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGradient::InterpolationMode interpolationMode()
+// [4] QGradient::InterpolationMode interpolationMode() const
 func (this *QGradient) InterpolationMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient17interpolationModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +157,7 @@ func (this *QGradient) SetInterpolationMode(mode int) {
 // /usr/include/qt/QtGui/qbrush.h:224
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QGradient &)
+// [1] bool operator==(const QGradient &) const
 func (this *QGradient) Operator_equal_equal(gradient QGradient_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if gradient != nil && gradient.QGradient_PTR() != nil {
@@ -171,7 +171,7 @@ func (this *QGradient) Operator_equal_equal(gradient QGradient_ITF) bool {
 // /usr/include/qt/QtGui/qbrush.h:225
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QGradient &)
+// [1] bool operator!=(const QGradient &) const
 func (this *QGradient) Operator_not_equal(other QGradient_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGradient_PTR() != nil {

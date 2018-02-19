@@ -99,7 +99,7 @@ func (*QDialog) NewFromPointer(cthis unsafe.Pointer) *QDialog {
 // /usr/include/qt/QtWidgets/qdialog.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QDialog10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -122,6 +122,40 @@ func NewQDialog(parent QWidget_ITF /*777 QWidget **/, f int) *QDialog {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qdialog.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDialog(QWidget *, Qt::WindowFlags)
+func NewQDialog__() *QDialog {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	f := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDialogFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDialog")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qdialog.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDialog(QWidget *, Qt::WindowFlags)
+func NewQDialog__1(parent QWidget_ITF /*777 QWidget **/) *QDialog {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	f := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDialogFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDialog")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qdialog.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -136,7 +170,7 @@ func DeleteQDialog(this *QDialog) {
 // /usr/include/qt/QtWidgets/qdialog.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int result()
+// [4] int result() const
 func (this *QDialog) Result() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QDialog6resultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +198,7 @@ func (this *QDialog) SetOrientation(orientation int) {
 // /usr/include/qt/QtWidgets/qdialog.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Orientation orientation()
+// [4] Qt::Orientation orientation() const
 func (this *QDialog) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QDialog11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +221,7 @@ func (this *QDialog) SetExtension(extension QWidget_ITF /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qdialog.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * extension()
+// [8] QWidget * extension() const
 func (this *QDialog) Extension() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QDialog9extensionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +231,7 @@ func (this *QDialog) Extension() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qdialog.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QDialog) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QDialog8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -209,7 +243,7 @@ func (this *QDialog) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qdialog.h:79
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QDialog15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -230,7 +264,7 @@ func (this *QDialog) SetSizeGripEnabled(arg0 bool) {
 // /usr/include/qt/QtWidgets/qdialog.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSizeGripEnabled()
+// [1] bool isSizeGripEnabled() const
 func (this *QDialog) IsSizeGripEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QDialog17isSizeGripEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

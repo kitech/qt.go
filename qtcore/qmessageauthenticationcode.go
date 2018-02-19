@@ -79,6 +79,20 @@ func NewQMessageAuthenticationCode(method int, key QByteArray_ITF) *QMessageAuth
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qmessageauthenticationcode.h:54
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QMessageAuthenticationCode(QCryptographicHash::Algorithm, const QByteArray &)
+func NewQMessageAuthenticationCode__(method int) *QMessageAuthenticationCode {
+	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record,
+	var convArg1 = NewQByteArray()
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeC2EN18QCryptographicHash9AlgorithmERK10QByteArray", qtrt.FFI_TYPE_POINTER, method, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQMessageAuthenticationCodeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMessageAuthenticationCode)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qmessageauthenticationcode.h:56
 // index:0
 // Public Visibility=Default Availability=Available
@@ -153,7 +167,7 @@ func (this *QMessageAuthenticationCode) AddData_2(device QIODevice_ITF /*777 QIO
 // /usr/include/qt/QtCore/qmessageauthenticationcode.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray result()
+// [8] QByteArray result() const
 func (this *QMessageAuthenticationCode) Result() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QMessageAuthenticationCode6resultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

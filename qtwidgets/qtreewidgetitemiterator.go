@@ -79,6 +79,24 @@ func NewQTreeWidgetItemIterator(widget QTreeWidget_ITF /*777 QTreeWidget **/, fl
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:85
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTreeWidgetItemIterator(QTreeWidget *, QTreeWidgetItemIterator::IteratorFlags)
+func NewQTreeWidgetItemIterator__(widget QTreeWidget_ITF /*777 QTreeWidget **/) *QTreeWidgetItemIterator {
+	var convArg0 unsafe.Pointer
+	if widget != nil && widget.QTreeWidget_PTR() != nil {
+		convArg0 = widget.QTreeWidget_PTR().GetCthis()
+	}
+	// arg: 1, QTreeWidgetItemIterator::IteratorFlags=Typedef, QTreeWidgetItemIterator::IteratorFlags=Typedef, QFlags<QTreeWidgetItemIterator::IteratorFlag>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP11QTreeWidget6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTreeWidgetItemIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItemIterator)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:86
 // index:1
 // Public Visibility=Default Availability=Available
@@ -88,6 +106,24 @@ func NewQTreeWidgetItemIterator_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP15QTreeWidgetItem6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTreeWidgetItemIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItemIterator)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:86
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QTreeWidgetItemIterator(QTreeWidgetItem *, QTreeWidgetItemIterator::IteratorFlags)
+func NewQTreeWidgetItemIterator_1_(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItemIterator {
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTreeWidgetItem_PTR() != nil {
+		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
+	}
+	// arg: 1, QTreeWidgetItemIterator::IteratorFlags=Typedef, QTreeWidgetItemIterator::IteratorFlags=Typedef, QFlags<QTreeWidgetItemIterator::IteratorFlag>
+	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP15QTreeWidgetItem6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -197,7 +233,7 @@ func (this *QTreeWidgetItemIterator) Operator_minus_equal(n int) *QTreeWidgetIte
 // /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:99
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QTreeWidgetItem * operator*()
+// [8] QTreeWidgetItem * operator*() const
 func (this *QTreeWidgetItemIterator) Operator_mul() *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QTreeWidgetItemIteratordeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

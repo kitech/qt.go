@@ -74,7 +74,7 @@ func (*QMouseEventTransition) NewFromPointer(cthis unsafe.Pointer) *QMouseEventT
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QMouseEventTransition) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QMouseEventTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +90,20 @@ func NewQMouseEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *Q
 	if sourceState != nil && sourceState.QState_PTR() != nil {
 		convArg0 = sourceState.QState_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQMouseEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMouseEventTransition")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qmouseeventtransition.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QMouseEventTransition(QState *)
+func NewQMouseEventTransition__() *QMouseEventTransition {
+	// arg: 0, QState *=Pointer, QState=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMouseEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,6 +131,24 @@ func NewQMouseEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, typ
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qmouseeventtransition.h:59
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QMouseEventTransition(QObject *, QEvent::Type, Qt::MouseButton, QState *)
+func NewQMouseEventTransition_1_(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int) *QMouseEventTransition {
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
+	// arg: 3, QState *=Pointer, QState=Record,
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP7QObjectN6QEvent4TypeEN2Qt11MouseButtonEP6QState", qtrt.FFI_TYPE_POINTER, convArg0, type_, button, convArg3)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQMouseEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QMouseEventTransition")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -131,7 +163,7 @@ func DeleteQMouseEventTransition(this *QMouseEventTransition) {
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::MouseButton button()
+// [4] Qt::MouseButton button() const
 func (this *QMouseEventTransition) Button() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QMouseEventTransition6buttonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,7 +182,7 @@ func (this *QMouseEventTransition) SetButton(button int) {
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::KeyboardModifiers modifierMask()
+// [4] Qt::KeyboardModifiers modifierMask() const
 func (this *QMouseEventTransition) ModifierMask() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QMouseEventTransition12modifierMaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -169,7 +201,7 @@ func (this *QMouseEventTransition) SetModifierMask(modifiers int) {
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath hitTestPath()
+// [8] QPainterPath hitTestPath() const
 func (this *QMouseEventTransition) HitTestPath() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QMouseEventTransition11hitTestPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

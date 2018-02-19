@@ -129,7 +129,7 @@ func (this *QNetworkConfiguration) Swap(other QNetworkConfiguration_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QNetworkConfiguration &)
+// [1] bool operator==(const QNetworkConfiguration &) const
 func (this *QNetworkConfiguration) Operator_equal_equal(other QNetworkConfiguration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkConfiguration_PTR() != nil {
@@ -143,7 +143,7 @@ func (this *QNetworkConfiguration) Operator_equal_equal(other QNetworkConfigurat
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:67
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QNetworkConfiguration &)
+// [1] bool operator!=(const QNetworkConfiguration &) const
 func (this *QNetworkConfiguration) Operator_not_equal(other QNetworkConfiguration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkConfiguration_PTR() != nil {
@@ -157,7 +157,7 @@ func (this *QNetworkConfiguration) Operator_not_equal(other QNetworkConfiguratio
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QNetworkConfiguration::StateFlags state()
+// [4] QNetworkConfiguration::StateFlags state() const
 func (this *QNetworkConfiguration) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QNetworkConfiguration) State() int {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QNetworkConfiguration::Type type()
+// [4] QNetworkConfiguration::Type type() const
 func (this *QNetworkConfiguration) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QNetworkConfiguration) Type() int {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QNetworkConfiguration::Purpose purpose()
+// [4] QNetworkConfiguration::Purpose purpose() const
 func (this *QNetworkConfiguration) Purpose() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration7purposeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func (this *QNetworkConfiguration) Purpose() int {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QNetworkConfiguration::BearerType bearerType()
+// [4] QNetworkConfiguration::BearerType bearerType() const
 func (this *QNetworkConfiguration) BearerType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration10bearerTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +197,7 @@ func (this *QNetworkConfiguration) BearerType() int {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QNetworkConfiguration::BearerType bearerTypeFamily()
+// [4] QNetworkConfiguration::BearerType bearerTypeFamily() const
 func (this *QNetworkConfiguration) BearerTypeFamily() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration16bearerTypeFamilyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QNetworkConfiguration) BearerTypeFamily() int {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString bearerTypeName()
+// [8] QString bearerTypeName() const
 func (this *QNetworkConfiguration) BearerTypeName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration14bearerTypeNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,7 +220,7 @@ func (this *QNetworkConfiguration) BearerTypeName() string {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString identifier()
+// [8] QString identifier() const
 func (this *QNetworkConfiguration) Identifier() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration10identifierEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -233,7 +233,7 @@ func (this *QNetworkConfiguration) Identifier() string {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRoamingAvailable()
+// [1] bool isRoamingAvailable() const
 func (this *QNetworkConfiguration) IsRoamingAvailable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration18isRoamingAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -243,7 +243,7 @@ func (this *QNetworkConfiguration) IsRoamingAvailable() bool {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString name()
+// [8] QString name() const
 func (this *QNetworkConfiguration) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -256,7 +256,7 @@ func (this *QNetworkConfiguration) Name() string {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QNetworkConfiguration) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -266,7 +266,7 @@ func (this *QNetworkConfiguration) IsValid() bool {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int connectTimeout()
+// [4] int connectTimeout() const
 func (this *QNetworkConfiguration) ConnectTimeout() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration14connectTimeoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -89,7 +89,7 @@ func DeleteQWinColorizationChangeEvent(this *QWinColorizationChangeEvent) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinevent.h:68
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QRgb color()
+// [4] QRgb color() const
 func (this *QWinColorizationChangeEvent) Color() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QWinColorizationChangeEvent5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -99,7 +99,7 @@ func (this *QWinColorizationChangeEvent) Color() uint {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinevent.h:69
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool opaqueBlend()
+// [1] bool opaqueBlend() const
 func (this *QWinColorizationChangeEvent) OpaqueBlend() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QWinColorizationChangeEvent11opaqueBlendEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

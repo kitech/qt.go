@@ -67,7 +67,7 @@ func (*QTimeLine) NewFromPointer(cthis unsafe.Pointer) *QTimeLine {
 // /usr/include/qt/QtCore/qtimeline.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTimeLine) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +90,36 @@ func NewQTimeLine(duration int, parent QObject_ITF /*777 QObject **/) *QTimeLine
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qtimeline.h:79
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTimeLine(int, QObject *)
+func NewQTimeLine__() *QTimeLine {
+	// arg: 0, int=Int, =Invalid,
+	duration := 1000
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", qtrt.FFI_TYPE_POINTER, duration, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTimeLineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTimeLine")
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qtimeline.h:79
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTimeLine(int, QObject *)
+func NewQTimeLine__1(duration int) *QTimeLine {
+	// arg: 1, QObject *=Pointer, QObject=Record,
+	var convArg1 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", qtrt.FFI_TYPE_POINTER, duration, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTimeLineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTimeLine")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qtimeline.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -104,7 +134,7 @@ func DeleteQTimeLine(this *QTimeLine) {
 // /usr/include/qt/QtCore/qtimeline.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTimeLine::State state()
+// [4] QTimeLine::State state() const
 func (this *QTimeLine) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +144,7 @@ func (this *QTimeLine) State() int {
 // /usr/include/qt/QtCore/qtimeline.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int loopCount()
+// [4] int loopCount() const
 func (this *QTimeLine) LoopCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine9loopCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,7 +163,7 @@ func (this *QTimeLine) SetLoopCount(count int) {
 // /usr/include/qt/QtCore/qtimeline.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTimeLine::Direction direction()
+// [4] QTimeLine::Direction direction() const
 func (this *QTimeLine) Direction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine9directionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -152,7 +182,7 @@ func (this *QTimeLine) SetDirection(direction int) {
 // /usr/include/qt/QtCore/qtimeline.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int duration()
+// [4] int duration() const
 func (this *QTimeLine) Duration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,7 +201,7 @@ func (this *QTimeLine) SetDuration(duration int) {
 // /usr/include/qt/QtCore/qtimeline.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int startFrame()
+// [4] int startFrame() const
 func (this *QTimeLine) StartFrame() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine10startFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,7 +220,7 @@ func (this *QTimeLine) SetStartFrame(frame int) {
 // /usr/include/qt/QtCore/qtimeline.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int endFrame()
+// [4] int endFrame() const
 func (this *QTimeLine) EndFrame() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine8endFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,7 +248,7 @@ func (this *QTimeLine) SetFrameRange(startFrame int, endFrame int) {
 // /usr/include/qt/QtCore/qtimeline.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int updateInterval()
+// [4] int updateInterval() const
 func (this *QTimeLine) UpdateInterval() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine14updateIntervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -237,7 +267,7 @@ func (this *QTimeLine) SetUpdateInterval(interval int) {
 // /usr/include/qt/QtCore/qtimeline.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTimeLine::CurveShape curveShape()
+// [4] QTimeLine::CurveShape curveShape() const
 func (this *QTimeLine) CurveShape() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine10curveShapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -256,7 +286,7 @@ func (this *QTimeLine) SetCurveShape(shape int) {
 // /usr/include/qt/QtCore/qtimeline.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QEasingCurve easingCurve()
+// [8] QEasingCurve easingCurve() const
 func (this *QTimeLine) EasingCurve() *QEasingCurve /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine11easingCurveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -281,7 +311,7 @@ func (this *QTimeLine) SetEasingCurve(curve QEasingCurve_ITF) {
 // /usr/include/qt/QtCore/qtimeline.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int currentTime()
+// [4] int currentTime() const
 func (this *QTimeLine) CurrentTime() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine11currentTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -291,7 +321,7 @@ func (this *QTimeLine) CurrentTime() int {
 // /usr/include/qt/QtCore/qtimeline.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int currentFrame()
+// [4] int currentFrame() const
 func (this *QTimeLine) CurrentFrame() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine12currentFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -301,7 +331,7 @@ func (this *QTimeLine) CurrentFrame() int {
 // /usr/include/qt/QtCore/qtimeline.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal currentValue()
+// [8] qreal currentValue() const
 func (this *QTimeLine) CurrentValue() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine12currentValueEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -311,7 +341,7 @@ func (this *QTimeLine) CurrentValue() float64 {
 // /usr/include/qt/QtCore/qtimeline.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int frameForTime(int)
+// [4] int frameForTime(int) const
 func (this *QTimeLine) FrameForTime(msec int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine12frameForTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	qtrt.ErrPrint(err, rv)
@@ -321,7 +351,7 @@ func (this *QTimeLine) FrameForTime(msec int) int {
 // /usr/include/qt/QtCore/qtimeline.h:113
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qreal valueForTime(int)
+// [8] qreal valueForTime(int) const
 func (this *QTimeLine) ValueForTime(msec int) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine12valueForTimeEi", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), msec)
 	qtrt.ErrPrint(err, rv)

@@ -88,7 +88,7 @@ func DeleteQWhatsThisClickedEvent(this *QWhatsThisClickedEvent) {
 // /usr/include/qt/QtGui/qevent.h:716
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QString href()
+// [8] QString href() const
 func (this *QWhatsThisClickedEvent) Href() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

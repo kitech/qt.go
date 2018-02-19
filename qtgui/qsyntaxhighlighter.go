@@ -108,7 +108,7 @@ func (*QSyntaxHighlighter) NewFromPointer(cthis unsafe.Pointer) *QSyntaxHighligh
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSyntaxHighlighter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +174,7 @@ func (this *QSyntaxHighlighter) SetDocument(doc QTextDocument_ITF /*777 QTextDoc
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QTextDocument * document()
+// [8] QTextDocument * document() const
 func (this *QSyntaxHighlighter) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter8documentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -256,7 +256,7 @@ func (this *QSyntaxHighlighter) SetFormat_2(start int, count int, font QFont_ITF
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:82
 // index:0
 // Protected Visibility=Default Availability=Available
-// [16] QTextCharFormat format(int)
+// [16] QTextCharFormat format(int) const
 func (this *QSyntaxHighlighter) Format(pos int) *QTextCharFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter6formatEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +268,7 @@ func (this *QSyntaxHighlighter) Format(pos int) *QTextCharFormat /*123*/ {
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:84
 // index:0
 // Protected Visibility=Default Availability=Available
-// [4] int previousBlockState()
+// [4] int previousBlockState() const
 func (this *QSyntaxHighlighter) PreviousBlockState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter18previousBlockStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -278,7 +278,7 @@ func (this *QSyntaxHighlighter) PreviousBlockState() int {
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:85
 // index:0
 // Protected Visibility=Default Availability=Available
-// [4] int currentBlockState()
+// [4] int currentBlockState() const
 func (this *QSyntaxHighlighter) CurrentBlockState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter17currentBlockStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -310,7 +310,7 @@ func (this *QSyntaxHighlighter) SetCurrentBlockUserData(data QTextBlockUserData_
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:89
 // index:0
 // Protected Visibility=Default Availability=Available
-// [8] QTextBlockUserData * currentBlockUserData()
+// [8] QTextBlockUserData * currentBlockUserData() const
 func (this *QSyntaxHighlighter) CurrentBlockUserData() *QTextBlockUserData /*777 QTextBlockUserData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter20currentBlockUserDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -320,7 +320,7 @@ func (this *QSyntaxHighlighter) CurrentBlockUserData() *QTextBlockUserData /*777
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:91
 // index:0
 // Protected Visibility=Default Availability=Available
-// [16] QTextBlock currentBlock()
+// [16] QTextBlock currentBlock() const
 func (this *QSyntaxHighlighter) CurrentBlock() *QTextBlock /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter12currentBlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

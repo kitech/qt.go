@@ -87,7 +87,7 @@ func DeleteQGraphicsSceneMoveEvent(this *QGraphicsSceneMoveEvent) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:316
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF oldPos()
+// [16] QPointF oldPos() const
 func (this *QGraphicsSceneMoveEvent) OldPos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6oldPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,7 +112,7 @@ func (this *QGraphicsSceneMoveEvent) SetOldPos(pos qtcore.QPointF_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:319
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF newPos()
+// [16] QPointF newPos() const
 func (this *QGraphicsSceneMoveEvent) NewPos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6newPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

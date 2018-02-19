@@ -74,6 +74,20 @@ func NewQHostInfo(lookupId int) *QHostInfo {
 	return gothis
 }
 
+// /usr/include/qt/QtNetwork/qhostinfo.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QHostInfo(int)
+func NewQHostInfo__() *QHostInfo {
+	// arg: 0, int=Int, =Invalid,
+	lookupId := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfoC2Ei", qtrt.FFI_TYPE_POINTER, lookupId)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQHostInfoFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHostInfo)
+	return gothis
+}
+
 // /usr/include/qt/QtNetwork/qhostinfo.h:65
 // index:0
 // Public Visibility=Default Availability=Available
@@ -129,7 +143,7 @@ func (this *QHostInfo) Swap(other QHostInfo_ITF) {
 // /usr/include/qt/QtNetwork/qhostinfo.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString hostName()
+// [8] QString hostName() const
 func (this *QHostInfo) HostName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QHostInfo8hostNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +167,7 @@ func (this *QHostInfo) SetHostName(name string) {
 // /usr/include/qt/QtNetwork/qhostinfo.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QHostInfo::HostInfoError error()
+// [4] QHostInfo::HostInfoError error() const
 func (this *QHostInfo) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QHostInfo5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -172,7 +186,7 @@ func (this *QHostInfo) SetError(error int) {
 // /usr/include/qt/QtNetwork/qhostinfo.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString errorString()
+// [8] QString errorString() const
 func (this *QHostInfo) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QHostInfo11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -205,7 +219,7 @@ func (this *QHostInfo) SetLookupId(id int) {
 // /usr/include/qt/QtNetwork/qhostinfo.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int lookupId()
+// [4] int lookupId() const
 func (this *QHostInfo) LookupId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QHostInfo8lookupIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

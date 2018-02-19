@@ -104,7 +104,7 @@ func (*QSplitter) NewFromPointer(cthis unsafe.Pointer) *QSplitter {
 // /usr/include/qt/QtWidgets/qsplitter.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSplitter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +127,20 @@ func NewQSplitter(parent QWidget_ITF /*777 QWidget **/) *QSplitter {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qsplitter.h:67
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSplitter(QWidget *)
+func NewQSplitter__() *QSplitter {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSplitterC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSplitterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSplitter")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qsplitter.h:68
 // index:1
 // Public Visibility=Default Availability=Available
@@ -136,6 +150,20 @@ func NewQSplitter_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QSplitter {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSplitterC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSplitterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSplitter")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qsplitter.h:68
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QSplitter(Qt::Orientation, QWidget *)
+func NewQSplitter_1_(arg0 int) *QSplitter {
+	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSplitterC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSplitterFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -206,7 +234,7 @@ func (this *QSplitter) SetOrientation(arg0 int) {
 // /usr/include/qt/QtWidgets/qsplitter.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Orientation orientation()
+// [4] Qt::Orientation orientation() const
 func (this *QSplitter) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -225,7 +253,7 @@ func (this *QSplitter) SetChildrenCollapsible(arg0 bool) {
 // /usr/include/qt/QtWidgets/qsplitter.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool childrenCollapsible()
+// [1] bool childrenCollapsible() const
 func (this *QSplitter) ChildrenCollapsible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter19childrenCollapsibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -244,7 +272,7 @@ func (this *QSplitter) SetCollapsible(index int, arg1 bool) {
 // /usr/include/qt/QtWidgets/qsplitter.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isCollapsible(int)
+// [1] bool isCollapsible(int) const
 func (this *QSplitter) IsCollapsible(index int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter13isCollapsibleEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -260,10 +288,21 @@ func (this *QSplitter) SetOpaqueResize(opaque bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qsplitter.h:83
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOpaqueResize(_Bool)
+func (this *QSplitter) SetOpaqueResize__() {
+	// arg: 0, bool=Bool, =Invalid,
+	opaque := true
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSplitter15setOpaqueResizeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opaque)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qsplitter.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool opaqueResize()
+// [1] bool opaqueResize() const
 func (this *QSplitter) OpaqueResize() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter12opaqueResizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -282,7 +321,7 @@ func (this *QSplitter) Refresh() {
 // /usr/include/qt/QtWidgets/qsplitter.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QSplitter) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -294,7 +333,7 @@ func (this *QSplitter) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qsplitter.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSizeHint()
+// [8] QSize minimumSizeHint() const
 func (this *QSplitter) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -306,7 +345,7 @@ func (this *QSplitter) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qsplitter.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray saveState()
+// [8] QByteArray saveState() const
 func (this *QSplitter) SaveState() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter9saveStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -332,7 +371,7 @@ func (this *QSplitter) RestoreState(state qtcore.QByteArray_ITF) bool {
 // /usr/include/qt/QtWidgets/qsplitter.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int handleWidth()
+// [4] int handleWidth() const
 func (this *QSplitter) HandleWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter11handleWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -351,7 +390,7 @@ func (this *QSplitter) SetHandleWidth(arg0 int) {
 // /usr/include/qt/QtWidgets/qsplitter.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int indexOf(QWidget *)
+// [4] int indexOf(QWidget *) const
 func (this *QSplitter) IndexOf(w QWidget_ITF /*777 QWidget **/) int {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -365,7 +404,7 @@ func (this *QSplitter) IndexOf(w QWidget_ITF /*777 QWidget **/) int {
 // /usr/include/qt/QtWidgets/qsplitter.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * widget(int)
+// [8] QWidget * widget(int) const
 func (this *QSplitter) Widget(index int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter6widgetEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -375,7 +414,7 @@ func (this *QSplitter) Widget(index int) *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qsplitter.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QSplitter) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -385,7 +424,7 @@ func (this *QSplitter) Count() int {
 // /usr/include/qt/QtWidgets/qsplitter.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void getRange(int, int *, int *)
+// [-2] void getRange(int, int *, int *) const
 func (this *QSplitter) GetRange(index int, arg1 unsafe.Pointer /*666*/, arg2 unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter8getRangeEiPiS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, arg1, arg2)
 	qtrt.ErrPrint(err, rv)
@@ -394,7 +433,7 @@ func (this *QSplitter) GetRange(index int, arg1 unsafe.Pointer /*666*/, arg2 uns
 // /usr/include/qt/QtWidgets/qsplitter.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSplitterHandle * handle(int)
+// [8] QSplitterHandle * handle(int) const
 func (this *QSplitter) Handle(index int) *QSplitterHandle /*777 QSplitterHandle **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter6handleEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)

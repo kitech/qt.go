@@ -98,6 +98,20 @@ func NewQTransform_2(h11 float64, h12 float64, h13 float64, h21 float64, h22 flo
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qtransform.h:71
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QTransform(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
+func NewQTransform_2_(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64) *QTransform {
+	// arg: 8, qreal=Typedef, qreal=Typedef, double
+	h33 := 1.0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2Eddddddddd", qtrt.FFI_TYPE_POINTER, h11, h12, h13, h21, h22, h23, h31, h32, h33)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTransform)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qtransform.h:74
 // index:3
 // Public Visibility=Default Availability=Available
@@ -157,7 +171,7 @@ func (this *QTransform) Operator_equal_1(arg0 QTransform_ITF) *QTransform {
 // /usr/include/qt/QtGui/qtransform.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isAffine()
+// [1] bool isAffine() const
 func (this *QTransform) IsAffine() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform8isAffineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +181,7 @@ func (this *QTransform) IsAffine() bool {
 // /usr/include/qt/QtGui/qtransform.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isIdentity()
+// [1] bool isIdentity() const
 func (this *QTransform) IsIdentity() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform10isIdentityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,7 +191,7 @@ func (this *QTransform) IsIdentity() bool {
 // /usr/include/qt/QtGui/qtransform.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isInvertible()
+// [1] bool isInvertible() const
 func (this *QTransform) IsInvertible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform12isInvertibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +201,7 @@ func (this *QTransform) IsInvertible() bool {
 // /usr/include/qt/QtGui/qtransform.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isScaling()
+// [1] bool isScaling() const
 func (this *QTransform) IsScaling() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform9isScalingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +211,7 @@ func (this *QTransform) IsScaling() bool {
 // /usr/include/qt/QtGui/qtransform.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isRotating()
+// [1] bool isRotating() const
 func (this *QTransform) IsRotating() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform10isRotatingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +221,7 @@ func (this *QTransform) IsRotating() bool {
 // /usr/include/qt/QtGui/qtransform.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isTranslating()
+// [1] bool isTranslating() const
 func (this *QTransform) IsTranslating() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform13isTranslatingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,7 +231,7 @@ func (this *QTransform) IsTranslating() bool {
 // /usr/include/qt/QtGui/qtransform.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTransform::TransformationType type()
+// [4] QTransform::TransformationType type() const
 func (this *QTransform) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +241,7 @@ func (this *QTransform) Type() int {
 // /usr/include/qt/QtGui/qtransform.h:100
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] qreal determinant()
+// [8] qreal determinant() const
 func (this *QTransform) Determinant() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform11determinantEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -237,7 +251,7 @@ func (this *QTransform) Determinant() float64 {
 // /usr/include/qt/QtGui/qtransform.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal det()
+// [8] qreal det() const
 func (this *QTransform) Det() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3detEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,7 +261,7 @@ func (this *QTransform) Det() float64 {
 // /usr/include/qt/QtGui/qtransform.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal m11()
+// [8] qreal m11() const
 func (this *QTransform) M11() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3m11Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +271,7 @@ func (this *QTransform) M11() float64 {
 // /usr/include/qt/QtGui/qtransform.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal m12()
+// [8] qreal m12() const
 func (this *QTransform) M12() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3m12Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -267,7 +281,7 @@ func (this *QTransform) M12() float64 {
 // /usr/include/qt/QtGui/qtransform.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal m13()
+// [8] qreal m13() const
 func (this *QTransform) M13() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3m13Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -277,7 +291,7 @@ func (this *QTransform) M13() float64 {
 // /usr/include/qt/QtGui/qtransform.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal m21()
+// [8] qreal m21() const
 func (this *QTransform) M21() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3m21Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -287,7 +301,7 @@ func (this *QTransform) M21() float64 {
 // /usr/include/qt/QtGui/qtransform.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal m22()
+// [8] qreal m22() const
 func (this *QTransform) M22() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3m22Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -297,7 +311,7 @@ func (this *QTransform) M22() float64 {
 // /usr/include/qt/QtGui/qtransform.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal m23()
+// [8] qreal m23() const
 func (this *QTransform) M23() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3m23Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -307,7 +321,7 @@ func (this *QTransform) M23() float64 {
 // /usr/include/qt/QtGui/qtransform.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal m31()
+// [8] qreal m31() const
 func (this *QTransform) M31() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3m31Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -317,7 +331,7 @@ func (this *QTransform) M31() float64 {
 // /usr/include/qt/QtGui/qtransform.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal m32()
+// [8] qreal m32() const
 func (this *QTransform) M32() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3m32Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -327,7 +341,7 @@ func (this *QTransform) M32() float64 {
 // /usr/include/qt/QtGui/qtransform.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal m33()
+// [8] qreal m33() const
 func (this *QTransform) M33() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3m33Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -337,7 +351,7 @@ func (this *QTransform) M33() float64 {
 // /usr/include/qt/QtGui/qtransform.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal dx()
+// [8] qreal dx() const
 func (this *QTransform) Dx() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform2dxEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -347,7 +361,7 @@ func (this *QTransform) Dx() float64 {
 // /usr/include/qt/QtGui/qtransform.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal dy()
+// [8] qreal dy() const
 func (this *QTransform) Dy() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform2dyEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -366,8 +380,22 @@ func (this *QTransform) SetMatrix(m11 float64, m12 float64, m13 float64, m21 flo
 // /usr/include/qt/QtGui/qtransform.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform inverted(_Bool *)
+// [88] QTransform inverted(_Bool *) const
 func (this *QTransform) Inverted(invertible *bool) *QTransform /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform8invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qtransform.h:119
+// index:0
+// Public Visibility=Default Availability=Available
+// [88] QTransform inverted(_Bool *) const
+func (this *QTransform) Inverted__() *QTransform /*123*/ {
+	// arg: 0, bool *=Pointer, =Invalid,
+	var invertible unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform8invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -378,7 +406,7 @@ func (this *QTransform) Inverted(invertible *bool) *QTransform /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform adjoint()
+// [88] QTransform adjoint() const
 func (this *QTransform) Adjoint() *QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform7adjointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -390,7 +418,7 @@ func (this *QTransform) Adjoint() *QTransform /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform transposed()
+// [88] QTransform transposed() const
 func (this *QTransform) Transposed() *QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform10transposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -447,11 +475,39 @@ func (this *QTransform) Rotate(a float64, axis int) *QTransform {
 	return rv2
 }
 
+// /usr/include/qt/QtGui/qtransform.h:126
+// index:0
+// Public Visibility=Default Availability=Available
+// [88] QTransform & rotate(qreal, Qt::Axis)
+func (this *QTransform) Rotate__(a float64) *QTransform {
+	// arg: 1, Qt::Axis=Elaborated, Qt::Axis=Enum,
+	axis := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransform6rotateEdN2Qt4AxisE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, axis)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qtransform.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform & rotateRadians(qreal, Qt::Axis)
 func (this *QTransform) RotateRadians(a float64, axis int) *QTransform {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransform13rotateRadiansEdN2Qt4AxisE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, axis)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qtransform.h:127
+// index:0
+// Public Visibility=Default Availability=Available
+// [88] QTransform & rotateRadians(qreal, Qt::Axis)
+func (this *QTransform) RotateRadians__(a float64) *QTransform {
+	// arg: 1, Qt::Axis=Elaborated, Qt::Axis=Enum,
+	axis := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransform13rotateRadiansEdN2Qt4AxisE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, axis)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -535,7 +591,7 @@ func QTransform_QuadToQuad(one QPolygonF_ITF, two QPolygonF_ITF, result QTransfo
 // /usr/include/qt/QtGui/qtransform.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(const QTransform &)
+// [1] bool operator==(const QTransform &) const
 func (this *QTransform) Operator_equal_equal(arg0 QTransform_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTransform_PTR() != nil {
@@ -549,7 +605,7 @@ func (this *QTransform) Operator_equal_equal(arg0 QTransform_ITF) bool {
 // /usr/include/qt/QtGui/qtransform.h:136
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool operator!=(const QTransform &)
+// [1] bool operator!=(const QTransform &) const
 func (this *QTransform) Operator_not_equal(arg0 QTransform_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTransform_PTR() != nil {
@@ -591,7 +647,7 @@ func (this *QTransform) Operator_mul_equal_1(div float64) *QTransform {
 // /usr/include/qt/QtGui/qtransform.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform operator*(const QTransform &)
+// [88] QTransform operator*(const QTransform &) const
 func (this *QTransform) Operator_mul(o QTransform_ITF) *QTransform /*123*/ {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QTransform_PTR() != nil {
@@ -616,7 +672,7 @@ func (this *QTransform) Reset() {
 // /usr/include/qt/QtGui/qtransform.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint map(const QPoint &)
+// [8] QPoint map(const QPoint &) const
 func (this *QTransform) Map(p qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -632,7 +688,7 @@ func (this *QTransform) Map(p qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:145
 // index:1
 // Public Visibility=Default Availability=Available
-// [16] QPointF map(const QPointF &)
+// [16] QPointF map(const QPointF &) const
 func (this *QTransform) Map_1(p qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
@@ -648,7 +704,7 @@ func (this *QTransform) Map_1(p qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:146
 // index:2
 // Public Visibility=Default Availability=Available
-// [16] QLine map(const QLine &)
+// [16] QLine map(const QLine &) const
 func (this *QTransform) Map_2(l qtcore.QLine_ITF) *qtcore.QLine /*123*/ {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLine_PTR() != nil {
@@ -664,7 +720,7 @@ func (this *QTransform) Map_2(l qtcore.QLine_ITF) *qtcore.QLine /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:147
 // index:3
 // Public Visibility=Default Availability=Available
-// [32] QLineF map(const QLineF &)
+// [32] QLineF map(const QLineF &) const
 func (this *QTransform) Map_3(l qtcore.QLineF_ITF) *qtcore.QLineF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLineF_PTR() != nil {
@@ -680,7 +736,7 @@ func (this *QTransform) Map_3(l qtcore.QLineF_ITF) *qtcore.QLineF /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:148
 // index:4
 // Public Visibility=Default Availability=Available
-// [8] QPolygonF map(const QPolygonF &)
+// [8] QPolygonF map(const QPolygonF &) const
 func (this *QTransform) Map_4(a QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygonF_PTR() != nil {
@@ -696,7 +752,7 @@ func (this *QTransform) Map_4(a QPolygonF_ITF) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:149
 // index:5
 // Public Visibility=Default Availability=Available
-// [8] QPolygon map(const QPolygon &)
+// [8] QPolygon map(const QPolygon &) const
 func (this *QTransform) Map_5(a QPolygon_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygon_PTR() != nil {
@@ -712,7 +768,7 @@ func (this *QTransform) Map_5(a QPolygon_ITF) *QPolygon /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:150
 // index:6
 // Public Visibility=Default Availability=Available
-// [8] QRegion map(const QRegion &)
+// [8] QRegion map(const QRegion &) const
 func (this *QTransform) Map_6(r QRegion_ITF) *QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRegion_PTR() != nil {
@@ -728,7 +784,7 @@ func (this *QTransform) Map_6(r QRegion_ITF) *QRegion /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:151
 // index:7
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath map(const QPainterPath &)
+// [8] QPainterPath map(const QPainterPath &) const
 func (this *QTransform) Map_7(p QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainterPath_PTR() != nil {
@@ -744,7 +800,7 @@ func (this *QTransform) Map_7(p QPainterPath_ITF) *QPainterPath /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:155
 // index:8
 // Public Visibility=Default Availability=Available
-// [-2] void map(int, int, int *, int *)
+// [-2] void map(int, int, int *, int *) const
 func (this *QTransform) Map_8(x int, y int, tx unsafe.Pointer /*666*/, ty unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapEiiPiS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, tx, ty)
 	qtrt.ErrPrint(err, rv)
@@ -753,7 +809,7 @@ func (this *QTransform) Map_8(x int, y int, tx unsafe.Pointer /*666*/, ty unsafe
 // /usr/include/qt/QtGui/qtransform.h:156
 // index:9
 // Public Visibility=Default Availability=Available
-// [-2] void map(qreal, qreal, qreal *, qreal *)
+// [-2] void map(qreal, qreal, qreal *, qreal *) const
 func (this *QTransform) Map_9(x float64, y float64, tx unsafe.Pointer /*666*/, ty unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapEddPdS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, tx, ty)
 	qtrt.ErrPrint(err, rv)
@@ -762,7 +818,7 @@ func (this *QTransform) Map_9(x float64, y float64, tx unsafe.Pointer /*666*/, t
 // /usr/include/qt/QtGui/qtransform.h:152
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPolygon mapToPolygon(const QRect &)
+// [8] QPolygon mapToPolygon(const QRect &) const
 func (this *QTransform) MapToPolygon(r qtcore.QRect_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -778,7 +834,7 @@ func (this *QTransform) MapToPolygon(r qtcore.QRect_ITF) *QPolygon /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:153
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect mapRect(const QRect &)
+// [16] QRect mapRect(const QRect &) const
 func (this *QTransform) MapRect(arg0 qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
@@ -794,7 +850,7 @@ func (this *QTransform) MapRect(arg0 qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:154
 // index:1
 // Public Visibility=Default Availability=Available
-// [32] QRectF mapRect(const QRectF &)
+// [32] QRectF mapRect(const QRectF &) const
 func (this *QTransform) MapRect_1(arg0 qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRectF_PTR() != nil {
@@ -810,7 +866,7 @@ func (this *QTransform) MapRect_1(arg0 qtcore.QRectF_ITF) *qtcore.QRectF /*123*/
 // /usr/include/qt/QtGui/qtransform.h:158
 // index:0
 // Public Visibility=Default Availability=Available
-// [48] const QMatrix & toAffine()
+// [48] const QMatrix & toAffine() const
 func (this *QTransform) ToAffine() *QMatrix {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform8toAffineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

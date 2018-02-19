@@ -73,6 +73,36 @@ func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qstyleoption.h:509
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionComplex(int, int)
+func NewQStyleOptionComplex__() *QStyleOptionComplex {
+	// arg: 0, int=Int, =Invalid,
+	version := 0 /*QStyleOptionComplex::Version*/
+	// arg: 1, int=Int, =Invalid,
+	type_ := QStyleOption__SO_Complex
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStyleOptionComplexFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionComplex)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:509
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionComplex(int, int)
+func NewQStyleOptionComplex__1(version int) *QStyleOptionComplex {
+	// arg: 1, int=Int, =Invalid,
+	type_ := QStyleOption__SO_Complex
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQStyleOptionComplexFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionComplex)
+	return gothis
+}
+
 func DeleteQStyleOptionComplex(this *QStyleOptionComplex) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionComplexD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

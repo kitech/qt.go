@@ -85,10 +85,40 @@ func NewQTime_1(h int, m int, s int, ms int) *QTime {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qdatetime.h:161
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QTime(int, int, int, int)
+func NewQTime_1_(h int, m int) *QTime {
+	// arg: 2, int=Int, =Invalid,
+	s := 0
+	// arg: 3, int=Int, =Invalid,
+	ms := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTimeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTime)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:161
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QTime(int, int, int, int)
+func NewQTime_1_1(h int, m int, s int) *QTime {
+	// arg: 3, int=Int, =Invalid,
+	ms := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTimeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTime)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qdatetime.h:163
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isNull()
+// [1] bool isNull() const
 func (this *QTime) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,7 +128,7 @@ func (this *QTime) IsNull() bool {
 // /usr/include/qt/QtCore/qdatetime.h:164
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isValid()
+// [1] bool isValid() const
 func (this *QTime) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,10 +150,22 @@ func QTime_IsValid_1(h int, m int, s int, ms int) bool {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qdatetime.h:199
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool isValid(int, int, int, int)
+func (this *QTime) IsValid_1_(h int, m int, s int) bool {
+	// arg: 3, int=Int, =Invalid,
+	ms := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime7isValidEiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qdatetime.h:166
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int hour()
+// [4] int hour() const
 func (this *QTime) Hour() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime4hourEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,7 +175,7 @@ func (this *QTime) Hour() int {
 // /usr/include/qt/QtCore/qdatetime.h:167
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int minute()
+// [4] int minute() const
 func (this *QTime) Minute() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime6minuteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +185,7 @@ func (this *QTime) Minute() int {
 // /usr/include/qt/QtCore/qdatetime.h:168
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int second()
+// [4] int second() const
 func (this *QTime) Second() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime6secondEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +195,7 @@ func (this *QTime) Second() int {
 // /usr/include/qt/QtCore/qdatetime.h:169
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int msec()
+// [4] int msec() const
 func (this *QTime) Msec() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime4msecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,8 +205,23 @@ func (this *QTime) Msec() int {
 // /usr/include/qt/QtCore/qdatetime.h:171
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toString(Qt::DateFormat)
+// [8] QString toString(Qt::DateFormat) const
 func (this *QTime) ToString(f int) string {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:171
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString toString(Qt::DateFormat) const
+func (this *QTime) ToString__() string {
+	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
+	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -176,7 +233,7 @@ func (this *QTime) ToString(f int) string {
 // /usr/include/qt/QtCore/qdatetime.h:173
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QString toString(const QString &)
+// [8] QString toString(const QString &) const
 func (this *QTime) ToString_1(format string) string {
 	var tmpArg0 = NewQString_5(format)
 	var convArg0 = tmpArg0.GetCthis()
@@ -191,7 +248,7 @@ func (this *QTime) ToString_1(format string) string {
 // /usr/include/qt/QtCore/qdatetime.h:175
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] QString toString(QStringView)
+// [8] QString toString(QStringView) const
 func (this *QTime) ToString_2(format QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QStringView_PTR() != nil {
@@ -215,10 +272,22 @@ func (this *QTime) SetHMS(h int, m int, s int, ms int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qdatetime.h:177
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool setHMS(int, int, int, int)
+func (this *QTime) SetHMS__(h int, m int, s int) bool {
+	// arg: 3, int=Int, =Invalid,
+	ms := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime6setHMSEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, m, s, ms)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qdatetime.h:179
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTime addSecs(int)
+// [4] QTime addSecs(int) const
 func (this *QTime) AddSecs(secs int) *QTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime7addSecsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), secs)
 	qtrt.ErrPrint(err, rv)
@@ -230,7 +299,7 @@ func (this *QTime) AddSecs(secs int) *QTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int secsTo(const QTime &)
+// [4] int secsTo(const QTime &) const
 func (this *QTime) SecsTo(arg0 QTime_ITF) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTime_PTR() != nil {
@@ -244,7 +313,7 @@ func (this *QTime) SecsTo(arg0 QTime_ITF) int {
 // /usr/include/qt/QtCore/qdatetime.h:181
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTime addMSecs(int)
+// [4] QTime addMSecs(int) const
 func (this *QTime) AddMSecs(ms int) *QTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8addMSecsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ms)
 	qtrt.ErrPrint(err, rv)
@@ -256,7 +325,7 @@ func (this *QTime) AddMSecs(ms int) *QTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:182
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int msecsTo(const QTime &)
+// [4] int msecsTo(const QTime &) const
 func (this *QTime) MsecsTo(arg0 QTime_ITF) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTime_PTR() != nil {
@@ -270,7 +339,7 @@ func (this *QTime) MsecsTo(arg0 QTime_ITF) int {
 // /usr/include/qt/QtCore/qdatetime.h:184
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator==(const QTime &)
+// [1] bool operator==(const QTime &) const
 func (this *QTime) Operator_equal_equal(other QTime_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTime_PTR() != nil {
@@ -284,7 +353,7 @@ func (this *QTime) Operator_equal_equal(other QTime_ITF) bool {
 // /usr/include/qt/QtCore/qdatetime.h:185
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QTime &)
+// [1] bool operator!=(const QTime &) const
 func (this *QTime) Operator_not_equal(other QTime_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTime_PTR() != nil {
@@ -298,7 +367,7 @@ func (this *QTime) Operator_not_equal(other QTime_ITF) bool {
 // /usr/include/qt/QtCore/qdatetime.h:186
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<(const QTime &)
+// [1] bool operator<(const QTime &) const
 func (this *QTime) Operator_less_than(other QTime_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTime_PTR() != nil {
@@ -312,7 +381,7 @@ func (this *QTime) Operator_less_than(other QTime_ITF) bool {
 // /usr/include/qt/QtCore/qdatetime.h:187
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator<=(const QTime &)
+// [1] bool operator<=(const QTime &) const
 func (this *QTime) Operator_less_than_equal(other QTime_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTime_PTR() != nil {
@@ -326,7 +395,7 @@ func (this *QTime) Operator_less_than_equal(other QTime_ITF) bool {
 // /usr/include/qt/QtCore/qdatetime.h:188
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>(const QTime &)
+// [1] bool operator>(const QTime &) const
 func (this *QTime) Operator_greater_than(other QTime_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTime_PTR() != nil {
@@ -340,7 +409,7 @@ func (this *QTime) Operator_greater_than(other QTime_ITF) bool {
 // /usr/include/qt/QtCore/qdatetime.h:189
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator>=(const QTime &)
+// [1] bool operator>=(const QTime &) const
 func (this *QTime) Operator_greater_than_equal(other QTime_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTime_PTR() != nil {
@@ -371,7 +440,7 @@ func QTime_FromMSecsSinceStartOfDay(msecs int) *QTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:192
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int msecsSinceStartOfDay()
+// [4] int msecsSinceStartOfDay() const
 func (this *QTime) MsecsSinceStartOfDay() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime20msecsSinceStartOfDayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -412,6 +481,22 @@ func QTime_FromString(s string, f int) *QTime /*123*/ {
 	var nilthis *QTime
 	rv := nilthis.FromString(s, f)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:196
+// index:0
+// Public static Visibility=Default Availability=Available
+// [4] QTime fromString(const QString &, Qt::DateFormat)
+func (this *QTime) FromString__(s string) *QTime /*123*/ {
+	var tmpArg0 = NewQString_5(s)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
+	f := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime10fromStringERK7QStringN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, convArg0, f)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTime)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:197
@@ -457,7 +542,7 @@ func (this *QTime) Restart() int {
 // /usr/include/qt/QtCore/qdatetime.h:203
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int elapsed()
+// [4] int elapsed() const
 func (this *QTime) Elapsed() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

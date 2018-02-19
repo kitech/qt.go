@@ -67,7 +67,7 @@ func (*QTemporaryFile) NewFromPointer(cthis unsafe.Pointer) *QTemporaryFile {
 // /usr/include/qt/QtCore/qtemporaryfile.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTemporaryFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTemporaryFile10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,7 +148,7 @@ func DeleteQTemporaryFile(this *QTemporaryFile) {
 // /usr/include/qt/QtCore/qtemporaryfile.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool autoRemove()
+// [1] bool autoRemove() const
 func (this *QTemporaryFile) AutoRemove() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTemporaryFile10autoRemoveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func (this *QTemporaryFile) Open_1(flags int) bool {
 // /usr/include/qt/QtCore/qtemporaryfile.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QString fileName()
+// [8] QString fileName() const
 func (this *QTemporaryFile) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTemporaryFile8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,7 +200,7 @@ func (this *QTemporaryFile) FileName() string {
 // /usr/include/qt/QtCore/qtemporaryfile.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString fileTemplate()
+// [8] QString fileTemplate() const
 func (this *QTemporaryFile) FileTemplate() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTemporaryFile12fileTemplateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

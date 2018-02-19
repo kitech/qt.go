@@ -89,7 +89,7 @@ func DeleteQFileIconProvider(this *QFileIconProvider) {
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QIcon icon(enum QFileIconProvider::IconType)
+// [8] QIcon icon(enum QFileIconProvider::IconType) const
 func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconENS_8IconTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	qtrt.ErrPrint(err, rv)
@@ -101,7 +101,7 @@ func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:66
 // index:1
 // Public virtual Visibility=Default Availability=Available
-// [8] QIcon icon(const QFileInfo &)
+// [8] QIcon icon(const QFileInfo &) const
 func (this *QFileIconProvider) Icon_1(info qtcore.QFileInfo_ITF) *qtgui.QIcon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if info != nil && info.QFileInfo_PTR() != nil {
@@ -117,7 +117,7 @@ func (this *QFileIconProvider) Icon_1(info qtcore.QFileInfo_ITF) *qtgui.QIcon /*
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QString type(const QFileInfo &)
+// [8] QString type(const QFileInfo &) const
 func (this *QFileIconProvider) Type(info qtcore.QFileInfo_ITF) string {
 	var convArg0 unsafe.Pointer
 	if info != nil && info.QFileInfo_PTR() != nil {
@@ -143,7 +143,7 @@ func (this *QFileIconProvider) SetOptions(options int) {
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QFileIconProvider::Options options()
+// [4] QFileIconProvider::Options options() const
 func (this *QFileIconProvider) Options() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFileIconProvider7optionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

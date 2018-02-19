@@ -94,7 +94,7 @@ func DeleteQHelpEvent(this *QHelpEvent) {
 // /usr/include/qt/QtGui/qevent.h:683
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int x()
+// [4] int x() const
 func (this *QHelpEvent) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -104,7 +104,7 @@ func (this *QHelpEvent) X() int {
 // /usr/include/qt/QtGui/qevent.h:684
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int y()
+// [4] int y() const
 func (this *QHelpEvent) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +114,7 @@ func (this *QHelpEvent) Y() int {
 // /usr/include/qt/QtGui/qevent.h:685
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int globalX()
+// [4] int globalX() const
 func (this *QHelpEvent) GlobalX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent7globalXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,7 +124,7 @@ func (this *QHelpEvent) GlobalX() int {
 // /usr/include/qt/QtGui/qevent.h:686
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int globalY()
+// [4] int globalY() const
 func (this *QHelpEvent) GlobalY() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent7globalYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func (this *QHelpEvent) GlobalY() int {
 // /usr/include/qt/QtGui/qevent.h:688
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QPoint & pos()
+// [8] const QPoint & pos() const
 func (this *QHelpEvent) Pos() *qtcore.QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,7 +146,7 @@ func (this *QHelpEvent) Pos() *qtcore.QPoint {
 // /usr/include/qt/QtGui/qevent.h:689
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] const QPoint & globalPos()
+// [8] const QPoint & globalPos() const
 func (this *QHelpEvent) GlobalPos() *qtcore.QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent9globalPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

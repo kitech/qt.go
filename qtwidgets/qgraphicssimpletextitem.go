@@ -92,6 +92,20 @@ func NewQGraphicsSimpleTextItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:968
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsSimpleTextItem(QGraphicsItem *)
+func NewQGraphicsSimpleTextItem__() *QGraphicsSimpleTextItem {
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsSimpleTextItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsSimpleTextItem)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:969
 // index:1
 // Public Visibility=Default Availability=Available
@@ -103,6 +117,22 @@ func NewQGraphicsSimpleTextItem_1(text string, parent QGraphicsItem_ITF /*777 QG
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg1 = parent.QGraphicsItem_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGraphicsSimpleTextItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsSimpleTextItem)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:969
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsSimpleTextItem(const QString &, QGraphicsItem *)
+func NewQGraphicsSimpleTextItem_1_(text string) *QGraphicsSimpleTextItem {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGraphicsSimpleTextItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -135,7 +165,7 @@ func (this *QGraphicsSimpleTextItem) SetText(text string) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:973
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString text()
+// [8] QString text() const
 func (this *QGraphicsSimpleTextItem) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,7 +191,7 @@ func (this *QGraphicsSimpleTextItem) SetFont(font qtgui.QFont_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:976
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QFont font()
+// [16] QFont font() const
 func (this *QGraphicsSimpleTextItem) Font() *qtgui.QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,7 +203,7 @@ func (this *QGraphicsSimpleTextItem) Font() *qtgui.QFont /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:978
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QRectF boundingRect()
+// [32] QRectF boundingRect() const
 func (this *QGraphicsSimpleTextItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,7 +215,7 @@ func (this *QGraphicsSimpleTextItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:979
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPainterPath shape()
+// [8] QPainterPath shape() const
 func (this *QGraphicsSimpleTextItem) Shape() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem5shapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +227,7 @@ func (this *QGraphicsSimpleTextItem) Shape() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:980
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool contains(const QPointF &)
+// [1] bool contains(const QPointF &) const
 func (this *QGraphicsSimpleTextItem) Contains(point qtcore.QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -232,7 +262,7 @@ func (this *QGraphicsSimpleTextItem) Paint(painter qtgui.QPainter_ITF /*777 QPai
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:984
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isObscuredBy(const QGraphicsItem *)
+// [1] bool isObscuredBy(const QGraphicsItem *) const
 func (this *QGraphicsSimpleTextItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
@@ -246,7 +276,7 @@ func (this *QGraphicsSimpleTextItem) IsObscuredBy(item QGraphicsItem_ITF /*777 c
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:985
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPainterPath opaqueArea()
+// [8] QPainterPath opaqueArea() const
 func (this *QGraphicsSimpleTextItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,7 +288,7 @@ func (this *QGraphicsSimpleTextItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:988
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int type()
+// [4] int type() const
 func (this *QGraphicsSimpleTextItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +298,7 @@ func (this *QGraphicsSimpleTextItem) Type() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:991
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool supportsExtension(enum QGraphicsItem::Extension)
+// [1] bool supportsExtension(enum QGraphicsItem::Extension) const
 func (this *QGraphicsSimpleTextItem) SupportsExtension(extension int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	qtrt.ErrPrint(err, rv)
@@ -291,7 +321,7 @@ func (this *QGraphicsSimpleTextItem) SetExtension(extension int, variant qtcore.
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:993
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QVariant extension(const QVariant &)
+// [16] QVariant extension(const QVariant &) const
 func (this *QGraphicsSimpleTextItem) Extension(variant qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if variant != nil && variant.QVariant_PTR() != nil {

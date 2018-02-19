@@ -74,7 +74,7 @@ func (*QErrorMessage) NewFromPointer(cthis unsafe.Pointer) *QErrorMessage {
 // /usr/include/qt/QtWidgets/qerrormessage.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QErrorMessage10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +90,20 @@ func NewQErrorMessage(parent QWidget_ITF /*777 QWidget **/) *QErrorMessage {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessageC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQErrorMessageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QErrorMessage")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qerrormessage.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QErrorMessage(QWidget *)
+func NewQErrorMessage__() *QErrorMessage {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessageC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQErrorMessageFromPointer(unsafe.Pointer(uintptr(rv)))

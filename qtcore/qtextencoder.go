@@ -138,12 +138,12 @@ func (this *QTextEncoder) FromUnicode_1(str QStringView_ITF /*123*/) *QByteArray
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(const QChar *, int)
-func (this *QTextEncoder) FromUnicode_2(uc QChar_ITF /*777 const QChar **/, len int) *QByteArray /*123*/ {
+func (this *QTextEncoder) FromUnicode_2(uc QChar_ITF /*777 const QChar **/, len_ int) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QChar_PTR() != nil {
 		convArg0 = uc.QChar_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeEPK5QChari", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeEPK5QChari", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -153,7 +153,7 @@ func (this *QTextEncoder) FromUnicode_2(uc QChar_ITF /*777 const QChar **/, len 
 // /usr/include/qt/QtCore/qtextcodec.h:149
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasFailure()
+// [1] bool hasFailure() const
 func (this *QTextEncoder) HasFailure() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextEncoder10hasFailureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

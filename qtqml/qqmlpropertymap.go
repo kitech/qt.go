@@ -69,7 +69,7 @@ func (*QQmlPropertyMap) NewFromPointer(cthis unsafe.Pointer) *QQmlPropertyMap {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QQmlPropertyMap) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +92,20 @@ func NewQQmlPropertyMap(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlProper
 	return gothis
 }
 
+// /usr/include/qt/QtQml/qqmlpropertymap.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlPropertyMap(QObject *)
+func NewQQmlPropertyMap__() *QQmlPropertyMap {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QQmlPropertyMapC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQmlPropertyMapFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQmlPropertyMap")
+	return gothis
+}
+
 // /usr/include/qt/QtQml/qqmlpropertymap.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -106,7 +120,7 @@ func DeleteQQmlPropertyMap(this *QQmlPropertyMap) {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant value(const QString &)
+// [16] QVariant value(const QString &) const
 func (this *QQmlPropertyMap) Value(key string) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -131,7 +145,7 @@ func (this *QQmlPropertyMap) Clear(key string) {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList keys()
+// [8] QStringList keys() const
 func (this *QQmlPropertyMap) Keys() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap4keysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +157,7 @@ func (this *QQmlPropertyMap) Keys() *qtcore.QStringList /*123*/ {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int count()
+// [4] int count() const
 func (this *QQmlPropertyMap) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +167,7 @@ func (this *QQmlPropertyMap) Count() int {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int size()
+// [4] int size() const
 func (this *QQmlPropertyMap) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,7 +177,7 @@ func (this *QQmlPropertyMap) Size() int {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QQmlPropertyMap) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,7 +187,7 @@ func (this *QQmlPropertyMap) IsEmpty() bool {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QString &)
+// [1] bool contains(const QString &) const
 func (this *QQmlPropertyMap) Contains(key string) bool {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -199,7 +213,7 @@ func (this *QQmlPropertyMap) Operator_get_index(key string) *qtcore.QVariant {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:73
 // index:1
 // Public Visibility=Default Availability=Available
-// [16] QVariant operator[](const QString &)
+// [16] QVariant operator[](const QString &) const
 func (this *QQmlPropertyMap) Operator_get_index_1(key string) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()

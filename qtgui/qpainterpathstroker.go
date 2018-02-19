@@ -113,7 +113,7 @@ func (this *QPainterPathStroker) SetWidth(width float64) {
 // /usr/include/qt/QtGui/qpainterpath.h:251
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal width()
+// [8] qreal width() const
 func (this *QPainterPathStroker) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QPainterPathStroker) SetCapStyle(style int) {
 // /usr/include/qt/QtGui/qpainterpath.h:254
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::PenCapStyle capStyle()
+// [4] Qt::PenCapStyle capStyle() const
 func (this *QPainterPathStroker) CapStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker8capStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func (this *QPainterPathStroker) SetJoinStyle(style int) {
 // /usr/include/qt/QtGui/qpainterpath.h:257
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::PenJoinStyle joinStyle()
+// [4] Qt::PenJoinStyle joinStyle() const
 func (this *QPainterPathStroker) JoinStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker9joinStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +170,7 @@ func (this *QPainterPathStroker) SetMiterLimit(length float64) {
 // /usr/include/qt/QtGui/qpainterpath.h:260
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal miterLimit()
+// [8] qreal miterLimit() const
 func (this *QPainterPathStroker) MiterLimit() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker10miterLimitEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,7 +189,7 @@ func (this *QPainterPathStroker) SetCurveThreshold(threshold float64) {
 // /usr/include/qt/QtGui/qpainterpath.h:263
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal curveThreshold()
+// [8] qreal curveThreshold() const
 func (this *QPainterPathStroker) CurveThreshold() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker14curveThresholdEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QPainterPathStroker) SetDashOffset(offset float64) {
 // /usr/include/qt/QtGui/qpainterpath.h:270
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal dashOffset()
+// [8] qreal dashOffset() const
 func (this *QPainterPathStroker) DashOffset() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker10dashOffsetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +227,7 @@ func (this *QPainterPathStroker) DashOffset() float64 {
 // /usr/include/qt/QtGui/qpainterpath.h:272
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainterPath createStroke(const QPainterPath &)
+// [8] QPainterPath createStroke(const QPainterPath &) const
 func (this *QPainterPathStroker) CreateStroke(path QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {

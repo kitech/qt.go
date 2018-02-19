@@ -67,7 +67,7 @@ func (*QTimer) NewFromPointer(cthis unsafe.Pointer) *QTimer {
 // /usr/include/qt/QtCore/qtimer.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QTimer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +90,20 @@ func NewQTimer(parent QObject_ITF /*777 QObject **/) *QTimer {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qtimer.h:66
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTimer(QObject *)
+func NewQTimer__() *QTimer {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQTimerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QTimer")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qtimer.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -104,7 +118,7 @@ func DeleteQTimer(this *QTimer) {
 // /usr/include/qt/QtCore/qtimer.h:69
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isActive()
+// [1] bool isActive() const
 func (this *QTimer) IsActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +128,7 @@ func (this *QTimer) IsActive() bool {
 // /usr/include/qt/QtCore/qtimer.h:70
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int timerId()
+// [4] int timerId() const
 func (this *QTimer) TimerId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer7timerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,7 +147,7 @@ func (this *QTimer) SetInterval(msec int) {
 // /usr/include/qt/QtCore/qtimer.h:73
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int interval()
+// [4] int interval() const
 func (this *QTimer) Interval() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer8intervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +157,7 @@ func (this *QTimer) Interval() int {
 // /usr/include/qt/QtCore/qtimer.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int remainingTime()
+// [4] int remainingTime() const
 func (this *QTimer) RemainingTime() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer13remainingTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +176,7 @@ func (this *QTimer) SetTimerType(atype int) {
 // /usr/include/qt/QtCore/qtimer.h:78
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] Qt::TimerType timerType()
+// [4] Qt::TimerType timerType() const
 func (this *QTimer) TimerType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer9timerTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -181,7 +195,7 @@ func (this *QTimer) SetSingleShot(singleShot bool) {
 // /usr/include/qt/QtCore/qtimer.h:81
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isSingleShot()
+// [1] bool isSingleShot() const
 func (this *QTimer) IsSingleShot() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer12isSingleShotEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -256,7 +270,7 @@ func (this *QTimer) Stop() {
 // /usr/include/qt/QtCore/qtimer.h:173
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] std::chrono::milliseconds intervalAsDuration()
+// [8] std::chrono::milliseconds intervalAsDuration() const
 func (this *QTimer) IntervalAsDuration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer18intervalAsDurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -266,7 +280,7 @@ func (this *QTimer) IntervalAsDuration() int {
 // /usr/include/qt/QtCore/qtimer.h:178
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] std::chrono::milliseconds remainingTimeAsDuration()
+// [8] std::chrono::milliseconds remainingTimeAsDuration() const
 func (this *QTimer) RemainingTimeAsDuration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer23remainingTimeAsDurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -76,7 +76,7 @@ func DeleteQAccessibleStateChangeEvent(this *QAccessibleStateChangeEvent) {
 // /usr/include/qt/QtGui/qaccessible.h:735
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QAccessible::State changedStates()
+// [8] QAccessible::State changedStates() const
 func (this *QAccessibleStateChangeEvent) ChangedStates() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAccessibleStateChangeEvent13changedStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

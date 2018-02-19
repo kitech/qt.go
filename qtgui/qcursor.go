@@ -106,6 +106,52 @@ func NewQCursor_2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCu
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qcursor.h:84
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QCursor(const QBitmap &, const QBitmap &, int, int)
+func NewQCursor_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
+	var convArg0 unsafe.Pointer
+	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
+		convArg0 = bitmap.QBitmap_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if mask != nil && mask.QBitmap_PTR() != nil {
+		convArg1 = mask.QBitmap_PTR().GetCthis()
+	}
+	// arg: 2, int=Int, =Invalid,
+	hotX := -1
+	// arg: 3, int=Int, =Invalid,
+	hotY := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QBitmapS2_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, hotX, hotY)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQCursorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCursor)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qcursor.h:84
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QCursor(const QBitmap &, const QBitmap &, int, int)
+func NewQCursor_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
+	var convArg0 unsafe.Pointer
+	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
+		convArg0 = bitmap.QBitmap_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if mask != nil && mask.QBitmap_PTR() != nil {
+		convArg1 = mask.QBitmap_PTR().GetCthis()
+	}
+	// arg: 3, int=Int, =Invalid,
+	hotY := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QBitmapS2_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, hotX, hotY)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQCursorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCursor)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qcursor.h:85
 // index:3
 // Public Visibility=Default Availability=Available
@@ -115,6 +161,44 @@ func NewQCursor_3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QPixmapii", qtrt.FFI_TYPE_POINTER, convArg0, hotX, hotY)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQCursorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCursor)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qcursor.h:85
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QCursor(const QPixmap &, int, int)
+func NewQCursor_3_(pixmap QPixmap_ITF) *QCursor {
+	var convArg0 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg0 = pixmap.QPixmap_PTR().GetCthis()
+	}
+	// arg: 1, int=Int, =Invalid,
+	hotX := -1
+	// arg: 2, int=Int, =Invalid,
+	hotY := -1
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QPixmapii", qtrt.FFI_TYPE_POINTER, convArg0, hotX, hotY)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQCursorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCursor)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qcursor.h:85
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QCursor(const QPixmap &, int, int)
+func NewQCursor_3_1(pixmap QPixmap_ITF, hotX int) *QCursor {
+	var convArg0 unsafe.Pointer
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg0 = pixmap.QPixmap_PTR().GetCthis()
+	}
+	// arg: 2, int=Int, =Invalid,
+	hotY := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QPixmapii", qtrt.FFI_TYPE_POINTER, convArg0, hotX, hotY)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCursorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -177,7 +261,7 @@ func (this *QCursor) Swap(other QCursor_ITF) {
 // /usr/include/qt/QtGui/qcursor.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::CursorShape shape()
+// [4] Qt::CursorShape shape() const
 func (this *QCursor) Shape() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCursor5shapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -196,7 +280,7 @@ func (this *QCursor) SetShape(newShape int) {
 // /usr/include/qt/QtGui/qcursor.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const QBitmap * bitmap()
+// [8] const QBitmap * bitmap() const
 func (this *QCursor) Bitmap() *QBitmap /*777 const QBitmap **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCursor6bitmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -206,7 +290,7 @@ func (this *QCursor) Bitmap() *QBitmap /*777 const QBitmap **/ {
 // /usr/include/qt/QtGui/qcursor.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const QBitmap * mask()
+// [8] const QBitmap * mask() const
 func (this *QCursor) Mask() *QBitmap /*777 const QBitmap **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCursor4maskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +300,7 @@ func (this *QCursor) Mask() *QBitmap /*777 const QBitmap **/ {
 // /usr/include/qt/QtGui/qcursor.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap()
+// [32] QPixmap pixmap() const
 func (this *QCursor) Pixmap() *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCursor6pixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,7 +312,7 @@ func (this *QCursor) Pixmap() *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qcursor.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPoint hotSpot()
+// [8] QPoint hotSpot() const
 func (this *QCursor) HotSpot() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCursor7hotSpotEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

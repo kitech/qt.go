@@ -62,7 +62,7 @@ func (*QFile) NewFromPointer(cthis unsafe.Pointer) *QFile {
 // /usr/include/qt/QtCore/qfile.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,7 +143,7 @@ func DeleteQFile(this *QFile) {
 // /usr/include/qt/QtCore/qfile.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QString fileName()
+// [8] QString fileName() const
 func (this *QFile) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,7 +228,7 @@ func QFile_DecodeName_1(localFileName string) string {
 // /usr/include/qt/QtCore/qfile.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool exists()
+// [1] bool exists() const
 func (this *QFile) Exists() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile6existsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,7 +255,7 @@ func QFile_Exists_1(fileName string) bool {
 // /usr/include/qt/QtCore/qfile.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString readLink()
+// [8] QString readLink() const
 func (this *QFile) ReadLink() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile8readLinkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func QFile_ReadLink_1(fileName string) string {
 // /usr/include/qt/QtCore/qfile.h:112
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QString symLinkTarget()
+// [8] QString symLinkTarget() const
 func (this *QFile) SymLinkTarget() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile13symLinkTargetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -458,10 +458,22 @@ func (this *QFile) Open_1(fd int, ioFlags int, handleFlags int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qfile.h:129
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool open(int, QIODevice::OpenMode, QFileDevice::FileHandleFlags)
+func (this *QFile) Open_1_(fd int, ioFlags int) bool {
+	// arg: 2, QFileDevice::FileHandleFlags=Typedef, QFileDevice::FileHandleFlags=Typedef, QFlags<QFileDevice::FileHandleFlag>
+	handleFlags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4openEi6QFlagsIN9QIODevice12OpenModeFlagEES0_IN11QFileDevice14FileHandleFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fd, ioFlags, handleFlags)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qfile.h:131
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] qint64 size()
+// [8] qint64 size() const
 func (this *QFile) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -498,7 +510,7 @@ func QFile_Resize_1(filename string, sz int64) bool {
 // /usr/include/qt/QtCore/qfile.h:136
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QFileDevice::Permissions permissions()
+// [4] QFileDevice::Permissions permissions() const
 func (this *QFile) Permissions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile11permissionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

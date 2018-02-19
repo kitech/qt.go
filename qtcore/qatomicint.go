@@ -73,6 +73,20 @@ func NewQAtomicInt(value int) *QAtomicInt {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qatomic.h:162
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QAtomicInt(int)
+func NewQAtomicInt__() *QAtomicInt {
+	// arg: 0, int=Int, =Invalid,
+	value := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QAtomicIntC2Ei", qtrt.FFI_TYPE_POINTER, value)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAtomicIntFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAtomicInt)
+	return gothis
+}
+
 func DeleteQAtomicInt(this *QAtomicInt) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QAtomicIntD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

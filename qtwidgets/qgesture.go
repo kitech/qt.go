@@ -64,7 +64,7 @@ func (*QGesture) NewFromPointer(cthis unsafe.Pointer) *QGesture {
 // /usr/include/qt/QtWidgets/qgesture.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGesture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +87,20 @@ func NewQGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QGesture {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgesture.h:73
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QGesture(QObject *)
+func NewQGesture__() *QGesture {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGestureFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QGesture")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qgesture.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -101,7 +115,7 @@ func DeleteQGesture(this *QGesture) {
 // /usr/include/qt/QtWidgets/qgesture.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::GestureType gestureType()
+// [4] Qt::GestureType gestureType() const
 func (this *QGesture) GestureType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGesture11gestureTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +125,7 @@ func (this *QGesture) GestureType() int {
 // /usr/include/qt/QtWidgets/qgesture.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::GestureState state()
+// [4] Qt::GestureState state() const
 func (this *QGesture) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGesture5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,7 +135,7 @@ func (this *QGesture) State() int {
 // /usr/include/qt/QtWidgets/qgesture.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QPointF hotSpot()
+// [16] QPointF hotSpot() const
 func (this *QGesture) HotSpot() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGesture7hotSpotEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,7 +160,7 @@ func (this *QGesture) SetHotSpot(value qtcore.QPointF_ITF) {
 // /usr/include/qt/QtWidgets/qgesture.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasHotSpot()
+// [1] bool hasHotSpot() const
 func (this *QGesture) HasHotSpot() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGesture10hasHotSpotEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +188,7 @@ func (this *QGesture) SetGestureCancelPolicy(policy int) {
 // /usr/include/qt/QtWidgets/qgesture.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QGesture::GestureCancelPolicy gestureCancelPolicy()
+// [4] QGesture::GestureCancelPolicy gestureCancelPolicy() const
 func (this *QGesture) GestureCancelPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGesture19gestureCancelPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

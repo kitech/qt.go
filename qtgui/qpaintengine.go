@@ -74,6 +74,20 @@ func NewQPaintEngine(features int) *QPaintEngine {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qpaintengine.h:147
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QPaintEngine(QPaintEngine::PaintEngineFeatures)
+func NewQPaintEngine__() *QPaintEngine {
+	// arg: 0, QPaintEngine::PaintEngineFeatures=Typedef, QPaintEngine::PaintEngineFeatures=Typedef, QFlags<QPaintEngine::PaintEngineFeature>
+	features := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngineC2E6QFlagsINS_18PaintEngineFeatureEE", qtrt.FFI_TYPE_POINTER, features)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQPaintEngineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPaintEngine)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qpaintengine.h:148
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -88,7 +102,7 @@ func DeleteQPaintEngine(this *QPaintEngine) {
 // /usr/include/qt/QtGui/qpaintengine.h:150
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isActive()
+// [1] bool isActive() const
 func (this *QPaintEngine) IsActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -364,6 +378,29 @@ func (this *QPaintEngine) DrawImage(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtcor
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qpaintengine.h:178
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void drawImage(const QRectF &, const QImage &, const QRectF &, Qt::ImageConversionFlags)
+func (this *QPaintEngine) DrawImage__(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtcore.QRectF_ITF) {
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRectF_PTR() != nil {
+		convArg0 = r.QRectF_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if pm != nil && pm.QImage_PTR() != nil {
+		convArg1 = pm.QImage_PTR().GetCthis()
+	}
+	var convArg2 unsafe.Pointer
+	if sr != nil && sr.QRectF_PTR() != nil {
+		convArg2 = sr.QRectF_PTR().GetCthis()
+	}
+	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9drawImageERK6QRectFRK6QImageS2_6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, flags)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qpaintengine.h:181
 // index:0
 // Public Visibility=Default Availability=Available
@@ -380,7 +417,7 @@ func (this *QPaintEngine) SetPaintDevice(device QPaintDevice_ITF /*777 QPaintDev
 // /usr/include/qt/QtGui/qpaintengine.h:182
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPaintDevice * paintDevice()
+// [8] QPaintDevice * paintDevice() const
 func (this *QPaintEngine) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine11paintDeviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -403,7 +440,7 @@ func (this *QPaintEngine) SetSystemClip(baseClip QRegion_ITF) {
 // /usr/include/qt/QtGui/qpaintengine.h:185
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegion systemClip()
+// [8] QRegion systemClip() const
 func (this *QPaintEngine) SystemClip() *QRegion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10systemClipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -428,7 +465,7 @@ func (this *QPaintEngine) SetSystemRect(rect qtcore.QRect_ITF) {
 // /usr/include/qt/QtGui/qpaintengine.h:188
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QRect systemRect()
+// [16] QRect systemRect() const
 func (this *QPaintEngine) SystemRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10systemRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -440,7 +477,7 @@ func (this *QPaintEngine) SystemRect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qpaintengine.h:191
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QPoint coordinateOffset()
+// [8] QPoint coordinateOffset() const
 func (this *QPaintEngine) CoordinateOffset() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine16coordinateOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -452,7 +489,7 @@ func (this *QPaintEngine) CoordinateOffset() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qpaintengine.h:214
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] QPaintEngine::Type type()
+// [4] QPaintEngine::Type type() const
 func (this *QPaintEngine) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -499,7 +536,7 @@ func (this *QPaintEngine) ClearDirty(df int) {
 // /usr/include/qt/QtGui/qpaintengine.h:222
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool hasFeature(QPaintEngine::PaintEngineFeatures)
+// [1] bool hasFeature(QPaintEngine::PaintEngineFeatures) const
 func (this *QPaintEngine) HasFeature(feature int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10hasFeatureE6QFlagsINS_18PaintEngineFeatureEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), feature)
 	qtrt.ErrPrint(err, rv)
@@ -509,7 +546,7 @@ func (this *QPaintEngine) HasFeature(feature int) bool {
 // /usr/include/qt/QtGui/qpaintengine.h:224
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPainter * painter()
+// [8] QPainter * painter() const
 func (this *QPaintEngine) Painter() *QPainter /*777 QPainter **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine7painterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -528,7 +565,7 @@ func (this *QPaintEngine) SyncState() {
 // /usr/include/qt/QtGui/qpaintengine.h:227
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool isExtended()
+// [1] bool isExtended() const
 func (this *QPaintEngine) IsExtended() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10isExtendedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

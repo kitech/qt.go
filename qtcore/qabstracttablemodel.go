@@ -62,7 +62,7 @@ func (*QAbstractTableModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractTable
 // /usr/include/qt/QtCore/qabstractitemmodel.h:367
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QAbstractTableModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTableModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +85,20 @@ func NewQAbstractTableModel(parent QObject_ITF /*777 QObject **/) *QAbstractTabl
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qabstractitemmodel.h:370
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAbstractTableModel(QObject *)
+func NewQAbstractTableModel__() *QAbstractTableModel {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTableModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQAbstractTableModelFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QAbstractTableModel")
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qabstractitemmodel.h:371
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -99,7 +113,7 @@ func DeleteQAbstractTableModel(this *QAbstractTableModel) {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:373
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [24] QModelIndex index(int, int, const QModelIndex &)
+// [24] QModelIndex index(int, int, const QModelIndex &) const
 func (this *QAbstractTableModel) Index(row int, column int, parent QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -112,10 +126,24 @@ func (this *QAbstractTableModel) Index(row int, column int, parent QModelIndex_I
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qabstractitemmodel.h:373
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [24] QModelIndex index(int, int, const QModelIndex &) const
+func (this *QAbstractTableModel) Index__(row int, column int) *QModelIndex /*123*/ {
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	var convArg2 = NewQModelIndex()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTableModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qabstractitemmodel.h:374
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [24] QModelIndex sibling(int, int, const QModelIndex &)
+// [24] QModelIndex sibling(int, int, const QModelIndex &) const
 func (this *QAbstractTableModel) Sibling(row int, column int, idx QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
 	if idx != nil && idx.QModelIndex_PTR() != nil {
@@ -149,7 +177,7 @@ func (this *QAbstractTableModel) DropMimeData(data QMimeData_ITF /*777 const QMi
 // /usr/include/qt/QtCore/qabstractitemmodel.h:378
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] Qt::ItemFlags flags(const QModelIndex &)
+// [4] Qt::ItemFlags flags(const QModelIndex &) const
 func (this *QAbstractTableModel) Flags(index QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {

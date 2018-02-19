@@ -73,6 +73,36 @@ func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qlayoutitem.h:95
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSpacerItem(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
+func NewQSpacerItem__(w int, h int) *QSpacerItem {
+	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	hData := 0
+	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	vData := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, w, h, hData, vData)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSpacerItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSpacerItem)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qlayoutitem.h:95
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSpacerItem(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
+func NewQSpacerItem__1(w int, h int, hData int) *QSpacerItem {
+	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	vData := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, w, h, hData, vData)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSpacerItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSpacerItem)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qlayoutitem.h:99
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -93,10 +123,34 @@ func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qlayoutitem.h:101
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void changeSize(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
+func (this *QSpacerItem) ChangeSize__(w int, h int) {
+	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	hData := 0
+	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	vData := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, hData, vData)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlayoutitem.h:101
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void changeSize(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
+func (this *QSpacerItem) ChangeSize__1(w int, h int, hData int) {
+	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	vData := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, hData, vData)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qlayoutitem.h:104
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeHint()
+// [8] QSize sizeHint() const
 func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -108,7 +162,7 @@ func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:105
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize minimumSize()
+// [8] QSize minimumSize() const
 func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,7 +174,7 @@ func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:106
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize maximumSize()
+// [8] QSize maximumSize() const
 func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -132,7 +186,7 @@ func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:107
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] Qt::Orientations expandingDirections()
+// [4] Qt::Orientations expandingDirections() const
 func (this *QSpacerItem) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,7 +196,7 @@ func (this *QSpacerItem) ExpandingDirections() int {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:108
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QSpacerItem) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -165,7 +219,7 @@ func (this *QSpacerItem) SetGeometry(arg0 qtcore.QRect_ITF) {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:110
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect geometry()
+// [16] QRect geometry() const
 func (this *QSpacerItem) Geometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +241,7 @@ func (this *QSpacerItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:112
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] QSizePolicy sizePolicy()
+// [4] QSizePolicy sizePolicy() const
 func (this *QSpacerItem) SizePolicy() *QSizePolicy /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem10sizePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

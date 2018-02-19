@@ -102,7 +102,7 @@ func (this *QSGTransformNode) SetMatrix(matrix qtgui.QMatrix4x4_ITF) {
 // /usr/include/qt/QtQuick/qsgnode.h:288
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [68] const QMatrix4x4 & matrix()
+// [68] const QMatrix4x4 & matrix() const
 func (this *QSGTransformNode) Matrix() *qtgui.QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGTransformNode6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,7 +127,7 @@ func (this *QSGTransformNode) SetCombinedMatrix(matrix qtgui.QMatrix4x4_ITF) {
 // /usr/include/qt/QtQuick/qsgnode.h:291
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [68] const QMatrix4x4 & combinedMatrix()
+// [68] const QMatrix4x4 & combinedMatrix() const
 func (this *QSGTransformNode) CombinedMatrix() *qtgui.QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGTransformNode14combinedMatrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

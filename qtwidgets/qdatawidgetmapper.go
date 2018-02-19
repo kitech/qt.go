@@ -64,7 +64,7 @@ func (*QDataWidgetMapper) NewFromPointer(cthis unsafe.Pointer) *QDataWidgetMappe
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QDataWidgetMapper) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDataWidgetMapper10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +80,20 @@ func NewQDataWidgetMapper(parent qtcore.QObject_ITF /*777 QObject **/) *QDataWid
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QDataWidgetMapperC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQDataWidgetMapperFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QDataWidgetMapper")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:64
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDataWidgetMapper(QObject *)
+func NewQDataWidgetMapper__() *QDataWidgetMapper {
+	// arg: 0, QObject *=Pointer, QObject=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QDataWidgetMapperC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDataWidgetMapperFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -114,7 +128,7 @@ func (this *QDataWidgetMapper) SetModel(model qtcore.QAbstractItemModel_ITF /*77
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractItemModel * model()
+// [8] QAbstractItemModel * model() const
 func (this *QDataWidgetMapper) Model() *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDataWidgetMapper5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -137,7 +151,7 @@ func (this *QDataWidgetMapper) SetItemDelegate(delegate QAbstractItemDelegate_IT
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractItemDelegate * itemDelegate()
+// [8] QAbstractItemDelegate * itemDelegate() const
 func (this *QDataWidgetMapper) ItemDelegate() *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDataWidgetMapper12itemDelegateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +174,7 @@ func (this *QDataWidgetMapper) SetRootIndex(index qtcore.QModelIndex_ITF) {
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [24] QModelIndex rootIndex()
+// [24] QModelIndex rootIndex() const
 func (this *QDataWidgetMapper) RootIndex() *qtcore.QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDataWidgetMapper9rootIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -181,7 +195,7 @@ func (this *QDataWidgetMapper) SetOrientation(aOrientation int) {
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] Qt::Orientation orientation()
+// [4] Qt::Orientation orientation() const
 func (this *QDataWidgetMapper) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDataWidgetMapper11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,7 +214,7 @@ func (this *QDataWidgetMapper) SetSubmitPolicy(policy int) {
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QDataWidgetMapper::SubmitPolicy submitPolicy()
+// [4] QDataWidgetMapper::SubmitPolicy submitPolicy() const
 func (this *QDataWidgetMapper) SubmitPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDataWidgetMapper12submitPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -253,7 +267,7 @@ func (this *QDataWidgetMapper) RemoveMapping(widget QWidget_ITF /*777 QWidget **
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int mappedSection(QWidget *)
+// [4] int mappedSection(QWidget *) const
 func (this *QDataWidgetMapper) MappedSection(widget QWidget_ITF /*777 QWidget **/) int {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -267,7 +281,7 @@ func (this *QDataWidgetMapper) MappedSection(widget QWidget_ITF /*777 QWidget **
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray mappedPropertyName(QWidget *)
+// [8] QByteArray mappedPropertyName(QWidget *) const
 func (this *QDataWidgetMapper) MappedPropertyName(widget QWidget_ITF /*777 QWidget **/) *qtcore.QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -283,7 +297,7 @@ func (this *QDataWidgetMapper) MappedPropertyName(widget QWidget_ITF /*777 QWidg
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * mappedWidgetAt(int)
+// [8] QWidget * mappedWidgetAt(int) const
 func (this *QDataWidgetMapper) MappedWidgetAt(section int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDataWidgetMapper14mappedWidgetAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section)
 	qtrt.ErrPrint(err, rv)
@@ -302,7 +316,7 @@ func (this *QDataWidgetMapper) ClearMapping() {
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int currentIndex()
+// [4] int currentIndex() const
 func (this *QDataWidgetMapper) CurrentIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDataWidgetMapper12currentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

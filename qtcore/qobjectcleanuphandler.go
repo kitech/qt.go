@@ -62,7 +62,7 @@ func (*QObjectCleanupHandler) NewFromPointer(cthis unsafe.Pointer) *QObjectClean
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:50
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func (this *QObjectCleanupHandler) Remove(object QObject_ITF /*777 QObject **/) 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:58
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEmpty()
+// [1] bool isEmpty() const
 func (this *QObjectCleanupHandler) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

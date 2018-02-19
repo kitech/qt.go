@@ -77,8 +77,22 @@ func NewQFontDatabase() *QFontDatabase {
 // /usr/include/qt/QtGui/qfontdatabase.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList families(enum QFontDatabase::WritingSystem)
+// [8] QStringList families(enum QFontDatabase::WritingSystem) const
 func (this *QFontDatabase) Families(writingSystem int) *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase8familiesENS_13WritingSystemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), writingSystem)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qfontdatabase.h:123
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList families(enum QFontDatabase::WritingSystem) const
+func (this *QFontDatabase) Families__() *qtcore.QStringList /*123*/ {
+	// arg: 0, QFontDatabase::WritingSystem=Enum, QFontDatabase::WritingSystem=Enum,
+	writingSystem := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase8familiesENS_13WritingSystemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), writingSystem)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -89,7 +103,7 @@ func (this *QFontDatabase) Families(writingSystem int) *qtcore.QStringList /*123
 // /usr/include/qt/QtGui/qfontdatabase.h:124
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList styles(const QString &)
+// [8] QStringList styles(const QString &) const
 func (this *QFontDatabase) Styles(family string) *qtcore.QStringList /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -137,7 +151,7 @@ func (this *QFontDatabase) StyleString_1(fontInfo QFontInfo_ITF) string {
 // /usr/include/qt/QtGui/qfontdatabase.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QFont font(const QString &, const QString &, int)
+// [16] QFont font(const QString &, const QString &, int) const
 func (this *QFontDatabase) Font(family string, style string, pointSize int) *QFont /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -153,7 +167,7 @@ func (this *QFontDatabase) Font(family string, style string, pointSize int) *QFo
 // /usr/include/qt/QtGui/qfontdatabase.h:132
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isBitmapScalable(const QString &, const QString &)
+// [1] bool isBitmapScalable(const QString &, const QString &) const
 func (this *QFontDatabase) IsBitmapScalable(family string, style string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -164,10 +178,24 @@ func (this *QFontDatabase) IsBitmapScalable(family string, style string) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qfontdatabase.h:132
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isBitmapScalable(const QString &, const QString &) const
+func (this *QFontDatabase) IsBitmapScalable__(family string) bool {
+	var tmpArg0 = qtcore.NewQString_5(family)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qfontdatabase.h:133
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isSmoothlyScalable(const QString &, const QString &)
+// [1] bool isSmoothlyScalable(const QString &, const QString &) const
 func (this *QFontDatabase) IsSmoothlyScalable(family string, style string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -178,10 +206,24 @@ func (this *QFontDatabase) IsSmoothlyScalable(family string, style string) bool 
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qfontdatabase.h:133
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isSmoothlyScalable(const QString &, const QString &) const
+func (this *QFontDatabase) IsSmoothlyScalable__(family string) bool {
+	var tmpArg0 = qtcore.NewQString_5(family)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qfontdatabase.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isScalable(const QString &, const QString &)
+// [1] bool isScalable(const QString &, const QString &) const
 func (this *QFontDatabase) IsScalable(family string, style string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -192,10 +234,24 @@ func (this *QFontDatabase) IsScalable(family string, style string) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qfontdatabase.h:134
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isScalable(const QString &, const QString &) const
+func (this *QFontDatabase) IsScalable__(family string) bool {
+	var tmpArg0 = qtcore.NewQString_5(family)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase10isScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qfontdatabase.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isFixedPitch(const QString &, const QString &)
+// [1] bool isFixedPitch(const QString &, const QString &) const
 func (this *QFontDatabase) IsFixedPitch(family string, style string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -206,10 +262,24 @@ func (this *QFontDatabase) IsFixedPitch(family string, style string) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qfontdatabase.h:135
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isFixedPitch(const QString &, const QString &) const
+func (this *QFontDatabase) IsFixedPitch__(family string) bool {
+	var tmpArg0 = qtcore.NewQString_5(family)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, const QString &=LValueReference, QString=Record,
+	var convArg1 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qfontdatabase.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool italic(const QString &, const QString &)
+// [1] bool italic(const QString &, const QString &) const
 func (this *QFontDatabase) Italic(family string, style string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -223,7 +293,7 @@ func (this *QFontDatabase) Italic(family string, style string) bool {
 // /usr/include/qt/QtGui/qfontdatabase.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool bold(const QString &, const QString &)
+// [1] bool bold(const QString &, const QString &) const
 func (this *QFontDatabase) Bold(family string, style string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -237,7 +307,7 @@ func (this *QFontDatabase) Bold(family string, style string) bool {
 // /usr/include/qt/QtGui/qfontdatabase.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int weight(const QString &, const QString &)
+// [4] int weight(const QString &, const QString &) const
 func (this *QFontDatabase) Weight(family string, style string) int {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -251,7 +321,7 @@ func (this *QFontDatabase) Weight(family string, style string) int {
 // /usr/include/qt/QtGui/qfontdatabase.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool hasFamily(const QString &)
+// [1] bool hasFamily(const QString &) const
 func (this *QFontDatabase) HasFamily(family string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -263,7 +333,7 @@ func (this *QFontDatabase) HasFamily(family string) bool {
 // /usr/include/qt/QtGui/qfontdatabase.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isPrivateFamily(const QString &)
+// [1] bool isPrivateFamily(const QString &) const
 func (this *QFontDatabase) IsPrivateFamily(family string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()

@@ -89,7 +89,7 @@ func (*QSpinBox) NewFromPointer(cthis unsafe.Pointer) *QSpinBox {
 // /usr/include/qt/QtWidgets/qspinbox.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +112,20 @@ func NewQSpinBox(parent QWidget_ITF /*777 QWidget **/) *QSpinBox {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qspinbox.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSpinBox(QWidget *)
+func NewQSpinBox__() *QSpinBox {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QSpinBox")
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qspinbox.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -126,7 +140,7 @@ func DeleteQSpinBox(this *QSpinBox) {
 // /usr/include/qt/QtWidgets/qspinbox.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int value()
+// [4] int value() const
 func (this *QSpinBox) Value() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,7 +150,7 @@ func (this *QSpinBox) Value() int {
 // /usr/include/qt/QtWidgets/qspinbox.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString prefix()
+// [8] QString prefix() const
 func (this *QSpinBox) Prefix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox6prefixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +174,7 @@ func (this *QSpinBox) SetPrefix(prefix string) {
 // /usr/include/qt/QtWidgets/qspinbox.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString suffix()
+// [8] QString suffix() const
 func (this *QSpinBox) Suffix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox6suffixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,7 +198,7 @@ func (this *QSpinBox) SetSuffix(suffix string) {
 // /usr/include/qt/QtWidgets/qspinbox.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString cleanText()
+// [8] QString cleanText() const
 func (this *QSpinBox) CleanText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox9cleanTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,7 +211,7 @@ func (this *QSpinBox) CleanText() string {
 // /usr/include/qt/QtWidgets/qspinbox.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int singleStep()
+// [4] int singleStep() const
 func (this *QSpinBox) SingleStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox10singleStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +230,7 @@ func (this *QSpinBox) SetSingleStep(val int) {
 // /usr/include/qt/QtWidgets/qspinbox.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int minimum()
+// [4] int minimum() const
 func (this *QSpinBox) Minimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox7minimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -235,7 +249,7 @@ func (this *QSpinBox) SetMinimum(min int) {
 // /usr/include/qt/QtWidgets/qspinbox.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int maximum()
+// [4] int maximum() const
 func (this *QSpinBox) Maximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox7maximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -263,7 +277,7 @@ func (this *QSpinBox) SetRange(min int, max int) {
 // /usr/include/qt/QtWidgets/qspinbox.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int displayIntegerBase()
+// [4] int displayIntegerBase() const
 func (this *QSpinBox) DisplayIntegerBase() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox18displayIntegerBaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -296,7 +310,7 @@ func (this *QSpinBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qspinbox.h:94
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] QValidator::State validate(QString &, int &)
+// [4] QValidator::State validate(QString &, int &) const
 func (this *QSpinBox) Validate(input string, pos int) int {
 	var tmpArg0 = qtcore.NewQString_5(input)
 	var convArg0 = tmpArg0.GetCthis()
@@ -308,7 +322,7 @@ func (this *QSpinBox) Validate(input string, pos int) int {
 // /usr/include/qt/QtWidgets/qspinbox.h:95
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int valueFromText(const QString &)
+// [4] int valueFromText(const QString &) const
 func (this *QSpinBox) ValueFromText(text string) int {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -320,7 +334,7 @@ func (this *QSpinBox) ValueFromText(text string) int {
 // /usr/include/qt/QtWidgets/qspinbox.h:96
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QString textFromValue(int)
+// [8] QString textFromValue(int) const
 func (this *QSpinBox) TextFromValue(val int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox13textFromValueEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	qtrt.ErrPrint(err, rv)
@@ -333,7 +347,7 @@ func (this *QSpinBox) TextFromValue(val int) string {
 // /usr/include/qt/QtWidgets/qspinbox.h:97
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void fixup(QString &)
+// [-2] void fixup(QString &) const
 func (this *QSpinBox) Fixup(str string) {
 	var tmpArg0 = qtcore.NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()

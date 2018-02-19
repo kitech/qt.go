@@ -84,7 +84,7 @@ func (*QWidgetAction) NewFromPointer(cthis unsafe.Pointer) *QWidgetAction {
 // /usr/include/qt/QtWidgets/qwidgetaction.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QWidgetAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetAction10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func (this *QWidgetAction) SetDefaultWidget(w QWidget_ITF /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qwidgetaction.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * defaultWidget()
+// [8] QWidget * defaultWidget() const
 func (this *QWidgetAction) DefaultWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetAction13defaultWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

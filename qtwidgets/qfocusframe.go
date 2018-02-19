@@ -84,7 +84,7 @@ func (*QFocusFrame) NewFromPointer(cthis unsafe.Pointer) *QFocusFrame {
 // /usr/include/qt/QtWidgets/qfocusframe.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject()
+// [8] const QMetaObject * metaObject() const
 func (this *QFocusFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusFrame10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +100,20 @@ func NewQFocusFrame(parent QWidget_ITF /*777 QWidget **/) *QFocusFrame {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusFrameC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQFocusFrameFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QFocusFrame")
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qfocusframe.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFocusFrame(QWidget *)
+func NewQFocusFrame__() *QFocusFrame {
+	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusFrameC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFocusFrameFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -134,7 +148,7 @@ func (this *QFocusFrame) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qfocusframe.h:60
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * widget()
+// [8] QWidget * widget() const
 func (this *QFocusFrame) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusFrame6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,7 +203,7 @@ func (this *QFocusFrame) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent
 // /usr/include/qt/QtWidgets/qfocusframe.h:67
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void initStyleOption(QStyleOption *)
+// [-2] void initStyleOption(QStyleOption *) const
 func (this *QFocusFrame) InitStyleOption(option QStyleOption_ITF /*777 QStyleOption **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
