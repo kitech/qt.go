@@ -154,6 +154,8 @@ var qtlibs = map[string]FFILibrary{}
 func SetDebugFFICall(on bool) { debugFFICall = on }
 func init() {
 	init_ffi_invoke()
+
+	// TODO maybe run when first qtcall
 	init_destroyedDynSlot()
 	init_callack_inherit()
 }
@@ -214,7 +216,6 @@ func init_ffi_invoke() {
 func deinit() {}
 
 func InvokeQtFunc(symname string, retype byte, types []byte, args ...interface{}) (VRetype, error) {
-
 	for modname, lib := range qtlibs {
 		addr, err := lib.Symbol(symname)
 		ErrPrint(err)
@@ -242,18 +243,18 @@ func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []u
 }
 
 func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, error) {
-	rawname := symname
 	addr := GetQtSymAddr(symname)
 	if debugFFICall {
 		log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 	}
 
-	argtys, argvals := convArgs(args...)
+	argtys, argvals, argrefps := convArgs(args...)
+	_ = argrefps
 	var retval C.uint64_t = 0
-	C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(argtys)),
+	C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(args)),
 		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0]))
 
-	onCtorAlloc(rawname)
+	onCtorAlloc(symname)
 	return uint64(retval), nil
 }
 
@@ -264,11 +265,11 @@ func InvokeQtFunc7(symname string, args ...interface{}) (VRetype, error) {
 	log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 
 	var retval unsafe.Pointer = C.calloc(1, 256)
-	argtys, argvals := convArgs(args...)
+	argtys, argvals, argrefps := convArgs(args...)
+	_ = argrefps
 	// var retval C.uint64_t = 0
-	C.ffi_call_ex(addr, C.int(retype), (*C.uint64_t)(retval), C.int(len(argtys)),
+	C.ffi_call_ex(addr, C.int(retype), (*C.uint64_t)(retval), C.int(len(args)),
 		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0]))
-
 	return uint64(uintptr(retval)), nil
 }
 
@@ -309,51 +310,106 @@ func getSymByVTable(ptr unsafe.Pointer, midx int, bidx int) unsafe.Pointer {
 	return ptr
 }
 
-func convArgs(args ...interface{}) (argtys []byte, argvals []uint64) {
+func convArgs(args ...interface{}) (argtys []byte, argvals []uint64, argrefps []*reflect.Value) {
 	argtys = make([]byte, 20)
 	argvals = make([]uint64, 20)
+	argrefps = make([]*reflect.Value, 20)
 	for i, argx := range args {
-		argty, argval := convArg(argx)
-		argtys[i], argvals[i] = argty, argval
+		argty, argval, argrefp := convArg(i, argx)
+		argtys[i], argvals[i], argrefps[i] = argty, argval, &argrefp
 	}
 	return
 }
 
-func convArg(argx interface{}) (argty byte, argval uint64) {
+var tyconvmap = map[reflect.Kind]byte{
+	reflect.Uint64: FFI_TYPE_UINT64, reflect.Int64: FFI_TYPE_SINT64,
+	reflect.Uint32: FFI_TYPE_UINT32, reflect.Int32: FFI_TYPE_SINT32,
+	reflect.Uint: FFI_TYPE_UINT32, reflect.Int: FFI_TYPE_INT,
+	reflect.Uint16: FFI_TYPE_UINT16, reflect.Int16: FFI_TYPE_SINT16,
+	reflect.Uint8: FFI_TYPE_UINT8, reflect.Int8: FFI_TYPE_SINT8,
+}
+
+// argval should be the value's valid address
+//   for non-addressable primitive type, a temporary var is created and it's address is returned
+// argrefp for hold the temporary created var's address's reference, prevent gc for a while
+func convArg(idx int, argx interface{}) (argty byte, argval uint64, argrefp reflect.Value) {
 
 	av := reflect.ValueOf(argx)
 	aty := av.Type()
 
 	switch aty.Kind() {
-	case reflect.Uint64:
-		argty = FFI_TYPE_UINT64
-		argval = uint64(argx.(uint64))
-	case reflect.Int:
-		argty = FFI_TYPE_INT
-		argval = uint64(argx.(int))
-	case reflect.Uint:
-		argty = FFI_TYPE_UINT32
-		argval = uint64(argx.(uint))
+	case reflect.Uint64, reflect.Int64, reflect.Uint32, reflect.Int32,
+		reflect.Int, reflect.Uint, reflect.Uint16, reflect.Int16,
+		reflect.Uint8, reflect.Int8:
+		argty = tyconvmap[aty.Kind()]
+		if av.CanAddr() {
+			argrefp = av
+			argval = refvaluint64(&argrefp)
+		} else {
+			argrefp = reflect.New(aty)
+			argrefp.Elem().Set(av)
+			argval = refvaluint64(&argrefp)
+		}
 	case reflect.Bool:
 		argty = FFI_TYPE_INT
-		argval = uint64(IfElseInt(argx.(bool), 1, 0))
-	case reflect.Ptr:
-		argty = FFI_TYPE_POINTER
-		argval = uint64(av.Pointer())
+		argrefp = reflect.New(IntTy)
+		argrefp.Elem().Set(reflect.ValueOf(IfElseInt(argx.(bool), 1, 0)))
+		argval = refvaluint64(&argrefp)
 	case reflect.Float64:
 		argty = FFI_TYPE_DOUBLE
-		tv := uint64(0)
-		*(*float64)(unsafe.Pointer(&tv)) = argx.(float64)
-		argval = tv
+		if av.CanAddr() {
+			argrefp = av
+			argval = refvaluint64(&argrefp)
+		} else {
+			argrefp = reflect.New(Float64Ty)
+			argrefp.Elem().Set(av)
+			argval = refvaluint64(&argrefp)
+		}
+
+	case reflect.Float32:
+		argty = FFI_TYPE_FLOAT
+		if av.CanAddr() {
+			argrefp = av
+			argval = refvaluint64(&argrefp)
+		} else {
+			argrefp = reflect.New(Float32Ty)
+			argrefp.Elem().Set(av)
+			argval = refvaluint64(&argrefp)
+		}
+
+	case reflect.Ptr:
+		argty = FFI_TYPE_POINTER
+		argrefp = reflect.New(av.Type())
+		argrefp.Elem().Set(av)
+		argval = refvaluint64(&argrefp)
+
 	case reflect.UnsafePointer:
 		argty = FFI_TYPE_POINTER
-		argval = uint64(av.Pointer())
+		argrefp = reflect.New(VoidpTy())
+		argrefp.Elem().Set(av)
+		argval = refvaluint64(&argrefp)
+
 	default:
 		log.Println("Unknown type:", argty, argval, aty.String(), argx)
 	}
 
 	return
 }
+
+// emulate reflect.Value
+type emuValue struct {
+	typ *reflect.Value // placeholder struct pointer field
+	ptr unsafe.Pointer
+	uint8
+}
+
+// hacked replacement of flaged depcreated  reflect.Value.Unsafe.Pointer() and reflect.Value.Pointer()
+func refvalptr(vp *reflect.Value) unsafe.Pointer  { return (*emuValue)(unsafe.Pointer(vp)).ptr }
+func refvaluintptr(vp *reflect.Value) uintptr     { return uintptr(refvalptr(vp)) }
+func refvaluint64(vp *reflect.Value) uint64       { return uint64(refvaluintptr(vp)) }
+func refvalptr_(vp *reflect.Value) unsafe.Pointer { return unsafe.Pointer(vp.UnsafeAddr()) }
+func refvaluintptr_(vp *reflect.Value) uintptr    { return uintptr(refvalptr(vp)) }
+func refvaluint64_(vp *reflect.Value) uint64      { return uint64(refvaluintptr(vp)) }
 
 func convRetval(retype byte, retval interface{}) interface{} {
 	refv := reflect.ValueOf(retval)
