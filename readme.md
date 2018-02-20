@@ -33,6 +33,17 @@ All platforms should be supported, but for now only Linux/Android is tested.
     make
     cp libQtInline.so /usr/lib/libQt5Inline.so
 
+##### FFI
+
+Make sure libffi is installed
+    
+Debian based:
+
+    apt-get install libffi-dev
+    
+Arch based:
+
+    pacaur -Sy libffi-git
 
 ### Examples
 
@@ -45,7 +56,6 @@ All platforms should be supported, but for now only Linux/Android is tested.
         btn.Show()
         app.Exec()
     }
-
 
 ### Internals
 
