@@ -38,7 +38,7 @@ All platforms should be supported, but for now only Linux/Android is tested.
 
     package main
     import "os"
-    import "github.com/qt.go/qtwidgets"
+    import "github.com/kitech/qt.go/qtwidgets"
     func main() {
         app := qtwidgets.NewQApplication(len(os.Args), os.Args, 0)
         btn := qtwidgets.NewQPushButton_1("hello qt.go", nil)
