@@ -3,7 +3,7 @@ package main
 import "testing"
 import "reflect"
 import "unsafe"
-import "github.com/kitech/qt5"
+import "github.com/kitech/qt.go/qt5"
 
 func init() {
 	if false {
