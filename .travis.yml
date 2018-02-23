@@ -1,0 +1,44 @@
+language: go
+sudo: true
+
+cache: ccache
+addons: {apt: {packages: [yasm]}}
+
+matrix:
+  fast_finish: true
+  include:
+    # the actual compilin'
+    - stage: Ubuntu14-go1.10
+      os: linux
+      env: JOB=build-ubuntu14
+      go: "1.10.x"
+    - stage: Ubuntu14-go1.9
+      os: linux
+      env: JOB=build-ubuntu14
+      go: "1.9"
+    # should be latest go
+    - stage: WinMingw-x64
+      os: linux
+      env:
+        - JOB=build-mingw
+        - WINARCH=x64
+      services:
+        - docker
+    - stage: WinMingw-x32
+      os: linux
+      env:
+        - JOB=build-mingw
+        - WINARCH=x32
+      services:
+        - docker
+    - stage: macOS
+      os: osx
+      # osx_image: xcode7.3
+      env: JOB=build-osx
+
+before_install:
+
+before_script:
+
+script:  "./.travis/$JOB.sh"
+

@@ -1,0 +1,28 @@
+
+[[constraint]]
+  name = "github.com/bitly/go-simplejson"
+  version = "0.5.0"
+
+[[constraint]]
+  name = "github.com/clbanning/mxj"
+  version = "1.6.1"
+
+[[constraint]]
+  name = "github.com/emirpasic/gods"
+  version = "1.9.0"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/gonuts/dl"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/kitech/goplusplus"
+
+[[constraint]]
+  name = "github.com/thoas/go-funk"
+  version = "0.2.0"
+
+[prune]
+  go-tests = true
+  unused-packages = true
