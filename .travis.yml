@@ -17,14 +17,14 @@ matrix:
       env: JOB=build-ubuntu14
       go: "1.9"
     # should be latest go
-    - stage: Ubuntu16-go1.10
-      os: linux
-      env:
-        - JOB=build-ubuntu16
-        - GOVER=1.10
-      go: "1.10.x"
-      services:
-        - docker
+    # - stage: Ubuntu16-go1.10
+    #   os: linux
+    #   env:
+    #     - JOB=build-ubuntu16
+    #     - GOVER=1.10
+    #   go: "1.10.x"
+    #   services:
+    #     - docker
     - stage: Ubuntu16-go1.9
       os: linux
       env:
