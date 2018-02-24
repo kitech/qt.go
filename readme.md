@@ -11,15 +11,25 @@ Qt5 binding for Go (Golang) without CGO that aims to achieve Go's native compile
 
 * Binding code with no CGO compile cost
 * Popular Qt5 packages (widgets/QML/extras) support
-* go-uic, go-rcc tools
+* Simple go-uic, go-rcc tools
 * full signal/slot support
 * protected method override support
 * default arguments and value wrapper functions
 
 ### Multiple platforms support
-All platforms should be supported, but for now only Linux/Android is tested.
+All platforms should be supported, for now some of them are tested:
+
+* Archlinux/Ubuntu16+
+* MacOS
+* Android
+* Windows
 
 ### Installation
+
+##### requirement
+
+* go 1.9+
+* libffi
 
 ##### qt.go:
 
@@ -32,7 +42,7 @@ All platforms should be supported, but for now only Linux/Android is tested.
     cd qt.inline
     cmake .
     make
-    cp libQtInline.so /usr/lib/libQt5Inline.so
+    cp libQt5Inline.so /usr/lib/libQt5Inline.so
 
 ##### FFI
 
@@ -44,7 +54,7 @@ Debian based:
     
 Arch based:
 
-    pacaur -Sy libffi-git
+    pacman -S libffi
 
 ### Examples
 
