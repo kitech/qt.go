@@ -8,11 +8,15 @@ matrix:
   fast_finish: true
   include:
     # the actual compilin'
-    - stage: Ubuntu14-go1.10
+    - stage: Ubuntu14-go1.10-tests
+      os: linux
+      env: JOB=tests-ubuntu14
+      go: "1.10.x"
+    - stage: Ubuntu14-go1.10-build
       os: linux
       env: JOB=build-ubuntu14
       go: "1.10.x"
-    - stage: Ubuntu14-go1.9
+    - stage: Ubuntu14-go1.9-build
       os: linux
       env: JOB=build-ubuntu14
       go: "1.9"
@@ -25,7 +29,7 @@ matrix:
     #   go: "1.10.x"
     #   services:
     #     - docker
-    - stage: Ubuntu16-go1.9
+    - stage: Ubuntu16-go1.9-build
       os: linux
       env:
         - JOB=build-ubuntu16
@@ -33,25 +37,25 @@ matrix:
       go: "1.9"
       services:
         - docker
-    - stage: Win-Mingw-x64
+    - stage: Win-Mingw-x64-build
       os: linux
       env:
         - JOB=build-mingw
         - WINARCH=x64
       services:
         - docker
-    - stage: Win-Mingw-x32
+    - stage: Win-Mingw-x32-build
       os: linux
       env:
         - JOB=build-mingw
         - WINARCH=x32
       services:
         - docker
-    - stage: MacOS-Xcode9.3
+    - stage: MacOS-Xcode9.3-build
       os: osx
       osx_image: xcode9.3beta
       env: JOB=build-osx
-    - stage: MacOS-Xcode8.3
+    - stage: MacOS-Xcode8.3-build
       os: osx
       osx_image: xcode8.3
       env: JOB=build-osx

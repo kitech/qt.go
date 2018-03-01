@@ -206,8 +206,12 @@ func init_ffi_invoke() {
 		return fmt.Sprintf("%slibQt5%s.%s", dirp, modname, oslibexts["linux"])
 	}
 
-	for _, modname := range []string{"Core", "Gui", "Widgets", "Network", "Inline",
-		"Qml", "Quick", "QuickControls2", "QuickWidgets"} {
+	mods := []string{"Inline"}
+	// TODO auto check static and omit load other module
+	if !UseWrapSymbols { // raw c++ symbols
+		mods = append([]string{"Core", "Gui", "Widgets", "Network", "Qml", "Quick", "QuickControls2", "QuickWidgets"}, mods...)
+	}
+	for _, modname := range mods {
 		libpath := getLibFile(getLibDirp(), modname)
 		loadModule(libpath, modname)
 	}

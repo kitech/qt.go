@@ -3,9 +3,10 @@
 
 Qt5 binding for Go (Golang) without CGO that aims to achieve Go's native compile speeds. Instead of using common bindings and heavy C++ wrapper code that forces you to compile and link time and time again, Qt.Go uses FFI so there's only a runtime dependency.
 
-[![GoDoc](https://godoc.org/github.com/kitech/qt.go?status.svg)](https://godoc.org/github.com/kitech/qt.go)
 [![Build Status](https://travis-ci.org/kitech/qt.go.svg?branch=master)](https://travis-ci.org/kitech/qt.go)
-
+[![Go Report Card](https://goreportcard.com/badge/github.com/kitech/qt.go)](https://goreportcard.com/report/github.com/kitech/qt.go)
+[![GoDoc](https://godoc.org/github.com/kitech/qt.go?status.svg)](https://godoc.org/github.com/kitech/qt.go)
+[![Sourcegraph](https://sourcegraph.com/github.com/kitech/qt.go/-/badge.svg)](https://sourcegraph.com/github.com/kitech/qt.go?badge)
 
 ### Features
 
