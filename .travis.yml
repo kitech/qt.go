@@ -55,6 +55,10 @@ matrix:
       os: osx
       osx_image: xcode9.3beta
       env: JOB=build-osx
+    - stage: MacOS-Xcode8.3-tests
+      os: osx
+      osx_image: xcode8.3
+      env: JOB=tests-osx
     - stage: MacOS-Xcode8.3-build
       os: osx
       osx_image: xcode8.3

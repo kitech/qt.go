@@ -6,7 +6,7 @@ set -e -o pipefail
 ./.travis/build-ubuntu14.sh
 
 pwd
-wget https://github.com/kitech/qt.inline/releases/download/v1.0-rc.1/qt510_linux_x64_static.tar.bz2
+wget https://github.com/kitech/qt.inline/releases/download/v1.0-rc2/qt510_linux_x64_static.tar.bz2
 
 tar xvf qt510_linux_x64_static.tar.bz2
 
