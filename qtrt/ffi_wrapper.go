@@ -3,7 +3,7 @@ package qtrt
 import (
 	"unsafe"
 
-	"github.com/gonuts/dl"
+	"github.com/kitech/dl"
 )
 
 // Library is a dl-opened library holding the corresponding dl.Handle

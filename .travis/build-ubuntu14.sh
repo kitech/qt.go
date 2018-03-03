@@ -8,7 +8,7 @@ sudo apt-get -qq update
 sudo apt-get install -y libffi-dev
 
 # before_script:
-go get -v github.com/gonuts/dl
+go get -v github.com/kitech/dl
 go get -v github.com/emirpasic/gods/lists/arraylist
 go get -v github.com/thoas/go-funk
 go get -v github.com/kitech/goplusplus

@@ -31,12 +31,12 @@ All platforms should be supported, for now some of them are tested:
 
 * go 1.9+
 * libffi
+* dlfcn (windows)
 
 ##### qt.go:
 
     go get -v -u github.com/kitech/qt.go
     
-
 ##### runtime dependency:
 
     git clone https://github.com/kitech/qt.inline.git
@@ -56,6 +56,8 @@ Debian based:
 Arch based:
 
     pacman -S libffi
+
+[Full Installation](https://github.com/kitech/qt.go/blob/master/install.md)
 
 ### Examples
 

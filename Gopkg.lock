@@ -40,7 +40,7 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/gonuts/dl"
+  name = "github.com/kitech/dl"
   packages = ["."]
   revision = "9a2e942d34774fa26b997e62c671c325240cfe68"
 

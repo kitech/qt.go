@@ -26,13 +26,6 @@ ls
 pwd
 
 
-
-git clone https://github.com/gonuts/dl.git
-sed -i 's/NoLoad/\/\/NoLoad/' dl/dl.go
-sed -i 's/NoDelete/\/\/NoDelete/' dl/dl.go
-mkdir $GOPATH/src/github.com/gonuts -p
-cp -a dl $GOPATH/src/github.com/gonuts/
-
 export CGO_ENABLED=1
 export GOOS=windows
 if [ x"$WINARCH" = x"x64" ]; then
@@ -46,6 +39,7 @@ if [ x"$WINARCH" = x"x64" ]; then
     export CGO_LDFLAGS="-L/usr/x86_64-w64-mingw32/lib/ -ldl -lpsapi -lkernel32"
     export CGO_CFLAGS="-I/usr/x86_64-w64-mingw32/lib/libffi-3.2.1/include/"
 
+    go get -v github.com/kitech/dl
     go get -v github.com/emirpasic/gods/lists/arraylist
     go get -v github.com/thoas/go-funk
     go get -v github.com/kitech/goplusplus
@@ -65,6 +59,7 @@ else
     export CGO_LDFLAGS="-L/usr/i686-w64-mingw32/lib/ -ldl -lpsapi -lkernel32"
     export CGO_CFLAGS="-I/usr/i686-w64-mingw32/lib/libffi-3.2.1/include/"
 
+    go get -v github.com/kitech/dl
     go get -v github.com/emirpasic/gods/lists/arraylist
     go get -v github.com/thoas/go-funk
     go get -v github.com/kitech/goplusplus
