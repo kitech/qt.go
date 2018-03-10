@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionGraphicsItem struct {
 	*QStyleOption
 }
@@ -67,6 +70,10 @@ func (*QStyleOptionGraphicsItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOpt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionGraphicsItem()
+
+/*
+
+ */
 func NewQStyleOptionGraphicsItem() *QStyleOptionGraphicsItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQStyleOptionGraphicsItem() *QStyleOptionGraphicsItem {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionGraphicsItem(int)
+
+/*
+
+ */
 func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +102,10 @@ func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] qreal levelOfDetailFromTransform(const QTransform &)
+
+/*
+
+ */
 func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform(worldTransform qtgui.QTransform_ITF) float64 {
 	var convArg0 unsafe.Pointer
 	if worldTransform != nil && worldTransform.QTransform_PTR() != nil {
@@ -112,12 +127,35 @@ func DeleteQStyleOptionGraphicsItem(this *QStyleOptionGraphicsItem) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionGraphicsItem__StyleOptionType = int
 
+//
 const QStyleOptionGraphicsItem__Type QStyleOptionGraphicsItem__StyleOptionType = 15
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionGraphicsItem__StyleOptionVersion = int
 
+// 1
 const QStyleOptionGraphicsItem__Version QStyleOptionGraphicsItem__StyleOptionVersion = 1
 
 //  body block end

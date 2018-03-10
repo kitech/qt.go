@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QWinJumpListItem struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QWinJumpListItem) NewFromPointer(cthis unsafe.Pointer) *QWinJumpListItem 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinJumpListItem(enum QWinJumpListItem::Type)
+
+/*
+Constructs a QWinJumpListItem with the specified type.
+*/
 func NewQWinJumpListItem(type_ int) *QWinJumpListItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItemC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQWinJumpListItem(type_ int) *QWinJumpListItem {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QWinJumpListItem()
+
+/*
+
+ */
 func DeleteQWinJumpListItem(this *QWinJumpListItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -90,6 +101,12 @@ func DeleteQWinJumpListItem(this *QWinJumpListItem) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setType(enum QWinJumpListItem::Type)
+
+/*
+Sets the item type.
+
+See also type().
+*/
 func (this *QWinJumpListItem) SetType(type_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem7setTypeENS_4TypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +116,12 @@ func (this *QWinJumpListItem) SetType(type_ int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QWinJumpListItem::Type type() const
+
+/*
+Returns the item type.
+
+See also setType().
+*/
 func (this *QWinJumpListItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,6 +132,17 @@ func (this *QWinJumpListItem) Type() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilePath(const QString &)
+
+/*
+Sets the item filePath, the meaning of which depends on the type of this item:
+
+
+If the item type is QWinJumpListItem::Destination, filePath is the path to a file that can be opened by an application.
+If the item type is QWinJumpListItem::Link, filePath is the path to an executable that is executed when this item is clicked by the user.
+
+
+See also filePath(), setWorkingDirectory(), and setArguments().
+*/
 func (this *QWinJumpListItem) SetFilePath(filePath string) {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
@@ -120,6 +154,12 @@ func (this *QWinJumpListItem) SetFilePath(filePath string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString filePath() const
+
+/*
+Returns the file path set by setFilePath().
+
+See also setFilePath().
+*/
 func (this *QWinJumpListItem) FilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem8filePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +173,14 @@ func (this *QWinJumpListItem) FilePath() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWorkingDirectory(const QString &)
+
+/*
+Sets the path to the working directory of this item to workingDirectory.
+
+This value is used only if the type of this item is QWinJumpListItem::Link.
+
+See also workingDirectory() and setFilePath().
+*/
 func (this *QWinJumpListItem) SetWorkingDirectory(workingDirectory string) {
 	var tmpArg0 = qtcore.NewQString_5(workingDirectory)
 	var convArg0 = tmpArg0.GetCthis()
@@ -144,6 +192,12 @@ func (this *QWinJumpListItem) SetWorkingDirectory(workingDirectory string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString workingDirectory() const
+
+/*
+Returns the working directory path.
+
+See also setWorkingDirectory().
+*/
 func (this *QWinJumpListItem) WorkingDirectory() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem16workingDirectoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,6 +211,14 @@ func (this *QWinJumpListItem) WorkingDirectory() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
+
+/*
+Sets the icon of this item.
+
+This value is used only if the type of this item is QWinJumpListItem::Link.
+
+See also icon().
+*/
 func (this *QWinJumpListItem) SetIcon(icon qtgui.QIcon_ITF) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -170,6 +232,12 @@ func (this *QWinJumpListItem) SetIcon(icon qtgui.QIcon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon icon() const
+
+/*
+Returns the icon set for this item.
+
+See also setIcon().
+*/
 func (this *QWinJumpListItem) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,6 +250,14 @@ func (this *QWinJumpListItem) Icon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitle(const QString &)
+
+/*
+Sets the title of this item.
+
+This value is used only if the type of this item is QWinJumpListItem::Link.
+
+See also title().
+*/
 func (this *QWinJumpListItem) SetTitle(title string) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -193,6 +269,12 @@ func (this *QWinJumpListItem) SetTitle(title string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString title() const
+
+/*
+Returns the title of this item.
+
+See also setTitle().
+*/
 func (this *QWinJumpListItem) Title() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem5titleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -206,6 +288,14 @@ func (this *QWinJumpListItem) Title() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDescription(const QString &)
+
+/*
+Sets a description for this item.
+
+This value is used only if the type of this item is QWinJumpListItem::Link.
+
+See also description().
+*/
 func (this *QWinJumpListItem) SetDescription(description string) {
 	var tmpArg0 = qtcore.NewQString_5(description)
 	var convArg0 = tmpArg0.GetCthis()
@@ -217,6 +307,12 @@ func (this *QWinJumpListItem) SetDescription(description string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString description() const
+
+/*
+Returns the description of this item.
+
+See also setDescription().
+*/
 func (this *QWinJumpListItem) Description() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -230,6 +326,14 @@ func (this *QWinJumpListItem) Description() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setArguments(const QStringList &)
+
+/*
+Sets command-line arguments for this item.
+
+This value is used only if the type of this item is QWinJumpListItem::Link.
+
+See also arguments() and setFilePath().
+*/
 func (this *QWinJumpListItem) SetArguments(arguments qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if arguments != nil && arguments.QStringList_PTR() != nil {
@@ -243,6 +347,12 @@ func (this *QWinJumpListItem) SetArguments(arguments qtcore.QStringList_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList arguments() const
+
+/*
+Returns the command-line arguments of this item.
+
+See also setArguments().
+*/
 func (this *QWinJumpListItem) Arguments() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem9argumentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -251,10 +361,20 @@ func (this *QWinJumpListItem) Arguments() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
+/*
+This enum describes the available QWinJumpListItem types.
+
+
+*/
 type QWinJumpListItem__Type = int
 
+// Item acts as a link to a file that the application can open.
 const QWinJumpListItem__Destination QWinJumpListItem__Type = 0
+
+// Item represents a link to an application.
 const QWinJumpListItem__Link QWinJumpListItem__Type = 1
+
+// Item is a separator. Only tasks category supports separators.
 const QWinJumpListItem__Separator QWinJumpListItem__Type = 2
 
 //  body block end

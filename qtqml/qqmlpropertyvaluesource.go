@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlPropertyValueSource struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QQmlPropertyValueSource) NewFromPointer(cthis unsafe.Pointer) *QQmlProper
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlPropertyValueSource()
+
+/*
+Constructs a QQmlPropertyValueSource.
+*/
 func NewQQmlPropertyValueSource() *QQmlPropertyValueSource {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQmlPropertyValueSourceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQQmlPropertyValueSource() *QQmlPropertyValueSource {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlPropertyValueSource()
+
+/*
+
+ */
 func DeleteQQmlPropertyValueSource(this *QQmlPropertyValueSource) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQmlPropertyValueSourceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -90,6 +101,10 @@ func DeleteQQmlPropertyValueSource(this *QQmlPropertyValueSource) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setTarget(const QQmlProperty &)
+
+/*
+Set the target property for the value source. This method will be called by the QML engine when assigning a value source.
+*/
 func (this *QQmlPropertyValueSource) SetTarget(arg0 QQmlProperty_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlProperty_PTR() != nil {

@@ -1,6 +1,6 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h
+// /usr/include/qt/QtAndroidExtras/qandroidbinder.h
 // #include <qandroidbinder.h>
 // #include <QtAndroidExtras>
 
@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAndroidBinder struct {
 	*qtrt.CObject
 }
@@ -62,10 +65,16 @@ func (*QAndroidBinder) NewFromPointer(cthis unsafe.Pointer) *QAndroidBinder {
 	return NewQAndroidBinderFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:62
+// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidBinder()
+
+/*
+Creates a new object which can be used to perform IPC.
+
+See also onTransact and transact.
+*/
 func NewQAndroidBinder() *QAndroidBinder {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidBinderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -74,10 +83,16 @@ func NewQAndroidBinder() *QAndroidBinder {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:63
+// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:63
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidBinder(const QAndroidJniObject &)
+
+/*
+Creates a new object which can be used to perform IPC.
+
+See also onTransact and transact.
+*/
 func NewQAndroidBinder_1(binder QAndroidJniObject_ITF) *QAndroidBinder {
 	var convArg0 unsafe.Pointer
 	if binder != nil && binder.QAndroidJniObject_PTR() != nil {
@@ -90,21 +105,38 @@ func NewQAndroidBinder_1(binder QAndroidJniObject_ITF) *QAndroidBinder {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:65
+// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAndroidBinder()
+
+/*
+
+ */
 func DeleteQAndroidBinder(this *QAndroidBinder) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidBinderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 1)
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:67
+// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool onTransact(int, const QAndroidParcel &, const QAndroidParcel &, enum QAndroidBinder::CallType)
+
+/*
+Default implementation is a stub that returns false. The user should override this method to get the transact data from the caller.
+
+The code is the action to perform. The data is the marshaled data sent by the caller.
+ The reply is the marshaled data to be sent to the caller.
+ The flags are the additional operation flags.
+
+
+Warning: This method is called from Binder's thread which is different from the thread that this object was created.
+
+See also transact.
+*/
 func (this *QAndroidBinder) OnTransact(code int, data QAndroidParcel_ITF, reply QAndroidParcel_ITF, flags int) bool {
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QAndroidParcel_PTR() != nil {
@@ -119,10 +151,22 @@ func (this *QAndroidBinder) OnTransact(code int, data QAndroidParcel_ITF, reply 
 	return rv != 0
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:68
+// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType) const
+
+/*
+Performs an IPC call
+
+The code is the action to perform. Should be between FIRST_CALL_TRANSACTION and LAST_CALL_TRANSACTION.
+ The data is the marshaled data to send to the target.
+ The reply (if specified) is the marshaled data to be received from the target. May be nullptr if you are not interested in the return value.
+ The flags are the additional operation flags.
+
+
+Returns true on success
+*/
 func (this *QAndroidBinder) Transact(code int, data QAndroidParcel_ITF, reply QAndroidParcel_ITF /*777 QAndroidParcel **/, flags int) bool {
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QAndroidParcel_PTR() != nil {
@@ -137,10 +181,22 @@ func (this *QAndroidBinder) Transact(code int, data QAndroidParcel_ITF, reply QA
 	return rv != 0
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:68
+// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType) const
+
+/*
+Performs an IPC call
+
+The code is the action to perform. Should be between FIRST_CALL_TRANSACTION and LAST_CALL_TRANSACTION.
+ The data is the marshaled data to send to the target.
+ The reply (if specified) is the marshaled data to be received from the target. May be nullptr if you are not interested in the return value.
+ The flags are the additional operation flags.
+
+
+Returns true on success
+*/
 func (this *QAndroidBinder) Transact__(code int, data QAndroidParcel_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QAndroidParcel_PTR() != nil {
@@ -155,10 +211,22 @@ func (this *QAndroidBinder) Transact__(code int, data QAndroidParcel_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:68
+// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType) const
+
+/*
+Performs an IPC call
+
+The code is the action to perform. Should be between FIRST_CALL_TRANSACTION and LAST_CALL_TRANSACTION.
+ The data is the marshaled data to send to the target.
+ The reply (if specified) is the marshaled data to be received from the target. May be nullptr if you are not interested in the return value.
+ The flags are the additional operation flags.
+
+
+Returns true on success
+*/
 func (this *QAndroidBinder) Transact__1(code int, data QAndroidParcel_ITF, reply QAndroidParcel_ITF /*777 QAndroidParcel **/) bool {
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QAndroidParcel_PTR() != nil {
@@ -175,10 +243,14 @@ func (this *QAndroidBinder) Transact__1(code int, data QAndroidParcel_ITF, reply
 	return rv != 0
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:70
+// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] QAndroidJniObject handle() const
+// [16] QAndroidJniObject handle() const
+
+/*
+The return value is useful to call other Java API which are not covered by this wrapper
+*/
 func (this *QAndroidBinder) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,9 +259,17 @@ func (this *QAndroidBinder) Handle() *QAndroidJniObject /*123*/ {
 	return rv2
 }
 
+/*
+This enum is used with QAndroidBinder::transact() to describe the mode in which the IPC call is performed.
+
+
+*/
 type QAndroidBinder__CallType = int
 
+// normal IPC, meaning that the caller waits the result from the callee
 const QAndroidBinder__Normal QAndroidBinder__CallType = 0
+
+// one-way IPC, meaning that the caller returns immediately, without waiting for a result from the callee
 const QAndroidBinder__OneWay QAndroidBinder__CallType = 1
 
 //  body block end

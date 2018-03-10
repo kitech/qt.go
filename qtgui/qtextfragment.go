@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextFragment struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QTextFragment) NewFromPointer(cthis unsafe.Pointer) *QTextFragment {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextFragment()
+
+/*
+
+ */
 func NewQTextFragment() *QTextFragment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextFragmentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQTextFragment() *QTextFragment {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QTextFragment & operator=(const QTextFragment &)
+
+/*
+
+ */
 func (this *QTextFragment) Operator_equal(o QTextFragment_ITF) *QTextFragment {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QTextFragment_PTR() != nil {
@@ -94,6 +105,10 @@ func (this *QTextFragment) Operator_equal(o QTextFragment_ITF) *QTextFragment {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+
+ */
 func (this *QTextFragment) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -104,6 +119,10 @@ func (this *QTextFragment) IsValid() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QTextFragment &) const
+
+/*
+
+ */
 func (this *QTextFragment) Operator_equal_equal(o QTextFragment_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QTextFragment_PTR() != nil {
@@ -118,6 +137,10 @@ func (this *QTextFragment) Operator_equal_equal(o QTextFragment_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QTextFragment &) const
+
+/*
+
+ */
 func (this *QTextFragment) Operator_not_equal(o QTextFragment_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QTextFragment_PTR() != nil {
@@ -132,6 +155,10 @@ func (this *QTextFragment) Operator_not_equal(o QTextFragment_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const QTextFragment &) const
+
+/*
+
+ */
 func (this *QTextFragment) Operator_less_than(o QTextFragment_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QTextFragment_PTR() != nil {
@@ -146,6 +173,10 @@ func (this *QTextFragment) Operator_less_than(o QTextFragment_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int position() const
+
+/*
+
+ */
 func (this *QTextFragment) Position() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -156,6 +187,10 @@ func (this *QTextFragment) Position() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int length() const
+
+/*
+
+ */
 func (this *QTextFragment) Length() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment6lengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +201,10 @@ func (this *QTextFragment) Length() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(int) const
+
+/*
+
+ */
 func (this *QTextFragment) Contains(position int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment8containsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	qtrt.ErrPrint(err, rv)
@@ -176,6 +215,10 @@ func (this *QTextFragment) Contains(position int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextCharFormat charFormat() const
+
+/*
+
+ */
 func (this *QTextFragment) CharFormat() *QTextCharFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment10charFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,6 +231,10 @@ func (this *QTextFragment) CharFormat() *QTextCharFormat /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int charFormatIndex() const
+
+/*
+
+ */
 func (this *QTextFragment) CharFormatIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment15charFormatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,6 +245,10 @@ func (this *QTextFragment) CharFormatIndex() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
+
+/*
+
+ */
 func (this *QTextFragment) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

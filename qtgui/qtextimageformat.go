@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextImageFormat struct {
 	*QTextCharFormat
 }
@@ -64,6 +67,10 @@ func (*QTextImageFormat) NewFromPointer(cthis unsafe.Pointer) *QTextImageFormat 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextImageFormat()
+
+/*
+
+ */
 func NewQTextImageFormat() *QTextImageFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQTextImageFormat() *QTextImageFormat {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextImageFormat(const QTextFormat &)
+
+/*
+
+ */
 func NewQTextImageFormat_1(format QTextFormat_ITF) *QTextImageFormat {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QTextFormat_PTR() != nil {
@@ -92,6 +103,10 @@ func NewQTextImageFormat_1(format QTextFormat_ITF) *QTextImageFormat {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if the format is valid (i.e. is not InvalidFormat); otherwise returns false.
+*/
 func (this *QTextImageFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +117,10 @@ func (this *QTextImageFormat) IsValid() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setName(const QString &)
+
+/*
+
+ */
 func (this *QTextImageFormat) SetName(name string) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -113,6 +132,10 @@ func (this *QTextImageFormat) SetName(name string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString name() const
+
+/*
+
+ */
 func (this *QTextImageFormat) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -126,6 +149,10 @@ func (this *QTextImageFormat) Name() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWidth(qreal)
+
+/*
+
+ */
 func (this *QTextImageFormat) SetWidth(width float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormat8setWidthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +162,10 @@ func (this *QTextImageFormat) SetWidth(width float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal width() const
+
+/*
+
+ */
 func (this *QTextImageFormat) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,6 +176,10 @@ func (this *QTextImageFormat) Width() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHeight(qreal)
+
+/*
+
+ */
 func (this *QTextImageFormat) SetHeight(height float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormat9setHeightEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), height)
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +189,10 @@ func (this *QTextImageFormat) SetHeight(height float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal height() const
+
+/*
+
+ */
 func (this *QTextImageFormat) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

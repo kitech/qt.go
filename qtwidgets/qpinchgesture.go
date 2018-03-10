@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QPinchGesture struct {
 	*QGesture
 }
@@ -65,6 +68,10 @@ func (*QPinchGesture) NewFromPointer(cthis unsafe.Pointer) *QPinchGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QPinchGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QPinchGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPinchGesture(QObject *)
+
+/*
+
+ */
 func NewQPinchGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPinchGesture {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQPinchGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPinchGestur
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPinchGesture(QObject *)
+
+/*
+
+ */
 func NewQPinchGesture__() *QPinchGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQPinchGesture__() *QPinchGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPinchGesture()
+
+/*
+
+ */
 func DeleteQPinchGesture(this *QPinchGesture) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGestureD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -116,6 +135,10 @@ func DeleteQPinchGesture(this *QPinchGesture) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QPinchGesture::ChangeFlags totalChangeFlags() const
+
+/*
+
+ */
 func (this *QPinchGesture) TotalChangeFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture16totalChangeFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -126,6 +149,10 @@ func (this *QPinchGesture) TotalChangeFlags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTotalChangeFlags(QPinchGesture::ChangeFlags)
+
+/*
+
+ */
 func (this *QPinchGesture) SetTotalChangeFlags(value int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture19setTotalChangeFlagsE6QFlagsINS_10ChangeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +162,10 @@ func (this *QPinchGesture) SetTotalChangeFlags(value int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QPinchGesture::ChangeFlags changeFlags() const
+
+/*
+
+ */
 func (this *QPinchGesture) ChangeFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture11changeFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,6 +176,10 @@ func (this *QPinchGesture) ChangeFlags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setChangeFlags(QPinchGesture::ChangeFlags)
+
+/*
+
+ */
 func (this *QPinchGesture) SetChangeFlags(value int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture14setChangeFlagsE6QFlagsINS_10ChangeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +189,10 @@ func (this *QPinchGesture) SetChangeFlags(value int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF startCenterPoint() const
+
+/*
+
+ */
 func (this *QPinchGesture) StartCenterPoint() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture16startCenterPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +205,10 @@ func (this *QPinchGesture) StartCenterPoint() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF lastCenterPoint() const
+
+/*
+
+ */
 func (this *QPinchGesture) LastCenterPoint() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture15lastCenterPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,6 +221,10 @@ func (this *QPinchGesture) LastCenterPoint() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF centerPoint() const
+
+/*
+
+ */
 func (this *QPinchGesture) CenterPoint() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture11centerPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,6 +237,10 @@ func (this *QPinchGesture) CenterPoint() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStartCenterPoint(const QPointF &)
+
+/*
+
+ */
 func (this *QPinchGesture) SetStartCenterPoint(value qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QPointF_PTR() != nil {
@@ -203,6 +254,10 @@ func (this *QPinchGesture) SetStartCenterPoint(value qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastCenterPoint(const QPointF &)
+
+/*
+
+ */
 func (this *QPinchGesture) SetLastCenterPoint(value qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QPointF_PTR() != nil {
@@ -216,6 +271,10 @@ func (this *QPinchGesture) SetLastCenterPoint(value qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCenterPoint(const QPointF &)
+
+/*
+
+ */
 func (this *QPinchGesture) SetCenterPoint(value qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QPointF_PTR() != nil {
@@ -229,6 +288,10 @@ func (this *QPinchGesture) SetCenterPoint(value qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal totalScaleFactor() const
+
+/*
+
+ */
 func (this *QPinchGesture) TotalScaleFactor() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture16totalScaleFactorEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -239,6 +302,10 @@ func (this *QPinchGesture) TotalScaleFactor() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal lastScaleFactor() const
+
+/*
+
+ */
 func (this *QPinchGesture) LastScaleFactor() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture15lastScaleFactorEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -249,6 +316,10 @@ func (this *QPinchGesture) LastScaleFactor() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal scaleFactor() const
+
+/*
+
+ */
 func (this *QPinchGesture) ScaleFactor() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture11scaleFactorEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -259,6 +330,10 @@ func (this *QPinchGesture) ScaleFactor() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTotalScaleFactor(qreal)
+
+/*
+
+ */
 func (this *QPinchGesture) SetTotalScaleFactor(value float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture19setTotalScaleFactorEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -268,6 +343,10 @@ func (this *QPinchGesture) SetTotalScaleFactor(value float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastScaleFactor(qreal)
+
+/*
+
+ */
 func (this *QPinchGesture) SetLastScaleFactor(value float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture18setLastScaleFactorEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -277,6 +356,10 @@ func (this *QPinchGesture) SetLastScaleFactor(value float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScaleFactor(qreal)
+
+/*
+
+ */
 func (this *QPinchGesture) SetScaleFactor(value float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture14setScaleFactorEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -286,6 +369,10 @@ func (this *QPinchGesture) SetScaleFactor(value float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal totalRotationAngle() const
+
+/*
+
+ */
 func (this *QPinchGesture) TotalRotationAngle() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture18totalRotationAngleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -296,6 +383,10 @@ func (this *QPinchGesture) TotalRotationAngle() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal lastRotationAngle() const
+
+/*
+
+ */
 func (this *QPinchGesture) LastRotationAngle() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture17lastRotationAngleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -306,6 +397,10 @@ func (this *QPinchGesture) LastRotationAngle() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rotationAngle() const
+
+/*
+
+ */
 func (this *QPinchGesture) RotationAngle() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPinchGesture13rotationAngleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -316,6 +411,10 @@ func (this *QPinchGesture) RotationAngle() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTotalRotationAngle(qreal)
+
+/*
+
+ */
 func (this *QPinchGesture) SetTotalRotationAngle(value float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture21setTotalRotationAngleEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -325,6 +424,10 @@ func (this *QPinchGesture) SetTotalRotationAngle(value float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastRotationAngle(qreal)
+
+/*
+
+ */
 func (this *QPinchGesture) SetLastRotationAngle(value float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture20setLastRotationAngleEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -334,15 +437,28 @@ func (this *QPinchGesture) SetLastRotationAngle(value float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRotationAngle(qreal)
+
+/*
+
+ */
 func (this *QPinchGesture) SetRotationAngle(value float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGesture16setRotationAngleEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QPinchGesture__ChangeFlag = int
 
+//
 const QPinchGesture__ScaleFactorChanged QPinchGesture__ChangeFlag = 1
+
+//
 const QPinchGesture__RotationAngleChanged QPinchGesture__ChangeFlag = 2
+
+//
 const QPinchGesture__CenterPointChanged QPinchGesture__ChangeFlag = 4
 
 //  body block end

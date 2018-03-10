@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QDragEnterEvent struct {
 	*QDragMoveEvent
 }
@@ -64,6 +67,10 @@ func (*QDragEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QDragEnterEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDragEnterEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers)
+
+/*
+
+ */
 func NewQDragEnterEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragEnterEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -84,6 +91,10 @@ func NewQDragEnterEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeDat
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragEnterEvent()
+
+/*
+
+ */
 func DeleteQDragEnterEvent(this *QDragEnterEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QDragEnterEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 88)

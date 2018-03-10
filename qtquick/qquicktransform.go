@@ -40,6 +40,9 @@ func (this *QQuickTransform) InheritUpdate(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "update", f)
 }
 
+/*
+
+ */
 type QQuickTransform struct {
 	*qtcore.QObject
 }
@@ -72,6 +75,10 @@ func (*QQuickTransform) NewFromPointer(cthis unsafe.Pointer) *QQuickTransform {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQuickTransform) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQuickTransform10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -82,6 +89,10 @@ func (this *QQuickTransform) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickTransform(QObject *)
+
+/*
+
+ */
 func NewQQuickTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickTransform {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -98,6 +109,10 @@ func NewQQuickTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickTran
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickTransform(QObject *)
+
+/*
+
+ */
 func NewQQuickTransform__() *QQuickTransform {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -112,6 +127,10 @@ func NewQQuickTransform__() *QQuickTransform {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickTransform()
+
+/*
+
+ */
 func DeleteQQuickTransform(this *QQuickTransform) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQuickTransformD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -123,6 +142,10 @@ func DeleteQQuickTransform(this *QQuickTransform) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void appendToItem(QQuickItem *)
+
+/*
+
+ */
 func (this *QQuickTransform) AppendToItem(arg0 QQuickItem_ITF /*777 QQuickItem **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQuickItem_PTR() != nil {
@@ -136,6 +159,10 @@ func (this *QQuickTransform) AppendToItem(arg0 QQuickItem_ITF /*777 QQuickItem *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void prependToItem(QQuickItem *)
+
+/*
+
+ */
 func (this *QQuickTransform) PrependToItem(arg0 QQuickItem_ITF /*777 QQuickItem **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQuickItem_PTR() != nil {
@@ -149,6 +176,10 @@ func (this *QQuickTransform) PrependToItem(arg0 QQuickItem_ITF /*777 QQuickItem 
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void applyTo(QMatrix4x4 *) const
+
+/*
+
+ */
 func (this *QQuickTransform) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x4 **/) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {
@@ -162,6 +193,14 @@ func (this *QQuickTransform) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void update()
+
+/*
+Schedules a call to updatePaintNode() for this item.
+
+The call to QQuickItem::updatePaintNode() will always happen if the item is showing in a QQuickWindow.
+
+Only items which specify QQuickItem::ItemHasContents are allowed to call QQuickItem::update().
+*/
 func (this *QQuickTransform) Update() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQuickTransform6updateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

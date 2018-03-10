@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionButton struct {
 	*QStyleOption
 }
@@ -65,6 +68,10 @@ func (*QStyleOptionButton) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionBut
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionButton()
+
+/*
+
+ */
 func NewQStyleOptionButton() *QStyleOptionButton {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleOptionButton() *QStyleOptionButton {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionButton(int)
+
+/*
+
+ */
 func NewQStyleOptionButton_1(version int) *QStyleOptionButton {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,21 +102,59 @@ func DeleteQStyleOptionButton(this *QStyleOptionButton) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionButton__StyleOptionType = int
 
+//
 const QStyleOptionButton__Type QStyleOptionButton__StyleOptionType = 2
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionButton__StyleOptionVersion = int
 
+// 1
 const QStyleOptionButton__Version QStyleOptionButton__StyleOptionVersion = 1
 
+/*
+
+
+ */
 type QStyleOptionButton__ButtonFeature = int
 
+//
 const QStyleOptionButton__None QStyleOptionButton__ButtonFeature = 0
+
+//
 const QStyleOptionButton__Flat QStyleOptionButton__ButtonFeature = 1
+
+//
 const QStyleOptionButton__HasMenu QStyleOptionButton__ButtonFeature = 2
+
+//
 const QStyleOptionButton__DefaultButton QStyleOptionButton__ButtonFeature = 4
+
+//
 const QStyleOptionButton__AutoDefaultButton QStyleOptionButton__ButtonFeature = 8
+
+//
 const QStyleOptionButton__CommandLinkButton QStyleOptionButton__ButtonFeature = 16
 
 //  body block end

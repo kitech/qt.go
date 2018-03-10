@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QTimerEvent struct {
 	*QEvent
 }
@@ -63,6 +66,10 @@ func (*QTimerEvent) NewFromPointer(cthis unsafe.Pointer) *QTimerEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTimerEvent(int)
+
+/*
+
+ */
 func NewQTimerEvent(timerId int) *QTimerEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTimerEventC2Ei", qtrt.FFI_TYPE_POINTER, timerId)
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func NewQTimerEvent(timerId int) *QTimerEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTimerEvent()
+
+/*
+
+ */
 func DeleteQTimerEvent(this *QTimerEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTimerEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -86,6 +97,10 @@ func DeleteQTimerEvent(this *QTimerEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int timerId() const
+
+/*
+
+ */
 func (this *QTimerEvent) TimerId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTimerEvent7timerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

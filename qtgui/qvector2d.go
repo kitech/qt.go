@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QVector2D struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QVector2D) NewFromPointer(cthis unsafe.Pointer) *QVector2D {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector2D()
+
+/*
+Constructs a null vector, i.e. with coordinates (0, 0).
+*/
 func NewQVector2D() *QVector2D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQVector2D() *QVector2D {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector2D(Qt::Initialization)
+
+/*
+Constructs a null vector, i.e. with coordinates (0, 0).
+*/
 func NewQVector2D_1(arg0 int) *QVector2D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +101,10 @@ func NewQVector2D_1(arg0 int) *QVector2D {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector2D(float, float)
+
+/*
+Constructs a null vector, i.e. with coordinates (0, 0).
+*/
 func NewQVector2D_2(xpos float32, ypos float32) *QVector2D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2Eff", qtrt.FFI_TYPE_POINTER, xpos, ypos)
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +117,10 @@ func NewQVector2D_2(xpos float32, ypos float32) *QVector2D {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector2D(const QPoint &)
+
+/*
+Constructs a null vector, i.e. with coordinates (0, 0).
+*/
 func NewQVector2D_3(point qtcore.QPoint_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
@@ -118,6 +137,10 @@ func NewQVector2D_3(point qtcore.QPoint_ITF) *QVector2D {
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVector2D(const QPointF &)
+
+/*
+Constructs a null vector, i.e. with coordinates (0, 0).
+*/
 func NewQVector2D_4(point qtcore.QPointF_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -134,6 +157,10 @@ func NewQVector2D_4(point qtcore.QPointF_ITF) *QVector2D {
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QVector2D(const QVector3D &)
+
+/*
+Constructs a null vector, i.e. with coordinates (0, 0).
+*/
 func NewQVector2D_5(vector QVector3D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
@@ -150,6 +177,10 @@ func NewQVector2D_5(vector QVector3D_ITF) *QVector2D {
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QVector2D(const QVector4D &)
+
+/*
+Constructs a null vector, i.e. with coordinates (0, 0).
+*/
 func NewQVector2D_6(vector QVector4D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector4D_PTR() != nil {
@@ -166,6 +197,10 @@ func NewQVector2D_6(vector QVector4D_ITF) *QVector2D {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if the x and y coordinates are set to 0.0, otherwise returns false.
+*/
 func (this *QVector2D) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,6 +211,12 @@ func (this *QVector2D) IsNull() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] float x() const
+
+/*
+Returns the x coordinate of this point.
+
+See also setX() and y().
+*/
 func (this *QVector2D) X() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,6 +227,12 @@ func (this *QVector2D) X() float32 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] float y() const
+
+/*
+Returns the y coordinate of this point.
+
+See also setY() and x().
+*/
 func (this *QVector2D) Y() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -196,6 +243,12 @@ func (this *QVector2D) Y() float32 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setX(float)
+
+/*
+Sets the x coordinate of this point to the given x coordinate.
+
+See also x() and setY().
+*/
 func (this *QVector2D) SetX(x float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2D4setXEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	qtrt.ErrPrint(err, rv)
@@ -205,6 +258,12 @@ func (this *QVector2D) SetX(x float32) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setY(float)
+
+/*
+Sets the y coordinate of this point to the given y coordinate.
+
+See also y() and setX().
+*/
 func (this *QVector2D) SetY(y float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2D4setYEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	qtrt.ErrPrint(err, rv)
@@ -214,6 +273,10 @@ func (this *QVector2D) SetY(y float32) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float & operator[](int)
+
+/*
+
+ */
 func (this *QVector2D) Operator_get_index(i int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +287,10 @@ func (this *QVector2D) Operator_get_index(i int) float32 {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] float operator[](int) const
+
+/*
+
+ */
 func (this *QVector2D) Operator_get_index_1(i int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2DixEi", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -234,6 +301,12 @@ func (this *QVector2D) Operator_get_index_1(i int) float32 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float length() const
+
+/*
+Returns the length of the vector from the origin.
+
+See also lengthSquared() and normalized().
+*/
 func (this *QVector2D) Length() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D6lengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -244,6 +317,12 @@ func (this *QVector2D) Length() float32 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float lengthSquared() const
+
+/*
+Returns the squared length of the vector from the origin. This is equivalent to the dot product of the vector with itself.
+
+See also length() and dotProduct().
+*/
 func (this *QVector2D) LengthSquared() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D13lengthSquaredEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -254,6 +333,14 @@ func (this *QVector2D) LengthSquared() float32 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QVector2D normalized() const
+
+/*
+Returns the normalized unit vector form of this vector.
+
+If this vector is null, then a null vector is returned. If the length of the vector is very close to 1, then the vector will be returned as-is. Otherwise the normalized form of the vector of length 1 will be returned.
+
+See also length() and normalize().
+*/
 func (this *QVector2D) Normalized() *QVector2D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D10normalizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -266,6 +353,12 @@ func (this *QVector2D) Normalized() *QVector2D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void normalize()
+
+/*
+Normalizes the currect vector in place. Nothing happens if this vector is a null vector or the length of the vector is very close to 1.
+
+See also length() and normalized().
+*/
 func (this *QVector2D) Normalize() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2D9normalizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -275,6 +368,14 @@ func (this *QVector2D) Normalize() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float distanceToPoint(const QVector2D &) const
+
+/*
+Returns the distance from this vertex to a point defined by the vertex point.
+
+This function was introduced in  Qt 5.1.
+
+See also distanceToLine().
+*/
 func (this *QVector2D) DistanceToPoint(point QVector2D_ITF) float32 {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector2D_PTR() != nil {
@@ -289,6 +390,16 @@ func (this *QVector2D) DistanceToPoint(point QVector2D_ITF) float32 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float distanceToLine(const QVector2D &, const QVector2D &) const
+
+/*
+Returns the distance that this vertex is from a line defined by point and the unit vector direction.
+
+If direction is a null vector, then it does not define a line. In that case, the distance from point to this vertex is returned.
+
+This function was introduced in  Qt 5.1.
+
+See also distanceToPoint().
+*/
 func (this *QVector2D) DistanceToLine(point QVector2D_ITF, direction QVector2D_ITF) float32 {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector2D_PTR() != nil {
@@ -307,6 +418,10 @@ func (this *QVector2D) DistanceToLine(point QVector2D_ITF, direction QVector2D_I
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QVector2D & operator+=(const QVector2D &)
+
+/*
+
+ */
 func (this *QVector2D) Operator_add_equal(vector QVector2D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector2D_PTR() != nil {
@@ -323,6 +438,10 @@ func (this *QVector2D) Operator_add_equal(vector QVector2D_ITF) *QVector2D {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QVector2D & operator-=(const QVector2D &)
+
+/*
+
+ */
 func (this *QVector2D) Operator_minus_equal(vector QVector2D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector2D_PTR() != nil {
@@ -339,6 +458,10 @@ func (this *QVector2D) Operator_minus_equal(vector QVector2D_ITF) *QVector2D {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QVector2D & operator*=(float)
+
+/*
+
+ */
 func (this *QVector2D) Operator_mul_equal(factor float32) *QVector2D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DmLEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
 	qtrt.ErrPrint(err, rv)
@@ -351,6 +474,10 @@ func (this *QVector2D) Operator_mul_equal(factor float32) *QVector2D {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QVector2D & operator*=(const QVector2D &)
+
+/*
+
+ */
 func (this *QVector2D) Operator_mul_equal_1(vector QVector2D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector2D_PTR() != nil {
@@ -367,6 +494,10 @@ func (this *QVector2D) Operator_mul_equal_1(vector QVector2D_ITF) *QVector2D {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QVector2D & operator/=(float)
+
+/*
+
+ */
 func (this *QVector2D) Operator_div_equal(divisor float32) *QVector2D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DdVEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), divisor)
 	qtrt.ErrPrint(err, rv)
@@ -379,6 +510,10 @@ func (this *QVector2D) Operator_div_equal(divisor float32) *QVector2D {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QVector2D & operator/=(const QVector2D &)
+
+/*
+
+ */
 func (this *QVector2D) Operator_div_equal_1(vector QVector2D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector2D_PTR() != nil {
@@ -395,6 +530,10 @@ func (this *QVector2D) Operator_div_equal_1(vector QVector2D_ITF) *QVector2D {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] float dotProduct(const QVector2D &, const QVector2D &)
+
+/*
+Returns the dot product of v1 and v2.
+*/
 func (this *QVector2D) DotProduct(v1 QVector2D_ITF, v2 QVector2D_ITF) float32 {
 	var convArg0 unsafe.Pointer
 	if v1 != nil && v1.QVector2D_PTR() != nil {
@@ -418,6 +557,12 @@ func QVector2D_DotProduct(v1 QVector2D_ITF, v2 QVector2D_ITF) float32 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [12] QVector3D toVector3D() const
+
+/*
+Returns the 3D form of this 2D vector, with the z coordinate set to zero.
+
+See also toVector4D() and toPoint().
+*/
 func (this *QVector2D) ToVector3D() *QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D10toVector3DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -430,6 +575,12 @@ func (this *QVector2D) ToVector3D() *QVector3D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVector4D toVector4D() const
+
+/*
+Returns the 4D form of this 2D vector, with the z and w coordinates set to zero.
+
+See also toVector3D() and toPoint().
+*/
 func (this *QVector2D) ToVector4D() *QVector4D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D10toVector4DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -442,6 +593,12 @@ func (this *QVector2D) ToVector4D() *QVector4D /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint toPoint() const
+
+/*
+Returns the QPoint form of this 2D vector.
+
+See also toPointF() and toVector3D().
+*/
 func (this *QVector2D) ToPoint() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D7toPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -454,6 +611,12 @@ func (this *QVector2D) ToPoint() *qtcore.QPoint /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF toPointF() const
+
+/*
+Returns the QPointF form of this 2D vector.
+
+See also toPoint() and toVector3D().
+*/
 func (this *QVector2D) ToPointF() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2D8toPointFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

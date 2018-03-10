@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QTimeZone struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QTimeZone) NewFromPointer(cthis unsafe.Pointer) *QTimeZone {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone()
+
+/*
+Create a null/invalid time zone instance.
+*/
 func NewQTimeZone() *QTimeZone {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQTimeZone() *QTimeZone {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone(const QByteArray &)
+
+/*
+Create a null/invalid time zone instance.
+*/
 func NewQTimeZone_1(ianaId QByteArray_ITF) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if ianaId != nil && ianaId.QByteArray_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQTimeZone_1(ianaId QByteArray_ITF) *QTimeZone {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone(int)
+
+/*
+Create a null/invalid time zone instance.
+*/
 func NewQTimeZone_2(offsetSeconds int) *QTimeZone {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneC2Ei", qtrt.FFI_TYPE_POINTER, offsetSeconds)
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +120,10 @@ func NewQTimeZone_2(offsetSeconds int) *QTimeZone {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone(const QByteArray &, int, const QString &, const QString &, QLocale::Country, const QString &)
+
+/*
+Create a null/invalid time zone instance.
+*/
 func NewQTimeZone_3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int, comment string) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if zoneId != nil && zoneId.QByteArray_PTR() != nil {
@@ -127,6 +146,10 @@ func NewQTimeZone_3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbre
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone(const QByteArray &, int, const QString &, const QString &, QLocale::Country, const QString &)
+
+/*
+Create a null/invalid time zone instance.
+*/
 func NewQTimeZone_3_(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if zoneId != nil && zoneId.QByteArray_PTR() != nil {
@@ -151,6 +174,10 @@ func NewQTimeZone_3_(zoneId QByteArray_ITF, offsetSeconds int, name string, abbr
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone(const QByteArray &, int, const QString &, const QString &, QLocale::Country, const QString &)
+
+/*
+Create a null/invalid time zone instance.
+*/
 func NewQTimeZone_3_1(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if zoneId != nil && zoneId.QByteArray_PTR() != nil {
@@ -173,6 +200,10 @@ func NewQTimeZone_3_1(zoneId QByteArray_ITF, offsetSeconds int, name string, abb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTimeZone()
+
+/*
+
+ */
 func DeleteQTimeZone(this *QTimeZone) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -184,6 +215,10 @@ func DeleteQTimeZone(this *QTimeZone) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTimeZone & operator=(const QTimeZone &)
+
+/*
+
+ */
 func (this *QTimeZone) Operator_equal(other QTimeZone_ITF) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTimeZone_PTR() != nil {
@@ -200,6 +235,10 @@ func (this *QTimeZone) Operator_equal(other QTimeZone_ITF) *QTimeZone {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QTimeZone & operator=(QTimeZone &&)
+
+/*
+
+ */
 func (this *QTimeZone) Operator_equal_1(other unsafe.Pointer /*333*/) *QTimeZone {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -212,6 +251,10 @@ func (this *QTimeZone) Operator_equal_1(other unsafe.Pointer /*333*/) *QTimeZone
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QTimeZone &)
+
+/*
+Swaps this time zone instance with other. This function is very fast and never fails.
+*/
 func (this *QTimeZone) Swap(other QTimeZone_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTimeZone_PTR() != nil {
@@ -225,6 +268,10 @@ func (this *QTimeZone) Swap(other QTimeZone_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QTimeZone &) const
+
+/*
+
+ */
 func (this *QTimeZone) Operator_equal_equal(other QTimeZone_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTimeZone_PTR() != nil {
@@ -239,6 +286,10 @@ func (this *QTimeZone) Operator_equal_equal(other QTimeZone_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QTimeZone &) const
+
+/*
+
+ */
 func (this *QTimeZone) Operator_not_equal(other QTimeZone_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTimeZone_PTR() != nil {
@@ -253,6 +304,10 @@ func (this *QTimeZone) Operator_not_equal(other QTimeZone_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if this time zone is valid.
+*/
 func (this *QTimeZone) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -263,6 +318,12 @@ func (this *QTimeZone) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray id() const
+
+/*
+Returns the IANA ID for the time zone.
+
+IANA IDs are used on all platforms. On Windows these are translated from the Windows ID into the closest IANA ID for the time zone and country.
+*/
 func (this *QTimeZone) Id() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone2idEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -275,6 +336,10 @@ func (this *QTimeZone) Id() *QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocale::Country country() const
+
+/*
+Returns the country for the time zone.
+*/
 func (this *QTimeZone) Country() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone7countryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -285,6 +350,12 @@ func (this *QTimeZone) Country() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString comment() const
+
+/*
+Returns any comment for the time zone.
+
+A comment may be provided by the host platform to assist users in choosing the correct time zone. Depending on the platform this may not be localized.
+*/
 func (this *QTimeZone) Comment() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone7commentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -298,6 +369,16 @@ func (this *QTimeZone) Comment() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(const QDateTime &, QTimeZone::NameType, const QLocale &) const
+
+/*
+Returns the localized time zone display name at the given atDateTime for the given nameType in the given locale. The nameType and locale requested may not be supported on all platforms, in which case the best available option will be returned.
+
+If the locale is not provided then the application default locale will be used.
+
+The display name may change depending on DST or historical events.
+
+See also abbreviation().
+*/
 func (this *QTimeZone) DisplayName(atDateTime QDateTime_ITF, nameType int, locale QLocale_ITF) string {
 	var convArg0 unsafe.Pointer
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
@@ -319,6 +400,16 @@ func (this *QTimeZone) DisplayName(atDateTime QDateTime_ITF, nameType int, local
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(const QDateTime &, QTimeZone::NameType, const QLocale &) const
+
+/*
+Returns the localized time zone display name at the given atDateTime for the given nameType in the given locale. The nameType and locale requested may not be supported on all platforms, in which case the best available option will be returned.
+
+If the locale is not provided then the application default locale will be used.
+
+The display name may change depending on DST or historical events.
+
+See also abbreviation().
+*/
 func (this *QTimeZone) DisplayName__(atDateTime QDateTime_ITF) string {
 	var convArg0 unsafe.Pointer
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
@@ -340,6 +431,16 @@ func (this *QTimeZone) DisplayName__(atDateTime QDateTime_ITF) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(const QDateTime &, QTimeZone::NameType, const QLocale &) const
+
+/*
+Returns the localized time zone display name at the given atDateTime for the given nameType in the given locale. The nameType and locale requested may not be supported on all platforms, in which case the best available option will be returned.
+
+If the locale is not provided then the application default locale will be used.
+
+The display name may change depending on DST or historical events.
+
+See also abbreviation().
+*/
 func (this *QTimeZone) DisplayName__1(atDateTime QDateTime_ITF, nameType int) string {
 	var convArg0 unsafe.Pointer
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
@@ -359,6 +460,16 @@ func (this *QTimeZone) DisplayName__1(atDateTime QDateTime_ITF, nameType int) st
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(QTimeZone::TimeType, QTimeZone::NameType, const QLocale &) const
+
+/*
+Returns the localized time zone display name at the given atDateTime for the given nameType in the given locale. The nameType and locale requested may not be supported on all platforms, in which case the best available option will be returned.
+
+If the locale is not provided then the application default locale will be used.
+
+The display name may change depending on DST or historical events.
+
+See also abbreviation().
+*/
 func (this *QTimeZone) DisplayName_1(timeType int, nameType int, locale QLocale_ITF) string {
 	var convArg2 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
@@ -376,6 +487,16 @@ func (this *QTimeZone) DisplayName_1(timeType int, nameType int, locale QLocale_
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(QTimeZone::TimeType, QTimeZone::NameType, const QLocale &) const
+
+/*
+Returns the localized time zone display name at the given atDateTime for the given nameType in the given locale. The nameType and locale requested may not be supported on all platforms, in which case the best available option will be returned.
+
+If the locale is not provided then the application default locale will be used.
+
+The display name may change depending on DST or historical events.
+
+See also abbreviation().
+*/
 func (this *QTimeZone) DisplayName_1_(timeType int) string {
 	// arg: 1, QTimeZone::NameType=Elaborated, QTimeZone::NameType=Enum,
 	nameType := 0
@@ -393,6 +514,16 @@ func (this *QTimeZone) DisplayName_1_(timeType int) string {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(QTimeZone::TimeType, QTimeZone::NameType, const QLocale &) const
+
+/*
+Returns the localized time zone display name at the given atDateTime for the given nameType in the given locale. The nameType and locale requested may not be supported on all platforms, in which case the best available option will be returned.
+
+If the locale is not provided then the application default locale will be used.
+
+The display name may change depending on DST or historical events.
+
+See also abbreviation().
+*/
 func (this *QTimeZone) DisplayName_1_1(timeType int, nameType int) string {
 	// arg: 2, const QLocale &=LValueReference, QLocale=Record,
 	var convArg2 unsafe.Pointer
@@ -408,6 +539,14 @@ func (this *QTimeZone) DisplayName_1_1(timeType int, nameType int) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString abbreviation(const QDateTime &) const
+
+/*
+Returns the time zone abbreviation at the given atDateTime. The abbreviation may change depending on DST or even historical events.
+
+Note that the abbreviation is not guaranteed to be unique to this time zone and should not be used in place of the ID or display name.
+
+See also displayName().
+*/
 func (this *QTimeZone) Abbreviation(atDateTime QDateTime_ITF) string {
 	var convArg0 unsafe.Pointer
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
@@ -425,6 +564,14 @@ func (this *QTimeZone) Abbreviation(atDateTime QDateTime_ITF) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int offsetFromUtc(const QDateTime &) const
+
+/*
+Returns the total effective offset at the given atDateTime, i.e. the number of seconds to add to UTC to obtain the local time. This includes any DST offset that may be in effect, i.e. it is the sum of standardTimeOffset() and daylightTimeOffset() for the given datetime.
+
+For example, for the time zone "Europe/Berlin" the standard time offset is +3600 seconds and the DST offset is +3600 seconds. During standard time offsetFromUtc() will return +3600 (UTC+01:00), and during DST it will return +7200 (UTC+02:00).
+
+See also standardTimeOffset() and daylightTimeOffset().
+*/
 func (this *QTimeZone) OffsetFromUtc(atDateTime QDateTime_ITF) int {
 	var convArg0 unsafe.Pointer
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
@@ -439,6 +586,14 @@ func (this *QTimeZone) OffsetFromUtc(atDateTime QDateTime_ITF) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int standardTimeOffset(const QDateTime &) const
+
+/*
+Returns the standard time offset at the given atDateTime, i.e. the number of seconds to add to UTC to obtain the local Standard Time. This excludes any DST offset that may be in effect.
+
+For example, for the time zone "Europe/Berlin" the standard time offset is +3600 seconds. During both standard and DST offsetFromUtc() will return +3600 (UTC+01:00).
+
+See also offsetFromUtc() and daylightTimeOffset().
+*/
 func (this *QTimeZone) StandardTimeOffset(atDateTime QDateTime_ITF) int {
 	var convArg0 unsafe.Pointer
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
@@ -453,6 +608,14 @@ func (this *QTimeZone) StandardTimeOffset(atDateTime QDateTime_ITF) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int daylightTimeOffset(const QDateTime &) const
+
+/*
+Returns the daylight-saving time offset at the given atDateTime, i.e. the number of seconds to add to the standard time offset to obtain the local daylight-saving time.
+
+For example, for the time zone "Europe/Berlin" the DST offset is +3600 seconds. During standard time daylightTimeOffset() will return 0, and when daylight-saving is in effect it will return +3600.
+
+See also offsetFromUtc() and standardTimeOffset().
+*/
 func (this *QTimeZone) DaylightTimeOffset(atDateTime QDateTime_ITF) int {
 	var convArg0 unsafe.Pointer
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
@@ -467,6 +630,12 @@ func (this *QTimeZone) DaylightTimeOffset(atDateTime QDateTime_ITF) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasDaylightTime() const
+
+/*
+Returns true if the time zone has practiced daylight-saving at any time.
+
+See also isDaylightTime() and daylightTimeOffset().
+*/
 func (this *QTimeZone) HasDaylightTime() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone15hasDaylightTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -477,6 +646,12 @@ func (this *QTimeZone) HasDaylightTime() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDaylightTime(const QDateTime &) const
+
+/*
+Returns true if daylight-saving was in effect at the given atDateTime.
+
+See also hasDaylightTime() and daylightTimeOffset().
+*/
 func (this *QTimeZone) IsDaylightTime(atDateTime QDateTime_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
@@ -491,6 +666,12 @@ func (this *QTimeZone) IsDaylightTime(atDateTime QDateTime_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QTimeZone::OffsetData offsetData(const QDateTime &) const
+
+/*
+Returns the effective offset details at the given forDateTime. This is the equivalent of calling offsetFromUtc(), abbreviation(), etc individually but is more efficient.
+
+See also offsetFromUtc(), standardTimeOffset(), daylightTimeOffset(), and abbreviation().
+*/
 func (this *QTimeZone) OffsetData(forDateTime QDateTime_ITF) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if forDateTime != nil && forDateTime.QDateTime_PTR() != nil {
@@ -505,6 +686,14 @@ func (this *QTimeZone) OffsetData(forDateTime QDateTime_ITF) unsafe.Pointer /*44
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasTransitions() const
+
+/*
+Returns true if the system backend supports obtaining transitions.
+
+Transitions are changes in the time-zone: these happen when DST turns on or off and when authorities alter the offsets for the time-zone.
+
+See also nextTransition(), previousTransition(), and transitions().
+*/
 func (this *QTimeZone) HasTransitions() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone14hasTransitionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -515,6 +704,16 @@ func (this *QTimeZone) HasTransitions() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QTimeZone::OffsetData nextTransition(const QDateTime &) const
+
+/*
+Returns the first time zone Transition after the given afterDateTime. This is most useful when you have a Transition time and wish to find the Transition after it.
+
+If there is no transition after the given afterDateTime then an invalid OffsetData will be returned with an invalid QDateTime.
+
+The given afterDateTime is exclusive.
+
+See also hasTransitions(), previousTransition(), and transitions().
+*/
 func (this *QTimeZone) NextTransition(afterDateTime QDateTime_ITF) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if afterDateTime != nil && afterDateTime.QDateTime_PTR() != nil {
@@ -529,6 +728,16 @@ func (this *QTimeZone) NextTransition(afterDateTime QDateTime_ITF) unsafe.Pointe
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QTimeZone::OffsetData previousTransition(const QDateTime &) const
+
+/*
+Returns the first time zone Transition before the given beforeDateTime. This is most useful when you have a Transition time and wish to find the Transition before it.
+
+If there is no transition before the given beforeDateTime then an invalid OffsetData will be returned with an invalid QDateTime.
+
+The given beforeDateTime is exclusive.
+
+See also hasTransitions(), nextTransition(), and transitions().
+*/
 func (this *QTimeZone) PreviousTransition(beforeDateTime QDateTime_ITF) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if beforeDateTime != nil && beforeDateTime.QDateTime_PTR() != nil {
@@ -543,6 +752,12 @@ func (this *QTimeZone) PreviousTransition(beforeDateTime QDateTime_ITF) unsafe.P
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray systemTimeZoneId()
+
+/*
+Returns the current system time zone IANA ID.
+
+On Windows this ID is translated from the Windows ID using an internal translation table and the user's selected country. As a consequence there is a small chance any Windows install may have IDs not known by Qt, in which case "UTC" will be returned.
+*/
 func (this *QTimeZone) SystemTimeZoneId() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZone16systemTimeZoneIdEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -560,6 +775,14 @@ func QTimeZone_SystemTimeZoneId() *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTimeZone systemTimeZone()
+
+/*
+Returns a QTimeZone object that refers to the local system time, as specified by systemTimeZoneId().
+
+This function was introduced in  Qt 5.5.
+
+See also utc().
+*/
 func (this *QTimeZone) SystemTimeZone() *QTimeZone /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZone14systemTimeZoneEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -577,6 +800,14 @@ func QTimeZone_SystemTimeZone() *QTimeZone /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTimeZone utc()
+
+/*
+Returns a QTimeZone object that refers to UTC (Universal Time Coordinated).
+
+This function was introduced in  Qt 5.5.
+
+See also systemTimeZone().
+*/
 func (this *QTimeZone) Utc() *QTimeZone /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZone3utcEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -594,6 +825,12 @@ func QTimeZone_Utc() *QTimeZone /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool isTimeZoneIdAvailable(const QByteArray &)
+
+/*
+Returns true if a given time zone ianaId is available on this system.
+
+See also availableTimeZoneIds().
+*/
 func (this *QTimeZone) IsTimeZoneIdAvailable(ianaId QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if ianaId != nil && ianaId.QByteArray_PTR() != nil {
@@ -613,6 +850,12 @@ func QTimeZone_IsTimeZoneIdAvailable(ianaId QByteArray_ITF) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray ianaIdToWindowsId(const QByteArray &)
+
+/*
+Returns the Windows ID equivalent to the given ianaId.
+
+See also windowsIdToDefaultIanaId() and windowsIdToIanaIds().
+*/
 func (this *QTimeZone) IanaIdToWindowsId(ianaId QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if ianaId != nil && ianaId.QByteArray_PTR() != nil {
@@ -634,6 +877,14 @@ func QTimeZone_IanaIdToWindowsId(ianaId QByteArray_ITF) *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray windowsIdToDefaultIanaId(const QByteArray &)
+
+/*
+Returns the default IANA ID for a given windowsId.
+
+Because a Windows ID can cover several IANA IDs in several different countries, this function returns the most frequently used IANA ID with no regard for the country and should thus be used with care. It is usually best to request the default for a specific country.
+
+See also ianaIdToWindowsId() and windowsIdToIanaIds().
+*/
 func (this *QTimeZone) WindowsIdToDefaultIanaId(windowsId QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if windowsId != nil && windowsId.QByteArray_PTR() != nil {
@@ -655,6 +906,14 @@ func QTimeZone_WindowsIdToDefaultIanaId(windowsId QByteArray_ITF) *QByteArray /*
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray windowsIdToDefaultIanaId(const QByteArray &, QLocale::Country)
+
+/*
+Returns the default IANA ID for a given windowsId.
+
+Because a Windows ID can cover several IANA IDs in several different countries, this function returns the most frequently used IANA ID with no regard for the country and should thus be used with care. It is usually best to request the default for a specific country.
+
+See also ianaIdToWindowsId() and windowsIdToIanaIds().
+*/
 func (this *QTimeZone) WindowsIdToDefaultIanaId_1(windowsId QByteArray_ITF, country int) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if windowsId != nil && windowsId.QByteArray_PTR() != nil {
@@ -672,22 +931,51 @@ func QTimeZone_WindowsIdToDefaultIanaId_1(windowsId QByteArray_ITF, country int)
 	return rv
 }
 
+/*
+
+
+ */
 type QTimeZone__ = int
 
+//
 const QTimeZone__MinUtcOffsetSecs QTimeZone__ = -50400
+
+//
 const QTimeZone__MaxUtcOffsetSecs QTimeZone__ = 50400
 
+/*
+The type of time zone time, for example when requesting the name. In time zones that do not apply DST, all three values may return the same result.
+
+
+*/
 type QTimeZone__TimeType = int
 
+// The standard time in a time zone, i.e. when Daylight-Saving is not in effect. For example when formatting a display name this will show something like "Pacific Standard Time".
 const QTimeZone__StandardTime QTimeZone__TimeType = 0
+
+// A time when Daylight-Saving is in effect. For example when formatting a display name this will show something like "Pacific daylight-saving time".
 const QTimeZone__DaylightTime QTimeZone__TimeType = 1
+
+// A time which is not specifically Standard or Daylight-Saving time, either an unknown time or a neutral form. For example when formatting a display name this will show something like "Pacific Time".
 const QTimeZone__GenericTime QTimeZone__TimeType = 2
 
+/*
+The type of time zone name.
+
+
+*/
 type QTimeZone__NameType = int
 
+// The default form of the time zone name, e.g. LongName, ShortName or OffsetName
 const QTimeZone__DefaultName QTimeZone__NameType = 0
+
+// The long form of the time zone name, e.g. "Central European Time"
 const QTimeZone__LongName QTimeZone__NameType = 1
+
+// The short form of the time zone name, usually an abbreviation, e.g. "CET"
 const QTimeZone__ShortName QTimeZone__NameType = 2
+
+//
 const QTimeZone__OffsetName QTimeZone__NameType = 3
 
 //  body block end

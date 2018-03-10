@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QMarginsF struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QMarginsF) NewFromPointer(cthis unsafe.Pointer) *QMarginsF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMarginsF()
+
+/*
+
+ */
 func NewQMarginsF() *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQMarginsF() *QMarginsF {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMarginsF(qreal, qreal, qreal, qreal)
+
+/*
+
+ */
 func NewQMarginsF_1(left float64, top float64, right float64, bottom float64) *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFC2Edddd", qtrt.FFI_TYPE_POINTER, left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +100,10 @@ func NewQMarginsF_1(left float64, top float64, right float64, bottom float64) *Q
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMarginsF(const QMargins &)
+
+/*
+
+ */
 func NewQMarginsF_2(margins QMargins_ITF) *QMarginsF {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
@@ -105,6 +120,10 @@ func NewQMarginsF_2(margins QMargins_ITF) *QMarginsF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if all margins are is 0; otherwise returns false.
+*/
 func (this *QMarginsF) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,6 +134,12 @@ func (this *QMarginsF) IsNull() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal left() const
+
+/*
+Returns the left margin.
+
+See also setLeft().
+*/
 func (this *QMarginsF) Left() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF4leftEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,6 +150,12 @@ func (this *QMarginsF) Left() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal top() const
+
+/*
+Returns the top margin.
+
+See also setTop().
+*/
 func (this *QMarginsF) Top() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF3topEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +166,12 @@ func (this *QMarginsF) Top() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal right() const
+
+/*
+Returns the right margin.
+
+See also setRight().
+*/
 func (this *QMarginsF) Right() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF5rightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,6 +182,12 @@ func (this *QMarginsF) Right() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal bottom() const
+
+/*
+Returns the bottom margin.
+
+See also setBottom().
+*/
 func (this *QMarginsF) Bottom() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF6bottomEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -155,6 +198,12 @@ func (this *QMarginsF) Bottom() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLeft(qreal)
+
+/*
+Sets the left margin to left.
+
+See also left().
+*/
 func (this *QMarginsF) SetLeft(left float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsF7setLeftEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left)
 	qtrt.ErrPrint(err, rv)
@@ -164,6 +213,12 @@ func (this *QMarginsF) SetLeft(left float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTop(qreal)
+
+/*
+Sets the Top margin to Top.
+
+See also top().
+*/
 func (this *QMarginsF) SetTop(top float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsF6setTopEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), top)
 	qtrt.ErrPrint(err, rv)
@@ -173,6 +228,12 @@ func (this *QMarginsF) SetTop(top float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRight(qreal)
+
+/*
+Sets the right margin to right.
+
+See also right().
+*/
 func (this *QMarginsF) SetRight(right float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsF8setRightEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), right)
 	qtrt.ErrPrint(err, rv)
@@ -182,6 +243,12 @@ func (this *QMarginsF) SetRight(right float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBottom(qreal)
+
+/*
+Sets the bottom margin to bottom.
+
+See also bottom().
+*/
 func (this *QMarginsF) SetBottom(bottom float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsF9setBottomEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bottom)
 	qtrt.ErrPrint(err, rv)
@@ -191,6 +258,10 @@ func (this *QMarginsF) SetBottom(bottom float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QMarginsF & operator+=(const QMarginsF &)
+
+/*
+
+ */
 func (this *QMarginsF) Operator_add_equal(margins QMarginsF_ITF) *QMarginsF {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMarginsF_PTR() != nil {
@@ -207,6 +278,10 @@ func (this *QMarginsF) Operator_add_equal(margins QMarginsF_ITF) *QMarginsF {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QMarginsF & operator+=(qreal)
+
+/*
+
+ */
 func (this *QMarginsF) Operator_add_equal_1(addend float64) *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFpLEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), addend)
 	qtrt.ErrPrint(err, rv)
@@ -219,6 +294,10 @@ func (this *QMarginsF) Operator_add_equal_1(addend float64) *QMarginsF {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QMarginsF & operator-=(const QMarginsF &)
+
+/*
+
+ */
 func (this *QMarginsF) Operator_minus_equal(margins QMarginsF_ITF) *QMarginsF {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMarginsF_PTR() != nil {
@@ -235,6 +314,10 @@ func (this *QMarginsF) Operator_minus_equal(margins QMarginsF_ITF) *QMarginsF {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QMarginsF & operator-=(qreal)
+
+/*
+
+ */
 func (this *QMarginsF) Operator_minus_equal_1(subtrahend float64) *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFmIEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), subtrahend)
 	qtrt.ErrPrint(err, rv)
@@ -247,6 +330,10 @@ func (this *QMarginsF) Operator_minus_equal_1(subtrahend float64) *QMarginsF {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QMarginsF & operator*=(qreal)
+
+/*
+
+ */
 func (this *QMarginsF) Operator_mul_equal(factor float64) *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFmLEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
 	qtrt.ErrPrint(err, rv)
@@ -259,6 +346,10 @@ func (this *QMarginsF) Operator_mul_equal(factor float64) *QMarginsF {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QMarginsF & operator/=(qreal)
+
+/*
+
+ */
 func (this *QMarginsF) Operator_div_equal(divisor float64) *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFdVEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), divisor)
 	qtrt.ErrPrint(err, rv)
@@ -271,6 +362,10 @@ func (this *QMarginsF) Operator_div_equal(divisor float64) *QMarginsF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QMargins toMargins() const
+
+/*
+
+ */
 func (this *QMarginsF) ToMargins() *QMargins /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF9toMarginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

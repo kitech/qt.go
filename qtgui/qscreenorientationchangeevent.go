@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QScreenOrientationChangeEvent struct {
 	*qtcore.QEvent
 }
@@ -66,6 +69,10 @@ func (*QScreenOrientationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QScr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScreenOrientationChangeEvent(QScreen *, Qt::ScreenOrientation)
+
+/*
+
+ */
 func NewQScreenOrientationChangeEvent(screen QScreen_ITF /*777 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {
@@ -82,6 +89,10 @@ func NewQScreenOrientationChangeEvent(screen QScreen_ITF /*777 QScreen **/, orie
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScreenOrientationChangeEvent()
+
+/*
+
+ */
 func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -93,6 +104,10 @@ func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QScreen * screen() const
+
+/*
+
+ */
 func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*777 QScreen **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent6screenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -103,6 +118,10 @@ func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*777 QScreen **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ScreenOrientation orientation() const
+
+/*
+
+ */
 func (this *QScreenOrientationChangeEvent) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

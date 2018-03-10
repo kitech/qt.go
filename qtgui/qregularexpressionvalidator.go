@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QRegularExpressionValidator struct {
 	*QValidator
 }
@@ -66,6 +69,10 @@ func (*QRegularExpressionValidator) NewFromPointer(cthis unsafe.Pointer) *QRegul
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*777 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionValidator(QObject *)
+
+/*
+
+ */
 func NewQRegularExpressionValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -92,6 +103,10 @@ func NewQRegularExpressionValidator(parent qtcore.QObject_ITF /*777 QObject **/)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionValidator(QObject *)
+
+/*
+
+ */
 func NewQRegularExpressionValidator__() *QRegularExpressionValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -106,6 +121,10 @@ func NewQRegularExpressionValidator__() *QRegularExpressionValidator {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionValidator(const QRegularExpression &, QObject *)
+
+/*
+
+ */
 func NewQRegularExpressionValidator_1(re qtcore.QRegularExpression_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
@@ -126,6 +145,10 @@ func NewQRegularExpressionValidator_1(re qtcore.QRegularExpression_ITF, parent q
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionValidator(const QRegularExpression &, QObject *)
+
+/*
+
+ */
 func NewQRegularExpressionValidator_1_(re qtcore.QRegularExpression_ITF) *QRegularExpressionValidator {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
@@ -144,6 +167,10 @@ func NewQRegularExpressionValidator_1_(re qtcore.QRegularExpression_ITF) *QRegul
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRegularExpressionValidator()
+
+/*
+
+ */
 func DeleteQRegularExpressionValidator(this *QRegularExpressionValidator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -155,6 +182,12 @@ func DeleteQRegularExpressionValidator(this *QRegularExpressionValidator) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
+
+/*
+This virtual function returns Invalid if input is invalid according to this validator's rules, Intermediate if it is likely that a little more editing will make the input acceptable (e.g. the user types "4" into a widget which accepts integers between 10 and 99), and Acceptable if the input is valid.
+
+The function can change both input and pos (the cursor position) if required.
+*/
 func (this *QRegularExpressionValidator) Validate(input string, pos int) int {
 	var tmpArg0 = qtcore.NewQString_5(input)
 	var convArg0 = tmpArg0.GetCthis()
@@ -167,6 +200,10 @@ func (this *QRegularExpressionValidator) Validate(input string, pos int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpression regularExpression() const
+
+/*
+
+ */
 func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExpression /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator17regularExpressionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +216,10 @@ func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExp
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRegularExpression(const QRegularExpression &)
+
+/*
+
+ */
 func (this *QRegularExpressionValidator) SetRegularExpression(re qtcore.QRegularExpression_ITF) {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
@@ -192,6 +233,10 @@ func (this *QRegularExpressionValidator) SetRegularExpression(re qtcore.QRegular
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void regularExpressionChanged(const QRegularExpression &)
+
+/*
+
+ */
 func (this *QRegularExpressionValidator) RegularExpressionChanged(re qtcore.QRegularExpression_ITF) {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {

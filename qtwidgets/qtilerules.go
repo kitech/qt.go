@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QTileRules struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QTileRules) NewFromPointer(cthis unsafe.Pointer) *QTileRules {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTileRules(Qt::TileRule, Qt::TileRule)
+
+/*
+
+ */
 func NewQTileRules(horizontalRule int, verticalRule int) *QTileRules {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleES1_", qtrt.FFI_TYPE_POINTER, horizontalRule, verticalRule)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQTileRules(horizontalRule int, verticalRule int) *QTileRules {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTileRules(Qt::TileRule)
+
+/*
+
+ */
 func NewQTileRules_1(rule int) *QTileRules {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleE", qtrt.FFI_TYPE_POINTER, rule)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +102,10 @@ func NewQTileRules_1(rule int) *QTileRules {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTileRules(Qt::TileRule)
+
+/*
+
+ */
 func NewQTileRules_1_() *QTileRules {
 	// arg: 0, Qt::TileRule=Elaborated, Qt::TileRule=Enum,
 	rule := 0

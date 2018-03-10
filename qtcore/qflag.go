@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QFlag struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QFlag) NewFromPointer(cthis unsafe.Pointer) *QFlag {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QFlag(int)
+
+/*
+
+ */
 func NewQFlag(ai int) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ei", qtrt.FFI_TYPE_POINTER, ai)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQFlag(ai int) *QFlag {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QFlag(uint)
+
+/*
+
+ */
 func NewQFlag_1(ai uint) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ej", qtrt.FFI_TYPE_POINTER, ai)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +100,10 @@ func NewQFlag_1(ai uint) *QFlag {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QFlag(short)
+
+/*
+
+ */
 func NewQFlag_2(ai int16) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Es", qtrt.FFI_TYPE_POINTER, ai)
 	qtrt.ErrPrint(err, rv)
@@ -101,6 +116,10 @@ func NewQFlag_2(ai int16) *QFlag {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [-2] void QFlag(ushort)
+
+/*
+
+ */
 func NewQFlag_3(ai uint16) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Et", qtrt.FFI_TYPE_POINTER, ai)
 	qtrt.ErrPrint(err, rv)

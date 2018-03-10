@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlNetworkAccessManagerFactory struct {
 	*qtrt.CObject
 }
@@ -69,6 +72,10 @@ func (*QQmlNetworkAccessManagerFactory) NewFromPointer(cthis unsafe.Pointer) *QQ
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlNetworkAccessManagerFactory()
+
+/*
+
+ */
 func DeleteQQmlNetworkAccessManagerFactory(this *QQmlNetworkAccessManagerFactory) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -80,6 +87,12 @@ func DeleteQQmlNetworkAccessManagerFactory(this *QQmlNetworkAccessManagerFactory
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QNetworkAccessManager * create(QObject *)
+
+/*
+Creates and returns a network access manager with the specified parent. This method must return a new QNetworkAccessManager instance each time it is called.
+
+Note: this method may be called by multiple threads, so ensure the implementation of this method is reentrant.
+*/
 func (this *QQmlNetworkAccessManagerFactory) Create(parent qtcore.QObject_ITF /*777 QObject **/) *qtnetwork.QNetworkAccessManager /*777 QNetworkAccessManager **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

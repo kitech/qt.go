@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QIntValidator struct {
 	*QValidator
 }
@@ -64,6 +67,10 @@ func (*QIntValidator) NewFromPointer(cthis unsafe.Pointer) *QIntValidator {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QIntValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QIntValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(QObject *)
+
+/*
+
+ */
 func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidato
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(QObject *)
+
+/*
+
+ */
 func NewQIntValidator__() *QIntValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +119,10 @@ func NewQIntValidator__() *QIntValidator {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(int, int, QObject *)
+
+/*
+
+ */
 func NewQIntValidator_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -120,6 +139,10 @@ func NewQIntValidator_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QOb
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(int, int, QObject *)
+
+/*
+
+ */
 func NewQIntValidator_1_(bottom int, top int) *QIntValidator {
 	// arg: 2, QObject *=Pointer, QObject=Record,
 	var convArg2 unsafe.Pointer
@@ -134,6 +157,10 @@ func NewQIntValidator_1_(bottom int, top int) *QIntValidator {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIntValidator()
+
+/*
+
+ */
 func DeleteQIntValidator(this *QIntValidator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -145,6 +172,12 @@ func DeleteQIntValidator(this *QIntValidator) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
+
+/*
+This virtual function returns Invalid if input is invalid according to this validator's rules, Intermediate if it is likely that a little more editing will make the input acceptable (e.g. the user types "4" into a widget which accepts integers between 10 and 99), and Acceptable if the input is valid.
+
+The function can change both input and pos (the cursor position) if required.
+*/
 func (this *QIntValidator) Validate(arg0 string, arg1 int) int {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -157,6 +190,12 @@ func (this *QIntValidator) Validate(arg0 string, arg1 int) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fixup(QString &) const
+
+/*
+This function attempts to change input to be valid according to this validator's rules. It need not result in a valid string: callers of this function must re-test afterwards; the default does nothing.
+
+Reimplementations of this function can change input even if they do not produce a valid string. For example, an ISBN validator might want to delete every character except digits and "-", even if the result is still not a valid ISBN; a surname validator might want to remove whitespace from the start and end of the string, even if the resulting string is not in the list of accepted surnames.
+*/
 func (this *QIntValidator) Fixup(input string) {
 	var tmpArg0 = qtcore.NewQString_5(input)
 	var convArg0 = tmpArg0.GetCthis()
@@ -168,6 +207,10 @@ func (this *QIntValidator) Fixup(input string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBottom(int)
+
+/*
+
+ */
 func (this *QIntValidator) SetBottom(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidator9setBottomEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -177,6 +220,10 @@ func (this *QIntValidator) SetBottom(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTop(int)
+
+/*
+
+ */
 func (this *QIntValidator) SetTop(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidator6setTopEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -186,6 +233,10 @@ func (this *QIntValidator) SetTop(arg0 int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRange(int, int)
+
+/*
+
+ */
 func (this *QIntValidator) SetRange(bottom int, top int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidator8setRangeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bottom, top)
 	qtrt.ErrPrint(err, rv)
@@ -195,6 +246,10 @@ func (this *QIntValidator) SetRange(bottom int, top int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int bottom() const
+
+/*
+
+ */
 func (this *QIntValidator) Bottom() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator6bottomEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -205,6 +260,10 @@ func (this *QIntValidator) Bottom() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int top() const
+
+/*
+
+ */
 func (this *QIntValidator) Top() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator3topEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -215,6 +274,10 @@ func (this *QIntValidator) Top() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void bottomChanged(int)
+
+/*
+
+ */
 func (this *QIntValidator) BottomChanged(bottom int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidator13bottomChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bottom)
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +287,10 @@ func (this *QIntValidator) BottomChanged(bottom int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void topChanged(int)
+
+/*
+
+ */
 func (this *QIntValidator) TopChanged(top int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidator10topChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), top)
 	qtrt.ErrPrint(err, rv)

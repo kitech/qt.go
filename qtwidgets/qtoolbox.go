@@ -58,6 +58,9 @@ func (this *QToolBox) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
+/*
+
+ */
 type QToolBox struct {
 	*QFrame
 }
@@ -90,6 +93,10 @@ func (*QToolBox) NewFromPointer(cthis unsafe.Pointer) *QToolBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QToolBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +107,10 @@ func (this *QToolBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBox(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a new toolbox with the given parent and the flags, f.
+*/
 func NewQToolBox(parent QWidget_ITF /*777 QWidget **/, f int) *QToolBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -116,6 +127,10 @@ func NewQToolBox(parent QWidget_ITF /*777 QWidget **/, f int) *QToolBox {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBox(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a new toolbox with the given parent and the flags, f.
+*/
 func NewQToolBox__() *QToolBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -132,6 +147,10 @@ func NewQToolBox__() *QToolBox {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBox(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a new toolbox with the given parent and the flags, f.
+*/
 func NewQToolBox__1(parent QWidget_ITF /*777 QWidget **/) *QToolBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -150,6 +169,10 @@ func NewQToolBox__1(parent QWidget_ITF /*777 QWidget **/) *QToolBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolBox()
+
+/*
+
+ */
 func DeleteQToolBox(this *QToolBox) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -161,6 +184,10 @@ func DeleteQToolBox(this *QToolBox) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int addItem(QWidget *, const QString &)
+
+/*
+Adds the widget in a new tab at bottom of the toolbox. The new tab's text is set to text, and the iconSet is displayed to the left of the text. Returns the new tab's index.
+*/
 func (this *QToolBox) AddItem(widget QWidget_ITF /*777 QWidget **/, text string) int {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -177,6 +204,10 @@ func (this *QToolBox) AddItem(widget QWidget_ITF /*777 QWidget **/, text string)
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int addItem(QWidget *, const QIcon &, const QString &)
+
+/*
+Adds the widget in a new tab at bottom of the toolbox. The new tab's text is set to text, and the iconSet is displayed to the left of the text. Returns the new tab's index.
+*/
 func (this *QToolBox) AddItem_1(widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, text string) int {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -197,6 +228,10 @@ func (this *QToolBox) AddItem_1(widget QWidget_ITF /*777 QWidget **/, icon qtgui
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertItem(int, QWidget *, const QString &)
+
+/*
+Inserts the widget at position index, or at the bottom of the toolbox if index is out of range. The new item's text is set to text, and the icon is displayed to the left of the text. Returns the new item's index.
+*/
 func (this *QToolBox) InsertItem(index int, widget QWidget_ITF /*777 QWidget **/, text string) int {
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -213,6 +248,10 @@ func (this *QToolBox) InsertItem(index int, widget QWidget_ITF /*777 QWidget **/
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int insertItem(int, QWidget *, const QIcon &, const QString &)
+
+/*
+Inserts the widget at position index, or at the bottom of the toolbox if index is out of range. The new item's text is set to text, and the icon is displayed to the left of the text. Returns the new item's index.
+*/
 func (this *QToolBox) InsertItem_1(index int, widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, text string) int {
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -233,6 +272,10 @@ func (this *QToolBox) InsertItem_1(index int, widget QWidget_ITF /*777 QWidget *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeItem(int)
+
+/*
+Removes the item at position index from the toolbox. Note that the widget is not deleted.
+*/
 func (this *QToolBox) RemoveItem(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox10removeItemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -242,6 +285,12 @@ func (this *QToolBox) RemoveItem(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemEnabled(int, _Bool)
+
+/*
+If enabled is true then the item at position index is enabled; otherwise the item at position index is disabled.
+
+See also isItemEnabled().
+*/
 func (this *QToolBox) SetItemEnabled(index int, enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox14setItemEnabledEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, enabled)
 	qtrt.ErrPrint(err, rv)
@@ -251,6 +300,10 @@ func (this *QToolBox) SetItemEnabled(index int, enabled bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isItemEnabled(int) const
+
+/*
+Returns true if the item at position index is enabled; otherwise returns false.
+*/
 func (this *QToolBox) IsItemEnabled(index int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox13isItemEnabledEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -261,6 +314,14 @@ func (this *QToolBox) IsItemEnabled(index int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemText(int, const QString &)
+
+/*
+Sets the text of the item at position index to text.
+
+If the provided text contains an ampersand character ('&'), a mnemonic is automatically created for it. The character that follows the '&' will be used as the shortcut key. Any previous mnemonic will be overwritten, or cleared if no mnemonic is defined by the text. See the QShortcut documentation for details (to display an actual ampersand, use '&&').
+
+See also itemText().
+*/
 func (this *QToolBox) SetItemText(index int, text string) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
@@ -272,6 +333,12 @@ func (this *QToolBox) SetItemText(index int, text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString itemText(int) const
+
+/*
+Returns the text of the item at position index, or an empty string if index is out of range.
+
+See also setItemText().
+*/
 func (this *QToolBox) ItemText(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox8itemTextEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -285,6 +352,12 @@ func (this *QToolBox) ItemText(index int) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemIcon(int, const QIcon &)
+
+/*
+Sets the icon of the item at position index to icon.
+
+See also itemIcon().
+*/
 func (this *QToolBox) SetItemIcon(index int, icon qtgui.QIcon_ITF) {
 	var convArg1 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -298,6 +371,12 @@ func (this *QToolBox) SetItemIcon(index int, icon qtgui.QIcon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon itemIcon(int) const
+
+/*
+Returns the icon of the item at position index, or a null icon if index is out of range.
+
+See also setItemIcon().
+*/
 func (this *QToolBox) ItemIcon(index int) *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox8itemIconEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -310,6 +389,12 @@ func (this *QToolBox) ItemIcon(index int) *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemToolTip(int, const QString &)
+
+/*
+Sets the tooltip of the item at position index to toolTip.
+
+See also itemToolTip().
+*/
 func (this *QToolBox) SetItemToolTip(index int, toolTip string) {
 	var tmpArg1 = qtcore.NewQString_5(toolTip)
 	var convArg1 = tmpArg1.GetCthis()
@@ -321,6 +406,12 @@ func (this *QToolBox) SetItemToolTip(index int, toolTip string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString itemToolTip(int) const
+
+/*
+Returns the tooltip of the item at position index, or an empty string if index is out of range.
+
+See also setItemToolTip().
+*/
 func (this *QToolBox) ItemToolTip(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox11itemToolTipEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -334,6 +425,10 @@ func (this *QToolBox) ItemToolTip(index int) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentIndex() const
+
+/*
+
+ */
 func (this *QToolBox) CurrentIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox12currentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,6 +439,12 @@ func (this *QToolBox) CurrentIndex() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * currentWidget() const
+
+/*
+Returns a pointer to the current widget, or 0 if there is no such item.
+
+See also currentIndex() and setCurrentWidget().
+*/
 func (this *QToolBox) CurrentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox13currentWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -354,6 +455,10 @@ func (this *QToolBox) CurrentWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget(int) const
+
+/*
+Returns the widget at position index, or 0 if there is no such item.
+*/
 func (this *QToolBox) Widget(index int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox6widgetEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -364,6 +469,10 @@ func (this *QToolBox) Widget(index int) *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QWidget *) const
+
+/*
+Returns the index of widget, or -1 if the item does not exist.
+*/
 func (this *QToolBox) IndexOf(widget QWidget_ITF /*777 QWidget **/) int {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -378,6 +487,10 @@ func (this *QToolBox) IndexOf(widget QWidget_ITF /*777 QWidget **/) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
+
+/*
+
+ */
 func (this *QToolBox) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBox5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -388,6 +501,10 @@ func (this *QToolBox) Count() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentIndex(int)
+
+/*
+
+ */
 func (this *QToolBox) SetCurrentIndex(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox15setCurrentIndexEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -397,6 +514,12 @@ func (this *QToolBox) SetCurrentIndex(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWidget(QWidget *)
+
+/*
+Makeswidget the current widget. The widget must be an item in this tool box.
+
+See also addItem(), setCurrentIndex(), and currentWidget().
+*/
 func (this *QToolBox) SetCurrentWidget(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -410,6 +533,12 @@ func (this *QToolBox) SetCurrentWidget(widget QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentChanged(int)
+
+/*
+This signal is emitted when the current item is changed. The new current item's index is passed in index, or -1 if there is no current item.
+
+Note: Notifier signal for property currentIndex.
+*/
 func (this *QToolBox) CurrentChanged(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox14currentChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -419,6 +548,10 @@ func (this *QToolBox) CurrentChanged(index int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QToolBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -433,6 +566,12 @@ func (this *QToolBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void itemInserted(int)
+
+/*
+This virtual handler is called after a new item was added or inserted at position index.
+
+See also itemRemoved().
+*/
 func (this *QToolBox) ItemInserted(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox12itemInsertedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -442,6 +581,12 @@ func (this *QToolBox) ItemInserted(index int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void itemRemoved(int)
+
+/*
+This virtual handler is called after an item was removed from position index.
+
+See also itemInserted().
+*/
 func (this *QToolBox) ItemRemoved(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox11itemRemovedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -451,6 +596,10 @@ func (this *QToolBox) ItemRemoved(index int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
+
+/*
+Reimplemented from QWidget::showEvent().
+*/
 func (this *QToolBox) ShowEvent(e qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QShowEvent_PTR() != nil {
@@ -464,6 +613,10 @@ func (this *QToolBox) ShowEvent(e qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QToolBox) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {

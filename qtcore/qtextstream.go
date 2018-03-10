@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QTextStream struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,12 @@ func (*QTextStream) NewFromPointer(cthis unsafe.Pointer) *QTextStream {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream()
+
+/*
+Constructs a QTextStream. Before you can use it for reading or writing, you must assign a device or a string.
+
+See also setDevice() and setString().
+*/
 func NewQTextStream() *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +86,12 @@ func NewQTextStream() *QTextStream {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(QIODevice *)
+
+/*
+Constructs a QTextStream. Before you can use it for reading or writing, you must assign a device or a string.
+
+See also setDevice() and setString().
+*/
 func NewQTextStream_1(device QIODevice_ITF /*777 QIODevice **/) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -93,6 +108,12 @@ func NewQTextStream_1(device QIODevice_ITF /*777 QIODevice **/) *QTextStream {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(QString *, QIODevice::OpenMode)
+
+/*
+Constructs a QTextStream. Before you can use it for reading or writing, you must assign a device or a string.
+
+See also setDevice() and setString().
+*/
 func NewQTextStream_2(string string, openMode int) *QTextStream {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
@@ -107,6 +128,12 @@ func NewQTextStream_2(string string, openMode int) *QTextStream {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(QString *, QIODevice::OpenMode)
+
+/*
+Constructs a QTextStream. Before you can use it for reading or writing, you must assign a device or a string.
+
+See also setDevice() and setString().
+*/
 func NewQTextStream_2_(string string) *QTextStream {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
@@ -123,6 +150,12 @@ func NewQTextStream_2_(string string) *QTextStream {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(QByteArray *, QIODevice::OpenMode)
+
+/*
+Constructs a QTextStream. Before you can use it for reading or writing, you must assign a device or a string.
+
+See also setDevice() and setString().
+*/
 func NewQTextStream_3(array QByteArray_ITF /*777 QByteArray **/, openMode int) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -139,6 +172,12 @@ func NewQTextStream_3(array QByteArray_ITF /*777 QByteArray **/, openMode int) *
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(QByteArray *, QIODevice::OpenMode)
+
+/*
+Constructs a QTextStream. Before you can use it for reading or writing, you must assign a device or a string.
+
+See also setDevice() and setString().
+*/
 func NewQTextStream_3_(array QByteArray_ITF /*777 QByteArray **/) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -157,6 +196,12 @@ func NewQTextStream_3_(array QByteArray_ITF /*777 QByteArray **/) *QTextStream {
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(const QByteArray &, QIODevice::OpenMode)
+
+/*
+Constructs a QTextStream. Before you can use it for reading or writing, you must assign a device or a string.
+
+See also setDevice() and setString().
+*/
 func NewQTextStream_4(array QByteArray_ITF, openMode int) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -173,6 +218,12 @@ func NewQTextStream_4(array QByteArray_ITF, openMode int) *QTextStream {
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(const QByteArray &, QIODevice::OpenMode)
+
+/*
+Constructs a QTextStream. Before you can use it for reading or writing, you must assign a device or a string.
+
+See also setDevice() and setString().
+*/
 func NewQTextStream_4_(array QByteArray_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -191,6 +242,10 @@ func NewQTextStream_4_(array QByteArray_ITF) *QTextStream {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextStream()
+
+/*
+
+ */
 func DeleteQTextStream(this *QTextStream) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -202,6 +257,16 @@ func DeleteQTextStream(this *QTextStream) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCodec(QTextCodec *)
+
+/*
+Sets the codec for this stream to codec. The codec is used for decoding any data that is read from the assigned device, and for encoding any data that is written. By default, QTextCodec::codecForLocale() is used, and automatic unicode detection is enabled.
+
+If QTextStream operates on a string, this function does nothing.
+
+Warning: If you call this function while the text stream is reading from an open sequential socket, the internal buffer may still contain text decoded using the old codec.
+
+See also codec(), setAutoDetectUnicode(), and setLocale().
+*/
 func (this *QTextStream) SetCodec(codec QTextCodec_ITF /*777 QTextCodec **/) {
 	var convArg0 unsafe.Pointer
 	if codec != nil && codec.QTextCodec_PTR() != nil {
@@ -215,6 +280,16 @@ func (this *QTextStream) SetCodec(codec QTextCodec_ITF /*777 QTextCodec **/) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setCodec(const char *)
+
+/*
+Sets the codec for this stream to codec. The codec is used for decoding any data that is read from the assigned device, and for encoding any data that is written. By default, QTextCodec::codecForLocale() is used, and automatic unicode detection is enabled.
+
+If QTextStream operates on a string, this function does nothing.
+
+Warning: If you call this function while the text stream is reading from an open sequential socket, the internal buffer may still contain text decoded using the old codec.
+
+See also codec(), setAutoDetectUnicode(), and setLocale().
+*/
 func (this *QTextStream) SetCodec_1(codecName string) {
 	var convArg0 = qtrt.CString(codecName)
 	defer qtrt.FreeMem(convArg0)
@@ -226,6 +301,12 @@ func (this *QTextStream) SetCodec_1(codecName string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextCodec * codec() const
+
+/*
+Returns the codec that is current assigned to the stream.
+
+See also setCodec(), setAutoDetectUnicode(), and locale().
+*/
 func (this *QTextStream) Codec() *QTextCodec /*777 QTextCodec **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream5codecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -236,6 +317,14 @@ func (this *QTextStream) Codec() *QTextCodec /*777 QTextCodec **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoDetectUnicode(_Bool)
+
+/*
+If enabled is true, QTextStream will attempt to detect Unicode encoding by peeking into the stream data to see if it can find the UTF-16 or UTF-32 BOM (Byte Order Mark). If this mark is found, QTextStream will replace the current codec with the UTF codec.
+
+This function can be used together with setCodec(). It is common to set the codec to UTF-8, and then enable UTF-16 detection.
+
+See also autoDetectUnicode() and setCodec().
+*/
 func (this *QTextStream) SetAutoDetectUnicode(enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream20setAutoDetectUnicodeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	qtrt.ErrPrint(err, rv)
@@ -245,6 +334,12 @@ func (this *QTextStream) SetAutoDetectUnicode(enabled bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoDetectUnicode() const
+
+/*
+Returns true if automatic Unicode detection is enabled, otherwise returns false. Automatic Unicode detection is enabled by default.
+
+See also setAutoDetectUnicode() and setCodec().
+*/
 func (this *QTextStream) AutoDetectUnicode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream17autoDetectUnicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,6 +350,12 @@ func (this *QTextStream) AutoDetectUnicode() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGenerateByteOrderMark(_Bool)
+
+/*
+If generate is true and a UTF codec is used, QTextStream will insert the BOM (Byte Order Mark) before any data has been written to the device. If generate is false, no BOM will be inserted. This function must be called before any data is written. Otherwise, it does nothing.
+
+See also generateByteOrderMark() and bom().
+*/
 func (this *QTextStream) SetGenerateByteOrderMark(generate bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream24setGenerateByteOrderMarkEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), generate)
 	qtrt.ErrPrint(err, rv)
@@ -264,6 +365,12 @@ func (this *QTextStream) SetGenerateByteOrderMark(generate bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool generateByteOrderMark() const
+
+/*
+Returns true if QTextStream is set to generate the UTF BOM (Byte Order Mark) when using a UTF codec; otherwise returns false. UTF BOM generation is set to false by default.
+
+See also setGenerateByteOrderMark().
+*/
 func (this *QTextStream) GenerateByteOrderMark() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream21generateByteOrderMarkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -274,6 +381,16 @@ func (this *QTextStream) GenerateByteOrderMark() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLocale(const QLocale &)
+
+/*
+Sets the locale for this stream to locale. The specified locale is used for conversions between numbers and their string representations.
+
+The default locale is C and it is a special case - the thousands group separator is not used for backward compatibility reasons.
+
+This function was introduced in  Qt 4.5.
+
+See also locale().
+*/
 func (this *QTextStream) SetLocale(locale QLocale_ITF) {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
@@ -287,6 +404,14 @@ func (this *QTextStream) SetLocale(locale QLocale_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QLocale locale() const
+
+/*
+Returns the locale for this stream. The default locale is C.
+
+This function was introduced in  Qt 4.5.
+
+See also setLocale().
+*/
 func (this *QTextStream) Locale() *QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream6localeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -299,6 +424,14 @@ func (this *QTextStream) Locale() *QLocale /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
+
+/*
+Sets the current device to device. If a device has already been assigned, QTextStream will call flush() before the old device is replaced.
+
+Note: This function resets locale to the default locale ('C') and codec to the default codec, QTextCodec::codecForLocale().
+
+See also device() and setString().
+*/
 func (this *QTextStream) SetDevice(device QIODevice_ITF /*777 QIODevice **/) {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -312,6 +445,12 @@ func (this *QTextStream) SetDevice(device QIODevice_ITF /*777 QIODevice **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIODevice * device() const
+
+/*
+Returns the current device associated with the QTextStream, or 0 if no device has been assigned.
+
+See also setDevice() and string().
+*/
 func (this *QTextStream) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -322,6 +461,12 @@ func (this *QTextStream) Device() *QIODevice /*777 QIODevice **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setString(QString *, QIODevice::OpenMode)
+
+/*
+Sets the current string to string, using the given openMode. If a device has already been assigned, QTextStream will call flush() before replacing it.
+
+See also string() and setDevice().
+*/
 func (this *QTextStream) SetString(string string, openMode int) {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
@@ -333,6 +478,12 @@ func (this *QTextStream) SetString(string string, openMode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setString(QString *, QIODevice::OpenMode)
+
+/*
+Sets the current string to string, using the given openMode. If a device has already been assigned, QTextStream will call flush() before replacing it.
+
+See also string() and setDevice().
+*/
 func (this *QTextStream) SetString__(string string) {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
@@ -346,6 +497,12 @@ func (this *QTextStream) SetString__(string string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString * string() const
+
+/*
+Returns the current string assigned to the QTextStream, or 0 if no string has been assigned.
+
+See also setString() and device().
+*/
 func (this *QTextStream) String() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream6stringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -359,6 +516,12 @@ func (this *QTextStream) String() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTextStream::Status status() const
+
+/*
+Returns the status of the text stream.
+
+See also QTextStream::Status, setStatus(), and resetStatus().
+*/
 func (this *QTextStream) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -369,6 +532,16 @@ func (this *QTextStream) Status() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStatus(enum QTextStream::Status)
+
+/*
+Sets the status of the text stream to the status given.
+
+Subsequent calls to setStatus() are ignored until resetStatus() is called.
+
+This function was introduced in  Qt 4.1.
+
+See also Status, status(), and resetStatus().
+*/
 func (this *QTextStream) SetStatus(status int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream9setStatusENS_6StatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), status)
 	qtrt.ErrPrint(err, rv)
@@ -378,6 +551,14 @@ func (this *QTextStream) SetStatus(status int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetStatus()
+
+/*
+Resets the status of the text stream.
+
+This function was introduced in  Qt 4.1.
+
+See also QTextStream::Status, status(), and setStatus().
+*/
 func (this *QTextStream) ResetStatus() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream11resetStatusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -387,6 +568,10 @@ func (this *QTextStream) ResetStatus() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool atEnd() const
+
+/*
+Returns true if there is no more data to be read from the QTextStream; otherwise returns false. This is similar to, but not the same as calling QIODevice::atEnd(), as QTextStream also takes into account its internal Unicode buffer.
+*/
 func (this *QTextStream) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -397,6 +582,10 @@ func (this *QTextStream) AtEnd() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reset()
+
+/*
+Resets QTextStream's formatting options, bringing it back to its original constructed state. The device, string and any buffered data is left untouched.
+*/
 func (this *QTextStream) Reset() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -406,6 +595,12 @@ func (this *QTextStream) Reset() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void flush()
+
+/*
+Flushes any buffered data waiting to be written to the device.
+
+If QTextStream operates on a string, this function does nothing.
+*/
 func (this *QTextStream) Flush() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream5flushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -415,6 +610,10 @@ func (this *QTextStream) Flush() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool seek(qint64)
+
+/*
+Seeks to the position pos in the device. Returns true on success; otherwise returns false.
+*/
 func (this *QTextStream) Seek(pos int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream4seekEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	qtrt.ErrPrint(err, rv)
@@ -425,16 +624,35 @@ func (this *QTextStream) Seek(pos int64) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 pos() const
+
+/*
+Returns the device position corresponding to the current position of the stream, or -1 if an error occurs (e.g., if there is no device or string, or if there's a device error).
+
+Because QTextStream is buffered, this function may have to seek the device to reconstruct a valid device position. This operation can be expensive, so you may want to avoid calling this function in a tight loop.
+
+This function was introduced in  Qt 4.2.
+
+See also seek().
+*/
 func (this *QTextStream) Pos() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void skipWhiteSpace()
+
+/*
+Reads and discards whitespace from the stream until either a non-space character is detected, or until atEnd() returns true. This function is useful when reading a stream character by character.
+
+Whitespace characters are all characters for which QChar::isSpace() returns true.
+
+See also operator>>().
+*/
 func (this *QTextStream) SkipWhiteSpace() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream14skipWhiteSpaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -444,6 +662,18 @@ func (this *QTextStream) SkipWhiteSpace() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString readLine(qint64)
+
+/*
+Reads one line of text from the stream, and returns it as a QString. The maximum allowed line length is set to maxlen. If the stream contains lines longer than this, then the lines will be split after maxlen characters and returned in parts.
+
+If maxlen is 0, the lines can be of any length.
+
+The returned line has no trailing end-of-line characters ("\n" or "\r\n"), so calling QString::trimmed() can be unnecessary.
+
+If the stream has read to the end of the file, readLine() will return a null QString. For strings, or for devices that support it, you can explicitly test for the end of the stream using atEnd().
+
+See also readAll() and QIODevice::readLine().
+*/
 func (this *QTextStream) ReadLine(maxlen int64) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream8readLineEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	qtrt.ErrPrint(err, rv)
@@ -457,6 +687,18 @@ func (this *QTextStream) ReadLine(maxlen int64) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString readLine(qint64)
+
+/*
+Reads one line of text from the stream, and returns it as a QString. The maximum allowed line length is set to maxlen. If the stream contains lines longer than this, then the lines will be split after maxlen characters and returned in parts.
+
+If maxlen is 0, the lines can be of any length.
+
+The returned line has no trailing end-of-line characters ("\n" or "\r\n"), so calling QString::trimmed() can be unnecessary.
+
+If the stream has read to the end of the file, readLine() will return a null QString. For strings, or for devices that support it, you can explicitly test for the end of the stream using atEnd().
+
+See also readAll() and QIODevice::readLine().
+*/
 func (this *QTextStream) ReadLine__() string {
 	// arg: 0, qint64=Typedef, qint64=Typedef, long long
 	maxlen := int64(0)
@@ -472,6 +714,24 @@ func (this *QTextStream) ReadLine__() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool readLineInto(QString *, qint64)
+
+/*
+Reads one line of text from the stream into line. If line is 0, the read line is not stored.
+
+The maximum allowed line length is set to maxlen. If the stream contains lines longer than this, then the lines will be split after maxlen characters and returned in parts.
+
+If maxlen is 0, the lines can be of any length.
+
+The resulting line has no trailing end-of-line characters ("\n" or "\r\n"), so calling QString::trimmed() can be unnecessary.
+
+If line has sufficient capacity for the data that is about to be read, this function may not need to allocate new memory. Because of this, it can be faster than readLine().
+
+Returns false if the stream has read to the end of the file or an error has occurred; otherwise returns true. The contents in line before the call are discarded in any case.
+
+This function was introduced in  Qt 5.5.
+
+See also readAll() and QIODevice::readLine().
+*/
 func (this *QTextStream) ReadLineInto(line string, maxlen int64) bool {
 	var tmpArg0 = NewQString_5(line)
 	var convArg0 = tmpArg0.GetCthis()
@@ -484,6 +744,24 @@ func (this *QTextStream) ReadLineInto(line string, maxlen int64) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool readLineInto(QString *, qint64)
+
+/*
+Reads one line of text from the stream into line. If line is 0, the read line is not stored.
+
+The maximum allowed line length is set to maxlen. If the stream contains lines longer than this, then the lines will be split after maxlen characters and returned in parts.
+
+If maxlen is 0, the lines can be of any length.
+
+The resulting line has no trailing end-of-line characters ("\n" or "\r\n"), so calling QString::trimmed() can be unnecessary.
+
+If line has sufficient capacity for the data that is about to be read, this function may not need to allocate new memory. Because of this, it can be faster than readLine().
+
+Returns false if the stream has read to the end of the file or an error has occurred; otherwise returns true. The contents in line before the call are discarded in any case.
+
+This function was introduced in  Qt 5.5.
+
+See also readAll() and QIODevice::readLine().
+*/
 func (this *QTextStream) ReadLineInto__(line string) bool {
 	var tmpArg0 = NewQString_5(line)
 	var convArg0 = tmpArg0.GetCthis()
@@ -498,6 +776,14 @@ func (this *QTextStream) ReadLineInto__(line string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString readAll()
+
+/*
+Reads the entire content of the stream, and returns it as a QString. Avoid this function when working on large files, as it will consume a significant amount of memory.
+
+Calling readLine() is better if you do not know how much data is available.
+
+See also readLine().
+*/
 func (this *QTextStream) ReadAll() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream7readAllEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -511,6 +797,14 @@ func (this *QTextStream) ReadAll() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString read(qint64)
+
+/*
+Reads at most maxlen characters from the stream, and returns the data read as a QString.
+
+This function was introduced in  Qt 4.1.
+
+See also readAll(), readLine(), and QIODevice::read().
+*/
 func (this *QTextStream) Read(maxlen int64) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream4readEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	qtrt.ErrPrint(err, rv)
@@ -524,6 +818,12 @@ func (this *QTextStream) Read(maxlen int64) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFieldAlignment(enum QTextStream::FieldAlignment)
+
+/*
+Sets the field alignment to mode. When used together with setFieldWidth(), this function allows you to generate formatted output with text aligned to the left, to the right or center aligned.
+
+See also fieldAlignment() and setFieldWidth().
+*/
 func (this *QTextStream) SetFieldAlignment(alignment int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream17setFieldAlignmentENS_14FieldAlignmentE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	qtrt.ErrPrint(err, rv)
@@ -533,6 +833,12 @@ func (this *QTextStream) SetFieldAlignment(alignment int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTextStream::FieldAlignment fieldAlignment() const
+
+/*
+Returns the current field alignment.
+
+See also setFieldAlignment() and fieldWidth().
+*/
 func (this *QTextStream) FieldAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream14fieldAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -543,6 +849,31 @@ func (this *QTextStream) FieldAlignment() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPadChar(QChar)
+
+/*
+Sets the pad character to ch. The default value is the ASCII space character (' '), or QChar(0x20). This character is used to fill in the space in fields when generating text.
+
+Example:
+
+
+  QString s;
+  QTextStream out(&s);
+  out.setFieldWidth(10);
+  out.setFieldAlignment(QTextStream::AlignCenter);
+  out.setPadChar('-');
+  out << "Qt" << "rocks!";
+
+
+
+The string s contains:
+
+
+  ----Qt------rocks!--
+
+
+
+See also padChar() and setFieldWidth().
+*/
 func (this *QTextStream) SetPadChar(ch QChar_ITF /*123*/) {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
@@ -556,6 +887,12 @@ func (this *QTextStream) SetPadChar(ch QChar_ITF /*123*/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar padChar() const
+
+/*
+Returns the current pad character.
+
+See also setPadChar() and setFieldWidth().
+*/
 func (this *QTextStream) PadChar() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream7padCharEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -568,6 +905,14 @@ func (this *QTextStream) PadChar() *QChar /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFieldWidth(int)
+
+/*
+Sets the current field width to width. If width is 0 (the default), the field width is equal to the length of the generated text.
+
+Note: The field width applies to every element appended to this stream after this function has been called (e.g., it also pads endl). This behavior is different from similar classes in the STL, where the field width only applies to the next element.
+
+See also fieldWidth() and setPadChar().
+*/
 func (this *QTextStream) SetFieldWidth(width int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream13setFieldWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
@@ -577,6 +922,12 @@ func (this *QTextStream) SetFieldWidth(width int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int fieldWidth() const
+
+/*
+Returns the current field width.
+
+See also setFieldWidth().
+*/
 func (this *QTextStream) FieldWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream10fieldWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -587,6 +938,12 @@ func (this *QTextStream) FieldWidth() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNumberFlags(QTextStream::NumberFlags)
+
+/*
+Sets the current number flags to flags. flags is a set of flags from the NumberFlag enum, and describes options for formatting generated code (e.g., whether or not to always write the base or sign of a number).
+
+See also numberFlags(), setIntegerBase(), and setRealNumberNotation().
+*/
 func (this *QTextStream) SetNumberFlags(flags int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream14setNumberFlagsE6QFlagsINS_10NumberFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
@@ -596,6 +953,12 @@ func (this *QTextStream) SetNumberFlags(flags int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTextStream::NumberFlags numberFlags() const
+
+/*
+Returns the current number flags.
+
+See also setNumberFlags(), integerBase(), and realNumberNotation().
+*/
 func (this *QTextStream) NumberFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream11numberFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -606,6 +969,12 @@ func (this *QTextStream) NumberFlags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIntegerBase(int)
+
+/*
+Sets the base of integers to base, both for reading and for generating numbers. base can be either 2 (binary), 8 (octal), 10 (decimal) or 16 (hexadecimal). If base is 0, QTextStream will attempt to detect the base by inspecting the data on the stream. When generating numbers, QTextStream assumes base is 10 unless the base has been set explicitly.
+
+See also integerBase(), QString::number(), and setNumberFlags().
+*/
 func (this *QTextStream) SetIntegerBase(base int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream14setIntegerBaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), base)
 	qtrt.ErrPrint(err, rv)
@@ -615,6 +984,12 @@ func (this *QTextStream) SetIntegerBase(base int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int integerBase() const
+
+/*
+Returns the current base of integers. 0 means that the base is detected when reading, or 10 (decimal) when generating numbers.
+
+See also setIntegerBase(), QString::number(), and numberFlags().
+*/
 func (this *QTextStream) IntegerBase() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream11integerBaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -625,6 +1000,12 @@ func (this *QTextStream) IntegerBase() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRealNumberNotation(enum QTextStream::RealNumberNotation)
+
+/*
+Sets the real number notation to notation (SmartNotation, FixedNotation, ScientificNotation). When reading and generating numbers, QTextStream uses this value to detect the formatting of real numbers.
+
+See also realNumberNotation(), setRealNumberPrecision(), setNumberFlags(), and setIntegerBase().
+*/
 func (this *QTextStream) SetRealNumberNotation(notation int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream21setRealNumberNotationENS_18RealNumberNotationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), notation)
 	qtrt.ErrPrint(err, rv)
@@ -634,6 +1015,12 @@ func (this *QTextStream) SetRealNumberNotation(notation int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTextStream::RealNumberNotation realNumberNotation() const
+
+/*
+Returns the current real number notation.
+
+See also setRealNumberNotation(), realNumberPrecision(), numberFlags(), and integerBase().
+*/
 func (this *QTextStream) RealNumberNotation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream18realNumberNotationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -644,6 +1031,14 @@ func (this *QTextStream) RealNumberNotation() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRealNumberPrecision(int)
+
+/*
+Sets the precision of real numbers to precision. This value describes the number of fraction digits QTextStream should write when generating real numbers.
+
+The precision cannot be a negative value. The default value is 6.
+
+See also realNumberPrecision() and setRealNumberNotation().
+*/
 func (this *QTextStream) SetRealNumberPrecision(precision int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream22setRealNumberPrecisionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), precision)
 	qtrt.ErrPrint(err, rv)
@@ -653,6 +1048,12 @@ func (this *QTextStream) SetRealNumberPrecision(precision int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int realNumberPrecision() const
+
+/*
+Returns the current real number precision, or the number of fraction digits QTextStream will write when generating real numbers.
+
+See also setRealNumberPrecision(), setRealNumberNotation(), realNumberNotation(), numberFlags(), and integerBase().
+*/
 func (this *QTextStream) RealNumberPrecision() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream19realNumberPrecisionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -663,6 +1064,10 @@ func (this *QTextStream) RealNumberPrecision() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(QChar &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift(ch QChar_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
@@ -679,6 +1084,10 @@ func (this *QTextStream) Operator_right_shift(ch QChar_ITF) *QTextStream {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(char &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_1(ch byte) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ch)
 	qtrt.ErrPrint(err, rv)
@@ -691,6 +1100,10 @@ func (this *QTextStream) Operator_right_shift_1(ch byte) *QTextStream {
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(short &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_2(i int16) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
@@ -703,6 +1116,10 @@ func (this *QTextStream) Operator_right_shift_2(i int16) *QTextStream {
 // index:3
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(unsigned short &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_3(i uint16) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
@@ -715,6 +1132,10 @@ func (this *QTextStream) Operator_right_shift_3(i uint16) *QTextStream {
 // index:4
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(int &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_4(i int) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
@@ -727,6 +1148,10 @@ func (this *QTextStream) Operator_right_shift_4(i int) *QTextStream {
 // index:5
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(unsigned int &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_5(i uint) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
@@ -739,6 +1164,10 @@ func (this *QTextStream) Operator_right_shift_5(i uint) *QTextStream {
 // index:6
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(long &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_6(i int) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
@@ -751,6 +1180,10 @@ func (this *QTextStream) Operator_right_shift_6(i int) *QTextStream {
 // index:7
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(unsigned long &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_7(i uint) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
@@ -763,6 +1196,10 @@ func (this *QTextStream) Operator_right_shift_7(i uint) *QTextStream {
 // index:8
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(qlonglong &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_8(i int64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
@@ -775,6 +1212,10 @@ func (this *QTextStream) Operator_right_shift_8(i int64) *QTextStream {
 // index:9
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(qulonglong &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_9(i uint64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
@@ -787,6 +1228,10 @@ func (this *QTextStream) Operator_right_shift_9(i uint64) *QTextStream {
 // index:10
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(float &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_10(f float32) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &f)
 	qtrt.ErrPrint(err, rv)
@@ -799,6 +1244,10 @@ func (this *QTextStream) Operator_right_shift_10(f float32) *QTextStream {
 // index:11
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(double &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_11(f float64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &f)
 	qtrt.ErrPrint(err, rv)
@@ -811,6 +1260,10 @@ func (this *QTextStream) Operator_right_shift_11(f float64) *QTextStream {
 // index:12
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(QString &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_12(s string) *QTextStream {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -825,6 +1278,10 @@ func (this *QTextStream) Operator_right_shift_12(s string) *QTextStream {
 // index:13
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(QByteArray &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_13(array QByteArray_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -841,6 +1298,10 @@ func (this *QTextStream) Operator_right_shift_13(array QByteArray_ITF) *QTextStr
 // index:14
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator>>(char *)
+
+/*
+
+ */
 func (this *QTextStream) Operator_right_shift_14(c string) *QTextStream {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
@@ -855,6 +1316,10 @@ func (this *QTextStream) Operator_right_shift_14(c string) *QTextStream {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(QChar)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift(ch QChar_ITF /*123*/) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
@@ -871,6 +1336,10 @@ func (this *QTextStream) Operator_left_shift(ch QChar_ITF /*123*/) *QTextStream 
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(char)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_1(ch byte) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ch)
 	qtrt.ErrPrint(err, rv)
@@ -883,6 +1352,10 @@ func (this *QTextStream) Operator_left_shift_1(ch byte) *QTextStream {
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(short)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_2(i int16) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -895,6 +1368,10 @@ func (this *QTextStream) Operator_left_shift_2(i int16) *QTextStream {
 // index:3
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(unsigned short)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_3(i uint16) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -907,6 +1384,10 @@ func (this *QTextStream) Operator_left_shift_3(i uint16) *QTextStream {
 // index:4
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(int)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_4(i int) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -919,6 +1400,10 @@ func (this *QTextStream) Operator_left_shift_4(i int) *QTextStream {
 // index:5
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(unsigned int)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_5(i uint) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -931,6 +1416,10 @@ func (this *QTextStream) Operator_left_shift_5(i uint) *QTextStream {
 // index:6
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(long)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_6(i int) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -943,6 +1432,10 @@ func (this *QTextStream) Operator_left_shift_6(i int) *QTextStream {
 // index:7
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(unsigned long)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_7(i uint) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -955,6 +1448,10 @@ func (this *QTextStream) Operator_left_shift_7(i uint) *QTextStream {
 // index:8
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(qlonglong)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_8(i int64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -967,6 +1464,10 @@ func (this *QTextStream) Operator_left_shift_8(i int64) *QTextStream {
 // index:9
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(qulonglong)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_9(i uint64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -979,6 +1480,10 @@ func (this *QTextStream) Operator_left_shift_9(i uint64) *QTextStream {
 // index:10
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(float)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_10(f float32) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
@@ -991,6 +1496,10 @@ func (this *QTextStream) Operator_left_shift_10(f float32) *QTextStream {
 // index:11
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(double)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_11(f float64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
@@ -1003,6 +1512,10 @@ func (this *QTextStream) Operator_left_shift_11(f float64) *QTextStream {
 // index:12
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(const QString &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_12(s string) *QTextStream {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1017,6 +1530,10 @@ func (this *QTextStream) Operator_left_shift_12(s string) *QTextStream {
 // index:13
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(QLatin1String)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_13(s QLatin1String_ITF /*123*/) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
@@ -1033,6 +1550,10 @@ func (this *QTextStream) Operator_left_shift_13(s QLatin1String_ITF /*123*/) *QT
 // index:14
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(const QStringRef &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_14(s QStringRef_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
@@ -1049,6 +1570,10 @@ func (this *QTextStream) Operator_left_shift_14(s QStringRef_ITF) *QTextStream {
 // index:15
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(const QByteArray &)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_15(array QByteArray_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -1065,6 +1590,10 @@ func (this *QTextStream) Operator_left_shift_15(array QByteArray_ITF) *QTextStre
 // index:16
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(const char *)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_16(c string) *QTextStream {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
@@ -1079,6 +1608,10 @@ func (this *QTextStream) Operator_left_shift_16(c string) *QTextStream {
 // index:17
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(const void *)
+
+/*
+
+ */
 func (this *QTextStream) Operator_left_shift_17(ptr unsafe.Pointer /*666*/) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEPKv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ptr)
 	qtrt.ErrPrint(err, rv)
@@ -1087,32 +1620,88 @@ func (this *QTextStream) Operator_left_shift_17(ptr unsafe.Pointer /*666*/) *QTe
 	return rv2
 }
 
+/*
+This enum specifies which notations to use for expressing float and double as strings.
+
+
+
+See also setRealNumberNotation().
+
+*/
 type QTextStream__RealNumberNotation = int
 
+// Scientific or fixed-point notation, depending on which makes most sense (printf()'s %g flag).
 const QTextStream__SmartNotation QTextStream__RealNumberNotation = 0
+
+// Fixed-point notation (printf()'s %f flag).
 const QTextStream__FixedNotation QTextStream__RealNumberNotation = 1
+
+// Scientific notation (printf()'s %e flag).
 const QTextStream__ScientificNotation QTextStream__RealNumberNotation = 2
 
+/*
+This enum specifies how to align text in fields when the field is wider than the text that occupies it.
+
+
+
+See also setFieldAlignment().
+
+*/
 type QTextStream__FieldAlignment = int
 
+// Pad on the right side of fields.
 const QTextStream__AlignLeft QTextStream__FieldAlignment = 0
+
+// Pad on the left side of fields.
 const QTextStream__AlignRight QTextStream__FieldAlignment = 1
+
+// Pad on both sides of field.
 const QTextStream__AlignCenter QTextStream__FieldAlignment = 2
+
+// Same as AlignRight, except that the sign of a number is flush left.
 const QTextStream__AlignAccountingStyle QTextStream__FieldAlignment = 3
 
+/*
+This enum describes the current status of the text stream.
+
+
+
+See also status().
+
+*/
 type QTextStream__Status = int
 
+// The text stream is operating normally.
 const QTextStream__Ok QTextStream__Status = 0
+
+// The text stream has read past the end of the data in the underlying device.
 const QTextStream__ReadPastEnd QTextStream__Status = 1
+
+// The text stream has read corrupt data.
 const QTextStream__ReadCorruptData QTextStream__Status = 2
+
+// The text stream cannot write to the underlying device.
 const QTextStream__WriteFailed QTextStream__Status = 3
 
+/*
+
+
+ */
 type QTextStream__NumberFlag = int
 
+//
 const QTextStream__ShowBase QTextStream__NumberFlag = 1
+
+//
 const QTextStream__ForcePoint QTextStream__NumberFlag = 2
+
+//
 const QTextStream__ForceSign QTextStream__NumberFlag = 4
+
+//
 const QTextStream__UppercaseBase QTextStream__NumberFlag = 8
+
+//
 const QTextStream__UppercaseDigits QTextStream__NumberFlag = 16
 
 //  body block end

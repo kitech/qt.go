@@ -252,7 +252,7 @@ func onSetupUi(line string) {
 				"AutoRepeat", "AutoExclusive", "DocumentMode",
 				"Checked", "Flat", "AutoFillBackground":
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
-			case "Bold", "OpenExternalLinks", "WordWrap", "Frame":
+			case "Bold", "OpenExternalLinks", "WordWrap", "Frame", "Editable":
 				refmtval = untitle(refmtval) // True => true
 			case "ToolButtonStyle":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)

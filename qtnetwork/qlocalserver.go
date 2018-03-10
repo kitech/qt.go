@@ -37,6 +37,9 @@ func (this *QLocalServer) InheritIncomingConnection(f func(socketDescriptor uint
 	qtrt.SetAllInheritCallback(this, "incomingConnection", f)
 }
 
+/*
+
+ */
 type QLocalServer struct {
 	*qtcore.QObject
 }
@@ -69,6 +72,10 @@ func (*QLocalServer) NewFromPointer(cthis unsafe.Pointer) *QLocalServer {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QLocalServer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,12 @@ func (this *QLocalServer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void newConnection()
+
+/*
+This signal is emitted every time a new connection is available.
+
+See also hasPendingConnections() and nextPendingConnection().
+*/
 func (this *QLocalServer) NewConnection() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer13newConnectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +101,12 @@ func (this *QLocalServer) NewConnection() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLocalServer(QObject *)
+
+/*
+Create a new local socket server with the given parent.
+
+See also listen().
+*/
 func NewQLocalServer(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalServer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +123,12 @@ func NewQLocalServer(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalServer 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLocalServer(QObject *)
+
+/*
+Create a new local socket server with the given parent.
+
+See also listen().
+*/
 func NewQLocalServer__() *QLocalServer {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -118,6 +143,10 @@ func NewQLocalServer__() *QLocalServer {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QLocalServer()
+
+/*
+
+ */
 func DeleteQLocalServer(this *QLocalServer) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -129,6 +158,12 @@ func DeleteQLocalServer(this *QLocalServer) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void close()
+
+/*
+Stop listening for incoming connections. Existing connections are not affected, but any new connections will be refused.
+
+See also isListening() and listen().
+*/
 func (this *QLocalServer) Close() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer5closeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -138,6 +173,12 @@ func (this *QLocalServer) Close() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
+
+/*
+Returns the human-readable message appropriate to the current error reported by serverError(). If no suitable string is available, an empty string is returned.
+
+See also serverError().
+*/
 func (this *QLocalServer) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +192,12 @@ func (this *QLocalServer) ErrorString() string {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasPendingConnections() const
+
+/*
+Returns true if the server has a pending connection; otherwise returns false.
+
+See also nextPendingConnection() and setMaxPendingConnections().
+*/
 func (this *QLocalServer) HasPendingConnections() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer21hasPendingConnectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,6 +208,12 @@ func (this *QLocalServer) HasPendingConnections() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isListening() const
+
+/*
+Returns true if the server is listening for incoming connections otherwise false.
+
+See also listen() and close().
+*/
 func (this *QLocalServer) IsListening() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer11isListeningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,6 +224,18 @@ func (this *QLocalServer) IsListening() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool listen(const QString &)
+
+/*
+Tells the server to listen for incoming connections on name. If the server is currently listening then it will return false. Return true on success otherwise false.
+
+name can be a single name and QLocalServer will determine the correct platform specific path. serverName() will return the name that is passed into listen.
+
+Usually you would just pass in a name like "foo", but on Unix this could also be a path such as "/tmp/foo" and on Windows this could be a pipe path such as "\\.\pipe\foo"
+
+Note: On Unix if the server crashes without closing listen will fail with AddressInUseError. To create a new server the file should be removed. On Windows two local servers can listen to the same pipe at the same time, but any connections will go to one of the server.
+
+See also serverName(), isListening(), and close().
+*/
 func (this *QLocalServer) Listen(name string) bool {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -183,6 +248,18 @@ func (this *QLocalServer) Listen(name string) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool listen(qintptr)
+
+/*
+Tells the server to listen for incoming connections on name. If the server is currently listening then it will return false. Return true on success otherwise false.
+
+name can be a single name and QLocalServer will determine the correct platform specific path. serverName() will return the name that is passed into listen.
+
+Usually you would just pass in a name like "foo", but on Unix this could also be a path such as "/tmp/foo" and on Windows this could be a pipe path such as "\\.\pipe\foo"
+
+Note: On Unix if the server crashes without closing listen will fail with AddressInUseError. To create a new server the file should be removed. On Windows two local servers can listen to the same pipe at the same time, but any connections will go to one of the server.
+
+See also serverName(), isListening(), and close().
+*/
 func (this *QLocalServer) Listen_1(socketDescriptor int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer6listenEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor)
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +270,12 @@ func (this *QLocalServer) Listen_1(socketDescriptor int64) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maxPendingConnections() const
+
+/*
+Returns the maximum number of pending accepted connections. The default is 30.
+
+See also setMaxPendingConnections() and hasPendingConnections().
+*/
 func (this *QLocalServer) MaxPendingConnections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer21maxPendingConnectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,6 +286,16 @@ func (this *QLocalServer) MaxPendingConnections() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QLocalSocket * nextPendingConnection()
+
+/*
+Returns the next pending connection as a connected QLocalSocket object.
+
+The socket is created as a child of the server, which means that it is automatically deleted when the QLocalServer object is destroyed. It is still a good idea to delete the object explicitly when you are done with it, to avoid wasting memory.
+
+0 is returned if this function is called when there are no pending connections.
+
+See also hasPendingConnections(), newConnection(), and incomingConnection().
+*/
 func (this *QLocalServer) NextPendingConnection() *QLocalSocket /*777 QLocalSocket **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer21nextPendingConnectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -213,6 +306,12 @@ func (this *QLocalServer) NextPendingConnection() *QLocalSocket /*777 QLocalSock
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString serverName() const
+
+/*
+Returns the server name if the server is listening for connections; otherwise returns QString()
+
+See also listen() and fullServerName().
+*/
 func (this *QLocalServer) ServerName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer10serverNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -226,6 +325,14 @@ func (this *QLocalServer) ServerName() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fullServerName() const
+
+/*
+Returns the full path that the server is listening on.
+
+Note: This is platform specific
+
+See also listen() and serverName().
+*/
 func (this *QLocalServer) FullServerName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer14fullServerNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -239,6 +346,16 @@ func (this *QLocalServer) FullServerName() string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool removeServer(const QString &)
+
+/*
+Removes any server instance that might cause a call to listen() to fail and returns true if successful; otherwise returns false. This function is meant to recover from a crash, when the previous server instance has not been cleaned up.
+
+On Windows, this function does nothing; on Unix, it removes the socket file given by name.
+
+Warning: Be careful to avoid removing sockets of running instances.
+
+This function was introduced in  Qt 4.5.
+*/
 func (this *QLocalServer) RemoveServer(name string) bool {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -256,6 +373,12 @@ func QLocalServer_RemoveServer(name string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractSocket::SocketError serverError() const
+
+/*
+Returns the type of error that occurred last or NoError.
+
+See also errorString().
+*/
 func (this *QLocalServer) ServerError() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer11serverErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -266,6 +389,14 @@ func (this *QLocalServer) ServerError() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaxPendingConnections(int)
+
+/*
+Sets the maximum number of pending accepted connections to numConnections. QLocalServer will accept no more than numConnections incoming connections before nextPendingConnection() is called.
+
+Note: Even though QLocalServer will stop accepting new connections after it has reached its maximum number of pending connections, the operating system may still keep them in queue which will result in clients signaling that it is connected.
+
+See also maxPendingConnections() and hasPendingConnections().
+*/
 func (this *QLocalServer) SetMaxPendingConnections(numConnections int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer24setMaxPendingConnectionsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), numConnections)
 	qtrt.ErrPrint(err, rv)
@@ -275,6 +406,18 @@ func (this *QLocalServer) SetMaxPendingConnections(numConnections int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForNewConnection(int, _Bool *)
+
+/*
+Waits for at most msec milliseconds or until an incoming connection is available. Returns true if a connection is available; otherwise returns false. If the operation timed out and timedOut is not 0, *timedOut will be set to true.
+
+This is a blocking function call. Its use is ill-advised in a single-threaded GUI application, since the whole application will stop responding until the function returns. waitForNewConnection() is mostly useful when there is no event loop available.
+
+The non-blocking alternative is to connect to the newConnection() signal.
+
+If msec is -1, this function will not time out.
+
+See also hasPendingConnections() and nextPendingConnection().
+*/
 func (this *QLocalServer) WaitForNewConnection(msec int, timedOut *bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timedOut)
 	qtrt.ErrPrint(err, rv)
@@ -285,6 +428,18 @@ func (this *QLocalServer) WaitForNewConnection(msec int, timedOut *bool) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForNewConnection(int, _Bool *)
+
+/*
+Waits for at most msec milliseconds or until an incoming connection is available. Returns true if a connection is available; otherwise returns false. If the operation timed out and timedOut is not 0, *timedOut will be set to true.
+
+This is a blocking function call. Its use is ill-advised in a single-threaded GUI application, since the whole application will stop responding until the function returns. waitForNewConnection() is mostly useful when there is no event loop available.
+
+The non-blocking alternative is to connect to the newConnection() signal.
+
+If msec is -1, this function will not time out.
+
+See also hasPendingConnections() and nextPendingConnection().
+*/
 func (this *QLocalServer) WaitForNewConnection__() bool {
 	// arg: 0, int=Int, =Invalid,
 	msec := int(0)
@@ -299,6 +454,18 @@ func (this *QLocalServer) WaitForNewConnection__() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForNewConnection(int, _Bool *)
+
+/*
+Waits for at most msec milliseconds or until an incoming connection is available. Returns true if a connection is available; otherwise returns false. If the operation timed out and timedOut is not 0, *timedOut will be set to true.
+
+This is a blocking function call. Its use is ill-advised in a single-threaded GUI application, since the whole application will stop responding until the function returns. waitForNewConnection() is mostly useful when there is no event loop available.
+
+The non-blocking alternative is to connect to the newConnection() signal.
+
+If msec is -1, this function will not time out.
+
+See also hasPendingConnections() and nextPendingConnection().
+*/
 func (this *QLocalServer) WaitForNewConnection__1(msec int) bool {
 	// arg: 1, bool *=Pointer, =Invalid,
 	var timedOut unsafe.Pointer
@@ -311,6 +478,10 @@ func (this *QLocalServer) WaitForNewConnection__1(msec int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSocketOptions(QLocalServer::SocketOptions)
+
+/*
+
+ */
 func (this *QLocalServer) SetSocketOptions(options int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer16setSocketOptionsE6QFlagsINS_12SocketOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
 	qtrt.ErrPrint(err, rv)
@@ -320,6 +491,16 @@ func (this *QLocalServer) SetSocketOptions(options int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocalServer::SocketOptions socketOptions() const
+
+/*
+Returns the socket options set on the socket.
+
+This function was introduced in  Qt 5.0.
+
+Note: Getter function for property socketOptions.
+
+See also setSocketOptions().
+*/
 func (this *QLocalServer) SocketOptions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer13socketOptionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -330,27 +511,67 @@ func (this *QLocalServer) SocketOptions() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qintptr socketDescriptor() const
+
+/*
+Returns the native socket descriptor the server uses to listen for incoming instructions, or -1 if the server is not listening.
+
+The type of the descriptor depends on the platform:
+
+
+On Windows, the returned value is a Winsock 2 Socket Handle.
+With WinRT and on INTEGRITY, the returned value is the QTcpServer socket descriptor and the type is defined by socketDescriptor.
+On all other UNIX-like operating systems, the type is a file descriptor representing a listening socket.
+
+
+This function was introduced in  Qt 5.10.
+
+See also listen().
+*/
 func (this *QLocalServer) SocketDescriptor() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer16socketDescriptorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qlocalserver.h:98
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void incomingConnection(quintptr)
+
+/*
+This virtual function is called by QLocalServer when a new connection is available. socketDescriptor is the native socket descriptor for the accepted connection.
+
+The base implementation creates a QLocalSocket, sets the socket descriptor and then stores the QLocalSocket in an internal list of pending connections. Finally newConnection() is emitted.
+
+Reimplement this function to alter the server's behavior when a connection is available.
+
+See also newConnection(), nextPendingConnection(), and QLocalSocket::setSocketDescriptor().
+*/
 func (this *QLocalServer) IncomingConnection(socketDescriptor uint64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer18incomingConnectionEy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor)
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QLocalServer__SocketOption = int
 
+//
 const QLocalServer__NoOptions QLocalServer__SocketOption = 0
+
+//
 const QLocalServer__UserAccessOption QLocalServer__SocketOption = 1
+
+//
 const QLocalServer__GroupAccessOption QLocalServer__SocketOption = 2
+
+//
 const QLocalServer__OtherAccessOption QLocalServer__SocketOption = 4
+
+//
 const QLocalServer__WorldAccessOption QLocalServer__SocketOption = 7
 
 //  body block end

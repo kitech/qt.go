@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QGraphicsScale struct {
 	*QGraphicsTransform
 }
@@ -65,6 +68,10 @@ func (*QGraphicsScale) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScale {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGraphicsScale) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QGraphicsScale) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsScale(QObject *)
+
+/*
+
+ */
 func NewQGraphicsScale(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScale {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQGraphicsScale(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsSc
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsScale(QObject *)
+
+/*
+
+ */
 func NewQGraphicsScale__() *QGraphicsScale {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQGraphicsScale__() *QGraphicsScale {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsScale()
+
+/*
+
+ */
 func DeleteQGraphicsScale(this *QGraphicsScale) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScaleD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -116,6 +135,10 @@ func DeleteQGraphicsScale(this *QGraphicsScale) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [12] QVector3D origin() const
+
+/*
+
+ */
 func (this *QGraphicsScale) Origin() *qtgui.QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale6originEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +151,10 @@ func (this *QGraphicsScale) Origin() *qtgui.QVector3D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrigin(const QVector3D &)
+
+/*
+
+ */
 func (this *QGraphicsScale) SetOrigin(point qtgui.QVector3D_ITF) {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector3D_PTR() != nil {
@@ -141,6 +168,10 @@ func (this *QGraphicsScale) SetOrigin(point qtgui.QVector3D_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal xScale() const
+
+/*
+
+ */
 func (this *QGraphicsScale) XScale() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale6xScaleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +182,10 @@ func (this *QGraphicsScale) XScale() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setXScale(qreal)
+
+/*
+
+ */
 func (this *QGraphicsScale) SetXScale(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScale9setXScaleEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -160,6 +195,10 @@ func (this *QGraphicsScale) SetXScale(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal yScale() const
+
+/*
+
+ */
 func (this *QGraphicsScale) YScale() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale6yScaleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,6 +209,10 @@ func (this *QGraphicsScale) YScale() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setYScale(qreal)
+
+/*
+
+ */
 func (this *QGraphicsScale) SetYScale(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScale9setYScaleEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +222,10 @@ func (this *QGraphicsScale) SetYScale(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal zScale() const
+
+/*
+
+ */
 func (this *QGraphicsScale) ZScale() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale6zScaleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,6 +236,10 @@ func (this *QGraphicsScale) ZScale() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setZScale(qreal)
+
+/*
+
+ */
 func (this *QGraphicsScale) SetZScale(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScale9setZScaleEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -198,6 +249,14 @@ func (this *QGraphicsScale) SetZScale(arg0 float64) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void applyTo(QMatrix4x4 *) const
+
+/*
+This pure virtual method has to be reimplemented in derived classes.
+
+It applies this transformation to matrix.
+
+See also QGraphicsItem::transform() and QMatrix4x4::toTransform().
+*/
 func (this *QGraphicsScale) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x4 **/) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {
@@ -211,6 +270,10 @@ func (this *QGraphicsScale) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x4
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void originChanged()
+
+/*
+
+ */
 func (this *QGraphicsScale) OriginChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScale13originChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,6 +283,10 @@ func (this *QGraphicsScale) OriginChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void xScaleChanged()
+
+/*
+
+ */
 func (this *QGraphicsScale) XScaleChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScale13xScaleChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -229,6 +296,10 @@ func (this *QGraphicsScale) XScaleChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void yScaleChanged()
+
+/*
+
+ */
 func (this *QGraphicsScale) YScaleChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScale13yScaleChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,6 +309,10 @@ func (this *QGraphicsScale) YScaleChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void zScaleChanged()
+
+/*
+
+ */
 func (this *QGraphicsScale) ZScaleChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScale13zScaleChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,6 +322,10 @@ func (this *QGraphicsScale) ZScaleChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scaleChanged()
+
+/*
+
+ */
 func (this *QGraphicsScale) ScaleChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScale12scaleChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

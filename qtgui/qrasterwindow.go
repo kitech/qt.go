@@ -42,6 +42,9 @@ func (this *QRasterWindow) InheritRedirected(f func(arg0 *qtcore.QPoint /*777 QP
 	qtrt.SetAllInheritCallback(this, "redirected", f)
 }
 
+/*
+
+ */
 type QRasterWindow struct {
 	*QPaintDeviceWindow
 }
@@ -74,6 +77,10 @@ func (*QRasterWindow) NewFromPointer(cthis unsafe.Pointer) *QRasterWindow {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QRasterWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -84,6 +91,10 @@ func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRasterWindow(QWindow *)
+
+/*
+Constructs a new QRasterWindow with parent.
+*/
 func NewQRasterWindow(parent QWindow_ITF /*777 QWindow **/) *QRasterWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWindow_PTR() != nil {
@@ -100,6 +111,10 @@ func NewQRasterWindow(parent QWindow_ITF /*777 QWindow **/) *QRasterWindow {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRasterWindow(QWindow *)
+
+/*
+Constructs a new QRasterWindow with parent.
+*/
 func NewQRasterWindow__() *QRasterWindow {
 	// arg: 0, QWindow *=Pointer, QWindow=Record,
 	var convArg0 unsafe.Pointer
@@ -114,6 +129,10 @@ func NewQRasterWindow__() *QRasterWindow {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRasterWindow()
+
+/*
+
+ */
 func DeleteQRasterWindow(this *QRasterWindow) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QRasterWindowD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 64)
@@ -125,6 +144,10 @@ func DeleteQRasterWindow(this *QRasterWindow) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+
+/*
+
+ */
 func (this *QRasterWindow) Metric(metric int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QRasterWindow6metricEN12QPaintDevice17PaintDeviceMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +158,10 @@ func (this *QRasterWindow) Metric(metric int) int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QPaintDevice * redirected(QPoint *) const
+
+/*
+
+ */
 func (this *QRasterWindow) Redirected(arg0 qtcore.QPoint_ITF /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {

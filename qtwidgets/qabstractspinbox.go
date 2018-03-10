@@ -133,6 +133,9 @@ func (this *QAbstractSpinBox) InheritStepEnabled(f func() int) {
 	qtrt.SetAllInheritCallback(this, "stepEnabled", f)
 }
 
+/*
+
+ */
 type QAbstractSpinBox struct {
 	*QWidget
 }
@@ -165,6 +168,10 @@ func (*QAbstractSpinBox) NewFromPointer(cthis unsafe.Pointer) *QAbstractSpinBox 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +182,10 @@ func (this *QAbstractSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractSpinBox(QWidget *)
+
+/*
+Constructs an abstract spinbox with the given parent with default wrapping, and alignment properties.
+*/
 func NewQAbstractSpinBox(parent QWidget_ITF /*777 QWidget **/) *QAbstractSpinBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -191,6 +202,10 @@ func NewQAbstractSpinBox(parent QWidget_ITF /*777 QWidget **/) *QAbstractSpinBox
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractSpinBox(QWidget *)
+
+/*
+Constructs an abstract spinbox with the given parent with default wrapping, and alignment properties.
+*/
 func NewQAbstractSpinBox__() *QAbstractSpinBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -205,6 +220,10 @@ func NewQAbstractSpinBox__() *QAbstractSpinBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractSpinBox()
+
+/*
+
+ */
 func DeleteQAbstractSpinBox(this *QAbstractSpinBox) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -216,6 +235,10 @@ func DeleteQAbstractSpinBox(this *QAbstractSpinBox) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractSpinBox::ButtonSymbols buttonSymbols() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) ButtonSymbols() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox13buttonSymbolsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -226,6 +249,10 @@ func (this *QAbstractSpinBox) ButtonSymbols() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonSymbols(enum QAbstractSpinBox::ButtonSymbols)
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SetButtonSymbols(bs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox16setButtonSymbolsENS_13ButtonSymbolsE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bs)
 	qtrt.ErrPrint(err, rv)
@@ -235,6 +262,10 @@ func (this *QAbstractSpinBox) SetButtonSymbols(bs int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCorrectionMode(enum QAbstractSpinBox::CorrectionMode)
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SetCorrectionMode(cm int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox17setCorrectionModeENS_14CorrectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cm)
 	qtrt.ErrPrint(err, rv)
@@ -244,6 +275,10 @@ func (this *QAbstractSpinBox) SetCorrectionMode(cm int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractSpinBox::CorrectionMode correctionMode() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) CorrectionMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox14correctionModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -254,6 +289,10 @@ func (this *QAbstractSpinBox) CorrectionMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasAcceptableInput() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) HasAcceptableInput() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox18hasAcceptableInputEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -264,6 +303,10 @@ func (this *QAbstractSpinBox) HasAcceptableInput() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -277,6 +320,10 @@ func (this *QAbstractSpinBox) Text() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString specialValueText() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SpecialValueText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox16specialValueTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -290,6 +337,10 @@ func (this *QAbstractSpinBox) SpecialValueText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpecialValueText(const QString &)
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SetSpecialValueText(txt string) {
 	var tmpArg0 = qtcore.NewQString_5(txt)
 	var convArg0 = tmpArg0.GetCthis()
@@ -301,6 +352,10 @@ func (this *QAbstractSpinBox) SetSpecialValueText(txt string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wrapping() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) Wrapping() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8wrappingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -311,6 +366,10 @@ func (this *QAbstractSpinBox) Wrapping() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWrapping(_Bool)
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SetWrapping(w bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox11setWrappingEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	qtrt.ErrPrint(err, rv)
@@ -320,6 +379,10 @@ func (this *QAbstractSpinBox) SetWrapping(w bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReadOnly(_Bool)
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SetReadOnly(r bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox11setReadOnlyEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r)
 	qtrt.ErrPrint(err, rv)
@@ -329,6 +392,10 @@ func (this *QAbstractSpinBox) SetReadOnly(r bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadOnly() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) IsReadOnly() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox10isReadOnlyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -339,6 +406,10 @@ func (this *QAbstractSpinBox) IsReadOnly() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeyboardTracking(_Bool)
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SetKeyboardTracking(kt bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox19setKeyboardTrackingEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), kt)
 	qtrt.ErrPrint(err, rv)
@@ -348,6 +419,10 @@ func (this *QAbstractSpinBox) SetKeyboardTracking(kt bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool keyboardTracking() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) KeyboardTracking() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox16keyboardTrackingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -358,6 +433,10 @@ func (this *QAbstractSpinBox) KeyboardTracking() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(Qt::Alignment)
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SetAlignment(flag int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag)
 	qtrt.ErrPrint(err, rv)
@@ -367,6 +446,10 @@ func (this *QAbstractSpinBox) SetAlignment(flag int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -377,6 +460,10 @@ func (this *QAbstractSpinBox) Alignment() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFrame(_Bool)
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SetFrame(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox8setFrameEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -386,6 +473,10 @@ func (this *QAbstractSpinBox) SetFrame(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFrame() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) HasFrame() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8hasFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -396,6 +487,10 @@ func (this *QAbstractSpinBox) HasFrame() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAccelerated(_Bool)
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SetAccelerated(on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox14setAcceleratedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	qtrt.ErrPrint(err, rv)
@@ -405,6 +500,10 @@ func (this *QAbstractSpinBox) SetAccelerated(on bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAccelerated() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) IsAccelerated() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox13isAcceleratedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -415,6 +514,10 @@ func (this *QAbstractSpinBox) IsAccelerated() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGroupSeparatorShown(_Bool)
+
+/*
+
+ */
 func (this *QAbstractSpinBox) SetGroupSeparatorShown(shown bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox22setGroupSeparatorShownEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), shown)
 	qtrt.ErrPrint(err, rv)
@@ -424,6 +527,10 @@ func (this *QAbstractSpinBox) SetGroupSeparatorShown(shown bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isGroupSeparatorShown() const
+
+/*
+
+ */
 func (this *QAbstractSpinBox) IsGroupSeparatorShown() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -434,6 +541,10 @@ func (this *QAbstractSpinBox) IsGroupSeparatorShown() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QAbstractSpinBox) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -446,6 +557,10 @@ func (this *QAbstractSpinBox) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QAbstractSpinBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -458,6 +573,10 @@ func (this *QAbstractSpinBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void interpretText()
+
+/*
+This function interprets the text of the spin box. If the value has changed since last interpretation it will emit signals.
+*/
 func (this *QAbstractSpinBox) InterpretText() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox13interpretTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -467,6 +586,10 @@ func (this *QAbstractSpinBox) InterpretText() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QAbstractSpinBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -481,6 +604,10 @@ func (this *QAbstractSpinBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
+
+/*
+Reimplemented from QWidget::inputMethodQuery().
+*/
 func (this *QAbstractSpinBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox16inputMethodQueryEN2Qt16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -493,6 +620,10 @@ func (this *QAbstractSpinBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
+
+/*
+This virtual function is called by the QAbstractSpinBox to determine whether input is valid. The pos parameter indicates the position in the string. Reimplemented in the various subclasses.
+*/
 func (this *QAbstractSpinBox) Validate(input string, pos int) int {
 	var tmpArg0 = qtcore.NewQString_5(input)
 	var convArg0 = tmpArg0.GetCthis()
@@ -505,6 +636,10 @@ func (this *QAbstractSpinBox) Validate(input string, pos int) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fixup(QString &) const
+
+/*
+This virtual function is called by the QAbstractSpinBox if the input is not validated to QValidator::Acceptable when Return is pressed or interpretText() is called. It will try to change the text so it is valid. Reimplemented in the various subclasses.
+*/
 func (this *QAbstractSpinBox) Fixup(input string) {
 	var tmpArg0 = qtcore.NewQString_5(input)
 	var convArg0 = tmpArg0.GetCthis()
@@ -516,6 +651,12 @@ func (this *QAbstractSpinBox) Fixup(input string) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void stepBy(int)
+
+/*
+Virtual function that is called whenever the user triggers a step. The steps parameter indicates how many steps were taken, e.g. Pressing Qt::Key_Down will trigger a call to stepBy(-1), whereas pressing Qt::Key_Prior will trigger a call to stepBy(10).
+
+If you subclass QAbstractSpinBox you must reimplement this function. Note that this function is called even if the resulting value will be outside the bounds of minimum and maximum. It's this function's job to handle these situations.
+*/
 func (this *QAbstractSpinBox) StepBy(steps int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox6stepByEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), steps)
 	qtrt.ErrPrint(err, rv)
@@ -525,6 +666,12 @@ func (this *QAbstractSpinBox) StepBy(steps int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stepUp()
+
+/*
+Steps up by one linestep Calling this slot is analogous to calling stepBy(1);
+
+See also stepBy() and stepDown().
+*/
 func (this *QAbstractSpinBox) StepUp() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox6stepUpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -534,6 +681,12 @@ func (this *QAbstractSpinBox) StepUp() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stepDown()
+
+/*
+Steps down by one linestep Calling this slot is analogous to calling stepBy(-1);
+
+See also stepBy() and stepUp().
+*/
 func (this *QAbstractSpinBox) StepDown() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox8stepDownEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -543,6 +696,10 @@ func (this *QAbstractSpinBox) StepDown() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectAll()
+
+/*
+Selects all the text in the spinbox except the prefix and suffix.
+*/
 func (this *QAbstractSpinBox) SelectAll() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox9selectAllEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -552,6 +709,10 @@ func (this *QAbstractSpinBox) SelectAll() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the lineedit of all text but prefix and suffix.
+*/
 func (this *QAbstractSpinBox) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -561,6 +722,10 @@ func (this *QAbstractSpinBox) Clear() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+*/
 func (this *QAbstractSpinBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QResizeEvent_PTR() != nil {
@@ -574,6 +739,21 @@ func (this *QAbstractSpinBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QRe
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWidget::keyPressEvent().
+
+This function handles keyboard input.
+
+The following keys are handled specifically:
+
+
+ Enter/ReturnThis will reinterpret the text and emit a signal even if the value has not changed since last time a signal was emitted.
+UpThis will invoke stepBy(1)
+DownThis will invoke stepBy(-1)
+Page upThis will invoke stepBy(10)
+Page downThis will invoke stepBy(-10)
+*/
 func (this *QAbstractSpinBox) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QKeyEvent_PTR() != nil {
@@ -587,6 +767,10 @@ func (this *QAbstractSpinBox) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKey
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWidget::keyReleaseEvent().
+*/
 func (this *QAbstractSpinBox) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QKeyEvent_PTR() != nil {
@@ -600,6 +784,10 @@ func (this *QAbstractSpinBox) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QK
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
+
+/*
+Reimplemented from QWidget::wheelEvent().
+*/
 func (this *QAbstractSpinBox) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QWheelEvent_PTR() != nil {
@@ -613,6 +801,10 @@ func (this *QAbstractSpinBox) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWhee
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
+
+/*
+Reimplemented from QWidget::focusInEvent().
+*/
 func (this *QAbstractSpinBox) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QFocusEvent_PTR() != nil {
@@ -626,6 +818,10 @@ func (this *QAbstractSpinBox) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFo
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
+
+/*
+Reimplemented from QWidget::focusOutEvent().
+*/
 func (this *QAbstractSpinBox) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QFocusEvent_PTR() != nil {
@@ -639,6 +835,10 @@ func (this *QAbstractSpinBox) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QF
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
+
+/*
+Reimplemented from QWidget::contextMenuEvent().
+*/
 func (this *QAbstractSpinBox) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QContextMenuEvent_PTR() != nil {
@@ -652,6 +852,10 @@ func (this *QAbstractSpinBox) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QAbstractSpinBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -665,6 +869,10 @@ func (this *QAbstractSpinBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
+
+/*
+Reimplemented from QWidget::closeEvent().
+*/
 func (this *QAbstractSpinBox) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QCloseEvent_PTR() != nil {
@@ -678,6 +886,10 @@ func (this *QAbstractSpinBox) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QClos
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
+
+/*
+Reimplemented from QWidget::hideEvent().
+*/
 func (this *QAbstractSpinBox) HideEvent(event qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QHideEvent_PTR() != nil {
@@ -691,6 +903,10 @@ func (this *QAbstractSpinBox) HideEvent(event qtgui.QHideEvent_ITF /*777 QHideEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mousePressEvent().
+*/
 func (this *QAbstractSpinBox) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QMouseEvent_PTR() != nil {
@@ -704,6 +920,10 @@ func (this *QAbstractSpinBox) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseReleaseEvent().
+*/
 func (this *QAbstractSpinBox) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QMouseEvent_PTR() != nil {
@@ -717,6 +937,10 @@ func (this *QAbstractSpinBox) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*77
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseMoveEvent().
+*/
 func (this *QAbstractSpinBox) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QMouseEvent_PTR() != nil {
@@ -730,6 +954,10 @@ func (this *QAbstractSpinBox) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 Q
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
+
+/*
+Reimplemented from QObject::timerEvent().
+*/
 func (this *QAbstractSpinBox) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QTimerEvent_PTR() != nil {
@@ -743,6 +971,10 @@ func (this *QAbstractSpinBox) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTim
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QAbstractSpinBox) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QPaintEvent_PTR() != nil {
@@ -756,6 +988,10 @@ func (this *QAbstractSpinBox) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPain
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
+
+/*
+Reimplemented from QWidget::showEvent().
+*/
 func (this *QAbstractSpinBox) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QShowEvent_PTR() != nil {
@@ -769,6 +1005,12 @@ func (this *QAbstractSpinBox) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEv
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSpinBox *) const
+
+/*
+Initialize option with the values from this QSpinBox. This method is useful for subclasses when they need a QStyleOptionSpinBox, but don't want to fill in all the information themselves.
+
+See also QStyleOption::initFrom().
+*/
 func (this *QAbstractSpinBox) InitStyleOption(option QStyleOptionSpinBox_ITF /*777 QStyleOptionSpinBox **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionSpinBox_PTR() != nil {
@@ -782,6 +1024,12 @@ func (this *QAbstractSpinBox) InitStyleOption(option QStyleOptionSpinBox_ITF /*7
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QLineEdit * lineEdit() const
+
+/*
+This function returns a pointer to the line edit of the spin box.
+
+See also setLineEdit().
+*/
 func (this *QAbstractSpinBox) LineEdit() *QLineEdit /*777 QLineEdit **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8lineEditEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -792,6 +1040,16 @@ func (this *QAbstractSpinBox) LineEdit() *QLineEdit /*777 QLineEdit **/ {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setLineEdit(QLineEdit *)
+
+/*
+Sets the line edit of the spinbox to be lineEdit instead of the current line edit widget. lineEdit can not be 0.
+
+QAbstractSpinBox takes ownership of the new lineEdit
+
+If QLineEdit::validator() for the lineEdit returns 0, the internal validator of the spinbox will be set on the line edit.
+
+See also lineEdit().
+*/
 func (this *QAbstractSpinBox) SetLineEdit(edit QLineEdit_ITF /*777 QLineEdit **/) {
 	var convArg0 unsafe.Pointer
 	if edit != nil && edit.QLineEdit_PTR() != nil {
@@ -805,6 +1063,18 @@ func (this *QAbstractSpinBox) SetLineEdit(edit QLineEdit_ITF /*777 QLineEdit **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] QAbstractSpinBox::StepEnabled stepEnabled() const
+
+/*
+Virtual function that determines whether stepping up and down is legal at any given time.
+
+The up arrow will be painted as disabled unless (stepEnabled() & StepUpEnabled) != 0.
+
+The default implementation will return (StepUpEnabled| StepDownEnabled) if wrapping is turned on. Else it will return StepDownEnabled if value is > minimum() or'ed with StepUpEnabled if value < maximum().
+
+If you subclass QAbstractSpinBox you will need to reimplement this function.
+
+See also QSpinBox::minimum(), QSpinBox::maximum(), and wrapping().
+*/
 func (this *QAbstractSpinBox) StepEnabled() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox11stepEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -815,26 +1085,65 @@ func (this *QAbstractSpinBox) StepEnabled() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editingFinished()
+
+/*
+This signal is emitted editing is finished. This happens when the spinbox loses focus and when enter is pressed.
+*/
 func (this *QAbstractSpinBox) EditingFinished() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox15editingFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QAbstractSpinBox__StepEnabledFlag = int
 
+//
 const QAbstractSpinBox__StepNone QAbstractSpinBox__StepEnabledFlag = 0
+
+//
 const QAbstractSpinBox__StepUpEnabled QAbstractSpinBox__StepEnabledFlag = 1
+
+//
 const QAbstractSpinBox__StepDownEnabled QAbstractSpinBox__StepEnabledFlag = 2
 
+/*
+This enum type describes the symbols that can be displayed on the buttons in a spin box.
+
+
+
+
+
+See also QAbstractSpinBox::buttonSymbols.
+
+*/
 type QAbstractSpinBox__ButtonSymbols = int
 
+// Little arrows in the classic style.
 const QAbstractSpinBox__UpDownArrows QAbstractSpinBox__ButtonSymbols = 0
+
+// + and - symbols.
 const QAbstractSpinBox__PlusMinus QAbstractSpinBox__ButtonSymbols = 1
+
+// Don't display buttons.
 const QAbstractSpinBox__NoButtons QAbstractSpinBox__ButtonSymbols = 2
 
+/*
+This enum type describes the mode the spinbox will use to correct an Intermediate value if editing finishes.
+
+
+
+See also correctionMode.
+
+*/
 type QAbstractSpinBox__CorrectionMode = int
 
+// The spinbox will revert to the last valid value.
 const QAbstractSpinBox__CorrectToPreviousValue QAbstractSpinBox__CorrectionMode = 0
+
+// The spinbox will revert to the nearest valid value.
 const QAbstractSpinBox__CorrectToNearestValue QAbstractSpinBox__CorrectionMode = 1
 
 //  body block end

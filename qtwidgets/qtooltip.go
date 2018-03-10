@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QToolTip struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,16 @@ func (*QToolTip) NewFromPointer(cthis unsafe.Pointer) *QToolTip {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *)
+
+/*
+Shows text as a tool tip, with the global position pos as the point of interest. The tool tip will be shown with a platform specific offset from this point of interest.
+
+If you specify a non-empty rect the tip will be hidden as soon as you move your cursor out of this area.
+
+The rect is in the coordinates of the widget you specify with w. If the rect is not empty you must specify a widget. Otherwise this argument can be 0 but it is used to determine the appropriate screen on multi-head systems.
+
+If text is empty the tool tip is hidden. If the text is the same as the currently shown tooltip, the tip will not move. You can force moving by first hiding the tip with an empty text, and then showing the new tip at the new position.
+*/
 func (this *QToolTip) ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -90,6 +103,16 @@ func QToolTip_ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 Q
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *)
+
+/*
+Shows text as a tool tip, with the global position pos as the point of interest. The tool tip will be shown with a platform specific offset from this point of interest.
+
+If you specify a non-empty rect the tip will be hidden as soon as you move your cursor out of this area.
+
+The rect is in the coordinates of the widget you specify with w. If the rect is not empty you must specify a widget. Otherwise this argument can be 0 but it is used to determine the appropriate screen on multi-head systems.
+
+If text is empty the tool tip is hidden. If the text is the same as the currently shown tooltip, the tip will not move. You can force moving by first hiding the tip with an empty text, and then showing the new tip at the new position.
+*/
 func (this *QToolTip) ShowText__(pos qtcore.QPoint_ITF, text string) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -107,6 +130,16 @@ func (this *QToolTip) ShowText__(pos qtcore.QPoint_ITF, text string) {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *, const QRect &)
+
+/*
+Shows text as a tool tip, with the global position pos as the point of interest. The tool tip will be shown with a platform specific offset from this point of interest.
+
+If you specify a non-empty rect the tip will be hidden as soon as you move your cursor out of this area.
+
+The rect is in the coordinates of the widget you specify with w. If the rect is not empty you must specify a widget. Otherwise this argument can be 0 but it is used to determine the appropriate screen on multi-head systems.
+
+If text is empty the tool tip is hidden. If the text is the same as the currently shown tooltip, the tip will not move. You can force moving by first hiding the tip with an empty text, and then showing the new tip at the new position.
+*/
 func (this *QToolTip) ShowText_1(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -134,6 +167,16 @@ func QToolTip_ShowText_1(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777
 // index:2
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *, const QRect &, int)
+
+/*
+Shows text as a tool tip, with the global position pos as the point of interest. The tool tip will be shown with a platform specific offset from this point of interest.
+
+If you specify a non-empty rect the tip will be hidden as soon as you move your cursor out of this area.
+
+The rect is in the coordinates of the widget you specify with w. If the rect is not empty you must specify a widget. Otherwise this argument can be 0 but it is used to determine the appropriate screen on multi-head systems.
+
+If text is empty the tool tip is hidden. If the text is the same as the currently shown tooltip, the tip will not move. You can force moving by first hiding the tip with an empty text, and then showing the new tip at the new position.
+*/
 func (this *QToolTip) ShowText_2(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF, msecShowTime int) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -161,6 +204,14 @@ func QToolTip_ShowText_2(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [-2] void hideText()
+
+/*
+Hides the tool tip. This is the same as calling showText() with an empty string.
+
+This function was introduced in  Qt 4.2.
+
+See also showText().
+*/
 func (this *QToolTip) HideText() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8hideTextEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +225,14 @@ func QToolTip_HideText() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool isVisible()
+
+/*
+Returns true if this tooltip is currently shown.
+
+This function was introduced in  Qt 4.4.
+
+See also showText().
+*/
 func (this *QToolTip) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip9isVisibleEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -189,6 +248,12 @@ func QToolTip_IsVisible() bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString text()
+
+/*
+Returns the tooltip text, if a tooltip is visible, or an empty string if a tooltip is not visible.
+
+This function was introduced in  Qt 4.4.
+*/
 func (this *QToolTip) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip4textEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -207,6 +272,14 @@ func QToolTip_Text() string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QPalette palette()
+
+/*
+Returns the palette used to render tooltips.
+
+Note: Tool tips use the inactive color group of QPalette, because tool tips are not active windows.
+
+See also setPalette().
+*/
 func (this *QToolTip) Palette() *qtgui.QPalette /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip7paletteEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +297,16 @@ func QToolTip_Palette() *qtgui.QPalette /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setPalette(const QPalette &)
+
+/*
+Sets the palette used to render tooltips.
+
+Note: Tool tips use the inactive color group of QPalette, because tool tips are not active windows.
+
+This function was introduced in  Qt 4.2.
+
+See also palette().
+*/
 func (this *QToolTip) SetPalette(arg0 qtgui.QPalette_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPalette_PTR() != nil {
@@ -241,6 +324,14 @@ func QToolTip_SetPalette(arg0 qtgui.QPalette_ITF) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QFont font()
+
+/*
+Returns the font used to render tooltips.
+
+This function was introduced in  Qt 4.2.
+
+See also setFont().
+*/
 func (this *QToolTip) Font() *qtgui.QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip4fontEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -258,6 +349,14 @@ func QToolTip_Font() *qtgui.QFont /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
+
+/*
+Sets the font used to render tooltips.
+
+This function was introduced in  Qt 4.2.
+
+See also font().
+*/
 func (this *QToolTip) SetFont(arg0 qtgui.QFont_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {

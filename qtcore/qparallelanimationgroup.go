@@ -51,6 +51,9 @@ func (this *QParallelAnimationGroup) InheritUpdateDirection(f func(direction int
 	qtrt.SetAllInheritCallback(this, "updateDirection", f)
 }
 
+/*
+
+ */
 type QParallelAnimationGroup struct {
 	*QAnimationGroup
 }
@@ -83,6 +86,10 @@ func (*QParallelAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QParallelA
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +100,10 @@ func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QParallelAnimationGroup(QObject *)
+
+/*
+Constructs a QParallelAnimationGroup. parent is passed to QObject's constructor.
+*/
 func NewQParallelAnimationGroup(parent QObject_ITF /*777 QObject **/) *QParallelAnimationGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +120,10 @@ func NewQParallelAnimationGroup(parent QObject_ITF /*777 QObject **/) *QParallel
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QParallelAnimationGroup(QObject *)
+
+/*
+Constructs a QParallelAnimationGroup. parent is passed to QObject's constructor.
+*/
 func NewQParallelAnimationGroup__() *QParallelAnimationGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -123,6 +138,10 @@ func NewQParallelAnimationGroup__() *QParallelAnimationGroup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QParallelAnimationGroup()
+
+/*
+
+ */
 func DeleteQParallelAnimationGroup(this *QParallelAnimationGroup) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -134,6 +153,10 @@ func DeleteQParallelAnimationGroup(this *QParallelAnimationGroup) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int duration() const
+
+/*
+Reimplemented from QAbstractAnimation::duration().
+*/
 func (this *QParallelAnimationGroup) Duration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,6 +167,10 @@ func (this *QParallelAnimationGroup) Duration() int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QParallelAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -158,6 +185,10 @@ func (this *QParallelAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bo
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentTime(int)
+
+/*
+Reimplemented from QAbstractAnimation::updateCurrentTime().
+*/
 func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup17updateCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), currentTime)
 	qtrt.ErrPrint(err, rv)
@@ -167,6 +198,10 @@ func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
+
+/*
+Reimplemented from QAbstractAnimation::updateState().
+*/
 func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	qtrt.ErrPrint(err, rv)
@@ -176,6 +211,10 @@ func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateDirection(QAbstractAnimation::Direction)
+
+/*
+Reimplemented from QAbstractAnimation::updateDirection().
+*/
 func (this *QParallelAnimationGroup) UpdateDirection(direction int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	qtrt.ErrPrint(err, rv)

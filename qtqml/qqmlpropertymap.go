@@ -38,6 +38,9 @@ func (this *QQmlPropertyMap) InheritUpdateValue(f func(key string, input *qtcore
 	qtrt.SetAllInheritCallback(this, "updateValue", f)
 }
 
+/*
+
+ */
 type QQmlPropertyMap struct {
 	*qtcore.QObject
 }
@@ -70,6 +73,10 @@ func (*QQmlPropertyMap) NewFromPointer(cthis unsafe.Pointer) *QQmlPropertyMap {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQmlPropertyMap) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +87,10 @@ func (this *QQmlPropertyMap) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlPropertyMap(QObject *)
+
+/*
+Constructs a bindable map with parent object parent.
+*/
 func NewQQmlPropertyMap(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlPropertyMap {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -96,6 +107,10 @@ func NewQQmlPropertyMap(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlProper
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlPropertyMap(QObject *)
+
+/*
+Constructs a bindable map with parent object parent.
+*/
 func NewQQmlPropertyMap__() *QQmlPropertyMap {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -110,6 +125,10 @@ func NewQQmlPropertyMap__() *QQmlPropertyMap {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlPropertyMap()
+
+/*
+
+ */
 func DeleteQQmlPropertyMap(this *QQmlPropertyMap) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQmlPropertyMapD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -121,6 +140,12 @@ func DeleteQQmlPropertyMap(this *QQmlPropertyMap) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant value(const QString &) const
+
+/*
+Returns the value associated with key.
+
+If no value has been set for this key (or if the value has been cleared), an invalid QVariant is returned.
+*/
 func (this *QQmlPropertyMap) Value(key string) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -135,6 +160,10 @@ func (this *QQmlPropertyMap) Value(key string) *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear(const QString &)
+
+/*
+Clears the value (if any) associated with key.
+*/
 func (this *QQmlPropertyMap) Clear(key string) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -146,6 +175,12 @@ func (this *QQmlPropertyMap) Clear(key string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList keys() const
+
+/*
+Returns the list of keys.
+
+Keys that have been cleared will still appear in this list, even though their associated values are invalid QVariants.
+*/
 func (this *QQmlPropertyMap) Keys() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap4keysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,6 +193,12 @@ func (this *QQmlPropertyMap) Keys() *qtcore.QStringList /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
+
+/*
+This is an overloaded function.
+
+Same as size().
+*/
 func (this *QQmlPropertyMap) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -168,6 +209,12 @@ func (this *QQmlPropertyMap) Count() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int size() const
+
+/*
+Returns the number of keys in the map.
+
+See also isEmpty() and count().
+*/
 func (this *QQmlPropertyMap) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,6 +225,12 @@ func (this *QQmlPropertyMap) Size() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns true if the map contains no keys; otherwise returns false.
+
+See also size().
+*/
 func (this *QQmlPropertyMap) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,6 +241,12 @@ func (this *QQmlPropertyMap) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QString &) const
+
+/*
+Returns true if the map contains key.
+
+See also size().
+*/
 func (this *QQmlPropertyMap) Contains(key string) bool {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -200,6 +259,10 @@ func (this *QQmlPropertyMap) Contains(key string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant & operator[](const QString &)
+
+/*
+
+ */
 func (this *QQmlPropertyMap) Operator_get_index(key string) *qtcore.QVariant {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -214,6 +277,10 @@ func (this *QQmlPropertyMap) Operator_get_index(key string) *qtcore.QVariant {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QVariant operator[](const QString &) const
+
+/*
+
+ */
 func (this *QQmlPropertyMap) Operator_get_index_1(key string) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -228,6 +295,12 @@ func (this *QQmlPropertyMap) Operator_get_index_1(key string) *qtcore.QVariant /
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(const QString &, const QVariant &)
+
+/*
+This signal is emitted whenever one of the values in the map is changed. key is the key corresponding to the value that was changed.
+
+Note: valueChanged() is NOT emitted when changes are made by calling insert() or clear() - it is only emitted when a value is updated from QML.
+*/
 func (this *QQmlPropertyMap) ValueChanged(key string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -243,6 +316,12 @@ func (this *QQmlPropertyMap) ValueChanged(key string, value qtcore.QVariant_ITF)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant updateValue(const QString &, const QVariant &)
+
+/*
+Returns the new value to be stored for the key key. This function is provided to intercept updates to a property from QML, where the value provided from QML is input.
+
+Override this function to manipulate the property value as it is updated. Note that this function is only invoked when the value is updated from QML.
+*/
 func (this *QQmlPropertyMap) UpdateValue(key string, input qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()

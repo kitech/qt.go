@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QCommonStyle struct {
 	*QStyle
 }
@@ -65,6 +68,10 @@ func (*QCommonStyle) NewFromPointer(cthis unsafe.Pointer) *QCommonStyle {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QCommonStyle) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QCommonStyle10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QCommonStyle) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCommonStyle()
+
+/*
+Constructs a QCommonStyle.
+*/
 func NewQCommonStyle() *QCommonStyle {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QCommonStyleC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +98,10 @@ func NewQCommonStyle() *QCommonStyle {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCommonStyle()
+
+/*
+
+ */
 func DeleteQCommonStyle(this *QCommonStyle) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QCommonStyleD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -98,6 +113,10 @@ func DeleteQCommonStyle(this *QCommonStyle) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPrimitive(enum QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::drawPrimitive().
+*/
 func (this *QCommonStyle) DrawPrimitive(pe int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/, w QWidget_ITF /*777 const QWidget **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -119,6 +138,10 @@ func (this *QCommonStyle) DrawPrimitive(pe int, opt QStyleOption_ITF /*777 const
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPrimitive(enum QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::drawPrimitive().
+*/
 func (this *QCommonStyle) DrawPrimitive__(pe int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -138,6 +161,10 @@ func (this *QCommonStyle) DrawPrimitive__(pe int, opt QStyleOption_ITF /*777 con
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawControl(enum QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::drawControl().
+*/
 func (this *QCommonStyle) DrawControl(element int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/, w QWidget_ITF /*777 const QWidget **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -159,6 +186,10 @@ func (this *QCommonStyle) DrawControl(element int, opt QStyleOption_ITF /*777 co
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawControl(enum QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::drawControl().
+*/
 func (this *QCommonStyle) DrawControl__(element int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -178,6 +209,10 @@ func (this *QCommonStyle) DrawControl__(element int, opt QStyleOption_ITF /*777 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect subElementRect(enum QStyle::SubElement, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::subElementRect().
+*/
 func (this *QCommonStyle) SubElementRect(r int, opt QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -198,6 +233,10 @@ func (this *QCommonStyle) SubElementRect(r int, opt QStyleOption_ITF /*777 const
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect subElementRect(enum QStyle::SubElement, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::subElementRect().
+*/
 func (this *QCommonStyle) SubElementRect__(r int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -216,6 +255,10 @@ func (this *QCommonStyle) SubElementRect__(r int, opt QStyleOption_ITF /*777 con
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::drawComplexControl().
+*/
 func (this *QCommonStyle) DrawComplexControl(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, p qtgui.QPainter_ITF /*777 QPainter **/, w QWidget_ITF /*777 const QWidget **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
@@ -237,6 +280,10 @@ func (this *QCommonStyle) DrawComplexControl(cc int, opt QStyleOptionComplex_ITF
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::drawComplexControl().
+*/
 func (this *QCommonStyle) DrawComplexControl__(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
@@ -256,6 +303,10 @@ func (this *QCommonStyle) DrawComplexControl__(cc int, opt QStyleOptionComplex_I
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QStyle::SubControl hitTestComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
+
+/*
+Reimplemented from QStyle::hitTestComplexControl().
+*/
 func (this *QCommonStyle) HitTestComplexControl(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pt qtcore.QPoint_ITF, w QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
@@ -278,6 +329,10 @@ func (this *QCommonStyle) HitTestComplexControl(cc int, opt QStyleOptionComplex_
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QStyle::SubControl hitTestComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
+
+/*
+Reimplemented from QStyle::hitTestComplexControl().
+*/
 func (this *QCommonStyle) HitTestComplexControl__(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pt qtcore.QPoint_ITF) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
@@ -298,6 +353,10 @@ func (this *QCommonStyle) HitTestComplexControl__(cc int, opt QStyleOptionComple
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect subControlRect(enum QStyle::ComplexControl, const QStyleOptionComplex *, enum QStyle::SubControl, const QWidget *) const
+
+/*
+Reimplemented from QStyle::subControlRect().
+*/
 func (this *QCommonStyle) SubControlRect(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, sc int, w QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
@@ -318,6 +377,10 @@ func (this *QCommonStyle) SubControlRect(cc int, opt QStyleOptionComplex_ITF /*7
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect subControlRect(enum QStyle::ComplexControl, const QStyleOptionComplex *, enum QStyle::SubControl, const QWidget *) const
+
+/*
+Reimplemented from QStyle::subControlRect().
+*/
 func (this *QCommonStyle) SubControlRect__(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, sc int) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
@@ -336,6 +399,10 @@ func (this *QCommonStyle) SubControlRect__(cc int, opt QStyleOptionComplex_ITF /
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeFromContents(enum QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *) const
+
+/*
+Reimplemented from QStyle::sizeFromContents().
+*/
 func (this *QCommonStyle) SizeFromContents(ct int, opt QStyleOption_ITF /*777 const QStyleOption **/, contentsSize qtcore.QSize_ITF, widget QWidget_ITF /*777 const QWidget **/) *qtcore.QSize /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -360,6 +427,10 @@ func (this *QCommonStyle) SizeFromContents(ct int, opt QStyleOption_ITF /*777 co
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeFromContents(enum QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *) const
+
+/*
+Reimplemented from QStyle::sizeFromContents().
+*/
 func (this *QCommonStyle) SizeFromContents__(ct int, opt QStyleOption_ITF /*777 const QStyleOption **/, contentsSize qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -382,6 +453,10 @@ func (this *QCommonStyle) SizeFromContents__(ct int, opt QStyleOption_ITF /*777 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::pixelMetric().
+*/
 func (this *QCommonStyle) PixelMetric(m int, opt QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -400,6 +475,10 @@ func (this *QCommonStyle) PixelMetric(m int, opt QStyleOption_ITF /*777 const QS
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::pixelMetric().
+*/
 func (this *QCommonStyle) PixelMetric__(m int) int {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record,
 	var convArg1 unsafe.Pointer
@@ -414,6 +493,10 @@ func (this *QCommonStyle) PixelMetric__(m int) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::pixelMetric().
+*/
 func (this *QCommonStyle) PixelMetric__1(m int, opt QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -430,6 +513,10 @@ func (this *QCommonStyle) PixelMetric__1(m int, opt QStyleOption_ITF /*777 const
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+
+/*
+Reimplemented from QStyle::styleHint().
+*/
 func (this *QCommonStyle) StyleHint(sh int, opt QStyleOption_ITF /*777 const QStyleOption **/, w QWidget_ITF /*777 const QWidget **/, shret QStyleHintReturn_ITF /*777 QStyleHintReturn **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -452,6 +539,10 @@ func (this *QCommonStyle) StyleHint(sh int, opt QStyleOption_ITF /*777 const QSt
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+
+/*
+Reimplemented from QStyle::styleHint().
+*/
 func (this *QCommonStyle) StyleHint__(sh int) int {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record,
 	var convArg1 unsafe.Pointer
@@ -468,6 +559,10 @@ func (this *QCommonStyle) StyleHint__(sh int) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+
+/*
+Reimplemented from QStyle::styleHint().
+*/
 func (this *QCommonStyle) StyleHint__1(sh int, opt QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -486,6 +581,10 @@ func (this *QCommonStyle) StyleHint__1(sh int, opt QStyleOption_ITF /*777 const 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+
+/*
+Reimplemented from QStyle::styleHint().
+*/
 func (this *QCommonStyle) StyleHint__2(sh int, opt QStyleOption_ITF /*777 const QStyleOption **/, w QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -506,6 +605,10 @@ func (this *QCommonStyle) StyleHint__2(sh int, opt QStyleOption_ITF /*777 const 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+
+/*
+
+ */
 func (this *QCommonStyle) StandardIcon(standardIcon int, opt QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) *qtgui.QIcon /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -526,6 +629,10 @@ func (this *QCommonStyle) StandardIcon(standardIcon int, opt QStyleOption_ITF /*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+
+/*
+
+ */
 func (this *QCommonStyle) StandardIcon__(standardIcon int) *qtgui.QIcon /*123*/ {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record,
 	var convArg1 unsafe.Pointer
@@ -542,6 +649,10 @@ func (this *QCommonStyle) StandardIcon__(standardIcon int) *qtgui.QIcon /*123*/ 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+
+/*
+
+ */
 func (this *QCommonStyle) StandardIcon__1(standardIcon int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QIcon /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -560,6 +671,10 @@ func (this *QCommonStyle) StandardIcon__1(standardIcon int, opt QStyleOption_ITF
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::standardPixmap().
+*/
 func (this *QCommonStyle) StandardPixmap(sp int, opt QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -580,6 +695,10 @@ func (this *QCommonStyle) StandardPixmap(sp int, opt QStyleOption_ITF /*777 cons
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::standardPixmap().
+*/
 func (this *QCommonStyle) StandardPixmap__(sp int) *qtgui.QPixmap /*123*/ {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record,
 	var convArg1 unsafe.Pointer
@@ -596,6 +715,10 @@ func (this *QCommonStyle) StandardPixmap__(sp int) *qtgui.QPixmap /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::standardPixmap().
+*/
 func (this *QCommonStyle) StandardPixmap__1(sp int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -614,6 +737,10 @@ func (this *QCommonStyle) StandardPixmap__1(sp int, opt QStyleOption_ITF /*777 c
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QPixmap generatedIconPixmap(QIcon::Mode, const QPixmap &, const QStyleOption *) const
+
+/*
+Reimplemented from QStyle::generatedIconPixmap().
+*/
 func (this *QCommonStyle) GeneratedIconPixmap(iconMode int, pixmap qtgui.QPixmap_ITF, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -634,6 +761,10 @@ func (this *QCommonStyle) GeneratedIconPixmap(iconMode int, pixmap qtgui.QPixmap
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::layoutSpacing().
+*/
 func (this *QCommonStyle) LayoutSpacing(control1 int, control2 int, orientation int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg3 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
@@ -652,6 +783,10 @@ func (this *QCommonStyle) LayoutSpacing(control1 int, control2 int, orientation 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::layoutSpacing().
+*/
 func (this *QCommonStyle) LayoutSpacing__(control1 int, control2 int, orientation int) int {
 	// arg: 3, const QStyleOption *=Pointer, QStyleOption=Record,
 	var convArg3 unsafe.Pointer
@@ -666,6 +801,10 @@ func (this *QCommonStyle) LayoutSpacing__(control1 int, control2 int, orientatio
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
+
+/*
+Reimplemented from QStyle::layoutSpacing().
+*/
 func (this *QCommonStyle) LayoutSpacing__1(control1 int, control2 int, orientation int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg3 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
@@ -682,6 +821,10 @@ func (this *QCommonStyle) LayoutSpacing__1(control1 int, control2 int, orientati
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void polish(QPalette &)
+
+/*
+Reimplemented from QStyle::polish().
+*/
 func (this *QCommonStyle) Polish(arg0 qtgui.QPalette_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPalette_PTR() != nil {
@@ -695,6 +838,10 @@ func (this *QCommonStyle) Polish(arg0 qtgui.QPalette_ITF) {
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void polish(QApplication *)
+
+/*
+Reimplemented from QStyle::polish().
+*/
 func (this *QCommonStyle) Polish_1(app QApplication_ITF /*777 QApplication **/) {
 	var convArg0 unsafe.Pointer
 	if app != nil && app.QApplication_PTR() != nil {
@@ -708,6 +855,10 @@ func (this *QCommonStyle) Polish_1(app QApplication_ITF /*777 QApplication **/) 
 // index:2
 // Public virtual Visibility=Default Availability=Available
 // [-2] void polish(QWidget *)
+
+/*
+Reimplemented from QStyle::polish().
+*/
 func (this *QCommonStyle) Polish_2(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -721,6 +872,10 @@ func (this *QCommonStyle) Polish_2(widget QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void unpolish(QWidget *)
+
+/*
+Reimplemented from QStyle::unpolish().
+*/
 func (this *QCommonStyle) Unpolish(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -734,6 +889,10 @@ func (this *QCommonStyle) Unpolish(widget QWidget_ITF /*777 QWidget **/) {
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void unpolish(QApplication *)
+
+/*
+Reimplemented from QStyle::unpolish().
+*/
 func (this *QCommonStyle) Unpolish_1(application QApplication_ITF /*777 QApplication **/) {
 	var convArg0 unsafe.Pointer
 	if application != nil && application.QApplication_PTR() != nil {

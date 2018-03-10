@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleFactory struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,12 @@ func (*QStyleFactory) NewFromPointer(cthis unsafe.Pointer) *QStyleFactory {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList keys()
+
+/*
+Returns the list of valid keys, i.e. the keys this factory can create styles for.
+
+See also create().
+*/
 func (this *QStyleFactory) Keys() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStyleFactory4keysEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -84,6 +93,16 @@ func QStyleFactory_Keys() *qtcore.QStringList /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStyle * create(const QString &)
+
+/*
+Creates and returns a QStyle object that matches the given key, or returns 0 if no matching style is found.
+
+Both built-in styles and styles from style plugins are queried for a matching style.
+
+Note: The keys used are case insensitive.
+
+See also keys().
+*/
 func (this *QStyleFactory) Create(arg0 string) *QStyle /*777 QStyle **/ {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()

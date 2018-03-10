@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QMessageLogContext struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QMessageLogContext) NewFromPointer(cthis unsafe.Pointer) *QMessageLogCont
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMessageLogContext()
+
+/*
+
+ */
 func NewQMessageLogContext() *QMessageLogContext {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContextC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQMessageLogContext() *QMessageLogContext {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMessageLogContext(const char *, int, const char *, const char *)
+
+/*
+
+ */
 func NewQMessageLogContext_1(fileName string, lineNumber int, functionName string, categoryName string) *QMessageLogContext {
 	var convArg0 = qtrt.CString(fileName)
 	defer qtrt.FreeMem(convArg0)
@@ -95,6 +106,10 @@ func NewQMessageLogContext_1(fileName string, lineNumber int, functionName strin
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void copy(const QMessageLogContext &)
+
+/*
+
+ */
 func (this *QMessageLogContext) Copy(logContext QMessageLogContext_ITF) {
 	var convArg0 unsafe.Pointer
 	if logContext != nil && logContext.QMessageLogContext_PTR() != nil {

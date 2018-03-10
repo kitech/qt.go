@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QTapGesture struct {
 	*QGesture
 }
@@ -65,6 +68,10 @@ func (*QTapGesture) NewFromPointer(cthis unsafe.Pointer) *QTapGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QTapGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTapGesture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QTapGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTapGesture(QObject *)
+
+/*
+
+ */
 func NewQTapGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QTapGesture {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQTapGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QTapGesture {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTapGesture(QObject *)
+
+/*
+
+ */
 func NewQTapGesture__() *QTapGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQTapGesture__() *QTapGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTapGesture()
+
+/*
+
+ */
 func DeleteQTapGesture(this *QTapGesture) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTapGestureD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -116,6 +135,10 @@ func DeleteQTapGesture(this *QTapGesture) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF position() const
+
+/*
+
+ */
 func (this *QTapGesture) Position() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTapGesture8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +151,10 @@ func (this *QTapGesture) Position() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(const QPointF &)
+
+/*
+
+ */
 func (this *QTapGesture) SetPosition(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {

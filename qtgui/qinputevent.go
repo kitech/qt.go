@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QInputEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QInputEvent) NewFromPointer(cthis unsafe.Pointer) *QInputEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QInputEvent(enum QEvent::Type, Qt::KeyboardModifiers)
+
+/*
+
+ */
 func NewQInputEvent(type_ int, modifiers int) *QInputEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QInputEventC2EN6QEvent4TypeE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, type_, modifiers)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQInputEvent(type_ int, modifiers int) *QInputEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QInputEvent(enum QEvent::Type, Qt::KeyboardModifiers)
+
+/*
+
+ */
 func NewQInputEvent__(type_ int) *QInputEvent {
 	// arg: 1, Qt::KeyboardModifiers=Elaborated, Qt::KeyboardModifiers=Typedef, QFlags<Qt::KeyboardModifier>
 	modifiers := 0
@@ -90,6 +101,10 @@ func NewQInputEvent__(type_ int) *QInputEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QInputEvent()
+
+/*
+
+ */
 func DeleteQInputEvent(this *QInputEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QInputEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -101,6 +116,10 @@ func DeleteQInputEvent(this *QInputEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers modifiers() const
+
+/*
+
+ */
 func (this *QInputEvent) Modifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QInputEvent9modifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +130,10 @@ func (this *QInputEvent) Modifiers() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setModifiers(Qt::KeyboardModifiers)
+
+/*
+
+ */
 func (this *QInputEvent) SetModifiers(amodifiers int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QInputEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), amodifiers)
 	qtrt.ErrPrint(err, rv)
@@ -120,16 +143,25 @@ func (this *QInputEvent) SetModifiers(amodifiers int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] ulong timestamp() const
+
+/*
+
+ */
 func (this *QInputEvent) Timestamp() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QInputEvent9timestampEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned long // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:76
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTimestamp(ulong)
+
+/*
+
+ */
 func (this *QInputEvent) SetTimestamp(atimestamp uint) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QInputEvent12setTimestampEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), atimestamp)
 	qtrt.ErrPrint(err, rv)

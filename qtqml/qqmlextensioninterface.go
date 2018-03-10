@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlExtensionInterface struct {
 	*QQmlTypesExtensionInterface
 }
@@ -65,6 +68,10 @@ func (*QQmlExtensionInterface) NewFromPointer(cthis unsafe.Pointer) *QQmlExtensi
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlExtensionInterface()
+
+/*
+
+ */
 func DeleteQQmlExtensionInterface(this *QQmlExtensionInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QQmlExtensionInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -76,6 +83,10 @@ func DeleteQQmlExtensionInterface(this *QQmlExtensionInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void initializeEngine(QQmlEngine *, const char *)
+
+/*
+
+ */
 func (this *QQmlExtensionInterface) InitializeEngine(engine QQmlEngine_ITF /*777 QQmlEngine **/, uri string) {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QQmlEngine_PTR() != nil {

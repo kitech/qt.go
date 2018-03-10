@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextFrame struct {
 	*QTextObject
 }
@@ -64,6 +67,10 @@ func (*QTextFrame) NewFromPointer(cthis unsafe.Pointer) *QTextFrame {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QTextFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QTextFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextFrame(QTextDocument *)
+
+/*
+
+ */
 func NewQTextFrame(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextFrame {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQTextFrame(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextFrame {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextFrame()
+
+/*
+
+ */
 func DeleteQTextFrame(this *QTextFrame) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextFrameD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -101,6 +116,10 @@ func DeleteQTextFrame(this *QTextFrame) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFrameFormat(const QTextFrameFormat &)
+
+/*
+
+ */
 func (this *QTextFrame) SetFrameFormat(format QTextFrameFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QTextFrameFormat_PTR() != nil {
@@ -114,6 +133,10 @@ func (this *QTextFrame) SetFrameFormat(format QTextFrameFormat_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QTextFrameFormat frameFormat() const
+
+/*
+
+ */
 func (this *QTextFrame) FrameFormat() *QTextFrameFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame11frameFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -126,6 +149,10 @@ func (this *QTextFrame) FrameFormat() *QTextFrameFormat /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor firstCursorPosition() const
+
+/*
+
+ */
 func (this *QTextFrame) FirstCursorPosition() *QTextCursor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame19firstCursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -138,6 +165,10 @@ func (this *QTextFrame) FirstCursorPosition() *QTextCursor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor lastCursorPosition() const
+
+/*
+
+ */
 func (this *QTextFrame) LastCursorPosition() *QTextCursor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame18lastCursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,6 +181,10 @@ func (this *QTextFrame) LastCursorPosition() *QTextCursor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int firstPosition() const
+
+/*
+
+ */
 func (this *QTextFrame) FirstPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame13firstPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,6 +195,10 @@ func (this *QTextFrame) FirstPosition() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lastPosition() const
+
+/*
+
+ */
 func (this *QTextFrame) LastPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame12lastPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,6 +209,10 @@ func (this *QTextFrame) LastPosition() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextFrameLayoutData * layoutData() const
+
+/*
+
+ */
 func (this *QTextFrame) LayoutData() *QTextFrameLayoutData /*777 QTextFrameLayoutData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame10layoutDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,6 +223,10 @@ func (this *QTextFrame) LayoutData() *QTextFrameLayoutData /*777 QTextFrameLayou
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLayoutData(QTextFrameLayoutData *)
+
+/*
+
+ */
 func (this *QTextFrame) SetLayoutData(data QTextFrameLayoutData_ITF /*777 QTextFrameLayoutData **/) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QTextFrameLayoutData_PTR() != nil {
@@ -193,6 +240,10 @@ func (this *QTextFrame) SetLayoutData(data QTextFrameLayoutData_ITF /*777 QTextF
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextFrame * parentFrame() const
+
+/*
+
+ */
 func (this *QTextFrame) ParentFrame() *QTextFrame /*777 QTextFrame **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame11parentFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,6 +254,10 @@ func (this *QTextFrame) ParentFrame() *QTextFrame /*777 QTextFrame **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QTextFrame::iterator begin() const
+
+/*
+
+ */
 func (this *QTextFrame) Begin() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -213,6 +268,10 @@ func (this *QTextFrame) Begin() unsafe.Pointer /*444*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QTextFrame::iterator end() const
+
+/*
+
+ */
 func (this *QTextFrame) End() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextFrame3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

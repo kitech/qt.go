@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleHintReturn struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QStyleHintReturn) NewFromPointer(cthis unsafe.Pointer) *QStyleHintReturn 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleHintReturn(int, int)
+
+/*
+
+ */
 func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleHintReturn(int, int)
+
+/*
+
+ */
 func NewQStyleHintReturn__() *QStyleHintReturn {
 	// arg: 0, int=Int, =Invalid,
 	version := 0 /*QStyleOption::Version*/
@@ -95,6 +106,10 @@ func NewQStyleHintReturn__() *QStyleHintReturn {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleHintReturn(int, int)
+
+/*
+
+ */
 func NewQStyleHintReturn__1(version int) *QStyleHintReturn {
 	// arg: 1, int=Int, =Invalid,
 	type_ := QStyleHintReturn__SH_Default
@@ -109,6 +124,10 @@ func NewQStyleHintReturn__1(version int) *QStyleHintReturn {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStyleHintReturn()
+
+/*
+
+ */
 func DeleteQStyleHintReturn(this *QStyleHintReturn) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStyleHintReturnD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -116,18 +135,50 @@ func DeleteQStyleHintReturn(this *QStyleHintReturn) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QStyleHintReturn__HintReturnType = int
 
+//
 const QStyleHintReturn__SH_Default QStyleHintReturn__HintReturnType = 61440
+
+//
 const QStyleHintReturn__SH_Mask QStyleHintReturn__HintReturnType = 61441
+
+//
 const QStyleHintReturn__SH_Variant QStyleHintReturn__HintReturnType = 61442
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleHintReturn__StyleOptionType = int
 
+//
 const QStyleHintReturn__Type QStyleHintReturn__StyleOptionType = 61440
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleHintReturn__StyleOptionVersion = int
 
+// 1
 const QStyleHintReturn__Version QStyleHintReturn__StyleOptionVersion = 1
 
 //  body block end

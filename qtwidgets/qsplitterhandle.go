@@ -73,6 +73,9 @@ func (this *QSplitterHandle) InheritClosestLegalPosition(f func(p int) int) {
 	qtrt.SetAllInheritCallback(this, "closestLegalPosition", f)
 }
 
+/*
+
+ */
 type QSplitterHandle struct {
 	*QWidget
 }
@@ -105,6 +108,10 @@ func (*QSplitterHandle) NewFromPointer(cthis unsafe.Pointer) *QSplitterHandle {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSplitterHandle) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,6 +122,10 @@ func (this *QSplitterHandle) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSplitterHandle(Qt::Orientation, QSplitter *)
+
+/*
+
+ */
 func NewQSplitterHandle(o int, parent QSplitter_ITF /*777 QSplitter **/) *QSplitterHandle {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QSplitter_PTR() != nil {
@@ -131,6 +142,10 @@ func NewQSplitterHandle(o int, parent QSplitter_ITF /*777 QSplitter **/) *QSplit
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSplitterHandle()
+
+/*
+
+ */
 func DeleteQSplitterHandle(this *QSplitterHandle) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSplitterHandleD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -142,6 +157,10 @@ func DeleteQSplitterHandle(this *QSplitterHandle) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
+
+/*
+
+ */
 func (this *QSplitterHandle) SetOrientation(o int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSplitterHandle14setOrientationEN2Qt11OrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), o)
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +170,10 @@ func (this *QSplitterHandle) SetOrientation(o int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
+
+/*
+
+ */
 func (this *QSplitterHandle) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,6 +184,10 @@ func (this *QSplitterHandle) Orientation() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool opaqueResize() const
+
+/*
+
+ */
 func (this *QSplitterHandle) OpaqueResize() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle12opaqueResizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,6 +198,10 @@ func (this *QSplitterHandle) OpaqueResize() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSplitter * splitter() const
+
+/*
+
+ */
 func (this *QSplitterHandle) Splitter() *QSplitter /*777 QSplitter **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle8splitterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -181,6 +212,10 @@ func (this *QSplitterHandle) Splitter() *QSplitter /*777 QSplitter **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QSplitterHandle) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +228,10 @@ func (this *QSplitterHandle) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+
+ */
 func (this *QSplitterHandle) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
@@ -206,6 +245,10 @@ func (this *QSplitterHandle) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+
+ */
 func (this *QSplitterHandle) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -219,6 +262,10 @@ func (this *QSplitterHandle) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMo
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+
+ */
 func (this *QSplitterHandle) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -232,6 +279,10 @@ func (this *QSplitterHandle) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QM
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+
+ */
 func (this *QSplitterHandle) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -245,6 +296,10 @@ func (this *QSplitterHandle) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+*/
 func (this *QSplitterHandle) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QResizeEvent_PTR() != nil {
@@ -258,6 +313,10 @@ func (this *QSplitterHandle) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResi
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QSplitterHandle) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -272,6 +331,14 @@ func (this *QSplitterHandle) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void moveSplitter(int)
+
+/*
+Moves the left or top edge of the splitter handle at index as close as possible to position pos, which is the distance from the left or top edge of the widget.
+
+For right-to-left languages such as Arabic and Hebrew, the layout of horizontal splitters is reversed. pos is then the distance from the right edge of the widget.
+
+See also splitterMoved(), closestLegalPosition(), and getRange().
+*/
 func (this *QSplitterHandle) MoveSplitter(p int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSplitterHandle12moveSplitterEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	qtrt.ErrPrint(err, rv)
@@ -281,6 +348,14 @@ func (this *QSplitterHandle) MoveSplitter(p int) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int closestLegalPosition(int)
+
+/*
+Returns the closest legal position to pos of the widget at index.
+
+For right-to-left languages such as Arabic and Hebrew, the layout of horizontal splitters is reversed. Positions are then measured from the right edge of the widget.
+
+See also getRange().
+*/
 func (this *QSplitterHandle) ClosestLegalPosition(p int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSplitterHandle20closestLegalPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	qtrt.ErrPrint(err, rv)

@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGMaterialType struct {
 	*qtrt.CObject
 }

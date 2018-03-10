@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QMetaObject struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QMetaObject) NewFromPointer(cthis unsafe.Pointer) *QMetaObject {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * className() const
+
+/*
+
+ */
 func (this *QMetaObject) ClassName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject9classNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QMetaObject) ClassName() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QMetaObject * superClass() const
+
+/*
+
+ */
 func (this *QMetaObject) SuperClass() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject10superClassEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +96,10 @@ func (this *QMetaObject) SuperClass() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * cast(QObject *) const
+
+/*
+
+ */
 func (this *QMetaObject) Cast(obj QObject_ITF /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -99,6 +114,10 @@ func (this *QMetaObject) Cast(obj QObject_ITF /*777 QObject **/) *QObject /*777 
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] const QObject * cast(const QObject *) const
+
+/*
+
+ */
 func (this *QMetaObject) Cast_1(obj QObject_ITF /*777 const QObject **/) *QObject /*777 const QObject **/ {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -113,6 +132,10 @@ func (this *QMetaObject) Cast_1(obj QObject_ITF /*777 const QObject **/) *QObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int methodOffset() const
+
+/*
+
+ */
 func (this *QMetaObject) MethodOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject12methodOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -123,6 +146,10 @@ func (this *QMetaObject) MethodOffset() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int enumeratorOffset() const
+
+/*
+
+ */
 func (this *QMetaObject) EnumeratorOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject16enumeratorOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +160,10 @@ func (this *QMetaObject) EnumeratorOffset() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int propertyOffset() const
+
+/*
+
+ */
 func (this *QMetaObject) PropertyOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject14propertyOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +174,10 @@ func (this *QMetaObject) PropertyOffset() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int classInfoOffset() const
+
+/*
+
+ */
 func (this *QMetaObject) ClassInfoOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject15classInfoOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,6 +188,10 @@ func (this *QMetaObject) ClassInfoOffset() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int constructorCount() const
+
+/*
+
+ */
 func (this *QMetaObject) ConstructorCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject16constructorCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,6 +202,10 @@ func (this *QMetaObject) ConstructorCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int methodCount() const
+
+/*
+
+ */
 func (this *QMetaObject) MethodCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11methodCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,6 +216,10 @@ func (this *QMetaObject) MethodCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int enumeratorCount() const
+
+/*
+
+ */
 func (this *QMetaObject) EnumeratorCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject15enumeratorCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,6 +230,10 @@ func (this *QMetaObject) EnumeratorCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int propertyCount() const
+
+/*
+
+ */
 func (this *QMetaObject) PropertyCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject13propertyCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +244,10 @@ func (this *QMetaObject) PropertyCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int classInfoCount() const
+
+/*
+
+ */
 func (this *QMetaObject) ClassInfoCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject14classInfoCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,6 +258,10 @@ func (this *QMetaObject) ClassInfoCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfConstructor(const char *) const
+
+/*
+
+ */
 func (this *QMetaObject) IndexOfConstructor(constructor string) int {
 	var convArg0 = qtrt.CString(constructor)
 	defer qtrt.FreeMem(convArg0)
@@ -215,6 +274,10 @@ func (this *QMetaObject) IndexOfConstructor(constructor string) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfMethod(const char *) const
+
+/*
+
+ */
 func (this *QMetaObject) IndexOfMethod(method string) int {
 	var convArg0 = qtrt.CString(method)
 	defer qtrt.FreeMem(convArg0)
@@ -227,6 +290,10 @@ func (this *QMetaObject) IndexOfMethod(method string) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfSignal(const char *) const
+
+/*
+
+ */
 func (this *QMetaObject) IndexOfSignal(signal string) int {
 	var convArg0 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg0)
@@ -239,6 +306,10 @@ func (this *QMetaObject) IndexOfSignal(signal string) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfSlot(const char *) const
+
+/*
+
+ */
 func (this *QMetaObject) IndexOfSlot(slot string) int {
 	var convArg0 = qtrt.CString(slot)
 	defer qtrt.FreeMem(convArg0)
@@ -251,6 +322,10 @@ func (this *QMetaObject) IndexOfSlot(slot string) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfEnumerator(const char *) const
+
+/*
+
+ */
 func (this *QMetaObject) IndexOfEnumerator(name string) int {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
@@ -263,6 +338,10 @@ func (this *QMetaObject) IndexOfEnumerator(name string) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfProperty(const char *) const
+
+/*
+
+ */
 func (this *QMetaObject) IndexOfProperty(name string) int {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
@@ -275,6 +354,10 @@ func (this *QMetaObject) IndexOfProperty(name string) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfClassInfo(const char *) const
+
+/*
+
+ */
 func (this *QMetaObject) IndexOfClassInfo(name string) int {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
@@ -287,6 +370,10 @@ func (this *QMetaObject) IndexOfClassInfo(name string) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaMethod constructor(int) const
+
+/*
+
+ */
 func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11constructorEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -299,6 +386,10 @@ func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaMethod method(int) const
+
+/*
+
+ */
 func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject6methodEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -311,6 +402,10 @@ func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaEnum enumerator(int) const
+
+/*
+
+ */
 func (this *QMetaObject) Enumerator(index int) *QMetaEnum /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject10enumeratorEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -323,6 +418,10 @@ func (this *QMetaObject) Enumerator(index int) *QMetaEnum /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QMetaProperty property(int) const
+
+/*
+
+ */
 func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject8propertyEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -335,6 +434,10 @@ func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaClassInfo classInfo(int) const
+
+/*
+
+ */
 func (this *QMetaObject) ClassInfo(index int) *QMetaClassInfo /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject9classInfoEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -347,6 +450,10 @@ func (this *QMetaObject) ClassInfo(index int) *QMetaClassInfo /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QMetaProperty userProperty() const
+
+/*
+
+ */
 func (this *QMetaObject) UserProperty() *QMetaProperty /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject12userPropertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -359,6 +466,10 @@ func (this *QMetaObject) UserProperty() *QMetaProperty /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool checkConnectArgs(const char *, const char *)
+
+/*
+
+ */
 func (this *QMetaObject) CheckConnectArgs(signal string, method string) bool {
 	var convArg0 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg0)
@@ -378,6 +489,10 @@ func QMetaObject_CheckConnectArgs(signal string, method string) bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool checkConnectArgs(const QMetaMethod &, const QMetaMethod &)
+
+/*
+
+ */
 func (this *QMetaObject) CheckConnectArgs_1(signal QMetaMethod_ITF, method QMetaMethod_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if signal != nil && signal.QMetaMethod_PTR() != nil {
@@ -401,6 +516,10 @@ func QMetaObject_CheckConnectArgs_1(signal QMetaMethod_ITF, method QMetaMethod_I
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray normalizedSignature(const char *)
+
+/*
+
+ */
 func (this *QMetaObject) NormalizedSignature(method string) *QByteArray /*123*/ {
 	var convArg0 = qtrt.CString(method)
 	defer qtrt.FreeMem(convArg0)
@@ -420,6 +539,10 @@ func QMetaObject_NormalizedSignature(method string) *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray normalizedType(const char *)
+
+/*
+
+ */
 func (this *QMetaObject) NormalizedType(type_ string) *QByteArray /*123*/ {
 	var convArg0 = qtrt.CString(type_)
 	defer qtrt.FreeMem(convArg0)
@@ -439,6 +562,10 @@ func QMetaObject_NormalizedType(type_ string) *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, int, const QObject *, int, int, int *)
+
+/*
+
+ */
 func (this *QMetaObject) Connect(sender QObject_ITF /*777 const QObject **/, signal_index int, receiver QObject_ITF /*777 const QObject **/, method_index int, type_ int, types unsafe.Pointer /*666*/) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -462,6 +589,10 @@ func QMetaObject_Connect(sender QObject_ITF /*777 const QObject **/, signal_inde
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, int, const QObject *, int, int, int *)
+
+/*
+
+ */
 func (this *QMetaObject) Connect__(sender QObject_ITF /*777 const QObject **/, signal_index int, receiver QObject_ITF /*777 const QObject **/, method_index int) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -484,6 +615,10 @@ func (this *QMetaObject) Connect__(sender QObject_ITF /*777 const QObject **/, s
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, int, const QObject *, int, int, int *)
+
+/*
+
+ */
 func (this *QMetaObject) Connect__1(sender QObject_ITF /*777 const QObject **/, signal_index int, receiver QObject_ITF /*777 const QObject **/, method_index int, type_ int) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -504,6 +639,10 @@ func (this *QMetaObject) Connect__1(sender QObject_ITF /*777 const QObject **/, 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool disconnect(const QObject *, int, const QObject *, int)
+
+/*
+
+ */
 func (this *QMetaObject) Disconnect(sender QObject_ITF /*777 const QObject **/, signal_index int, receiver QObject_ITF /*777 const QObject **/, method_index int) bool {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -527,6 +666,10 @@ func QMetaObject_Disconnect(sender QObject_ITF /*777 const QObject **/, signal_i
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool disconnectOne(const QObject *, int, const QObject *, int)
+
+/*
+
+ */
 func (this *QMetaObject) DisconnectOne(sender QObject_ITF /*777 const QObject **/, signal_index int, receiver QObject_ITF /*777 const QObject **/, method_index int) bool {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -550,6 +693,10 @@ func QMetaObject_DisconnectOne(sender QObject_ITF /*777 const QObject **/, signa
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void connectSlotsByName(QObject *)
+
+/*
+
+ */
 func (this *QMetaObject) ConnectSlotsByName(o QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QObject_PTR() != nil {
@@ -567,6 +714,10 @@ func QMetaObject_ConnectSlotsByName(o QObject_ITF /*777 QObject **/) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void activate(QObject *, int, void **)
+
+/*
+
+ */
 func (this *QMetaObject) Activate(sender QObject_ITF /*777 QObject **/, signal_index int, argv unsafe.Pointer /*666*/) {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -584,6 +735,10 @@ func QMetaObject_Activate(sender QObject_ITF /*777 QObject **/, signal_index int
 // index:1
 // Public static Visibility=Default Availability=Available
 // [-2] void activate(QObject *, int, int, void **)
+
+/*
+
+ */
 func (this *QMetaObject) Activate_1(sender QObject_ITF /*777 QObject **/, signal_offset int, local_signal_index int, argv unsafe.Pointer /*666*/) {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -601,6 +756,10 @@ func QMetaObject_Activate_1(sender QObject_ITF /*777 QObject **/, signal_offset 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/, val9 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -666,6 +825,10 @@ func QMetaObject_InvokeMethod(obj QObject_ITF /*777 QObject **/, member string, 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod__(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -706,6 +869,10 @@ func (this *QMetaObject) InvokeMethod__(obj QObject_ITF /*777 QObject **/, membe
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod__1(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -748,6 +915,10 @@ func (this *QMetaObject) InvokeMethod__1(obj QObject_ITF /*777 QObject **/, memb
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod__2(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -792,6 +963,10 @@ func (this *QMetaObject) InvokeMethod__2(obj QObject_ITF /*777 QObject **/, memb
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod__3(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -838,6 +1013,10 @@ func (this *QMetaObject) InvokeMethod__3(obj QObject_ITF /*777 QObject **/, memb
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod__4(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -886,6 +1065,10 @@ func (this *QMetaObject) InvokeMethod__4(obj QObject_ITF /*777 QObject **/, memb
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod__5(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -936,6 +1119,10 @@ func (this *QMetaObject) InvokeMethod__5(obj QObject_ITF /*777 QObject **/, memb
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod__6(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -988,6 +1175,10 @@ func (this *QMetaObject) InvokeMethod__6(obj QObject_ITF /*777 QObject **/, memb
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod__7(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1042,6 +1233,10 @@ func (this *QMetaObject) InvokeMethod__7(obj QObject_ITF /*777 QObject **/, memb
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod__8(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1098,6 +1293,10 @@ func (this *QMetaObject) InvokeMethod__8(obj QObject_ITF /*777 QObject **/, memb
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod__9(obj QObject_ITF /*777 QObject **/, member string, arg2 int, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1156,6 +1355,10 @@ func (this *QMetaObject) InvokeMethod__9(obj QObject_ITF /*777 QObject **/, memb
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/, val9 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1221,6 +1424,10 @@ func QMetaObject_InvokeMethod_1(obj QObject_ITF /*777 QObject **/, member string
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1_(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1261,6 +1468,10 @@ func (this *QMetaObject) InvokeMethod_1_(obj QObject_ITF /*777 QObject **/, memb
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1_1(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1303,6 +1514,10 @@ func (this *QMetaObject) InvokeMethod_1_1(obj QObject_ITF /*777 QObject **/, mem
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1_2(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1347,6 +1562,10 @@ func (this *QMetaObject) InvokeMethod_1_2(obj QObject_ITF /*777 QObject **/, mem
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1_3(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1393,6 +1612,10 @@ func (this *QMetaObject) InvokeMethod_1_3(obj QObject_ITF /*777 QObject **/, mem
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1_4(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1441,6 +1664,10 @@ func (this *QMetaObject) InvokeMethod_1_4(obj QObject_ITF /*777 QObject **/, mem
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1_5(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1491,6 +1718,10 @@ func (this *QMetaObject) InvokeMethod_1_5(obj QObject_ITF /*777 QObject **/, mem
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1_6(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1543,6 +1774,10 @@ func (this *QMetaObject) InvokeMethod_1_6(obj QObject_ITF /*777 QObject **/, mem
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1_7(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1597,6 +1832,10 @@ func (this *QMetaObject) InvokeMethod_1_7(obj QObject_ITF /*777 QObject **/, mem
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1_8(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1653,6 +1892,10 @@ func (this *QMetaObject) InvokeMethod_1_8(obj QObject_ITF /*777 QObject **/, mem
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_1_9(obj QObject_ITF /*777 QObject **/, member string, ret QGenericReturnArgument_ITF /*123*/, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1711,6 +1954,10 @@ func (this *QMetaObject) InvokeMethod_1_9(obj QObject_ITF /*777 QObject **/, mem
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/, val9 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1772,6 +2019,10 @@ func QMetaObject_InvokeMethod_2(obj QObject_ITF /*777 QObject **/, member string
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2_(obj QObject_ITF /*777 QObject **/, member string, type_ int) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1808,6 +2059,10 @@ func (this *QMetaObject) InvokeMethod_2_(obj QObject_ITF /*777 QObject **/, memb
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2_1(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1846,6 +2101,10 @@ func (this *QMetaObject) InvokeMethod_2_1(obj QObject_ITF /*777 QObject **/, mem
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2_2(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1886,6 +2145,10 @@ func (this *QMetaObject) InvokeMethod_2_2(obj QObject_ITF /*777 QObject **/, mem
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2_3(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1928,6 +2191,10 @@ func (this *QMetaObject) InvokeMethod_2_3(obj QObject_ITF /*777 QObject **/, mem
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2_4(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -1972,6 +2239,10 @@ func (this *QMetaObject) InvokeMethod_2_4(obj QObject_ITF /*777 QObject **/, mem
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2_5(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2018,6 +2289,10 @@ func (this *QMetaObject) InvokeMethod_2_5(obj QObject_ITF /*777 QObject **/, mem
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2_6(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2066,6 +2341,10 @@ func (this *QMetaObject) InvokeMethod_2_6(obj QObject_ITF /*777 QObject **/, mem
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2_7(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2116,6 +2395,10 @@ func (this *QMetaObject) InvokeMethod_2_7(obj QObject_ITF /*777 QObject **/, mem
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2_8(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2168,6 +2451,10 @@ func (this *QMetaObject) InvokeMethod_2_8(obj QObject_ITF /*777 QObject **/, mem
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_2_9(obj QObject_ITF /*777 QObject **/, member string, type_ int, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2222,6 +2509,10 @@ func (this *QMetaObject) InvokeMethod_2_9(obj QObject_ITF /*777 QObject **/, mem
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/, val9 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2283,6 +2574,10 @@ func QMetaObject_InvokeMethod_3(obj QObject_ITF /*777 QObject **/, member string
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3_(obj QObject_ITF /*777 QObject **/, member string) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2319,6 +2614,10 @@ func (this *QMetaObject) InvokeMethod_3_(obj QObject_ITF /*777 QObject **/, memb
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3_1(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2357,6 +2656,10 @@ func (this *QMetaObject) InvokeMethod_3_1(obj QObject_ITF /*777 QObject **/, mem
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3_2(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2397,6 +2700,10 @@ func (this *QMetaObject) InvokeMethod_3_2(obj QObject_ITF /*777 QObject **/, mem
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3_3(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2439,6 +2746,10 @@ func (this *QMetaObject) InvokeMethod_3_3(obj QObject_ITF /*777 QObject **/, mem
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3_4(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2483,6 +2794,10 @@ func (this *QMetaObject) InvokeMethod_3_4(obj QObject_ITF /*777 QObject **/, mem
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3_5(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2529,6 +2844,10 @@ func (this *QMetaObject) InvokeMethod_3_5(obj QObject_ITF /*777 QObject **/, mem
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3_6(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2577,6 +2896,10 @@ func (this *QMetaObject) InvokeMethod_3_6(obj QObject_ITF /*777 QObject **/, mem
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3_7(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2627,6 +2950,10 @@ func (this *QMetaObject) InvokeMethod_3_7(obj QObject_ITF /*777 QObject **/, mem
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3_8(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2679,6 +3006,10 @@ func (this *QMetaObject) InvokeMethod_3_8(obj QObject_ITF /*777 QObject **/, mem
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+
+/*
+
+ */
 func (this *QMetaObject) InvokeMethod_3_9(obj QObject_ITF /*777 QObject **/, member string, val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -2733,6 +3064,10 @@ func (this *QMetaObject) InvokeMethod_3_9(obj QObject_ITF /*777 QObject **/, mem
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance(val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/, val9 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
@@ -2783,6 +3118,10 @@ func (this *QMetaObject) NewInstance(val0 QGenericArgument_ITF /*123*/, val1 QGe
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance__() *QObject /*777 QObject **/ {
 	// arg: 0, QGenericArgument=Record, QGenericArgument=Record,
 	var convArg0 unsafe.Pointer
@@ -2813,6 +3152,10 @@ func (this *QMetaObject) NewInstance__() *QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance__1(val0 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
@@ -2845,6 +3188,10 @@ func (this *QMetaObject) NewInstance__1(val0 QGenericArgument_ITF /*123*/) *QObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance__2(val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
@@ -2879,6 +3226,10 @@ func (this *QMetaObject) NewInstance__2(val0 QGenericArgument_ITF /*123*/, val1 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance__3(val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
@@ -2915,6 +3266,10 @@ func (this *QMetaObject) NewInstance__3(val0 QGenericArgument_ITF /*123*/, val1 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance__4(val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
@@ -2953,6 +3308,10 @@ func (this *QMetaObject) NewInstance__4(val0 QGenericArgument_ITF /*123*/, val1 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance__5(val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
@@ -2993,6 +3352,10 @@ func (this *QMetaObject) NewInstance__5(val0 QGenericArgument_ITF /*123*/, val1 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance__6(val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
@@ -3035,6 +3398,10 @@ func (this *QMetaObject) NewInstance__6(val0 QGenericArgument_ITF /*123*/, val1 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance__7(val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
@@ -3079,6 +3446,10 @@ func (this *QMetaObject) NewInstance__7(val0 QGenericArgument_ITF /*123*/, val1 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance__8(val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
@@ -3125,6 +3496,10 @@ func (this *QMetaObject) NewInstance__8(val0 QGenericArgument_ITF /*123*/, val1 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
+
+/*
+
+ */
 func (this *QMetaObject) NewInstance__9(val0 QGenericArgument_ITF /*123*/, val1 QGenericArgument_ITF /*123*/, val2 QGenericArgument_ITF /*123*/, val3 QGenericArgument_ITF /*123*/, val4 QGenericArgument_ITF /*123*/, val5 QGenericArgument_ITF /*123*/, val6 QGenericArgument_ITF /*123*/, val7 QGenericArgument_ITF /*123*/, val8 QGenericArgument_ITF /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
@@ -3173,6 +3548,10 @@ func (this *QMetaObject) NewInstance__9(val0 QGenericArgument_ITF /*123*/, val1 
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int static_metacall(enum QMetaObject::Call, int, void **) const
+
+/*
+
+ */
 func (this *QMetaObject) Static_metacall(arg0 int, arg1 int, arg2 unsafe.Pointer /*666*/) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject15static_metacallENS_4CallEiPPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1, arg2)
 	qtrt.ErrPrint(err, rv)
@@ -3183,6 +3562,10 @@ func (this *QMetaObject) Static_metacall(arg0 int, arg1 int, arg2 unsafe.Pointer
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int metacall(QObject *, enum QMetaObject::Call, int, void **)
+
+/*
+
+ */
 func (this *QMetaObject) Metacall(arg0 QObject_ITF /*777 QObject **/, arg1 int, arg2 int, arg3 unsafe.Pointer /*666*/) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -3204,20 +3587,49 @@ func DeleteQMetaObject(this *QMetaObject) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QMetaObject__Call = int
 
+//
 const QMetaObject__InvokeMetaMethod QMetaObject__Call = 0
+
+//
 const QMetaObject__ReadProperty QMetaObject__Call = 1
+
+//
 const QMetaObject__WriteProperty QMetaObject__Call = 2
+
+//
 const QMetaObject__ResetProperty QMetaObject__Call = 3
+
+//
 const QMetaObject__QueryPropertyDesignable QMetaObject__Call = 4
+
+//
 const QMetaObject__QueryPropertyScriptable QMetaObject__Call = 5
+
+//
 const QMetaObject__QueryPropertyStored QMetaObject__Call = 6
+
+//
 const QMetaObject__QueryPropertyEditable QMetaObject__Call = 7
+
+//
 const QMetaObject__QueryPropertyUser QMetaObject__Call = 8
+
+//
 const QMetaObject__CreateInstance QMetaObject__Call = 9
+
+//
 const QMetaObject__IndexOfMethod QMetaObject__Call = 10
+
+//
 const QMetaObject__RegisterPropertyMetaType QMetaObject__Call = 11
+
+//
 const QMetaObject__RegisterMethodArgumentMetaType QMetaObject__Call = 12
 
 //  body block end

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QFileSelector struct {
 	*QObject
 }
@@ -63,6 +66,10 @@ func (*QFileSelector) NewFromPointer(cthis unsafe.Pointer) *QFileSelector {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QFileSelector) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFileSelector10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -73,6 +80,12 @@ func (this *QFileSelector) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSelector(QObject *)
+
+/*
+Create a QFileSelector instance. This instance will have the same static selectors as other QFileSelector instances, but its own set of extra selectors.
+
+If supplied, it will have the given QObject parent.
+*/
 func NewQFileSelector(parent QObject_ITF /*777 QObject **/) *QFileSelector {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -89,6 +102,12 @@ func NewQFileSelector(parent QObject_ITF /*777 QObject **/) *QFileSelector {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSelector(QObject *)
+
+/*
+Create a QFileSelector instance. This instance will have the same static selectors as other QFileSelector instances, but its own set of extra selectors.
+
+If supplied, it will have the given QObject parent.
+*/
 func NewQFileSelector__() *QFileSelector {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -103,6 +122,10 @@ func NewQFileSelector__() *QFileSelector {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileSelector()
+
+/*
+
+ */
 func DeleteQFileSelector(this *QFileSelector) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFileSelectorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -114,6 +137,14 @@ func DeleteQFileSelector(this *QFileSelector) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString select(const QString &) const
+
+/*
+This function returns the selected version of the path, based on the conditions at runtime. If no selectable files are present, returns the original filePath.
+
+If the original file does not exist, the original filePath is returned. This means that you must have a base file to fall back on, you cannot have only files in selectable sub-directories.
+
+See the class overview for the selection algorithm.
+*/
 func (this *QFileSelector) Select(filePath string) string {
 	var tmpArg0 = NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
@@ -129,6 +160,14 @@ func (this *QFileSelector) Select(filePath string) string {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QUrl select(const QUrl &) const
+
+/*
+This function returns the selected version of the path, based on the conditions at runtime. If no selectable files are present, returns the original filePath.
+
+If the original file does not exist, the original filePath is returned. This means that you must have a base file to fall back on, you cannot have only files in selectable sub-directories.
+
+See the class overview for the selection algorithm.
+*/
 func (this *QFileSelector) Select_1(filePath QUrl_ITF) *QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if filePath != nil && filePath.QUrl_PTR() != nil {
@@ -145,6 +184,12 @@ func (this *QFileSelector) Select_1(filePath QUrl_ITF) *QUrl /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList extraSelectors() const
+
+/*
+Returns the list of extra selectors which have been added programmatically to this instance.
+
+See also setExtraSelectors().
+*/
 func (this *QFileSelector) ExtraSelectors() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFileSelector14extraSelectorsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,6 +202,14 @@ func (this *QFileSelector) ExtraSelectors() *QStringList /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExtraSelectors(const QStringList &)
+
+/*
+Sets the list of extra selectors which have been added programmatically to this instance.
+
+These selectors have priority over any which have been automatically picked up.
+
+See also extraSelectors().
+*/
 func (this *QFileSelector) SetExtraSelectors(list QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if list != nil && list.QStringList_PTR() != nil {
@@ -170,6 +223,10 @@ func (this *QFileSelector) SetExtraSelectors(list QStringList_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList allSelectors() const
+
+/*
+Returns the complete, ordered list of selectors used by this instance
+*/
 func (this *QFileSelector) AllSelectors() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFileSelector12allSelectorsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

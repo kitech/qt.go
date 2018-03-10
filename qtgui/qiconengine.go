@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QIconEngine struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,12 @@ func (*QIconEngine) NewFromPointer(cthis unsafe.Pointer) *QIconEngine {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIconEngine()
+
+/*
+Constructs the icon engine.
+
+This function was introduced in  Qt 5.6.
+*/
 func NewQIconEngine() *QIconEngine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngineC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +87,10 @@ func NewQIconEngine() *QIconEngine {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIconEngine()
+
+/*
+
+ */
 func DeleteQIconEngine(this *QIconEngine) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngineD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -89,6 +102,10 @@ func DeleteQIconEngine(this *QIconEngine) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QRect &, QIcon::Mode, QIcon::State)
+
+/*
+Uses the given painter to paint the icon with the required mode and state into the rectangle rect.
+*/
 func (this *QIconEngine) Paint(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, mode int, state int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -106,6 +123,10 @@ func (this *QIconEngine) Paint(painter QPainter_ITF /*777 QPainter **/, rect qtc
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize actualSize(const QSize &, QIcon::Mode, QIcon::State)
+
+/*
+Returns the actual size of the icon the engine provides for the requested size, mode and state. The default implementation returns the given size.
+*/
 func (this *QIconEngine) ActualSize(size qtcore.QSize_ITF, mode int, state int) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -122,6 +143,10 @@ func (this *QIconEngine) ActualSize(size qtcore.QSize_ITF, mode int, state int) 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QPixmap pixmap(const QSize &, QIcon::Mode, QIcon::State)
+
+/*
+Returns the icon as a pixmap with the required size, mode, and state. The default implementation creates a new pixmap and calls paint() to fill it.
+*/
 func (this *QIconEngine) Pixmap(size qtcore.QSize_ITF, mode int, state int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -138,6 +163,10 @@ func (this *QIconEngine) Pixmap(size qtcore.QSize_ITF, mode int, state int) *QPi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void addPixmap(const QPixmap &, QIcon::Mode, QIcon::State)
+
+/*
+Called by QIcon::addPixmap(). Adds a specialized pixmap for the given mode and state. The default pixmap-based engine stores any supplied pixmaps, and it uses them instead of scaled pixmaps if the size of a pixmap matches the size of icon requested. Custom icon engines that implement scalable vector formats are free to ignores any extra pixmaps.
+*/
 func (this *QIconEngine) AddPixmap(pixmap QPixmap_ITF, mode int, state int) {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -151,6 +180,10 @@ func (this *QIconEngine) AddPixmap(pixmap QPixmap_ITF, mode int, state int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void addFile(const QString &, const QSize &, QIcon::Mode, QIcon::State)
+
+/*
+Called by QIcon::addFile(). Adds a specialized pixmap from the file with the given fileName, size, mode and state. The default pixmap-based engine stores any supplied file names, and it loads the pixmaps on demand instead of using scaled pixmaps if the size of a pixmap matches the size of icon requested. Custom icon engines that implement scalable vector formats are free to ignores any extra files.
+*/
 func (this *QIconEngine) AddFile(fileName string, size qtcore.QSize_ITF, mode int, state int) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -166,6 +199,10 @@ func (this *QIconEngine) AddFile(fileName string, size qtcore.QSize_ITF, mode in
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString key() const
+
+/*
+Returns a key that identifies this icon engine.
+*/
 func (this *QIconEngine) Key() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +216,10 @@ func (this *QIconEngine) Key() string {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIconEngine * clone() const
+
+/*
+Reimplement this method to return a clone of this icon engine.
+*/
 func (this *QIconEngine) Clone() *QIconEngine /*777 QIconEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine5cloneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,6 +230,12 @@ func (this *QIconEngine) Clone() *QIconEngine /*777 QIconEngine **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool read(QDataStream &)
+
+/*
+Reads icon engine contents from the QDataStream in. Returns true if the contents were read; otherwise returns false.
+
+QIconEngine's default implementation always return false.
+*/
 func (this *QIconEngine) Read(in qtcore.QDataStream_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if in != nil && in.QDataStream_PTR() != nil {
@@ -203,6 +250,12 @@ func (this *QIconEngine) Read(in qtcore.QDataStream_ITF) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool write(QDataStream &) const
+
+/*
+Writes the contents of this engine to the QDataStream out. Returns true if the contents were written; otherwise returns false.
+
+QIconEngine's default implementation always return false.
+*/
 func (this *QIconEngine) Write(out qtcore.QDataStream_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if out != nil && out.QDataStream_PTR() != nil {
@@ -217,6 +270,14 @@ func (this *QIconEngine) Write(out qtcore.QDataStream_ITF) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString iconName() const
+
+/*
+Returns the name used to create the engine, if available.
+
+Note: This is a helper method and the actual work is done by the virtual_hook() method, hence this method depends on icon engine support and may not work with all icon engines.
+
+This function was introduced in  Qt 4.7.
+*/
 func (this *QIconEngine) IconName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine8iconNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -230,6 +291,14 @@ func (this *QIconEngine) IconName() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if this icon engine represent a null QIcon.
+
+Note: This is a helper method and the actual work is done by the virtual_hook() method, hence this method depends on icon engine support and may not work with all icon engines.
+
+This function was introduced in  Qt 5.7.
+*/
 func (this *QIconEngine) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -240,6 +309,20 @@ func (this *QIconEngine) IsNull() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap scaledPixmap(const QSize &, QIcon::Mode, QIcon::State, qreal)
+
+/*
+Returns a pixmap for the given size, mode, state and scale.
+
+The scale argument is typically equal to the device pixel ratio of the display.
+
+Note: This is a helper method and the actual work is done by the virtual_hook() method, hence this method depends on icon engine support and may not work with all icon engines.
+
+Note: Some engines may cast scale to an integer.
+
+This function was introduced in  Qt 5.9.
+
+See also ScaledPixmapArgument.
+*/
 func (this *QIconEngine) ScaledPixmap(size qtcore.QSize_ITF, mode int, state int, scale float64) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -256,16 +339,41 @@ func (this *QIconEngine) ScaledPixmap(size qtcore.QSize_ITF, mode int, state int
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void virtual_hook(int, void *)
+
+/*
+Additional method to allow extending QIconEngine without adding new virtual methods (and without breaking binary compatibility). The actual action and format of data depends on id argument which is in fact a constant from IconEngineHook enum.
+
+This function was introduced in  Qt 4.5.
+
+See also IconEngineHook.
+*/
 func (this *QIconEngine) Virtual_hook(id int, data unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngine12virtual_hookEiPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, data)
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+These enum values are used for virtual_hook() to allow additional queries to icon engine without breaking binary compatibility.
+
+
+
+This enum was introduced or modified in  Qt 4.5.
+
+See also virtual_hook().
+
+*/
 type QIconEngine__IconEngineHook = int
 
+// Allows to query the sizes of the contained pixmaps for pixmap-based engines. The data argument of the virtual_hook() function is a AvailableSizesArgument pointer that should be filled with icon sizes. Engines that work in terms of a scalable, vectorial format normally return an empty list.
 const QIconEngine__AvailableSizesHook QIconEngine__IconEngineHook = 1
+
+// Allows to query the name used to create the icon, for example when instantiating an icon using QIcon::fromTheme().
 const QIconEngine__IconNameHook QIconEngine__IconEngineHook = 2
+
+//
 const QIconEngine__IsNullHook QIconEngine__IconEngineHook = 3
+
+//
 const QIconEngine__ScaledPixmapHook QIconEngine__IconEngineHook = 4
 
 //  body block end

@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QGradient struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QGradient) NewFromPointer(cthis unsafe.Pointer) *QGradient {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGradient()
+
+/*
+
+ */
 func NewQGradient() *QGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradientC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQGradient() *QGradient {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QGradient::Type type() const
+
+/*
+
+ */
 func (this *QGradient) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +99,10 @@ func (this *QGradient) Type() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSpread(enum QGradient::Spread)
+
+/*
+
+ */
 func (this *QGradient) SetSpread(spread int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient9setSpreadENS_6SpreadE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spread)
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +112,10 @@ func (this *QGradient) SetSpread(spread int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QGradient::Spread spread() const
+
+/*
+
+ */
 func (this *QGradient) Spread() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient6spreadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -107,6 +126,10 @@ func (this *QGradient) Spread() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColorAt(qreal, const QColor &)
+
+/*
+
+ */
 func (this *QGradient) SetColorAt(pos float64, color QColor_ITF) {
 	var convArg1 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -120,6 +143,10 @@ func (this *QGradient) SetColorAt(pos float64, color QColor_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QGradient::CoordinateMode coordinateMode() const
+
+/*
+
+ */
 func (this *QGradient) CoordinateMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient14coordinateModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +157,10 @@ func (this *QGradient) CoordinateMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCoordinateMode(enum QGradient::CoordinateMode)
+
+/*
+
+ */
 func (this *QGradient) SetCoordinateMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient17setCoordinateModeENS_14CoordinateModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -139,6 +170,10 @@ func (this *QGradient) SetCoordinateMode(mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QGradient::InterpolationMode interpolationMode() const
+
+/*
+
+ */
 func (this *QGradient) InterpolationMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient17interpolationModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -149,6 +184,10 @@ func (this *QGradient) InterpolationMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInterpolationMode(enum QGradient::InterpolationMode)
+
+/*
+
+ */
 func (this *QGradient) SetInterpolationMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient20setInterpolationModeENS_17InterpolationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -158,6 +197,10 @@ func (this *QGradient) SetInterpolationMode(mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QGradient &) const
+
+/*
+
+ */
 func (this *QGradient) Operator_equal_equal(gradient QGradient_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if gradient != nil && gradient.QGradient_PTR() != nil {
@@ -172,6 +215,10 @@ func (this *QGradient) Operator_equal_equal(gradient QGradient_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QGradient &) const
+
+/*
+
+ */
 func (this *QGradient) Operator_not_equal(other QGradient_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGradient_PTR() != nil {
@@ -188,28 +235,64 @@ func DeleteQGradient(this *QGradient) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QGradient__Type = int
 
+//
 const QGradient__LinearGradient QGradient__Type = 0
+
+//
 const QGradient__RadialGradient QGradient__Type = 1
+
+//
 const QGradient__ConicalGradient QGradient__Type = 2
+
+//
 const QGradient__NoGradient QGradient__Type = 3
 
+/*
+
+
+ */
 type QGradient__Spread = int
 
+//
 const QGradient__PadSpread QGradient__Spread = 0
+
+//
 const QGradient__ReflectSpread QGradient__Spread = 1
+
+//
 const QGradient__RepeatSpread QGradient__Spread = 2
 
+/*
+
+
+ */
 type QGradient__CoordinateMode = int
 
+//
 const QGradient__LogicalMode QGradient__CoordinateMode = 0
+
+//
 const QGradient__StretchToDeviceMode QGradient__CoordinateMode = 1
+
+//
 const QGradient__ObjectBoundingMode QGradient__CoordinateMode = 2
 
+/*
+
+
+ */
 type QGradient__InterpolationMode = int
 
+//
 const QGradient__ColorInterpolation QGradient__InterpolationMode = 0
+
+//
 const QGradient__ComponentInterpolation QGradient__InterpolationMode = 1
 
 //  body block end

@@ -41,6 +41,9 @@ func (this *QPauseAnimation) InheritUpdateCurrentTime(f func(arg0 int) /*void*/)
 	qtrt.SetAllInheritCallback(this, "updateCurrentTime", f)
 }
 
+/*
+
+ */
 type QPauseAnimation struct {
 	*QAbstractAnimation
 }
@@ -73,6 +76,10 @@ func (*QPauseAnimation) NewFromPointer(cthis unsafe.Pointer) *QPauseAnimation {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QPauseAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -83,6 +90,10 @@ func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPauseAnimation(QObject *)
+
+/*
+Constructs a QPauseAnimation. parent is passed to QObject's constructor. The default duration is 0.
+*/
 func NewQPauseAnimation(parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -99,6 +110,10 @@ func NewQPauseAnimation(parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPauseAnimation(QObject *)
+
+/*
+Constructs a QPauseAnimation. parent is passed to QObject's constructor. The default duration is 0.
+*/
 func NewQPauseAnimation__() *QPauseAnimation {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -113,6 +128,10 @@ func NewQPauseAnimation__() *QPauseAnimation {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPauseAnimation(int, QObject *)
+
+/*
+Constructs a QPauseAnimation. parent is passed to QObject's constructor. The default duration is 0.
+*/
 func NewQPauseAnimation_1(msecs int, parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -129,6 +148,10 @@ func NewQPauseAnimation_1(msecs int, parent QObject_ITF /*777 QObject **/) *QPau
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPauseAnimation(int, QObject *)
+
+/*
+Constructs a QPauseAnimation. parent is passed to QObject's constructor. The default duration is 0.
+*/
 func NewQPauseAnimation_1_(msecs int) *QPauseAnimation {
 	// arg: 1, QObject *=Pointer, QObject=Record,
 	var convArg1 unsafe.Pointer
@@ -143,6 +166,10 @@ func NewQPauseAnimation_1_(msecs int) *QPauseAnimation {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPauseAnimation()
+
+/*
+
+ */
 func DeleteQPauseAnimation(this *QPauseAnimation) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -154,6 +181,10 @@ func DeleteQPauseAnimation(this *QPauseAnimation) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int duration() const
+
+/*
+
+ */
 func (this *QPauseAnimation) Duration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QPauseAnimation8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,6 +195,10 @@ func (this *QPauseAnimation) Duration() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDuration(int)
+
+/*
+
+ */
 func (this *QPauseAnimation) SetDuration(msecs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimation11setDurationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -173,6 +208,10 @@ func (this *QPauseAnimation) SetDuration(msecs int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QPauseAnimation) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -187,6 +226,10 @@ func (this *QPauseAnimation) Event(e QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentTime(int)
+
+/*
+Reimplemented from QAbstractAnimation::updateCurrentTime().
+*/
 func (this *QPauseAnimation) UpdateCurrentTime(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimation17updateCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)

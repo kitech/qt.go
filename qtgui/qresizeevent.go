@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QResizeEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QResizeEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QResizeEvent(const QSize &, const QSize &)
+
+/*
+
+ */
 func NewQResizeEvent(size qtcore.QSize_ITF, oldSize qtcore.QSize_ITF) *QResizeEvent {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -84,6 +91,10 @@ func NewQResizeEvent(size qtcore.QSize_ITF, oldSize qtcore.QSize_ITF) *QResizeEv
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QResizeEvent()
+
+/*
+
+ */
 func DeleteQResizeEvent(this *QResizeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QResizeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -95,6 +106,10 @@ func DeleteQResizeEvent(this *QResizeEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QSize & size() const
+
+/*
+
+ */
 func (this *QResizeEvent) Size() *qtcore.QSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QResizeEvent4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -107,6 +122,10 @@ func (this *QResizeEvent) Size() *qtcore.QSize {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QSize & oldSize() const
+
+/*
+
+ */
 func (this *QResizeEvent) OldSize() *qtcore.QSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QResizeEvent7oldSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

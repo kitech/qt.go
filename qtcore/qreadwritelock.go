@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QReadWriteLock struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,16 @@ func (*QReadWriteLock) NewFromPointer(cthis unsafe.Pointer) *QReadWriteLock {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QReadWriteLock(enum QReadWriteLock::RecursionMode)
+
+/*
+Constructs a QReadWriteLock object in the given recursionMode.
+
+The default recursion mode is NonRecursive.
+
+This function was introduced in  Qt 4.4.
+
+See also lockForRead(), lockForWrite(), and RecursionMode.
+*/
 func NewQReadWriteLock(recursionMode int) *QReadWriteLock {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLockC2ENS_13RecursionModeE", qtrt.FFI_TYPE_POINTER, recursionMode)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +90,16 @@ func NewQReadWriteLock(recursionMode int) *QReadWriteLock {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QReadWriteLock(enum QReadWriteLock::RecursionMode)
+
+/*
+Constructs a QReadWriteLock object in the given recursionMode.
+
+The default recursion mode is NonRecursive.
+
+This function was introduced in  Qt 4.4.
+
+See also lockForRead(), lockForWrite(), and RecursionMode.
+*/
 func NewQReadWriteLock__() *QReadWriteLock {
 	// arg: 0, QReadWriteLock::RecursionMode=Enum, QReadWriteLock::RecursionMode=Enum,
 	recursionMode := 0
@@ -91,6 +114,10 @@ func NewQReadWriteLock__() *QReadWriteLock {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QReadWriteLock()
+
+/*
+
+ */
 func DeleteQReadWriteLock(this *QReadWriteLock) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLockD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -102,6 +129,14 @@ func DeleteQReadWriteLock(this *QReadWriteLock) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void lockForRead()
+
+/*
+Locks the lock for reading. This function will block the current thread if another thread has locked for writing.
+
+It is not possible to lock for read if the thread already has locked for write.
+
+See also unlock(), lockForWrite(), and tryLockForRead().
+*/
 func (this *QReadWriteLock) LockForRead() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock11lockForReadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +146,18 @@ func (this *QReadWriteLock) LockForRead() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryLockForRead()
+
+/*
+Attempts to lock for reading. If the lock was obtained, this function returns true, otherwise it returns false instead of waiting for the lock to become available, i.e. it does not block.
+
+The lock attempt will fail if another thread has locked for writing.
+
+If the lock was obtained, the lock must be unlocked with unlock() before another thread can successfully lock it for writing.
+
+It is not possible to lock for read if the thread already has locked for write.
+
+See also unlock() and lockForRead().
+*/
 func (this *QReadWriteLock) TryLockForRead() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +168,18 @@ func (this *QReadWriteLock) TryLockForRead() bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool tryLockForRead(int)
+
+/*
+Attempts to lock for reading. If the lock was obtained, this function returns true, otherwise it returns false instead of waiting for the lock to become available, i.e. it does not block.
+
+The lock attempt will fail if another thread has locked for writing.
+
+If the lock was obtained, the lock must be unlocked with unlock() before another thread can successfully lock it for writing.
+
+It is not possible to lock for read if the thread already has locked for write.
+
+See also unlock() and lockForRead().
+*/
 func (this *QReadWriteLock) TryLockForRead_1(timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +190,14 @@ func (this *QReadWriteLock) TryLockForRead_1(timeout int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void lockForWrite()
+
+/*
+Locks the lock for writing. This function will block the current thread if another thread (including the current) has locked for reading or writing (unless the lock has been created using the QReadWriteLock::Recursive mode).
+
+It is not possible to lock for write if the thread already has locked for read.
+
+See also unlock(), lockForRead(), and tryLockForWrite().
+*/
 func (this *QReadWriteLock) LockForWrite() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock12lockForWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +207,18 @@ func (this *QReadWriteLock) LockForWrite() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryLockForWrite()
+
+/*
+Attempts to lock for writing. If the lock was obtained, this function returns true; otherwise, it returns false immediately.
+
+The lock attempt will fail if another thread has locked for reading or writing.
+
+If the lock was obtained, the lock must be unlocked with unlock() before another thread can successfully lock it.
+
+It is not possible to lock for write if the thread already has locked for read.
+
+See also unlock() and lockForWrite().
+*/
 func (this *QReadWriteLock) TryLockForWrite() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,6 +229,18 @@ func (this *QReadWriteLock) TryLockForWrite() bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool tryLockForWrite(int)
+
+/*
+Attempts to lock for writing. If the lock was obtained, this function returns true; otherwise, it returns false immediately.
+
+The lock attempt will fail if another thread has locked for reading or writing.
+
+If the lock was obtained, the lock must be unlocked with unlock() before another thread can successfully lock it.
+
+It is not possible to lock for write if the thread already has locked for read.
+
+See also unlock() and lockForWrite().
+*/
 func (this *QReadWriteLock) TryLockForWrite_1(timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)
@@ -160,21 +251,51 @@ func (this *QReadWriteLock) TryLockForWrite_1(timeout int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unlock()
+
+/*
+Unlocks the lock.
+
+Attempting to unlock a lock that is not locked is an error, and will result in program termination.
+
+See also lockForRead(), lockForWrite(), tryLockForRead(), and tryLockForWrite().
+*/
 func (this *QReadWriteLock) Unlock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock6unlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+This enum was introduced or modified in  Qt 4.4.
+
+See also QReadWriteLock().
+
+*/
 type QReadWriteLock__RecursionMode = int
 
+// In this mode, a thread may only lock a QReadWriteLock once.
 const QReadWriteLock__NonRecursive QReadWriteLock__RecursionMode = 0
+
+// In this mode, a thread can lock the same QReadWriteLock multiple times. The QReadWriteLock won't be unlocked until a corresponding number of unlock() calls have been made.
 const QReadWriteLock__Recursive QReadWriteLock__RecursionMode = 1
 
+/*
+
+
+ */
 type QReadWriteLock__StateForWaitCondition = int
 
+//
 const QReadWriteLock__LockedForRead QReadWriteLock__StateForWaitCondition = 0
+
+//
 const QReadWriteLock__LockedForWrite QReadWriteLock__StateForWaitCondition = 1
+
+//
 const QReadWriteLock__Unlocked QReadWriteLock__StateForWaitCondition = 2
+
+//
 const QReadWriteLock__RecursivelyLocked QReadWriteLock__StateForWaitCondition = 3
 
 //  body block end

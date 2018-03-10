@@ -38,6 +38,10 @@ func init() {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qsgnode_set_description(QSGNode *, const QString &)
+
+/*
+
+ */
 func Qsgnode_set_description(node QSGNode_ITF /*777 QSGNode **/, description string) {
 	var convArg0 unsafe.Pointer
 	if node != nil && node.QSGNode_PTR() != nil {

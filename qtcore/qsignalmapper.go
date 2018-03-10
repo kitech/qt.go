@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QSignalMapper struct {
 	*QObject
 }
@@ -63,6 +66,10 @@ func (*QSignalMapper) NewFromPointer(cthis unsafe.Pointer) *QSignalMapper {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSignalMapper) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -73,6 +80,12 @@ func (this *QSignalMapper) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSignalMapper(QObject *)
+
+/*
+This function is deprecated.
+
+Constructs a QSignalMapper with parent parent.
+*/
 func NewQSignalMapper(parent QObject_ITF /*777 QObject **/) *QSignalMapper {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -89,6 +102,12 @@ func NewQSignalMapper(parent QObject_ITF /*777 QObject **/) *QSignalMapper {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSignalMapper(QObject *)
+
+/*
+This function is deprecated.
+
+Constructs a QSignalMapper with parent parent.
+*/
 func NewQSignalMapper__() *QSignalMapper {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -103,6 +122,10 @@ func NewQSignalMapper__() *QSignalMapper {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSignalMapper()
+
+/*
+
+ */
 func DeleteQSignalMapper(this *QSignalMapper) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapperD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -114,6 +137,14 @@ func DeleteQSignalMapper(this *QSignalMapper) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMapping(QObject *, int)
+
+/*
+Adds a mapping so that when map() is signalled from the given sender, the signal mapped(id) is emitted.
+
+There may be at most one integer ID for each sender.
+
+See also mapping().
+*/
 func (this *QSignalMapper) SetMapping(sender QObject_ITF /*777 QObject **/, id int) {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -127,6 +158,14 @@ func (this *QSignalMapper) SetMapping(sender QObject_ITF /*777 QObject **/, id i
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setMapping(QObject *, const QString &)
+
+/*
+Adds a mapping so that when map() is signalled from the given sender, the signal mapped(id) is emitted.
+
+There may be at most one integer ID for each sender.
+
+See also mapping().
+*/
 func (this *QSignalMapper) SetMapping_1(sender QObject_ITF /*777 QObject **/, text string) {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -142,6 +181,14 @@ func (this *QSignalMapper) SetMapping_1(sender QObject_ITF /*777 QObject **/, te
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void setMapping(QObject *, QWidget *)
+
+/*
+Adds a mapping so that when map() is signalled from the given sender, the signal mapped(id) is emitted.
+
+There may be at most one integer ID for each sender.
+
+See also mapping().
+*/
 func (this *QSignalMapper) SetMapping_2(sender QObject_ITF /*777 QObject **/, widget unsafe.Pointer /*666*/) {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -155,6 +202,14 @@ func (this *QSignalMapper) SetMapping_2(sender QObject_ITF /*777 QObject **/, wi
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void setMapping(QObject *, QObject *)
+
+/*
+Adds a mapping so that when map() is signalled from the given sender, the signal mapped(id) is emitted.
+
+There may be at most one integer ID for each sender.
+
+See also mapping().
+*/
 func (this *QSignalMapper) SetMapping_3(sender QObject_ITF /*777 QObject **/, object QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -172,6 +227,14 @@ func (this *QSignalMapper) SetMapping_3(sender QObject_ITF /*777 QObject **/, ob
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeMappings(QObject *)
+
+/*
+Removes all mappings for sender.
+
+This is done automatically when mapped objects are destroyed.
+
+Note: This does not disconnect any signals. If sender is not destroyed then this will need to be done explicitly if required.
+*/
 func (this *QSignalMapper) RemoveMappings(sender QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -185,6 +248,12 @@ func (this *QSignalMapper) RemoveMappings(sender QObject_ITF /*777 QObject **/) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * mapping(int) const
+
+/*
+Returns the sender QObject that is associated with the id.
+
+See also setMapping().
+*/
 func (this *QSignalMapper) Mapping(id int) *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	qtrt.ErrPrint(err, rv)
@@ -195,6 +264,12 @@ func (this *QSignalMapper) Mapping(id int) *QObject /*777 QObject **/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QObject * mapping(const QString &) const
+
+/*
+Returns the sender QObject that is associated with the id.
+
+See also setMapping().
+*/
 func (this *QSignalMapper) Mapping_1(text string) *QObject /*777 QObject **/ {
 	var tmpArg0 = NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -207,6 +282,12 @@ func (this *QSignalMapper) Mapping_1(text string) *QObject /*777 QObject **/ {
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QObject * mapping(QWidget *) const
+
+/*
+Returns the sender QObject that is associated with the id.
+
+See also setMapping().
+*/
 func (this *QSignalMapper) Mapping_2(widget unsafe.Pointer /*666*/) *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), widget)
 	qtrt.ErrPrint(err, rv)
@@ -217,6 +298,12 @@ func (this *QSignalMapper) Mapping_2(widget unsafe.Pointer /*666*/) *QObject /*7
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QObject * mapping(QObject *) const
+
+/*
+Returns the sender QObject that is associated with the id.
+
+See also setMapping().
+*/
 func (this *QSignalMapper) Mapping_3(object QObject_ITF /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -231,6 +318,20 @@ func (this *QSignalMapper) Mapping_3(object QObject_ITF /*777 QObject **/) *QObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mapped(int)
+
+/*
+This signal is emitted when map() is signalled from an object that has an integer mapping set. The object's mapped integer is passed in i.
+
+Note: Signal mapped is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
+      [=](int i){ \/* ... *\/ });
+
+
+
+See also setMapping().
+*/
 func (this *QSignalMapper) Mapped(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper6mappedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -240,6 +341,20 @@ func (this *QSignalMapper) Mapped(arg0 int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void mapped(const QString &)
+
+/*
+This signal is emitted when map() is signalled from an object that has an integer mapping set. The object's mapped integer is passed in i.
+
+Note: Signal mapped is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
+      [=](int i){ \/* ... *\/ });
+
+
+
+See also setMapping().
+*/
 func (this *QSignalMapper) Mapped_1(arg0 string) {
 	var tmpArg0 = NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -251,6 +366,20 @@ func (this *QSignalMapper) Mapped_1(arg0 string) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void mapped(QWidget *)
+
+/*
+This signal is emitted when map() is signalled from an object that has an integer mapping set. The object's mapped integer is passed in i.
+
+Note: Signal mapped is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
+      [=](int i){ \/* ... *\/ });
+
+
+
+See also setMapping().
+*/
 func (this *QSignalMapper) Mapped_2(arg0 unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper6mappedEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -260,6 +389,20 @@ func (this *QSignalMapper) Mapped_2(arg0 unsafe.Pointer /*666*/) {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void mapped(QObject *)
+
+/*
+This signal is emitted when map() is signalled from an object that has an integer mapping set. The object's mapped integer is passed in i.
+
+Note: Signal mapped is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
+      [=](int i){ \/* ... *\/ });
+
+
+
+See also setMapping().
+*/
 func (this *QSignalMapper) Mapped_3(arg0 QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -273,6 +416,10 @@ func (this *QSignalMapper) Mapped_3(arg0 QObject_ITF /*777 QObject **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void map()
+
+/*
+This slot emits signals based on which object sends signals to it.
+*/
 func (this *QSignalMapper) Map() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper3mapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -282,6 +429,10 @@ func (this *QSignalMapper) Map() {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void map(QObject *)
+
+/*
+This slot emits signals based on which object sends signals to it.
+*/
 func (this *QSignalMapper) Map_1(sender QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {

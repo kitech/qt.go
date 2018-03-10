@@ -43,6 +43,9 @@ func (this *QQmlIncubator) InheritSetInitialState(f func(arg0 *qtcore.QObject /*
 	qtrt.SetAllInheritCallback(this, "setInitialState", f)
 }
 
+/*
+
+ */
 type QQmlIncubator struct {
 	*qtrt.CObject
 }
@@ -77,6 +80,10 @@ func (*QQmlIncubator) NewFromPointer(cthis unsafe.Pointer) *QQmlIncubator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlIncubator(enum QQmlIncubator::IncubationMode)
+
+/*
+Create a new incubator with the specified mode
+*/
 func NewQQmlIncubator(arg0 int) *QQmlIncubator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubatorC2ENS_14IncubationModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +96,10 @@ func NewQQmlIncubator(arg0 int) *QQmlIncubator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlIncubator(enum QQmlIncubator::IncubationMode)
+
+/*
+Create a new incubator with the specified mode
+*/
 func NewQQmlIncubator__() *QQmlIncubator {
 	// arg: 0, QQmlIncubator::IncubationMode=Enum, QQmlIncubator::IncubationMode=Enum,
 	arg0 := 0
@@ -103,6 +114,10 @@ func NewQQmlIncubator__() *QQmlIncubator {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlIncubator()
+
+/*
+
+ */
 func DeleteQQmlIncubator(this *QQmlIncubator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -114,6 +129,10 @@ func DeleteQQmlIncubator(this *QQmlIncubator) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the incubator. Any in-progress incubation is aborted. If the incubator is in the Ready state, the created object is not deleted.
+*/
 func (this *QQmlIncubator) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubator5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -123,6 +142,10 @@ func (this *QQmlIncubator) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void forceCompletion()
+
+/*
+Force any in-progress incubation to finish synchronously. Once this call returns, the incubator will not be in the Loading state.
+*/
 func (this *QQmlIncubator) ForceCompletion() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubator15forceCompletionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -132,6 +155,10 @@ func (this *QQmlIncubator) ForceCompletion() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if the incubator's status() is Null.
+*/
 func (this *QQmlIncubator) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,6 +169,10 @@ func (this *QQmlIncubator) IsNull() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReady() const
+
+/*
+Returns true if the incubator's status() is Ready.
+*/
 func (this *QQmlIncubator) IsReady() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator7isReadyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -152,6 +183,10 @@ func (this *QQmlIncubator) IsReady() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isError() const
+
+/*
+Returns true if the incubator's status() is Error.
+*/
 func (this *QQmlIncubator) IsError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator7isErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -162,6 +197,10 @@ func (this *QQmlIncubator) IsError() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isLoading() const
+
+/*
+Returns true if the incubator's status() is Loading.
+*/
 func (this *QQmlIncubator) IsLoading() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator9isLoadingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -172,6 +211,10 @@ func (this *QQmlIncubator) IsLoading() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQmlIncubator::IncubationMode incubationMode() const
+
+/*
+Return the incubation mode passed to the QQmlIncubator constructor.
+*/
 func (this *QQmlIncubator) IncubationMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator14incubationModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,6 +225,10 @@ func (this *QQmlIncubator) IncubationMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQmlIncubator::Status status() const
+
+/*
+Return the current status of the incubator.
+*/
 func (this *QQmlIncubator) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,6 +239,10 @@ func (this *QQmlIncubator) Status() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * object() const
+
+/*
+Return the incubated object if the status is Ready, otherwise 0.
+*/
 func (this *QQmlIncubator) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -202,6 +253,12 @@ func (this *QQmlIncubator) Object() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void statusChanged(enum QQmlIncubator::Status)
+
+/*
+Called when the status of the incubator changes. status is the new status.
+
+The default implementation does nothing.
+*/
 func (this *QQmlIncubator) StatusChanged(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubator13statusChangedENS_6StatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -211,6 +268,12 @@ func (this *QQmlIncubator) StatusChanged(arg0 int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setInitialState(QObject *)
+
+/*
+Called after the object is first created, but before property bindings are evaluated and, if applicable, QQmlParserStatus::componentComplete() is called. This is equivalent to the point between QQmlComponent::beginCreate() and QQmlComponent::completeCreate(), and can be used to assign initial values to the object's properties.
+
+The default implementation does nothing.
+*/
 func (this *QQmlIncubator) SetInitialState(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -220,17 +283,39 @@ func (this *QQmlIncubator) SetInitialState(arg0 qtcore.QObject_ITF /*777 QObject
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+Specifies the mode the incubator operates in. Regardless of the incubation mode, a QQmlIncubator will behave synchronously if the QQmlEngine does not have a QQmlIncubationController set.
+
+
+*/
 type QQmlIncubator__IncubationMode = int
 
+// The object will be created asynchronously.
 const QQmlIncubator__Asynchronous QQmlIncubator__IncubationMode = 0
+
+// If the object is being created in a context that is already part of an asynchronous creation, this incubator will join that existing incubation and execute asynchronously. The existing incubation will not become Ready until both it and this incubation have completed. Otherwise, the incubation will execute synchronously.
 const QQmlIncubator__AsynchronousIfNested QQmlIncubator__IncubationMode = 1
+
+// The object will be created synchronously.
 const QQmlIncubator__Synchronous QQmlIncubator__IncubationMode = 2
 
+/*
+Specifies the status of the QQmlIncubator.
+
+
+*/
 type QQmlIncubator__Status = int
 
+// Incubation is not in progress. Call QQmlComponent::create() to begin incubating.
 const QQmlIncubator__Null QQmlIncubator__Status = 0
+
+// The object is fully created and can be accessed by calling object().
 const QQmlIncubator__Ready QQmlIncubator__Status = 1
+
+// The object is in the process of being created.
 const QQmlIncubator__Loading QQmlIncubator__Status = 2
+
+// An error occurred. The errors can be access by calling errors().
 const QQmlIncubator__Error QQmlIncubator__Status = 3
 
 //  body block end

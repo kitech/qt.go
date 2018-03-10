@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type ExternalRefCountData struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*ExternalRefCountData) NewFromPointer(cthis unsafe.Pointer) *ExternalRefCo
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ExternalRefCountData(Qt::Initialization)
+
+/*
+
+ */
 func NewExternalRefCountData(arg0 int) *ExternalRefCountData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewExternalRefCountData(arg0 int) *ExternalRefCountData {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~ExternalRefCountData()
+
+/*
+
+ */
 func DeleteExternalRefCountData(this *ExternalRefCountData) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -88,6 +99,10 @@ func DeleteExternalRefCountData(this *ExternalRefCountData) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void destroy()
+
+/*
+
+ */
 func (this *ExternalRefCountData) Destroy() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData7destroyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +112,10 @@ func (this *ExternalRefCountData) Destroy() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QtSharedPointer::ExternalRefCountData * getAndRef(const QObject *)
+
+/*
+
+ */
 func (this *ExternalRefCountData) GetAndRef(arg0 QObject_ITF /*777 const QObject **/) unsafe.Pointer /*666*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -116,6 +135,10 @@ func ExternalRefCountData_GetAndRef(arg0 QObject_ITF /*777 const QObject **/) un
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setQObjectShared(const QObject *, _Bool)
+
+/*
+
+ */
 func (this *ExternalRefCountData) SetQObjectShared(arg0 QObject_ITF /*777 const QObject **/, enable bool) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -129,6 +152,10 @@ func (this *ExternalRefCountData) SetQObjectShared(arg0 QObject_ITF /*777 const 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void checkQObjectShared(const QObject *)
+
+/*
+
+ */
 func (this *ExternalRefCountData) CheckQObjectShared(arg0 QObject_ITF /*777 const QObject **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -142,6 +169,10 @@ func (this *ExternalRefCountData) CheckQObjectShared(arg0 QObject_ITF /*777 cons
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [-2] void operator delete(void *)
+
+/*
+
+ */
 func (this *ExternalRefCountData) Operator_delete(ptr unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDatadlEPv", qtrt.FFI_TYPE_POINTER, ptr)
 	qtrt.ErrPrint(err, rv)
@@ -155,6 +186,10 @@ func ExternalRefCountData_Operator_delete(ptr unsafe.Pointer /*666*/) {
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [-2] void operator delete(void *, void *)
+
+/*
+
+ */
 func (this *ExternalRefCountData) Operator_delete_1(arg0 unsafe.Pointer /*666*/, arg1 unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDatadlEPvS1_", qtrt.FFI_TYPE_POINTER, arg0, arg1)
 	qtrt.ErrPrint(err, rv)

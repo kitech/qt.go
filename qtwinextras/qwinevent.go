@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QWinEvent struct {
 	*qtcore.QEvent
 }
@@ -65,6 +68,10 @@ func (*QWinEvent) NewFromPointer(cthis unsafe.Pointer) *QWinEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinEvent(int)
+
+/*
+
+ */
 func NewQWinEvent(type_ int) *QWinEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QWinEventC2Ei", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQWinEvent(type_ int) *QWinEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWinEvent()
+
+/*
+
+ */
 func DeleteQWinEvent(this *QWinEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QWinEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)

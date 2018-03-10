@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGFlatColorMaterial struct {
 	*QSGMaterial
 }
@@ -67,6 +70,12 @@ func (*QSGFlatColorMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGFlatColorM
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGFlatColorMaterial()
+
+/*
+Constructs a new flat color material.
+
+The default color is white.
+*/
 func NewQSGFlatColorMaterial() *QSGFlatColorMaterial {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGFlatColorMaterialC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +88,10 @@ func NewQSGFlatColorMaterial() *QSGFlatColorMaterial {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGMaterialType * type() const
+
+/*
+
+ */
 func (this *QSGFlatColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +102,10 @@ func (this *QSGFlatColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialType 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGMaterialShader * createShader() const
+
+/*
+
+ */
 func (this *QSGFlatColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +116,12 @@ func (this *QSGFlatColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMat
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
+
+/*
+Sets this flat color material's color to color.
+
+See also color().
+*/
 func (this *QSGFlatColorMaterial) SetColor(color qtgui.QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -112,6 +135,14 @@ func (this *QSGFlatColorMaterial) SetColor(color qtgui.QColor_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QColor & color() const
+
+/*
+Returns this flat color material's color.
+
+The default color is white.
+
+See also setColor().
+*/
 func (this *QSGFlatColorMaterial) Color() *qtgui.QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,6 +155,10 @@ func (this *QSGFlatColorMaterial) Color() *qtgui.QColor {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int compare(const QSGMaterial *) const
+
+/*
+
+ */
 func (this *QSGFlatColorMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSGMaterial_PTR() != nil {

@@ -46,6 +46,9 @@ func (this *QFinalState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QFinalState struct {
 	*QAbstractState
 }
@@ -78,6 +81,10 @@ func (*QFinalState) NewFromPointer(cthis unsafe.Pointer) *QFinalState {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFinalState10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +95,10 @@ func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFinalState(QState *)
+
+/*
+Constructs a new QFinalState object with the given parent state.
+*/
 func NewQFinalState(parent QState_ITF /*777 QState **/) *QFinalState {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QState_PTR() != nil {
@@ -104,6 +115,10 @@ func NewQFinalState(parent QState_ITF /*777 QState **/) *QFinalState {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFinalState(QState *)
+
+/*
+Constructs a new QFinalState object with the given parent state.
+*/
 func NewQFinalState__() *QFinalState {
 	// arg: 0, QState *=Pointer, QState=Record,
 	var convArg0 unsafe.Pointer
@@ -118,6 +133,10 @@ func NewQFinalState__() *QFinalState {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFinalState()
+
+/*
+
+ */
 func DeleteQFinalState(this *QFinalState) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalStateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -129,6 +148,10 @@ func DeleteQFinalState(this *QFinalState) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onEntry(QEvent *)
+
+/*
+Reimplemented from QAbstractState::onEntry().
+*/
 func (this *QFinalState) OnEntry(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -142,6 +165,10 @@ func (this *QFinalState) OnEntry(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onExit(QEvent *)
+
+/*
+Reimplemented from QAbstractState::onExit().
+*/
 func (this *QFinalState) OnExit(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -155,6 +182,10 @@ func (this *QFinalState) OnExit(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QFinalState) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {

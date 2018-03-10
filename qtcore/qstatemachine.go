@@ -66,6 +66,9 @@ func (this *QStateMachine) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool)
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QStateMachine struct {
 	*QState
 }
@@ -98,6 +101,10 @@ func (*QStateMachine) NewFromPointer(cthis unsafe.Pointer) *QStateMachine {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QStateMachine) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -108,6 +115,10 @@ func (this *QStateMachine) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStateMachine(QObject *)
+
+/*
+Constructs a new state machine with the given parent.
+*/
 func NewQStateMachine(parent QObject_ITF /*777 QObject **/) *QStateMachine {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -124,6 +135,10 @@ func NewQStateMachine(parent QObject_ITF /*777 QObject **/) *QStateMachine {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStateMachine(QObject *)
+
+/*
+Constructs a new state machine with the given parent.
+*/
 func NewQStateMachine__() *QStateMachine {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -138,6 +153,10 @@ func NewQStateMachine__() *QStateMachine {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStateMachine(QState::ChildMode, QObject *)
+
+/*
+Constructs a new state machine with the given parent.
+*/
 func NewQStateMachine_1(childMode int, parent QObject_ITF /*777 QObject **/) *QStateMachine {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -154,6 +173,10 @@ func NewQStateMachine_1(childMode int, parent QObject_ITF /*777 QObject **/) *QS
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStateMachine(QState::ChildMode, QObject *)
+
+/*
+Constructs a new state machine with the given parent.
+*/
 func NewQStateMachine_1_(childMode int) *QStateMachine {
 	// arg: 1, QObject *=Pointer, QObject=Record,
 	var convArg1 unsafe.Pointer
@@ -168,6 +191,10 @@ func NewQStateMachine_1_(childMode int) *QStateMachine {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStateMachine()
+
+/*
+
+ */
 func DeleteQStateMachine(this *QStateMachine) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachineD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -179,6 +206,14 @@ func DeleteQStateMachine(this *QStateMachine) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addState(QAbstractState *)
+
+/*
+Adds the given state to this state machine. The state becomes a top-level state.
+
+If the state is already in a different machine, it will first be removed from its old machine, and then added to this machine.
+
+See also removeState() and setInitialState().
+*/
 func (this *QStateMachine) AddState(state QAbstractState_ITF /*777 QAbstractState **/) {
 	var convArg0 unsafe.Pointer
 	if state != nil && state.QAbstractState_PTR() != nil {
@@ -192,6 +227,12 @@ func (this *QStateMachine) AddState(state QAbstractState_ITF /*777 QAbstractStat
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeState(QAbstractState *)
+
+/*
+Removes the given state from this state machine. The state machine releases ownership of the state.
+
+See also addState().
+*/
 func (this *QStateMachine) RemoveState(state QAbstractState_ITF /*777 QAbstractState **/) {
 	var convArg0 unsafe.Pointer
 	if state != nil && state.QAbstractState_PTR() != nil {
@@ -205,6 +246,10 @@ func (this *QStateMachine) RemoveState(state QAbstractState_ITF /*777 QAbstractS
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QStateMachine::Error error() const
+
+/*
+Returns the error code of the last error that occurred in the state machine.
+*/
 func (this *QStateMachine) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -215,6 +260,12 @@ func (this *QStateMachine) Error() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
+
+/*
+Returns the error string of the last error that occurred in the state machine.
+
+Note: Getter function for property errorString.
+*/
 func (this *QStateMachine) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,6 +279,10 @@ func (this *QStateMachine) ErrorString() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearError()
+
+/*
+Clears the error string and error code of the state machine.
+*/
 func (this *QStateMachine) ClearError() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine10clearErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -237,6 +292,10 @@ func (this *QStateMachine) ClearError() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRunning() const
+
+/*
+
+ */
 func (this *QStateMachine) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,6 +306,12 @@ func (this *QStateMachine) IsRunning() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAnimated() const
+
+/*
+Returns whether animations are enabled for this state machine.
+
+Note: Getter function for property animated.
+*/
 func (this *QStateMachine) IsAnimated() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine10isAnimatedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,6 +322,14 @@ func (this *QStateMachine) IsAnimated() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAnimated(_Bool)
+
+/*
+Sets whether animations are enabled for this state machine.
+
+Note: Setter function for property animated.
+
+See also isAnimated().
+*/
 func (this *QStateMachine) SetAnimated(enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine11setAnimatedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	qtrt.ErrPrint(err, rv)
@@ -266,6 +339,10 @@ func (this *QStateMachine) SetAnimated(enabled bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addDefaultAnimation(QAbstractAnimation *)
+
+/*
+Adds a default animation to be considered for any transition.
+*/
 func (this *QStateMachine) AddDefaultAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
 	var convArg0 unsafe.Pointer
 	if animation != nil && animation.QAbstractAnimation_PTR() != nil {
@@ -279,6 +356,10 @@ func (this *QStateMachine) AddDefaultAnimation(animation QAbstractAnimation_ITF 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeDefaultAnimation(QAbstractAnimation *)
+
+/*
+Removes animation from the list of default animations.
+*/
 func (this *QStateMachine) RemoveDefaultAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
 	var convArg0 unsafe.Pointer
 	if animation != nil && animation.QAbstractAnimation_PTR() != nil {
@@ -292,6 +373,14 @@ func (this *QStateMachine) RemoveDefaultAnimation(animation QAbstractAnimation_I
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QState::RestorePolicy globalRestorePolicy() const
+
+/*
+Returns the restore policy of the state machine.
+
+Note: Getter function for property globalRestorePolicy.
+
+See also setGlobalRestorePolicy().
+*/
 func (this *QStateMachine) GlobalRestorePolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStateMachine19globalRestorePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -302,6 +391,14 @@ func (this *QStateMachine) GlobalRestorePolicy() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGlobalRestorePolicy(QState::RestorePolicy)
+
+/*
+Sets the restore policy of the state machine to restorePolicy. The default restore policy is QState::DontRestoreProperties.
+
+Note: Setter function for property globalRestorePolicy.
+
+See also globalRestorePolicy().
+*/
 func (this *QStateMachine) SetGlobalRestorePolicy(restorePolicy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine22setGlobalRestorePolicyEN6QState13RestorePolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), restorePolicy)
 	qtrt.ErrPrint(err, rv)
@@ -311,6 +408,18 @@ func (this *QStateMachine) SetGlobalRestorePolicy(restorePolicy int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void postEvent(QEvent *, enum QStateMachine::EventPriority)
+
+/*
+Posts the given event of the given priority for processing by this state machine.
+
+This function returns immediately. The event is added to the state machine's event queue. Events are processed in the order posted. The state machine takes ownership of the event and deletes it once it has been processed.
+
+You can only post events when the state machine is running or when it is starting up.
+
+Note: This function is thread-safe.
+
+See also postDelayedEvent().
+*/
 func (this *QStateMachine) PostEvent(event QEvent_ITF /*777 QEvent **/, priority int) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -324,6 +433,18 @@ func (this *QStateMachine) PostEvent(event QEvent_ITF /*777 QEvent **/, priority
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void postEvent(QEvent *, enum QStateMachine::EventPriority)
+
+/*
+Posts the given event of the given priority for processing by this state machine.
+
+This function returns immediately. The event is added to the state machine's event queue. Events are processed in the order posted. The state machine takes ownership of the event and deletes it once it has been processed.
+
+You can only post events when the state machine is running or when it is starting up.
+
+Note: This function is thread-safe.
+
+See also postDelayedEvent().
+*/
 func (this *QStateMachine) PostEvent__(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -339,6 +460,18 @@ func (this *QStateMachine) PostEvent__(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int postDelayedEvent(QEvent *, int)
+
+/*
+Posts the given event for processing by this state machine, with the given delay in milliseconds. Returns an identifier associated with the delayed event, or -1 if the event could not be posted.
+
+This function returns immediately. When the delay has expired, the event will be added to the state machine's event queue for processing. The state machine takes ownership of the event and deletes it once it has been processed.
+
+You can only post events when the state machine is running.
+
+Note: This function is thread-safe.
+
+See also cancelDelayedEvent() and postEvent().
+*/
 func (this *QStateMachine) PostDelayedEvent(event QEvent_ITF /*777 QEvent **/, delay int) int {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -353,6 +486,14 @@ func (this *QStateMachine) PostDelayedEvent(event QEvent_ITF /*777 QEvent **/, d
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool cancelDelayedEvent(int)
+
+/*
+Cancels the delayed event identified by the given id. The id should be a value returned by a call to postDelayedEvent(). Returns true if the event was successfully cancelled, otherwise returns false.
+
+Note: This function is thread-safe.
+
+See also postDelayedEvent().
+*/
 func (this *QStateMachine) CancelDelayedEvent(id int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine18cancelDelayedEventEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	qtrt.ErrPrint(err, rv)
@@ -363,6 +504,10 @@ func (this *QStateMachine) CancelDelayedEvent(id int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+Reimplemented from QObject::eventFilter().
+*/
 func (this *QStateMachine) EventFilter(watched QObject_ITF /*777 QObject **/, event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if watched != nil && watched.QObject_PTR() != nil {
@@ -381,6 +526,14 @@ func (this *QStateMachine) EventFilter(watched QObject_ITF /*777 QObject **/, ev
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start()
+
+/*
+Starts this state machine. The machine will reset its configuration and transition to the initial state. When a final top-level state (QFinalState) is entered, the machine will emit the finished() signal.
+
+Note: A state machine will not run without a running event loop, such as the main application event loop started with QCoreApplication::exec() or QApplication::exec().
+
+See also started(), finished(), stop(), initialState(), and setRunning().
+*/
 func (this *QStateMachine) Start() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -390,6 +543,12 @@ func (this *QStateMachine) Start() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stop()
+
+/*
+Stops this state machine. The state machine will stop processing events and then emit the stopped() signal.
+
+See also stopped(), start(), and setRunning().
+*/
 func (this *QStateMachine) Stop() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine4stopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -399,6 +558,10 @@ func (this *QStateMachine) Stop() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRunning(_Bool)
+
+/*
+
+ */
 func (this *QStateMachine) SetRunning(running bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine10setRunningEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), running)
 	qtrt.ErrPrint(err, rv)
@@ -408,6 +571,16 @@ func (this *QStateMachine) SetRunning(running bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void runningChanged(_Bool)
+
+/*
+This signal is emitted when the running property is changed with running as argument.
+
+This function was introduced in  Qt 5.4.
+
+Note: Notifier signal for property running.
+
+See also QStateMachine::running.
+*/
 func (this *QStateMachine) RunningChanged(running bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine14runningChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), running)
 	qtrt.ErrPrint(err, rv)
@@ -417,6 +590,12 @@ func (this *QStateMachine) RunningChanged(running bool) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onEntry(QEvent *)
+
+/*
+Reimplemented from QAbstractState::onEntry().
+
+This function will call start() to start the state machine.
+*/
 func (this *QStateMachine) OnEntry(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -430,6 +609,12 @@ func (this *QStateMachine) OnEntry(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onExit(QEvent *)
+
+/*
+Reimplemented from QAbstractState::onExit().
+
+This function will call stop() to stop the state machine and subsequently emit the stopped() signal.
+*/
 func (this *QStateMachine) OnExit(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -443,6 +628,10 @@ func (this *QStateMachine) OnExit(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void beginSelectTransitions(QEvent *)
+
+/*
+
+ */
 func (this *QStateMachine) BeginSelectTransitions(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -456,6 +645,10 @@ func (this *QStateMachine) BeginSelectTransitions(event QEvent_ITF /*777 QEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void endSelectTransitions(QEvent *)
+
+/*
+
+ */
 func (this *QStateMachine) EndSelectTransitions(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -469,6 +662,10 @@ func (this *QStateMachine) EndSelectTransitions(event QEvent_ITF /*777 QEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void beginMicrostep(QEvent *)
+
+/*
+
+ */
 func (this *QStateMachine) BeginMicrostep(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -482,6 +679,10 @@ func (this *QStateMachine) BeginMicrostep(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void endMicrostep(QEvent *)
+
+/*
+
+ */
 func (this *QStateMachine) EndMicrostep(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -495,6 +696,10 @@ func (this *QStateMachine) EndMicrostep(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QStateMachine) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -505,16 +710,41 @@ func (this *QStateMachine) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
+/*
+This enum type specifies the priority of an event posted to the state machine using postEvent().
+
+Events of high priority are processed before events of normal priority.
+
+
+*/
 type QStateMachine__EventPriority = int
 
+// The event has normal priority.
 const QStateMachine__NormalPriority QStateMachine__EventPriority = 0
+
+// The event has high priority.
 const QStateMachine__HighPriority QStateMachine__EventPriority = 1
 
+/*
+This enum type defines errors that can occur in the state machine at run time. When the state machine encounters an unrecoverable error at run time, it will set the error code returned by error(), the error message returned by errorString(), and enter an error state based on the context of the error.
+
+
+
+See also setErrorState().
+
+*/
 type QStateMachine__Error = int
 
+// No error has occurred.
 const QStateMachine__NoError QStateMachine__Error = 0
+
+// The machine has entered a QState with children which does not have an initial state set. The context of this error is the state which is missing an initial state.
 const QStateMachine__NoInitialStateError QStateMachine__Error = 1
+
+// The machine has entered a QHistoryState which does not have a default state set. The context of this error is the QHistoryState which is missing a default state.
 const QStateMachine__NoDefaultStateInHistoryStateError QStateMachine__Error = 2
+
+// The machine has selected a transition whose source and targets are not part of the same tree of states, and thus are not part of the same state machine. Commonly, this could mean that one of the states has not been given any parent or added to any machine. The context of this error is the source state of the transition.
 const QStateMachine__NoCommonAncestorForTransitionError QStateMachine__Error = 3
 
 //  body block end

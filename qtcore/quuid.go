@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QUuid struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QUuid) NewFromPointer(cthis unsafe.Pointer) *QUuid {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QUuid()
+
+/*
+Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
+*/
 func NewQUuid() *QUuid {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuidC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQUuid() *QUuid {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QUuid(uint, ushort, ushort, uchar, uchar, uchar, uchar, uchar, uchar, uchar, uchar)
+
+/*
+Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
+*/
 func NewQUuid_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte, b5 byte, b6 byte, b7 byte, b8 byte) *QUuid {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuidC2Ejtthhhhhhhh", qtrt.FFI_TYPE_POINTER, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +100,10 @@ func NewQUuid_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QUuid(const QString &)
+
+/*
+Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
+*/
 func NewQUuid_2(arg0 string) *QUuid {
 	var tmpArg0 = NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -103,6 +118,10 @@ func NewQUuid_2(arg0 string) *QUuid {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QUuid(const char *)
+
+/*
+Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
+*/
 func NewQUuid_3(arg0 string) *QUuid {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
@@ -117,6 +136,10 @@ func NewQUuid_3(arg0 string) *QUuid {
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QUuid(const QByteArray &)
+
+/*
+Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
+*/
 func NewQUuid_4(arg0 QByteArray_ITF) *QUuid {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QByteArray_PTR() != nil {
@@ -133,6 +156,14 @@ func NewQUuid_4(arg0 QByteArray_ITF) *QUuid {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromString(QStringView)
+
+/*
+Creates a QUuid object from the string text, which must be formatted as five hex fields separated by '-', e.g., "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}" where each 'x' is a hex digit. The curly braces shown here are optional, but it is normal to include them. If the conversion fails, a null UUID is returned. See toString() for an explanation of how the five hex fields map to the public data members in QUuid.
+
+This function was introduced in  Qt 5.10.
+
+See also toString() and QUuid().
+*/
 func (this *QUuid) FromString(string QStringView_ITF /*123*/) *QUuid /*123*/ {
 	var convArg0 unsafe.Pointer
 	if string != nil && string.QStringView_PTR() != nil {
@@ -154,6 +185,14 @@ func QUuid_FromString(string QStringView_ITF /*123*/) *QUuid /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromString(QLatin1String)
+
+/*
+Creates a QUuid object from the string text, which must be formatted as five hex fields separated by '-', e.g., "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}" where each 'x' is a hex digit. The curly braces shown here are optional, but it is normal to include them. If the conversion fails, a null UUID is returned. See toString() for an explanation of how the five hex fields map to the public data members in QUuid.
+
+This function was introduced in  Qt 5.10.
+
+See also toString() and QUuid().
+*/
 func (this *QUuid) FromString_1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
 	var convArg0 unsafe.Pointer
 	if string != nil && string.QLatin1String_PTR() != nil {
@@ -175,6 +214,18 @@ func QUuid_FromString_1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
+
+/*
+Returns the string representation of this QUuid. The string is formatted as five hex fields separated by '-' and enclosed in curly braces, i.e., "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}" where 'x' is a hex digit. From left to right, the five hex fields are obtained from the four public data members in QUuid as follows:
+
+
+ Field #Source
+1data1
+2data2
+3data3
+4data4[0] .. data4[1]
+5data4[2] .. data4[7]
+*/
 func (this *QUuid) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,6 +239,21 @@ func (this *QUuid) ToString() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toByteArray() const
+
+/*
+Returns the binary representation of this QUuid. The byte array is formatted as five hex fields separated by '-' and enclosed in curly braces, i.e., "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}" where 'x' is a hex digit. From left to right, the five hex fields are obtained from the four public data members in QUuid as follows:
+
+
+ Field #Source
+1data1
+2data2
+3data3
+4data4[0] .. data4[1]
+5data4[2] .. data4[7]
+
+
+This function was introduced in  Qt 4.8.
+*/
 func (this *QUuid) ToByteArray() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid11toByteArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,6 +266,22 @@ func (this *QUuid) ToByteArray() *QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toRfc4122() const
+
+/*
+Returns the binary representation of this QUuid. The byte array is in big endian format, and formatted according to RFC 4122, section 4.1.2 - "Layout and byte order".
+
+The order is as follows:
+
+
+ Field #Source
+1data1
+2data2
+3data3
+4data4[0] .. data4[7]
+
+
+This function was introduced in  Qt 4.8.
+*/
 func (this *QUuid) ToRfc4122() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid9toRfc4122Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -212,6 +294,18 @@ func (this *QUuid) ToRfc4122() *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromRfc4122(const QByteArray &)
+
+/*
+Creates a QUuid object from the binary representation of the UUID, as specified by RFC 4122 section 4.1.2. See toRfc4122() for a further explanation of the order of bytes required.
+
+The byte array accepted is NOT a human readable format.
+
+If the conversion fails, a null UUID is created.
+
+This function was introduced in  Qt 4.8.
+
+See also toRfc4122() and QUuid().
+*/
 func (this *QUuid) FromRfc4122(arg0 QByteArray_ITF) *QUuid /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QByteArray_PTR() != nil {
@@ -233,6 +327,10 @@ func QUuid_FromRfc4122(arg0 QByteArray_ITF) *QUuid /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if this is the null UUID {00000000-0000-0000-0000-000000000000}; otherwise returns false.
+*/
 func (this *QUuid) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -243,6 +341,10 @@ func (this *QUuid) IsNull() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QUuid &) const
+
+/*
+
+ */
 func (this *QUuid) Operator_equal_equal(orig QUuid_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if orig != nil && orig.QUuid_PTR() != nil {
@@ -257,6 +359,10 @@ func (this *QUuid) Operator_equal_equal(orig QUuid_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QUuid &) const
+
+/*
+
+ */
 func (this *QUuid) Operator_not_equal(orig QUuid_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if orig != nil && orig.QUuid_PTR() != nil {
@@ -271,6 +377,10 @@ func (this *QUuid) Operator_not_equal(orig QUuid_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator<(const QUuid &) const
+
+/*
+
+ */
 func (this *QUuid) Operator_less_than(other QUuid_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUuid_PTR() != nil {
@@ -285,6 +395,10 @@ func (this *QUuid) Operator_less_than(other QUuid_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator>(const QUuid &) const
+
+/*
+
+ */
 func (this *QUuid) Operator_greater_than(other QUuid_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUuid_PTR() != nil {
@@ -299,6 +413,12 @@ func (this *QUuid) Operator_greater_than(other QUuid_ITF) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid createUuid()
+
+/*
+On any platform other than Windows, this function returns a new UUID with variant QUuid::DCE and version QUuid::Random. On Windows, a GUID is generated using the Windows API and will be of the type that the API decides to create.
+
+See also variant() and version().
+*/
 func (this *QUuid) CreateUuid() *QUuid /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid10createUuidEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -316,6 +436,14 @@ func QUuid_CreateUuid() *QUuid /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid createUuidV3(const QUuid &, const QByteArray &)
+
+/*
+This function returns a new UUID with variant QUuid::DCE and version QUuid::Md5. ns is the namespace and baseData is the basic data as described by RFC 4122.
+
+This function was introduced in  Qt 5.0.
+
+See also variant(), version(), and createUuidV5().
+*/
 func (this *QUuid) CreateUuidV3(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
 	var convArg0 unsafe.Pointer
 	if ns != nil && ns.QUuid_PTR() != nil {
@@ -341,6 +469,14 @@ func QUuid_CreateUuidV3(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [16] QUuid createUuidV3(const QUuid &, const QString &)
+
+/*
+This function returns a new UUID with variant QUuid::DCE and version QUuid::Md5. ns is the namespace and baseData is the basic data as described by RFC 4122.
+
+This function was introduced in  Qt 5.0.
+
+See also variant(), version(), and createUuidV5().
+*/
 func (this *QUuid) CreateUuidV3_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 	var convArg0 unsafe.Pointer
 	if ns != nil && ns.QUuid_PTR() != nil {
@@ -364,6 +500,14 @@ func QUuid_CreateUuidV3_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid createUuidV5(const QUuid &, const QByteArray &)
+
+/*
+This function returns a new UUID with variant QUuid::DCE and version QUuid::Sha1. ns is the namespace and baseData is the basic data as described by RFC 4122.
+
+This function was introduced in  Qt 5.0.
+
+See also variant(), version(), and createUuidV3().
+*/
 func (this *QUuid) CreateUuidV5(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
 	var convArg0 unsafe.Pointer
 	if ns != nil && ns.QUuid_PTR() != nil {
@@ -389,6 +533,14 @@ func QUuid_CreateUuidV5(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [16] QUuid createUuidV5(const QUuid &, const QString &)
+
+/*
+This function returns a new UUID with variant QUuid::DCE and version QUuid::Sha1. ns is the namespace and baseData is the basic data as described by RFC 4122.
+
+This function was introduced in  Qt 5.0.
+
+See also variant(), version(), and createUuidV3().
+*/
 func (this *QUuid) CreateUuidV5_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 	var convArg0 unsafe.Pointer
 	if ns != nil && ns.QUuid_PTR() != nil {
@@ -412,6 +564,12 @@ func QUuid_CreateUuidV5_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QUuid::Variant variant() const
+
+/*
+Returns the value in the variant field of the UUID. If the return value is QUuid::DCE, call version() to see which layout it uses. The null UUID is considered to be of an unknown variant.
+
+See also version().
+*/
 func (this *QUuid) Variant() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid7variantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -422,6 +580,12 @@ func (this *QUuid) Variant() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QUuid::Version version() const
+
+/*
+Returns the version field of the UUID, if the UUID's variant field is QUuid::DCE. Otherwise it returns QUuid::VerUnknown.
+
+See also variant().
+*/
 func (this *QUuid) Version() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid7versionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -434,22 +598,54 @@ func DeleteQUuid(this *QUuid) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum defines the values used in the variant field of the UUID. The value in the variant field determines the layout of the 128-bit value.
+
+
+*/
 type QUuid__Variant = int
 
+//
 const QUuid__VarUnknown QUuid__Variant = -1
+
+// Reserved for NCS (Network Computing System) backward compatibility
 const QUuid__NCS QUuid__Variant = 0
+
+// Distributed Computing Environment, the scheme used by QUuid
 const QUuid__DCE QUuid__Variant = 2
+
+// Reserved for Microsoft backward compatibility (GUID)
 const QUuid__Microsoft QUuid__Variant = 6
+
+// Reserved for future definition
 const QUuid__Reserved QUuid__Variant = 7
 
+/*
+This enum defines the values used in the version field of the UUID. The version field is meaningful only if the value in the variant field is QUuid::DCE.
+
+
+*/
 type QUuid__Version = int
 
+//
 const QUuid__VerUnknown QUuid__Version = -1
+
+// Time-based, by using timestamp, clock sequence, and MAC network card address (if available) for the node sections
 const QUuid__Time QUuid__Version = 1
+
+// DCE Security version, with embedded POSIX UUIDs
 const QUuid__EmbeddedPOSIX QUuid__Version = 2
+
+// Alias for Name
 const QUuid__Md5 QUuid__Version = 3
+
+//
 const QUuid__Name QUuid__Version = 3
+
+// Random-based, by using random numbers for all sections
 const QUuid__Random QUuid__Version = 4
+
+//
 const QUuid__Sha1 QUuid__Version = 5
 
 //  body block end

@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleHintReturnVariant struct {
 	*QStyleHintReturn
 }
@@ -65,6 +68,10 @@ func (*QStyleHintReturnVariant) NewFromPointer(cthis unsafe.Pointer) *QStyleHint
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleHintReturnVariant()
+
+/*
+
+ */
 func NewQStyleHintReturnVariant() *QStyleHintReturnVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QStyleHintReturnVariantC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleHintReturnVariant() *QStyleHintReturnVariant {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStyleHintReturnVariant()
+
+/*
+
+ */
 func DeleteQStyleHintReturnVariant(this *QStyleHintReturnVariant) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QStyleHintReturnVariantD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -84,12 +95,35 @@ func DeleteQStyleHintReturnVariant(this *QStyleHintReturnVariant) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleHintReturnVariant__StyleOptionType = int
 
+//
 const QStyleHintReturnVariant__Type QStyleHintReturnVariant__StyleOptionType = 61442
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleHintReturnVariant__StyleOptionVersion = int
 
+// 1
 const QStyleHintReturnVariant__Version QStyleHintReturnVariant__StyleOptionVersion = 1
 
 //  body block end

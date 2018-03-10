@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QSslCertificate struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QSslCertificate) NewFromPointer(cthis unsafe.Pointer) *QSslCertificate {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCertificate(QIODevice *, QSsl::EncodingFormat)
+
+/*
+Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
+*/
 func NewQSslCertificate(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -82,6 +89,10 @@ func NewQSslCertificate(device qtcore.QIODevice_ITF /*777 QIODevice **/, format 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCertificate(QIODevice *, QSsl::EncodingFormat)
+
+/*
+Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
+*/
 func NewQSslCertificate__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -100,6 +111,10 @@ func NewQSslCertificate__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSsl
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCertificate(const QByteArray &, QSsl::EncodingFormat)
+
+/*
+Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
+*/
 func NewQSslCertificate_1(data qtcore.QByteArray_ITF, format int) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -116,6 +131,10 @@ func NewQSslCertificate_1(data qtcore.QByteArray_ITF, format int) *QSslCertifica
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCertificate(const QByteArray &, QSsl::EncodingFormat)
+
+/*
+Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
+*/
 func NewQSslCertificate_1_() *QSslCertificate {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
 	var convArg0 = qtcore.NewQByteArray()
@@ -132,6 +151,10 @@ func NewQSslCertificate_1_() *QSslCertificate {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCertificate(const QByteArray &, QSsl::EncodingFormat)
+
+/*
+Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
+*/
 func NewQSslCertificate_1_1(data qtcore.QByteArray_ITF) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -150,6 +173,10 @@ func NewQSslCertificate_1_1(data qtcore.QByteArray_ITF) *QSslCertificate {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSslCertificate()
+
+/*
+
+ */
 func DeleteQSslCertificate(this *QSslCertificate) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -161,6 +188,10 @@ func DeleteQSslCertificate(this *QSslCertificate) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSslCertificate & operator=(QSslCertificate &&)
+
+/*
+
+ */
 func (this *QSslCertificate) Operator_equal(other unsafe.Pointer /*333*/) *QSslCertificate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -173,6 +204,10 @@ func (this *QSslCertificate) Operator_equal(other unsafe.Pointer /*333*/) *QSslC
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QSslCertificate & operator=(const QSslCertificate &)
+
+/*
+
+ */
 func (this *QSslCertificate) Operator_equal_1(other QSslCertificate_ITF) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslCertificate_PTR() != nil {
@@ -189,6 +224,12 @@ func (this *QSslCertificate) Operator_equal_1(other QSslCertificate_ITF) *QSslCe
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslCertificate &)
+
+/*
+Swaps this certificate instance with other. This function is very fast and never fails.
+
+This function was introduced in  Qt 5.0.
+*/
 func (this *QSslCertificate) Swap(other QSslCertificate_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslCertificate_PTR() != nil {
@@ -202,6 +243,10 @@ func (this *QSslCertificate) Swap(other QSslCertificate_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QSslCertificate &) const
+
+/*
+
+ */
 func (this *QSslCertificate) Operator_equal_equal(other QSslCertificate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslCertificate_PTR() != nil {
@@ -216,6 +261,10 @@ func (this *QSslCertificate) Operator_equal_equal(other QSslCertificate_ITF) boo
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QSslCertificate &) const
+
+/*
+
+ */
 func (this *QSslCertificate) Operator_not_equal(other QSslCertificate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslCertificate_PTR() != nil {
@@ -230,6 +279,14 @@ func (this *QSslCertificate) Operator_not_equal(other QSslCertificate_ITF) bool 
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if this is a null certificate (i.e., a certificate with no contents); otherwise returns false.
+
+By default, QSslCertificate constructs a null certificate.
+
+See also clear().
+*/
 func (this *QSslCertificate) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -240,6 +297,12 @@ func (this *QSslCertificate) IsNull() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isBlacklisted() const
+
+/*
+Returns true if this certificate is blacklisted; otherwise returns false.
+
+See also isNull().
+*/
 func (this *QSslCertificate) IsBlacklisted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate13isBlacklistedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -250,6 +313,14 @@ func (this *QSslCertificate) IsBlacklisted() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSelfSigned() const
+
+/*
+Returns true if this certificate is self signed; otherwise returns false.
+
+A certificate is considered self-signed its issuer and subject are identical.
+
+This function was introduced in  Qt 5.4.
+*/
 func (this *QSslCertificate) IsSelfSigned() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate12isSelfSignedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -260,6 +331,12 @@ func (this *QSslCertificate) IsSelfSigned() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the contents of this certificate, making it a null certificate.
+
+See also isNull().
+*/
 func (this *QSslCertificate) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificate5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -269,6 +346,10 @@ func (this *QSslCertificate) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray version() const
+
+/*
+Returns the certificate's version string.
+*/
 func (this *QSslCertificate) Version() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate7versionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -281,6 +362,10 @@ func (this *QSslCertificate) Version() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray serialNumber() const
+
+/*
+Returns the certificate's serial number string in hexadecimal format.
+*/
 func (this *QSslCertificate) SerialNumber() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate12serialNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -293,6 +378,10 @@ func (this *QSslCertificate) SerialNumber() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray digest(QCryptographicHash::Algorithm) const
+
+/*
+Returns a cryptographic digest of this certificate. By default, an MD5 digest will be generated, but you can also specify a custom algorithm.
+*/
 func (this *QSslCertificate) Digest(algorithm int) *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6digestEN18QCryptographicHash9AlgorithmE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), algorithm)
 	qtrt.ErrPrint(err, rv)
@@ -305,6 +394,10 @@ func (this *QSslCertificate) Digest(algorithm int) *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray digest(QCryptographicHash::Algorithm) const
+
+/*
+Returns a cryptographic digest of this certificate. By default, an MD5 digest will be generated, but you can also specify a custom algorithm.
+*/
 func (this *QSslCertificate) Digest__() *qtcore.QByteArray /*123*/ {
 	// arg: 0, QCryptographicHash::Algorithm=Elaborated, QCryptographicHash::Algorithm=Enum,
 	algorithm := 0
@@ -319,6 +412,12 @@ func (this *QSslCertificate) Digest__() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList issuerInfo(enum QSslCertificate::SubjectInfo) const
+
+/*
+Returns the issuer information for the subject from the certificate, or an empty list if there is no information for subject in the certificate. There can be more than one entry of each type.
+
+See also subjectInfo().
+*/
 func (this *QSslCertificate) IssuerInfo(info int) *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate10issuerInfoENS_11SubjectInfoE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), info)
 	qtrt.ErrPrint(err, rv)
@@ -331,6 +430,12 @@ func (this *QSslCertificate) IssuerInfo(info int) *qtcore.QStringList /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QStringList issuerInfo(const QByteArray &) const
+
+/*
+Returns the issuer information for the subject from the certificate, or an empty list if there is no information for subject in the certificate. There can be more than one entry of each type.
+
+See also subjectInfo().
+*/
 func (this *QSslCertificate) IssuerInfo_1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if attribute != nil && attribute.QByteArray_PTR() != nil {
@@ -347,6 +452,12 @@ func (this *QSslCertificate) IssuerInfo_1(attribute qtcore.QByteArray_ITF) *qtco
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList subjectInfo(enum QSslCertificate::SubjectInfo) const
+
+/*
+Returns the information for the subject, or an empty list if there is no information for subject in the certificate. There can be more than one entry of each type.
+
+See also issuerInfo().
+*/
 func (this *QSslCertificate) SubjectInfo(info int) *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate11subjectInfoENS_11SubjectInfoE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), info)
 	qtrt.ErrPrint(err, rv)
@@ -359,6 +470,12 @@ func (this *QSslCertificate) SubjectInfo(info int) *qtcore.QStringList /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QStringList subjectInfo(const QByteArray &) const
+
+/*
+Returns the information for the subject, or an empty list if there is no information for subject in the certificate. There can be more than one entry of each type.
+
+See also issuerInfo().
+*/
 func (this *QSslCertificate) SubjectInfo_1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if attribute != nil && attribute.QByteArray_PTR() != nil {
@@ -375,6 +492,12 @@ func (this *QSslCertificate) SubjectInfo_1(attribute qtcore.QByteArray_ITF) *qtc
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime effectiveDate() const
+
+/*
+Returns the date-time that the certificate becomes valid, or an empty QDateTime if this is a null certificate.
+
+See also expiryDate().
+*/
 func (this *QSslCertificate) EffectiveDate() *qtcore.QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate13effectiveDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -387,6 +510,12 @@ func (this *QSslCertificate) EffectiveDate() *qtcore.QDateTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime expiryDate() const
+
+/*
+Returns the date-time that the certificate expires, or an empty QDateTime if this is a null certificate.
+
+See also effectiveDate().
+*/
 func (this *QSslCertificate) ExpiryDate() *qtcore.QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate10expiryDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -399,6 +528,10 @@ func (this *QSslCertificate) ExpiryDate() *qtcore.QDateTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslKey publicKey() const
+
+/*
+Returns the certificate subject's public key.
+*/
 func (this *QSslCertificate) PublicKey() *QSslKey /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate9publicKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -411,6 +544,10 @@ func (this *QSslCertificate) PublicKey() *QSslKey /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toPem() const
+
+/*
+Returns this certificate converted to a PEM (Base64) encoded representation.
+*/
 func (this *QSslCertificate) ToPem() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate5toPemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -423,6 +560,10 @@ func (this *QSslCertificate) ToPem() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toDer() const
+
+/*
+Returns this certificate converted to a DER (binary) encoded representation.
+*/
 func (this *QSslCertificate) ToDer() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate5toDerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -435,6 +576,12 @@ func (this *QSslCertificate) ToDer() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toText() const
+
+/*
+Returns this certificate converted to a human-readable text representation.
+
+This function was introduced in  Qt 5.0.
+*/
 func (this *QSslCertificate) ToText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6toTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -448,22 +595,52 @@ func (this *QSslCertificate) ToText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] Qt::HANDLE handle() const
+
+/*
+Returns a pointer to the native certificate handle, if there is one, or a null pointer otherwise.
+
+You can use this handle, together with the native API, to access extended information about the certificate.
+
+Warning: Use of this function has a high probability of being non-portable, and its return value may vary from platform to platform or change from minor release to minor release.
+*/
 func (this *QSslCertificate) Handle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
+/*
+Describes keys that you can pass to QSslCertificate::issuerInfo() or QSslCertificate::subjectInfo() to get information about the certificate issuer or subject.
+
+
+*/
 type QSslCertificate__SubjectInfo = int
 
+// "O" The name of the organization.
 const QSslCertificate__Organization QSslCertificate__SubjectInfo = 0
+
+// "CN" The common name; most often this is used to store the host name.
 const QSslCertificate__CommonName QSslCertificate__SubjectInfo = 1
+
+// "L" The locality.
 const QSslCertificate__LocalityName QSslCertificate__SubjectInfo = 2
+
+// "OU" The organizational unit name.
 const QSslCertificate__OrganizationalUnitName QSslCertificate__SubjectInfo = 3
+
+// "C" The country.
 const QSslCertificate__CountryName QSslCertificate__SubjectInfo = 4
+
+// "ST" The state or province.
 const QSslCertificate__StateOrProvinceName QSslCertificate__SubjectInfo = 5
+
+// The distinguished name qualifier
 const QSslCertificate__DistinguishedNameQualifier QSslCertificate__SubjectInfo = 6
+
+// The certificate's serial number
 const QSslCertificate__SerialNumber QSslCertificate__SubjectInfo = 7
+
+// The email address associated with the certificate
 const QSslCertificate__EmailAddress QSslCertificate__SubjectInfo = 8
 
 //  body block end

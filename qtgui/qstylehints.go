@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleHints struct {
 	*qtcore.QObject
 }
@@ -64,6 +67,10 @@ func (*QStyleHints) NewFromPointer(cthis unsafe.Pointer) *QStyleHints {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QStyleHints) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QStyleHints) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMouseDoubleClickInterval(int)
+
+/*
+
+ */
 func (this *QStyleHints) SetMouseDoubleClickInterval(mouseDoubleClickInterval int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints27setMouseDoubleClickIntervalEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mouseDoubleClickInterval)
 	qtrt.ErrPrint(err, rv)
@@ -83,6 +94,10 @@ func (this *QStyleHints) SetMouseDoubleClickInterval(mouseDoubleClickInterval in
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int mouseDoubleClickInterval() const
+
+/*
+
+ */
 func (this *QStyleHints) MouseDoubleClickInterval() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints24mouseDoubleClickIntervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +108,10 @@ func (this *QStyleHints) MouseDoubleClickInterval() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMousePressAndHoldInterval(int)
+
+/*
+
+ */
 func (this *QStyleHints) SetMousePressAndHoldInterval(mousePressAndHoldInterval int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints28setMousePressAndHoldIntervalEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mousePressAndHoldInterval)
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +121,10 @@ func (this *QStyleHints) SetMousePressAndHoldInterval(mousePressAndHoldInterval 
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int mousePressAndHoldInterval() const
+
+/*
+
+ */
 func (this *QStyleHints) MousePressAndHoldInterval() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints25mousePressAndHoldIntervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +135,10 @@ func (this *QStyleHints) MousePressAndHoldInterval() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStartDragDistance(int)
+
+/*
+
+ */
 func (this *QStyleHints) SetStartDragDistance(startDragDistance int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints20setStartDragDistanceEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startDragDistance)
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +148,10 @@ func (this *QStyleHints) SetStartDragDistance(startDragDistance int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int startDragDistance() const
+
+/*
+
+ */
 func (this *QStyleHints) StartDragDistance() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints17startDragDistanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +162,10 @@ func (this *QStyleHints) StartDragDistance() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStartDragTime(int)
+
+/*
+
+ */
 func (this *QStyleHints) SetStartDragTime(startDragTime int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints16setStartDragTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startDragTime)
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +175,10 @@ func (this *QStyleHints) SetStartDragTime(startDragTime int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int startDragTime() const
+
+/*
+
+ */
 func (this *QStyleHints) StartDragTime() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints13startDragTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,6 +189,10 @@ func (this *QStyleHints) StartDragTime() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int startDragVelocity() const
+
+/*
+
+ */
 func (this *QStyleHints) StartDragVelocity() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints17startDragVelocityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,6 +203,10 @@ func (this *QStyleHints) StartDragVelocity() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeyboardInputInterval(int)
+
+/*
+
+ */
 func (this *QStyleHints) SetKeyboardInputInterval(keyboardInputInterval int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints24setKeyboardInputIntervalEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), keyboardInputInterval)
 	qtrt.ErrPrint(err, rv)
@@ -169,6 +216,10 @@ func (this *QStyleHints) SetKeyboardInputInterval(keyboardInputInterval int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyboardInputInterval() const
+
+/*
+
+ */
 func (this *QStyleHints) KeyboardInputInterval() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints21keyboardInputIntervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +230,10 @@ func (this *QStyleHints) KeyboardInputInterval() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyboardAutoRepeatRate() const
+
+/*
+
+ */
 func (this *QStyleHints) KeyboardAutoRepeatRate() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints22keyboardAutoRepeatRateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,6 +244,10 @@ func (this *QStyleHints) KeyboardAutoRepeatRate() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCursorFlashTime(int)
+
+/*
+
+ */
 func (this *QStyleHints) SetCursorFlashTime(cursorFlashTime int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints18setCursorFlashTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cursorFlashTime)
 	qtrt.ErrPrint(err, rv)
@@ -198,6 +257,10 @@ func (this *QStyleHints) SetCursorFlashTime(cursorFlashTime int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int cursorFlashTime() const
+
+/*
+
+ */
 func (this *QStyleHints) CursorFlashTime() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints15cursorFlashTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -208,6 +271,10 @@ func (this *QStyleHints) CursorFlashTime() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showIsFullScreen() const
+
+/*
+
+ */
 func (this *QStyleHints) ShowIsFullScreen() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints16showIsFullScreenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,6 +285,10 @@ func (this *QStyleHints) ShowIsFullScreen() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showIsMaximized() const
+
+/*
+
+ */
 func (this *QStyleHints) ShowIsMaximized() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints15showIsMaximizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,6 +299,10 @@ func (this *QStyleHints) ShowIsMaximized() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showShortcutsInContextMenus() const
+
+/*
+
+ */
 func (this *QStyleHints) ShowShortcutsInContextMenus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints27showShortcutsInContextMenusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,6 +313,10 @@ func (this *QStyleHints) ShowShortcutsInContextMenus() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int passwordMaskDelay() const
+
+/*
+
+ */
 func (this *QStyleHints) PasswordMaskDelay() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints17passwordMaskDelayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -248,6 +327,10 @@ func (this *QStyleHints) PasswordMaskDelay() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar passwordMaskCharacter() const
+
+/*
+
+ */
 func (this *QStyleHints) PasswordMaskCharacter() *qtcore.QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints21passwordMaskCharacterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -260,6 +343,10 @@ func (this *QStyleHints) PasswordMaskCharacter() *qtcore.QChar /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal fontSmoothingGamma() const
+
+/*
+
+ */
 func (this *QStyleHints) FontSmoothingGamma() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints18fontSmoothingGammaEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -270,6 +357,10 @@ func (this *QStyleHints) FontSmoothingGamma() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool useRtlExtensions() const
+
+/*
+
+ */
 func (this *QStyleHints) UseRtlExtensions() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints16useRtlExtensionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -280,6 +371,10 @@ func (this *QStyleHints) UseRtlExtensions() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setFocusOnTouchRelease() const
+
+/*
+
+ */
 func (this *QStyleHints) SetFocusOnTouchRelease() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints22setFocusOnTouchReleaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -290,6 +385,10 @@ func (this *QStyleHints) SetFocusOnTouchRelease() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TabFocusBehavior tabFocusBehavior() const
+
+/*
+
+ */
 func (this *QStyleHints) TabFocusBehavior() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints16tabFocusBehaviorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -300,6 +399,10 @@ func (this *QStyleHints) TabFocusBehavior() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabFocusBehavior(Qt::TabFocusBehavior)
+
+/*
+
+ */
 func (this *QStyleHints) SetTabFocusBehavior(tabFocusBehavior int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints19setTabFocusBehaviorEN2Qt16TabFocusBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), tabFocusBehavior)
 	qtrt.ErrPrint(err, rv)
@@ -309,6 +412,10 @@ func (this *QStyleHints) SetTabFocusBehavior(tabFocusBehavior int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool singleClickActivation() const
+
+/*
+
+ */
 func (this *QStyleHints) SingleClickActivation() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints21singleClickActivationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -319,6 +426,10 @@ func (this *QStyleHints) SingleClickActivation() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool useHoverEffects() const
+
+/*
+
+ */
 func (this *QStyleHints) UseHoverEffects() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints15useHoverEffectsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -329,6 +440,10 @@ func (this *QStyleHints) UseHoverEffects() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUseHoverEffects(_Bool)
+
+/*
+
+ */
 func (this *QStyleHints) SetUseHoverEffects(useHoverEffects bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints18setUseHoverEffectsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), useHoverEffects)
 	qtrt.ErrPrint(err, rv)
@@ -338,6 +453,10 @@ func (this *QStyleHints) SetUseHoverEffects(useHoverEffects bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int wheelScrollLines() const
+
+/*
+
+ */
 func (this *QStyleHints) WheelScrollLines() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints16wheelScrollLinesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -348,6 +467,10 @@ func (this *QStyleHints) WheelScrollLines() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWheelScrollLines(int)
+
+/*
+
+ */
 func (this *QStyleHints) SetWheelScrollLines(scrollLines int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints19setWheelScrollLinesEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), scrollLines)
 	qtrt.ErrPrint(err, rv)
@@ -357,6 +480,10 @@ func (this *QStyleHints) SetWheelScrollLines(scrollLines int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cursorFlashTimeChanged(int)
+
+/*
+
+ */
 func (this *QStyleHints) CursorFlashTimeChanged(cursorFlashTime int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints22cursorFlashTimeChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cursorFlashTime)
 	qtrt.ErrPrint(err, rv)
@@ -366,6 +493,10 @@ func (this *QStyleHints) CursorFlashTimeChanged(cursorFlashTime int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void keyboardInputIntervalChanged(int)
+
+/*
+
+ */
 func (this *QStyleHints) KeyboardInputIntervalChanged(keyboardInputInterval int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints28keyboardInputIntervalChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), keyboardInputInterval)
 	qtrt.ErrPrint(err, rv)
@@ -375,6 +506,10 @@ func (this *QStyleHints) KeyboardInputIntervalChanged(keyboardInputInterval int)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickIntervalChanged(int)
+
+/*
+
+ */
 func (this *QStyleHints) MouseDoubleClickIntervalChanged(mouseDoubleClickInterval int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints31mouseDoubleClickIntervalChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mouseDoubleClickInterval)
 	qtrt.ErrPrint(err, rv)
@@ -384,6 +519,10 @@ func (this *QStyleHints) MouseDoubleClickIntervalChanged(mouseDoubleClickInterva
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mousePressAndHoldIntervalChanged(int)
+
+/*
+
+ */
 func (this *QStyleHints) MousePressAndHoldIntervalChanged(mousePressAndHoldInterval int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints32mousePressAndHoldIntervalChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mousePressAndHoldInterval)
 	qtrt.ErrPrint(err, rv)
@@ -393,6 +532,10 @@ func (this *QStyleHints) MousePressAndHoldIntervalChanged(mousePressAndHoldInter
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void startDragDistanceChanged(int)
+
+/*
+
+ */
 func (this *QStyleHints) StartDragDistanceChanged(startDragDistance int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints24startDragDistanceChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startDragDistance)
 	qtrt.ErrPrint(err, rv)
@@ -402,6 +545,10 @@ func (this *QStyleHints) StartDragDistanceChanged(startDragDistance int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void startDragTimeChanged(int)
+
+/*
+
+ */
 func (this *QStyleHints) StartDragTimeChanged(startDragTime int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints20startDragTimeChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startDragTime)
 	qtrt.ErrPrint(err, rv)
@@ -411,6 +558,10 @@ func (this *QStyleHints) StartDragTimeChanged(startDragTime int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tabFocusBehaviorChanged(Qt::TabFocusBehavior)
+
+/*
+
+ */
 func (this *QStyleHints) TabFocusBehaviorChanged(tabFocusBehavior int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints23tabFocusBehaviorChangedEN2Qt16TabFocusBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), tabFocusBehavior)
 	qtrt.ErrPrint(err, rv)
@@ -420,6 +571,10 @@ func (this *QStyleHints) TabFocusBehaviorChanged(tabFocusBehavior int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void useHoverEffectsChanged(_Bool)
+
+/*
+
+ */
 func (this *QStyleHints) UseHoverEffectsChanged(useHoverEffects bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints22useHoverEffectsChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), useHoverEffects)
 	qtrt.ErrPrint(err, rv)
@@ -429,6 +584,10 @@ func (this *QStyleHints) UseHoverEffectsChanged(useHoverEffects bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void wheelScrollLinesChanged(int)
+
+/*
+
+ */
 func (this *QStyleHints) WheelScrollLinesChanged(scrollLines int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStyleHints23wheelScrollLinesChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), scrollLines)
 	qtrt.ErrPrint(err, rv)

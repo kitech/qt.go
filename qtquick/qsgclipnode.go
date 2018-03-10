@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGClipNode struct {
 	*QSGBasicGeometryNode
 }
@@ -67,6 +70,10 @@ func (*QSGClipNode) NewFromPointer(cthis unsafe.Pointer) *QSGClipNode {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGClipNode()
+
+/*
+
+ */
 func NewQSGClipNode() *QSGClipNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGClipNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQSGClipNode() *QSGClipNode {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGClipNode()
+
+/*
+
+ */
 func DeleteQSGClipNode(this *QSGClipNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGClipNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 152)
@@ -90,6 +101,10 @@ func DeleteQSGClipNode(this *QSGClipNode) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIsRectangular(_Bool)
+
+/*
+
+ */
 func (this *QSGClipNode) SetIsRectangular(rectHint bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGClipNode16setIsRectangularEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rectHint)
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +114,10 @@ func (this *QSGClipNode) SetIsRectangular(rectHint bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isRectangular() const
+
+/*
+
+ */
 func (this *QSGClipNode) IsRectangular() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGClipNode13isRectangularEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,6 +128,10 @@ func (this *QSGClipNode) IsRectangular() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClipRect(const QRectF &)
+
+/*
+
+ */
 func (this *QSGClipNode) SetClipRect(arg0 qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRectF_PTR() != nil {
@@ -122,6 +145,10 @@ func (this *QSGClipNode) SetClipRect(arg0 qtcore.QRectF_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF clipRect() const
+
+/*
+
+ */
 func (this *QSGClipNode) ClipRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGClipNode8clipRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QToolBarChangeEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QToolBarChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QToolBarChange
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBarChangeEvent(_Bool)
+
+/*
+
+ */
 func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", qtrt.FFI_TYPE_POINTER, t)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolBarChangeEvent()
+
+/*
+
+ */
 func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QToolBarChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -87,6 +98,10 @@ func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool toggle() const
+
+/*
+
+ */
 func (this *QToolBarChangeEvent) Toggle() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

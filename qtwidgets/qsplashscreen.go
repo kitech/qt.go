@@ -48,6 +48,9 @@ func (this *QSplashScreen) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
+/*
+
+ */
 type QSplashScreen struct {
 	*QWidget
 }
@@ -80,6 +83,10 @@ func (*QSplashScreen) NewFromPointer(cthis unsafe.Pointer) *QSplashScreen {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSplashScreen) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSplashScreen10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +97,12 @@ func (this *QSplashScreen) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSplashScreen(const QPixmap &, Qt::WindowFlags)
+
+/*
+Construct a splash screen that will display the pixmap.
+
+There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
+*/
 func NewQSplashScreen(pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -106,6 +119,12 @@ func NewQSplashScreen(pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSplashScreen(const QPixmap &, Qt::WindowFlags)
+
+/*
+Construct a splash screen that will display the pixmap.
+
+There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
+*/
 func NewQSplashScreen__() *QSplashScreen {
 	// arg: 0, const QPixmap &=LValueReference, QPixmap=Record,
 	var convArg0 unsafe.Pointer
@@ -122,6 +141,12 @@ func NewQSplashScreen__() *QSplashScreen {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSplashScreen(const QPixmap &, Qt::WindowFlags)
+
+/*
+Construct a splash screen that will display the pixmap.
+
+There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
+*/
 func NewQSplashScreen__1(pixmap qtgui.QPixmap_ITF) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -140,6 +165,12 @@ func NewQSplashScreen__1(pixmap qtgui.QPixmap_ITF) *QSplashScreen {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSplashScreen(QWidget *, const QPixmap &, Qt::WindowFlags)
+
+/*
+Construct a splash screen that will display the pixmap.
+
+There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
+*/
 func NewQSplashScreen_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -160,6 +191,12 @@ func NewQSplashScreen_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixm
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSplashScreen(QWidget *, const QPixmap &, Qt::WindowFlags)
+
+/*
+Construct a splash screen that will display the pixmap.
+
+There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
+*/
 func NewQSplashScreen_1_(parent QWidget_ITF /*777 QWidget **/) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -180,6 +217,12 @@ func NewQSplashScreen_1_(parent QWidget_ITF /*777 QWidget **/) *QSplashScreen {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSplashScreen(QWidget *, const QPixmap &, Qt::WindowFlags)
+
+/*
+Construct a splash screen that will display the pixmap.
+
+There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
+*/
 func NewQSplashScreen_1_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -202,6 +245,10 @@ func NewQSplashScreen_1_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSplashScreen()
+
+/*
+
+ */
 func DeleteQSplashScreen(this *QSplashScreen) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreenD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -213,6 +260,12 @@ func DeleteQSplashScreen(this *QSplashScreen) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixmap(const QPixmap &)
+
+/*
+Sets the pixmap that will be used as the splash screen's image to pixmap.
+
+See also pixmap().
+*/
 func (this *QSplashScreen) SetPixmap(pixmap qtgui.QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -226,6 +279,12 @@ func (this *QSplashScreen) SetPixmap(pixmap qtgui.QPixmap_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] const QPixmap pixmap() const
+
+/*
+Returns the pixmap that is used in the splash screen. The image does not have any of the text drawn by showMessage() calls.
+
+See also setPixmap().
+*/
 func (this *QSplashScreen) Pixmap() *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSplashScreen6pixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,6 +297,10 @@ func (this *QSplashScreen) Pixmap() *qtgui.QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finish(QWidget *)
+
+/*
+Makes the splash screen wait until the widget mainWin is displayed before calling close() on itself.
+*/
 func (this *QSplashScreen) Finish(w QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -251,6 +314,10 @@ func (this *QSplashScreen) Finish(w QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void repaint()
+
+/*
+This overrides QWidget::repaint(). It differs from the standard repaint function in that it also calls QApplication::processEvents() to ensure the updates are displayed, even when there is no event loop present.
+*/
 func (this *QSplashScreen) Repaint() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreen7repaintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -260,6 +327,14 @@ func (this *QSplashScreen) Repaint() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString message() const
+
+/*
+Returns the message that is currently displayed on the splash screen.
+
+This function was introduced in  Qt 5.2.
+
+See also showMessage() and clearMessage().
+*/
 func (this *QSplashScreen) Message() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSplashScreen7messageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -273,6 +348,12 @@ func (this *QSplashScreen) Message() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, int, const QColor &)
+
+/*
+Draws the message text onto the splash screen with color color and aligns the text according to the flags in alignment. This function calls repaint() to make sure the splash screen is repainted immediately. As a result the message is kept up to date with what your application is doing (e.g. loading files).
+
+See also Qt::Alignment, clearMessage(), and message().
+*/
 func (this *QSplashScreen) ShowMessage(message string, alignment int, color qtgui.QColor_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(message)
 	var convArg0 = tmpArg0.GetCthis()
@@ -288,6 +369,12 @@ func (this *QSplashScreen) ShowMessage(message string, alignment int, color qtgu
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, int, const QColor &)
+
+/*
+Draws the message text onto the splash screen with color color and aligns the text according to the flags in alignment. This function calls repaint() to make sure the splash screen is repainted immediately. As a result the message is kept up to date with what your application is doing (e.g. loading files).
+
+See also Qt::Alignment, clearMessage(), and message().
+*/
 func (this *QSplashScreen) ShowMessage__(message string) {
 	var tmpArg0 = qtcore.NewQString_5(message)
 	var convArg0 = tmpArg0.GetCthis()
@@ -303,6 +390,12 @@ func (this *QSplashScreen) ShowMessage__(message string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, int, const QColor &)
+
+/*
+Draws the message text onto the splash screen with color color and aligns the text according to the flags in alignment. This function calls repaint() to make sure the splash screen is repainted immediately. As a result the message is kept up to date with what your application is doing (e.g. loading files).
+
+See also Qt::Alignment, clearMessage(), and message().
+*/
 func (this *QSplashScreen) ShowMessage__1(message string, alignment int) {
 	var tmpArg0 = qtcore.NewQString_5(message)
 	var convArg0 = tmpArg0.GetCthis()
@@ -316,6 +409,12 @@ func (this *QSplashScreen) ShowMessage__1(message string, alignment int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearMessage()
+
+/*
+Removes the message being displayed on the splash screen
+
+See also showMessage().
+*/
 func (this *QSplashScreen) ClearMessage() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreen12clearMessageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -325,6 +424,12 @@ func (this *QSplashScreen) ClearMessage() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void messageChanged(const QString &)
+
+/*
+This signal is emitted when the message on the splash screen changes. message is the new message and is a null-string when the message has been removed.
+
+See also showMessage() and clearMessage().
+*/
 func (this *QSplashScreen) MessageChanged(message string) {
 	var tmpArg0 = qtcore.NewQString_5(message)
 	var convArg0 = tmpArg0.GetCthis()
@@ -336,6 +441,10 @@ func (this *QSplashScreen) MessageChanged(message string) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QSplashScreen) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -350,6 +459,10 @@ func (this *QSplashScreen) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void drawContents(QPainter *)
+
+/*
+Draw the contents of the splash screen using painter painter. The default implementation draws the message passed by showMessage(). Reimplement this function if you want to do your own drawing on the splash screen.
+*/
 func (this *QSplashScreen) DrawContents(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -363,6 +476,10 @@ func (this *QSplashScreen) DrawContents(painter qtgui.QPainter_ITF /*777 QPainte
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mousePressEvent().
+*/
 func (this *QSplashScreen) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {

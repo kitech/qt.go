@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QMutexLocker struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QMutexLocker) NewFromPointer(cthis unsafe.Pointer) *QMutexLocker {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMutexLocker(QBasicMutex *)
+
+/*
+
+ */
 func NewQMutexLocker(m QBasicMutex_ITF /*777 QBasicMutex **/) *QMutexLocker {
 	var convArg0 unsafe.Pointer
 	if m != nil && m.QBasicMutex_PTR() != nil {
@@ -81,6 +88,10 @@ func NewQMutexLocker(m QBasicMutex_ITF /*777 QBasicMutex **/) *QMutexLocker {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QMutexLocker()
+
+/*
+
+ */
 func DeleteQMutexLocker(this *QMutexLocker) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMutexLockerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -92,6 +103,12 @@ func DeleteQMutexLocker(this *QMutexLocker) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void unlock()
+
+/*
+Unlocks the mutex. Attempting to unlock a mutex in a different thread to the one that locked it results in an error. Unlocking a mutex that is not locked results in undefined behavior.
+
+See also lock().
+*/
 func (this *QMutexLocker) Unlock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMutexLocker6unlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -101,6 +118,10 @@ func (this *QMutexLocker) Unlock() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void relock()
+
+/*
+
+ */
 func (this *QMutexLocker) Relock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMutexLocker6relockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +131,10 @@ func (this *QMutexLocker) Relock() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QMutex * mutex() const
+
+/*
+
+ */
 func (this *QMutexLocker) Mutex() *QMutex /*777 QMutex **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMutexLocker5mutexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

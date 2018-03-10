@@ -40,6 +40,9 @@ func (this *QQuickItemGrabResult) InheritEvent(f func(arg0 *qtcore.QEvent /*777 
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QQuickItemGrabResult struct {
 	*qtcore.QObject
 }
@@ -72,6 +75,10 @@ func (*QQuickItemGrabResult) NewFromPointer(cthis unsafe.Pointer) *QQuickItemGra
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQuickItemGrabResult) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -82,6 +89,10 @@ func (this *QQuickItemGrabResult) MetaObject() *qtcore.QMetaObject /*777 const Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage image() const
+
+/*
+
+ */
 func (this *QQuickItemGrabResult) Image() *qtgui.QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult5imageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -94,6 +105,10 @@ func (this *QQuickItemGrabResult) Image() *qtgui.QImage /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl url() const
+
+/*
+
+ */
 func (this *QQuickItemGrabResult) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,6 +121,12 @@ func (this *QQuickItemGrabResult) Url() *qtcore.QUrl /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool saveToFile(const QString &)
+
+/*
+Saves the grab result as an image to fileName. Returns true if successful; otherwise returns false.
+
+Note: In Qt versions prior to 5.9, this function is marked as non-const.
+*/
 func (this *QQuickItemGrabResult) SaveToFile(fileName string) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -118,6 +139,12 @@ func (this *QQuickItemGrabResult) SaveToFile(fileName string) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool saveToFile(const QString &) const
+
+/*
+Saves the grab result as an image to fileName. Returns true if successful; otherwise returns false.
+
+Note: In Qt versions prior to 5.9, this function is marked as non-const.
+*/
 func (this *QQuickItemGrabResult) SaveToFile_1(fileName string) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -130,6 +157,10 @@ func (this *QQuickItemGrabResult) SaveToFile_1(fileName string) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+
+ */
 func (this *QQuickItemGrabResult) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -144,6 +175,10 @@ func (this *QQuickItemGrabResult) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ready()
+
+/*
+This signal is emitted when the grab has completed.
+*/
 func (this *QQuickItemGrabResult) Ready() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickItemGrabResult5readyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

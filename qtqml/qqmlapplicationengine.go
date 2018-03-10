@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlApplicationEngine struct {
 	*QQmlEngine
 }
@@ -65,6 +68,10 @@ func (*QQmlApplicationEngine) NewFromPointer(cthis unsafe.Pointer) *QQmlApplicat
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQmlApplicationEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQmlApplicationEngine10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QQmlApplicationEngine) MetaObject() *qtcore.QMetaObject /*777 const 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlApplicationEngine(QObject *)
+
+/*
+Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
+*/
 func NewQQmlApplicationEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQQmlApplicationEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QQml
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlApplicationEngine(QObject *)
+
+/*
+Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
+*/
 func NewQQmlApplicationEngine__() *QQmlApplicationEngine {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQQmlApplicationEngine__() *QQmlApplicationEngine {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlApplicationEngine(const QUrl &, QObject *)
+
+/*
+Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
+*/
 func NewQQmlApplicationEngine_1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -125,6 +144,10 @@ func NewQQmlApplicationEngine_1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlApplicationEngine(const QUrl &, QObject *)
+
+/*
+Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
+*/
 func NewQQmlApplicationEngine_1_(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -143,6 +166,10 @@ func NewQQmlApplicationEngine_1_(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlApplicationEngine(const QString &, QObject *)
+
+/*
+Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
+*/
 func NewQQmlApplicationEngine_2(filePath string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
@@ -161,6 +188,10 @@ func NewQQmlApplicationEngine_2(filePath string, parent qtcore.QObject_ITF /*777
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlApplicationEngine(const QString &, QObject *)
+
+/*
+Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
+*/
 func NewQQmlApplicationEngine_2_(filePath string) *QQmlApplicationEngine {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
@@ -177,6 +208,10 @@ func NewQQmlApplicationEngine_2_(filePath string) *QQmlApplicationEngine {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlApplicationEngine()
+
+/*
+
+ */
 func DeleteQQmlApplicationEngine(this *QQmlApplicationEngine) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngineD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -188,6 +223,12 @@ func DeleteQQmlApplicationEngine(this *QQmlApplicationEngine) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void load(const QUrl &)
+
+/*
+Loads the root QML file located at url. The object tree defined by the file is created immediately for local file urls. Remote urls are loaded asynchronously, listen to the objectCreated signal to determine when the object tree is ready.
+
+If an error occurs, error messages are printed with qWarning.
+*/
 func (this *QQmlApplicationEngine) Load(url qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -201,6 +242,12 @@ func (this *QQmlApplicationEngine) Load(url qtcore.QUrl_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void load(const QString &)
+
+/*
+Loads the root QML file located at url. The object tree defined by the file is created immediately for local file urls. Remote urls are loaded asynchronously, listen to the objectCreated signal to determine when the object tree is ready.
+
+If an error occurs, error messages are printed with qWarning.
+*/
 func (this *QQmlApplicationEngine) Load_1(filePath string) {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
@@ -212,6 +259,14 @@ func (this *QQmlApplicationEngine) Load_1(filePath string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void loadData(const QByteArray &, const QUrl &)
+
+/*
+Loads the QML given in data. The object tree defined by data is instantiated immediately.
+
+If a url is specified it is used as the base url of the component. This affects relative paths within the data and error messages.
+
+If an error occurs, error messages are printed with qWarning.
+*/
 func (this *QQmlApplicationEngine) LoadData(data qtcore.QByteArray_ITF, url qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -229,6 +284,14 @@ func (this *QQmlApplicationEngine) LoadData(data qtcore.QByteArray_ITF, url qtco
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void loadData(const QByteArray &, const QUrl &)
+
+/*
+Loads the QML given in data. The object tree defined by data is instantiated immediately.
+
+If a url is specified it is used as the base url of the component. This affects relative paths within the data and error messages.
+
+If an error occurs, error messages are printed with qWarning.
+*/
 func (this *QQmlApplicationEngine) LoadData__(data qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -244,6 +307,14 @@ func (this *QQmlApplicationEngine) LoadData__(data qtcore.QByteArray_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void objectCreated(QObject *, const QUrl &)
+
+/*
+This signal is emitted when an object finishes loading. If loading was successful, object contains a pointer to the loaded object, otherwise the pointer is NULL.
+
+The url to the component the object came from is also provided.
+
+Note: If the path to the component was provided as a QString containing a relative path, the url will contain a fully resolved path to the file.
+*/
 func (this *QQmlApplicationEngine) ObjectCreated(object qtcore.QObject_ITF /*777 QObject **/, url qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {

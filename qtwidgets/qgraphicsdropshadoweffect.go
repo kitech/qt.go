@@ -38,6 +38,9 @@ func (this *QGraphicsDropShadowEffect) InheritDraw(f func(painter *qtgui.QPainte
 	qtrt.SetAllInheritCallback(this, "draw", f)
 }
 
+/*
+
+ */
 type QGraphicsDropShadowEffect struct {
 	*QGraphicsEffect
 }
@@ -72,6 +75,10 @@ func (*QGraphicsDropShadowEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphic
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -82,6 +89,10 @@ func (this *QGraphicsDropShadowEffect) MetaObject() *qtcore.QMetaObject /*777 co
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsDropShadowEffect(QObject *)
+
+/*
+
+ */
 func NewQGraphicsDropShadowEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsDropShadowEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -98,6 +109,10 @@ func NewQGraphicsDropShadowEffect(parent qtcore.QObject_ITF /*777 QObject **/) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsDropShadowEffect(QObject *)
+
+/*
+
+ */
 func NewQGraphicsDropShadowEffect__() *QGraphicsDropShadowEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -112,6 +127,10 @@ func NewQGraphicsDropShadowEffect__() *QGraphicsDropShadowEffect {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsDropShadowEffect()
+
+/*
+
+ */
 func DeleteQGraphicsDropShadowEffect(this *QGraphicsDropShadowEffect) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -123,6 +142,12 @@ func DeleteQGraphicsDropShadowEffect(this *QGraphicsDropShadowEffect) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRectFor(const QRectF &) const
+
+/*
+Returns the effective bounding rectangle for this effect, given the provided rect in the device coordinates. When writing you own custom effect, you must call updateBoundingRect() whenever any parameters are changed that may cause this this function to return a different value.
+
+See also sourceBoundingRect().
+*/
 func (this *QGraphicsDropShadowEffect) BoundingRectFor(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -139,6 +164,10 @@ func (this *QGraphicsDropShadowEffect) BoundingRectFor(rect qtcore.QRectF_ITF) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF offset() const
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) Offset() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect6offsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +180,10 @@ func (this *QGraphicsDropShadowEffect) Offset() *qtcore.QPointF /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal xOffset() const
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) XOffset() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect7xOffsetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,6 +194,10 @@ func (this *QGraphicsDropShadowEffect) XOffset() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal yOffset() const
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) YOffset() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect7yOffsetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,6 +208,10 @@ func (this *QGraphicsDropShadowEffect) YOffset() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal blurRadius() const
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) BlurRadius() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect10blurRadiusEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -181,6 +222,10 @@ func (this *QGraphicsDropShadowEffect) BlurRadius() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor color() const
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +238,10 @@ func (this *QGraphicsDropShadowEffect) Color() *qtgui.QColor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOffset(const QPointF &)
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) SetOffset(ofs qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if ofs != nil && ofs.QPointF_PTR() != nil {
@@ -206,6 +255,10 @@ func (this *QGraphicsDropShadowEffect) SetOffset(ofs qtcore.QPointF_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setOffset(qreal, qreal)
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) SetOffset_1(dx float64, dy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect9setOffsetEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -215,6 +268,10 @@ func (this *QGraphicsDropShadowEffect) SetOffset_1(dx float64, dy float64) {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void setOffset(qreal)
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) SetOffset_2(d float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect9setOffsetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), d)
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +281,10 @@ func (this *QGraphicsDropShadowEffect) SetOffset_2(d float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setXOffset(qreal)
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) SetXOffset(dx float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect10setXOffsetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx)
 	qtrt.ErrPrint(err, rv)
@@ -233,6 +294,10 @@ func (this *QGraphicsDropShadowEffect) SetXOffset(dx float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setYOffset(qreal)
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) SetYOffset(dy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect10setYOffsetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dy)
 	qtrt.ErrPrint(err, rv)
@@ -242,6 +307,10 @@ func (this *QGraphicsDropShadowEffect) SetYOffset(dy float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBlurRadius(qreal)
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) SetBlurRadius(blurRadius float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect13setBlurRadiusEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), blurRadius)
 	qtrt.ErrPrint(err, rv)
@@ -251,6 +320,10 @@ func (this *QGraphicsDropShadowEffect) SetBlurRadius(blurRadius float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) SetColor(color qtgui.QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -264,6 +337,10 @@ func (this *QGraphicsDropShadowEffect) SetColor(color qtgui.QColor_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void offsetChanged(const QPointF &)
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) OffsetChanged(offset qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPointF_PTR() != nil {
@@ -277,6 +354,10 @@ func (this *QGraphicsDropShadowEffect) OffsetChanged(offset qtcore.QPointF_ITF) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void blurRadiusChanged(qreal)
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) BlurRadiusChanged(blurRadius float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect17blurRadiusChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), blurRadius)
 	qtrt.ErrPrint(err, rv)
@@ -286,6 +367,10 @@ func (this *QGraphicsDropShadowEffect) BlurRadiusChanged(blurRadius float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void colorChanged(const QColor &)
+
+/*
+
+ */
 func (this *QGraphicsDropShadowEffect) ColorChanged(color qtgui.QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -299,6 +384,38 @@ func (this *QGraphicsDropShadowEffect) ColorChanged(color qtgui.QColor_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
+
+/*
+This pure virtual function draws the effect and is called whenever the source needs to be drawn.
+
+Reimplement this function in a QGraphicsEffect subclass to provide the effect's drawing implementation, using painter.
+
+For example:
+
+
+  MyGraphicsEffect::draw(QPainter *painter)
+  {
+      ...
+      QPoint offset;
+      if (sourceIsPixmap()) {
+          // No point in drawing in device coordinates (pixmap will be scaled anyways).
+          const QPixmap pixmap = sourcePixmap(Qt::LogicalCoordinates, &offset);
+          ...
+          painter->drawPixmap(offset, pixmap);
+      } else {
+          // Draw pixmap in device coordinates to avoid pixmap scaling;
+          const QPixmap pixmap = sourcePixmap(Qt::DeviceCoordinates, &offset);
+          painter->setWorldTransform(QTransform());
+          ...
+          painter->drawPixmap(offset, pixmap);
+      }
+      ...
+  }
+
+
+
+This function should not be called explicitly by the user, since it is meant for reimplementation purposes only.
+*/
 func (this *QGraphicsDropShadowEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {

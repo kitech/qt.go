@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QGraphicsSceneResizeEvent struct {
 	*QGraphicsSceneEvent
 }
@@ -67,6 +70,10 @@ func (*QGraphicsSceneResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphic
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneResizeEvent()
+
+/*
+
+ */
 func NewQGraphicsSceneResizeEvent() *QGraphicsSceneResizeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQGraphicsSceneResizeEvent() *QGraphicsSceneResizeEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneResizeEvent()
+
+/*
+
+ */
 func DeleteQGraphicsSceneResizeEvent(this *QGraphicsSceneResizeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -90,6 +101,10 @@ func DeleteQGraphicsSceneResizeEvent(this *QGraphicsSceneResizeEvent) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF oldSize() const
+
+/*
+
+ */
 func (this *QGraphicsSceneResizeEvent) OldSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsSceneResizeEvent7oldSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +117,10 @@ func (this *QGraphicsSceneResizeEvent) OldSize() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOldSize(const QSizeF &)
+
+/*
+
+ */
 func (this *QGraphicsSceneResizeEvent) SetOldSize(size qtcore.QSizeF_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
@@ -115,6 +134,10 @@ func (this *QGraphicsSceneResizeEvent) SetOldSize(size qtcore.QSizeF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF newSize() const
+
+/*
+
+ */
 func (this *QGraphicsSceneResizeEvent) NewSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QGraphicsSceneResizeEvent7newSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +150,10 @@ func (this *QGraphicsSceneResizeEvent) NewSize() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNewSize(const QSizeF &)
+
+/*
+
+ */
 func (this *QGraphicsSceneResizeEvent) SetNewSize(size qtcore.QSizeF_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {

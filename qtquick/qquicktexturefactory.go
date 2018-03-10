@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QQuickTextureFactory struct {
 	*qtcore.QObject
 }
@@ -67,6 +70,10 @@ func (*QQuickTextureFactory) NewFromPointer(cthis unsafe.Pointer) *QQuickTexture
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickTextureFactory()
+
+/*
+
+ */
 func NewQQuickTextureFactory() *QQuickTextureFactory {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickTextureFactoryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQQuickTextureFactory() *QQuickTextureFactory {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickTextureFactory()
+
+/*
+
+ */
 func DeleteQQuickTextureFactory(this *QQuickTextureFactory) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickTextureFactoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -90,6 +101,10 @@ func DeleteQQuickTextureFactory(this *QQuickTextureFactory) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSGTexture * createTexture(QQuickWindow *) const
+
+/*
+
+ */
 func (this *QQuickTextureFactory) CreateTexture(window QQuickWindow_ITF /*777 QQuickWindow **/) *QSGTexture /*777 QSGTexture **/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QQuickWindow_PTR() != nil {
@@ -104,6 +119,10 @@ func (this *QQuickTextureFactory) CreateTexture(window QQuickWindow_ITF /*777 QQ
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSize textureSize() const
+
+/*
+
+ */
 func (this *QQuickTextureFactory) TextureSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickTextureFactory11textureSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,6 +135,10 @@ func (this *QQuickTextureFactory) TextureSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int textureByteCount() const
+
+/*
+
+ */
 func (this *QQuickTextureFactory) TextureByteCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickTextureFactory16textureByteCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -126,6 +149,10 @@ func (this *QQuickTextureFactory) TextureByteCount() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QImage image() const
+
+/*
+
+ */
 func (this *QQuickTextureFactory) Image() *qtgui.QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickTextureFactory5imageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -138,6 +165,10 @@ func (this *QQuickTextureFactory) Image() *qtgui.QImage /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QQuickTextureFactory * textureFactoryForImage(const QImage &)
+
+/*
+
+ */
 func (this *QQuickTextureFactory) TextureFactoryForImage(image qtgui.QImage_ITF) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {

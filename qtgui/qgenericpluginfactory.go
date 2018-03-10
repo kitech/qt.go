@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QGenericPluginFactory struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,12 @@ func (*QGenericPluginFactory) NewFromPointer(cthis unsafe.Pointer) *QGenericPlug
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList keys()
+
+/*
+Returns the list of valid keys, i.e. the available mouse drivers.
+
+See also create().
+*/
 func (this *QGenericPluginFactory) Keys() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGenericPluginFactory4keysEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -83,6 +92,14 @@ func QGenericPluginFactory_Keys() *qtcore.QStringList /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QObject * create(const QString &, const QString &)
+
+/*
+Creates the driver specified by key, using the given specification.
+
+Note that the keys are case-insensitive.
+
+See also keys().
+*/
 func (this *QGenericPluginFactory) Create(arg0 string, arg1 string) *qtcore.QObject /*777 QObject **/ {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()

@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionFrame struct {
 	*QStyleOption
 }
@@ -65,6 +68,10 @@ func (*QStyleOptionFrame) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionFram
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionFrame()
+
+/*
+
+ */
 func NewQStyleOptionFrame() *QStyleOptionFrame {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleOptionFrame() *QStyleOptionFrame {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionFrame(int)
+
+/*
+
+ */
 func NewQStyleOptionFrame_1(version int) *QStyleOptionFrame {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,18 +102,50 @@ func DeleteQStyleOptionFrame(this *QStyleOptionFrame) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionFrame__StyleOptionType = int
 
+//
 const QStyleOptionFrame__Type QStyleOptionFrame__StyleOptionType = 5
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionFrame__StyleOptionVersion = int
 
+// 1
 const QStyleOptionFrame__Version QStyleOptionFrame__StyleOptionVersion = 3
 
+/*
+
+
+ */
 type QStyleOptionFrame__FrameFeature = int
 
+//
 const QStyleOptionFrame__None QStyleOptionFrame__FrameFeature = 0
+
+//
 const QStyleOptionFrame__Flat QStyleOptionFrame__FrameFeature = 1
+
+//
 const QStyleOptionFrame__Rounded QStyleOptionFrame__FrameFeature = 2
 
 //  body block end

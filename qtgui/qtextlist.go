@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextList struct {
 	*QTextBlockGroup
 }
@@ -64,6 +67,10 @@ func (*QTextList) NewFromPointer(cthis unsafe.Pointer) *QTextList {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QTextList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QTextList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextList(QTextDocument *)
+
+/*
+
+ */
 func NewQTextList(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextList {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQTextList(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextList {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextList()
+
+/*
+
+ */
 func DeleteQTextList(this *QTextList) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextListD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -101,6 +116,10 @@ func DeleteQTextList(this *QTextList) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
+
+/*
+Returns the number of items in the list.
+*/
 func (this *QTextList) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +130,10 @@ func (this *QTextList) Count() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+
+ */
 func (this *QTextList) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +144,12 @@ func (this *QTextList) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextBlock item(int) const
+
+/*
+Returns the i-th text block in the list.
+
+See also count() and itemText().
+*/
 func (this *QTextList) Item(i int) *QTextBlock /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList4itemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +162,10 @@ func (this *QTextList) Item(i int) *QTextBlock /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int itemNumber(const QTextBlock &) const
+
+/*
+Returns the index of the list item that corresponds to the given block. Returns -1 if the block was not present in the list.
+*/
 func (this *QTextList) ItemNumber(arg0 QTextBlock_ITF) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTextBlock_PTR() != nil {
@@ -147,6 +180,10 @@ func (this *QTextList) ItemNumber(arg0 QTextBlock_ITF) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString itemText(const QTextBlock &) const
+
+/*
+Returns the text of the list item that corresponds to the given block.
+*/
 func (this *QTextList) ItemText(arg0 QTextBlock_ITF) string {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTextBlock_PTR() != nil {
@@ -164,6 +201,12 @@ func (this *QTextList) ItemText(arg0 QTextBlock_ITF) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeItem(int)
+
+/*
+Removes the item at item position i from the list. When the last item in the list is removed, the list is automatically deleted by the QTextDocument that owns it.
+
+See also add() and remove().
+*/
 func (this *QTextList) RemoveItem(i int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextList10removeItemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -173,6 +216,12 @@ func (this *QTextList) RemoveItem(i int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void remove(const QTextBlock &)
+
+/*
+Removes the given block from the list.
+
+See also add() and removeItem().
+*/
 func (this *QTextList) Remove(arg0 QTextBlock_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTextBlock_PTR() != nil {
@@ -186,6 +235,12 @@ func (this *QTextList) Remove(arg0 QTextBlock_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void add(const QTextBlock &)
+
+/*
+Makes the given block part of the list.
+
+See also remove() and removeItem().
+*/
 func (this *QTextList) Add(block QTextBlock_ITF) {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {
@@ -199,6 +254,12 @@ func (this *QTextList) Add(block QTextBlock_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFormat(const QTextListFormat &)
+
+/*
+Sets the list's format to format.
+
+See also format().
+*/
 func (this *QTextList) SetFormat(format QTextListFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QTextListFormat_PTR() != nil {
@@ -212,6 +273,12 @@ func (this *QTextList) SetFormat(format QTextListFormat_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QTextListFormat format() const
+
+/*
+Returns the list's format.
+
+See also setFormat().
+*/
 func (this *QTextList) Format() *QTextListFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextList6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

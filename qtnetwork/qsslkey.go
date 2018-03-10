@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QSslKey struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,12 @@ func (*QSslKey) NewFromPointer(cthis unsafe.Pointer) *QSslKey {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey()
+
+/*
+Constructs a null key.
+
+See also isNull().
+*/
 func NewQSslKey() *QSslKey {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +87,12 @@ func NewQSslKey() *QSslKey {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey(const QByteArray &, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
+
+/*
+Constructs a null key.
+
+See also isNull().
+*/
 func NewQSslKey_1(encoded qtcore.QByteArray_ITF, algorithm int, format int, type_ int, passPhrase qtcore.QByteArray_ITF) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
@@ -98,6 +113,12 @@ func NewQSslKey_1(encoded qtcore.QByteArray_ITF, algorithm int, format int, type
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey(const QByteArray &, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
+
+/*
+Constructs a null key.
+
+See also isNull().
+*/
 func NewQSslKey_1_(encoded qtcore.QByteArray_ITF, algorithm int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
@@ -120,6 +141,12 @@ func NewQSslKey_1_(encoded qtcore.QByteArray_ITF, algorithm int) *QSslKey {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey(const QByteArray &, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
+
+/*
+Constructs a null key.
+
+See also isNull().
+*/
 func NewQSslKey_1_1(encoded qtcore.QByteArray_ITF, algorithm int, format int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
@@ -140,6 +167,12 @@ func NewQSslKey_1_1(encoded qtcore.QByteArray_ITF, algorithm int, format int) *Q
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey(const QByteArray &, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
+
+/*
+Constructs a null key.
+
+See also isNull().
+*/
 func NewQSslKey_1_2(encoded qtcore.QByteArray_ITF, algorithm int, format int, type_ int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
@@ -158,6 +191,12 @@ func NewQSslKey_1_2(encoded qtcore.QByteArray_ITF, algorithm int, format int, ty
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey(QIODevice *, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
+
+/*
+Constructs a null key.
+
+See also isNull().
+*/
 func NewQSslKey_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int, format int, type_ int, passPhrase qtcore.QByteArray_ITF) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -178,6 +217,12 @@ func NewQSslKey_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey(QIODevice *, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
+
+/*
+Constructs a null key.
+
+See also isNull().
+*/
 func NewQSslKey_2_(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -200,6 +245,12 @@ func NewQSslKey_2_(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm in
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey(QIODevice *, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
+
+/*
+Constructs a null key.
+
+See also isNull().
+*/
 func NewQSslKey_2_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int, format int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -220,6 +271,12 @@ func NewQSslKey_2_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm i
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey(QIODevice *, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
+
+/*
+Constructs a null key.
+
+See also isNull().
+*/
 func NewQSslKey_2_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int, format int, type_ int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -238,6 +295,10 @@ func NewQSslKey_2_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm i
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSslKey & operator=(QSslKey &&)
+
+/*
+
+ */
 func (this *QSslKey) Operator_equal(other unsafe.Pointer /*333*/) *QSslKey {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -250,6 +311,10 @@ func (this *QSslKey) Operator_equal(other unsafe.Pointer /*333*/) *QSslKey {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QSslKey & operator=(const QSslKey &)
+
+/*
+
+ */
 func (this *QSslKey) Operator_equal_1(other QSslKey_ITF) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslKey_PTR() != nil {
@@ -266,6 +331,10 @@ func (this *QSslKey) Operator_equal_1(other QSslKey_ITF) *QSslKey {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSslKey()
+
+/*
+
+ */
 func DeleteQSslKey(this *QSslKey) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -277,6 +346,12 @@ func DeleteQSslKey(this *QSslKey) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslKey &)
+
+/*
+Swaps this ssl key with other. This function is very fast and never fails.
+
+This function was introduced in  Qt 5.0.
+*/
 func (this *QSslKey) Swap(other QSslKey_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslKey_PTR() != nil {
@@ -290,6 +365,12 @@ func (this *QSslKey) Swap(other QSslKey_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if this is a null key; otherwise false.
+
+See also clear().
+*/
 func (this *QSslKey) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -300,6 +381,12 @@ func (this *QSslKey) IsNull() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the contents of this key, making it a null key.
+
+See also isNull().
+*/
 func (this *QSslKey) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKey5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -309,6 +396,10 @@ func (this *QSslKey) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int length() const
+
+/*
+Returns the length of the key in bits, or -1 if the key is null.
+*/
 func (this *QSslKey) Length() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey6lengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -319,6 +410,10 @@ func (this *QSslKey) Length() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSsl::KeyType type() const
+
+/*
+Returns the type of the key (i.e., PublicKey or PrivateKey).
+*/
 func (this *QSslKey) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -329,6 +424,10 @@ func (this *QSslKey) Type() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSsl::KeyAlgorithm algorithm() const
+
+/*
+Returns the key algorithm.
+*/
 func (this *QSslKey) Algorithm() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey9algorithmEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -339,6 +438,10 @@ func (this *QSslKey) Algorithm() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toPem(const QByteArray &) const
+
+/*
+Returns the key in PEM encoding. The result is encrypted with passPhrase if the key is a private key and passPhrase is non-empty.
+*/
 func (this *QSslKey) ToPem(passPhrase qtcore.QByteArray_ITF) *qtcore.QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if passPhrase != nil && passPhrase.QByteArray_PTR() != nil {
@@ -355,6 +458,10 @@ func (this *QSslKey) ToPem(passPhrase qtcore.QByteArray_ITF) *qtcore.QByteArray 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toPem(const QByteArray &) const
+
+/*
+Returns the key in PEM encoding. The result is encrypted with passPhrase if the key is a private key and passPhrase is non-empty.
+*/
 func (this *QSslKey) ToPem__() *qtcore.QByteArray /*123*/ {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
 	var convArg0 = qtcore.NewQByteArray()
@@ -369,6 +476,12 @@ func (this *QSslKey) ToPem__() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toDer(const QByteArray &) const
+
+/*
+Returns the key in DER encoding.
+
+The passPhrase argument should be omitted as DER cannot be encrypted. It will be removed in a future version of Qt.
+*/
 func (this *QSslKey) ToDer(passPhrase qtcore.QByteArray_ITF) *qtcore.QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if passPhrase != nil && passPhrase.QByteArray_PTR() != nil {
@@ -385,6 +498,12 @@ func (this *QSslKey) ToDer(passPhrase qtcore.QByteArray_ITF) *qtcore.QByteArray 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toDer(const QByteArray &) const
+
+/*
+Returns the key in DER encoding.
+
+The passPhrase argument should be omitted as DER cannot be encrypted. It will be removed in a future version of Qt.
+*/
 func (this *QSslKey) ToDer__() *qtcore.QByteArray /*123*/ {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
 	var convArg0 = qtcore.NewQByteArray()
@@ -399,6 +518,14 @@ func (this *QSslKey) ToDer__() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] Qt::HANDLE handle() const
+
+/*
+Returns a pointer to the native key handle, if it is available; otherwise a null pointer is returned.
+
+You can use this handle together with the native API to access extended information about the key.
+
+Warning: Use of this function has a high probability of being non-portable, and its return value may vary across platforms, and between minor Qt releases.
+*/
 func (this *QSslKey) Handle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -409,6 +536,10 @@ func (this *QSslKey) Handle() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QSslKey &) const
+
+/*
+
+ */
 func (this *QSslKey) Operator_equal_equal(key QSslKey_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QSslKey_PTR() != nil {
@@ -423,6 +554,10 @@ func (this *QSslKey) Operator_equal_equal(key QSslKey_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QSslKey &) const
+
+/*
+
+ */
 func (this *QSslKey) Operator_not_equal(key QSslKey_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QSslKey_PTR() != nil {

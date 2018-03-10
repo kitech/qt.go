@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QGraphicsSceneHoverEvent struct {
 	*QGraphicsSceneEvent
 }
@@ -67,6 +70,10 @@ func (*QGraphicsSceneHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneHoverEvent(enum QEvent::Type)
+
+/*
+
+ */
 func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneHoverEvent(enum QEvent::Type)
+
+/*
+
+ */
 func NewQGraphicsSceneHoverEvent__() *QGraphicsSceneHoverEvent {
 	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum,
 	type_ := 0
@@ -93,6 +104,10 @@ func NewQGraphicsSceneHoverEvent__() *QGraphicsSceneHoverEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneHoverEvent()
+
+/*
+
+ */
 func DeleteQGraphicsSceneHoverEvent(this *QGraphicsSceneHoverEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -104,6 +119,10 @@ func DeleteQGraphicsSceneHoverEvent(this *QGraphicsSceneHoverEvent) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF pos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) Pos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,6 +135,10 @@ func (this *QGraphicsSceneHoverEvent) Pos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) SetPos(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -129,6 +152,10 @@ func (this *QGraphicsSceneHoverEvent) SetPos(pos qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF scenePos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent8scenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,6 +168,10 @@ func (this *QGraphicsSceneHoverEvent) ScenePos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -154,6 +185,10 @@ func (this *QGraphicsSceneHoverEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint screenPos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +201,10 @@ func (this *QGraphicsSceneHoverEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -179,6 +218,10 @@ func (this *QGraphicsSceneHoverEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF lastPos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) LastPos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent7lastPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -191,6 +234,10 @@ func (this *QGraphicsSceneHoverEvent) LastPos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastPos(const QPointF &)
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) SetLastPos(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -204,6 +251,10 @@ func (this *QGraphicsSceneHoverEvent) SetLastPos(pos qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF lastScenePos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) LastScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,6 +267,10 @@ func (this *QGraphicsSceneHoverEvent) LastScenePos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastScenePos(const QPointF &)
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) SetLastScenePos(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -229,6 +284,10 @@ func (this *QGraphicsSceneHoverEvent) SetLastScenePos(pos qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint lastScreenPos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) LastScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -241,6 +300,10 @@ func (this *QGraphicsSceneHoverEvent) LastScreenPos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastScreenPos(const QPoint &)
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) SetLastScreenPos(pos qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -254,6 +317,10 @@ func (this *QGraphicsSceneHoverEvent) SetLastScreenPos(pos qtcore.QPoint_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers modifiers() const
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) Modifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneHoverEvent9modifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -264,6 +331,10 @@ func (this *QGraphicsSceneHoverEvent) Modifiers() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModifiers(Qt::KeyboardModifiers)
+
+/*
+
+ */
 func (this *QGraphicsSceneHoverEvent) SetModifiers(modifiers int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
 	qtrt.ErrPrint(err, rv)

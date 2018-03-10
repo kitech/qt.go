@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QInputDialog struct {
 	*QDialog
 }
@@ -65,6 +68,10 @@ func (*QInputDialog) NewFromPointer(cthis unsafe.Pointer) *QInputDialog {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QInputDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,12 @@ func (this *QInputDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QInputDialog(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a new input dialog with the given parent and window flags.
+
+This function was introduced in  Qt 4.5.
+*/
 func NewQInputDialog(parent QWidget_ITF /*777 QWidget **/, flags int) *QInputDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -91,6 +104,12 @@ func NewQInputDialog(parent QWidget_ITF /*777 QWidget **/, flags int) *QInputDia
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QInputDialog(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a new input dialog with the given parent and window flags.
+
+This function was introduced in  Qt 4.5.
+*/
 func NewQInputDialog__() *QInputDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -107,6 +126,12 @@ func NewQInputDialog__() *QInputDialog {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QInputDialog(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a new input dialog with the given parent and window flags.
+
+This function was introduced in  Qt 4.5.
+*/
 func NewQInputDialog__1(parent QWidget_ITF /*777 QWidget **/) *QInputDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -125,6 +150,10 @@ func NewQInputDialog__1(parent QWidget_ITF /*777 QWidget **/) *QInputDialog {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QInputDialog()
+
+/*
+
+ */
 func DeleteQInputDialog(this *QInputDialog) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialogD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -136,6 +165,10 @@ func DeleteQInputDialog(this *QInputDialog) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInputMode(enum QInputDialog::InputMode)
+
+/*
+
+ */
 func (this *QInputDialog) SetInputMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog12setInputModeENS_9InputModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -145,6 +178,10 @@ func (this *QInputDialog) SetInputMode(mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QInputDialog::InputMode inputMode() const
+
+/*
+
+ */
 func (this *QInputDialog) InputMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog9inputModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -155,6 +192,10 @@ func (this *QInputDialog) InputMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLabelText(const QString &)
+
+/*
+
+ */
 func (this *QInputDialog) SetLabelText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -166,6 +207,10 @@ func (this *QInputDialog) SetLabelText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString labelText() const
+
+/*
+
+ */
 func (this *QInputDialog) LabelText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog9labelTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +224,12 @@ func (this *QInputDialog) LabelText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(enum QInputDialog::InputDialogOption, _Bool)
+
+/*
+Sets the given option to be enabled if on is true; otherwise, clears the given option.
+
+See also options and testOption().
+*/
 func (this *QInputDialog) SetOption(option int, on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9setOptionENS_17InputDialogOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	qtrt.ErrPrint(err, rv)
@@ -188,6 +239,12 @@ func (this *QInputDialog) SetOption(option int, on bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(enum QInputDialog::InputDialogOption, _Bool)
+
+/*
+Sets the given option to be enabled if on is true; otherwise, clears the given option.
+
+See also options and testOption().
+*/
 func (this *QInputDialog) SetOption__(option int) {
 	// arg: 1, bool=Bool, =Invalid,
 	on := true
@@ -199,6 +256,12 @@ func (this *QInputDialog) SetOption__(option int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(enum QInputDialog::InputDialogOption) const
+
+/*
+Returns true if the given option is enabled; otherwise, returns false.
+
+See also options and setOption().
+*/
 func (this *QInputDialog) TestOption(option int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog10testOptionENS_17InputDialogOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	qtrt.ErrPrint(err, rv)
@@ -209,6 +272,10 @@ func (this *QInputDialog) TestOption(option int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOptions(QInputDialog::InputDialogOptions)
+
+/*
+
+ */
 func (this *QInputDialog) SetOptions(options int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog10setOptionsE6QFlagsINS_17InputDialogOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
 	qtrt.ErrPrint(err, rv)
@@ -218,6 +285,10 @@ func (this *QInputDialog) SetOptions(options int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QInputDialog::InputDialogOptions options() const
+
+/*
+
+ */
 func (this *QInputDialog) Options() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog7optionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,6 +299,10 @@ func (this *QInputDialog) Options() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextValue(const QString &)
+
+/*
+
+ */
 func (this *QInputDialog) SetTextValue(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -239,6 +314,10 @@ func (this *QInputDialog) SetTextValue(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString textValue() const
+
+/*
+
+ */
 func (this *QInputDialog) TextValue() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog9textValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -252,6 +331,10 @@ func (this *QInputDialog) TextValue() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextEchoMode(QLineEdit::EchoMode)
+
+/*
+
+ */
 func (this *QInputDialog) SetTextEchoMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog15setTextEchoModeEN9QLineEdit8EchoModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -261,6 +344,10 @@ func (this *QInputDialog) SetTextEchoMode(mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLineEdit::EchoMode textEchoMode() const
+
+/*
+
+ */
 func (this *QInputDialog) TextEchoMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog12textEchoModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -271,6 +358,10 @@ func (this *QInputDialog) TextEchoMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setComboBoxEditable(_Bool)
+
+/*
+
+ */
 func (this *QInputDialog) SetComboBoxEditable(editable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog19setComboBoxEditableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), editable)
 	qtrt.ErrPrint(err, rv)
@@ -280,6 +371,10 @@ func (this *QInputDialog) SetComboBoxEditable(editable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isComboBoxEditable() const
+
+/*
+
+ */
 func (this *QInputDialog) IsComboBoxEditable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog18isComboBoxEditableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -290,6 +385,10 @@ func (this *QInputDialog) IsComboBoxEditable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setComboBoxItems(const QStringList &)
+
+/*
+
+ */
 func (this *QInputDialog) SetComboBoxItems(items qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if items != nil && items.QStringList_PTR() != nil {
@@ -303,6 +402,10 @@ func (this *QInputDialog) SetComboBoxItems(items qtcore.QStringList_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList comboBoxItems() const
+
+/*
+
+ */
 func (this *QInputDialog) ComboBoxItems() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog13comboBoxItemsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -315,6 +418,10 @@ func (this *QInputDialog) ComboBoxItems() *qtcore.QStringList /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIntValue(int)
+
+/*
+
+ */
 func (this *QInputDialog) SetIntValue(value int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog11setIntValueEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -324,6 +431,10 @@ func (this *QInputDialog) SetIntValue(value int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int intValue() const
+
+/*
+
+ */
 func (this *QInputDialog) IntValue() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog8intValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -334,6 +445,10 @@ func (this *QInputDialog) IntValue() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIntMinimum(int)
+
+/*
+
+ */
 func (this *QInputDialog) SetIntMinimum(min int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog13setIntMinimumEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), min)
 	qtrt.ErrPrint(err, rv)
@@ -343,6 +458,10 @@ func (this *QInputDialog) SetIntMinimum(min int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int intMinimum() const
+
+/*
+
+ */
 func (this *QInputDialog) IntMinimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog10intMinimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -353,6 +472,10 @@ func (this *QInputDialog) IntMinimum() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIntMaximum(int)
+
+/*
+
+ */
 func (this *QInputDialog) SetIntMaximum(max int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog13setIntMaximumEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), max)
 	qtrt.ErrPrint(err, rv)
@@ -362,6 +485,10 @@ func (this *QInputDialog) SetIntMaximum(max int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int intMaximum() const
+
+/*
+
+ */
 func (this *QInputDialog) IntMaximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog10intMaximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -372,6 +499,10 @@ func (this *QInputDialog) IntMaximum() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIntRange(int, int)
+
+/*
+Sets the range of integer values accepted by the dialog when used in IntInput mode, with minimum and maximum values specified by min and max respectively.
+*/
 func (this *QInputDialog) SetIntRange(min int, max int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog11setIntRangeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), min, max)
 	qtrt.ErrPrint(err, rv)
@@ -381,6 +512,10 @@ func (this *QInputDialog) SetIntRange(min int, max int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIntStep(int)
+
+/*
+
+ */
 func (this *QInputDialog) SetIntStep(step int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog10setIntStepEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -390,6 +525,10 @@ func (this *QInputDialog) SetIntStep(step int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int intStep() const
+
+/*
+
+ */
 func (this *QInputDialog) IntStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog7intStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -400,6 +539,10 @@ func (this *QInputDialog) IntStep() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDoubleValue(double)
+
+/*
+
+ */
 func (this *QInputDialog) SetDoubleValue(value float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog14setDoubleValueEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -409,6 +552,10 @@ func (this *QInputDialog) SetDoubleValue(value float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double doubleValue() const
+
+/*
+
+ */
 func (this *QInputDialog) DoubleValue() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog11doubleValueEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -419,6 +566,10 @@ func (this *QInputDialog) DoubleValue() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDoubleMinimum(double)
+
+/*
+
+ */
 func (this *QInputDialog) SetDoubleMinimum(min float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16setDoubleMinimumEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), min)
 	qtrt.ErrPrint(err, rv)
@@ -428,6 +579,10 @@ func (this *QInputDialog) SetDoubleMinimum(min float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double doubleMinimum() const
+
+/*
+
+ */
 func (this *QInputDialog) DoubleMinimum() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog13doubleMinimumEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -438,6 +593,10 @@ func (this *QInputDialog) DoubleMinimum() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDoubleMaximum(double)
+
+/*
+
+ */
 func (this *QInputDialog) SetDoubleMaximum(max float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16setDoubleMaximumEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), max)
 	qtrt.ErrPrint(err, rv)
@@ -447,6 +606,10 @@ func (this *QInputDialog) SetDoubleMaximum(max float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double doubleMaximum() const
+
+/*
+
+ */
 func (this *QInputDialog) DoubleMaximum() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog13doubleMaximumEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -457,6 +620,10 @@ func (this *QInputDialog) DoubleMaximum() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDoubleRange(double, double)
+
+/*
+Sets the range of double precision floating point values accepted by the dialog when used in DoubleInput mode, with minimum and maximum values specified by min and max respectively.
+*/
 func (this *QInputDialog) SetDoubleRange(min float64, max float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog14setDoubleRangeEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), min, max)
 	qtrt.ErrPrint(err, rv)
@@ -466,6 +633,10 @@ func (this *QInputDialog) SetDoubleRange(min float64, max float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDoubleDecimals(int)
+
+/*
+
+ */
 func (this *QInputDialog) SetDoubleDecimals(decimals int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog17setDoubleDecimalsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), decimals)
 	qtrt.ErrPrint(err, rv)
@@ -475,6 +646,10 @@ func (this *QInputDialog) SetDoubleDecimals(decimals int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int doubleDecimals() const
+
+/*
+
+ */
 func (this *QInputDialog) DoubleDecimals() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog14doubleDecimalsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -485,6 +660,10 @@ func (this *QInputDialog) DoubleDecimals() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOkButtonText(const QString &)
+
+/*
+
+ */
 func (this *QInputDialog) SetOkButtonText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -496,6 +675,10 @@ func (this *QInputDialog) SetOkButtonText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString okButtonText() const
+
+/*
+
+ */
 func (this *QInputDialog) OkButtonText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog12okButtonTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -509,6 +692,10 @@ func (this *QInputDialog) OkButtonText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCancelButtonText(const QString &)
+
+/*
+
+ */
 func (this *QInputDialog) SetCancelButtonText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -520,6 +707,10 @@ func (this *QInputDialog) SetCancelButtonText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString cancelButtonText() const
+
+/*
+
+ */
 func (this *QInputDialog) CancelButtonText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog16cancelButtonTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -533,6 +724,23 @@ func (this *QInputDialog) CancelButtonText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void open(QObject *, const char *)
+
+/*
+This is an overloaded function.
+
+This function connects one of its signals to the slot specified by receiver and member. The specific signal depends on the arguments that are specified in member. These are:
+
+
+textValueSelected() if member has a QString for its first argument.
+intValueSelected() if member has an int for its first argument.
+doubleValueSelected() if member has a double for its first argument.
+accepted() if member has NO arguments.
+
+
+The signal will be disconnected from the slot when the dialog is closed.
+
+This function was introduced in  Qt 4.5.
+*/
 func (this *QInputDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, member string) {
 	var convArg0 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -548,6 +756,10 @@ func (this *QInputDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, me
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QInputDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -560,6 +772,10 @@ func (this *QInputDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QInputDialog) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -572,6 +788,10 @@ func (this *QInputDialog) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setVisible(_Bool)
+
+/*
+Reimplemented from QWidget::setVisible().
+*/
 func (this *QInputDialog) SetVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	qtrt.ErrPrint(err, rv)
@@ -581,6 +801,30 @@ func (this *QInputDialog) SetVisible(visible bool) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getText(this, tr("QInputDialog::getText()"),
+                                           tr("User name:"), QLineEdit::Normal,
+                                           QDir::home().dirName(), &ok);
+      if (ok && !text.isEmpty())
+          textLabel->setText(text);
+
+
+
+See also getInt(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetText(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok *bool, flags int, inputMethodHints int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -609,6 +853,30 @@ func QInputDialog_GetText(parent QWidget_ITF /*777 QWidget **/, title string, la
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getText(this, tr("QInputDialog::getText()"),
+                                           tr("User name:"), QLineEdit::Normal,
+                                           QDir::home().dirName(), &ok);
+      if (ok && !text.isEmpty())
+          textLabel->setText(text);
+
+
+
+See also getInt(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetText__(parent QWidget_ITF /*777 QWidget **/, title string, label string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -640,6 +908,30 @@ func (this *QInputDialog) GetText__(parent QWidget_ITF /*777 QWidget **/, title 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getText(this, tr("QInputDialog::getText()"),
+                                           tr("User name:"), QLineEdit::Normal,
+                                           QDir::home().dirName(), &ok);
+      if (ok && !text.isEmpty())
+          textLabel->setText(text);
+
+
+
+See also getInt(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetText__1(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -669,6 +961,30 @@ func (this *QInputDialog) GetText__1(parent QWidget_ITF /*777 QWidget **/, title
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getText(this, tr("QInputDialog::getText()"),
+                                           tr("User name:"), QLineEdit::Normal,
+                                           QDir::home().dirName(), &ok);
+      if (ok && !text.isEmpty())
+          textLabel->setText(text);
+
+
+
+See also getInt(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetText__2(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -698,6 +1014,30 @@ func (this *QInputDialog) GetText__2(parent QWidget_ITF /*777 QWidget **/, title
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getText(this, tr("QInputDialog::getText()"),
+                                           tr("User name:"), QLineEdit::Normal,
+                                           QDir::home().dirName(), &ok);
+      if (ok && !text.isEmpty())
+          textLabel->setText(text);
+
+
+
+See also getInt(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetText__3(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok *bool) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -725,6 +1065,30 @@ func (this *QInputDialog) GetText__3(parent QWidget_ITF /*777 QWidget **/, title
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getText(this, tr("QInputDialog::getText()"),
+                                           tr("User name:"), QLineEdit::Normal,
+                                           QDir::home().dirName(), &ok);
+      if (ok && !text.isEmpty())
+          textLabel->setText(text);
+
+
+
+See also getInt(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetText__4(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok *bool, flags int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -750,6 +1114,31 @@ func (this *QInputDialog) GetText__4(parent QWidget_ITF /*777 QWidget **/, title
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a multiline string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the plain text edit. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's plain text edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getMultiLineText(this, tr("QInputDialog::getMultiLineText()"),
+                                                    tr("Address:"), "John Doe\nFreedom Street", &ok);
+      if (ok && !text.isEmpty())
+          multiLineTextLabel->setText(text);
+
+
+
+This function was introduced in  Qt 5.2.
+
+See also getInt(), getDouble(), getItem(), and getText().
+*/
 func (this *QInputDialog) GetMultiLineText(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok *bool, flags int, inputMethodHints int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -778,6 +1167,31 @@ func QInputDialog_GetMultiLineText(parent QWidget_ITF /*777 QWidget **/, title s
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a multiline string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the plain text edit. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's plain text edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getMultiLineText(this, tr("QInputDialog::getMultiLineText()"),
+                                                    tr("Address:"), "John Doe\nFreedom Street", &ok);
+      if (ok && !text.isEmpty())
+          multiLineTextLabel->setText(text);
+
+
+
+This function was introduced in  Qt 5.2.
+
+See also getInt(), getDouble(), getItem(), and getText().
+*/
 func (this *QInputDialog) GetMultiLineText__(parent QWidget_ITF /*777 QWidget **/, title string, label string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -807,6 +1221,31 @@ func (this *QInputDialog) GetMultiLineText__(parent QWidget_ITF /*777 QWidget **
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a multiline string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the plain text edit. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's plain text edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getMultiLineText(this, tr("QInputDialog::getMultiLineText()"),
+                                                    tr("Address:"), "John Doe\nFreedom Street", &ok);
+      if (ok && !text.isEmpty())
+          multiLineTextLabel->setText(text);
+
+
+
+This function was introduced in  Qt 5.2.
+
+See also getInt(), getDouble(), getItem(), and getText().
+*/
 func (this *QInputDialog) GetMultiLineText__1(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -836,6 +1275,31 @@ func (this *QInputDialog) GetMultiLineText__1(parent QWidget_ITF /*777 QWidget *
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a multiline string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the plain text edit. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's plain text edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getMultiLineText(this, tr("QInputDialog::getMultiLineText()"),
+                                                    tr("Address:"), "John Doe\nFreedom Street", &ok);
+      if (ok && !text.isEmpty())
+          multiLineTextLabel->setText(text);
+
+
+
+This function was introduced in  Qt 5.2.
+
+See also getInt(), getDouble(), getItem(), and getText().
+*/
 func (this *QInputDialog) GetMultiLineText__2(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok *bool) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -863,6 +1327,31 @@ func (this *QInputDialog) GetMultiLineText__2(parent QWidget_ITF /*777 QWidget *
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to get a multiline string from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the plain text edit. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+
+If the dialog is accepted, this function returns the text in the dialog's plain text edit. If the dialog is rejected, a null QString is returned.
+
+Use this static function like this:
+
+
+      bool ok;
+      QString text = QInputDialog::getMultiLineText(this, tr("QInputDialog::getMultiLineText()"),
+                                                    tr("Address:"), "John Doe\nFreedom Street", &ok);
+      if (ok && !text.isEmpty())
+          multiLineTextLabel->setText(text);
+
+
+
+This function was introduced in  Qt 5.2.
+
+See also getInt(), getDouble(), getItem(), and getText().
+*/
 func (this *QInputDialog) GetMultiLineText__3(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok *bool, flags int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -888,6 +1377,34 @@ func (this *QInputDialog) GetMultiLineText__3(parent QWidget_ITF /*777 QWidget *
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to let the user select an item from a string list.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). items is the string list which is inserted into the combo box. current is the number of the item which should be the current item. inputMethodHints is the input method hints that will be used if the combo box is editable and an input method is active.
+
+If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the text of the current item, or if editable is true, the current text of the combo box.
+
+Use this static function like this:
+
+
+      QStringList items;
+      items << tr("Spring") << tr("Summer") << tr("Fall") << tr("Winter");
+
+      bool ok;
+      QString item = QInputDialog::getItem(this, tr("QInputDialog::getItem()"),
+                                           tr("Season:"), items, 0, false, &ok);
+      if (ok && !item.isEmpty())
+          itemLabel->setText(item);
+
+
+
+See also getText(), getInt(), getDouble(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetItem(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok *bool, flags int, inputMethodHints int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -918,6 +1435,34 @@ func QInputDialog_GetItem(parent QWidget_ITF /*777 QWidget **/, title string, la
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to let the user select an item from a string list.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). items is the string list which is inserted into the combo box. current is the number of the item which should be the current item. inputMethodHints is the input method hints that will be used if the combo box is editable and an input method is active.
+
+If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the text of the current item, or if editable is true, the current text of the combo box.
+
+Use this static function like this:
+
+
+      QStringList items;
+      items << tr("Spring") << tr("Summer") << tr("Fall") << tr("Winter");
+
+      bool ok;
+      QString item = QInputDialog::getItem(this, tr("QInputDialog::getItem()"),
+                                           tr("Season:"), items, 0, false, &ok);
+      if (ok && !item.isEmpty())
+          itemLabel->setText(item);
+
+
+
+See also getText(), getInt(), getDouble(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetItem__(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -953,6 +1498,34 @@ func (this *QInputDialog) GetItem__(parent QWidget_ITF /*777 QWidget **/, title 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to let the user select an item from a string list.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). items is the string list which is inserted into the combo box. current is the number of the item which should be the current item. inputMethodHints is the input method hints that will be used if the combo box is editable and an input method is active.
+
+If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the text of the current item, or if editable is true, the current text of the combo box.
+
+Use this static function like this:
+
+
+      QStringList items;
+      items << tr("Spring") << tr("Summer") << tr("Fall") << tr("Winter");
+
+      bool ok;
+      QString item = QInputDialog::getItem(this, tr("QInputDialog::getItem()"),
+                                           tr("Season:"), items, 0, false, &ok);
+      if (ok && !item.isEmpty())
+          itemLabel->setText(item);
+
+
+
+See also getText(), getInt(), getDouble(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetItem__1(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -986,6 +1559,34 @@ func (this *QInputDialog) GetItem__1(parent QWidget_ITF /*777 QWidget **/, title
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to let the user select an item from a string list.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). items is the string list which is inserted into the combo box. current is the number of the item which should be the current item. inputMethodHints is the input method hints that will be used if the combo box is editable and an input method is active.
+
+If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the text of the current item, or if editable is true, the current text of the combo box.
+
+Use this static function like this:
+
+
+      QStringList items;
+      items << tr("Spring") << tr("Summer") << tr("Fall") << tr("Winter");
+
+      bool ok;
+      QString item = QInputDialog::getItem(this, tr("QInputDialog::getItem()"),
+                                           tr("Season:"), items, 0, false, &ok);
+      if (ok && !item.isEmpty())
+          itemLabel->setText(item);
+
+
+
+See also getText(), getInt(), getDouble(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetItem__2(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1017,6 +1618,34 @@ func (this *QInputDialog) GetItem__2(parent QWidget_ITF /*777 QWidget **/, title
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to let the user select an item from a string list.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). items is the string list which is inserted into the combo box. current is the number of the item which should be the current item. inputMethodHints is the input method hints that will be used if the combo box is editable and an input method is active.
+
+If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the text of the current item, or if editable is true, the current text of the combo box.
+
+Use this static function like this:
+
+
+      QStringList items;
+      items << tr("Spring") << tr("Summer") << tr("Fall") << tr("Winter");
+
+      bool ok;
+      QString item = QInputDialog::getItem(this, tr("QInputDialog::getItem()"),
+                                           tr("Season:"), items, 0, false, &ok);
+      if (ok && !item.isEmpty())
+          itemLabel->setText(item);
+
+
+
+See also getText(), getInt(), getDouble(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetItem__3(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok *bool) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1046,6 +1675,34 @@ func (this *QInputDialog) GetItem__3(parent QWidget_ITF /*777 QWidget **/, title
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+
+/*
+Static convenience function to let the user select an item from a string list.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). items is the string list which is inserted into the combo box. current is the number of the item which should be the current item. inputMethodHints is the input method hints that will be used if the combo box is editable and an input method is active.
+
+If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
+
+If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the text of the current item, or if editable is true, the current text of the combo box.
+
+Use this static function like this:
+
+
+      QStringList items;
+      items << tr("Spring") << tr("Summer") << tr("Fall") << tr("Winter");
+
+      bool ok;
+      QString item = QInputDialog::getItem(this, tr("QInputDialog::getItem()"),
+                                           tr("Season:"), items, 0, false, &ok);
+      if (ok && !item.isEmpty())
+          itemLabel->setText(item);
+
+
+
+See also getText(), getInt(), getDouble(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetItem__4(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok *bool, flags int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1073,6 +1730,31 @@ func (this *QInputDialog) GetItem__4(parent QWidget_ITF /*777 QWidget **/, title
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get an integer input from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default integer which the spinbox will be set to. min and max are the minimum and maximum values the user may choose. step is the amount by which the values change as the user presses the arrow buttons to increment or decrement the value.
+
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+On success, this function returns the integer which has been entered by the user; on failure, it returns the initial value.
+
+Use this static function like this:
+
+
+      bool ok;
+      int i = QInputDialog::getInt(this, tr("QInputDialog::getInteger()"),
+                                   tr("Percentage:"), 25, 0, 100, 1, &ok);
+      if (ok)
+          integerLabel->setText(tr("%1%").arg(i));
+
+
+
+This function was introduced in  Qt 4.5.
+
+See also getText(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetInt(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int, ok *bool, flags int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1096,6 +1778,31 @@ func QInputDialog_GetInt(parent QWidget_ITF /*777 QWidget **/, title string, lab
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get an integer input from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default integer which the spinbox will be set to. min and max are the minimum and maximum values the user may choose. step is the amount by which the values change as the user presses the arrow buttons to increment or decrement the value.
+
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+On success, this function returns the integer which has been entered by the user; on failure, it returns the initial value.
+
+Use this static function like this:
+
+
+      bool ok;
+      int i = QInputDialog::getInt(this, tr("QInputDialog::getInteger()"),
+                                   tr("Percentage:"), 25, 0, 100, 1, &ok);
+      if (ok)
+          integerLabel->setText(tr("%1%").arg(i));
+
+
+
+This function was introduced in  Qt 4.5.
+
+See also getText(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetInt__(parent QWidget_ITF /*777 QWidget **/, title string, label string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1126,6 +1833,31 @@ func (this *QInputDialog) GetInt__(parent QWidget_ITF /*777 QWidget **/, title s
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get an integer input from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default integer which the spinbox will be set to. min and max are the minimum and maximum values the user may choose. step is the amount by which the values change as the user presses the arrow buttons to increment or decrement the value.
+
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+On success, this function returns the integer which has been entered by the user; on failure, it returns the initial value.
+
+Use this static function like this:
+
+
+      bool ok;
+      int i = QInputDialog::getInt(this, tr("QInputDialog::getInteger()"),
+                                   tr("Percentage:"), 25, 0, 100, 1, &ok);
+      if (ok)
+          integerLabel->setText(tr("%1%").arg(i));
+
+
+
+This function was introduced in  Qt 4.5.
+
+See also getText(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetInt__1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1154,6 +1886,31 @@ func (this *QInputDialog) GetInt__1(parent QWidget_ITF /*777 QWidget **/, title 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get an integer input from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default integer which the spinbox will be set to. min and max are the minimum and maximum values the user may choose. step is the amount by which the values change as the user presses the arrow buttons to increment or decrement the value.
+
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+On success, this function returns the integer which has been entered by the user; on failure, it returns the initial value.
+
+Use this static function like this:
+
+
+      bool ok;
+      int i = QInputDialog::getInt(this, tr("QInputDialog::getInteger()"),
+                                   tr("Percentage:"), 25, 0, 100, 1, &ok);
+      if (ok)
+          integerLabel->setText(tr("%1%").arg(i));
+
+
+
+This function was introduced in  Qt 4.5.
+
+See also getText(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetInt__2(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1180,6 +1937,31 @@ func (this *QInputDialog) GetInt__2(parent QWidget_ITF /*777 QWidget **/, title 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get an integer input from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default integer which the spinbox will be set to. min and max are the minimum and maximum values the user may choose. step is the amount by which the values change as the user presses the arrow buttons to increment or decrement the value.
+
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+On success, this function returns the integer which has been entered by the user; on failure, it returns the initial value.
+
+Use this static function like this:
+
+
+      bool ok;
+      int i = QInputDialog::getInt(this, tr("QInputDialog::getInteger()"),
+                                   tr("Percentage:"), 25, 0, 100, 1, &ok);
+      if (ok)
+          integerLabel->setText(tr("%1%").arg(i));
+
+
+
+This function was introduced in  Qt 4.5.
+
+See also getText(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetInt__3(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1204,6 +1986,31 @@ func (this *QInputDialog) GetInt__3(parent QWidget_ITF /*777 QWidget **/, title 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get an integer input from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default integer which the spinbox will be set to. min and max are the minimum and maximum values the user may choose. step is the amount by which the values change as the user presses the arrow buttons to increment or decrement the value.
+
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+On success, this function returns the integer which has been entered by the user; on failure, it returns the initial value.
+
+Use this static function like this:
+
+
+      bool ok;
+      int i = QInputDialog::getInt(this, tr("QInputDialog::getInteger()"),
+                                   tr("Percentage:"), 25, 0, 100, 1, &ok);
+      if (ok)
+          integerLabel->setText(tr("%1%").arg(i));
+
+
+
+This function was introduced in  Qt 4.5.
+
+See also getText(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetInt__4(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1226,6 +2033,31 @@ func (this *QInputDialog) GetInt__4(parent QWidget_ITF /*777 QWidget **/, title 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get an integer input from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default integer which the spinbox will be set to. min and max are the minimum and maximum values the user may choose. step is the amount by which the values change as the user presses the arrow buttons to increment or decrement the value.
+
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+On success, this function returns the integer which has been entered by the user; on failure, it returns the initial value.
+
+Use this static function like this:
+
+
+      bool ok;
+      int i = QInputDialog::getInt(this, tr("QInputDialog::getInteger()"),
+                                   tr("Percentage:"), 25, 0, 100, 1, &ok);
+      if (ok)
+          integerLabel->setText(tr("%1%").arg(i));
+
+
+
+This function was introduced in  Qt 4.5.
+
+See also getText(), getDouble(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetInt__5(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int, ok *bool) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1246,6 +2078,29 @@ func (this *QInputDialog) GetInt__5(parent QWidget_ITF /*777 QWidget **/, title 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get a floating point number from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default floating point number that the line edit will be set to. min and max are the minimum and maximum values the user may choose. decimals is the maximum number of decimal places the number may have.
+
+If ok is nonnull, *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the floating point number which has been entered by the user.
+
+Use this static function like this:
+
+
+      bool ok;
+      double d = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),
+                                         tr("Amount:"), 37.56, -10000, 10000, 2, &ok);
+      if (ok)
+          doubleLabel->setText(QString("$%1").arg(d));
+
+
+
+See also getText(), getInt(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetDouble(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1269,6 +2124,29 @@ func QInputDialog_GetDouble(parent QWidget_ITF /*777 QWidget **/, title string, 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get a floating point number from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default floating point number that the line edit will be set to. min and max are the minimum and maximum values the user may choose. decimals is the maximum number of decimal places the number may have.
+
+If ok is nonnull, *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the floating point number which has been entered by the user.
+
+Use this static function like this:
+
+
+      bool ok;
+      double d = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),
+                                         tr("Amount:"), 37.56, -10000, 10000, 2, &ok);
+      if (ok)
+          doubleLabel->setText(QString("$%1").arg(d));
+
+
+
+See also getText(), getInt(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetDouble__(parent QWidget_ITF /*777 QWidget **/, title string, label string) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1299,6 +2177,29 @@ func (this *QInputDialog) GetDouble__(parent QWidget_ITF /*777 QWidget **/, titl
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get a floating point number from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default floating point number that the line edit will be set to. min and max are the minimum and maximum values the user may choose. decimals is the maximum number of decimal places the number may have.
+
+If ok is nonnull, *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the floating point number which has been entered by the user.
+
+Use this static function like this:
+
+
+      bool ok;
+      double d = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),
+                                         tr("Amount:"), 37.56, -10000, 10000, 2, &ok);
+      if (ok)
+          doubleLabel->setText(QString("$%1").arg(d));
+
+
+
+See also getText(), getInt(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetDouble__1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1327,6 +2228,29 @@ func (this *QInputDialog) GetDouble__1(parent QWidget_ITF /*777 QWidget **/, tit
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get a floating point number from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default floating point number that the line edit will be set to. min and max are the minimum and maximum values the user may choose. decimals is the maximum number of decimal places the number may have.
+
+If ok is nonnull, *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the floating point number which has been entered by the user.
+
+Use this static function like this:
+
+
+      bool ok;
+      double d = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),
+                                         tr("Amount:"), 37.56, -10000, 10000, 2, &ok);
+      if (ok)
+          doubleLabel->setText(QString("$%1").arg(d));
+
+
+
+See also getText(), getInt(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetDouble__2(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1353,6 +2277,29 @@ func (this *QInputDialog) GetDouble__2(parent QWidget_ITF /*777 QWidget **/, tit
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get a floating point number from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default floating point number that the line edit will be set to. min and max are the minimum and maximum values the user may choose. decimals is the maximum number of decimal places the number may have.
+
+If ok is nonnull, *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the floating point number which has been entered by the user.
+
+Use this static function like this:
+
+
+      bool ok;
+      double d = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),
+                                         tr("Amount:"), 37.56, -10000, 10000, 2, &ok);
+      if (ok)
+          doubleLabel->setText(QString("$%1").arg(d));
+
+
+
+See also getText(), getInt(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetDouble__3(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1377,6 +2324,29 @@ func (this *QInputDialog) GetDouble__3(parent QWidget_ITF /*777 QWidget **/, tit
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get a floating point number from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default floating point number that the line edit will be set to. min and max are the minimum and maximum values the user may choose. decimals is the maximum number of decimal places the number may have.
+
+If ok is nonnull, *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the floating point number which has been entered by the user.
+
+Use this static function like this:
+
+
+      bool ok;
+      double d = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),
+                                         tr("Amount:"), 37.56, -10000, 10000, 2, &ok);
+      if (ok)
+          doubleLabel->setText(QString("$%1").arg(d));
+
+
+
+See also getText(), getInt(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetDouble__4(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1399,6 +2369,29 @@ func (this *QInputDialog) GetDouble__4(parent QWidget_ITF /*777 QWidget **/, tit
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+
+/*
+Static convenience function to get a floating point number from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default floating point number that the line edit will be set to. min and max are the minimum and maximum values the user may choose. decimals is the maximum number of decimal places the number may have.
+
+If ok is nonnull, *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the floating point number which has been entered by the user.
+
+Use this static function like this:
+
+
+      bool ok;
+      double d = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),
+                                         tr("Amount:"), 37.56, -10000, 10000, 2, &ok);
+      if (ok)
+          doubleLabel->setText(QString("$%1").arg(d));
+
+
+
+See also getText(), getInt(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetDouble__5(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1419,6 +2412,29 @@ func (this *QInputDialog) GetDouble__5(parent QWidget_ITF /*777 QWidget **/, tit
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags, double)
+
+/*
+Static convenience function to get a floating point number from the user.
+
+title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default floating point number that the line edit will be set to. min and max are the minimum and maximum values the user may choose. decimals is the maximum number of decimal places the number may have.
+
+If ok is nonnull, *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+
+This function returns the floating point number which has been entered by the user.
+
+Use this static function like this:
+
+
+      bool ok;
+      double d = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),
+                                         tr("Amount:"), 37.56, -10000, 10000, 2, &ok);
+      if (ok)
+          doubleLabel->setText(QString("$%1").arg(d));
+
+
+
+See also getText(), getInt(), getItem(), and getMultiLineText().
+*/
 func (this *QInputDialog) GetDouble_1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int, step float64) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1442,6 +2458,10 @@ func QInputDialog_GetDouble_1(parent QWidget_ITF /*777 QWidget **/, title string
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDoubleStep(double)
+
+/*
+
+ */
 func (this *QInputDialog) SetDoubleStep(step float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog13setDoubleStepEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -1451,6 +2471,10 @@ func (this *QInputDialog) SetDoubleStep(step float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double doubleStep() const
+
+/*
+
+ */
 func (this *QInputDialog) DoubleStep() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog10doubleStepEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1461,6 +2485,14 @@ func (this *QInputDialog) DoubleStep() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void textValueChanged(const QString &)
+
+/*
+This signal is emitted whenever the text string changes in the dialog. The current string is specified by text.
+
+This signal is only relevant when the input dialog is used in TextInput mode.
+
+Note: Notifier signal for property textValue.
+*/
 func (this *QInputDialog) TextValueChanged(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1472,6 +2504,12 @@ func (this *QInputDialog) TextValueChanged(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void textValueSelected(const QString &)
+
+/*
+This signal is emitted whenever the user selects a text string by accepting the dialog; for example, by clicking the OK button. The selected string is specified by text.
+
+This signal is only relevant when the input dialog is used in TextInput mode.
+*/
 func (this *QInputDialog) TextValueSelected(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1483,6 +2521,14 @@ func (this *QInputDialog) TextValueSelected(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void intValueChanged(int)
+
+/*
+This signal is emitted whenever the integer value changes in the dialog. The current value is specified by value.
+
+This signal is only relevant when the input dialog is used in IntInput mode.
+
+Note: Notifier signal for property intValue.
+*/
 func (this *QInputDialog) IntValueChanged(value int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog15intValueChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -1492,6 +2538,12 @@ func (this *QInputDialog) IntValueChanged(value int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void intValueSelected(int)
+
+/*
+This signal is emitted whenever the user selects a integer value by accepting the dialog; for example, by clicking the OK button. The selected value is specified by value.
+
+This signal is only relevant when the input dialog is used in IntInput mode.
+*/
 func (this *QInputDialog) IntValueSelected(value int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16intValueSelectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -1501,6 +2553,14 @@ func (this *QInputDialog) IntValueSelected(value int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void doubleValueChanged(double)
+
+/*
+This signal is emitted whenever the double value changes in the dialog. The current value is specified by value.
+
+This signal is only relevant when the input dialog is used in DoubleInput mode.
+
+Note: Notifier signal for property doubleValue.
+*/
 func (this *QInputDialog) DoubleValueChanged(value float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog18doubleValueChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -1510,6 +2570,12 @@ func (this *QInputDialog) DoubleValueChanged(value float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void doubleValueSelected(double)
+
+/*
+This signal is emitted whenever the user selects a double value by accepting the dialog; for example, by clicking the OK button. The selected value is specified by value.
+
+This signal is only relevant when the input dialog is used in DoubleInput mode.
+*/
 func (this *QInputDialog) DoubleValueSelected(value float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog19doubleValueSelectedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -1519,21 +2585,53 @@ func (this *QInputDialog) DoubleValueSelected(value float64) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void done(int)
+
+/*
+Reimplemented from QDialog::done().
+
+Closes the dialog and sets its result code to result. If this dialog is shown with exec(), done() causes the local event loop to finish, and exec() to return result.
+
+See also QDialog::done().
+*/
 func (this *QInputDialog) Done(result int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog4doneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), result)
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QInputDialog__InputDialogOption = int
 
+//
 const QInputDialog__NoButtons QInputDialog__InputDialogOption = 1
+
+//
 const QInputDialog__UseListViewForComboBoxItems QInputDialog__InputDialogOption = 2
+
+//
 const QInputDialog__UsePlainTextEditForTextInput QInputDialog__InputDialogOption = 4
 
+/*
+This enum describes the different modes of input that can be selected for the dialog.
+
+
+
+This enum was introduced or modified in  Qt 4.5.
+
+See also inputMode.
+
+*/
 type QInputDialog__InputMode = int
 
+// Used to input text strings.
 const QInputDialog__TextInput QInputDialog__InputMode = 0
+
+// Used to input integers.
 const QInputDialog__IntInput QInputDialog__InputMode = 1
+
+// Used to input floating point numbers with double precision accuracy.
 const QInputDialog__DoubleInput QInputDialog__InputMode = 2
 
 //  body block end

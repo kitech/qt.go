@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QMetaClassInfo struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QMetaClassInfo) NewFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMetaClassInfo()
+
+/*
+
+ */
 func NewQMetaClassInfo() *QMetaClassInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMetaClassInfoC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQMetaClassInfo() *QMetaClassInfo {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * name() const
+
+/*
+
+ */
 func (this *QMetaClassInfo) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMetaClassInfo4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +98,10 @@ func (this *QMetaClassInfo) Name() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * value() const
+
+/*
+
+ */
 func (this *QMetaClassInfo) Value() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMetaClassInfo5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +112,10 @@ func (this *QMetaClassInfo) Value() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QMetaObject * enclosingMetaObject() const
+
+/*
+
+ */
 func (this *QMetaClassInfo) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMetaClassInfo19enclosingMetaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type RegisterCompositeSingletonType struct {
 	*qtrt.CObject
 }

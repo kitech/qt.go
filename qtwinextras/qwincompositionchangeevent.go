@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QWinCompositionChangeEvent struct {
 	*QWinEvent
 }
@@ -67,6 +70,10 @@ func (*QWinCompositionChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWinCom
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinCompositionChangeEvent(_Bool)
+
+/*
+
+ */
 func NewQWinCompositionChangeEvent(enabled bool) *QWinCompositionChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QWinCompositionChangeEventC2Eb", qtrt.FFI_TYPE_POINTER, enabled)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQWinCompositionChangeEvent(enabled bool) *QWinCompositionChangeEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWinCompositionChangeEvent()
+
+/*
+
+ */
 func DeleteQWinCompositionChangeEvent(this *QWinCompositionChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QWinCompositionChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -90,6 +101,10 @@ func DeleteQWinCompositionChangeEvent(this *QWinCompositionChangeEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isCompositionEnabled() const
+
+/*
+
+ */
 func (this *QWinCompositionChangeEvent) IsCompositionEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QWinCompositionChangeEvent20isCompositionEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

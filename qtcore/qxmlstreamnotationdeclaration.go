@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QXmlStreamNotationDeclaration struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QXmlStreamNotationDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXml
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamNotationDeclaration()
+
+/*
+
+ */
 func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamNotationDeclaration()
+
+/*
+
+ */
 func DeleteQXmlStreamNotationDeclaration(this *QXmlStreamNotationDeclaration) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
@@ -90,6 +101,10 @@ func DeleteQXmlStreamNotationDeclaration(this *QXmlStreamNotationDeclaration) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [56] QXmlStreamNotationDeclaration & operator=(const QXmlStreamNotationDeclaration &)
+
+/*
+
+ */
 func (this *QXmlStreamNotationDeclaration) Operator_equal(arg0 QXmlStreamNotationDeclaration_ITF) *QXmlStreamNotationDeclaration {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QXmlStreamNotationDeclaration_PTR() != nil {
@@ -106,6 +121,10 @@ func (this *QXmlStreamNotationDeclaration) Operator_equal(arg0 QXmlStreamNotatio
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [56] QXmlStreamNotationDeclaration & operator=(QXmlStreamNotationDeclaration &&)
+
+/*
+
+ */
 func (this *QXmlStreamNotationDeclaration) Operator_equal_1(other unsafe.Pointer /*333*/) *QXmlStreamNotationDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -118,6 +137,10 @@ func (this *QXmlStreamNotationDeclaration) Operator_equal_1(other unsafe.Pointer
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef name() const
+
+/*
+
+ */
 func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +153,10 @@ func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef systemId() const
+
+/*
+
+ */
 func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,6 +169,10 @@ func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef publicId() const
+
+/*
+
+ */
 func (this *QXmlStreamNotationDeclaration) PublicId() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +185,10 @@ func (this *QXmlStreamNotationDeclaration) PublicId() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QXmlStreamNotationDeclaration &) const
+
+/*
+
+ */
 func (this *QXmlStreamNotationDeclaration) Operator_equal_equal(other QXmlStreamNotationDeclaration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamNotationDeclaration_PTR() != nil {
@@ -168,6 +203,10 @@ func (this *QXmlStreamNotationDeclaration) Operator_equal_equal(other QXmlStream
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QXmlStreamNotationDeclaration &) const
+
+/*
+
+ */
 func (this *QXmlStreamNotationDeclaration) Operator_not_equal(other QXmlStreamNotationDeclaration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamNotationDeclaration_PTR() != nil {

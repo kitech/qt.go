@@ -37,6 +37,9 @@ func (this *QAbstractOpenGLFunctions) InheritIsInitialized(f func() bool) {
 	qtrt.SetAllInheritCallback(this, "isInitialized", f)
 }
 
+/*
+
+ */
 type QAbstractOpenGLFunctions struct {
 	*qtrt.CObject
 }
@@ -73,6 +76,10 @@ func (*QAbstractOpenGLFunctions) NewFromPointer(cthis unsafe.Pointer) *QAbstract
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractOpenGLFunctions()
+
+/*
+
+ */
 func DeleteQAbstractOpenGLFunctions(this *QAbstractOpenGLFunctions) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -84,6 +91,10 @@ func DeleteQAbstractOpenGLFunctions(this *QAbstractOpenGLFunctions) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool initializeOpenGLFunctions()
+
+/*
+
+ */
 func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -94,6 +105,10 @@ func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QAbstractOpenGLFunctions()
+
+/*
+
+ */
 func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -106,6 +121,10 @@ func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool isInitialized() const
+
+/*
+
+ */
 func (this *QAbstractOpenGLFunctions) IsInitialized() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13isInitializedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

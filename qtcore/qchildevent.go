@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QChildEvent struct {
 	*QEvent
 }
@@ -63,6 +66,10 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QChildEvent(enum QEvent::Type, QObject *)
+
+/*
+
+ */
 func NewQChildEvent(type_ int, child QObject_ITF /*777 QObject **/) *QChildEvent {
 	var convArg1 unsafe.Pointer
 	if child != nil && child.QObject_PTR() != nil {
@@ -79,6 +86,10 @@ func NewQChildEvent(type_ int, child QObject_ITF /*777 QObject **/) *QChildEvent
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QChildEvent()
+
+/*
+
+ */
 func DeleteQChildEvent(this *QChildEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QChildEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -90,6 +101,10 @@ func DeleteQChildEvent(this *QChildEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QObject * child() const
+
+/*
+
+ */
 func (this *QChildEvent) Child() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +115,10 @@ func (this *QChildEvent) Child() *QObject /*777 QObject **/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool added() const
+
+/*
+
+ */
 func (this *QChildEvent) Added() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent5addedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +129,10 @@ func (this *QChildEvent) Added() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool polished() const
+
+/*
+
+ */
 func (this *QChildEvent) Polished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent8polishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,6 +143,10 @@ func (this *QChildEvent) Polished() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool removed() const
+
+/*
+
+ */
 func (this *QChildEvent) Removed() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent7removedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

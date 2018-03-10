@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QActionEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QActionEvent) NewFromPointer(cthis unsafe.Pointer) *QActionEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QActionEvent(int, QAction *, QAction *)
+
+/*
+
+ */
 func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Pointer /*666*/) *QActionEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", qtrt.FFI_TYPE_POINTER, type_, action, before)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Poi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QActionEvent(int, QAction *, QAction *)
+
+/*
+
+ */
 func NewQActionEvent__(type_ int, action unsafe.Pointer /*666*/) *QActionEvent {
 	// arg: 2, QAction *=Pointer, QAction=Record,
 	var before unsafe.Pointer
@@ -90,6 +101,10 @@ func NewQActionEvent__(type_ int, action unsafe.Pointer /*666*/) *QActionEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QActionEvent()
+
+/*
+
+ */
 func DeleteQActionEvent(this *QActionEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -101,6 +116,10 @@ func DeleteQActionEvent(this *QActionEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAction * action() const
+
+/*
+
+ */
 func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +130,10 @@ func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAction * before() const
+
+/*
+
+ */
 func (this *QActionEvent) Before() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

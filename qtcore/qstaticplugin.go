@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QStaticPlugin struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QStaticPlugin) NewFromPointer(cthis unsafe.Pointer) *QStaticPlugin {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject metaData() const
+
+/*
+
+ */
 func (this *QStaticPlugin) MetaData() *QJsonObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStaticPlugin8metaDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

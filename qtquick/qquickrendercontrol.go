@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QQuickRenderControl struct {
 	*qtcore.QObject
 }
@@ -67,6 +70,10 @@ func (*QQuickRenderControl) NewFromPointer(cthis unsafe.Pointer) *QQuickRenderCo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQuickRenderControl) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickRenderControl10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func (this *QQuickRenderControl) MetaObject() *qtcore.QMetaObject /*777 const QM
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickRenderControl(QObject *)
+
+/*
+Constructs a QQuickRenderControl object, with parent object parent.
+*/
 func NewQQuickRenderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickRenderControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQQuickRenderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QQuick
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickRenderControl(QObject *)
+
+/*
+Constructs a QQuickRenderControl object, with parent object parent.
+*/
 func NewQQuickRenderControl__() *QQuickRenderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -107,6 +122,10 @@ func NewQQuickRenderControl__() *QQuickRenderControl {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickRenderControl()
+
+/*
+
+ */
 func DeleteQQuickRenderControl(this *QQuickRenderControl) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControlD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -118,6 +137,12 @@ func DeleteQQuickRenderControl(this *QQuickRenderControl) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void prepareThread(QThread *)
+
+/*
+Prepares rendering the Qt Quick scene outside the gui thread.
+
+targetThread specifies the thread on which synchronization and rendering will happen. There is no need to call this function in a single threaded scenario.
+*/
 func (this *QQuickRenderControl) PrepareThread(targetThread qtcore.QThread_ITF /*777 QThread **/) {
 	var convArg0 unsafe.Pointer
 	if targetThread != nil && targetThread.QThread_PTR() != nil {
@@ -131,6 +156,18 @@ func (this *QQuickRenderControl) PrepareThread(targetThread qtcore.QThread_ITF /
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void invalidate()
+
+/*
+Stop rendering and release resources. Requires a current context.
+
+This is the equivalent of the cleanup operations that happen with a real QQuickWindow when the window becomes hidden.
+
+This function is called from the destructor. Therefore there will typically be no need to call it directly. Pay attention however to the fact that this requires the context, that was passed to initialize(), to be the current one at the time of destroying the QQuickRenderControl instance.
+
+Once invalidate() has been called, it is possible to reuse the QQuickRenderControl instance by calling initialize() again.
+
+Note: This function does not take QQuickWindow::persistentSceneGraph() or QQuickWindow::persistentOpenGLContext() into account. This means that context-specific resources are always released.
+*/
 func (this *QQuickRenderControl) Invalidate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl10invalidateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +177,10 @@ func (this *QQuickRenderControl) Invalidate() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void polishItems()
+
+/*
+This function should be called as late as possible before sync(). In a threaded scenario, rendering can happen in parallel with this function.
+*/
 func (this *QQuickRenderControl) PolishItems() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl11polishItemsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -149,6 +190,10 @@ func (this *QQuickRenderControl) PolishItems() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void render()
+
+/*
+Renders the scenegraph using the current context.
+*/
 func (this *QQuickRenderControl) Render() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl6renderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,6 +203,14 @@ func (this *QQuickRenderControl) Render() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool sync()
+
+/*
+This function is used to synchronize the QML scene with the rendering scene graph.
+
+If a dedicated render thread is used, the GUI thread should be blocked for the duration of this call.
+
+Returns true if the synchronization changed the scene graph.
+*/
 func (this *QQuickRenderControl) Sync() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl4syncEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -168,6 +221,12 @@ func (this *QQuickRenderControl) Sync() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage grab()
+
+/*
+Grabs the contents of the scene and returns it as an image.
+
+Note: Requires the context to be current.
+*/
 func (this *QQuickRenderControl) Grab() *qtgui.QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl4grabEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,6 +239,12 @@ func (this *QQuickRenderControl) Grab() *qtgui.QImage /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QWindow * renderWindowFor(QQuickWindow *, QPoint *)
+
+/*
+Returns the real window that win is being rendered to, if any.
+
+If offset in non-null, it is set to the offset of the rendering inside its window.
+*/
 func (this *QQuickRenderControl) RenderWindowFor(win QQuickWindow_ITF /*777 QQuickWindow **/, offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
 	var convArg0 unsafe.Pointer
 	if win != nil && win.QQuickWindow_PTR() != nil {
@@ -203,6 +268,12 @@ func QQuickRenderControl_RenderWindowFor(win QQuickWindow_ITF /*777 QQuickWindow
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QWindow * renderWindowFor(QQuickWindow *, QPoint *)
+
+/*
+Returns the real window that win is being rendered to, if any.
+
+If offset in non-null, it is set to the offset of the rendering inside its window.
+*/
 func (this *QQuickRenderControl) RenderWindowFor__(win QQuickWindow_ITF /*777 QQuickWindow **/) *qtgui.QWindow /*777 QWindow **/ {
 	var convArg0 unsafe.Pointer
 	if win != nil && win.QQuickWindow_PTR() != nil {
@@ -219,6 +290,14 @@ func (this *QQuickRenderControl) RenderWindowFor__(win QQuickWindow_ITF /*777 QQ
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [8] QWindow * renderWindow(QPoint *)
+
+/*
+Reimplemented in subclasses to return the real window this render control is rendering into.
+
+If offset in non-null, it is set to the offset of the control inside the window.
+
+Note: While not mandatory, reimplementing this function becomes essential for supporting multiple screens with different device pixel ratios and properly positioning popup windows opened from QML. Therefore providing it in subclasses is highly recommended.
+*/
 func (this *QQuickRenderControl) RenderWindow(offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
@@ -233,6 +312,12 @@ func (this *QQuickRenderControl) RenderWindow(offset qtcore.QPoint_ITF /*777 QPo
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void renderRequested()
+
+/*
+This signal is emitted when the scene graph needs to be rendered. It is not necessary to call sync().
+
+Note: Avoid triggering rendering directly when this signal is emitted. Instead, prefer deferring it by using a timer for example. This will lead to better performance.
+*/
 func (this *QQuickRenderControl) RenderRequested() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl15renderRequestedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,6 +327,12 @@ func (this *QQuickRenderControl) RenderRequested() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sceneChanged()
+
+/*
+This signal is emitted when the scene graph is updated, meaning that polishItems() and sync() needs to be called. If sync() returns true, then render() needs to be called.
+
+Note: Avoid triggering polishing, synchronization and rendering directly when this signal is emitted. Instead, prefer deferring it by using a timer for example. This will lead to better performance.
+*/
 func (this *QQuickRenderControl) SceneChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl12sceneChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type AbstractComparatorFunction struct {
 	*qtrt.CObject
 }

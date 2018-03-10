@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QObjectUserData struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QObjectUserData) NewFromPointer(cthis unsafe.Pointer) *QObjectUserData {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QObjectUserData()
+
+/*
+
+ */
 func DeleteQObjectUserData(this *QObjectUserData) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QObjectUserDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)

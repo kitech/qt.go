@@ -56,6 +56,9 @@ func (this *QSortFilterProxyModel) InheritInvalidateFilter(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "invalidateFilter", f)
 }
 
+/*
+
+ */
 type QSortFilterProxyModel struct {
 	*QAbstractProxyModel
 }
@@ -88,6 +91,10 @@ func (*QSortFilterProxyModel) NewFromPointer(cthis unsafe.Pointer) *QSortFilterP
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,6 +105,10 @@ func (this *QSortFilterProxyModel) MetaObject() *QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSortFilterProxyModel(QObject *)
+
+/*
+Constructs a sorting filter model with the given parent.
+*/
 func NewQSortFilterProxyModel(parent QObject_ITF /*777 QObject **/) *QSortFilterProxyModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -114,6 +125,10 @@ func NewQSortFilterProxyModel(parent QObject_ITF /*777 QObject **/) *QSortFilter
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSortFilterProxyModel(QObject *)
+
+/*
+Constructs a sorting filter model with the given parent.
+*/
 func NewQSortFilterProxyModel__() *QSortFilterProxyModel {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -128,6 +143,10 @@ func NewQSortFilterProxyModel__() *QSortFilterProxyModel {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSortFilterProxyModel()
+
+/*
+
+ */
 func DeleteQSortFilterProxyModel(this *QSortFilterProxyModel) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModelD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -139,6 +158,10 @@ func DeleteQSortFilterProxyModel(this *QSortFilterProxyModel) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSourceModel(QAbstractItemModel *)
+
+/*
+Reimplemented from QAbstractProxyModel::setSourceModel().
+*/
 func (this *QSortFilterProxyModel) SetSourceModel(sourceModel QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
 	var convArg0 unsafe.Pointer
 	if sourceModel != nil && sourceModel.QAbstractItemModel_PTR() != nil {
@@ -152,6 +175,14 @@ func (this *QSortFilterProxyModel) SetSourceModel(sourceModel QAbstractItemModel
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex mapToSource(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractProxyModel::mapToSource().
+
+Returns the source model index corresponding to the given proxyIndex from the sorting filter model.
+
+See also mapFromSource().
+*/
 func (this *QSortFilterProxyModel) MapToSource(proxyIndex QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if proxyIndex != nil && proxyIndex.QModelIndex_PTR() != nil {
@@ -168,6 +199,14 @@ func (this *QSortFilterProxyModel) MapToSource(proxyIndex QModelIndex_ITF) *QMod
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex mapFromSource(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractProxyModel::mapFromSource().
+
+Returns the model index in the QSortFilterProxyModel given the sourceIndex from the source model.
+
+See also mapToSource().
+*/
 func (this *QSortFilterProxyModel) MapFromSource(sourceIndex QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if sourceIndex != nil && sourceIndex.QModelIndex_PTR() != nil {
@@ -184,6 +223,10 @@ func (this *QSortFilterProxyModel) MapFromSource(sourceIndex QModelIndex_ITF) *Q
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QItemSelection mapSelectionToSource(const QItemSelection &) const
+
+/*
+Reimplemented from QAbstractProxyModel::mapSelectionToSource().
+*/
 func (this *QSortFilterProxyModel) MapSelectionToSource(proxySelection QItemSelection_ITF) *QItemSelection /*123*/ {
 	var convArg0 unsafe.Pointer
 	if proxySelection != nil && proxySelection.QItemSelection_PTR() != nil {
@@ -200,6 +243,10 @@ func (this *QSortFilterProxyModel) MapSelectionToSource(proxySelection QItemSele
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QItemSelection mapSelectionFromSource(const QItemSelection &) const
+
+/*
+Reimplemented from QAbstractProxyModel::mapSelectionFromSource().
+*/
 func (this *QSortFilterProxyModel) MapSelectionFromSource(sourceSelection QItemSelection_ITF) *QItemSelection /*123*/ {
 	var convArg0 unsafe.Pointer
 	if sourceSelection != nil && sourceSelection.QItemSelection_PTR() != nil {
@@ -216,6 +263,10 @@ func (this *QSortFilterProxyModel) MapSelectionFromSource(sourceSelection QItemS
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegExp filterRegExp() const
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) FilterRegExp() *QRegExp /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel12filterRegExpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,6 +279,10 @@ func (this *QSortFilterProxyModel) FilterRegExp() *QRegExp /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilterRegExp(const QRegExp &)
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SetFilterRegExp(regExp QRegExp_ITF) {
 	var convArg0 unsafe.Pointer
 	if regExp != nil && regExp.QRegExp_PTR() != nil {
@@ -241,6 +296,10 @@ func (this *QSortFilterProxyModel) SetFilterRegExp(regExp QRegExp_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setFilterRegExp(const QString &)
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SetFilterRegExp_1(pattern string) {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -252,6 +311,10 @@ func (this *QSortFilterProxyModel) SetFilterRegExp_1(pattern string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int filterKeyColumn() const
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) FilterKeyColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel15filterKeyColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -262,6 +325,10 @@ func (this *QSortFilterProxyModel) FilterKeyColumn() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilterKeyColumn(int)
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SetFilterKeyColumn(column int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel18setFilterKeyColumnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -271,6 +338,10 @@ func (this *QSortFilterProxyModel) SetFilterKeyColumn(column int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::CaseSensitivity filterCaseSensitivity() const
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) FilterCaseSensitivity() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel21filterCaseSensitivityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -281,6 +352,10 @@ func (this *QSortFilterProxyModel) FilterCaseSensitivity() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilterCaseSensitivity(Qt::CaseSensitivity)
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SetFilterCaseSensitivity(cs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel24setFilterCaseSensitivityEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cs)
 	qtrt.ErrPrint(err, rv)
@@ -290,6 +365,10 @@ func (this *QSortFilterProxyModel) SetFilterCaseSensitivity(cs int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::CaseSensitivity sortCaseSensitivity() const
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SortCaseSensitivity() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel19sortCaseSensitivityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -300,6 +379,10 @@ func (this *QSortFilterProxyModel) SortCaseSensitivity() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSortCaseSensitivity(Qt::CaseSensitivity)
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SetSortCaseSensitivity(cs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel22setSortCaseSensitivityEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cs)
 	qtrt.ErrPrint(err, rv)
@@ -309,6 +392,10 @@ func (this *QSortFilterProxyModel) SetSortCaseSensitivity(cs int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSortLocaleAware() const
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) IsSortLocaleAware() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel17isSortLocaleAwareEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -319,6 +406,10 @@ func (this *QSortFilterProxyModel) IsSortLocaleAware() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSortLocaleAware(_Bool)
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SetSortLocaleAware(on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel18setSortLocaleAwareEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	qtrt.ErrPrint(err, rv)
@@ -328,6 +419,14 @@ func (this *QSortFilterProxyModel) SetSortLocaleAware(on bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int sortColumn() const
+
+/*
+the column currently used for sorting
+
+This returns the most recently used sort column.
+
+This function was introduced in  Qt 4.5.
+*/
 func (this *QSortFilterProxyModel) SortColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel10sortColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -338,6 +437,14 @@ func (this *QSortFilterProxyModel) SortColumn() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::SortOrder sortOrder() const
+
+/*
+the order currently used for sorting
+
+This returns the most recently used sort order.
+
+This function was introduced in  Qt 4.5.
+*/
 func (this *QSortFilterProxyModel) SortOrder() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel9sortOrderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -348,6 +455,10 @@ func (this *QSortFilterProxyModel) SortOrder() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool dynamicSortFilter() const
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) DynamicSortFilter() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel17dynamicSortFilterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -358,6 +469,10 @@ func (this *QSortFilterProxyModel) DynamicSortFilter() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDynamicSortFilter(_Bool)
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SetDynamicSortFilter(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel20setDynamicSortFilterEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	qtrt.ErrPrint(err, rv)
@@ -367,6 +482,10 @@ func (this *QSortFilterProxyModel) SetDynamicSortFilter(enable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int sortRole() const
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SortRole() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel8sortRoleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -377,6 +496,10 @@ func (this *QSortFilterProxyModel) SortRole() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSortRole(int)
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SetSortRole(role int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel11setSortRoleEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
@@ -386,6 +509,10 @@ func (this *QSortFilterProxyModel) SetSortRole(role int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int filterRole() const
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) FilterRole() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel10filterRoleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -396,6 +523,10 @@ func (this *QSortFilterProxyModel) FilterRole() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilterRole(int)
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SetFilterRole(role int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13setFilterRoleEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
@@ -405,6 +536,10 @@ func (this *QSortFilterProxyModel) SetFilterRole(role int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRecursiveFilteringEnabled() const
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) IsRecursiveFilteringEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel27isRecursiveFilteringEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -415,6 +550,10 @@ func (this *QSortFilterProxyModel) IsRecursiveFilteringEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRecursiveFilteringEnabled(_Bool)
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) SetRecursiveFilteringEnabled(recursive bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel28setRecursiveFilteringEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), recursive)
 	qtrt.ErrPrint(err, rv)
@@ -424,6 +563,12 @@ func (this *QSortFilterProxyModel) SetRecursiveFilteringEnabled(recursive bool) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilterWildcard(const QString &)
+
+/*
+Sets the wildcard expression used to filter the contents of the source model to the given pattern.
+
+See also setFilterCaseSensitivity(), setFilterRegExp(), setFilterFixedString(), and filterRegExp().
+*/
 func (this *QSortFilterProxyModel) SetFilterWildcard(pattern string) {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -435,6 +580,12 @@ func (this *QSortFilterProxyModel) SetFilterWildcard(pattern string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilterFixedString(const QString &)
+
+/*
+Sets the fixed string used to filter the contents of the source model to the given pattern.
+
+See also setFilterCaseSensitivity(), setFilterRegExp(), setFilterWildcard(), and filterRegExp().
+*/
 func (this *QSortFilterProxyModel) SetFilterFixedString(pattern string) {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -446,6 +597,10 @@ func (this *QSortFilterProxyModel) SetFilterFixedString(pattern string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -455,6 +610,14 @@ func (this *QSortFilterProxyModel) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void invalidate()
+
+/*
+Invalidates the current sorting and filtering.
+
+This function was introduced in  Qt 4.3.
+
+See also invalidateFilter().
+*/
 func (this *QSortFilterProxyModel) Invalidate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel10invalidateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -464,6 +627,16 @@ func (this *QSortFilterProxyModel) Invalidate() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool filterAcceptsRow(int, const QModelIndex &) const
+
+/*
+Returns true if the item in the row indicated by the given source_row and source_parent should be included in the model; otherwise returns false.
+
+The default implementation returns true if the value held by the relevant item matches the filter string, wildcard string or regular expression.
+
+Note: By default, the Qt::DisplayRole is used to determine if the row should be accepted or not. This can be changed by setting the filterRole property.
+
+See also filterAcceptsColumn(), setFilterFixedString(), setFilterRegExp(), and setFilterWildcard().
+*/
 func (this *QSortFilterProxyModel) FilterAcceptsRow(source_row int, source_parent QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if source_parent != nil && source_parent.QModelIndex_PTR() != nil {
@@ -478,6 +651,16 @@ func (this *QSortFilterProxyModel) FilterAcceptsRow(source_row int, source_paren
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool filterAcceptsColumn(int, const QModelIndex &) const
+
+/*
+Returns true if the item in the column indicated by the given source_column and source_parent should be included in the model; otherwise returns false.
+
+The default implementation returns true if the value held by the relevant item matches the filter string, wildcard string or regular expression.
+
+Note: By default, the Qt::DisplayRole is used to determine if the column should be accepted or not. This can be changed by setting the filterRole property.
+
+See also filterAcceptsRow(), setFilterFixedString(), setFilterRegExp(), and setFilterWildcard().
+*/
 func (this *QSortFilterProxyModel) FilterAcceptsColumn(source_column int, source_parent QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if source_parent != nil && source_parent.QModelIndex_PTR() != nil {
@@ -492,6 +675,36 @@ func (this *QSortFilterProxyModel) FilterAcceptsColumn(source_column int, source
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool lessThan(const QModelIndex &, const QModelIndex &) const
+
+/*
+Returns true if the value of the item referred to by the given index source_left is less than the value of the item referred to by the given index source_right, otherwise returns false.
+
+This function is used as the < operator when sorting, and handles the following QVariant types:
+
+
+QMetaType::Int
+QMetaType::UInt
+QMetaType::LongLong
+QMetaType::ULongLong
+QMetaType::Float
+QMetaType::Double
+QMetaType::QChar
+QMetaType::QDate
+QMetaType::QTime
+QMetaType::QDateTime
+QMetaType::QString
+
+
+Any other type will be converted to a QString using QVariant::toString().
+
+Comparison of QStrings is case sensitive by default; this can be changed using the sortCaseSensitivity property.
+
+By default, the Qt::DisplayRole associated with the QModelIndexes is used for comparisons. This can be changed by setting the sortRole property.
+
+Note: The indices passed in correspond to the source model.
+
+See also sortRole, sortCaseSensitivity, and dynamicSortFilter.
+*/
 func (this *QSortFilterProxyModel) LessThan(source_left QModelIndex_ITF, source_right QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if source_left != nil && source_left.QModelIndex_PTR() != nil {
@@ -510,6 +723,10 @@ func (this *QSortFilterProxyModel) LessThan(source_left QModelIndex_ITF, source_
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void filterChanged()
+
+/*
+
+ */
 func (this *QSortFilterProxyModel) FilterChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13filterChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -519,6 +736,16 @@ func (this *QSortFilterProxyModel) FilterChanged() {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void invalidateFilter()
+
+/*
+Invalidates the current filtering.
+
+This function should be called if you are implementing custom filtering (e.g. filterAcceptsRow()), and your filter parameters have changed.
+
+This function was introduced in  Qt 4.3.
+
+See also invalidate().
+*/
 func (this *QSortFilterProxyModel) InvalidateFilter() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel16invalidateFilterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -528,6 +755,10 @@ func (this *QSortFilterProxyModel) InvalidateFilter() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::index().
+*/
 func (this *QSortFilterProxyModel) Index(row int, column int, parent QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -544,6 +775,10 @@ func (this *QSortFilterProxyModel) Index(row int, column int, parent QModelIndex
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::index().
+*/
 func (this *QSortFilterProxyModel) Index__(row int, column int) *QModelIndex /*123*/ {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = NewQModelIndex()
@@ -558,6 +793,10 @@ func (this *QSortFilterProxyModel) Index__(row int, column int) *QModelIndex /*1
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex parent(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::parent().
+*/
 func (this *QSortFilterProxyModel) Parent(child QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if child != nil && child.QModelIndex_PTR() != nil {
@@ -574,6 +813,10 @@ func (this *QSortFilterProxyModel) Parent(child QModelIndex_ITF) *QModelIndex /*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::sibling().
+*/
 func (this *QSortFilterProxyModel) Sibling(row int, column int, idx QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
 	if idx != nil && idx.QModelIndex_PTR() != nil {
@@ -590,6 +833,10 @@ func (this *QSortFilterProxyModel) Sibling(row int, column int, idx QModelIndex_
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::rowCount().
+*/
 func (this *QSortFilterProxyModel) RowCount(parent QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -604,6 +851,10 @@ func (this *QSortFilterProxyModel) RowCount(parent QModelIndex_ITF) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::rowCount().
+*/
 func (this *QSortFilterProxyModel) RowCount__() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg0 = NewQModelIndex()
@@ -616,6 +867,10 @@ func (this *QSortFilterProxyModel) RowCount__() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::columnCount().
+*/
 func (this *QSortFilterProxyModel) ColumnCount(parent QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -630,6 +885,10 @@ func (this *QSortFilterProxyModel) ColumnCount(parent QModelIndex_ITF) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::columnCount().
+*/
 func (this *QSortFilterProxyModel) ColumnCount__() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg0 = NewQModelIndex()
@@ -642,6 +901,10 @@ func (this *QSortFilterProxyModel) ColumnCount__() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::hasChildren().
+*/
 func (this *QSortFilterProxyModel) HasChildren(parent QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -656,6 +919,10 @@ func (this *QSortFilterProxyModel) HasChildren(parent QModelIndex_ITF) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::hasChildren().
+*/
 func (this *QSortFilterProxyModel) HasChildren__() bool {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg0 = NewQModelIndex()
@@ -668,6 +935,12 @@ func (this *QSortFilterProxyModel) HasChildren__() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
+
+/*
+Reimplemented from QAbstractItemModel::data().
+
+See also setData().
+*/
 func (this *QSortFilterProxyModel) Data(index QModelIndex_ITF, role int) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -684,6 +957,12 @@ func (this *QSortFilterProxyModel) Data(index QModelIndex_ITF, role int) *QVaria
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
+
+/*
+Reimplemented from QAbstractItemModel::data().
+
+See also setData().
+*/
 func (this *QSortFilterProxyModel) Data__(index QModelIndex_ITF) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -702,6 +981,12 @@ func (this *QSortFilterProxyModel) Data__(index QModelIndex_ITF) *QVariant /*123
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setData().
+
+See also data().
+*/
 func (this *QSortFilterProxyModel) SetData(index QModelIndex_ITF, value QVariant_ITF, role int) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -720,6 +1005,12 @@ func (this *QSortFilterProxyModel) SetData(index QModelIndex_ITF, value QVariant
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setData().
+
+See also data().
+*/
 func (this *QSortFilterProxyModel) SetData__(index QModelIndex_ITF, value QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -740,6 +1031,12 @@ func (this *QSortFilterProxyModel) SetData__(index QModelIndex_ITF, value QVaria
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
+
+/*
+Reimplemented from QAbstractItemModel::headerData().
+
+See also setHeaderData().
+*/
 func (this *QSortFilterProxyModel) HeaderData(section int, orientation int, role int) *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
 	qtrt.ErrPrint(err, rv)
@@ -752,6 +1049,12 @@ func (this *QSortFilterProxyModel) HeaderData(section int, orientation int, role
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
+
+/*
+Reimplemented from QAbstractItemModel::headerData().
+
+See also setHeaderData().
+*/
 func (this *QSortFilterProxyModel) HeaderData__(section int, orientation int) *QVariant /*123*/ {
 	// arg: 2, int=Int, =Invalid,
 	role := 0 /*Qt::DisplayRole*/
@@ -766,6 +1069,12 @@ func (this *QSortFilterProxyModel) HeaderData__(section int, orientation int) *Q
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setHeaderData().
+
+See also headerData().
+*/
 func (this *QSortFilterProxyModel) SetHeaderData(section int, orientation int, value QVariant_ITF, role int) bool {
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -780,6 +1089,12 @@ func (this *QSortFilterProxyModel) SetHeaderData(section int, orientation int, v
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setHeaderData().
+
+See also headerData().
+*/
 func (this *QSortFilterProxyModel) SetHeaderData__(section int, orientation int, value QVariant_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -796,6 +1111,10 @@ func (this *QSortFilterProxyModel) SetHeaderData__(section int, orientation int,
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::dropMimeData().
+*/
 func (this *QSortFilterProxyModel) DropMimeData(data QMimeData_ITF /*777 const QMimeData **/, action int, row int, column int, parent QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QMimeData_PTR() != nil {
@@ -814,6 +1133,10 @@ func (this *QSortFilterProxyModel) DropMimeData(data QMimeData_ITF /*777 const Q
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::insertRows().
+*/
 func (this *QSortFilterProxyModel) InsertRows(row int, count int, parent QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -828,6 +1151,10 @@ func (this *QSortFilterProxyModel) InsertRows(row int, count int, parent QModelI
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::insertRows().
+*/
 func (this *QSortFilterProxyModel) InsertRows__(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = NewQModelIndex()
@@ -840,6 +1167,10 @@ func (this *QSortFilterProxyModel) InsertRows__(row int, count int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertColumns(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::insertColumns().
+*/
 func (this *QSortFilterProxyModel) InsertColumns(column int, count int, parent QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -854,6 +1185,10 @@ func (this *QSortFilterProxyModel) InsertColumns(column int, count int, parent Q
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertColumns(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::insertColumns().
+*/
 func (this *QSortFilterProxyModel) InsertColumns__(column int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = NewQModelIndex()
@@ -866,6 +1201,10 @@ func (this *QSortFilterProxyModel) InsertColumns__(column int, count int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::removeRows().
+*/
 func (this *QSortFilterProxyModel) RemoveRows(row int, count int, parent QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -880,6 +1219,10 @@ func (this *QSortFilterProxyModel) RemoveRows(row int, count int, parent QModelI
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::removeRows().
+*/
 func (this *QSortFilterProxyModel) RemoveRows__(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = NewQModelIndex()
@@ -892,6 +1235,10 @@ func (this *QSortFilterProxyModel) RemoveRows__(row int, count int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeColumns(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::removeColumns().
+*/
 func (this *QSortFilterProxyModel) RemoveColumns(column int, count int, parent QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -906,6 +1253,10 @@ func (this *QSortFilterProxyModel) RemoveColumns(column int, count int, parent Q
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeColumns(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::removeColumns().
+*/
 func (this *QSortFilterProxyModel) RemoveColumns__(column int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = NewQModelIndex()
@@ -918,6 +1269,10 @@ func (this *QSortFilterProxyModel) RemoveColumns__(column int, count int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fetchMore(const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::fetchMore().
+*/
 func (this *QSortFilterProxyModel) FetchMore(parent QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -931,6 +1286,10 @@ func (this *QSortFilterProxyModel) FetchMore(parent QModelIndex_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canFetchMore(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::canFetchMore().
+*/
 func (this *QSortFilterProxyModel) CanFetchMore(parent QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -945,6 +1304,10 @@ func (this *QSortFilterProxyModel) CanFetchMore(parent QModelIndex_ITF) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::flags().
+*/
 func (this *QSortFilterProxyModel) Flags(index QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -959,6 +1322,10 @@ func (this *QSortFilterProxyModel) Flags(index QModelIndex_ITF) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex buddy(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::buddy().
+*/
 func (this *QSortFilterProxyModel) Buddy(index QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -975,6 +1342,10 @@ func (this *QSortFilterProxyModel) Buddy(index QModelIndex_ITF) *QModelIndex /*1
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QModelIndexList match(const QModelIndex &, int, const QVariant &, int, Qt::MatchFlags) const
+
+/*
+Reimplemented from QAbstractItemModel::match().
+*/
 func (this *QSortFilterProxyModel) Match(start QModelIndex_ITF, role int, value QVariant_ITF, hits int, flags int) *QModelIndexList /*667*/ {
 	var convArg0 unsafe.Pointer
 	if start != nil && start.QModelIndex_PTR() != nil {
@@ -994,6 +1365,10 @@ func (this *QSortFilterProxyModel) Match(start QModelIndex_ITF, role int, value 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QModelIndexList match(const QModelIndex &, int, const QVariant &, int, Qt::MatchFlags) const
+
+/*
+Reimplemented from QAbstractItemModel::match().
+*/
 func (this *QSortFilterProxyModel) Match__(start QModelIndex_ITF, role int, value QVariant_ITF) *QModelIndexList /*667*/ {
 	var convArg0 unsafe.Pointer
 	if start != nil && start.QModelIndex_PTR() != nil {
@@ -1017,6 +1392,10 @@ func (this *QSortFilterProxyModel) Match__(start QModelIndex_ITF, role int, valu
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QModelIndexList match(const QModelIndex &, int, const QVariant &, int, Qt::MatchFlags) const
+
+/*
+Reimplemented from QAbstractItemModel::match().
+*/
 func (this *QSortFilterProxyModel) Match__1(start QModelIndex_ITF, role int, value QVariant_ITF, hits int) *QModelIndexList /*667*/ {
 	var convArg0 unsafe.Pointer
 	if start != nil && start.QModelIndex_PTR() != nil {
@@ -1038,6 +1417,10 @@ func (this *QSortFilterProxyModel) Match__1(start QModelIndex_ITF, role int, val
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize span(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::span().
+*/
 func (this *QSortFilterProxyModel) Span(index QModelIndex_ITF) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -1054,6 +1437,10 @@ func (this *QSortFilterProxyModel) Span(index QModelIndex_ITF) *QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
+
+/*
+Reimplemented from QAbstractItemModel::sort().
+*/
 func (this *QSortFilterProxyModel) Sort(column int, order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	qtrt.ErrPrint(err, rv)
@@ -1063,6 +1450,10 @@ func (this *QSortFilterProxyModel) Sort(column int, order int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
+
+/*
+Reimplemented from QAbstractItemModel::sort().
+*/
 func (this *QSortFilterProxyModel) Sort__(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
 	order := 0
@@ -1074,6 +1465,10 @@ func (this *QSortFilterProxyModel) Sort__(column int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
+
+/*
+Reimplemented from QAbstractItemModel::mimeTypes().
+*/
 func (this *QSortFilterProxyModel) MimeTypes() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1086,6 +1481,10 @@ func (this *QSortFilterProxyModel) MimeTypes() *QStringList /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
+
+/*
+Reimplemented from QAbstractItemModel::supportedDropActions().
+*/
 func (this *QSortFilterProxyModel) SupportedDropActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel20supportedDropActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -83,6 +83,9 @@ func (this *QMdiArea) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 
+/*
+
+ */
 type QMdiArea struct {
 	*QAbstractScrollArea
 }
@@ -115,6 +118,10 @@ func (*QMdiArea) NewFromPointer(cthis unsafe.Pointer) *QMdiArea {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QMdiArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,6 +132,10 @@ func (this *QMdiArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMdiArea(QWidget *)
+
+/*
+Constructs an empty mdi area. parent is passed to QWidget's constructor.
+*/
 func NewQMdiArea(parent QWidget_ITF /*777 QWidget **/) *QMdiArea {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -141,6 +152,10 @@ func NewQMdiArea(parent QWidget_ITF /*777 QWidget **/) *QMdiArea {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMdiArea(QWidget *)
+
+/*
+Constructs an empty mdi area. parent is passed to QWidget's constructor.
+*/
 func NewQMdiArea__() *QMdiArea {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -155,6 +170,10 @@ func NewQMdiArea__() *QMdiArea {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMdiArea()
+
+/*
+
+ */
 func DeleteQMdiArea(this *QMdiArea) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiAreaD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -166,6 +185,10 @@ func DeleteQMdiArea(this *QMdiArea) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,6 +201,10 @@ func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QMdiArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,6 +217,14 @@ func (this *QMdiArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMdiSubWindow * currentSubWindow() const
+
+/*
+Returns a pointer to the current subwindow, or 0 if there is no current subwindow.
+
+This function will return the same as activeSubWindow() if the QApplication containing QMdiArea is active.
+
+See also activeSubWindow() and QApplication::activeWindow().
+*/
 func (this *QMdiArea) CurrentSubWindow() *QMdiSubWindow /*777 QMdiSubWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea16currentSubWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,6 +235,14 @@ func (this *QMdiArea) CurrentSubWindow() *QMdiSubWindow /*777 QMdiSubWindow **/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMdiSubWindow * activeSubWindow() const
+
+/*
+Returns a pointer to the current active subwindow. If no window is currently active, 0 is returned.
+
+Subwindows are treated as top-level windows with respect to window state, i.e., if a widget outside the MDI area is the active window, no subwindow will be active. Note that if a widget in the window in which the MDI area lives gains focus, the window will be activated.
+
+See also setActiveSubWindow() and Qt::WindowState.
+*/
 func (this *QMdiArea) ActiveSubWindow() *QMdiSubWindow /*777 QMdiSubWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea15activeSubWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -210,6 +253,32 @@ func (this *QMdiArea) ActiveSubWindow() *QMdiSubWindow /*777 QMdiSubWindow **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMdiSubWindow * addSubWindow(QWidget *, Qt::WindowFlags)
+
+/*
+Adds widget as a new subwindow to the MDI area. If windowFlags are non-zero, they will override the flags set on the widget.
+
+The widget can be either a QMdiSubWindow or another QWidget (in which case the MDI area will create a subwindow and set the widget as the internal widget).
+
+Note: Once the subwindow has been added, its parent will be the viewport widget of the QMdiArea.
+
+
+      QMdiArea mdiArea;
+      QMdiSubWindow *subWindow1 = new QMdiSubWindow;
+      subWindow1->setWidget(internalWidget1);
+      subWindow1->setAttribute(Qt::WA_DeleteOnClose);
+      mdiArea.addSubWindow(subWindow1);
+
+      QMdiSubWindow *subWindow2 =
+          mdiArea.addSubWindow(internalWidget2);
+
+
+
+When you create your own subwindow, you must set the Qt::WA_DeleteOnClose widget attribute if you want the window to be deleted when closed in the MDI area. If not, the window will be hidden and the MDI area will not activate the next subwindow.
+
+Returns the QMdiSubWindow that is added to the MDI area.
+
+See also removeSubWindow().
+*/
 func (this *QMdiArea) AddSubWindow(widget QWidget_ITF /*777 QWidget **/, flags int) *QMdiSubWindow /*777 QMdiSubWindow **/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -224,6 +293,32 @@ func (this *QMdiArea) AddSubWindow(widget QWidget_ITF /*777 QWidget **/, flags i
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMdiSubWindow * addSubWindow(QWidget *, Qt::WindowFlags)
+
+/*
+Adds widget as a new subwindow to the MDI area. If windowFlags are non-zero, they will override the flags set on the widget.
+
+The widget can be either a QMdiSubWindow or another QWidget (in which case the MDI area will create a subwindow and set the widget as the internal widget).
+
+Note: Once the subwindow has been added, its parent will be the viewport widget of the QMdiArea.
+
+
+      QMdiArea mdiArea;
+      QMdiSubWindow *subWindow1 = new QMdiSubWindow;
+      subWindow1->setWidget(internalWidget1);
+      subWindow1->setAttribute(Qt::WA_DeleteOnClose);
+      mdiArea.addSubWindow(subWindow1);
+
+      QMdiSubWindow *subWindow2 =
+          mdiArea.addSubWindow(internalWidget2);
+
+
+
+When you create your own subwindow, you must set the Qt::WA_DeleteOnClose widget attribute if you want the window to be deleted when closed in the MDI area. If not, the window will be hidden and the MDI area will not activate the next subwindow.
+
+Returns the QMdiSubWindow that is added to the MDI area.
+
+See also removeSubWindow().
+*/
 func (this *QMdiArea) AddSubWindow__(widget QWidget_ITF /*777 QWidget **/) *QMdiSubWindow /*777 QMdiSubWindow **/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -240,6 +335,12 @@ func (this *QMdiArea) AddSubWindow__(widget QWidget_ITF /*777 QWidget **/) *QMdi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeSubWindow(QWidget *)
+
+/*
+Removes widget from the MDI area. The widget must be either a QMdiSubWindow or a widget that is the internal widget of a subwindow. Note widget is never actually deleted by QMdiArea. If a QMdiSubWindow is passed in its parent is set to 0 and it is removed, but if an internal widget is passed in the child widget is set to 0 but the QMdiSubWindow is not removed.
+
+See also addSubWindow().
+*/
 func (this *QMdiArea) RemoveSubWindow(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -253,6 +354,10 @@ func (this *QMdiArea) RemoveSubWindow(widget QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QBrush background() const
+
+/*
+
+ */
 func (this *QMdiArea) Background() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea10backgroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -265,6 +370,10 @@ func (this *QMdiArea) Background() *qtgui.QBrush /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
+
+/*
+
+ */
 func (this *QMdiArea) SetBackground(background qtgui.QBrush_ITF) {
 	var convArg0 unsafe.Pointer
 	if background != nil && background.QBrush_PTR() != nil {
@@ -278,6 +387,10 @@ func (this *QMdiArea) SetBackground(background qtgui.QBrush_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMdiArea::WindowOrder activationOrder() const
+
+/*
+
+ */
 func (this *QMdiArea) ActivationOrder() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea15activationOrderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -288,6 +401,10 @@ func (this *QMdiArea) ActivationOrder() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActivationOrder(enum QMdiArea::WindowOrder)
+
+/*
+
+ */
 func (this *QMdiArea) SetActivationOrder(order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea18setActivationOrderENS_11WindowOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), order)
 	qtrt.ErrPrint(err, rv)
@@ -297,6 +414,12 @@ func (this *QMdiArea) SetActivationOrder(order int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(enum QMdiArea::AreaOption, _Bool)
+
+/*
+If on is true, option is enabled on the MDI area; otherwise it is disabled. See AreaOption for the effect of each option.
+
+See also AreaOption and testOption().
+*/
 func (this *QMdiArea) SetOption(option int, on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea9setOptionENS_10AreaOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	qtrt.ErrPrint(err, rv)
@@ -306,6 +429,12 @@ func (this *QMdiArea) SetOption(option int, on bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(enum QMdiArea::AreaOption, _Bool)
+
+/*
+If on is true, option is enabled on the MDI area; otherwise it is disabled. See AreaOption for the effect of each option.
+
+See also AreaOption and testOption().
+*/
 func (this *QMdiArea) SetOption__(option int) {
 	// arg: 1, bool=Bool, =Invalid,
 	on := true
@@ -317,6 +446,12 @@ func (this *QMdiArea) SetOption__(option int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(enum QMdiArea::AreaOption) const
+
+/*
+Returns true if option is enabled; otherwise returns false.
+
+See also AreaOption and setOption().
+*/
 func (this *QMdiArea) TestOption(opton int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea10testOptionENS_10AreaOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opton)
 	qtrt.ErrPrint(err, rv)
@@ -327,6 +462,10 @@ func (this *QMdiArea) TestOption(opton int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setViewMode(enum QMdiArea::ViewMode)
+
+/*
+
+ */
 func (this *QMdiArea) SetViewMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea11setViewModeENS_8ViewModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -336,6 +475,10 @@ func (this *QMdiArea) SetViewMode(mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMdiArea::ViewMode viewMode() const
+
+/*
+
+ */
 func (this *QMdiArea) ViewMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea8viewModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -346,6 +489,10 @@ func (this *QMdiArea) ViewMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool documentMode() const
+
+/*
+
+ */
 func (this *QMdiArea) DocumentMode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea12documentModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -356,6 +503,10 @@ func (this *QMdiArea) DocumentMode() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDocumentMode(_Bool)
+
+/*
+
+ */
 func (this *QMdiArea) SetDocumentMode(enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea15setDocumentModeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	qtrt.ErrPrint(err, rv)
@@ -365,6 +516,10 @@ func (this *QMdiArea) SetDocumentMode(enabled bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabsClosable(_Bool)
+
+/*
+
+ */
 func (this *QMdiArea) SetTabsClosable(closable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea15setTabsClosableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), closable)
 	qtrt.ErrPrint(err, rv)
@@ -374,6 +529,10 @@ func (this *QMdiArea) SetTabsClosable(closable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tabsClosable() const
+
+/*
+
+ */
 func (this *QMdiArea) TabsClosable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea12tabsClosableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -384,6 +543,10 @@ func (this *QMdiArea) TabsClosable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabsMovable(_Bool)
+
+/*
+
+ */
 func (this *QMdiArea) SetTabsMovable(movable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea14setTabsMovableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	qtrt.ErrPrint(err, rv)
@@ -393,6 +556,10 @@ func (this *QMdiArea) SetTabsMovable(movable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tabsMovable() const
+
+/*
+
+ */
 func (this *QMdiArea) TabsMovable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea11tabsMovableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -403,6 +570,10 @@ func (this *QMdiArea) TabsMovable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabShape(QTabWidget::TabShape)
+
+/*
+
+ */
 func (this *QMdiArea) SetTabShape(shape int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea11setTabShapeEN10QTabWidget8TabShapeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), shape)
 	qtrt.ErrPrint(err, rv)
@@ -412,6 +583,10 @@ func (this *QMdiArea) SetTabShape(shape int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTabWidget::TabShape tabShape() const
+
+/*
+
+ */
 func (this *QMdiArea) TabShape() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea8tabShapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -422,6 +597,10 @@ func (this *QMdiArea) TabShape() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabPosition(QTabWidget::TabPosition)
+
+/*
+
+ */
 func (this *QMdiArea) SetTabPosition(position int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea14setTabPositionEN10QTabWidget11TabPositionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	qtrt.ErrPrint(err, rv)
@@ -431,6 +610,10 @@ func (this *QMdiArea) SetTabPosition(position int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTabWidget::TabPosition tabPosition() const
+
+/*
+
+ */
 func (this *QMdiArea) TabPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea11tabPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -441,6 +624,12 @@ func (this *QMdiArea) TabPosition() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void subWindowActivated(QMdiSubWindow *)
+
+/*
+QMdiArea emits this signal after window has been activated. When window is 0, QMdiArea has just deactivated its last active window, and there are no active windows on the workspace.
+
+See also QMdiArea::activeSubWindow().
+*/
 func (this *QMdiArea) SubWindowActivated(arg0 QMdiSubWindow_ITF /*777 QMdiSubWindow **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMdiSubWindow_PTR() != nil {
@@ -454,6 +643,12 @@ func (this *QMdiArea) SubWindowActivated(arg0 QMdiSubWindow_ITF /*777 QMdiSubWin
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActiveSubWindow(QMdiSubWindow *)
+
+/*
+Activates the subwindow window. If window is 0, any current active window is deactivated.
+
+See also activeSubWindow().
+*/
 func (this *QMdiArea) SetActiveSubWindow(window QMdiSubWindow_ITF /*777 QMdiSubWindow **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QMdiSubWindow_PTR() != nil {
@@ -467,6 +662,12 @@ func (this *QMdiArea) SetActiveSubWindow(window QMdiSubWindow_ITF /*777 QMdiSubW
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tileSubWindows()
+
+/*
+Arranges all child windows in a tile pattern.
+
+See also cascadeSubWindows().
+*/
 func (this *QMdiArea) TileSubWindows() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea14tileSubWindowsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -476,6 +677,12 @@ func (this *QMdiArea) TileSubWindows() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cascadeSubWindows()
+
+/*
+Arranges all the child windows in a cascade pattern.
+
+See also tileSubWindows().
+*/
 func (this *QMdiArea) CascadeSubWindows() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea17cascadeSubWindowsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -485,6 +692,12 @@ func (this *QMdiArea) CascadeSubWindows() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closeActiveSubWindow()
+
+/*
+Closes the active subwindow.
+
+See also closeAllSubWindows().
+*/
 func (this *QMdiArea) CloseActiveSubWindow() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea20closeActiveSubWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -494,6 +707,14 @@ func (this *QMdiArea) CloseActiveSubWindow() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closeAllSubWindows()
+
+/*
+Closes all subwindows by sending a QCloseEvent to each window. You may receive subWindowActivated() signals from subwindows before they are closed (if the MDI area activates the subwindow when another is closing).
+
+Subwindows that ignore the close event will remain open.
+
+See also closeActiveSubWindow().
+*/
 func (this *QMdiArea) CloseAllSubWindows() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea18closeAllSubWindowsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -503,6 +724,12 @@ func (this *QMdiArea) CloseAllSubWindows() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activateNextSubWindow()
+
+/*
+Gives the keyboard focus to another window in the list of child windows. The window activated will be the next one determined by the current activation order.
+
+See also activatePreviousSubWindow() and QMdiArea::WindowOrder.
+*/
 func (this *QMdiArea) ActivateNextSubWindow() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea21activateNextSubWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -512,6 +739,12 @@ func (this *QMdiArea) ActivateNextSubWindow() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activatePreviousSubWindow()
+
+/*
+Gives the keyboard focus to another window in the list of child windows. The window activated will be the previous one determined by the current activation order.
+
+See also activateNextSubWindow() and QMdiArea::WindowOrder.
+*/
 func (this *QMdiArea) ActivatePreviousSubWindow() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea25activatePreviousSubWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -521,6 +754,14 @@ func (this *QMdiArea) ActivatePreviousSubWindow() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setupViewport(QWidget *)
+
+/*
+Reimplemented from QAbstractScrollArea::setupViewport().
+
+This slot is called by QAbstractScrollArea after setViewport() has been called. Reimplement this function in a subclass of QMdiArea to initialize the new viewport before it is used.
+
+See also setViewport().
+*/
 func (this *QMdiArea) SetupViewport(viewport QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if viewport != nil && viewport.QWidget_PTR() != nil {
@@ -534,6 +775,10 @@ func (this *QMdiArea) SetupViewport(viewport QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QMdiArea) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -548,6 +793,10 @@ func (this *QMdiArea) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+Reimplemented from QObject::eventFilter().
+*/
 func (this *QMdiArea) EventFilter(object qtcore.QObject_ITF /*777 QObject **/, event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -566,6 +815,10 @@ func (this *QMdiArea) EventFilter(object qtcore.QObject_ITF /*777 QObject **/, e
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QMdiArea) PaintEvent(paintEvent qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if paintEvent != nil && paintEvent.QPaintEvent_PTR() != nil {
@@ -579,6 +832,10 @@ func (this *QMdiArea) PaintEvent(paintEvent qtgui.QPaintEvent_ITF /*777 QPaintEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void childEvent(QChildEvent *)
+
+/*
+Reimplemented from QObject::childEvent().
+*/
 func (this *QMdiArea) ChildEvent(childEvent qtcore.QChildEvent_ITF /*777 QChildEvent **/) {
 	var convArg0 unsafe.Pointer
 	if childEvent != nil && childEvent.QChildEvent_PTR() != nil {
@@ -592,6 +849,10 @@ func (this *QMdiArea) ChildEvent(childEvent qtcore.QChildEvent_ITF /*777 QChildE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+*/
 func (this *QMdiArea) ResizeEvent(resizeEvent qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if resizeEvent != nil && resizeEvent.QResizeEvent_PTR() != nil {
@@ -605,6 +866,10 @@ func (this *QMdiArea) ResizeEvent(resizeEvent qtgui.QResizeEvent_ITF /*777 QResi
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
+
+/*
+Reimplemented from QObject::timerEvent().
+*/
 func (this *QMdiArea) TimerEvent(timerEvent qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
 	var convArg0 unsafe.Pointer
 	if timerEvent != nil && timerEvent.QTimerEvent_PTR() != nil {
@@ -618,6 +883,10 @@ func (this *QMdiArea) TimerEvent(timerEvent qtcore.QTimerEvent_ITF /*777 QTimerE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
+
+/*
+Reimplemented from QWidget::showEvent().
+*/
 func (this *QMdiArea) ShowEvent(showEvent qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	var convArg0 unsafe.Pointer
 	if showEvent != nil && showEvent.QShowEvent_PTR() != nil {
@@ -631,6 +900,10 @@ func (this *QMdiArea) ShowEvent(showEvent qtgui.QShowEvent_ITF /*777 QShowEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool viewportEvent(QEvent *)
+
+/*
+Reimplemented from QAbstractScrollArea::viewportEvent().
+*/
 func (this *QMdiArea) ViewportEvent(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -645,24 +918,59 @@ func (this *QMdiArea) ViewportEvent(event qtcore.QEvent_ITF /*777 QEvent **/) bo
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void scrollContentsBy(int, int)
+
+/*
+Reimplemented from QAbstractScrollArea::scrollContentsBy().
+*/
 func (this *QMdiArea) ScrollContentsBy(dx int, dy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea16scrollContentsByEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QMdiArea__AreaOption = int
 
+//
 const QMdiArea__DontMaximizeSubWindowOnActivation QMdiArea__AreaOption = 1
 
+/*
+Specifies the criteria to use for ordering the list of child windows returned by subWindowList(). The functions cascadeSubWindows() and tileSubWindows() follow this order when arranging the windows.
+
+
+
+See also subWindowList().
+
+*/
 type QMdiArea__WindowOrder = int
 
+// The windows are returned in the order of their creation.
 const QMdiArea__CreationOrder QMdiArea__WindowOrder = 0
+
+// The windows are returned in the order in which they are stacked, with the top-most window being last in the list.
 const QMdiArea__StackingOrder QMdiArea__WindowOrder = 1
+
+// The windows are returned in the order in which they were activated.
 const QMdiArea__ActivationHistoryOrder QMdiArea__WindowOrder = 2
 
+/*
+This enum describes the view mode of the area; i.e. how sub-windows will be displayed.
+
+
+
+This enum was introduced or modified in  Qt 4.4.
+
+See also setViewMode().
+
+*/
 type QMdiArea__ViewMode = int
 
+// Display sub-windows with window frames (default).
 const QMdiArea__SubWindowView QMdiArea__ViewMode = 0
+
+// Display sub-windows with tabs in a tab bar.
 const QMdiArea__TabbedView QMdiArea__ViewMode = 1
 
 //  body block end

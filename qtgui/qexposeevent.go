@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QExposeEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QExposeEvent) NewFromPointer(cthis unsafe.Pointer) *QExposeEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QExposeEvent(const QRegion &)
+
+/*
+
+ */
 func NewQExposeEvent(rgn QRegion_ITF) *QExposeEvent {
 	var convArg0 unsafe.Pointer
 	if rgn != nil && rgn.QRegion_PTR() != nil {
@@ -80,6 +87,10 @@ func NewQExposeEvent(rgn QRegion_ITF) *QExposeEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QExposeEvent()
+
+/*
+
+ */
 func DeleteQExposeEvent(this *QExposeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QExposeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -91,6 +102,10 @@ func DeleteQExposeEvent(this *QExposeEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QRegion & region() const
+
+/*
+
+ */
 func (this *QExposeEvent) Region() *QRegion {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

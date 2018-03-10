@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGEngine struct {
 	*qtcore.QObject
 }
@@ -67,6 +70,10 @@ func (*QSGEngine) NewFromPointer(cthis unsafe.Pointer) *QSGEngine {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSGEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSGEngine10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func (this *QSGEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGEngine(QObject *)
+
+/*
+Constructs a new QSGEngine with its parent
+*/
 func NewQSGEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QSGEngine {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQSGEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QSGEngine {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGEngine(QObject *)
+
+/*
+Constructs a new QSGEngine with its parent
+*/
 func NewQSGEngine__() *QSGEngine {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -107,6 +122,10 @@ func NewQSGEngine__() *QSGEngine {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGEngine()
+
+/*
+
+ */
 func DeleteQSGEngine(this *QSGEngine) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSGEngineD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -118,6 +137,12 @@ func DeleteQSGEngine(this *QSGEngine) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void invalidate()
+
+/*
+Invalidate the engine releasing its resources
+
+You will have to call initialize() and createRenderer() if you want to use it again.
+*/
 func (this *QSGEngine) Invalidate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSGEngine10invalidateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +152,12 @@ func (this *QSGEngine) Invalidate() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGAbstractRenderer * createRenderer() const
+
+/*
+Returns a renderer that can be used to render a QSGNode tree
+
+You call initialize() first with the QOpenGLContext that you want to use with this renderer. This will return a null renderer otherwise.
+*/
 func (this *QSGEngine) CreateRenderer() *QSGAbstractRenderer /*777 QSGAbstractRenderer **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSGEngine14createRendererEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -137,6 +168,16 @@ func (this *QSGEngine) CreateRenderer() *QSGAbstractRenderer /*777 QSGAbstractRe
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromImage(const QImage &, QSGEngine::CreateTextureOptions) const
+
+/*
+Creates a texture using the data of image
+
+Valid options are TextureCanUseAtlas and TextureIsOpaque.
+
+The caller takes ownership of the texture and the texture should only be used with this engine.
+
+See also createTextureFromId(), QSGSimpleTextureNode::setOwnsTexture(), and QQuickWindow::createTextureFromImage().
+*/
 func (this *QSGEngine) CreateTextureFromImage(image qtgui.QImage_ITF, options int) *QSGTexture /*777 QSGTexture **/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
@@ -151,6 +192,16 @@ func (this *QSGEngine) CreateTextureFromImage(image qtgui.QImage_ITF, options in
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromImage(const QImage &, QSGEngine::CreateTextureOptions) const
+
+/*
+Creates a texture using the data of image
+
+Valid options are TextureCanUseAtlas and TextureIsOpaque.
+
+The caller takes ownership of the texture and the texture should only be used with this engine.
+
+See also createTextureFromId(), QSGSimpleTextureNode::setOwnsTexture(), and QQuickWindow::createTextureFromImage().
+*/
 func (this *QSGEngine) CreateTextureFromImage__(image qtgui.QImage_ITF) *QSGTexture /*777 QSGTexture **/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
@@ -167,6 +218,16 @@ func (this *QSGEngine) CreateTextureFromImage__(image qtgui.QImage_ITF) *QSGText
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromId(uint, const QSize &, QSGEngine::CreateTextureOptions) const
+
+/*
+Creates a texture object that wraps the GL texture id uploaded with size
+
+Valid options are TextureHasAlphaChannel and TextureOwnsGLTexture
+
+The caller takes ownership of the texture object and the texture should only be used with this engine.
+
+See also createTextureFromImage(), QSGSimpleTextureNode::setOwnsTexture(), and QQuickWindow::createTextureFromId().
+*/
 func (this *QSGEngine) CreateTextureFromId(id uint, size qtcore.QSize_ITF, options int) *QSGTexture /*777 QSGTexture **/ {
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -181,6 +242,16 @@ func (this *QSGEngine) CreateTextureFromId(id uint, size qtcore.QSize_ITF, optio
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromId(uint, const QSize &, QSGEngine::CreateTextureOptions) const
+
+/*
+Creates a texture object that wraps the GL texture id uploaded with size
+
+Valid options are TextureHasAlphaChannel and TextureOwnsGLTexture
+
+The caller takes ownership of the texture object and the texture should only be used with this engine.
+
+See also createTextureFromImage(), QSGSimpleTextureNode::setOwnsTexture(), and QQuickWindow::createTextureFromId().
+*/
 func (this *QSGEngine) CreateTextureFromId__(id uint, size qtcore.QSize_ITF) *QSGTexture /*777 QSGTexture **/ {
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -197,6 +268,14 @@ func (this *QSGEngine) CreateTextureFromId__(id uint, size qtcore.QSize_ITF) *QS
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGRendererInterface * rendererInterface() const
+
+/*
+Returns the current renderer interface if there is one. Otherwise null is returned.
+
+This function was introduced in  Qt 5.8.
+
+See also QSGRenderNode and QSGRendererInterface.
+*/
 func (this *QSGEngine) RendererInterface() *QSGRendererInterface /*777 QSGRendererInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSGEngine17rendererInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,6 +286,16 @@ func (this *QSGEngine) RendererInterface() *QSGRendererInterface /*777 QSGRender
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGRectangleNode * createRectangleNode() const
+
+/*
+Creates a simple rectangle node. When the scenegraph is not initialized, the return value is null.
+
+This is cross-backend alternative to constructing a QSGSimpleRectNode directly.
+
+This function was introduced in  Qt 5.8.
+
+See also QSGRectangleNode.
+*/
 func (this *QSGEngine) CreateRectangleNode() *QSGRectangleNode /*777 QSGRectangleNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSGEngine19createRectangleNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,6 +306,16 @@ func (this *QSGEngine) CreateRectangleNode() *QSGRectangleNode /*777 QSGRectangl
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGImageNode * createImageNode() const
+
+/*
+Creates a simple image node. When the scenegraph is not initialized, the return value is null.
+
+This is cross-backend alternative to constructing a QSGSimpleTextureNode directly.
+
+This function was introduced in  Qt 5.8.
+
+See also QSGImageNode.
+*/
 func (this *QSGEngine) CreateImageNode() *QSGImageNode /*777 QSGImageNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSGEngine15createImageNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,17 +326,34 @@ func (this *QSGEngine) CreateImageNode() *QSGImageNode /*777 QSGImageNode **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGNinePatchNode * createNinePatchNode() const
+
+/*
+Creates a nine patch node. When the scenegraph is not initialized, the return value is null.
+
+This function was introduced in  Qt 5.8.
+*/
 func (this *QSGEngine) CreateNinePatchNode() *QSGNinePatchNode /*777 QSGNinePatchNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSGEngine19createNinePatchNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGNinePatchNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
+/*
+
+
+ */
 type QSGEngine__CreateTextureOption = int
 
+//
 const QSGEngine__TextureHasAlphaChannel QSGEngine__CreateTextureOption = 1
+
+//
 const QSGEngine__TextureOwnsGLTexture QSGEngine__CreateTextureOption = 4
+
+//
 const QSGEngine__TextureCanUseAtlas QSGEngine__CreateTextureOption = 8
+
+//
 const QSGEngine__TextureIsOpaque QSGEngine__CreateTextureOption = 16
 
 //  body block end

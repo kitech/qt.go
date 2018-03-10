@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QSignalBlocker struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QSignalBlocker) NewFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSignalBlocker(QObject *)
+
+/*
+
+ */
 func NewQSignalBlocker(o QObject_ITF /*777 QObject **/) *QSignalBlocker {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QObject_PTR() != nil {
@@ -81,6 +88,10 @@ func NewQSignalBlocker(o QObject_ITF /*777 QObject **/) *QSignalBlocker {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSignalBlocker(QObject &)
+
+/*
+
+ */
 func NewQSignalBlocker_1(o QObject_ITF) *QSignalBlocker {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QObject_PTR() != nil {
@@ -97,6 +108,10 @@ func NewQSignalBlocker_1(o QObject_ITF) *QSignalBlocker {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QSignalBlocker()
+
+/*
+
+ */
 func DeleteQSignalBlocker(this *QSignalBlocker) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlockerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -108,6 +123,10 @@ func DeleteQSignalBlocker(this *QSignalBlocker) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void reblock()
+
+/*
+
+ */
 func (this *QSignalBlocker) Reblock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlocker7reblockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -117,6 +136,10 @@ func (this *QSignalBlocker) Reblock() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void unblock()
+
+/*
+
+ */
 func (this *QSignalBlocker) Unblock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlocker7unblockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

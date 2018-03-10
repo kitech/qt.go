@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QXmlStreamEntityDeclaration struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QXmlStreamEntityDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXmlSt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamEntityDeclaration()
+
+/*
+
+ */
 func NewQXmlStreamEntityDeclaration() *QXmlStreamEntityDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQXmlStreamEntityDeclaration() *QXmlStreamEntityDeclaration {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamEntityDeclaration()
+
+/*
+
+ */
 func DeleteQXmlStreamEntityDeclaration(this *QXmlStreamEntityDeclaration) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 88)
@@ -90,6 +101,10 @@ func DeleteQXmlStreamEntityDeclaration(this *QXmlStreamEntityDeclaration) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QXmlStreamEntityDeclaration & operator=(const QXmlStreamEntityDeclaration &)
+
+/*
+
+ */
 func (this *QXmlStreamEntityDeclaration) Operator_equal(arg0 QXmlStreamEntityDeclaration_ITF) *QXmlStreamEntityDeclaration {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QXmlStreamEntityDeclaration_PTR() != nil {
@@ -106,6 +121,10 @@ func (this *QXmlStreamEntityDeclaration) Operator_equal(arg0 QXmlStreamEntityDec
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [88] QXmlStreamEntityDeclaration & operator=(QXmlStreamEntityDeclaration &&)
+
+/*
+
+ */
 func (this *QXmlStreamEntityDeclaration) Operator_equal_1(other unsafe.Pointer /*333*/) *QXmlStreamEntityDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -118,6 +137,10 @@ func (this *QXmlStreamEntityDeclaration) Operator_equal_1(other unsafe.Pointer /
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef name() const
+
+/*
+
+ */
 func (this *QXmlStreamEntityDeclaration) Name() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +153,10 @@ func (this *QXmlStreamEntityDeclaration) Name() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef notationName() const
+
+/*
+
+ */
 func (this *QXmlStreamEntityDeclaration) NotationName() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration12notationNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,6 +169,10 @@ func (this *QXmlStreamEntityDeclaration) NotationName() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef systemId() const
+
+/*
+
+ */
 func (this *QXmlStreamEntityDeclaration) SystemId() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8systemIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +185,10 @@ func (this *QXmlStreamEntityDeclaration) SystemId() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef publicId() const
+
+/*
+
+ */
 func (this *QXmlStreamEntityDeclaration) PublicId() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8publicIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +201,10 @@ func (this *QXmlStreamEntityDeclaration) PublicId() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef value() const
+
+/*
+
+ */
 func (this *QXmlStreamEntityDeclaration) Value() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,6 +217,10 @@ func (this *QXmlStreamEntityDeclaration) Value() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QXmlStreamEntityDeclaration &) const
+
+/*
+
+ */
 func (this *QXmlStreamEntityDeclaration) Operator_equal_equal(other QXmlStreamEntityDeclaration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamEntityDeclaration_PTR() != nil {
@@ -192,6 +235,10 @@ func (this *QXmlStreamEntityDeclaration) Operator_equal_equal(other QXmlStreamEn
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QXmlStreamEntityDeclaration &) const
+
+/*
+
+ */
 func (this *QXmlStreamEntityDeclaration) Operator_not_equal(other QXmlStreamEntityDeclaration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamEntityDeclaration_PTR() != nil {

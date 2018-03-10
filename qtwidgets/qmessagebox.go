@@ -63,6 +63,9 @@ func (this *QMessageBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QE
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
+/*
+
+ */
 type QMessageBox struct {
 	*QDialog
 }
@@ -95,6 +98,10 @@ func (*QMessageBox) NewFromPointer(cthis unsafe.Pointer) *QMessageBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QMessageBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +112,12 @@ func (this *QMessageBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(QWidget *)
+
+/*
+Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
+
+On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
+*/
 func NewQMessageBox(parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -121,6 +134,12 @@ func NewQMessageBox(parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(QWidget *)
+
+/*
+Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
+
+On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
+*/
 func NewQMessageBox__() *QMessageBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -135,6 +154,12 @@ func NewQMessageBox__() *QMessageBox {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(enum QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
+
+On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
+*/
 func NewQMessageBox_1(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/, flags int) *QMessageBox {
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
@@ -155,6 +180,12 @@ func NewQMessageBox_1(icon int, title string, text string, buttons int, parent Q
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(enum QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
+
+On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
+*/
 func NewQMessageBox_1_(icon int, title string, text string) *QMessageBox {
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
@@ -177,6 +208,12 @@ func NewQMessageBox_1_(icon int, title string, text string) *QMessageBox {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(enum QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
+
+On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
+*/
 func NewQMessageBox_1_1(icon int, title string, text string, buttons int) *QMessageBox {
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
@@ -197,6 +234,12 @@ func NewQMessageBox_1_1(icon int, title string, text string, buttons int) *QMess
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(enum QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
+
+On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
+*/
 func NewQMessageBox_1_2(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
@@ -219,6 +262,12 @@ func NewQMessageBox_1_2(icon int, title string, text string, buttons int, parent
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(const QString &, const QString &, enum QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
+
+On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
+*/
 func NewQMessageBox_2(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/, f int) *QMessageBox {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -239,6 +288,12 @@ func NewQMessageBox_2(title string, text string, icon int, button0 int, button1 
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(const QString &, const QString &, enum QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
+
+On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
+*/
 func NewQMessageBox_2_(title string, text string, icon int, button0 int, button1 int, button2 int) *QMessageBox {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -259,6 +314,12 @@ func NewQMessageBox_2_(title string, text string, icon int, button0 int, button1
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(const QString &, const QString &, enum QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
+
+On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
+*/
 func NewQMessageBox_2_1(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -281,6 +342,10 @@ func NewQMessageBox_2_1(title string, text string, icon int, button0 int, button
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMessageBox()
+
+/*
+
+ */
 func DeleteQMessageBox(this *QMessageBox) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -292,6 +357,14 @@ func DeleteQMessageBox(this *QMessageBox) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addButton(QAbstractButton *, enum QMessageBox::ButtonRole)
+
+/*
+Adds the given button to the message box with the specified role.
+
+This function was introduced in  Qt 4.2.
+
+See also removeButton(), button(), and setStandardButtons().
+*/
 func (this *QMessageBox) AddButton(button QAbstractButton_ITF /*777 QAbstractButton **/, role int) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -305,6 +378,14 @@ func (this *QMessageBox) AddButton(button QAbstractButton_ITF /*777 QAbstractBut
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * addButton(const QString &, enum QMessageBox::ButtonRole)
+
+/*
+Adds the given button to the message box with the specified role.
+
+This function was introduced in  Qt 4.2.
+
+See also removeButton(), button(), and setStandardButtons().
+*/
 func (this *QMessageBox) AddButton_1(text string, role int) *QPushButton /*777 QPushButton **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -317,6 +398,14 @@ func (this *QMessageBox) AddButton_1(text string, role int) *QPushButton /*777 Q
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * addButton(enum QMessageBox::StandardButton)
+
+/*
+Adds the given button to the message box with the specified role.
+
+This function was introduced in  Qt 4.2.
+
+See also removeButton(), button(), and setStandardButtons().
+*/
 func (this *QMessageBox) AddButton_2(button int) *QPushButton /*777 QPushButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox9addButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	qtrt.ErrPrint(err, rv)
@@ -327,6 +416,14 @@ func (this *QMessageBox) AddButton_2(button int) *QPushButton /*777 QPushButton 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeButton(QAbstractButton *)
+
+/*
+Removes button from the button box without deleting it.
+
+This function was introduced in  Qt 4.2.
+
+See also addButton() and setStandardButtons().
+*/
 func (this *QMessageBox) RemoveButton(button QAbstractButton_ITF /*777 QAbstractButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -340,6 +437,14 @@ func (this *QMessageBox) RemoveButton(button QAbstractButton_ITF /*777 QAbstract
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void open(QObject *, const char *)
+
+/*
+This is an overloaded function.
+
+Opens the dialog and connects its finished() or buttonClicked() signal to the slot specified by receiver and member. If the slot in member has a pointer for its first parameter the connection is to buttonClicked(), otherwise the connection is to finished().
+
+The signal will be disconnected from the slot when the dialog is closed.
+*/
 func (this *QMessageBox) Open(receiver qtcore.QObject_ITF /*777 QObject **/, member string) {
 	var convArg0 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -355,6 +460,14 @@ func (this *QMessageBox) Open(receiver qtcore.QObject_ITF /*777 QObject **/, mem
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMessageBox::ButtonRole buttonRole(QAbstractButton *) const
+
+/*
+Returns the button role for the specified button. This function returns InvalidRole if button is 0 or has not been added to the message box.
+
+This function was introduced in  Qt 4.5.
+
+See also buttons() and addButton().
+*/
 func (this *QMessageBox) ButtonRole(button QAbstractButton_ITF /*777 QAbstractButton **/) int {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -369,6 +482,10 @@ func (this *QMessageBox) ButtonRole(button QAbstractButton_ITF /*777 QAbstractBu
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardButtons(QMessageBox::StandardButtons)
+
+/*
+
+ */
 func (this *QMessageBox) SetStandardButtons(buttons int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox18setStandardButtonsE6QFlagsINS_14StandardButtonEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
 	qtrt.ErrPrint(err, rv)
@@ -378,6 +495,10 @@ func (this *QMessageBox) SetStandardButtons(buttons int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButtons standardButtons() const
+
+/*
+
+ */
 func (this *QMessageBox) StandardButtons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox15standardButtonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -388,6 +509,14 @@ func (this *QMessageBox) StandardButtons() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton standardButton(QAbstractButton *) const
+
+/*
+Returns the standard button enum value corresponding to the given button, or NoButton if the given button isn't a standard button.
+
+This function was introduced in  Qt 4.2.
+
+See also button() and standardButtons().
+*/
 func (this *QMessageBox) StandardButton(button QAbstractButton_ITF /*777 QAbstractButton **/) int {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -402,6 +531,14 @@ func (this *QMessageBox) StandardButton(button QAbstractButton_ITF /*777 QAbstra
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractButton * button(enum QMessageBox::StandardButton) const
+
+/*
+Returns a pointer corresponding to the standard button which, or 0 if the standard button doesn't exist in this message box.
+
+This function was introduced in  Qt 4.2.
+
+See also standardButtons and standardButton().
+*/
 func (this *QMessageBox) Button(which int) *QAbstractButton /*777 QAbstractButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox6buttonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	qtrt.ErrPrint(err, rv)
@@ -412,6 +549,14 @@ func (this *QMessageBox) Button(which int) *QAbstractButton /*777 QAbstractButto
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * defaultButton() const
+
+/*
+Returns the button that should be the message box's default button. Returns 0 if no default button was set.
+
+This function was introduced in  Qt 4.2.
+
+See also setDefaultButton(), addButton(), and QPushButton::setDefault().
+*/
 func (this *QMessageBox) DefaultButton() *QPushButton /*777 QPushButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox13defaultButtonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -422,6 +567,14 @@ func (this *QMessageBox) DefaultButton() *QPushButton /*777 QPushButton **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultButton(QPushButton *)
+
+/*
+Sets the message box's default button to button.
+
+This function was introduced in  Qt 4.2.
+
+See also defaultButton(), addButton(), and QPushButton::setDefault().
+*/
 func (this *QMessageBox) SetDefaultButton(button QPushButton_ITF /*777 QPushButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QPushButton_PTR() != nil {
@@ -435,6 +588,14 @@ func (this *QMessageBox) SetDefaultButton(button QPushButton_ITF /*777 QPushButt
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultButton(enum QMessageBox::StandardButton)
+
+/*
+Sets the message box's default button to button.
+
+This function was introduced in  Qt 4.2.
+
+See also defaultButton(), addButton(), and QPushButton::setDefault().
+*/
 func (this *QMessageBox) SetDefaultButton_1(button int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox16setDefaultButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	qtrt.ErrPrint(err, rv)
@@ -444,6 +605,12 @@ func (this *QMessageBox) SetDefaultButton_1(button int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractButton * escapeButton() const
+
+/*
+Returns the button that is activated when escape is pressed.
+
+By default, QMessageBox attempts to automatically detect an escape button as follows:
+*/
 func (this *QMessageBox) EscapeButton() *QAbstractButton /*777 QAbstractButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox12escapeButtonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -454,6 +621,14 @@ func (this *QMessageBox) EscapeButton() *QAbstractButton /*777 QAbstractButton *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEscapeButton(QAbstractButton *)
+
+/*
+Sets the button that gets activated when the Escape key is pressed to button.
+
+This function was introduced in  Qt 4.2.
+
+See also escapeButton(), addButton(), and clickedButton().
+*/
 func (this *QMessageBox) SetEscapeButton(button QAbstractButton_ITF /*777 QAbstractButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -467,6 +642,14 @@ func (this *QMessageBox) SetEscapeButton(button QAbstractButton_ITF /*777 QAbstr
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setEscapeButton(enum QMessageBox::StandardButton)
+
+/*
+Sets the button that gets activated when the Escape key is pressed to button.
+
+This function was introduced in  Qt 4.2.
+
+See also escapeButton(), addButton(), and clickedButton().
+*/
 func (this *QMessageBox) SetEscapeButton_1(button int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox15setEscapeButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	qtrt.ErrPrint(err, rv)
@@ -476,6 +659,30 @@ func (this *QMessageBox) SetEscapeButton_1(button int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractButton * clickedButton() const
+
+/*
+Returns the button that was clicked by the user, or 0 if the user hit the Esc key and no escape button was set.
+
+If exec() hasn't been called yet, returns 0.
+
+Example:
+
+
+  QMessageBox messageBox(this);
+  QAbstractButton *disconnectButton =
+        messageBox.addButton(tr("Disconnect"), QMessageBox::ActionRole);
+  ...
+  messageBox.exec();
+  if (messageBox.clickedButton() == disconnectButton) {
+      ...
+  }
+
+
+
+This function was introduced in  Qt 4.2.
+
+See also standardButton() and button().
+*/
 func (this *QMessageBox) ClickedButton() *QAbstractButton /*777 QAbstractButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox13clickedButtonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -486,6 +693,10 @@ func (this *QMessageBox) ClickedButton() *QAbstractButton /*777 QAbstractButton 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
+
+/*
+
+ */
 func (this *QMessageBox) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -499,6 +710,10 @@ func (this *QMessageBox) Text() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
+
+/*
+
+ */
 func (this *QMessageBox) SetText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -510,6 +725,10 @@ func (this *QMessageBox) SetText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMessageBox::Icon icon() const
+
+/*
+
+ */
 func (this *QMessageBox) Icon() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -520,6 +739,10 @@ func (this *QMessageBox) Icon() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(enum QMessageBox::Icon)
+
+/*
+
+ */
 func (this *QMessageBox) SetIcon(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7setIconENS_4IconE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -529,6 +752,10 @@ func (this *QMessageBox) SetIcon(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap iconPixmap() const
+
+/*
+
+ */
 func (this *QMessageBox) IconPixmap() *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox10iconPixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -541,6 +768,10 @@ func (this *QMessageBox) IconPixmap() *qtgui.QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconPixmap(const QPixmap &)
+
+/*
+
+ */
 func (this *QMessageBox) SetIconPixmap(pixmap qtgui.QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -554,6 +785,10 @@ func (this *QMessageBox) SetIconPixmap(pixmap qtgui.QPixmap_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TextFormat textFormat() const
+
+/*
+
+ */
 func (this *QMessageBox) TextFormat() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox10textFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -564,6 +799,10 @@ func (this *QMessageBox) TextFormat() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextFormat(Qt::TextFormat)
+
+/*
+
+ */
 func (this *QMessageBox) SetTextFormat(format int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox13setTextFormatEN2Qt10TextFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
@@ -573,6 +812,10 @@ func (this *QMessageBox) SetTextFormat(format int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextInteractionFlags(Qt::TextInteractionFlags)
+
+/*
+
+ */
 func (this *QMessageBox) SetTextInteractionFlags(flags int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
@@ -582,6 +825,10 @@ func (this *QMessageBox) SetTextInteractionFlags(flags int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TextInteractionFlags textInteractionFlags() const
+
+/*
+
+ */
 func (this *QMessageBox) TextInteractionFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox20textInteractionFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -592,6 +839,14 @@ func (this *QMessageBox) TextInteractionFlags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCheckBox(QCheckBox *)
+
+/*
+Sets the checkbox cb on the message dialog. The message box takes ownership of the checkbox. The argument cb can be 0 to remove an existing checkbox from the message box.
+
+This function was introduced in  Qt 5.2.
+
+See also checkBox().
+*/
 func (this *QMessageBox) SetCheckBox(cb QCheckBox_ITF /*777 QCheckBox **/) {
 	var convArg0 unsafe.Pointer
 	if cb != nil && cb.QCheckBox_PTR() != nil {
@@ -605,6 +860,14 @@ func (this *QMessageBox) SetCheckBox(cb QCheckBox_ITF /*777 QCheckBox **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCheckBox * checkBox() const
+
+/*
+Returns the checkbox shown on the dialog. This is 0 if no checkbox is set.
+
+This function was introduced in  Qt 5.2.
+
+See also setCheckBox().
+*/
 func (this *QMessageBox) CheckBox() *QCheckBox /*777 QCheckBox **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox8checkBoxEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -615,6 +878,22 @@ func (this *QMessageBox) CheckBox() *QCheckBox /*777 QCheckBox **/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int, defaultButton int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -638,6 +917,22 @@ func QMessageBox_Information(parent QWidget_ITF /*777 QWidget **/, title string,
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information__(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -660,6 +955,22 @@ func (this *QMessageBox) Information__(parent QWidget_ITF /*777 QWidget **/, tit
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information__1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -680,6 +991,22 @@ func (this *QMessageBox) Information__1(parent QWidget_ITF /*777 QWidget **/, ti
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, int, int, int)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -703,6 +1030,22 @@ func QMessageBox_Information_1(parent QWidget_ITF /*777 QWidget **/, title strin
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, int, int, int)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information_1_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -725,6 +1068,22 @@ func (this *QMessageBox) Information_1_(parent QWidget_ITF /*777 QWidget **/, ti
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, int, int, int)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information_1_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -745,6 +1104,22 @@ func (this *QMessageBox) Information_1_1(parent QWidget_ITF /*777 QWidget **/, t
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -774,6 +1149,22 @@ func QMessageBox_Information_2(parent QWidget_ITF /*777 QWidget **/, title strin
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information_2_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -802,6 +1193,22 @@ func (this *QMessageBox) Information_2_(parent QWidget_ITF /*777 QWidget **/, ti
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information_2_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -830,6 +1237,22 @@ func (this *QMessageBox) Information_2_1(parent QWidget_ITF /*777 QWidget **/, t
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information_2_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -858,6 +1281,22 @@ func (this *QMessageBox) Information_2_2(parent QWidget_ITF /*777 QWidget **/, t
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information_2_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -884,6 +1323,22 @@ func (this *QMessageBox) Information_2_3(parent QWidget_ITF /*777 QWidget **/, t
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -907,6 +1362,22 @@ func QMessageBox_Information_3(parent QWidget_ITF /*777 QWidget **/, title strin
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+
+/*
+Opens an information message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and critical().
+*/
 func (this *QMessageBox) Information_3_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -927,6 +1398,22 @@ func (this *QMessageBox) Information_3_(parent QWidget_ITF /*777 QWidget **/, ti
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int, defaultButton int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -950,6 +1437,22 @@ func QMessageBox_Question(parent QWidget_ITF /*777 QWidget **/, title string, te
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question__(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -972,6 +1475,22 @@ func (this *QMessageBox) Question__(parent QWidget_ITF /*777 QWidget **/, title 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question__1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -992,6 +1511,22 @@ func (this *QMessageBox) Question__1(parent QWidget_ITF /*777 QWidget **/, title
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, int, int, int)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1015,6 +1550,22 @@ func QMessageBox_Question_1(parent QWidget_ITF /*777 QWidget **/, title string, 
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, int, int, int)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question_1_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1037,6 +1588,22 @@ func (this *QMessageBox) Question_1_(parent QWidget_ITF /*777 QWidget **/, title
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, int, int, int)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question_1_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1057,6 +1624,22 @@ func (this *QMessageBox) Question_1_1(parent QWidget_ITF /*777 QWidget **/, titl
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1086,6 +1669,22 @@ func QMessageBox_Question_2(parent QWidget_ITF /*777 QWidget **/, title string, 
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question_2_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1114,6 +1713,22 @@ func (this *QMessageBox) Question_2_(parent QWidget_ITF /*777 QWidget **/, title
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question_2_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1142,6 +1757,22 @@ func (this *QMessageBox) Question_2_1(parent QWidget_ITF /*777 QWidget **/, titl
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question_2_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1170,6 +1801,22 @@ func (this *QMessageBox) Question_2_2(parent QWidget_ITF /*777 QWidget **/, titl
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question_2_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1196,6 +1843,22 @@ func (this *QMessageBox) Question_2_3(parent QWidget_ITF /*777 QWidget **/, titl
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+
+/*
+Opens a question message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also information(), warning(), and critical().
+*/
 func (this *QMessageBox) Question_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1219,6 +1882,22 @@ func QMessageBox_Question_3(parent QWidget_ITF /*777 QWidget **/, title string, 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int, defaultButton int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1242,6 +1921,22 @@ func QMessageBox_Warning(parent QWidget_ITF /*777 QWidget **/, title string, tex
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning__(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1264,6 +1959,22 @@ func (this *QMessageBox) Warning__(parent QWidget_ITF /*777 QWidget **/, title s
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning__1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1284,6 +1995,22 @@ func (this *QMessageBox) Warning__1(parent QWidget_ITF /*777 QWidget **/, title 
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, int, int, int)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1307,6 +2034,22 @@ func QMessageBox_Warning_1(parent QWidget_ITF /*777 QWidget **/, title string, t
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, int, int, int)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning_1_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1327,6 +2070,22 @@ func (this *QMessageBox) Warning_1_(parent QWidget_ITF /*777 QWidget **/, title 
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1356,6 +2115,22 @@ func QMessageBox_Warning_2(parent QWidget_ITF /*777 QWidget **/, title string, t
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning_2_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1384,6 +2159,22 @@ func (this *QMessageBox) Warning_2_(parent QWidget_ITF /*777 QWidget **/, title 
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning_2_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1412,6 +2203,22 @@ func (this *QMessageBox) Warning_2_1(parent QWidget_ITF /*777 QWidget **/, title
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning_2_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1440,6 +2247,22 @@ func (this *QMessageBox) Warning_2_2(parent QWidget_ITF /*777 QWidget **/, title
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning_2_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1466,6 +2289,22 @@ func (this *QMessageBox) Warning_2_3(parent QWidget_ITF /*777 QWidget **/, title
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+
+/*
+Opens a warning message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), information(), and critical().
+*/
 func (this *QMessageBox) Warning_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1489,6 +2328,22 @@ func QMessageBox_Warning_3(parent QWidget_ITF /*777 QWidget **/, title string, t
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int, defaultButton int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1512,6 +2367,22 @@ func QMessageBox_Critical(parent QWidget_ITF /*777 QWidget **/, title string, te
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical__(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1534,6 +2405,22 @@ func (this *QMessageBox) Critical__(parent QWidget_ITF /*777 QWidget **/, title 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical__1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1554,6 +2441,22 @@ func (this *QMessageBox) Critical__1(parent QWidget_ITF /*777 QWidget **/, title
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, int, int, int)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1577,6 +2480,22 @@ func QMessageBox_Critical_1(parent QWidget_ITF /*777 QWidget **/, title string, 
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, int, int, int)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical_1_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1597,6 +2516,22 @@ func (this *QMessageBox) Critical_1_(parent QWidget_ITF /*777 QWidget **/, title
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1626,6 +2561,22 @@ func QMessageBox_Critical_2(parent QWidget_ITF /*777 QWidget **/, title string, 
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical_2_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1654,6 +2605,22 @@ func (this *QMessageBox) Critical_2_(parent QWidget_ITF /*777 QWidget **/, title
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical_2_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1682,6 +2649,22 @@ func (this *QMessageBox) Critical_2_1(parent QWidget_ITF /*777 QWidget **/, titl
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical_2_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1710,6 +2693,22 @@ func (this *QMessageBox) Critical_2_2(parent QWidget_ITF /*777 QWidget **/, titl
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical_2_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1736,6 +2735,22 @@ func (this *QMessageBox) Critical_2_3(parent QWidget_ITF /*777 QWidget **/, titl
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+
+/*
+Opens a critical message box with the given title and text in front of the specified parent widget.
+
+The standard buttons are added to the message box. defaultButton specifies the button used when Enter is pressed. defaultButton must refer to a button that was given in buttons. If defaultButton is QMessageBox::NoButton, QMessageBox chooses a suitable default automatically.
+
+Returns the identity of the standard button that was clicked. If Esc was pressed instead, the escape button is returned.
+
+The message box is an application modal dialog box.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QMessageBox constructors.
+
+This function was introduced in  Qt 4.2.
+
+See also question(), warning(), and information().
+*/
 func (this *QMessageBox) Critical_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1759,6 +2774,12 @@ func QMessageBox_Critical_3(parent QWidget_ITF /*777 QWidget **/, title string, 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void about(QWidget *, const QString &, const QString &)
+
+/*
+Displays a simple about box with title title and text text. The about box's parent is parent.
+
+about() looks for a suitable icon in four locations:
+*/
 func (this *QMessageBox) About(parent QWidget_ITF /*777 QWidget **/, title string, text string) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1780,6 +2801,18 @@ func QMessageBox_About(parent QWidget_ITF /*777 QWidget **/, title string, text 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void aboutQt(QWidget *, const QString &)
+
+/*
+Displays a simple message box about Qt, with the given title and centered over parent (if parent is not 0). The message includes the version number of Qt being used by the application.
+
+This is useful for inclusion in the Help menu of an application, as shown in the Menus example.
+
+QApplication provides this functionality as a slot.
+
+On macOS, the about box is popped up as a modeless window; on other platforms, it is currently application modal.
+
+See also QApplication::aboutQt().
+*/
 func (this *QMessageBox) AboutQt(parent QWidget_ITF /*777 QWidget **/, title string) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1799,6 +2832,18 @@ func QMessageBox_AboutQt(parent QWidget_ITF /*777 QWidget **/, title string) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void aboutQt(QWidget *, const QString &)
+
+/*
+Displays a simple message box about Qt, with the given title and centered over parent (if parent is not 0). The message includes the version number of Qt being used by the application.
+
+This is useful for inclusion in the Help menu of an application, as shown in the Menus example.
+
+QApplication provides this functionality as a slot.
+
+On macOS, the about box is popped up as a modeless window; on other platforms, it is currently application modal.
+
+See also QApplication::aboutQt().
+*/
 func (this *QMessageBox) AboutQt__(parent QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -1814,6 +2859,10 @@ func (this *QMessageBox) AboutQt__(parent QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString buttonText(int) const
+
+/*
+
+ */
 func (this *QMessageBox) ButtonText(button int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox10buttonTextEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	qtrt.ErrPrint(err, rv)
@@ -1827,6 +2876,10 @@ func (this *QMessageBox) ButtonText(button int) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonText(int, const QString &)
+
+/*
+
+ */
 func (this *QMessageBox) SetButtonText(button int, text string) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
@@ -1838,6 +2891,10 @@ func (this *QMessageBox) SetButtonText(button int, text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString informativeText() const
+
+/*
+
+ */
 func (this *QMessageBox) InformativeText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox15informativeTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1851,6 +2908,10 @@ func (this *QMessageBox) InformativeText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInformativeText(const QString &)
+
+/*
+
+ */
 func (this *QMessageBox) SetInformativeText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1862,6 +2923,10 @@ func (this *QMessageBox) SetInformativeText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString detailedText() const
+
+/*
+
+ */
 func (this *QMessageBox) DetailedText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox12detailedTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1875,6 +2940,10 @@ func (this *QMessageBox) DetailedText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDetailedText(const QString &)
+
+/*
+
+ */
 func (this *QMessageBox) SetDetailedText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1886,6 +2955,14 @@ func (this *QMessageBox) SetDetailedText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWindowTitle(const QString &)
+
+/*
+This function shadows QWidget::setWindowTitle().
+
+Sets the title of the message box to title. On macOS, the window title is ignored (as required by the macOS Guidelines).
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QMessageBox) SetWindowTitle(title string) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1897,6 +2974,16 @@ func (this *QMessageBox) SetWindowTitle(title string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWindowModality(Qt::WindowModality)
+
+/*
+This function shadows QWidget::setWindowModality().
+
+Sets the modality of the message box to windowModality.
+
+On macOS, if the modality is set to Qt::WindowModal and the message box has a parent, then the message box will be a Qt::Sheet, otherwise the message box will be a standard dialog.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QMessageBox) SetWindowModality(windowModality int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox17setWindowModalityEN2Qt14WindowModalityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), windowModality)
 	qtrt.ErrPrint(err, rv)
@@ -1906,6 +2993,10 @@ func (this *QMessageBox) SetWindowModality(windowModality int) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap standardIcon(enum QMessageBox::Icon)
+
+/*
+
+ */
 func (this *QMessageBox) StandardIcon(icon int) *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox12standardIconENS_4IconE", qtrt.FFI_TYPE_POINTER, icon)
 	qtrt.ErrPrint(err, rv)
@@ -1923,6 +3014,10 @@ func QMessageBox_StandardIcon(icon int) *qtgui.QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void buttonClicked(QAbstractButton *)
+
+/*
+This signal is emitted whenever a button is clicked inside the QMessageBox. The button that was clicked in returned in button.
+*/
 func (this *QMessageBox) ButtonClicked(button QAbstractButton_ITF /*777 QAbstractButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -1936,6 +3031,10 @@ func (this *QMessageBox) ButtonClicked(button QAbstractButton_ITF /*777 QAbstrac
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QMessageBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -1950,6 +3049,10 @@ func (this *QMessageBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+*/
 func (this *QMessageBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QResizeEvent_PTR() != nil {
@@ -1963,6 +3066,10 @@ func (this *QMessageBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
+
+/*
+Reimplemented from QWidget::showEvent().
+*/
 func (this *QMessageBox) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QShowEvent_PTR() != nil {
@@ -1976,6 +3083,10 @@ func (this *QMessageBox) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
+
+/*
+Reimplemented from QWidget::closeEvent().
+*/
 func (this *QMessageBox) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QCloseEvent_PTR() != nil {
@@ -1989,6 +3100,10 @@ func (this *QMessageBox) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWidget::keyPressEvent().
+*/
 func (this *QMessageBox) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QKeyEvent_PTR() != nil {
@@ -2002,6 +3117,10 @@ func (this *QMessageBox) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QMessageBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -2011,56 +3130,156 @@ func (this *QMessageBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+This enum has the following values:
+
+
+*/
 type QMessageBox__Icon = int
 
+// the message box does not have any icon.
 const QMessageBox__NoIcon QMessageBox__Icon = 0
+
+// an icon indicating that the message is nothing out of the ordinary.
 const QMessageBox__Information QMessageBox__Icon = 1
+
+// an icon indicating that the message is a warning, but can be dealt with.
 const QMessageBox__Warning QMessageBox__Icon = 2
+
+// an icon indicating that the message represents a critical problem.
 const QMessageBox__Critical QMessageBox__Icon = 3
+
+// an icon indicating that the message is asking a question.
 const QMessageBox__Question QMessageBox__Icon = 4
 
+/*
+This enum describes the roles that can be used to describe buttons in the button box. Combinations of these roles are as flags used to describe different aspects of their behavior.
+
+
+
+See also StandardButton.
+
+*/
 type QMessageBox__ButtonRole = int
 
+//
 const QMessageBox__InvalidRole QMessageBox__ButtonRole = -1
+
+// Clicking the button causes the dialog to be accepted (e.g. OK).
 const QMessageBox__AcceptRole QMessageBox__ButtonRole = 0
+
+// Clicking the button causes the dialog to be rejected (e.g. Cancel).
 const QMessageBox__RejectRole QMessageBox__ButtonRole = 1
+
+// Clicking the button causes a destructive change (e.g. for Discarding Changes) and closes the dialog.
 const QMessageBox__DestructiveRole QMessageBox__ButtonRole = 2
+
+// Clicking the button causes changes to the elements within the dialog.
 const QMessageBox__ActionRole QMessageBox__ButtonRole = 3
+
+// The button can be clicked to request help.
 const QMessageBox__HelpRole QMessageBox__ButtonRole = 4
+
+// The button is a "Yes"-like button.
 const QMessageBox__YesRole QMessageBox__ButtonRole = 5
+
+// The button is a "No"-like button.
 const QMessageBox__NoRole QMessageBox__ButtonRole = 6
+
+// The button resets the dialog's fields to default values.
 const QMessageBox__ResetRole QMessageBox__ButtonRole = 7
+
+// The button applies current changes.
 const QMessageBox__ApplyRole QMessageBox__ButtonRole = 8
+
+//
 const QMessageBox__NRoles QMessageBox__ButtonRole = 9
 
+/*
+
+
+ */
 type QMessageBox__StandardButton = int
 
+//
 const QMessageBox__NoButton QMessageBox__StandardButton = 0
+
+//
 const QMessageBox__Ok QMessageBox__StandardButton = 1024
+
+//
 const QMessageBox__Save QMessageBox__StandardButton = 2048
+
+//
 const QMessageBox__SaveAll QMessageBox__StandardButton = 4096
+
+//
 const QMessageBox__Open QMessageBox__StandardButton = 8192
+
+//
 const QMessageBox__Yes QMessageBox__StandardButton = 16384
+
+//
 const QMessageBox__YesToAll QMessageBox__StandardButton = 32768
+
+//
 const QMessageBox__No QMessageBox__StandardButton = 65536
+
+//
 const QMessageBox__NoToAll QMessageBox__StandardButton = 131072
+
+//
 const QMessageBox__Abort QMessageBox__StandardButton = 262144
+
+//
 const QMessageBox__Retry QMessageBox__StandardButton = 524288
+
+//
 const QMessageBox__Ignore QMessageBox__StandardButton = 1048576
+
+//
 const QMessageBox__Close QMessageBox__StandardButton = 2097152
+
+//
 const QMessageBox__Cancel QMessageBox__StandardButton = 4194304
+
+//
 const QMessageBox__Discard QMessageBox__StandardButton = 8388608
+
+//
 const QMessageBox__Help QMessageBox__StandardButton = 16777216
+
+//
 const QMessageBox__Apply QMessageBox__StandardButton = 33554432
+
+//
 const QMessageBox__Reset QMessageBox__StandardButton = 67108864
+
+//
 const QMessageBox__RestoreDefaults QMessageBox__StandardButton = 134217728
+
+//
 const QMessageBox__FirstButton QMessageBox__StandardButton = 1024
+
+//
 const QMessageBox__LastButton QMessageBox__StandardButton = 134217728
+
+//
 const QMessageBox__YesAll QMessageBox__StandardButton = 32768
+
+//
 const QMessageBox__NoAll QMessageBox__StandardButton = 131072
+
+//
 const QMessageBox__Default QMessageBox__StandardButton = 256
+
+//
 const QMessageBox__Escape QMessageBox__StandardButton = 512
+
+//
 const QMessageBox__FlagMask QMessageBox__StandardButton = 768
+
+//
 const QMessageBox__ButtonMask QMessageBox__StandardButton = -769
 
 //  body block end

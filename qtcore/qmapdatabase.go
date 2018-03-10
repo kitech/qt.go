@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QMapDataBase struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QMapDataBase) NewFromPointer(cthis unsafe.Pointer) *QMapDataBase {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void recalcMostLeftNode()
+
+/*
+
+ */
 func (this *QMapDataBase) RecalcMostLeftNode() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapDataBase18recalcMostLeftNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QMapDataBase) RecalcMostLeftNode() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QMapDataBase * createData()
+
+/*
+
+ */
 func (this *QMapDataBase) CreateData() *QMapDataBase /*777 QMapDataBase **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapDataBase10createDataEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionFocusRect struct {
 	*QStyleOption
 }
@@ -65,6 +68,10 @@ func (*QStyleOptionFocusRect) NewFromPointer(cthis unsafe.Pointer) *QStyleOption
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionFocusRect()
+
+/*
+
+ */
 func NewQStyleOptionFocusRect() *QStyleOptionFocusRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleOptionFocusRect() *QStyleOptionFocusRect {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionFocusRect(int)
+
+/*
+
+ */
 func NewQStyleOptionFocusRect_1(version int) *QStyleOptionFocusRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,12 +102,35 @@ func DeleteQStyleOptionFocusRect(this *QStyleOptionFocusRect) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionFocusRect__StyleOptionType = int
 
+//
 const QStyleOptionFocusRect__Type QStyleOptionFocusRect__StyleOptionType = 1
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionFocusRect__StyleOptionVersion = int
 
+// 1
 const QStyleOptionFocusRect__Version QStyleOptionFocusRect__StyleOptionVersion = 1
 
 //  body block end

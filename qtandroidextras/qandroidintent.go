@@ -1,6 +1,6 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h
 // #include <qandroidintent.h>
 // #include <QtAndroidExtras>
 
@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAndroidIntent struct {
 	*qtrt.CObject
 }
@@ -62,10 +65,14 @@ func (*QAndroidIntent) NewFromPointer(cthis unsafe.Pointer) *QAndroidIntent {
 	return NewQAndroidIntentFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:51
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h:51
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidIntent()
+
+/*
+Create a new intent
+*/
 func NewQAndroidIntent() *QAndroidIntent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -74,10 +81,14 @@ func NewQAndroidIntent() *QAndroidIntent {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:53
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h:53
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidIntent(const QAndroidJniObject &)
+
+/*
+Create a new intent
+*/
 func NewQAndroidIntent_1(intent QAndroidJniObject_ITF) *QAndroidIntent {
 	var convArg0 unsafe.Pointer
 	if intent != nil && intent.QAndroidJniObject_PTR() != nil {
@@ -90,10 +101,14 @@ func NewQAndroidIntent_1(intent QAndroidJniObject_ITF) *QAndroidIntent {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:54
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h:54
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidIntent(const QString &)
+
+/*
+Create a new intent
+*/
 func NewQAndroidIntent_2(action string) *QAndroidIntent {
 	var tmpArg0 = qtcore.NewQString_5(action)
 	var convArg0 = tmpArg0.GetCthis()
@@ -104,10 +119,14 @@ func NewQAndroidIntent_2(action string) *QAndroidIntent {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:55
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h:55
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidIntent(const QAndroidJniObject &, const char *)
+
+/*
+Create a new intent
+*/
 func NewQAndroidIntent_3(packageContext QAndroidJniObject_ITF, className string) *QAndroidIntent {
 	var convArg0 unsafe.Pointer
 	if packageContext != nil && packageContext.QAndroidJniObject_PTR() != nil {
@@ -122,21 +141,29 @@ func NewQAndroidIntent_3(packageContext QAndroidJniObject_ITF, className string)
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:52
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAndroidIntent()
+
+/*
+
+ */
 func DeleteQAndroidIntent(this *QAndroidIntent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 1)
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:57
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void putExtra(const QString &, const QByteArray &)
+
+/*
+Sets the key with the data in the Intent extras
+*/
 func (this *QAndroidIntent) PutExtra(key string, data qtcore.QByteArray_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -148,10 +175,14 @@ func (this *QAndroidIntent) PutExtra(key string, data qtcore.QByteArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:60
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h:60
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void putExtra(const QString &, const QVariant &)
+
+/*
+Sets the key with the data in the Intent extras
+*/
 func (this *QAndroidIntent) PutExtra_1(key string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -163,10 +194,14 @@ func (this *QAndroidIntent) PutExtra_1(key string, value qtcore.QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:58
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray extraBytes(const QString &)
+
+/*
+Returns the extra key data from the Intent extras
+*/
 func (this *QAndroidIntent) ExtraBytes(key string) *qtcore.QByteArray /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -177,10 +212,14 @@ func (this *QAndroidIntent) ExtraBytes(key string) *qtcore.QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:61
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant extraVariant(const QString &)
+
+/*
+Returns the extra key data from the Intent extras as a QVariant
+*/
 func (this *QAndroidIntent) ExtraVariant(key string) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -191,10 +230,14 @@ func (this *QAndroidIntent) ExtraVariant(key string) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidintent.h:63
+// /usr/include/qt/QtAndroidExtras/qandroidintent.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] QAndroidJniObject handle() const
+// [16] QAndroidJniObject handle() const
+
+/*
+The return value is useful to call other Java API which are not covered by this wrapper
+*/
 func (this *QAndroidIntent) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidIntent6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QItemSelection struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QItemSelection) NewFromPointer(cthis unsafe.Pointer) *QItemSelection {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QItemSelection()
+
+/*
+
+ */
 func NewQItemSelection() *QItemSelection {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelectionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQItemSelection() *QItemSelection {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QItemSelection(const QModelIndex &, const QModelIndex &)
+
+/*
+
+ */
 func NewQItemSelection_1(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) *QItemSelection {
 	var convArg0 unsafe.Pointer
 	if topLeft != nil && topLeft.QModelIndex_PTR() != nil {
@@ -97,6 +108,12 @@ func NewQItemSelection_1(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void select(const QModelIndex &, const QModelIndex &)
+
+/*
+Selects the model item index using the specified command, and emits selectionChanged().
+
+See also QItemSelectionModel::SelectionFlags.
+*/
 func (this *QItemSelection) Select(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if topLeft != nil && topLeft.QModelIndex_PTR() != nil {
@@ -114,6 +131,10 @@ func (this *QItemSelection) Select(topLeft QModelIndex_ITF, bottomRight QModelIn
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QModelIndex &) const
+
+/*
+
+ */
 func (this *QItemSelection) Contains(index QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -128,6 +149,10 @@ func (this *QItemSelection) Contains(index QModelIndex_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList indexes() const
+
+/*
+
+ */
 func (this *QItemSelection) Indexes() *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QItemSelection7indexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,6 +164,10 @@ func (this *QItemSelection) Indexes() *QModelIndexList /*667*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void merge(const QItemSelection &, QItemSelectionModel::SelectionFlags)
+
+/*
+
+ */
 func (this *QItemSelection) Merge(other QItemSelection_ITF, command int) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QItemSelection_PTR() != nil {
@@ -152,6 +181,10 @@ func (this *QItemSelection) Merge(other QItemSelection_ITF, command int) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void split(const QItemSelectionRange &, const QItemSelectionRange &, QItemSelection *)
+
+/*
+
+ */
 func (this *QItemSelection) Split(range_ QItemSelectionRange_ITF, other QItemSelectionRange_ITF, result QItemSelection_ITF /*777 QItemSelection **/) {
 	var convArg0 unsafe.Pointer
 	if range_ != nil && range_.QItemSelectionRange_PTR() != nil {

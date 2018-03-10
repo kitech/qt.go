@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleTableCellInterface struct {
 	*qtrt.CObject
 }
@@ -68,6 +71,10 @@ func (*QAccessibleTableCellInterface) NewFromPointer(cthis unsafe.Pointer) *QAcc
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTableCellInterface()
+
+/*
+
+ */
 func DeleteQAccessibleTableCellInterface(this *QAccessibleTableCellInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QAccessibleTableCellInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -79,6 +86,10 @@ func DeleteQAccessibleTableCellInterface(this *QAccessibleTableCellInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool isSelected() const
+
+/*
+
+ */
 func (this *QAccessibleTableCellInterface) IsSelected() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface10isSelectedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +100,10 @@ func (this *QAccessibleTableCellInterface) IsSelected() bool {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int columnIndex() const
+
+/*
+
+ */
 func (this *QAccessibleTableCellInterface) ColumnIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface11columnIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +114,10 @@ func (this *QAccessibleTableCellInterface) ColumnIndex() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int rowIndex() const
+
+/*
+
+ */
 func (this *QAccessibleTableCellInterface) RowIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface8rowIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,6 +128,10 @@ func (this *QAccessibleTableCellInterface) RowIndex() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int columnExtent() const
+
+/*
+
+ */
 func (this *QAccessibleTableCellInterface) ColumnExtent() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface12columnExtentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +142,10 @@ func (this *QAccessibleTableCellInterface) ColumnExtent() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int rowExtent() const
+
+/*
+
+ */
 func (this *QAccessibleTableCellInterface) RowExtent() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface9rowExtentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,6 +156,10 @@ func (this *QAccessibleTableCellInterface) RowExtent() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * table() const
+
+/*
+
+ */
 func (this *QAccessibleTableCellInterface) Table() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface5tableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

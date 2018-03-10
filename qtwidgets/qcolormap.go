@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QColormap struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QColormap) NewFromPointer(cthis unsafe.Pointer) *QColormap {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void initialize()
+
+/*
+
+ */
 func (this *QColormap) Initialize() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormap10initializeEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +87,10 @@ func QColormap_Initialize() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void cleanup()
+
+/*
+
+ */
 func (this *QColormap) Cleanup() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormap7cleanupEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +104,10 @@ func QColormap_Cleanup() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QColormap instance(int)
+
+/*
+Returns the colormap for the specified screen. If screen is -1, this function returns the colormap for the default screen.
+*/
 func (this *QColormap) Instance(screen int) *QColormap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormap8instanceEi", qtrt.FFI_TYPE_POINTER, screen)
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +125,10 @@ func QColormap_Instance(screen int) *QColormap /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QColormap instance(int)
+
+/*
+Returns the colormap for the specified screen. If screen is -1, this function returns the colormap for the default screen.
+*/
 func (this *QColormap) Instance__() *QColormap /*123*/ {
 	// arg: 0, int=Int, =Invalid,
 	screen := int(-1)
@@ -124,6 +143,10 @@ func (this *QColormap) Instance__() *QColormap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QColormap()
+
+/*
+
+ */
 func DeleteQColormap(this *QColormap) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormapD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -135,6 +158,10 @@ func DeleteQColormap(this *QColormap) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QColormap & operator=(const QColormap &)
+
+/*
+
+ */
 func (this *QColormap) Operator_equal(colormap QColormap_ITF) *QColormap {
 	var convArg0 unsafe.Pointer
 	if colormap != nil && colormap.QColormap_PTR() != nil {
@@ -151,6 +178,12 @@ func (this *QColormap) Operator_equal(colormap QColormap_ITF) *QColormap {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QColormap::Mode mode() const
+
+/*
+Returns the mode of this colormap.
+
+See also QColormap::Mode.
+*/
 func (this *QColormap) Mode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap4modeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,6 +194,12 @@ func (this *QColormap) Mode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int depth() const
+
+/*
+Returns the depth of the device.
+
+See also size().
+*/
 func (this *QColormap) Depth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap5depthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,6 +210,12 @@ func (this *QColormap) Depth() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int size() const
+
+/*
+Returns the size of the colormap for Indexed and Gray modes; Returns -1 for Direct mode.
+
+See also colormap().
+*/
 func (this *QColormap) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -181,6 +226,12 @@ func (this *QColormap) Size() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint pixel(const QColor &) const
+
+/*
+Returns a device dependent pixel value for the color.
+
+See also colorAt().
+*/
 func (this *QColormap) Pixel(color qtgui.QColor_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -189,12 +240,19 @@ func (this *QColormap) Pixel(color qtgui.QColor_ITF) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap5pixelERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 // /usr/include/qt/QtWidgets/qcolormap.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] const QColor colorAt(uint) const
+
+/*
+Returns a QColor for the pixel.
+
+See also pixel().
+*/
 func (this *QColormap) ColorAt(pixel uint) *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap7colorAtEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pixel)
 	qtrt.ErrPrint(err, rv)
@@ -203,10 +261,20 @@ func (this *QColormap) ColorAt(pixel uint) *qtgui.QColor /*123*/ {
 	return rv2
 }
 
+/*
+This enum describes how QColormap maps device independent RGB values to device dependent pixel values.
+
+
+*/
 type QColormap__Mode = int
 
+// Pixel values are derived directly from the RGB values, also known as "True Color."
 const QColormap__Direct QColormap__Mode = 0
+
+// Pixel values represent indexes into a vector of available colors, i.e. QColormap uses the index of the color that most closely matches an RGB value.
 const QColormap__Indexed QColormap__Mode = 1
+
+// Similar to Indexed, pixel values represent a vector of available gray tones. QColormap uses the index of the gray tone that most closely matches the computed gray tone of an RGB value.
 const QColormap__Gray QColormap__Mode = 2
 
 //  body block end

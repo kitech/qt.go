@@ -43,6 +43,9 @@ func (this *QGraphicsItemAnimation) InheritAfterAnimationStep(f func(step float6
 	qtrt.SetAllInheritCallback(this, "afterAnimationStep", f)
 }
 
+/*
+
+ */
 type QGraphicsItemAnimation struct {
 	*qtcore.QObject
 }
@@ -75,6 +78,10 @@ func (*QGraphicsItemAnimation) NewFromPointer(cthis unsafe.Pointer) *QGraphicsIt
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +92,10 @@ func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*777 const
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsItemAnimation(QObject *)
+
+/*
+Constructs an animation object with the given parent.
+*/
 func NewQGraphicsItemAnimation(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsItemAnimation {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -101,6 +112,10 @@ func NewQGraphicsItemAnimation(parent qtcore.QObject_ITF /*777 QObject **/) *QGr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsItemAnimation(QObject *)
+
+/*
+Constructs an animation object with the given parent.
+*/
 func NewQGraphicsItemAnimation__() *QGraphicsItemAnimation {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -115,6 +130,10 @@ func NewQGraphicsItemAnimation__() *QGraphicsItemAnimation {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsItemAnimation()
+
+/*
+
+ */
 func DeleteQGraphicsItemAnimation(this *QGraphicsItemAnimation) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -126,6 +145,12 @@ func DeleteQGraphicsItemAnimation(this *QGraphicsItemAnimation) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * item() const
+
+/*
+Returns the item on which the animation object operates.
+
+See also setItem().
+*/
 func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation4itemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,6 +161,12 @@ func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*777 QGraphicsItem **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItem(QGraphicsItem *)
+
+/*
+Sets the specified item to be used in the animation.
+
+See also item().
+*/
 func (this *QGraphicsItemAnimation) SetItem(item QGraphicsItem_ITF /*777 QGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
@@ -149,6 +180,12 @@ func (this *QGraphicsItemAnimation) SetItem(item QGraphicsItem_ITF /*777 QGraphi
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTimeLine * timeLine() const
+
+/*
+Returns the timeline object used to control the rate at which the animation occurs.
+
+See also setTimeLine().
+*/
 func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*777 QTimeLine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation8timeLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,6 +196,12 @@ func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*777 QTimeLine
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTimeLine(QTimeLine *)
+
+/*
+Sets the timeline object used to control the rate of animation to the timeLine specified.
+
+See also timeLine().
+*/
 func (this *QGraphicsItemAnimation) SetTimeLine(timeLine qtcore.QTimeLine_ITF /*777 QTimeLine **/) {
 	var convArg0 unsafe.Pointer
 	if timeLine != nil && timeLine.QTimeLine_PTR() != nil {
@@ -172,6 +215,12 @@ func (this *QGraphicsItemAnimation) SetTimeLine(timeLine qtcore.QTimeLine_ITF /*
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF posAt(qreal) const
+
+/*
+Returns the position of the item at the given step value.
+
+See also setPosAt().
+*/
 func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation5posAtEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -184,6 +233,12 @@ func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosAt(qreal, const QPointF &)
+
+/*
+Sets the position of the item at the given step value to the point specified.
+
+See also posAt().
+*/
 func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos qtcore.QPointF_ITF) {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -197,6 +252,10 @@ func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos qtcore.QPointF_IT
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QMatrix matrixAt(qreal) const
+
+/*
+Returns the matrix used to transform the item at the specified step value.
+*/
 func (this *QGraphicsItemAnimation) MatrixAt(step float64) *qtgui.QMatrix /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation8matrixAtEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -209,6 +268,12 @@ func (this *QGraphicsItemAnimation) MatrixAt(step float64) *qtgui.QMatrix /*123*
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rotationAt(qreal) const
+
+/*
+Returns the angle at which the item is rotated at the specified step value.
+
+See also setRotationAt().
+*/
 func (this *QGraphicsItemAnimation) RotationAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10rotationAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -219,6 +284,12 @@ func (this *QGraphicsItemAnimation) RotationAt(step float64) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRotationAt(qreal, qreal)
+
+/*
+Sets the rotation of the item at the given step value to the angle specified.
+
+See also rotationAt().
+*/
 func (this *QGraphicsItemAnimation) SetRotationAt(step float64, angle float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation13setRotationAtEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step, angle)
 	qtrt.ErrPrint(err, rv)
@@ -228,6 +299,12 @@ func (this *QGraphicsItemAnimation) SetRotationAt(step float64, angle float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal xTranslationAt(qreal) const
+
+/*
+Returns the horizontal translation of the item at the specified step value.
+
+See also setTranslationAt().
+*/
 func (this *QGraphicsItemAnimation) XTranslationAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14xTranslationAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -238,6 +315,12 @@ func (this *QGraphicsItemAnimation) XTranslationAt(step float64) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal yTranslationAt(qreal) const
+
+/*
+Returns the vertical translation of the item at the specified step value.
+
+See also setTranslationAt().
+*/
 func (this *QGraphicsItemAnimation) YTranslationAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14yTranslationAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -248,6 +331,12 @@ func (this *QGraphicsItemAnimation) YTranslationAt(step float64) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTranslationAt(qreal, qreal, qreal)
+
+/*
+Sets the translation of the item at the given step value using the horizontal and vertical coordinates specified by dx and dy.
+
+See also xTranslationAt() and yTranslationAt().
+*/
 func (this *QGraphicsItemAnimation) SetTranslationAt(step float64, dx float64, dy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation16setTranslationAtEddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step, dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -257,6 +346,12 @@ func (this *QGraphicsItemAnimation) SetTranslationAt(step float64, dx float64, d
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal verticalScaleAt(qreal) const
+
+/*
+Returns the vertical scale for the item at the specified step value.
+
+See also setScaleAt().
+*/
 func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalScaleAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -267,6 +362,12 @@ func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal horizontalScaleAt(qreal) const
+
+/*
+Returns the horizontal scale for the item at the specified step value.
+
+See also setScaleAt().
+*/
 func (this *QGraphicsItemAnimation) HorizontalScaleAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -277,6 +378,12 @@ func (this *QGraphicsItemAnimation) HorizontalScaleAt(step float64) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScaleAt(qreal, qreal, qreal)
+
+/*
+Sets the scale of the item at the given step value using the horizontal and vertical scale factors specified by sx and sy.
+
+See also verticalScaleAt() and horizontalScaleAt().
+*/
 func (this *QGraphicsItemAnimation) SetScaleAt(step float64, sx float64, sy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation10setScaleAtEddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step, sx, sy)
 	qtrt.ErrPrint(err, rv)
@@ -286,6 +393,12 @@ func (this *QGraphicsItemAnimation) SetScaleAt(step float64, sx float64, sy floa
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal verticalShearAt(qreal) const
+
+/*
+Returns the vertical shear for the item at the specified step value.
+
+See also setShearAt().
+*/
 func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalShearAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -296,6 +409,12 @@ func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal horizontalShearAt(qreal) const
+
+/*
+Returns the horizontal shear for the item at the specified step value.
+
+See also setShearAt().
+*/
 func (this *QGraphicsItemAnimation) HorizontalShearAt(step float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalShearAtEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -306,6 +425,12 @@ func (this *QGraphicsItemAnimation) HorizontalShearAt(step float64) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShearAt(qreal, qreal, qreal)
+
+/*
+Sets the shear of the item at the given step value using the horizontal and vertical shear factors specified by sh and sv.
+
+See also verticalShearAt() and horizontalShearAt().
+*/
 func (this *QGraphicsItemAnimation) SetShearAt(step float64, sh float64, sv float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation10setShearAtEddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step, sh, sv)
 	qtrt.ErrPrint(err, rv)
@@ -315,6 +440,10 @@ func (this *QGraphicsItemAnimation) SetShearAt(step float64, sh float64, sv floa
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the scheduled transformations used for the animation, but retains the item and timeline.
+*/
 func (this *QGraphicsItemAnimation) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -324,6 +453,10 @@ func (this *QGraphicsItemAnimation) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStep(qreal)
+
+/*
+Sets the current step value for the animation, causing the transformations scheduled at this step to be performed.
+*/
 func (this *QGraphicsItemAnimation) SetStep(x float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation7setStepEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	qtrt.ErrPrint(err, rv)
@@ -333,6 +466,10 @@ func (this *QGraphicsItemAnimation) SetStep(x float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reset()
+
+/*
+
+ */
 func (this *QGraphicsItemAnimation) Reset() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -342,6 +479,10 @@ func (this *QGraphicsItemAnimation) Reset() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void beforeAnimationStep(qreal)
+
+/*
+This method is meant to be overridden by subclassed that needs to execute additional code before a new step takes place. The animation step is provided for use in cases where the action depends on its value.
+*/
 func (this *QGraphicsItemAnimation) BeforeAnimationStep(step float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation19beforeAnimationStepEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -351,6 +492,10 @@ func (this *QGraphicsItemAnimation) BeforeAnimationStep(step float64) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void afterAnimationStep(qreal)
+
+/*
+This method is meant to be overridden in subclasses that need to execute additional code after a new step has taken place. The animation step is provided for use in cases where the action depends on its value.
+*/
 func (this *QGraphicsItemAnimation) AfterAnimationStep(step float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation18afterAnimationStepEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)

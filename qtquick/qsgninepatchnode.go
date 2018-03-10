@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGNinePatchNode struct {
 	*QSGGeometryNode
 }
@@ -67,6 +70,10 @@ func (*QSGNinePatchNode) NewFromPointer(cthis unsafe.Pointer) *QSGNinePatchNode 
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QSGNinePatchNode()
+
+/*
+
+ */
 func DeleteQSGNinePatchNode(this *QSGNinePatchNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGNinePatchNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 144)
@@ -78,6 +85,10 @@ func DeleteQSGNinePatchNode(this *QSGNinePatchNode) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setTexture(QSGTexture *)
+
+/*
+
+ */
 func (this *QSGNinePatchNode) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/) {
 	var convArg0 unsafe.Pointer
 	if texture != nil && texture.QSGTexture_PTR() != nil {
@@ -91,6 +102,10 @@ func (this *QSGNinePatchNode) SetTexture(texture QSGTexture_ITF /*777 QSGTexture
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setBounds(const QRectF &)
+
+/*
+
+ */
 func (this *QSGNinePatchNode) SetBounds(bounds qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if bounds != nil && bounds.QRectF_PTR() != nil {
@@ -104,6 +119,10 @@ func (this *QSGNinePatchNode) SetBounds(bounds qtcore.QRectF_ITF) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setDevicePixelRatio(qreal)
+
+/*
+
+ */
 func (this *QSGNinePatchNode) SetDevicePixelRatio(ratio float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGNinePatchNode19setDevicePixelRatioEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ratio)
 	qtrt.ErrPrint(err, rv)
@@ -113,6 +132,10 @@ func (this *QSGNinePatchNode) SetDevicePixelRatio(ratio float64) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setPadding(qreal, qreal, qreal, qreal)
+
+/*
+
+ */
 func (this *QSGNinePatchNode) SetPadding(left float64, top float64, right float64, bottom float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGNinePatchNode10setPaddingEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)
@@ -122,6 +145,10 @@ func (this *QSGNinePatchNode) SetPadding(left float64, top float64, right float6
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void update()
+
+/*
+
+ */
 func (this *QSGNinePatchNode) Update() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGNinePatchNode6updateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +158,10 @@ func (this *QSGNinePatchNode) Update() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void rebuildGeometry(QSGTexture *, QSGGeometry *, const QVector4D &, const QRectF &, qreal)
+
+/*
+
+ */
 func (this *QSGNinePatchNode) RebuildGeometry(texture QSGTexture_ITF /*777 QSGTexture **/, geometry QSGGeometry_ITF /*777 QSGGeometry **/, padding qtgui.QVector4D_ITF, bounds qtcore.QRectF_ITF, dpr float64) {
 	var convArg0 unsafe.Pointer
 	if texture != nil && texture.QSGTexture_PTR() != nil {

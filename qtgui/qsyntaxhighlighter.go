@@ -77,6 +77,9 @@ func (this *QSyntaxHighlighter) InheritCurrentBlock(f func() unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "currentBlock", f)
 }
 
+/*
+
+ */
 type QSyntaxHighlighter struct {
 	*qtcore.QObject
 }
@@ -109,6 +112,10 @@ func (*QSyntaxHighlighter) NewFromPointer(cthis unsafe.Pointer) *QSyntaxHighligh
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSyntaxHighlighter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +126,12 @@ func (this *QSyntaxHighlighter) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSyntaxHighlighter(QObject *)
+
+/*
+Constructs a QSyntaxHighlighter with the given parent.
+
+If the parent is a QTextEdit, it installs the syntax highlighter on the parents document. The specified QTextEdit also becomes the owner of the QSyntaxHighlighter.
+*/
 func NewQSyntaxHighlighter(parent qtcore.QObject_ITF /*777 QObject **/) *QSyntaxHighlighter {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -135,6 +148,12 @@ func NewQSyntaxHighlighter(parent qtcore.QObject_ITF /*777 QObject **/) *QSyntax
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSyntaxHighlighter(QTextDocument *)
+
+/*
+Constructs a QSyntaxHighlighter with the given parent.
+
+If the parent is a QTextEdit, it installs the syntax highlighter on the parents document. The specified QTextEdit also becomes the owner of the QSyntaxHighlighter.
+*/
 func NewQSyntaxHighlighter_1(parent QTextDocument_ITF /*777 QTextDocument **/) *QSyntaxHighlighter {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QTextDocument_PTR() != nil {
@@ -151,6 +170,10 @@ func NewQSyntaxHighlighter_1(parent QTextDocument_ITF /*777 QTextDocument **/) *
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSyntaxHighlighter()
+
+/*
+
+ */
 func DeleteQSyntaxHighlighter(this *QSyntaxHighlighter) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighterD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -162,6 +185,12 @@ func DeleteQSyntaxHighlighter(this *QSyntaxHighlighter) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDocument(QTextDocument *)
+
+/*
+Installs the syntax highlighter on the given QTextDocument doc. A QSyntaxHighlighter can only be used with one document at a time.
+
+See also document().
+*/
 func (this *QSyntaxHighlighter) SetDocument(doc QTextDocument_ITF /*777 QTextDocument **/) {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {
@@ -175,6 +204,12 @@ func (this *QSyntaxHighlighter) SetDocument(doc QTextDocument_ITF /*777 QTextDoc
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextDocument * document() const
+
+/*
+Returns the QTextDocument on which this syntax highlighter is installed.
+
+See also setDocument().
+*/
 func (this *QSyntaxHighlighter) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter8documentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,6 +220,14 @@ func (this *QSyntaxHighlighter) Document() *QTextDocument /*777 QTextDocument **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rehighlight()
+
+/*
+Reapplies the highlighting to the whole document.
+
+This function was introduced in  Qt 4.2.
+
+See also rehighlightBlock().
+*/
 func (this *QSyntaxHighlighter) Rehighlight() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighter11rehighlightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,6 +237,14 @@ func (this *QSyntaxHighlighter) Rehighlight() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rehighlightBlock(const QTextBlock &)
+
+/*
+Reapplies the highlighting to the given QTextBlock block.
+
+This function was introduced in  Qt 4.6.
+
+See also rehighlight().
+*/
 func (this *QSyntaxHighlighter) RehighlightBlock(block QTextBlock_ITF) {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {
@@ -207,6 +258,34 @@ func (this *QSyntaxHighlighter) RehighlightBlock(block QTextBlock_ITF) {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void highlightBlock(const QString &)
+
+/*
+Highlights the given text block. This function is called when necessary by the rich text engine, i.e. on text blocks which have changed.
+
+To provide your own syntax highlighting, you must subclass QSyntaxHighlighter and reimplement highlightBlock(). In your reimplementation you should parse the block's text and call setFormat() as often as necessary to apply any font and color changes that you require. For example:
+
+
+  void MyHighlighter::highlightBlock(const QString &text)
+  {
+      QTextCharFormat myClassFormat;
+      myClassFormat.setFontWeight(QFont::Bold);
+      myClassFormat.setForeground(Qt::darkMagenta);
+
+      QRegularExpression expression("\\bMy[A-Za-z]+\\b");
+      QRegularExpressionMatchIterator i = expression.globalMatch(text);
+      while (i.hasNext())
+      {
+        QRegularExpressionMatch match = i.next();
+        setFormat(match.capturedStart(), match.capturedLength(), myClassFormat);
+      }
+  }
+
+
+
+See the Detailed Description for examples of using setCurrentBlockState(), currentBlockState() and previousBlockState() to handle syntaxes with constructs that span several text blocks
+
+See also previousBlockState(), setFormat(), and setCurrentBlockState().
+*/
 func (this *QSyntaxHighlighter) HighlightBlock(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -218,6 +297,14 @@ func (this *QSyntaxHighlighter) HighlightBlock(text string) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setFormat(int, int, const QTextCharFormat &)
+
+/*
+This function is applied to the syntax highlighter's current text block (i.e. the text that is passed to the highlightBlock() function).
+
+The specified format is applied to the text from the start position for a length of count characters (if count is 0, nothing is done). The formatting properties set in format are merged at display time with the formatting information stored directly in the document, for example as previously set with QTextCursor's functions. Note that the document itself remains unmodified by the format set through this function.
+
+See also format() and highlightBlock().
+*/
 func (this *QSyntaxHighlighter) SetFormat(start int, count int, format QTextCharFormat_ITF) {
 	var convArg2 unsafe.Pointer
 	if format != nil && format.QTextCharFormat_PTR() != nil {
@@ -231,6 +318,14 @@ func (this *QSyntaxHighlighter) SetFormat(start int, count int, format QTextChar
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void setFormat(int, int, const QColor &)
+
+/*
+This function is applied to the syntax highlighter's current text block (i.e. the text that is passed to the highlightBlock() function).
+
+The specified format is applied to the text from the start position for a length of count characters (if count is 0, nothing is done). The formatting properties set in format are merged at display time with the formatting information stored directly in the document, for example as previously set with QTextCursor's functions. Note that the document itself remains unmodified by the format set through this function.
+
+See also format() and highlightBlock().
+*/
 func (this *QSyntaxHighlighter) SetFormat_1(start int, count int, color QColor_ITF) {
 	var convArg2 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -244,6 +339,14 @@ func (this *QSyntaxHighlighter) SetFormat_1(start int, count int, color QColor_I
 // index:2
 // Protected Visibility=Default Availability=Available
 // [-2] void setFormat(int, int, const QFont &)
+
+/*
+This function is applied to the syntax highlighter's current text block (i.e. the text that is passed to the highlightBlock() function).
+
+The specified format is applied to the text from the start position for a length of count characters (if count is 0, nothing is done). The formatting properties set in format are merged at display time with the formatting information stored directly in the document, for example as previously set with QTextCursor's functions. Note that the document itself remains unmodified by the format set through this function.
+
+See also format() and highlightBlock().
+*/
 func (this *QSyntaxHighlighter) SetFormat_2(start int, count int, font QFont_ITF) {
 	var convArg2 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -257,6 +360,12 @@ func (this *QSyntaxHighlighter) SetFormat_2(start int, count int, font QFont_ITF
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QTextCharFormat format(int) const
+
+/*
+Returns the format at position inside the syntax highlighter's current text block.
+
+See also setFormat().
+*/
 func (this *QSyntaxHighlighter) Format(pos int) *QTextCharFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter6formatEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	qtrt.ErrPrint(err, rv)
@@ -269,6 +378,12 @@ func (this *QSyntaxHighlighter) Format(pos int) *QTextCharFormat /*123*/ {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int previousBlockState() const
+
+/*
+Returns the end state of the text block previous to the syntax highlighter's current block. If no value was previously set, the returned value is -1.
+
+See also highlightBlock() and setCurrentBlockState().
+*/
 func (this *QSyntaxHighlighter) PreviousBlockState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter18previousBlockStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -279,6 +394,12 @@ func (this *QSyntaxHighlighter) PreviousBlockState() int {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int currentBlockState() const
+
+/*
+Returns the state of the current text block. If no value is set, the returned value is -1.
+
+See also setCurrentBlockState().
+*/
 func (this *QSyntaxHighlighter) CurrentBlockState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter17currentBlockStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -289,6 +410,12 @@ func (this *QSyntaxHighlighter) CurrentBlockState() int {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setCurrentBlockState(int)
+
+/*
+Sets the state of the current text block to newState.
+
+See also currentBlockState() and highlightBlock().
+*/
 func (this *QSyntaxHighlighter) SetCurrentBlockState(newState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighter20setCurrentBlockStateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState)
 	qtrt.ErrPrint(err, rv)
@@ -298,6 +425,34 @@ func (this *QSyntaxHighlighter) SetCurrentBlockState(newState int) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setCurrentBlockUserData(QTextBlockUserData *)
+
+/*
+Attaches the given data to the current text block. The ownership is passed to the underlying text document, i.e. the provided QTextBlockUserData object will be deleted if the corresponding text block gets deleted.
+
+QTextBlockUserData can be used to store custom settings. In the case of syntax highlighting, it is in particular interesting as cache storage for information that you may figure out while parsing the paragraph's text.
+
+For example while parsing the text, you can keep track of parenthesis characters that you encounter ('{[(' and the like), and store their relative position and the actual QChar in a simple class derived from QTextBlockUserData:
+
+
+  struct ParenthesisInfo
+  {
+      QChar char;
+      int position;
+  };
+
+  struct BlockData : public QTextBlockUserData
+  {
+      QVector<ParenthesisInfo> parentheses;
+  };
+
+
+
+During cursor navigation in the associated editor, you can ask the current QTextBlock (retrieved using the QTextCursor::block() function) if it has a user data object set and cast it to your BlockData object. Then you can check if the current cursor position matches with a previously recorded parenthesis position, and, depending on the type of parenthesis (opening or closing), find the next opening or closing parenthesis on the same level.
+
+In this way you can do a visual parenthesis matching and highlight from the current cursor position to the matching parenthesis. That makes it easier to spot a missing parenthesis in your code and to find where a corresponding opening/closing parenthesis is when editing parenthesis intensive code.
+
+See also currentBlockUserData() and QTextBlock::setUserData().
+*/
 func (this *QSyntaxHighlighter) SetCurrentBlockUserData(data QTextBlockUserData_ITF /*777 QTextBlockUserData **/) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QTextBlockUserData_PTR() != nil {
@@ -311,6 +466,12 @@ func (this *QSyntaxHighlighter) SetCurrentBlockUserData(data QTextBlockUserData_
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QTextBlockUserData * currentBlockUserData() const
+
+/*
+Returns the QTextBlockUserData object previously attached to the current text block.
+
+See also QTextBlock::userData() and setCurrentBlockUserData().
+*/
 func (this *QSyntaxHighlighter) CurrentBlockUserData() *QTextBlockUserData /*777 QTextBlockUserData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter20currentBlockUserDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -321,6 +482,12 @@ func (this *QSyntaxHighlighter) CurrentBlockUserData() *QTextBlockUserData /*777
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QTextBlock currentBlock() const
+
+/*
+Returns the current text block.
+
+This function was introduced in  Qt 4.4.
+*/
 func (this *QSyntaxHighlighter) CurrentBlock() *QTextBlock /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter12currentBlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

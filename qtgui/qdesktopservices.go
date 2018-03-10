@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QDesktopServices struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,44 @@ func (*QDesktopServices) NewFromPointer(cthis unsafe.Pointer) *QDesktopServices 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool openUrl(const QUrl &)
+
+/*
+Opens the given url in the appropriate Web browser for the user's desktop environment, and returns true if successful; otherwise returns false.
+
+If the URL is a reference to a local file (i.e., the URL scheme is "file") then it will be opened with a suitable application instead of a Web browser.
+
+The following example opens a file on the Windows file system residing on a path that contains spaces:
+
+
+  QDesktopServices::openUrl(QUrl("file:///C:/Documents and Settings/All Users/Desktop", QUrl::TolerantMode));
+
+
+
+If a mailto URL is specified, the user's e-mail client will be used to open a composer window containing the options specified in the URL, similar to the way mailto links are handled by a Web browser.
+
+For example, the following URL contains a recipient (user@foo.com), a subject (Test), and a message body (Just a test):
+
+
+  mailto:user@foo.com?subject=Test&body=Just a test
+
+
+
+Warning: Although many e-mail clients can send attachments and are Unicode-aware, the user may have configured their client without these features. Also, certain e-mail clients (e.g., Lotus Notes) have problems with long URLs.
+
+Warning: A return value of true indicates that the application has successfully requested the operating system to open the URL in an external application. The external application may still fail to launch or fail to open the requested URL. This result will not be reported back to the application.
+
+Warning: URLs passed to this function on iOS will not load unless their schemes are listed in the LSApplicationQueriesSchemes key of the application's Info.plist file. For more information, see the Apple Developer Documentation for canOpenURL(_:). For example, the following lines enable URLs with the HTTPS scheme:
+
+
+  <key>LSApplicationQueriesSchemes</key>
+  <array>
+      <string>https</string>
+  </array>
+
+
+
+See also setUrlHandler().
+*/
 func (this *QDesktopServices) OpenUrl(url qtcore.QUrl_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -85,6 +126,20 @@ func QDesktopServices_OpenUrl(url qtcore.QUrl_ITF) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setUrlHandler(const QString &, QObject *, const char *)
+
+/*
+Sets the handler for the given scheme to be the handler method provided by the receiver object.
+
+This function provides a way to customize the behavior of openUrl(). If openUrl() is called with a URL with the specified scheme then the given method on the receiver object is called instead of QDesktopServices launching an external application.
+
+The provided method must be implemented as a slot that only accepts a single QUrl argument.
+
+If setUrlHandler() is used to set a new handler for a scheme which already has a handler, the existing handler is simply replaced with the new one. Since QDesktopServices does not take ownership of handlers, no objects are deleted when a handler is replaced.
+
+Note that the handler will always be called from within the same thread that calls QDesktopServices::openUrl().
+
+See also openUrl() and unsetUrlHandler().
+*/
 func (this *QDesktopServices) SetUrlHandler(scheme string, receiver qtcore.QObject_ITF /*777 QObject **/, method string) {
 	var tmpArg0 = qtcore.NewQString_5(scheme)
 	var convArg0 = tmpArg0.GetCthis()
@@ -106,6 +161,12 @@ func QDesktopServices_SetUrlHandler(scheme string, receiver qtcore.QObject_ITF /
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void unsetUrlHandler(const QString &)
+
+/*
+Removes a previously set URL handler for the specified scheme.
+
+See also setUrlHandler().
+*/
 func (this *QDesktopServices) UnsetUrlHandler(scheme string) {
 	var tmpArg0 = qtcore.NewQString_5(scheme)
 	var convArg0 = tmpArg0.GetCthis()

@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QFormLayout struct {
 	*QLayout
 }
@@ -65,6 +68,10 @@ func (*QFormLayout) NewFromPointer(cthis unsafe.Pointer) *QFormLayout {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QFormLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,12 @@ func (this *QFormLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFormLayout(QWidget *)
+
+/*
+Constructs a new form layout with the given parent widget.
+
+See also QWidget::setLayout().
+*/
 func NewQFormLayout(parent QWidget_ITF /*777 QWidget **/) *QFormLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -91,6 +104,12 @@ func NewQFormLayout(parent QWidget_ITF /*777 QWidget **/) *QFormLayout {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFormLayout(QWidget *)
+
+/*
+Constructs a new form layout with the given parent widget.
+
+See also QWidget::setLayout().
+*/
 func NewQFormLayout__() *QFormLayout {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +124,10 @@ func NewQFormLayout__() *QFormLayout {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFormLayout()
+
+/*
+
+ */
 func DeleteQFormLayout(this *QFormLayout) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayoutD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -116,6 +139,10 @@ func DeleteQFormLayout(this *QFormLayout) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFieldGrowthPolicy(enum QFormLayout::FieldGrowthPolicy)
+
+/*
+
+ */
 func (this *QFormLayout) SetFieldGrowthPolicy(policy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout20setFieldGrowthPolicyENS_17FieldGrowthPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	qtrt.ErrPrint(err, rv)
@@ -125,6 +152,10 @@ func (this *QFormLayout) SetFieldGrowthPolicy(policy int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFormLayout::FieldGrowthPolicy fieldGrowthPolicy() const
+
+/*
+
+ */
 func (this *QFormLayout) FieldGrowthPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout17fieldGrowthPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +166,10 @@ func (this *QFormLayout) FieldGrowthPolicy() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowWrapPolicy(enum QFormLayout::RowWrapPolicy)
+
+/*
+
+ */
 func (this *QFormLayout) SetRowWrapPolicy(policy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout16setRowWrapPolicyENS_13RowWrapPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	qtrt.ErrPrint(err, rv)
@@ -144,6 +179,10 @@ func (this *QFormLayout) SetRowWrapPolicy(policy int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFormLayout::RowWrapPolicy rowWrapPolicy() const
+
+/*
+
+ */
 func (this *QFormLayout) RowWrapPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout13rowWrapPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +193,10 @@ func (this *QFormLayout) RowWrapPolicy() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLabelAlignment(Qt::Alignment)
+
+/*
+
+ */
 func (this *QFormLayout) SetLabelAlignment(alignment int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout17setLabelAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	qtrt.ErrPrint(err, rv)
@@ -163,6 +206,10 @@ func (this *QFormLayout) SetLabelAlignment(alignment int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment labelAlignment() const
+
+/*
+
+ */
 func (this *QFormLayout) LabelAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout14labelAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,6 +220,10 @@ func (this *QFormLayout) LabelAlignment() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormAlignment(Qt::Alignment)
+
+/*
+
+ */
 func (this *QFormLayout) SetFormAlignment(alignment int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout16setFormAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	qtrt.ErrPrint(err, rv)
@@ -182,6 +233,10 @@ func (this *QFormLayout) SetFormAlignment(alignment int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment formAlignment() const
+
+/*
+
+ */
 func (this *QFormLayout) FormAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout13formAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,6 +247,10 @@ func (this *QFormLayout) FormAlignment() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalSpacing(int)
+
+/*
+
+ */
 func (this *QFormLayout) SetHorizontalSpacing(spacing int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout20setHorizontalSpacingEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	qtrt.ErrPrint(err, rv)
@@ -201,6 +260,10 @@ func (this *QFormLayout) SetHorizontalSpacing(spacing int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int horizontalSpacing() const
+
+/*
+
+ */
 func (this *QFormLayout) HorizontalSpacing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout17horizontalSpacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -211,6 +274,10 @@ func (this *QFormLayout) HorizontalSpacing() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalSpacing(int)
+
+/*
+
+ */
 func (this *QFormLayout) SetVerticalSpacing(spacing int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout18setVerticalSpacingEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	qtrt.ErrPrint(err, rv)
@@ -220,6 +287,10 @@ func (this *QFormLayout) SetVerticalSpacing(spacing int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int verticalSpacing() const
+
+/*
+
+ */
 func (this *QFormLayout) VerticalSpacing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout15verticalSpacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -230,6 +301,12 @@ func (this *QFormLayout) VerticalSpacing() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int spacing() const
+
+/*
+If the vertical spacing is equal to the horizontal spacing, this function returns that value; otherwise it returns -1.
+
+See also setSpacing(), verticalSpacing(), and horizontalSpacing().
+*/
 func (this *QFormLayout) Spacing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout7spacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -240,6 +317,12 @@ func (this *QFormLayout) Spacing() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpacing(int)
+
+/*
+This function sets both the vertical and horizontal spacing to spacing.
+
+See also spacing(), setVerticalSpacing(), and setHorizontalSpacing().
+*/
 func (this *QFormLayout) SetSpacing(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout10setSpacingEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -249,6 +332,12 @@ func (this *QFormLayout) SetSpacing(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addRow(QWidget *, QWidget *)
+
+/*
+Adds a new row to the bottom of this form layout, with the given label and field.
+
+See also insertRow().
+*/
 func (this *QFormLayout) AddRow(label QWidget_ITF /*777 QWidget **/, field QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if label != nil && label.QWidget_PTR() != nil {
@@ -266,6 +355,12 @@ func (this *QFormLayout) AddRow(label QWidget_ITF /*777 QWidget **/, field QWidg
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addRow(QWidget *, QLayout *)
+
+/*
+Adds a new row to the bottom of this form layout, with the given label and field.
+
+See also insertRow().
+*/
 func (this *QFormLayout) AddRow_1(label QWidget_ITF /*777 QWidget **/, field QLayout_ITF /*777 QLayout **/) {
 	var convArg0 unsafe.Pointer
 	if label != nil && label.QWidget_PTR() != nil {
@@ -283,6 +378,12 @@ func (this *QFormLayout) AddRow_1(label QWidget_ITF /*777 QWidget **/, field QLa
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void addRow(const QString &, QWidget *)
+
+/*
+Adds a new row to the bottom of this form layout, with the given label and field.
+
+See also insertRow().
+*/
 func (this *QFormLayout) AddRow_2(labelText string, field QWidget_ITF /*777 QWidget **/) {
 	var tmpArg0 = qtcore.NewQString_5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -298,6 +399,12 @@ func (this *QFormLayout) AddRow_2(labelText string, field QWidget_ITF /*777 QWid
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void addRow(const QString &, QLayout *)
+
+/*
+Adds a new row to the bottom of this form layout, with the given label and field.
+
+See also insertRow().
+*/
 func (this *QFormLayout) AddRow_3(labelText string, field QLayout_ITF /*777 QLayout **/) {
 	var tmpArg0 = qtcore.NewQString_5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -313,6 +420,12 @@ func (this *QFormLayout) AddRow_3(labelText string, field QLayout_ITF /*777 QLay
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void addRow(QWidget *)
+
+/*
+Adds a new row to the bottom of this form layout, with the given label and field.
+
+See also insertRow().
+*/
 func (this *QFormLayout) AddRow_4(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -326,6 +439,12 @@ func (this *QFormLayout) AddRow_4(widget QWidget_ITF /*777 QWidget **/) {
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void addRow(QLayout *)
+
+/*
+Adds a new row to the bottom of this form layout, with the given label and field.
+
+See also insertRow().
+*/
 func (this *QFormLayout) AddRow_5(layout QLayout_ITF /*777 QLayout **/) {
 	var convArg0 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
@@ -339,6 +458,12 @@ func (this *QFormLayout) AddRow_5(layout QLayout_ITF /*777 QLayout **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertRow(int, QWidget *, QWidget *)
+
+/*
+Inserts a new row at position row in this form layout, with the given label and field. If row is out of bounds, the new row is added at the end.
+
+See also addRow().
+*/
 func (this *QFormLayout) InsertRow(row int, label QWidget_ITF /*777 QWidget **/, field QWidget_ITF /*777 QWidget **/) {
 	var convArg1 unsafe.Pointer
 	if label != nil && label.QWidget_PTR() != nil {
@@ -356,6 +481,12 @@ func (this *QFormLayout) InsertRow(row int, label QWidget_ITF /*777 QWidget **/,
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void insertRow(int, QWidget *, QLayout *)
+
+/*
+Inserts a new row at position row in this form layout, with the given label and field. If row is out of bounds, the new row is added at the end.
+
+See also addRow().
+*/
 func (this *QFormLayout) InsertRow_1(row int, label QWidget_ITF /*777 QWidget **/, field QLayout_ITF /*777 QLayout **/) {
 	var convArg1 unsafe.Pointer
 	if label != nil && label.QWidget_PTR() != nil {
@@ -373,6 +504,12 @@ func (this *QFormLayout) InsertRow_1(row int, label QWidget_ITF /*777 QWidget **
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void insertRow(int, const QString &, QWidget *)
+
+/*
+Inserts a new row at position row in this form layout, with the given label and field. If row is out of bounds, the new row is added at the end.
+
+See also addRow().
+*/
 func (this *QFormLayout) InsertRow_2(row int, labelText string, field QWidget_ITF /*777 QWidget **/) {
 	var tmpArg1 = qtcore.NewQString_5(labelText)
 	var convArg1 = tmpArg1.GetCthis()
@@ -388,6 +525,12 @@ func (this *QFormLayout) InsertRow_2(row int, labelText string, field QWidget_IT
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void insertRow(int, const QString &, QLayout *)
+
+/*
+Inserts a new row at position row in this form layout, with the given label and field. If row is out of bounds, the new row is added at the end.
+
+See also addRow().
+*/
 func (this *QFormLayout) InsertRow_3(row int, labelText string, field QLayout_ITF /*777 QLayout **/) {
 	var tmpArg1 = qtcore.NewQString_5(labelText)
 	var convArg1 = tmpArg1.GetCthis()
@@ -403,6 +546,12 @@ func (this *QFormLayout) InsertRow_3(row int, labelText string, field QLayout_IT
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void insertRow(int, QWidget *)
+
+/*
+Inserts a new row at position row in this form layout, with the given label and field. If row is out of bounds, the new row is added at the end.
+
+See also addRow().
+*/
 func (this *QFormLayout) InsertRow_4(row int, widget QWidget_ITF /*777 QWidget **/) {
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -416,6 +565,12 @@ func (this *QFormLayout) InsertRow_4(row int, widget QWidget_ITF /*777 QWidget *
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void insertRow(int, QLayout *)
+
+/*
+Inserts a new row at position row in this form layout, with the given label and field. If row is out of bounds, the new row is added at the end.
+
+See also addRow().
+*/
 func (this *QFormLayout) InsertRow_5(row int, layout QLayout_ITF /*777 QLayout **/) {
 	var convArg1 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
@@ -429,6 +584,31 @@ func (this *QFormLayout) InsertRow_5(row int, layout QLayout_ITF /*777 QLayout *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeRow(int)
+
+/*
+Deletes row row from this form layout.
+
+row must be non-negative and less than rowCount().
+
+After this call, rowCount() is decremented by one. All widgets and nested layouts that occupied this row are deleted. That includes both the field widget(s) and the label, if any. All following rows are shifted up one row and the freed vertical space is redistributed amongst the remaining rows.
+
+You can use this function to undo a previous addRow() or insertRow():
+
+
+  QFormLayout *flay = ...;
+  QPointer<QLineEdit> le = new QLineEdit;
+  flay->insertRow(2, "User:", le);
+  // later:
+  flay->removeRow(2); // le == nullptr at this point
+
+
+
+If you want to remove the row from the layout without deleting the widgets, use takeRow() instead.
+
+This function was introduced in  Qt 5.8.
+
+See also takeRow().
+*/
 func (this *QFormLayout) RemoveRow(row int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout9removeRowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -438,6 +618,31 @@ func (this *QFormLayout) RemoveRow(row int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void removeRow(QWidget *)
+
+/*
+Deletes row row from this form layout.
+
+row must be non-negative and less than rowCount().
+
+After this call, rowCount() is decremented by one. All widgets and nested layouts that occupied this row are deleted. That includes both the field widget(s) and the label, if any. All following rows are shifted up one row and the freed vertical space is redistributed amongst the remaining rows.
+
+You can use this function to undo a previous addRow() or insertRow():
+
+
+  QFormLayout *flay = ...;
+  QPointer<QLineEdit> le = new QLineEdit;
+  flay->insertRow(2, "User:", le);
+  // later:
+  flay->removeRow(2); // le == nullptr at this point
+
+
+
+If you want to remove the row from the layout without deleting the widgets, use takeRow() instead.
+
+This function was introduced in  Qt 5.8.
+
+See also takeRow().
+*/
 func (this *QFormLayout) RemoveRow_1(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -451,6 +656,31 @@ func (this *QFormLayout) RemoveRow_1(widget QWidget_ITF /*777 QWidget **/) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void removeRow(QLayout *)
+
+/*
+Deletes row row from this form layout.
+
+row must be non-negative and less than rowCount().
+
+After this call, rowCount() is decremented by one. All widgets and nested layouts that occupied this row are deleted. That includes both the field widget(s) and the label, if any. All following rows are shifted up one row and the freed vertical space is redistributed amongst the remaining rows.
+
+You can use this function to undo a previous addRow() or insertRow():
+
+
+  QFormLayout *flay = ...;
+  QPointer<QLineEdit> le = new QLineEdit;
+  flay->insertRow(2, "User:", le);
+  // later:
+  flay->removeRow(2); // le == nullptr at this point
+
+
+
+If you want to remove the row from the layout without deleting the widgets, use takeRow() instead.
+
+This function was introduced in  Qt 5.8.
+
+See also takeRow().
+*/
 func (this *QFormLayout) RemoveRow_2(layout QLayout_ITF /*777 QLayout **/) {
 	var convArg0 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
@@ -464,6 +694,35 @@ func (this *QFormLayout) RemoveRow_2(layout QLayout_ITF /*777 QLayout **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFormLayout::TakeRowResult takeRow(int)
+
+/*
+Removes the specified row from this form layout.
+
+row must be non-negative and less than rowCount().
+
+Note: This function doesn't delete anything.
+
+After this call, rowCount() is decremented by one. All following rows are shifted up one row and the freed vertical space is redistributed amongst the remaining rows.
+
+You can use this function to undo a previous addRow() or insertRow():
+
+
+  QFormLayout *flay = ...;
+  QPointer<QLineEdit> le = new QLineEdit;
+  flay->insertRow(2, "User:", le);
+  // later:
+  QFormLayout::TakeRowResult result = flay->takeRow(2);
+
+
+
+If you want to remove the row from the layout and delete the widgets, use removeRow() instead.
+
+Returns A structure containing both the widget and corresponding label layout items
+
+This function was introduced in  Qt 5.8.
+
+See also removeRow().
+*/
 func (this *QFormLayout) TakeRow(row int) unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout7takeRowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -474,6 +733,35 @@ func (this *QFormLayout) TakeRow(row int) unsafe.Pointer /*444*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QFormLayout::TakeRowResult takeRow(QWidget *)
+
+/*
+Removes the specified row from this form layout.
+
+row must be non-negative and less than rowCount().
+
+Note: This function doesn't delete anything.
+
+After this call, rowCount() is decremented by one. All following rows are shifted up one row and the freed vertical space is redistributed amongst the remaining rows.
+
+You can use this function to undo a previous addRow() or insertRow():
+
+
+  QFormLayout *flay = ...;
+  QPointer<QLineEdit> le = new QLineEdit;
+  flay->insertRow(2, "User:", le);
+  // later:
+  QFormLayout::TakeRowResult result = flay->takeRow(2);
+
+
+
+If you want to remove the row from the layout and delete the widgets, use removeRow() instead.
+
+Returns A structure containing both the widget and corresponding label layout items
+
+This function was introduced in  Qt 5.8.
+
+See also removeRow().
+*/
 func (this *QFormLayout) TakeRow_1(widget QWidget_ITF /*777 QWidget **/) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -488,6 +776,35 @@ func (this *QFormLayout) TakeRow_1(widget QWidget_ITF /*777 QWidget **/) unsafe.
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QFormLayout::TakeRowResult takeRow(QLayout *)
+
+/*
+Removes the specified row from this form layout.
+
+row must be non-negative and less than rowCount().
+
+Note: This function doesn't delete anything.
+
+After this call, rowCount() is decremented by one. All following rows are shifted up one row and the freed vertical space is redistributed amongst the remaining rows.
+
+You can use this function to undo a previous addRow() or insertRow():
+
+
+  QFormLayout *flay = ...;
+  QPointer<QLineEdit> le = new QLineEdit;
+  flay->insertRow(2, "User:", le);
+  // later:
+  QFormLayout::TakeRowResult result = flay->takeRow(2);
+
+
+
+If you want to remove the row from the layout and delete the widgets, use removeRow() instead.
+
+Returns A structure containing both the widget and corresponding label layout items
+
+This function was introduced in  Qt 5.8.
+
+See also removeRow().
+*/
 func (this *QFormLayout) TakeRow_2(layout QLayout_ITF /*777 QLayout **/) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
@@ -502,6 +819,16 @@ func (this *QFormLayout) TakeRow_2(layout QLayout_ITF /*777 QLayout **/) unsafe.
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItem(int, enum QFormLayout::ItemRole, QLayoutItem *)
+
+/*
+Sets the item in the given row for the given role to item, extending the layout with empty rows if necessary.
+
+If the cell is already occupied, the item is not inserted and an error message is sent to the console. The item spans both columns.
+
+Warning: Do not use this function to add child layouts or child widget items. Use setLayout() or setWidget() instead.
+
+See also setLayout().
+*/
 func (this *QFormLayout) SetItem(row int, role int, item QLayoutItem_ITF /*777 QLayoutItem **/) {
 	var convArg2 unsafe.Pointer
 	if item != nil && item.QLayoutItem_PTR() != nil {
@@ -515,6 +842,16 @@ func (this *QFormLayout) SetItem(row int, role int, item QLayoutItem_ITF /*777 Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(int, enum QFormLayout::ItemRole, QWidget *)
+
+/*
+Sets the widget in the given row for the given role to widget, extending the layout with empty rows if necessary.
+
+If the cell is already occupied, the widget is not inserted and an error message is sent to the console.
+
+Note: For most applications, addRow() or insertRow() should be used instead of setWidget().
+
+See also setLayout().
+*/
 func (this *QFormLayout) SetWidget(row int, role int, widget QWidget_ITF /*777 QWidget **/) {
 	var convArg2 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -528,6 +865,16 @@ func (this *QFormLayout) SetWidget(row int, role int, widget QWidget_ITF /*777 Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLayout(int, enum QFormLayout::ItemRole, QLayout *)
+
+/*
+Sets the sub-layout in the given row for the given role to layout, extending the form layout with empty rows if necessary.
+
+If the cell is already occupied, the layout is not inserted and an error message is sent to the console.
+
+Note: For most applications, addRow() or insertRow() should be used instead of setLayout().
+
+See also setWidget().
+*/
 func (this *QFormLayout) SetLayout(row int, role int, layout QLayout_ITF /*777 QLayout **/) {
 	var convArg2 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
@@ -541,6 +888,12 @@ func (this *QFormLayout) SetLayout(row int, role int, layout QLayout_ITF /*777 Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QLayoutItem * itemAt(int, enum QFormLayout::ItemRole) const
+
+/*
+Returns the layout item in the given row with the specified role (column). Returns 0 if there is no such item.
+
+See also QLayout::itemAt() and setItem().
+*/
 func (this *QFormLayout) ItemAt(row int, role int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout6itemAtEiNS_8ItemRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, role)
 	qtrt.ErrPrint(err, rv)
@@ -551,6 +904,12 @@ func (this *QFormLayout) ItemAt(row int, role int) *QLayoutItem /*777 QLayoutIte
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [8] QLayoutItem * itemAt(int) const
+
+/*
+Returns the layout item in the given row with the specified role (column). Returns 0 if there is no such item.
+
+See also QLayout::itemAt() and setItem().
+*/
 func (this *QFormLayout) ItemAt_1(index int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout6itemAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -561,6 +920,12 @@ func (this *QFormLayout) ItemAt_1(index int) *QLayoutItem /*777 QLayoutItem **/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getItemPosition(int, int *, enum QFormLayout::ItemRole *) const
+
+/*
+Retrieves the row and role (column) of the item at the specified index. If index is out of bounds, *rowPtr is set to -1; otherwise the row is stored in *rowPtr and the role is stored in *rolePtr.
+
+See also itemAt(), count(), getLayoutPosition(), and getWidgetPosition().
+*/
 func (this *QFormLayout) GetItemPosition(index int, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout15getItemPositionEiPiPNS_8ItemRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, rowPtr, rolePtr)
 	qtrt.ErrPrint(err, rv)
@@ -570,6 +935,12 @@ func (this *QFormLayout) GetItemPosition(index int, rowPtr unsafe.Pointer /*666*
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getWidgetPosition(QWidget *, int *, enum QFormLayout::ItemRole *) const
+
+/*
+Retrieves the row and role (column) of the specified widget in the layout. If widget is not in the layout, *rowPtr is set to -1; otherwise the row is stored in *rowPtr and the role is stored in *rolePtr.
+
+See also getItemPosition() and itemAt().
+*/
 func (this *QFormLayout) GetWidgetPosition(widget QWidget_ITF /*777 QWidget **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -583,6 +954,10 @@ func (this *QFormLayout) GetWidgetPosition(widget QWidget_ITF /*777 QWidget **/,
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getLayoutPosition(QLayout *, int *, enum QFormLayout::ItemRole *) const
+
+/*
+Retrieves the row and role (column) of the specified child layout. If layout is not in the form layout, *rowPtr is set to -1; otherwise the row is stored in *rowPtr and the role is stored in *rolePtr.
+*/
 func (this *QFormLayout) GetLayoutPosition(layout QLayout_ITF /*777 QLayout **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	var convArg0 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
@@ -596,6 +971,12 @@ func (this *QFormLayout) GetLayoutPosition(layout QLayout_ITF /*777 QLayout **/,
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * labelForField(QWidget *) const
+
+/*
+Returns the label associated with the given field.
+
+See also itemAt().
+*/
 func (this *QFormLayout) LabelForField(field QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if field != nil && field.QWidget_PTR() != nil {
@@ -610,6 +991,12 @@ func (this *QFormLayout) LabelForField(field QWidget_ITF /*777 QWidget **/) *QWi
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QWidget * labelForField(QLayout *) const
+
+/*
+Returns the label associated with the given field.
+
+See also itemAt().
+*/
 func (this *QFormLayout) LabelForField_1(field QLayout_ITF /*777 QLayout **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if field != nil && field.QLayout_PTR() != nil {
@@ -624,6 +1011,10 @@ func (this *QFormLayout) LabelForField_1(field QLayout_ITF /*777 QLayout **/) *Q
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void addItem(QLayoutItem *)
+
+/*
+Reimplemented from QLayout::addItem().
+*/
 func (this *QFormLayout) AddItem(item QLayoutItem_ITF /*777 QLayoutItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QLayoutItem_PTR() != nil {
@@ -637,6 +1028,10 @@ func (this *QFormLayout) AddItem(item QLayoutItem_ITF /*777 QLayoutItem **/) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QLayoutItem * takeAt(int)
+
+/*
+Reimplemented from QLayout::takeAt().
+*/
 func (this *QFormLayout) TakeAt(index int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout6takeAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -647,6 +1042,10 @@ func (this *QFormLayout) TakeAt(index int) *QLayoutItem /*777 QLayoutItem **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
+
+/*
+Reimplemented from QLayoutItem::setGeometry().
+*/
 func (this *QFormLayout) SetGeometry(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -660,6 +1059,10 @@ func (this *QFormLayout) SetGeometry(rect qtcore.QRect_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSize() const
+
+/*
+Reimplemented from QLayoutItem::minimumSize().
+*/
 func (this *QFormLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -672,6 +1075,10 @@ func (this *QFormLayout) MinimumSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QLayoutItem::sizeHint().
+*/
 func (this *QFormLayout) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -684,6 +1091,10 @@ func (this *QFormLayout) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void invalidate()
+
+/*
+Reimplemented from QLayoutItem::invalidate().
+*/
 func (this *QFormLayout) Invalidate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout10invalidateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -693,6 +1104,10 @@ func (this *QFormLayout) Invalidate() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasHeightForWidth() const
+
+/*
+Reimplemented from QLayoutItem::hasHeightForWidth().
+*/
 func (this *QFormLayout) HasHeightForWidth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout17hasHeightForWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -703,6 +1118,10 @@ func (this *QFormLayout) HasHeightForWidth() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int heightForWidth(int) const
+
+/*
+Reimplemented from QLayoutItem::heightForWidth().
+*/
 func (this *QFormLayout) HeightForWidth(width int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
@@ -713,6 +1132,10 @@ func (this *QFormLayout) HeightForWidth(width int) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::Orientations expandingDirections() const
+
+/*
+Reimplemented from QLayoutItem::expandingDirections().
+*/
 func (this *QFormLayout) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -723,6 +1146,10 @@ func (this *QFormLayout) ExpandingDirections() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int count() const
+
+/*
+Reimplemented from QLayout::count().
+*/
 func (this *QFormLayout) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -733,28 +1160,73 @@ func (this *QFormLayout) Count() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rowCount() const
+
+/*
+Returns the number of rows in the form.
+
+See also QLayout::count().
+*/
 func (this *QFormLayout) RowCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout8rowCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+/*
+This enum specifies the different policies that can be used to control the way in which the form's fields grow.
+
+
+
+See also fieldGrowthPolicy.
+
+*/
 type QFormLayout__FieldGrowthPolicy = int
 
+// The fields never grow beyond their effective size hint. This is the default for QMacStyle.
 const QFormLayout__FieldsStayAtSizeHint QFormLayout__FieldGrowthPolicy = 0
+
+// Fields with an horizontal size policy of Expanding or MinimumExpanding will grow to fill the available space. The other fields will not grow beyond their effective size hint. This is the default policy for Plastique.
 const QFormLayout__ExpandingFieldsGrow QFormLayout__FieldGrowthPolicy = 1
+
+// All fields with a size policy that allows them to grow will grow to fill the available space. This is the default policy for most styles.
 const QFormLayout__AllNonFixedFieldsGrow QFormLayout__FieldGrowthPolicy = 2
 
+/*
+This enum specifies the different policies that can be used to control the way in which the form's rows wrap.
+
+
+
+See also rowWrapPolicy.
+
+*/
 type QFormLayout__RowWrapPolicy = int
 
+// Fields are always laid out next to their label. This is the default policy for all styles except Qt Extended styles.
 const QFormLayout__DontWrapRows QFormLayout__RowWrapPolicy = 0
+
+// Labels are given enough horizontal space to fit the widest label, and the rest of the space is given to the fields. If the minimum size of a field pair is wider than the available space, the field is wrapped to the next line. This is the default policy for Qt Extended styles.
 const QFormLayout__WrapLongRows QFormLayout__RowWrapPolicy = 1
+
+// Fields are always laid out below their label.
 const QFormLayout__WrapAllRows QFormLayout__RowWrapPolicy = 2
 
+/*
+This enum specifies the types of widgets (or other layout items) that may appear in a row.
+
+
+
+See also itemAt() and getItemPosition().
+
+*/
 type QFormLayout__ItemRole = int
 
+// A label widget.
 const QFormLayout__LabelRole QFormLayout__ItemRole = 0
+
+// A field widget.
 const QFormLayout__FieldRole QFormLayout__ItemRole = 1
+
+// A widget that spans label and field columns.
 const QFormLayout__SpanningRole QFormLayout__ItemRole = 2
 
 //  body block end

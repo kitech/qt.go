@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QFocusEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QFocusEvent) NewFromPointer(cthis unsafe.Pointer) *QFocusEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFocusEvent(enum QEvent::Type, Qt::FocusReason)
+
+/*
+
+ */
 func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, type_, reason)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFocusEvent(enum QEvent::Type, Qt::FocusReason)
+
+/*
+
+ */
 func NewQFocusEvent__(type_ int) *QFocusEvent {
 	// arg: 1, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum,
 	reason := 0
@@ -90,6 +101,10 @@ func NewQFocusEvent__(type_ int) *QFocusEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFocusEvent()
+
+/*
+
+ */
 func DeleteQFocusEvent(this *QFocusEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -101,6 +116,10 @@ func DeleteQFocusEvent(this *QFocusEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool gotFocus() const
+
+/*
+
+ */
 func (this *QFocusEvent) GotFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent8gotFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +130,10 @@ func (this *QFocusEvent) GotFocus() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool lostFocus() const
+
+/*
+
+ */
 func (this *QFocusEvent) LostFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent9lostFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +144,10 @@ func (this *QFocusEvent) LostFocus() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::FocusReason reason() const
+
+/*
+
+ */
 func (this *QFocusEvent) Reason() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent6reasonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

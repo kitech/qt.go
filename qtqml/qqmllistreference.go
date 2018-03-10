@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlListReference struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QQmlListReference) NewFromPointer(cthis unsafe.Pointer) *QQmlListReferenc
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlListReference()
+
+/*
+
+ */
 func NewQQmlListReference() *QQmlListReference {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQmlListReferenceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQQmlListReference() *QQmlListReference {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlListReference(QObject *, const char *, QQmlEngine *)
+
+/*
+
+ */
 func NewQQmlListReference_1(arg0 qtcore.QObject_ITF /*777 QObject **/, property string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlListReference {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -101,6 +112,10 @@ func NewQQmlListReference_1(arg0 qtcore.QObject_ITF /*777 QObject **/, property 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlListReference(QObject *, const char *, QQmlEngine *)
+
+/*
+
+ */
 func NewQQmlListReference_1_(arg0 qtcore.QObject_ITF /*777 QObject **/, property string) *QQmlListReference {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -121,6 +136,10 @@ func NewQQmlListReference_1_(arg0 qtcore.QObject_ITF /*777 QObject **/, property
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlListReference & operator=(const QQmlListReference &)
+
+/*
+
+ */
 func (this *QQmlListReference) Operator_equal(arg0 QQmlListReference_ITF) *QQmlListReference {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlListReference_PTR() != nil {
@@ -137,6 +156,10 @@ func (this *QQmlListReference) Operator_equal(arg0 QQmlListReference_ITF) *QQmlL
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QQmlListReference()
+
+/*
+
+ */
 func DeleteQQmlListReference(this *QQmlListReference) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQmlListReferenceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -148,6 +171,10 @@ func DeleteQQmlListReference(this *QQmlListReference) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+
+ */
 func (this *QQmlListReference) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,6 +185,10 @@ func (this *QQmlListReference) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * object() const
+
+/*
+
+ */
 func (this *QQmlListReference) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -168,6 +199,10 @@ func (this *QQmlListReference) Object() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QMetaObject * listElementType() const
+
+/*
+
+ */
 func (this *QQmlListReference) ListElementType() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference15listElementTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,6 +213,10 @@ func (this *QQmlListReference) ListElementType() *qtcore.QMetaObject /*777 const
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canAppend() const
+
+/*
+
+ */
 func (this *QQmlListReference) CanAppend() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference9canAppendEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,6 +227,10 @@ func (this *QQmlListReference) CanAppend() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canAt() const
+
+/*
+
+ */
 func (this *QQmlListReference) CanAt() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference5canAtEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,6 +241,10 @@ func (this *QQmlListReference) CanAt() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canClear() const
+
+/*
+
+ */
 func (this *QQmlListReference) CanClear() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference8canClearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -208,6 +255,10 @@ func (this *QQmlListReference) CanClear() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canCount() const
+
+/*
+
+ */
 func (this *QQmlListReference) CanCount() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference8canCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,6 +269,10 @@ func (this *QQmlListReference) CanCount() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isManipulable() const
+
+/*
+
+ */
 func (this *QQmlListReference) IsManipulable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference13isManipulableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -228,6 +283,10 @@ func (this *QQmlListReference) IsManipulable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadable() const
+
+/*
+
+ */
 func (this *QQmlListReference) IsReadable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference10isReadableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,6 +297,10 @@ func (this *QQmlListReference) IsReadable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * at(int) const
+
+/*
+
+ */
 func (this *QQmlListReference) At(arg0 int) *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -248,6 +311,10 @@ func (this *QQmlListReference) At(arg0 int) *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool clear() const
+
+/*
+
+ */
 func (this *QQmlListReference) Clear() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,6 +325,10 @@ func (this *QQmlListReference) Clear() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
+
+/*
+
+ */
 func (this *QQmlListReference) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

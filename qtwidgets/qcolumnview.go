@@ -93,6 +93,9 @@ func (this *QColumnView) InheritInitializeColumn(f func(column *QAbstractItemVie
 	qtrt.SetAllInheritCallback(this, "initializeColumn", f)
 }
 
+/*
+
+ */
 type QColumnView struct {
 	*QAbstractItemView
 }
@@ -125,6 +128,10 @@ func (*QColumnView) NewFromPointer(cthis unsafe.Pointer) *QColumnView {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QColumnView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QColumnView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +142,12 @@ func (this *QColumnView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void updatePreviewWidget(const QModelIndex &)
+
+/*
+This signal is emitted when the preview widget should be updated to provide rich information about index
+
+See also previewWidget().
+*/
 func (this *QColumnView) UpdatePreviewWidget(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -148,6 +161,12 @@ func (this *QColumnView) UpdatePreviewWidget(index qtcore.QModelIndex_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QColumnView(QWidget *)
+
+/*
+Constructs a column view with a parent to represent a model's data. Use setModel() to set the model.
+
+See also QAbstractItemModel.
+*/
 func NewQColumnView(parent QWidget_ITF /*777 QWidget **/) *QColumnView {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -164,6 +183,12 @@ func NewQColumnView(parent QWidget_ITF /*777 QWidget **/) *QColumnView {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QColumnView(QWidget *)
+
+/*
+Constructs a column view with a parent to represent a model's data. Use setModel() to set the model.
+
+See also QAbstractItemModel.
+*/
 func NewQColumnView__() *QColumnView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -178,6 +203,10 @@ func NewQColumnView__() *QColumnView {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QColumnView()
+
+/*
+
+ */
 func DeleteQColumnView(this *QColumnView) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QColumnViewD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -189,6 +218,10 @@ func DeleteQColumnView(this *QColumnView) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex indexAt(const QPoint &) const
+
+/*
+Reimplemented from QAbstractItemView::indexAt().
+*/
 func (this *QColumnView) IndexAt(point qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
@@ -205,6 +238,10 @@ func (this *QColumnView) IndexAt(point qtcore.QPoint_ITF) *qtcore.QModelIndex /*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+
+/*
+Reimplemented from QAbstractItemView::scrollTo().
+*/
 func (this *QColumnView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -218,6 +255,10 @@ func (this *QColumnView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+
+/*
+Reimplemented from QAbstractItemView::scrollTo().
+*/
 func (this *QColumnView) ScrollTo__(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -233,6 +274,10 @@ func (this *QColumnView) ScrollTo__(index qtcore.QModelIndex_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QColumnView) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QColumnView8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -245,6 +290,10 @@ func (this *QColumnView) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect visualRect(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemView::visualRect().
+*/
 func (this *QColumnView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -261,6 +310,10 @@ func (this *QColumnView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
+
+/*
+Reimplemented from QAbstractItemView::setModel().
+*/
 func (this *QColumnView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
@@ -274,6 +327,10 @@ func (this *QColumnView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbs
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSelectionModel(QItemSelectionModel *)
+
+/*
+Reimplemented from QAbstractItemView::setSelectionModel().
+*/
 func (this *QColumnView) SetSelectionModel(selectionModel qtcore.QItemSelectionModel_ITF /*777 QItemSelectionModel **/) {
 	var convArg0 unsafe.Pointer
 	if selectionModel != nil && selectionModel.QItemSelectionModel_PTR() != nil {
@@ -287,6 +344,10 @@ func (this *QColumnView) SetSelectionModel(selectionModel qtcore.QItemSelectionM
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRootIndex(const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemView::setRootIndex().
+*/
 func (this *QColumnView) SetRootIndex(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -300,6 +361,10 @@ func (this *QColumnView) SetRootIndex(index qtcore.QModelIndex_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void selectAll()
+
+/*
+Reimplemented from QAbstractItemView::selectAll().
+*/
 func (this *QColumnView) SelectAll() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QColumnView9selectAllEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -309,6 +374,10 @@ func (this *QColumnView) SelectAll() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setResizeGripsVisible(_Bool)
+
+/*
+
+ */
 func (this *QColumnView) SetResizeGripsVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QColumnView21setResizeGripsVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	qtrt.ErrPrint(err, rv)
@@ -318,6 +387,10 @@ func (this *QColumnView) SetResizeGripsVisible(visible bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool resizeGripsVisible() const
+
+/*
+
+ */
 func (this *QColumnView) ResizeGripsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QColumnView18resizeGripsVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -328,6 +401,12 @@ func (this *QColumnView) ResizeGripsVisible() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * previewWidget() const
+
+/*
+Returns the preview widget, or 0 if there is none.
+
+See also setPreviewWidget() and updatePreviewWidget().
+*/
 func (this *QColumnView) PreviewWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QColumnView13previewWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -338,6 +417,14 @@ func (this *QColumnView) PreviewWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreviewWidget(QWidget *)
+
+/*
+Sets the preview widget.
+
+The widget becomes a child of the column view, and will be destroyed when the column area is deleted or when a new widget is set.
+
+See also previewWidget() and updatePreviewWidget().
+*/
 func (this *QColumnView) SetPreviewWidget(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -351,6 +438,10 @@ func (this *QColumnView) SetPreviewWidget(widget QWidget_ITF /*777 QWidget **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool isIndexHidden(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemView::isIndexHidden().
+*/
 func (this *QColumnView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -365,6 +456,12 @@ func (this *QColumnView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+
+/*
+Reimplemented from QAbstractItemView::moveCursor().
+
+Move left should go to the parent index Move right should go to the child index or down if there is no child
+*/
 func (this *QColumnView) MoveCursor(cursorAction int, modifiers int) *qtcore.QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QColumnView10moveCursorEN17QAbstractItemView12CursorActionE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cursorAction, modifiers)
 	qtrt.ErrPrint(err, rv)
@@ -377,6 +474,10 @@ func (this *QColumnView) MoveCursor(cursorAction int, modifiers int) *qtcore.QMo
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+*/
 func (this *QColumnView) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QResizeEvent_PTR() != nil {
@@ -390,6 +491,10 @@ func (this *QColumnView) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
+
+/*
+Reimplemented from QAbstractItemView::setSelection().
+*/
 func (this *QColumnView) SetSelection(rect qtcore.QRect_ITF, command int) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -403,6 +508,10 @@ func (this *QColumnView) SetSelection(rect qtcore.QRect_ITF, command int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QRegion visualRegionForSelection(const QItemSelection &) const
+
+/*
+Reimplemented from QAbstractItemView::visualRegionForSelection().
+*/
 func (this *QColumnView) VisualRegionForSelection(selection qtcore.QItemSelection_ITF) *qtgui.QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if selection != nil && selection.QItemSelection_PTR() != nil {
@@ -419,6 +528,10 @@ func (this *QColumnView) VisualRegionForSelection(selection qtcore.QItemSelectio
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int horizontalOffset() const
+
+/*
+Reimplemented from QAbstractItemView::horizontalOffset().
+*/
 func (this *QColumnView) HorizontalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QColumnView16horizontalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -429,6 +542,10 @@ func (this *QColumnView) HorizontalOffset() int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int verticalOffset() const
+
+/*
+Reimplemented from QAbstractItemView::verticalOffset().
+*/
 func (this *QColumnView) VerticalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QColumnView14verticalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -439,6 +556,10 @@ func (this *QColumnView) VerticalOffset() int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void rowsInserted(const QModelIndex &, int, int)
+
+/*
+Reimplemented from QAbstractItemView::rowsInserted().
+*/
 func (this *QColumnView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end int) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -452,6 +573,10 @@ func (this *QColumnView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void currentChanged(const QModelIndex &, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemView::currentChanged().
+*/
 func (this *QColumnView) CurrentChanged(current qtcore.QModelIndex_ITF, previous qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if current != nil && current.QModelIndex_PTR() != nil {
@@ -469,6 +594,10 @@ func (this *QColumnView) CurrentChanged(current qtcore.QModelIndex_ITF, previous
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void scrollContentsBy(int, int)
+
+/*
+Reimplemented from QAbstractScrollArea::scrollContentsBy().
+*/
 func (this *QColumnView) ScrollContentsBy(dx int, dy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QColumnView16scrollContentsByEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -478,6 +607,14 @@ func (this *QColumnView) ScrollContentsBy(dx int, dy int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QAbstractItemView * createColumn(const QModelIndex &)
+
+/*
+To use a custom widget for the final column when you select an item overload this function and return a widget. index is the root index that will be assigned to the view.
+
+Return the new view. QColumnView will automatically take ownership of the widget.
+
+See also setPreviewWidget().
+*/
 func (this *QColumnView) CreateColumn(rootIndex qtcore.QModelIndex_ITF) *QAbstractItemView /*777 QAbstractItemView **/ {
 	var convArg0 unsafe.Pointer
 	if rootIndex != nil && rootIndex.QModelIndex_PTR() != nil {
@@ -492,6 +629,14 @@ func (this *QColumnView) CreateColumn(rootIndex qtcore.QModelIndex_ITF) *QAbstra
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initializeColumn(QAbstractItemView *) const
+
+/*
+Copies the behavior and options of the column view and applies them to the column such as the iconSize(), textElideMode() and alternatingRowColors(). This can be useful when reimplementing createColumn().
+
+This function was introduced in  Qt 4.4.
+
+See also createColumn().
+*/
 func (this *QColumnView) InitializeColumn(column QAbstractItemView_ITF /*777 QAbstractItemView **/) {
 	var convArg0 unsafe.Pointer
 	if column != nil && column.QAbstractItemView_PTR() != nil {

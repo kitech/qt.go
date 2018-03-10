@@ -1,6 +1,6 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidactivityresultreceiver.h
+// /usr/include/qt/QtAndroidExtras/qandroidactivityresultreceiver.h
 // #include <qandroidactivityresultreceiver.h>
 // #include <QtAndroidExtras>
 
@@ -18,7 +18,7 @@ package qtandroidextras
 
 /*
 #include <stdlib.h>
-// extern C begin: 14
+// extern C begin: 10
 */
 // import "C"
 import "unsafe"
@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAndroidActivityResultReceiver struct {
 	*qtrt.CObject
 }
@@ -64,10 +67,14 @@ func (*QAndroidActivityResultReceiver) NewFromPointer(cthis unsafe.Pointer) *QAn
 	return NewQAndroidActivityResultReceiverFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidactivityresultreceiver.h:52
+// /usr/include/qt/QtAndroidExtras/qandroidactivityresultreceiver.h:52
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidActivityResultReceiver()
+
+/*
+
+ */
 func NewQAndroidActivityResultReceiver() *QAndroidActivityResultReceiver {
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QAndroidActivityResultReceiverC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,21 +83,29 @@ func NewQAndroidActivityResultReceiver() *QAndroidActivityResultReceiver {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidactivityresultreceiver.h:53
+// /usr/include/qt/QtAndroidExtras/qandroidactivityresultreceiver.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAndroidActivityResultReceiver()
+
+/*
+
+ */
 func DeleteQAndroidActivityResultReceiver(this *QAndroidActivityResultReceiver) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QAndroidActivityResultReceiverD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 1)
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidactivityresultreceiver.h:54
+// /usr/include/qt/QtAndroidExtras/qandroidactivityresultreceiver.h:54
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void handleActivityResult(int, int, const QAndroidJniObject &)
+
+/*
+Reimplement this function to get activity results after starting an activity using either QtAndroid::startActivity() or QtAndroid::startIntentSender(). The receiverRequestCode is the request code unique to this receiver which was originally passed to the startActivity() or startIntentSender() functions. The resultCode is the result returned by the activity, and data is either null or a Java object of the class android.content.Intent. Both the last to arguments are identical to the arguments passed to onActivityResult().
+*/
 func (this *QAndroidActivityResultReceiver) HandleActivityResult(receiverRequestCode int, resultCode int, data QAndroidJniObject_ITF) {
 	var convArg2 unsafe.Pointer
 	if data != nil && data.QAndroidJniObject_PTR() != nil {

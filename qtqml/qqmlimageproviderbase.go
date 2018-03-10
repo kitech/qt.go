@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlImageProviderBase struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QQmlImageProviderBase) NewFromPointer(cthis unsafe.Pointer) *QQmlImagePro
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlImageProviderBase()
+
+/*
+
+ */
 func DeleteQQmlImageProviderBase(this *QQmlImageProviderBase) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlImageProviderBaseD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -78,6 +85,10 @@ func DeleteQQmlImageProviderBase(this *QQmlImageProviderBase) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QQmlImageProviderBase::ImageType imageType() const
+
+/*
+
+ */
 func (this *QQmlImageProviderBase) ImageType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQmlImageProviderBase9imageTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,22 +99,44 @@ func (this *QQmlImageProviderBase) ImageType() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QQmlImageProviderBase::Flags flags() const
+
+/*
+
+ */
 func (this *QQmlImageProviderBase) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQmlImageProviderBase5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
+/*
+
+
+ */
 type QQmlImageProviderBase__ImageType = int
 
+//
 const QQmlImageProviderBase__Image QQmlImageProviderBase__ImageType = 0
+
+//
 const QQmlImageProviderBase__Pixmap QQmlImageProviderBase__ImageType = 1
+
+//
 const QQmlImageProviderBase__Texture QQmlImageProviderBase__ImageType = 2
+
+//
 const QQmlImageProviderBase__Invalid QQmlImageProviderBase__ImageType = 3
+
+//
 const QQmlImageProviderBase__ImageResponse QQmlImageProviderBase__ImageType = 4
 
+/*
+
+
+ */
 type QQmlImageProviderBase__Flag = int
 
+//
 const QQmlImageProviderBase__ForceAsynchronousImageLoading QQmlImageProviderBase__Flag = 1
 
 //  body block end

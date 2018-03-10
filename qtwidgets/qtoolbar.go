@@ -58,6 +58,9 @@ func (this *QToolBar) InheritInitStyleOption(f func(option *QStyleOptionToolBar 
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
+/*
+
+ */
 type QToolBar struct {
 	*QWidget
 }
@@ -90,6 +93,10 @@ func (*QToolBar) NewFromPointer(cthis unsafe.Pointer) *QToolBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +107,14 @@ func (this *QToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBar(const QString &, QWidget *)
+
+/*
+Constructs a QToolBar with the given parent.
+
+The given window title identifies the toolbar and is shown in the context menu provided by QMainWindow.
+
+See also setWindowTitle().
+*/
 func NewQToolBar(title string, parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -118,6 +133,14 @@ func NewQToolBar(title string, parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBar(const QString &, QWidget *)
+
+/*
+Constructs a QToolBar with the given parent.
+
+The given window title identifies the toolbar and is shown in the context menu provided by QMainWindow.
+
+See also setWindowTitle().
+*/
 func NewQToolBar__(title string) *QToolBar {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -134,6 +157,14 @@ func NewQToolBar__(title string) *QToolBar {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBar(QWidget *)
+
+/*
+Constructs a QToolBar with the given parent.
+
+The given window title identifies the toolbar and is shown in the context menu provided by QMainWindow.
+
+See also setWindowTitle().
+*/
 func NewQToolBar_1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -150,6 +181,14 @@ func NewQToolBar_1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBar(QWidget *)
+
+/*
+Constructs a QToolBar with the given parent.
+
+The given window title identifies the toolbar and is shown in the context menu provided by QMainWindow.
+
+See also setWindowTitle().
+*/
 func NewQToolBar_1_() *QToolBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -164,6 +203,10 @@ func NewQToolBar_1_() *QToolBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolBar()
+
+/*
+
+ */
 func DeleteQToolBar(this *QToolBar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -175,6 +218,10 @@ func DeleteQToolBar(this *QToolBar) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMovable(_Bool)
+
+/*
+
+ */
 func (this *QToolBar) SetMovable(movable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar10setMovableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	qtrt.ErrPrint(err, rv)
@@ -184,6 +231,10 @@ func (this *QToolBar) SetMovable(movable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isMovable() const
+
+/*
+
+ */
 func (this *QToolBar) IsMovable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar9isMovableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,6 +245,10 @@ func (this *QToolBar) IsMovable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAllowedAreas(Qt::ToolBarAreas)
+
+/*
+
+ */
 func (this *QToolBar) SetAllowedAreas(areas int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar15setAllowedAreasE6QFlagsIN2Qt11ToolBarAreaEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), areas)
 	qtrt.ErrPrint(err, rv)
@@ -203,6 +258,10 @@ func (this *QToolBar) SetAllowedAreas(areas int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ToolBarAreas allowedAreas() const
+
+/*
+
+ */
 func (this *QToolBar) AllowedAreas() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar12allowedAreasEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -213,6 +272,10 @@ func (this *QToolBar) AllowedAreas() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isAreaAllowed(Qt::ToolBarArea) const
+
+/*
+Returns true if this toolbar is dockable in the given area; otherwise returns false.
+*/
 func (this *QToolBar) IsAreaAllowed(area int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar13isAreaAllowedEN2Qt11ToolBarAreaE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), area)
 	qtrt.ErrPrint(err, rv)
@@ -223,6 +286,10 @@ func (this *QToolBar) IsAreaAllowed(area int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
+
+/*
+
+ */
 func (this *QToolBar) SetOrientation(orientation int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar14setOrientationEN2Qt11OrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	qtrt.ErrPrint(err, rv)
@@ -232,6 +299,10 @@ func (this *QToolBar) SetOrientation(orientation int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
+
+/*
+
+ */
 func (this *QToolBar) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,6 +313,12 @@ func (this *QToolBar) Orientation() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Removes all actions from the toolbar.
+
+See also removeAction().
+*/
 func (this *QToolBar) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -251,6 +328,12 @@ func (this *QToolBar) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &)
+
+/*
+This is an overloaded function.
+
+Creates a new action with the given text. This action is added to the end of the toolbar.
+*/
 func (this *QToolBar) AddAction(text string) *QAction /*777 QAction **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -263,6 +346,12 @@ func (this *QToolBar) AddAction(text string) *QAction /*777 QAction **/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &)
+
+/*
+This is an overloaded function.
+
+Creates a new action with the given text. This action is added to the end of the toolbar.
+*/
 func (this *QToolBar) AddAction_1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -279,6 +368,12 @@ func (this *QToolBar) AddAction_1(icon qtgui.QIcon_ITF, text string) *QAction /*
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &, const QObject *, const char *)
+
+/*
+This is an overloaded function.
+
+Creates a new action with the given text. This action is added to the end of the toolbar.
+*/
 func (this *QToolBar) AddAction_2(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -297,6 +392,12 @@ func (this *QToolBar) AddAction_2(text string, receiver qtcore.QObject_ITF /*777
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &, const QObject *, const char *)
+
+/*
+This is an overloaded function.
+
+Creates a new action with the given text. This action is added to the end of the toolbar.
+*/
 func (this *QToolBar) AddAction_3(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -319,6 +420,12 @@ func (this *QToolBar) AddAction_3(icon qtgui.QIcon_ITF, text string, receiver qt
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addSeparator()
+
+/*
+Adds a separator to the end of the toolbar.
+
+See also insertSeparator().
+*/
 func (this *QToolBar) AddSeparator() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar12addSeparatorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -329,6 +436,12 @@ func (this *QToolBar) AddSeparator() *QAction /*777 QAction **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSeparator(QAction *)
+
+/*
+Inserts a separator into the toolbar in front of the toolbar item associated with the before action.
+
+See also addSeparator().
+*/
 func (this *QToolBar) InsertSeparator(before QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if before != nil && before.QAction_PTR() != nil {
@@ -343,6 +456,18 @@ func (this *QToolBar) InsertSeparator(before QAction_ITF /*777 QAction **/) *QAc
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addWidget(QWidget *)
+
+/*
+Adds the given widget to the toolbar as the toolbar's last item.
+
+The toolbar takes ownership of widget.
+
+If you add a QToolButton with this method, the toolbar's Qt::ToolButtonStyle will not be respected.
+
+Note: You should use QAction::setVisible() to change the visibility of the widget. Using QWidget::setVisible(), QWidget::show() and QWidget::hide() does not work.
+
+See also insertWidget().
+*/
 func (this *QToolBar) AddWidget(widget QWidget_ITF /*777 QWidget **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -357,6 +482,14 @@ func (this *QToolBar) AddWidget(widget QWidget_ITF /*777 QWidget **/) *QAction /
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertWidget(QAction *, QWidget *)
+
+/*
+Inserts the given widget in front of the toolbar item associated with the before action.
+
+Note: You should use QAction::setVisible() to change the visibility of the widget. Using QWidget::setVisible(), QWidget::show() and QWidget::hide() does not work.
+
+See also addWidget().
+*/
 func (this *QToolBar) InsertWidget(before QAction_ITF /*777 QAction **/, widget QWidget_ITF /*777 QWidget **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if before != nil && before.QAction_PTR() != nil {
@@ -375,6 +508,10 @@ func (this *QToolBar) InsertWidget(before QAction_ITF /*777 QAction **/, widget 
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect actionGeometry(QAction *) const
+
+/*
+
+ */
 func (this *QToolBar) ActionGeometry(action QAction_ITF /*777 QAction **/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if action != nil && action.QAction_PTR() != nil {
@@ -391,6 +528,12 @@ func (this *QToolBar) ActionGeometry(action QAction_ITF /*777 QAction **/) *qtco
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * actionAt(const QPoint &) const
+
+/*
+Returns the action at point p. This function returns zero if no action was found.
+
+See also QWidget::childAt().
+*/
 func (this *QToolBar) ActionAt(p qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -405,6 +548,12 @@ func (this *QToolBar) ActionAt(p qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QAction * actionAt(int, int) const
+
+/*
+Returns the action at point p. This function returns zero if no action was found.
+
+See also QWidget::childAt().
+*/
 func (this *QToolBar) ActionAt_1(x int, y int) *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar8actionAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -415,6 +564,14 @@ func (this *QToolBar) ActionAt_1(x int, y int) *QAction /*777 QAction **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * toggleViewAction() const
+
+/*
+Returns a checkable action that can be used to show or hide this toolbar.
+
+The action's text is set to the toolbar's window title.
+
+See also QAction::text and QWidget::windowTitle.
+*/
 func (this *QToolBar) ToggleViewAction() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar16toggleViewActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -425,6 +582,10 @@ func (this *QToolBar) ToggleViewAction() *QAction /*777 QAction **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize iconSize() const
+
+/*
+
+ */
 func (this *QToolBar) IconSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar8iconSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -437,6 +598,10 @@ func (this *QToolBar) IconSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ToolButtonStyle toolButtonStyle() const
+
+/*
+
+ */
 func (this *QToolBar) ToolButtonStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar15toolButtonStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -447,6 +612,14 @@ func (this *QToolBar) ToolButtonStyle() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widgetForAction(QAction *) const
+
+/*
+Returns the widget associated with the specified action.
+
+This function was introduced in  Qt 4.2.
+
+See also addWidget().
+*/
 func (this *QToolBar) WidgetForAction(action QAction_ITF /*777 QAction **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if action != nil && action.QAction_PTR() != nil {
@@ -461,6 +634,10 @@ func (this *QToolBar) WidgetForAction(action QAction_ITF /*777 QAction **/) *QWi
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFloatable() const
+
+/*
+
+ */
 func (this *QToolBar) IsFloatable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar11isFloatableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -471,6 +648,10 @@ func (this *QToolBar) IsFloatable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFloatable(_Bool)
+
+/*
+
+ */
 func (this *QToolBar) SetFloatable(floatable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar12setFloatableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), floatable)
 	qtrt.ErrPrint(err, rv)
@@ -480,6 +661,10 @@ func (this *QToolBar) SetFloatable(floatable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFloating() const
+
+/*
+
+ */
 func (this *QToolBar) IsFloating() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar10isFloatingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -490,6 +675,10 @@ func (this *QToolBar) IsFloating() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
+
+/*
+
+ */
 func (this *QToolBar) SetIconSize(iconSize qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if iconSize != nil && iconSize.QSize_PTR() != nil {
@@ -503,6 +692,10 @@ func (this *QToolBar) SetIconSize(iconSize qtcore.QSize_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setToolButtonStyle(Qt::ToolButtonStyle)
+
+/*
+
+ */
 func (this *QToolBar) SetToolButtonStyle(toolButtonStyle int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar18setToolButtonStyleEN2Qt15ToolButtonStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), toolButtonStyle)
 	qtrt.ErrPrint(err, rv)
@@ -512,6 +705,10 @@ func (this *QToolBar) SetToolButtonStyle(toolButtonStyle int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void actionTriggered(QAction *)
+
+/*
+This signal is emitted when an action in this toolbar is triggered. This happens when the action's tool button is pressed, or when the action is triggered in some other way outside the toolbar. The parameter holds the triggered action.
+*/
 func (this *QToolBar) ActionTriggered(action QAction_ITF /*777 QAction **/) {
 	var convArg0 unsafe.Pointer
 	if action != nil && action.QAction_PTR() != nil {
@@ -525,6 +722,14 @@ func (this *QToolBar) ActionTriggered(action QAction_ITF /*777 QAction **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void movableChanged(_Bool)
+
+/*
+This signal is emitted when the toolbar becomes movable or fixed. If the toolbar can be moved, movable is true; otherwise it is false.
+
+Note: Notifier signal for property movable.
+
+See also movable.
+*/
 func (this *QToolBar) MovableChanged(movable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar14movableChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	qtrt.ErrPrint(err, rv)
@@ -534,6 +739,14 @@ func (this *QToolBar) MovableChanged(movable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void allowedAreasChanged(Qt::ToolBarAreas)
+
+/*
+This signal is emitted when the collection of allowed areas for the toolbar is changed. The new areas in which the toolbar can be positioned are specified by allowedAreas.
+
+Note: Notifier signal for property allowedAreas.
+
+See also allowedAreas.
+*/
 func (this *QToolBar) AllowedAreasChanged(allowedAreas int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar19allowedAreasChangedE6QFlagsIN2Qt11ToolBarAreaEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), allowedAreas)
 	qtrt.ErrPrint(err, rv)
@@ -543,6 +756,14 @@ func (this *QToolBar) AllowedAreasChanged(allowedAreas int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void orientationChanged(Qt::Orientation)
+
+/*
+This signal is emitted when the orientation of the toolbar changes. The orientation parameter holds the toolbar's new orientation.
+
+Note: Notifier signal for property orientation.
+
+See also orientation.
+*/
 func (this *QToolBar) OrientationChanged(orientation int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar18orientationChangedEN2Qt11OrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	qtrt.ErrPrint(err, rv)
@@ -552,6 +773,14 @@ func (this *QToolBar) OrientationChanged(orientation int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void iconSizeChanged(const QSize &)
+
+/*
+This signal is emitted when the icon size is changed. The iconSize parameter holds the toolbar's new icon size.
+
+Note: Notifier signal for property iconSize.
+
+See also iconSize and QMainWindow::iconSize.
+*/
 func (this *QToolBar) IconSizeChanged(iconSize qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if iconSize != nil && iconSize.QSize_PTR() != nil {
@@ -565,6 +794,14 @@ func (this *QToolBar) IconSizeChanged(iconSize qtcore.QSize_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toolButtonStyleChanged(Qt::ToolButtonStyle)
+
+/*
+This signal is emitted when the tool button style is changed. The toolButtonStyle parameter holds the toolbar's new tool button style.
+
+Note: Notifier signal for property toolButtonStyle.
+
+See also toolButtonStyle and QMainWindow::toolButtonStyle.
+*/
 func (this *QToolBar) ToolButtonStyleChanged(toolButtonStyle int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar22toolButtonStyleChangedEN2Qt15ToolButtonStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), toolButtonStyle)
 	qtrt.ErrPrint(err, rv)
@@ -574,6 +811,14 @@ func (this *QToolBar) ToolButtonStyleChanged(toolButtonStyle int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void topLevelChanged(_Bool)
+
+/*
+This signal is emitted when the floating property changes. The topLevel parameter is true if the toolbar is now floating; otherwise it is false.
+
+This function was introduced in  Qt 4.6.
+
+See also isWindow().
+*/
 func (this *QToolBar) TopLevelChanged(topLevel bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar15topLevelChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), topLevel)
 	qtrt.ErrPrint(err, rv)
@@ -583,6 +828,12 @@ func (this *QToolBar) TopLevelChanged(topLevel bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void visibilityChanged(_Bool)
+
+/*
+This signal is emitted when the toolbar becomes visible (or invisible). This happens when the widget is hidden or shown.
+
+This function was introduced in  Qt 4.7.
+*/
 func (this *QToolBar) VisibilityChanged(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar17visibilityChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	qtrt.ErrPrint(err, rv)
@@ -592,6 +843,10 @@ func (this *QToolBar) VisibilityChanged(visible bool) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void actionEvent(QActionEvent *)
+
+/*
+Reimplemented from QWidget::actionEvent().
+*/
 func (this *QToolBar) ActionEvent(event qtgui.QActionEvent_ITF /*777 QActionEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QActionEvent_PTR() != nil {
@@ -605,6 +860,10 @@ func (this *QToolBar) ActionEvent(event qtgui.QActionEvent_ITF /*777 QActionEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QToolBar) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -618,6 +877,10 @@ func (this *QToolBar) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QToolBar) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QPaintEvent_PTR() != nil {
@@ -631,6 +894,10 @@ func (this *QToolBar) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QToolBar) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -645,6 +912,10 @@ func (this *QToolBar) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionToolBar *) const
+
+/*
+
+ */
 func (this *QToolBar) InitStyleOption(option QStyleOptionToolBar_ITF /*777 QStyleOptionToolBar **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionToolBar_PTR() != nil {

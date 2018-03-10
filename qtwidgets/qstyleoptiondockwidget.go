@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionDockWidget struct {
 	*QStyleOption
 }
@@ -65,6 +68,10 @@ func (*QStyleOptionDockWidget) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionDockWidget()
+
+/*
+
+ */
 func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionDockWidget(int)
+
+/*
+
+ */
 func NewQStyleOptionDockWidget_1(version int) *QStyleOptionDockWidget {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,12 +102,35 @@ func DeleteQStyleOptionDockWidget(this *QStyleOptionDockWidget) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionDockWidget__StyleOptionType = int
 
+//
 const QStyleOptionDockWidget__Type QStyleOptionDockWidget__StyleOptionType = 9
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionDockWidget__StyleOptionVersion = int
 
+// 1
 const QStyleOptionDockWidget__Version QStyleOptionDockWidget__StyleOptionVersion = 2
 
 //  body block end

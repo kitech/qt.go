@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QSslPreSharedKeyAuthenticator struct {
 	*qtrt.CObject
 }
@@ -68,6 +71,12 @@ func (*QSslPreSharedKeyAuthenticator) NewFromPointer(cthis unsafe.Pointer) *QSsl
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSslPreSharedKeyAuthenticator()
+
+/*
+Constructs a default QSslPreSharedKeyAuthenticator object.
+
+The identity hint, the identity and the key will be initialized to empty byte arrays; the maximum length for both the identity and the key will be initialized to 0.
+*/
 func NewQSslPreSharedKeyAuthenticator() *QSslPreSharedKeyAuthenticator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticatorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +89,10 @@ func NewQSslPreSharedKeyAuthenticator() *QSslPreSharedKeyAuthenticator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSslPreSharedKeyAuthenticator()
+
+/*
+
+ */
 func DeleteQSslPreSharedKeyAuthenticator(this *QSslPreSharedKeyAuthenticator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -91,6 +104,10 @@ func DeleteQSslPreSharedKeyAuthenticator(this *QSslPreSharedKeyAuthenticator) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslPreSharedKeyAuthenticator & operator=(const QSslPreSharedKeyAuthenticator &)
+
+/*
+
+ */
 func (this *QSslPreSharedKeyAuthenticator) Operator_equal(authenticator QSslPreSharedKeyAuthenticator_ITF) *QSslPreSharedKeyAuthenticator {
 	var convArg0 unsafe.Pointer
 	if authenticator != nil && authenticator.QSslPreSharedKeyAuthenticator_PTR() != nil {
@@ -107,6 +124,10 @@ func (this *QSslPreSharedKeyAuthenticator) Operator_equal(authenticator QSslPreS
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QSslPreSharedKeyAuthenticator & operator=(QSslPreSharedKeyAuthenticator &&)
+
+/*
+
+ */
 func (this *QSslPreSharedKeyAuthenticator) Operator_equal_1(other unsafe.Pointer /*333*/) *QSslPreSharedKeyAuthenticator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticatoraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +140,10 @@ func (this *QSslPreSharedKeyAuthenticator) Operator_equal_1(other unsafe.Pointer
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslPreSharedKeyAuthenticator &)
+
+/*
+Swaps the QSslPreSharedKeyAuthenticator object authenticator with this object. This operation is very fast and never fails.
+*/
 func (this *QSslPreSharedKeyAuthenticator) Swap(other QSslPreSharedKeyAuthenticator_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslPreSharedKeyAuthenticator_PTR() != nil {
@@ -132,6 +157,10 @@ func (this *QSslPreSharedKeyAuthenticator) Swap(other QSslPreSharedKeyAuthentica
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray identityHint() const
+
+/*
+Returns the PSK identity hint as provided by the server. The interpretation of this hint is left to the application.
+*/
 func (this *QSslPreSharedKeyAuthenticator) IdentityHint() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator12identityHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,6 +173,14 @@ func (this *QSslPreSharedKeyAuthenticator) IdentityHint() *qtcore.QByteArray /*1
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIdentity(const QByteArray &)
+
+/*
+Sets the PSK client identity (to be advised to the server) to identity.
+
+Note: it is possible to set an identity whose length is greater than maximumIdentityLength(); in this case, only the first maximumIdentityLength() bytes will be actually sent to the server.
+
+See also identity() and maximumIdentityLength().
+*/
 func (this *QSslPreSharedKeyAuthenticator) SetIdentity(identity qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if identity != nil && identity.QByteArray_PTR() != nil {
@@ -157,6 +194,12 @@ func (this *QSslPreSharedKeyAuthenticator) SetIdentity(identity qtcore.QByteArra
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray identity() const
+
+/*
+Returns the PSK client identity.
+
+See also setIdentity().
+*/
 func (this *QSslPreSharedKeyAuthenticator) Identity() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator8identityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -169,6 +212,14 @@ func (this *QSslPreSharedKeyAuthenticator) Identity() *qtcore.QByteArray /*123*/
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maximumIdentityLength() const
+
+/*
+Returns the maximum length, in bytes, of the PSK client identity.
+
+Note: it is possible to set an identity whose length is greater than maximumIdentityLength(); in this case, only the first maximumIdentityLength() bytes will be actually sent to the server.
+
+See also setIdentity().
+*/
 func (this *QSslPreSharedKeyAuthenticator) MaximumIdentityLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator21maximumIdentityLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +230,14 @@ func (this *QSslPreSharedKeyAuthenticator) MaximumIdentityLength() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreSharedKey(const QByteArray &)
+
+/*
+Sets the pre shared key to preSharedKey.
+
+Note: it is possible to set a key whose length is greater than the maximumPreSharedKeyLength(); in this case, only the first maximumPreSharedKeyLength() bytes will be actually sent to the server.
+
+See also preSharedKey(), maximumPreSharedKeyLength(), and QByteArray::fromHex().
+*/
 func (this *QSslPreSharedKeyAuthenticator) SetPreSharedKey(preSharedKey qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if preSharedKey != nil && preSharedKey.QByteArray_PTR() != nil {
@@ -192,6 +251,12 @@ func (this *QSslPreSharedKeyAuthenticator) SetPreSharedKey(preSharedKey qtcore.Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray preSharedKey() const
+
+/*
+Returns the pre shared key.
+
+See also setPreSharedKey().
+*/
 func (this *QSslPreSharedKeyAuthenticator) PreSharedKey() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator12preSharedKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -204,6 +269,14 @@ func (this *QSslPreSharedKeyAuthenticator) PreSharedKey() *qtcore.QByteArray /*1
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maximumPreSharedKeyLength() const
+
+/*
+Returns the maximum length, in bytes, of the pre shared key.
+
+Note: it is possible to set a key whose length is greater than the maximumPreSharedKeyLength(); in this case, only the first maximumPreSharedKeyLength() bytes will be actually sent to the server.
+
+See also setPreSharedKey().
+*/
 func (this *QSslPreSharedKeyAuthenticator) MaximumPreSharedKeyLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator25maximumPreSharedKeyLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

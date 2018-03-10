@@ -62,6 +62,9 @@ func (this *QAbstractTextDocumentLayout) InheritFormat(f func(pos int) unsafe.Po
 	qtrt.SetAllInheritCallback(this, "format", f)
 }
 
+/*
+
+ */
 type QAbstractTextDocumentLayout struct {
 	*qtcore.QObject
 }
@@ -96,6 +99,10 @@ func (*QAbstractTextDocumentLayout) NewFromPointer(cthis unsafe.Pointer) *QAbstr
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAbstractTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,6 +113,10 @@ func (this *QAbstractTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractTextDocumentLayout(QTextDocument *)
+
+/*
+Creates a new text document layout for the given document.
+*/
 func NewQAbstractTextDocumentLayout(doc QTextDocument_ITF /*777 QTextDocument **/) *QAbstractTextDocumentLayout {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {
@@ -122,6 +133,10 @@ func NewQAbstractTextDocumentLayout(doc QTextDocument_ITF /*777 QTextDocument **
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractTextDocumentLayout()
+
+/*
+
+ */
 func DeleteQAbstractTextDocumentLayout(this *QAbstractTextDocumentLayout) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayoutD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -133,6 +148,10 @@ func DeleteQAbstractTextDocumentLayout(this *QAbstractTextDocumentLayout) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int hitTest(const QPointF &, Qt::HitTestAccuracy) const
+
+/*
+Returns the cursor position for the given point with the specified accuracy. Returns -1 if no valid cursor position was found.
+*/
 func (this *QAbstractTextDocumentLayout) HitTest(point qtcore.QPointF_ITF, accuracy int) int {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -147,6 +166,10 @@ func (this *QAbstractTextDocumentLayout) HitTest(point qtcore.QPointF_ITF, accur
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString anchorAt(const QPointF &) const
+
+/*
+Returns the reference of the anchor the given position, or an empty string if no anchor exists at that point.
+*/
 func (this *QAbstractTextDocumentLayout) AnchorAt(pos qtcore.QPointF_ITF) string {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -164,6 +187,12 @@ func (this *QAbstractTextDocumentLayout) AnchorAt(pos qtcore.QPointF_ITF) string
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString imageAt(const QPointF &) const
+
+/*
+Returns the source of the image at the given position pos, or an empty string if no image exists at that point.
+
+This function was introduced in  Qt 5.8.
+*/
 func (this *QAbstractTextDocumentLayout) ImageAt(pos qtcore.QPointF_ITF) string {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -181,6 +210,12 @@ func (this *QAbstractTextDocumentLayout) ImageAt(pos qtcore.QPointF_ITF) string 
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextFormat formatAt(const QPointF &) const
+
+/*
+Returns the text format at the given position pos.
+
+This function was introduced in  Qt 5.8.
+*/
 func (this *QAbstractTextDocumentLayout) FormatAt(pos qtcore.QPointF_ITF) *QTextFormat /*123*/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -197,6 +232,12 @@ func (this *QAbstractTextDocumentLayout) FormatAt(pos qtcore.QPointF_ITF) *QText
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int pageCount() const
+
+/*
+Returns the number of pages contained in the layout.
+
+See also pageCountChanged().
+*/
 func (this *QAbstractTextDocumentLayout) PageCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout9pageCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,6 +248,14 @@ func (this *QAbstractTextDocumentLayout) PageCount() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QSizeF documentSize() const
+
+/*
+Returns the total size of the document's layout.
+
+This information can be used by display widgets to update their scroll bars correctly.
+
+See also documentSizeChanged() and QTextDocument::pageSize.
+*/
 func (this *QAbstractTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout12documentSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -219,6 +268,10 @@ func (this *QAbstractTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QRectF frameBoundingRect(QTextFrame *) const
+
+/*
+Returns the bounding rectangle of frame.
+*/
 func (this *QAbstractTextDocumentLayout) FrameBoundingRect(frame QTextFrame_ITF /*777 QTextFrame **/) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if frame != nil && frame.QTextFrame_PTR() != nil {
@@ -235,6 +288,10 @@ func (this *QAbstractTextDocumentLayout) FrameBoundingRect(frame QTextFrame_ITF 
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QRectF blockBoundingRect(const QTextBlock &) const
+
+/*
+Returns the bounding rectangle of block.
+*/
 func (this *QAbstractTextDocumentLayout) BlockBoundingRect(block QTextBlock_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {
@@ -251,6 +308,12 @@ func (this *QAbstractTextDocumentLayout) BlockBoundingRect(block QTextBlock_ITF)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPaintDevice(QPaintDevice *)
+
+/*
+Sets the paint device used for rendering the document's layout to the given device.
+
+See also paintDevice().
+*/
 func (this *QAbstractTextDocumentLayout) SetPaintDevice(device QPaintDevice_ITF /*777 QPaintDevice **/) {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QPaintDevice_PTR() != nil {
@@ -264,6 +327,12 @@ func (this *QAbstractTextDocumentLayout) SetPaintDevice(device QPaintDevice_ITF 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPaintDevice * paintDevice() const
+
+/*
+Returns the paint device used to render the document's layout.
+
+See also setPaintDevice().
+*/
 func (this *QAbstractTextDocumentLayout) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout11paintDeviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -274,6 +343,10 @@ func (this *QAbstractTextDocumentLayout) PaintDevice() *QPaintDevice /*777 QPain
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextDocument * document() const
+
+/*
+Returns the text document that this layout is operating on.
+*/
 func (this *QAbstractTextDocumentLayout) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout8documentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -284,6 +357,14 @@ func (this *QAbstractTextDocumentLayout) Document() *QTextDocument /*777 QTextDo
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void registerHandler(int, QObject *)
+
+/*
+Registers the given component as a handler for items of the given objectType.
+
+Note: registerHandler() has to be called once for each object type. This means that there is only one handler for multiple replacement characters of the same object type.
+
+The text document layout does not take ownership of component.
+*/
 func (this *QAbstractTextDocumentLayout) RegisterHandler(objectType int, component qtcore.QObject_ITF /*777 QObject **/) {
 	var convArg1 unsafe.Pointer
 	if component != nil && component.QObject_PTR() != nil {
@@ -297,6 +378,12 @@ func (this *QAbstractTextDocumentLayout) RegisterHandler(objectType int, compone
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unregisterHandler(int, QObject *)
+
+/*
+Unregisters the given component as a handler for items of the given objectType, or any handler if the component is not specified.
+
+This function was introduced in  Qt 5.2.
+*/
 func (this *QAbstractTextDocumentLayout) UnregisterHandler(objectType int, component qtcore.QObject_ITF /*777 QObject **/) {
 	var convArg1 unsafe.Pointer
 	if component != nil && component.QObject_PTR() != nil {
@@ -310,6 +397,12 @@ func (this *QAbstractTextDocumentLayout) UnregisterHandler(objectType int, compo
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unregisterHandler(int, QObject *)
+
+/*
+Unregisters the given component as a handler for items of the given objectType, or any handler if the component is not specified.
+
+This function was introduced in  Qt 5.2.
+*/
 func (this *QAbstractTextDocumentLayout) UnregisterHandler__(objectType int) {
 	// arg: 1, QObject *=Pointer, QObject=Record,
 	var convArg1 unsafe.Pointer
@@ -321,6 +414,10 @@ func (this *QAbstractTextDocumentLayout) UnregisterHandler__(objectType int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextObjectInterface * handlerForObject(int) const
+
+/*
+Returns a handler for objects of the given objectType.
+*/
 func (this *QAbstractTextDocumentLayout) HandlerForObject(objectType int) *QTextObjectInterface /*777 QTextObjectInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), objectType)
 	qtrt.ErrPrint(err, rv)
@@ -331,6 +428,12 @@ func (this *QAbstractTextDocumentLayout) HandlerForObject(objectType int) *QText
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRectF &)
+
+/*
+This signal is emitted when the rectangle rect has been updated.
+
+Subclasses of QAbstractTextDocumentLayout should emit this signal when the layout of the contents change in order to repaint.
+*/
 func (this *QAbstractTextDocumentLayout) Update(arg0 qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRectF_PTR() != nil {
@@ -344,6 +447,12 @@ func (this *QAbstractTextDocumentLayout) Update(arg0 qtcore.QRectF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRectF &)
+
+/*
+This signal is emitted when the rectangle rect has been updated.
+
+Subclasses of QAbstractTextDocumentLayout should emit this signal when the layout of the contents change in order to repaint.
+*/
 func (this *QAbstractTextDocumentLayout) Update__() {
 	// arg: 0, const QRectF &=LValueReference, QRectF=Record,
 	var convArg0 unsafe.Pointer
@@ -355,6 +464,14 @@ func (this *QAbstractTextDocumentLayout) Update__() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void updateBlock(const QTextBlock &)
+
+/*
+This signal is emitted when the specified block has been updated.
+
+Subclasses of QAbstractTextDocumentLayout should emit this signal when the layout of block has changed in order to repaint.
+
+This function was introduced in  Qt 4.4.
+*/
 func (this *QAbstractTextDocumentLayout) UpdateBlock(block QTextBlock_ITF) {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {
@@ -368,6 +485,14 @@ func (this *QAbstractTextDocumentLayout) UpdateBlock(block QTextBlock_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void documentSizeChanged(const QSizeF &)
+
+/*
+This signal is emitted when the size of the document layout changes to newSize.
+
+Subclasses of QAbstractTextDocumentLayout should emit this signal when the document's entire layout size changes. This signal is useful for widgets that display text documents since it enables them to update their scroll bars correctly.
+
+See also documentSize().
+*/
 func (this *QAbstractTextDocumentLayout) DocumentSizeChanged(newSize qtcore.QSizeF_ITF) {
 	var convArg0 unsafe.Pointer
 	if newSize != nil && newSize.QSizeF_PTR() != nil {
@@ -381,6 +506,14 @@ func (this *QAbstractTextDocumentLayout) DocumentSizeChanged(newSize qtcore.QSiz
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void pageCountChanged(int)
+
+/*
+This signal is emitted when the number of pages in the layout changes; newPages is the updated page count.
+
+Subclasses of QAbstractTextDocumentLayout should emit this signal when the number of pages in the layout has changed. Changes to the page count are caused by changes to the layout or the document content itself.
+
+See also pageCount().
+*/
 func (this *QAbstractTextDocumentLayout) PageCountChanged(newPages int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayout16pageCountChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newPages)
 	qtrt.ErrPrint(err, rv)
@@ -390,6 +523,28 @@ func (this *QAbstractTextDocumentLayout) PageCountChanged(newPages int) {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void documentChanged(int, int, int)
+
+/*
+This function is called whenever the contents of the document change. A change occurs when text is inserted, removed, or a combination of these two. The change is specified by position, charsRemoved, and charsAdded corresponding to the starting character position of the change, the number of characters removed from the document, and the number of characters added.
+
+For example, when inserting the text "Hello" into an empty document, charsRemoved would be 0 and charsAdded would be 5 (the length of the string).
+
+Replacing text is a combination of removing and inserting. For example, if the text "Hello" gets replaced by "Hi", charsRemoved would be 5 and charsAdded would be 2.
+
+For subclasses of QAbstractTextDocumentLayout, this is the central function where a large portion of the work to lay out and position document contents is done.
+
+For example, in a subclass that only arranges blocks of text, an implementation of this function would have to do the following:
+
+
+Determine the list of changed QTextBlock(s) using the parameters provided.
+Each QTextBlock object's corresponding QTextLayout object needs to be processed. You can access the QTextBlock's layout using the QTextBlock::layout() function. This processing should take the document's page size into consideration.
+If the total number of pages changed, the pageCountChanged() signal should be emitted.
+If the total size changed, the documentSizeChanged() signal should be emitted.
+The update() signal should be emitted to schedule a repaint of areas in the layout that require repainting.
+
+
+See also QTextLayout.
+*/
 func (this *QAbstractTextDocumentLayout) DocumentChanged(from int, charsRemoved int, charsAdded int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayout15documentChangedEiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), from, charsRemoved, charsAdded)
 	qtrt.ErrPrint(err, rv)
@@ -399,6 +554,14 @@ func (this *QAbstractTextDocumentLayout) DocumentChanged(from int, charsRemoved 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeInlineObject(QTextInlineObject, int, const QTextFormat &)
+
+/*
+Sets the size of the inline object item corresponding to the text format.
+
+posInDocument specifies the position of the object within the document.
+
+The default implementation resizes the item to the size returned by the object handler's intrinsicSize() function. This function is called only within Qt. Subclasses can reimplement this function to customize the resizing of inline objects.
+*/
 func (this *QAbstractTextDocumentLayout) ResizeInlineObject(item QTextInlineObject_ITF /*123*/, posInDocument int, format QTextFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTextInlineObject_PTR() != nil {
@@ -416,6 +579,16 @@ func (this *QAbstractTextDocumentLayout) ResizeInlineObject(item QTextInlineObje
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void positionInlineObject(QTextInlineObject, int, const QTextFormat &)
+
+/*
+Lays out the inline object item using the given text format.
+
+posInDocument specifies the position of the object within the document.
+
+The default implementation does nothing. This function is called only within Qt. Subclasses can reimplement this function to customize the position of inline objects.
+
+See also drawInlineObject().
+*/
 func (this *QAbstractTextDocumentLayout) PositionInlineObject(item QTextInlineObject_ITF /*123*/, posInDocument int, format QTextFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTextInlineObject_PTR() != nil {
@@ -433,6 +606,16 @@ func (this *QAbstractTextDocumentLayout) PositionInlineObject(item QTextInlineOb
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void drawInlineObject(QPainter *, const QRectF &, QTextInlineObject, int, const QTextFormat &)
+
+/*
+This function is called to draw the inline object, object, with the given painter within the rectangle specified by rect using the specified text format.
+
+posInDocument specifies the position of the object within the document.
+
+The default implementation calls drawObject() on the object handlers. This function is called only within Qt. Subclasses can reimplement this function to customize the drawing of inline objects.
+
+See also draw().
+*/
 func (this *QAbstractTextDocumentLayout) DrawInlineObject(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRectF_ITF, object QTextInlineObject_ITF /*123*/, posInDocument int, format QTextFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -458,6 +641,10 @@ func (this *QAbstractTextDocumentLayout) DrawInlineObject(painter QPainter_ITF /
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int formatIndex(int)
+
+/*
+
+ */
 func (this *QAbstractTextDocumentLayout) FormatIndex(pos int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayout11formatIndexEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	qtrt.ErrPrint(err, rv)
@@ -468,6 +655,10 @@ func (this *QAbstractTextDocumentLayout) FormatIndex(pos int) int {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QTextCharFormat format(int)
+
+/*
+Returns the character format that is applicable at the given position.
+*/
 func (this *QAbstractTextDocumentLayout) Format(pos int) *QTextCharFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayout6formatEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	qtrt.ErrPrint(err, rv)

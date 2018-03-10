@@ -36,6 +36,9 @@ func (this *QAnimationGroup) InheritEvent(f func(event *QEvent /*777 QEvent **/)
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QAnimationGroup struct {
 	*QAbstractAnimation
 }
@@ -68,6 +71,10 @@ func (*QAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QAnimationGroup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAnimationGroup(QObject *)
+
+/*
+Constructs a QAnimationGroup. parent is passed to QObject's constructor.
+*/
 func NewQAnimationGroup(parent QObject_ITF /*777 QObject **/) *QAnimationGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -94,6 +105,10 @@ func NewQAnimationGroup(parent QObject_ITF /*777 QObject **/) *QAnimationGroup {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAnimationGroup(QObject *)
+
+/*
+Constructs a QAnimationGroup. parent is passed to QObject's constructor.
+*/
 func NewQAnimationGroup__() *QAnimationGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -108,6 +123,10 @@ func NewQAnimationGroup__() *QAnimationGroup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAnimationGroup()
+
+/*
+
+ */
 func DeleteQAnimationGroup(this *QAnimationGroup) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -119,6 +138,12 @@ func DeleteQAnimationGroup(this *QAnimationGroup) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractAnimation * animationAt(int) const
+
+/*
+Returns a pointer to the animation at index in this group. This function is useful when you need access to a particular animation. index is between 0 and animationCount() - 1.
+
+See also animationCount() and indexOfAnimation().
+*/
 func (this *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation /*777 QAbstractAnimation **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup11animationAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -129,6 +154,12 @@ func (this *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation /*777 QA
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int animationCount() const
+
+/*
+Returns the number of animations managed by this group.
+
+See also indexOfAnimation(), addAnimation(), and animationAt().
+*/
 func (this *QAnimationGroup) AnimationCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAnimationGroup14animationCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,6 +170,12 @@ func (this *QAnimationGroup) AnimationCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfAnimation(QAbstractAnimation *) const
+
+/*
+Returns the index of animation. The returned index can be passed to the other functions that take an index as an argument.
+
+See also insertAnimation(), animationAt(), and takeAnimation().
+*/
 func (this *QAnimationGroup) IndexOfAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) int {
 	var convArg0 unsafe.Pointer
 	if animation != nil && animation.QAbstractAnimation_PTR() != nil {
@@ -153,6 +190,14 @@ func (this *QAnimationGroup) IndexOfAnimation(animation QAbstractAnimation_ITF /
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addAnimation(QAbstractAnimation *)
+
+/*
+Adds animation to this group. This will call insertAnimation with index equals to animationCount().
+
+Note: The group takes ownership of the animation.
+
+See also removeAnimation().
+*/
 func (this *QAnimationGroup) AddAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
 	var convArg0 unsafe.Pointer
 	if animation != nil && animation.QAbstractAnimation_PTR() != nil {
@@ -166,6 +211,14 @@ func (this *QAnimationGroup) AddAnimation(animation QAbstractAnimation_ITF /*777
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertAnimation(int, QAbstractAnimation *)
+
+/*
+Inserts animation into this animation group at index. If index is 0 the animation is inserted at the beginning. If index is animationCount(), the animation is inserted at the end.
+
+Note: The group takes ownership of the animation.
+
+See also takeAnimation(), addAnimation(), indexOfAnimation(), and removeAnimation().
+*/
 func (this *QAnimationGroup) InsertAnimation(index int, animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
 	var convArg1 unsafe.Pointer
 	if animation != nil && animation.QAbstractAnimation_PTR() != nil {
@@ -179,6 +232,12 @@ func (this *QAnimationGroup) InsertAnimation(index int, animation QAbstractAnima
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAnimation(QAbstractAnimation *)
+
+/*
+Removes animation from this group. The ownership of animation is transferred to the caller.
+
+See also takeAnimation(), insertAnimation(), and addAnimation().
+*/
 func (this *QAnimationGroup) RemoveAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
 	var convArg0 unsafe.Pointer
 	if animation != nil && animation.QAbstractAnimation_PTR() != nil {
@@ -192,6 +251,14 @@ func (this *QAnimationGroup) RemoveAnimation(animation QAbstractAnimation_ITF /*
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractAnimation * takeAnimation(int)
+
+/*
+Returns the animation at index and removes it from the animation group.
+
+Note: The ownership of the animation is transferred to the caller.
+
+See also removeAnimation(), addAnimation(), insertAnimation(), and indexOfAnimation().
+*/
 func (this *QAnimationGroup) TakeAnimation(index int) *QAbstractAnimation /*777 QAbstractAnimation **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup13takeAnimationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -202,6 +269,12 @@ func (this *QAnimationGroup) TakeAnimation(index int) *QAbstractAnimation /*777 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Removes and deletes all animations in this animation group, and resets the current time to 0.
+
+See also addAnimation() and removeAnimation().
+*/
 func (this *QAnimationGroup) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroup5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -211,6 +284,10 @@ func (this *QAnimationGroup) Clear() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QBitRef struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QBitRef) NewFromPointer(cthis unsafe.Pointer) *QBitRef {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!() const
+
+/*
+
+ */
 func (this *QBitRef) Operator_not() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBitRefntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QBitRef) Operator_not() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QBitRef & operator=(const QBitRef &)
+
+/*
+
+ */
 func (this *QBitRef) Operator_equal(val QBitRef_ITF) *QBitRef {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QBitRef_PTR() != nil {
@@ -91,6 +102,10 @@ func (this *QBitRef) Operator_equal(val QBitRef_ITF) *QBitRef {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QBitRef & operator=(_Bool)
+
+/*
+
+ */
 func (this *QBitRef) Operator_equal_1(val bool) *QBitRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitRefaSEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	qtrt.ErrPrint(err, rv)

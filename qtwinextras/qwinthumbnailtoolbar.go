@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QWinThumbnailToolBar struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QWinThumbnailToolBar) NewFromPointer(cthis unsafe.Pointer) *QWinThumbnail
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QWinThumbnailToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,12 @@ func (this *QWinThumbnailToolBar) MetaObject() *qtcore.QMetaObject /*777 const Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinThumbnailToolBar(QObject *)
+
+/*
+Constructs a QWinThumbnailToolBar with the specified parent.
+
+If parent is an instance of QWindow, it is automatically assigned as the thumbnail toolbar's window.
+*/
 func NewQWinThumbnailToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QWinThumbnailToolBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +104,12 @@ func NewQWinThumbnailToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QWinT
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinThumbnailToolBar(QObject *)
+
+/*
+Constructs a QWinThumbnailToolBar with the specified parent.
+
+If parent is an instance of QWindow, it is automatically assigned as the thumbnail toolbar's window.
+*/
 func NewQWinThumbnailToolBar__() *QWinThumbnailToolBar {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +124,10 @@ func NewQWinThumbnailToolBar__() *QWinThumbnailToolBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWinThumbnailToolBar()
+
+/*
+
+ */
 func DeleteQWinThumbnailToolBar(this *QWinThumbnailToolBar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -116,6 +139,10 @@ func DeleteQWinThumbnailToolBar(this *QWinThumbnailToolBar) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWindow(QWindow *)
+
+/*
+
+ */
 func (this *QWinThumbnailToolBar) SetWindow(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -129,6 +156,10 @@ func (this *QWinThumbnailToolBar) SetWindow(window qtgui.QWindow_ITF /*777 QWind
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWindow * window() const
+
+/*
+
+ */
 func (this *QWinThumbnailToolBar) Window() *qtgui.QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,6 +170,12 @@ func (this *QWinThumbnailToolBar) Window() *qtgui.QWindow /*777 QWindow **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addButton(QWinThumbnailToolButton *)
+
+/*
+Adds a button to the thumbnail toolbar.
+
+Note: The number of buttons is limited to 7.
+*/
 func (this *QWinThumbnailToolBar) AddButton(button QWinThumbnailToolButton_ITF /*777 QWinThumbnailToolButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QWinThumbnailToolButton_PTR() != nil {
@@ -152,6 +189,10 @@ func (this *QWinThumbnailToolBar) AddButton(button QWinThumbnailToolButton_ITF /
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeButton(QWinThumbnailToolButton *)
+
+/*
+Removes the button from the thumbnail toolbar.
+*/
 func (this *QWinThumbnailToolBar) RemoveButton(button QWinThumbnailToolButton_ITF /*777 QWinThumbnailToolButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QWinThumbnailToolButton_PTR() != nil {
@@ -165,6 +206,10 @@ func (this *QWinThumbnailToolBar) RemoveButton(button QWinThumbnailToolButton_IT
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
+
+/*
+
+ */
 func (this *QWinThumbnailToolBar) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +220,10 @@ func (this *QWinThumbnailToolBar) Count() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool iconicPixmapNotificationsEnabled() const
+
+/*
+
+ */
 func (this *QWinThumbnailToolBar) IconicPixmapNotificationsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar32iconicPixmapNotificationsEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,6 +234,10 @@ func (this *QWinThumbnailToolBar) IconicPixmapNotificationsEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconicPixmapNotificationsEnabled(_Bool)
+
+/*
+
+ */
 func (this *QWinThumbnailToolBar) SetIconicPixmapNotificationsEnabled(enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar35setIconicPixmapNotificationsEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	qtrt.ErrPrint(err, rv)
@@ -194,6 +247,10 @@ func (this *QWinThumbnailToolBar) SetIconicPixmapNotificationsEnabled(enabled bo
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap iconicThumbnailPixmap() const
+
+/*
+
+ */
 func (this *QWinThumbnailToolBar) IconicThumbnailPixmap() *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar21iconicThumbnailPixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -206,6 +263,10 @@ func (this *QWinThumbnailToolBar) IconicThumbnailPixmap() *qtgui.QPixmap /*123*/
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap iconicLivePreviewPixmap() const
+
+/*
+
+ */
 func (this *QWinThumbnailToolBar) IconicLivePreviewPixmap() *qtgui.QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinThumbnailToolBar23iconicLivePreviewPixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -218,6 +279,10 @@ func (this *QWinThumbnailToolBar) IconicLivePreviewPixmap() *qtgui.QPixmap /*123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Removes all buttons from the thumbnail toolbar.
+*/
 func (this *QWinThumbnailToolBar) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,6 +292,10 @@ func (this *QWinThumbnailToolBar) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconicThumbnailPixmap(const QPixmap &)
+
+/*
+
+ */
 func (this *QWinThumbnailToolBar) SetIconicThumbnailPixmap(arg0 qtgui.QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
@@ -240,6 +309,10 @@ func (this *QWinThumbnailToolBar) SetIconicThumbnailPixmap(arg0 qtgui.QPixmap_IT
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconicLivePreviewPixmap(const QPixmap &)
+
+/*
+
+ */
 func (this *QWinThumbnailToolBar) SetIconicLivePreviewPixmap(arg0 qtgui.QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
@@ -253,6 +326,14 @@ func (this *QWinThumbnailToolBar) SetIconicLivePreviewPixmap(arg0 qtgui.QPixmap_
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void iconicThumbnailPixmapRequested()
+
+/*
+This signal is emitted when the operating system requests a new iconic thumbnail pixmap, typically when the thumbnail is shown.
+
+This function was introduced in  Qt 5.4.
+
+See also iconicThumbnailPixmap.
+*/
 func (this *QWinThumbnailToolBar) IconicThumbnailPixmapRequested() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar30iconicThumbnailPixmapRequestedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -262,6 +343,14 @@ func (this *QWinThumbnailToolBar) IconicThumbnailPixmapRequested() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void iconicLivePreviewPixmapRequested()
+
+/*
+This signal is emitted when the operating system requests a new iconic live preview pixmap, typically when the user ALT-tabs to the application.
+
+This function was introduced in  Qt 5.4.
+
+See also iconicLivePreviewPixmap.
+*/
 func (this *QWinThumbnailToolBar) IconicLivePreviewPixmapRequested() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinThumbnailToolBar32iconicLivePreviewPixmapRequestedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

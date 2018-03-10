@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QGraphicsAnchor struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QGraphicsAnchor) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnchor {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGraphicsAnchor) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,16 @@ func (this *QGraphicsAnchor) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpacing(qreal)
+
+/*
+Sets the default horizontal and the default vertical spacing for the anchor layout to spacing.
+
+If an item is anchored with no spacing associated with the anchor, it will use the default spacing.
+
+QGraphicsAnchorLayout does not support negative spacings. Setting a negative value will unset the previous spacing and make the layout use the spacing provided by the current widget style.
+
+See also setHorizontalSpacing() and setVerticalSpacing().
+*/
 func (this *QGraphicsAnchor) SetSpacing(spacing float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchor10setSpacingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	qtrt.ErrPrint(err, rv)
@@ -84,6 +101,10 @@ func (this *QGraphicsAnchor) SetSpacing(spacing float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unsetSpacing()
+
+/*
+
+ */
 func (this *QGraphicsAnchor) UnsetSpacing() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchor12unsetSpacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +114,10 @@ func (this *QGraphicsAnchor) UnsetSpacing() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal spacing() const
+
+/*
+
+ */
 func (this *QGraphicsAnchor) Spacing() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor7spacingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -103,6 +128,10 @@ func (this *QGraphicsAnchor) Spacing() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSizePolicy(QSizePolicy::Policy)
+
+/*
+
+ */
 func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchor13setSizePolicyEN11QSizePolicy6PolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +141,10 @@ func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSizePolicy::Policy sizePolicy() const
+
+/*
+
+ */
 func (this *QGraphicsAnchor) SizePolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10sizePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -122,6 +155,10 @@ func (this *QGraphicsAnchor) SizePolicy() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsAnchor()
+
+/*
+
+ */
 func DeleteQGraphicsAnchor(this *QGraphicsAnchor) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)

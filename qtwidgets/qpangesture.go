@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QPanGesture struct {
 	*QGesture
 }
@@ -65,6 +68,10 @@ func (*QPanGesture) NewFromPointer(cthis unsafe.Pointer) *QPanGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QPanGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPanGesture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QPanGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPanGesture(QObject *)
+
+/*
+
+ */
 func NewQPanGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPanGesture {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQPanGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPanGesture {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPanGesture(QObject *)
+
+/*
+
+ */
 func NewQPanGesture__() *QPanGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQPanGesture__() *QPanGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPanGesture()
+
+/*
+
+ */
 func DeleteQPanGesture(this *QPanGesture) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPanGestureD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -116,6 +135,10 @@ func DeleteQPanGesture(this *QPanGesture) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF lastOffset() const
+
+/*
+
+ */
 func (this *QPanGesture) LastOffset() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPanGesture10lastOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +151,10 @@ func (this *QPanGesture) LastOffset() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF offset() const
+
+/*
+
+ */
 func (this *QPanGesture) Offset() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPanGesture6offsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +167,10 @@ func (this *QPanGesture) Offset() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF delta() const
+
+/*
+
+ */
 func (this *QPanGesture) Delta() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPanGesture5deltaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -152,6 +183,10 @@ func (this *QPanGesture) Delta() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal acceleration() const
+
+/*
+
+ */
 func (this *QPanGesture) Acceleration() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPanGesture12accelerationEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -162,6 +197,10 @@ func (this *QPanGesture) Acceleration() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastOffset(const QPointF &)
+
+/*
+
+ */
 func (this *QPanGesture) SetLastOffset(value qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QPointF_PTR() != nil {
@@ -175,6 +214,10 @@ func (this *QPanGesture) SetLastOffset(value qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOffset(const QPointF &)
+
+/*
+
+ */
 func (this *QPanGesture) SetOffset(value qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QPointF_PTR() != nil {
@@ -188,6 +231,10 @@ func (this *QPanGesture) SetOffset(value qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceleration(qreal)
+
+/*
+
+ */
 func (this *QPanGesture) SetAcceleration(value float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPanGesture15setAccelerationEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)

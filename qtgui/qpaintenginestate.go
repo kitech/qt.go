@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QPaintEngineState struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QPaintEngineState) NewFromPointer(cthis unsafe.Pointer) *QPaintEngineStat
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QPaintEngine::DirtyFlags state() const
+
+/*
+
+ */
 func (this *QPaintEngineState) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func (this *QPaintEngineState) State() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPen pen() const
+
+/*
+
+ */
 func (this *QPaintEngineState) Pen() *QPen /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState3penEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +99,10 @@ func (this *QPaintEngineState) Pen() *QPen /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QBrush brush() const
+
+/*
+
+ */
 func (this *QPaintEngineState) Brush() *QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState5brushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +115,10 @@ func (this *QPaintEngineState) Brush() *QBrush /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF brushOrigin() const
+
+/*
+
+ */
 func (this *QPaintEngineState) BrushOrigin() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState11brushOriginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +131,10 @@ func (this *QPaintEngineState) BrushOrigin() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QBrush backgroundBrush() const
+
+/*
+
+ */
 func (this *QPaintEngineState) BackgroundBrush() *QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState15backgroundBrushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,6 +147,10 @@ func (this *QPaintEngineState) BackgroundBrush() *QBrush /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::BGMode backgroundMode() const
+
+/*
+
+ */
 func (this *QPaintEngineState) BackgroundMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState14backgroundModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,6 +161,10 @@ func (this *QPaintEngineState) BackgroundMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont font() const
+
+/*
+
+ */
 func (this *QPaintEngineState) Font() *QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,6 +177,10 @@ func (this *QPaintEngineState) Font() *QFont /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QMatrix matrix() const
+
+/*
+
+ */
 func (this *QPaintEngineState) Matrix() *QMatrix /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,6 +193,10 @@ func (this *QPaintEngineState) Matrix() *QMatrix /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform transform() const
+
+/*
+
+ */
 func (this *QPaintEngineState) Transform() *QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState9transformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,6 +209,10 @@ func (this *QPaintEngineState) Transform() *QTransform /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ClipOperation clipOperation() const
+
+/*
+
+ */
 func (this *QPaintEngineState) ClipOperation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState13clipOperationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,6 +223,10 @@ func (this *QPaintEngineState) ClipOperation() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion clipRegion() const
+
+/*
+
+ */
 func (this *QPaintEngineState) ClipRegion() *QRegion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState10clipRegionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,6 +239,10 @@ func (this *QPaintEngineState) ClipRegion() *QRegion /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath clipPath() const
+
+/*
+
+ */
 func (this *QPaintEngineState) ClipPath() *QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState8clipPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -204,6 +255,10 @@ func (this *QPaintEngineState) ClipPath() *QPainterPath /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isClipEnabled() const
+
+/*
+
+ */
 func (this *QPaintEngineState) IsClipEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState13isClipEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,6 +269,10 @@ func (this *QPaintEngineState) IsClipEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QPainter::RenderHints renderHints() const
+
+/*
+
+ */
 func (this *QPaintEngineState) RenderHints() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState11renderHintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +283,10 @@ func (this *QPaintEngineState) RenderHints() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QPainter::CompositionMode compositionMode() const
+
+/*
+
+ */
 func (this *QPaintEngineState) CompositionMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState15compositionModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -234,6 +297,10 @@ func (this *QPaintEngineState) CompositionMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal opacity() const
+
+/*
+
+ */
 func (this *QPaintEngineState) Opacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState7opacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -244,6 +311,10 @@ func (this *QPaintEngineState) Opacity() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPainter * painter() const
+
+/*
+Returns the paint engine's painter.
+*/
 func (this *QPaintEngineState) Painter() *QPainter /*777 QPainter **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState7painterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -254,6 +325,10 @@ func (this *QPaintEngineState) Painter() *QPainter /*777 QPainter **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool brushNeedsResolving() const
+
+/*
+
+ */
 func (this *QPaintEngineState) BrushNeedsResolving() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState19brushNeedsResolvingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -264,6 +339,10 @@ func (this *QPaintEngineState) BrushNeedsResolving() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool penNeedsResolving() const
+
+/*
+
+ */
 func (this *QPaintEngineState) PenNeedsResolving() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPaintEngineState17penNeedsResolvingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

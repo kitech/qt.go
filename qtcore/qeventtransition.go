@@ -46,6 +46,9 @@ func (this *QEventTransition) InheritEvent(f func(e *QEvent /*777 QEvent **/) bo
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QEventTransition struct {
 	*QAbstractTransition
 }
@@ -78,6 +81,10 @@ func (*QEventTransition) NewFromPointer(cthis unsafe.Pointer) *QEventTransition 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QEventTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QEventTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +95,10 @@ func (this *QEventTransition) MetaObject() *QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QEventTransition(QState *)
+
+/*
+Constructs a new QEventTransition object with the given sourceState.
+*/
 func NewQEventTransition(sourceState QState_ITF /*777 QState **/) *QEventTransition {
 	var convArg0 unsafe.Pointer
 	if sourceState != nil && sourceState.QState_PTR() != nil {
@@ -104,6 +115,10 @@ func NewQEventTransition(sourceState QState_ITF /*777 QState **/) *QEventTransit
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QEventTransition(QState *)
+
+/*
+Constructs a new QEventTransition object with the given sourceState.
+*/
 func NewQEventTransition__() *QEventTransition {
 	// arg: 0, QState *=Pointer, QState=Record,
 	var convArg0 unsafe.Pointer
@@ -118,6 +133,10 @@ func NewQEventTransition__() *QEventTransition {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QEventTransition(QObject *, QEvent::Type, QState *)
+
+/*
+Constructs a new QEventTransition object with the given sourceState.
+*/
 func NewQEventTransition_1(object QObject_ITF /*777 QObject **/, type_ int, sourceState QState_ITF /*777 QState **/) *QEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -138,6 +157,10 @@ func NewQEventTransition_1(object QObject_ITF /*777 QObject **/, type_ int, sour
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QEventTransition(QObject *, QEvent::Type, QState *)
+
+/*
+Constructs a new QEventTransition object with the given sourceState.
+*/
 func NewQEventTransition_1_(object QObject_ITF /*777 QObject **/, type_ int) *QEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -156,6 +179,10 @@ func NewQEventTransition_1_(object QObject_ITF /*777 QObject **/, type_ int) *QE
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QEventTransition()
+
+/*
+
+ */
 func DeleteQEventTransition(this *QEventTransition) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -167,6 +194,14 @@ func DeleteQEventTransition(this *QEventTransition) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * eventSource() const
+
+/*
+Returns the event source associated with this event transition.
+
+Note: Getter function for property eventSource.
+
+See also setEventSource().
+*/
 func (this *QEventTransition) EventSource() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QEventTransition11eventSourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,6 +212,14 @@ func (this *QEventTransition) EventSource() *QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEventSource(QObject *)
+
+/*
+Sets the event source associated with this event transition to be the given object.
+
+Note: Setter function for property eventSource.
+
+See also eventSource().
+*/
 func (this *QEventTransition) SetEventSource(object QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -190,6 +233,14 @@ func (this *QEventTransition) SetEventSource(object QObject_ITF /*777 QObject **
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QEvent::Type eventType() const
+
+/*
+Returns the event type that this event transition is associated with.
+
+Note: Getter function for property eventType.
+
+See also setEventType().
+*/
 func (this *QEventTransition) EventType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QEventTransition9eventTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,6 +251,14 @@ func (this *QEventTransition) EventType() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEventType(QEvent::Type)
+
+/*
+Sets the event type that this event transition is associated with.
+
+Note: Setter function for property eventType.
+
+See also eventType().
+*/
 func (this *QEventTransition) SetEventType(type_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransition12setEventTypeEN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	qtrt.ErrPrint(err, rv)
@@ -209,6 +268,10 @@ func (this *QEventTransition) SetEventType(type_ int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventTest(QEvent *)
+
+/*
+Reimplemented from QAbstractTransition::eventTest().
+*/
 func (this *QEventTransition) EventTest(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -223,6 +286,10 @@ func (this *QEventTransition) EventTest(event QEvent_ITF /*777 QEvent **/) bool 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onTransition(QEvent *)
+
+/*
+Reimplemented from QAbstractTransition::onTransition().
+*/
 func (this *QEventTransition) OnTransition(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -236,6 +303,10 @@ func (this *QEventTransition) OnTransition(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QEventTransition) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {

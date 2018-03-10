@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlExpression struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QQmlExpression) NewFromPointer(cthis unsafe.Pointer) *QQmlExpression {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQmlExpression) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,12 @@ func (this *QQmlExpression) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression()
+
+/*
+Create an invalid QQmlExpression.
+
+As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
+*/
 func NewQQmlExpression() *QQmlExpression {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +100,12 @@ func NewQQmlExpression() *QQmlExpression {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(QQmlContext *, QObject *, const QString &, QObject *)
+
+/*
+Create an invalid QQmlExpression.
+
+As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
+*/
 func NewQQmlExpression_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlContext_PTR() != nil {
@@ -113,6 +132,12 @@ func NewQQmlExpression_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(QQmlContext *, QObject *, const QString &, QObject *)
+
+/*
+Create an invalid QQmlExpression.
+
+As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
+*/
 func NewQQmlExpression_1_(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlContext_PTR() != nil {
@@ -137,6 +162,12 @@ func NewQQmlExpression_1_(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcor
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(const QQmlScriptString &, QQmlContext *, QObject *, QObject *)
+
+/*
+Create an invalid QQmlExpression.
+
+As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
+*/
 func NewQQmlExpression_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
@@ -165,6 +196,12 @@ func NewQQmlExpression_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 Q
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(const QQmlScriptString &, QQmlContext *, QObject *, QObject *)
+
+/*
+Create an invalid QQmlExpression.
+
+As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
+*/
 func NewQQmlExpression_2_(arg0 QQmlScriptString_ITF) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
@@ -187,6 +224,12 @@ func NewQQmlExpression_2_(arg0 QQmlScriptString_ITF) *QQmlExpression {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(const QQmlScriptString &, QQmlContext *, QObject *, QObject *)
+
+/*
+Create an invalid QQmlExpression.
+
+As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
+*/
 func NewQQmlExpression_2_1(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
@@ -211,6 +254,12 @@ func NewQQmlExpression_2_1(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(const QQmlScriptString &, QQmlContext *, QObject *, QObject *)
+
+/*
+Create an invalid QQmlExpression.
+
+As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
+*/
 func NewQQmlExpression_2_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
@@ -237,6 +286,10 @@ func NewQQmlExpression_2_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlExpression()
+
+/*
+
+ */
 func DeleteQQmlExpression(this *QQmlExpression) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -248,6 +301,10 @@ func DeleteQQmlExpression(this *QQmlExpression) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlEngine * engine() const
+
+/*
+Returns the QQmlEngine this expression is associated with, or 0 if there is no association or the QQmlEngine has been destroyed.
+*/
 func (this *QQmlExpression) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,6 +315,10 @@ func (this *QQmlExpression) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlContext * context() const
+
+/*
+Returns the QQmlContext this expression is associated with, or 0 if there is no association or the QQmlContext has been destroyed.
+*/
 func (this *QQmlExpression) Context() *QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression7contextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,6 +329,12 @@ func (this *QQmlExpression) Context() *QQmlContext /*777 QQmlContext **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString expression() const
+
+/*
+Returns the expression string.
+
+See also setExpression().
+*/
 func (this *QQmlExpression) Expression() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10expressionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -281,6 +348,12 @@ func (this *QQmlExpression) Expression() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExpression(const QString &)
+
+/*
+Set the expression to expression.
+
+See also expression().
+*/
 func (this *QQmlExpression) SetExpression(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -292,6 +365,12 @@ func (this *QQmlExpression) SetExpression(arg0 string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool notifyOnValueChanged() const
+
+/*
+Returns true if the valueChanged() signal is emitted when the expression's evaluated value changes.
+
+See also setNotifyOnValueChanged().
+*/
 func (this *QQmlExpression) NotifyOnValueChanged() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression20notifyOnValueChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -302,6 +381,16 @@ func (this *QQmlExpression) NotifyOnValueChanged() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNotifyOnValueChanged(_Bool)
+
+/*
+Sets whether the valueChanged() signal is emitted when the expression's evaluated value changes.
+
+If notifyOnChange is true, the QQmlExpression will monitor properties involved in the expression's evaluation, and emit QQmlExpression::valueChanged() if they have changed. This allows an application to ensure that any value associated with the result of the expression remains up to date.
+
+If notifyOnChange is false (default), the QQmlExpression will not montitor properties involved in the expression's evaluation, and QQmlExpression::valueChanged() will never be emitted. This is more efficient if an application wants a "one off" evaluation of the expression.
+
+See also notifyOnValueChanged().
+*/
 func (this *QQmlExpression) SetNotifyOnValueChanged(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression23setNotifyOnValueChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -311,6 +400,10 @@ func (this *QQmlExpression) SetNotifyOnValueChanged(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString sourceFile() const
+
+/*
+Returns the source file URL for this expression. The source location must have been previously set by calling setSourceLocation().
+*/
 func (this *QQmlExpression) SourceFile() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10sourceFileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -324,6 +417,10 @@ func (this *QQmlExpression) SourceFile() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lineNumber() const
+
+/*
+Returns the source file line number for this expression. The source location must have been previously set by calling setSourceLocation().
+*/
 func (this *QQmlExpression) LineNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10lineNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -334,6 +431,10 @@ func (this *QQmlExpression) LineNumber() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int columnNumber() const
+
+/*
+Returns the source file column number for this expression. The source location must have been previously set by calling setSourceLocation().
+*/
 func (this *QQmlExpression) ColumnNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression12columnNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,6 +445,10 @@ func (this *QQmlExpression) ColumnNumber() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSourceLocation(const QString &, int, int)
+
+/*
+Set the location of this expression to line and column of url. This information is used by the script engine.
+*/
 func (this *QQmlExpression) SetSourceLocation(fileName string, line int, column int) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -355,6 +460,10 @@ func (this *QQmlExpression) SetSourceLocation(fileName string, line int, column 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSourceLocation(const QString &, int, int)
+
+/*
+Set the location of this expression to line and column of url. This information is used by the script engine.
+*/
 func (this *QQmlExpression) SetSourceLocation__(fileName string, line int) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -368,6 +477,12 @@ func (this *QQmlExpression) SetSourceLocation__(fileName string, line int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * scopeObject() const
+
+/*
+Returns the expression's scope object, if provided, otherwise 0.
+
+In addition to data provided by the expression's QQmlContext, the scope object's properties are also in scope during the expression's evaluation.
+*/
 func (this *QQmlExpression) ScopeObject() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression11scopeObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -378,6 +493,12 @@ func (this *QQmlExpression) ScopeObject() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasError() const
+
+/*
+Returns true if the last call to evaluate() resulted in an error, otherwise false.
+
+See also error() and clearError().
+*/
 func (this *QQmlExpression) HasError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression8hasErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -388,6 +509,12 @@ func (this *QQmlExpression) HasError() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearError()
+
+/*
+Clear any expression errors. Calls to hasError() following this will return false.
+
+See also hasError() and error().
+*/
 func (this *QQmlExpression) ClearError() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression10clearErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -397,6 +524,12 @@ func (this *QQmlExpression) ClearError() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlError error() const
+
+/*
+Return any error from the last call to evaluate(). If there was no error, this returns an invalid QQmlError instance.
+
+See also hasError() and clearError().
+*/
 func (this *QQmlExpression) Error() *QQmlError /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -409,6 +542,14 @@ func (this *QQmlExpression) Error() *QQmlError /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant evaluate(_Bool *)
+
+/*
+Evaulates the expression, returning the result of the evaluation, or an invalid QVariant if the expression is invalid or has an error.
+
+valueIsUndefined is set to true if the expression resulted in an undefined value.
+
+See also hasError() and error().
+*/
 func (this *QQmlExpression) Evaluate(valueIsUndefined *bool) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression8evaluateEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), valueIsUndefined)
 	qtrt.ErrPrint(err, rv)
@@ -421,6 +562,14 @@ func (this *QQmlExpression) Evaluate(valueIsUndefined *bool) *qtcore.QVariant /*
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant evaluate(_Bool *)
+
+/*
+Evaulates the expression, returning the result of the evaluation, or an invalid QVariant if the expression is invalid or has an error.
+
+valueIsUndefined is set to true if the expression resulted in an undefined value.
+
+See also hasError() and error().
+*/
 func (this *QQmlExpression) Evaluate__() *qtcore.QVariant /*123*/ {
 	// arg: 0, bool *=Pointer, =Invalid,
 	var valueIsUndefined unsafe.Pointer
@@ -435,6 +584,10 @@ func (this *QQmlExpression) Evaluate__() *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged()
+
+/*
+Emitted each time the expression value changes from the last time it was evaluated. The expression must have been evaluated at least once (by calling QQmlExpression::evaluate()) before this signal will be emitted.
+*/
 func (this *QQmlExpression) ValueChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression12valueChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

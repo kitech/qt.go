@@ -48,6 +48,9 @@ func (this *QFontDialog) InheritEventFilter(f func(object *qtcore.QObject /*777 
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
+/*
+
+ */
 type QFontDialog struct {
 	*QDialog
 }
@@ -80,6 +83,10 @@ func (*QFontDialog) NewFromPointer(cthis unsafe.Pointer) *QFontDialog {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QFontDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFontDialog10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +97,18 @@ func (this *QFontDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFontDialog(QWidget *)
+
+/*
+Constructs a standard font dialog.
+
+Use setCurrentFont() to set the initial font attributes.
+
+The parent parameter is passed to the QDialog constructor.
+
+This function was introduced in  Qt 4.5.
+
+See also getFont().
+*/
 func NewQFontDialog(parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -106,6 +125,18 @@ func NewQFontDialog(parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFontDialog(QWidget *)
+
+/*
+Constructs a standard font dialog.
+
+Use setCurrentFont() to set the initial font attributes.
+
+The parent parameter is passed to the QDialog constructor.
+
+This function was introduced in  Qt 4.5.
+
+See also getFont().
+*/
 func NewQFontDialog__() *QFontDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -120,6 +151,18 @@ func NewQFontDialog__() *QFontDialog {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFontDialog(const QFont &, QWidget *)
+
+/*
+Constructs a standard font dialog.
+
+Use setCurrentFont() to set the initial font attributes.
+
+The parent parameter is passed to the QDialog constructor.
+
+This function was introduced in  Qt 4.5.
+
+See also getFont().
+*/
 func NewQFontDialog_1(initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
@@ -140,6 +183,18 @@ func NewQFontDialog_1(initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFontDialog(const QFont &, QWidget *)
+
+/*
+Constructs a standard font dialog.
+
+Use setCurrentFont() to set the initial font attributes.
+
+The parent parameter is passed to the QDialog constructor.
+
+This function was introduced in  Qt 4.5.
+
+See also getFont().
+*/
 func NewQFontDialog_1_(initial qtgui.QFont_ITF) *QFontDialog {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
@@ -158,6 +213,10 @@ func NewQFontDialog_1_(initial qtgui.QFont_ITF) *QFontDialog {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFontDialog()
+
+/*
+
+ */
 func DeleteQFontDialog(this *QFontDialog) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialogD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -169,6 +228,16 @@ func DeleteQFontDialog(this *QFontDialog) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentFont(const QFont &)
+
+/*
+Sets the font highlighted in the QFontDialog to the given font.
+
+This function was introduced in  Qt 4.5.
+
+Note: Setter function for property currentFont.
+
+See also currentFont() and selectedFont().
+*/
 func (this *QFontDialog) SetCurrentFont(font qtgui.QFont_ITF) {
 	var convArg0 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -182,6 +251,16 @@ func (this *QFontDialog) SetCurrentFont(font qtgui.QFont_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont currentFont() const
+
+/*
+Returns the current font.
+
+This function was introduced in  Qt 4.5.
+
+Note: Getter function for property currentFont.
+
+See also setCurrentFont() and selectedFont().
+*/
 func (this *QFontDialog) CurrentFont() *qtgui.QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFontDialog11currentFontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,6 +273,12 @@ func (this *QFontDialog) CurrentFont() *qtgui.QFont /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont selectedFont() const
+
+/*
+Returns the font that the user selected by clicking the OK or equivalent button.
+
+Note: This font is not always the same as the font held by the currentFont property since the user can choose different fonts before finally selecting the one to use.
+*/
 func (this *QFontDialog) SelectedFont() *qtgui.QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFontDialog12selectedFontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -206,6 +291,12 @@ func (this *QFontDialog) SelectedFont() *qtgui.QFont /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(enum QFontDialog::FontDialogOption, _Bool)
+
+/*
+Sets the given option to be enabled if on is true; otherwise, clears the given option.
+
+See also options and testOption().
+*/
 func (this *QFontDialog) SetOption(option int, on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog9setOptionENS_16FontDialogOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	qtrt.ErrPrint(err, rv)
@@ -215,6 +306,12 @@ func (this *QFontDialog) SetOption(option int, on bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(enum QFontDialog::FontDialogOption, _Bool)
+
+/*
+Sets the given option to be enabled if on is true; otherwise, clears the given option.
+
+See also options and testOption().
+*/
 func (this *QFontDialog) SetOption__(option int) {
 	// arg: 1, bool=Bool, =Invalid,
 	on := true
@@ -226,6 +323,12 @@ func (this *QFontDialog) SetOption__(option int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(enum QFontDialog::FontDialogOption) const
+
+/*
+Returns true if the given option is enabled; otherwise, returns false.
+
+See also options and setOption().
+*/
 func (this *QFontDialog) TestOption(option int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFontDialog10testOptionENS_16FontDialogOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	qtrt.ErrPrint(err, rv)
@@ -236,6 +339,10 @@ func (this *QFontDialog) TestOption(option int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOptions(QFontDialog::FontDialogOptions)
+
+/*
+
+ */
 func (this *QFontDialog) SetOptions(options int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog10setOptionsE6QFlagsINS_16FontDialogOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
 	qtrt.ErrPrint(err, rv)
@@ -245,6 +352,10 @@ func (this *QFontDialog) SetOptions(options int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFontDialog::FontDialogOptions options() const
+
+/*
+
+ */
 func (this *QFontDialog) Options() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFontDialog7optionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,6 +366,16 @@ func (this *QFontDialog) Options() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void open(QObject *, const char *)
+
+/*
+This is an overloaded function.
+
+Opens the dialog and connects its fontSelected() signal to the slot specified by receiver and member.
+
+The signal will be disconnected from the slot when the dialog is closed.
+
+This function was introduced in  Qt 4.5.
+*/
 func (this *QFontDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, member string) {
 	var convArg0 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -270,6 +391,10 @@ func (this *QFontDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, mem
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setVisible(_Bool)
+
+/*
+Reimplemented from QWidget::setVisible().
+*/
 func (this *QFontDialog) SetVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	qtrt.ErrPrint(err, rv)
@@ -279,6 +404,39 @@ func (this *QFontDialog) SetVisible(visible bool) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(_Bool *, QWidget *)
+
+/*
+Executes a modal font dialog and returns a font.
+
+If the user clicks OK, the selected font is returned. If the user clicks Cancel, the initial font is returned.
+
+The dialog is constructed with the given parent and the options specified in options. title is shown as the window title of the dialog and initial is the initially selected font. If the ok parameter is not-null, the value it refers to is set to true if the user clicks OK, and set to false if the user clicks Cancel.
+
+Examples:
+
+
+  bool ok;
+  QFont font = QFontDialog::getFont(&ok, QFont("Times", 12), this);
+  if (ok) {
+      // font is set to the font the user selected
+  } else {
+      // the user canceled the dialog; font is set to the initial
+      // value, in this case Times, 12.
+  }
+
+
+
+The dialog can also be used to set a widget's font directly:
+
+
+  myWidget.setFont(QFontDialog::getFont(0, myWidget.font()));
+
+
+
+In this example, if the user clicks OK the font they chose will be used, and if they click Cancel the original font is used.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
+*/
 func (this *QFontDialog) GetFont(ok *bool, parent QWidget_ITF /*777 QWidget **/) *qtgui.QFont /*123*/ {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -300,6 +458,39 @@ func QFontDialog_GetFont(ok *bool, parent QWidget_ITF /*777 QWidget **/) *qtgui.
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(_Bool *, QWidget *)
+
+/*
+Executes a modal font dialog and returns a font.
+
+If the user clicks OK, the selected font is returned. If the user clicks Cancel, the initial font is returned.
+
+The dialog is constructed with the given parent and the options specified in options. title is shown as the window title of the dialog and initial is the initially selected font. If the ok parameter is not-null, the value it refers to is set to true if the user clicks OK, and set to false if the user clicks Cancel.
+
+Examples:
+
+
+  bool ok;
+  QFont font = QFontDialog::getFont(&ok, QFont("Times", 12), this);
+  if (ok) {
+      // font is set to the font the user selected
+  } else {
+      // the user canceled the dialog; font is set to the initial
+      // value, in this case Times, 12.
+  }
+
+
+
+The dialog can also be used to set a widget's font directly:
+
+
+  myWidget.setFont(QFontDialog::getFont(0, myWidget.font()));
+
+
+
+In this example, if the user clicks OK the font they chose will be used, and if they click Cancel the original font is used.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
+*/
 func (this *QFontDialog) GetFont__(ok *bool) *qtgui.QFont /*123*/ {
 	// arg: 1, QWidget *=Pointer, QWidget=Record,
 	var convArg1 unsafe.Pointer
@@ -314,6 +505,39 @@ func (this *QFontDialog) GetFont__(ok *bool) *qtgui.QFont /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(_Bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
+
+/*
+Executes a modal font dialog and returns a font.
+
+If the user clicks OK, the selected font is returned. If the user clicks Cancel, the initial font is returned.
+
+The dialog is constructed with the given parent and the options specified in options. title is shown as the window title of the dialog and initial is the initially selected font. If the ok parameter is not-null, the value it refers to is set to true if the user clicks OK, and set to false if the user clicks Cancel.
+
+Examples:
+
+
+  bool ok;
+  QFont font = QFontDialog::getFont(&ok, QFont("Times", 12), this);
+  if (ok) {
+      // font is set to the font the user selected
+  } else {
+      // the user canceled the dialog; font is set to the initial
+      // value, in this case Times, 12.
+  }
+
+
+
+The dialog can also be used to set a widget's font directly:
+
+
+  myWidget.setFont(QFontDialog::getFont(0, myWidget.font()));
+
+
+
+In this example, if the user clicks OK the font they chose will be used, and if they click Cancel the original font is used.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
+*/
 func (this *QFontDialog) GetFont_1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/, title string, options int) *qtgui.QFont /*123*/ {
 	var convArg1 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
@@ -341,6 +565,39 @@ func QFontDialog_GetFont_1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(_Bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
+
+/*
+Executes a modal font dialog and returns a font.
+
+If the user clicks OK, the selected font is returned. If the user clicks Cancel, the initial font is returned.
+
+The dialog is constructed with the given parent and the options specified in options. title is shown as the window title of the dialog and initial is the initially selected font. If the ok parameter is not-null, the value it refers to is set to true if the user clicks OK, and set to false if the user clicks Cancel.
+
+Examples:
+
+
+  bool ok;
+  QFont font = QFontDialog::getFont(&ok, QFont("Times", 12), this);
+  if (ok) {
+      // font is set to the font the user selected
+  } else {
+      // the user canceled the dialog; font is set to the initial
+      // value, in this case Times, 12.
+  }
+
+
+
+The dialog can also be used to set a widget's font directly:
+
+
+  myWidget.setFont(QFontDialog::getFont(0, myWidget.font()));
+
+
+
+In this example, if the user clicks OK the font they chose will be used, and if they click Cancel the original font is used.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
+*/
 func (this *QFontDialog) GetFont_1_(ok *bool, initial qtgui.QFont_ITF) *qtgui.QFont /*123*/ {
 	var convArg1 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
@@ -363,6 +620,39 @@ func (this *QFontDialog) GetFont_1_(ok *bool, initial qtgui.QFont_ITF) *qtgui.QF
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(_Bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
+
+/*
+Executes a modal font dialog and returns a font.
+
+If the user clicks OK, the selected font is returned. If the user clicks Cancel, the initial font is returned.
+
+The dialog is constructed with the given parent and the options specified in options. title is shown as the window title of the dialog and initial is the initially selected font. If the ok parameter is not-null, the value it refers to is set to true if the user clicks OK, and set to false if the user clicks Cancel.
+
+Examples:
+
+
+  bool ok;
+  QFont font = QFontDialog::getFont(&ok, QFont("Times", 12), this);
+  if (ok) {
+      // font is set to the font the user selected
+  } else {
+      // the user canceled the dialog; font is set to the initial
+      // value, in this case Times, 12.
+  }
+
+
+
+The dialog can also be used to set a widget's font directly:
+
+
+  myWidget.setFont(QFontDialog::getFont(0, myWidget.font()));
+
+
+
+In this example, if the user clicks OK the font they chose will be used, and if they click Cancel the original font is used.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
+*/
 func (this *QFontDialog) GetFont_1_1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/) *qtgui.QFont /*123*/ {
 	var convArg1 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
@@ -387,6 +677,39 @@ func (this *QFontDialog) GetFont_1_1(ok *bool, initial qtgui.QFont_ITF, parent Q
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(_Bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
+
+/*
+Executes a modal font dialog and returns a font.
+
+If the user clicks OK, the selected font is returned. If the user clicks Cancel, the initial font is returned.
+
+The dialog is constructed with the given parent and the options specified in options. title is shown as the window title of the dialog and initial is the initially selected font. If the ok parameter is not-null, the value it refers to is set to true if the user clicks OK, and set to false if the user clicks Cancel.
+
+Examples:
+
+
+  bool ok;
+  QFont font = QFontDialog::getFont(&ok, QFont("Times", 12), this);
+  if (ok) {
+      // font is set to the font the user selected
+  } else {
+      // the user canceled the dialog; font is set to the initial
+      // value, in this case Times, 12.
+  }
+
+
+
+The dialog can also be used to set a widget's font directly:
+
+
+  myWidget.setFont(QFontDialog::getFont(0, myWidget.font()));
+
+
+
+In this example, if the user clicks OK the font they chose will be used, and if they click Cancel the original font is used.
+
+Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
+*/
 func (this *QFontDialog) GetFont_1_2(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/, title string) *qtgui.QFont /*123*/ {
 	var convArg1 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
@@ -411,6 +734,18 @@ func (this *QFontDialog) GetFont_1_2(ok *bool, initial qtgui.QFont_ITF, parent Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentFontChanged(const QFont &)
+
+/*
+This signal is emitted when the current font is changed. The new font is specified in font.
+
+The signal is emitted while a user is selecting a font. Ultimately, the chosen font may differ from the font currently selected.
+
+This function was introduced in  Qt 4.5.
+
+Note: Notifier signal for property currentFont.
+
+See also currentFont, fontSelected(), and selectedFont().
+*/
 func (this *QFontDialog) CurrentFontChanged(font qtgui.QFont_ITF) {
 	var convArg0 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -424,6 +759,16 @@ func (this *QFontDialog) CurrentFontChanged(font qtgui.QFont_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void fontSelected(const QFont &)
+
+/*
+This signal is emitted when a font has been selected. The selected font is specified in font.
+
+The signal is only emitted when a user has chosen the final font to be used. It is not emitted while the user is changing the current font in the font dialog.
+
+This function was introduced in  Qt 4.5.
+
+See also selectedFont(), currentFontChanged(), and currentFont.
+*/
 func (this *QFontDialog) FontSelected(font qtgui.QFont_ITF) {
 	var convArg0 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -437,6 +782,10 @@ func (this *QFontDialog) FontSelected(font qtgui.QFont_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QFontDialog) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -450,6 +799,14 @@ func (this *QFontDialog) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void done(int)
+
+/*
+Reimplemented from QDialog::done().
+
+Closes the dialog and sets its result code to result. If this dialog is shown with exec(), done() causes the local event loop to finish, and exec() to return result.
+
+See also QDialog::done().
+*/
 func (this *QFontDialog) Done(result int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog4doneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), result)
 	qtrt.ErrPrint(err, rv)
@@ -459,6 +816,10 @@ func (this *QFontDialog) Done(result int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+
+ */
 func (this *QFontDialog) EventFilter(object qtcore.QObject_ITF /*777 QObject **/, event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -473,13 +834,28 @@ func (this *QFontDialog) EventFilter(object qtcore.QObject_ITF /*777 QObject **/
 	return rv != 0
 }
 
+/*
+
+
+ */
 type QFontDialog__FontDialogOption = int
 
+//
 const QFontDialog__NoButtons QFontDialog__FontDialogOption = 1
+
+//
 const QFontDialog__DontUseNativeDialog QFontDialog__FontDialogOption = 2
+
+//
 const QFontDialog__ScalableFonts QFontDialog__FontDialogOption = 4
+
+//
 const QFontDialog__NonScalableFonts QFontDialog__FontDialogOption = 8
+
+//
 const QFontDialog__MonospacedFonts QFontDialog__FontDialogOption = 16
+
+//
 const QFontDialog__ProportionalFonts QFontDialog__FontDialogOption = 32
 
 //  body block end

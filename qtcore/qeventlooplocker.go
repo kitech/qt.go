@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QEventLoopLocker struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QEventLoopLocker) NewFromPointer(cthis unsafe.Pointer) *QEventLoopLocker 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QEventLoopLocker()
+
+/*
+
+ */
 func NewQEventLoopLocker() *QEventLoopLocker {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQEventLoopLocker() *QEventLoopLocker {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QEventLoopLocker(QEventLoop *)
+
+/*
+
+ */
 func NewQEventLoopLocker_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoopLocker {
 	var convArg0 unsafe.Pointer
 	if loop != nil && loop.QEventLoop_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQEventLoopLocker_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoop
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QEventLoopLocker(QThread *)
+
+/*
+
+ */
 func NewQEventLoopLocker_2(thread QThread_ITF /*777 QThread **/) *QEventLoopLocker {
 	var convArg0 unsafe.Pointer
 	if thread != nil && thread.QThread_PTR() != nil {
@@ -109,6 +124,10 @@ func NewQEventLoopLocker_2(thread QThread_ITF /*777 QThread **/) *QEventLoopLock
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QEventLoopLocker()
+
+/*
+
+ */
 func DeleteQEventLoopLocker(this *QEventLoopLocker) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)

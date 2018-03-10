@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QQuickTextDocument struct {
 	*qtcore.QObject
 }
@@ -67,6 +70,10 @@ func (*QQuickTextDocument) NewFromPointer(cthis unsafe.Pointer) *QQuickTextDocum
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQuickTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QQuickTextDocument10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func (this *QQuickTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickTextDocument(QQuickItem *)
+
+/*
+Constructs a QQuickTextDocument object with parent as the parent object.
+*/
 func NewQQuickTextDocument(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickTextDocument {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQuickItem_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQQuickTextDocument(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickTe
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextDocument * textDocument() const
+
+/*
+Returns a pointer to the QTextDocument object.
+*/
 func (this *QQuickTextDocument) TextDocument() *qtgui.QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QQuickTextDocument12textDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

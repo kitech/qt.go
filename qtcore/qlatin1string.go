@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QLatin1String struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QLatin1String) NewFromPointer(cthis unsafe.Pointer) *QLatin1String {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLatin1String()
+
+/*
+
+ */
 func NewQLatin1String() *QLatin1String {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1StringC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQLatin1String() *QLatin1String {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLatin1String(const char *)
+
+/*
+
+ */
 func NewQLatin1String_1(s string) *QLatin1String {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -91,6 +102,10 @@ func NewQLatin1String_1(s string) *QLatin1String {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLatin1String(const char *, const char *)
+
+/*
+
+ */
 func NewQLatin1String_2(f string, l string) *QLatin1String {
 	var convArg0 = qtrt.CString(f)
 	defer qtrt.FreeMem(convArg0)
@@ -107,6 +122,10 @@ func NewQLatin1String_2(f string, l string) *QLatin1String {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLatin1String(const char *, int)
+
+/*
+
+ */
 func NewQLatin1String_3(s string, sz int) *QLatin1String {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -121,6 +140,10 @@ func NewQLatin1String_3(s string, sz int) *QLatin1String {
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLatin1String(const QByteArray &)
+
+/*
+
+ */
 func NewQLatin1String_4(s QByteArray_ITF) *QLatin1String {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
@@ -137,6 +160,10 @@ func NewQLatin1String_4(s QByteArray_ITF) *QLatin1String {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const char * latin1() const
+
+/*
+
+ */
 func (this *QLatin1String) Latin1() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String6latin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,6 +174,24 @@ func (this *QLatin1String) Latin1() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int size() const
+
+/*
+Returns the number of characters in this string.
+
+The last character in the string is at position size() - 1.
+
+Example:
+
+
+  QString str = "World";
+  int n = str.size();         // n == 5
+  str.data()[0];              // returns 'W'
+  str.data()[4];              // returns 'd'
+
+
+
+See also isEmpty() and resize().
+*/
 func (this *QLatin1String) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,6 +202,28 @@ func (this *QLatin1String) Size() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const char * data() const
+
+/*
+Returns a pointer to the data stored in the QString. The pointer can be used to access and modify the characters that compose the string.
+
+Unlike constData() and unicode(), the returned data is always '\0'-terminated.
+
+Example:
+
+
+  QString str = "Hello world";
+  QChar *data = str.data();
+  while (!data->isNull()) {
+      qDebug() << data->unicode();
+      ++data;
+  }
+
+
+
+Note that the pointer remains valid only as long as the string is not modified by other means. For read-only access, constData() is faster because it never causes a deep copy to occur.
+
+See also constData() and operator[]().
+*/
 func (this *QLatin1String) Data() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,6 +234,23 @@ func (this *QLatin1String) Data() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if this string is null; otherwise returns false.
+
+Example:
+
+
+  QString().isNull();             // returns true
+  QString("").isNull();           // returns false
+  QString("abc").isNull();        // returns false
+
+
+
+Qt makes a distinction between null strings and empty strings for historical reasons. For most applications, what matters is whether or not a string contains any data, and this can be determined using the isEmpty() function.
+
+See also isEmpty().
+*/
 func (this *QLatin1String) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,6 +261,22 @@ func (this *QLatin1String) IsNull() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns true if the string has no characters; otherwise returns false.
+
+Example:
+
+
+  QString().isEmpty();            // returns true
+  QString("").isEmpty();          // returns true
+  QString("x").isEmpty();         // returns false
+  QString("abc").isEmpty();       // returns false
+
+
+
+See also size().
+*/
 func (this *QLatin1String) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,6 +287,14 @@ func (this *QLatin1String) IsEmpty() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] QLatin1Char at(int) const
+
+/*
+Returns the character at the given index position in the string.
+
+The position must be a valid index position in the string (i.e., 0 <= position < size()).
+
+See also operator[]().
+*/
 func (this *QLatin1String) At(i int) *QLatin1Char /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -199,6 +307,10 @@ func (this *QLatin1String) At(i int) *QLatin1Char /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] QLatin1Char operator[](int) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_get_index(i int) *QLatin1Char /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -211,6 +323,18 @@ func (this *QLatin1String) Operator_get_index(i int) *QLatin1Char /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] QLatin1Char front() const
+
+/*
+Returns the first character in the string. Same as at(0).
+
+This function is provided for STL compatibility.
+
+Warning: Calling this function on an empty string constitutes undefined behavior.
+
+This function was introduced in  Qt 5.10.
+
+See also back(), at(), and operator[]().
+*/
 func (this *QLatin1String) Front() *QLatin1Char /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String5frontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,6 +347,18 @@ func (this *QLatin1String) Front() *QLatin1Char /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] QLatin1Char back() const
+
+/*
+Returns the last character in the string. Same as at(size() - 1).
+
+This function is provided for STL compatibility.
+
+Warning: Calling this function on an empty string constitutes undefined behavior.
+
+This function was introduced in  Qt 5.10.
+
+See also front(), at(), and operator[]().
+*/
 func (this *QLatin1String) Back() *QLatin1Char /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String4backEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -235,6 +371,21 @@ func (this *QLatin1String) Back() *QLatin1Char /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
 func (this *QLatin1String) StartsWith(s QStringView_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
@@ -249,6 +400,21 @@ func (this *QLatin1String) StartsWith(s QStringView_ITF /*123*/, cs int) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
 func (this *QLatin1String) StartsWith__(s QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
@@ -265,6 +431,21 @@ func (this *QLatin1String) StartsWith__(s QStringView_ITF /*123*/) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
 func (this *QLatin1String) StartsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
@@ -279,6 +460,21 @@ func (this *QLatin1String) StartsWith_1(s QLatin1String_ITF /*123*/, cs int) boo
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
 func (this *QLatin1String) StartsWith_1_(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
@@ -295,6 +491,21 @@ func (this *QLatin1String) StartsWith_1_(s QLatin1String_ITF /*123*/) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QChar) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
 func (this *QLatin1String) StartsWith_2(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
@@ -309,6 +520,21 @@ func (this *QLatin1String) StartsWith_2(c QChar_ITF /*123*/) bool {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QChar, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
 func (this *QLatin1String) StartsWith_3(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
@@ -323,6 +549,21 @@ func (this *QLatin1String) StartsWith_3(c QChar_ITF /*123*/, cs int) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
 func (this *QLatin1String) EndsWith(s QStringView_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
@@ -337,6 +578,21 @@ func (this *QLatin1String) EndsWith(s QStringView_ITF /*123*/, cs int) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
 func (this *QLatin1String) EndsWith__(s QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
@@ -353,6 +609,21 @@ func (this *QLatin1String) EndsWith__(s QStringView_ITF /*123*/) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
 func (this *QLatin1String) EndsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
@@ -367,6 +638,21 @@ func (this *QLatin1String) EndsWith_1(s QLatin1String_ITF /*123*/, cs int) bool 
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
 func (this *QLatin1String) EndsWith_1_(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
@@ -383,6 +669,21 @@ func (this *QLatin1String) EndsWith_1_(s QLatin1String_ITF /*123*/) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QChar) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
 func (this *QLatin1String) EndsWith_2(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
@@ -397,6 +698,21 @@ func (this *QLatin1String) EndsWith_2(c QChar_ITF /*123*/) bool {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QChar, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
 func (this *QLatin1String) EndsWith_3(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
@@ -411,46 +727,91 @@ func (this *QLatin1String) EndsWith_3(c QChar_ITF /*123*/, cs int) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QLatin1String::const_iterator begin() const
+
+/*
+Returns an STL-style iterator pointing to the first character in the string.
+
+See also constBegin() and end().
+*/
 func (this *QLatin1String) Begin() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return string(rv) // 222
+	return qtrt.GoStringI(rv)
 }
 
 // /usr/include/qt/QtCore/qstring.h:142
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QLatin1String::const_iterator cbegin() const
+
+/*
+Returns a const STL-style iterator pointing to the first character in the string.
+
+This function was introduced in  Qt 5.0.
+
+See also begin() and cend().
+*/
 func (this *QLatin1String) Cbegin() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String6cbeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return string(rv) // 222
+	return qtrt.GoStringI(rv)
 }
 
 // /usr/include/qt/QtCore/qstring.h:143
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QLatin1String::const_iterator end() const
+
+/*
+Returns an STL-style iterator pointing to the imaginary character after the last character in the string.
+
+See also begin() and constEnd().
+*/
 func (this *QLatin1String) End() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return string(rv) // 222
+	return qtrt.GoStringI(rv)
 }
 
 // /usr/include/qt/QtCore/qstring.h:144
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QLatin1String::const_iterator cend() const
+
+/*
+Returns a const STL-style iterator pointing to the imaginary character after the last character in the list.
+
+This function was introduced in  Qt 5.0.
+
+See also cbegin() and end().
+*/
 func (this *QLatin1String) Cend() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String4cendEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return string(rv) // 222
+	return qtrt.GoStringI(rv)
 }
 
 // /usr/include/qt/QtCore/qstring.h:154
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QLatin1String mid(int) const
+
+/*
+Returns a string that contains n characters of this string, starting at the specified position index.
+
+Returns a null string if the position index exceeds the length of the string. If there are less than n characters available in the string starting at the given position, or if n is -1 (default), the function returns all characters that are available from the specified position.
+
+Example:
+
+
+  QString x = "Nine pineapples";
+  QString y = x.mid(5, 4);            // y == "pine"
+  QString z = x.mid(5);               // z == "pineapples"
+
+
+
+See also left(), right(), chopped(), chop(), and truncate().
+*/
 func (this *QLatin1String) Mid(pos int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String3midEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	qtrt.ErrPrint(err, rv)
@@ -463,6 +824,23 @@ func (this *QLatin1String) Mid(pos int) *QLatin1String /*123*/ {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QLatin1String mid(int, int) const
+
+/*
+Returns a string that contains n characters of this string, starting at the specified position index.
+
+Returns a null string if the position index exceeds the length of the string. If there are less than n characters available in the string starting at the given position, or if n is -1 (default), the function returns all characters that are available from the specified position.
+
+Example:
+
+
+  QString x = "Nine pineapples";
+  QString y = x.mid(5, 4);            // y == "pine"
+  QString z = x.mid(5);               // z == "pineapples"
+
+
+
+See also left(), right(), chopped(), chop(), and truncate().
+*/
 func (this *QLatin1String) Mid_1(pos int, n int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, n)
 	qtrt.ErrPrint(err, rv)
@@ -475,6 +853,20 @@ func (this *QLatin1String) Mid_1(pos int, n int) *QLatin1String /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QLatin1String left(int) const
+
+/*
+Returns a substring that contains the n leftmost characters of the string.
+
+The entire string is returned if n is greater than or equal to size(), or less than zero.
+
+
+  QString x = "Pineapple";
+  QString y = x.left(4);      // y == "Pine"
+
+
+
+See also right(), mid(), startsWith(), chopped(), chop(), and truncate().
+*/
 func (this *QLatin1String) Left(n int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String4leftEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
@@ -487,6 +879,20 @@ func (this *QLatin1String) Left(n int) *QLatin1String /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QLatin1String right(int) const
+
+/*
+Returns a substring that contains the n rightmost characters of the string.
+
+The entire string is returned if n is greater than or equal to size(), or less than zero.
+
+
+  QString x = "Pineapple";
+  QString y = x.right(5);      // y == "apple"
+
+
+
+See also left(), mid(), endsWith(), chopped(), chop(), and truncate().
+*/
 func (this *QLatin1String) Right(n int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String5rightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
@@ -499,6 +905,16 @@ func (this *QLatin1String) Right(n int) *QLatin1String /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QLatin1String chopped(int) const
+
+/*
+Returns a substring that contains the size() - len leftmost characters of this string.
+
+Note: The behavior is undefined if len is negative or greater than size().
+
+This function was introduced in  Qt 5.10.
+
+See also endsWith(), left(), right(), mid(), chop(), and truncate().
+*/
 func (this *QLatin1String) Chopped(n int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String7choppedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
@@ -511,6 +927,25 @@ func (this *QLatin1String) Chopped(n int) *QLatin1String /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void chop(int)
+
+/*
+Removes n characters from the end of the string.
+
+If n is greater than or equal to size(), the result is an empty string; if n is negative, it is equivalent to passing zero.
+
+Example:
+
+
+  QString str("LOGOUT\r\n");
+  str.chop(2);
+  // str == "LOGOUT"
+
+
+
+If you want to remove characters from the beginning of the string, use remove() instead.
+
+See also truncate(), resize(), remove(), and QStringRef::chop().
+*/
 func (this *QLatin1String) Chop(n int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1String4chopEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
@@ -520,6 +955,25 @@ func (this *QLatin1String) Chop(n int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void truncate(int)
+
+/*
+Truncates the string at the given position index.
+
+If the specified position index is beyond the end of the string, nothing happens.
+
+Example:
+
+
+  QString str = "Vladivostok";
+  str.truncate(4);
+  // str == "Vlad"
+
+
+
+If position is negative, it is equivalent to passing zero.
+
+See also chop(), resize(), left(), and QStringRef::truncate().
+*/
 func (this *QLatin1String) Truncate(n int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1String8truncateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
@@ -529,6 +983,25 @@ func (this *QLatin1String) Truncate(n int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QLatin1String trimmed() const
+
+/*
+Returns a string that has whitespace removed from the start and the end.
+
+Whitespace means any character for which QChar::isSpace() returns true. This includes the ASCII characters '\t', '\n', '\v', '\f', '\r', and ' '.
+
+Example:
+
+
+  QString str = "  lots\t of\nwhitespace\r\n ";
+  str = str.trimmed();
+  // str == "lots\t of\nwhitespace"
+
+
+
+Unlike simplified(), trimmed() leaves internal whitespace alone.
+
+See also simplified().
+*/
 func (this *QLatin1String) Trimmed() *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String7trimmedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -541,6 +1014,10 @@ func (this *QLatin1String) Trimmed() *QLatin1String /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QString &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_equal_equal(s string) bool {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -553,6 +1030,10 @@ func (this *QLatin1String) Operator_equal_equal(s string) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_equal_equal_1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -565,6 +1046,10 @@ func (this *QLatin1String) Operator_equal_equal_1(s string) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QByteArray &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_equal_equal_2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
@@ -579,6 +1064,10 @@ func (this *QLatin1String) Operator_equal_equal_2(s QByteArray_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QString &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_not_equal(s string) bool {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -591,6 +1080,10 @@ func (this *QLatin1String) Operator_not_equal(s string) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_not_equal_1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -603,6 +1096,10 @@ func (this *QLatin1String) Operator_not_equal_1(s string) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QByteArray &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_not_equal_2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
@@ -617,6 +1114,10 @@ func (this *QLatin1String) Operator_not_equal_2(s QByteArray_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const QString &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_greater_than(s string) bool {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -629,6 +1130,10 @@ func (this *QLatin1String) Operator_greater_than(s string) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const char *) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_greater_than_1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -641,6 +1146,10 @@ func (this *QLatin1String) Operator_greater_than_1(s string) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const QByteArray &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_greater_than_2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
@@ -655,6 +1164,10 @@ func (this *QLatin1String) Operator_greater_than_2(s QByteArray_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const QString &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_less_than(s string) bool {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -667,6 +1180,10 @@ func (this *QLatin1String) Operator_less_than(s string) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const char *) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_less_than_1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -679,6 +1196,10 @@ func (this *QLatin1String) Operator_less_than_1(s string) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const QByteArray &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_less_than_2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
@@ -693,6 +1214,10 @@ func (this *QLatin1String) Operator_less_than_2(s QByteArray_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const QString &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_greater_than_equal(s string) bool {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -705,6 +1230,10 @@ func (this *QLatin1String) Operator_greater_than_equal(s string) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const char *) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_greater_than_equal_1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -717,6 +1246,10 @@ func (this *QLatin1String) Operator_greater_than_equal_1(s string) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const QByteArray &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_greater_than_equal_2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
@@ -731,6 +1264,10 @@ func (this *QLatin1String) Operator_greater_than_equal_2(s QByteArray_ITF) bool 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const QString &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_less_than_equal(s string) bool {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -743,6 +1280,10 @@ func (this *QLatin1String) Operator_less_than_equal(s string) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const char *) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_less_than_equal_1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -755,6 +1296,10 @@ func (this *QLatin1String) Operator_less_than_equal_1(s string) bool {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const QByteArray &) const
+
+/*
+
+ */
 func (this *QLatin1String) Operator_less_than_equal_2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {

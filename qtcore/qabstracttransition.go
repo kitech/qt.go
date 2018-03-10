@@ -46,6 +46,9 @@ func (this *QAbstractTransition) InheritEvent(f func(e *QEvent /*777 QEvent **/)
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QAbstractTransition struct {
 	*QObject
 }
@@ -78,6 +81,10 @@ func (*QAbstractTransition) NewFromPointer(cthis unsafe.Pointer) *QAbstractTrans
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAbstractTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +95,10 @@ func (this *QAbstractTransition) MetaObject() *QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractTransition(QState *)
+
+/*
+Constructs a new QAbstractTransition object with the given sourceState.
+*/
 func NewQAbstractTransition(sourceState QState_ITF /*777 QState **/) *QAbstractTransition {
 	var convArg0 unsafe.Pointer
 	if sourceState != nil && sourceState.QState_PTR() != nil {
@@ -104,6 +115,10 @@ func NewQAbstractTransition(sourceState QState_ITF /*777 QState **/) *QAbstractT
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractTransition(QState *)
+
+/*
+Constructs a new QAbstractTransition object with the given sourceState.
+*/
 func NewQAbstractTransition__() *QAbstractTransition {
 	// arg: 0, QState *=Pointer, QState=Record,
 	var convArg0 unsafe.Pointer
@@ -118,6 +133,10 @@ func NewQAbstractTransition__() *QAbstractTransition {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractTransition()
+
+/*
+
+ */
 func DeleteQAbstractTransition(this *QAbstractTransition) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransitionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -129,6 +148,12 @@ func DeleteQAbstractTransition(this *QAbstractTransition) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QState * sourceState() const
+
+/*
+Returns the source state of this transition, or 0 if this transition has no source state.
+
+Note: Getter function for property sourceState.
+*/
 func (this *QAbstractTransition) SourceState() *QState /*777 QState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition11sourceStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,6 +164,14 @@ func (this *QAbstractTransition) SourceState() *QState /*777 QState **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractState * targetState() const
+
+/*
+Returns the target state of this transition, or 0 if the transition has no target.
+
+Note: Getter function for property targetState.
+
+See also setTargetState().
+*/
 func (this *QAbstractTransition) TargetState() *QAbstractState /*777 QAbstractState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition11targetStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -149,6 +182,14 @@ func (this *QAbstractTransition) TargetState() *QAbstractState /*777 QAbstractSt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTargetState(QAbstractState *)
+
+/*
+Sets the target state of this transition.
+
+Note: Setter function for property targetState.
+
+See also targetState().
+*/
 func (this *QAbstractTransition) SetTargetState(target QAbstractState_ITF /*777 QAbstractState **/) {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QAbstractState_PTR() != nil {
@@ -162,6 +203,14 @@ func (this *QAbstractTransition) SetTargetState(target QAbstractState_ITF /*777 
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractTransition::TransitionType transitionType() const
+
+/*
+Returns the type of the transition.
+
+Note: Getter function for property transitionType.
+
+See also setTransitionType().
+*/
 func (this *QAbstractTransition) TransitionType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition14transitionTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -172,6 +221,14 @@ func (this *QAbstractTransition) TransitionType() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransitionType(enum QAbstractTransition::TransitionType)
+
+/*
+Sets the type of the transition to type.
+
+Note: Setter function for property transitionType.
+
+See also transitionType().
+*/
 func (this *QAbstractTransition) SetTransitionType(type_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition17setTransitionTypeENS_14TransitionTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	qtrt.ErrPrint(err, rv)
@@ -181,6 +238,10 @@ func (this *QAbstractTransition) SetTransitionType(type_ int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStateMachine * machine() const
+
+/*
+Returns the state machine that this transition is part of, or 0 if the transition is not part of a state machine.
+*/
 func (this *QAbstractTransition) Machine() *QStateMachine /*777 QStateMachine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractTransition7machineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -191,6 +252,12 @@ func (this *QAbstractTransition) Machine() *QStateMachine /*777 QStateMachine **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addAnimation(QAbstractAnimation *)
+
+/*
+Adds the given animation to this transition. The transition does not take ownership of the animation.
+
+See also removeAnimation() and animations().
+*/
 func (this *QAbstractTransition) AddAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
 	var convArg0 unsafe.Pointer
 	if animation != nil && animation.QAbstractAnimation_PTR() != nil {
@@ -204,6 +271,12 @@ func (this *QAbstractTransition) AddAnimation(animation QAbstractAnimation_ITF /
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAnimation(QAbstractAnimation *)
+
+/*
+Removes the given animation from this transition.
+
+See also addAnimation().
+*/
 func (this *QAbstractTransition) RemoveAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
 	var convArg0 unsafe.Pointer
 	if animation != nil && animation.QAbstractAnimation_PTR() != nil {
@@ -217,6 +290,10 @@ func (this *QAbstractTransition) RemoveAnimation(animation QAbstractAnimation_IT
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [1] bool eventTest(QEvent *)
+
+/*
+This function is called to determine whether the given event should cause this transition to trigger. Reimplement this function and return true if the event should trigger the transition, otherwise return false.
+*/
 func (this *QAbstractTransition) EventTest(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -231,6 +308,10 @@ func (this *QAbstractTransition) EventTest(event QEvent_ITF /*777 QEvent **/) bo
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void onTransition(QEvent *)
+
+/*
+This function is called when the transition is triggered. The given event is what caused the transition to trigger. Reimplement this function to perform custom processing when the transition is triggered.
+*/
 func (this *QAbstractTransition) OnTransition(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -244,6 +325,10 @@ func (this *QAbstractTransition) OnTransition(event QEvent_ITF /*777 QEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QAbstractTransition) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -254,9 +339,20 @@ func (this *QAbstractTransition) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
+/*
+This enum specifies the kind of transition. By default, the type is an external transition.
+
+
+
+See also QAbstractTransition::transitionType.
+
+*/
 type QAbstractTransition__TransitionType = int
 
+// Any state that is the source state of a transition (which is not a target-less transition) is left, and re-entered when necessary.
 const QAbstractTransition__ExternalTransition QAbstractTransition__TransitionType = 0
+
+// If the target state of a transition is a sub-state of a compound state, and that compound state is the source state, an internal transition will not leave the source state.
 const QAbstractTransition__InternalTransition QAbstractTransition__TransitionType = 1
 
 //  body block end

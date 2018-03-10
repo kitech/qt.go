@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QDnsDomainNameRecord struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QDnsDomainNameRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsDomainNam
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsDomainNameRecord()
+
+/*
+
+ */
 func NewQDnsDomainNameRecord() *QDnsDomainNameRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDnsDomainNameRecordC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQDnsDomainNameRecord() *QDnsDomainNameRecord {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDnsDomainNameRecord & operator=(QDnsDomainNameRecord &&)
+
+/*
+
+ */
 func (this *QDnsDomainNameRecord) Operator_equal(other unsafe.Pointer /*333*/) *QDnsDomainNameRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDnsDomainNameRecordaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +101,10 @@ func (this *QDnsDomainNameRecord) Operator_equal(other unsafe.Pointer /*333*/) *
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDnsDomainNameRecord & operator=(const QDnsDomainNameRecord &)
+
+/*
+
+ */
 func (this *QDnsDomainNameRecord) Operator_equal_1(other QDnsDomainNameRecord_ITF) *QDnsDomainNameRecord {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDnsDomainNameRecord_PTR() != nil {
@@ -106,6 +121,10 @@ func (this *QDnsDomainNameRecord) Operator_equal_1(other QDnsDomainNameRecord_IT
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDnsDomainNameRecord()
+
+/*
+
+ */
 func DeleteQDnsDomainNameRecord(this *QDnsDomainNameRecord) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDnsDomainNameRecordD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -117,6 +136,10 @@ func DeleteQDnsDomainNameRecord(this *QDnsDomainNameRecord) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsDomainNameRecord &)
+
+/*
+
+ */
 func (this *QDnsDomainNameRecord) Swap(other QDnsDomainNameRecord_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDnsDomainNameRecord_PTR() != nil {
@@ -130,6 +153,10 @@ func (this *QDnsDomainNameRecord) Swap(other QDnsDomainNameRecord_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
+
+/*
+
+ */
 func (this *QDnsDomainNameRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,16 +170,25 @@ func (this *QDnsDomainNameRecord) Name() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] quint32 timeToLive() const
+
+/*
+
+ */
 func (this *QDnsDomainNameRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString value() const
+
+/*
+
+ */
 func (this *QDnsDomainNameRecord) Value() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

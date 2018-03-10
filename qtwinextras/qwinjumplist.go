@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QWinJumpList struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QWinJumpList) NewFromPointer(cthis unsafe.Pointer) *QWinJumpList {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QWinJumpList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QWinJumpList10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QWinJumpList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinJumpList(QObject *)
+
+/*
+Constructs a QWinJumpList with the parent object parent.
+*/
 func NewQWinJumpList(parent qtcore.QObject_ITF /*777 QObject **/) *QWinJumpList {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQWinJumpList(parent qtcore.QObject_ITF /*777 QObject **/) *QWinJumpList 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinJumpList(QObject *)
+
+/*
+Constructs a QWinJumpList with the parent object parent.
+*/
 func NewQWinJumpList__() *QWinJumpList {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQWinJumpList__() *QWinJumpList {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWinJumpList()
+
+/*
+
+ */
 func DeleteQWinJumpList(this *QWinJumpList) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpListD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -116,6 +135,10 @@ func DeleteQWinJumpList(this *QWinJumpList) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString identifier() const
+
+/*
+
+ */
 func (this *QWinJumpList) Identifier() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QWinJumpList10identifierEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,6 +152,10 @@ func (this *QWinJumpList) Identifier() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIdentifier(const QString &)
+
+/*
+
+ */
 func (this *QWinJumpList) SetIdentifier(identifier string) {
 	var tmpArg0 = qtcore.NewQString_5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
@@ -140,6 +167,10 @@ func (this *QWinJumpList) SetIdentifier(identifier string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWinJumpListCategory * recent() const
+
+/*
+Returns the recent items category in the jump list.
+*/
 func (this *QWinJumpList) Recent() *QWinJumpListCategory /*777 QWinJumpListCategory **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QWinJumpList6recentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,6 +181,10 @@ func (this *QWinJumpList) Recent() *QWinJumpListCategory /*777 QWinJumpListCateg
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWinJumpListCategory * frequent() const
+
+/*
+Returns the frequent items category in the jump list.
+*/
 func (this *QWinJumpList) Frequent() *QWinJumpListCategory /*777 QWinJumpListCategory **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QWinJumpList8frequentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,6 +195,10 @@ func (this *QWinJumpList) Frequent() *QWinJumpListCategory /*777 QWinJumpListCat
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWinJumpListCategory * tasks() const
+
+/*
+Returns the tasks category in the jump list.
+*/
 func (this *QWinJumpList) Tasks() *QWinJumpListCategory /*777 QWinJumpListCategory **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QWinJumpList5tasksEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,6 +209,10 @@ func (this *QWinJumpList) Tasks() *QWinJumpListCategory /*777 QWinJumpListCatego
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addCategory(QWinJumpListCategory *)
+
+/*
+Adds a custom category to the jump list.
+*/
 func (this *QWinJumpList) AddCategory(category QWinJumpListCategory_ITF /*777 QWinJumpListCategory **/) {
 	var convArg0 unsafe.Pointer
 	if category != nil && category.QWinJumpListCategory_PTR() != nil {
@@ -183,6 +226,12 @@ func (this *QWinJumpList) AddCategory(category QWinJumpListCategory_ITF /*777 QW
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the jump list.
+
+See also QWinJumpListCategory::clear().
+*/
 func (this *QWinJumpList) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpList5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

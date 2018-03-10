@@ -38,6 +38,9 @@ func (this *QDesktopWidget) InheritResizeEvent(f func(e *qtgui.QResizeEvent /*77
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
+/*
+
+ */
 type QDesktopWidget struct {
 	*QWidget
 }
@@ -70,6 +73,10 @@ func (*QDesktopWidget) NewFromPointer(cthis unsafe.Pointer) *QDesktopWidget {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QDesktopWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +87,10 @@ func (this *QDesktopWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDesktopWidget()
+
+/*
+
+ */
 func NewQDesktopWidget() *QDesktopWidget {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidgetC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +103,10 @@ func NewQDesktopWidget() *QDesktopWidget {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDesktopWidget()
+
+/*
+
+ */
 func DeleteQDesktopWidget(this *QDesktopWidget) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidgetD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -103,6 +118,10 @@ func DeleteQDesktopWidget(this *QDesktopWidget) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVirtualDesktop() const
+
+/*
+
+ */
 func (this *QDesktopWidget) IsVirtualDesktop() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget16isVirtualDesktopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -113,6 +132,10 @@ func (this *QDesktopWidget) IsVirtualDesktop() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int numScreens() const
+
+/*
+
+ */
 func (this *QDesktopWidget) NumScreens() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget10numScreensEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -123,6 +146,10 @@ func (this *QDesktopWidget) NumScreens() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int screenCount() const
+
+/*
+
+ */
 func (this *QDesktopWidget) ScreenCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget11screenCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +160,10 @@ func (this *QDesktopWidget) ScreenCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int primaryScreen() const
+
+/*
+
+ */
 func (this *QDesktopWidget) PrimaryScreen() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget13primaryScreenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +174,12 @@ func (this *QDesktopWidget) PrimaryScreen() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int screenNumber(const QWidget *) const
+
+/*
+Returns the index of the screen that contains the largest part of widget, or -1 if the widget not on a screen.
+
+See also primaryScreen.
+*/
 func (this *QDesktopWidget) ScreenNumber(widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -157,6 +194,12 @@ func (this *QDesktopWidget) ScreenNumber(widget QWidget_ITF /*777 const QWidget 
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int screenNumber(const QWidget *) const
+
+/*
+Returns the index of the screen that contains the largest part of widget, or -1 if the widget not on a screen.
+
+See also primaryScreen.
+*/
 func (this *QDesktopWidget) ScreenNumber__() int {
 	// arg: 0, const QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -169,6 +212,12 @@ func (this *QDesktopWidget) ScreenNumber__() int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int screenNumber(const QPoint &) const
+
+/*
+Returns the index of the screen that contains the largest part of widget, or -1 if the widget not on a screen.
+
+See also primaryScreen.
+*/
 func (this *QDesktopWidget) ScreenNumber_1(arg0 qtcore.QPoint_ITF) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
@@ -183,6 +232,14 @@ func (this *QDesktopWidget) ScreenNumber_1(arg0 qtcore.QPoint_ITF) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * screen(int)
+
+/*
+Returns a widget that represents the screen with index screen (a value of -1 means the default screen).
+
+If the system uses a virtual desktop, the returned widget will have the geometry of the entire virtual desktop; i.e., bounding every screen.
+
+See also primaryScreen, screenCount, and virtualDesktop.
+*/
 func (this *QDesktopWidget) Screen(screen int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidget6screenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +250,14 @@ func (this *QDesktopWidget) Screen(screen int) *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * screen(int)
+
+/*
+Returns a widget that represents the screen with index screen (a value of -1 means the default screen).
+
+If the system uses a virtual desktop, the returned widget will have the geometry of the entire virtual desktop; i.e., bounding every screen.
+
+See also primaryScreen, screenCount, and virtualDesktop.
+*/
 func (this *QDesktopWidget) Screen__() *QWidget /*777 QWidget **/ {
 	// arg: 0, int=Int, =Invalid,
 	screen := int(-1)
@@ -205,6 +270,12 @@ func (this *QDesktopWidget) Screen__() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] const QRect screenGeometry(int) const
+
+/*
+Returns the geometry of the screen with index screen. The default screen is used if screen is -1.
+
+See also screenNumber().
+*/
 func (this *QDesktopWidget) ScreenGeometry(screen int) *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget14screenGeometryEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
 	qtrt.ErrPrint(err, rv)
@@ -217,6 +288,12 @@ func (this *QDesktopWidget) ScreenGeometry(screen int) *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] const QRect screenGeometry(int) const
+
+/*
+Returns the geometry of the screen with index screen. The default screen is used if screen is -1.
+
+See also screenNumber().
+*/
 func (this *QDesktopWidget) ScreenGeometry__() *qtcore.QRect /*123*/ {
 	// arg: 0, int=Int, =Invalid,
 	screen := int(-1)
@@ -231,6 +308,12 @@ func (this *QDesktopWidget) ScreenGeometry__() *qtcore.QRect /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] const QRect screenGeometry(const QWidget *) const
+
+/*
+Returns the geometry of the screen with index screen. The default screen is used if screen is -1.
+
+See also screenNumber().
+*/
 func (this *QDesktopWidget) ScreenGeometry_1(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -247,6 +330,12 @@ func (this *QDesktopWidget) ScreenGeometry_1(widget QWidget_ITF /*777 const QWid
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [16] const QRect screenGeometry(const QPoint &) const
+
+/*
+Returns the geometry of the screen with index screen. The default screen is used if screen is -1.
+
+See also screenNumber().
+*/
 func (this *QDesktopWidget) ScreenGeometry_2(point qtcore.QPoint_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
@@ -263,6 +352,12 @@ func (this *QDesktopWidget) ScreenGeometry_2(point qtcore.QPoint_ITF) *qtcore.QR
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] const QRect availableGeometry(int) const
+
+/*
+Returns the available geometry of the screen with index screen. What is available will be subrect of screenGeometry() based on what the platform decides is available (for example excludes the dock and menu bar on macOS, or the task bar on Windows). The default screen is used if screen is -1.
+
+See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
+*/
 func (this *QDesktopWidget) AvailableGeometry(screen int) *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget17availableGeometryEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
 	qtrt.ErrPrint(err, rv)
@@ -275,6 +370,12 @@ func (this *QDesktopWidget) AvailableGeometry(screen int) *qtcore.QRect /*123*/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] const QRect availableGeometry(int) const
+
+/*
+Returns the available geometry of the screen with index screen. What is available will be subrect of screenGeometry() based on what the platform decides is available (for example excludes the dock and menu bar on macOS, or the task bar on Windows). The default screen is used if screen is -1.
+
+See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
+*/
 func (this *QDesktopWidget) AvailableGeometry__() *qtcore.QRect /*123*/ {
 	// arg: 0, int=Int, =Invalid,
 	screen := int(-1)
@@ -289,6 +390,12 @@ func (this *QDesktopWidget) AvailableGeometry__() *qtcore.QRect /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] const QRect availableGeometry(const QWidget *) const
+
+/*
+Returns the available geometry of the screen with index screen. What is available will be subrect of screenGeometry() based on what the platform decides is available (for example excludes the dock and menu bar on macOS, or the task bar on Windows). The default screen is used if screen is -1.
+
+See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
+*/
 func (this *QDesktopWidget) AvailableGeometry_1(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -305,6 +412,12 @@ func (this *QDesktopWidget) AvailableGeometry_1(widget QWidget_ITF /*777 const Q
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [16] const QRect availableGeometry(const QPoint &) const
+
+/*
+Returns the available geometry of the screen with index screen. What is available will be subrect of screenGeometry() based on what the platform decides is available (for example excludes the dock and menu bar on macOS, or the task bar on Windows). The default screen is used if screen is -1.
+
+See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
+*/
 func (this *QDesktopWidget) AvailableGeometry_2(point qtcore.QPoint_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
@@ -321,6 +434,10 @@ func (this *QDesktopWidget) AvailableGeometry_2(point qtcore.QPoint_ITF) *qtcore
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resized(int)
+
+/*
+This signal is emitted when the size of screen changes.
+*/
 func (this *QDesktopWidget) Resized(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidget7resizedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -330,6 +447,10 @@ func (this *QDesktopWidget) Resized(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void workAreaResized(int)
+
+/*
+This signal is emitted when the work area available on screen changes.
+*/
 func (this *QDesktopWidget) WorkAreaResized(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidget15workAreaResizedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -339,6 +460,16 @@ func (this *QDesktopWidget) WorkAreaResized(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void screenCountChanged(int)
+
+/*
+This signal is emitted when the number of screens changes to newCount.
+
+This function was introduced in  Qt 4.6.
+
+Note: Notifier signal for property screenCount.
+
+See also screenCount.
+*/
 func (this *QDesktopWidget) ScreenCountChanged(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidget18screenCountChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -348,6 +479,18 @@ func (this *QDesktopWidget) ScreenCountChanged(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void primaryScreenChanged()
+
+/*
+This signal is emitted whenever the primary screen changes.
+
+Note: This doesn't mean the QDesktopWidget::primaryScreen index will necessarily be different, but now it will refer to the new primary screen.
+
+This function was introduced in  Qt 5.6.
+
+Note: Notifier signal for property primaryScreen.
+
+See also primaryScreen and screenGeometry().
+*/
 func (this *QDesktopWidget) PrimaryScreenChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidget20primaryScreenChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -357,6 +500,10 @@ func (this *QDesktopWidget) PrimaryScreenChanged() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+*/
 func (this *QDesktopWidget) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QResizeEvent_PTR() != nil {

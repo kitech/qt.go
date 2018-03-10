@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QMessageAuthenticationCode struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QMessageAuthenticationCode) NewFromPointer(cthis unsafe.Pointer) *QMessag
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageAuthenticationCode(QCryptographicHash::Algorithm, const QByteArray &)
+
+/*
+Constructs an object that can be used to create a cryptographic hash from data using method method and key key.
+*/
 func NewQMessageAuthenticationCode(method int, key QByteArray_ITF) *QMessageAuthenticationCode {
 	var convArg1 unsafe.Pointer
 	if key != nil && key.QByteArray_PTR() != nil {
@@ -83,6 +90,10 @@ func NewQMessageAuthenticationCode(method int, key QByteArray_ITF) *QMessageAuth
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageAuthenticationCode(QCryptographicHash::Algorithm, const QByteArray &)
+
+/*
+Constructs an object that can be used to create a cryptographic hash from data using method method and key key.
+*/
 func NewQMessageAuthenticationCode__(method int) *QMessageAuthenticationCode {
 	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record,
 	var convArg1 = NewQByteArray()
@@ -97,6 +108,10 @@ func NewQMessageAuthenticationCode__(method int) *QMessageAuthenticationCode {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QMessageAuthenticationCode()
+
+/*
+
+ */
 func DeleteQMessageAuthenticationCode(this *QMessageAuthenticationCode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -108,6 +123,10 @@ func DeleteQMessageAuthenticationCode(this *QMessageAuthenticationCode) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reset()
+
+/*
+Resets message data. Calling this method doesn't affect the key.
+*/
 func (this *QMessageAuthenticationCode) Reset() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -117,6 +136,10 @@ func (this *QMessageAuthenticationCode) Reset() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKey(const QByteArray &)
+
+/*
+Sets secret key. Calling this method automatically resets the object state.
+*/
 func (this *QMessageAuthenticationCode) SetKey(key QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QByteArray_PTR() != nil {
@@ -130,6 +153,10 @@ func (this *QMessageAuthenticationCode) SetKey(key QByteArray_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addData(const char *, int)
+
+/*
+Adds the first length chars of data to the message.
+*/
 func (this *QMessageAuthenticationCode) AddData(data string, length int) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -141,6 +168,10 @@ func (this *QMessageAuthenticationCode) AddData(data string, length int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addData(const QByteArray &)
+
+/*
+Adds the first length chars of data to the message.
+*/
 func (this *QMessageAuthenticationCode) AddData_1(data QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -154,6 +185,10 @@ func (this *QMessageAuthenticationCode) AddData_1(data QByteArray_ITF) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool addData(QIODevice *)
+
+/*
+Adds the first length chars of data to the message.
+*/
 func (this *QMessageAuthenticationCode) AddData_2(device QIODevice_ITF /*777 QIODevice **/) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -168,6 +203,12 @@ func (this *QMessageAuthenticationCode) AddData_2(device QIODevice_ITF /*777 QIO
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray result() const
+
+/*
+Returns the final authentication code.
+
+See also QByteArray::toHex().
+*/
 func (this *QMessageAuthenticationCode) Result() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QMessageAuthenticationCode6resultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,6 +221,10 @@ func (this *QMessageAuthenticationCode) Result() *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray hash(const QByteArray &, const QByteArray &, QCryptographicHash::Algorithm)
+
+/*
+Returns the authentication code for the message message using the key key and the method method.
+*/
 func (this *QMessageAuthenticationCode) Hash(message QByteArray_ITF, key QByteArray_ITF, method int) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if message != nil && message.QByteArray_PTR() != nil {

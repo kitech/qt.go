@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGSimpleRectNode struct {
 	*QSGGeometryNode
 }
@@ -67,6 +70,10 @@ func (*QSGSimpleRectNode) NewFromPointer(cthis unsafe.Pointer) *QSGSimpleRectNod
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGSimpleRectNode(const QRectF &, const QColor &)
+
+/*
+Constructs a QSGSimpleRectNode instance which is spanning rect with the color color.
+*/
 func NewQSGSimpleRectNode(rect qtcore.QRectF_ITF, color qtgui.QColor_ITF) *QSGSimpleRectNode {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -87,6 +94,10 @@ func NewQSGSimpleRectNode(rect qtcore.QRectF_ITF, color qtgui.QColor_ITF) *QSGSi
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSGSimpleRectNode()
+
+/*
+Constructs a QSGSimpleRectNode instance which is spanning rect with the color color.
+*/
 func NewQSGSimpleRectNode_1() *QSGSimpleRectNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +110,12 @@ func NewQSGSimpleRectNode_1() *QSGSimpleRectNode {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
+
+/*
+Sets the rectangle of this rect node to rect.
+
+See also rect().
+*/
 func (this *QSGSimpleRectNode) SetRect(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -112,6 +129,12 @@ func (this *QSGSimpleRectNode) SetRect(rect qtcore.QRectF_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRect(qreal, qreal, qreal, qreal)
+
+/*
+Sets the rectangle of this rect node to rect.
+
+See also rect().
+*/
 func (this *QSGSimpleRectNode) SetRect_1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +144,12 @@ func (this *QSGSimpleRectNode) SetRect_1(x float64, y float64, w float64, h floa
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF rect() const
+
+/*
+Returns the rectangle that this rect node covers.
+
+See also setRect().
+*/
 func (this *QSGSimpleRectNode) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGSimpleRectNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +162,12 @@ func (this *QSGSimpleRectNode) Rect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
+
+/*
+Sets the color of this rectangle to color. The default color will be white.
+
+See also color().
+*/
 func (this *QSGSimpleRectNode) SetColor(color qtgui.QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -146,6 +181,12 @@ func (this *QSGSimpleRectNode) SetColor(color qtgui.QColor_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor color() const
+
+/*
+Returns the color of this rectangle.
+
+See also setColor().
+*/
 func (this *QSGSimpleRectNode) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGSimpleRectNode5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

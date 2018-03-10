@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QTableWidgetSelectionRange struct {
 	*qtrt.CObject
 }
@@ -69,6 +72,10 @@ func (*QTableWidgetSelectionRange) NewFromPointer(cthis unsafe.Pointer) *QTableW
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetSelectionRange()
+
+/*
+
+ */
 func NewQTableWidgetSelectionRange() *QTableWidgetSelectionRange {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -81,6 +88,10 @@ func NewQTableWidgetSelectionRange() *QTableWidgetSelectionRange {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetSelectionRange(int, int, int, int)
+
+/*
+
+ */
 func NewQTableWidgetSelectionRange_1(top int, left int, bottom int, right int) *QTableWidgetSelectionRange {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Eiiii", qtrt.FFI_TYPE_POINTER, top, left, bottom, right)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +104,10 @@ func NewQTableWidgetSelectionRange_1(top int, left int, bottom int, right int) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTableWidgetSelectionRange()
+
+/*
+
+ */
 func DeleteQTableWidgetSelectionRange(this *QTableWidgetSelectionRange) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -104,6 +119,10 @@ func DeleteQTableWidgetSelectionRange(this *QTableWidgetSelectionRange) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int topRow() const
+
+/*
+
+ */
 func (this *QTableWidgetSelectionRange) TopRow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange6topRowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,6 +133,10 @@ func (this *QTableWidgetSelectionRange) TopRow() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int bottomRow() const
+
+/*
+
+ */
 func (this *QTableWidgetSelectionRange) BottomRow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange9bottomRowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -124,6 +147,10 @@ func (this *QTableWidgetSelectionRange) BottomRow() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int leftColumn() const
+
+/*
+
+ */
 func (this *QTableWidgetSelectionRange) LeftColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange10leftColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,6 +161,10 @@ func (this *QTableWidgetSelectionRange) LeftColumn() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int rightColumn() const
+
+/*
+
+ */
 func (this *QTableWidgetSelectionRange) RightColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11rightColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,6 +175,14 @@ func (this *QTableWidgetSelectionRange) RightColumn() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int rowCount() const
+
+/*
+Returns the number of rows.
+
+Note: Getter function for property rowCount.
+
+See also setRowCount().
+*/
 func (this *QTableWidgetSelectionRange) RowCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange8rowCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +193,14 @@ func (this *QTableWidgetSelectionRange) RowCount() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int columnCount() const
+
+/*
+Returns the number of columns.
+
+Note: Getter function for property columnCount.
+
+See also setColumnCount().
+*/
 func (this *QTableWidgetSelectionRange) ColumnCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11columnCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

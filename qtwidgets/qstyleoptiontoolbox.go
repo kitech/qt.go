@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionToolBox struct {
 	*QStyleOption
 }
@@ -65,6 +68,10 @@ func (*QStyleOptionToolBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionTo
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionToolBox()
+
+/*
+
+ */
 func NewQStyleOptionToolBox() *QStyleOptionToolBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionToolBoxC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleOptionToolBox() *QStyleOptionToolBox {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionToolBox(int)
+
+/*
+
+ */
 func NewQStyleOptionToolBox_1(version int) *QStyleOptionToolBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionToolBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,25 +102,68 @@ func DeleteQStyleOptionToolBox(this *QStyleOptionToolBox) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionToolBox__StyleOptionType = int
 
+//
 const QStyleOptionToolBox__Type QStyleOptionToolBox__StyleOptionType = 7
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionToolBox__StyleOptionVersion = int
 
+// 1
 const QStyleOptionToolBox__Version QStyleOptionToolBox__StyleOptionVersion = 2
 
+/*
+
+
+ */
 type QStyleOptionToolBox__TabPosition = int
 
+//
 const QStyleOptionToolBox__Beginning QStyleOptionToolBox__TabPosition = 0
+
+//
 const QStyleOptionToolBox__Middle QStyleOptionToolBox__TabPosition = 1
+
+//
 const QStyleOptionToolBox__End QStyleOptionToolBox__TabPosition = 2
+
+//
 const QStyleOptionToolBox__OnlyOneTab QStyleOptionToolBox__TabPosition = 3
 
+/*
+
+
+ */
 type QStyleOptionToolBox__SelectedPosition = int
 
+//
 const QStyleOptionToolBox__NotAdjacent QStyleOptionToolBox__SelectedPosition = 0
+
+//
 const QStyleOptionToolBox__NextIsSelected QStyleOptionToolBox__SelectedPosition = 1
+
+//
 const QStyleOptionToolBox__PreviousIsSelected QStyleOptionToolBox__SelectedPosition = 2
 
 //  body block end

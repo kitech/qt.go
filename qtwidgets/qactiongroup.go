@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QActionGroup struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QActionGroup) NewFromPointer(cthis unsafe.Pointer) *QActionGroup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QActionGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,12 @@ func (this *QActionGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QActionGroup(QObject *)
+
+/*
+Constructs an action group for the parent object.
+
+The action group is exclusive by default. Call setExclusive(false) to make the action group non-exclusive.
+*/
 func NewQActionGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QActionGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +104,10 @@ func NewQActionGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QActionGroup 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QActionGroup()
+
+/*
+
+ */
 func DeleteQActionGroup(this *QActionGroup) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -102,6 +119,14 @@ func DeleteQActionGroup(this *QActionGroup) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(QAction *)
+
+/*
+Adds the action to this group, and returns it.
+
+Normally an action is added to a group by creating it with the group as its parent, so this function is not usually used.
+
+See also QAction::setActionGroup().
+*/
 func (this *QActionGroup) AddAction(a QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QAction_PTR() != nil {
@@ -116,6 +141,14 @@ func (this *QActionGroup) AddAction(a QAction_ITF /*777 QAction **/) *QAction /*
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &)
+
+/*
+Adds the action to this group, and returns it.
+
+Normally an action is added to a group by creating it with the group as its parent, so this function is not usually used.
+
+See also QAction::setActionGroup().
+*/
 func (this *QActionGroup) AddAction_1(text string) *QAction /*777 QAction **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -128,6 +161,14 @@ func (this *QActionGroup) AddAction_1(text string) *QAction /*777 QAction **/ {
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &)
+
+/*
+Adds the action to this group, and returns it.
+
+Normally an action is added to a group by creating it with the group as its parent, so this function is not usually used.
+
+See also QAction::setActionGroup().
+*/
 func (this *QActionGroup) AddAction_2(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -144,6 +185,12 @@ func (this *QActionGroup) AddAction_2(icon qtgui.QIcon_ITF, text string) *QActio
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAction(QAction *)
+
+/*
+Removes the action from this group. The action will have no parent as a result.
+
+See also QAction::setActionGroup().
+*/
 func (this *QActionGroup) RemoveAction(a QAction_ITF /*777 QAction **/) {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QAction_PTR() != nil {
@@ -157,6 +204,10 @@ func (this *QActionGroup) RemoveAction(a QAction_ITF /*777 QAction **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * checkedAction() const
+
+/*
+Returns the currently checked action in the group, or 0 if none are checked.
+*/
 func (this *QActionGroup) CheckedAction() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionGroup13checkedActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,6 +218,10 @@ func (this *QActionGroup) CheckedAction() *QAction /*777 QAction **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isExclusive() const
+
+/*
+
+ */
 func (this *QActionGroup) IsExclusive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionGroup11isExclusiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,6 +232,10 @@ func (this *QActionGroup) IsExclusive() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled() const
+
+/*
+
+ */
 func (this *QActionGroup) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionGroup9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,6 +246,10 @@ func (this *QActionGroup) IsEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible() const
+
+/*
+
+ */
 func (this *QActionGroup) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionGroup9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,6 +260,10 @@ func (this *QActionGroup) IsVisible() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(_Bool)
+
+/*
+
+ */
 func (this *QActionGroup) SetEnabled(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup10setEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -206,6 +273,10 @@ func (this *QActionGroup) SetEnabled(arg0 bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDisabled(_Bool)
+
+/*
+This is a convenience function for the enabled property, that is useful for signals--slots connections. If b is true the action group is disabled; otherwise it is enabled.
+*/
 func (this *QActionGroup) SetDisabled(b bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup11setDisabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	qtrt.ErrPrint(err, rv)
@@ -215,6 +286,10 @@ func (this *QActionGroup) SetDisabled(b bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(_Bool)
+
+/*
+
+ */
 func (this *QActionGroup) SetVisible(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +299,10 @@ func (this *QActionGroup) SetVisible(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExclusive(_Bool)
+
+/*
+
+ */
 func (this *QActionGroup) SetExclusive(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup12setExclusiveEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -233,6 +312,14 @@ func (this *QActionGroup) SetExclusive(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(QAction *)
+
+/*
+This signal is emitted when the given action in the action group is activated by the user; for example, when the user clicks a menu option, toolbar button, or presses an action's shortcut key combination.
+
+Connect to this signal for command actions.
+
+See also QAction::activate().
+*/
 func (this *QActionGroup) Triggered(arg0 QAction_ITF /*777 QAction **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QAction_PTR() != nil {
@@ -246,6 +333,12 @@ func (this *QActionGroup) Triggered(arg0 QAction_ITF /*777 QAction **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hovered(QAction *)
+
+/*
+This signal is emitted when the given action in the action group is highlighted by the user; for example, when the user pauses with the cursor over a menu option, toolbar button, or presses an action's shortcut key combination.
+
+See also QAction::activate().
+*/
 func (this *QActionGroup) Hovered(arg0 QAction_ITF /*777 QAction **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QAction_PTR() != nil {

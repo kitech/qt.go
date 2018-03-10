@@ -1,8 +1,8 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h
 // #include <qandroidjniobject.h>
-// #include <Qtjni>
+// #include <QtAndroidExtras>
 
 //  header block end
 
@@ -18,7 +18,7 @@ package qtandroidextras
 
 /*
 #include <stdlib.h>
-// extern C begin: 12
+// extern C begin: 0
 */
 // import "C"
 import "unsafe"
@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAndroidJniObject struct {
 	*qtrt.CObject
 }
@@ -62,10 +65,16 @@ func (*QAndroidJniObject) NewFromPointer(cthis unsafe.Pointer) *QAndroidJniObjec
 	return NewQAndroidJniObjectFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:55
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h:55
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidJniObject()
+
+/*
+Constructs an invalid QAndroidJniObject.
+
+See also isValid().
+*/
 func NewQAndroidJniObject() *QAndroidJniObject {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -74,10 +83,16 @@ func NewQAndroidJniObject() *QAndroidJniObject {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:56
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h:56
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidJniObject(const char *)
+
+/*
+Constructs an invalid QAndroidJniObject.
+
+See also isValid().
+*/
 func NewQAndroidJniObject_1(className string) *QAndroidJniObject {
 	var convArg0 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg0)
@@ -88,55 +103,74 @@ func NewQAndroidJniObject_1(className string) *QAndroidJniObject {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:58
-// index:2
-// Public Visibility=Default Availability=Available
-// [-2] void QAndroidJniObject(int)
-func NewQAndroidJniObject_2(clazz int) *QAndroidJniObject {
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectC2Ei", qtrt.FFI_TYPE_POINTER, clazz)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQAndroidJniObject)
-	return gothis
-}
-
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:60
-// index:3
-// Public Visibility=Default Availability=Available
-// [-2] void QAndroidJniObject(int)
-func NewQAndroidJniObject_3(obj int) *QAndroidJniObject {
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectC2Ei", qtrt.FFI_TYPE_POINTER, obj)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQAndroidJniObject)
-	return gothis
-}
-
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:61
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QAndroidJniObject()
+
+/*
+
+ */
 func DeleteQAndroidJniObject(this *QAndroidJniObject) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 1)
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:66
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h:66
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [4] int object() const
-func (this *QAndroidJniObject) Object() int {
+// [8] jobject object() const
+
+/*
+Returns the object held by the QAndroidJniObject as type T.
+
+
+  QAndroidJniObject string = QAndroidJniObject::fromString("Hello, JNI");
+  jstring jstring = string.object<jstring>();
+
+
+
+Note: The returned object is still owned by the QAndroidJniObject. If you want to keep the object valid you should create a new QAndroidJniObject or make a new global reference to the object and free it yourself.
+
+
+  void functionScope()
+  {
+      QString helloString("Hello");
+      jstring myJString = 0;
+      {
+          QAndroidJniObject string = QAndroidJniObject::fromString(helloString);
+          myJString = string.object<jstring>();
+      }
+
+     // Ops! myJString is no longer valid.
+  }
+
+
+
+Note: Since Qt 5.3 this function can be used without a template type, if the returned type is a jobject.
+
+
+  jobject object = jniObject.object();
+*/
+func (this *QAndroidJniObject) Object() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAndroidJniObject6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:108
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] QAndroidJniObject getObjectField(const char *, const char *) const
+// [16] QAndroidJniObject getObjectField(const char *, const char *) const
+
+/*
+Retrieves the object of field fieldName.
+
+
+  QAndroidJniObject field = jniObject.getObjectField<jstring>("FIELD_NAME");
+*/
 func (this *QAndroidJniObject) GetObjectField(fieldName string, sig string) *QAndroidJniObject /*123*/ {
 	var convArg0 = qtrt.CString(fieldName)
 	defer qtrt.FreeMem(convArg0)
@@ -149,10 +183,17 @@ func (this *QAndroidJniObject) GetObjectField(fieldName string, sig string) *QAn
 	return rv2
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:124
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h:124
 // index:0
 // Public static Visibility=Default Availability=Available
-// [1] QAndroidJniObject getStaticObjectField(const char *, const char *, const char *)
+// [16] QAndroidJniObject getStaticObjectField(const char *, const char *, const char *)
+
+/*
+Retrieves the object from the field fieldName on the class className.
+
+
+  QAndroidJniObject jobj = QAndroidJniObject::getStaticObjectField<jstring>("class/with/Fields", "FIELD_NAME");
+*/
 func (this *QAndroidJniObject) GetStaticObjectField(className string, fieldName string, sig string) *QAndroidJniObject /*123*/ {
 	var convArg0 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg0)
@@ -172,31 +213,24 @@ func QAndroidJniObject_GetStaticObjectField(className string, fieldName string, 
 	return rv
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:140
-// index:1
-// Public static Visibility=Default Availability=Available
-// [1] QAndroidJniObject getStaticObjectField(int, const char *, const char *)
-func (this *QAndroidJniObject) GetStaticObjectField_1(clazz int, fieldName string, sig string) *QAndroidJniObject /*123*/ {
-	var convArg1 = qtrt.CString(fieldName)
-	defer qtrt.FreeMem(convArg1)
-	var convArg2 = qtrt.CString(sig)
-	defer qtrt.FreeMem(convArg2)
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObject20getStaticObjectFieldEiPKcS1_", qtrt.FFI_TYPE_POINTER, clazz, convArg1, convArg2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
-	return rv2
-}
-func QAndroidJniObject_GetStaticObjectField_1(clazz int, fieldName string, sig string) *QAndroidJniObject /*123*/ {
-	var nilthis *QAndroidJniObject
-	rv := nilthis.GetStaticObjectField_1(clazz, fieldName, sig)
-	return rv
-}
-
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:158
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h:158
 // index:0
 // Public static Visibility=Default Availability=Available
-// [1] QAndroidJniObject fromString(const QString &)
+// [16] QAndroidJniObject fromString(const QString &)
+
+/*
+Creates a Java string from the QString string and returns a QAndroidJniObject holding that string.
+
+
+  ...
+  QString myQString = "QString";
+  QAndroidJniObject myJavaString = QAndroidJniObject::fromString(myQString);
+  ...
+
+
+
+See also toString().
+*/
 func (this *QAndroidJniObject) FromString(string string) *QAndroidJniObject /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
@@ -212,10 +246,22 @@ func QAndroidJniObject_FromString(string string) *QAndroidJniObject /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:159
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
+
+/*
+Returns a QString with a string representation of the java object. Calling this function on a Java String object is a convenient way of getting the actual string data.
+
+
+  QAndroidJniObject string = ...; //  "Hello Java"
+  QString qstring = string.toString(); // "Hello Java"
+
+
+
+See also fromString().
+*/
 func (this *QAndroidJniObject) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAndroidJniObject8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -225,10 +271,21 @@ func (this *QAndroidJniObject) ToString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:161
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h:161
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool isClassAvailable(const char *)
+
+/*
+Returns true if the Java class className is available.
+
+
+  ...
+  if (QAndroidJniObject::isClassAvailable("java/lang/String")) {
+     ...
+  }
+  ...
+*/
 func (this *QAndroidJniObject) IsClassAvailable(className string) bool {
 	var convArg0 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg0)
@@ -242,31 +299,25 @@ func QAndroidJniObject_IsClassAvailable(className string) bool {
 	return rv
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:162
+// /usr/include/qt/QtAndroidExtras/qandroidjniobject.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if this instance holds a valid Java object.
+
+
+  ...
+  QAndroidJniObject qjniObject;                        ==> isValid() == false
+  QAndroidJniObject qjniObject(0)                      ==> isValid() == false
+  QAndroidJniObject qjniObject("could/not/find/Class") ==> isValid() == false
+  ...
+*/
 func (this *QAndroidJniObject) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAndroidJniObject7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
-}
-
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjniobject.h:164
-// index:0
-// Public static Visibility=Default Availability=Available
-// [1] QAndroidJniObject fromLocalRef(int)
-func (this *QAndroidJniObject) FromLocalRef(obj int) *QAndroidJniObject /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObject12fromLocalRefEi", qtrt.FFI_TYPE_POINTER, obj)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
-	return rv2
-}
-func QAndroidJniObject_FromLocalRef(obj int) *QAndroidJniObject /*123*/ {
-	var nilthis *QAndroidJniObject
-	rv := nilthis.FromLocalRef(obj)
-	return rv
 }
 
 //  body block end

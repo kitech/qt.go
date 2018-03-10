@@ -1,8 +1,8 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h
 // #include <qandroidjnienvironment.h>
-// #include <Qtjni>
+// #include <QtAndroidExtras>
 
 //  header block end
 
@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAndroidJniExceptionCleaner struct {
 	*qtrt.CObject
 }
@@ -64,10 +67,14 @@ func (*QAndroidJniExceptionCleaner) NewFromPointer(cthis unsafe.Pointer) *QAndro
 	return NewQAndroidJniExceptionCleanerFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:75
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidJniExceptionCleaner(enum QAndroidJniExceptionCleaner::OutputMode)
+
+/*
+
+ */
 func NewQAndroidJniExceptionCleaner(outputMode int) *QAndroidJniExceptionCleaner {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAndroidJniExceptionCleanerC2ENS_10OutputModeE", qtrt.FFI_TYPE_POINTER, outputMode)
 	qtrt.ErrPrint(err, rv)
@@ -76,10 +83,14 @@ func NewQAndroidJniExceptionCleaner(outputMode int) *QAndroidJniExceptionCleaner
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:75
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidJniExceptionCleaner(enum QAndroidJniExceptionCleaner::OutputMode)
+
+/*
+
+ */
 func NewQAndroidJniExceptionCleaner__() *QAndroidJniExceptionCleaner {
 	// arg: 0, QAndroidJniExceptionCleaner::OutputMode=Enum, QAndroidJniExceptionCleaner::OutputMode=Enum,
 	outputMode := 0
@@ -90,10 +101,14 @@ func NewQAndroidJniExceptionCleaner__() *QAndroidJniExceptionCleaner {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:76
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QAndroidJniExceptionCleaner()
+
+/*
+
+ */
 func DeleteQAndroidJniExceptionCleaner(this *QAndroidJniExceptionCleaner) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAndroidJniExceptionCleanerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 4)
@@ -101,18 +116,29 @@ func DeleteQAndroidJniExceptionCleaner(this *QAndroidJniExceptionCleaner) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:78
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clean()
+
+/*
+
+ */
 func (this *QAndroidJniExceptionCleaner) Clean() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAndroidJniExceptionCleaner5cleanEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QAndroidJniExceptionCleaner__OutputMode = int
 
+//
 const QAndroidJniExceptionCleaner__Silent QAndroidJniExceptionCleaner__OutputMode = 0
+
+//
 const QAndroidJniExceptionCleaner__Verbose QAndroidJniExceptionCleaner__OutputMode = 1
 
 //  body block end

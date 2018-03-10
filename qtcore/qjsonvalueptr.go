@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QJsonValuePtr struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QJsonValuePtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QJsonValuePtr(const QJsonValue &)
+
+/*
+
+ */
 func NewQJsonValuePtr(val QJsonValue_ITF) *QJsonValuePtr {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QJsonValue_PTR() != nil {
@@ -81,6 +88,10 @@ func NewQJsonValuePtr(val QJsonValue_ITF) *QJsonValuePtr {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [24] QJsonValue & operator*()
+
+/*
+
+ */
 func (this *QJsonValuePtr) Operator_mul() *QJsonValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonValuePtrdeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +104,10 @@ func (this *QJsonValuePtr) Operator_mul() *QJsonValue {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QJsonValue * operator->()
+
+/*
+
+ */
 func (this *QJsonValuePtr) Operator_minus_greater() *QJsonValue /*777 QJsonValue **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonValuePtrptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

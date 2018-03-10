@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlAbstractUrlInterceptor struct {
 	*qtrt.CObject
 }
@@ -69,6 +72,10 @@ func (*QQmlAbstractUrlInterceptor) NewFromPointer(cthis unsafe.Pointer) *QQmlAbs
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QQmlAbstractUrlInterceptor()
+
+/*
+Constructor for QQmlAbstractUrlInterceptor.
+*/
 func NewQQmlAbstractUrlInterceptor() *QQmlAbstractUrlInterceptor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -81,6 +88,10 @@ func NewQQmlAbstractUrlInterceptor() *QQmlAbstractUrlInterceptor {
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlAbstractUrlInterceptor()
+
+/*
+
+ */
 func DeleteQQmlAbstractUrlInterceptor(this *QQmlAbstractUrlInterceptor) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -92,6 +103,12 @@ func DeleteQQmlAbstractUrlInterceptor(this *QQmlAbstractUrlInterceptor) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QUrl intercept(const QUrl &, enum QQmlAbstractUrlInterceptor::DataType)
+
+/*
+A pure virtual function where you can intercept the url. The returned value is taken as the new value for the url. The type of url being intercepted is given by the type variable.
+
+Your implementation of this function must be thread-safe, as it can be called from multiple threads at the same time.
+*/
 func (this *QQmlAbstractUrlInterceptor) Intercept(path qtcore.QUrl_ITF, type_ int) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QUrl_PTR() != nil {
@@ -104,11 +121,25 @@ func (this *QQmlAbstractUrlInterceptor) Intercept(path qtcore.QUrl_ITF, type_ in
 	return rv2
 }
 
+/*
+Specifies where URL interception is taking place.
+
+Because QML loads qmldir files for locating types, there are two URLs involved in loading a QML type. The URL of the (possibly implicit) qmldir used for locating the type and the URL of the file which defines the type. Intercepting both leads to either complex URL replacement or double URL replacements for the same file.
+
+
+*/
 type QQmlAbstractUrlInterceptor__DataType = int
 
+// The URL being intercepted is for a Qml file. Intercepting this, but not the Qmldir file, leaves the base dir of a QML file untouched and acts like replacing the file with another file.
 const QQmlAbstractUrlInterceptor__QmlFile QQmlAbstractUrlInterceptor__DataType = 0
+
+// The URL being intercepted is an import for a Javascript file.
 const QQmlAbstractUrlInterceptor__JavaScriptFile QQmlAbstractUrlInterceptor__DataType = 1
+
+// The URL being intercepted is for a Qmldir file. Intercepting this, but not the QmlFile, allows for swapping out entire sub trees.
 const QQmlAbstractUrlInterceptor__QmldirFile QQmlAbstractUrlInterceptor__DataType = 2
+
+//
 const QQmlAbstractUrlInterceptor__UrlString QQmlAbstractUrlInterceptor__DataType = 4096
 
 //  body block end

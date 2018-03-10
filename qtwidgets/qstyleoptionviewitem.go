@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionViewItem struct {
 	*QStyleOption
 }
@@ -65,6 +68,10 @@ func (*QStyleOptionViewItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionV
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionViewItem()
+
+/*
+
+ */
 func NewQStyleOptionViewItem() *QStyleOptionViewItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionViewItemC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleOptionViewItem() *QStyleOptionViewItem {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionViewItem(int)
+
+/*
+
+ */
 func NewQStyleOptionViewItem_1(version int) *QStyleOptionViewItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionViewItemC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,36 +102,98 @@ func DeleteQStyleOptionViewItem(this *QStyleOptionViewItem) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionViewItem__StyleOptionType = int
 
+//
 const QStyleOptionViewItem__Type QStyleOptionViewItem__StyleOptionType = 10
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionViewItem__StyleOptionVersion = int
 
+// 1
 const QStyleOptionViewItem__Version QStyleOptionViewItem__StyleOptionVersion = 4
 
+/*
+
+
+ */
 type QStyleOptionViewItem__Position = int
 
+//
 const QStyleOptionViewItem__Left QStyleOptionViewItem__Position = 0
+
+//
 const QStyleOptionViewItem__Right QStyleOptionViewItem__Position = 1
+
+//
 const QStyleOptionViewItem__Top QStyleOptionViewItem__Position = 2
+
+//
 const QStyleOptionViewItem__Bottom QStyleOptionViewItem__Position = 3
 
+/*
+
+
+ */
 type QStyleOptionViewItem__ViewItemFeature = int
 
+//
 const QStyleOptionViewItem__None QStyleOptionViewItem__ViewItemFeature = 0
+
+//
 const QStyleOptionViewItem__WrapText QStyleOptionViewItem__ViewItemFeature = 1
+
+//
 const QStyleOptionViewItem__Alternate QStyleOptionViewItem__ViewItemFeature = 2
+
+//
 const QStyleOptionViewItem__HasCheckIndicator QStyleOptionViewItem__ViewItemFeature = 4
+
+//
 const QStyleOptionViewItem__HasDisplay QStyleOptionViewItem__ViewItemFeature = 8
+
+//
 const QStyleOptionViewItem__HasDecoration QStyleOptionViewItem__ViewItemFeature = 16
 
+/*
+
+
+ */
 type QStyleOptionViewItem__ViewItemPosition = int
 
+//
 const QStyleOptionViewItem__Invalid QStyleOptionViewItem__ViewItemPosition = 0
+
+//
 const QStyleOptionViewItem__Beginning QStyleOptionViewItem__ViewItemPosition = 1
+
+//
 const QStyleOptionViewItem__Middle QStyleOptionViewItem__ViewItemPosition = 2
+
+//
 const QStyleOptionViewItem__End QStyleOptionViewItem__ViewItemPosition = 3
+
+//
 const QStyleOptionViewItem__OnlyOne QStyleOptionViewItem__ViewItemPosition = 4
 
 //  body block end

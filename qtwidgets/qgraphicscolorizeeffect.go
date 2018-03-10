@@ -38,6 +38,9 @@ func (this *QGraphicsColorizeEffect) InheritDraw(f func(painter *qtgui.QPainter 
 	qtrt.SetAllInheritCallback(this, "draw", f)
 }
 
+/*
+
+ */
 type QGraphicsColorizeEffect struct {
 	*QGraphicsEffect
 }
@@ -70,6 +73,10 @@ func (*QGraphicsColorizeEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsC
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +87,10 @@ func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*777 cons
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsColorizeEffect(QObject *)
+
+/*
+
+ */
 func NewQGraphicsColorizeEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsColorizeEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -96,6 +107,10 @@ func NewQGraphicsColorizeEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QG
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsColorizeEffect(QObject *)
+
+/*
+
+ */
 func NewQGraphicsColorizeEffect__() *QGraphicsColorizeEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -110,6 +125,10 @@ func NewQGraphicsColorizeEffect__() *QGraphicsColorizeEffect {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsColorizeEffect()
+
+/*
+
+ */
 func DeleteQGraphicsColorizeEffect(this *QGraphicsColorizeEffect) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -121,6 +140,10 @@ func DeleteQGraphicsColorizeEffect(this *QGraphicsColorizeEffect) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor color() const
+
+/*
+
+ */
 func (this *QGraphicsColorizeEffect) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +156,10 @@ func (this *QGraphicsColorizeEffect) Color() *qtgui.QColor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal strength() const
+
+/*
+
+ */
 func (this *QGraphicsColorizeEffect) Strength() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect8strengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +170,10 @@ func (this *QGraphicsColorizeEffect) Strength() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
+
+/*
+
+ */
 func (this *QGraphicsColorizeEffect) SetColor(c qtgui.QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QColor_PTR() != nil {
@@ -156,6 +187,10 @@ func (this *QGraphicsColorizeEffect) SetColor(c qtgui.QColor_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStrength(qreal)
+
+/*
+
+ */
 func (this *QGraphicsColorizeEffect) SetStrength(strength float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect11setStrengthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), strength)
 	qtrt.ErrPrint(err, rv)
@@ -165,6 +200,10 @@ func (this *QGraphicsColorizeEffect) SetStrength(strength float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void colorChanged(const QColor &)
+
+/*
+
+ */
 func (this *QGraphicsColorizeEffect) ColorChanged(color qtgui.QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -178,6 +217,10 @@ func (this *QGraphicsColorizeEffect) ColorChanged(color qtgui.QColor_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void strengthChanged(qreal)
+
+/*
+
+ */
 func (this *QGraphicsColorizeEffect) StrengthChanged(strength float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect15strengthChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), strength)
 	qtrt.ErrPrint(err, rv)
@@ -187,6 +230,38 @@ func (this *QGraphicsColorizeEffect) StrengthChanged(strength float64) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
+
+/*
+This pure virtual function draws the effect and is called whenever the source needs to be drawn.
+
+Reimplement this function in a QGraphicsEffect subclass to provide the effect's drawing implementation, using painter.
+
+For example:
+
+
+  MyGraphicsEffect::draw(QPainter *painter)
+  {
+      ...
+      QPoint offset;
+      if (sourceIsPixmap()) {
+          // No point in drawing in device coordinates (pixmap will be scaled anyways).
+          const QPixmap pixmap = sourcePixmap(Qt::LogicalCoordinates, &offset);
+          ...
+          painter->drawPixmap(offset, pixmap);
+      } else {
+          // Draw pixmap in device coordinates to avoid pixmap scaling;
+          const QPixmap pixmap = sourcePixmap(Qt::DeviceCoordinates, &offset);
+          painter->setWorldTransform(QTransform());
+          ...
+          painter->drawPixmap(offset, pixmap);
+      }
+      ...
+  }
+
+
+
+This function should not be called explicitly by the user, since it is meant for reimplementation purposes only.
+*/
 func (this *QGraphicsColorizeEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {

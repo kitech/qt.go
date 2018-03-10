@@ -108,6 +108,9 @@ func (this *QComboBox) InheritInitStyleOption(f func(option *QStyleOptionComboBo
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
+/*
+
+ */
 type QComboBox struct {
 	*QWidget
 }
@@ -140,6 +143,10 @@ func (*QComboBox) NewFromPointer(cthis unsafe.Pointer) *QComboBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QComboBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,6 +157,10 @@ func (this *QComboBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QComboBox(QWidget *)
+
+/*
+Constructs a combobox with the given parent, using the default model QStandardItemModel.
+*/
 func NewQComboBox(parent QWidget_ITF /*777 QWidget **/) *QComboBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -166,6 +177,10 @@ func NewQComboBox(parent QWidget_ITF /*777 QWidget **/) *QComboBox {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QComboBox(QWidget *)
+
+/*
+Constructs a combobox with the given parent, using the default model QStandardItemModel.
+*/
 func NewQComboBox__() *QComboBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -180,6 +195,10 @@ func NewQComboBox__() *QComboBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QComboBox()
+
+/*
+
+ */
 func DeleteQComboBox(this *QComboBox) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -191,6 +210,10 @@ func DeleteQComboBox(this *QComboBox) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maxVisibleItems() const
+
+/*
+
+ */
 func (this *QComboBox) MaxVisibleItems() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox15maxVisibleItemsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -201,6 +224,10 @@ func (this *QComboBox) MaxVisibleItems() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaxVisibleItems(int)
+
+/*
+
+ */
 func (this *QComboBox) SetMaxVisibleItems(maxItems int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox18setMaxVisibleItemsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxItems)
 	qtrt.ErrPrint(err, rv)
@@ -210,6 +237,10 @@ func (this *QComboBox) SetMaxVisibleItems(maxItems int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
+
+/*
+
+ */
 func (this *QComboBox) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,6 +251,10 @@ func (this *QComboBox) Count() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaxCount(int)
+
+/*
+
+ */
 func (this *QComboBox) SetMaxCount(max int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11setMaxCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), max)
 	qtrt.ErrPrint(err, rv)
@@ -229,6 +264,10 @@ func (this *QComboBox) SetMaxCount(max int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maxCount() const
+
+/*
+
+ */
 func (this *QComboBox) MaxCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8maxCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -239,6 +278,10 @@ func (this *QComboBox) MaxCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoCompletion() const
+
+/*
+
+ */
 func (this *QComboBox) AutoCompletion() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox14autoCompletionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -249,6 +292,10 @@ func (this *QComboBox) AutoCompletion() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoCompletion(_Bool)
+
+/*
+
+ */
 func (this *QComboBox) SetAutoCompletion(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox17setAutoCompletionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	qtrt.ErrPrint(err, rv)
@@ -258,6 +305,10 @@ func (this *QComboBox) SetAutoCompletion(enable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::CaseSensitivity autoCompletionCaseSensitivity() const
+
+/*
+
+ */
 func (this *QComboBox) AutoCompletionCaseSensitivity() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox29autoCompletionCaseSensitivityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,6 +319,10 @@ func (this *QComboBox) AutoCompletionCaseSensitivity() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoCompletionCaseSensitivity(Qt::CaseSensitivity)
+
+/*
+
+ */
 func (this *QComboBox) SetAutoCompletionCaseSensitivity(sensitivity int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox32setAutoCompletionCaseSensitivityEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), sensitivity)
 	qtrt.ErrPrint(err, rv)
@@ -277,6 +332,10 @@ func (this *QComboBox) SetAutoCompletionCaseSensitivity(sensitivity int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool duplicatesEnabled() const
+
+/*
+
+ */
 func (this *QComboBox) DuplicatesEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox17duplicatesEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -287,6 +346,10 @@ func (this *QComboBox) DuplicatesEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDuplicatesEnabled(_Bool)
+
+/*
+
+ */
 func (this *QComboBox) SetDuplicatesEnabled(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox20setDuplicatesEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	qtrt.ErrPrint(err, rv)
@@ -296,6 +359,10 @@ func (this *QComboBox) SetDuplicatesEnabled(enable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFrame(_Bool)
+
+/*
+
+ */
 func (this *QComboBox) SetFrame(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox8setFrameEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -305,6 +372,10 @@ func (this *QComboBox) SetFrame(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFrame() const
+
+/*
+
+ */
 func (this *QComboBox) HasFrame() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8hasFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -315,6 +386,12 @@ func (this *QComboBox) HasFrame() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int findText(const QString &, Qt::MatchFlags) const
+
+/*
+Returns the index of the item containing the given text; otherwise returns -1.
+
+The flags specify how the items in the combobox are searched.
+*/
 func (this *QComboBox) FindText(text string, flags int) int {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -327,6 +404,12 @@ func (this *QComboBox) FindText(text string, flags int) int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int findText(const QString &, Qt::MatchFlags) const
+
+/*
+Returns the index of the item containing the given text; otherwise returns -1.
+
+The flags specify how the items in the combobox are searched.
+*/
 func (this *QComboBox) FindText__(text string) int {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -341,6 +424,12 @@ func (this *QComboBox) FindText__(text string) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int findData(const QVariant &, int, Qt::MatchFlags) const
+
+/*
+Returns the index of the item containing the given data for the given role; otherwise returns -1.
+
+The flags specify how the items in the combobox are searched.
+*/
 func (this *QComboBox) FindData(data qtcore.QVariant_ITF, role int, flags int) int {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QVariant_PTR() != nil {
@@ -355,6 +444,12 @@ func (this *QComboBox) FindData(data qtcore.QVariant_ITF, role int, flags int) i
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int findData(const QVariant &, int, Qt::MatchFlags) const
+
+/*
+Returns the index of the item containing the given data for the given role; otherwise returns -1.
+
+The flags specify how the items in the combobox are searched.
+*/
 func (this *QComboBox) FindData__(data qtcore.QVariant_ITF) int {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QVariant_PTR() != nil {
@@ -373,6 +468,12 @@ func (this *QComboBox) FindData__(data qtcore.QVariant_ITF) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int findData(const QVariant &, int, Qt::MatchFlags) const
+
+/*
+Returns the index of the item containing the given data for the given role; otherwise returns -1.
+
+The flags specify how the items in the combobox are searched.
+*/
 func (this *QComboBox) FindData__1(data qtcore.QVariant_ITF, role int) int {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QVariant_PTR() != nil {
@@ -389,6 +490,10 @@ func (this *QComboBox) FindData__1(data qtcore.QVariant_ITF, role int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QComboBox::InsertPolicy insertPolicy() const
+
+/*
+
+ */
 func (this *QComboBox) InsertPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox12insertPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -399,6 +504,10 @@ func (this *QComboBox) InsertPolicy() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInsertPolicy(enum QComboBox::InsertPolicy)
+
+/*
+
+ */
 func (this *QComboBox) SetInsertPolicy(policy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox15setInsertPolicyENS_12InsertPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	qtrt.ErrPrint(err, rv)
@@ -408,6 +517,10 @@ func (this *QComboBox) SetInsertPolicy(policy int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QComboBox::SizeAdjustPolicy sizeAdjustPolicy() const
+
+/*
+
+ */
 func (this *QComboBox) SizeAdjustPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox16sizeAdjustPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -418,6 +531,10 @@ func (this *QComboBox) SizeAdjustPolicy() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSizeAdjustPolicy(enum QComboBox::SizeAdjustPolicy)
+
+/*
+
+ */
 func (this *QComboBox) SetSizeAdjustPolicy(policy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox19setSizeAdjustPolicyENS_16SizeAdjustPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	qtrt.ErrPrint(err, rv)
@@ -427,6 +544,10 @@ func (this *QComboBox) SetSizeAdjustPolicy(policy int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minimumContentsLength() const
+
+/*
+
+ */
 func (this *QComboBox) MinimumContentsLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox21minimumContentsLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -437,6 +558,10 @@ func (this *QComboBox) MinimumContentsLength() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumContentsLength(int)
+
+/*
+
+ */
 func (this *QComboBox) SetMinimumContentsLength(characters int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox24setMinimumContentsLengthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), characters)
 	qtrt.ErrPrint(err, rv)
@@ -446,6 +571,10 @@ func (this *QComboBox) SetMinimumContentsLength(characters int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize iconSize() const
+
+/*
+
+ */
 func (this *QComboBox) IconSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8iconSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -458,6 +587,10 @@ func (this *QComboBox) IconSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
+
+/*
+
+ */
 func (this *QComboBox) SetIconSize(size qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -471,6 +604,10 @@ func (this *QComboBox) SetIconSize(size qtcore.QSize_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEditable() const
+
+/*
+
+ */
 func (this *QComboBox) IsEditable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox10isEditableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -481,6 +618,10 @@ func (this *QComboBox) IsEditable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEditable(_Bool)
+
+/*
+
+ */
 func (this *QComboBox) SetEditable(editable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11setEditableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), editable)
 	qtrt.ErrPrint(err, rv)
@@ -490,6 +631,14 @@ func (this *QComboBox) SetEditable(editable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLineEdit(QLineEdit *)
+
+/*
+Sets the line edit to use instead of the current line edit widget.
+
+The combo box takes ownership of the line edit.
+
+See also lineEdit().
+*/
 func (this *QComboBox) SetLineEdit(edit QLineEdit_ITF /*777 QLineEdit **/) {
 	var convArg0 unsafe.Pointer
 	if edit != nil && edit.QLineEdit_PTR() != nil {
@@ -503,6 +652,14 @@ func (this *QComboBox) SetLineEdit(edit QLineEdit_ITF /*777 QLineEdit **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QLineEdit * lineEdit() const
+
+/*
+Returns the line edit used to edit items in the combobox, or 0 if there is no line edit.
+
+Only editable combo boxes have a line edit.
+
+See also setLineEdit().
+*/
 func (this *QComboBox) LineEdit() *QLineEdit /*777 QLineEdit **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8lineEditEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -513,6 +670,14 @@ func (this *QComboBox) LineEdit() *QLineEdit /*777 QLineEdit **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValidator(const QValidator *)
+
+/*
+Sets the validator to use instead of the current validator.
+
+Note: The validator is removed when the editable property becomes false.
+
+See also validator().
+*/
 func (this *QComboBox) SetValidator(v qtgui.QValidator_ITF /*777 const QValidator **/) {
 	var convArg0 unsafe.Pointer
 	if v != nil && v.QValidator_PTR() != nil {
@@ -526,6 +691,12 @@ func (this *QComboBox) SetValidator(v qtgui.QValidator_ITF /*777 const QValidato
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QValidator * validator() const
+
+/*
+Returns the validator that is used to constrain text input for the combobox.
+
+See also setValidator() and editable.
+*/
 func (this *QComboBox) Validator() *qtgui.QValidator /*777 const QValidator **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox9validatorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -536,6 +707,18 @@ func (this *QComboBox) Validator() *qtgui.QValidator /*777 const QValidator **/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCompleter(QCompleter *)
+
+/*
+Sets the completer to use instead of the current completer. If completer is 0, auto completion is disabled.
+
+By default, for an editable combo box, a QCompleter that performs case insensitive inline completion is automatically created.
+
+Note: The completer is removed when the editable property becomes false.
+
+This function was introduced in  Qt 4.2.
+
+See also completer().
+*/
 func (this *QComboBox) SetCompleter(c QCompleter_ITF /*777 QCompleter **/) {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QCompleter_PTR() != nil {
@@ -549,6 +732,14 @@ func (this *QComboBox) SetCompleter(c QCompleter_ITF /*777 QCompleter **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCompleter * completer() const
+
+/*
+Returns the completer that is used to auto complete text input for the combobox.
+
+This function was introduced in  Qt 4.2.
+
+See also setCompleter() and editable.
+*/
 func (this *QComboBox) Completer() *QCompleter /*777 QCompleter **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox9completerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -559,6 +750,12 @@ func (this *QComboBox) Completer() *QCompleter /*777 QCompleter **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemDelegate * itemDelegate() const
+
+/*
+Returns the item delegate used by the popup list view.
+
+See also setItemDelegate().
+*/
 func (this *QComboBox) ItemDelegate() *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox12itemDelegateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -569,6 +766,14 @@ func (this *QComboBox) ItemDelegate() *QAbstractItemDelegate /*777 QAbstractItem
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemDelegate(QAbstractItemDelegate *)
+
+/*
+Sets the item delegate for the popup list view. The combobox takes ownership of the delegate.
+
+Warning: You should not share the same instance of a delegate between comboboxes, widget mappers or views. Doing so can cause incorrect or unintuitive editing behavior since each view connected to a given delegate may receive the closeEditor() signal, and attempt to access, modify or close an editor that has already been closed.
+
+See also itemDelegate().
+*/
 func (this *QComboBox) SetItemDelegate(delegate QAbstractItemDelegate_ITF /*777 QAbstractItemDelegate **/) {
 	var convArg0 unsafe.Pointer
 	if delegate != nil && delegate.QAbstractItemDelegate_PTR() != nil {
@@ -582,6 +787,12 @@ func (this *QComboBox) SetItemDelegate(delegate QAbstractItemDelegate_ITF /*777 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemModel * model() const
+
+/*
+Returns the model used by the combobox.
+
+See also setModel().
+*/
 func (this *QComboBox) Model() *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -592,6 +803,12 @@ func (this *QComboBox) Model() *qtcore.QAbstractItemModel /*777 QAbstractItemMod
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
+
+/*
+Sets the model to be model. model must not be 0. If you want to clear the contents of a model, call clear().
+
+See also model() and clear().
+*/
 func (this *QComboBox) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
@@ -605,6 +822,12 @@ func (this *QComboBox) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstr
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex rootModelIndex() const
+
+/*
+Returns the root model item index for the items in the combobox.
+
+See also setRootModelIndex().
+*/
 func (this *QComboBox) RootModelIndex() *qtcore.QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox14rootModelIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -617,6 +840,12 @@ func (this *QComboBox) RootModelIndex() *qtcore.QModelIndex /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRootModelIndex(const QModelIndex &)
+
+/*
+Sets the root model item index for the items in the combobox.
+
+See also rootModelIndex().
+*/
 func (this *QComboBox) SetRootModelIndex(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -630,6 +859,10 @@ func (this *QComboBox) SetRootModelIndex(index qtcore.QModelIndex_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int modelColumn() const
+
+/*
+
+ */
 func (this *QComboBox) ModelColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox11modelColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -640,6 +873,10 @@ func (this *QComboBox) ModelColumn() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModelColumn(int)
+
+/*
+
+ */
 func (this *QComboBox) SetModelColumn(visibleColumn int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox14setModelColumnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visibleColumn)
 	qtrt.ErrPrint(err, rv)
@@ -649,6 +886,10 @@ func (this *QComboBox) SetModelColumn(visibleColumn int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentIndex() const
+
+/*
+
+ */
 func (this *QComboBox) CurrentIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox12currentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -659,6 +900,10 @@ func (this *QComboBox) CurrentIndex() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString currentText() const
+
+/*
+
+ */
 func (this *QComboBox) CurrentText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox11currentTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -672,6 +917,10 @@ func (this *QComboBox) CurrentText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant currentData(int) const
+
+/*
+
+ */
 func (this *QComboBox) CurrentData(role int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox11currentDataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
@@ -684,6 +933,10 @@ func (this *QComboBox) CurrentData(role int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant currentData(int) const
+
+/*
+
+ */
 func (this *QComboBox) CurrentData__() *qtcore.QVariant /*123*/ {
 	// arg: 0, int=Int, =Invalid,
 	role := 0 /*Qt::UserRole*/
@@ -698,6 +951,12 @@ func (this *QComboBox) CurrentData__() *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString itemText(int) const
+
+/*
+Returns the text for the given index in the combobox.
+
+See also setItemText().
+*/
 func (this *QComboBox) ItemText(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8itemTextEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -711,6 +970,12 @@ func (this *QComboBox) ItemText(index int) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon itemIcon(int) const
+
+/*
+Returns the icon for the given index in the combobox.
+
+See also setItemIcon().
+*/
 func (this *QComboBox) ItemIcon(index int) *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8itemIconEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -723,6 +988,12 @@ func (this *QComboBox) ItemIcon(index int) *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant itemData(int, int) const
+
+/*
+Returns the data for the given role in the given index in the combobox, or QVariant::Invalid if there is no data for this role.
+
+See also setItemData().
+*/
 func (this *QComboBox) ItemData(index int, role int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8itemDataEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, role)
 	qtrt.ErrPrint(err, rv)
@@ -735,6 +1006,12 @@ func (this *QComboBox) ItemData(index int, role int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant itemData(int, int) const
+
+/*
+Returns the data for the given role in the given index in the combobox, or QVariant::Invalid if there is no data for this role.
+
+See also setItemData().
+*/
 func (this *QComboBox) ItemData__(index int) *qtcore.QVariant /*123*/ {
 	// arg: 1, int=Int, =Invalid,
 	role := 0 /*Qt::UserRole*/
@@ -749,6 +1026,10 @@ func (this *QComboBox) ItemData__(index int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(const QString &, const QVariant &)
+
+/*
+Adds an item to the combobox with the given text, and containing the specified userData (stored in the Qt::UserRole). The item is appended to the list of existing items.
+*/
 func (this *QComboBox) AddItem(text string, userData qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -764,6 +1045,10 @@ func (this *QComboBox) AddItem(text string, userData qtcore.QVariant_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(const QString &, const QVariant &)
+
+/*
+Adds an item to the combobox with the given text, and containing the specified userData (stored in the Qt::UserRole). The item is appended to the list of existing items.
+*/
 func (this *QComboBox) AddItem__(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -777,6 +1062,10 @@ func (this *QComboBox) AddItem__(text string) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(const QIcon &, const QString &, const QVariant &)
+
+/*
+Adds an item to the combobox with the given text, and containing the specified userData (stored in the Qt::UserRole). The item is appended to the list of existing items.
+*/
 func (this *QComboBox) AddItem_1(icon qtgui.QIcon_ITF, text string, userData qtcore.QVariant_ITF) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -796,6 +1085,10 @@ func (this *QComboBox) AddItem_1(icon qtgui.QIcon_ITF, text string, userData qtc
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(const QIcon &, const QString &, const QVariant &)
+
+/*
+Adds an item to the combobox with the given text, and containing the specified userData (stored in the Qt::UserRole). The item is appended to the list of existing items.
+*/
 func (this *QComboBox) AddItem_1_(icon qtgui.QIcon_ITF, text string) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -813,6 +1106,10 @@ func (this *QComboBox) AddItem_1_(icon qtgui.QIcon_ITF, text string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItems(const QStringList &)
+
+/*
+Adds each of the strings in the given texts to the combobox. Each item is appended to the list of existing items in turn.
+*/
 func (this *QComboBox) AddItems(texts qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if texts != nil && texts.QStringList_PTR() != nil {
@@ -826,6 +1123,14 @@ func (this *QComboBox) AddItems(texts qtcore.QStringList_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void insertItem(int, const QString &, const QVariant &)
+
+/*
+Inserts the text and userData (stored in the Qt::UserRole) into the combobox at the given index.
+
+If the index is equal to or higher than the total number of items, the new item is appended to the list of existing items. If the index is zero or negative, the new item is prepended to the list of existing items.
+
+See also insertItems().
+*/
 func (this *QComboBox) InsertItem(index int, text string, userData qtcore.QVariant_ITF) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
@@ -841,6 +1146,14 @@ func (this *QComboBox) InsertItem(index int, text string, userData qtcore.QVaria
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void insertItem(int, const QString &, const QVariant &)
+
+/*
+Inserts the text and userData (stored in the Qt::UserRole) into the combobox at the given index.
+
+If the index is equal to or higher than the total number of items, the new item is appended to the list of existing items. If the index is zero or negative, the new item is prepended to the list of existing items.
+
+See also insertItems().
+*/
 func (this *QComboBox) InsertItem__(index int, text string) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
@@ -854,6 +1167,14 @@ func (this *QComboBox) InsertItem__(index int, text string) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void insertItem(int, const QIcon &, const QString &, const QVariant &)
+
+/*
+Inserts the text and userData (stored in the Qt::UserRole) into the combobox at the given index.
+
+If the index is equal to or higher than the total number of items, the new item is appended to the list of existing items. If the index is zero or negative, the new item is prepended to the list of existing items.
+
+See also insertItems().
+*/
 func (this *QComboBox) InsertItem_1(index int, icon qtgui.QIcon_ITF, text string, userData qtcore.QVariant_ITF) {
 	var convArg1 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -873,6 +1194,14 @@ func (this *QComboBox) InsertItem_1(index int, icon qtgui.QIcon_ITF, text string
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void insertItem(int, const QIcon &, const QString &, const QVariant &)
+
+/*
+Inserts the text and userData (stored in the Qt::UserRole) into the combobox at the given index.
+
+If the index is equal to or higher than the total number of items, the new item is appended to the list of existing items. If the index is zero or negative, the new item is prepended to the list of existing items.
+
+See also insertItems().
+*/
 func (this *QComboBox) InsertItem_1_(index int, icon qtgui.QIcon_ITF, text string) {
 	var convArg1 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -890,6 +1219,14 @@ func (this *QComboBox) InsertItem_1_(index int, icon qtgui.QIcon_ITF, text strin
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertItems(int, const QStringList &)
+
+/*
+Inserts the strings from the list into the combobox as separate items, starting at the index specified.
+
+If the index is equal to or higher than the total number of items, the new items are appended to the list of existing items. If the index is zero or negative, the new items are prepended to the list of existing items.
+
+See also insertItem().
+*/
 func (this *QComboBox) InsertItems(index int, texts qtcore.QStringList_ITF) {
 	var convArg1 unsafe.Pointer
 	if texts != nil && texts.QStringList_PTR() != nil {
@@ -903,6 +1240,16 @@ func (this *QComboBox) InsertItems(index int, texts qtcore.QStringList_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertSeparator(int)
+
+/*
+Inserts a separator item into the combobox at the given index.
+
+If the index is equal to or higher than the total number of items, the new item is appended to the list of existing items. If the index is zero or negative, the new item is prepended to the list of existing items.
+
+This function was introduced in  Qt 4.4.
+
+See also insertItem().
+*/
 func (this *QComboBox) InsertSeparator(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox15insertSeparatorEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -912,6 +1259,12 @@ func (this *QComboBox) InsertSeparator(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeItem(int)
+
+/*
+Removes the item at the given index from the combobox. This will update the current index if the index is removed.
+
+This function does nothing if index is out of range.
+*/
 func (this *QComboBox) RemoveItem(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox10removeItemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -921,6 +1274,12 @@ func (this *QComboBox) RemoveItem(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemText(int, const QString &)
+
+/*
+Sets the text for the item on the given index in the combobox.
+
+See also itemText().
+*/
 func (this *QComboBox) SetItemText(index int, text string) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
@@ -932,6 +1291,12 @@ func (this *QComboBox) SetItemText(index int, text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemIcon(int, const QIcon &)
+
+/*
+Sets the icon for the item on the given index in the combobox.
+
+See also itemIcon().
+*/
 func (this *QComboBox) SetItemIcon(index int, icon qtgui.QIcon_ITF) {
 	var convArg1 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -945,6 +1310,12 @@ func (this *QComboBox) SetItemIcon(index int, icon qtgui.QIcon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemData(int, const QVariant &, int)
+
+/*
+Sets the data role for the item on the given index in the combobox to the specified value.
+
+See also itemData().
+*/
 func (this *QComboBox) SetItemData(index int, value qtcore.QVariant_ITF, role int) {
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -958,6 +1329,12 @@ func (this *QComboBox) SetItemData(index int, value qtcore.QVariant_ITF, role in
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemData(int, const QVariant &, int)
+
+/*
+Sets the data role for the item on the given index in the combobox to the specified value.
+
+See also itemData().
+*/
 func (this *QComboBox) SetItemData__(index int, value qtcore.QVariant_ITF) {
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -973,6 +1350,12 @@ func (this *QComboBox) SetItemData__(index int, value qtcore.QVariant_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemView * view() const
+
+/*
+Returns the list view used for the combobox popup.
+
+See also setView().
+*/
 func (this *QComboBox) View() *QAbstractItemView /*777 QAbstractItemView **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox4viewEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -983,6 +1366,14 @@ func (this *QComboBox) View() *QAbstractItemView /*777 QAbstractItemView **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setView(QAbstractItemView *)
+
+/*
+Sets the view to be used in the combobox popup to the given itemView. The combobox takes ownership of the view.
+
+Note: If you want to use the convenience views (like QListWidget, QTableWidget or QTreeWidget), make sure to call setModel() on the combobox with the convenience widgets model before calling this function.
+
+See also view().
+*/
 func (this *QComboBox) SetView(itemView QAbstractItemView_ITF /*777 QAbstractItemView **/) {
 	var convArg0 unsafe.Pointer
 	if itemView != nil && itemView.QAbstractItemView_PTR() != nil {
@@ -996,6 +1387,12 @@ func (this *QComboBox) SetView(itemView QAbstractItemView_ITF /*777 QAbstractIte
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+
+This implementation caches the size hint to avoid resizing when the contents change dynamically. To invalidate the cached value change the sizeAdjustPolicy.
+*/
 func (this *QComboBox) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1008,6 +1405,10 @@ func (this *QComboBox) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QComboBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1020,6 +1421,14 @@ func (this *QComboBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void showPopup()
+
+/*
+Displays the list of items in the combobox. If the list is empty then the no items will be shown.
+
+If you reimplement this function to show a custom pop-up, make sure you call hidePopup() to reset the internal state.
+
+See also hidePopup().
+*/
 func (this *QComboBox) ShowPopup() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox9showPopupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1029,6 +1438,12 @@ func (this *QComboBox) ShowPopup() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void hidePopup()
+
+/*
+Hides the list of items in the combobox if it is currently visible and resets the internal state, so that if the custom pop-up was shown inside the reimplemented showPopup(), then you also need to reimplement the hidePopup() function to hide your custom pop-up and call the base class implementation to reset the internal state whenever your custom pop-up widget is hidden.
+
+See also showPopup().
+*/
 func (this *QComboBox) HidePopup() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox9hidePopupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1038,6 +1453,10 @@ func (this *QComboBox) HidePopup() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QComboBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -1052,6 +1471,10 @@ func (this *QComboBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
+
+/*
+Reimplemented from QWidget::inputMethodQuery().
+*/
 func (this *QComboBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox16inputMethodQueryEN2Qt16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1064,6 +1487,10 @@ func (this *QComboBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery, const QVariant &) const
+
+/*
+Reimplemented from QWidget::inputMethodQuery().
+*/
 func (this *QComboBox) InputMethodQuery_1(query int, argument qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
 	var convArg1 unsafe.Pointer
 	if argument != nil && argument.QVariant_PTR() != nil {
@@ -1080,6 +1507,12 @@ func (this *QComboBox) InputMethodQuery_1(query int, argument qtcore.QVariant_IT
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the combobox, removing all items.
+
+Note: If you have set an external model on the combobox this model will still be cleared when calling this function.
+*/
 func (this *QComboBox) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1089,6 +1522,10 @@ func (this *QComboBox) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearEditText()
+
+/*
+Clears the contents of the line edit used for editing in the combobox.
+*/
 func (this *QComboBox) ClearEditText() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox13clearEditTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1098,6 +1535,10 @@ func (this *QComboBox) ClearEditText() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEditText(const QString &)
+
+/*
+Sets the text in the combobox's text edit.
+*/
 func (this *QComboBox) SetEditText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1109,6 +1550,10 @@ func (this *QComboBox) SetEditText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentIndex(int)
+
+/*
+
+ */
 func (this *QComboBox) SetCurrentIndex(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox15setCurrentIndexEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -1118,6 +1563,10 @@ func (this *QComboBox) SetCurrentIndex(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentText(const QString &)
+
+/*
+
+ */
 func (this *QComboBox) SetCurrentText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1129,6 +1578,10 @@ func (this *QComboBox) SetCurrentText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editTextChanged(const QString &)
+
+/*
+This signal is emitted when the text in the combobox's line edit widget is changed. The new text is specified by text.
+*/
 func (this *QComboBox) EditTextChanged(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1140,6 +1593,16 @@ func (this *QComboBox) EditTextChanged(arg0 string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activated(int)
+
+/*
+This signal is sent when the user chooses an item in the combobox. The item's index is passed. Note that this signal is sent even when the choice is not changed. If you need to know when the choice actually changes, use signal currentIndexChanged().
+
+Note: Signal activated is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(comboBox, QOverload<int>::of(&QComboBox::activated),
+      [=](int index){ \/* ... *\/ });
+*/
 func (this *QComboBox) Activated(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox9activatedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -1149,6 +1612,16 @@ func (this *QComboBox) Activated(index int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void activated(const QString &)
+
+/*
+This signal is sent when the user chooses an item in the combobox. The item's index is passed. Note that this signal is sent even when the choice is not changed. If you need to know when the choice actually changes, use signal currentIndexChanged().
+
+Note: Signal activated is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(comboBox, QOverload<int>::of(&QComboBox::activated),
+      [=](int index){ \/* ... *\/ });
+*/
 func (this *QComboBox) Activated_1(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1160,6 +1633,16 @@ func (this *QComboBox) Activated_1(arg0 string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void highlighted(int)
+
+/*
+This signal is sent when an item in the combobox popup list is highlighted by the user. The item's index is passed.
+
+Note: Signal highlighted is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(comboBox, QOverload<int>::of(&QComboBox::highlighted),
+      [=](int index){ \/* ... *\/ });
+*/
 func (this *QComboBox) Highlighted(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11highlightedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -1169,6 +1652,16 @@ func (this *QComboBox) Highlighted(index int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void highlighted(const QString &)
+
+/*
+This signal is sent when an item in the combobox popup list is highlighted by the user. The item's index is passed.
+
+Note: Signal highlighted is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(comboBox, QOverload<int>::of(&QComboBox::highlighted),
+      [=](int index){ \/* ... *\/ });
+*/
 func (this *QComboBox) Highlighted_1(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1180,6 +1673,22 @@ func (this *QComboBox) Highlighted_1(arg0 string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentIndexChanged(int)
+
+/*
+This signal is sent whenever the currentIndex in the combobox changes either through user interaction or programmatically. The item's index is passed or -1 if the combobox becomes empty or the currentIndex was reset.
+
+Note: Signal currentIndexChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged),
+      [=](int index){ \/* ... *\/ });
+
+
+
+This function was introduced in  Qt 4.1.
+
+Note: Notifier signal for property currentIndex.
+*/
 func (this *QComboBox) CurrentIndexChanged(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox19currentIndexChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -1189,6 +1698,22 @@ func (this *QComboBox) CurrentIndexChanged(index int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void currentIndexChanged(const QString &)
+
+/*
+This signal is sent whenever the currentIndex in the combobox changes either through user interaction or programmatically. The item's index is passed or -1 if the combobox becomes empty or the currentIndex was reset.
+
+Note: Signal currentIndexChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged),
+      [=](int index){ \/* ... *\/ });
+
+
+
+This function was introduced in  Qt 4.1.
+
+Note: Notifier signal for property currentIndex.
+*/
 func (this *QComboBox) CurrentIndexChanged_1(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1200,6 +1725,14 @@ func (this *QComboBox) CurrentIndexChanged_1(arg0 string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentTextChanged(const QString &)
+
+/*
+This signal is sent whenever currentText changes. The new value is passed as text.
+
+This function was introduced in  Qt 5.0.
+
+Note: Notifier signal for property currentText.
+*/
 func (this *QComboBox) CurrentTextChanged(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1211,6 +1744,10 @@ func (this *QComboBox) CurrentTextChanged(arg0 string) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
+
+/*
+Reimplemented from QWidget::focusInEvent().
+*/
 func (this *QComboBox) FocusInEvent(e qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QFocusEvent_PTR() != nil {
@@ -1224,6 +1761,10 @@ func (this *QComboBox) FocusInEvent(e qtgui.QFocusEvent_ITF /*777 QFocusEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
+
+/*
+Reimplemented from QWidget::focusOutEvent().
+*/
 func (this *QComboBox) FocusOutEvent(e qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QFocusEvent_PTR() != nil {
@@ -1237,6 +1778,10 @@ func (this *QComboBox) FocusOutEvent(e qtgui.QFocusEvent_ITF /*777 QFocusEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QComboBox) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -1250,6 +1795,10 @@ func (this *QComboBox) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+*/
 func (this *QComboBox) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QResizeEvent_PTR() != nil {
@@ -1263,6 +1812,10 @@ func (this *QComboBox) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QComboBox) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QPaintEvent_PTR() != nil {
@@ -1276,6 +1829,10 @@ func (this *QComboBox) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
+
+/*
+Reimplemented from QWidget::showEvent().
+*/
 func (this *QComboBox) ShowEvent(e qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QShowEvent_PTR() != nil {
@@ -1289,6 +1846,10 @@ func (this *QComboBox) ShowEvent(e qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
+
+/*
+Reimplemented from QWidget::hideEvent().
+*/
 func (this *QComboBox) HideEvent(e qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QHideEvent_PTR() != nil {
@@ -1302,6 +1863,10 @@ func (this *QComboBox) HideEvent(e qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mousePressEvent().
+*/
 func (this *QComboBox) MousePressEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QMouseEvent_PTR() != nil {
@@ -1315,6 +1880,10 @@ func (this *QComboBox) MousePressEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseReleaseEvent().
+*/
 func (this *QComboBox) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QMouseEvent_PTR() != nil {
@@ -1328,6 +1897,10 @@ func (this *QComboBox) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWidget::keyPressEvent().
+*/
 func (this *QComboBox) KeyPressEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QKeyEvent_PTR() != nil {
@@ -1341,6 +1914,10 @@ func (this *QComboBox) KeyPressEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWidget::keyReleaseEvent().
+*/
 func (this *QComboBox) KeyReleaseEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QKeyEvent_PTR() != nil {
@@ -1354,6 +1931,10 @@ func (this *QComboBox) KeyReleaseEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
+
+/*
+Reimplemented from QWidget::wheelEvent().
+*/
 func (this *QComboBox) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QWheelEvent_PTR() != nil {
@@ -1367,6 +1948,10 @@ func (this *QComboBox) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
+
+/*
+Reimplemented from QWidget::contextMenuEvent().
+*/
 func (this *QComboBox) ContextMenuEvent(e qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QContextMenuEvent_PTR() != nil {
@@ -1380,6 +1965,10 @@ func (this *QComboBox) ContextMenuEvent(e qtgui.QContextMenuEvent_ITF /*777 QCon
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void inputMethodEvent(QInputMethodEvent *)
+
+/*
+Reimplemented from QWidget::inputMethodEvent().
+*/
 func (this *QComboBox) InputMethodEvent(arg0 qtgui.QInputMethodEvent_ITF /*777 QInputMethodEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QInputMethodEvent_PTR() != nil {
@@ -1393,6 +1982,12 @@ func (this *QComboBox) InputMethodEvent(arg0 qtgui.QInputMethodEvent_ITF /*777 Q
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionComboBox *) const
+
+/*
+Initialize option with the values from this QComboBox. This method is useful for subclasses when they need a QStyleOptionComboBox, but don't want to fill in all the information themselves.
+
+See also QStyleOption::initFrom().
+*/
 func (this *QComboBox) InitStyleOption(option QStyleOptionComboBox_ITF /*777 QStyleOptionComboBox **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionComboBox_PTR() != nil {
@@ -1402,21 +1997,51 @@ func (this *QComboBox) InitStyleOption(option QStyleOptionComboBox_ITF /*777 QSt
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+This enum specifies what the QComboBox should do when a new string is entered by the user.
+
+
+*/
 type QComboBox__InsertPolicy = int
 
+// The string will not be inserted into the combobox.
 const QComboBox__NoInsert QComboBox__InsertPolicy = 0
+
+// The string will be inserted as the first item in the combobox.
 const QComboBox__InsertAtTop QComboBox__InsertPolicy = 1
+
+// The current item will be replaced by the string.
 const QComboBox__InsertAtCurrent QComboBox__InsertPolicy = 2
+
+// The string will be inserted after the last item in the combobox.
 const QComboBox__InsertAtBottom QComboBox__InsertPolicy = 3
+
+// The string is inserted after the current item in the combobox.
 const QComboBox__InsertAfterCurrent QComboBox__InsertPolicy = 4
+
+// The string is inserted before the current item in the combobox.
 const QComboBox__InsertBeforeCurrent QComboBox__InsertPolicy = 5
+
+// The string is inserted in the alphabetic order in the combobox.
 const QComboBox__InsertAlphabetically QComboBox__InsertPolicy = 6
 
+/*
+This enum specifies how the size hint of the QComboBox should adjust when new content is added or content changes.
+
+
+*/
 type QComboBox__SizeAdjustPolicy = int
 
+// The combobox will always adjust to the contents
 const QComboBox__AdjustToContents QComboBox__SizeAdjustPolicy = 0
+
+// The combobox will adjust to its contents the first time it is shown.
 const QComboBox__AdjustToContentsOnFirstShow QComboBox__SizeAdjustPolicy = 1
+
+// Use AdjustToContents or AdjustToContentsOnFirstShow instead.
 const QComboBox__AdjustToMinimumContentsLength QComboBox__SizeAdjustPolicy = 2
+
+// The combobox will adjust to minimumContentsLength plus space for an icon. For performance reasons use this policy on large models.
 const QComboBox__AdjustToMinimumContentsLengthWithIcon QComboBox__SizeAdjustPolicy = 3
 
 //  body block end

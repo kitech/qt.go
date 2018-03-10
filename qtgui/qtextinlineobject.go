@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextInlineObject struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QTextInlineObject) NewFromPointer(cthis unsafe.Pointer) *QTextInlineObjec
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextInlineObject()
+
+/*
+
+ */
 func NewQTextInlineObject() *QTextInlineObject {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QTextInlineObjectC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQTextInlineObject() *QTextInlineObject {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+
+ */
 func (this *QTextInlineObject) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +99,10 @@ func (this *QTextInlineObject) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF rect() const
+
+/*
+
+ */
 func (this *QTextInlineObject) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +115,10 @@ func (this *QTextInlineObject) Rect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal width() const
+
+/*
+
+ */
 func (this *QTextInlineObject) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +129,10 @@ func (this *QTextInlineObject) Width() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal ascent() const
+
+/*
+
+ */
 func (this *QTextInlineObject) Ascent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject6ascentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,6 +143,10 @@ func (this *QTextInlineObject) Ascent() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal descent() const
+
+/*
+
+ */
 func (this *QTextInlineObject) Descent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject7descentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +157,10 @@ func (this *QTextInlineObject) Descent() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal height() const
+
+/*
+
+ */
 func (this *QTextInlineObject) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +171,10 @@ func (this *QTextInlineObject) Height() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::LayoutDirection textDirection() const
+
+/*
+
+ */
 func (this *QTextInlineObject) TextDirection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject13textDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,6 +185,10 @@ func (this *QTextInlineObject) TextDirection() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidth(qreal)
+
+/*
+
+ */
 func (this *QTextInlineObject) SetWidth(w float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QTextInlineObject8setWidthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	qtrt.ErrPrint(err, rv)
@@ -159,6 +198,10 @@ func (this *QTextInlineObject) SetWidth(w float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAscent(qreal)
+
+/*
+
+ */
 func (this *QTextInlineObject) SetAscent(a float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QTextInlineObject9setAscentEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a)
 	qtrt.ErrPrint(err, rv)
@@ -168,6 +211,10 @@ func (this *QTextInlineObject) SetAscent(a float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDescent(qreal)
+
+/*
+
+ */
 func (this *QTextInlineObject) SetDescent(d float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QTextInlineObject10setDescentEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), d)
 	qtrt.ErrPrint(err, rv)
@@ -177,6 +224,10 @@ func (this *QTextInlineObject) SetDescent(d float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int textPosition() const
+
+/*
+
+ */
 func (this *QTextInlineObject) TextPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject12textPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,6 +238,10 @@ func (this *QTextInlineObject) TextPosition() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int formatIndex() const
+
+/*
+
+ */
 func (this *QTextInlineObject) FormatIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject11formatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,6 +252,10 @@ func (this *QTextInlineObject) FormatIndex() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextFormat format() const
+
+/*
+
+ */
 func (this *QTextInlineObject) Format() *QTextFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

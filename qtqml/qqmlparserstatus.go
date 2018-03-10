@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlParserStatus struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QQmlParserStatus) NewFromPointer(cthis unsafe.Pointer) *QQmlParserStatus 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlParserStatus()
+
+/*
+
+ */
 func NewQQmlParserStatus() *QQmlParserStatus {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatusC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQQmlParserStatus() *QQmlParserStatus {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlParserStatus()
+
+/*
+
+ */
 func DeleteQQmlParserStatus(this *QQmlParserStatus) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatusD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -90,6 +101,10 @@ func DeleteQQmlParserStatus(this *QQmlParserStatus) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void classBegin()
+
+/*
+Invoked after class creation, but before any properties have been set.
+*/
 func (this *QQmlParserStatus) ClassBegin() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatus10classBeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +114,10 @@ func (this *QQmlParserStatus) ClassBegin() {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void componentComplete()
+
+/*
+Invoked after the root component that caused this instantiation has completed construction. At this point all static values and binding values have been assigned to the class.
+*/
 func (this *QQmlParserStatus) ComponentComplete() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatus17componentCompleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

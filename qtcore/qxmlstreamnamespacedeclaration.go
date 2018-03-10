@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QXmlStreamNamespaceDeclaration struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QXmlStreamNamespaceDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXm
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamNamespaceDeclaration()
+
+/*
+
+ */
 func NewQXmlStreamNamespaceDeclaration() *QXmlStreamNamespaceDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQXmlStreamNamespaceDeclaration() *QXmlStreamNamespaceDeclaration {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamNamespaceDeclaration(const QString &, const QString &)
+
+/*
+
+ */
 func NewQXmlStreamNamespaceDeclaration_1(prefix string, namespaceUri string) *QXmlStreamNamespaceDeclaration {
 	var tmpArg0 = NewQString_5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
@@ -95,6 +106,10 @@ func NewQXmlStreamNamespaceDeclaration_1(prefix string, namespaceUri string) *QX
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [40] QXmlStreamNamespaceDeclaration & operator=(QXmlStreamNamespaceDeclaration &&)
+
+/*
+
+ */
 func (this *QXmlStreamNamespaceDeclaration) Operator_equal(other unsafe.Pointer /*333*/) *QXmlStreamNamespaceDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -107,6 +122,10 @@ func (this *QXmlStreamNamespaceDeclaration) Operator_equal(other unsafe.Pointer 
 // index:1
 // Public Visibility=Default Availability=Available
 // [40] QXmlStreamNamespaceDeclaration & operator=(const QXmlStreamNamespaceDeclaration &)
+
+/*
+
+ */
 func (this *QXmlStreamNamespaceDeclaration) Operator_equal_1(arg0 QXmlStreamNamespaceDeclaration_ITF) *QXmlStreamNamespaceDeclaration {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QXmlStreamNamespaceDeclaration_PTR() != nil {
@@ -123,6 +142,10 @@ func (this *QXmlStreamNamespaceDeclaration) Operator_equal_1(arg0 QXmlStreamName
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamNamespaceDeclaration()
+
+/*
+
+ */
 func DeleteQXmlStreamNamespaceDeclaration(this *QXmlStreamNamespaceDeclaration) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -134,6 +157,10 @@ func DeleteQXmlStreamNamespaceDeclaration(this *QXmlStreamNamespaceDeclaration) 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef prefix() const
+
+/*
+
+ */
 func (this *QXmlStreamNamespaceDeclaration) Prefix() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration6prefixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,6 +173,10 @@ func (this *QXmlStreamNamespaceDeclaration) Prefix() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef namespaceUri() const
+
+/*
+
+ */
 func (this *QXmlStreamNamespaceDeclaration) NamespaceUri() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,6 +189,10 @@ func (this *QXmlStreamNamespaceDeclaration) NamespaceUri() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QXmlStreamNamespaceDeclaration &) const
+
+/*
+
+ */
 func (this *QXmlStreamNamespaceDeclaration) Operator_equal_equal(other QXmlStreamNamespaceDeclaration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamNamespaceDeclaration_PTR() != nil {
@@ -172,6 +207,10 @@ func (this *QXmlStreamNamespaceDeclaration) Operator_equal_equal(other QXmlStrea
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QXmlStreamNamespaceDeclaration &) const
+
+/*
+
+ */
 func (this *QXmlStreamNamespaceDeclaration) Operator_not_equal(other QXmlStreamNamespaceDeclaration_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamNamespaceDeclaration_PTR() != nil {

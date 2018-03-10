@@ -48,6 +48,9 @@ func (this *QGraphicsLayoutItem) InheritSizeHint(f func(which int, constraint *q
 	qtrt.SetAllInheritCallback(this, "sizeHint", f)
 }
 
+/*
+
+ */
 type QGraphicsLayoutItem struct {
 	*qtrt.CObject
 }
@@ -82,6 +85,10 @@ func (*QGraphicsLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayou
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, _Bool)
+
+/*
+Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
+*/
 func NewQGraphicsLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, isLayout bool) *QGraphicsLayoutItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
@@ -98,6 +105,10 @@ func NewQGraphicsLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayout
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, _Bool)
+
+/*
+Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
+*/
 func NewQGraphicsLayoutItem__() *QGraphicsLayoutItem {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record,
 	var convArg0 unsafe.Pointer
@@ -114,6 +125,10 @@ func NewQGraphicsLayoutItem__() *QGraphicsLayoutItem {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, _Bool)
+
+/*
+Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
+*/
 func NewQGraphicsLayoutItem__1(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayoutItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
@@ -132,6 +147,10 @@ func NewQGraphicsLayoutItem__1(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLay
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsLayoutItem()
+
+/*
+
+ */
 func DeleteQGraphicsLayoutItem(this *QGraphicsLayoutItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -143,6 +162,14 @@ func DeleteQGraphicsLayoutItem(this *QGraphicsLayoutItem) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSizePolicy(const QSizePolicy &)
+
+/*
+Sets the size policy to policy. The size policy describes how the item should grow horizontally and vertically when arranged in a layout.
+
+QGraphicsLayoutItem's default size policy is (QSizePolicy::Fixed, QSizePolicy::Fixed, QSizePolicy::DefaultType), but it is common for subclasses to change the default. For example, QGraphicsWidget defaults to (QSizePolicy::Preferred, QSizePolicy::Preferred, QSizePolicy::DefaultType).
+
+See also sizePolicy() and QWidget::sizePolicy().
+*/
 func (this *QGraphicsLayoutItem) SetSizePolicy(policy QSizePolicy_ITF) {
 	var convArg0 unsafe.Pointer
 	if policy != nil && policy.QSizePolicy_PTR() != nil {
@@ -156,6 +183,14 @@ func (this *QGraphicsLayoutItem) SetSizePolicy(policy QSizePolicy_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setSizePolicy(QSizePolicy::Policy, QSizePolicy::Policy, QSizePolicy::ControlType)
+
+/*
+Sets the size policy to policy. The size policy describes how the item should grow horizontally and vertically when arranged in a layout.
+
+QGraphicsLayoutItem's default size policy is (QSizePolicy::Fixed, QSizePolicy::Fixed, QSizePolicy::DefaultType), but it is common for subclasses to change the default. For example, QGraphicsWidget defaults to (QSizePolicy::Preferred, QSizePolicy::Preferred, QSizePolicy::DefaultType).
+
+See also sizePolicy() and QWidget::sizePolicy().
+*/
 func (this *QGraphicsLayoutItem) SetSizePolicy_1(hPolicy int, vPolicy int, controlType int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem13setSizePolicyEN11QSizePolicy6PolicyES1_NS0_11ControlTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hPolicy, vPolicy, controlType)
 	qtrt.ErrPrint(err, rv)
@@ -165,6 +200,14 @@ func (this *QGraphicsLayoutItem) SetSizePolicy_1(hPolicy int, vPolicy int, contr
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setSizePolicy(QSizePolicy::Policy, QSizePolicy::Policy, QSizePolicy::ControlType)
+
+/*
+Sets the size policy to policy. The size policy describes how the item should grow horizontally and vertically when arranged in a layout.
+
+QGraphicsLayoutItem's default size policy is (QSizePolicy::Fixed, QSizePolicy::Fixed, QSizePolicy::DefaultType), but it is common for subclasses to change the default. For example, QGraphicsWidget defaults to (QSizePolicy::Preferred, QSizePolicy::Preferred, QSizePolicy::DefaultType).
+
+See also sizePolicy() and QWidget::sizePolicy().
+*/
 func (this *QGraphicsLayoutItem) SetSizePolicy_1_(hPolicy int, vPolicy int) {
 	// arg: 2, QSizePolicy::ControlType=Elaborated, QSizePolicy::ControlType=Enum,
 	controlType := 0
@@ -176,6 +219,12 @@ func (this *QGraphicsLayoutItem) SetSizePolicy_1_(hPolicy int, vPolicy int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSizePolicy sizePolicy() const
+
+/*
+Returns the current size policy.
+
+See also setSizePolicy() and QWidget::sizePolicy().
+*/
 func (this *QGraphicsLayoutItem) SizePolicy() *QSizePolicy /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem10sizePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,6 +237,12 @@ func (this *QGraphicsLayoutItem) SizePolicy() *QSizePolicy /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumSize(const QSizeF &)
+
+/*
+Sets the minimum size to size. This property overrides sizeHint() for Qt::MinimumSize and ensures that effectiveSizeHint() will never return a size smaller than size. In order to unset the minimum size, use an invalid size.
+
+See also minimumSize(), maximumSize(), preferredSize(), Qt::MinimumSize, sizeHint(), setMinimumWidth(), and setMinimumHeight().
+*/
 func (this *QGraphicsLayoutItem) SetMinimumSize(size qtcore.QSizeF_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
@@ -201,6 +256,12 @@ func (this *QGraphicsLayoutItem) SetMinimumSize(size qtcore.QSizeF_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setMinimumSize(qreal, qreal)
+
+/*
+Sets the minimum size to size. This property overrides sizeHint() for Qt::MinimumSize and ensures that effectiveSizeHint() will never return a size smaller than size. In order to unset the minimum size, use an invalid size.
+
+See also minimumSize(), maximumSize(), preferredSize(), Qt::MinimumSize, sizeHint(), setMinimumWidth(), and setMinimumHeight().
+*/
 func (this *QGraphicsLayoutItem) SetMinimumSize_1(w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem14setMinimumSizeEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	qtrt.ErrPrint(err, rv)
@@ -210,6 +271,12 @@ func (this *QGraphicsLayoutItem) SetMinimumSize_1(w float64, h float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF minimumSize() const
+
+/*
+Returns the minimum size.
+
+See also setMinimumSize(), preferredSize(), maximumSize(), Qt::MinimumSize, and sizeHint().
+*/
 func (this *QGraphicsLayoutItem) MinimumSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -222,6 +289,12 @@ func (this *QGraphicsLayoutItem) MinimumSize() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumWidth(qreal)
+
+/*
+Sets the minimum width to width.
+
+See also minimumWidth(), setMinimumSize(), and minimumSize().
+*/
 func (this *QGraphicsLayoutItem) SetMinimumWidth(width float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem15setMinimumWidthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
@@ -231,6 +304,12 @@ func (this *QGraphicsLayoutItem) SetMinimumWidth(width float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal minimumWidth() const
+
+/*
+Returns the minimum width.
+
+See also setMinimumWidth(), setMinimumSize(), and minimumSize().
+*/
 func (this *QGraphicsLayoutItem) MinimumWidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem12minimumWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -241,6 +320,12 @@ func (this *QGraphicsLayoutItem) MinimumWidth() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumHeight(qreal)
+
+/*
+Sets the minimum height to height.
+
+See also minimumHeight(), setMinimumSize(), and minimumSize().
+*/
 func (this *QGraphicsLayoutItem) SetMinimumHeight(height float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem16setMinimumHeightEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), height)
 	qtrt.ErrPrint(err, rv)
@@ -250,6 +335,12 @@ func (this *QGraphicsLayoutItem) SetMinimumHeight(height float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal minimumHeight() const
+
+/*
+Returns the minimum height.
+
+See also setMinimumHeight(), setMinimumSize(), and minimumSize().
+*/
 func (this *QGraphicsLayoutItem) MinimumHeight() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem13minimumHeightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -260,6 +351,12 @@ func (this *QGraphicsLayoutItem) MinimumHeight() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreferredSize(const QSizeF &)
+
+/*
+Sets the preferred size to size. This property overrides sizeHint() for Qt::PreferredSize and provides the default value for effectiveSizeHint(). In order to unset the preferred size, use an invalid size.
+
+See also preferredSize(), minimumSize(), maximumSize(), Qt::PreferredSize, and sizeHint().
+*/
 func (this *QGraphicsLayoutItem) SetPreferredSize(size qtcore.QSizeF_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
@@ -273,6 +370,12 @@ func (this *QGraphicsLayoutItem) SetPreferredSize(size qtcore.QSizeF_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPreferredSize(qreal, qreal)
+
+/*
+Sets the preferred size to size. This property overrides sizeHint() for Qt::PreferredSize and provides the default value for effectiveSizeHint(). In order to unset the preferred size, use an invalid size.
+
+See also preferredSize(), minimumSize(), maximumSize(), Qt::PreferredSize, and sizeHint().
+*/
 func (this *QGraphicsLayoutItem) SetPreferredSize_1(w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem16setPreferredSizeEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	qtrt.ErrPrint(err, rv)
@@ -282,6 +385,12 @@ func (this *QGraphicsLayoutItem) SetPreferredSize_1(w float64, h float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF preferredSize() const
+
+/*
+Returns the preferred size.
+
+See also setPreferredSize(), minimumSize(), maximumSize(), Qt::PreferredSize, and sizeHint().
+*/
 func (this *QGraphicsLayoutItem) PreferredSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem13preferredSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -294,6 +403,12 @@ func (this *QGraphicsLayoutItem) PreferredSize() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreferredWidth(qreal)
+
+/*
+Sets the preferred width to width.
+
+See also preferredWidth(), preferredHeight(), setPreferredSize(), and preferredSize().
+*/
 func (this *QGraphicsLayoutItem) SetPreferredWidth(width float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem17setPreferredWidthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
@@ -303,6 +418,12 @@ func (this *QGraphicsLayoutItem) SetPreferredWidth(width float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal preferredWidth() const
+
+/*
+Returns the preferred width.
+
+See also setPreferredWidth(), setPreferredSize(), and preferredSize().
+*/
 func (this *QGraphicsLayoutItem) PreferredWidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem14preferredWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -313,6 +434,12 @@ func (this *QGraphicsLayoutItem) PreferredWidth() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreferredHeight(qreal)
+
+/*
+Sets the preferred height to height.
+
+See also preferredHeight(), preferredWidth(), setPreferredSize(), and preferredSize().
+*/
 func (this *QGraphicsLayoutItem) SetPreferredHeight(height float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem18setPreferredHeightEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), height)
 	qtrt.ErrPrint(err, rv)
@@ -322,6 +449,12 @@ func (this *QGraphicsLayoutItem) SetPreferredHeight(height float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal preferredHeight() const
+
+/*
+Returns the preferred height.
+
+See also setPreferredHeight(), setPreferredSize(), and preferredSize().
+*/
 func (this *QGraphicsLayoutItem) PreferredHeight() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem15preferredHeightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -332,6 +465,12 @@ func (this *QGraphicsLayoutItem) PreferredHeight() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumSize(const QSizeF &)
+
+/*
+Sets the maximum size to size. This property overrides sizeHint() for Qt::MaximumSize and ensures that effectiveSizeHint() will never return a size larger than size. In order to unset the maximum size, use an invalid size.
+
+See also maximumSize(), minimumSize(), preferredSize(), Qt::MaximumSize, and sizeHint().
+*/
 func (this *QGraphicsLayoutItem) SetMaximumSize(size qtcore.QSizeF_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
@@ -345,6 +484,12 @@ func (this *QGraphicsLayoutItem) SetMaximumSize(size qtcore.QSizeF_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setMaximumSize(qreal, qreal)
+
+/*
+Sets the maximum size to size. This property overrides sizeHint() for Qt::MaximumSize and ensures that effectiveSizeHint() will never return a size larger than size. In order to unset the maximum size, use an invalid size.
+
+See also maximumSize(), minimumSize(), preferredSize(), Qt::MaximumSize, and sizeHint().
+*/
 func (this *QGraphicsLayoutItem) SetMaximumSize_1(w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem14setMaximumSizeEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	qtrt.ErrPrint(err, rv)
@@ -354,6 +499,12 @@ func (this *QGraphicsLayoutItem) SetMaximumSize_1(w float64, h float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF maximumSize() const
+
+/*
+Returns the maximum size.
+
+See also setMaximumSize(), minimumSize(), preferredSize(), Qt::MaximumSize, and sizeHint().
+*/
 func (this *QGraphicsLayoutItem) MaximumSize() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -366,6 +517,12 @@ func (this *QGraphicsLayoutItem) MaximumSize() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumWidth(qreal)
+
+/*
+Sets the maximum width to width.
+
+See also maximumWidth(), setMaximumSize(), and maximumSize().
+*/
 func (this *QGraphicsLayoutItem) SetMaximumWidth(width float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem15setMaximumWidthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
@@ -375,6 +532,12 @@ func (this *QGraphicsLayoutItem) SetMaximumWidth(width float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal maximumWidth() const
+
+/*
+Returns the maximum width.
+
+See also setMaximumWidth(), setMaximumSize(), and maximumSize().
+*/
 func (this *QGraphicsLayoutItem) MaximumWidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem12maximumWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -385,6 +548,12 @@ func (this *QGraphicsLayoutItem) MaximumWidth() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumHeight(qreal)
+
+/*
+Sets the maximum height to height.
+
+See also maximumHeight(), setMaximumSize(), and maximumSize().
+*/
 func (this *QGraphicsLayoutItem) SetMaximumHeight(height float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem16setMaximumHeightEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), height)
 	qtrt.ErrPrint(err, rv)
@@ -394,6 +563,12 @@ func (this *QGraphicsLayoutItem) SetMaximumHeight(height float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal maximumHeight() const
+
+/*
+Returns the maximum height.
+
+See also setMaximumHeight(), setMaximumSize(), and maximumSize().
+*/
 func (this *QGraphicsLayoutItem) MaximumHeight() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem13maximumHeightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -404,6 +579,16 @@ func (this *QGraphicsLayoutItem) MaximumHeight() float64 {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
+
+/*
+This virtual function sets the geometry of the QGraphicsLayoutItem to rect, which is in parent coordinates (e.g., the top-left corner of rect is equivalent to the item's position in parent coordinates).
+
+You must reimplement this function in a subclass of QGraphicsLayoutItem to receive geometry updates. The layout will call this function when it does a rearrangement.
+
+If rect is outside of the bounds of minimumSize and maximumSize, it will be adjusted to its closest size so that it is within the legal bounds.
+
+See also geometry().
+*/
 func (this *QGraphicsLayoutItem) SetGeometry(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -417,6 +602,12 @@ func (this *QGraphicsLayoutItem) SetGeometry(rect qtcore.QRectF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF geometry() const
+
+/*
+Returns the item's geometry (e.g., position and size) as a QRectF. This function is equivalent to QRectF(pos(), size()).
+
+See also setGeometry().
+*/
 func (this *QGraphicsLayoutItem) Geometry() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -429,6 +620,12 @@ func (this *QGraphicsLayoutItem) Geometry() *qtcore.QRectF /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void getContentsMargins(qreal *, qreal *, qreal *, qreal *) const
+
+/*
+This virtual function provides the left, top, right and bottom contents margins for this QGraphicsLayoutItem. The default implementation assumes all contents margins are 0. The parameters point to values stored in qreals. If any of the pointers is 0, that value will not be updated.
+
+See also QGraphicsWidget::setContentsMargins().
+*/
 func (this *QGraphicsLayoutItem) GetContentsMargins(left unsafe.Pointer /*666*/, top unsafe.Pointer /*666*/, right unsafe.Pointer /*666*/, bottom unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)
@@ -438,6 +635,14 @@ func (this *QGraphicsLayoutItem) GetContentsMargins(left unsafe.Pointer /*666*/,
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF contentsRect() const
+
+/*
+Returns the contents rect in local coordinates.
+
+The contents rect defines the subrectangle used by an associated layout when arranging subitems. This function is a convenience function that adjusts the item's geometry() by its contents margins. Note that getContentsMargins() is a virtual function that you can reimplement to return the item's contents margins.
+
+See also getContentsMargins() and geometry().
+*/
 func (this *QGraphicsLayoutItem) ContentsRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem12contentsRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -450,6 +655,22 @@ func (this *QGraphicsLayoutItem) ContentsRect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF effectiveSizeHint(Qt::SizeHint, const QSizeF &) const
+
+/*
+Returns the effective size hint for this QGraphicsLayoutItem.
+
+which is the size hint in question. constraint is an optional argument that defines a special constrain when calculating the effective size hint. By default, constraint is QSizeF(-1, -1), which means there is no constraint to the size hint.
+
+If you want to specify the widget's size hint for a given width or height, you can provide the fixed dimension in constraint. This is useful for widgets that can grow only either vertically or horizontally, and need to set either their width or their height to a special value.
+
+For example, a text paragraph item fit into a column width of 200 may grow vertically. You can pass QSizeF(200, -1) as a constraint to get a suitable minimum, preferred and maximum height).
+
+You can adjust the effective size hint by reimplementing sizeHint() in a QGraphicsLayoutItem subclass, or by calling one of the following functions: setMinimumSize(), setPreferredSize, or setMaximumSize() (or a combination of both).
+
+This function caches each of the size hints and guarantees that sizeHint() will be called only once for each value of which - unless constraint is not specified and updateGeometry() has been called.
+
+See also sizeHint().
+*/
 func (this *QGraphicsLayoutItem) EffectiveSizeHint(which int, constraint qtcore.QSizeF_ITF) *qtcore.QSizeF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if constraint != nil && constraint.QSizeF_PTR() != nil {
@@ -466,6 +687,22 @@ func (this *QGraphicsLayoutItem) EffectiveSizeHint(which int, constraint qtcore.
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF effectiveSizeHint(Qt::SizeHint, const QSizeF &) const
+
+/*
+Returns the effective size hint for this QGraphicsLayoutItem.
+
+which is the size hint in question. constraint is an optional argument that defines a special constrain when calculating the effective size hint. By default, constraint is QSizeF(-1, -1), which means there is no constraint to the size hint.
+
+If you want to specify the widget's size hint for a given width or height, you can provide the fixed dimension in constraint. This is useful for widgets that can grow only either vertically or horizontally, and need to set either their width or their height to a special value.
+
+For example, a text paragraph item fit into a column width of 200 may grow vertically. You can pass QSizeF(200, -1) as a constraint to get a suitable minimum, preferred and maximum height).
+
+You can adjust the effective size hint by reimplementing sizeHint() in a QGraphicsLayoutItem subclass, or by calling one of the following functions: setMinimumSize(), setPreferredSize, or setMaximumSize() (or a combination of both).
+
+This function caches each of the size hints and guarantees that sizeHint() will be called only once for each value of which - unless constraint is not specified and updateGeometry() has been called.
+
+See also sizeHint().
+*/
 func (this *QGraphicsLayoutItem) EffectiveSizeHint__(which int) *qtcore.QSizeF /*123*/ {
 	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record,
 	var convArg1 unsafe.Pointer
@@ -480,6 +717,12 @@ func (this *QGraphicsLayoutItem) EffectiveSizeHint__(which int) *qtcore.QSizeF /
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void updateGeometry()
+
+/*
+This virtual function discards any cached size hint information. You should always call this function if you change the return value of the sizeHint() function. Subclasses must always call the base implementation when reimplementing this function.
+
+See also effectiveSizeHint().
+*/
 func (this *QGraphicsLayoutItem) UpdateGeometry() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem14updateGeometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -489,6 +732,12 @@ func (this *QGraphicsLayoutItem) UpdateGeometry() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsLayoutItem * parentLayoutItem() const
+
+/*
+Returns the parent of this QGraphicsLayoutItem, or 0 if there is no parent, or if the parent does not inherit from QGraphicsLayoutItem (QGraphicsLayoutItem is often used through multiple inheritance with QObject-derived classes).
+
+See also setParentLayoutItem().
+*/
 func (this *QGraphicsLayoutItem) ParentLayoutItem() *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem16parentLayoutItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -499,6 +748,12 @@ func (this *QGraphicsLayoutItem) ParentLayoutItem() *QGraphicsLayoutItem /*777 Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setParentLayoutItem(QGraphicsLayoutItem *)
+
+/*
+Sets the parent of this QGraphicsLayoutItem to parent.
+
+See also parentLayoutItem().
+*/
 func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
@@ -512,6 +767,12 @@ func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent QGraphicsLayoutItem_
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isLayout() const
+
+/*
+Returns true if this QGraphicsLayoutItem is a layout (e.g., is inherited by an object that arranges other QGraphicsLayoutItem objects); otherwise returns false.
+
+See also QGraphicsLayout.
+*/
 func (this *QGraphicsLayoutItem) IsLayout() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem8isLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -522,6 +783,12 @@ func (this *QGraphicsLayoutItem) IsLayout() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * graphicsItem() const
+
+/*
+Returns the QGraphicsItem that this layout item represents. For QGraphicsWidget it will return itself. For custom items it can return an aggregated value.
+
+See also setGraphicsItem().
+*/
 func (this *QGraphicsLayoutItem) GraphicsItem() *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem12graphicsItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -532,6 +799,18 @@ func (this *QGraphicsLayoutItem) GraphicsItem() *QGraphicsItem /*777 QGraphicsIt
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool ownedByLayout() const
+
+/*
+Returns whether a layout should delete this item in its destructor. If its true, then the layout will delete it. If its false, then it is assumed that another object has the ownership of it, and the layout won't delete this item.
+
+If the item inherits both QGraphicsItem and QGraphicsLayoutItem (such as QGraphicsWidget does) the item is really part of two ownership hierarchies. This property informs what the layout should do with its child items when it is destructed. In the case of QGraphicsWidget, it is preferred that when the layout is deleted it won't delete its children (since they are also part of the graphics item hierarchy).
+
+By default this value is initialized to false in QGraphicsLayoutItem, but it is overridden by QGraphicsLayout to return true. This is because QGraphicsLayout is not normally part of the QGraphicsItem hierarchy, so the parent layout should delete it. Subclasses might override this default behaviour by calling setOwnedByLayout(true).
+
+This function was introduced in  Qt 4.6.
+
+See also setOwnedByLayout().
+*/
 func (this *QGraphicsLayoutItem) OwnedByLayout() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem13ownedByLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -542,6 +821,12 @@ func (this *QGraphicsLayoutItem) OwnedByLayout() bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setGraphicsItem(QGraphicsItem *)
+
+/*
+If the QGraphicsLayoutItem represents a QGraphicsItem, and it wants to take advantage of the automatic reparenting capabilities of QGraphicsLayout it should set this value. Note that if you delete item and not delete the layout item, you are responsible of calling setGraphicsItem(0) in order to avoid having a dangling pointer.
+
+See also graphicsItem().
+*/
 func (this *QGraphicsLayoutItem) SetGraphicsItem(item QGraphicsItem_ITF /*777 QGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
@@ -555,6 +840,14 @@ func (this *QGraphicsLayoutItem) SetGraphicsItem(item QGraphicsItem_ITF /*777 QG
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setOwnedByLayout(_Bool)
+
+/*
+Sets whether a layout should delete this item in its destructor or not. ownership must be true to in order for the layout to delete it.
+
+This function was introduced in  Qt 4.6.
+
+See also ownedByLayout().
+*/
 func (this *QGraphicsLayoutItem) SetOwnedByLayout(ownedByLayout bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem16setOwnedByLayoutEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ownedByLayout)
 	qtrt.ErrPrint(err, rv)
@@ -564,6 +857,14 @@ func (this *QGraphicsLayoutItem) SetOwnedByLayout(ownedByLayout bool) {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
+
+/*
+This pure virtual function returns the size hint for which of the QGraphicsLayoutItem, using the width or height of constraint to constrain the output.
+
+Reimplement this function in a subclass of QGraphicsLayoutItem to provide the necessary size hints for your items.
+
+See also effectiveSizeHint().
+*/
 func (this *QGraphicsLayoutItem) SizeHint(which int, constraint qtcore.QSizeF_ITF) *qtcore.QSizeF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if constraint != nil && constraint.QSizeF_PTR() != nil {
@@ -580,6 +881,14 @@ func (this *QGraphicsLayoutItem) SizeHint(which int, constraint qtcore.QSizeF_IT
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
+
+/*
+This pure virtual function returns the size hint for which of the QGraphicsLayoutItem, using the width or height of constraint to constrain the output.
+
+Reimplement this function in a subclass of QGraphicsLayoutItem to provide the necessary size hints for your items.
+
+See also effectiveSizeHint().
+*/
 func (this *QGraphicsLayoutItem) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
 	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record,
 	var convArg1 unsafe.Pointer

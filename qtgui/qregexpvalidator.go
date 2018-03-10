@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QRegExpValidator struct {
 	*QValidator
 }
@@ -64,6 +67,10 @@ func (*QRegExpValidator) NewFromPointer(cthis unsafe.Pointer) *QRegExpValidator 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QRegExpValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QRegExpValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QRegExpValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegExpValidator(QObject *)
+
+/*
+
+ */
 func NewQRegExpValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQRegExpValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpVa
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegExpValidator(QObject *)
+
+/*
+
+ */
 func NewQRegExpValidator__() *QRegExpValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +119,10 @@ func NewQRegExpValidator__() *QRegExpValidator {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegExpValidator(const QRegExp &, QObject *)
+
+/*
+
+ */
 func NewQRegExpValidator_1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -124,6 +143,10 @@ func NewQRegExpValidator_1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*77
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegExpValidator(const QRegExp &, QObject *)
+
+/*
+
+ */
 func NewQRegExpValidator_1_(rx qtcore.QRegExp_ITF) *QRegExpValidator {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -142,6 +165,10 @@ func NewQRegExpValidator_1_(rx qtcore.QRegExp_ITF) *QRegExpValidator {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRegExpValidator()
+
+/*
+
+ */
 func DeleteQRegExpValidator(this *QRegExpValidator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRegExpValidatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -153,6 +180,12 @@ func DeleteQRegExpValidator(this *QRegExpValidator) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
+
+/*
+This virtual function returns Invalid if input is invalid according to this validator's rules, Intermediate if it is likely that a little more editing will make the input acceptable (e.g. the user types "4" into a widget which accepts integers between 10 and 99), and Acceptable if the input is valid.
+
+The function can change both input and pos (the cursor position) if required.
+*/
 func (this *QRegExpValidator) Validate(input string, pos int) int {
 	var tmpArg0 = qtcore.NewQString_5(input)
 	var convArg0 = tmpArg0.GetCthis()
@@ -165,6 +198,10 @@ func (this *QRegExpValidator) Validate(input string, pos int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRegExp(const QRegExp &)
+
+/*
+
+ */
 func (this *QRegExpValidator) SetRegExp(rx qtcore.QRegExp_ITF) {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -178,6 +215,10 @@ func (this *QRegExpValidator) SetRegExp(rx qtcore.QRegExp_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QRegExp & regExp() const
+
+/*
+
+ */
 func (this *QRegExpValidator) RegExp() *qtcore.QRegExp {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QRegExpValidator6regExpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,6 +231,10 @@ func (this *QRegExpValidator) RegExp() *qtcore.QRegExp {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void regExpChanged(const QRegExp &)
+
+/*
+
+ */
 func (this *QRegExpValidator) RegExpChanged(regExp qtcore.QRegExp_ITF) {
 	var convArg0 unsafe.Pointer
 	if regExp != nil && regExp.QRegExp_PTR() != nil {

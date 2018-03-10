@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QFileIconProvider struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QFileIconProvider) NewFromPointer(cthis unsafe.Pointer) *QFileIconProvide
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileIconProvider()
+
+/*
+Constructs a file icon provider.
+*/
 func NewQFileIconProvider() *QFileIconProvider {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QFileIconProviderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQFileIconProvider() *QFileIconProvider {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileIconProvider()
+
+/*
+
+ */
 func DeleteQFileIconProvider(this *QFileIconProvider) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QFileIconProviderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -90,6 +101,10 @@ func DeleteQFileIconProvider(this *QFileIconProvider) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QIcon icon(enum QFileIconProvider::IconType) const
+
+/*
+Returns an icon set for the given type.
+*/
 func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconENS_8IconTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +117,10 @@ func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [8] QIcon icon(const QFileInfo &) const
+
+/*
+Returns an icon set for the given type.
+*/
 func (this *QFileIconProvider) Icon_1(info qtcore.QFileInfo_ITF) *qtgui.QIcon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if info != nil && info.QFileInfo_PTR() != nil {
@@ -118,6 +137,10 @@ func (this *QFileIconProvider) Icon_1(info qtcore.QFileInfo_ITF) *qtgui.QIcon /*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString type(const QFileInfo &) const
+
+/*
+Returns the type of the file described by info.
+*/
 func (this *QFileIconProvider) Type(info qtcore.QFileInfo_ITF) string {
 	var convArg0 unsafe.Pointer
 	if info != nil && info.QFileInfo_PTR() != nil {
@@ -135,6 +158,14 @@ func (this *QFileIconProvider) Type(info qtcore.QFileInfo_ITF) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOptions(QFileIconProvider::Options)
+
+/*
+Sets options that affect the icon provider.
+
+This function was introduced in  Qt 5.2.
+
+See also options().
+*/
 func (this *QFileIconProvider) SetOptions(options int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QFileIconProvider10setOptionsE6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
 	qtrt.ErrPrint(err, rv)
@@ -144,24 +175,61 @@ func (this *QFileIconProvider) SetOptions(options int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFileIconProvider::Options options() const
+
+/*
+Returns all the options that affect the icon provider. By default, all options are disabled.
+
+This function was introduced in  Qt 5.2.
+
+See also setOptions().
+*/
 func (this *QFileIconProvider) Options() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFileIconProvider7optionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
+/*
+ConstantValue
+QFileIconProvider::Computer0
+QFileIconProvider::Desktop1
+QFileIconProvider::Trashcan2
+QFileIconProvider::Network3
+QFileIconProvider::Drive4
+QFileIconProvider::Folder5
+QFileIconProvider::File6
+
+*/
 type QFileIconProvider__IconType = int
 
+//
 const QFileIconProvider__Computer QFileIconProvider__IconType = 0
+
+//
 const QFileIconProvider__Desktop QFileIconProvider__IconType = 1
+
+//
 const QFileIconProvider__Trashcan QFileIconProvider__IconType = 2
+
+//
 const QFileIconProvider__Network QFileIconProvider__IconType = 3
+
+//
 const QFileIconProvider__Drive QFileIconProvider__IconType = 4
+
+//
 const QFileIconProvider__Folder QFileIconProvider__IconType = 5
+
+//
 const QFileIconProvider__File QFileIconProvider__IconType = 6
 
+/*
+
+
+ */
 type QFileIconProvider__Option = int
 
+//
 const QFileIconProvider__DontUseCustomDirectoryIcons QFileIconProvider__Option = 1
 
 //  body block end

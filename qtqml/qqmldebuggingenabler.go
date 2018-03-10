@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlDebuggingEnabler struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QQmlDebuggingEnabler) NewFromPointer(cthis unsafe.Pointer) *QQmlDebugging
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlDebuggingEnabler(_Bool)
+
+/*
+
+ */
 func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnablerC2Eb", qtrt.FFI_TYPE_POINTER, printWarning)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlDebuggingEnabler(_Bool)
+
+/*
+
+ */
 func NewQQmlDebuggingEnabler__() *QQmlDebuggingEnabler {
 	// arg: 0, bool=Bool, =Invalid,
 	printWarning := true
@@ -93,6 +104,10 @@ func NewQQmlDebuggingEnabler__() *QQmlDebuggingEnabler {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList debuggerServices()
+
+/*
+
+ */
 func (this *QQmlDebuggingEnabler) DebuggerServices() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler16debuggerServicesEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +125,10 @@ func QQmlDebuggingEnabler_DebuggerServices() *qtcore.QStringList /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList inspectorServices()
+
+/*
+
+ */
 func (this *QQmlDebuggingEnabler) InspectorServices() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler17inspectorServicesEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +146,10 @@ func QQmlDebuggingEnabler_InspectorServices() *qtcore.QStringList /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList profilerServices()
+
+/*
+
+ */
 func (this *QQmlDebuggingEnabler) ProfilerServices() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler16profilerServicesEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -144,6 +167,10 @@ func QQmlDebuggingEnabler_ProfilerServices() *qtcore.QStringList /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList nativeDebuggerServices()
+
+/*
+
+ */
 func (this *QQmlDebuggingEnabler) NativeDebuggerServices() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler22nativeDebuggerServicesEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -161,6 +188,10 @@ func QQmlDebuggingEnabler_NativeDebuggerServices() *qtcore.QStringList /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setServices(const QStringList &)
+
+/*
+
+ */
 func (this *QQmlDebuggingEnabler) SetServices(services qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if services != nil && services.QStringList_PTR() != nil {
@@ -178,6 +209,10 @@ func QQmlDebuggingEnabler_SetServices(services qtcore.QStringList_ITF) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool startTcpDebugServer(int, enum QQmlDebuggingEnabler::StartMode, const QString &)
+
+/*
+
+ */
 func (this *QQmlDebuggingEnabler) StartTcpDebugServer(port int, mode int, hostName string) bool {
 	var tmpArg2 = qtcore.NewQString_5(hostName)
 	var convArg2 = tmpArg2.GetCthis()
@@ -195,6 +230,10 @@ func QQmlDebuggingEnabler_StartTcpDebugServer(port int, mode int, hostName strin
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool startTcpDebugServer(int, enum QQmlDebuggingEnabler::StartMode, const QString &)
+
+/*
+
+ */
 func (this *QQmlDebuggingEnabler) StartTcpDebugServer__(port int) bool {
 	// arg: 1, QQmlDebuggingEnabler::StartMode=Enum, QQmlDebuggingEnabler::StartMode=Enum,
 	mode := 0
@@ -209,6 +248,10 @@ func (this *QQmlDebuggingEnabler) StartTcpDebugServer__(port int) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool startTcpDebugServer(int, enum QQmlDebuggingEnabler::StartMode, const QString &)
+
+/*
+
+ */
 func (this *QQmlDebuggingEnabler) StartTcpDebugServer__1(port int, mode int) bool {
 	// arg: 2, const QString &=LValueReference, QString=Record,
 	var convArg2 = qtcore.NewQString()
@@ -221,6 +264,10 @@ func (this *QQmlDebuggingEnabler) StartTcpDebugServer__1(port int, mode int) boo
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool connectToLocalDebugger(const QString &, enum QQmlDebuggingEnabler::StartMode)
+
+/*
+
+ */
 func (this *QQmlDebuggingEnabler) ConnectToLocalDebugger(socketFileName string, mode int) bool {
 	var tmpArg0 = qtcore.NewQString_5(socketFileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -238,6 +285,10 @@ func QQmlDebuggingEnabler_ConnectToLocalDebugger(socketFileName string, mode int
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool connectToLocalDebugger(const QString &, enum QQmlDebuggingEnabler::StartMode)
+
+/*
+
+ */
 func (this *QQmlDebuggingEnabler) ConnectToLocalDebugger__(socketFileName string) bool {
 	var tmpArg0 = qtcore.NewQString_5(socketFileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -254,9 +305,16 @@ func DeleteQQmlDebuggingEnabler(this *QQmlDebuggingEnabler) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QQmlDebuggingEnabler__StartMode = int
 
+//
 const QQmlDebuggingEnabler__DoNotWaitForClient QQmlDebuggingEnabler__StartMode = 0
+
+//
 const QQmlDebuggingEnabler__WaitForClient QQmlDebuggingEnabler__StartMode = 1
 
 //  body block end

@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGGeometryNode struct {
 	*QSGBasicGeometryNode
 }
@@ -67,6 +70,10 @@ func (*QSGGeometryNode) NewFromPointer(cthis unsafe.Pointer) *QSGGeometryNode {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGGeometryNode()
+
+/*
+
+ */
 func NewQSGGeometryNode() *QSGGeometryNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSGGeometryNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQSGGeometryNode() *QSGGeometryNode {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGGeometryNode()
+
+/*
+
+ */
 func DeleteQSGGeometryNode(this *QSGGeometryNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSGGeometryNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 144)
@@ -90,6 +101,10 @@ func DeleteQSGGeometryNode(this *QSGGeometryNode) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaterial(QSGMaterial *)
+
+/*
+
+ */
 func (this *QSGGeometryNode) SetMaterial(material QSGMaterial_ITF /*777 QSGMaterial **/) {
 	var convArg0 unsafe.Pointer
 	if material != nil && material.QSGMaterial_PTR() != nil {
@@ -103,6 +118,10 @@ func (this *QSGGeometryNode) SetMaterial(material QSGMaterial_ITF /*777 QSGMater
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSGMaterial * material() const
+
+/*
+
+ */
 func (this *QSGGeometryNode) Material() *QSGMaterial /*777 QSGMaterial **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSGGeometryNode8materialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -113,6 +132,10 @@ func (this *QSGGeometryNode) Material() *QSGMaterial /*777 QSGMaterial **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpaqueMaterial(QSGMaterial *)
+
+/*
+
+ */
 func (this *QSGGeometryNode) SetOpaqueMaterial(material QSGMaterial_ITF /*777 QSGMaterial **/) {
 	var convArg0 unsafe.Pointer
 	if material != nil && material.QSGMaterial_PTR() != nil {
@@ -126,6 +149,10 @@ func (this *QSGGeometryNode) SetOpaqueMaterial(material QSGMaterial_ITF /*777 QS
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSGMaterial * opaqueMaterial() const
+
+/*
+
+ */
 func (this *QSGGeometryNode) OpaqueMaterial() *QSGMaterial /*777 QSGMaterial **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSGGeometryNode14opaqueMaterialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,6 +163,10 @@ func (this *QSGGeometryNode) OpaqueMaterial() *QSGMaterial /*777 QSGMaterial **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGMaterial * activeMaterial() const
+
+/*
+
+ */
 func (this *QSGGeometryNode) ActiveMaterial() *QSGMaterial /*777 QSGMaterial **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSGGeometryNode14activeMaterialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,6 +177,10 @@ func (this *QSGGeometryNode) ActiveMaterial() *QSGMaterial /*777 QSGMaterial **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderOrder(int)
+
+/*
+
+ */
 func (this *QSGGeometryNode) SetRenderOrder(order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSGGeometryNode14setRenderOrderEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), order)
 	qtrt.ErrPrint(err, rv)
@@ -155,6 +190,10 @@ func (this *QSGGeometryNode) SetRenderOrder(order int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int renderOrder() const
+
+/*
+
+ */
 func (this *QSGGeometryNode) RenderOrder() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSGGeometryNode11renderOrderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -165,6 +204,10 @@ func (this *QSGGeometryNode) RenderOrder() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInheritedOpacity(qreal)
+
+/*
+
+ */
 func (this *QSGGeometryNode) SetInheritedOpacity(opacity float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSGGeometryNode19setInheritedOpacityEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +217,10 @@ func (this *QSGGeometryNode) SetInheritedOpacity(opacity float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal inheritedOpacity() const
+
+/*
+
+ */
 func (this *QSGGeometryNode) InheritedOpacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSGGeometryNode16inheritedOpacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QObjectData struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QObjectData) NewFromPointer(cthis unsafe.Pointer) *QObjectData {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void ~QObjectData()
+
+/*
+
+ */
 func DeleteQObjectData(this *QObjectData) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QObjectDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -76,6 +83,10 @@ func DeleteQObjectData(this *QObjectData) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMetaObject * dynamicMetaObject() const
+
+/*
+
+ */
 func (this *QObjectData) DynamicMetaObject() *QMetaObject /*777 QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QObjectData17dynamicMetaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

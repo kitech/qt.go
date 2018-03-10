@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QHstsPolicy struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QHstsPolicy) NewFromPointer(cthis unsafe.Pointer) *QHstsPolicy {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHstsPolicy()
+
+/*
+Constructs an invalid (expired) policy with empty host name and subdomains not included.
+*/
 func NewQHstsPolicy() *QHstsPolicy {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQHstsPolicy() *QHstsPolicy {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHstsPolicy(const QDateTime &, QHstsPolicy::PolicyFlags, const QString &, QUrl::ParsingMode)
+
+/*
+Constructs an invalid (expired) policy with empty host name and subdomains not included.
+*/
 func NewQHstsPolicy_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode int) *QHstsPolicy {
 	var convArg0 unsafe.Pointer
 	if expiry != nil && expiry.QDateTime_PTR() != nil {
@@ -96,6 +107,10 @@ func NewQHstsPolicy_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHstsPolicy(const QDateTime &, QHstsPolicy::PolicyFlags, const QString &, QUrl::ParsingMode)
+
+/*
+Constructs an invalid (expired) policy with empty host name and subdomains not included.
+*/
 func NewQHstsPolicy_1_(expiry qtcore.QDateTime_ITF, flags int, host string) *QHstsPolicy {
 	var convArg0 unsafe.Pointer
 	if expiry != nil && expiry.QDateTime_PTR() != nil {
@@ -116,6 +131,10 @@ func NewQHstsPolicy_1_(expiry qtcore.QDateTime_ITF, flags int, host string) *QHs
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QHstsPolicy & operator=(const QHstsPolicy &)
+
+/*
+
+ */
 func (this *QHstsPolicy) Operator_equal(rhs QHstsPolicy_ITF) *QHstsPolicy {
 	var convArg0 unsafe.Pointer
 	if rhs != nil && rhs.QHstsPolicy_PTR() != nil {
@@ -132,6 +151,10 @@ func (this *QHstsPolicy) Operator_equal(rhs QHstsPolicy_ITF) *QHstsPolicy {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QHstsPolicy & operator=(QHstsPolicy &&)
+
+/*
+
+ */
 func (this *QHstsPolicy) Operator_equal_1(other unsafe.Pointer /*333*/) *QHstsPolicy {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -144,6 +167,10 @@ func (this *QHstsPolicy) Operator_equal_1(other unsafe.Pointer /*333*/) *QHstsPo
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QHstsPolicy()
+
+/*
+
+ */
 func DeleteQHstsPolicy(this *QHstsPolicy) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -155,6 +182,10 @@ func DeleteQHstsPolicy(this *QHstsPolicy) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QHstsPolicy &)
+
+/*
+
+ */
 func (this *QHstsPolicy) Swap(other QHstsPolicy_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QHstsPolicy_PTR() != nil {
@@ -168,6 +199,12 @@ func (this *QHstsPolicy) Swap(other QHstsPolicy_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHost(const QString &, QUrl::ParsingMode)
+
+/*
+Sets a host, host data is interpreted according to mode parameter.
+
+See also host(), QUrl::setHost(), and QUrl::ParsingMode.
+*/
 func (this *QHstsPolicy) SetHost(host string, mode int) {
 	var tmpArg0 = qtcore.NewQString_5(host)
 	var convArg0 = tmpArg0.GetCthis()
@@ -179,6 +216,12 @@ func (this *QHstsPolicy) SetHost(host string, mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHost(const QString &, QUrl::ParsingMode)
+
+/*
+Sets a host, host data is interpreted according to mode parameter.
+
+See also host(), QUrl::setHost(), and QUrl::ParsingMode.
+*/
 func (this *QHstsPolicy) SetHost__(host string) {
 	var tmpArg0 = qtcore.NewQString_5(host)
 	var convArg0 = tmpArg0.GetCthis()
@@ -192,6 +235,12 @@ func (this *QHstsPolicy) SetHost__(host string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExpiry(const QDateTime &)
+
+/*
+Sets the expiration date for the policy (in UTC) to expiry.
+
+See also expiry().
+*/
 func (this *QHstsPolicy) SetExpiry(expiry qtcore.QDateTime_ITF) {
 	var convArg0 unsafe.Pointer
 	if expiry != nil && expiry.QDateTime_PTR() != nil {
@@ -205,6 +254,12 @@ func (this *QHstsPolicy) SetExpiry(expiry qtcore.QDateTime_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime expiry() const
+
+/*
+Returns the expiration date for the policy (in UTC).
+
+See also setExpiry().
+*/
 func (this *QHstsPolicy) Expiry() *qtcore.QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy6expiryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,6 +272,12 @@ func (this *QHstsPolicy) Expiry() *qtcore.QDateTime /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIncludesSubDomains(_Bool)
+
+/*
+Sets whether subdomains are included for this policy to include.
+
+See also includesSubDomains().
+*/
 func (this *QHstsPolicy) SetIncludesSubDomains(include bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy21setIncludesSubDomainsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), include)
 	qtrt.ErrPrint(err, rv)
@@ -226,6 +287,12 @@ func (this *QHstsPolicy) SetIncludesSubDomains(include bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool includesSubDomains() const
+
+/*
+Returns true if this policy also includes subdomains.
+
+See also setIncludesSubDomains().
+*/
 func (this *QHstsPolicy) IncludesSubDomains() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy18includesSubDomainsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -236,14 +303,25 @@ func (this *QHstsPolicy) IncludesSubDomains() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isExpired() const
+
+/*
+Return true if this policy has a valid expiration date and this date is greater than QDateTime::currentGetDateTimeUtc().
+
+See also setExpiry() and expiry().
+*/
 func (this *QHstsPolicy) IsExpired() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy9isExpiredEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
+/*
+
+
+ */
 type QHstsPolicy__PolicyFlag = int
 
+//
 const QHstsPolicy__IncludeSubDomains QHstsPolicy__PolicyFlag = 1
 
 //  body block end

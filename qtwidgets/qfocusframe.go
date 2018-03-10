@@ -53,6 +53,9 @@ func (this *QFocusFrame) InheritInitStyleOption(f func(option *QStyleOption /*77
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
+/*
+
+ */
 type QFocusFrame struct {
 	*QWidget
 }
@@ -85,6 +88,10 @@ func (*QFocusFrame) NewFromPointer(cthis unsafe.Pointer) *QFocusFrame {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QFocusFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusFrame10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -95,6 +102,14 @@ func (this *QFocusFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFocusFrame(QWidget *)
+
+/*
+Constructs a QFocusFrame.
+
+The focus frame will not monitor parent for updates but rather can be placed manually or by using QFocusFrame::setWidget. A QFocusFrame sets Qt::WA_NoChildEventsForParent attribute; as a result the parent will not receive a QEvent::ChildAdded event, this will make it possible to manually set the geometry of the QFocusFrame inside of a QSplitter or other child event monitoring widget.
+
+See also QFocusFrame::setWidget().
+*/
 func NewQFocusFrame(parent QWidget_ITF /*777 QWidget **/) *QFocusFrame {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -111,6 +126,14 @@ func NewQFocusFrame(parent QWidget_ITF /*777 QWidget **/) *QFocusFrame {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFocusFrame(QWidget *)
+
+/*
+Constructs a QFocusFrame.
+
+The focus frame will not monitor parent for updates but rather can be placed manually or by using QFocusFrame::setWidget. A QFocusFrame sets Qt::WA_NoChildEventsForParent attribute; as a result the parent will not receive a QEvent::ChildAdded event, this will make it possible to manually set the geometry of the QFocusFrame inside of a QSplitter or other child event monitoring widget.
+
+See also QFocusFrame::setWidget().
+*/
 func NewQFocusFrame__() *QFocusFrame {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -125,6 +148,10 @@ func NewQFocusFrame__() *QFocusFrame {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFocusFrame()
+
+/*
+
+ */
 func DeleteQFocusFrame(this *QFocusFrame) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusFrameD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -136,6 +163,12 @@ func DeleteQFocusFrame(this *QFocusFrame) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
+
+/*
+QFocusFrame will track changes to widget and resize itself automatically. If the monitored widget's parent changes, QFocusFrame will follow the widget and place itself around the widget automatically. If the monitored widget is deleted, QFocusFrame will set it to zero.
+
+See also QFocusFrame::widget().
+*/
 func (this *QFocusFrame) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -149,6 +182,12 @@ func (this *QFocusFrame) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget() const
+
+/*
+Returns the currently monitored widget for automatically resize and update.
+
+See also QFocusFrame::setWidget().
+*/
 func (this *QFocusFrame) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusFrame6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,6 +198,10 @@ func (this *QFocusFrame) Widget() *QWidget /*777 QWidget **/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QFocusFrame) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -173,6 +216,10 @@ func (this *QFocusFrame) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+Reimplemented from QObject::eventFilter().
+*/
 func (this *QFocusFrame) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -191,6 +238,10 @@ func (this *QFocusFrame) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QFocusFrame) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
@@ -204,6 +255,12 @@ func (this *QFocusFrame) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOption *) const
+
+/*
+Initialize option with the values from this QFocusFrame. This method is useful for subclasses when they need a QStyleOption, but don't want to fill in all the information themselves.
+
+See also QStyleOption::initFrom().
+*/
 func (this *QFocusFrame) InitStyleOption(option QStyleOption_ITF /*777 QStyleOption **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {

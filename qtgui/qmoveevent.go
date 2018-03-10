@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QMoveEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QMoveEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMoveEvent(const QPoint &, const QPoint &)
+
+/*
+
+ */
 func NewQMoveEvent(pos qtcore.QPoint_ITF, oldPos qtcore.QPoint_ITF) *QMoveEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -84,6 +91,10 @@ func NewQMoveEvent(pos qtcore.QPoint_ITF, oldPos qtcore.QPoint_ITF) *QMoveEvent 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMoveEvent()
+
+/*
+
+ */
 func DeleteQMoveEvent(this *QMoveEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMoveEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -95,6 +106,10 @@ func DeleteQMoveEvent(this *QMoveEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & pos() const
+
+/*
+
+ */
 func (this *QMoveEvent) Pos() *qtcore.QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -107,6 +122,10 @@ func (this *QMoveEvent) Pos() *qtcore.QPoint {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & oldPos() const
+
+/*
+
+ */
 func (this *QMoveEvent) OldPos() *qtcore.QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

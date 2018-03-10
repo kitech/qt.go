@@ -43,6 +43,9 @@ func (this *QMouseEventTransition) InheritEventTest(f func(event *qtcore.QEvent 
 	qtrt.SetAllInheritCallback(this, "eventTest", f)
 }
 
+/*
+
+ */
 type QMouseEventTransition struct {
 	*qtcore.QEventTransition
 }
@@ -75,6 +78,10 @@ func (*QMouseEventTransition) NewFromPointer(cthis unsafe.Pointer) *QMouseEventT
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QMouseEventTransition) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QMouseEventTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +92,10 @@ func (this *QMouseEventTransition) MetaObject() *qtcore.QMetaObject /*777 const 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMouseEventTransition(QState *)
+
+/*
+Constructs a new mouse event transition with the given sourceState.
+*/
 func NewQMouseEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
 	var convArg0 unsafe.Pointer
 	if sourceState != nil && sourceState.QState_PTR() != nil {
@@ -101,6 +112,10 @@ func NewQMouseEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMouseEventTransition(QState *)
+
+/*
+Constructs a new mouse event transition with the given sourceState.
+*/
 func NewQMouseEventTransition__() *QMouseEventTransition {
 	// arg: 0, QState *=Pointer, QState=Record,
 	var convArg0 unsafe.Pointer
@@ -115,6 +130,10 @@ func NewQMouseEventTransition__() *QMouseEventTransition {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMouseEventTransition(QObject *, QEvent::Type, Qt::MouseButton, QState *)
+
+/*
+Constructs a new mouse event transition with the given sourceState.
+*/
 func NewQMouseEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int, sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -135,6 +154,10 @@ func NewQMouseEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, typ
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMouseEventTransition(QObject *, QEvent::Type, Qt::MouseButton, QState *)
+
+/*
+Constructs a new mouse event transition with the given sourceState.
+*/
 func NewQMouseEventTransition_1_(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int) *QMouseEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -153,6 +176,10 @@ func NewQMouseEventTransition_1_(object qtcore.QObject_ITF /*777 QObject **/, ty
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMouseEventTransition()
+
+/*
+
+ */
 func DeleteQMouseEventTransition(this *QMouseEventTransition) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransitionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -164,6 +191,14 @@ func DeleteQMouseEventTransition(this *QMouseEventTransition) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButton button() const
+
+/*
+Returns the button that this mouse event transition checks for.
+
+Note: Getter function for property button.
+
+See also setButton().
+*/
 func (this *QMouseEventTransition) Button() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QMouseEventTransition6buttonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +209,14 @@ func (this *QMouseEventTransition) Button() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButton(Qt::MouseButton)
+
+/*
+Sets the button that this mouse event transition will check for.
+
+Note: Setter function for property button.
+
+See also button().
+*/
 func (this *QMouseEventTransition) SetButton(button int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransition9setButtonEN2Qt11MouseButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	qtrt.ErrPrint(err, rv)
@@ -183,6 +226,14 @@ func (this *QMouseEventTransition) SetButton(button int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers modifierMask() const
+
+/*
+Returns the keyboard modifier mask that this mouse event transition checks for.
+
+Note: Getter function for property modifierMask.
+
+See also setModifierMask().
+*/
 func (this *QMouseEventTransition) ModifierMask() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QMouseEventTransition12modifierMaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +244,14 @@ func (this *QMouseEventTransition) ModifierMask() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModifierMask(Qt::KeyboardModifiers)
+
+/*
+Sets the keyboard modifier mask that this mouse event transition will check for to modifierMask.
+
+Note: Setter function for property modifierMask.
+
+See also modifierMask().
+*/
 func (this *QMouseEventTransition) SetModifierMask(modifiers int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransition15setModifierMaskE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
 	qtrt.ErrPrint(err, rv)
@@ -202,6 +261,12 @@ func (this *QMouseEventTransition) SetModifierMask(modifiers int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath hitTestPath() const
+
+/*
+Returns the hit test path for this mouse event transition.
+
+See also setHitTestPath().
+*/
 func (this *QMouseEventTransition) HitTestPath() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QMouseEventTransition11hitTestPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,6 +279,12 @@ func (this *QMouseEventTransition) HitTestPath() *qtgui.QPainterPath /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHitTestPath(const QPainterPath &)
+
+/*
+Sets the hit test path for this mouse event transition to path. If a valid path has been set, the transition will only trigger if the mouse event position (QMouseEvent::pos()) is inside the path.
+
+See also hitTestPath() and QPainterPath::contains().
+*/
 func (this *QMouseEventTransition) SetHitTestPath(path qtgui.QPainterPath_ITF) {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
@@ -227,6 +298,10 @@ func (this *QMouseEventTransition) SetHitTestPath(path qtgui.QPainterPath_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onTransition(QEvent *)
+
+/*
+Reimplemented from QAbstractTransition::onTransition().
+*/
 func (this *QMouseEventTransition) OnTransition(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -240,6 +315,10 @@ func (this *QMouseEventTransition) OnTransition(event qtcore.QEvent_ITF /*777 QE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventTest(QEvent *)
+
+/*
+Reimplemented from QAbstractTransition::eventTest().
+*/
 func (this *QMouseEventTransition) EventTest(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {

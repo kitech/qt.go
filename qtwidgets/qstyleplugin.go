@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStylePlugin struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QStylePlugin) NewFromPointer(cthis unsafe.Pointer) *QStylePlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QStylePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStylePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,12 @@ func (this *QStylePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStylePlugin(QObject *)
+
+/*
+Constructs a style plugin with the given parent.
+
+Note that this constructor is invoked automatically by the moc generated code that exports the plugin, so there is no need for calling it explicitly.
+*/
 func NewQStylePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QStylePlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +104,12 @@ func NewQStylePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QStylePlugin 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStylePlugin(QObject *)
+
+/*
+Constructs a style plugin with the given parent.
+
+Note that this constructor is invoked automatically by the moc generated code that exports the plugin, so there is no need for calling it explicitly.
+*/
 func NewQStylePlugin__() *QStylePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +124,10 @@ func NewQStylePlugin__() *QStylePlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStylePlugin()
+
+/*
+
+ */
 func DeleteQStylePlugin(this *QStylePlugin) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePluginD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -116,6 +139,24 @@ func DeleteQStylePlugin(this *QStylePlugin) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QStyle * create(const QString &)
+
+/*
+Creates and returns a QStyle object for the given style key. If a plugin cannot create a style, it should return 0 instead.
+
+The style key is usually the class name of the required style. Note that the keys are case insensitive. For example:
+
+
+  QStyle *MyStylePlugin::create(const QString &key)
+  {
+      QString lcKey = key.toLower();
+      if (lcKey == "rocket") {
+          return new RocketStyle;
+      } else if (lcKey == "starbuster") {
+          return new StarBusterStyle;
+      }
+      return 0;
+  }
+*/
 func (this *QStylePlugin) Create(key string) *QStyle /*777 QStyle **/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()

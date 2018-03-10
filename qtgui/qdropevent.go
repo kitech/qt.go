@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QDropEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QDropEvent) NewFromPointer(cthis unsafe.Pointer) *QDropEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDropEvent(const QPointF &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+
+/*
+
+ */
 func NewQDropEvent(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDropEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -84,6 +91,10 @@ func NewQDropEvent(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_IT
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDropEvent(const QPointF &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+
+/*
+
+ */
 func NewQDropEvent__(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDropEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -106,6 +117,10 @@ func NewQDropEvent__(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDropEvent()
+
+/*
+
+ */
 func DeleteQDropEvent(this *QDropEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDropEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 72)
@@ -117,6 +132,10 @@ func DeleteQDropEvent(this *QDropEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint pos() const
+
+/*
+
+ */
 func (this *QDropEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,6 +148,10 @@ func (this *QDropEvent) Pos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & posF() const
+
+/*
+
+ */
 func (this *QDropEvent) PosF() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent4posFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,6 +164,10 @@ func (this *QDropEvent) PosF() *qtcore.QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::MouseButtons mouseButtons() const
+
+/*
+
+ */
 func (this *QDropEvent) MouseButtons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent12mouseButtonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +178,10 @@ func (this *QDropEvent) MouseButtons() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers keyboardModifiers() const
+
+/*
+
+ */
 func (this *QDropEvent) KeyboardModifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent17keyboardModifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,6 +192,10 @@ func (this *QDropEvent) KeyboardModifiers() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::DropActions possibleActions() const
+
+/*
+
+ */
 func (this *QDropEvent) PossibleActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent15possibleActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,6 +206,10 @@ func (this *QDropEvent) PossibleActions() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::DropAction proposedAction() const
+
+/*
+
+ */
 func (this *QDropEvent) ProposedAction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent14proposedActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -181,6 +220,10 @@ func (this *QDropEvent) ProposedAction() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void acceptProposedAction()
+
+/*
+
+ */
 func (this *QDropEvent) AcceptProposedAction() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDropEvent20acceptProposedActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,6 +233,10 @@ func (this *QDropEvent) AcceptProposedAction() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::DropAction dropAction() const
+
+/*
+
+ */
 func (this *QDropEvent) DropAction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent10dropActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -200,6 +247,10 @@ func (this *QDropEvent) DropAction() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDropAction(Qt::DropAction)
+
+/*
+
+ */
 func (this *QDropEvent) SetDropAction(action int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDropEvent13setDropActionEN2Qt10DropActionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action)
 	qtrt.ErrPrint(err, rv)
@@ -209,6 +260,10 @@ func (this *QDropEvent) SetDropAction(action int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * source() const
+
+/*
+
+ */
 func (this *QDropEvent) Source() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -219,6 +274,10 @@ func (this *QDropEvent) Source() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QMimeData * mimeData() const
+
+/*
+
+ */
 func (this *QDropEvent) MimeData() *qtcore.QMimeData /*777 const QMimeData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDropEvent8mimeDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

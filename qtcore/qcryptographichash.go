@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QCryptographicHash struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QCryptographicHash) NewFromPointer(cthis unsafe.Pointer) *QCryptographicH
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCryptographicHash(enum QCryptographicHash::Algorithm)
+
+/*
+Constructs an object that can be used to create a cryptographic hash from data using method.
+*/
 func NewQCryptographicHash(method int) *QCryptographicHash {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCryptographicHashC2ENS_9AlgorithmE", qtrt.FFI_TYPE_POINTER, method)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQCryptographicHash(method int) *QCryptographicHash {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QCryptographicHash()
+
+/*
+
+ */
 func DeleteQCryptographicHash(this *QCryptographicHash) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCryptographicHashD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -88,6 +99,10 @@ func DeleteQCryptographicHash(this *QCryptographicHash) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reset()
+
+/*
+Resets the object.
+*/
 func (this *QCryptographicHash) Reset() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCryptographicHash5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +112,10 @@ func (this *QCryptographicHash) Reset() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addData(const char *, int)
+
+/*
+Adds the first length chars of data to the cryptographic hash.
+*/
 func (this *QCryptographicHash) AddData(data string, length int) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -108,6 +127,10 @@ func (this *QCryptographicHash) AddData(data string, length int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addData(const QByteArray &)
+
+/*
+Adds the first length chars of data to the cryptographic hash.
+*/
 func (this *QCryptographicHash) AddData_1(data QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -121,6 +144,10 @@ func (this *QCryptographicHash) AddData_1(data QByteArray_ITF) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool addData(QIODevice *)
+
+/*
+Adds the first length chars of data to the cryptographic hash.
+*/
 func (this *QCryptographicHash) AddData_2(device QIODevice_ITF /*777 QIODevice **/) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -135,6 +162,12 @@ func (this *QCryptographicHash) AddData_2(device QIODevice_ITF /*777 QIODevice *
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray result() const
+
+/*
+Returns the final hash value.
+
+See also QByteArray::toHex().
+*/
 func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCryptographicHash6resultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,6 +180,10 @@ func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray hash(const QByteArray &, enum QCryptographicHash::Algorithm)
+
+/*
+Returns the hash of data using method.
+*/
 func (this *QCryptographicHash) Hash(data QByteArray_ITF, method int) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -164,26 +201,68 @@ func QCryptographicHash_Hash(data QByteArray_ITF, method int) *QByteArray /*123*
 	return rv
 }
 
+/*
+Note: In Qt versions before 5.9, when asked to generate a SHA3 hash sum, QCryptographicHash actually calculated Keccak. If you need compatibility with SHA-3 hashes produced by those versions of Qt, use the Keccak_ enumerators. Alternatively, if source compatibility is required, define the macro QT_SHA3_KECCAK_COMPAT.
+
+
+*/
 type QCryptographicHash__Algorithm = int
 
+//
 const QCryptographicHash__Md4 QCryptographicHash__Algorithm = 0
+
+//
 const QCryptographicHash__Md5 QCryptographicHash__Algorithm = 1
+
+//
 const QCryptographicHash__Sha1 QCryptographicHash__Algorithm = 2
+
+//
 const QCryptographicHash__Sha224 QCryptographicHash__Algorithm = 3
+
+//
 const QCryptographicHash__Sha256 QCryptographicHash__Algorithm = 4
+
+//
 const QCryptographicHash__Sha384 QCryptographicHash__Algorithm = 5
+
+//
 const QCryptographicHash__Sha512 QCryptographicHash__Algorithm = 6
+
+//
 const QCryptographicHash__Keccak_224 QCryptographicHash__Algorithm = 7
+
+//
 const QCryptographicHash__Keccak_256 QCryptographicHash__Algorithm = 8
+
+//
 const QCryptographicHash__Keccak_384 QCryptographicHash__Algorithm = 9
+
+//
 const QCryptographicHash__Keccak_512 QCryptographicHash__Algorithm = 10
+
+//
 const QCryptographicHash__RealSha3_224 QCryptographicHash__Algorithm = 11
+
+//
 const QCryptographicHash__RealSha3_256 QCryptographicHash__Algorithm = 12
+
+//
 const QCryptographicHash__RealSha3_384 QCryptographicHash__Algorithm = 13
+
+//
 const QCryptographicHash__RealSha3_512 QCryptographicHash__Algorithm = 14
+
+//
 const QCryptographicHash__Sha3_224 QCryptographicHash__Algorithm = 11
+
+//
 const QCryptographicHash__Sha3_256 QCryptographicHash__Algorithm = 12
+
+//
 const QCryptographicHash__Sha3_384 QCryptographicHash__Algorithm = 13
+
+//
 const QCryptographicHash__Sha3_512 QCryptographicHash__Algorithm = 14
 
 //  body block end

@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QPolygonF struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QPolygonF) NewFromPointer(cthis unsafe.Pointer) *QPolygonF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPolygonF()
+
+/*
+
+ */
 func NewQPolygonF() *QPolygonF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQPolygonF() *QPolygonF {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPolygonF(int)
+
+/*
+
+ */
 func NewQPolygonF_1(size int) *QPolygonF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFC2Ei", qtrt.FFI_TYPE_POINTER, size)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +101,10 @@ func NewQPolygonF_1(size int) *QPolygonF {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QPolygonF(const QRectF &)
+
+/*
+
+ */
 func NewQPolygonF_2(r qtcore.QRectF_ITF) *QPolygonF {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -106,6 +121,10 @@ func NewQPolygonF_2(r qtcore.QRectF_ITF) *QPolygonF {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QPolygonF(const QPolygon &)
+
+/*
+
+ */
 func NewQPolygonF_3(a QPolygon_ITF) *QPolygonF {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygon_PTR() != nil {
@@ -122,6 +141,10 @@ func NewQPolygonF_3(a QPolygon_ITF) *QPolygonF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QPolygonF()
+
+/*
+
+ */
 func DeleteQPolygonF(this *QPolygonF) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -133,6 +156,10 @@ func DeleteQPolygonF(this *QPolygonF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF & operator=(QPolygonF &&)
+
+/*
+
+ */
 func (this *QPolygonF) Operator_equal(other unsafe.Pointer /*333*/) *QPolygonF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -145,6 +172,10 @@ func (this *QPolygonF) Operator_equal(other unsafe.Pointer /*333*/) *QPolygonF {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF & operator=(const QPolygonF &)
+
+/*
+
+ */
 func (this *QPolygonF) Operator_equal_1(other QPolygonF_ITF) *QPolygonF {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPolygonF_PTR() != nil {
@@ -161,6 +192,12 @@ func (this *QPolygonF) Operator_equal_1(other QPolygonF_ITF) *QPolygonF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPolygonF &)
+
+/*
+Swaps polygon other with this polygon. This operation is very fast and never fails.
+
+This function was introduced in  Qt 4.8.
+*/
 func (this *QPolygonF) Swap(other QPolygonF_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPolygonF_PTR() != nil {
@@ -174,6 +211,12 @@ func (this *QPolygonF) Swap(other QPolygonF_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void translate(qreal, qreal)
+
+/*
+Translates all points in the polygon by (dx, dy).
+
+See also translated().
+*/
 func (this *QPolygonF) Translate(dx float64, dy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonF9translateEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -183,6 +226,12 @@ func (this *QPolygonF) Translate(dx float64, dy float64) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void translate(const QPointF &)
+
+/*
+Translates all points in the polygon by (dx, dy).
+
+See also translated().
+*/
 func (this *QPolygonF) Translate_1(offset qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPointF_PTR() != nil {
@@ -196,6 +245,14 @@ func (this *QPolygonF) Translate_1(offset qtcore.QPointF_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF translated(qreal, qreal) const
+
+/*
+Returns a copy of the polygon that is translated by (dx, dy).
+
+This function was introduced in  Qt 4.6.
+
+See also translate().
+*/
 func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF10translatedEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -208,6 +265,14 @@ func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF translated(const QPointF &) const
+
+/*
+Returns a copy of the polygon that is translated by (dx, dy).
+
+This function was introduced in  Qt 4.6.
+
+See also translate().
+*/
 func (this *QPolygonF) Translated_1(offset qtcore.QPointF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPointF_PTR() != nil {
@@ -224,6 +289,10 @@ func (this *QPolygonF) Translated_1(offset qtcore.QPointF_ITF) *QPolygonF /*123*
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygon toPolygon() const
+
+/*
+
+ */
 func (this *QPolygonF) ToPolygon() *QPolygon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF9toPolygonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -236,6 +305,10 @@ func (this *QPolygonF) ToPolygon() *QPolygon /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isClosed() const
+
+/*
+
+ */
 func (this *QPolygonF) IsClosed() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF8isClosedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -246,6 +319,12 @@ func (this *QPolygonF) IsClosed() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
+
+/*
+Returns the bounding rectangle of the polygon, or QRect(0, 0, 0, 0) if the polygon is empty.
+
+See also QVector::isEmpty().
+*/
 func (this *QPolygonF) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,6 +337,12 @@ func (this *QPolygonF) BoundingRect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool containsPoint(const QPointF &, Qt::FillRule) const
+
+/*
+Returns true if the given point is inside the polygon according to the specified fillRule; otherwise returns false.
+
+This function was introduced in  Qt 4.3.
+*/
 func (this *QPolygonF) ContainsPoint(pt qtcore.QPointF_ITF, fillRule int) bool {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPointF_PTR() != nil {
@@ -272,6 +357,16 @@ func (this *QPolygonF) ContainsPoint(pt qtcore.QPointF_ITF, fillRule int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF united(const QPolygonF &) const
+
+/*
+Returns a polygon which is the union of this polygon and r.
+
+Set operations on polygons, will treat the polygons as areas, and implicitly close the polygon.
+
+This function was introduced in  Qt 4.3.
+
+See also intersected() and subtracted().
+*/
 func (this *QPolygonF) United(r QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygonF_PTR() != nil {
@@ -288,6 +383,16 @@ func (this *QPolygonF) United(r QPolygonF_ITF) *QPolygonF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF intersected(const QPolygonF &) const
+
+/*
+Returns a polygon which is the intersection of this polygon and r.
+
+Set operations on polygons will treat the polygons as areas. Non-closed polygons will be treated as implicitly closed.
+
+This function was introduced in  Qt 4.3.
+
+See also intersects().
+*/
 func (this *QPolygonF) Intersected(r QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygonF_PTR() != nil {
@@ -304,6 +409,14 @@ func (this *QPolygonF) Intersected(r QPolygonF_ITF) *QPolygonF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF subtracted(const QPolygonF &) const
+
+/*
+Returns a polygon which is r subtracted from this polygon.
+
+Set operations on polygons will treat the polygons as areas. Non-closed polygons will be treated as implicitly closed.
+
+This function was introduced in  Qt 4.3.
+*/
 func (this *QPolygonF) Subtracted(r QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygonF_PTR() != nil {
@@ -320,6 +433,16 @@ func (this *QPolygonF) Subtracted(r QPolygonF_ITF) *QPolygonF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool intersects(const QPolygonF &) const
+
+/*
+Returns true if the current polygon intersects at any point the given polygon p. Also returns true if the current polygon contains or is contained by any part of p.
+
+Set operations on polygons will treat the polygons as areas. Non-closed polygons will be treated as implicitly closed.
+
+This function was introduced in  Qt 5.10.
+
+See also intersected().
+*/
 func (this *QPolygonF) Intersects(r QPolygonF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygonF_PTR() != nil {

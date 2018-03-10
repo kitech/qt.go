@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGBasicGeometryNode struct {
 	*QSGNode
 }
@@ -67,6 +70,10 @@ func (*QSGBasicGeometryNode) NewFromPointer(cthis unsafe.Pointer) *QSGBasicGeome
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGBasicGeometryNode()
+
+/*
+
+ */
 func DeleteQSGBasicGeometryNode(this *QSGBasicGeometryNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 112)
@@ -78,6 +85,10 @@ func DeleteQSGBasicGeometryNode(this *QSGBasicGeometryNode) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGeometry(QSGGeometry *)
+
+/*
+
+ */
 func (this *QSGBasicGeometryNode) SetGeometry(geometry QSGGeometry_ITF /*777 QSGGeometry **/) {
 	var convArg0 unsafe.Pointer
 	if geometry != nil && geometry.QSGGeometry_PTR() != nil {
@@ -91,6 +102,10 @@ func (this *QSGBasicGeometryNode) SetGeometry(geometry QSGGeometry_ITF /*777 QSG
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QSGGeometry * geometry() const
+
+/*
+
+ */
 func (this *QSGBasicGeometryNode) Geometry() *QSGGeometry /*777 const QSGGeometry **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -101,6 +116,10 @@ func (this *QSGBasicGeometryNode) Geometry() *QSGGeometry /*777 const QSGGeometr
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QSGGeometry * geometry()
+
+/*
+
+ */
 func (this *QSGBasicGeometryNode) Geometry_1() *QSGGeometry /*777 QSGGeometry **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +130,10 @@ func (this *QSGBasicGeometryNode) Geometry_1() *QSGGeometry /*777 QSGGeometry **
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QMatrix4x4 * matrix() const
+
+/*
+
+ */
 func (this *QSGBasicGeometryNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +144,10 @@ func (this *QSGBasicGeometryNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QSGClipNode * clipList() const
+
+/*
+
+ */
 func (this *QSGBasicGeometryNode) ClipList() *QSGClipNode /*777 const QSGClipNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode8clipListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +158,10 @@ func (this *QSGBasicGeometryNode) ClipList() *QSGClipNode /*777 const QSGClipNod
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRendererMatrix(const QMatrix4x4 *)
+
+/*
+
+ */
 func (this *QSGBasicGeometryNode) SetRendererMatrix(m qtgui.QMatrix4x4_ITF /*777 const QMatrix4x4 **/) {
 	var convArg0 unsafe.Pointer
 	if m != nil && m.QMatrix4x4_PTR() != nil {
@@ -144,6 +175,10 @@ func (this *QSGBasicGeometryNode) SetRendererMatrix(m qtgui.QMatrix4x4_ITF /*777
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRendererClipList(const QSGClipNode *)
+
+/*
+
+ */
 func (this *QSGBasicGeometryNode) SetRendererClipList(c QSGClipNode_ITF /*777 const QSGClipNode **/) {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QSGClipNode_PTR() != nil {
@@ -157,6 +192,10 @@ func (this *QSGBasicGeometryNode) SetRendererClipList(c QSGClipNode_ITF /*777 co
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QSGBasicGeometryNode(enum QSGNode::NodeType)
+
+/*
+
+ */
 func NewQSGBasicGeometryNode(type_ int) *QSGBasicGeometryNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNodeC2EN7QSGNode8NodeTypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

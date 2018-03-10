@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QMessageLogger struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QMessageLogger) NewFromPointer(cthis unsafe.Pointer) *QMessageLogger {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMessageLogger()
+
+/*
+
+ */
 func NewQMessageLogger() *QMessageLogger {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMessageLoggerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQMessageLogger() *QMessageLogger {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMessageLogger(const char *, int, const char *)
+
+/*
+
+ */
 func NewQMessageLogger_1(file string, line int, function string) *QMessageLogger {
 	var convArg0 = qtrt.CString(file)
 	defer qtrt.FreeMem(convArg0)
@@ -93,6 +104,10 @@ func NewQMessageLogger_1(file string, line int, function string) *QMessageLogger
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMessageLogger(const char *, int, const char *, const char *)
+
+/*
+
+ */
 func NewQMessageLogger_2(file string, line int, function string, category string) *QMessageLogger {
 	var convArg0 = qtrt.CString(file)
 	defer qtrt.FreeMem(convArg0)

@@ -41,6 +41,9 @@ func (this *QAbstractConcatenable) InheritAppendLatin1To(f func(a string, len_ i
 	qtrt.SetAllInheritCallback(this, "appendLatin1To", f)
 }
 
+/*
+
+ */
 type QAbstractConcatenable struct {
 	*qtrt.CObject
 }
@@ -75,6 +78,10 @@ func (*QAbstractConcatenable) NewFromPointer(cthis unsafe.Pointer) *QAbstractCon
 // index:0
 // Protected static Visibility=Default Availability=Available
 // [-2] void convertFromAscii(const char *, int, QChar *&)
+
+/*
+
+ */
 func (this *QAbstractConcatenable) ConvertFromAscii(a string, len_ int, out QChar_ITF) {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
@@ -94,6 +101,10 @@ func QAbstractConcatenable_ConvertFromAscii(a string, len_ int, out QChar_ITF) {
 // index:1
 // Protected static inline Visibility=Default Availability=Available
 // [-2] void convertFromAscii(char, QChar *&)
+
+/*
+
+ */
 func (this *QAbstractConcatenable) ConvertFromAscii_1(a byte, out QChar_ITF) {
 	var convArg1 unsafe.Pointer
 	if out != nil && out.QChar_PTR() != nil {
@@ -111,6 +122,10 @@ func QAbstractConcatenable_ConvertFromAscii_1(a byte, out QChar_ITF) {
 // index:0
 // Protected static Visibility=Default Availability=Available
 // [-2] void appendLatin1To(const char *, int, QChar *)
+
+/*
+
+ */
 func (this *QAbstractConcatenable) AppendLatin1To(a string, len_ int, out QChar_ITF /*777 QChar **/) {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)

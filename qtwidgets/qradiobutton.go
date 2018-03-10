@@ -58,6 +58,9 @@ func (this *QRadioButton) InheritInitStyleOption(f func(button *QStyleOptionButt
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
+/*
+
+ */
 type QRadioButton struct {
 	*QAbstractButton
 }
@@ -90,6 +93,10 @@ func (*QRadioButton) NewFromPointer(cthis unsafe.Pointer) *QRadioButton {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QRadioButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QRadioButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +107,12 @@ func (this *QRadioButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRadioButton(QWidget *)
+
+/*
+Constructs a radio button with the given parent, but with no text or pixmap.
+
+The parent argument is passed on to the QAbstractButton constructor.
+*/
 func NewQRadioButton(parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -116,6 +129,12 @@ func NewQRadioButton(parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRadioButton(QWidget *)
+
+/*
+Constructs a radio button with the given parent, but with no text or pixmap.
+
+The parent argument is passed on to the QAbstractButton constructor.
+*/
 func NewQRadioButton__() *QRadioButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -130,6 +149,12 @@ func NewQRadioButton__() *QRadioButton {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRadioButton(const QString &, QWidget *)
+
+/*
+Constructs a radio button with the given parent, but with no text or pixmap.
+
+The parent argument is passed on to the QAbstractButton constructor.
+*/
 func NewQRadioButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -148,6 +173,12 @@ func NewQRadioButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadi
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRadioButton(const QString &, QWidget *)
+
+/*
+Constructs a radio button with the given parent, but with no text or pixmap.
+
+The parent argument is passed on to the QAbstractButton constructor.
+*/
 func NewQRadioButton_1_(text string) *QRadioButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -164,6 +195,10 @@ func NewQRadioButton_1_(text string) *QRadioButton {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRadioButton()
+
+/*
+
+ */
 func DeleteQRadioButton(this *QRadioButton) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButtonD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -175,6 +210,10 @@ func DeleteQRadioButton(this *QRadioButton) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QRadioButton8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,6 +226,10 @@ func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QRadioButton15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,6 +242,10 @@ func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QRadioButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -213,6 +260,10 @@ func (this *QRadioButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool hitButton(const QPoint &) const
+
+/*
+Reimplemented from QAbstractButton::hitButton().
+*/
 func (this *QRadioButton) HitButton(arg0 qtcore.QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
@@ -227,6 +278,10 @@ func (this *QRadioButton) HitButton(arg0 qtcore.QPoint_ITF) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QRadioButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
@@ -240,6 +295,10 @@ func (this *QRadioButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseMoveEvent().
+*/
 func (this *QRadioButton) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -253,6 +312,12 @@ func (this *QRadioButton) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouse
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionButton *) const
+
+/*
+Initialize option with the values from this QRadioButton. This method is useful for subclasses when they need a QStyleOptionButton, but don't want to fill in all the information themselves.
+
+See also QStyleOption::initFrom().
+*/
 func (this *QRadioButton) InitStyleOption(button QStyleOptionButton_ITF /*777 QStyleOptionButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QStyleOptionButton_PTR() != nil {

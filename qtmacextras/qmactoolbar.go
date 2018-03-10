@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QMacToolBar struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QMacToolBar) NewFromPointer(cthis unsafe.Pointer) *QMacToolBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QMacToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMacToolBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QMacToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMacToolBar(QObject *)
+
+/*
+Constructs a QMacToolBar with the given parent
+*/
 func NewQMacToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQMacToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMacToolBar(QObject *)
+
+/*
+Constructs a QMacToolBar with the given parent
+*/
 func NewQMacToolBar__() *QMacToolBar {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQMacToolBar__() *QMacToolBar {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMacToolBar(const QString &, QObject *)
+
+/*
+Constructs a QMacToolBar with the given parent
+*/
 func NewQMacToolBar_1(identifier string, parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 	var tmpArg0 = qtcore.NewQString_5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
@@ -123,6 +142,10 @@ func NewQMacToolBar_1(identifier string, parent qtcore.QObject_ITF /*777 QObject
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMacToolBar(const QString &, QObject *)
+
+/*
+Constructs a QMacToolBar with the given parent
+*/
 func NewQMacToolBar_1_(identifier string) *QMacToolBar {
 	var tmpArg0 = qtcore.NewQString_5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
@@ -139,6 +162,10 @@ func NewQMacToolBar_1_(identifier string) *QMacToolBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMacToolBar()
+
+/*
+
+ */
 func DeleteQMacToolBar(this *QMacToolBar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -150,6 +177,10 @@ func DeleteQMacToolBar(this *QMacToolBar) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMacToolBarItem * addItem(const QIcon &, const QString &)
+
+/*
+Add a toolbar item with icon and text.
+*/
 func (this *QMacToolBar) AddItem(icon qtgui.QIcon_ITF, text string) *QMacToolBarItem /*777 QMacToolBarItem **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -166,6 +197,10 @@ func (this *QMacToolBar) AddItem(icon qtgui.QIcon_ITF, text string) *QMacToolBar
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMacToolBarItem * addAllowedItem(const QIcon &, const QString &)
+
+/*
+Add atoolbar item with icon and text to the toolbar customization menu.
+*/
 func (this *QMacToolBar) AddAllowedItem(icon qtgui.QIcon_ITF, text string) *QMacToolBarItem /*777 QMacToolBarItem **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -182,6 +217,10 @@ func (this *QMacToolBar) AddAllowedItem(icon qtgui.QIcon_ITF, text string) *QMac
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMacToolBarItem * addStandardItem(QMacToolBarItem::StandardItem)
+
+/*
+
+ */
 func (this *QMacToolBar) AddStandardItem(standardItem int) *QMacToolBarItem /*777 QMacToolBarItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar15addStandardItemEN15QMacToolBarItem12StandardItemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardItem)
 	qtrt.ErrPrint(err, rv)
@@ -192,6 +231,10 @@ func (this *QMacToolBar) AddStandardItem(standardItem int) *QMacToolBarItem /*77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMacToolBarItem * addAllowedStandardItem(QMacToolBarItem::StandardItem)
+
+/*
+
+ */
 func (this *QMacToolBar) AddAllowedStandardItem(standardItem int) *QMacToolBarItem /*777 QMacToolBarItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar22addAllowedStandardItemEN15QMacToolBarItem12StandardItemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardItem)
 	qtrt.ErrPrint(err, rv)
@@ -202,6 +245,10 @@ func (this *QMacToolBar) AddAllowedStandardItem(standardItem int) *QMacToolBarIt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addSeparator()
+
+/*
+Add a toolbar separator item.
+*/
 func (this *QMacToolBar) AddSeparator() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar12addSeparatorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -211,6 +258,12 @@ func (this *QMacToolBar) AddSeparator() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void attachToWindow(QWindow *)
+
+/*
+Attaches the toolbar to window. The toolbar will be displayed at the top of the native window, under and attached to the title bar above the QWindow. The toolbar is displayed outside the QWidnow area.
+
+Use QWidget::windowHandle() to get a QWindow pointer from a QWidget instance. At app startup the QWindow might not have been created yet, call QWidget::winId() to make sure it is.
+*/
 func (this *QMacToolBar) AttachToWindow(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -224,6 +277,10 @@ func (this *QMacToolBar) AttachToWindow(window qtgui.QWindow_ITF /*777 QWindow *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void detachFromWindow()
+
+/*
+Detatches the toolbar from the current window.
+*/
 func (this *QMacToolBar) DetachFromWindow() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar16detachFromWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -233,6 +290,10 @@ func (this *QMacToolBar) DetachFromWindow() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] NSToolbar * nativeToolbar() const
+
+/*
+Returns the naitve NSTooolbar object.
+*/
 func (this *QMacToolBar) NativeToolbar() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMacToolBar13nativeToolbarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

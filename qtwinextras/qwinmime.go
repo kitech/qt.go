@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QWinMime struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QWinMime) NewFromPointer(cthis unsafe.Pointer) *QWinMime {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinMime()
+
+/*
+Constructs a new conversion object, adding it to the globally accessed list of available converters.
+*/
 func NewQWinMime() *QWinMime {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QWinMimeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQWinMime() *QWinMime {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWinMime()
+
+/*
+
+ */
 func DeleteQWinMime(this *QWinMime) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QWinMimeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -90,6 +101,10 @@ func DeleteQWinMime(this *QWinMime) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int registerMimeType(const QString &)
+
+/*
+Registers the MIME type mime, and returns an ID number identifying the format on Windows.
+*/
 func (this *QWinMime) RegisterMimeType(mime string) int {
 	var tmpArg0 = qtcore.NewQString_5(mime)
 	var convArg0 = tmpArg0.GetCthis()

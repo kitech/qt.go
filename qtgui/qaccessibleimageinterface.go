@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleImageInterface struct {
 	*qtrt.CObject
 }
@@ -68,6 +71,10 @@ func (*QAccessibleImageInterface) NewFromPointer(cthis unsafe.Pointer) *QAccessi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleImageInterface()
+
+/*
+
+ */
 func DeleteQAccessibleImageInterface(this *QAccessibleImageInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAccessibleImageInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -79,6 +86,10 @@ func DeleteQAccessibleImageInterface(this *QAccessibleImageInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QString imageDescription() const
+
+/*
+
+ */
 func (this *QAccessibleImageInterface) ImageDescription() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface16imageDescriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +103,10 @@ func (this *QAccessibleImageInterface) ImageDescription() string {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSize imageSize() const
+
+/*
+
+ */
 func (this *QAccessibleImageInterface) ImageSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface9imageSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -104,6 +119,10 @@ func (this *QAccessibleImageInterface) ImageSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QPoint imagePosition() const
+
+/*
+
+ */
 func (this *QAccessibleImageInterface) ImagePosition() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface13imagePositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

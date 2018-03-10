@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAbstractNetworkCache struct {
 	*qtcore.QObject
 }
@@ -64,6 +67,10 @@ func (*QAbstractNetworkCache) NewFromPointer(cthis unsafe.Pointer) *QAbstractNet
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAbstractNetworkCache) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractNetworkCache10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QAbstractNetworkCache) MetaObject() *qtcore.QMetaObject /*777 const 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractNetworkCache()
+
+/*
+
+ */
 func DeleteQAbstractNetworkCache(this *QAbstractNetworkCache) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCacheD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -85,6 +96,16 @@ func DeleteQAbstractNetworkCache(this *QAbstractNetworkCache) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QNetworkCacheMetaData metaData(const QUrl &)
+
+/*
+Returns the meta data for the url url.
+
+If the url is valid and the cache contains the data for url, a valid QNetworkCacheMetaData is returned.
+
+In the base class this is a pure virtual function.
+
+See also updateMetaData() and data().
+*/
 func (this *QAbstractNetworkCache) MetaData(url qtcore.QUrl_ITF) *QNetworkCacheMetaData /*123*/ {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -101,6 +122,16 @@ func (this *QAbstractNetworkCache) MetaData(url qtcore.QUrl_ITF) *QNetworkCacheM
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void updateMetaData(const QNetworkCacheMetaData &)
+
+/*
+Updates the cache meta date for the metaData's url to metaData
+
+If the cache does not contains a cache item for the url then no action is taken.
+
+In the base class this is a pure virtual function.
+
+See also metaData() and prepare().
+*/
 func (this *QAbstractNetworkCache) UpdateMetaData(metaData QNetworkCacheMetaData_ITF) {
 	var convArg0 unsafe.Pointer
 	if metaData != nil && metaData.QNetworkCacheMetaData_PTR() != nil {
@@ -114,6 +145,18 @@ func (this *QAbstractNetworkCache) UpdateMetaData(metaData QNetworkCacheMetaData
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIODevice * data(const QUrl &)
+
+/*
+Returns the data associated with url.
+
+It is up to the application that requests the data to delete the QIODevice when done with it.
+
+If there is no cache for url, the url is invalid, or if there is an internal cache error 0 is returned.
+
+In the base class this is a pure virtual function.
+
+See also metaData() and prepare().
+*/
 func (this *QAbstractNetworkCache) Data(url qtcore.QUrl_ITF) *qtcore.QIODevice /*777 QIODevice **/ {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -128,6 +171,14 @@ func (this *QAbstractNetworkCache) Data(url qtcore.QUrl_ITF) *qtcore.QIODevice /
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool remove(const QUrl &)
+
+/*
+Removes the cache entry for url, returning true if success otherwise false.
+
+In the base class this is a pure virtual function.
+
+See also clear() and prepare().
+*/
 func (this *QAbstractNetworkCache) Remove(url qtcore.QUrl_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -142,16 +193,37 @@ func (this *QAbstractNetworkCache) Remove(url qtcore.QUrl_ITF) bool {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] qint64 cacheSize() const
+
+/*
+Returns the current size taken up by the cache. Depending upon the cache implementation this might be disk or memory size.
+
+In the base class this is a pure virtual function.
+
+See also clear().
+*/
 func (this *QAbstractNetworkCache) CacheSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractNetworkCache9cacheSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:127
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIODevice * prepare(const QNetworkCacheMetaData &)
+
+/*
+Returns the device that should be populated with the data for the cache item metaData. When all of the data has been written insert() should be called. If metaData is invalid or the url in the metadata is invalid 0 is returned.
+
+The cache owns the device and will take care of deleting it when it is inserted or removed.
+
+To cancel a prepared inserted call remove() on the metadata's url.
+
+In the base class this is a pure virtual function.
+
+See also remove(), updateMetaData(), and insert().
+*/
 func (this *QAbstractNetworkCache) Prepare(metaData QNetworkCacheMetaData_ITF) *qtcore.QIODevice /*777 QIODevice **/ {
 	var convArg0 unsafe.Pointer
 	if metaData != nil && metaData.QNetworkCacheMetaData_PTR() != nil {
@@ -166,6 +238,14 @@ func (this *QAbstractNetworkCache) Prepare(metaData QNetworkCacheMetaData_ITF) *
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Removes all items from the cache. Unless there was failures clearing the cache cacheSize() should return 0 after a call to clear.
+
+In the base class this is a pure virtual function.
+
+See also cacheSize() and remove().
+*/
 func (this *QAbstractNetworkCache) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCache5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +255,10 @@ func (this *QAbstractNetworkCache) Clear() {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QAbstractNetworkCache(QObject *)
+
+/*
+Constructs an abstract network cache with the given parent.
+*/
 func NewQAbstractNetworkCache(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractNetworkCache {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -191,6 +275,10 @@ func NewQAbstractNetworkCache(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QAbstractNetworkCache(QObject *)
+
+/*
+Constructs an abstract network cache with the given parent.
+*/
 func NewQAbstractNetworkCache__() *QAbstractNetworkCache {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer

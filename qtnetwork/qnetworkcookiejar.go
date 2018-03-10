@@ -37,6 +37,9 @@ func (this *QNetworkCookieJar) InheritValidateCookie(f func(cookie *QNetworkCook
 	qtrt.SetAllInheritCallback(this, "validateCookie", f)
 }
 
+/*
+
+ */
 type QNetworkCookieJar struct {
 	*qtcore.QObject
 }
@@ -69,6 +72,10 @@ func (*QNetworkCookieJar) NewFromPointer(cthis unsafe.Pointer) *QNetworkCookieJa
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QNetworkCookieJar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkCookieJar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,12 @@ func (this *QNetworkCookieJar) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkCookieJar(QObject *)
+
+/*
+Creates a QNetworkCookieJar object and sets the parent object to be parent.
+
+The cookie jar is initialized to empty.
+*/
 func NewQNetworkCookieJar(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkCookieJar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -95,6 +108,12 @@ func NewQNetworkCookieJar(parent qtcore.QObject_ITF /*777 QObject **/) *QNetwork
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkCookieJar(QObject *)
+
+/*
+Creates a QNetworkCookieJar object and sets the parent object to be parent.
+
+The cookie jar is initialized to empty.
+*/
 func NewQNetworkCookieJar__() *QNetworkCookieJar {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -109,6 +128,10 @@ func NewQNetworkCookieJar__() *QNetworkCookieJar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QNetworkCookieJar()
+
+/*
+
+ */
 func DeleteQNetworkCookieJar(this *QNetworkCookieJar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -120,6 +143,16 @@ func DeleteQNetworkCookieJar(this *QNetworkCookieJar) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertCookie(const QNetworkCookie &)
+
+/*
+Adds cookie to this cookie jar.
+
+Returns true if cookie was added, false otherwise.
+
+If a cookie with the same identifier already exists in the cookie jar, it will be overridden.
+
+This function was introduced in  Qt 5.0.
+*/
 func (this *QNetworkCookieJar) InsertCookie(cookie QNetworkCookie_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
@@ -134,6 +167,16 @@ func (this *QNetworkCookieJar) InsertCookie(cookie QNetworkCookie_ITF) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool updateCookie(const QNetworkCookie &)
+
+/*
+If a cookie with the same identifier as cookie exists in this cookie jar it will be updated. This function uses insertCookie().
+
+Returns true if cookie was updated, false if no cookie in the jar matches the identifier of cookie.
+
+This function was introduced in  Qt 5.0.
+
+See also QNetworkCookie::hasSameIdentifier().
+*/
 func (this *QNetworkCookieJar) UpdateCookie(cookie QNetworkCookie_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
@@ -148,6 +191,16 @@ func (this *QNetworkCookieJar) UpdateCookie(cookie QNetworkCookie_ITF) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool deleteCookie(const QNetworkCookie &)
+
+/*
+Deletes from cookie jar the cookie found to have the same identifier as cookie.
+
+Returns true if a cookie was deleted, false otherwise.
+
+This function was introduced in  Qt 5.0.
+
+See also QNetworkCookie::hasSameIdentifier().
+*/
 func (this *QNetworkCookieJar) DeleteCookie(cookie QNetworkCookie_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
@@ -162,6 +215,12 @@ func (this *QNetworkCookieJar) DeleteCookie(cookie QNetworkCookie_ITF) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool validateCookie(const QNetworkCookie &, const QUrl &) const
+
+/*
+Returns true if the domain and path of cookie are valid, false otherwise. The url parameter is used to determine if the domain specified in the cookie is allowed.
+
+This function was introduced in  Qt 5.0.
+*/
 func (this *QNetworkCookieJar) ValidateCookie(cookie QNetworkCookie_ITF, url qtcore.QUrl_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {

@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QGraphicsSceneWheelEvent struct {
 	*QGraphicsSceneEvent
 }
@@ -67,6 +70,10 @@ func (*QGraphicsSceneWheelEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneWheelEvent(enum QEvent::Type)
+
+/*
+
+ */
 func NewQGraphicsSceneWheelEvent(type_ int) *QGraphicsSceneWheelEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQGraphicsSceneWheelEvent(type_ int) *QGraphicsSceneWheelEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneWheelEvent(enum QEvent::Type)
+
+/*
+
+ */
 func NewQGraphicsSceneWheelEvent__() *QGraphicsSceneWheelEvent {
 	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum,
 	type_ := 0
@@ -93,6 +104,10 @@ func NewQGraphicsSceneWheelEvent__() *QGraphicsSceneWheelEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneWheelEvent()
+
+/*
+
+ */
 func DeleteQGraphicsSceneWheelEvent(this *QGraphicsSceneWheelEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -104,6 +119,10 @@ func DeleteQGraphicsSceneWheelEvent(this *QGraphicsSceneWheelEvent) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF pos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) Pos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,6 +135,10 @@ func (this *QGraphicsSceneWheelEvent) Pos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) SetPos(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -129,6 +152,10 @@ func (this *QGraphicsSceneWheelEvent) SetPos(pos qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF scenePos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent8scenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,6 +168,10 @@ func (this *QGraphicsSceneWheelEvent) ScenePos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -154,6 +185,10 @@ func (this *QGraphicsSceneWheelEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint screenPos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +201,10 @@ func (this *QGraphicsSceneWheelEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -179,6 +218,10 @@ func (this *QGraphicsSceneWheelEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButtons buttons() const
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) Buttons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent7buttonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,6 +232,10 @@ func (this *QGraphicsSceneWheelEvent) Buttons() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtons(Qt::MouseButtons)
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) SetButtons(buttons int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEvent10setButtonsE6QFlagsIN2Qt11MouseButtonEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
 	qtrt.ErrPrint(err, rv)
@@ -198,6 +245,10 @@ func (this *QGraphicsSceneWheelEvent) SetButtons(buttons int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers modifiers() const
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) Modifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent9modifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -208,6 +259,10 @@ func (this *QGraphicsSceneWheelEvent) Modifiers() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModifiers(Qt::KeyboardModifiers)
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) SetModifiers(modifiers int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
 	qtrt.ErrPrint(err, rv)
@@ -217,6 +272,10 @@ func (this *QGraphicsSceneWheelEvent) SetModifiers(modifiers int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int delta() const
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) Delta() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent5deltaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,6 +286,10 @@ func (this *QGraphicsSceneWheelEvent) Delta() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDelta(int)
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) SetDelta(delta int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEvent8setDeltaEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), delta)
 	qtrt.ErrPrint(err, rv)
@@ -236,6 +299,10 @@ func (this *QGraphicsSceneWheelEvent) SetDelta(delta int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -246,6 +313,10 @@ func (this *QGraphicsSceneWheelEvent) Orientation() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
+
+/*
+
+ */
 func (this *QGraphicsSceneWheelEvent) SetOrientation(orientation int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEvent14setOrientationEN2Qt11OrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	qtrt.ErrPrint(err, rv)

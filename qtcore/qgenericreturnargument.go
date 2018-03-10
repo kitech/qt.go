@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QGenericReturnArgument struct {
 	*QGenericArgument
 }
@@ -63,6 +66,10 @@ func (*QGenericReturnArgument) NewFromPointer(cthis unsafe.Pointer) *QGenericRet
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericReturnArgument(const char *, void *)
+
+/*
+
+ */
 func NewQGenericReturnArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericReturnArgument {
 	var convArg0 = qtrt.CString(aName)
 	defer qtrt.FreeMem(convArg0)
@@ -77,6 +84,10 @@ func NewQGenericReturnArgument(aName string, aData unsafe.Pointer /*666*/) *QGen
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericReturnArgument(const char *, void *)
+
+/*
+
+ */
 func NewQGenericReturnArgument__() *QGenericReturnArgument {
 	// arg: 0, const char *=Pointer, =Invalid,
 	var convArg0 unsafe.Pointer
@@ -93,6 +104,10 @@ func NewQGenericReturnArgument__() *QGenericReturnArgument {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericReturnArgument(const char *, void *)
+
+/*
+
+ */
 func NewQGenericReturnArgument__1(aName string) *QGenericReturnArgument {
 	var convArg0 = qtrt.CString(aName)
 	defer qtrt.FreeMem(convArg0)

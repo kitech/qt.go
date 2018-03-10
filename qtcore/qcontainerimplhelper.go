@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QContainerImplHelper struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QContainerImplHelper) NewFromPointer(cthis unsafe.Pointer) *QContainerImp
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QtPrivate::QContainerImplHelper::CutResult mid(int, int *, int *)
+
+/*
+
+ */
 func (this *QContainerImplHelper) Mid(originalLength int, position unsafe.Pointer /*666*/, length unsafe.Pointer /*666*/) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate20QContainerImplHelper3midEiPiS1_", qtrt.FFI_TYPE_POINTER, originalLength, position, length)
 	qtrt.ErrPrint(err, rv)
@@ -82,11 +89,22 @@ func DeleteQContainerImplHelper(this *QContainerImplHelper) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QContainerImplHelper__CutResult = int
 
+//
 const QContainerImplHelper__Null QContainerImplHelper__CutResult = 0
+
+//
 const QContainerImplHelper__Empty QContainerImplHelper__CutResult = 1
+
+//
 const QContainerImplHelper__Full QContainerImplHelper__CutResult = 2
+
+//
 const QContainerImplHelper__Subset QContainerImplHelper__CutResult = 3
 
 //  body block end

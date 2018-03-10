@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QXmlStreamEntityResolver struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QXmlStreamEntityResolver) NewFromPointer(cthis unsafe.Pointer) *QXmlStrea
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamEntityResolver()
+
+/*
+
+ */
 func DeleteQXmlStreamEntityResolver(this *QXmlStreamEntityResolver) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolverD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -78,6 +85,10 @@ func DeleteQXmlStreamEntityResolver(this *QXmlStreamEntityResolver) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString resolveEntity(const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamEntityResolver) ResolveEntity(publicId string, systemId string) string {
 	var tmpArg0 = NewQString_5(publicId)
 	var convArg0 = tmpArg0.GetCthis()
@@ -95,6 +106,10 @@ func (this *QXmlStreamEntityResolver) ResolveEntity(publicId string, systemId st
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString resolveUndeclaredEntity(const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name string) string {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()

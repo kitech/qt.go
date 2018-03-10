@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QHttpMultiPart struct {
 	*qtcore.QObject
 }
@@ -64,6 +67,10 @@ func (*QHttpMultiPart) NewFromPointer(cthis unsafe.Pointer) *QHttpMultiPart {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QHttpMultiPart) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QHttpMultiPart10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,12 @@ func (this *QHttpMultiPart) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(QObject *)
+
+/*
+Constructs a QHttpMultiPart with content type MixedType and sets parent as the parent object.
+
+See also QHttpMultiPart::ContentType.
+*/
 func NewQHttpMultiPart(parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +103,12 @@ func NewQHttpMultiPart(parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiP
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(QObject *)
+
+/*
+Constructs a QHttpMultiPart with content type MixedType and sets parent as the parent object.
+
+See also QHttpMultiPart::ContentType.
+*/
 func NewQHttpMultiPart__() *QHttpMultiPart {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +123,12 @@ func NewQHttpMultiPart__() *QHttpMultiPart {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(enum QHttpMultiPart::ContentType, QObject *)
+
+/*
+Constructs a QHttpMultiPart with content type MixedType and sets parent as the parent object.
+
+See also QHttpMultiPart::ContentType.
+*/
 func NewQHttpMultiPart_1(contentType int, parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -120,6 +145,12 @@ func NewQHttpMultiPart_1(contentType int, parent qtcore.QObject_ITF /*777 QObjec
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(enum QHttpMultiPart::ContentType, QObject *)
+
+/*
+Constructs a QHttpMultiPart with content type MixedType and sets parent as the parent object.
+
+See also QHttpMultiPart::ContentType.
+*/
 func NewQHttpMultiPart_1_(contentType int) *QHttpMultiPart {
 	// arg: 1, QObject *=Pointer, QObject=Record,
 	var convArg1 unsafe.Pointer
@@ -134,6 +165,10 @@ func NewQHttpMultiPart_1_(contentType int) *QHttpMultiPart {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHttpMultiPart()
+
+/*
+
+ */
 func DeleteQHttpMultiPart(this *QHttpMultiPart) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -145,6 +180,12 @@ func DeleteQHttpMultiPart(this *QHttpMultiPart) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContentType(enum QHttpMultiPart::ContentType)
+
+/*
+Sets the content type to contentType. The content type will be used in the HTTP header section when sending the multipart message via QNetworkAccessManager::post(). In case you want to use a multipart subtype not contained in QHttpMultiPart::ContentType, you can add the "Content-Type" header field to the QNetworkRequest by hand, and then use this request together with the multipart message for posting.
+
+See also QHttpMultiPart::ContentType and QNetworkAccessManager::post().
+*/
 func (this *QHttpMultiPart) SetContentType(contentType int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPart14setContentTypeENS_11ContentTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), contentType)
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +195,12 @@ func (this *QHttpMultiPart) SetContentType(contentType int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray boundary() const
+
+/*
+returns the boundary.
+
+See also setBoundary().
+*/
 func (this *QHttpMultiPart) Boundary() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QHttpMultiPart8boundaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +213,14 @@ func (this *QHttpMultiPart) Boundary() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBoundary(const QByteArray &)
+
+/*
+Sets the boundary to boundary.
+
+Usually, you do not need to generate a boundary yourself; upon construction the boundary is initiated with the string "boundary_.oOo._" followed by random characters, and provides enough uniqueness to make sure it does not occur inside the parts itself.
+
+See also boundary().
+*/
 func (this *QHttpMultiPart) SetBoundary(boundary qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if boundary != nil && boundary.QByteArray_PTR() != nil {
@@ -175,11 +230,26 @@ func (this *QHttpMultiPart) SetBoundary(boundary qtcore.QByteArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+List of known content types for a multipart subtype as described in RFC 2046 and others.
+
+
+
+See also setContentType().
+
+*/
 type QHttpMultiPart__ContentType = int
 
+//
 const QHttpMultiPart__MixedType QHttpMultiPart__ContentType = 0
+
+//
 const QHttpMultiPart__RelatedType QHttpMultiPart__ContentType = 1
+
+//
 const QHttpMultiPart__FormDataType QHttpMultiPart__ContentType = 2
+
+//
 const QHttpMultiPart__AlternativeType QHttpMultiPart__ContentType = 3
 
 //  body block end

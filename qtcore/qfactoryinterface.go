@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QFactoryInterface struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QFactoryInterface) NewFromPointer(cthis unsafe.Pointer) *QFactoryInterfac
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFactoryInterface()
+
+/*
+
+ */
 func DeleteQFactoryInterface(this *QFactoryInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QFactoryInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -76,6 +83,10 @@ func DeleteQFactoryInterface(this *QFactoryInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QStringList keys() const
+
+/*
+
+ */
 func (this *QFactoryInterface) Keys() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFactoryInterface4keysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

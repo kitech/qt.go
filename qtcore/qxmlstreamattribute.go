@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QXmlStreamAttribute struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QXmlStreamAttribute) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamAttr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamAttribute()
+
+/*
+
+ */
 func NewQXmlStreamAttribute() *QXmlStreamAttribute {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamAttributeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQXmlStreamAttribute() *QXmlStreamAttribute {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamAttribute(const QString &, const QString &)
+
+/*
+
+ */
 func NewQXmlStreamAttribute_1(qualifiedName string, value string) *QXmlStreamAttribute {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -93,6 +104,10 @@ func NewQXmlStreamAttribute_1(qualifiedName string, value string) *QXmlStreamAtt
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamAttribute(const QString &, const QString &, const QString &)
+
+/*
+
+ */
 func NewQXmlStreamAttribute_2(namespaceUri string, name string, value string) *QXmlStreamAttribute {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -111,6 +126,10 @@ func NewQXmlStreamAttribute_2(namespaceUri string, name string, value string) *Q
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [80] QXmlStreamAttribute & operator=(QXmlStreamAttribute &&)
+
+/*
+
+ */
 func (this *QXmlStreamAttribute) Operator_equal(other unsafe.Pointer /*333*/) *QXmlStreamAttribute {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamAttributeaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -123,6 +142,10 @@ func (this *QXmlStreamAttribute) Operator_equal(other unsafe.Pointer /*333*/) *Q
 // index:1
 // Public Visibility=Default Availability=Available
 // [80] QXmlStreamAttribute & operator=(const QXmlStreamAttribute &)
+
+/*
+
+ */
 func (this *QXmlStreamAttribute) Operator_equal_1(arg0 QXmlStreamAttribute_ITF) *QXmlStreamAttribute {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QXmlStreamAttribute_PTR() != nil {
@@ -139,6 +162,10 @@ func (this *QXmlStreamAttribute) Operator_equal_1(arg0 QXmlStreamAttribute_ITF) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamAttribute()
+
+/*
+
+ */
 func DeleteQXmlStreamAttribute(this *QXmlStreamAttribute) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamAttributeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 80)
@@ -150,6 +177,10 @@ func DeleteQXmlStreamAttribute(this *QXmlStreamAttribute) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef namespaceUri() const
+
+/*
+
+ */
 func (this *QXmlStreamAttribute) NamespaceUri() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute12namespaceUriEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -162,6 +193,10 @@ func (this *QXmlStreamAttribute) NamespaceUri() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef name() const
+
+/*
+
+ */
 func (this *QXmlStreamAttribute) Name() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +209,10 @@ func (this *QXmlStreamAttribute) Name() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef qualifiedName() const
+
+/*
+
+ */
 func (this *QXmlStreamAttribute) QualifiedName() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute13qualifiedNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,6 +225,10 @@ func (this *QXmlStreamAttribute) QualifiedName() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef prefix() const
+
+/*
+
+ */
 func (this *QXmlStreamAttribute) Prefix() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute6prefixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,6 +241,10 @@ func (this *QXmlStreamAttribute) Prefix() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef value() const
+
+/*
+
+ */
 func (this *QXmlStreamAttribute) Value() *QStringRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -210,6 +257,10 @@ func (this *QXmlStreamAttribute) Value() *QStringRef /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDefault() const
+
+/*
+
+ */
 func (this *QXmlStreamAttribute) IsDefault() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamAttribute9isDefaultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,6 +271,10 @@ func (this *QXmlStreamAttribute) IsDefault() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QXmlStreamAttribute &) const
+
+/*
+
+ */
 func (this *QXmlStreamAttribute) Operator_equal_equal(other QXmlStreamAttribute_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamAttribute_PTR() != nil {
@@ -234,6 +289,10 @@ func (this *QXmlStreamAttribute) Operator_equal_equal(other QXmlStreamAttribute_
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QXmlStreamAttribute &) const
+
+/*
+
+ */
 func (this *QXmlStreamAttribute) Operator_not_equal(other QXmlStreamAttribute_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamAttribute_PTR() != nil {

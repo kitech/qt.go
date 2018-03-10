@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGImageNode struct {
 	*QSGGeometryNode
 }
@@ -67,6 +70,10 @@ func (*QSGImageNode) NewFromPointer(cthis unsafe.Pointer) *QSGImageNode {
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QSGImageNode()
+
+/*
+
+ */
 func DeleteQSGImageNode(this *QSGImageNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 144)
@@ -78,6 +85,12 @@ func DeleteQSGImageNode(this *QSGImageNode) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
+
+/*
+Sets the target rect of this image node to rect.
+
+See also rect().
+*/
 func (this *QSGImageNode) SetRect(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -91,6 +104,12 @@ func (this *QSGImageNode) SetRect(rect qtcore.QRectF_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRect(qreal, qreal, qreal, qreal)
+
+/*
+Sets the target rect of this image node to rect.
+
+See also rect().
+*/
 func (this *QSGImageNode) SetRect_1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +119,12 @@ func (this *QSGImageNode) SetRect_1(x float64, y float64, w float64, h float64) 
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QRectF rect() const
+
+/*
+Returns the target rect of this image node.
+
+See also setRect().
+*/
 func (this *QSGImageNode) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +137,12 @@ func (this *QSGImageNode) Rect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setSourceRect(const QRectF &)
+
+/*
+Sets the source rect of this image node to rect.
+
+See also sourceRect().
+*/
 func (this *QSGImageNode) SetSourceRect(r qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -125,6 +156,12 @@ func (this *QSGImageNode) SetSourceRect(r qtcore.QRectF_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSourceRect(qreal, qreal, qreal, qreal)
+
+/*
+Sets the source rect of this image node to rect.
+
+See also sourceRect().
+*/
 func (this *QSGImageNode) SetSourceRect_1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode13setSourceRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -134,6 +171,12 @@ func (this *QSGImageNode) SetSourceRect_1(x float64, y float64, w float64, h flo
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QRectF sourceRect() const
+
+/*
+Returns the source rect of this image node.
+
+See also setSourceRect().
+*/
 func (this *QSGImageNode) SourceRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode10sourceRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,6 +189,16 @@ func (this *QSGImageNode) SourceRect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setTexture(QSGTexture *)
+
+/*
+Sets the texture of this image node to texture.
+
+Use setOwnsTexture() to set whether the node should take ownership of the texture. By default, the node does not take ownership.
+
+Warning: An image node must have a texture before being added to the scenegraph to be rendered.
+
+See also texture().
+*/
 func (this *QSGImageNode) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/) {
 	var convArg0 unsafe.Pointer
 	if texture != nil && texture.QSGTexture_PTR() != nil {
@@ -159,6 +212,12 @@ func (this *QSGImageNode) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSGTexture * texture() const
+
+/*
+Returns the texture for this image node.
+
+See also setTexture().
+*/
 func (this *QSGImageNode) Texture() *QSGTexture /*777 QSGTexture **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode7textureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -169,6 +228,14 @@ func (this *QSGImageNode) Texture() *QSGTexture /*777 QSGTexture **/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setFiltering(QSGTexture::Filtering)
+
+/*
+Sets the filtering to be used for this image node to filtering.
+
+For smooth scaling, use QSGTexture::Linear. For normal scaling, use QSGTexture::Nearest.
+
+See also filtering().
+*/
 func (this *QSGImageNode) SetFiltering(filtering int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode12setFilteringEN10QSGTexture9FilteringE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filtering)
 	qtrt.ErrPrint(err, rv)
@@ -178,6 +245,12 @@ func (this *QSGImageNode) SetFiltering(filtering int) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGTexture::Filtering filtering() const
+
+/*
+Returns the filtering for this image node.
+
+See also setFiltering().
+*/
 func (this *QSGImageNode) Filtering() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode9filteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -188,6 +261,14 @@ func (this *QSGImageNode) Filtering() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setMipmapFiltering(QSGTexture::Filtering)
+
+/*
+Sets the mipmap filtering to be used for this image node to filtering.
+
+For smooth scaling between mip maps, use QSGTexture::Linear. For normal scaling, use QSGTexture::Nearest.
+
+See also mipmapFiltering().
+*/
 func (this *QSGImageNode) SetMipmapFiltering(filtering int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode18setMipmapFilteringEN10QSGTexture9FilteringE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filtering)
 	qtrt.ErrPrint(err, rv)
@@ -197,6 +278,12 @@ func (this *QSGImageNode) SetMipmapFiltering(filtering int) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGTexture::Filtering mipmapFiltering() const
+
+/*
+Returns the mipmap filtering for this image node.
+
+See also setMipmapFiltering().
+*/
 func (this *QSGImageNode) MipmapFiltering() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode15mipmapFilteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,6 +294,12 @@ func (this *QSGImageNode) MipmapFiltering() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setTextureCoordinatesTransform(QSGImageNode::TextureCoordinatesTransformMode)
+
+/*
+Sets the method used to generate texture coordinates to mode. This can be used to obtain correct orientation of the texture. This is commonly needed when using a third-party OpenGL library to render to texture as OpenGL has an inverted y-axis relative to Qt Quick.
+
+See also textureCoordinatesTransform().
+*/
 func (this *QSGImageNode) SetTextureCoordinatesTransform(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode30setTextureCoordinatesTransformE6QFlagsINS_31TextureCoordinatesTransformFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -216,6 +309,12 @@ func (this *QSGImageNode) SetTextureCoordinatesTransform(mode int) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGImageNode::TextureCoordinatesTransformMode textureCoordinatesTransform() const
+
+/*
+Returns the mode used to generate texture coordinates for this node.
+
+See also setTextureCoordinatesTransform().
+*/
 func (this *QSGImageNode) TextureCoordinatesTransform() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode27textureCoordinatesTransformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -226,6 +325,14 @@ func (this *QSGImageNode) TextureCoordinatesTransform() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setOwnsTexture(_Bool)
+
+/*
+Sets whether the node takes ownership of the texture to owns.
+
+By default, the node does not take ownership of the texture.
+
+See also ownsTexture().
+*/
 func (this *QSGImageNode) SetOwnsTexture(owns bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode14setOwnsTextureEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), owns)
 	qtrt.ErrPrint(err, rv)
@@ -235,6 +342,12 @@ func (this *QSGImageNode) SetOwnsTexture(owns bool) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool ownsTexture() const
+
+/*
+Returns true if the node takes ownership of the texture; otherwise false.
+
+See also setOwnsTexture().
+*/
 func (this *QSGImageNode) OwnsTexture() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSGImageNode11ownsTextureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -245,6 +358,10 @@ func (this *QSGImageNode) OwnsTexture() bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void rebuildGeometry(QSGGeometry *, QSGTexture *, const QRectF &, QRectF, QSGImageNode::TextureCoordinatesTransformMode)
+
+/*
+
+ */
 func (this *QSGImageNode) RebuildGeometry(g QSGGeometry_ITF /*777 QSGGeometry **/, texture QSGTexture_ITF /*777 QSGTexture **/, rect qtcore.QRectF_ITF, sourceRect qtcore.QRectF_ITF /*123*/, texCoordMode int) {
 	var convArg0 unsafe.Pointer
 	if g != nil && g.QSGGeometry_PTR() != nil {
@@ -270,10 +387,19 @@ func QSGImageNode_RebuildGeometry(g QSGGeometry_ITF /*777 QSGGeometry **/, textu
 	nilthis.RebuildGeometry(g, texture, rect, sourceRect, texCoordMode)
 }
 
+/*
+
+
+ */
 type QSGImageNode__TextureCoordinatesTransformFlag = int
 
+//
 const QSGImageNode__NoTransform QSGImageNode__TextureCoordinatesTransformFlag = 0
+
+//
 const QSGImageNode__MirrorHorizontally QSGImageNode__TextureCoordinatesTransformFlag = 1
+
+//
 const QSGImageNode__MirrorVertically QSGImageNode__TextureCoordinatesTransformFlag = 2
 
 //  body block end

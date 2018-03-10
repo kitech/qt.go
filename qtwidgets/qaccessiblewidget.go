@@ -48,6 +48,9 @@ func (this *QAccessibleWidget) InheritAddControllingSignal(f func(signal string)
 	qtrt.SetAllInheritCallback(this, "addControllingSignal", f)
 }
 
+/*
+
+ */
 type QAccessibleWidget struct {
 	*qtrt.CObject
 }
@@ -82,6 +85,10 @@ func (*QAccessibleWidget) NewFromPointer(cthis unsafe.Pointer) *QAccessibleWidge
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAccessibleWidget(QWidget *, QAccessible::Role, const QString &)
+
+/*
+Creates a QAccessibleWidget object for widget w. role and name are optional parameters that set the object's role and name properties.
+*/
 func NewQAccessibleWidget(o QWidget_ITF /*777 QWidget **/, r int, name string) *QAccessibleWidget {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QWidget_PTR() != nil {
@@ -100,6 +107,10 @@ func NewQAccessibleWidget(o QWidget_ITF /*777 QWidget **/, r int, name string) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAccessibleWidget(QWidget *, QAccessible::Role, const QString &)
+
+/*
+Creates a QAccessibleWidget object for widget w. role and name are optional parameters that set the object's role and name properties.
+*/
 func NewQAccessibleWidget__(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QWidget_PTR() != nil {
@@ -120,6 +131,10 @@ func NewQAccessibleWidget__(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAccessibleWidget(QWidget *, QAccessible::Role, const QString &)
+
+/*
+Creates a QAccessibleWidget object for widget w. role and name are optional parameters that set the object's role and name properties.
+*/
 func NewQAccessibleWidget__1(o QWidget_ITF /*777 QWidget **/, r int) *QAccessibleWidget {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QWidget_PTR() != nil {
@@ -138,6 +153,10 @@ func NewQAccessibleWidget__1(o QWidget_ITF /*777 QWidget **/, r int) *QAccessibl
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Reimplemented from QAccessibleInterface::isValid().
+*/
 func (this *QAccessibleWidget) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,6 +167,10 @@ func (this *QAccessibleWidget) IsValid() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QWindow * window() const
+
+/*
+Reimplemented from QAccessibleInterface::window().
+*/
 func (this *QAccessibleWidget) Window() *qtgui.QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,6 +181,10 @@ func (this *QAccessibleWidget) Window() *qtgui.QWindow /*777 QWindow **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int childCount() const
+
+/*
+Reimplemented from QAccessibleInterface::childCount().
+*/
 func (this *QAccessibleWidget) ChildCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget10childCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -168,6 +195,10 @@ func (this *QAccessibleWidget) ChildCount() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int indexOfChild(const QAccessibleInterface *) const
+
+/*
+Reimplemented from QAccessibleInterface::indexOfChild().
+*/
 func (this *QAccessibleWidget) IndexOfChild(child qtgui.QAccessibleInterface_ITF /*777 const QAccessibleInterface **/) int {
 	var convArg0 unsafe.Pointer
 	if child != nil && child.QAccessibleInterface_PTR() != nil {
@@ -182,6 +213,10 @@ func (this *QAccessibleWidget) IndexOfChild(child qtgui.QAccessibleInterface_ITF
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * focusChild() const
+
+/*
+Reimplemented from QAccessibleInterface::focusChild().
+*/
 func (this *QAccessibleWidget) FocusChild() *qtgui.QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget10focusChildEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,6 +227,10 @@ func (this *QAccessibleWidget) FocusChild() *qtgui.QAccessibleInterface /*777 QA
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect rect() const
+
+/*
+Reimplemented from QAccessibleInterface::rect().
+*/
 func (this *QAccessibleWidget) Rect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -204,6 +243,10 @@ func (this *QAccessibleWidget) Rect() *qtcore.QRect /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * parent() const
+
+/*
+Reimplemented from QAccessibleInterface::parent().
+*/
 func (this *QAccessibleWidget) Parent() *qtgui.QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,6 +257,10 @@ func (this *QAccessibleWidget) Parent() *qtgui.QAccessibleInterface /*777 QAcces
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * child(int) const
+
+/*
+Reimplemented from QAccessibleInterface::child().
+*/
 func (this *QAccessibleWidget) Child(index int) *qtgui.QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget5childEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +271,10 @@ func (this *QAccessibleWidget) Child(index int) *qtgui.QAccessibleInterface /*77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString text(QAccessible::Text) const
+
+/*
+Reimplemented from QAccessibleInterface::text().
+*/
 func (this *QAccessibleWidget) Text(t int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget4textEN11QAccessible4TextE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -237,6 +288,10 @@ func (this *QAccessibleWidget) Text(t int) string {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QAccessible::Role role() const
+
+/*
+Reimplemented from QAccessibleInterface::role().
+*/
 func (this *QAccessibleWidget) Role() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget4roleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,6 +302,10 @@ func (this *QAccessibleWidget) Role() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessible::State state() const
+
+/*
+Reimplemented from QAccessibleInterface::state().
+*/
 func (this *QAccessibleWidget) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,6 +316,10 @@ func (this *QAccessibleWidget) State() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QColor foregroundColor() const
+
+/*
+Reimplemented from QAccessibleInterface::foregroundColor().
+*/
 func (this *QAccessibleWidget) ForegroundColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget15foregroundColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -269,6 +332,10 @@ func (this *QAccessibleWidget) ForegroundColor() *qtgui.QColor /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QColor backgroundColor() const
+
+/*
+Reimplemented from QAccessibleInterface::backgroundColor().
+*/
 func (this *QAccessibleWidget) BackgroundColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget15backgroundColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -281,6 +348,10 @@ func (this *QAccessibleWidget) BackgroundColor() *qtgui.QColor /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] void * interface_cast(QAccessible::InterfaceType)
+
+/*
+Reimplemented from QAccessibleInterface::interface_cast().
+*/
 func (this *QAccessibleWidget) Interface_cast(t int) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleWidget14interface_castEN11QAccessible13InterfaceTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -291,6 +362,10 @@ func (this *QAccessibleWidget) Interface_cast(t int) unsafe.Pointer /*666*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStringList actionNames() const
+
+/*
+Reimplemented from QAccessibleActionInterface::actionNames().
+*/
 func (this *QAccessibleWidget) ActionNames() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget11actionNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -303,6 +378,10 @@ func (this *QAccessibleWidget) ActionNames() *qtcore.QStringList /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void doAction(const QString &)
+
+/*
+Reimplemented from QAccessibleActionInterface::doAction().
+*/
 func (this *QAccessibleWidget) DoAction(actionName string) {
 	var tmpArg0 = qtcore.NewQString_5(actionName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -314,6 +393,10 @@ func (this *QAccessibleWidget) DoAction(actionName string) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStringList keyBindingsForAction(const QString &) const
+
+/*
+Reimplemented from QAccessibleActionInterface::keyBindingsForAction().
+*/
 func (this *QAccessibleWidget) KeyBindingsForAction(actionName string) *qtcore.QStringList /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(actionName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -328,6 +411,10 @@ func (this *QAccessibleWidget) KeyBindingsForAction(actionName string) *qtcore.Q
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleWidget()
+
+/*
+
+ */
 func DeleteQAccessibleWidget(this *QAccessibleWidget) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleWidgetD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -339,6 +426,10 @@ func DeleteQAccessibleWidget(this *QAccessibleWidget) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QWidget * widget() const
+
+/*
+Returns the associated widget.
+*/
 func (this *QAccessibleWidget) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -349,6 +440,10 @@ func (this *QAccessibleWidget) Widget() *QWidget /*777 QWidget **/ {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QObject * parentObject() const
+
+/*
+Returns the associated widget's parent object, which is either the parent widget, or qApp for top-level widgets.
+*/
 func (this *QAccessibleWidget) ParentObject() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget12parentObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -359,6 +454,12 @@ func (this *QAccessibleWidget) ParentObject() *qtcore.QObject /*777 QObject **/ 
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void addControllingSignal(const QString &)
+
+/*
+Registers signal as a controlling signal.
+
+An object is a Controller to any other object connected to a controlling signal.
+*/
 func (this *QAccessibleWidget) AddControllingSignal(signal string) {
 	var tmpArg0 = qtcore.NewQString_5(signal)
 	var convArg0 = tmpArg0.GetCthis()

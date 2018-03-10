@@ -53,6 +53,9 @@ func (this *QWidgetAction) InheritDeleteWidget(f func(widget *QWidget /*777 QWid
 	qtrt.SetAllInheritCallback(this, "deleteWidget", f)
 }
 
+/*
+
+ */
 type QWidgetAction struct {
 	*QAction
 }
@@ -85,6 +88,10 @@ func (*QWidgetAction) NewFromPointer(cthis unsafe.Pointer) *QWidgetAction {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QWidgetAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetAction10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -95,6 +102,10 @@ func (this *QWidgetAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWidgetAction(QObject *)
+
+/*
+Constructs an action with parent.
+*/
 func NewQWidgetAction(parent qtcore.QObject_ITF /*777 QObject **/) *QWidgetAction {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -111,6 +122,10 @@ func NewQWidgetAction(parent qtcore.QObject_ITF /*777 QObject **/) *QWidgetActio
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWidgetAction()
+
+/*
+
+ */
 func DeleteQWidgetAction(this *QWidgetAction) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetActionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -122,6 +137,12 @@ func DeleteQWidgetAction(this *QWidgetAction) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultWidget(QWidget *)
+
+/*
+Sets widget to be the default widget. The ownership is transferred to QWidgetAction. Unless createWidget() is reimplemented by a subclass to return a new widget the default widget is used when a container widget requests a widget through requestWidget().
+
+See also defaultWidget().
+*/
 func (this *QWidgetAction) SetDefaultWidget(w QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -135,6 +156,12 @@ func (this *QWidgetAction) SetDefaultWidget(w QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * defaultWidget() const
+
+/*
+Returns the default widget.
+
+See also setDefaultWidget().
+*/
 func (this *QWidgetAction) DefaultWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetAction13defaultWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,6 +172,14 @@ func (this *QWidgetAction) DefaultWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * requestWidget(QWidget *)
+
+/*
+Returns a widget that represents the action, with the given parent.
+
+Container widgets that support actions can call this function to request a widget as visual representation of the action.
+
+See also releaseWidget(), createWidget(), and defaultWidget().
+*/
 func (this *QWidgetAction) RequestWidget(parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -159,6 +194,14 @@ func (this *QWidgetAction) RequestWidget(parent QWidget_ITF /*777 QWidget **/) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void releaseWidget(QWidget *)
+
+/*
+Releases the specified widget.
+
+Container widgets that support actions call this function when a widget action is removed.
+
+See also requestWidget(), deleteWidget(), and defaultWidget().
+*/
 func (this *QWidgetAction) ReleaseWidget(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -172,6 +215,10 @@ func (this *QWidgetAction) ReleaseWidget(widget QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QWidgetAction) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -186,6 +233,10 @@ func (this *QWidgetAction) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+Reimplemented from QObject::eventFilter().
+*/
 func (this *QWidgetAction) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -204,6 +255,12 @@ func (this *QWidgetAction) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QWidget * createWidget(QWidget *)
+
+/*
+This function is called whenever the action is added to a container widget that supports custom widgets. If you don't want a custom widget to be used as representation of the action in the specified parent widget then 0 should be returned.
+
+See also deleteWidget().
+*/
 func (this *QWidgetAction) CreateWidget(parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -218,6 +275,12 @@ func (this *QWidgetAction) CreateWidget(parent QWidget_ITF /*777 QWidget **/) *Q
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void deleteWidget(QWidget *)
+
+/*
+This function is called whenever the action is removed from a container widget that displays the action using a custom widget previously created using createWidget(). The default implementation hides the widget and schedules it for deletion using QObject::deleteLater().
+
+See also createWidget().
+*/
 func (this *QWidgetAction) DeleteWidget(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {

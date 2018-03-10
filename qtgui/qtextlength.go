@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextLength struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QTextLength) NewFromPointer(cthis unsafe.Pointer) *QTextLength {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextLength()
+
+/*
+
+ */
 func NewQTextLength() *QTextLength {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLengthC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQTextLength() *QTextLength {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextLength(enum QTextLength::Type, qreal)
+
+/*
+
+ */
 func NewQTextLength_1(type_ int, value float64) *QTextLength {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", qtrt.FFI_TYPE_POINTER, type_, value)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +101,12 @@ func NewQTextLength_1(type_ int, value float64) *QTextLength {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTextLength::Type type() const
+
+/*
+Returns the type of this format.
+
+See also FormatType.
+*/
 func (this *QTextLength) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +117,10 @@ func (this *QTextLength) Type() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal value(qreal) const
+
+/*
+
+ */
 func (this *QTextLength) Value(maximumLength float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), maximumLength)
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +131,10 @@ func (this *QTextLength) Value(maximumLength float64) float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal rawValue() const
+
+/*
+
+ */
 func (this *QTextLength) RawValue() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength8rawValueEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,6 +145,10 @@ func (this *QTextLength) RawValue() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QTextLength &) const
+
+/*
+
+ */
 func (this *QTextLength) Operator_equal_equal(other QTextLength_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTextLength_PTR() != nil {
@@ -134,6 +163,10 @@ func (this *QTextLength) Operator_equal_equal(other QTextLength_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QTextLength &) const
+
+/*
+
+ */
 func (this *QTextLength) Operator_not_equal(other QTextLength_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTextLength_PTR() != nil {
@@ -150,10 +183,19 @@ func DeleteQTextLength(this *QTextLength) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QTextLength__Type = int
 
+//
 const QTextLength__VariableLength QTextLength__Type = 0
+
+//
 const QTextLength__FixedLength QTextLength__Type = 1
+
+//
 const QTextLength__PercentageLength QTextLength__Type = 2
 
 //  body block end

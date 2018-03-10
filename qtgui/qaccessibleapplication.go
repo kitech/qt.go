@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleApplication struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QAccessibleApplication) NewFromPointer(cthis unsafe.Pointer) *QAccessible
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAccessibleApplication()
+
+/*
+
+ */
 func NewQAccessibleApplication() *QAccessibleApplication {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAccessibleApplicationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQAccessibleApplication() *QAccessibleApplication {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QWindow * window() const
+
+/*
+
+ */
 func (this *QAccessibleApplication) Window() *QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +99,10 @@ func (this *QAccessibleApplication) Window() *QWindow /*777 QWindow **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int childCount() const
+
+/*
+
+ */
 func (this *QAccessibleApplication) ChildCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication10childCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,6 +113,10 @@ func (this *QAccessibleApplication) ChildCount() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int indexOfChild(const QAccessibleInterface *) const
+
+/*
+
+ */
 func (this *QAccessibleApplication) IndexOfChild(arg0 QAccessibleInterface_ITF /*777 const QAccessibleInterface **/) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QAccessibleInterface_PTR() != nil {
@@ -112,6 +131,10 @@ func (this *QAccessibleApplication) IndexOfChild(arg0 QAccessibleInterface_ITF /
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * focusChild() const
+
+/*
+
+ */
 func (this *QAccessibleApplication) FocusChild() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication10focusChildEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -122,6 +145,10 @@ func (this *QAccessibleApplication) FocusChild() *QAccessibleInterface /*777 QAc
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * parent() const
+
+/*
+
+ */
 func (this *QAccessibleApplication) Parent() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -132,6 +159,10 @@ func (this *QAccessibleApplication) Parent() *QAccessibleInterface /*777 QAccess
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * child(int) const
+
+/*
+
+ */
 func (this *QAccessibleApplication) Child(index int) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication5childEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -142,6 +173,10 @@ func (this *QAccessibleApplication) Child(index int) *QAccessibleInterface /*777
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString text(QAccessible::Text) const
+
+/*
+
+ */
 func (this *QAccessibleApplication) Text(t int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication4textEN11QAccessible4TextE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -155,6 +190,10 @@ func (this *QAccessibleApplication) Text(t int) string {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QAccessible::Role role() const
+
+/*
+
+ */
 func (this *QAccessibleApplication) Role() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication4roleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -165,6 +204,10 @@ func (this *QAccessibleApplication) Role() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessible::State state() const
+
+/*
+
+ */
 func (this *QAccessibleApplication) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

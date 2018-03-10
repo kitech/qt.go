@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QTranslator struct {
 	*QObject
 }
@@ -63,6 +66,10 @@ func (*QTranslator) NewFromPointer(cthis unsafe.Pointer) *QTranslator {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QTranslator) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTranslator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -73,6 +80,10 @@ func (this *QTranslator) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTranslator(QObject *)
+
+/*
+Constructs an empty message file object with parent parent that is not connected to any file.
+*/
 func NewQTranslator(parent QObject_ITF /*777 QObject **/) *QTranslator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -89,6 +100,10 @@ func NewQTranslator(parent QObject_ITF /*777 QObject **/) *QTranslator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTranslator(QObject *)
+
+/*
+Constructs an empty message file object with parent parent that is not connected to any file.
+*/
 func NewQTranslator__() *QTranslator {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -103,6 +118,10 @@ func NewQTranslator__() *QTranslator {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTranslator()
+
+/*
+
+ */
 func DeleteQTranslator(this *QTranslator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -114,6 +133,18 @@ func DeleteQTranslator(this *QTranslator) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString translate(const char *, const char *, const char *, int) const
+
+/*
+Returns the translation for the key (context, sourceText, disambiguation). If none is found, also tries (context, sourceText, ""). If that still fails, returns a null string.
+
+Note: Incomplete translations may result in unexpected behavior: If no translation for (context, sourceText, "") is provided, the method might in this case actually return a translation for a different disambiguation.
+
+If n is not -1, it is used to choose an appropriate form for the translation (e.g. "%n file found" vs. "%n files found").
+
+If you need to programatically insert translations into a QTranslator, this function can be reimplemented.
+
+See also load().
+*/
 func (this *QTranslator) Translate(context string, sourceText string, disambiguation string, n int) string {
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
@@ -133,6 +164,18 @@ func (this *QTranslator) Translate(context string, sourceText string, disambigua
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString translate(const char *, const char *, const char *, int) const
+
+/*
+Returns the translation for the key (context, sourceText, disambiguation). If none is found, also tries (context, sourceText, ""). If that still fails, returns a null string.
+
+Note: Incomplete translations may result in unexpected behavior: If no translation for (context, sourceText, "") is provided, the method might in this case actually return a translation for a different disambiguation.
+
+If n is not -1, it is used to choose an appropriate form for the translation (e.g. "%n file found" vs. "%n files found").
+
+If you need to programatically insert translations into a QTranslator, this function can be reimplemented.
+
+See also load().
+*/
 func (this *QTranslator) Translate__(context string, sourceText string) string {
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
@@ -154,6 +197,18 @@ func (this *QTranslator) Translate__(context string, sourceText string) string {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString translate(const char *, const char *, const char *, int) const
+
+/*
+Returns the translation for the key (context, sourceText, disambiguation). If none is found, also tries (context, sourceText, ""). If that still fails, returns a null string.
+
+Note: Incomplete translations may result in unexpected behavior: If no translation for (context, sourceText, "") is provided, the method might in this case actually return a translation for a different disambiguation.
+
+If n is not -1, it is used to choose an appropriate form for the translation (e.g. "%n file found" vs. "%n files found").
+
+If you need to programatically insert translations into a QTranslator, this function can be reimplemented.
+
+See also load().
+*/
 func (this *QTranslator) Translate__1(context string, sourceText string, disambiguation string) string {
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
@@ -175,6 +230,10 @@ func (this *QTranslator) Translate__1(context string, sourceText string, disambi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns true if this translator is empty, otherwise returns false. This function works with stripped and unstripped translation files.
+*/
 func (this *QTranslator) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTranslator7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,6 +244,16 @@ func (this *QTranslator) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QString &, const QString &, const QString &, const QString &)
+
+/*
+Loads filename + suffix (".qm" if the suffix is not specified), which may be an absolute file name or relative to directory. Returns true if the translation is successfully loaded; otherwise returns false.
+
+If directory is not specified, the current directory is used (i.e., as currentPath()).
+
+The previous contents of this translator object are discarded.
+
+If the file name does not exist, other file names are tried in the following order:
+*/
 func (this *QTranslator) Load(filename string, directory string, search_delimiters string, suffix string) bool {
 	var tmpArg0 = NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
@@ -203,6 +272,16 @@ func (this *QTranslator) Load(filename string, directory string, search_delimite
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QString &, const QString &, const QString &, const QString &)
+
+/*
+Loads filename + suffix (".qm" if the suffix is not specified), which may be an absolute file name or relative to directory. Returns true if the translation is successfully loaded; otherwise returns false.
+
+If directory is not specified, the current directory is used (i.e., as currentPath()).
+
+The previous contents of this translator object are discarded.
+
+If the file name does not exist, other file names are tried in the following order:
+*/
 func (this *QTranslator) Load__(filename string) bool {
 	var tmpArg0 = NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
@@ -221,6 +300,16 @@ func (this *QTranslator) Load__(filename string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QString &, const QString &, const QString &, const QString &)
+
+/*
+Loads filename + suffix (".qm" if the suffix is not specified), which may be an absolute file name or relative to directory. Returns true if the translation is successfully loaded; otherwise returns false.
+
+If directory is not specified, the current directory is used (i.e., as currentPath()).
+
+The previous contents of this translator object are discarded.
+
+If the file name does not exist, other file names are tried in the following order:
+*/
 func (this *QTranslator) Load__1(filename string, directory string) bool {
 	var tmpArg0 = NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
@@ -239,6 +328,16 @@ func (this *QTranslator) Load__1(filename string, directory string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QString &, const QString &, const QString &, const QString &)
+
+/*
+Loads filename + suffix (".qm" if the suffix is not specified), which may be an absolute file name or relative to directory. Returns true if the translation is successfully loaded; otherwise returns false.
+
+If directory is not specified, the current directory is used (i.e., as currentPath()).
+
+The previous contents of this translator object are discarded.
+
+If the file name does not exist, other file names are tried in the following order:
+*/
 func (this *QTranslator) Load__2(filename string, directory string, search_delimiters string) bool {
 	var tmpArg0 = NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
@@ -257,6 +356,16 @@ func (this *QTranslator) Load__2(filename string, directory string, search_delim
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QLocale &, const QString &, const QString &, const QString &, const QString &)
+
+/*
+Loads filename + suffix (".qm" if the suffix is not specified), which may be an absolute file name or relative to directory. Returns true if the translation is successfully loaded; otherwise returns false.
+
+If directory is not specified, the current directory is used (i.e., as currentPath()).
+
+The previous contents of this translator object are discarded.
+
+If the file name does not exist, other file names are tried in the following order:
+*/
 func (this *QTranslator) Load_1(locale QLocale_ITF, filename string, prefix string, directory string, suffix string) bool {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
@@ -279,6 +388,16 @@ func (this *QTranslator) Load_1(locale QLocale_ITF, filename string, prefix stri
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QLocale &, const QString &, const QString &, const QString &, const QString &)
+
+/*
+Loads filename + suffix (".qm" if the suffix is not specified), which may be an absolute file name or relative to directory. Returns true if the translation is successfully loaded; otherwise returns false.
+
+If directory is not specified, the current directory is used (i.e., as currentPath()).
+
+The previous contents of this translator object are discarded.
+
+If the file name does not exist, other file names are tried in the following order:
+*/
 func (this *QTranslator) Load_1_(locale QLocale_ITF, filename string) bool {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
@@ -301,6 +420,16 @@ func (this *QTranslator) Load_1_(locale QLocale_ITF, filename string) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QLocale &, const QString &, const QString &, const QString &, const QString &)
+
+/*
+Loads filename + suffix (".qm" if the suffix is not specified), which may be an absolute file name or relative to directory. Returns true if the translation is successfully loaded; otherwise returns false.
+
+If directory is not specified, the current directory is used (i.e., as currentPath()).
+
+The previous contents of this translator object are discarded.
+
+If the file name does not exist, other file names are tried in the following order:
+*/
 func (this *QTranslator) Load_1_1(locale QLocale_ITF, filename string, prefix string) bool {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
@@ -323,6 +452,16 @@ func (this *QTranslator) Load_1_1(locale QLocale_ITF, filename string, prefix st
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QLocale &, const QString &, const QString &, const QString &, const QString &)
+
+/*
+Loads filename + suffix (".qm" if the suffix is not specified), which may be an absolute file name or relative to directory. Returns true if the translation is successfully loaded; otherwise returns false.
+
+If directory is not specified, the current directory is used (i.e., as currentPath()).
+
+The previous contents of this translator object are discarded.
+
+If the file name does not exist, other file names are tried in the following order:
+*/
 func (this *QTranslator) Load_1_2(locale QLocale_ITF, filename string, prefix string, directory string) bool {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
@@ -345,6 +484,16 @@ func (this *QTranslator) Load_1_2(locale QLocale_ITF, filename string, prefix st
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool load(const uchar *, int, const QString &)
+
+/*
+Loads filename + suffix (".qm" if the suffix is not specified), which may be an absolute file name or relative to directory. Returns true if the translation is successfully loaded; otherwise returns false.
+
+If directory is not specified, the current directory is used (i.e., as currentPath()).
+
+The previous contents of this translator object are discarded.
+
+If the file name does not exist, other file names are tried in the following order:
+*/
 func (this *QTranslator) Load_2(data unsafe.Pointer /*666*/, len_ int, directory string) bool {
 	var tmpArg2 = NewQString_5(directory)
 	var convArg2 = tmpArg2.GetCthis()
@@ -357,6 +506,16 @@ func (this *QTranslator) Load_2(data unsafe.Pointer /*666*/, len_ int, directory
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool load(const uchar *, int, const QString &)
+
+/*
+Loads filename + suffix (".qm" if the suffix is not specified), which may be an absolute file name or relative to directory. Returns true if the translation is successfully loaded; otherwise returns false.
+
+If directory is not specified, the current directory is used (i.e., as currentPath()).
+
+The previous contents of this translator object are discarded.
+
+If the file name does not exist, other file names are tried in the following order:
+*/
 func (this *QTranslator) Load_2_(data unsafe.Pointer /*666*/, len_ int) bool {
 	// arg: 2, const QString &=LValueReference, QString=Record,
 	var convArg2 = NewQString()

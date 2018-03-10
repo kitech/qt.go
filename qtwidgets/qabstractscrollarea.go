@@ -133,6 +133,9 @@ func (this *QAbstractScrollArea) InheritViewportSizeHint(f func() unsafe.Pointer
 	qtrt.SetAllInheritCallback(this, "viewportSizeHint", f)
 }
 
+/*
+
+ */
 type QAbstractScrollArea struct {
 	*QFrame
 }
@@ -165,6 +168,10 @@ func (*QAbstractScrollArea) NewFromPointer(cthis unsafe.Pointer) *QAbstractScrol
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAbstractScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +182,12 @@ func (this *QAbstractScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QM
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractScrollArea(QWidget *)
+
+/*
+Constructs a viewport.
+
+The parent argument is sent to the QWidget constructor.
+*/
 func NewQAbstractScrollArea(parent QWidget_ITF /*777 QWidget **/) *QAbstractScrollArea {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -191,6 +204,12 @@ func NewQAbstractScrollArea(parent QWidget_ITF /*777 QWidget **/) *QAbstractScro
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractScrollArea(QWidget *)
+
+/*
+Constructs a viewport.
+
+The parent argument is sent to the QWidget constructor.
+*/
 func NewQAbstractScrollArea__() *QAbstractScrollArea {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -205,6 +224,10 @@ func NewQAbstractScrollArea__() *QAbstractScrollArea {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractScrollArea()
+
+/*
+
+ */
 func DeleteQAbstractScrollArea(this *QAbstractScrollArea) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollAreaD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -216,6 +239,10 @@ func DeleteQAbstractScrollArea(this *QAbstractScrollArea) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ScrollBarPolicy verticalScrollBarPolicy() const
+
+/*
+
+ */
 func (this *QAbstractScrollArea) VerticalScrollBarPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea23verticalScrollBarPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -226,6 +253,10 @@ func (this *QAbstractScrollArea) VerticalScrollBarPolicy() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalScrollBarPolicy(Qt::ScrollBarPolicy)
+
+/*
+
+ */
 func (this *QAbstractScrollArea) SetVerticalScrollBarPolicy(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea26setVerticalScrollBarPolicyEN2Qt15ScrollBarPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -235,6 +266,12 @@ func (this *QAbstractScrollArea) SetVerticalScrollBarPolicy(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QScrollBar * verticalScrollBar() const
+
+/*
+Returns the vertical scroll bar.
+
+See also setVerticalScrollBar(), verticalScrollBarPolicy, and horizontalScrollBar().
+*/
 func (this *QAbstractScrollArea) VerticalScrollBar() *QScrollBar /*777 QScrollBar **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea17verticalScrollBarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -245,6 +282,16 @@ func (this *QAbstractScrollArea) VerticalScrollBar() *QScrollBar /*777 QScrollBa
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalScrollBar(QScrollBar *)
+
+/*
+Replaces the existing vertical scroll bar with scrollBar, and sets all the former scroll bar's slider properties on the new scroll bar. The former scroll bar is then deleted.
+
+QAbstractScrollArea already provides vertical and horizontal scroll bars by default. You can call this function to replace the default vertical scroll bar with your own custom scroll bar.
+
+This function was introduced in  Qt 4.2.
+
+See also verticalScrollBar() and setHorizontalScrollBar().
+*/
 func (this *QAbstractScrollArea) SetVerticalScrollBar(scrollbar QScrollBar_ITF /*777 QScrollBar **/) {
 	var convArg0 unsafe.Pointer
 	if scrollbar != nil && scrollbar.QScrollBar_PTR() != nil {
@@ -258,6 +305,10 @@ func (this *QAbstractScrollArea) SetVerticalScrollBar(scrollbar QScrollBar_ITF /
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ScrollBarPolicy horizontalScrollBarPolicy() const
+
+/*
+
+ */
 func (this *QAbstractScrollArea) HorizontalScrollBarPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea25horizontalScrollBarPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,6 +319,10 @@ func (this *QAbstractScrollArea) HorizontalScrollBarPolicy() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy)
+
+/*
+
+ */
 func (this *QAbstractScrollArea) SetHorizontalScrollBarPolicy(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea28setHorizontalScrollBarPolicyEN2Qt15ScrollBarPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -277,6 +332,12 @@ func (this *QAbstractScrollArea) SetHorizontalScrollBarPolicy(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QScrollBar * horizontalScrollBar() const
+
+/*
+Returns the horizontal scroll bar.
+
+See also setHorizontalScrollBar(), horizontalScrollBarPolicy, and verticalScrollBar().
+*/
 func (this *QAbstractScrollArea) HorizontalScrollBar() *QScrollBar /*777 QScrollBar **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea19horizontalScrollBarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -287,6 +348,16 @@ func (this *QAbstractScrollArea) HorizontalScrollBar() *QScrollBar /*777 QScroll
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalScrollBar(QScrollBar *)
+
+/*
+Replaces the existing horizontal scroll bar with scrollBar, and sets all the former scroll bar's slider properties on the new scroll bar. The former scroll bar is then deleted.
+
+QAbstractScrollArea already provides horizontal and vertical scroll bars by default. You can call this function to replace the default horizontal scroll bar with your own custom scroll bar.
+
+This function was introduced in  Qt 4.2.
+
+See also horizontalScrollBar() and setVerticalScrollBar().
+*/
 func (this *QAbstractScrollArea) SetHorizontalScrollBar(scrollbar QScrollBar_ITF /*777 QScrollBar **/) {
 	var convArg0 unsafe.Pointer
 	if scrollbar != nil && scrollbar.QScrollBar_PTR() != nil {
@@ -300,6 +371,16 @@ func (this *QAbstractScrollArea) SetHorizontalScrollBar(scrollbar QScrollBar_ITF
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * cornerWidget() const
+
+/*
+Returns the widget in the corner between the two scroll bars.
+
+By default, no corner widget is present.
+
+This function was introduced in  Qt 4.2.
+
+See also setCornerWidget().
+*/
 func (this *QAbstractScrollArea) CornerWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea12cornerWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -310,6 +391,28 @@ func (this *QAbstractScrollArea) CornerWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCornerWidget(QWidget *)
+
+/*
+Sets the widget in the corner between the two scroll bars to be widget.
+
+You will probably also want to set at least one of the scroll bar modes to AlwaysOn.
+
+Passing 0 shows no widget in the corner.
+
+Any previous corner widget is hidden.
+
+You may call setCornerWidget() with the same widget at different times.
+
+All widgets set here will be deleted by the scroll area when it is destroyed unless you separately reparent the widget after setting some other corner widget (or 0).
+
+Any newly set widget should have no current parent.
+
+By default, no corner widget is present.
+
+This function was introduced in  Qt 4.2.
+
+See also cornerWidget(), horizontalScrollBarPolicy, and horizontalScrollBarPolicy.
+*/
 func (this *QAbstractScrollArea) SetCornerWidget(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -323,6 +426,24 @@ func (this *QAbstractScrollArea) SetCornerWidget(widget QWidget_ITF /*777 QWidge
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addScrollBarWidget(QWidget *, Qt::Alignment)
+
+/*
+Adds widget as a scroll bar widget in the location specified by alignment.
+
+Scroll bar widgets are shown next to the horizontal or vertical scroll bar, and can be placed on either side of it. If you want the scroll bar widgets to be always visible, set the scrollBarPolicy for the corresponding scroll bar to AlwaysOn.
+
+alignment must be one of Qt::Alignleft and Qt::AlignRight, which maps to the horizontal scroll bar, or Qt::AlignTop and Qt::AlignBottom, which maps to the vertical scroll bar.
+
+A scroll bar widget can be removed by either re-parenting the widget or deleting it. It's also possible to hide a widget with QWidget::hide()
+
+The scroll bar widget will be resized to fit the scroll bar geometry for the current style. The following describes the case for scroll bar widgets on the horizontal scroll bar:
+
+The height of the widget will be set to match the height of the scroll bar. To control the width of the widget, use QWidget::setMinimumWidth and QWidget::setMaximumWidth, or implement QWidget::sizeHint() and set a horizontal size policy. If you want a square widget, call QStyle::pixelMetric(QStyle::PM_ScrollBarExtent) and set the width to this value.
+
+This function was introduced in  Qt 4.2.
+
+See also scrollBarWidgets().
+*/
 func (this *QAbstractScrollArea) AddScrollBarWidget(widget QWidget_ITF /*777 QWidget **/, alignment int) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -336,6 +457,14 @@ func (this *QAbstractScrollArea) AddScrollBarWidget(widget QWidget_ITF /*777 QWi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] QWidgetList scrollBarWidgets(Qt::Alignment)
+
+/*
+Returns a list of the currently set scroll bar widgets. alignment can be any combination of the four location flags.
+
+This function was introduced in  Qt 4.2.
+
+See also addScrollBarWidget().
+*/
 func (this *QAbstractScrollArea) ScrollBarWidgets(alignment int) *QWidgetList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea16scrollBarWidgetsE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	qtrt.ErrPrint(err, rv)
@@ -347,6 +476,14 @@ func (this *QAbstractScrollArea) ScrollBarWidgets(alignment int) *QWidgetList /*
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * viewport() const
+
+/*
+Returns the viewport widget.
+
+Use the QScrollArea::widget() function to retrieve the contents of the viewport widget.
+
+See also setViewport() and QScrollArea::widget().
+*/
 func (this *QAbstractScrollArea) Viewport() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea8viewportEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -357,6 +494,16 @@ func (this *QAbstractScrollArea) Viewport() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setViewport(QWidget *)
+
+/*
+Sets the viewport to be the given widget. The QAbstractScrollArea will take ownership of the given widget.
+
+If widget is 0, QAbstractScrollArea will assign a new QWidget instance for the viewport.
+
+This function was introduced in  Qt 4.2.
+
+See also viewport().
+*/
 func (this *QAbstractScrollArea) SetViewport(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -370,6 +517,10 @@ func (this *QAbstractScrollArea) SetViewport(widget QWidget_ITF /*777 QWidget **
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize maximumViewportSize() const
+
+/*
+Returns the size of the viewport as if the scroll bars had no valid scrolling range.
+*/
 func (this *QAbstractScrollArea) MaximumViewportSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea19maximumViewportSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -382,6 +533,10 @@ func (this *QAbstractScrollArea) MaximumViewportSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QAbstractScrollArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -394,6 +549,12 @@ func (this *QAbstractScrollArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+
+Returns the sizeHint property of the scroll area. The size is determined by using viewportSizeHint() plus some extra space for scroll bars, if needed.
+*/
 func (this *QAbstractScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -406,6 +567,12 @@ func (this *QAbstractScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setupViewport(QWidget *)
+
+/*
+This slot is called by QAbstractScrollArea after setViewport(viewport) has been called. Reimplement this function in a subclass of QAbstractScrollArea to initialize the new viewport before it is used.
+
+See also setViewport().
+*/
 func (this *QAbstractScrollArea) SetupViewport(viewport QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if viewport != nil && viewport.QWidget_PTR() != nil {
@@ -419,6 +586,10 @@ func (this *QAbstractScrollArea) SetupViewport(viewport QWidget_ITF /*777 QWidge
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractScrollArea::SizeAdjustPolicy sizeAdjustPolicy() const
+
+/*
+
+ */
 func (this *QAbstractScrollArea) SizeAdjustPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea16sizeAdjustPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -429,6 +600,10 @@ func (this *QAbstractScrollArea) SizeAdjustPolicy() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSizeAdjustPolicy(enum QAbstractScrollArea::SizeAdjustPolicy)
+
+/*
+
+ */
 func (this *QAbstractScrollArea) SetSizeAdjustPolicy(policy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea19setSizeAdjustPolicyENS_16SizeAdjustPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	qtrt.ErrPrint(err, rv)
@@ -438,6 +613,16 @@ func (this *QAbstractScrollArea) SetSizeAdjustPolicy(policy int) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setViewportMargins(int, int, int, int)
+
+/*
+Sets the margins around the scrolling area to left, top, right and bottom. This is useful for applications such as spreadsheets with "locked" rows and columns. The marginal space is is left blank; put widgets in the unused area.
+
+Note that this function is frequently called by QTreeView and QTableView, so margins must be implemented by QAbstractScrollArea subclasses. Also, if the subclasses are to be used in item views, they should not call this function.
+
+By default all margins are zero.
+
+See also viewportMargins().
+*/
 func (this *QAbstractScrollArea) SetViewportMargins(left int, top int, right int, bottom int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea18setViewportMarginsEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)
@@ -447,6 +632,16 @@ func (this *QAbstractScrollArea) SetViewportMargins(left int, top int, right int
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void setViewportMargins(const QMargins &)
+
+/*
+Sets the margins around the scrolling area to left, top, right and bottom. This is useful for applications such as spreadsheets with "locked" rows and columns. The marginal space is is left blank; put widgets in the unused area.
+
+Note that this function is frequently called by QTreeView and QTableView, so margins must be implemented by QAbstractScrollArea subclasses. Also, if the subclasses are to be used in item views, they should not call this function.
+
+By default all margins are zero.
+
+See also viewportMargins().
+*/
 func (this *QAbstractScrollArea) SetViewportMargins_1(margins qtcore.QMargins_ITF) {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
@@ -460,6 +655,14 @@ func (this *QAbstractScrollArea) SetViewportMargins_1(margins qtcore.QMargins_IT
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QMargins viewportMargins() const
+
+/*
+Returns the margins around the scrolling area. By default all the margins are zero.
+
+This function was introduced in  Qt 5.5.
+
+See also setViewportMargins().
+*/
 func (this *QAbstractScrollArea) ViewportMargins() *qtcore.QMargins /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea15viewportMarginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -472,6 +675,10 @@ func (this *QAbstractScrollArea) ViewportMargins() *qtcore.QMargins /*123*/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+
+ */
 func (this *QAbstractScrollArea) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -490,6 +697,14 @@ func (this *QAbstractScrollArea) EventFilter(arg0 qtcore.QObject_ITF /*777 QObje
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+
+This is the main event handler for the QAbstractScrollArea widget (not the scrolling area viewport()). The specified event is a general event object that may need to be cast to the appropriate class depending on its type.
+
+See also QEvent::type().
+*/
 func (this *QAbstractScrollArea) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -504,6 +719,16 @@ func (this *QAbstractScrollArea) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool viewportEvent(QEvent *)
+
+/*
+The main event handler for the scrolling area (the viewport() widget). It handles the event specified, and can be called by subclasses to provide reasonable default behavior.
+
+Returns true to indicate to the event system that the event has been handled, and needs no further processing; otherwise returns false to indicate that the event should be propagated further.
+
+You can reimplement this function in a subclass, but we recommend using one of the specialized event handlers instead.
+
+Specialized handlers for viewport events are: paintEvent(), mousePressEvent(), mouseReleaseEvent(), mouseDoubleClickEvent(), mouseMoveEvent(), wheelEvent(), dragEnterEvent(), dragMoveEvent(), dragLeaveEvent(), dropEvent(), contextMenuEvent(), and resizeEvent().
+*/
 func (this *QAbstractScrollArea) ViewportEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -518,6 +743,16 @@ func (this *QAbstractScrollArea) ViewportEvent(arg0 qtcore.QEvent_ITF /*777 QEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+
+This event handler can be reimplemented in a subclass to receive resize events (passed in event), for the viewport() widget.
+
+When resizeEvent() is called, the viewport already has its new geometry: Its new size is accessible through the QResizeEvent::size() function, and the old size through QResizeEvent::oldSize().
+
+See also QWidget::resizeEvent().
+*/
 func (this *QAbstractScrollArea) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QResizeEvent_PTR() != nil {
@@ -531,6 +766,16 @@ func (this *QAbstractScrollArea) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 Q
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+
+This event handler can be reimplemented in a subclass to receive paint events (passed in event), for the viewport() widget.
+
+Note: If you open a painter, make sure to open it on the viewport().
+
+See also QWidget::paintEvent().
+*/
 func (this *QAbstractScrollArea) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
@@ -544,6 +789,14 @@ func (this *QAbstractScrollArea) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPa
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mousePressEvent().
+
+This event handler can be reimplemented in a subclass to receive mouse press events for the viewport() widget. The event is passed in e.
+
+See also QWidget::mousePressEvent().
+*/
 func (this *QAbstractScrollArea) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -557,6 +810,14 @@ func (this *QAbstractScrollArea) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*77
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseReleaseEvent().
+
+This event handler can be reimplemented in a subclass to receive mouse release events for the viewport() widget. The event is passed in e.
+
+See also QWidget::mouseReleaseEvent().
+*/
 func (this *QAbstractScrollArea) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -570,6 +831,14 @@ func (this *QAbstractScrollArea) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseDoubleClickEvent().
+
+This event handler can be reimplemented in a subclass to receive mouse double click events for the viewport() widget. The event is passed in e.
+
+See also QWidget::mouseDoubleClickEvent().
+*/
 func (this *QAbstractScrollArea) MouseDoubleClickEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -583,6 +852,14 @@ func (this *QAbstractScrollArea) MouseDoubleClickEvent(arg0 qtgui.QMouseEvent_IT
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseMoveEvent().
+
+This event handler can be reimplemented in a subclass to receive mouse move events for the viewport() widget. The event is passed in e.
+
+See also QWidget::mouseMoveEvent().
+*/
 func (this *QAbstractScrollArea) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -596,6 +873,14 @@ func (this *QAbstractScrollArea) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
+
+/*
+Reimplemented from QWidget::wheelEvent().
+
+This event handler can be reimplemented in a subclass to receive wheel events for the viewport() widget. The event is passed in e.
+
+See also QWidget::wheelEvent().
+*/
 func (this *QAbstractScrollArea) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWheelEvent_PTR() != nil {
@@ -609,6 +894,14 @@ func (this *QAbstractScrollArea) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWh
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
+
+/*
+Reimplemented from QWidget::contextMenuEvent().
+
+This event handler can be reimplemented in a subclass to receive context menu events for the viewport() widget. The event is passed in e.
+
+See also QWidget::contextMenuEvent().
+*/
 func (this *QAbstractScrollArea) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QContextMenuEvent_PTR() != nil {
@@ -622,6 +915,14 @@ func (this *QAbstractScrollArea) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_I
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QDragEnterEvent *)
+
+/*
+Reimplemented from QWidget::dragEnterEvent().
+
+This event handler can be reimplemented in a subclass to receive drag enter events (passed in event), for the viewport() widget.
+
+See also QWidget::dragEnterEvent().
+*/
 func (this *QAbstractScrollArea) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /*777 QDragEnterEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDragEnterEvent_PTR() != nil {
@@ -635,6 +936,14 @@ func (this *QAbstractScrollArea) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
+
+/*
+Reimplemented from QWidget::dragMoveEvent().
+
+This event handler can be reimplemented in a subclass to receive drag move events (passed in event), for the viewport() widget.
+
+See also QWidget::dragMoveEvent().
+*/
 func (this *QAbstractScrollArea) DragMoveEvent(arg0 qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDragMoveEvent_PTR() != nil {
@@ -648,6 +957,14 @@ func (this *QAbstractScrollArea) DragMoveEvent(arg0 qtgui.QDragMoveEvent_ITF /*7
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
+
+/*
+Reimplemented from QWidget::dragLeaveEvent().
+
+This event handler can be reimplemented in a subclass to receive drag leave events (passed in event), for the viewport() widget.
+
+See also QWidget::dragLeaveEvent().
+*/
 func (this *QAbstractScrollArea) DragLeaveEvent(arg0 qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDragLeaveEvent_PTR() != nil {
@@ -661,6 +978,14 @@ func (this *QAbstractScrollArea) DragLeaveEvent(arg0 qtgui.QDragLeaveEvent_ITF /
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
+
+/*
+Reimplemented from QWidget::dropEvent().
+
+This event handler can be reimplemented in a subclass to receive drop events (passed in event), for the viewport() widget.
+
+See also QWidget::dropEvent().
+*/
 func (this *QAbstractScrollArea) DropEvent(arg0 qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDropEvent_PTR() != nil {
@@ -674,6 +999,12 @@ func (this *QAbstractScrollArea) DropEvent(arg0 qtgui.QDropEvent_ITF /*777 QDrop
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWidget::keyPressEvent().
+
+This function is called with key event e when key presses occur. It handles PageUp, PageDown, Up, Down, Left, and Right, and ignores all other key presses.
+*/
 func (this *QAbstractScrollArea) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QKeyEvent_PTR() != nil {
@@ -687,6 +1018,14 @@ func (this *QAbstractScrollArea) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QK
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void scrollContentsBy(int, int)
+
+/*
+This virtual handler is called when the scroll bars are moved by dx, dy, and consequently the viewport's contents should be scrolled accordingly.
+
+The default implementation simply calls update() on the entire viewport(), subclasses can reimplement this handler for optimization purposes, or - like QScrollArea - to move a contents widget. The parameters dx and dy are there for convenience, so that the class knows how much should be scrolled (useful e.g. when doing pixel-shifts). You may just as well ignore these values and scroll directly to the position the scroll bars indicate.
+
+Calling this function in order to scroll programmatically is an error, use the scroll bars instead (e.g. by calling QScrollBar::setValue() directly).
+*/
 func (this *QAbstractScrollArea) ScrollContentsBy(dx int, dy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea16scrollContentsByEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -696,6 +1035,12 @@ func (this *QAbstractScrollArea) ScrollContentsBy(dx int, dy int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize viewportSizeHint() const
+
+/*
+Returns the recommended size for the viewport. The default implementation returns viewport()->sizeHint(). Note that the size is just the viewport's size, without any scroll bars visible.
+
+This function was introduced in  Qt 5.2.
+*/
 func (this *QAbstractScrollArea) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractScrollArea16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -704,10 +1049,23 @@ func (this *QAbstractScrollArea) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
+/*
+This enum specifies how the size hint of the QAbstractScrollArea should adjust when the size of the viewport changes.
+
+
+
+This enum was introduced or modified in  Qt 5.2.
+
+*/
 type QAbstractScrollArea__SizeAdjustPolicy = int
 
+// The scroll area will behave like before - and not do any adjust.
 const QAbstractScrollArea__AdjustIgnored QAbstractScrollArea__SizeAdjustPolicy = 0
+
+// The scroll area will adjust to its viewport the first time it is shown.
 const QAbstractScrollArea__AdjustToContentsOnFirstShow QAbstractScrollArea__SizeAdjustPolicy = 1
+
+// The scroll area will always adjust to the viewport
 const QAbstractScrollArea__AdjustToContents QAbstractScrollArea__SizeAdjustPolicy = 2
 
 //  body block end

@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QFontMetrics struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,16 @@ func (*QFontMetrics) NewFromPointer(cthis unsafe.Pointer) *QFontMetrics {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFontMetrics(const QFont &)
+
+/*
+Constructs a font metrics object for font.
+
+The font metrics will be compatible with the paintdevice used to create font.
+
+The font metrics object holds the information for the font that is passed in the constructor at the time it is created, and is not updated if the font's attributes are changed later.
+
+Use QFontMetrics(const QFont &, QPaintDevice *) to get the font metrics that are compatible with a certain paint device.
+*/
 func NewQFontMetrics(arg0 QFont_ITF) *QFontMetrics {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {
@@ -82,6 +95,16 @@ func NewQFontMetrics(arg0 QFont_ITF) *QFontMetrics {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFontMetrics(const QFont &, QPaintDevice *)
+
+/*
+Constructs a font metrics object for font.
+
+The font metrics will be compatible with the paintdevice used to create font.
+
+The font metrics object holds the information for the font that is passed in the constructor at the time it is created, and is not updated if the font's attributes are changed later.
+
+Use QFontMetrics(const QFont &, QPaintDevice *) to get the font metrics that are compatible with a certain paint device.
+*/
 func NewQFontMetrics_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFontMetrics {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {
@@ -102,6 +125,10 @@ func NewQFontMetrics_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QFontMetrics()
+
+/*
+
+ */
 func DeleteQFontMetrics(this *QFontMetrics) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QFontMetricsD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -113,6 +140,10 @@ func DeleteQFontMetrics(this *QFontMetrics) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QFontMetrics & operator=(const QFontMetrics &)
+
+/*
+
+ */
 func (this *QFontMetrics) Operator_equal(arg0 QFontMetrics_ITF) *QFontMetrics {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFontMetrics_PTR() != nil {
@@ -129,6 +160,10 @@ func (this *QFontMetrics) Operator_equal(arg0 QFontMetrics_ITF) *QFontMetrics {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QFontMetrics & operator=(QFontMetrics &&)
+
+/*
+
+ */
 func (this *QFontMetrics) Operator_equal_1(other unsafe.Pointer /*333*/) *QFontMetrics {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QFontMetricsaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -141,6 +176,12 @@ func (this *QFontMetrics) Operator_equal_1(other unsafe.Pointer /*333*/) *QFontM
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QFontMetrics &)
+
+/*
+Swaps this font metrics instance with other. This function is very fast and never fails.
+
+This function was introduced in  Qt 5.0.
+*/
 func (this *QFontMetrics) Swap(other QFontMetrics_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QFontMetrics_PTR() != nil {
@@ -154,6 +195,14 @@ func (this *QFontMetrics) Swap(other QFontMetrics_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int ascent() const
+
+/*
+Returns the ascent of the font.
+
+The ascent of a font is the distance from the baseline to the highest position characters extend to. In practice, some font designers break this rule, e.g. when they put more than one accent on top of a character, or to accommodate an unusual character in an exotic language, so it is possible (though rare) that this value will be too small.
+
+See also descent().
+*/
 func (this *QFontMetrics) Ascent() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics6ascentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,6 +213,16 @@ func (this *QFontMetrics) Ascent() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int capHeight() const
+
+/*
+Returns the cap height of the font.
+
+The cap height of a font is the height of a capital letter above the baseline. It specifically is the height of capital letters that are flat - such as H or I - as opposed to round letters such as O, or pointed letters like A, both of which may display overshoot.
+
+This function was introduced in  Qt 5.8.
+
+See also ascent().
+*/
 func (this *QFontMetrics) CapHeight() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics9capHeightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +233,14 @@ func (this *QFontMetrics) CapHeight() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int descent() const
+
+/*
+Returns the descent of the font.
+
+The descent is the distance from the base line to the lowest point characters extend to. In practice, some font designers break this rule, e.g. to accommodate an unusual character in an exotic language, so it is possible (though rare) that this value will be too small.
+
+See also ascent().
+*/
 func (this *QFontMetrics) Descent() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics7descentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,6 +251,14 @@ func (this *QFontMetrics) Descent() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int height() const
+
+/*
+Returns the height of the font.
+
+This is always equal to ascent()+descent().
+
+See also leading() and lineSpacing().
+*/
 func (this *QFontMetrics) Height() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics6heightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,6 +269,14 @@ func (this *QFontMetrics) Height() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int leading() const
+
+/*
+Returns the leading of the font.
+
+This is the natural inter-line spacing.
+
+See also height() and lineSpacing().
+*/
 func (this *QFontMetrics) Leading() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics7leadingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -204,6 +287,14 @@ func (this *QFontMetrics) Leading() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lineSpacing() const
+
+/*
+Returns the distance from one base line to the next.
+
+This value is always equal to leading()+height().
+
+See also height() and leading().
+*/
 func (this *QFontMetrics) LineSpacing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics11lineSpacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,6 +305,16 @@ func (this *QFontMetrics) LineSpacing() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minLeftBearing() const
+
+/*
+Returns the minimum left bearing of the font.
+
+This is the smallest leftBearing(char) of all characters in the font.
+
+Note that this function can be very slow if the font is large.
+
+See also minRightBearing() and leftBearing().
+*/
 func (this *QFontMetrics) MinLeftBearing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics14minLeftBearingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +325,16 @@ func (this *QFontMetrics) MinLeftBearing() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minRightBearing() const
+
+/*
+Returns the minimum right bearing of the font.
+
+This is the smallest rightBearing(char) of all characters in the font.
+
+Note that this function can be very slow if the font is large.
+
+See also minLeftBearing() and rightBearing().
+*/
 func (this *QFontMetrics) MinRightBearing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics15minRightBearingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -234,6 +345,10 @@ func (this *QFontMetrics) MinRightBearing() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maxWidth() const
+
+/*
+Returns the width of the widest character in the font.
+*/
 func (this *QFontMetrics) MaxWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics8maxWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -244,6 +359,10 @@ func (this *QFontMetrics) MaxWidth() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int xHeight() const
+
+/*
+Returns the 'x' height of the font. This is often but not always the same as the height of the character 'x'.
+*/
 func (this *QFontMetrics) XHeight() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics7xHeightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -254,6 +373,12 @@ func (this *QFontMetrics) XHeight() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int averageCharWidth() const
+
+/*
+Returns the average width of glyphs in the font.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QFontMetrics) AverageCharWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics16averageCharWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -264,6 +389,10 @@ func (this *QFontMetrics) AverageCharWidth() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool inFont(QChar) const
+
+/*
+Returns true if character ch is a valid character in the font; otherwise returns false.
+*/
 func (this *QFontMetrics) InFont(arg0 qtcore.QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QChar_PTR() != nil {
@@ -278,6 +407,10 @@ func (this *QFontMetrics) InFont(arg0 qtcore.QChar_ITF /*123*/) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool inFontUcs4(uint) const
+
+/*
+Returns true if the character ucs4 encoded in UCS-4/UTF-32 is a valid character in the font; otherwise returns false.
+*/
 func (this *QFontMetrics) InFontUcs4(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics10inFontUcs4Ej", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ucs4)
 	qtrt.ErrPrint(err, rv)
@@ -288,6 +421,16 @@ func (this *QFontMetrics) InFontUcs4(ucs4 uint) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int leftBearing(QChar) const
+
+/*
+Returns the left bearing of character ch in the font.
+
+The left bearing is the right-ward distance of the left-most pixel of the character from the logical origin of the character. This value is negative if the pixels of the character extend to the left of the logical origin.
+
+See width(QChar) for a graphical description of this metric.
+
+See also rightBearing(), minLeftBearing(), and width().
+*/
 func (this *QFontMetrics) LeftBearing(arg0 qtcore.QChar_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QChar_PTR() != nil {
@@ -302,6 +445,16 @@ func (this *QFontMetrics) LeftBearing(arg0 qtcore.QChar_ITF /*123*/) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rightBearing(QChar) const
+
+/*
+Returns the right bearing of character ch in the font.
+
+The right bearing is the left-ward distance of the right-most pixel of the character from the logical origin of a subsequent character. This value is negative if the pixels of the character extend to the right of the width() of the character.
+
+See width() for a graphical description of this metric.
+
+See also leftBearing(), minRightBearing(), and width().
+*/
 func (this *QFontMetrics) RightBearing(arg0 qtcore.QChar_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QChar_PTR() != nil {
@@ -316,6 +469,14 @@ func (this *QFontMetrics) RightBearing(arg0 qtcore.QChar_ITF /*123*/) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int width(const QString &, int) const
+
+/*
+Returns the width in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
+
+Note that this value is not equal to boundingRect().width(); boundingRect() returns a rectangle describing the pixels this string will cover whereas width() returns the distance to where the next string should be drawn.
+
+See also boundingRect().
+*/
 func (this *QFontMetrics) Width(arg0 string, len_ int) int {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -328,6 +489,14 @@ func (this *QFontMetrics) Width(arg0 string, len_ int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int width(const QString &, int) const
+
+/*
+Returns the width in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
+
+Note that this value is not equal to boundingRect().width(); boundingRect() returns a rectangle describing the pixels this string will cover whereas width() returns the distance to where the next string should be drawn.
+
+See also boundingRect().
+*/
 func (this *QFontMetrics) Width__(arg0 string) int {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -342,6 +511,14 @@ func (this *QFontMetrics) Width__(arg0 string) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int width(const QString &, int, int) const
+
+/*
+Returns the width in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
+
+Note that this value is not equal to boundingRect().width(); boundingRect() returns a rectangle describing the pixels this string will cover whereas width() returns the distance to where the next string should be drawn.
+
+See also boundingRect().
+*/
 func (this *QFontMetrics) Width_1(arg0 string, len_ int, flags int) int {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -354,6 +531,14 @@ func (this *QFontMetrics) Width_1(arg0 string, len_ int, flags int) int {
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int width(QChar) const
+
+/*
+Returns the width in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
+
+Note that this value is not equal to boundingRect().width(); boundingRect() returns a rectangle describing the pixels this string will cover whereas width() returns the distance to where the next string should be drawn.
+
+See also boundingRect().
+*/
 func (this *QFontMetrics) Width_2(arg0 qtcore.QChar_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QChar_PTR() != nil {
@@ -368,6 +553,10 @@ func (this *QFontMetrics) Width_2(arg0 qtcore.QChar_ITF /*123*/) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int charWidth(const QString &, int) const
+
+/*
+
+ */
 func (this *QFontMetrics) CharWidth(str string, pos int) int {
 	var tmpArg0 = qtcore.NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
@@ -380,6 +569,18 @@ func (this *QFontMetrics) CharWidth(str string, pos int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect(QChar) const
+
+/*
+Returns the rectangle that is covered by ink if character ch were to be drawn at the origin of the coordinate system.
+
+Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for italicized fonts), and that the text output may cover all pixels in the bounding rectangle. For a space character the rectangle will usually be empty.
+
+Note that the rectangle usually extends both above and below the base line.
+
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+
+See also width().
+*/
 func (this *QFontMetrics) BoundingRect(arg0 qtcore.QChar_ITF /*123*/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QChar_PTR() != nil {
@@ -396,6 +597,18 @@ func (this *QFontMetrics) BoundingRect(arg0 qtcore.QChar_ITF /*123*/) *qtcore.QR
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect(const QString &) const
+
+/*
+Returns the rectangle that is covered by ink if character ch were to be drawn at the origin of the coordinate system.
+
+Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for italicized fonts), and that the text output may cover all pixels in the bounding rectangle. For a space character the rectangle will usually be empty.
+
+Note that the rectangle usually extends both above and below the base line.
+
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+
+See also width().
+*/
 func (this *QFontMetrics) BoundingRect_1(text string) *qtcore.QRect /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -410,6 +623,18 @@ func (this *QFontMetrics) BoundingRect_1(text string) *qtcore.QRect /*123*/ {
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect(const QRect &, int, const QString &, int, int *) const
+
+/*
+Returns the rectangle that is covered by ink if character ch were to be drawn at the origin of the coordinate system.
+
+Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for italicized fonts), and that the text output may cover all pixels in the bounding rectangle. For a space character the rectangle will usually be empty.
+
+Note that the rectangle usually extends both above and below the base line.
+
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+
+See also width().
+*/
 func (this *QFontMetrics) BoundingRect_2(r qtcore.QRect_ITF, flags int, text string, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -428,6 +653,18 @@ func (this *QFontMetrics) BoundingRect_2(r qtcore.QRect_ITF, flags int, text str
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect(const QRect &, int, const QString &, int, int *) const
+
+/*
+Returns the rectangle that is covered by ink if character ch were to be drawn at the origin of the coordinate system.
+
+Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for italicized fonts), and that the text output may cover all pixels in the bounding rectangle. For a space character the rectangle will usually be empty.
+
+Note that the rectangle usually extends both above and below the base line.
+
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+
+See also width().
+*/
 func (this *QFontMetrics) BoundingRect_2_(r qtcore.QRect_ITF, flags int, text string) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -450,6 +687,18 @@ func (this *QFontMetrics) BoundingRect_2_(r qtcore.QRect_ITF, flags int, text st
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect(const QRect &, int, const QString &, int, int *) const
+
+/*
+Returns the rectangle that is covered by ink if character ch were to be drawn at the origin of the coordinate system.
+
+Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for italicized fonts), and that the text output may cover all pixels in the bounding rectangle. For a space character the rectangle will usually be empty.
+
+Note that the rectangle usually extends both above and below the base line.
+
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+
+See also width().
+*/
 func (this *QFontMetrics) BoundingRect_2_1(r qtcore.QRect_ITF, flags int, text string, tabstops int) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -470,6 +719,18 @@ func (this *QFontMetrics) BoundingRect_2_1(r qtcore.QRect_ITF, flags int, text s
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [16] QRect boundingRect(int, int, int, int, int, const QString &, int, int *) const
+
+/*
+Returns the rectangle that is covered by ink if character ch were to be drawn at the origin of the coordinate system.
+
+Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for italicized fonts), and that the text output may cover all pixels in the bounding rectangle. For a space character the rectangle will usually be empty.
+
+Note that the rectangle usually extends both above and below the base line.
+
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+
+See also width().
+*/
 func (this *QFontMetrics) BoundingRect_3(x int, y int, w int, h int, flags int, text string, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QRect /*123*/ {
 	var tmpArg5 = qtcore.NewQString_5(text)
 	var convArg5 = tmpArg5.GetCthis()
@@ -484,6 +745,18 @@ func (this *QFontMetrics) BoundingRect_3(x int, y int, w int, h int, flags int, 
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [16] QRect boundingRect(int, int, int, int, int, const QString &, int, int *) const
+
+/*
+Returns the rectangle that is covered by ink if character ch were to be drawn at the origin of the coordinate system.
+
+Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for italicized fonts), and that the text output may cover all pixels in the bounding rectangle. For a space character the rectangle will usually be empty.
+
+Note that the rectangle usually extends both above and below the base line.
+
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+
+See also width().
+*/
 func (this *QFontMetrics) BoundingRect_3_(x int, y int, w int, h int, flags int, text string) *qtcore.QRect /*123*/ {
 	var tmpArg5 = qtcore.NewQString_5(text)
 	var convArg5 = tmpArg5.GetCthis()
@@ -502,6 +775,18 @@ func (this *QFontMetrics) BoundingRect_3_(x int, y int, w int, h int, flags int,
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [16] QRect boundingRect(int, int, int, int, int, const QString &, int, int *) const
+
+/*
+Returns the rectangle that is covered by ink if character ch were to be drawn at the origin of the coordinate system.
+
+Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for italicized fonts), and that the text output may cover all pixels in the bounding rectangle. For a space character the rectangle will usually be empty.
+
+Note that the rectangle usually extends both above and below the base line.
+
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+
+See also width().
+*/
 func (this *QFontMetrics) BoundingRect_3_1(x int, y int, w int, h int, flags int, text string, tabstops int) *qtcore.QRect /*123*/ {
 	var tmpArg5 = qtcore.NewQString_5(text)
 	var convArg5 = tmpArg5.GetCthis()
@@ -518,6 +803,27 @@ func (this *QFontMetrics) BoundingRect_3_1(x int, y int, w int, h int, flags int
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize size(int, const QString &, int, int *) const
+
+/*
+Returns the size in pixels of text.
+
+The flags argument is the bitwise OR of the following flags:
+
+
+Qt::TextSingleLine ignores newline characters.
+Qt::TextExpandTabs expands tabs (see below)
+Qt::TextShowMnemonic interprets "&x" as x; i.e., underlined.
+Qt::TextWordWrap breaks the text to fit the rectangle.
+
+
+If Qt::TextExpandTabs is set in flags, then: if tabArray is non-null, it specifies a 0-terminated sequence of pixel-positions for tabs; otherwise if tabStops is non-zero, it is used as the tab spacing (in pixels).
+
+Newline characters are processed as linebreaks.
+
+Despite the different actual character heights, the heights of the bounding rectangles of "Yes" and "yes" are the same.
+
+See also boundingRect().
+*/
 func (this *QFontMetrics) Size(flags int, str string, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QSize /*123*/ {
 	var tmpArg1 = qtcore.NewQString_5(str)
 	var convArg1 = tmpArg1.GetCthis()
@@ -532,6 +838,27 @@ func (this *QFontMetrics) Size(flags int, str string, tabstops int, tabarray uns
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize size(int, const QString &, int, int *) const
+
+/*
+Returns the size in pixels of text.
+
+The flags argument is the bitwise OR of the following flags:
+
+
+Qt::TextSingleLine ignores newline characters.
+Qt::TextExpandTabs expands tabs (see below)
+Qt::TextShowMnemonic interprets "&x" as x; i.e., underlined.
+Qt::TextWordWrap breaks the text to fit the rectangle.
+
+
+If Qt::TextExpandTabs is set in flags, then: if tabArray is non-null, it specifies a 0-terminated sequence of pixel-positions for tabs; otherwise if tabStops is non-zero, it is used as the tab spacing (in pixels).
+
+Newline characters are processed as linebreaks.
+
+Despite the different actual character heights, the heights of the bounding rectangles of "Yes" and "yes" are the same.
+
+See also boundingRect().
+*/
 func (this *QFontMetrics) Size__(flags int, str string) *qtcore.QSize /*123*/ {
 	var tmpArg1 = qtcore.NewQString_5(str)
 	var convArg1 = tmpArg1.GetCthis()
@@ -550,6 +877,27 @@ func (this *QFontMetrics) Size__(flags int, str string) *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize size(int, const QString &, int, int *) const
+
+/*
+Returns the size in pixels of text.
+
+The flags argument is the bitwise OR of the following flags:
+
+
+Qt::TextSingleLine ignores newline characters.
+Qt::TextExpandTabs expands tabs (see below)
+Qt::TextShowMnemonic interprets "&x" as x; i.e., underlined.
+Qt::TextWordWrap breaks the text to fit the rectangle.
+
+
+If Qt::TextExpandTabs is set in flags, then: if tabArray is non-null, it specifies a 0-terminated sequence of pixel-positions for tabs; otherwise if tabStops is non-zero, it is used as the tab spacing (in pixels).
+
+Newline characters are processed as linebreaks.
+
+Despite the different actual character heights, the heights of the bounding rectangles of "Yes" and "yes" are the same.
+
+See also boundingRect().
+*/
 func (this *QFontMetrics) Size__1(flags int, str string, tabstops int) *qtcore.QSize /*123*/ {
 	var tmpArg1 = qtcore.NewQString_5(str)
 	var convArg1 = tmpArg1.GetCthis()
@@ -566,6 +914,22 @@ func (this *QFontMetrics) Size__1(flags int, str string, tabstops int) *qtcore.Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect tightBoundingRect(const QString &) const
+
+/*
+Returns a tight bounding rectangle around the characters in the string specified by text. The bounding rectangle always covers at least the set of pixels the text would cover if drawn at (0, 0).
+
+Note that the bounding rectangle may extend to the left of (0, 0), e.g. for italicized fonts, and that the width of the returned rectangle might be different than what the width() method returns.
+
+If you want to know the advance width of the string (to lay out a set of strings next to each other), use width() instead.
+
+Newline characters are processed as normal characters, not as linebreaks.
+
+Warning: Calling this method is very slow on Windows.
+
+This function was introduced in  Qt 4.3.
+
+See also width(), height(), and boundingRect().
+*/
 func (this *QFontMetrics) TightBoundingRect(text string) *qtcore.QRect /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -580,6 +944,20 @@ func (this *QFontMetrics) TightBoundingRect(text string) *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString elidedText(const QString &, Qt::TextElideMode, int, int) const
+
+/*
+If the string text is wider than width, returns an elided version of the string (i.e., a string with "..." in it). Otherwise, returns the original string.
+
+The mode parameter specifies whether the text is elided on the left (e.g., "...tech"), in the middle (e.g., "Tr...ch"), or on the right (e.g., "Trol...").
+
+The width is specified in pixels, not characters.
+
+The flags argument is optional and currently only supports Qt::TextShowMnemonic as value.
+
+The elide mark follows the layoutdirection. For example, it will be on the right side of the text for right-to-left layouts if the mode is Qt::ElideLeft, and on the left side of the text if the mode is Qt::ElideRight.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QFontMetrics) ElidedText(text string, mode int, width int, flags int) string {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -595,6 +973,20 @@ func (this *QFontMetrics) ElidedText(text string, mode int, width int, flags int
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString elidedText(const QString &, Qt::TextElideMode, int, int) const
+
+/*
+If the string text is wider than width, returns an elided version of the string (i.e., a string with "..." in it). Otherwise, returns the original string.
+
+The mode parameter specifies whether the text is elided on the left (e.g., "...tech"), in the middle (e.g., "Tr...ch"), or on the right (e.g., "Trol...").
+
+The width is specified in pixels, not characters.
+
+The flags argument is optional and currently only supports Qt::TextShowMnemonic as value.
+
+The elide mark follows the layoutdirection. For example, it will be on the right side of the text for right-to-left layouts if the mode is Qt::ElideLeft, and on the left side of the text if the mode is Qt::ElideRight.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QFontMetrics) ElidedText__(text string, mode int, width int) string {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -612,6 +1004,12 @@ func (this *QFontMetrics) ElidedText__(text string, mode int, width int) string 
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int underlinePos() const
+
+/*
+Returns the distance from the base line to where an underscore should be drawn.
+
+See also overlinePos(), strikeOutPos(), and lineWidth().
+*/
 func (this *QFontMetrics) UnderlinePos() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics12underlinePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -622,6 +1020,12 @@ func (this *QFontMetrics) UnderlinePos() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int overlinePos() const
+
+/*
+Returns the distance from the base line to where an overline should be drawn.
+
+See also underlinePos(), strikeOutPos(), and lineWidth().
+*/
 func (this *QFontMetrics) OverlinePos() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics11overlinePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -632,6 +1036,12 @@ func (this *QFontMetrics) OverlinePos() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int strikeOutPos() const
+
+/*
+Returns the distance from the base line to where the strikeout line should be drawn.
+
+See also underlinePos(), overlinePos(), and lineWidth().
+*/
 func (this *QFontMetrics) StrikeOutPos() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics12strikeOutPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -642,6 +1052,12 @@ func (this *QFontMetrics) StrikeOutPos() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lineWidth() const
+
+/*
+Returns the width of the underline and strikeout lines, adjusted for the point size of the font.
+
+See also underlinePos(), overlinePos(), and strikeOutPos().
+*/
 func (this *QFontMetrics) LineWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics9lineWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -652,6 +1068,10 @@ func (this *QFontMetrics) LineWidth() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QFontMetrics &) const
+
+/*
+
+ */
 func (this *QFontMetrics) Operator_equal_equal(other QFontMetrics_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QFontMetrics_PTR() != nil {
@@ -666,6 +1086,10 @@ func (this *QFontMetrics) Operator_equal_equal(other QFontMetrics_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QFontMetrics &) const
+
+/*
+
+ */
 func (this *QFontMetrics) Operator_not_equal(other QFontMetrics_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QFontMetrics_PTR() != nil {

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QSemaphore struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,12 @@ func (*QSemaphore) NewFromPointer(cthis unsafe.Pointer) *QSemaphore {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSemaphore(int)
+
+/*
+Creates a new semaphore and initializes the number of resources it guards to n (by default, 0).
+
+See also release() and available().
+*/
 func NewQSemaphore(n int) *QSemaphore {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphoreC2Ei", qtrt.FFI_TYPE_POINTER, n)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +86,12 @@ func NewQSemaphore(n int) *QSemaphore {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSemaphore(int)
+
+/*
+Creates a new semaphore and initializes the number of resources it guards to n (by default, 0).
+
+See also release() and available().
+*/
 func NewQSemaphore__() *QSemaphore {
 	// arg: 0, int=Int, =Invalid,
 	n := int(0)
@@ -91,6 +106,10 @@ func NewQSemaphore__() *QSemaphore {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSemaphore()
+
+/*
+
+ */
 func DeleteQSemaphore(this *QSemaphore) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphoreD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -102,6 +121,12 @@ func DeleteQSemaphore(this *QSemaphore) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void acquire(int)
+
+/*
+Tries to acquire n resources guarded by the semaphore. If n > available(), this call will block until enough resources are available.
+
+See also release(), available(), and tryAcquire().
+*/
 func (this *QSemaphore) Acquire(n int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7acquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +136,12 @@ func (this *QSemaphore) Acquire(n int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void acquire(int)
+
+/*
+Tries to acquire n resources guarded by the semaphore. If n > available(), this call will block until enough resources are available.
+
+See also release(), available(), and tryAcquire().
+*/
 func (this *QSemaphore) Acquire__() {
 	// arg: 0, int=Int, =Invalid,
 	n := int(1)
@@ -122,6 +153,21 @@ func (this *QSemaphore) Acquire__() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryAcquire(int)
+
+/*
+Tries to acquire n resources guarded by the semaphore and returns true on success. If available() < n, this call immediately returns false without acquiring any resources.
+
+Example:
+
+
+  QSemaphore sem(5);      // sem.available() == 5
+  sem.tryAcquire(250);    // sem.available() == 5, returns false
+  sem.tryAcquire(3);      // sem.available() == 2, returns true
+
+
+
+See also acquire().
+*/
 func (this *QSemaphore) TryAcquire(n int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
@@ -132,6 +178,21 @@ func (this *QSemaphore) TryAcquire(n int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryAcquire(int)
+
+/*
+Tries to acquire n resources guarded by the semaphore and returns true on success. If available() < n, this call immediately returns false without acquiring any resources.
+
+Example:
+
+
+  QSemaphore sem(5);      // sem.available() == 5
+  sem.tryAcquire(250);    // sem.available() == 5, returns false
+  sem.tryAcquire(3);      // sem.available() == 2, returns true
+
+
+
+See also acquire().
+*/
 func (this *QSemaphore) TryAcquire__() bool {
 	// arg: 0, int=Int, =Invalid,
 	n := int(1)
@@ -144,6 +205,21 @@ func (this *QSemaphore) TryAcquire__() bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool tryAcquire(int, int)
+
+/*
+Tries to acquire n resources guarded by the semaphore and returns true on success. If available() < n, this call immediately returns false without acquiring any resources.
+
+Example:
+
+
+  QSemaphore sem(5);      // sem.available() == 5
+  sem.tryAcquire(250);    // sem.available() == 5, returns false
+  sem.tryAcquire(3);      // sem.available() == 2, returns true
+
+
+
+See also acquire().
+*/
 func (this *QSemaphore) TryAcquire_1(n int, timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n, timeout)
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +230,24 @@ func (this *QSemaphore) TryAcquire_1(n int, timeout int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void release(int)
+
+/*
+Releases n resources guarded by the semaphore.
+
+This function can be used to "create" resources as well. For example:
+
+
+  QSemaphore sem(5);      // a semaphore that guards 5 resources
+  sem.acquire(5);         // acquire all 5 resources
+  sem.release(5);         // release the 5 resources
+  sem.release(10);        // "create" 10 new resources
+
+
+
+QSemaphoreReleaser is a RAII wrapper around this function.
+
+See also acquire(), available(), and QSemaphoreReleaser.
+*/
 func (this *QSemaphore) Release(n int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)
@@ -163,6 +257,24 @@ func (this *QSemaphore) Release(n int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void release(int)
+
+/*
+Releases n resources guarded by the semaphore.
+
+This function can be used to "create" resources as well. For example:
+
+
+  QSemaphore sem(5);      // a semaphore that guards 5 resources
+  sem.acquire(5);         // acquire all 5 resources
+  sem.release(5);         // release the 5 resources
+  sem.release(10);        // "create" 10 new resources
+
+
+
+QSemaphoreReleaser is a RAII wrapper around this function.
+
+See also acquire(), available(), and QSemaphoreReleaser.
+*/
 func (this *QSemaphore) Release__() {
 	// arg: 0, int=Int, =Invalid,
 	n := int(1)
@@ -174,6 +286,12 @@ func (this *QSemaphore) Release__() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int available() const
+
+/*
+Returns the number of resources currently available to the semaphore. This number can never be negative.
+
+See also acquire() and release().
+*/
 func (this *QSemaphore) Available() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSemaphore9availableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -68,6 +68,9 @@ func (this *QGraphicsEffect) InheritSourcePixmap(f func(system int, offset *qtco
 	qtrt.SetAllInheritCallback(this, "sourcePixmap", f)
 }
 
+/*
+
+ */
 type QGraphicsEffect struct {
 	*qtcore.QObject
 }
@@ -100,6 +103,10 @@ func (*QGraphicsEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsEffect {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGraphicsEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +117,10 @@ func (this *QGraphicsEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEffect(QObject *)
+
+/*
+Constructs a new QGraphicsEffect instance having the specified parent.
+*/
 func NewQGraphicsEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -126,6 +137,10 @@ func NewQGraphicsEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsE
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEffect(QObject *)
+
+/*
+Constructs a new QGraphicsEffect instance having the specified parent.
+*/
 func NewQGraphicsEffect__() *QGraphicsEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -140,6 +155,10 @@ func NewQGraphicsEffect__() *QGraphicsEffect {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsEffect()
+
+/*
+
+ */
 func DeleteQGraphicsEffect(this *QGraphicsEffect) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -151,6 +170,12 @@ func DeleteQGraphicsEffect(this *QGraphicsEffect) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRectFor(const QRectF &) const
+
+/*
+Returns the effective bounding rectangle for this effect, given the provided rect in the device coordinates. When writing you own custom effect, you must call updateBoundingRect() whenever any parameters are changed that may cause this this function to return a different value.
+
+See also sourceBoundingRect().
+*/
 func (this *QGraphicsEffect) BoundingRectFor(sourceRect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if sourceRect != nil && sourceRect.QRectF_PTR() != nil {
@@ -167,6 +192,12 @@ func (this *QGraphicsEffect) BoundingRectFor(sourceRect qtcore.QRectF_ITF) *qtco
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
+
+/*
+Returns the effective bounding rectangle for this effect, i.e., the bounding rectangle of the source in device coordinates, adjusted by any margins applied by the effect itself.
+
+See also boundingRectFor() and updateBoundingRect().
+*/
 func (this *QGraphicsEffect) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +210,10 @@ func (this *QGraphicsEffect) BoundingRect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled() const
+
+/*
+
+ */
 func (this *QGraphicsEffect) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,6 +224,10 @@ func (this *QGraphicsEffect) IsEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(_Bool)
+
+/*
+
+ */
 func (this *QGraphicsEffect) SetEnabled(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffect10setEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	qtrt.ErrPrint(err, rv)
@@ -198,6 +237,12 @@ func (this *QGraphicsEffect) SetEnabled(enable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update()
+
+/*
+Schedules a redraw of the effect. Call this function whenever the effect needs to be redrawn. This function does not trigger a redraw of the source.
+
+See also updateBoundingRect().
+*/
 func (this *QGraphicsEffect) Update() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffect6updateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,6 +252,14 @@ func (this *QGraphicsEffect) Update() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void enabledChanged(_Bool)
+
+/*
+This signal is emitted whenever the effect is enabled or disabled. The enabled parameter holds the effects's new enabled state.
+
+Note: Notifier signal for property enabled.
+
+See also isEnabled().
+*/
 func (this *QGraphicsEffect) EnabledChanged(enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffect14enabledChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	qtrt.ErrPrint(err, rv)
@@ -216,6 +269,38 @@ func (this *QGraphicsEffect) EnabledChanged(enabled bool) {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
+
+/*
+This pure virtual function draws the effect and is called whenever the source needs to be drawn.
+
+Reimplement this function in a QGraphicsEffect subclass to provide the effect's drawing implementation, using painter.
+
+For example:
+
+
+  MyGraphicsEffect::draw(QPainter *painter)
+  {
+      ...
+      QPoint offset;
+      if (sourceIsPixmap()) {
+          // No point in drawing in device coordinates (pixmap will be scaled anyways).
+          const QPixmap pixmap = sourcePixmap(Qt::LogicalCoordinates, &offset);
+          ...
+          painter->drawPixmap(offset, pixmap);
+      } else {
+          // Draw pixmap in device coordinates to avoid pixmap scaling;
+          const QPixmap pixmap = sourcePixmap(Qt::DeviceCoordinates, &offset);
+          painter->setWorldTransform(QTransform());
+          ...
+          painter->drawPixmap(offset, pixmap);
+      }
+      ...
+  }
+
+
+
+This function should not be called explicitly by the user, since it is meant for reimplementation purposes only.
+*/
 func (this *QGraphicsEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -229,6 +314,12 @@ func (this *QGraphicsEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void sourceChanged(QGraphicsEffect::ChangeFlags)
+
+/*
+This virtual function is called by QGraphicsEffect to notify the effect that the source has changed. If the effect applies any cache, then this cache must be purged in order to reflect the new appearance of the source.
+
+The flags describes what has changed.
+*/
 func (this *QGraphicsEffect) SourceChanged(flags int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffect13sourceChangedE6QFlagsINS_10ChangeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
@@ -238,6 +329,14 @@ func (this *QGraphicsEffect) SourceChanged(flags int) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void updateBoundingRect()
+
+/*
+This function notifies the effect framework when the effect's bounding rectangle has changed. As a custom effect author, you must call this function whenever you change any parameters that will cause the virtual boundingRectFor() function to return a different value.
+
+This function will call update() if this is necessary.
+
+See also boundingRectFor(), boundingRect(), and sourceBoundingRect().
+*/
 func (this *QGraphicsEffect) UpdateBoundingRect() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffect18updateBoundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,6 +346,12 @@ func (this *QGraphicsEffect) UpdateBoundingRect() {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool sourceIsPixmap() const
+
+/*
+Returns true if the source effectively is a pixmap, e.g., a QGraphicsPixmapItem.
+
+This function is useful for optimization purposes. For instance, there's no point in drawing the source in device coordinates to avoid pixmap scaling if this function returns true - the source pixmap will be scaled anyways.
+*/
 func (this *QGraphicsEffect) SourceIsPixmap() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect14sourceIsPixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,6 +362,14 @@ func (this *QGraphicsEffect) SourceIsPixmap() bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QRectF sourceBoundingRect(Qt::CoordinateSystem) const
+
+/*
+Returns the bounding rectangle of the source mapped to the given system.
+
+Calling this function with Qt::DeviceCoordinates outside of QGraphicsEffect::draw() will give undefined results, as there is no device context available.
+
+See also draw().
+*/
 func (this *QGraphicsEffect) SourceBoundingRect(system int) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect18sourceBoundingRectEN2Qt16CoordinateSystemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), system)
 	qtrt.ErrPrint(err, rv)
@@ -269,6 +382,14 @@ func (this *QGraphicsEffect) SourceBoundingRect(system int) *qtcore.QRectF /*123
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QRectF sourceBoundingRect(Qt::CoordinateSystem) const
+
+/*
+Returns the bounding rectangle of the source mapped to the given system.
+
+Calling this function with Qt::DeviceCoordinates outside of QGraphicsEffect::draw() will give undefined results, as there is no device context available.
+
+See also draw().
+*/
 func (this *QGraphicsEffect) SourceBoundingRect__() *qtcore.QRectF /*123*/ {
 	// arg: 0, Qt::CoordinateSystem=Elaborated, Qt::CoordinateSystem=Enum,
 	system := 0
@@ -283,6 +404,29 @@ func (this *QGraphicsEffect) SourceBoundingRect__() *qtcore.QRectF /*123*/ {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void drawSource(QPainter *)
+
+/*
+Draws the source directly using the given painter.
+
+This function should only be called from QGraphicsEffect::draw().
+
+For example:
+
+
+  MyGraphicsOpacityEffect::draw(QPainter *painter)
+  {
+      // Fully opaque; draw directly without going through a pixmap.
+      if (qFuzzyCompare(m_opacity, 1)) {
+          drawSource(painter);
+          return;
+      }
+      ...
+  }
+
+
+
+See also QGraphicsEffect::draw().
+*/
 func (this *QGraphicsEffect) DrawSource(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -296,6 +440,18 @@ func (this *QGraphicsEffect) DrawSource(painter qtgui.QPainter_ITF /*777 QPainte
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+
+/*
+Returns a pixmap with the source painted into it.
+
+The system specifies which coordinate system to be used for the source. The optional offset parameter returns the offset where the pixmap should be painted at using the current painter. For control on how the pixmap is padded use the mode parameter.
+
+The returned pixmap is clipped to the current painter's device rectangle when system is Qt::DeviceCoordinates.
+
+Calling this function with Qt::DeviceCoordinates outside of QGraphicsEffect::draw() will give undefined results, as there is no device context available.
+
+See also draw() and boundingRect().
+*/
 func (this *QGraphicsEffect) SourcePixmap(system int, offset qtcore.QPoint_ITF /*777 QPoint **/, mode int) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
@@ -312,6 +468,18 @@ func (this *QGraphicsEffect) SourcePixmap(system int, offset qtcore.QPoint_ITF /
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+
+/*
+Returns a pixmap with the source painted into it.
+
+The system specifies which coordinate system to be used for the source. The optional offset parameter returns the offset where the pixmap should be painted at using the current painter. For control on how the pixmap is padded use the mode parameter.
+
+The returned pixmap is clipped to the current painter's device rectangle when system is Qt::DeviceCoordinates.
+
+Calling this function with Qt::DeviceCoordinates outside of QGraphicsEffect::draw() will give undefined results, as there is no device context available.
+
+See also draw() and boundingRect().
+*/
 func (this *QGraphicsEffect) SourcePixmap__() *qtgui.QPixmap /*123*/ {
 	// arg: 0, Qt::CoordinateSystem=Elaborated, Qt::CoordinateSystem=Enum,
 	system := 0
@@ -330,6 +498,18 @@ func (this *QGraphicsEffect) SourcePixmap__() *qtgui.QPixmap /*123*/ {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+
+/*
+Returns a pixmap with the source painted into it.
+
+The system specifies which coordinate system to be used for the source. The optional offset parameter returns the offset where the pixmap should be painted at using the current painter. For control on how the pixmap is padded use the mode parameter.
+
+The returned pixmap is clipped to the current painter's device rectangle when system is Qt::DeviceCoordinates.
+
+Calling this function with Qt::DeviceCoordinates outside of QGraphicsEffect::draw() will give undefined results, as there is no device context available.
+
+See also draw() and boundingRect().
+*/
 func (this *QGraphicsEffect) SourcePixmap__1(system int) *qtgui.QPixmap /*123*/ {
 	// arg: 1, QPoint *=Pointer, QPoint=Record,
 	var convArg1 unsafe.Pointer
@@ -346,6 +526,18 @@ func (this *QGraphicsEffect) SourcePixmap__1(system int) *qtgui.QPixmap /*123*/ 
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+
+/*
+Returns a pixmap with the source painted into it.
+
+The system specifies which coordinate system to be used for the source. The optional offset parameter returns the offset where the pixmap should be painted at using the current painter. For control on how the pixmap is padded use the mode parameter.
+
+The returned pixmap is clipped to the current painter's device rectangle when system is Qt::DeviceCoordinates.
+
+Calling this function with Qt::DeviceCoordinates outside of QGraphicsEffect::draw() will give undefined results, as there is no device context available.
+
+See also draw() and boundingRect().
+*/
 func (this *QGraphicsEffect) SourcePixmap__2(system int, offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
@@ -360,17 +552,38 @@ func (this *QGraphicsEffect) SourcePixmap__2(system int, offset qtcore.QPoint_IT
 	return rv2
 }
 
+/*
+
+
+ */
 type QGraphicsEffect__ChangeFlag = int
 
+//
 const QGraphicsEffect__SourceAttached QGraphicsEffect__ChangeFlag = 1
+
+//
 const QGraphicsEffect__SourceDetached QGraphicsEffect__ChangeFlag = 2
+
+//
 const QGraphicsEffect__SourceBoundingRectChanged QGraphicsEffect__ChangeFlag = 4
+
+//
 const QGraphicsEffect__SourceInvalidated QGraphicsEffect__ChangeFlag = 8
 
+/*
+This enum describes how the pixmap returned from sourcePixmap should be padded.
+
+
+*/
 type QGraphicsEffect__PixmapPadMode = int
 
+// The pixmap should not receive any additional padding.
 const QGraphicsEffect__NoPad QGraphicsEffect__PixmapPadMode = 0
+
+// The pixmap should be padded to ensure it has a completely transparent border.
 const QGraphicsEffect__PadToTransparentBorder QGraphicsEffect__PixmapPadMode = 1
+
+// The pixmap should be padded to match the effective bounding rectangle of the effect.
 const QGraphicsEffect__PadToEffectiveBoundingRect QGraphicsEffect__PixmapPadMode = 2
 
 //  body block end

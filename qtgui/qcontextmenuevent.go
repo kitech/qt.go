@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QContextMenuEvent struct {
 	*QInputEvent
 }
@@ -64,6 +67,10 @@ func (*QContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QContextMenuEven
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &, Qt::KeyboardModifiers)
+
+/*
+
+ */
 func NewQContextMenuEvent(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF, modifiers int) *QContextMenuEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -84,6 +91,10 @@ func NewQContextMenuEvent(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QP
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &)
+
+/*
+
+ */
 func NewQContextMenuEvent_1(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF) *QContextMenuEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -104,6 +115,10 @@ func NewQContextMenuEvent_1(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &)
+
+/*
+
+ */
 func NewQContextMenuEvent_2(reason int, pos qtcore.QPoint_ITF) *QContextMenuEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -120,6 +135,10 @@ func NewQContextMenuEvent_2(reason int, pos qtcore.QPoint_ITF) *QContextMenuEven
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QContextMenuEvent()
+
+/*
+
+ */
 func DeleteQContextMenuEvent(this *QContextMenuEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QContextMenuEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
@@ -131,6 +150,10 @@ func DeleteQContextMenuEvent(this *QContextMenuEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int x() const
+
+/*
+
+ */
 func (this *QContextMenuEvent) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QContextMenuEvent1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,6 +164,10 @@ func (this *QContextMenuEvent) X() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int y() const
+
+/*
+
+ */
 func (this *QContextMenuEvent) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QContextMenuEvent1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +178,10 @@ func (this *QContextMenuEvent) Y() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalX() const
+
+/*
+
+ */
 func (this *QContextMenuEvent) GlobalX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QContextMenuEvent7globalXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,6 +192,10 @@ func (this *QContextMenuEvent) GlobalX() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalY() const
+
+/*
+
+ */
 func (this *QContextMenuEvent) GlobalY() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QContextMenuEvent7globalYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,6 +206,10 @@ func (this *QContextMenuEvent) GlobalY() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & pos() const
+
+/*
+
+ */
 func (this *QContextMenuEvent) Pos() *qtcore.QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QContextMenuEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,6 +222,10 @@ func (this *QContextMenuEvent) Pos() *qtcore.QPoint {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & globalPos() const
+
+/*
+
+ */
 func (this *QContextMenuEvent) GlobalPos() *qtcore.QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QContextMenuEvent9globalPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,16 +238,29 @@ func (this *QContextMenuEvent) GlobalPos() *qtcore.QPoint {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QContextMenuEvent::Reason reason() const
+
+/*
+
+ */
 func (this *QContextMenuEvent) Reason() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QContextMenuEvent6reasonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
+/*
+
+
+ */
 type QContextMenuEvent__Reason = int
 
+//
 const QContextMenuEvent__Mouse QContextMenuEvent__Reason = 0
+
+//
 const QContextMenuEvent__Keyboard QContextMenuEvent__Reason = 1
+
+//
 const QContextMenuEvent__Other QContextMenuEvent__Reason = 2
 
 //  body block end

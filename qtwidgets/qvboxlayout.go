@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QVBoxLayout struct {
 	*QBoxLayout
 }
@@ -65,6 +68,10 @@ func (*QVBoxLayout) NewFromPointer(cthis unsafe.Pointer) *QVBoxLayout {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QVBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QVBoxLayout10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QVBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QVBoxLayout()
+
+/*
+
+ */
 func NewQVBoxLayout() *QVBoxLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QVBoxLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +98,10 @@ func NewQVBoxLayout() *QVBoxLayout {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QVBoxLayout(QWidget *)
+
+/*
+
+ */
 func NewQVBoxLayout_1(parent QWidget_ITF /*777 QWidget **/) *QVBoxLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -103,6 +118,10 @@ func NewQVBoxLayout_1(parent QWidget_ITF /*777 QWidget **/) *QVBoxLayout {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QVBoxLayout()
+
+/*
+
+ */
 func DeleteQVBoxLayout(this *QVBoxLayout) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QVBoxLayoutD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)

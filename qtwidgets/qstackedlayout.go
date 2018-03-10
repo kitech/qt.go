@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStackedLayout struct {
 	*QLayout
 }
@@ -65,6 +68,10 @@ func (*QStackedLayout) NewFromPointer(cthis unsafe.Pointer) *QStackedLayout {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QStackedLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,14 @@ func (this *QStackedLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedLayout()
+
+/*
+Constructs a QStackedLayout with no parent.
+
+This QStackedLayout must be installed on a widget later on to become effective.
+
+See also addWidget() and insertWidget().
+*/
 func NewQStackedLayout() *QStackedLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +102,14 @@ func NewQStackedLayout() *QStackedLayout {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedLayout(QWidget *)
+
+/*
+Constructs a QStackedLayout with no parent.
+
+This QStackedLayout must be installed on a widget later on to become effective.
+
+See also addWidget() and insertWidget().
+*/
 func NewQStackedLayout_1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -103,6 +126,14 @@ func NewQStackedLayout_1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedLayout(QLayout *)
+
+/*
+Constructs a QStackedLayout with no parent.
+
+This QStackedLayout must be installed on a widget later on to become effective.
+
+See also addWidget() and insertWidget().
+*/
 func NewQStackedLayout_2(parentLayout QLayout_ITF /*777 QLayout **/) *QStackedLayout {
 	var convArg0 unsafe.Pointer
 	if parentLayout != nil && parentLayout.QLayout_PTR() != nil {
@@ -119,6 +150,10 @@ func NewQStackedLayout_2(parentLayout QLayout_ITF /*777 QLayout **/) *QStackedLa
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStackedLayout()
+
+/*
+
+ */
 func DeleteQStackedLayout(this *QStackedLayout) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayoutD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -130,6 +165,14 @@ func DeleteQStackedLayout(this *QStackedLayout) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int addWidget(QWidget *)
+
+/*
+Adds the given widget to the end of this layout and returns the index position of the widget.
+
+If the QStackedLayout is empty before this function is called, the given widget becomes the current widget.
+
+See also insertWidget(), removeWidget(), and setCurrentWidget().
+*/
 func (this *QStackedLayout) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -144,6 +187,16 @@ func (this *QStackedLayout) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertWidget(int, QWidget *)
+
+/*
+Inserts the given widget at the given index in this QStackedLayout. If index is out of range, the widget is appended (in which case it is the actual index of the widget that is returned).
+
+If the QStackedLayout is empty before this function is called, the given widget becomes the current widget.
+
+Inserting a new widget at an index less than or equal to the current index will increment the current index, but keep the current widget.
+
+See also addWidget(), removeWidget(), and setCurrentWidget().
+*/
 func (this *QStackedLayout) InsertWidget(index int, w QWidget_ITF /*777 QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -158,6 +211,12 @@ func (this *QStackedLayout) InsertWidget(index int, w QWidget_ITF /*777 QWidget 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * currentWidget() const
+
+/*
+Returns the current widget, or 0 if there are no widgets in this layout.
+
+See also currentIndex() and setCurrentWidget().
+*/
 func (this *QStackedLayout) CurrentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout13currentWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -168,6 +227,10 @@ func (this *QStackedLayout) CurrentWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentIndex() const
+
+/*
+
+ */
 func (this *QStackedLayout) CurrentIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout12currentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -178,6 +241,12 @@ func (this *QStackedLayout) CurrentIndex() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget(int) const
+
+/*
+Returns the widget at the given index, or 0 if there is no widget at the given position.
+
+See also currentWidget() and indexOf().
+*/
 func (this *QStackedLayout) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout6widgetEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -188,6 +257,10 @@ func (this *QStackedLayout) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int count() const
+
+/*
+
+ */
 func (this *QStackedLayout) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -198,6 +271,10 @@ func (this *QStackedLayout) Count() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QStackedLayout::StackingMode stackingMode() const
+
+/*
+
+ */
 func (this *QStackedLayout) StackingMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout12stackingModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -208,6 +285,10 @@ func (this *QStackedLayout) StackingMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStackingMode(enum QStackedLayout::StackingMode)
+
+/*
+
+ */
 func (this *QStackedLayout) SetStackingMode(stackingMode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout15setStackingModeENS_12StackingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), stackingMode)
 	qtrt.ErrPrint(err, rv)
@@ -217,6 +298,10 @@ func (this *QStackedLayout) SetStackingMode(stackingMode int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void addItem(QLayoutItem *)
+
+/*
+Reimplemented from QLayout::addItem().
+*/
 func (this *QStackedLayout) AddItem(item QLayoutItem_ITF /*777 QLayoutItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QLayoutItem_PTR() != nil {
@@ -230,6 +315,10 @@ func (this *QStackedLayout) AddItem(item QLayoutItem_ITF /*777 QLayoutItem **/) 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QLayoutItem::sizeHint().
+*/
 func (this *QStackedLayout) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,6 +331,10 @@ func (this *QStackedLayout) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSize() const
+
+/*
+Reimplemented from QLayoutItem::minimumSize().
+*/
 func (this *QStackedLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -254,6 +347,10 @@ func (this *QStackedLayout) MinimumSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QLayoutItem * itemAt(int) const
+
+/*
+Reimplemented from QLayout::itemAt().
+*/
 func (this *QStackedLayout) ItemAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout6itemAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -264,6 +361,10 @@ func (this *QStackedLayout) ItemAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QLayoutItem * takeAt(int)
+
+/*
+Reimplemented from QLayout::takeAt().
+*/
 func (this *QStackedLayout) TakeAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout6takeAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -274,6 +375,10 @@ func (this *QStackedLayout) TakeAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
+
+/*
+Reimplemented from QLayoutItem::setGeometry().
+*/
 func (this *QStackedLayout) SetGeometry(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -287,6 +392,10 @@ func (this *QStackedLayout) SetGeometry(rect qtcore.QRect_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasHeightForWidth() const
+
+/*
+Reimplemented from QLayoutItem::hasHeightForWidth().
+*/
 func (this *QStackedLayout) HasHeightForWidth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout17hasHeightForWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -297,6 +406,10 @@ func (this *QStackedLayout) HasHeightForWidth() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int heightForWidth(int) const
+
+/*
+Reimplemented from QLayoutItem::heightForWidth().
+*/
 func (this *QStackedLayout) HeightForWidth(width int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
@@ -307,6 +420,12 @@ func (this *QStackedLayout) HeightForWidth(width int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void widgetRemoved(int)
+
+/*
+This signal is emitted whenever a widget is removed from the layout. The widget's index is passed as parameter.
+
+See also removeWidget().
+*/
 func (this *QStackedLayout) WidgetRemoved(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout13widgetRemovedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -316,6 +435,14 @@ func (this *QStackedLayout) WidgetRemoved(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentChanged(int)
+
+/*
+This signal is emitted whenever the current widget in the layout changes. The index specifies the index of the new current widget, or -1 if there isn't a new one (for example, if there are no widgets in the QStackedLayout)
+
+Note: Notifier signal for property currentIndex.
+
+See also currentWidget() and setCurrentWidget().
+*/
 func (this *QStackedLayout) CurrentChanged(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout14currentChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -325,6 +452,10 @@ func (this *QStackedLayout) CurrentChanged(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentIndex(int)
+
+/*
+
+ */
 func (this *QStackedLayout) SetCurrentIndex(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayout15setCurrentIndexEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -334,6 +465,12 @@ func (this *QStackedLayout) SetCurrentIndex(index int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWidget(QWidget *)
+
+/*
+Sets the current widget to be the specified widget. The new current widget must already be contained in this stacked layout.
+
+See also setCurrentIndex() and currentWidget().
+*/
 func (this *QStackedLayout) SetCurrentWidget(w QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -343,9 +480,20 @@ func (this *QStackedLayout) SetCurrentWidget(w QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+This enum specifies how the layout handles its child widgets regarding their visibility.
+
+
+
+This enum was introduced or modified in  Qt 4.4.
+
+*/
 type QStackedLayout__StackingMode = int
 
+// Only the current widget is visible. This is the default.
 const QStackedLayout__StackOne QStackedLayout__StackingMode = 0
+
+// All widgets are visible. The current widget is merely raised.
 const QStackedLayout__StackAll QStackedLayout__StackingMode = 1
 
 //  body block end

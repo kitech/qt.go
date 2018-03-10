@@ -51,6 +51,9 @@ func (this *QSequentialAnimationGroup) InheritUpdateDirection(f func(direction i
 	qtrt.SetAllInheritCallback(this, "updateDirection", f)
 }
 
+/*
+
+ */
 type QSequentialAnimationGroup struct {
 	*QAnimationGroup
 }
@@ -85,6 +88,10 @@ func (*QSequentialAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QSequent
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSequentialAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QSequentialAnimationGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -95,6 +102,10 @@ func (this *QSequentialAnimationGroup) MetaObject() *QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSequentialAnimationGroup(QObject *)
+
+/*
+Constructs a QSequentialAnimationGroup. parent is passed to QObject's constructor.
+*/
 func NewQSequentialAnimationGroup(parent QObject_ITF /*777 QObject **/) *QSequentialAnimationGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -111,6 +122,10 @@ func NewQSequentialAnimationGroup(parent QObject_ITF /*777 QObject **/) *QSequen
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSequentialAnimationGroup(QObject *)
+
+/*
+Constructs a QSequentialAnimationGroup. parent is passed to QObject's constructor.
+*/
 func NewQSequentialAnimationGroup__() *QSequentialAnimationGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -125,6 +140,10 @@ func NewQSequentialAnimationGroup__() *QSequentialAnimationGroup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSequentialAnimationGroup()
+
+/*
+
+ */
 func DeleteQSequentialAnimationGroup(this *QSequentialAnimationGroup) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -136,6 +155,12 @@ func DeleteQSequentialAnimationGroup(this *QSequentialAnimationGroup) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPauseAnimation * addPause(int)
+
+/*
+Adds a pause of msecs to this animation group. The pause is considered as a special type of animation, thus animationCount will be increased by one.
+
+See also insertPause() and QAnimationGroup::addAnimation().
+*/
 func (this *QSequentialAnimationGroup) AddPause(msecs int) *QPauseAnimation /*777 QPauseAnimation **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup8addPauseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -146,6 +171,12 @@ func (this *QSequentialAnimationGroup) AddPause(msecs int) *QPauseAnimation /*77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPauseAnimation * insertPause(int, int)
+
+/*
+Inserts a pause of msecs milliseconds at index in this animation group.
+
+See also addPause() and QAnimationGroup::insertAnimation().
+*/
 func (this *QSequentialAnimationGroup) InsertPause(index int, msecs int) *QPauseAnimation /*777 QPauseAnimation **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup11insertPauseEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, msecs)
 	qtrt.ErrPrint(err, rv)
@@ -156,6 +187,10 @@ func (this *QSequentialAnimationGroup) InsertPause(index int, msecs int) *QPause
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractAnimation * currentAnimation() const
+
+/*
+
+ */
 func (this *QSequentialAnimationGroup) CurrentAnimation() *QAbstractAnimation /*777 QAbstractAnimation **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QSequentialAnimationGroup16currentAnimationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +201,10 @@ func (this *QSequentialAnimationGroup) CurrentAnimation() *QAbstractAnimation /*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int duration() const
+
+/*
+Reimplemented from QAbstractAnimation::duration().
+*/
 func (this *QSequentialAnimationGroup) Duration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QSequentialAnimationGroup8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,6 +215,14 @@ func (this *QSequentialAnimationGroup) Duration() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentAnimationChanged(QAbstractAnimation *)
+
+/*
+QSequentialAnimationGroup emits this signal when currentAnimation has been changed. current is the current animation.
+
+Note: Notifier signal for property currentAnimation.
+
+See also currentAnimation().
+*/
 func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
 	var convArg0 unsafe.Pointer
 	if current != nil && current.QAbstractAnimation_PTR() != nil {
@@ -189,6 +236,10 @@ func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current QAbstract
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QSequentialAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -203,6 +254,10 @@ func (this *QSequentialAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentTime(int)
+
+/*
+Reimplemented from QAbstractAnimation::updateCurrentTime().
+*/
 func (this *QSequentialAnimationGroup) UpdateCurrentTime(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup17updateCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -212,6 +267,10 @@ func (this *QSequentialAnimationGroup) UpdateCurrentTime(arg0 int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
+
+/*
+Reimplemented from QAbstractAnimation::updateState().
+*/
 func (this *QSequentialAnimationGroup) UpdateState(newState int, oldState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	qtrt.ErrPrint(err, rv)
@@ -221,6 +280,10 @@ func (this *QSequentialAnimationGroup) UpdateState(newState int, oldState int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateDirection(QAbstractAnimation::Direction)
+
+/*
+Reimplemented from QAbstractAnimation::updateDirection().
+*/
 func (this *QSequentialAnimationGroup) UpdateDirection(direction int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	qtrt.ErrPrint(err, rv)

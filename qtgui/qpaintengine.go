@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QPaintEngine struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QPaintEngine) NewFromPointer(cthis unsafe.Pointer) *QPaintEngine {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEngine(QPaintEngine::PaintEngineFeatures)
+
+/*
+Creates a paint engine with the featureset specified by caps.
+*/
 func NewQPaintEngine(features int) *QPaintEngine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngineC2E6QFlagsINS_18PaintEngineFeatureEE", qtrt.FFI_TYPE_POINTER, features)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQPaintEngine(features int) *QPaintEngine {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEngine(QPaintEngine::PaintEngineFeatures)
+
+/*
+Creates a paint engine with the featureset specified by caps.
+*/
 func NewQPaintEngine__() *QPaintEngine {
 	// arg: 0, QPaintEngine::PaintEngineFeatures=Typedef, QPaintEngine::PaintEngineFeatures=Typedef, QFlags<QPaintEngine::PaintEngineFeature>
 	features := 0
@@ -92,6 +103,10 @@ func NewQPaintEngine__() *QPaintEngine {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPaintEngine()
+
+/*
+
+ */
 func DeleteQPaintEngine(this *QPaintEngine) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngineD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -103,6 +118,12 @@ func DeleteQPaintEngine(this *QPaintEngine) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isActive() const
+
+/*
+Returns true if the paint engine is actively drawing; otherwise returns false.
+
+See also setActive().
+*/
 func (this *QPaintEngine) IsActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -113,6 +134,12 @@ func (this *QPaintEngine) IsActive() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setActive(_Bool)
+
+/*
+Sets the active state of the paint engine to state.
+
+See also isActive().
+*/
 func (this *QPaintEngine) SetActive(newState bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9setActiveEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState)
 	qtrt.ErrPrint(err, rv)
@@ -122,6 +149,12 @@ func (this *QPaintEngine) SetActive(newState bool) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool begin(QPaintDevice *)
+
+/*
+Reimplement this function to initialise your paint engine when painting is to start on the paint device pdev. Return true if the initialization was successful; otherwise return false.
+
+See also end() and isActive().
+*/
 func (this *QPaintEngine) Begin(pdev QPaintDevice_ITF /*777 QPaintDevice **/) bool {
 	var convArg0 unsafe.Pointer
 	if pdev != nil && pdev.QPaintDevice_PTR() != nil {
@@ -136,6 +169,12 @@ func (this *QPaintEngine) Begin(pdev QPaintDevice_ITF /*777 QPaintDevice **/) bo
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool end()
+
+/*
+Reimplement this function to finish painting on the current paint device. Return true if painting was finished successfully; otherwise return false.
+
+See also begin() and isActive().
+*/
 func (this *QPaintEngine) End() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,6 +185,14 @@ func (this *QPaintEngine) End() bool {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void updateState(const QPaintEngineState &)
+
+/*
+Reimplement this function to update the state of a paint engine.
+
+When implemented, this function is responsible for checking the paint engine's current state and update the properties that are changed. Use the QPaintEngineState::state() function to find out which properties that must be updated, then use the corresponding get function to retrieve the current values for the given properties.
+
+See also QPaintEngineState.
+*/
 func (this *QPaintEngine) UpdateState(state QPaintEngineState_ITF) {
 	var convArg0 unsafe.Pointer
 	if state != nil && state.QPaintEngineState_PTR() != nil {
@@ -159,6 +206,10 @@ func (this *QPaintEngine) UpdateState(state QPaintEngineState_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawRects(const QRect *, int)
+
+/*
+Draws the first rectCount rectangles in the buffer rects. The default implementation of this function calls drawPath() or drawPolygon() depending on the feature set of the paint engine.
+*/
 func (this *QPaintEngine) DrawRects(rects qtcore.QRect_ITF /*777 const QRect **/, rectCount int) {
 	var convArg0 unsafe.Pointer
 	if rects != nil && rects.QRect_PTR() != nil {
@@ -172,6 +223,10 @@ func (this *QPaintEngine) DrawRects(rects qtcore.QRect_ITF /*777 const QRect **/
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawRects(const QRectF *, int)
+
+/*
+Draws the first rectCount rectangles in the buffer rects. The default implementation of this function calls drawPath() or drawPolygon() depending on the feature set of the paint engine.
+*/
 func (this *QPaintEngine) DrawRects_1(rects qtcore.QRectF_ITF /*777 const QRectF **/, rectCount int) {
 	var convArg0 unsafe.Pointer
 	if rects != nil && rects.QRectF_PTR() != nil {
@@ -185,6 +240,10 @@ func (this *QPaintEngine) DrawRects_1(rects qtcore.QRectF_ITF /*777 const QRectF
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawLines(const QLine *, int)
+
+/*
+The default implementation splits the list of lines in lines into lineCount separate calls to drawPath() or drawPolygon() depending on the feature set of the paint engine.
+*/
 func (this *QPaintEngine) DrawLines(lines qtcore.QLine_ITF /*777 const QLine **/, lineCount int) {
 	var convArg0 unsafe.Pointer
 	if lines != nil && lines.QLine_PTR() != nil {
@@ -198,6 +257,10 @@ func (this *QPaintEngine) DrawLines(lines qtcore.QLine_ITF /*777 const QLine **/
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawLines(const QLineF *, int)
+
+/*
+The default implementation splits the list of lines in lines into lineCount separate calls to drawPath() or drawPolygon() depending on the feature set of the paint engine.
+*/
 func (this *QPaintEngine) DrawLines_1(lines qtcore.QLineF_ITF /*777 const QLineF **/, lineCount int) {
 	var convArg0 unsafe.Pointer
 	if lines != nil && lines.QLineF_PTR() != nil {
@@ -211,6 +274,12 @@ func (this *QPaintEngine) DrawLines_1(lines qtcore.QLineF_ITF /*777 const QLineF
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawEllipse(const QRectF &)
+
+/*
+Reimplement this function to draw the largest ellipse that can be contained within rectangle rect.
+
+The default implementation calls drawPolygon().
+*/
 func (this *QPaintEngine) DrawEllipse(r qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -224,6 +293,12 @@ func (this *QPaintEngine) DrawEllipse(r qtcore.QRectF_ITF) {
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawEllipse(const QRect &)
+
+/*
+Reimplement this function to draw the largest ellipse that can be contained within rectangle rect.
+
+The default implementation calls drawPolygon().
+*/
 func (this *QPaintEngine) DrawEllipse_1(r qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -237,6 +312,10 @@ func (this *QPaintEngine) DrawEllipse_1(r qtcore.QRect_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPath(const QPainterPath &)
+
+/*
+The default implementation ignores the path and does nothing.
+*/
 func (this *QPaintEngine) DrawPath(path QPainterPath_ITF) {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
@@ -250,6 +329,10 @@ func (this *QPaintEngine) DrawPath(path QPainterPath_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPoints(const QPointF *, int)
+
+/*
+Draws the first pointCount points in the buffer points
+*/
 func (this *QPaintEngine) DrawPoints(points qtcore.QPointF_ITF /*777 const QPointF **/, pointCount int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPointF_PTR() != nil {
@@ -263,6 +346,10 @@ func (this *QPaintEngine) DrawPoints(points qtcore.QPointF_ITF /*777 const QPoin
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPoints(const QPoint *, int)
+
+/*
+Draws the first pointCount points in the buffer points
+*/
 func (this *QPaintEngine) DrawPoints_1(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPoint_PTR() != nil {
@@ -276,6 +363,12 @@ func (this *QPaintEngine) DrawPoints_1(points qtcore.QPoint_ITF /*777 const QPoi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPolygon(const QPointF *, int, enum QPaintEngine::PolygonDrawMode)
+
+/*
+Reimplement this virtual function to draw the polygon defined by the pointCount first points in points, using mode mode.
+
+Note: At least one of the drawPolygon() functions must be reimplemented.
+*/
 func (this *QPaintEngine) DrawPolygon(points qtcore.QPointF_ITF /*777 const QPointF **/, pointCount int, mode int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPointF_PTR() != nil {
@@ -289,6 +382,12 @@ func (this *QPaintEngine) DrawPolygon(points qtcore.QPointF_ITF /*777 const QPoi
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawPolygon(const QPoint *, int, enum QPaintEngine::PolygonDrawMode)
+
+/*
+Reimplement this virtual function to draw the polygon defined by the pointCount first points in points, using mode mode.
+
+Note: At least one of the drawPolygon() functions must be reimplemented.
+*/
 func (this *QPaintEngine) DrawPolygon_1(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int, mode int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPoint_PTR() != nil {
@@ -302,6 +401,10 @@ func (this *QPaintEngine) DrawPolygon_1(points qtcore.QPoint_ITF /*777 const QPo
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void drawPixmap(const QRectF &, const QPixmap &, const QRectF &)
+
+/*
+Reimplement this function to draw the part of the pm specified by the sr rectangle in the given r.
+*/
 func (this *QPaintEngine) DrawPixmap(r qtcore.QRectF_ITF, pm QPixmap_ITF, sr qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -323,6 +426,10 @@ func (this *QPaintEngine) DrawPixmap(r qtcore.QRectF_ITF, pm QPixmap_ITF, sr qtc
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawTextItem(const QPointF &, const QTextItem &)
+
+/*
+This function draws the text item textItem at position p. The default implementation of this function converts the text to a QPainterPath and paints the resulting path.
+*/
 func (this *QPaintEngine) DrawTextItem(p qtcore.QPointF_ITF, textItem QTextItem_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
@@ -340,6 +447,10 @@ func (this *QPaintEngine) DrawTextItem(p qtcore.QPointF_ITF, textItem QTextItem_
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawTiledPixmap(const QRectF &, const QPixmap &, const QPointF &)
+
+/*
+Reimplement this function to draw the pixmap in the given rect, starting at the given p. The pixmap will be drawn repeatedly until the rect is filled.
+*/
 func (this *QPaintEngine) DrawTiledPixmap(r qtcore.QRectF_ITF, pixmap QPixmap_ITF, s qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -361,6 +472,10 @@ func (this *QPaintEngine) DrawTiledPixmap(r qtcore.QRectF_ITF, pixmap QPixmap_IT
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawImage(const QRectF &, const QImage &, const QRectF &, Qt::ImageConversionFlags)
+
+/*
+Reimplement this function to draw the part of the image specified by the sr rectangle in the given rectangle using the given conversion flags flags, to convert it to a pixmap.
+*/
 func (this *QPaintEngine) DrawImage(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtcore.QRectF_ITF, flags int) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -382,6 +497,10 @@ func (this *QPaintEngine) DrawImage(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtcor
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void drawImage(const QRectF &, const QImage &, const QRectF &, Qt::ImageConversionFlags)
+
+/*
+Reimplement this function to draw the part of the image specified by the sr rectangle in the given rectangle using the given conversion flags flags, to convert it to a pixmap.
+*/
 func (this *QPaintEngine) DrawImage__(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -405,6 +524,10 @@ func (this *QPaintEngine) DrawImage__(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtc
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPaintDevice(QPaintDevice *)
+
+/*
+
+ */
 func (this *QPaintEngine) SetPaintDevice(device QPaintDevice_ITF /*777 QPaintDevice **/) {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QPaintDevice_PTR() != nil {
@@ -418,6 +541,10 @@ func (this *QPaintEngine) SetPaintDevice(device QPaintDevice_ITF /*777 QPaintDev
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPaintDevice * paintDevice() const
+
+/*
+Returns the device that this engine is painting on, if painting is active; otherwise returns 0.
+*/
 func (this *QPaintEngine) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine11paintDeviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -428,6 +555,10 @@ func (this *QPaintEngine) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSystemClip(const QRegion &)
+
+/*
+
+ */
 func (this *QPaintEngine) SetSystemClip(baseClip QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if baseClip != nil && baseClip.QRegion_PTR() != nil {
@@ -441,6 +572,10 @@ func (this *QPaintEngine) SetSystemClip(baseClip QRegion_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion systemClip() const
+
+/*
+
+ */
 func (this *QPaintEngine) SystemClip() *QRegion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10systemClipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -453,6 +588,10 @@ func (this *QPaintEngine) SystemClip() *QRegion /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSystemRect(const QRect &)
+
+/*
+
+ */
 func (this *QPaintEngine) SetSystemRect(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -466,6 +605,10 @@ func (this *QPaintEngine) SetSystemRect(rect qtcore.QRect_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect systemRect() const
+
+/*
+
+ */
 func (this *QPaintEngine) SystemRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10systemRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -478,6 +621,10 @@ func (this *QPaintEngine) SystemRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPoint coordinateOffset() const
+
+/*
+
+ */
 func (this *QPaintEngine) CoordinateOffset() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine16coordinateOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -490,6 +637,10 @@ func (this *QPaintEngine) CoordinateOffset() *qtcore.QPoint /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QPaintEngine::Type type() const
+
+/*
+Reimplement this function to return the paint engine Type.
+*/
 func (this *QPaintEngine) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -500,6 +651,10 @@ func (this *QPaintEngine) Type() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void fix_neg_rect(int *, int *, int *, int *)
+
+/*
+
+ */
 func (this *QPaintEngine) Fix_neg_rect(x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, w unsafe.Pointer /*666*/, h unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -509,6 +664,10 @@ func (this *QPaintEngine) Fix_neg_rect(x unsafe.Pointer /*666*/, y unsafe.Pointe
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool testDirty(QPaintEngine::DirtyFlags)
+
+/*
+
+ */
 func (this *QPaintEngine) TestDirty(df int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9testDirtyE6QFlagsINS_9DirtyFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), df)
 	qtrt.ErrPrint(err, rv)
@@ -519,6 +678,10 @@ func (this *QPaintEngine) TestDirty(df int) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDirty(QPaintEngine::DirtyFlags)
+
+/*
+
+ */
 func (this *QPaintEngine) SetDirty(df int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine8setDirtyE6QFlagsINS_9DirtyFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), df)
 	qtrt.ErrPrint(err, rv)
@@ -528,6 +691,10 @@ func (this *QPaintEngine) SetDirty(df int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void clearDirty(QPaintEngine::DirtyFlags)
+
+/*
+
+ */
 func (this *QPaintEngine) ClearDirty(df int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine10clearDirtyE6QFlagsINS_9DirtyFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), df)
 	qtrt.ErrPrint(err, rv)
@@ -537,6 +704,10 @@ func (this *QPaintEngine) ClearDirty(df int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool hasFeature(QPaintEngine::PaintEngineFeatures) const
+
+/*
+Returns true if the paint engine supports the specified feature; otherwise returns false.
+*/
 func (this *QPaintEngine) HasFeature(feature int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10hasFeatureE6QFlagsINS_18PaintEngineFeatureEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), feature)
 	qtrt.ErrPrint(err, rv)
@@ -547,6 +718,10 @@ func (this *QPaintEngine) HasFeature(feature int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPainter * painter() const
+
+/*
+Returns the paint engine's painter.
+*/
 func (this *QPaintEngine) Painter() *QPainter /*777 QPainter **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine7painterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -557,6 +732,10 @@ func (this *QPaintEngine) Painter() *QPainter /*777 QPainter **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void syncState()
+
+/*
+
+ */
 func (this *QPaintEngine) SyncState() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9syncStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -566,80 +745,210 @@ func (this *QPaintEngine) SyncState() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isExtended() const
+
+/*
+
+ */
 func (this *QPaintEngine) IsExtended() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10isExtendedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
+/*
+
+
+ */
 type QPaintEngine__PaintEngineFeature = int
 
+//
 const QPaintEngine__PrimitiveTransform QPaintEngine__PaintEngineFeature = 1
+
+//
 const QPaintEngine__PatternTransform QPaintEngine__PaintEngineFeature = 2
+
+//
 const QPaintEngine__PixmapTransform QPaintEngine__PaintEngineFeature = 4
+
+//
 const QPaintEngine__PatternBrush QPaintEngine__PaintEngineFeature = 8
+
+//
 const QPaintEngine__LinearGradientFill QPaintEngine__PaintEngineFeature = 16
+
+//
 const QPaintEngine__RadialGradientFill QPaintEngine__PaintEngineFeature = 32
+
+//
 const QPaintEngine__ConicalGradientFill QPaintEngine__PaintEngineFeature = 64
+
+//
 const QPaintEngine__AlphaBlend QPaintEngine__PaintEngineFeature = 128
+
+//
 const QPaintEngine__PorterDuff QPaintEngine__PaintEngineFeature = 256
+
+//
 const QPaintEngine__PainterPaths QPaintEngine__PaintEngineFeature = 512
+
+//
 const QPaintEngine__Antialiasing QPaintEngine__PaintEngineFeature = 1024
+
+//
 const QPaintEngine__BrushStroke QPaintEngine__PaintEngineFeature = 2048
+
+//
 const QPaintEngine__ConstantOpacity QPaintEngine__PaintEngineFeature = 4096
+
+//
 const QPaintEngine__MaskedBrush QPaintEngine__PaintEngineFeature = 8192
+
+//
 const QPaintEngine__PerspectiveTransform QPaintEngine__PaintEngineFeature = 16384
+
+//
 const QPaintEngine__BlendModes QPaintEngine__PaintEngineFeature = 32768
+
+//
 const QPaintEngine__ObjectBoundingModeGradients QPaintEngine__PaintEngineFeature = 65536
+
+//
 const QPaintEngine__RasterOpModes QPaintEngine__PaintEngineFeature = 131072
+
+//
 const QPaintEngine__PaintOutsidePaintEvent QPaintEngine__PaintEngineFeature = 536870912
+
+//
 const QPaintEngine__AllFeatures QPaintEngine__PaintEngineFeature = -1
 
+/*
+
+
+ */
 type QPaintEngine__DirtyFlag = int
 
+//
 const QPaintEngine__DirtyPen QPaintEngine__DirtyFlag = 1
+
+//
 const QPaintEngine__DirtyBrush QPaintEngine__DirtyFlag = 2
+
+//
 const QPaintEngine__DirtyBrushOrigin QPaintEngine__DirtyFlag = 4
+
+//
 const QPaintEngine__DirtyFont QPaintEngine__DirtyFlag = 8
+
+//
 const QPaintEngine__DirtyBackground QPaintEngine__DirtyFlag = 16
+
+//
 const QPaintEngine__DirtyBackgroundMode QPaintEngine__DirtyFlag = 32
+
+//
 const QPaintEngine__DirtyTransform QPaintEngine__DirtyFlag = 64
+
+//
 const QPaintEngine__DirtyClipRegion QPaintEngine__DirtyFlag = 128
+
+//
 const QPaintEngine__DirtyClipPath QPaintEngine__DirtyFlag = 256
+
+//
 const QPaintEngine__DirtyHints QPaintEngine__DirtyFlag = 512
+
+//
 const QPaintEngine__DirtyCompositionMode QPaintEngine__DirtyFlag = 1024
+
+//
 const QPaintEngine__DirtyClipEnabled QPaintEngine__DirtyFlag = 2048
+
+//
 const QPaintEngine__DirtyOpacity QPaintEngine__DirtyFlag = 4096
+
+//
 const QPaintEngine__AllDirty QPaintEngine__DirtyFlag = 65535
 
+/*
+
+ */
 type QPaintEngine__PolygonDrawMode = int
 
+// The polygon should be drawn using OddEven fill rule.
 const QPaintEngine__OddEvenMode QPaintEngine__PolygonDrawMode = 0
+
+// The polygon should be drawn using Winding fill rule.
 const QPaintEngine__WindingMode QPaintEngine__PolygonDrawMode = 1
+
+// The polygon is a convex polygon and can be drawn using specialized algorithms where available.
 const QPaintEngine__ConvexMode QPaintEngine__PolygonDrawMode = 2
+
+// Only the outline of the polygon should be drawn.
 const QPaintEngine__PolylineMode QPaintEngine__PolygonDrawMode = 3
 
+/*
+
+ */
 type QPaintEngine__Type = int
 
+//
 const QPaintEngine__X11 QPaintEngine__Type = 0
+
+//
 const QPaintEngine__Windows QPaintEngine__Type = 1
+
+// macOS's QuickDraw
 const QPaintEngine__QuickDraw QPaintEngine__Type = 2
+
+//
 const QPaintEngine__CoreGraphics QPaintEngine__Type = 3
+
+//
 const QPaintEngine__MacPrinter QPaintEngine__Type = 4
+
+// Qt for Embedded Linux
 const QPaintEngine__QWindowSystem QPaintEngine__Type = 5
+
+// (No longer supported)
 const QPaintEngine__PostScript QPaintEngine__Type = 6
+
+//
 const QPaintEngine__OpenGL QPaintEngine__Type = 7
+
+// QPicture format
 const QPaintEngine__Picture QPaintEngine__Type = 8
+
+// Scalable Vector Graphics XML format
 const QPaintEngine__SVG QPaintEngine__Type = 9
+
+//
 const QPaintEngine__Raster QPaintEngine__Type = 10
+
+//
 const QPaintEngine__Direct3D QPaintEngine__Type = 11
+
+//
 const QPaintEngine__Pdf QPaintEngine__Type = 12
+
+//
 const QPaintEngine__OpenVG QPaintEngine__Type = 13
+
+//
 const QPaintEngine__OpenGL2 QPaintEngine__Type = 14
+
+//
 const QPaintEngine__PaintBuffer QPaintEngine__Type = 15
+
+//
 const QPaintEngine__Blitter QPaintEngine__Type = 16
+
+//
 const QPaintEngine__Direct2D QPaintEngine__Type = 17
+
+//
 const QPaintEngine__User QPaintEngine__Type = 50
+
+//
 const QPaintEngine__MaxUser QPaintEngine__Type = 100
 
 //  body block end

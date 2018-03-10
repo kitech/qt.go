@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QHideEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QHideEvent) NewFromPointer(cthis unsafe.Pointer) *QHideEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHideEvent()
+
+/*
+
+ */
 func NewQHideEvent() *QHideEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QHideEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQHideEvent() *QHideEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHideEvent()
+
+/*
+
+ */
 func DeleteQHideEvent(this *QHideEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QHideEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)

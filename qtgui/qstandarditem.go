@@ -42,6 +42,9 @@ func (this *QStandardItem) InheritEmitDataChanged(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "emitDataChanged", f)
 }
 
+/*
+
+ */
 type QStandardItem struct {
 	*qtrt.CObject
 }
@@ -76,6 +79,10 @@ func (*QStandardItem) NewFromPointer(cthis unsafe.Pointer) *QStandardItem {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem()
+
+/*
+
+ */
 func NewQStandardItem() *QStandardItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +95,10 @@ func NewQStandardItem() *QStandardItem {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem(const QString &)
+
+/*
+
+ */
 func NewQStandardItem_1(text string) *QStandardItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -102,6 +113,10 @@ func NewQStandardItem_1(text string) *QStandardItem {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem(const QIcon &, const QString &)
+
+/*
+
+ */
 func NewQStandardItem_2(icon QIcon_ITF, text string) *QStandardItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -120,6 +135,10 @@ func NewQStandardItem_2(icon QIcon_ITF, text string) *QStandardItem {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem(int, int)
+
+/*
+
+ */
 func NewQStandardItem_3(rows int, columns int) *QStandardItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2Eii", qtrt.FFI_TYPE_POINTER, rows, columns)
 	qtrt.ErrPrint(err, rv)
@@ -132,6 +151,10 @@ func NewQStandardItem_3(rows int, columns int) *QStandardItem {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem(int, int)
+
+/*
+
+ */
 func NewQStandardItem_3_(rows int) *QStandardItem {
 	// arg: 1, int=Int, =Invalid,
 	columns := int(1)
@@ -146,6 +169,10 @@ func NewQStandardItem_3_(rows int) *QStandardItem {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStandardItem()
+
+/*
+
+ */
 func DeleteQStandardItem(this *QStandardItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -157,6 +184,12 @@ func DeleteQStandardItem(this *QStandardItem) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(int) const
+
+/*
+Reimplemented from QAbstractItemModel::data().
+
+See also setData().
+*/
 func (this *QStandardItem) Data(role int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
@@ -169,6 +202,12 @@ func (this *QStandardItem) Data(role int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(int) const
+
+/*
+Reimplemented from QAbstractItemModel::data().
+
+See also setData().
+*/
 func (this *QStandardItem) Data__() *qtcore.QVariant /*123*/ {
 	// arg: 0, int=Int, =Invalid,
 	role := 0 /*Qt::UserRole + 1*/
@@ -183,6 +222,12 @@ func (this *QStandardItem) Data__() *qtcore.QVariant /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setData(const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setData().
+
+See also data().
+*/
 func (this *QStandardItem) SetData(value qtcore.QVariant_ITF, role int) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -196,6 +241,12 @@ func (this *QStandardItem) SetData(value qtcore.QVariant_ITF, role int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setData(const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setData().
+
+See also data().
+*/
 func (this *QStandardItem) SetData__(value qtcore.QVariant_ITF) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -211,6 +262,10 @@ func (this *QStandardItem) SetData__(value qtcore.QVariant_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString text() const
+
+/*
+
+ */
 func (this *QStandardItem) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +279,10 @@ func (this *QStandardItem) Text() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
+
+/*
+
+ */
 func (this *QStandardItem) SetText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -235,6 +294,10 @@ func (this *QStandardItem) SetText(text string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QIcon icon() const
+
+/*
+
+ */
 func (this *QStandardItem) Icon() *QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,6 +310,10 @@ func (this *QStandardItem) Icon() *QIcon /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
+
+/*
+
+ */
 func (this *QStandardItem) SetIcon(icon QIcon_ITF) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -260,6 +327,10 @@ func (this *QStandardItem) SetIcon(icon QIcon_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toolTip() const
+
+/*
+
+ */
 func (this *QStandardItem) ToolTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -273,6 +344,10 @@ func (this *QStandardItem) ToolTip() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
+
+/*
+
+ */
 func (this *QStandardItem) SetToolTip(toolTip string) {
 	var tmpArg0 = qtcore.NewQString_5(toolTip)
 	var convArg0 = tmpArg0.GetCthis()
@@ -284,6 +359,10 @@ func (this *QStandardItem) SetToolTip(toolTip string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString statusTip() const
+
+/*
+
+ */
 func (this *QStandardItem) StatusTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem9statusTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -297,6 +376,10 @@ func (this *QStandardItem) StatusTip() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setStatusTip(const QString &)
+
+/*
+
+ */
 func (this *QStandardItem) SetStatusTip(statusTip string) {
 	var tmpArg0 = qtcore.NewQString_5(statusTip)
 	var convArg0 = tmpArg0.GetCthis()
@@ -308,6 +391,10 @@ func (this *QStandardItem) SetStatusTip(statusTip string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString whatsThis() const
+
+/*
+
+ */
 func (this *QStandardItem) WhatsThis() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem9whatsThisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -321,6 +408,10 @@ func (this *QStandardItem) WhatsThis() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWhatsThis(const QString &)
+
+/*
+
+ */
 func (this *QStandardItem) SetWhatsThis(whatsThis string) {
 	var tmpArg0 = qtcore.NewQString_5(whatsThis)
 	var convArg0 = tmpArg0.GetCthis()
@@ -332,6 +423,10 @@ func (this *QStandardItem) SetWhatsThis(whatsThis string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+
+ */
 func (this *QStandardItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,6 +439,10 @@ func (this *QStandardItem) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSizeHint(const QSize &)
+
+/*
+
+ */
 func (this *QStandardItem) SetSizeHint(sizeHint qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if sizeHint != nil && sizeHint.QSize_PTR() != nil {
@@ -357,6 +456,10 @@ func (this *QStandardItem) SetSizeHint(sizeHint qtcore.QSize_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QFont font() const
+
+/*
+
+ */
 func (this *QStandardItem) Font() *QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -369,6 +472,10 @@ func (this *QStandardItem) Font() *QFont /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
+
+/*
+
+ */
 func (this *QStandardItem) SetFont(font QFont_ITF) {
 	var convArg0 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -382,6 +489,10 @@ func (this *QStandardItem) SetFont(font QFont_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::Alignment textAlignment() const
+
+/*
+
+ */
 func (this *QStandardItem) TextAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem13textAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -392,6 +503,10 @@ func (this *QStandardItem) TextAlignment() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextAlignment(Qt::Alignment)
+
+/*
+
+ */
 func (this *QStandardItem) SetTextAlignment(textAlignment int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem16setTextAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), textAlignment)
 	qtrt.ErrPrint(err, rv)
@@ -401,6 +516,10 @@ func (this *QStandardItem) SetTextAlignment(textAlignment int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush background() const
+
+/*
+
+ */
 func (this *QStandardItem) Background() *QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem10backgroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -413,6 +532,10 @@ func (this *QStandardItem) Background() *QBrush /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
+
+/*
+
+ */
 func (this *QStandardItem) SetBackground(brush QBrush_ITF) {
 	var convArg0 unsafe.Pointer
 	if brush != nil && brush.QBrush_PTR() != nil {
@@ -426,6 +549,10 @@ func (this *QStandardItem) SetBackground(brush QBrush_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush foreground() const
+
+/*
+
+ */
 func (this *QStandardItem) Foreground() *QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem10foregroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -438,6 +565,10 @@ func (this *QStandardItem) Foreground() *QBrush /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setForeground(const QBrush &)
+
+/*
+
+ */
 func (this *QStandardItem) SetForeground(brush QBrush_ITF) {
 	var convArg0 unsafe.Pointer
 	if brush != nil && brush.QBrush_PTR() != nil {
@@ -451,6 +582,10 @@ func (this *QStandardItem) SetForeground(brush QBrush_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::CheckState checkState() const
+
+/*
+
+ */
 func (this *QStandardItem) CheckState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem10checkStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -461,6 +596,10 @@ func (this *QStandardItem) CheckState() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCheckState(Qt::CheckState)
+
+/*
+
+ */
 func (this *QStandardItem) SetCheckState(checkState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem13setCheckStateEN2Qt10CheckStateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checkState)
 	qtrt.ErrPrint(err, rv)
@@ -470,6 +609,10 @@ func (this *QStandardItem) SetCheckState(checkState int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString accessibleText() const
+
+/*
+
+ */
 func (this *QStandardItem) AccessibleText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem14accessibleTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -483,6 +626,10 @@ func (this *QStandardItem) AccessibleText() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAccessibleText(const QString &)
+
+/*
+
+ */
 func (this *QStandardItem) SetAccessibleText(accessibleText string) {
 	var tmpArg0 = qtcore.NewQString_5(accessibleText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -494,6 +641,10 @@ func (this *QStandardItem) SetAccessibleText(accessibleText string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString accessibleDescription() const
+
+/*
+
+ */
 func (this *QStandardItem) AccessibleDescription() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem21accessibleDescriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -507,6 +658,10 @@ func (this *QStandardItem) AccessibleDescription() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAccessibleDescription(const QString &)
+
+/*
+
+ */
 func (this *QStandardItem) SetAccessibleDescription(accessibleDescription string) {
 	var tmpArg0 = qtcore.NewQString_5(accessibleDescription)
 	var convArg0 = tmpArg0.GetCthis()
@@ -518,6 +673,10 @@ func (this *QStandardItem) SetAccessibleDescription(accessibleDescription string
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags() const
+
+/*
+Reimplemented from QAbstractItemModel::flags().
+*/
 func (this *QStandardItem) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -528,6 +687,10 @@ func (this *QStandardItem) Flags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(Qt::ItemFlags)
+
+/*
+
+ */
 func (this *QStandardItem) SetFlags(flags int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem8setFlagsE6QFlagsIN2Qt8ItemFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
@@ -537,6 +700,10 @@ func (this *QStandardItem) SetFlags(flags int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isEnabled() const
+
+/*
+
+ */
 func (this *QStandardItem) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -547,6 +714,10 @@ func (this *QStandardItem) IsEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(_Bool)
+
+/*
+
+ */
 func (this *QStandardItem) SetEnabled(enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem10setEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	qtrt.ErrPrint(err, rv)
@@ -556,6 +727,10 @@ func (this *QStandardItem) SetEnabled(enabled bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isEditable() const
+
+/*
+
+ */
 func (this *QStandardItem) IsEditable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem10isEditableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -566,6 +741,10 @@ func (this *QStandardItem) IsEditable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEditable(_Bool)
+
+/*
+
+ */
 func (this *QStandardItem) SetEditable(editable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem11setEditableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), editable)
 	qtrt.ErrPrint(err, rv)
@@ -575,6 +754,10 @@ func (this *QStandardItem) SetEditable(editable bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSelectable() const
+
+/*
+
+ */
 func (this *QStandardItem) IsSelectable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem12isSelectableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -585,6 +768,10 @@ func (this *QStandardItem) IsSelectable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSelectable(_Bool)
+
+/*
+
+ */
 func (this *QStandardItem) SetSelectable(selectable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem13setSelectableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), selectable)
 	qtrt.ErrPrint(err, rv)
@@ -594,6 +781,10 @@ func (this *QStandardItem) SetSelectable(selectable bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isCheckable() const
+
+/*
+
+ */
 func (this *QStandardItem) IsCheckable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem11isCheckableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -604,6 +795,10 @@ func (this *QStandardItem) IsCheckable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCheckable(_Bool)
+
+/*
+
+ */
 func (this *QStandardItem) SetCheckable(checkable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem12setCheckableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checkable)
 	qtrt.ErrPrint(err, rv)
@@ -613,6 +808,10 @@ func (this *QStandardItem) SetCheckable(checkable bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isAutoTristate() const
+
+/*
+
+ */
 func (this *QStandardItem) IsAutoTristate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem14isAutoTristateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -623,6 +822,10 @@ func (this *QStandardItem) IsAutoTristate() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoTristate(_Bool)
+
+/*
+
+ */
 func (this *QStandardItem) SetAutoTristate(tristate bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem15setAutoTristateEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), tristate)
 	qtrt.ErrPrint(err, rv)
@@ -632,6 +835,10 @@ func (this *QStandardItem) SetAutoTristate(tristate bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isUserTristate() const
+
+/*
+
+ */
 func (this *QStandardItem) IsUserTristate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem14isUserTristateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -642,6 +849,10 @@ func (this *QStandardItem) IsUserTristate() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUserTristate(_Bool)
+
+/*
+
+ */
 func (this *QStandardItem) SetUserTristate(tristate bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem15setUserTristateEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), tristate)
 	qtrt.ErrPrint(err, rv)
@@ -651,6 +862,10 @@ func (this *QStandardItem) SetUserTristate(tristate bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isTristate() const
+
+/*
+
+ */
 func (this *QStandardItem) IsTristate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem10isTristateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -661,6 +876,10 @@ func (this *QStandardItem) IsTristate() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTristate(_Bool)
+
+/*
+
+ */
 func (this *QStandardItem) SetTristate(tristate bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem11setTristateEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), tristate)
 	qtrt.ErrPrint(err, rv)
@@ -670,6 +889,10 @@ func (this *QStandardItem) SetTristate(tristate bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDragEnabled() const
+
+/*
+
+ */
 func (this *QStandardItem) IsDragEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem13isDragEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -680,6 +903,10 @@ func (this *QStandardItem) IsDragEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDragEnabled(_Bool)
+
+/*
+
+ */
 func (this *QStandardItem) SetDragEnabled(dragEnabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem14setDragEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dragEnabled)
 	qtrt.ErrPrint(err, rv)
@@ -689,6 +916,10 @@ func (this *QStandardItem) SetDragEnabled(dragEnabled bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDropEnabled() const
+
+/*
+
+ */
 func (this *QStandardItem) IsDropEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem13isDropEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -699,6 +930,10 @@ func (this *QStandardItem) IsDropEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDropEnabled(_Bool)
+
+/*
+
+ */
 func (this *QStandardItem) SetDropEnabled(dropEnabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem14setDropEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dropEnabled)
 	qtrt.ErrPrint(err, rv)
@@ -708,6 +943,10 @@ func (this *QStandardItem) SetDropEnabled(dropEnabled bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * parent() const
+
+/*
+Reimplemented from QAbstractItemModel::parent().
+*/
 func (this *QStandardItem) Parent() *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -718,6 +957,10 @@ func (this *QStandardItem) Parent() *QStandardItem /*777 QStandardItem **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int row() const
+
+/*
+
+ */
 func (this *QStandardItem) Row() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem3rowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -728,6 +971,10 @@ func (this *QStandardItem) Row() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int column() const
+
+/*
+
+ */
 func (this *QStandardItem) Column() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem6columnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -738,6 +985,10 @@ func (this *QStandardItem) Column() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex index() const
+
+/*
+Reimplemented from QAbstractItemModel::index().
+*/
 func (this *QStandardItem) Index() *qtcore.QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem5indexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -750,6 +1001,10 @@ func (this *QStandardItem) Index() *qtcore.QModelIndex /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItemModel * model() const
+
+/*
+
+ */
 func (this *QStandardItem) Model() *QStandardItemModel /*777 QStandardItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -760,6 +1015,12 @@ func (this *QStandardItem) Model() *QStandardItemModel /*777 QStandardItemModel 
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rowCount() const
+
+/*
+Reimplemented from QAbstractItemModel::rowCount().
+
+See also setRowCount().
+*/
 func (this *QStandardItem) RowCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem8rowCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -770,6 +1031,14 @@ func (this *QStandardItem) RowCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowCount(int)
+
+/*
+Sets the number of rows in this model to rows. If this is less than rowCount(), the data in the unwanted rows is discarded.
+
+This function was introduced in  Qt 4.2.
+
+See also rowCount() and setColumnCount().
+*/
 func (this *QStandardItem) SetRowCount(rows int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem11setRowCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rows)
 	qtrt.ErrPrint(err, rv)
@@ -779,6 +1048,12 @@ func (this *QStandardItem) SetRowCount(rows int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int columnCount() const
+
+/*
+Reimplemented from QAbstractItemModel::columnCount().
+
+See also setColumnCount().
+*/
 func (this *QStandardItem) ColumnCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem11columnCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -789,6 +1064,14 @@ func (this *QStandardItem) ColumnCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnCount(int)
+
+/*
+Sets the number of columns in this model to columns. If this is less than columnCount(), the data in the unwanted columns is discarded.
+
+This function was introduced in  Qt 4.2.
+
+See also columnCount() and setRowCount().
+*/
 func (this *QStandardItem) SetColumnCount(columns int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem14setColumnCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), columns)
 	qtrt.ErrPrint(err, rv)
@@ -798,6 +1081,10 @@ func (this *QStandardItem) SetColumnCount(columns int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasChildren() const
+
+/*
+Reimplemented from QAbstractItemModel::hasChildren().
+*/
 func (this *QStandardItem) HasChildren() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem11hasChildrenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -808,6 +1095,10 @@ func (this *QStandardItem) HasChildren() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * child(int, int) const
+
+/*
+
+ */
 func (this *QStandardItem) Child(row int, column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem5childEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -818,6 +1109,10 @@ func (this *QStandardItem) Child(row int, column int) *QStandardItem /*777 QStan
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * child(int, int) const
+
+/*
+
+ */
 func (this *QStandardItem) Child__(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid,
 	column := int(0)
@@ -830,6 +1125,10 @@ func (this *QStandardItem) Child__(row int) *QStandardItem /*777 QStandardItem *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setChild(int, int, QStandardItem *)
+
+/*
+
+ */
 func (this *QStandardItem) SetChild(row int, column int, item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg2 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -843,6 +1142,10 @@ func (this *QStandardItem) SetChild(row int, column int, item QStandardItem_ITF 
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setChild(int, QStandardItem *)
+
+/*
+
+ */
 func (this *QStandardItem) SetChild_1(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg1 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -856,6 +1159,10 @@ func (this *QStandardItem) SetChild_1(row int, item QStandardItem_ITF /*777 QSta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertRows(int, int)
+
+/*
+Reimplemented from QAbstractItemModel::insertRows().
+*/
 func (this *QStandardItem) InsertRows(row int, count int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem10insertRowsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count)
 	qtrt.ErrPrint(err, rv)
@@ -865,6 +1172,10 @@ func (this *QStandardItem) InsertRows(row int, count int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertColumns(int, int)
+
+/*
+Reimplemented from QAbstractItemModel::insertColumns().
+*/
 func (this *QStandardItem) InsertColumns(column int, count int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem13insertColumnsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count)
 	qtrt.ErrPrint(err, rv)
@@ -874,6 +1185,10 @@ func (this *QStandardItem) InsertColumns(column int, count int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeRow(int)
+
+/*
+
+ */
 func (this *QStandardItem) RemoveRow(row int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem9removeRowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -883,6 +1198,10 @@ func (this *QStandardItem) RemoveRow(row int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeColumn(int)
+
+/*
+
+ */
 func (this *QStandardItem) RemoveColumn(column int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem12removeColumnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -892,6 +1211,10 @@ func (this *QStandardItem) RemoveColumn(column int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeRows(int, int)
+
+/*
+Reimplemented from QAbstractItemModel::removeRows().
+*/
 func (this *QStandardItem) RemoveRows(row int, count int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem10removeRowsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count)
 	qtrt.ErrPrint(err, rv)
@@ -901,6 +1224,10 @@ func (this *QStandardItem) RemoveRows(row int, count int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeColumns(int, int)
+
+/*
+Reimplemented from QAbstractItemModel::removeColumns().
+*/
 func (this *QStandardItem) RemoveColumns(column int, count int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem13removeColumnsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count)
 	qtrt.ErrPrint(err, rv)
@@ -910,6 +1237,14 @@ func (this *QStandardItem) RemoveColumns(column int, count int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void insertRow(int, QStandardItem *)
+
+/*
+Inserts a row at row containing items. If necessary, the column count is increased to the size of items.
+
+This function was introduced in  Qt 4.2.
+
+See also takeRow(), appendRow(), and insertColumn().
+*/
 func (this *QStandardItem) InsertRow(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg1 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -923,6 +1258,14 @@ func (this *QStandardItem) InsertRow(row int, item QStandardItem_ITF /*777 QStan
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void appendRow(QStandardItem *)
+
+/*
+Appends a row containing items. If necessary, the column count is increased to the size of items.
+
+This function was introduced in  Qt 4.2.
+
+See also insertRow() and appendColumn().
+*/
 func (this *QStandardItem) AppendRow(item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -936,6 +1279,10 @@ func (this *QStandardItem) AppendRow(item QStandardItem_ITF /*777 QStandardItem 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * takeChild(int, int)
+
+/*
+
+ */
 func (this *QStandardItem) TakeChild(row int, column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem9takeChildEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -946,6 +1293,10 @@ func (this *QStandardItem) TakeChild(row int, column int) *QStandardItem /*777 Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * takeChild(int, int)
+
+/*
+
+ */
 func (this *QStandardItem) TakeChild__(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid,
 	column := int(0)
@@ -958,6 +1309,10 @@ func (this *QStandardItem) TakeChild__(row int) *QStandardItem /*777 QStandardIt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sortChildren(int, Qt::SortOrder)
+
+/*
+
+ */
 func (this *QStandardItem) SortChildren(column int, order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem12sortChildrenEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	qtrt.ErrPrint(err, rv)
@@ -967,6 +1322,10 @@ func (this *QStandardItem) SortChildren(column int, order int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sortChildren(int, Qt::SortOrder)
+
+/*
+
+ */
 func (this *QStandardItem) SortChildren__(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
 	order := 0
@@ -978,6 +1337,10 @@ func (this *QStandardItem) SortChildren__(column int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStandardItem * clone() const
+
+/*
+
+ */
 func (this *QStandardItem) Clone() *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem5cloneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -988,6 +1351,10 @@ func (this *QStandardItem) Clone() *QStandardItem /*777 QStandardItem **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int type() const
+
+/*
+
+ */
 func (this *QStandardItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -998,6 +1365,10 @@ func (this *QStandardItem) Type() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void read(QDataStream &)
+
+/*
+
+ */
 func (this *QStandardItem) Read(in qtcore.QDataStream_ITF) {
 	var convArg0 unsafe.Pointer
 	if in != nil && in.QDataStream_PTR() != nil {
@@ -1011,6 +1382,10 @@ func (this *QStandardItem) Read(in qtcore.QDataStream_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void write(QDataStream &) const
+
+/*
+
+ */
 func (this *QStandardItem) Write(out qtcore.QDataStream_ITF) {
 	var convArg0 unsafe.Pointer
 	if out != nil && out.QDataStream_PTR() != nil {
@@ -1024,6 +1399,10 @@ func (this *QStandardItem) Write(out qtcore.QDataStream_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool operator<(const QStandardItem &) const
+
+/*
+
+ */
 func (this *QStandardItem) Operator_less_than(other QStandardItem_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QStandardItem_PTR() != nil {
@@ -1038,6 +1417,10 @@ func (this *QStandardItem) Operator_less_than(other QStandardItem_ITF) bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QStandardItem & operator=(const QStandardItem &)
+
+/*
+
+ */
 func (this *QStandardItem) Operator_equal(other QStandardItem_ITF) *QStandardItem {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QStandardItem_PTR() != nil {
@@ -1054,14 +1437,25 @@ func (this *QStandardItem) Operator_equal(other QStandardItem_ITF) *QStandardIte
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void emitDataChanged()
+
+/*
+
+ */
 func (this *QStandardItem) EmitDataChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem15emitDataChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QStandardItem__ItemType = int
 
+//
 const QStandardItem__Type QStandardItem__ItemType = 0
+
+//
 const QStandardItem__UserType QStandardItem__ItemType = 1000
 
 //  body block end

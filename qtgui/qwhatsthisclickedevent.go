@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QWhatsThisClickedEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QWhatsThisClickedEvent) NewFromPointer(cthis unsafe.Pointer) *QWhatsThisC
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWhatsThisClickedEvent(const QString &)
+
+/*
+
+ */
 func NewQWhatsThisClickedEvent(href string) *QWhatsThisClickedEvent {
 	var tmpArg0 = qtcore.NewQString_5(href)
 	var convArg0 = tmpArg0.GetCthis()
@@ -78,6 +85,10 @@ func NewQWhatsThisClickedEvent(href string) *QWhatsThisClickedEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWhatsThisClickedEvent()
+
+/*
+
+ */
 func DeleteQWhatsThisClickedEvent(this *QWhatsThisClickedEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -89,6 +100,10 @@ func DeleteQWhatsThisClickedEvent(this *QWhatsThisClickedEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString href() const
+
+/*
+
+ */
 func (this *QWhatsThisClickedEvent) Href() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

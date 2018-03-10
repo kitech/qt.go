@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGTransformNode struct {
 	*QSGNode
 }
@@ -67,6 +70,10 @@ func (*QSGTransformNode) NewFromPointer(cthis unsafe.Pointer) *QSGTransformNode 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGTransformNode()
+
+/*
+
+ */
 func NewQSGTransformNode() *QSGTransformNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGTransformNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQSGTransformNode() *QSGTransformNode {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGTransformNode()
+
+/*
+
+ */
 func DeleteQSGTransformNode(this *QSGTransformNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGTransformNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 216)
@@ -90,6 +101,10 @@ func DeleteQSGTransformNode(this *QSGTransformNode) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMatrix(const QMatrix4x4 &)
+
+/*
+
+ */
 func (this *QSGTransformNode) SetMatrix(matrix qtgui.QMatrix4x4_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {
@@ -103,6 +118,10 @@ func (this *QSGTransformNode) SetMatrix(matrix qtgui.QMatrix4x4_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [68] const QMatrix4x4 & matrix() const
+
+/*
+
+ */
 func (this *QSGTransformNode) Matrix() *qtgui.QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGTransformNode6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,6 +134,10 @@ func (this *QSGTransformNode) Matrix() *qtgui.QMatrix4x4 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCombinedMatrix(const QMatrix4x4 &)
+
+/*
+
+ */
 func (this *QSGTransformNode) SetCombinedMatrix(matrix qtgui.QMatrix4x4_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {
@@ -128,6 +151,10 @@ func (this *QSGTransformNode) SetCombinedMatrix(matrix qtgui.QMatrix4x4_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [68] const QMatrix4x4 & combinedMatrix() const
+
+/*
+
+ */
 func (this *QSGTransformNode) CombinedMatrix() *qtgui.QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGTransformNode14combinedMatrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -58,6 +58,9 @@ func (this *QScrollArea) InheritViewportSizeHint(f func() unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "viewportSizeHint", f)
 }
 
+/*
+
+ */
 type QScrollArea struct {
 	*QAbstractScrollArea
 }
@@ -90,6 +93,10 @@ func (*QScrollArea) NewFromPointer(cthis unsafe.Pointer) *QScrollArea {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +107,12 @@ func (this *QScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollArea(QWidget *)
+
+/*
+Constructs an empty scroll area with the given parent.
+
+See also setWidget().
+*/
 func NewQScrollArea(parent QWidget_ITF /*777 QWidget **/) *QScrollArea {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -116,6 +129,12 @@ func NewQScrollArea(parent QWidget_ITF /*777 QWidget **/) *QScrollArea {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollArea(QWidget *)
+
+/*
+Constructs an empty scroll area with the given parent.
+
+See also setWidget().
+*/
 func NewQScrollArea__() *QScrollArea {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -130,6 +149,10 @@ func NewQScrollArea__() *QScrollArea {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScrollArea()
+
+/*
+
+ */
 func DeleteQScrollArea(this *QScrollArea) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollAreaD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -141,6 +164,12 @@ func DeleteQScrollArea(this *QScrollArea) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget() const
+
+/*
+Returns the scroll area's widget, or 0 if there is none.
+
+See also setWidget().
+*/
 func (this *QScrollArea) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +180,20 @@ func (this *QScrollArea) Widget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
+
+/*
+Sets the scroll area's widget.
+
+The widget becomes a child of the scroll area, and will be destroyed when the scroll area is deleted or when a new widget is set.
+
+The widget's autoFillBackground property will be set to true.
+
+If the scroll area is visible when the widget is added, you must show() it explicitly.
+
+Note that You must add the layout of widget before you call this function; if you add it later, the widget will not be visible - regardless of when you show() the scroll area. In this case, you can also not show() the widget later.
+
+See also widget().
+*/
 func (this *QScrollArea) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -164,6 +207,12 @@ func (this *QScrollArea) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * takeWidget()
+
+/*
+Removes the scroll area's widget, and passes ownership of the widget to the caller.
+
+See also widget().
+*/
 func (this *QScrollArea) TakeWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea10takeWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +223,10 @@ func (this *QScrollArea) TakeWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool widgetResizable() const
+
+/*
+
+ */
 func (this *QScrollArea) WidgetResizable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea15widgetResizableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,6 +237,10 @@ func (this *QScrollArea) WidgetResizable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidgetResizable(_Bool)
+
+/*
+
+ */
 func (this *QScrollArea) SetWidgetResizable(resizable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea18setWidgetResizableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), resizable)
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +250,10 @@ func (this *QScrollArea) SetWidgetResizable(resizable bool) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -205,6 +266,10 @@ func (this *QScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool focusNextPrevChild(_Bool)
+
+/*
+Reimplemented from QWidget::focusNextPrevChild().
+*/
 func (this *QScrollArea) FocusNextPrevChild(next bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea18focusNextPrevChildEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	qtrt.ErrPrint(err, rv)
@@ -215,6 +280,10 @@ func (this *QScrollArea) FocusNextPrevChild(next bool) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment() const
+
+/*
+
+ */
 func (this *QScrollArea) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -225,6 +294,10 @@ func (this *QScrollArea) Alignment() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(Qt::Alignment)
+
+/*
+
+ */
 func (this *QScrollArea) SetAlignment(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -234,6 +307,10 @@ func (this *QScrollArea) SetAlignment(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(int, int, int, int)
+
+/*
+Scrolls the contents of the scroll area so that the point (x, y) is visible inside the region of the viewport with margins specified in pixels by xmargin and ymargin. If the specified point cannot be reached, the contents are scrolled to the nearest valid position. The default value for both margins is 50 pixels.
+*/
 func (this *QScrollArea) EnsureVisible(x int, y int, xmargin int, ymargin int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea13ensureVisibleEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -243,6 +320,10 @@ func (this *QScrollArea) EnsureVisible(x int, y int, xmargin int, ymargin int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(int, int, int, int)
+
+/*
+Scrolls the contents of the scroll area so that the point (x, y) is visible inside the region of the viewport with margins specified in pixels by xmargin and ymargin. If the specified point cannot be reached, the contents are scrolled to the nearest valid position. The default value for both margins is 50 pixels.
+*/
 func (this *QScrollArea) EnsureVisible__(x int, y int) {
 	// arg: 2, int=Int, =Invalid,
 	xmargin := int(50)
@@ -256,6 +337,10 @@ func (this *QScrollArea) EnsureVisible__(x int, y int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(int, int, int, int)
+
+/*
+Scrolls the contents of the scroll area so that the point (x, y) is visible inside the region of the viewport with margins specified in pixels by xmargin and ymargin. If the specified point cannot be reached, the contents are scrolled to the nearest valid position. The default value for both margins is 50 pixels.
+*/
 func (this *QScrollArea) EnsureVisible__1(x int, y int, xmargin int) {
 	// arg: 3, int=Int, =Invalid,
 	ymargin := int(50)
@@ -267,6 +352,12 @@ func (this *QScrollArea) EnsureVisible__1(x int, y int, xmargin int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureWidgetVisible(QWidget *, int, int)
+
+/*
+Scrolls the contents of the scroll area so that the childWidget of QScrollArea::widget() is visible inside the viewport with margins specified in pixels by xmargin and ymargin. If the specified point cannot be reached, the contents are scrolled to the nearest valid position. The default value for both margins is 50 pixels.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QScrollArea) EnsureWidgetVisible(childWidget QWidget_ITF /*777 QWidget **/, xmargin int, ymargin int) {
 	var convArg0 unsafe.Pointer
 	if childWidget != nil && childWidget.QWidget_PTR() != nil {
@@ -280,6 +371,12 @@ func (this *QScrollArea) EnsureWidgetVisible(childWidget QWidget_ITF /*777 QWidg
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureWidgetVisible(QWidget *, int, int)
+
+/*
+Scrolls the contents of the scroll area so that the childWidget of QScrollArea::widget() is visible inside the viewport with margins specified in pixels by xmargin and ymargin. If the specified point cannot be reached, the contents are scrolled to the nearest valid position. The default value for both margins is 50 pixels.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QScrollArea) EnsureWidgetVisible__(childWidget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if childWidget != nil && childWidget.QWidget_PTR() != nil {
@@ -297,6 +394,12 @@ func (this *QScrollArea) EnsureWidgetVisible__(childWidget QWidget_ITF /*777 QWi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureWidgetVisible(QWidget *, int, int)
+
+/*
+Scrolls the contents of the scroll area so that the childWidget of QScrollArea::widget() is visible inside the viewport with margins specified in pixels by xmargin and ymargin. If the specified point cannot be reached, the contents are scrolled to the nearest valid position. The default value for both margins is 50 pixels.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QScrollArea) EnsureWidgetVisible__1(childWidget QWidget_ITF /*777 QWidget **/, xmargin int) {
 	var convArg0 unsafe.Pointer
 	if childWidget != nil && childWidget.QWidget_PTR() != nil {
@@ -312,6 +415,10 @@ func (this *QScrollArea) EnsureWidgetVisible__1(childWidget QWidget_ITF /*777 QW
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QScrollArea) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -326,6 +433,10 @@ func (this *QScrollArea) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+Reimplemented from QObject::eventFilter().
+*/
 func (this *QScrollArea) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -344,6 +455,10 @@ func (this *QScrollArea) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+*/
 func (this *QScrollArea) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QResizeEvent_PTR() != nil {
@@ -357,6 +472,10 @@ func (this *QScrollArea) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void scrollContentsBy(int, int)
+
+/*
+Reimplemented from QAbstractScrollArea::scrollContentsBy().
+*/
 func (this *QScrollArea) ScrollContentsBy(dx int, dy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea16scrollContentsByEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -366,6 +485,10 @@ func (this *QScrollArea) ScrollContentsBy(dx int, dy int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize viewportSizeHint() const
+
+/*
+Reimplemented from QAbstractScrollArea::viewportSizeHint().
+*/
 func (this *QScrollArea) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

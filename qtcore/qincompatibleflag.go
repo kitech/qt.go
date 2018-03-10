@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QIncompatibleFlag struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QIncompatibleFlag) NewFromPointer(cthis unsafe.Pointer) *QIncompatibleFla
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QIncompatibleFlag(int)
+
+/*
+
+ */
 func NewQIncompatibleFlag(i int) *QIncompatibleFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", qtrt.FFI_TYPE_POINTER, i)
 	qtrt.ErrPrint(err, rv)

@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAuthenticator struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QAuthenticator) NewFromPointer(cthis unsafe.Pointer) *QAuthenticator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAuthenticator()
+
+/*
+Constructs an empty authentication object.
+*/
 func NewQAuthenticator() *QAuthenticator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAuthenticatorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQAuthenticator() *QAuthenticator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QAuthenticator()
+
+/*
+
+ */
 func DeleteQAuthenticator(this *QAuthenticator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAuthenticatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -89,6 +100,10 @@ func DeleteQAuthenticator(this *QAuthenticator) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAuthenticator & operator=(const QAuthenticator &)
+
+/*
+
+ */
 func (this *QAuthenticator) Operator_equal(other QAuthenticator_ITF) *QAuthenticator {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QAuthenticator_PTR() != nil {
@@ -105,6 +120,10 @@ func (this *QAuthenticator) Operator_equal(other QAuthenticator_ITF) *QAuthentic
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QAuthenticator &) const
+
+/*
+
+ */
 func (this *QAuthenticator) Operator_equal_equal(other QAuthenticator_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QAuthenticator_PTR() != nil {
@@ -119,6 +138,10 @@ func (this *QAuthenticator) Operator_equal_equal(other QAuthenticator_ITF) bool 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QAuthenticator &) const
+
+/*
+
+ */
 func (this *QAuthenticator) Operator_not_equal(other QAuthenticator_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QAuthenticator_PTR() != nil {
@@ -133,6 +156,12 @@ func (this *QAuthenticator) Operator_not_equal(other QAuthenticator_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString user() const
+
+/*
+Returns the user used for authentication.
+
+See also setUser().
+*/
 func (this *QAuthenticator) User() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAuthenticator4userEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -146,6 +175,12 @@ func (this *QAuthenticator) User() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUser(const QString &)
+
+/*
+Sets the user used for authentication.
+
+See also user() and QNetworkAccessManager::authenticationRequired().
+*/
 func (this *QAuthenticator) SetUser(user string) {
 	var tmpArg0 = qtcore.NewQString_5(user)
 	var convArg0 = tmpArg0.GetCthis()
@@ -157,6 +192,12 @@ func (this *QAuthenticator) SetUser(user string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString password() const
+
+/*
+Returns the password used for authentication.
+
+See also setPassword().
+*/
 func (this *QAuthenticator) Password() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAuthenticator8passwordEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,6 +211,12 @@ func (this *QAuthenticator) Password() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPassword(const QString &)
+
+/*
+Sets the password used for authentication.
+
+See also password() and QNetworkAccessManager::authenticationRequired().
+*/
 func (this *QAuthenticator) SetPassword(password string) {
 	var tmpArg0 = qtcore.NewQString_5(password)
 	var convArg0 = tmpArg0.GetCthis()
@@ -181,6 +228,10 @@ func (this *QAuthenticator) SetPassword(password string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString realm() const
+
+/*
+Returns the realm requiring authentication.
+*/
 func (this *QAuthenticator) Realm() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAuthenticator5realmEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,6 +245,10 @@ func (this *QAuthenticator) Realm() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRealm(const QString &)
+
+/*
+
+ */
 func (this *QAuthenticator) SetRealm(realm string) {
 	var tmpArg0 = qtcore.NewQString_5(realm)
 	var convArg0 = tmpArg0.GetCthis()
@@ -205,6 +260,14 @@ func (this *QAuthenticator) SetRealm(realm string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant option(const QString &) const
+
+/*
+Returns the value related to option opt if it was set by the server. See the Options section for more information on incoming options. If option opt isn't found, an invalid QVariant will be returned.
+
+This function was introduced in  Qt 4.7.
+
+See also setOption(), options(), and QAuthenticator options.
+*/
 func (this *QAuthenticator) Option(opt string) *qtcore.QVariant /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(opt)
 	var convArg0 = tmpArg0.GetCthis()
@@ -219,6 +282,14 @@ func (this *QAuthenticator) Option(opt string) *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(const QString &, const QVariant &)
+
+/*
+Sets the outgoing option opt to value value. See the Options section for more information on outgoing options.
+
+This function was introduced in  Qt 4.7.
+
+See also options(), option(), and QAuthenticator options.
+*/
 func (this *QAuthenticator) SetOption(opt string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(opt)
 	var convArg0 = tmpArg0.GetCthis()
@@ -234,6 +305,10 @@ func (this *QAuthenticator) SetOption(opt string, value qtcore.QVariant_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if the object has not been initialized. Returns false if non-const member functions have been called, or the content was constructed or copied from another initialized QAuthenticator object.
+*/
 func (this *QAuthenticator) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAuthenticator6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -244,6 +319,10 @@ func (this *QAuthenticator) IsNull() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void detach()
+
+/*
+
+ */
 func (this *QAuthenticator) Detach() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAuthenticator6detachEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

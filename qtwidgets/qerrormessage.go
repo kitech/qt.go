@@ -43,6 +43,9 @@ func (this *QErrorMessage) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEve
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
+/*
+
+ */
 type QErrorMessage struct {
 	*QDialog
 }
@@ -75,6 +78,10 @@ func (*QErrorMessage) NewFromPointer(cthis unsafe.Pointer) *QErrorMessage {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QErrorMessage10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +92,10 @@ func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QErrorMessage(QWidget *)
+
+/*
+Constructs and installs an error handler window with the given parent.
+*/
 func NewQErrorMessage(parent QWidget_ITF /*777 QWidget **/) *QErrorMessage {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -101,6 +112,10 @@ func NewQErrorMessage(parent QWidget_ITF /*777 QWidget **/) *QErrorMessage {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QErrorMessage(QWidget *)
+
+/*
+Constructs and installs an error handler window with the given parent.
+*/
 func NewQErrorMessage__() *QErrorMessage {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -115,6 +130,10 @@ func NewQErrorMessage__() *QErrorMessage {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QErrorMessage()
+
+/*
+
+ */
 func DeleteQErrorMessage(this *QErrorMessage) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessageD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -126,6 +145,10 @@ func DeleteQErrorMessage(this *QErrorMessage) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QErrorMessage * qtHandler()
+
+/*
+Returns a pointer to a QErrorMessage object that outputs the default Qt messages. This function creates such an object, if there isn't one already.
+*/
 func (this *QErrorMessage) QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage9qtHandlerEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -141,6 +164,12 @@ func QErrorMessage_QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &)
+
+/*
+Shows the given message, message, and returns immediately. If the user has requested for the message not to be shown again, this function does nothing.
+
+Normally, the message is displayed immediately. However, if there are pending messages, it will be queued to be displayed later.
+*/
 func (this *QErrorMessage) ShowMessage(message string) {
 	var tmpArg0 = qtcore.NewQString_5(message)
 	var convArg0 = tmpArg0.GetCthis()
@@ -152,6 +181,12 @@ func (this *QErrorMessage) ShowMessage(message string) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, const QString &)
+
+/*
+Shows the given message, message, and returns immediately. If the user has requested for the message not to be shown again, this function does nothing.
+
+Normally, the message is displayed immediately. However, if there are pending messages, it will be queued to be displayed later.
+*/
 func (this *QErrorMessage) ShowMessage_1(message string, type_ string) {
 	var tmpArg0 = qtcore.NewQString_5(message)
 	var convArg0 = tmpArg0.GetCthis()
@@ -165,6 +200,10 @@ func (this *QErrorMessage) ShowMessage_1(message string, type_ string) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void done(int)
+
+/*
+Reimplemented from QDialog::done().
+*/
 func (this *QErrorMessage) Done(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage4doneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +213,10 @@ func (this *QErrorMessage) Done(arg0 int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QErrorMessage) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {

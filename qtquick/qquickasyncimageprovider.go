@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QQuickAsyncImageProvider struct {
 	*QQuickImageProvider
 }
@@ -69,6 +72,10 @@ func (*QQuickAsyncImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickAsy
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickAsyncImageProvider()
+
+/*
+
+ */
 func NewQQuickAsyncImageProvider() *QQuickAsyncImageProvider {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -81,6 +88,10 @@ func NewQQuickAsyncImageProvider() *QQuickAsyncImageProvider {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickAsyncImageProvider()
+
+/*
+
+ */
 func DeleteQQuickAsyncImageProvider(this *QQuickAsyncImageProvider) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -92,6 +103,10 @@ func DeleteQQuickAsyncImageProvider(this *QQuickAsyncImageProvider) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QQuickImageResponse * requestImageResponse(const QString &, const QSize &)
+
+/*
+
+ */
 func (this *QQuickAsyncImageProvider) RequestImageResponse(id string, requestedSize qtcore.QSize_ITF) *QQuickImageResponse /*777 QQuickImageResponse **/ {
 	var tmpArg0 = qtcore.NewQString_5(id)
 	var convArg0 = tmpArg0.GetCthis()

@@ -40,6 +40,9 @@ func (this *QSGAbstractRenderer) InheritNodeChanged(f func(node *QSGNode /*777 Q
 	qtrt.SetAllInheritCallback(this, "nodeChanged", f)
 }
 
+/*
+
+ */
 type QSGAbstractRenderer struct {
 	*qtcore.QObject
 }
@@ -72,6 +75,10 @@ func (*QSGAbstractRenderer) NewFromPointer(cthis unsafe.Pointer) *QSGAbstractRen
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSGAbstractRenderer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -82,6 +89,10 @@ func (this *QSGAbstractRenderer) MetaObject() *qtcore.QMetaObject /*777 const QM
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGAbstractRenderer()
+
+/*
+
+ */
 func DeleteQSGAbstractRenderer(this *QSGAbstractRenderer) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRendererD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -93,6 +104,14 @@ func DeleteQSGAbstractRenderer(this *QSGAbstractRenderer) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRootNode(QSGRootNode *)
+
+/*
+Sets the node as the root of the QSGNode scene that you want to render. You need to provide a node before trying to render the scene.
+
+Note: This doesn't take ownership of node.
+
+See also rootNode().
+*/
 func (this *QSGAbstractRenderer) SetRootNode(node QSGRootNode_ITF /*777 QSGRootNode **/) {
 	var convArg0 unsafe.Pointer
 	if node != nil && node.QSGRootNode_PTR() != nil {
@@ -106,6 +125,12 @@ func (this *QSGAbstractRenderer) SetRootNode(node QSGRootNode_ITF /*777 QSGRootN
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGRootNode * rootNode() const
+
+/*
+Returns the root of the QSGNode scene.
+
+See also setRootNode().
+*/
 func (this *QSGAbstractRenderer) RootNode() *QSGRootNode /*777 QSGRootNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer8rootNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,6 +141,12 @@ func (this *QSGAbstractRenderer) RootNode() *QSGRootNode /*777 QSGRootNode **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDeviceRect(const QRect &)
+
+/*
+Sets rect as the geometry of the surface being rendered to.
+
+See also deviceRect().
+*/
 func (this *QSGAbstractRenderer) SetDeviceRect(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -129,6 +160,12 @@ func (this *QSGAbstractRenderer) SetDeviceRect(rect qtcore.QRect_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDeviceRect(const QSize &)
+
+/*
+Sets rect as the geometry of the surface being rendered to.
+
+See also deviceRect().
+*/
 func (this *QSGAbstractRenderer) SetDeviceRect_1(size qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -142,6 +179,12 @@ func (this *QSGAbstractRenderer) SetDeviceRect_1(size qtcore.QSize_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect deviceRect() const
+
+/*
+Returns the device rect of the surface being rendered to.
+
+See also setDeviceRect().
+*/
 func (this *QSGAbstractRenderer) DeviceRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer10deviceRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +197,12 @@ func (this *QSGAbstractRenderer) DeviceRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setViewportRect(const QRect &)
+
+/*
+Sets rect as the geometry of the viewport to render on the surface.
+
+See also viewportRect().
+*/
 func (this *QSGAbstractRenderer) SetViewportRect(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -167,6 +216,12 @@ func (this *QSGAbstractRenderer) SetViewportRect(rect qtcore.QRect_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setViewportRect(const QSize &)
+
+/*
+Sets rect as the geometry of the viewport to render on the surface.
+
+See also viewportRect().
+*/
 func (this *QSGAbstractRenderer) SetViewportRect_1(size qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -180,6 +235,12 @@ func (this *QSGAbstractRenderer) SetViewportRect_1(size qtcore.QSize_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect viewportRect() const
+
+/*
+Returns the rect of the viewport to render.
+
+See also setViewportRect().
+*/
 func (this *QSGAbstractRenderer) ViewportRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer12viewportRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,6 +253,12 @@ func (this *QSGAbstractRenderer) ViewportRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProjectionMatrixToRect(const QRectF &)
+
+/*
+Convenience method that calls setProjectionMatrix() with an orthographic matrix generated from rect.
+
+See also setProjectionMatrix() and projectionMatrix().
+*/
 func (this *QSGAbstractRenderer) SetProjectionMatrixToRect(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -205,6 +272,12 @@ func (this *QSGAbstractRenderer) SetProjectionMatrixToRect(rect qtcore.QRectF_IT
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProjectionMatrix(const QMatrix4x4 &)
+
+/*
+Use matrix to project the QSGNode coordinates onto surface pixels.
+
+See also projectionMatrix() and setProjectionMatrixToRect().
+*/
 func (this *QSGAbstractRenderer) SetProjectionMatrix(matrix qtgui.QMatrix4x4_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {
@@ -218,6 +291,12 @@ func (this *QSGAbstractRenderer) SetProjectionMatrix(matrix qtgui.QMatrix4x4_ITF
 // index:0
 // Public Visibility=Default Availability=Available
 // [68] QMatrix4x4 projectionMatrix() const
+
+/*
+Returns the projection matrix
+
+See also setProjectionMatrix() and setProjectionMatrixToRect().
+*/
 func (this *QSGAbstractRenderer) ProjectionMatrix() *qtgui.QMatrix4x4 /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer16projectionMatrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -230,6 +309,12 @@ func (this *QSGAbstractRenderer) ProjectionMatrix() *qtgui.QMatrix4x4 /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClearColor(const QColor &)
+
+/*
+Use color to clear the framebuffer when clearMode() is set to QSGAbstractRenderer::ClearColorBuffer.
+
+See also clearColor() and setClearMode().
+*/
 func (this *QSGAbstractRenderer) SetClearColor(color qtgui.QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -243,6 +328,12 @@ func (this *QSGAbstractRenderer) SetClearColor(color qtgui.QColor_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor clearColor() const
+
+/*
+Returns the color that clears the framebuffer at the beginning of the rendering.
+
+See also setClearColor() and clearMode().
+*/
 func (this *QSGAbstractRenderer) ClearColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer10clearColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,6 +346,12 @@ func (this *QSGAbstractRenderer) ClearColor() *qtgui.QColor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClearMode(QSGAbstractRenderer::ClearMode)
+
+/*
+Defines which attachment of the framebuffer should be cleared before each scene render with the mode flag.
+
+See also clearMode() and setClearColor().
+*/
 func (this *QSGAbstractRenderer) SetClearMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer12setClearModeE6QFlagsINS_12ClearModeBitEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -264,6 +361,12 @@ func (this *QSGAbstractRenderer) SetClearMode(mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSGAbstractRenderer::ClearMode clearMode() const
+
+/*
+Flags defining which attachment of the framebuffer will be cleared before each scene render.
+
+See also setClearMode() and clearColor().
+*/
 func (this *QSGAbstractRenderer) ClearMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSGAbstractRenderer9clearModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -274,6 +377,16 @@ func (this *QSGAbstractRenderer) ClearMode() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void renderScene(uint)
+
+/*
+Render the scene to the specified fboId
+
+If fboId isn't specified, the scene graph will be rendered to the default framebuffer. You will have to call QOpenGLContext::swapBuffers() yourself afterward.
+
+The framebuffer specified by fboId will be bound automatically.
+
+See also QOpenGLContext::swapBuffers() and QOpenGLFramebufferObject::handle().
+*/
 func (this *QSGAbstractRenderer) RenderScene(fboId uint) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer11renderSceneEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fboId)
 	qtrt.ErrPrint(err, rv)
@@ -283,6 +396,16 @@ func (this *QSGAbstractRenderer) RenderScene(fboId uint) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void renderScene(uint)
+
+/*
+Render the scene to the specified fboId
+
+If fboId isn't specified, the scene graph will be rendered to the default framebuffer. You will have to call QOpenGLContext::swapBuffers() yourself afterward.
+
+The framebuffer specified by fboId will be bound automatically.
+
+See also QOpenGLContext::swapBuffers() and QOpenGLFramebufferObject::handle().
+*/
 func (this *QSGAbstractRenderer) RenderScene__() {
 	// arg: 0, uint=Typedef, uint=Typedef, unsigned int
 	fboId := uint(0)
@@ -294,6 +417,10 @@ func (this *QSGAbstractRenderer) RenderScene__() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sceneGraphChanged()
+
+/*
+This signal is emitted on the first modification of a node in the tree after the last scene render.
+*/
 func (this *QSGAbstractRenderer) SceneGraphChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer17sceneGraphChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -303,6 +430,10 @@ func (this *QSGAbstractRenderer) SceneGraphChanged() {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QSGAbstractRenderer(QObject *)
+
+/*
+
+ */
 func NewQSGAbstractRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSGAbstractRenderer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -319,6 +450,10 @@ func NewQSGAbstractRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSGAbs
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QSGAbstractRenderer(QObject *)
+
+/*
+
+ */
 func NewQSGAbstractRenderer__() *QSGAbstractRenderer {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -333,6 +468,10 @@ func NewQSGAbstractRenderer__() *QSGAbstractRenderer {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void nodeChanged(QSGNode *, QSGNode::DirtyState)
+
+/*
+
+ */
 func (this *QSGAbstractRenderer) NodeChanged(node QSGNode_ITF /*777 QSGNode **/, state int) {
 	var convArg0 unsafe.Pointer
 	if node != nil && node.QSGNode_PTR() != nil {
@@ -342,10 +481,19 @@ func (this *QSGAbstractRenderer) NodeChanged(node QSGNode_ITF /*777 QSGNode **/,
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QSGAbstractRenderer__ClearModeBit = int
 
+//
 const QSGAbstractRenderer__ClearColorBuffer QSGAbstractRenderer__ClearModeBit = 1
+
+//
 const QSGAbstractRenderer__ClearDepthBuffer QSGAbstractRenderer__ClearModeBit = 2
+
+//
 const QSGAbstractRenderer__ClearStencilBuffer QSGAbstractRenderer__ClearModeBit = 4
 
 //  body block end

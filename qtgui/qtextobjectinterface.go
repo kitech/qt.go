@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextObjectInterface struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QTextObjectInterface) NewFromPointer(cthis unsafe.Pointer) *QTextObjectIn
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextObjectInterface()
+
+/*
+
+ */
 func DeleteQTextObjectInterface(this *QTextObjectInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextObjectInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -77,6 +84,10 @@ func DeleteQTextObjectInterface(this *QTextObjectInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QSizeF intrinsicSize(QTextDocument *, int, const QTextFormat &)
+
+/*
+
+ */
 func (this *QTextObjectInterface) IntrinsicSize(doc QTextDocument_ITF /*777 QTextDocument **/, posInDocument int, format QTextFormat_ITF) *qtcore.QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {
@@ -97,6 +108,10 @@ func (this *QTextObjectInterface) IntrinsicSize(doc QTextDocument_ITF /*777 QTex
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void drawObject(QPainter *, const QRectF &, QTextDocument *, int, const QTextFormat &)
+
+/*
+
+ */
 func (this *QTextObjectInterface) DrawObject(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRectF_ITF, doc QTextDocument_ITF /*777 QTextDocument **/, posInDocument int, format QTextFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {

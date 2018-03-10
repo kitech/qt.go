@@ -78,6 +78,9 @@ func (this *QSizeGrip) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QSizeGrip struct {
 	*QWidget
 }
@@ -110,6 +113,10 @@ func (*QSizeGrip) NewFromPointer(cthis unsafe.Pointer) *QSizeGrip {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSizeGrip) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSizeGrip10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,6 +127,10 @@ func (this *QSizeGrip) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSizeGrip(QWidget *)
+
+/*
+Constructs a resize corner as a child widget of the given parent.
+*/
 func NewQSizeGrip(parent QWidget_ITF /*777 QWidget **/) *QSizeGrip {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -136,6 +147,10 @@ func NewQSizeGrip(parent QWidget_ITF /*777 QWidget **/) *QSizeGrip {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSizeGrip()
+
+/*
+
+ */
 func DeleteQSizeGrip(this *QSizeGrip) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGripD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -147,6 +162,10 @@ func DeleteQSizeGrip(this *QSizeGrip) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QSizeGrip) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSizeGrip8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,6 +178,10 @@ func (this *QSizeGrip) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setVisible(_Bool)
+
+/*
+Reimplemented from QWidget::setVisible().
+*/
 func (this *QSizeGrip) SetVisible(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSizeGrip10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -168,6 +191,14 @@ func (this *QSizeGrip) SetVisible(arg0 bool) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+
+Paints the resize grip.
+
+Resize grips are usually rendered as small diagonal textured lines in the lower-right corner. The paint event is passed in the event parameter.
+*/
 func (this *QSizeGrip) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
@@ -181,6 +212,12 @@ func (this *QSizeGrip) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mousePressEvent().
+
+Receives the mouse press events for the widget, and primes the resize operation. The mouse press event is passed in the event parameter.
+*/
 func (this *QSizeGrip) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -194,6 +231,12 @@ func (this *QSizeGrip) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseMoveEvent().
+
+Resizes the top-level widget containing this widget. The mouse move event is passed in the event parameter.
+*/
 func (this *QSizeGrip) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -207,6 +250,10 @@ func (this *QSizeGrip) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseReleaseEvent().
+*/
 func (this *QSizeGrip) MouseReleaseEvent(mouseEvent qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if mouseEvent != nil && mouseEvent.QMouseEvent_PTR() != nil {
@@ -220,6 +267,10 @@ func (this *QSizeGrip) MouseReleaseEvent(mouseEvent qtgui.QMouseEvent_ITF /*777 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void moveEvent(QMoveEvent *)
+
+/*
+Reimplemented from QWidget::moveEvent().
+*/
 func (this *QSizeGrip) MoveEvent(moveEvent qtgui.QMoveEvent_ITF /*777 QMoveEvent **/) {
 	var convArg0 unsafe.Pointer
 	if moveEvent != nil && moveEvent.QMoveEvent_PTR() != nil {
@@ -233,6 +284,10 @@ func (this *QSizeGrip) MoveEvent(moveEvent qtgui.QMoveEvent_ITF /*777 QMoveEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
+
+/*
+Reimplemented from QWidget::showEvent().
+*/
 func (this *QSizeGrip) ShowEvent(showEvent qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	var convArg0 unsafe.Pointer
 	if showEvent != nil && showEvent.QShowEvent_PTR() != nil {
@@ -246,6 +301,10 @@ func (this *QSizeGrip) ShowEvent(showEvent qtgui.QShowEvent_ITF /*777 QShowEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
+
+/*
+Reimplemented from QWidget::hideEvent().
+*/
 func (this *QSizeGrip) HideEvent(hideEvent qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 	var convArg0 unsafe.Pointer
 	if hideEvent != nil && hideEvent.QHideEvent_PTR() != nil {
@@ -259,6 +318,10 @@ func (this *QSizeGrip) HideEvent(hideEvent qtgui.QHideEvent_ITF /*777 QHideEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+Reimplemented from QObject::eventFilter().
+*/
 func (this *QSizeGrip) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -277,6 +340,10 @@ func (this *QSizeGrip) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, ar
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QSizeGrip) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {

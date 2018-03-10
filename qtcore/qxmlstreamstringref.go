@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QXmlStreamStringRef struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QXmlStreamStringRef) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamStri
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QXmlStreamStringRef()
+
+/*
+
+ */
 func NewQXmlStreamStringRef() *QXmlStreamStringRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQXmlStreamStringRef() *QXmlStreamStringRef {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QXmlStreamStringRef(const QStringRef &)
+
+/*
+
+ */
 func NewQXmlStreamStringRef_1(aString QStringRef_ITF) *QXmlStreamStringRef {
 	var convArg0 unsafe.Pointer
 	if aString != nil && aString.QStringRef_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQXmlStreamStringRef_1(aString QStringRef_ITF) *QXmlStreamStringRef {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QXmlStreamStringRef(const QString &)
+
+/*
+
+ */
 func NewQXmlStreamStringRef_2(aString string) *QXmlStreamStringRef {
 	var tmpArg0 = NewQString_5(aString)
 	var convArg0 = tmpArg0.GetCthis()
@@ -107,6 +122,10 @@ func NewQXmlStreamStringRef_2(aString string) *QXmlStreamStringRef {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [-2] void QXmlStreamStringRef(QString &&)
+
+/*
+
+ */
 func NewQXmlStreamStringRef_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2EO7QString", qtrt.FFI_TYPE_POINTER, aString)
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +138,10 @@ func NewQXmlStreamStringRef_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringR
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QXmlStreamStringRef & operator=(QXmlStreamStringRef &&)
+
+/*
+
+ */
 func (this *QXmlStreamStringRef) Operator_equal(other unsafe.Pointer /*333*/) *QXmlStreamStringRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRefaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +154,10 @@ func (this *QXmlStreamStringRef) Operator_equal(other unsafe.Pointer /*333*/) *Q
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QXmlStreamStringRef & operator=(const QXmlStreamStringRef &)
+
+/*
+
+ */
 func (this *QXmlStreamStringRef) Operator_equal_1(other QXmlStreamStringRef_ITF) *QXmlStreamStringRef {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamStringRef_PTR() != nil {
@@ -147,6 +174,10 @@ func (this *QXmlStreamStringRef) Operator_equal_1(other QXmlStreamStringRef_ITF)
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamStringRef()
+
+/*
+
+ */
 func DeleteQXmlStreamStringRef(this *QXmlStreamStringRef) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRefD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -158,6 +189,10 @@ func DeleteQXmlStreamStringRef(this *QXmlStreamStringRef) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QXmlStreamStringRef &)
+
+/*
+
+ */
 func (this *QXmlStreamStringRef) Swap(other QXmlStreamStringRef_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamStringRef_PTR() != nil {
@@ -171,6 +206,10 @@ func (this *QXmlStreamStringRef) Swap(other QXmlStreamStringRef_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+
+ */
 func (this *QXmlStreamStringRef) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRef5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,6 +219,10 @@ func (this *QXmlStreamStringRef) Clear() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QString * string() const
+
+/*
+
+ */
 func (this *QXmlStreamStringRef) String() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef6stringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +236,10 @@ func (this *QXmlStreamStringRef) String() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int position() const
+
+/*
+
+ */
 func (this *QXmlStreamStringRef) Position() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,6 +250,10 @@ func (this *QXmlStreamStringRef) Position() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int size() const
+
+/*
+
+ */
 func (this *QXmlStreamStringRef) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

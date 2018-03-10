@@ -48,6 +48,9 @@ func (this *QProgressBar) InheritInitStyleOption(f func(option *QStyleOptionProg
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
+/*
+
+ */
 type QProgressBar struct {
 	*QWidget
 }
@@ -80,6 +83,10 @@ func (*QProgressBar) NewFromPointer(cthis unsafe.Pointer) *QProgressBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QProgressBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +97,14 @@ func (this *QProgressBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressBar(QWidget *)
+
+/*
+Constructs a progress bar with the given parent.
+
+By default, the minimum step value is set to 0, and the maximum to 100.
+
+See also setRange().
+*/
 func NewQProgressBar(parent QWidget_ITF /*777 QWidget **/) *QProgressBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -106,6 +121,14 @@ func NewQProgressBar(parent QWidget_ITF /*777 QWidget **/) *QProgressBar {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressBar(QWidget *)
+
+/*
+Constructs a progress bar with the given parent.
+
+By default, the minimum step value is set to 0, and the maximum to 100.
+
+See also setRange().
+*/
 func NewQProgressBar__() *QProgressBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -120,6 +143,10 @@ func NewQProgressBar__() *QProgressBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QProgressBar()
+
+/*
+
+ */
 func DeleteQProgressBar(this *QProgressBar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -131,6 +158,10 @@ func DeleteQProgressBar(this *QProgressBar) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minimum() const
+
+/*
+
+ */
 func (this *QProgressBar) Minimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar7minimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,6 +172,10 @@ func (this *QProgressBar) Minimum() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maximum() const
+
+/*
+
+ */
 func (this *QProgressBar) Maximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar7maximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +186,10 @@ func (this *QProgressBar) Maximum() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int value() const
+
+/*
+
+ */
 func (this *QProgressBar) Value() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,6 +200,10 @@ func (this *QProgressBar) Value() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString text() const
+
+/*
+
+ */
 func (this *QProgressBar) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +217,10 @@ func (this *QProgressBar) Text() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextVisible(_Bool)
+
+/*
+
+ */
 func (this *QProgressBar) SetTextVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar14setTextVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	qtrt.ErrPrint(err, rv)
@@ -183,6 +230,10 @@ func (this *QProgressBar) SetTextVisible(visible bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTextVisible() const
+
+/*
+
+ */
 func (this *QProgressBar) IsTextVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar13isTextVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +244,10 @@ func (this *QProgressBar) IsTextVisible() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment() const
+
+/*
+
+ */
 func (this *QProgressBar) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,6 +258,10 @@ func (this *QProgressBar) Alignment() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(Qt::Alignment)
+
+/*
+
+ */
 func (this *QProgressBar) SetAlignment(alignment int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	qtrt.ErrPrint(err, rv)
@@ -212,6 +271,10 @@ func (this *QProgressBar) SetAlignment(alignment int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QProgressBar) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +287,10 @@ func (this *QProgressBar) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QProgressBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -236,6 +303,10 @@ func (this *QProgressBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
+
+/*
+
+ */
 func (this *QProgressBar) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -246,6 +317,10 @@ func (this *QProgressBar) Orientation() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInvertedAppearance(_Bool)
+
+/*
+
+ */
 func (this *QProgressBar) SetInvertedAppearance(invert bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar21setInvertedAppearanceEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invert)
 	qtrt.ErrPrint(err, rv)
@@ -255,6 +330,10 @@ func (this *QProgressBar) SetInvertedAppearance(invert bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool invertedAppearance() const
+
+/*
+
+ */
 func (this *QProgressBar) InvertedAppearance() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar18invertedAppearanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -265,6 +344,10 @@ func (this *QProgressBar) InvertedAppearance() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextDirection(QProgressBar::Direction)
+
+/*
+
+ */
 func (this *QProgressBar) SetTextDirection(textDirection int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar16setTextDirectionENS_9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), textDirection)
 	qtrt.ErrPrint(err, rv)
@@ -274,6 +357,10 @@ func (this *QProgressBar) SetTextDirection(textDirection int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QProgressBar::Direction textDirection() const
+
+/*
+
+ */
 func (this *QProgressBar) TextDirection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar13textDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -284,6 +371,10 @@ func (this *QProgressBar) TextDirection() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QString &)
+
+/*
+
+ */
 func (this *QProgressBar) SetFormat(format string) {
 	var tmpArg0 = qtcore.NewQString_5(format)
 	var convArg0 = tmpArg0.GetCthis()
@@ -295,6 +386,10 @@ func (this *QProgressBar) SetFormat(format string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetFormat()
+
+/*
+
+ */
 func (this *QProgressBar) ResetFormat() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar11resetFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -304,6 +399,10 @@ func (this *QProgressBar) ResetFormat() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString format() const
+
+/*
+
+ */
 func (this *QProgressBar) Format() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -317,6 +416,10 @@ func (this *QProgressBar) Format() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reset()
+
+/*
+Reset the progress bar. The progress bar "rewinds" and shows no progress.
+*/
 func (this *QProgressBar) Reset() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -326,6 +429,18 @@ func (this *QProgressBar) Reset() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRange(int, int)
+
+/*
+Sets the progress bar's minimum and maximum values to minimum and maximum respectively.
+
+If maximum is smaller than minimum, minimum becomes the only legal value.
+
+If the current value falls outside the new range, the progress bar is reset with reset().
+
+The QProgressBar can be set to undetermined state by using setRange(0, 0).
+
+See also minimum and maximum.
+*/
 func (this *QProgressBar) SetRange(minimum int, maximum int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar8setRangeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), minimum, maximum)
 	qtrt.ErrPrint(err, rv)
@@ -335,6 +450,10 @@ func (this *QProgressBar) SetRange(minimum int, maximum int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimum(int)
+
+/*
+
+ */
 func (this *QProgressBar) SetMinimum(minimum int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar10setMinimumEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), minimum)
 	qtrt.ErrPrint(err, rv)
@@ -344,6 +463,10 @@ func (this *QProgressBar) SetMinimum(minimum int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximum(int)
+
+/*
+
+ */
 func (this *QProgressBar) SetMaximum(maximum int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar10setMaximumEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maximum)
 	qtrt.ErrPrint(err, rv)
@@ -353,6 +476,10 @@ func (this *QProgressBar) SetMaximum(maximum int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(int)
+
+/*
+
+ */
 func (this *QProgressBar) SetValue(value int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar8setValueEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -362,6 +489,10 @@ func (this *QProgressBar) SetValue(value int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
+
+/*
+
+ */
 func (this *QProgressBar) SetOrientation(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar14setOrientationEN2Qt11OrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -371,6 +502,12 @@ func (this *QProgressBar) SetOrientation(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(int)
+
+/*
+This signal is emitted when the value shown in the progress bar changes. value is the new value shown by the progress bar.
+
+Note: Notifier signal for property value.
+*/
 func (this *QProgressBar) ValueChanged(value int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar12valueChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -380,6 +517,10 @@ func (this *QProgressBar) ValueChanged(value int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QProgressBar) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -394,6 +535,10 @@ func (this *QProgressBar) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QProgressBar) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
@@ -407,6 +552,12 @@ func (this *QProgressBar) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEven
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionProgressBar *) const
+
+/*
+Initialize option with the values from this QProgressBar. This method is useful for subclasses when they need a QStyleOptionProgressBar, but don't want to fill in all the information themselves.
+
+See also QStyleOption::initFrom().
+*/
 func (this *QProgressBar) InitStyleOption(option QStyleOptionProgressBar_ITF /*777 QStyleOptionProgressBar **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionProgressBar_PTR() != nil {
@@ -416,9 +567,24 @@ func (this *QProgressBar) InitStyleOption(option QStyleOptionProgressBar_ITF /*7
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+Specifies the reading direction of the text for vertical progress bars.
+
+
+
+Note that whether or not the text is drawn is dependent on the style. Currently CleanLooks and Plastique draw the text. Mac, Windows and WindowsVista style do not.
+
+This enum was introduced or modified in  Qt 4.1.
+
+See also textDirection.
+
+*/
 type QProgressBar__Direction = int
 
+//
 const QProgressBar__TopToBottom QProgressBar__Direction = 0
+
+//
 const QProgressBar__BottomToTop QProgressBar__Direction = 1
 
 //  body block end

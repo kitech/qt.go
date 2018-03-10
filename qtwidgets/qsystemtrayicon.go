@@ -38,6 +38,9 @@ func (this *QSystemTrayIcon) InheritEvent(f func(event *qtcore.QEvent /*777 QEve
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QSystemTrayIcon struct {
 	*qtcore.QObject
 }
@@ -70,6 +73,10 @@ func (*QSystemTrayIcon) NewFromPointer(cthis unsafe.Pointer) *QSystemTrayIcon {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSystemTrayIcon) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +87,14 @@ func (this *QSystemTrayIcon) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSystemTrayIcon(QObject *)
+
+/*
+Constructs a QSystemTrayIcon object with the given parent.
+
+The icon is initially invisible.
+
+See also visible.
+*/
 func NewQSystemTrayIcon(parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -96,6 +111,14 @@ func NewQSystemTrayIcon(parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTra
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSystemTrayIcon(QObject *)
+
+/*
+Constructs a QSystemTrayIcon object with the given parent.
+
+The icon is initially invisible.
+
+See also visible.
+*/
 func NewQSystemTrayIcon__() *QSystemTrayIcon {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -110,6 +133,14 @@ func NewQSystemTrayIcon__() *QSystemTrayIcon {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSystemTrayIcon(const QIcon &, QObject *)
+
+/*
+Constructs a QSystemTrayIcon object with the given parent.
+
+The icon is initially invisible.
+
+See also visible.
+*/
 func NewQSystemTrayIcon_1(icon qtgui.QIcon_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -130,6 +161,14 @@ func NewQSystemTrayIcon_1(icon qtgui.QIcon_ITF, parent qtcore.QObject_ITF /*777 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSystemTrayIcon(const QIcon &, QObject *)
+
+/*
+Constructs a QSystemTrayIcon object with the given parent.
+
+The icon is initially invisible.
+
+See also visible.
+*/
 func NewQSystemTrayIcon_1_(icon qtgui.QIcon_ITF) *QSystemTrayIcon {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -148,6 +187,10 @@ func NewQSystemTrayIcon_1_(icon qtgui.QIcon_ITF) *QSystemTrayIcon {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSystemTrayIcon()
+
+/*
+
+ */
 func DeleteQSystemTrayIcon(this *QSystemTrayIcon) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIconD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -159,6 +202,18 @@ func DeleteQSystemTrayIcon(this *QSystemTrayIcon) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContextMenu(QMenu *)
+
+/*
+Sets the specified menu to be the context menu for the system tray icon.
+
+The menu will pop up when the user requests the context menu for the system tray icon by clicking the mouse button.
+
+On macOS, this is currenly converted to a NSMenu, so the aboutToHide() signal is not emitted.
+
+Note: The system tray icon does not take ownership of the menu. You must ensure that it is deleted at the appropriate time by, for example, creating the menu with a suitable parent object.
+
+See also contextMenu().
+*/
 func (this *QSystemTrayIcon) SetContextMenu(menu QMenu_ITF /*777 QMenu **/) {
 	var convArg0 unsafe.Pointer
 	if menu != nil && menu.QMenu_PTR() != nil {
@@ -172,6 +227,12 @@ func (this *QSystemTrayIcon) SetContextMenu(menu QMenu_ITF /*777 QMenu **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMenu * contextMenu() const
+
+/*
+Returns the current context menu for the system tray entry.
+
+See also setContextMenu().
+*/
 func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon11contextMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,6 +243,10 @@ func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon icon() const
+
+/*
+
+ */
 func (this *QSystemTrayIcon) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,6 +259,10 @@ func (this *QSystemTrayIcon) Icon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
+
+/*
+
+ */
 func (this *QSystemTrayIcon) SetIcon(icon qtgui.QIcon_ITF) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -207,6 +276,10 @@ func (this *QSystemTrayIcon) SetIcon(icon qtgui.QIcon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toolTip() const
+
+/*
+
+ */
 func (this *QSystemTrayIcon) ToolTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,6 +293,10 @@ func (this *QSystemTrayIcon) ToolTip() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
+
+/*
+
+ */
 func (this *QSystemTrayIcon) SetToolTip(tip string) {
 	var tmpArg0 = qtcore.NewQString_5(tip)
 	var convArg0 = tmpArg0.GetCthis()
@@ -231,6 +308,12 @@ func (this *QSystemTrayIcon) SetToolTip(tip string) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool isSystemTrayAvailable()
+
+/*
+Returns true if the system tray is available; otherwise returns false.
+
+If the system tray is currently unavailable but becomes available later, QSystemTrayIcon will automatically add an entry in the system tray if it is visible.
+*/
 func (this *QSystemTrayIcon) IsSystemTrayAvailable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon21isSystemTrayAvailableEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -246,6 +329,12 @@ func QSystemTrayIcon_IsSystemTrayAvailable() bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool supportsMessages()
+
+/*
+Returns true if the system tray supports balloon messages; otherwise returns false.
+
+See also showMessage().
+*/
 func (this *QSystemTrayIcon) SupportsMessages() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon16supportsMessagesEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -261,6 +350,14 @@ func QSystemTrayIcon_SupportsMessages() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect geometry() const
+
+/*
+Returns the geometry of the system tray icon in screen coordinates.
+
+This function was introduced in  Qt 4.3.
+
+See also visible.
+*/
 func (this *QSystemTrayIcon) Geometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -273,6 +370,10 @@ func (this *QSystemTrayIcon) Geometry() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible() const
+
+/*
+
+ */
 func (this *QSystemTrayIcon) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -283,6 +384,10 @@ func (this *QSystemTrayIcon) IsVisible() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(_Bool)
+
+/*
+
+ */
 func (this *QSystemTrayIcon) SetVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	qtrt.ErrPrint(err, rv)
@@ -292,6 +397,12 @@ func (this *QSystemTrayIcon) SetVisible(visible bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void show()
+
+/*
+Shows the icon in the system tray.
+
+See also hide() and visible.
+*/
 func (this *QSystemTrayIcon) Show() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon4showEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -301,6 +412,12 @@ func (this *QSystemTrayIcon) Show() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void hide()
+
+/*
+Hides the system tray entry.
+
+See also show() and visible.
+*/
 func (this *QSystemTrayIcon) Hide() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon4hideEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -310,6 +427,22 @@ func (this *QSystemTrayIcon) Hide() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, const QString &, const QIcon &, int)
+
+/*
+Shows a balloon message for the entry with the given title, message and icon for the time specified in millisecondsTimeoutHint. title and message must be plain text strings.
+
+Message can be clicked by the user; the messageClicked() signal will emitted when this occurs.
+
+Note that display of messages are dependent on the system configuration and user preferences, and that messages may not appear at all. Hence, it should not be relied upon as the sole means for providing critical information.
+
+On Windows, the millisecondsTimeoutHint is usually ignored by the system when the application has focus.
+
+Has been turned into a slot in Qt 5.2.
+
+This function was introduced in  Qt 4.3.
+
+See also show() and supportsMessages().
+*/
 func (this *QSystemTrayIcon) ShowMessage(title string, msg string, icon qtgui.QIcon_ITF, msecs int) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -327,6 +460,22 @@ func (this *QSystemTrayIcon) ShowMessage(title string, msg string, icon qtgui.QI
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, const QString &, const QIcon &, int)
+
+/*
+Shows a balloon message for the entry with the given title, message and icon for the time specified in millisecondsTimeoutHint. title and message must be plain text strings.
+
+Message can be clicked by the user; the messageClicked() signal will emitted when this occurs.
+
+Note that display of messages are dependent on the system configuration and user preferences, and that messages may not appear at all. Hence, it should not be relied upon as the sole means for providing critical information.
+
+On Windows, the millisecondsTimeoutHint is usually ignored by the system when the application has focus.
+
+Has been turned into a slot in Qt 5.2.
+
+This function was introduced in  Qt 4.3.
+
+See also show() and supportsMessages().
+*/
 func (this *QSystemTrayIcon) ShowMessage__(title string, msg string, icon qtgui.QIcon_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -346,6 +495,22 @@ func (this *QSystemTrayIcon) ShowMessage__(title string, msg string, icon qtgui.
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, const QString &, QSystemTrayIcon::MessageIcon, int)
+
+/*
+Shows a balloon message for the entry with the given title, message and icon for the time specified in millisecondsTimeoutHint. title and message must be plain text strings.
+
+Message can be clicked by the user; the messageClicked() signal will emitted when this occurs.
+
+Note that display of messages are dependent on the system configuration and user preferences, and that messages may not appear at all. Hence, it should not be relied upon as the sole means for providing critical information.
+
+On Windows, the millisecondsTimeoutHint is usually ignored by the system when the application has focus.
+
+Has been turned into a slot in Qt 5.2.
+
+This function was introduced in  Qt 4.3.
+
+See also show() and supportsMessages().
+*/
 func (this *QSystemTrayIcon) ShowMessage_1(title string, msg string, icon int, msecs int) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -359,6 +524,22 @@ func (this *QSystemTrayIcon) ShowMessage_1(title string, msg string, icon int, m
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, const QString &, QSystemTrayIcon::MessageIcon, int)
+
+/*
+Shows a balloon message for the entry with the given title, message and icon for the time specified in millisecondsTimeoutHint. title and message must be plain text strings.
+
+Message can be clicked by the user; the messageClicked() signal will emitted when this occurs.
+
+Note that display of messages are dependent on the system configuration and user preferences, and that messages may not appear at all. Hence, it should not be relied upon as the sole means for providing critical information.
+
+On Windows, the millisecondsTimeoutHint is usually ignored by the system when the application has focus.
+
+Has been turned into a slot in Qt 5.2.
+
+This function was introduced in  Qt 4.3.
+
+See also show() and supportsMessages().
+*/
 func (this *QSystemTrayIcon) ShowMessage_1_(title string, msg string) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -376,6 +557,22 @@ func (this *QSystemTrayIcon) ShowMessage_1_(title string, msg string) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, const QString &, QSystemTrayIcon::MessageIcon, int)
+
+/*
+Shows a balloon message for the entry with the given title, message and icon for the time specified in millisecondsTimeoutHint. title and message must be plain text strings.
+
+Message can be clicked by the user; the messageClicked() signal will emitted when this occurs.
+
+Note that display of messages are dependent on the system configuration and user preferences, and that messages may not appear at all. Hence, it should not be relied upon as the sole means for providing critical information.
+
+On Windows, the millisecondsTimeoutHint is usually ignored by the system when the application has focus.
+
+Has been turned into a slot in Qt 5.2.
+
+This function was introduced in  Qt 4.3.
+
+See also show() and supportsMessages().
+*/
 func (this *QSystemTrayIcon) ShowMessage_1_1(title string, msg string, icon int) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -391,6 +588,12 @@ func (this *QSystemTrayIcon) ShowMessage_1_1(title string, msg string, icon int)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activated(QSystemTrayIcon::ActivationReason)
+
+/*
+This signal is emitted when the user activates the system tray icon. reason specifies the reason for activation. QSystemTrayIcon::ActivationReason enumerates the various reasons.
+
+See also QSystemTrayIcon::ActivationReason.
+*/
 func (this *QSystemTrayIcon) Activated(reason int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), reason)
 	qtrt.ErrPrint(err, rv)
@@ -400,6 +603,16 @@ func (this *QSystemTrayIcon) Activated(reason int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void messageClicked()
+
+/*
+This signal is emitted when the message displayed using showMessage() was clicked by the user.
+
+Currently this signal is not sent on macOS.
+
+Note: We follow Microsoft Windows behavior, so the signal is also emitted when the user clicks on a tray icon with a balloon message displayed.
+
+See also activated().
+*/
 func (this *QSystemTrayIcon) MessageClicked() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon14messageClickedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -409,6 +622,10 @@ func (this *QSystemTrayIcon) MessageClicked() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QSystemTrayIcon) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -419,19 +636,55 @@ func (this *QSystemTrayIcon) Event(event qtcore.QEvent_ITF /*777 QEvent **/) boo
 	return rv != 0
 }
 
+/*
+This enum describes the reason the system tray was activated.
+
+
+
+Note: On macOS, a double click will only be emitted if no context menu is set, since the menu opens on mouse press
+
+
+
+See also activated().
+
+*/
 type QSystemTrayIcon__ActivationReason = int
 
+// Unknown reason
 const QSystemTrayIcon__Unknown QSystemTrayIcon__ActivationReason = 0
+
+// The context menu for the system tray entry was requested
 const QSystemTrayIcon__Context QSystemTrayIcon__ActivationReason = 1
+
+// The system tray entry was double clicked.
 const QSystemTrayIcon__DoubleClick QSystemTrayIcon__ActivationReason = 2
+
+// The system tray entry was clicked
 const QSystemTrayIcon__Trigger QSystemTrayIcon__ActivationReason = 3
+
+// The system tray entry was clicked with the middle mouse button
 const QSystemTrayIcon__MiddleClick QSystemTrayIcon__ActivationReason = 4
 
+/*
+This enum describes the icon that is shown when a balloon message is displayed.
+
+
+
+See also QMessageBox.
+
+*/
 type QSystemTrayIcon__MessageIcon = int
 
+// No icon is shown.
 const QSystemTrayIcon__NoIcon QSystemTrayIcon__MessageIcon = 0
+
+// An information icon is shown.
 const QSystemTrayIcon__Information QSystemTrayIcon__MessageIcon = 1
+
+// A standard warning icon is shown.
 const QSystemTrayIcon__Warning QSystemTrayIcon__MessageIcon = 2
+
+// A critical warning icon is shown.
 const QSystemTrayIcon__Critical QSystemTrayIcon__MessageIcon = 3
 
 //  body block end

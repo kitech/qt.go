@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGRectangleNode struct {
 	*QSGGeometryNode
 }
@@ -67,6 +70,10 @@ func (*QSGRectangleNode) NewFromPointer(cthis unsafe.Pointer) *QSGRectangleNode 
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QSGRectangleNode()
+
+/*
+
+ */
 func DeleteQSGRectangleNode(this *QSGRectangleNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 144)
@@ -78,6 +85,12 @@ func DeleteQSGRectangleNode(this *QSGRectangleNode) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
+
+/*
+Sets the rectangle of this rect node to rect.
+
+See also rect().
+*/
 func (this *QSGRectangleNode) SetRect(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -91,6 +104,12 @@ func (this *QSGRectangleNode) SetRect(rect qtcore.QRectF_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRect(qreal, qreal, qreal, qreal)
+
+/*
+Sets the rectangle of this rect node to rect.
+
+See also rect().
+*/
 func (this *QSGRectangleNode) SetRect_1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +119,12 @@ func (this *QSGRectangleNode) SetRect_1(x float64, y float64, w float64, h float
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QRectF rect() const
+
+/*
+Returns the rectangle that this rect node covers.
+
+See also setRect().
+*/
 func (this *QSGRectangleNode) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGRectangleNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +137,12 @@ func (this *QSGRectangleNode) Rect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
+
+/*
+Sets the color of this rectangle to color. The default color will be white.
+
+See also color().
+*/
 func (this *QSGRectangleNode) SetColor(color qtgui.QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -125,6 +156,12 @@ func (this *QSGRectangleNode) SetColor(color qtgui.QColor_ITF) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QColor color() const
+
+/*
+Returns the color of this rectangle.
+
+See also setColor().
+*/
 func (this *QSGRectangleNode) Color() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGRectangleNode5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

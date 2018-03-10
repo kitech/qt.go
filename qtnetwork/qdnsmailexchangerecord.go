@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QDnsMailExchangeRecord struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QDnsMailExchangeRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsMailExc
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsMailExchangeRecord()
+
+/*
+
+ */
 func NewQDnsMailExchangeRecord() *QDnsMailExchangeRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QDnsMailExchangeRecordC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQDnsMailExchangeRecord() *QDnsMailExchangeRecord {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDnsMailExchangeRecord & operator=(QDnsMailExchangeRecord &&)
+
+/*
+
+ */
 func (this *QDnsMailExchangeRecord) Operator_equal(other unsafe.Pointer /*333*/) *QDnsMailExchangeRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QDnsMailExchangeRecordaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +101,10 @@ func (this *QDnsMailExchangeRecord) Operator_equal(other unsafe.Pointer /*333*/)
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDnsMailExchangeRecord & operator=(const QDnsMailExchangeRecord &)
+
+/*
+
+ */
 func (this *QDnsMailExchangeRecord) Operator_equal_1(other QDnsMailExchangeRecord_ITF) *QDnsMailExchangeRecord {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDnsMailExchangeRecord_PTR() != nil {
@@ -106,6 +121,10 @@ func (this *QDnsMailExchangeRecord) Operator_equal_1(other QDnsMailExchangeRecor
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDnsMailExchangeRecord()
+
+/*
+
+ */
 func DeleteQDnsMailExchangeRecord(this *QDnsMailExchangeRecord) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QDnsMailExchangeRecordD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -117,6 +136,10 @@ func DeleteQDnsMailExchangeRecord(this *QDnsMailExchangeRecord) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsMailExchangeRecord &)
+
+/*
+
+ */
 func (this *QDnsMailExchangeRecord) Swap(other QDnsMailExchangeRecord_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDnsMailExchangeRecord_PTR() != nil {
@@ -130,6 +153,10 @@ func (this *QDnsMailExchangeRecord) Swap(other QDnsMailExchangeRecord_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString exchange() const
+
+/*
+
+ */
 func (this *QDnsMailExchangeRecord) Exchange() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord8exchangeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +170,10 @@ func (this *QDnsMailExchangeRecord) Exchange() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
+
+/*
+
+ */
 func (this *QDnsMailExchangeRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -156,20 +187,30 @@ func (this *QDnsMailExchangeRecord) Name() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] quint16 preference() const
+
+/*
+
+ */
 func (this *QDnsMailExchangeRecord) Preference() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord10preferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
+	// unsigned short // 222
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] quint32 timeToLive() const
+
+/*
+
+ */
 func (this *QDnsMailExchangeRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 //  body block end

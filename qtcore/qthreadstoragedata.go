@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QThreadStorageData struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QThreadStorageData) NewFromPointer(cthis unsafe.Pointer) *QThreadStorageD
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QThreadStorageData()
+
+/*
+
+ */
 func DeleteQThreadStorageData(this *QThreadStorageData) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QThreadStorageDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 4)
@@ -76,6 +83,10 @@ func DeleteQThreadStorageData(this *QThreadStorageData) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] void ** get() const
+
+/*
+
+ */
 func (this *QThreadStorageData) Get() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -86,6 +97,10 @@ func (this *QThreadStorageData) Get() unsafe.Pointer /*666*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] void ** set(void *)
+
+/*
+
+ */
 func (this *QThreadStorageData) Set(p unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QThreadStorageData3setEPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	qtrt.ErrPrint(err, rv)
@@ -96,6 +111,10 @@ func (this *QThreadStorageData) Set(p unsafe.Pointer /*666*/) unsafe.Pointer /*6
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void finish(void **)
+
+/*
+
+ */
 func (this *QThreadStorageData) Finish(arg0 unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QThreadStorageData6finishEPPv", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)

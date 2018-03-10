@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlComponent struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QQmlComponent) NewFromPointer(cthis unsafe.Pointer) *QQmlComponent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQmlComponent) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QQmlComponent) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQQmlComponent(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponen
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent__() *QQmlComponent {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQQmlComponent__() *QQmlComponent {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QQmlEngine *, QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -125,6 +144,10 @@ func NewQQmlComponent_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QQmlEngine *, QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent_1_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -143,6 +166,10 @@ func NewQQmlComponent_1_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponen
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QQmlEngine *, const QString &, QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -165,6 +192,10 @@ func NewQQmlComponent_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName strin
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QQmlEngine *, const QString &, QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent_2_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -185,6 +216,10 @@ func NewQQmlComponent_2_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName stri
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QQmlEngine *, const QString &, enum QQmlComponent::CompilationMode, QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent_3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -207,6 +242,10 @@ func NewQQmlComponent_3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName strin
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QQmlEngine *, const QString &, enum QQmlComponent::CompilationMode, QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent_3_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -227,6 +266,10 @@ func NewQQmlComponent_3_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName stri
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QQmlEngine *, const QUrl &, QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent_4(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -251,6 +294,10 @@ func NewQQmlComponent_4(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUr
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QQmlEngine *, const QUrl &, QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent_4_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -273,6 +320,10 @@ func NewQQmlComponent_4_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QU
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QQmlEngine *, const QUrl &, enum QQmlComponent::CompilationMode, QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent_5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -297,6 +348,10 @@ func NewQQmlComponent_5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUr
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlComponent(QQmlEngine *, const QUrl &, enum QQmlComponent::CompilationMode, QObject *)
+
+/*
+Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
+*/
 func NewQQmlComponent_5_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -319,6 +374,10 @@ func NewQQmlComponent_5_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QU
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlComponent()
+
+/*
+
+ */
 func DeleteQQmlComponent(this *QQmlComponent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -330,6 +389,10 @@ func DeleteQQmlComponent(this *QQmlComponent) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQmlComponent::Status status() const
+
+/*
+
+ */
 func (this *QQmlComponent) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -340,6 +403,10 @@ func (this *QQmlComponent) Status() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if status() == QQmlComponent::Null.
+*/
 func (this *QQmlComponent) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -350,6 +417,10 @@ func (this *QQmlComponent) IsNull() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReady() const
+
+/*
+Returns true if status() == QQmlComponent::Ready.
+*/
 func (this *QQmlComponent) IsReady() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent7isReadyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -360,6 +431,10 @@ func (this *QQmlComponent) IsReady() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isError() const
+
+/*
+Returns true if status() == QQmlComponent::Error.
+*/
 func (this *QQmlComponent) IsError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent7isErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -370,6 +445,10 @@ func (this *QQmlComponent) IsError() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isLoading() const
+
+/*
+Returns true if status() == QQmlComponent::Loading.
+*/
 func (this *QQmlComponent) IsLoading() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent9isLoadingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -380,6 +459,10 @@ func (this *QQmlComponent) IsLoading() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
+
+/*
+
+ */
 func (this *QQmlComponent) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -393,6 +476,10 @@ func (this *QQmlComponent) ErrorString() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal progress() const
+
+/*
+
+ */
 func (this *QQmlComponent) Progress() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent8progressEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -403,6 +490,10 @@ func (this *QQmlComponent) Progress() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl url() const
+
+/*
+
+ */
 func (this *QQmlComponent) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -415,6 +506,18 @@ func (this *QQmlComponent) Url() *qtcore.QUrl /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QObject * create(QQmlContext *)
+
+/*
+Create an object instance from this component. Returns 0 if creation failed. context specifies the context within which to create the object instance.
+
+If context is 0 (the default), it will create the instance in the engine' s root context.
+
+The ownership of the returned object instance is transferred to the caller.
+
+If the object being created from this component is a visual item, it must have a visual parent, which can be set by calling QQuickItem::setParentItem(). See Concepts - Visual Parent in Qt Quick for more details.
+
+See also QQmlEngine::ObjectOwnership.
+*/
 func (this *QQmlComponent) Create(context QQmlContext_ITF /*777 QQmlContext **/) *qtcore.QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if context != nil && context.QQmlContext_PTR() != nil {
@@ -429,6 +532,18 @@ func (this *QQmlComponent) Create(context QQmlContext_ITF /*777 QQmlContext **/)
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QObject * create(QQmlContext *)
+
+/*
+Create an object instance from this component. Returns 0 if creation failed. context specifies the context within which to create the object instance.
+
+If context is 0 (the default), it will create the instance in the engine' s root context.
+
+The ownership of the returned object instance is transferred to the caller.
+
+If the object being created from this component is a visual item, it must have a visual parent, which can be set by calling QQuickItem::setParentItem(). See Concepts - Visual Parent in Qt Quick for more details.
+
+See also QQmlEngine::ObjectOwnership.
+*/
 func (this *QQmlComponent) Create__() *qtcore.QObject /*777 QObject **/ {
 	// arg: 0, QQmlContext *=Pointer, QQmlContext=Record,
 	var convArg0 unsafe.Pointer
@@ -441,6 +556,18 @@ func (this *QQmlComponent) Create__() *qtcore.QObject /*777 QObject **/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void create(QQmlIncubator &, QQmlContext *, QQmlContext *)
+
+/*
+Create an object instance from this component. Returns 0 if creation failed. context specifies the context within which to create the object instance.
+
+If context is 0 (the default), it will create the instance in the engine' s root context.
+
+The ownership of the returned object instance is transferred to the caller.
+
+If the object being created from this component is a visual item, it must have a visual parent, which can be set by calling QQuickItem::setParentItem(). See Concepts - Visual Parent in Qt Quick for more details.
+
+See also QQmlEngine::ObjectOwnership.
+*/
 func (this *QQmlComponent) Create_1(arg0 QQmlIncubator_ITF, context QQmlContext_ITF /*777 QQmlContext **/, forContext QQmlContext_ITF /*777 QQmlContext **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlIncubator_PTR() != nil {
@@ -462,6 +589,18 @@ func (this *QQmlComponent) Create_1(arg0 QQmlIncubator_ITF, context QQmlContext_
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void create(QQmlIncubator &, QQmlContext *, QQmlContext *)
+
+/*
+Create an object instance from this component. Returns 0 if creation failed. context specifies the context within which to create the object instance.
+
+If context is 0 (the default), it will create the instance in the engine' s root context.
+
+The ownership of the returned object instance is transferred to the caller.
+
+If the object being created from this component is a visual item, it must have a visual parent, which can be set by calling QQuickItem::setParentItem(). See Concepts - Visual Parent in Qt Quick for more details.
+
+See also QQmlEngine::ObjectOwnership.
+*/
 func (this *QQmlComponent) Create_1_(arg0 QQmlIncubator_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlIncubator_PTR() != nil {
@@ -479,6 +618,18 @@ func (this *QQmlComponent) Create_1_(arg0 QQmlIncubator_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void create(QQmlIncubator &, QQmlContext *, QQmlContext *)
+
+/*
+Create an object instance from this component. Returns 0 if creation failed. context specifies the context within which to create the object instance.
+
+If context is 0 (the default), it will create the instance in the engine' s root context.
+
+The ownership of the returned object instance is transferred to the caller.
+
+If the object being created from this component is a visual item, it must have a visual parent, which can be set by calling QQuickItem::setParentItem(). See Concepts - Visual Parent in Qt Quick for more details.
+
+See also QQmlEngine::ObjectOwnership.
+*/
 func (this *QQmlComponent) Create_1_1(arg0 QQmlIncubator_ITF, context QQmlContext_ITF /*777 QQmlContext **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlIncubator_PTR() != nil {
@@ -498,6 +649,14 @@ func (this *QQmlComponent) Create_1_1(arg0 QQmlIncubator_ITF, context QQmlContex
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QObject * beginCreate(QQmlContext *)
+
+/*
+This method provides advanced control over component instance creation. In general, programmers should use QQmlComponent::create() to create object instances.
+
+Create an object instance from this component. Returns 0 if creation failed. publicContext specifies the context within which to create the object instance.
+
+When QQmlComponent constructs an instance, it occurs in three steps:
+*/
 func (this *QQmlComponent) BeginCreate(arg0 QQmlContext_ITF /*777 QQmlContext **/) *qtcore.QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlContext_PTR() != nil {
@@ -512,6 +671,14 @@ func (this *QQmlComponent) BeginCreate(arg0 QQmlContext_ITF /*777 QQmlContext **
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void completeCreate()
+
+/*
+This method provides advanced control over component instance creation. In general, programmers should use QQmlComponent::create() to create a component.
+
+This function completes the component creation begun with QQmlComponent::beginCreate() and must be called afterwards.
+
+See also beginCreate().
+*/
 func (this *QQmlComponent) CompleteCreate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent14completeCreateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -521,6 +688,10 @@ func (this *QQmlComponent) CompleteCreate() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlContext * creationContext() const
+
+/*
+Returns the QQmlContext the component was created in. This is only valid for components created directly from QML.
+*/
 func (this *QQmlComponent) CreationContext() *QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent15creationContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -531,6 +702,10 @@ func (this *QQmlComponent) CreationContext() *QQmlContext /*777 QQmlContext **/ 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QQmlComponentAttached * qmlAttachedProperties(QObject *)
+
+/*
+
+ */
 func (this *QQmlComponent) QmlAttachedProperties(arg0 qtcore.QObject_ITF /*777 QObject **/) unsafe.Pointer /*666*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -550,6 +725,14 @@ func QQmlComponent_QmlAttachedProperties(arg0 qtcore.QObject_ITF /*777 QObject *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void loadUrl(const QUrl &)
+
+/*
+Load the QQmlComponent from the provided url.
+
+Ensure that the URL provided is full and correct, in particular, use QUrl::fromLocalFile() when loading a file from the local filesystem.
+
+Relative paths will be resolved against the engine's baseUrl(), which is the current working directory unless specified.
+*/
 func (this *QQmlComponent) LoadUrl(url qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -563,6 +746,14 @@ func (this *QQmlComponent) LoadUrl(url qtcore.QUrl_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void loadUrl(const QUrl &, enum QQmlComponent::CompilationMode)
+
+/*
+Load the QQmlComponent from the provided url.
+
+Ensure that the URL provided is full and correct, in particular, use QUrl::fromLocalFile() when loading a file from the local filesystem.
+
+Relative paths will be resolved against the engine's baseUrl(), which is the current working directory unless specified.
+*/
 func (this *QQmlComponent) LoadUrl_1(url qtcore.QUrl_ITF, mode int) {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -576,6 +767,10 @@ func (this *QQmlComponent) LoadUrl_1(url qtcore.QUrl_ITF, mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QByteArray &, const QUrl &)
+
+/*
+Sets the QQmlComponent to use the given QML data. If url is provided, it is used to set the component name and to provide a base path for items resolved by this component.
+*/
 func (this *QQmlComponent) SetData(arg0 qtcore.QByteArray_ITF, baseUrl qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QByteArray_PTR() != nil {
@@ -593,6 +788,12 @@ func (this *QQmlComponent) SetData(arg0 qtcore.QByteArray_ITF, baseUrl qtcore.QU
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void statusChanged(QQmlComponent::Status)
+
+/*
+Emitted whenever the component's status changes. status will be the new status.
+
+Note: Notifier signal for property status.
+*/
 func (this *QQmlComponent) StatusChanged(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent13statusChangedENS_6StatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -602,21 +803,47 @@ func (this *QQmlComponent) StatusChanged(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void progressChanged(qreal)
+
+/*
+Emitted whenever the component's loading progress changes. progress will be the current progress between 0.0 (nothing loaded) and 1.0 (finished).
+
+Note: Notifier signal for property progress.
+*/
 func (this *QQmlComponent) ProgressChanged(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent15progressChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+Specifies whether the QQmlComponent should load the component immediately, or asynchonously.
+
+
+*/
 type QQmlComponent__CompilationMode = int
 
+// Prefer loading/compiling the component immediately, blocking the thread. This is not always possible; for example, remote URLs will always load asynchronously.
 const QQmlComponent__PreferSynchronous QQmlComponent__CompilationMode = 0
+
+// Load/compile the component in a background thread.
 const QQmlComponent__Asynchronous QQmlComponent__CompilationMode = 1
 
+/*
+Specifies the loading status of the QQmlComponent.
+
+
+*/
 type QQmlComponent__Status = int
 
+// This QQmlComponent has no data. Call loadUrl() or setData() to add QML content.
 const QQmlComponent__Null QQmlComponent__Status = 0
+
+// This QQmlComponent is ready and create() may be called.
 const QQmlComponent__Ready QQmlComponent__Status = 1
+
+// This QQmlComponent is loading network data.
 const QQmlComponent__Loading QQmlComponent__Status = 2
+
+// An error has occurred. Call errors() to retrieve a list of errors.
 const QQmlComponent__Error QQmlComponent__Status = 3
 
 //  body block end

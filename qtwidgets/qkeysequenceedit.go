@@ -53,6 +53,9 @@ func (this *QKeySequenceEdit) InheritTimerEvent(f func(arg0 *qtcore.QTimerEvent 
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
+/*
+
+ */
 type QKeySequenceEdit struct {
 	*QWidget
 }
@@ -85,6 +88,10 @@ func (*QKeySequenceEdit) NewFromPointer(cthis unsafe.Pointer) *QKeySequenceEdit 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QKeySequenceEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QKeySequenceEdit10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -95,6 +102,10 @@ func (this *QKeySequenceEdit) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QKeySequenceEdit(QWidget *)
+
+/*
+Constructs a QKeySequenceEdit widget with the given parent.
+*/
 func NewQKeySequenceEdit(parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -111,6 +122,10 @@ func NewQKeySequenceEdit(parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QKeySequenceEdit(QWidget *)
+
+/*
+Constructs a QKeySequenceEdit widget with the given parent.
+*/
 func NewQKeySequenceEdit__() *QKeySequenceEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -125,6 +140,10 @@ func NewQKeySequenceEdit__() *QKeySequenceEdit {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QKeySequenceEdit(const QKeySequence &, QWidget *)
+
+/*
+Constructs a QKeySequenceEdit widget with the given parent.
+*/
 func NewQKeySequenceEdit_1(keySequence qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
 	var convArg0 unsafe.Pointer
 	if keySequence != nil && keySequence.QKeySequence_PTR() != nil {
@@ -145,6 +164,10 @@ func NewQKeySequenceEdit_1(keySequence qtgui.QKeySequence_ITF, parent QWidget_IT
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QKeySequenceEdit(const QKeySequence &, QWidget *)
+
+/*
+Constructs a QKeySequenceEdit widget with the given parent.
+*/
 func NewQKeySequenceEdit_1_(keySequence qtgui.QKeySequence_ITF) *QKeySequenceEdit {
 	var convArg0 unsafe.Pointer
 	if keySequence != nil && keySequence.QKeySequence_PTR() != nil {
@@ -163,6 +186,10 @@ func NewQKeySequenceEdit_1_(keySequence qtgui.QKeySequence_ITF) *QKeySequenceEdi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QKeySequenceEdit()
+
+/*
+
+ */
 func DeleteQKeySequenceEdit(this *QKeySequenceEdit) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEditD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -174,6 +201,10 @@ func DeleteQKeySequenceEdit(this *QKeySequenceEdit) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QKeySequence keySequence() const
+
+/*
+
+ */
 func (this *QKeySequenceEdit) KeySequence() *qtgui.QKeySequence /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QKeySequenceEdit11keySequenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,6 +217,10 @@ func (this *QKeySequenceEdit) KeySequence() *qtgui.QKeySequence /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeySequence(const QKeySequence &)
+
+/*
+
+ */
 func (this *QKeySequenceEdit) SetKeySequence(keySequence qtgui.QKeySequence_ITF) {
 	var convArg0 unsafe.Pointer
 	if keySequence != nil && keySequence.QKeySequence_PTR() != nil {
@@ -199,6 +234,10 @@ func (this *QKeySequenceEdit) SetKeySequence(keySequence qtgui.QKeySequence_ITF)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the current key sequence.
+*/
 func (this *QKeySequenceEdit) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEdit5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -208,6 +247,12 @@ func (this *QKeySequenceEdit) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editingFinished()
+
+/*
+This signal is emitted when the user finishes entering the shortcut.
+
+Note: there is a one second delay before releasing the last key and emitting this signal.
+*/
 func (this *QKeySequenceEdit) EditingFinished() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEdit15editingFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,6 +262,10 @@ func (this *QKeySequenceEdit) EditingFinished() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void keySequenceChanged(const QKeySequence &)
+
+/*
+
+ */
 func (this *QKeySequenceEdit) KeySequenceChanged(keySequence qtgui.QKeySequence_ITF) {
 	var convArg0 unsafe.Pointer
 	if keySequence != nil && keySequence.QKeySequence_PTR() != nil {
@@ -230,6 +279,10 @@ func (this *QKeySequenceEdit) KeySequenceChanged(keySequence qtgui.QKeySequence_
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QKeySequenceEdit) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -244,6 +297,10 @@ func (this *QKeySequenceEdit) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) boo
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWidget::keyPressEvent().
+*/
 func (this *QKeySequenceEdit) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QKeyEvent_PTR() != nil {
@@ -257,6 +314,10 @@ func (this *QKeySequenceEdit) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWidget::keyReleaseEvent().
+*/
 func (this *QKeySequenceEdit) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QKeyEvent_PTR() != nil {
@@ -270,6 +331,10 @@ func (this *QKeySequenceEdit) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKe
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
+
+/*
+Reimplemented from QObject::timerEvent().
+*/
 func (this *QKeySequenceEdit) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTimerEvent_PTR() != nil {

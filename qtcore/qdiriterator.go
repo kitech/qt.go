@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QDirIterator struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,18 @@ func (*QDirIterator) NewFromPointer(cthis unsafe.Pointer) *QDirIterator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QDir &, QDirIterator::IteratorFlags)
+
+/*
+Constructs a QDirIterator that can iterate over dir's entrylist, using dir's name filters and regular filters. You can pass options via flags to decide how the directory should be iterated.
+
+By default, flags is NoIteratorFlags, which provides the same behavior as in QDir::entryList().
+
+The sorting in dir is ignored.
+
+Note: To list symlinks that point to non existing files, QDir::System must be passed to the flags.
+
+See also hasNext(), next(), and IteratorFlags.
+*/
 func NewQDirIterator(dir QDir_ITF, flags int) *QDirIterator {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {
@@ -81,6 +96,18 @@ func NewQDirIterator(dir QDir_ITF, flags int) *QDirIterator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QDir &, QDirIterator::IteratorFlags)
+
+/*
+Constructs a QDirIterator that can iterate over dir's entrylist, using dir's name filters and regular filters. You can pass options via flags to decide how the directory should be iterated.
+
+By default, flags is NoIteratorFlags, which provides the same behavior as in QDir::entryList().
+
+The sorting in dir is ignored.
+
+Note: To list symlinks that point to non existing files, QDir::System must be passed to the flags.
+
+See also hasNext(), next(), and IteratorFlags.
+*/
 func NewQDirIterator__(dir QDir_ITF) *QDirIterator {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {
@@ -99,6 +126,18 @@ func NewQDirIterator__(dir QDir_ITF) *QDirIterator {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QString &, QDirIterator::IteratorFlags)
+
+/*
+Constructs a QDirIterator that can iterate over dir's entrylist, using dir's name filters and regular filters. You can pass options via flags to decide how the directory should be iterated.
+
+By default, flags is NoIteratorFlags, which provides the same behavior as in QDir::entryList().
+
+The sorting in dir is ignored.
+
+Note: To list symlinks that point to non existing files, QDir::System must be passed to the flags.
+
+See also hasNext(), next(), and IteratorFlags.
+*/
 func NewQDirIterator_1(path string, flags int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -113,6 +152,18 @@ func NewQDirIterator_1(path string, flags int) *QDirIterator {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QString &, QDirIterator::IteratorFlags)
+
+/*
+Constructs a QDirIterator that can iterate over dir's entrylist, using dir's name filters and regular filters. You can pass options via flags to decide how the directory should be iterated.
+
+By default, flags is NoIteratorFlags, which provides the same behavior as in QDir::entryList().
+
+The sorting in dir is ignored.
+
+Note: To list symlinks that point to non existing files, QDir::System must be passed to the flags.
+
+See also hasNext(), next(), and IteratorFlags.
+*/
 func NewQDirIterator_1_(path string) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -129,6 +180,18 @@ func NewQDirIterator_1_(path string) *QDirIterator {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QString &, QDir::Filters, QDirIterator::IteratorFlags)
+
+/*
+Constructs a QDirIterator that can iterate over dir's entrylist, using dir's name filters and regular filters. You can pass options via flags to decide how the directory should be iterated.
+
+By default, flags is NoIteratorFlags, which provides the same behavior as in QDir::entryList().
+
+The sorting in dir is ignored.
+
+Note: To list symlinks that point to non existing files, QDir::System must be passed to the flags.
+
+See also hasNext(), next(), and IteratorFlags.
+*/
 func NewQDirIterator_2(path string, filter int, flags int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -143,6 +206,18 @@ func NewQDirIterator_2(path string, filter int, flags int) *QDirIterator {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QString &, QDir::Filters, QDirIterator::IteratorFlags)
+
+/*
+Constructs a QDirIterator that can iterate over dir's entrylist, using dir's name filters and regular filters. You can pass options via flags to decide how the directory should be iterated.
+
+By default, flags is NoIteratorFlags, which provides the same behavior as in QDir::entryList().
+
+The sorting in dir is ignored.
+
+Note: To list symlinks that point to non existing files, QDir::System must be passed to the flags.
+
+See also hasNext(), next(), and IteratorFlags.
+*/
 func NewQDirIterator_2_(path string, filter int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -159,6 +234,18 @@ func NewQDirIterator_2_(path string, filter int) *QDirIterator {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QString &, const QStringList &, QDir::Filters, QDirIterator::IteratorFlags)
+
+/*
+Constructs a QDirIterator that can iterate over dir's entrylist, using dir's name filters and regular filters. You can pass options via flags to decide how the directory should be iterated.
+
+By default, flags is NoIteratorFlags, which provides the same behavior as in QDir::entryList().
+
+The sorting in dir is ignored.
+
+Note: To list symlinks that point to non existing files, QDir::System must be passed to the flags.
+
+See also hasNext(), next(), and IteratorFlags.
+*/
 func NewQDirIterator_3(path string, nameFilters QStringList_ITF, filters int, flags int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -177,6 +264,18 @@ func NewQDirIterator_3(path string, nameFilters QStringList_ITF, filters int, fl
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QString &, const QStringList &, QDir::Filters, QDirIterator::IteratorFlags)
+
+/*
+Constructs a QDirIterator that can iterate over dir's entrylist, using dir's name filters and regular filters. You can pass options via flags to decide how the directory should be iterated.
+
+By default, flags is NoIteratorFlags, which provides the same behavior as in QDir::entryList().
+
+The sorting in dir is ignored.
+
+Note: To list symlinks that point to non existing files, QDir::System must be passed to the flags.
+
+See also hasNext(), next(), and IteratorFlags.
+*/
 func NewQDirIterator_3_(path string, nameFilters QStringList_ITF) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -199,6 +298,18 @@ func NewQDirIterator_3_(path string, nameFilters QStringList_ITF) *QDirIterator 
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDirIterator(const QString &, const QStringList &, QDir::Filters, QDirIterator::IteratorFlags)
+
+/*
+Constructs a QDirIterator that can iterate over dir's entrylist, using dir's name filters and regular filters. You can pass options via flags to decide how the directory should be iterated.
+
+By default, flags is NoIteratorFlags, which provides the same behavior as in QDir::entryList().
+
+The sorting in dir is ignored.
+
+Note: To list symlinks that point to non existing files, QDir::System must be passed to the flags.
+
+See also hasNext(), next(), and IteratorFlags.
+*/
 func NewQDirIterator_3_1(path string, nameFilters QStringList_ITF, filters int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -219,6 +330,10 @@ func NewQDirIterator_3_1(path string, nameFilters QStringList_ITF, filters int) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDirIterator()
+
+/*
+
+ */
 func DeleteQDirIterator(this *QDirIterator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -230,6 +345,14 @@ func DeleteQDirIterator(this *QDirIterator) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString next()
+
+/*
+Advances the iterator to the next entry, and returns the file path of this new entry. If hasNext() returns false, this function does nothing, and returns an empty QString.
+
+You can call fileName() or filePath() to get the current entry file name or path, or fileInfo() to get a QFileInfo for the current entry.
+
+See also hasNext(), fileName(), filePath(), and fileInfo().
+*/
 func (this *QDirIterator) Next() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIterator4nextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -243,6 +366,12 @@ func (this *QDirIterator) Next() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasNext() const
+
+/*
+Returns true if there is at least one more entry in the directory; otherwise, false is returned.
+
+See also next(), fileName(), filePath(), and fileInfo().
+*/
 func (this *QDirIterator) HasNext() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QDirIterator7hasNextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -253,6 +382,14 @@ func (this *QDirIterator) HasNext() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fileName() const
+
+/*
+Returns the file name for the current directory entry, without the path prepended.
+
+This function is convenient when iterating a single directory. When using the QDirIterator::Subdirectories flag, you can use filePath() to get the full path.
+
+See also filePath() and fileInfo().
+*/
 func (this *QDirIterator) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QDirIterator8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -266,6 +403,12 @@ func (this *QDirIterator) FileName() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString filePath() const
+
+/*
+Returns the full file path for the current directory entry.
+
+See also fileInfo() and fileName().
+*/
 func (this *QDirIterator) FilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QDirIterator8filePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -279,6 +422,12 @@ func (this *QDirIterator) FilePath() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QFileInfo fileInfo() const
+
+/*
+Returns a QFileInfo for the current directory entry.
+
+See also filePath() and fileName().
+*/
 func (this *QDirIterator) FileInfo() *QFileInfo /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QDirIterator8fileInfoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -291,6 +440,10 @@ func (this *QDirIterator) FileInfo() *QFileInfo /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString path() const
+
+/*
+Returns the base directory of the iterator.
+*/
 func (this *QDirIterator) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QDirIterator4pathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -300,10 +453,19 @@ func (this *QDirIterator) Path() string {
 	return rv3
 }
 
+/*
+
+
+ */
 type QDirIterator__IteratorFlag = int
 
+//
 const QDirIterator__NoIteratorFlags QDirIterator__IteratorFlag = 0
+
+//
 const QDirIterator__FollowSymlinks QDirIterator__IteratorFlag = 1
+
+//
 const QDirIterator__Subdirectories QDirIterator__IteratorFlag = 2
 
 //  body block end

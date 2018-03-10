@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGDynamicTexture struct {
 	*QSGTexture
 }
@@ -67,6 +70,10 @@ func (*QSGDynamicTexture) NewFromPointer(cthis unsafe.Pointer) *QSGDynamicTextur
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSGDynamicTexture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGDynamicTexture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func (this *QSGDynamicTexture) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool updateTexture()
+
+/*
+
+ */
 func (this *QSGDynamicTexture) UpdateTexture() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGDynamicTexture13updateTextureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

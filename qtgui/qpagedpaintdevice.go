@@ -37,6 +37,9 @@ func (this *QPagedPaintDevice) InheritDevicePageLayout(f func() unsafe.Pointer) 
 	qtrt.SetAllInheritCallback(this, "devicePageLayout", f)
 }
 
+/*
+
+ */
 type QPagedPaintDevice struct {
 	*QPaintDevice
 }
@@ -69,6 +72,10 @@ func (*QPagedPaintDevice) NewFromPointer(cthis unsafe.Pointer) *QPagedPaintDevic
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPagedPaintDevice()
+
+/*
+Constructs a new paged paint device.
+*/
 func NewQPagedPaintDevice() *QPagedPaintDevice {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDeviceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -81,6 +88,10 @@ func NewQPagedPaintDevice() *QPagedPaintDevice {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPagedPaintDevice()
+
+/*
+
+ */
 func DeleteQPagedPaintDevice(this *QPagedPaintDevice) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDeviceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -92,6 +103,10 @@ func DeleteQPagedPaintDevice(this *QPagedPaintDevice) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool newPage()
+
+/*
+Starts a new page. Returns true on success.
+*/
 func (this *QPagedPaintDevice) NewPage() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice7newPageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +117,18 @@ func (this *QPagedPaintDevice) NewPage() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setPageLayout(const QPageLayout &)
+
+/*
+Sets the page layout to newPageLayout.
+
+You should call this before calling QPainter::begin(), or immediately before calling newPage() to apply the new page layout to a new page. You should not call any painting methods between a call to setPageLayout() and newPage() as the wrong paint metrics may be used.
+
+Returns true if the page layout was successfully set to newPageLayout.
+
+This function was introduced in  Qt 5.3.
+
+See also pageLayout().
+*/
 func (this *QPagedPaintDevice) SetPageLayout(pageLayout QPageLayout_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if pageLayout != nil && pageLayout.QPageLayout_PTR() != nil {
@@ -116,6 +143,20 @@ func (this *QPagedPaintDevice) SetPageLayout(pageLayout QPageLayout_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setPageSize(const QPageSize &)
+
+/*
+Sets the page size to pageSize.
+
+To get the current QPageSize use pageLayout().pageSize().
+
+You should call this before calling QPainter::begin(), or immediately before calling newPage() to apply the new page size to a new page. You should not call any painting methods between a call to setPageSize() and newPage() as the wrong paint metrics may be used.
+
+Returns true if the page size was successfully set to pageSize.
+
+This function was introduced in  Qt 5.3.
+
+See also pageSize() and pageLayout().
+*/
 func (this *QPagedPaintDevice) SetPageSize(pageSize QPageSize_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if pageSize != nil && pageSize.QPageSize_PTR() != nil {
@@ -130,6 +171,20 @@ func (this *QPagedPaintDevice) SetPageSize(pageSize QPageSize_ITF) bool {
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setPageSize(enum QPagedPaintDevice::PageSize)
+
+/*
+Sets the page size to pageSize.
+
+To get the current QPageSize use pageLayout().pageSize().
+
+You should call this before calling QPainter::begin(), or immediately before calling newPage() to apply the new page size to a new page. You should not call any painting methods between a call to setPageSize() and newPage() as the wrong paint metrics may be used.
+
+Returns true if the page size was successfully set to pageSize.
+
+This function was introduced in  Qt 5.3.
+
+See also pageSize() and pageLayout().
+*/
 func (this *QPagedPaintDevice) SetPageSize_1(size int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeENS_8PageSizeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	qtrt.ErrPrint(err, rv)
@@ -139,6 +194,22 @@ func (this *QPagedPaintDevice) SetPageSize_1(size int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setPageOrientation(QPageLayout::Orientation)
+
+/*
+Sets the page orientation.
+
+The page orientation is used to define the orientation of the page size when obtaining the page rect.
+
+You should call this before calling QPainter::begin(), or immediately before calling newPage() to apply the new orientation to a new page. You should not call any painting methods between a call to setPageOrientation() and newPage() as the wrong paint metrics may be used.
+
+To get the current QPageLayout::Orientation use pageLayout().pageOrientation().
+
+Returns true if the page orientation was successfully set to orientation.
+
+This function was introduced in  Qt 5.3.
+
+See also pageLayout().
+*/
 func (this *QPagedPaintDevice) SetPageOrientation(orientation int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice18setPageOrientationEN11QPageLayout11OrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	qtrt.ErrPrint(err, rv)
@@ -149,6 +220,20 @@ func (this *QPagedPaintDevice) SetPageOrientation(orientation int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setPageMargins(const QMarginsF &)
+
+/*
+Set the page margins in the current page layout units.
+
+You should call this before calling QPainter::begin(), or immediately before calling newPage() to apply the new margins to a new page. You should not call any painting methods between a call to setPageMargins() and newPage() as the wrong paint metrics may be used.
+
+To get the current page margins use pageLayout().pageMargins().
+
+Returns true if the page margins were successfully set to margins.
+
+This function was introduced in  Qt 5.3.
+
+See also pageLayout().
+*/
 func (this *QPagedPaintDevice) SetPageMargins(margins qtcore.QMarginsF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMarginsF_PTR() != nil {
@@ -163,6 +248,20 @@ func (this *QPagedPaintDevice) SetPageMargins(margins qtcore.QMarginsF_ITF) bool
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool setPageMargins(const QMarginsF &, QPageLayout::Unit)
+
+/*
+Set the page margins in the current page layout units.
+
+You should call this before calling QPainter::begin(), or immediately before calling newPage() to apply the new margins to a new page. You should not call any painting methods between a call to setPageMargins() and newPage() as the wrong paint metrics may be used.
+
+To get the current page margins use pageLayout().pageMargins().
+
+Returns true if the page margins were successfully set to margins.
+
+This function was introduced in  Qt 5.3.
+
+See also pageLayout().
+*/
 func (this *QPagedPaintDevice) SetPageMargins_1(margins qtcore.QMarginsF_ITF, units int) bool {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMarginsF_PTR() != nil {
@@ -177,6 +276,16 @@ func (this *QPagedPaintDevice) SetPageMargins_1(margins qtcore.QMarginsF_ITF, un
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPageLayout pageLayout() const
+
+/*
+Returns the current page layout. Use this method to access the current QPageSize, QPageLayout::Orientation, QMarginsF, fullRect() and paintRect().
+
+Note that you cannot use the setters on the returned object, you must either call the individual QPagedPaintDevice setters or use setPageLayout().
+
+This function was introduced in  Qt 5.3.
+
+See also setPageLayout(), setPageSize(), setPageOrientation(), and setPageMargins().
+*/
 func (this *QPagedPaintDevice) PageLayout() *QPageLayout /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,6 +298,12 @@ func (this *QPagedPaintDevice) PageLayout() *QPageLayout /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QPagedPaintDevice::PageSize pageSize() const
+
+/*
+Returns the currently used page size.
+
+See also setPageSize().
+*/
 func (this *QPagedPaintDevice) PageSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice8pageSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,6 +314,14 @@ func (this *QPagedPaintDevice) PageSize() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setPageSizeMM(const QSizeF &)
+
+/*
+Sets the page size to size. size is specified in millimeters.
+
+If the size matches a standard QPagedPaintDevice::PageSize then that page size will be used, otherwise QPagedPaintDevice::Custom will be set.
+
+See also pageSizeMM().
+*/
 func (this *QPagedPaintDevice) SetPageSizeMM(size qtcore.QSizeF_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
@@ -212,6 +335,12 @@ func (this *QPagedPaintDevice) SetPageSizeMM(size qtcore.QSizeF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF pageSizeMM() const
+
+/*
+Returns the page size in millimeters.
+
+See also setPageSizeMM().
+*/
 func (this *QPagedPaintDevice) PageSizeMM() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageSizeMMEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +353,14 @@ func (this *QPagedPaintDevice) PageSizeMM() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPagedPaintDevice::Margins margins() const
+
+/*
+Returns the current margins of the paint device. The default is 0.
+
+Margins are specified in millimeters.
+
+See also setMargins().
+*/
 func (this *QPagedPaintDevice) Margins() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice7marginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -234,6 +371,10 @@ func (this *QPagedPaintDevice) Margins() unsafe.Pointer /*444*/ {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QPageLayout devicePageLayout() const
+
+/*
+
+ */
 func (this *QPagedPaintDevice) DevicePageLayout() *QPageLayout /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QPagedPaintDevice16devicePageLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -246,6 +387,10 @@ func (this *QPagedPaintDevice) DevicePageLayout() *QPageLayout /*123*/ {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [8] QPageLayout & devicePageLayout()
+
+/*
+
+ */
 func (this *QPagedPaintDevice) DevicePageLayout_1() *QPageLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice16devicePageLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -254,139 +399,418 @@ func (this *QPagedPaintDevice) DevicePageLayout_1() *QPageLayout {
 	return rv2
 }
 
+/*
+This enum type lists the available page sizes as defined in the Postscript PPD standard. These values are duplicated in QPageSize and QPrinter.
+
+The defined sizes are:
+
+QPagedPaintDevice::AnsiALetter= Letter
+QPagedPaintDevice::AnsiBLedger= Ledger
+QPagedPaintDevice::EnvelopeDLDLE= DLE
+
+
+Due to historic reasons QPageSize::Executive is not the same as the standard Postscript and Windows Executive size, use QPageSize::ExecutiveStandard instead.
+
+The Postscript standard size QPageSize::Folio is different to the Windows DMPAPER_FOLIO size, use the Postscript standard size QPageSize::FanFoldGermanLegal if needed.
+
+*/
 type QPagedPaintDevice__PageSize = int
 
+//
 const QPagedPaintDevice__A4 QPagedPaintDevice__PageSize = 0
+
+//
 const QPagedPaintDevice__B5 QPagedPaintDevice__PageSize = 1
+
+//
 const QPagedPaintDevice__Letter QPagedPaintDevice__PageSize = 2
+
+//
 const QPagedPaintDevice__Legal QPagedPaintDevice__PageSize = 3
+
+//
 const QPagedPaintDevice__Executive QPagedPaintDevice__PageSize = 4
+
+//
 const QPagedPaintDevice__A0 QPagedPaintDevice__PageSize = 5
+
+//
 const QPagedPaintDevice__A1 QPagedPaintDevice__PageSize = 6
+
+//
 const QPagedPaintDevice__A2 QPagedPaintDevice__PageSize = 7
+
+//
 const QPagedPaintDevice__A3 QPagedPaintDevice__PageSize = 8
+
+//
 const QPagedPaintDevice__A5 QPagedPaintDevice__PageSize = 9
+
+//
 const QPagedPaintDevice__A6 QPagedPaintDevice__PageSize = 10
+
+//
 const QPagedPaintDevice__A7 QPagedPaintDevice__PageSize = 11
+
+//
 const QPagedPaintDevice__A8 QPagedPaintDevice__PageSize = 12
+
+//
 const QPagedPaintDevice__A9 QPagedPaintDevice__PageSize = 13
+
+//
 const QPagedPaintDevice__B0 QPagedPaintDevice__PageSize = 14
+
+//
 const QPagedPaintDevice__B1 QPagedPaintDevice__PageSize = 15
+
+//
 const QPagedPaintDevice__B10 QPagedPaintDevice__PageSize = 16
+
+//
 const QPagedPaintDevice__B2 QPagedPaintDevice__PageSize = 17
+
+//
 const QPagedPaintDevice__B3 QPagedPaintDevice__PageSize = 18
+
+//
 const QPagedPaintDevice__B4 QPagedPaintDevice__PageSize = 19
+
+//
 const QPagedPaintDevice__B6 QPagedPaintDevice__PageSize = 20
+
+//
 const QPagedPaintDevice__B7 QPagedPaintDevice__PageSize = 21
+
+//
 const QPagedPaintDevice__B8 QPagedPaintDevice__PageSize = 22
+
+//
 const QPagedPaintDevice__B9 QPagedPaintDevice__PageSize = 23
+
+//
 const QPagedPaintDevice__C5E QPagedPaintDevice__PageSize = 24
+
+//
 const QPagedPaintDevice__Comm10E QPagedPaintDevice__PageSize = 25
+
+//
 const QPagedPaintDevice__DLE QPagedPaintDevice__PageSize = 26
+
+//
 const QPagedPaintDevice__Folio QPagedPaintDevice__PageSize = 27
+
+//
 const QPagedPaintDevice__Ledger QPagedPaintDevice__PageSize = 28
+
+//
 const QPagedPaintDevice__Tabloid QPagedPaintDevice__PageSize = 29
+
+//
 const QPagedPaintDevice__Custom QPagedPaintDevice__PageSize = 30
+
+//
 const QPagedPaintDevice__A10 QPagedPaintDevice__PageSize = 31
+
+//
 const QPagedPaintDevice__A3Extra QPagedPaintDevice__PageSize = 32
+
+//
 const QPagedPaintDevice__A4Extra QPagedPaintDevice__PageSize = 33
+
+//
 const QPagedPaintDevice__A4Plus QPagedPaintDevice__PageSize = 34
+
+//
 const QPagedPaintDevice__A4Small QPagedPaintDevice__PageSize = 35
+
+//
 const QPagedPaintDevice__A5Extra QPagedPaintDevice__PageSize = 36
+
+//
 const QPagedPaintDevice__B5Extra QPagedPaintDevice__PageSize = 37
+
+//
 const QPagedPaintDevice__JisB0 QPagedPaintDevice__PageSize = 38
+
+//
 const QPagedPaintDevice__JisB1 QPagedPaintDevice__PageSize = 39
+
+//
 const QPagedPaintDevice__JisB2 QPagedPaintDevice__PageSize = 40
+
+//
 const QPagedPaintDevice__JisB3 QPagedPaintDevice__PageSize = 41
+
+//
 const QPagedPaintDevice__JisB4 QPagedPaintDevice__PageSize = 42
+
+//
 const QPagedPaintDevice__JisB5 QPagedPaintDevice__PageSize = 43
+
+//
 const QPagedPaintDevice__JisB6 QPagedPaintDevice__PageSize = 44
+
+//
 const QPagedPaintDevice__JisB7 QPagedPaintDevice__PageSize = 45
+
+//
 const QPagedPaintDevice__JisB8 QPagedPaintDevice__PageSize = 46
+
+//
 const QPagedPaintDevice__JisB9 QPagedPaintDevice__PageSize = 47
+
+//
 const QPagedPaintDevice__JisB10 QPagedPaintDevice__PageSize = 48
+
+//
 const QPagedPaintDevice__AnsiC QPagedPaintDevice__PageSize = 49
+
+//
 const QPagedPaintDevice__AnsiD QPagedPaintDevice__PageSize = 50
+
+//
 const QPagedPaintDevice__AnsiE QPagedPaintDevice__PageSize = 51
+
+//
 const QPagedPaintDevice__LegalExtra QPagedPaintDevice__PageSize = 52
+
+//
 const QPagedPaintDevice__LetterExtra QPagedPaintDevice__PageSize = 53
+
+//
 const QPagedPaintDevice__LetterPlus QPagedPaintDevice__PageSize = 54
+
+//
 const QPagedPaintDevice__LetterSmall QPagedPaintDevice__PageSize = 55
+
+//
 const QPagedPaintDevice__TabloidExtra QPagedPaintDevice__PageSize = 56
+
+//
 const QPagedPaintDevice__ArchA QPagedPaintDevice__PageSize = 57
+
+//
 const QPagedPaintDevice__ArchB QPagedPaintDevice__PageSize = 58
+
+//
 const QPagedPaintDevice__ArchC QPagedPaintDevice__PageSize = 59
+
+//
 const QPagedPaintDevice__ArchD QPagedPaintDevice__PageSize = 60
+
+//
 const QPagedPaintDevice__ArchE QPagedPaintDevice__PageSize = 61
+
+//
 const QPagedPaintDevice__Imperial7x9 QPagedPaintDevice__PageSize = 62
+
+//
 const QPagedPaintDevice__Imperial8x10 QPagedPaintDevice__PageSize = 63
+
+//
 const QPagedPaintDevice__Imperial9x11 QPagedPaintDevice__PageSize = 64
+
+//
 const QPagedPaintDevice__Imperial9x12 QPagedPaintDevice__PageSize = 65
+
+//
 const QPagedPaintDevice__Imperial10x11 QPagedPaintDevice__PageSize = 66
+
+//
 const QPagedPaintDevice__Imperial10x13 QPagedPaintDevice__PageSize = 67
+
+//
 const QPagedPaintDevice__Imperial10x14 QPagedPaintDevice__PageSize = 68
+
+//
 const QPagedPaintDevice__Imperial12x11 QPagedPaintDevice__PageSize = 69
+
+//
 const QPagedPaintDevice__Imperial15x11 QPagedPaintDevice__PageSize = 70
+
+//
 const QPagedPaintDevice__ExecutiveStandard QPagedPaintDevice__PageSize = 71
+
+//
 const QPagedPaintDevice__Note QPagedPaintDevice__PageSize = 72
+
+//
 const QPagedPaintDevice__Quarto QPagedPaintDevice__PageSize = 73
+
+//
 const QPagedPaintDevice__Statement QPagedPaintDevice__PageSize = 74
+
+//
 const QPagedPaintDevice__SuperA QPagedPaintDevice__PageSize = 75
+
+//
 const QPagedPaintDevice__SuperB QPagedPaintDevice__PageSize = 76
+
+//
 const QPagedPaintDevice__Postcard QPagedPaintDevice__PageSize = 77
+
+//
 const QPagedPaintDevice__DoublePostcard QPagedPaintDevice__PageSize = 78
+
+//
 const QPagedPaintDevice__Prc16K QPagedPaintDevice__PageSize = 79
+
+//
 const QPagedPaintDevice__Prc32K QPagedPaintDevice__PageSize = 80
+
+//
 const QPagedPaintDevice__Prc32KBig QPagedPaintDevice__PageSize = 81
+
+//
 const QPagedPaintDevice__FanFoldUS QPagedPaintDevice__PageSize = 82
+
+//
 const QPagedPaintDevice__FanFoldGerman QPagedPaintDevice__PageSize = 83
+
+//
 const QPagedPaintDevice__FanFoldGermanLegal QPagedPaintDevice__PageSize = 84
+
+//
 const QPagedPaintDevice__EnvelopeB4 QPagedPaintDevice__PageSize = 85
+
+//
 const QPagedPaintDevice__EnvelopeB5 QPagedPaintDevice__PageSize = 86
+
+//
 const QPagedPaintDevice__EnvelopeB6 QPagedPaintDevice__PageSize = 87
+
+//
 const QPagedPaintDevice__EnvelopeC0 QPagedPaintDevice__PageSize = 88
+
+//
 const QPagedPaintDevice__EnvelopeC1 QPagedPaintDevice__PageSize = 89
+
+//
 const QPagedPaintDevice__EnvelopeC2 QPagedPaintDevice__PageSize = 90
+
+//
 const QPagedPaintDevice__EnvelopeC3 QPagedPaintDevice__PageSize = 91
+
+//
 const QPagedPaintDevice__EnvelopeC4 QPagedPaintDevice__PageSize = 92
+
+//
 const QPagedPaintDevice__EnvelopeC6 QPagedPaintDevice__PageSize = 93
+
+//
 const QPagedPaintDevice__EnvelopeC65 QPagedPaintDevice__PageSize = 94
+
+//
 const QPagedPaintDevice__EnvelopeC7 QPagedPaintDevice__PageSize = 95
+
+//
 const QPagedPaintDevice__Envelope9 QPagedPaintDevice__PageSize = 96
+
+//
 const QPagedPaintDevice__Envelope11 QPagedPaintDevice__PageSize = 97
+
+//
 const QPagedPaintDevice__Envelope12 QPagedPaintDevice__PageSize = 98
+
+//
 const QPagedPaintDevice__Envelope14 QPagedPaintDevice__PageSize = 99
+
+//
 const QPagedPaintDevice__EnvelopeMonarch QPagedPaintDevice__PageSize = 100
+
+//
 const QPagedPaintDevice__EnvelopePersonal QPagedPaintDevice__PageSize = 101
+
+//
 const QPagedPaintDevice__EnvelopeChou3 QPagedPaintDevice__PageSize = 102
+
+//
 const QPagedPaintDevice__EnvelopeChou4 QPagedPaintDevice__PageSize = 103
+
+//
 const QPagedPaintDevice__EnvelopeInvite QPagedPaintDevice__PageSize = 104
+
+//
 const QPagedPaintDevice__EnvelopeItalian QPagedPaintDevice__PageSize = 105
+
+//
 const QPagedPaintDevice__EnvelopeKaku2 QPagedPaintDevice__PageSize = 106
+
+//
 const QPagedPaintDevice__EnvelopeKaku3 QPagedPaintDevice__PageSize = 107
+
+//
 const QPagedPaintDevice__EnvelopePrc1 QPagedPaintDevice__PageSize = 108
+
+//
 const QPagedPaintDevice__EnvelopePrc2 QPagedPaintDevice__PageSize = 109
+
+//
 const QPagedPaintDevice__EnvelopePrc3 QPagedPaintDevice__PageSize = 110
+
+//
 const QPagedPaintDevice__EnvelopePrc4 QPagedPaintDevice__PageSize = 111
+
+//
 const QPagedPaintDevice__EnvelopePrc5 QPagedPaintDevice__PageSize = 112
+
+//
 const QPagedPaintDevice__EnvelopePrc6 QPagedPaintDevice__PageSize = 113
+
+//
 const QPagedPaintDevice__EnvelopePrc7 QPagedPaintDevice__PageSize = 114
+
+//
 const QPagedPaintDevice__EnvelopePrc8 QPagedPaintDevice__PageSize = 115
+
+//
 const QPagedPaintDevice__EnvelopePrc9 QPagedPaintDevice__PageSize = 116
+
+//
 const QPagedPaintDevice__EnvelopePrc10 QPagedPaintDevice__PageSize = 117
+
+//
 const QPagedPaintDevice__EnvelopeYou4 QPagedPaintDevice__PageSize = 118
+
+//
 const QPagedPaintDevice__LastPageSize QPagedPaintDevice__PageSize = 118
+
+//
 const QPagedPaintDevice__NPageSize QPagedPaintDevice__PageSize = 118
+
+//
 const QPagedPaintDevice__NPaperSize QPagedPaintDevice__PageSize = 118
+
+//
 const QPagedPaintDevice__AnsiA QPagedPaintDevice__PageSize = 2
+
+//
 const QPagedPaintDevice__AnsiB QPagedPaintDevice__PageSize = 28
+
+//
 const QPagedPaintDevice__EnvelopeC5 QPagedPaintDevice__PageSize = 24
+
+//
 const QPagedPaintDevice__EnvelopeDL QPagedPaintDevice__PageSize = 26
+
+//
 const QPagedPaintDevice__Envelope10 QPagedPaintDevice__PageSize = 25
 
+/*
+The PdfVersion enum describes the version of the PDF file that is produced by QPrinter or QPdfWriter.
+
+
+
+This enum was introduced or modified in  Qt 5.10.
+
+*/
 type QPagedPaintDevice__PdfVersion = int
 
+//
 const QPagedPaintDevice__PdfVersion_1_4 QPagedPaintDevice__PdfVersion = 0
+
+//
 const QPagedPaintDevice__PdfVersion_A1b QPagedPaintDevice__PdfVersion = 1
 
 //  body block end

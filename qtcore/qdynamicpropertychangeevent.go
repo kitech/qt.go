@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QDynamicPropertyChangeEvent struct {
 	*QEvent
 }
@@ -65,6 +68,10 @@ func (*QDynamicPropertyChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QDynam
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDynamicPropertyChangeEvent(const QByteArray &)
+
+/*
+
+ */
 func NewQDynamicPropertyChangeEvent(name QByteArray_ITF) *QDynamicPropertyChangeEvent {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QByteArray_PTR() != nil {
@@ -81,6 +88,10 @@ func NewQDynamicPropertyChangeEvent(name QByteArray_ITF) *QDynamicPropertyChange
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDynamicPropertyChangeEvent()
+
+/*
+
+ */
 func DeleteQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -92,6 +103,10 @@ func DeleteQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray propertyName() const
+
+/*
+
+ */
 func (this *QDynamicPropertyChangeEvent) PropertyName() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

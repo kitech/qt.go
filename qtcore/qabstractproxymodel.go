@@ -36,6 +36,9 @@ func (this *QAbstractProxyModel) InheritResetInternalData(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resetInternalData", f)
 }
 
+/*
+
+ */
 type QAbstractProxyModel struct {
 	*QAbstractItemModel
 }
@@ -68,6 +71,10 @@ func (*QAbstractProxyModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractProxy
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAbstractProxyModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractProxyModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func (this *QAbstractProxyModel) MetaObject() *QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractProxyModel(QObject *)
+
+/*
+Constructs a proxy model with the given parent.
+*/
 func NewQAbstractProxyModel(parent QObject_ITF /*777 QObject **/) *QAbstractProxyModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -94,6 +105,10 @@ func NewQAbstractProxyModel(parent QObject_ITF /*777 QObject **/) *QAbstractProx
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractProxyModel(QObject *)
+
+/*
+Constructs a proxy model with the given parent.
+*/
 func NewQAbstractProxyModel__() *QAbstractProxyModel {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -108,6 +123,10 @@ func NewQAbstractProxyModel__() *QAbstractProxyModel {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractProxyModel()
+
+/*
+
+ */
 func DeleteQAbstractProxyModel(this *QAbstractProxyModel) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractProxyModelD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -119,6 +138,16 @@ func DeleteQAbstractProxyModel(this *QAbstractProxyModel) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSourceModel(QAbstractItemModel *)
+
+/*
+Sets the given sourceModel to be processed by the proxy model.
+
+Subclasses should call beginResetModel() at the beginning of the method, disconnect from the old model, call this method, connect to the new model, and call endResetModel().
+
+Note: Setter function for property sourceModel.
+
+See also sourceModel().
+*/
 func (this *QAbstractProxyModel) SetSourceModel(sourceModel QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
 	var convArg0 unsafe.Pointer
 	if sourceModel != nil && sourceModel.QAbstractItemModel_PTR() != nil {
@@ -132,6 +161,14 @@ func (this *QAbstractProxyModel) SetSourceModel(sourceModel QAbstractItemModel_I
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemModel * sourceModel() const
+
+/*
+Returns the model that contains the data that is available through the proxy model.
+
+Note: Getter function for property sourceModel.
+
+See also setSourceModel().
+*/
 func (this *QAbstractProxyModel) SourceModel() *QAbstractItemModel /*777 QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractProxyModel11sourceModelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,6 +179,12 @@ func (this *QAbstractProxyModel) SourceModel() *QAbstractItemModel /*777 QAbstra
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [24] QModelIndex mapToSource(const QModelIndex &) const
+
+/*
+Reimplement this function to return the model index in the source model that corresponds to the proxyIndex in the proxy model.
+
+See also mapFromSource().
+*/
 func (this *QAbstractProxyModel) MapToSource(proxyIndex QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if proxyIndex != nil && proxyIndex.QModelIndex_PTR() != nil {
@@ -158,6 +201,12 @@ func (this *QAbstractProxyModel) MapToSource(proxyIndex QModelIndex_ITF) *QModel
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [24] QModelIndex mapFromSource(const QModelIndex &) const
+
+/*
+Reimplement this function to return the model index in the proxy model that corresponds to the sourceIndex from the source model.
+
+See also mapToSource().
+*/
 func (this *QAbstractProxyModel) MapFromSource(sourceIndex QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if sourceIndex != nil && sourceIndex.QModelIndex_PTR() != nil {
@@ -174,6 +223,12 @@ func (this *QAbstractProxyModel) MapFromSource(sourceIndex QModelIndex_ITF) *QMo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QItemSelection mapSelectionToSource(const QItemSelection &) const
+
+/*
+Returns a source selection mapped from the specified proxySelection.
+
+Reimplement this method to map proxy selections to source selections.
+*/
 func (this *QAbstractProxyModel) MapSelectionToSource(selection QItemSelection_ITF) *QItemSelection /*123*/ {
 	var convArg0 unsafe.Pointer
 	if selection != nil && selection.QItemSelection_PTR() != nil {
@@ -190,6 +245,12 @@ func (this *QAbstractProxyModel) MapSelectionToSource(selection QItemSelection_I
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QItemSelection mapSelectionFromSource(const QItemSelection &) const
+
+/*
+Returns a proxy selection mapped from the specified sourceSelection.
+
+Reimplement this method to map source selections to proxy selections.
+*/
 func (this *QAbstractProxyModel) MapSelectionFromSource(selection QItemSelection_ITF) *QItemSelection /*123*/ {
 	var convArg0 unsafe.Pointer
 	if selection != nil && selection.QItemSelection_PTR() != nil {
@@ -206,6 +267,10 @@ func (this *QAbstractProxyModel) MapSelectionFromSource(selection QItemSelection
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool submit()
+
+/*
+Reimplemented from QAbstractItemModel::submit().
+*/
 func (this *QAbstractProxyModel) Submit() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractProxyModel6submitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,6 +281,10 @@ func (this *QAbstractProxyModel) Submit() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void revert()
+
+/*
+Reimplemented from QAbstractItemModel::revert().
+*/
 func (this *QAbstractProxyModel) Revert() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractProxyModel6revertEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -225,6 +294,12 @@ func (this *QAbstractProxyModel) Revert() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
+
+/*
+Reimplemented from QAbstractItemModel::data().
+
+See also setData().
+*/
 func (this *QAbstractProxyModel) Data(proxyIndex QModelIndex_ITF, role int) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if proxyIndex != nil && proxyIndex.QModelIndex_PTR() != nil {
@@ -241,6 +316,12 @@ func (this *QAbstractProxyModel) Data(proxyIndex QModelIndex_ITF, role int) *QVa
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
+
+/*
+Reimplemented from QAbstractItemModel::data().
+
+See also setData().
+*/
 func (this *QAbstractProxyModel) Data__(proxyIndex QModelIndex_ITF) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if proxyIndex != nil && proxyIndex.QModelIndex_PTR() != nil {
@@ -259,6 +340,12 @@ func (this *QAbstractProxyModel) Data__(proxyIndex QModelIndex_ITF) *QVariant /*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
+
+/*
+Reimplemented from QAbstractItemModel::headerData().
+
+See also setHeaderData().
+*/
 func (this *QAbstractProxyModel) HeaderData(section int, orientation int, role int) *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractProxyModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
 	qtrt.ErrPrint(err, rv)
@@ -271,6 +358,12 @@ func (this *QAbstractProxyModel) HeaderData(section int, orientation int, role i
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
+
+/*
+Reimplemented from QAbstractItemModel::headerData().
+
+See also setHeaderData().
+*/
 func (this *QAbstractProxyModel) HeaderData__(section int, orientation int) *QVariant /*123*/ {
 	// arg: 2, int=Int, =Invalid,
 	role := 0 /*Qt::DisplayRole*/
@@ -285,6 +378,10 @@ func (this *QAbstractProxyModel) HeaderData__(section int, orientation int) *QVa
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::flags().
+*/
 func (this *QAbstractProxyModel) Flags(index QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -299,6 +396,12 @@ func (this *QAbstractProxyModel) Flags(index QModelIndex_ITF) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setData().
+
+See also data().
+*/
 func (this *QAbstractProxyModel) SetData(index QModelIndex_ITF, value QVariant_ITF, role int) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -317,6 +420,12 @@ func (this *QAbstractProxyModel) SetData(index QModelIndex_ITF, value QVariant_I
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setData().
+
+See also data().
+*/
 func (this *QAbstractProxyModel) SetData__(index QModelIndex_ITF, value QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -337,6 +446,12 @@ func (this *QAbstractProxyModel) SetData__(index QModelIndex_ITF, value QVariant
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setHeaderData().
+
+See also headerData().
+*/
 func (this *QAbstractProxyModel) SetHeaderData(section int, orientation int, value QVariant_ITF, role int) bool {
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -351,6 +466,12 @@ func (this *QAbstractProxyModel) SetHeaderData(section int, orientation int, val
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setHeaderData().
+
+See also headerData().
+*/
 func (this *QAbstractProxyModel) SetHeaderData__(section int, orientation int, value QVariant_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -367,6 +488,10 @@ func (this *QAbstractProxyModel) SetHeaderData__(section int, orientation int, v
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex buddy(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::buddy().
+*/
 func (this *QAbstractProxyModel) Buddy(index QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -383,6 +508,10 @@ func (this *QAbstractProxyModel) Buddy(index QModelIndex_ITF) *QModelIndex /*123
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canFetchMore(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::canFetchMore().
+*/
 func (this *QAbstractProxyModel) CanFetchMore(parent QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -397,6 +526,10 @@ func (this *QAbstractProxyModel) CanFetchMore(parent QModelIndex_ITF) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fetchMore(const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::fetchMore().
+*/
 func (this *QAbstractProxyModel) FetchMore(parent QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -410,6 +543,10 @@ func (this *QAbstractProxyModel) FetchMore(parent QModelIndex_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
+
+/*
+Reimplemented from QAbstractItemModel::sort().
+*/
 func (this *QAbstractProxyModel) Sort(column int, order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractProxyModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	qtrt.ErrPrint(err, rv)
@@ -419,6 +556,10 @@ func (this *QAbstractProxyModel) Sort(column int, order int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
+
+/*
+Reimplemented from QAbstractItemModel::sort().
+*/
 func (this *QAbstractProxyModel) Sort__(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
 	order := 0
@@ -430,6 +571,10 @@ func (this *QAbstractProxyModel) Sort__(column int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize span(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::span().
+*/
 func (this *QAbstractProxyModel) Span(index QModelIndex_ITF) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -446,6 +591,10 @@ func (this *QAbstractProxyModel) Span(index QModelIndex_ITF) *QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::hasChildren().
+*/
 func (this *QAbstractProxyModel) HasChildren(parent QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -460,6 +609,10 @@ func (this *QAbstractProxyModel) HasChildren(parent QModelIndex_ITF) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::hasChildren().
+*/
 func (this *QAbstractProxyModel) HasChildren__() bool {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg0 = NewQModelIndex()
@@ -472,6 +625,10 @@ func (this *QAbstractProxyModel) HasChildren__() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::sibling().
+*/
 func (this *QAbstractProxyModel) Sibling(row int, column int, idx QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
 	if idx != nil && idx.QModelIndex_PTR() != nil {
@@ -488,6 +645,12 @@ func (this *QAbstractProxyModel) Sibling(row int, column int, idx QModelIndex_IT
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canDropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::canDropMimeData().
+
+This function was introduced in  Qt 5.4.
+*/
 func (this *QAbstractProxyModel) CanDropMimeData(data QMimeData_ITF /*777 const QMimeData **/, action int, row int, column int, parent QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QMimeData_PTR() != nil {
@@ -506,6 +669,12 @@ func (this *QAbstractProxyModel) CanDropMimeData(data QMimeData_ITF /*777 const 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::dropMimeData().
+
+This function was introduced in  Qt 5.4.
+*/
 func (this *QAbstractProxyModel) DropMimeData(data QMimeData_ITF /*777 const QMimeData **/, action int, row int, column int, parent QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QMimeData_PTR() != nil {
@@ -524,6 +693,10 @@ func (this *QAbstractProxyModel) DropMimeData(data QMimeData_ITF /*777 const QMi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
+
+/*
+Reimplemented from QAbstractItemModel::mimeTypes().
+*/
 func (this *QAbstractProxyModel) MimeTypes() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractProxyModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -536,6 +709,10 @@ func (this *QAbstractProxyModel) MimeTypes() *QStringList /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDragActions() const
+
+/*
+Reimplemented from QAbstractItemModel::supportedDragActions().
+*/
 func (this *QAbstractProxyModel) SupportedDragActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractProxyModel20supportedDragActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -546,6 +723,10 @@ func (this *QAbstractProxyModel) SupportedDragActions() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
+
+/*
+Reimplemented from QAbstractItemModel::supportedDropActions().
+*/
 func (this *QAbstractProxyModel) SupportedDropActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractProxyModel20supportedDropActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -556,6 +737,10 @@ func (this *QAbstractProxyModel) SupportedDropActions() int {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void resetInternalData()
+
+/*
+Clears the roleNames of this proxy model.
+*/
 func (this *QAbstractProxyModel) ResetInternalData() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractProxyModel17resetInternalDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

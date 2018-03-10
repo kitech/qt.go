@@ -37,6 +37,9 @@ func (this *QTextObject) InheritSetFormat(f func(format *QTextFormat) /*void*/) 
 	qtrt.SetAllInheritCallback(this, "setFormat", f)
 }
 
+/*
+
+ */
 type QTextObject struct {
 	*qtcore.QObject
 }
@@ -69,6 +72,10 @@ func (*QTextObject) NewFromPointer(cthis unsafe.Pointer) *QTextObject {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,12 @@ func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextObject(QTextDocument *)
+
+/*
+Creates a new QTextObject for the given document.
+
+Warning: This function should never be called directly, but only from QTextDocument::createObject().
+*/
 func NewQTextObject(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextObject {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {
@@ -95,6 +108,10 @@ func NewQTextObject(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextObject 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ~QTextObject()
+
+/*
+
+ */
 func DeleteQTextObject(this *QTextObject) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextObjectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -106,6 +123,12 @@ func DeleteQTextObject(this *QTextObject) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setFormat(const QTextFormat &)
+
+/*
+Sets the text object's format.
+
+See also format().
+*/
 func (this *QTextObject) SetFormat(format QTextFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QTextFormat_PTR() != nil {
@@ -119,6 +142,12 @@ func (this *QTextObject) SetFormat(format QTextFormat_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextFormat format() const
+
+/*
+Returns the text object's format.
+
+See also setFormat() and document().
+*/
 func (this *QTextObject) Format() *QTextFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +160,12 @@ func (this *QTextObject) Format() *QTextFormat /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int formatIndex() const
+
+/*
+Returns the index of the object's format in the document's internal list of formats.
+
+See also QTextDocument::allFormats().
+*/
 func (this *QTextObject) FormatIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject11formatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,6 +176,12 @@ func (this *QTextObject) FormatIndex() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextDocument * document() const
+
+/*
+Returns the document this object belongs to.
+
+See also format().
+*/
 func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject8documentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +192,10 @@ func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int objectIndex() const
+
+/*
+Returns the object index of this object. This can be used together with QTextFormat::setObjectIndex().
+*/
 func (this *QTextObject) ObjectIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject11objectIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

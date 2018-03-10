@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QTapAndHoldGesture struct {
 	*QGesture
 }
@@ -65,6 +68,10 @@ func (*QTapAndHoldGesture) NewFromPointer(cthis unsafe.Pointer) *QTapAndHoldGest
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QTapAndHoldGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QTapAndHoldGesture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QTapAndHoldGesture) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTapAndHoldGesture(QObject *)
+
+/*
+
+ */
 func NewQTapAndHoldGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QTapAndHoldGesture {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQTapAndHoldGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QTapAnd
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTapAndHoldGesture(QObject *)
+
+/*
+
+ */
 func NewQTapAndHoldGesture__() *QTapAndHoldGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQTapAndHoldGesture__() *QTapAndHoldGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTapAndHoldGesture()
+
+/*
+
+ */
 func DeleteQTapAndHoldGesture(this *QTapAndHoldGesture) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QTapAndHoldGestureD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -116,6 +135,10 @@ func DeleteQTapAndHoldGesture(this *QTapAndHoldGesture) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF position() const
+
+/*
+
+ */
 func (this *QTapAndHoldGesture) Position() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QTapAndHoldGesture8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +151,10 @@ func (this *QTapAndHoldGesture) Position() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(const QPointF &)
+
+/*
+
+ */
 func (this *QTapAndHoldGesture) SetPosition(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -141,6 +168,10 @@ func (this *QTapAndHoldGesture) SetPosition(pos qtcore.QPointF_ITF) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setTimeout(int)
+
+/*
+
+ */
 func (this *QTapAndHoldGesture) SetTimeout(msecs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QTapAndHoldGesture10setTimeoutEi", qtrt.FFI_TYPE_POINTER, msecs)
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +185,10 @@ func QTapAndHoldGesture_SetTimeout(msecs int) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int timeout()
+
+/*
+
+ */
 func (this *QTapAndHoldGesture) Timeout() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QTapAndHoldGesture7timeoutEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

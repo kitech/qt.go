@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QDragLeaveEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QDragLeaveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragLeaveEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDragLeaveEvent()
+
+/*
+
+ */
 func NewQDragLeaveEvent() *QDragLeaveEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QDragLeaveEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQDragLeaveEvent() *QDragLeaveEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragLeaveEvent()
+
+/*
+
+ */
 func DeleteQDragLeaveEvent(this *QDragLeaveEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QDragLeaveEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)

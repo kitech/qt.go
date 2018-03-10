@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QTextBoundaryFinder struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QTextBoundaryFinder) NewFromPointer(cthis unsafe.Pointer) *QTextBoundaryF
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBoundaryFinder()
+
+/*
+Constructs an invalid QTextBoundaryFinder object.
+*/
 func NewQTextBoundaryFinder() *QTextBoundaryFinder {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQTextBoundaryFinder() *QTextBoundaryFinder {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QString &)
+
+/*
+Constructs an invalid QTextBoundaryFinder object.
+*/
 func NewQTextBoundaryFinder_1(type_ int, string string) *QTextBoundaryFinder {
 	var tmpArg1 = NewQString_5(string)
 	var convArg1 = tmpArg1.GetCthis()
@@ -91,6 +102,10 @@ func NewQTextBoundaryFinder_1(type_ int, string string) *QTextBoundaryFinder {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
+
+/*
+Constructs an invalid QTextBoundaryFinder object.
+*/
 func NewQTextBoundaryFinder_2(type_ int, chars QChar_ITF /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
 	var convArg1 unsafe.Pointer
 	if chars != nil && chars.QChar_PTR() != nil {
@@ -107,6 +122,10 @@ func NewQTextBoundaryFinder_2(type_ int, chars QChar_ITF /*777 const QChar **/, 
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
+
+/*
+Constructs an invalid QTextBoundaryFinder object.
+*/
 func NewQTextBoundaryFinder_2_(type_ int, chars QChar_ITF /*777 const QChar **/, length int) *QTextBoundaryFinder {
 	var convArg1 unsafe.Pointer
 	if chars != nil && chars.QChar_PTR() != nil {
@@ -127,6 +146,10 @@ func NewQTextBoundaryFinder_2_(type_ int, chars QChar_ITF /*777 const QChar **/,
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
+
+/*
+Constructs an invalid QTextBoundaryFinder object.
+*/
 func NewQTextBoundaryFinder_2_1(type_ int, chars QChar_ITF /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/) *QTextBoundaryFinder {
 	var convArg1 unsafe.Pointer
 	if chars != nil && chars.QChar_PTR() != nil {
@@ -145,6 +168,10 @@ func NewQTextBoundaryFinder_2_1(type_ int, chars QChar_ITF /*777 const QChar **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QTextBoundaryFinder & operator=(const QTextBoundaryFinder &)
+
+/*
+
+ */
 func (this *QTextBoundaryFinder) Operator_equal(other QTextBoundaryFinder_ITF) *QTextBoundaryFinder {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTextBoundaryFinder_PTR() != nil {
@@ -161,6 +188,10 @@ func (this *QTextBoundaryFinder) Operator_equal(other QTextBoundaryFinder_ITF) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextBoundaryFinder()
+
+/*
+
+ */
 func DeleteQTextBoundaryFinder(this *QTextBoundaryFinder) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -172,6 +203,10 @@ func DeleteQTextBoundaryFinder(this *QTextBoundaryFinder) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if the text boundary finder is valid; otherwise returns false. A default QTextBoundaryFinder is invalid.
+*/
 func (this *QTextBoundaryFinder) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,6 +217,10 @@ func (this *QTextBoundaryFinder) IsValid() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTextBoundaryFinder::BoundaryType type() const
+
+/*
+Returns the type of the QTextBoundaryFinder.
+*/
 func (this *QTextBoundaryFinder) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -192,6 +231,10 @@ func (this *QTextBoundaryFinder) Type() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString string() const
+
+/*
+Returns the string the QTextBoundaryFinder object operates on.
+*/
 func (this *QTextBoundaryFinder) String() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder6stringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -205,6 +248,12 @@ func (this *QTextBoundaryFinder) String() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toStart()
+
+/*
+Moves the finder to the start of the string. This is equivalent to setPosition(0).
+
+See also setPosition() and position().
+*/
 func (this *QTextBoundaryFinder) ToStart() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinder7toStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,6 +263,12 @@ func (this *QTextBoundaryFinder) ToStart() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toEnd()
+
+/*
+Moves the finder to the end of the string. This is equivalent to setPosition(string.length()).
+
+See also setPosition() and position().
+*/
 func (this *QTextBoundaryFinder) ToEnd() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinder5toEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,6 +278,14 @@ func (this *QTextBoundaryFinder) ToEnd() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int position() const
+
+/*
+Returns the current position of the QTextBoundaryFinder.
+
+The range is from 0 (the beginning of the string) to the length of the string inclusive.
+
+See also setPosition().
+*/
 func (this *QTextBoundaryFinder) Position() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -233,6 +296,14 @@ func (this *QTextBoundaryFinder) Position() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(int)
+
+/*
+Sets the current position of the QTextBoundaryFinder to position.
+
+If position is out of bounds, it will be bound to only valid positions. In this case, valid positions are from 0 to the length of the string inclusive.
+
+See also position().
+*/
 func (this *QTextBoundaryFinder) SetPosition(position int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinder11setPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	qtrt.ErrPrint(err, rv)
@@ -242,6 +313,12 @@ func (this *QTextBoundaryFinder) SetPosition(position int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toNextBoundary()
+
+/*
+Moves the QTextBoundaryFinder to the next boundary position and returns that position.
+
+Returns -1 if there is no next boundary.
+*/
 func (this *QTextBoundaryFinder) ToNextBoundary() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinder14toNextBoundaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -252,6 +329,12 @@ func (this *QTextBoundaryFinder) ToNextBoundary() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toPreviousBoundary()
+
+/*
+Moves the QTextBoundaryFinder to the previous boundary position and returns that position.
+
+Returns -1 if there is no previous boundary.
+*/
 func (this *QTextBoundaryFinder) ToPreviousBoundary() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinder18toPreviousBoundaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -262,6 +345,10 @@ func (this *QTextBoundaryFinder) ToPreviousBoundary() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAtBoundary() const
+
+/*
+Returns true if the object's position() is currently at a valid text boundary.
+*/
 func (this *QTextBoundaryFinder) IsAtBoundary() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder12isAtBoundaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -272,26 +359,55 @@ func (this *QTextBoundaryFinder) IsAtBoundary() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTextBoundaryFinder::BoundaryReasons boundaryReasons() const
+
+/*
+Returns the reasons for the boundary finder to have chosen the current position as a boundary.
+*/
 func (this *QTextBoundaryFinder) BoundaryReasons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder15boundaryReasonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
+/*
+
+ */
 type QTextBoundaryFinder__BoundaryType = int
 
+// Finds a grapheme which is the smallest boundary. It including letters, punctuation marks, numerals and more.
 const QTextBoundaryFinder__Grapheme QTextBoundaryFinder__BoundaryType = 0
+
+// Finds a word.
 const QTextBoundaryFinder__Word QTextBoundaryFinder__BoundaryType = 1
+
+// Finds sentence boundaries. These include periods, question marks etc.
 const QTextBoundaryFinder__Sentence QTextBoundaryFinder__BoundaryType = 2
+
+// Finds possible positions for breaking the text into multiple lines.
 const QTextBoundaryFinder__Line QTextBoundaryFinder__BoundaryType = 3
 
+/*
+
+
+ */
 type QTextBoundaryFinder__BoundaryReason = int
 
+//
 const QTextBoundaryFinder__NotAtBoundary QTextBoundaryFinder__BoundaryReason = 0
+
+//
 const QTextBoundaryFinder__BreakOpportunity QTextBoundaryFinder__BoundaryReason = 31
+
+//
 const QTextBoundaryFinder__StartOfItem QTextBoundaryFinder__BoundaryReason = 32
+
+//
 const QTextBoundaryFinder__EndOfItem QTextBoundaryFinder__BoundaryReason = 64
+
+//
 const QTextBoundaryFinder__MandatoryBreak QTextBoundaryFinder__BoundaryReason = 128
+
+//
 const QTextBoundaryFinder__SoftHyphen QTextBoundaryFinder__BoundaryReason = 256
 
 //  body block end

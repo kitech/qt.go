@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QRandomGenerator struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QRandomGenerator) NewFromPointer(cthis unsafe.Pointer) *QRandomGenerator 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator(quint32)
+
+/*
+
+ */
 func NewQRandomGenerator(seedValue uint) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2Ej", qtrt.FFI_TYPE_POINTER, seedValue)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQRandomGenerator(seedValue uint) *QRandomGenerator {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator(quint32)
+
+/*
+
+ */
 func NewQRandomGenerator__() *QRandomGenerator {
 	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int
 	seedValue := uint(1)
@@ -91,6 +102,10 @@ func NewQRandomGenerator__() *QRandomGenerator {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRandomGenerator(const quint32 *, qsizetype)
+
+/*
+
+ */
 func NewQRandomGenerator_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjx", qtrt.FFI_TYPE_POINTER, seedBuffer, len_)
 	qtrt.ErrPrint(err, rv)
@@ -103,6 +118,10 @@ func NewQRandomGenerator_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRand
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QRandomGenerator(const quint32 *, const quint32 *)
+
+/*
+
+ */
 func NewQRandomGenerator_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjS1_", qtrt.FFI_TYPE_POINTER, begin, end)
 	qtrt.ErrPrint(err, rv)
@@ -115,6 +134,10 @@ func NewQRandomGenerator_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*66
 // index:3
 // Protected Visibility=Default Availability=Available
 // [-2] void QRandomGenerator(enum QRandomGenerator::System)
+
+/*
+
+ */
 func NewQRandomGenerator_3(arg0 int) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2ENS_6SystemE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +150,10 @@ func NewQRandomGenerator_3(arg0 int) *QRandomGenerator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [2512] QRandomGenerator & operator=(const QRandomGenerator &)
+
+/*
+
+ */
 func (this *QRandomGenerator) Operator_equal(other QRandomGenerator_ITF) *QRandomGenerator {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QRandomGenerator_PTR() != nil {
@@ -143,16 +170,25 @@ func (this *QRandomGenerator) Operator_equal(other QRandomGenerator_ITF) *QRando
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] quint32 generate()
+
+/*
+
+ */
 func (this *QRandomGenerator) Generate() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator8generateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:159
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void generate(quint32 *, quint32 *)
+
+/*
+
+ */
 func (this *QRandomGenerator) Generate_1(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator8generateEPjS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), begin, end)
 	qtrt.ErrPrint(err, rv)
@@ -162,16 +198,25 @@ func (this *QRandomGenerator) Generate_1(begin unsafe.Pointer /*666*/, end unsaf
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] quint64 generate64()
+
+/*
+
+ */
 func (this *QRandomGenerator) Generate64() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator10generate64Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
+	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:98
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] double generateDouble()
+
+/*
+
+ */
 func (this *QRandomGenerator) GenerateDouble() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator14generateDoubleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -182,6 +227,10 @@ func (this *QRandomGenerator) GenerateDouble() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] double bounded(double)
+
+/*
+
+ */
 func (this *QRandomGenerator) Bounded(highest float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), highest)
 	qtrt.ErrPrint(err, rv)
@@ -192,16 +241,25 @@ func (this *QRandomGenerator) Bounded(highest float64) float64 {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] quint32 bounded(quint32)
+
+/*
+
+ */
 func (this *QRandomGenerator) Bounded_1(highest uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), highest)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:125
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [4] int bounded(int)
+
+/*
+
+ */
 func (this *QRandomGenerator) Bounded_2(highest int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), highest)
 	qtrt.ErrPrint(err, rv)
@@ -212,16 +270,25 @@ func (this *QRandomGenerator) Bounded_2(highest int) int {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [4] quint32 bounded(quint32, quint32)
+
+/*
+
+ */
 func (this *QRandomGenerator) Bounded_3(lowest uint, highest uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEjj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), lowest, highest)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:135
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [4] int bounded(int, int)
+
+/*
+
+ */
 func (this *QRandomGenerator) Bounded_4(lowest int, highest int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), lowest, highest)
 	qtrt.ErrPrint(err, rv)
@@ -232,16 +299,25 @@ func (this *QRandomGenerator) Bounded_4(lowest int, highest int) int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QRandomGenerator::result_type operator()()
+
+/*
+
+ */
 func (this *QRandomGenerator) Operator_fncall() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorclEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:167
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void seed(quint32)
+
+/*
+
+ */
 func (this *QRandomGenerator) Seed(s uint) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator4seedEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), s)
 	qtrt.ErrPrint(err, rv)
@@ -251,6 +327,10 @@ func (this *QRandomGenerator) Seed(s uint) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void seed(quint32)
+
+/*
+
+ */
 func (this *QRandomGenerator) Seed__() {
 	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int
 	s := uint(1)
@@ -262,6 +342,10 @@ func (this *QRandomGenerator) Seed__() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void discard(unsigned long long)
+
+/*
+
+ */
 func (this *QRandomGenerator) Discard(z uint64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7discardEy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), z)
 	qtrt.ErrPrint(err, rv)
@@ -271,10 +355,15 @@ func (this *QRandomGenerator) Discard(z uint64) {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [4] QRandomGenerator::result_type min()
+
+/*
+
+ */
 func (this *QRandomGenerator) Min() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator3minEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 func QRandomGenerator_Min() uint {
 	var nilthis *QRandomGenerator
@@ -286,10 +375,15 @@ func QRandomGenerator_Min() uint {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [4] QRandomGenerator::result_type max()
+
+/*
+
+ */
 func (this *QRandomGenerator) Max() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator3maxEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 func QRandomGenerator_Max() uint {
 	var nilthis *QRandomGenerator
@@ -301,6 +395,10 @@ func QRandomGenerator_Max() uint {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QRandomGenerator * system()
+
+/*
+
+ */
 func (this *QRandomGenerator) System() *QRandomGenerator /*777 QRandomGenerator **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator6systemEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -316,6 +414,10 @@ func QRandomGenerator_System() *QRandomGenerator /*777 QRandomGenerator **/ {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QRandomGenerator * global()
+
+/*
+
+ */
 func (this *QRandomGenerator) Global() *QRandomGenerator /*777 QRandomGenerator **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator6globalEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -331,6 +433,10 @@ func QRandomGenerator_Global() *QRandomGenerator /*777 QRandomGenerator **/ {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [2512] QRandomGenerator securelySeeded()
+
+/*
+
+ */
 func (this *QRandomGenerator) SecurelySeeded() *QRandomGenerator /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator14securelySeededEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -350,6 +456,10 @@ func DeleteQRandomGenerator(this *QRandomGenerator) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QRandomGenerator__System = int
 
 //  body block end

@@ -37,6 +37,9 @@ import "github.com/kitech/qt.go/qtquick"
 
 //  body block begin
 
+/*
+
+ */
 type QQuickStyle struct {
 	*qtrt.CObject
 }
@@ -71,6 +74,12 @@ func (*QQuickStyle) NewFromPointer(cthis unsafe.Pointer) *QQuickStyle {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString name()
+
+/*
+Returns the name of the application style.
+
+Note: The application style can be specified by passing a -style command line argument. Therefore name() may not return a fully resolved value if called before constructing a QGuiApplication.
+*/
 func (this *QQuickStyle) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle4nameEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +98,12 @@ func QQuickStyle_Name() string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString path()
+
+/*
+Returns the path of an overridden application style, or an empty string if the style is one of the built-in Qt Quick Controls 2 styles.
+
+Note: The application style can be specified by passing a -style command line argument. Therefore path() may not return a fully resolved value if called before constructing a QGuiApplication.
+*/
 func (this *QQuickStyle) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle4pathEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -107,6 +122,14 @@ func QQuickStyle_Path() string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setStyle(const QString &)
+
+/*
+Sets the application style to style.
+
+Note: The style must be configured before loading QML that imports Qt Quick Controls 2. It is not possible to change the style after the QML types have been registered.
+
+See also setFallbackStyle() and Using Styles in Qt Quick Controls 2.
+*/
 func (this *QQuickStyle) SetStyle(style string) {
 	var tmpArg0 = qtcore.NewQString_5(style)
 	var convArg0 = tmpArg0.GetCthis()
@@ -122,6 +145,20 @@ func QQuickStyle_SetStyle(style string) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setFallbackStyle(const QString &)
+
+/*
+Sets the application fallback style to style.
+
+Note: The fallback style must be the name of one of the built-in Qt Quick Controls 2 styles, e.g. "Material".
+
+Note: The style must be configured before loading QML that imports Qt Quick Controls 2. It is not possible to change the style after the QML types have been registered.
+
+The fallback style can be also specified by setting the QT_QUICK_CONTROLS_FALLBACK_STYLE environment variable.
+
+This function was introduced in  Qt 5.8.
+
+See also setStyle() and Using Styles in Qt Quick Controls 2.
+*/
 func (this *QQuickStyle) SetFallbackStyle(style string) {
 	var tmpArg0 = qtcore.NewQString_5(style)
 	var convArg0 = tmpArg0.GetCthis()
@@ -137,6 +174,14 @@ func QQuickStyle_SetFallbackStyle(style string) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList availableStyles()
+
+/*
+Returns the names of the available built-in styles.
+
+Note: The method must be called after creating an instance of QGuiApplication.
+
+This function was introduced in  Qt 5.9.
+*/
 func (this *QQuickStyle) AvailableStyles() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle15availableStylesEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

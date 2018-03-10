@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QPointingDeviceUniqueId struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QPointingDeviceUniqueId) NewFromPointer(cthis unsafe.Pointer) *QPointingD
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPointingDeviceUniqueId()
+
+/*
+
+ */
 func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QPointingDeviceUniqueId fromNumericId(qint64)
+
+/*
+
+ */
 func (this *QPointingDeviceUniqueId) FromNumericId(id int64) *QPointingDeviceUniqueId /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueId13fromNumericIdEx", qtrt.FFI_TYPE_POINTER, id)
 	qtrt.ErrPrint(err, rv)
@@ -95,6 +106,10 @@ func QPointingDeviceUniqueId_FromNumericId(id int64) *QPointingDeviceUniqueId /*
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+
+ */
 func (this *QPointingDeviceUniqueId) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,10 +120,15 @@ func (this *QPointingDeviceUniqueId) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 numericId() const
+
+/*
+
+ */
 func (this *QPointingDeviceUniqueId) NumericId() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId9numericIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 func DeleteQPointingDeviceUniqueId(this *QPointingDeviceUniqueId) {

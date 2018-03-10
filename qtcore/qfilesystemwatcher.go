@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QFileSystemWatcher struct {
 	*QObject
 }
@@ -63,6 +66,10 @@ func (*QFileSystemWatcher) NewFromPointer(cthis unsafe.Pointer) *QFileSystemWatc
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -73,6 +80,10 @@ func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSystemWatcher(QObject *)
+
+/*
+Constructs a new file system watcher object with the given parent.
+*/
 func NewQFileSystemWatcher(parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -89,6 +100,10 @@ func NewQFileSystemWatcher(parent QObject_ITF /*777 QObject **/) *QFileSystemWat
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSystemWatcher(QObject *)
+
+/*
+Constructs a new file system watcher object with the given parent.
+*/
 func NewQFileSystemWatcher__() *QFileSystemWatcher {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -103,6 +118,10 @@ func NewQFileSystemWatcher__() *QFileSystemWatcher {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSystemWatcher(const QStringList &, QObject *)
+
+/*
+Constructs a new file system watcher object with the given parent.
+*/
 func NewQFileSystemWatcher_1(paths QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
 	var convArg0 unsafe.Pointer
 	if paths != nil && paths.QStringList_PTR() != nil {
@@ -123,6 +142,10 @@ func NewQFileSystemWatcher_1(paths QStringList_ITF, parent QObject_ITF /*777 QOb
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSystemWatcher(const QStringList &, QObject *)
+
+/*
+Constructs a new file system watcher object with the given parent.
+*/
 func NewQFileSystemWatcher_1_(paths QStringList_ITF) *QFileSystemWatcher {
 	var convArg0 unsafe.Pointer
 	if paths != nil && paths.QStringList_PTR() != nil {
@@ -141,6 +164,10 @@ func NewQFileSystemWatcher_1_(paths QStringList_ITF) *QFileSystemWatcher {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileSystemWatcher()
+
+/*
+
+ */
 func DeleteQFileSystemWatcher(this *QFileSystemWatcher) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -152,6 +179,20 @@ func DeleteQFileSystemWatcher(this *QFileSystemWatcher) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool addPath(const QString &)
+
+/*
+Adds path to the file system watcher if path exists. The path is not added if it does not exist, or if it is already being monitored by the file system watcher.
+
+If path specifies a directory, the directoryChanged() signal will be emitted when path is modified or removed from disk; otherwise the fileChanged() signal is emitted when path is modified, renamed or removed.
+
+If the watch was successful, true is returned.
+
+Reasons for a watch failure are generally system-dependent, but may include the resource not existing, access failures, or the total watch count limit, if the platform has one.
+
+Note: There may be a system dependent limit to the number of files and directories that can be monitored simultaneously. If this limit is been reached, path will not be monitored, and false is returned.
+
+See also addPaths() and removePath().
+*/
 func (this *QFileSystemWatcher) AddPath(file string) bool {
 	var tmpArg0 = NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
@@ -164,6 +205,20 @@ func (this *QFileSystemWatcher) AddPath(file string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList addPaths(const QStringList &)
+
+/*
+Adds each path in paths to the file system watcher. Paths are not added if they not exist, or if they are already being monitored by the file system watcher.
+
+If a path specifies a directory, the directoryChanged() signal will be emitted when the path is modified or removed from disk; otherwise the fileChanged() signal is emitted when the path is modified, renamed, or removed.
+
+The return value is a list of paths that could not be watched.
+
+Reasons for a watch failure are generally system-dependent, but may include the resource not existing, access failures, or the total watch count limit, if the platform has one.
+
+Note: There may be a system dependent limit to the number of files and directories that can be monitored simultaneously. If this limit has been reached, the excess paths will not be monitored, and they will be added to the returned QStringList.
+
+See also addPath() and removePaths().
+*/
 func (this *QFileSystemWatcher) AddPaths(files QStringList_ITF) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if files != nil && files.QStringList_PTR() != nil {
@@ -180,6 +235,16 @@ func (this *QFileSystemWatcher) AddPaths(files QStringList_ITF) *QStringList /*1
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool removePath(const QString &)
+
+/*
+Removes the specified path from the file system watcher.
+
+If the watch is successfully removed, true is returned.
+
+Reasons for watch removal failing are generally system-dependent, but may be due to the path having already been deleted, for example.
+
+See also removePaths() and addPath().
+*/
 func (this *QFileSystemWatcher) RemovePath(file string) bool {
 	var tmpArg0 = NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
@@ -192,6 +257,16 @@ func (this *QFileSystemWatcher) RemovePath(file string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList removePaths(const QStringList &)
+
+/*
+Removes the specified paths from the file system watcher.
+
+The return value is a list of paths which were not able to be unwatched successfully.
+
+Reasons for watch removal failing are generally system-dependent, but may be due to the path having already been deleted, for example.
+
+See also removePath() and addPaths().
+*/
 func (this *QFileSystemWatcher) RemovePaths(files QStringList_ITF) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if files != nil && files.QStringList_PTR() != nil {
@@ -208,6 +283,12 @@ func (this *QFileSystemWatcher) RemovePaths(files QStringList_ITF) *QStringList 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList files() const
+
+/*
+Returns a list of paths to files that are being watched.
+
+See also directories().
+*/
 func (this *QFileSystemWatcher) Files() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher5filesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,6 +301,12 @@ func (this *QFileSystemWatcher) Files() *QStringList /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList directories() const
+
+/*
+Returns a list of paths to directories that are being watched.
+
+See also files().
+*/
 func (this *QFileSystemWatcher) Directories() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher11directoriesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

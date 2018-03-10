@@ -78,6 +78,9 @@ func (this *QScrollBar) InheritInitStyleOption(f func(option *QStyleOptionSlider
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
+/*
+
+ */
 type QScrollBar struct {
 	*QAbstractSlider
 }
@@ -110,6 +113,10 @@ func (*QScrollBar) NewFromPointer(cthis unsafe.Pointer) *QScrollBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QScrollBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QScrollBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,6 +127,14 @@ func (this *QScrollBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollBar(QWidget *)
+
+/*
+Constructs a vertical scroll bar.
+
+The parent argument is sent to the QWidget constructor.
+
+The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
+*/
 func NewQScrollBar(parent QWidget_ITF /*777 QWidget **/) *QScrollBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -136,6 +151,14 @@ func NewQScrollBar(parent QWidget_ITF /*777 QWidget **/) *QScrollBar {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollBar(QWidget *)
+
+/*
+Constructs a vertical scroll bar.
+
+The parent argument is sent to the QWidget constructor.
+
+The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
+*/
 func NewQScrollBar__() *QScrollBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -150,6 +173,14 @@ func NewQScrollBar__() *QScrollBar {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollBar(Qt::Orientation, QWidget *)
+
+/*
+Constructs a vertical scroll bar.
+
+The parent argument is sent to the QWidget constructor.
+
+The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
+*/
 func NewQScrollBar_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QScrollBar {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -166,6 +197,14 @@ func NewQScrollBar_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QScrollBar
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollBar(Qt::Orientation, QWidget *)
+
+/*
+Constructs a vertical scroll bar.
+
+The parent argument is sent to the QWidget constructor.
+
+The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
+*/
 func NewQScrollBar_1_(arg0 int) *QScrollBar {
 	// arg: 1, QWidget *=Pointer, QWidget=Record,
 	var convArg1 unsafe.Pointer
@@ -180,6 +219,10 @@ func NewQScrollBar_1_(arg0 int) *QScrollBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScrollBar()
+
+/*
+
+ */
 func DeleteQScrollBar(this *QScrollBar) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -191,6 +234,10 @@ func DeleteQScrollBar(this *QScrollBar) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QScrollBar) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QScrollBar8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,6 +250,10 @@ func (this *QScrollBar) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QScrollBar) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -217,6 +268,10 @@ func (this *QScrollBar) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
+
+/*
+Reimplemented from QWidget::wheelEvent().
+*/
 func (this *QScrollBar) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWheelEvent_PTR() != nil {
@@ -230,6 +285,10 @@ func (this *QScrollBar) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QScrollBar) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
@@ -243,6 +302,10 @@ func (this *QScrollBar) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mousePressEvent().
+*/
 func (this *QScrollBar) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -256,6 +319,10 @@ func (this *QScrollBar) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseReleaseEvent().
+*/
 func (this *QScrollBar) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -269,6 +336,10 @@ func (this *QScrollBar) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMous
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseMoveEvent().
+*/
 func (this *QScrollBar) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -282,6 +353,10 @@ func (this *QScrollBar) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEv
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
+
+/*
+Reimplemented from QWidget::hideEvent().
+*/
 func (this *QScrollBar) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QHideEvent_PTR() != nil {
@@ -295,6 +370,10 @@ func (this *QScrollBar) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void sliderChange(enum QAbstractSlider::SliderChange)
+
+/*
+Reimplemented from QAbstractSlider::sliderChange().
+*/
 func (this *QScrollBar) SliderChange(change int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBar12sliderChangeEN15QAbstractSlider12SliderChangeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), change)
 	qtrt.ErrPrint(err, rv)
@@ -304,6 +383,10 @@ func (this *QScrollBar) SliderChange(change int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
+
+/*
+Reimplemented from QWidget::contextMenuEvent().
+*/
 func (this *QScrollBar) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QContextMenuEvent_PTR() != nil {
@@ -317,6 +400,12 @@ func (this *QScrollBar) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*777 
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSlider *) const
+
+/*
+Initialize option with the values from this QScrollBar. This method is useful for subclasses when they need a QStyleOptionSlider, but don't want to fill in all the information themselves.
+
+See also QStyleOption::initFrom().
+*/
 func (this *QScrollBar) InitStyleOption(option QStyleOptionSlider_ITF /*777 QStyleOptionSlider **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionSlider_PTR() != nil {

@@ -42,6 +42,9 @@ func (this *QPixmap) InheritFromImageInPlace(f func(image *QImage, flags int) un
 	qtrt.SetAllInheritCallback(this, "fromImageInPlace", f)
 }
 
+/*
+
+ */
 type QPixmap struct {
 	*QPaintDevice
 }
@@ -74,6 +77,12 @@ func (*QPixmap) NewFromPointer(cthis unsafe.Pointer) *QPixmap {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPixmap()
+
+/*
+Constructs a null pixmap.
+
+See also isNull().
+*/
 func NewQPixmap() *QPixmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmapC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -86,6 +95,12 @@ func NewQPixmap() *QPixmap {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPixmap(int, int)
+
+/*
+Constructs a null pixmap.
+
+See also isNull().
+*/
 func NewQPixmap_1(w int, h int) *QPixmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmapC2Eii", qtrt.FFI_TYPE_POINTER, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -98,6 +113,12 @@ func NewQPixmap_1(w int, h int) *QPixmap {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QPixmap(const QSize &)
+
+/*
+Constructs a null pixmap.
+
+See also isNull().
+*/
 func NewQPixmap_2(arg0 qtcore.QSize_ITF) *QPixmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSize_PTR() != nil {
@@ -114,6 +135,12 @@ func NewQPixmap_2(arg0 qtcore.QSize_ITF) *QPixmap {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QPixmap(const QString &, const char *, Qt::ImageConversionFlags)
+
+/*
+Constructs a null pixmap.
+
+See also isNull().
+*/
 func NewQPixmap_3(fileName string, format string, flags int) *QPixmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -130,6 +157,12 @@ func NewQPixmap_3(fileName string, format string, flags int) *QPixmap {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QPixmap(const QString &, const char *, Qt::ImageConversionFlags)
+
+/*
+Constructs a null pixmap.
+
+See also isNull().
+*/
 func NewQPixmap_3_(fileName string) *QPixmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -148,6 +181,12 @@ func NewQPixmap_3_(fileName string) *QPixmap {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QPixmap(const QString &, const char *, Qt::ImageConversionFlags)
+
+/*
+Constructs a null pixmap.
+
+See also isNull().
+*/
 func NewQPixmap_3_1(fileName string, format string) *QPixmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -166,6 +205,12 @@ func NewQPixmap_3_1(fileName string, format string) *QPixmap {
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QPixmap(const char *const *)
+
+/*
+Constructs a null pixmap.
+
+See also isNull().
+*/
 func NewQPixmap_4(xpm []string) *QPixmap {
 	var convArg0 = qtrt.StringSliceToCCharPP(xpm)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmapC2EPKPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -179,6 +224,10 @@ func NewQPixmap_4(xpm []string) *QPixmap {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPixmap()
+
+/*
+
+ */
 func DeleteQPixmap(this *QPixmap) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmapD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -190,6 +239,10 @@ func DeleteQPixmap(this *QPixmap) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap & operator=(const QPixmap &)
+
+/*
+
+ */
 func (this *QPixmap) Operator_equal(arg0 QPixmap_ITF) *QPixmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
@@ -206,6 +259,10 @@ func (this *QPixmap) Operator_equal(arg0 QPixmap_ITF) *QPixmap {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap & operator=(QPixmap &&)
+
+/*
+
+ */
 func (this *QPixmap) Operator_equal_1(other unsafe.Pointer /*333*/) *QPixmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmapaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -218,6 +275,12 @@ func (this *QPixmap) Operator_equal_1(other unsafe.Pointer /*333*/) *QPixmap {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPixmap &)
+
+/*
+Swaps pixmap other with this pixmap. This operation is very fast and never fails.
+
+This function was introduced in  Qt 4.8.
+*/
 func (this *QPixmap) Swap(other QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPixmap_PTR() != nil {
@@ -231,6 +294,12 @@ func (this *QPixmap) Swap(other QPixmap_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if this is a null pixmap; otherwise returns false.
+
+A null pixmap has zero width, zero height and no contents. You cannot draw in a null pixmap.
+*/
 func (this *QPixmap) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -241,6 +310,10 @@ func (this *QPixmap) IsNull() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int devType() const
+
+/*
+
+ */
 func (this *QPixmap) DevType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap7devTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -251,6 +324,12 @@ func (this *QPixmap) DevType() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int width() const
+
+/*
+Returns the width of the pixmap.
+
+See also size() and Pixmap Information.
+*/
 func (this *QPixmap) Width() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -261,6 +340,12 @@ func (this *QPixmap) Width() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int height() const
+
+/*
+Returns the height of the pixmap.
+
+See also size() and Pixmap Information.
+*/
 func (this *QPixmap) Height() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap6heightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -271,6 +356,12 @@ func (this *QPixmap) Height() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize size() const
+
+/*
+Returns the size of the pixmap.
+
+See also width(), height(), and Pixmap Information.
+*/
 func (this *QPixmap) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -283,6 +374,12 @@ func (this *QPixmap) Size() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect rect() const
+
+/*
+Returns the pixmap's enclosing rectangle.
+
+See also Pixmap Information.
+*/
 func (this *QPixmap) Rect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -295,6 +392,14 @@ func (this *QPixmap) Rect() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int depth() const
+
+/*
+Returns the depth of the pixmap.
+
+The pixmap depth is also called bits per pixel (bpp) or bit planes of a pixmap. A null pixmap has depth 0.
+
+See also defaultDepth() and Pixmap Information.
+*/
 func (this *QPixmap) Depth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap5depthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -305,6 +410,14 @@ func (this *QPixmap) Depth() int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int defaultDepth()
+
+/*
+Returns the default pixmap depth used by the application.
+
+On all platforms the depth of the primary screen will be returned.
+
+See also depth(), QColormap::depth(), and Pixmap Information.
+*/
 func (this *QPixmap) DefaultDepth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap12defaultDepthEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -320,6 +433,14 @@ func QPixmap_DefaultDepth() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void fill(const QColor &)
+
+/*
+Fills the pixmap with the given color.
+
+The effect of this function is undefined when the pixmap is being painted on.
+
+See also Pixmap Transformations.
+*/
 func (this *QPixmap) Fill(fillColor QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if fillColor != nil && fillColor.QColor_PTR() != nil {
@@ -333,6 +454,14 @@ func (this *QPixmap) Fill(fillColor QColor_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void fill(const QColor &)
+
+/*
+Fills the pixmap with the given color.
+
+The effect of this function is undefined when the pixmap is being painted on.
+
+See also Pixmap Transformations.
+*/
 func (this *QPixmap) Fill__() {
 	// arg: 0, const QColor &=LValueReference, QColor=Record,
 	var convArg0 unsafe.Pointer
@@ -344,6 +473,14 @@ func (this *QPixmap) Fill__() {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void fill(const QPaintDevice *, const QPoint &)
+
+/*
+Fills the pixmap with the given color.
+
+The effect of this function is undefined when the pixmap is being painted on.
+
+See also Pixmap Transformations.
+*/
 func (this *QPixmap) Fill_1(device QPaintDevice_ITF /*777 const QPaintDevice **/, ofs qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QPaintDevice_PTR() != nil {
@@ -361,6 +498,14 @@ func (this *QPixmap) Fill_1(device QPaintDevice_ITF /*777 const QPaintDevice **/
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void fill(const QPaintDevice *, int, int)
+
+/*
+Fills the pixmap with the given color.
+
+The effect of this function is undefined when the pixmap is being painted on.
+
+See also Pixmap Transformations.
+*/
 func (this *QPixmap) Fill_2(device QPaintDevice_ITF /*777 const QPaintDevice **/, xofs int, yofs int) {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QPaintDevice_PTR() != nil {
@@ -374,6 +519,14 @@ func (this *QPixmap) Fill_2(device QPaintDevice_ITF /*777 const QPaintDevice **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QBitmap mask() const
+
+/*
+Extracts a bitmap mask from the pixmap's alpha channel.
+
+Warning: This is potentially an expensive operation. The mask of the pixmap is extracted dynamically from the pixeldata.
+
+See also setMask() and Pixmap Information.
+*/
 func (this *QPixmap) Mask() *QBitmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap4maskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -386,6 +539,18 @@ func (this *QPixmap) Mask() *QBitmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMask(const QBitmap &)
+
+/*
+Sets a mask bitmap.
+
+This function merges the mask with the pixmap's alpha channel. A pixel value of 1 on the mask means the pixmap's pixel is unchanged; a value of 0 means the pixel is transparent. The mask must have the same size as this pixmap.
+
+Setting a null mask resets the mask, leaving the previously transparent pixels black. The effect of this function is undefined when the pixmap is being painted on.
+
+Warning: This is potentially an expensive operation.
+
+See also mask(), Pixmap Transformations, and QBitmap.
+*/
 func (this *QPixmap) SetMask(arg0 QBitmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QBitmap_PTR() != nil {
@@ -399,6 +564,16 @@ func (this *QPixmap) SetMask(arg0 QBitmap_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal devicePixelRatio() const
+
+/*
+Returns the device pixel ratio for the pixmap. This is the ratio between device pixels and device independent pixels.
+
+Use this function when calculating layout geometry based on the pixmap size: QSize layoutSize = image.size() / image.devicePixelRatio()
+
+The default value is 1.0.
+
+See also setDevicePixelRatio() and QImageReader.
+*/
 func (this *QPixmap) DevicePixelRatio() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap16devicePixelRatioEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -409,6 +584,18 @@ func (this *QPixmap) DevicePixelRatio() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevicePixelRatio(qreal)
+
+/*
+Sets the device pixel ratio for the pixmap. This is the ratio between image pixels and device-independent pixels.
+
+The default scaleFactor is 1.0. Setting it to something else has two effects:
+
+QPainters that are opened on the pixmap will be scaled. For example, painting on a 200x200 image if with a ratio of 2.0 will result in effective (device-independent) painting bounds of 100x100.
+
+Code paths in Qt that calculate layout geometry based on the pixmap size will take the ratio into account: QSize layoutSize = pixmap.size() / pixmap.devicePixelRatio() The net effect of this is that the pixmap is displayed as high-DPI pixmap rather than a large pixmap (see Drawing High Resolution Versions of Pixmaps and Images).
+
+See also devicePixelRatio().
+*/
 func (this *QPixmap) SetDevicePixelRatio(scaleFactor float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap19setDevicePixelRatioEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), scaleFactor)
 	qtrt.ErrPrint(err, rv)
@@ -418,6 +605,12 @@ func (this *QPixmap) SetDevicePixelRatio(scaleFactor float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasAlpha() const
+
+/*
+Returns true if this pixmap has an alpha channel, or has a mask, otherwise returns false.
+
+See also hasAlphaChannel() and mask().
+*/
 func (this *QPixmap) HasAlpha() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap8hasAlphaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -428,6 +621,12 @@ func (this *QPixmap) HasAlpha() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasAlphaChannel() const
+
+/*
+Returns true if the pixmap has a format that respects the alpha channel, otherwise returns false.
+
+See also hasAlpha().
+*/
 func (this *QPixmap) HasAlphaChannel() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap15hasAlphaChannelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -438,6 +637,24 @@ func (this *QPixmap) HasAlphaChannel() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QBitmap createHeuristicMask(_Bool) const
+
+/*
+Creates and returns a heuristic mask for this pixmap.
+
+The function works by selecting a color from one of the corners and then chipping away pixels of that color, starting at all the edges. If clipTight is true (the default) the mask is just large enough to cover the pixels; otherwise, the mask is larger than the data pixels.
+
+The mask may not be perfect but it should be reasonable, so you can do things such as the following:
+
+
+  QPixmap myPixmap;
+  myPixmap.setMask(myPixmap.createHeuristicMask());
+
+
+
+This function is slow because it involves converting to/from a QImage, and non-trivial computations.
+
+See also QImage::createHeuristicMask() and createMaskFromColor().
+*/
 func (this *QPixmap) CreateHeuristicMask(clipTight bool) *QBitmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap19createHeuristicMaskEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), clipTight)
 	qtrt.ErrPrint(err, rv)
@@ -450,6 +667,24 @@ func (this *QPixmap) CreateHeuristicMask(clipTight bool) *QBitmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QBitmap createHeuristicMask(_Bool) const
+
+/*
+Creates and returns a heuristic mask for this pixmap.
+
+The function works by selecting a color from one of the corners and then chipping away pixels of that color, starting at all the edges. If clipTight is true (the default) the mask is just large enough to cover the pixels; otherwise, the mask is larger than the data pixels.
+
+The mask may not be perfect but it should be reasonable, so you can do things such as the following:
+
+
+  QPixmap myPixmap;
+  myPixmap.setMask(myPixmap.createHeuristicMask());
+
+
+
+This function is slow because it involves converting to/from a QImage, and non-trivial computations.
+
+See also QImage::createHeuristicMask() and createMaskFromColor().
+*/
 func (this *QPixmap) CreateHeuristicMask__() *QBitmap /*123*/ {
 	// arg: 0, bool=Bool, =Invalid,
 	clipTight := true
@@ -464,6 +699,14 @@ func (this *QPixmap) CreateHeuristicMask__() *QBitmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QBitmap createMaskFromColor(const QColor &, Qt::MaskMode) const
+
+/*
+Creates and returns a mask for this pixmap based on the given maskColor. If the mode is Qt::MaskInColor, all pixels matching the maskColor will be transparent. If mode is Qt::MaskOutColor, all pixels matching the maskColor will be opaque.
+
+This function is slow because it involves converting to/from a QImage.
+
+See also createHeuristicMask() and QImage::createMaskFromColor().
+*/
 func (this *QPixmap) CreateMaskFromColor(maskColor QColor_ITF, mode int) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if maskColor != nil && maskColor.QColor_PTR() != nil {
@@ -480,6 +723,14 @@ func (this *QPixmap) CreateMaskFromColor(maskColor QColor_ITF, mode int) *QBitma
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QBitmap createMaskFromColor(const QColor &, Qt::MaskMode) const
+
+/*
+Creates and returns a mask for this pixmap based on the given maskColor. If the mode is Qt::MaskInColor, all pixels matching the maskColor will be transparent. If mode is Qt::MaskOutColor, all pixels matching the maskColor will be opaque.
+
+This function is slow because it involves converting to/from a QImage.
+
+See also createHeuristicMask() and QImage::createMaskFromColor().
+*/
 func (this *QPixmap) CreateMaskFromColor__(maskColor QColor_ITF) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if maskColor != nil && maskColor.QColor_PTR() != nil {
@@ -498,6 +749,10 @@ func (this *QPixmap) CreateMaskFromColor__(maskColor QColor_ITF) *QBitmap /*123*
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap grabWindow(WId, int, int, int, int)
+
+/*
+
+ */
 func (this *QPixmap) GrabWindow(arg0 uint64, x int, y int, w int, h int) *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, arg0, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -515,6 +770,10 @@ func QPixmap_GrabWindow(arg0 uint64, x int, y int, w int, h int) *QPixmap /*123*
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap grabWindow(WId, int, int, int, int)
+
+/*
+
+ */
 func (this *QPixmap) GrabWindow__(arg0 uint64) *QPixmap /*123*/ {
 	// arg: 1, int=Int, =Invalid,
 	x := int(0)
@@ -535,6 +794,10 @@ func (this *QPixmap) GrabWindow__(arg0 uint64) *QPixmap /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap grabWindow(WId, int, int, int, int)
+
+/*
+
+ */
 func (this *QPixmap) GrabWindow__1(arg0 uint64, x int) *QPixmap /*123*/ {
 	// arg: 2, int=Int, =Invalid,
 	y := int(0)
@@ -553,6 +816,10 @@ func (this *QPixmap) GrabWindow__1(arg0 uint64, x int) *QPixmap /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap grabWindow(WId, int, int, int, int)
+
+/*
+
+ */
 func (this *QPixmap) GrabWindow__2(arg0 uint64, x int, y int) *QPixmap /*123*/ {
 	// arg: 3, int=Int, =Invalid,
 	w := int(-1)
@@ -569,6 +836,10 @@ func (this *QPixmap) GrabWindow__2(arg0 uint64, x int, y int) *QPixmap /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap grabWindow(WId, int, int, int, int)
+
+/*
+
+ */
 func (this *QPixmap) GrabWindow__3(arg0 uint64, x int, y int, w int) *QPixmap /*123*/ {
 	// arg: 4, int=Int, =Invalid,
 	h := int(-1)
@@ -583,6 +854,10 @@ func (this *QPixmap) GrabWindow__3(arg0 uint64, x int, y int, w int) *QPixmap /*
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap grabWidget(QObject *, const QRect &)
+
+/*
+
+ */
 func (this *QPixmap) GrabWidget(widget qtcore.QObject_ITF /*777 QObject **/, rect qtcore.QRect_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QObject_PTR() != nil {
@@ -608,6 +883,10 @@ func QPixmap_GrabWidget(widget qtcore.QObject_ITF /*777 QObject **/, rect qtcore
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [32] QPixmap grabWidget(QObject *, int, int, int, int)
+
+/*
+
+ */
 func (this *QPixmap) GrabWidget_1(widget qtcore.QObject_ITF /*777 QObject **/, x int, y int, w int, h int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QObject_PTR() != nil {
@@ -629,6 +908,10 @@ func QPixmap_GrabWidget_1(widget qtcore.QObject_ITF /*777 QObject **/, x int, y 
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [32] QPixmap grabWidget(QObject *, int, int, int, int)
+
+/*
+
+ */
 func (this *QPixmap) GrabWidget_1_(widget qtcore.QObject_ITF /*777 QObject **/) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QObject_PTR() != nil {
@@ -653,6 +936,10 @@ func (this *QPixmap) GrabWidget_1_(widget qtcore.QObject_ITF /*777 QObject **/) 
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [32] QPixmap grabWidget(QObject *, int, int, int, int)
+
+/*
+
+ */
 func (this *QPixmap) GrabWidget_1_1(widget qtcore.QObject_ITF /*777 QObject **/, x int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QObject_PTR() != nil {
@@ -675,6 +962,10 @@ func (this *QPixmap) GrabWidget_1_1(widget qtcore.QObject_ITF /*777 QObject **/,
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [32] QPixmap grabWidget(QObject *, int, int, int, int)
+
+/*
+
+ */
 func (this *QPixmap) GrabWidget_1_2(widget qtcore.QObject_ITF /*777 QObject **/, x int, y int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QObject_PTR() != nil {
@@ -695,6 +986,10 @@ func (this *QPixmap) GrabWidget_1_2(widget qtcore.QObject_ITF /*777 QObject **/,
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [32] QPixmap grabWidget(QObject *, int, int, int, int)
+
+/*
+
+ */
 func (this *QPixmap) GrabWidget_1_3(widget qtcore.QObject_ITF /*777 QObject **/, x int, y int, w int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QObject_PTR() != nil {
@@ -713,6 +1008,24 @@ func (this *QPixmap) GrabWidget_1_3(widget qtcore.QObject_ITF /*777 QObject **/,
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap scaled(int, int, Qt::AspectRatioMode, Qt::TransformationMode) const
+
+/*
+Scales the pixmap to the given size, using the aspect ratio and transformation modes specified by aspectRatioMode and transformMode.
+
+
+
+
+If aspectRatioMode is Qt::IgnoreAspectRatio, the pixmap is scaled to size.
+If aspectRatioMode is Qt::KeepAspectRatio, the pixmap is scaled to a rectangle as large as possible inside size, preserving the aspect ratio.
+If aspectRatioMode is Qt::KeepAspectRatioByExpanding, the pixmap is scaled to a rectangle as small as possible outside size, preserving the aspect ratio.
+
+
+If the given size is empty, this function returns a null pixmap.
+
+In some cases it can be more beneficial to draw the pixmap to a painter with a scale set rather than scaling the pixmap. This is the case when the painter is for instance based on OpenGL or when the scale factor changes rapidly.
+
+See also isNull() and Pixmap Transformations.
+*/
 func (this *QPixmap) Scaled(w int, h int, aspectMode int, mode int) *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap6scaledEiiN2Qt15AspectRatioModeENS0_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, aspectMode, mode)
 	qtrt.ErrPrint(err, rv)
@@ -725,6 +1038,24 @@ func (this *QPixmap) Scaled(w int, h int, aspectMode int, mode int) *QPixmap /*1
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap scaled(int, int, Qt::AspectRatioMode, Qt::TransformationMode) const
+
+/*
+Scales the pixmap to the given size, using the aspect ratio and transformation modes specified by aspectRatioMode and transformMode.
+
+
+
+
+If aspectRatioMode is Qt::IgnoreAspectRatio, the pixmap is scaled to size.
+If aspectRatioMode is Qt::KeepAspectRatio, the pixmap is scaled to a rectangle as large as possible inside size, preserving the aspect ratio.
+If aspectRatioMode is Qt::KeepAspectRatioByExpanding, the pixmap is scaled to a rectangle as small as possible outside size, preserving the aspect ratio.
+
+
+If the given size is empty, this function returns a null pixmap.
+
+In some cases it can be more beneficial to draw the pixmap to a painter with a scale set rather than scaling the pixmap. This is the case when the painter is for instance based on OpenGL or when the scale factor changes rapidly.
+
+See also isNull() and Pixmap Transformations.
+*/
 func (this *QPixmap) Scaled__(w int, h int) *QPixmap /*123*/ {
 	// arg: 2, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
 	aspectMode := 0
@@ -741,6 +1072,24 @@ func (this *QPixmap) Scaled__(w int, h int) *QPixmap /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap scaled(int, int, Qt::AspectRatioMode, Qt::TransformationMode) const
+
+/*
+Scales the pixmap to the given size, using the aspect ratio and transformation modes specified by aspectRatioMode and transformMode.
+
+
+
+
+If aspectRatioMode is Qt::IgnoreAspectRatio, the pixmap is scaled to size.
+If aspectRatioMode is Qt::KeepAspectRatio, the pixmap is scaled to a rectangle as large as possible inside size, preserving the aspect ratio.
+If aspectRatioMode is Qt::KeepAspectRatioByExpanding, the pixmap is scaled to a rectangle as small as possible outside size, preserving the aspect ratio.
+
+
+If the given size is empty, this function returns a null pixmap.
+
+In some cases it can be more beneficial to draw the pixmap to a painter with a scale set rather than scaling the pixmap. This is the case when the painter is for instance based on OpenGL or when the scale factor changes rapidly.
+
+See also isNull() and Pixmap Transformations.
+*/
 func (this *QPixmap) Scaled__1(w int, h int, aspectMode int) *QPixmap /*123*/ {
 	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
 	mode := 0
@@ -755,6 +1104,24 @@ func (this *QPixmap) Scaled__1(w int, h int, aspectMode int) *QPixmap /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QPixmap scaled(const QSize &, Qt::AspectRatioMode, Qt::TransformationMode) const
+
+/*
+Scales the pixmap to the given size, using the aspect ratio and transformation modes specified by aspectRatioMode and transformMode.
+
+
+
+
+If aspectRatioMode is Qt::IgnoreAspectRatio, the pixmap is scaled to size.
+If aspectRatioMode is Qt::KeepAspectRatio, the pixmap is scaled to a rectangle as large as possible inside size, preserving the aspect ratio.
+If aspectRatioMode is Qt::KeepAspectRatioByExpanding, the pixmap is scaled to a rectangle as small as possible outside size, preserving the aspect ratio.
+
+
+If the given size is empty, this function returns a null pixmap.
+
+In some cases it can be more beneficial to draw the pixmap to a painter with a scale set rather than scaling the pixmap. This is the case when the painter is for instance based on OpenGL or when the scale factor changes rapidly.
+
+See also isNull() and Pixmap Transformations.
+*/
 func (this *QPixmap) Scaled_1(s qtcore.QSize_ITF, aspectMode int, mode int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
@@ -771,6 +1138,24 @@ func (this *QPixmap) Scaled_1(s qtcore.QSize_ITF, aspectMode int, mode int) *QPi
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QPixmap scaled(const QSize &, Qt::AspectRatioMode, Qt::TransformationMode) const
+
+/*
+Scales the pixmap to the given size, using the aspect ratio and transformation modes specified by aspectRatioMode and transformMode.
+
+
+
+
+If aspectRatioMode is Qt::IgnoreAspectRatio, the pixmap is scaled to size.
+If aspectRatioMode is Qt::KeepAspectRatio, the pixmap is scaled to a rectangle as large as possible inside size, preserving the aspect ratio.
+If aspectRatioMode is Qt::KeepAspectRatioByExpanding, the pixmap is scaled to a rectangle as small as possible outside size, preserving the aspect ratio.
+
+
+If the given size is empty, this function returns a null pixmap.
+
+In some cases it can be more beneficial to draw the pixmap to a painter with a scale set rather than scaling the pixmap. This is the case when the painter is for instance based on OpenGL or when the scale factor changes rapidly.
+
+See also isNull() and Pixmap Transformations.
+*/
 func (this *QPixmap) Scaled_1_(s qtcore.QSize_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
@@ -791,6 +1176,24 @@ func (this *QPixmap) Scaled_1_(s qtcore.QSize_ITF) *QPixmap /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QPixmap scaled(const QSize &, Qt::AspectRatioMode, Qt::TransformationMode) const
+
+/*
+Scales the pixmap to the given size, using the aspect ratio and transformation modes specified by aspectRatioMode and transformMode.
+
+
+
+
+If aspectRatioMode is Qt::IgnoreAspectRatio, the pixmap is scaled to size.
+If aspectRatioMode is Qt::KeepAspectRatio, the pixmap is scaled to a rectangle as large as possible inside size, preserving the aspect ratio.
+If aspectRatioMode is Qt::KeepAspectRatioByExpanding, the pixmap is scaled to a rectangle as small as possible outside size, preserving the aspect ratio.
+
+
+If the given size is empty, this function returns a null pixmap.
+
+In some cases it can be more beneficial to draw the pixmap to a painter with a scale set rather than scaling the pixmap. This is the case when the painter is for instance based on OpenGL or when the scale factor changes rapidly.
+
+See also isNull() and Pixmap Transformations.
+*/
 func (this *QPixmap) Scaled_1_1(s qtcore.QSize_ITF, aspectMode int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
@@ -809,6 +1212,14 @@ func (this *QPixmap) Scaled_1_1(s qtcore.QSize_ITF, aspectMode int) *QPixmap /*1
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap scaledToWidth(int, Qt::TransformationMode) const
+
+/*
+Returns a scaled copy of the image. The returned image is scaled to the given width using the specified transformation mode. The height of the pixmap is automatically calculated so that the aspect ratio of the pixmap is preserved.
+
+If width is 0 or negative, a null pixmap is returned.
+
+See also isNull() and Pixmap Transformations.
+*/
 func (this *QPixmap) ScaledToWidth(w int, mode int) *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap13scaledToWidthEiN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, mode)
 	qtrt.ErrPrint(err, rv)
@@ -821,6 +1232,14 @@ func (this *QPixmap) ScaledToWidth(w int, mode int) *QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap scaledToWidth(int, Qt::TransformationMode) const
+
+/*
+Returns a scaled copy of the image. The returned image is scaled to the given width using the specified transformation mode. The height of the pixmap is automatically calculated so that the aspect ratio of the pixmap is preserved.
+
+If width is 0 or negative, a null pixmap is returned.
+
+See also isNull() and Pixmap Transformations.
+*/
 func (this *QPixmap) ScaledToWidth__(w int) *QPixmap /*123*/ {
 	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
 	mode := 0
@@ -835,6 +1254,14 @@ func (this *QPixmap) ScaledToWidth__(w int) *QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap scaledToHeight(int, Qt::TransformationMode) const
+
+/*
+Returns a scaled copy of the image. The returned image is scaled to the given height using the specified transformation mode. The width of the pixmap is automatically calculated so that the aspect ratio of the pixmap is preserved.
+
+If height is 0 or negative, a null pixmap is returned.
+
+See also isNull() and Pixmap Transformations.
+*/
 func (this *QPixmap) ScaledToHeight(h int, mode int) *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap14scaledToHeightEiN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, mode)
 	qtrt.ErrPrint(err, rv)
@@ -847,6 +1274,14 @@ func (this *QPixmap) ScaledToHeight(h int, mode int) *QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap scaledToHeight(int, Qt::TransformationMode) const
+
+/*
+Returns a scaled copy of the image. The returned image is scaled to the given height using the specified transformation mode. The width of the pixmap is automatically calculated so that the aspect ratio of the pixmap is preserved.
+
+If height is 0 or negative, a null pixmap is returned.
+
+See also isNull() and Pixmap Transformations.
+*/
 func (this *QPixmap) ScaledToHeight__(h int) *QPixmap /*123*/ {
 	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
 	mode := 0
@@ -861,6 +1296,16 @@ func (this *QPixmap) ScaledToHeight__(h int) *QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap transformed(const QMatrix &, Qt::TransformationMode) const
+
+/*
+Returns a copy of the pixmap that is transformed using the given transformation transform and transformation mode. The original pixmap is not changed.
+
+The transformation transform is internally adjusted to compensate for unwanted translation; i.e. the pixmap produced is the smallest pixmap that contains all the transformed points of the original pixmap. Use the trueMatrix() function to retrieve the actual matrix used for transforming the pixmap.
+
+This function is slow because it involves transformation to a QImage, non-trivial computations and a transformation back to a QPixmap.
+
+See also trueMatrix() and Pixmap Transformations.
+*/
 func (this *QPixmap) Transformed(arg0 QMatrix_ITF, mode int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMatrix_PTR() != nil {
@@ -877,6 +1322,16 @@ func (this *QPixmap) Transformed(arg0 QMatrix_ITF, mode int) *QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap transformed(const QMatrix &, Qt::TransformationMode) const
+
+/*
+Returns a copy of the pixmap that is transformed using the given transformation transform and transformation mode. The original pixmap is not changed.
+
+The transformation transform is internally adjusted to compensate for unwanted translation; i.e. the pixmap produced is the smallest pixmap that contains all the transformed points of the original pixmap. Use the trueMatrix() function to retrieve the actual matrix used for transforming the pixmap.
+
+This function is slow because it involves transformation to a QImage, non-trivial computations and a transformation back to a QPixmap.
+
+See also trueMatrix() and Pixmap Transformations.
+*/
 func (this *QPixmap) Transformed__(arg0 QMatrix_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMatrix_PTR() != nil {
@@ -895,6 +1350,16 @@ func (this *QPixmap) Transformed__(arg0 QMatrix_ITF) *QPixmap /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QPixmap transformed(const QTransform &, Qt::TransformationMode) const
+
+/*
+Returns a copy of the pixmap that is transformed using the given transformation transform and transformation mode. The original pixmap is not changed.
+
+The transformation transform is internally adjusted to compensate for unwanted translation; i.e. the pixmap produced is the smallest pixmap that contains all the transformed points of the original pixmap. Use the trueMatrix() function to retrieve the actual matrix used for transforming the pixmap.
+
+This function is slow because it involves transformation to a QImage, non-trivial computations and a transformation back to a QPixmap.
+
+See also trueMatrix() and Pixmap Transformations.
+*/
 func (this *QPixmap) Transformed_1(arg0 QTransform_ITF, mode int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTransform_PTR() != nil {
@@ -911,6 +1376,16 @@ func (this *QPixmap) Transformed_1(arg0 QTransform_ITF, mode int) *QPixmap /*123
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QPixmap transformed(const QTransform &, Qt::TransformationMode) const
+
+/*
+Returns a copy of the pixmap that is transformed using the given transformation transform and transformation mode. The original pixmap is not changed.
+
+The transformation transform is internally adjusted to compensate for unwanted translation; i.e. the pixmap produced is the smallest pixmap that contains all the transformed points of the original pixmap. Use the trueMatrix() function to retrieve the actual matrix used for transforming the pixmap.
+
+This function is slow because it involves transformation to a QImage, non-trivial computations and a transformation back to a QPixmap.
+
+See also trueMatrix() and Pixmap Transformations.
+*/
 func (this *QPixmap) Transformed_1_(arg0 QTransform_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTransform_PTR() != nil {
@@ -929,6 +1404,14 @@ func (this *QPixmap) Transformed_1_(arg0 QTransform_ITF) *QPixmap /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [48] QMatrix trueMatrix(const QMatrix &, int, int)
+
+/*
+Returns the actual matrix used for transforming a pixmap with the given width, height and matrix.
+
+When transforming a pixmap using the transformed() function, the transformation matrix is internally adjusted to compensate for unwanted translation, i.e. transformed() returns the smallest pixmap containing all transformed points of the original pixmap. This function returns the modified matrix, which maps points correctly from the original pixmap into the new pixmap.
+
+See also transformed() and Pixmap Transformations.
+*/
 func (this *QPixmap) TrueMatrix(m QMatrix_ITF, w int, h int) *QMatrix /*123*/ {
 	var convArg0 unsafe.Pointer
 	if m != nil && m.QMatrix_PTR() != nil {
@@ -950,6 +1433,14 @@ func QPixmap_TrueMatrix(m QMatrix_ITF, w int, h int) *QMatrix /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [88] QTransform trueMatrix(const QTransform &, int, int)
+
+/*
+Returns the actual matrix used for transforming a pixmap with the given width, height and matrix.
+
+When transforming a pixmap using the transformed() function, the transformation matrix is internally adjusted to compensate for unwanted translation, i.e. transformed() returns the smallest pixmap containing all transformed points of the original pixmap. This function returns the modified matrix, which maps points correctly from the original pixmap into the new pixmap.
+
+See also transformed() and Pixmap Transformations.
+*/
 func (this *QPixmap) TrueMatrix_1(m QTransform_ITF, w int, h int) *QTransform /*123*/ {
 	var convArg0 unsafe.Pointer
 	if m != nil && m.QTransform_PTR() != nil {
@@ -971,6 +1462,16 @@ func QPixmap_TrueMatrix_1(m QTransform_ITF, w int, h int) *QTransform /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage toImage() const
+
+/*
+Converts the pixmap to a QImage. Returns a null image if the conversion fails.
+
+If the pixmap has 1-bit depth, the returned image will also be 1 bit deep. Images with more bits will be returned in a format closely represents the underlying system. Usually this will be QImage::Format_ARGB32_Premultiplied for pixmaps with an alpha and QImage::Format_RGB32 or QImage::Format_RGB16 for pixmaps without alpha.
+
+Note that for the moment, alpha masks on monochrome images are ignored.
+
+See also fromImage() and Image Formats.
+*/
 func (this *QPixmap) ToImage() *QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap7toImageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -983,6 +1484,14 @@ func (this *QPixmap) ToImage() *QImage /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap fromImage(const QImage &, Qt::ImageConversionFlags)
+
+/*
+Converts the given image to a pixmap using the specified flags to control the conversion. The flags argument is a bitwise-OR of the Qt::ImageConversionFlags. Passing 0 for flags sets all the default options.
+
+In case of monochrome and 8-bit images, the image is first converted to a 32-bit pixmap and then filled with the colors in the color table. If this is too expensive an operation, you can use QBitmap::fromImage() instead.
+
+See also fromImageReader(), toImage(), and Pixmap Conversion.
+*/
 func (this *QPixmap) FromImage(image QImage_ITF, flags int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
@@ -1004,6 +1513,14 @@ func QPixmap_FromImage(image QImage_ITF, flags int) *QPixmap /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap fromImage(const QImage &, Qt::ImageConversionFlags)
+
+/*
+Converts the given image to a pixmap using the specified flags to control the conversion. The flags argument is a bitwise-OR of the Qt::ImageConversionFlags. Passing 0 for flags sets all the default options.
+
+In case of monochrome and 8-bit images, the image is first converted to a 32-bit pixmap and then filled with the colors in the color table. If this is too expensive an operation, you can use QBitmap::fromImage() instead.
+
+See also fromImageReader(), toImage(), and Pixmap Conversion.
+*/
 func (this *QPixmap) FromImage__(image QImage_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
@@ -1022,6 +1539,14 @@ func (this *QPixmap) FromImage__(image QImage_ITF) *QPixmap /*123*/ {
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [32] QPixmap fromImage(QImage &&, Qt::ImageConversionFlags)
+
+/*
+Converts the given image to a pixmap using the specified flags to control the conversion. The flags argument is a bitwise-OR of the Qt::ImageConversionFlags. Passing 0 for flags sets all the default options.
+
+In case of monochrome and 8-bit images, the image is first converted to a 32-bit pixmap and then filled with the colors in the color table. If this is too expensive an operation, you can use QBitmap::fromImage() instead.
+
+See also fromImageReader(), toImage(), and Pixmap Conversion.
+*/
 func (this *QPixmap) FromImage_1(image unsafe.Pointer /*333*/, flags int) *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap9fromImageEO6QImage6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, image, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1039,6 +1564,14 @@ func QPixmap_FromImage_1(image unsafe.Pointer /*333*/, flags int) *QPixmap /*123
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [32] QPixmap fromImage(QImage &&, Qt::ImageConversionFlags)
+
+/*
+Converts the given image to a pixmap using the specified flags to control the conversion. The flags argument is a bitwise-OR of the Qt::ImageConversionFlags. Passing 0 for flags sets all the default options.
+
+In case of monochrome and 8-bit images, the image is first converted to a 32-bit pixmap and then filled with the colors in the color table. If this is too expensive an operation, you can use QBitmap::fromImage() instead.
+
+See also fromImageReader(), toImage(), and Pixmap Conversion.
+*/
 func (this *QPixmap) FromImage_1_(image unsafe.Pointer /*333*/) *QPixmap /*123*/ {
 	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
 	flags := 0
@@ -1053,6 +1586,14 @@ func (this *QPixmap) FromImage_1_(image unsafe.Pointer /*333*/) *QPixmap /*123*/
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap fromImageReader(QImageReader *, Qt::ImageConversionFlags)
+
+/*
+Create a QPixmap from an image read directly from an imageReader. The flags argument is a bitwise-OR of the Qt::ImageConversionFlags. Passing 0 for flags sets all the default options.
+
+On some systems, reading an image directly to QPixmap can use less memory than reading a QImage to convert it to QPixmap.
+
+See also fromImage(), toImage(), and Pixmap Conversion.
+*/
 func (this *QPixmap) FromImageReader(imageReader QImageReader_ITF /*777 QImageReader **/, flags int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if imageReader != nil && imageReader.QImageReader_PTR() != nil {
@@ -1074,6 +1615,14 @@ func QPixmap_FromImageReader(imageReader QImageReader_ITF /*777 QImageReader **/
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap fromImageReader(QImageReader *, Qt::ImageConversionFlags)
+
+/*
+Create a QPixmap from an image read directly from an imageReader. The flags argument is a bitwise-OR of the Qt::ImageConversionFlags. Passing 0 for flags sets all the default options.
+
+On some systems, reading an image directly to QPixmap can use less memory than reading a QImage to convert it to QPixmap.
+
+See also fromImage(), toImage(), and Pixmap Conversion.
+*/
 func (this *QPixmap) FromImageReader__(imageReader QImageReader_ITF /*777 QImageReader **/) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if imageReader != nil && imageReader.QImageReader_PTR() != nil {
@@ -1092,6 +1641,20 @@ func (this *QPixmap) FromImageReader__(imageReader QImageReader_ITF /*777 QImage
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QString &, const char *, Qt::ImageConversionFlags)
+
+/*
+Loads a pixmap from the file with the given fileName. Returns true if the pixmap was successfully loaded; otherwise invalidates the pixmap and returns false.
+
+The loader attempts to read the pixmap using the specified format. If the format is not specified (which is the default), the loader probes the file for a header to guess the file format.
+
+The file name can either refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed pixmaps and other resource files in the application's executable.
+
+If the data needs to be modified to fit in a lower-resolution result (e.g. converting from 32-bit to 8-bit), use the flags to control the conversion.
+
+Note that QPixmaps are automatically added to the QPixmapCache when loaded from a file; the key used is internal and can not be acquired.
+
+See also loadFromData() and Reading and Writing Image Files.
+*/
 func (this *QPixmap) Load(fileName string, format string, flags int) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1106,6 +1669,20 @@ func (this *QPixmap) Load(fileName string, format string, flags int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QString &, const char *, Qt::ImageConversionFlags)
+
+/*
+Loads a pixmap from the file with the given fileName. Returns true if the pixmap was successfully loaded; otherwise invalidates the pixmap and returns false.
+
+The loader attempts to read the pixmap using the specified format. If the format is not specified (which is the default), the loader probes the file for a header to guess the file format.
+
+The file name can either refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed pixmaps and other resource files in the application's executable.
+
+If the data needs to be modified to fit in a lower-resolution result (e.g. converting from 32-bit to 8-bit), use the flags to control the conversion.
+
+Note that QPixmaps are automatically added to the QPixmapCache when loaded from a file; the key used is internal and can not be acquired.
+
+See also loadFromData() and Reading and Writing Image Files.
+*/
 func (this *QPixmap) Load__(fileName string) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1122,6 +1699,20 @@ func (this *QPixmap) Load__(fileName string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QString &, const char *, Qt::ImageConversionFlags)
+
+/*
+Loads a pixmap from the file with the given fileName. Returns true if the pixmap was successfully loaded; otherwise invalidates the pixmap and returns false.
+
+The loader attempts to read the pixmap using the specified format. If the format is not specified (which is the default), the loader probes the file for a header to guess the file format.
+
+The file name can either refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed pixmaps and other resource files in the application's executable.
+
+If the data needs to be modified to fit in a lower-resolution result (e.g. converting from 32-bit to 8-bit), use the flags to control the conversion.
+
+Note that QPixmaps are automatically added to the QPixmapCache when loaded from a file; the key used is internal and can not be acquired.
+
+See also loadFromData() and Reading and Writing Image Files.
+*/
 func (this *QPixmap) Load__1(fileName string, format string) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1138,6 +1729,16 @@ func (this *QPixmap) Load__1(fileName string, format string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool loadFromData(const uchar *, uint, const char *, Qt::ImageConversionFlags)
+
+/*
+Loads a pixmap from the len first bytes of the given binary data. Returns true if the pixmap was loaded successfully; otherwise invalidates the pixmap and returns false.
+
+The loader attempts to read the pixmap using the specified format. If the format is not specified (which is the default), the loader probes the file for a header to guess the file format.
+
+If the data needs to be modified to fit in a lower-resolution result (e.g. converting from 32-bit to 8-bit), use the flags to control the conversion.
+
+See also load() and Reading and Writing Image Files.
+*/
 func (this *QPixmap) LoadFromData(buf unsafe.Pointer /*666*/, len_ uint, format string, flags int) bool {
 	var convArg2 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg2)
@@ -1150,6 +1751,16 @@ func (this *QPixmap) LoadFromData(buf unsafe.Pointer /*666*/, len_ uint, format 
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool loadFromData(const uchar *, uint, const char *, Qt::ImageConversionFlags)
+
+/*
+Loads a pixmap from the len first bytes of the given binary data. Returns true if the pixmap was loaded successfully; otherwise invalidates the pixmap and returns false.
+
+The loader attempts to read the pixmap using the specified format. If the format is not specified (which is the default), the loader probes the file for a header to guess the file format.
+
+If the data needs to be modified to fit in a lower-resolution result (e.g. converting from 32-bit to 8-bit), use the flags to control the conversion.
+
+See also load() and Reading and Writing Image Files.
+*/
 func (this *QPixmap) LoadFromData__(buf unsafe.Pointer /*666*/, len_ uint) bool {
 	// arg: 2, const char *=Pointer, =Invalid,
 	var convArg2 unsafe.Pointer
@@ -1164,6 +1775,16 @@ func (this *QPixmap) LoadFromData__(buf unsafe.Pointer /*666*/, len_ uint) bool 
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool loadFromData(const uchar *, uint, const char *, Qt::ImageConversionFlags)
+
+/*
+Loads a pixmap from the len first bytes of the given binary data. Returns true if the pixmap was loaded successfully; otherwise invalidates the pixmap and returns false.
+
+The loader attempts to read the pixmap using the specified format. If the format is not specified (which is the default), the loader probes the file for a header to guess the file format.
+
+If the data needs to be modified to fit in a lower-resolution result (e.g. converting from 32-bit to 8-bit), use the flags to control the conversion.
+
+See also load() and Reading and Writing Image Files.
+*/
 func (this *QPixmap) LoadFromData__1(buf unsafe.Pointer /*666*/, len_ uint, format string) bool {
 	var convArg2 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg2)
@@ -1178,6 +1799,16 @@ func (this *QPixmap) LoadFromData__1(buf unsafe.Pointer /*666*/, len_ uint, form
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool loadFromData(const QByteArray &, const char *, Qt::ImageConversionFlags)
+
+/*
+Loads a pixmap from the len first bytes of the given binary data. Returns true if the pixmap was loaded successfully; otherwise invalidates the pixmap and returns false.
+
+The loader attempts to read the pixmap using the specified format. If the format is not specified (which is the default), the loader probes the file for a header to guess the file format.
+
+If the data needs to be modified to fit in a lower-resolution result (e.g. converting from 32-bit to 8-bit), use the flags to control the conversion.
+
+See also load() and Reading and Writing Image Files.
+*/
 func (this *QPixmap) LoadFromData_1(data qtcore.QByteArray_ITF, format string, flags int) bool {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -1194,6 +1825,16 @@ func (this *QPixmap) LoadFromData_1(data qtcore.QByteArray_ITF, format string, f
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool loadFromData(const QByteArray &, const char *, Qt::ImageConversionFlags)
+
+/*
+Loads a pixmap from the len first bytes of the given binary data. Returns true if the pixmap was loaded successfully; otherwise invalidates the pixmap and returns false.
+
+The loader attempts to read the pixmap using the specified format. If the format is not specified (which is the default), the loader probes the file for a header to guess the file format.
+
+If the data needs to be modified to fit in a lower-resolution result (e.g. converting from 32-bit to 8-bit), use the flags to control the conversion.
+
+See also load() and Reading and Writing Image Files.
+*/
 func (this *QPixmap) LoadFromData_1_(data qtcore.QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -1212,6 +1853,16 @@ func (this *QPixmap) LoadFromData_1_(data qtcore.QByteArray_ITF) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool loadFromData(const QByteArray &, const char *, Qt::ImageConversionFlags)
+
+/*
+Loads a pixmap from the len first bytes of the given binary data. Returns true if the pixmap was loaded successfully; otherwise invalidates the pixmap and returns false.
+
+The loader attempts to read the pixmap using the specified format. If the format is not specified (which is the default), the loader probes the file for a header to guess the file format.
+
+If the data needs to be modified to fit in a lower-resolution result (e.g. converting from 32-bit to 8-bit), use the flags to control the conversion.
+
+See also load() and Reading and Writing Image Files.
+*/
 func (this *QPixmap) LoadFromData_1_1(data qtcore.QByteArray_ITF, format string) bool {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -1230,6 +1881,16 @@ func (this *QPixmap) LoadFromData_1_1(data qtcore.QByteArray_ITF, format string)
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool save(const QString &, const char *, int) const
+
+/*
+Saves the pixmap to the file with the given fileName using the specified image file format and quality factor. Returns true if successful; otherwise returns false.
+
+The quality factor must be in the range [0,100] or -1. Specify 0 to obtain small compressed files, 100 for large uncompressed files, and -1 to use the default settings.
+
+If format is 0, an image format will be chosen from fileName's suffix.
+
+See also Reading and Writing Image Files.
+*/
 func (this *QPixmap) Save(fileName string, format string, quality int) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1244,6 +1905,16 @@ func (this *QPixmap) Save(fileName string, format string, quality int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool save(const QString &, const char *, int) const
+
+/*
+Saves the pixmap to the file with the given fileName using the specified image file format and quality factor. Returns true if successful; otherwise returns false.
+
+The quality factor must be in the range [0,100] or -1. Specify 0 to obtain small compressed files, 100 for large uncompressed files, and -1 to use the default settings.
+
+If format is 0, an image format will be chosen from fileName's suffix.
+
+See also Reading and Writing Image Files.
+*/
 func (this *QPixmap) Save__(fileName string) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1260,6 +1931,16 @@ func (this *QPixmap) Save__(fileName string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool save(const QString &, const char *, int) const
+
+/*
+Saves the pixmap to the file with the given fileName using the specified image file format and quality factor. Returns true if successful; otherwise returns false.
+
+The quality factor must be in the range [0,100] or -1. Specify 0 to obtain small compressed files, 100 for large uncompressed files, and -1 to use the default settings.
+
+If format is 0, an image format will be chosen from fileName's suffix.
+
+See also Reading and Writing Image Files.
+*/
 func (this *QPixmap) Save__1(fileName string, format string) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1276,6 +1957,16 @@ func (this *QPixmap) Save__1(fileName string, format string) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool save(QIODevice *, const char *, int) const
+
+/*
+Saves the pixmap to the file with the given fileName using the specified image file format and quality factor. Returns true if successful; otherwise returns false.
+
+The quality factor must be in the range [0,100] or -1. Specify 0 to obtain small compressed files, 100 for large uncompressed files, and -1 to use the default settings.
+
+If format is 0, an image format will be chosen from fileName's suffix.
+
+See also Reading and Writing Image Files.
+*/
 func (this *QPixmap) Save_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string, quality int) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -1292,6 +1983,16 @@ func (this *QPixmap) Save_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, for
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool save(QIODevice *, const char *, int) const
+
+/*
+Saves the pixmap to the file with the given fileName using the specified image file format and quality factor. Returns true if successful; otherwise returns false.
+
+The quality factor must be in the range [0,100] or -1. Specify 0 to obtain small compressed files, 100 for large uncompressed files, and -1 to use the default settings.
+
+If format is 0, an image format will be chosen from fileName's suffix.
+
+See also Reading and Writing Image Files.
+*/
 func (this *QPixmap) Save_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -1310,6 +2011,16 @@ func (this *QPixmap) Save_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) bo
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool save(QIODevice *, const char *, int) const
+
+/*
+Saves the pixmap to the file with the given fileName using the specified image file format and quality factor. Returns true if successful; otherwise returns false.
+
+The quality factor must be in the range [0,100] or -1. Specify 0 to obtain small compressed files, 100 for large uncompressed files, and -1 to use the default settings.
+
+If format is 0, an image format will be chosen from fileName's suffix.
+
+See also Reading and Writing Image Files.
+*/
 func (this *QPixmap) Save_1_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -1328,6 +2039,16 @@ func (this *QPixmap) Save_1_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, f
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool convertFromImage(const QImage &, Qt::ImageConversionFlags)
+
+/*
+Replaces this pixmap's data with the given image using the specified flags to control the conversion. The flags argument is a bitwise-OR of the Qt::ImageConversionFlags. Passing 0 for flags sets all the default options. Returns true if the result is that this pixmap is not null.
+
+Note: this function was part of Qt 3 support in Qt 4.6 and earlier. It has been promoted to official API status in 4.7 to support updating the pixmap's image without creating a new QPixmap as fromImage() would.
+
+This function was introduced in  Qt 4.7.
+
+See also fromImage().
+*/
 func (this *QPixmap) ConvertFromImage(img QImage_ITF, flags int) bool {
 	var convArg0 unsafe.Pointer
 	if img != nil && img.QImage_PTR() != nil {
@@ -1342,6 +2063,16 @@ func (this *QPixmap) ConvertFromImage(img QImage_ITF, flags int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool convertFromImage(const QImage &, Qt::ImageConversionFlags)
+
+/*
+Replaces this pixmap's data with the given image using the specified flags to control the conversion. The flags argument is a bitwise-OR of the Qt::ImageConversionFlags. Passing 0 for flags sets all the default options. Returns true if the result is that this pixmap is not null.
+
+Note: this function was part of Qt 3 support in Qt 4.6 and earlier. It has been promoted to official API status in 4.7 to support updating the pixmap's image without creating a new QPixmap as fromImage() would.
+
+This function was introduced in  Qt 4.7.
+
+See also fromImage().
+*/
 func (this *QPixmap) ConvertFromImage__(img QImage_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if img != nil && img.QImage_PTR() != nil {
@@ -1358,6 +2089,14 @@ func (this *QPixmap) ConvertFromImage__(img QImage_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap copy(int, int, int, int) const
+
+/*
+Returns a deep copy of the subset of the pixmap that is specified by the given rectangle. For more information on deep copies, see the Implicit Data Sharing documentation.
+
+If the given rectangle is empty, the whole image is copied.
+
+See also operator=(), QPixmap(), and Pixmap Transformations.
+*/
 func (this *QPixmap) Copy(x int, y int, width int, height int) *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap4copyEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, width, height)
 	qtrt.ErrPrint(err, rv)
@@ -1370,6 +2109,14 @@ func (this *QPixmap) Copy(x int, y int, width int, height int) *QPixmap /*123*/ 
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QPixmap copy(const QRect &) const
+
+/*
+Returns a deep copy of the subset of the pixmap that is specified by the given rectangle. For more information on deep copies, see the Implicit Data Sharing documentation.
+
+If the given rectangle is empty, the whole image is copied.
+
+See also operator=(), QPixmap(), and Pixmap Transformations.
+*/
 func (this *QPixmap) Copy_1(rect qtcore.QRect_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -1386,6 +2133,14 @@ func (this *QPixmap) Copy_1(rect qtcore.QRect_ITF) *QPixmap /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QPixmap copy(const QRect &) const
+
+/*
+Returns a deep copy of the subset of the pixmap that is specified by the given rectangle. For more information on deep copies, see the Implicit Data Sharing documentation.
+
+If the given rectangle is empty, the whole image is copied.
+
+See also operator=(), QPixmap(), and Pixmap Transformations.
+*/
 func (this *QPixmap) Copy_1_() *QPixmap /*123*/ {
 	// arg: 0, const QRect &=LValueReference, QRect=Record,
 	var convArg0 unsafe.Pointer
@@ -1400,6 +2155,14 @@ func (this *QPixmap) Copy_1_() *QPixmap /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void scroll(int, int, int, int, int, int, QRegion *)
+
+/*
+This convenience function is equivalent to calling QPixmap::scroll(dx, dy, QRect(x, y, width, height), exposed).
+
+This function was introduced in  Qt 4.6.
+
+See also QWidget::scroll() and QGraphicsItem::scroll().
+*/
 func (this *QPixmap) Scroll(dx int, dy int, x int, y int, width int, height int, exposed QRegion_ITF /*777 QRegion **/) {
 	var convArg6 unsafe.Pointer
 	if exposed != nil && exposed.QRegion_PTR() != nil {
@@ -1413,6 +2176,14 @@ func (this *QPixmap) Scroll(dx int, dy int, x int, y int, width int, height int,
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void scroll(int, int, int, int, int, int, QRegion *)
+
+/*
+This convenience function is equivalent to calling QPixmap::scroll(dx, dy, QRect(x, y, width, height), exposed).
+
+This function was introduced in  Qt 4.6.
+
+See also QWidget::scroll() and QGraphicsItem::scroll().
+*/
 func (this *QPixmap) Scroll__(dx int, dy int, x int, y int, width int, height int) {
 	// arg: 6, QRegion *=Pointer, QRegion=Record,
 	var convArg6 unsafe.Pointer
@@ -1424,6 +2195,14 @@ func (this *QPixmap) Scroll__(dx int, dy int, x int, y int, width int, height in
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void scroll(int, int, const QRect &, QRegion *)
+
+/*
+This convenience function is equivalent to calling QPixmap::scroll(dx, dy, QRect(x, y, width, height), exposed).
+
+This function was introduced in  Qt 4.6.
+
+See also QWidget::scroll() and QGraphicsItem::scroll().
+*/
 func (this *QPixmap) Scroll_1(dx int, dy int, rect qtcore.QRect_ITF, exposed QRegion_ITF /*777 QRegion **/) {
 	var convArg2 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -1441,6 +2220,14 @@ func (this *QPixmap) Scroll_1(dx int, dy int, rect qtcore.QRect_ITF, exposed QRe
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void scroll(int, int, const QRect &, QRegion *)
+
+/*
+This convenience function is equivalent to calling QPixmap::scroll(dx, dy, QRect(x, y, width, height), exposed).
+
+This function was introduced in  Qt 4.6.
+
+See also QWidget::scroll() and QGraphicsItem::scroll().
+*/
 func (this *QPixmap) Scroll_1_(dx int, dy int, rect qtcore.QRect_ITF) {
 	var convArg2 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -1456,16 +2243,27 @@ func (this *QPixmap) Scroll_1_(dx int, dy int, rect qtcore.QRect_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 cacheKey() const
+
+/*
+Returns a number that identifies this QPixmap. Distinct QPixmap objects can only have the same cache key if they refer to the same contents.
+
+The cacheKey() will change when the pixmap is altered.
+*/
 func (this *QPixmap) CacheKey() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap8cacheKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtGui/qpixmap.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDetached() const
+
+/*
+
+ */
 func (this *QPixmap) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1476,6 +2274,16 @@ func (this *QPixmap) IsDetached() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void detach()
+
+/*
+Detaches the pixmap from shared pixmap data.
+
+A pixmap is automatically detached by Qt whenever its contents are about to change. This is done in almost all QPixmap member functions that modify the pixmap (fill(), fromImage(), load(), etc.), and in QPainter::begin() on a pixmap.
+
+There are two exceptions in which detach() must be called explicitly, that is when calling the handle() or the x11PictureHandle() function (only available on X11). Otherwise, any modifications done using system calls, will be performed on the shared data.
+
+The detach() function returns immediately if there is just a single reference or if the pixmap has not been initialized yet.
+*/
 func (this *QPixmap) Detach() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap6detachEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1485,6 +2293,10 @@ func (this *QPixmap) Detach() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isQBitmap() const
+
+/*
+Returns true if this is a QBitmap; otherwise returns false.
+*/
 func (this *QPixmap) IsQBitmap() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap9isQBitmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1495,6 +2307,10 @@ func (this *QPixmap) IsQBitmap() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPaintEngine * paintEngine() const
+
+/*
+
+ */
 func (this *QPixmap) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap11paintEngineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1505,6 +2321,10 @@ func (this *QPixmap) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!() const
+
+/*
+
+ */
 func (this *QPixmap) Operator_not() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmapntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1515,6 +2335,10 @@ func (this *QPixmap) Operator_not() bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+
+/*
+
+ */
 func (this *QPixmap) Metric(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap6metricEN12QPaintDevice17PaintDeviceMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1525,6 +2349,10 @@ func (this *QPixmap) Metric(arg0 int) int {
 // index:0
 // Protected static Visibility=Default Availability=Available
 // [32] QPixmap fromImageInPlace(QImage &, Qt::ImageConversionFlags)
+
+/*
+
+ */
 func (this *QPixmap) FromImageInPlace(image QImage_ITF, flags int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
@@ -1546,6 +2374,10 @@ func QPixmap_FromImageInPlace(image QImage_ITF, flags int) *QPixmap /*123*/ {
 // index:0
 // Protected static Visibility=Default Availability=Available
 // [32] QPixmap fromImageInPlace(QImage &, Qt::ImageConversionFlags)
+
+/*
+
+ */
 func (this *QPixmap) FromImageInPlace__(image QImage_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {

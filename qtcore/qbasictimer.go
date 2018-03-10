@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QBasicTimer struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,12 @@ func (*QBasicTimer) NewFromPointer(cthis unsafe.Pointer) *QBasicTimer {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QBasicTimer()
+
+/*
+Contructs a basic timer.
+
+See also start().
+*/
 func NewQBasicTimer() *QBasicTimer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +86,10 @@ func NewQBasicTimer() *QBasicTimer {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QBasicTimer()
+
+/*
+
+ */
 func DeleteQBasicTimer(this *QBasicTimer) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 4)
@@ -88,6 +101,12 @@ func DeleteQBasicTimer(this *QBasicTimer) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isActive() const
+
+/*
+Returns true if the timer is running and has not been stopped; otherwise returns false.
+
+See also start() and stop().
+*/
 func (this *QBasicTimer) IsActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicTimer8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,6 +117,12 @@ func (this *QBasicTimer) IsActive() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int timerId() const
+
+/*
+Returns the timer's ID.
+
+See also QTimerEvent::timerId().
+*/
 func (this *QBasicTimer) TimerId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicTimer7timerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -108,6 +133,14 @@ func (this *QBasicTimer) TimerId() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(int, QObject *)
+
+/*
+Starts (or restarts) the timer with a msec milliseconds timeout. The timer will be a Qt::CoarseTimer. See Qt::TimerType for information on the different timer types.
+
+The given object will receive timer events.
+
+See also stop(), isActive(), QObject::timerEvent(), and Qt::CoarseTimer.
+*/
 func (this *QBasicTimer) Start(msec int, obj QObject_ITF /*777 QObject **/) {
 	var convArg1 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -121,6 +154,14 @@ func (this *QBasicTimer) Start(msec int, obj QObject_ITF /*777 QObject **/) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void start(int, Qt::TimerType, QObject *)
+
+/*
+Starts (or restarts) the timer with a msec milliseconds timeout. The timer will be a Qt::CoarseTimer. See Qt::TimerType for information on the different timer types.
+
+The given object will receive timer events.
+
+See also stop(), isActive(), QObject::timerEvent(), and Qt::CoarseTimer.
+*/
 func (this *QBasicTimer) Start_1(msec int, timerType int, obj QObject_ITF /*777 QObject **/) {
 	var convArg2 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -134,6 +175,12 @@ func (this *QBasicTimer) Start_1(msec int, timerType int, obj QObject_ITF /*777 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stop()
+
+/*
+Stops the timer.
+
+See also start() and isActive().
+*/
 func (this *QBasicTimer) Stop() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimer4stopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

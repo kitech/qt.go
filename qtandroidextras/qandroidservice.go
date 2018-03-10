@@ -1,6 +1,6 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h
+// /usr/include/qt/QtAndroidExtras/qandroidservice.h
 // #include <qandroidservice.h>
 // #include <QtAndroidExtras>
 
@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAndroidService struct {
 	*qtcore.QCoreApplication
 }
@@ -60,10 +63,14 @@ func (*QAndroidService) NewFromPointer(cthis unsafe.Pointer) *QAndroidService {
 	return NewQAndroidServiceFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h:54
+// /usr/include/qt/QtAndroidExtras/qandroidservice.h:54
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidService(int &, char **, int)
+
+/*
+Default constructs an instance of QAndroidService.
+*/
 func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidServiceC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, flags)
@@ -73,10 +80,14 @@ func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h:54
+// /usr/include/qt/QtAndroidExtras/qandroidservice.h:54
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidService(int &, char **, int)
+
+/*
+Default constructs an instance of QAndroidService.
+*/
 func NewQAndroidService__(argc int, argv []string) *QAndroidService {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	// arg: 2, int=Int, =Invalid,
@@ -88,21 +99,37 @@ func NewQAndroidService__(argc int, argv []string) *QAndroidService {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h:59
+// /usr/include/qt/QtAndroidExtras/qandroidservice.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAndroidService()
+
+/*
+
+ */
 func DeleteQAndroidService(this *QAndroidService) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidServiceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 1)
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h:61
+// /usr/include/qt/QtAndroidExtras/qandroidservice.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAndroidBinder * onBind(const QAndroidIntent &)
+
+/*
+The user must override this method and to return a binder.
+
+The intent parameter contains all the caller information.
+
+The returned binder is used by the caller to perform IPC calls.
+
+Warning: This method is called from Binder's thread which is different from the thread that this object was created.
+
+See also QAndroidBinder::onTransact and QAndroidBinder::transact.
+*/
 func (this *QAndroidService) OnBind(intent QAndroidIntent_ITF) *QAndroidBinder /*777 QAndroidBinder **/ {
 	var convArg0 unsafe.Pointer
 	if intent != nil && intent.QAndroidIntent_PTR() != nil {

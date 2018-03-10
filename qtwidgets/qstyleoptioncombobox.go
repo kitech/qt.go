@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionComboBox struct {
 	*QStyleOptionComplex
 }
@@ -65,6 +68,10 @@ func (*QStyleOptionComboBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionC
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionComboBox()
+
+/*
+
+ */
 func NewQStyleOptionComboBox() *QStyleOptionComboBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleOptionComboBox() *QStyleOptionComboBox {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionComboBox(int)
+
+/*
+
+ */
 func NewQStyleOptionComboBox_1(version int) *QStyleOptionComboBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,12 +102,35 @@ func DeleteQStyleOptionComboBox(this *QStyleOptionComboBox) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionComboBox__StyleOptionType = int
 
+//
 const QStyleOptionComboBox__Type QStyleOptionComboBox__StyleOptionType = 983044
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionComboBox__StyleOptionVersion = int
 
+// 1
 const QStyleOptionComboBox__Version QStyleOptionComboBox__StyleOptionVersion = 1
 
 //  body block end

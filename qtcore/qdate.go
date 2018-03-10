@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QDate struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QDate) NewFromPointer(cthis unsafe.Pointer) *QDate {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QDate()
+
+/*
+
+ */
 func NewQDate() *QDate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDateC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQDate() *QDate {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDate(int, int, int)
+
+/*
+
+ */
 func NewQDate_1(y int, m int, d int) *QDate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDateC2Eiii", qtrt.FFI_TYPE_POINTER, y, m, d)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +100,12 @@ func NewQDate_1(y int, m int, d int) *QDate {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if both the date and the time are null; otherwise returns false. A null datetime is invalid.
+
+See also QDate::isNull(), QTime::isNull(), and isValid().
+*/
 func (this *QDate) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +116,14 @@ func (this *QDate) IsNull() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if both the date and the time are valid and they are valid in the current Qt::TimeSpec, otherwise returns false.
+
+If the timeSpec() is Qt::LocalTime or Qt::TimeZone then the date and time are checked to see if they fall in the Standard Time to Daylight-Saving Time transition hour, i.e. if the transition is at 2am and the clock goes forward to 3am then the time from 02:00:00 to 02:59:59.999 is considered to be invalid.
+
+See also QDate::isValid() and QTime::isValid().
+*/
 func (this *QDate) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,6 +134,14 @@ func (this *QDate) IsValid() bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool isValid(int, int, int)
+
+/*
+Returns true if both the date and the time are valid and they are valid in the current Qt::TimeSpec, otherwise returns false.
+
+If the timeSpec() is Qt::LocalTime or Qt::TimeZone then the date and time are checked to see if they fall in the Standard Time to Daylight-Saving Time transition hour, i.e. if the transition is at 2am and the clock goes forward to 3am then the time from 02:00:00 to 02:59:59.999 is considered to be invalid.
+
+See also QDate::isValid() and QTime::isValid().
+*/
 func (this *QDate) IsValid_1(y int, m int, d int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate7isValidEiii", qtrt.FFI_TYPE_POINTER, y, m, d)
 	qtrt.ErrPrint(err, rv)
@@ -124,6 +157,10 @@ func QDate_IsValid_1(y int, m int, d int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int year() const
+
+/*
+
+ */
 func (this *QDate) Year() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate4yearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,6 +171,10 @@ func (this *QDate) Year() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int month() const
+
+/*
+
+ */
 func (this *QDate) Month() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate5monthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,6 +185,10 @@ func (this *QDate) Month() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int day() const
+
+/*
+
+ */
 func (this *QDate) Day() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate3dayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +199,10 @@ func (this *QDate) Day() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int dayOfWeek() const
+
+/*
+
+ */
 func (this *QDate) DayOfWeek() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate9dayOfWeekEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,6 +213,10 @@ func (this *QDate) DayOfWeek() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int dayOfYear() const
+
+/*
+
+ */
 func (this *QDate) DayOfYear() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate9dayOfYearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +227,10 @@ func (this *QDate) DayOfYear() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int daysInMonth() const
+
+/*
+
+ */
 func (this *QDate) DaysInMonth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate11daysInMonthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,6 +241,10 @@ func (this *QDate) DaysInMonth() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int daysInYear() const
+
+/*
+
+ */
 func (this *QDate) DaysInYear() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10daysInYearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,6 +255,10 @@ func (this *QDate) DaysInYear() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int weekNumber(int *) const
+
+/*
+
+ */
 func (this *QDate) WeekNumber(yearNum unsafe.Pointer /*666*/) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10weekNumberEPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), yearNum)
 	qtrt.ErrPrint(err, rv)
@@ -204,6 +269,10 @@ func (this *QDate) WeekNumber(yearNum unsafe.Pointer /*666*/) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int weekNumber(int *) const
+
+/*
+
+ */
 func (this *QDate) WeekNumber__() int {
 	// arg: 0, int *=Pointer, =Invalid,
 	var yearNum unsafe.Pointer
@@ -216,6 +285,10 @@ func (this *QDate) WeekNumber__() int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString shortMonthName(int, enum QDate::MonthNameType)
+
+/*
+
+ */
 func (this *QDate) ShortMonthName(month int, type_ int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate14shortMonthNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, month, type_)
 	qtrt.ErrPrint(err, rv)
@@ -234,6 +307,10 @@ func QDate_ShortMonthName(month int, type_ int) string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString shortMonthName(int, enum QDate::MonthNameType)
+
+/*
+
+ */
 func (this *QDate) ShortMonthName__(month int) string {
 	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
 	type_ := 0
@@ -249,6 +326,10 @@ func (this *QDate) ShortMonthName__(month int) string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString shortDayName(int, enum QDate::MonthNameType)
+
+/*
+
+ */
 func (this *QDate) ShortDayName(weekday int, type_ int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate12shortDayNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, weekday, type_)
 	qtrt.ErrPrint(err, rv)
@@ -267,6 +348,10 @@ func QDate_ShortDayName(weekday int, type_ int) string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString shortDayName(int, enum QDate::MonthNameType)
+
+/*
+
+ */
 func (this *QDate) ShortDayName__(weekday int) string {
 	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
 	type_ := 0
@@ -282,6 +367,10 @@ func (this *QDate) ShortDayName__(weekday int) string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString longMonthName(int, enum QDate::MonthNameType)
+
+/*
+
+ */
 func (this *QDate) LongMonthName(month int, type_ int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate13longMonthNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, month, type_)
 	qtrt.ErrPrint(err, rv)
@@ -300,6 +389,10 @@ func QDate_LongMonthName(month int, type_ int) string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString longMonthName(int, enum QDate::MonthNameType)
+
+/*
+
+ */
 func (this *QDate) LongMonthName__(month int) string {
 	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
 	type_ := 0
@@ -315,6 +408,10 @@ func (this *QDate) LongMonthName__(month int) string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString longDayName(int, enum QDate::MonthNameType)
+
+/*
+
+ */
 func (this *QDate) LongDayName(weekday int, type_ int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate11longDayNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, weekday, type_)
 	qtrt.ErrPrint(err, rv)
@@ -333,6 +430,10 @@ func QDate_LongDayName(weekday int, type_ int) string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString longDayName(int, enum QDate::MonthNameType)
+
+/*
+
+ */
 func (this *QDate) LongDayName__(weekday int) string {
 	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
 	type_ := 0
@@ -348,6 +449,62 @@ func (this *QDate) LongDayName__(weekday int) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString(Qt::DateFormat) const
+
+/*
+Returns the datetime as a string. The format parameter determines the format of the result string.
+
+These expressions may be used for the date:
+
+
+ ExpressionOutput
+dthe day as number without a leading zero (1 to 31)
+ddthe day as number with a leading zero (01 to 31)
+dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
+ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
+Mthe month as number without a leading zero (1-12)
+MMthe month as number with a leading zero (01-12)
+MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
+MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
+yythe year as two digit number (00-99)
+yyyythe year as four digit number
+
+
+These expressions may be used for the time:
+
+
+ ExpressionOutput
+hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
+hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
+Hthe hour without a leading zero (0 to 23, even with AM/PM display)
+HHthe hour with a leading zero (00 to 23, even with AM/PM display)
+mthe minute without a leading zero (0 to 59)
+mmthe minute with a leading zero (00 to 59)
+sthe whole second without a leading zero (0 to 59)
+ssthe whole second with a leading zero where applicable (00 to 59)
+zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
+zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
+ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
+tthe timezone (for example "CEST")
+
+
+All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
+
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+
+
+ FormatResult
+dd.MM.yyyy21.05.2001
+ddd MMMM d yyTue May 21 01
+hh:mm:ss.zzz14:13:09.120
+hh:mm:ss.z14:13:09.12
+h:m:s ap2:13:9 pm
+
+
+If the datetime is invalid, an empty string will be returned.
+
+See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
+*/
 func (this *QDate) ToString(f int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
@@ -361,6 +518,62 @@ func (this *QDate) ToString(f int) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString(Qt::DateFormat) const
+
+/*
+Returns the datetime as a string. The format parameter determines the format of the result string.
+
+These expressions may be used for the date:
+
+
+ ExpressionOutput
+dthe day as number without a leading zero (1 to 31)
+ddthe day as number with a leading zero (01 to 31)
+dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
+ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
+Mthe month as number without a leading zero (1-12)
+MMthe month as number with a leading zero (01-12)
+MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
+MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
+yythe year as two digit number (00-99)
+yyyythe year as four digit number
+
+
+These expressions may be used for the time:
+
+
+ ExpressionOutput
+hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
+hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
+Hthe hour without a leading zero (0 to 23, even with AM/PM display)
+HHthe hour with a leading zero (00 to 23, even with AM/PM display)
+mthe minute without a leading zero (0 to 59)
+mmthe minute with a leading zero (00 to 59)
+sthe whole second without a leading zero (0 to 59)
+ssthe whole second with a leading zero where applicable (00 to 59)
+zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
+zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
+ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
+tthe timezone (for example "CEST")
+
+
+All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
+
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+
+
+ FormatResult
+dd.MM.yyyy21.05.2001
+ddd MMMM d yyTue May 21 01
+hh:mm:ss.zzz14:13:09.120
+hh:mm:ss.z14:13:09.12
+h:m:s ap2:13:9 pm
+
+
+If the datetime is invalid, an empty string will be returned.
+
+See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
+*/
 func (this *QDate) ToString__() string {
 	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
 	f := 0
@@ -376,6 +589,62 @@ func (this *QDate) ToString__() string {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toString(const QString &) const
+
+/*
+Returns the datetime as a string. The format parameter determines the format of the result string.
+
+These expressions may be used for the date:
+
+
+ ExpressionOutput
+dthe day as number without a leading zero (1 to 31)
+ddthe day as number with a leading zero (01 to 31)
+dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
+ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
+Mthe month as number without a leading zero (1-12)
+MMthe month as number with a leading zero (01-12)
+MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
+MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
+yythe year as two digit number (00-99)
+yyyythe year as four digit number
+
+
+These expressions may be used for the time:
+
+
+ ExpressionOutput
+hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
+hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
+Hthe hour without a leading zero (0 to 23, even with AM/PM display)
+HHthe hour with a leading zero (00 to 23, even with AM/PM display)
+mthe minute without a leading zero (0 to 59)
+mmthe minute with a leading zero (00 to 59)
+sthe whole second without a leading zero (0 to 59)
+ssthe whole second with a leading zero where applicable (00 to 59)
+zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
+zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
+ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
+tthe timezone (for example "CEST")
+
+
+All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
+
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+
+
+ FormatResult
+dd.MM.yyyy21.05.2001
+ddd MMMM d yyTue May 21 01
+hh:mm:ss.zzz14:13:09.120
+hh:mm:ss.z14:13:09.12
+h:m:s ap2:13:9 pm
+
+
+If the datetime is invalid, an empty string will be returned.
+
+See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
+*/
 func (this *QDate) ToString_1(format string) string {
 	var tmpArg0 = NewQString_5(format)
 	var convArg0 = tmpArg0.GetCthis()
@@ -391,6 +660,62 @@ func (this *QDate) ToString_1(format string) string {
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString toString(QStringView) const
+
+/*
+Returns the datetime as a string. The format parameter determines the format of the result string.
+
+These expressions may be used for the date:
+
+
+ ExpressionOutput
+dthe day as number without a leading zero (1 to 31)
+ddthe day as number with a leading zero (01 to 31)
+dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
+ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
+Mthe month as number without a leading zero (1-12)
+MMthe month as number with a leading zero (01-12)
+MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
+MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
+yythe year as two digit number (00-99)
+yyyythe year as four digit number
+
+
+These expressions may be used for the time:
+
+
+ ExpressionOutput
+hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
+hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
+Hthe hour without a leading zero (0 to 23, even with AM/PM display)
+HHthe hour with a leading zero (00 to 23, even with AM/PM display)
+mthe minute without a leading zero (0 to 59)
+mmthe minute with a leading zero (00 to 59)
+sthe whole second without a leading zero (0 to 59)
+ssthe whole second with a leading zero where applicable (00 to 59)
+zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
+zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
+ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
+tthe timezone (for example "CEST")
+
+
+All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
+
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+
+
+ FormatResult
+dd.MM.yyyy21.05.2001
+ddd MMMM d yyTue May 21 01
+hh:mm:ss.zzz14:13:09.120
+hh:mm:ss.z14:13:09.12
+h:m:s ap2:13:9 pm
+
+
+If the datetime is invalid, an empty string will be returned.
+
+See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
+*/
 func (this *QDate) ToString_2(format QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QStringView_PTR() != nil {
@@ -408,6 +733,12 @@ func (this *QDate) ToString_2(format QStringView_ITF /*123*/) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setDate(int, int, int)
+
+/*
+Sets the date part of this datetime to date. If no time is set yet, it is set to midnight. If date is invalid, this QDateTime becomes invalid.
+
+See also date(), setTime(), and setTimeSpec().
+*/
 func (this *QDate) SetDate(year int, month int, day int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate7setDateEiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), year, month, day)
 	qtrt.ErrPrint(err, rv)
@@ -418,6 +749,10 @@ func (this *QDate) SetDate(year int, month int, day int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getDate(int *, int *, int *)
+
+/*
+
+ */
 func (this *QDate) GetDate(year unsafe.Pointer /*666*/, month unsafe.Pointer /*666*/, day unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate7getDateEPiS0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), year, month, day)
 	qtrt.ErrPrint(err, rv)
@@ -427,6 +762,10 @@ func (this *QDate) GetDate(year unsafe.Pointer /*666*/, month unsafe.Pointer /*6
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void getDate(int *, int *, int *) const
+
+/*
+
+ */
 func (this *QDate) GetDate_1(year unsafe.Pointer /*666*/, month unsafe.Pointer /*666*/, day unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7getDateEPiS0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), year, month, day)
 	qtrt.ErrPrint(err, rv)
@@ -436,6 +775,14 @@ func (this *QDate) GetDate_1(year unsafe.Pointer /*666*/, month unsafe.Pointer /
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDate addDays(qint64) const
+
+/*
+Returns a QDateTime object containing a datetime ndays days later than the datetime of this object (or earlier if ndays is negative).
+
+If the timeSpec() is Qt::LocalTime and the resulting date and time fall in the Standard Time to Daylight-Saving Time transition hour then the result will be adjusted accordingly, i.e. if the transition is at 2am and the clock goes forward to 3am and the result falls between 2am and 3am then the result will be adjusted to fall after 3am.
+
+See also daysTo(), addMonths(), addYears(), and addSecs().
+*/
 func (this *QDate) AddDays(days int64) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7addDaysEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), days)
 	qtrt.ErrPrint(err, rv)
@@ -448,6 +795,14 @@ func (this *QDate) AddDays(days int64) *QDate /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDate addMonths(int) const
+
+/*
+Returns a QDateTime object containing a datetime nmonths months later than the datetime of this object (or earlier if nmonths is negative).
+
+If the timeSpec() is Qt::LocalTime and the resulting date and time fall in the Standard Time to Daylight-Saving Time transition hour then the result will be adjusted accordingly, i.e. if the transition is at 2am and the clock goes forward to 3am and the result falls between 2am and 3am then the result will be adjusted to fall after 3am.
+
+See also daysTo(), addDays(), addYears(), and addSecs().
+*/
 func (this *QDate) AddMonths(months int) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate9addMonthsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), months)
 	qtrt.ErrPrint(err, rv)
@@ -460,6 +815,14 @@ func (this *QDate) AddMonths(months int) *QDate /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDate addYears(int) const
+
+/*
+Returns a QDateTime object containing a datetime nyears years later than the datetime of this object (or earlier if nyears is negative).
+
+If the timeSpec() is Qt::LocalTime and the resulting date and time fall in the Standard Time to Daylight-Saving Time transition hour then the result will be adjusted accordingly, i.e. if the transition is at 2am and the clock goes forward to 3am and the result falls between 2am and 3am then the result will be adjusted to fall after 3am.
+
+See also daysTo(), addDays(), addMonths(), and addSecs().
+*/
 func (this *QDate) AddYears(years int) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8addYearsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), years)
 	qtrt.ErrPrint(err, rv)
@@ -472,6 +835,30 @@ func (this *QDate) AddYears(years int) *QDate /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 daysTo(const QDate &) const
+
+/*
+Returns the number of days from this datetime to the other datetime. The number of days is counted as the number of times midnight is reached between this datetime to the other datetime. This means that a 10 minute difference from 23:55 to 0:05 the next day counts as one day.
+
+If the other datetime is earlier than this datetime, the value returned is negative.
+
+Example:
+
+
+  QDateTime startDate(QDate(2012, 7, 6), QTime(8, 30, 0));
+  QDateTime endDate(QDate(2012, 7, 7), QTime(16, 30, 0));
+  qDebug() << "Days from startDate to endDate: " << startDate.daysTo(endDate);
+
+  startDate = QDateTime(QDate(2012, 7, 6), QTime(23, 55, 0));
+  endDate = QDateTime(QDate(2012, 7, 7), QTime(0, 5, 0));
+  qDebug() << "Days from startDate to endDate: " << startDate.daysTo(endDate);
+
+  qSwap(startDate, endDate); // Make endDate before startDate.
+  qDebug() << "Days from startDate to endDate: " << startDate.daysTo(endDate);
+
+
+
+See also addDays(), secsTo(), and msecsTo().
+*/
 func (this *QDate) DaysTo(arg0 QDate_ITF) int64 {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDate_PTR() != nil {
@@ -480,12 +867,17 @@ func (this *QDate) DaysTo(arg0 QDate_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate6daysToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:118
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QDate &) const
+
+/*
+
+ */
 func (this *QDate) Operator_equal_equal(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -500,6 +892,10 @@ func (this *QDate) Operator_equal_equal(other QDate_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QDate &) const
+
+/*
+
+ */
 func (this *QDate) Operator_not_equal(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -514,6 +910,10 @@ func (this *QDate) Operator_not_equal(other QDate_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const QDate &) const
+
+/*
+
+ */
 func (this *QDate) Operator_less_than(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -528,6 +928,10 @@ func (this *QDate) Operator_less_than(other QDate_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const QDate &) const
+
+/*
+
+ */
 func (this *QDate) Operator_less_than_equal(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -542,6 +946,10 @@ func (this *QDate) Operator_less_than_equal(other QDate_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const QDate &) const
+
+/*
+
+ */
 func (this *QDate) Operator_greater_than(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -556,6 +964,10 @@ func (this *QDate) Operator_greater_than(other QDate_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const QDate &) const
+
+/*
+
+ */
 func (this *QDate) Operator_greater_than_equal(other QDate_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDate_PTR() != nil {
@@ -570,6 +982,10 @@ func (this *QDate) Operator_greater_than_equal(other QDate_ITF) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDate currentDate()
+
+/*
+
+ */
 func (this *QDate) CurrentDate() *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate11currentDateEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -587,6 +1003,14 @@ func QDate_CurrentDate() *QDate /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDate fromString(const QString &, Qt::DateFormat)
+
+/*
+Returns the QDateTime represented by the string, using the format given, or an invalid datetime if this is not possible.
+
+Note for Qt::TextDate: It is recommended that you use the English short month names (e.g. "Jan"). Although localized month names can also be used, they depend on the user's locale settings.
+
+See also toString() and QLocale::toDateTime().
+*/
 func (this *QDate) FromString(s string, f int) *QDate /*123*/ {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -606,6 +1030,14 @@ func QDate_FromString(s string, f int) *QDate /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDate fromString(const QString &, Qt::DateFormat)
+
+/*
+Returns the QDateTime represented by the string, using the format given, or an invalid datetime if this is not possible.
+
+Note for Qt::TextDate: It is recommended that you use the English short month names (e.g. "Jan"). Although localized month names can also be used, they depend on the user's locale settings.
+
+See also toString() and QLocale::toDateTime().
+*/
 func (this *QDate) FromString__(s string) *QDate /*123*/ {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -622,6 +1054,14 @@ func (this *QDate) FromString__(s string) *QDate /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QDate fromString(const QString &, const QString &)
+
+/*
+Returns the QDateTime represented by the string, using the format given, or an invalid datetime if this is not possible.
+
+Note for Qt::TextDate: It is recommended that you use the English short month names (e.g. "Jan"). Although localized month names can also be used, they depend on the user's locale settings.
+
+See also toString() and QLocale::toDateTime().
+*/
 func (this *QDate) FromString_1(s string, format string) *QDate /*123*/ {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -643,6 +1083,10 @@ func QDate_FromString_1(s string, format string) *QDate /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool isLeapYear(int)
+
+/*
+
+ */
 func (this *QDate) IsLeapYear(year int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate10isLeapYearEi", qtrt.FFI_TYPE_POINTER, year)
 	qtrt.ErrPrint(err, rv)
@@ -658,6 +1102,10 @@ func QDate_IsLeapYear(year int) bool {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QDate fromJulianDay(qint64)
+
+/*
+
+ */
 func (this *QDate) FromJulianDay(jd_ int64) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate13fromJulianDayEx", qtrt.FFI_TYPE_POINTER, jd_)
 	qtrt.ErrPrint(err, rv)
@@ -675,10 +1123,15 @@ func QDate_FromJulianDay(jd_ int64) *QDate /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qint64 toJulianDay() const
+
+/*
+
+ */
 func (this *QDate) ToJulianDay() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate11toJulianDayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 func DeleteQDate(this *QDate) {
@@ -687,9 +1140,16 @@ func DeleteQDate(this *QDate) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QDate__MonthNameType = int
 
+//
 const QDate__DateFormat QDate__MonthNameType = 0
+
+//
 const QDate__StandaloneFormat QDate__MonthNameType = 1
 
 //  body block end

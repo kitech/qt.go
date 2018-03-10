@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QSslEllipticCurve struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,12 @@ func (*QSslEllipticCurve) NewFromPointer(cthis unsafe.Pointer) *QSslEllipticCurv
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSslEllipticCurve()
+
+/*
+Constructs an invalid elliptic curve.
+
+See also isValid() and QSslConfiguration::supportedEllipticCurves().
+*/
 func NewQSslEllipticCurve() *QSslEllipticCurve {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurveC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +87,16 @@ func NewQSslEllipticCurve() *QSslEllipticCurve {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QSslEllipticCurve fromShortName(const QString &)
+
+/*
+Returns an QSslEllipticCurve instance representing the named curve name. The name is the conventional short name for the curve, as represented by RFC 4492 (for instance secp521r1), or as NIST short names (for instance P-256). The actual set of recognized names depends on the SSL implementation.
+
+If the given name is not supported, returns an invalid QSslEllipticCurve instance.
+
+Note: The OpenSSL implementation of this function treats the name case-sensitively.
+
+See also shortName().
+*/
 func (this *QSslEllipticCurve) FromShortName(name string) *QSslEllipticCurve /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -97,6 +116,16 @@ func QSslEllipticCurve_FromShortName(name string) *QSslEllipticCurve /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QSslEllipticCurve fromLongName(const QString &)
+
+/*
+Returns an QSslEllipticCurve instance representing the named curve name. The name is a long name for the curve, whose exact spelling depends on the SSL implementation.
+
+If the given name is not supported, returns an invalid QSslEllipticCurve instance.
+
+Note: The OpenSSL implementation of this function treats the name case-sensitively.
+
+See also longName().
+*/
 func (this *QSslEllipticCurve) FromLongName(name string) *QSslEllipticCurve /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -116,6 +145,12 @@ func QSslEllipticCurve_FromLongName(name string) *QSslEllipticCurve /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString shortName() const
+
+/*
+Returns the conventional short name for this curve. If this curve is invalid, returns an empty string.
+
+See also longName().
+*/
 func (this *QSslEllipticCurve) ShortName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve9shortNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,6 +164,12 @@ func (this *QSslEllipticCurve) ShortName() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString longName() const
+
+/*
+Returns the conventional long name for this curve. If this curve is invalid, returns an empty string.
+
+See also shortName().
+*/
 func (this *QSslEllipticCurve) LongName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve8longNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -142,6 +183,10 @@ func (this *QSslEllipticCurve) LongName() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if this elliptic curve is a valid curve, false otherwise.
+*/
 func (this *QSslEllipticCurve) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -152,6 +197,10 @@ func (this *QSslEllipticCurve) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTlsNamedCurve() const
+
+/*
+Returns true if this elliptic curve is one of the named curves that can be used in the key exchange when using an elliptic curve cipher with TLS; false otherwise.
+*/
 func (this *QSslEllipticCurve) IsTlsNamedCurve() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve15isTlsNamedCurveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

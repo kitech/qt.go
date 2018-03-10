@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QSslDiffieHellmanParameters struct {
 	*qtrt.CObject
 }
@@ -68,6 +71,12 @@ func (*QSslDiffieHellmanParameters) NewFromPointer(cthis unsafe.Pointer) *QSslDi
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters defaultParameters()
+
+/*
+Returns the default QSslDiffieHellmanParameters used by QSslSocket.
+
+This is currently the 1024-bit MODP group from RFC 2459, also known as the Second Oakley Group.
+*/
 func (this *QSslDiffieHellmanParameters) DefaultParameters() *QSslDiffieHellmanParameters /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters17defaultParametersEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +94,14 @@ func QSslDiffieHellmanParameters_DefaultParameters() *QSslDiffieHellmanParameter
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSslDiffieHellmanParameters()
+
+/*
+Constructs an empty QSslDiffieHellmanParameters instance.
+
+If an empty QSslDiffieHellmanParameters instance is set on a QSslConfiguration object, Diffie-Hellman negotiation will be disabled.
+
+See also isValid() and QSslConfiguration.
+*/
 func NewQSslDiffieHellmanParameters() *QSslDiffieHellmanParameters {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParametersC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +114,10 @@ func NewQSslDiffieHellmanParameters() *QSslDiffieHellmanParameters {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSslDiffieHellmanParameters()
+
+/*
+
+ */
 func DeleteQSslDiffieHellmanParameters(this *QSslDiffieHellmanParameters) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParametersD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -108,6 +129,10 @@ func DeleteQSslDiffieHellmanParameters(this *QSslDiffieHellmanParameters) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters & operator=(const QSslDiffieHellmanParameters &)
+
+/*
+
+ */
 func (this *QSslDiffieHellmanParameters) Operator_equal(other QSslDiffieHellmanParameters_ITF) *QSslDiffieHellmanParameters {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslDiffieHellmanParameters_PTR() != nil {
@@ -124,6 +149,10 @@ func (this *QSslDiffieHellmanParameters) Operator_equal(other QSslDiffieHellmanP
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters & operator=(QSslDiffieHellmanParameters &&)
+
+/*
+
+ */
 func (this *QSslDiffieHellmanParameters) Operator_equal_1(other unsafe.Pointer /*333*/) *QSslDiffieHellmanParameters {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParametersaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -136,6 +165,10 @@ func (this *QSslDiffieHellmanParameters) Operator_equal_1(other unsafe.Pointer /
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslDiffieHellmanParameters &)
+
+/*
+Swaps this QSslDiffieHellmanParameters with other. This function is very fast and never fails.
+*/
 func (this *QSslDiffieHellmanParameters) Swap(other QSslDiffieHellmanParameters_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslDiffieHellmanParameters_PTR() != nil {
@@ -149,6 +182,14 @@ func (this *QSslDiffieHellmanParameters) Swap(other QSslDiffieHellmanParameters_
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters fromEncoded(const QByteArray &, QSsl::EncodingFormat)
+
+/*
+Constructs a QSslDiffieHellmanParameters object using the byte array encoded in either PEM or DER form as specified by encoding.
+
+Use the isValid() method on the returned object to check whether the Diffie-Hellman parameters were valid and loaded correctly.
+
+See also isValid() and QSslConfiguration.
+*/
 func (this *QSslDiffieHellmanParameters) FromEncoded(encoded qtcore.QByteArray_ITF, format int) *QSslDiffieHellmanParameters /*123*/ {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
@@ -170,6 +211,14 @@ func QSslDiffieHellmanParameters_FromEncoded(encoded qtcore.QByteArray_ITF, form
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters fromEncoded(const QByteArray &, QSsl::EncodingFormat)
+
+/*
+Constructs a QSslDiffieHellmanParameters object using the byte array encoded in either PEM or DER form as specified by encoding.
+
+Use the isValid() method on the returned object to check whether the Diffie-Hellman parameters were valid and loaded correctly.
+
+See also isValid() and QSslConfiguration.
+*/
 func (this *QSslDiffieHellmanParameters) FromEncoded__(encoded qtcore.QByteArray_ITF) *QSslDiffieHellmanParameters /*123*/ {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
@@ -188,6 +237,14 @@ func (this *QSslDiffieHellmanParameters) FromEncoded__(encoded qtcore.QByteArray
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters fromEncoded(QIODevice *, QSsl::EncodingFormat)
+
+/*
+Constructs a QSslDiffieHellmanParameters object using the byte array encoded in either PEM or DER form as specified by encoding.
+
+Use the isValid() method on the returned object to check whether the Diffie-Hellman parameters were valid and loaded correctly.
+
+See also isValid() and QSslConfiguration.
+*/
 func (this *QSslDiffieHellmanParameters) FromEncoded_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -209,6 +266,14 @@ func QSslDiffieHellmanParameters_FromEncoded_1(device qtcore.QIODevice_ITF /*777
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters fromEncoded(QIODevice *, QSsl::EncodingFormat)
+
+/*
+Constructs a QSslDiffieHellmanParameters object using the byte array encoded in either PEM or DER form as specified by encoding.
+
+Use the isValid() method on the returned object to check whether the Diffie-Hellman parameters were valid and loaded correctly.
+
+See also isValid() and QSslConfiguration.
+*/
 func (this *QSslDiffieHellmanParameters) FromEncoded_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslDiffieHellmanParameters /*123*/ {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -227,6 +292,12 @@ func (this *QSslDiffieHellmanParameters) FromEncoded_1_(device qtcore.QIODevice_
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns true if this is a an empty QSslDiffieHellmanParameters instance.
+
+Setting an empty QSslDiffieHellmanParameters instance on a QSslSocket-based server will disable Diffie-Hellman key exchange.
+*/
 func (this *QSslDiffieHellmanParameters) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -237,6 +308,16 @@ func (this *QSslDiffieHellmanParameters) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if this is a valid QSslDiffieHellmanParameters; otherwise false.
+
+This method should be used after constructing a QSslDiffieHellmanParameters object to determine its validity.
+
+If a QSslDiffieHellmanParameters object is not valid, you can use the error() method to determine what error prevented the object from being constructed.
+
+See also error().
+*/
 func (this *QSslDiffieHellmanParameters) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,6 +328,10 @@ func (this *QSslDiffieHellmanParameters) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSslDiffieHellmanParameters::Error error() const
+
+/*
+Returns the error that caused the QSslDiffieHellmanParameters object to be invalid.
+*/
 func (this *QSslDiffieHellmanParameters) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,6 +342,10 @@ func (this *QSslDiffieHellmanParameters) Error() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
+
+/*
+Returns a human-readable description of the error that caused the QSslDiffieHellmanParameters object to be invalid.
+*/
 func (this *QSslDiffieHellmanParameters) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -266,10 +355,20 @@ func (this *QSslDiffieHellmanParameters) ErrorString() string {
 	return rv3
 }
 
+/*
+Describes a QSslDiffieHellmanParameters error.
+
+
+*/
 type QSslDiffieHellmanParameters__Error = int
 
+// No error occurred.
 const QSslDiffieHellmanParameters__NoError QSslDiffieHellmanParameters__Error = 0
+
+// The given input data could not be used to construct a QSslDiffieHellmanParameters object.
 const QSslDiffieHellmanParameters__InvalidInputDataError QSslDiffieHellmanParameters__Error = 1
+
+// The Diffie-Hellman parameters are unsafe and should not be used.
 const QSslDiffieHellmanParameters__UnsafeParametersError QSslDiffieHellmanParameters__Error = 2
 
 //  body block end

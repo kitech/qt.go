@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QWaitCondition struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QWaitCondition) NewFromPointer(cthis unsafe.Pointer) *QWaitCondition {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWaitCondition()
+
+/*
+Constructs a new wait condition object.
+*/
 func NewQWaitCondition() *QWaitCondition {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitConditionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQWaitCondition() *QWaitCondition {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QWaitCondition()
+
+/*
+
+ */
 func DeleteQWaitCondition(this *QWaitCondition) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitConditionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -88,6 +99,19 @@ func DeleteQWaitCondition(this *QWaitCondition) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wait(QMutex *, unsigned long)
+
+/*
+Releases the lockedMutex and waits on the wait condition. The lockedMutex must be initially locked by the calling thread. If lockedMutex is not in a locked state, the behavior is undefined. If lockedMutex is a recursive mutex, this function returns immediately. The lockedMutex will be unlocked, and the calling thread will block until either of these conditions is met:
+
+
+Another thread signals it using wakeOne() or wakeAll(). This function will return true in this case.
+time milliseconds has elapsed. If time is ULONG_MAX (the default), then the wait will never timeout (the event must be signalled). This function will return false if the wait timed out.
+
+
+The lockedMutex will be returned to the same locked state. This function is provided to allow the atomic transition from the locked state to the wait state.
+
+See also wakeOne() and wakeAll().
+*/
 func (this *QWaitCondition) Wait(lockedMutex QMutex_ITF /*777 QMutex **/, time uint) bool {
 	var convArg0 unsafe.Pointer
 	if lockedMutex != nil && lockedMutex.QMutex_PTR() != nil {
@@ -102,6 +126,19 @@ func (this *QWaitCondition) Wait(lockedMutex QMutex_ITF /*777 QMutex **/, time u
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wait(QMutex *, unsigned long)
+
+/*
+Releases the lockedMutex and waits on the wait condition. The lockedMutex must be initially locked by the calling thread. If lockedMutex is not in a locked state, the behavior is undefined. If lockedMutex is a recursive mutex, this function returns immediately. The lockedMutex will be unlocked, and the calling thread will block until either of these conditions is met:
+
+
+Another thread signals it using wakeOne() or wakeAll(). This function will return true in this case.
+time milliseconds has elapsed. If time is ULONG_MAX (the default), then the wait will never timeout (the event must be signalled). This function will return false if the wait timed out.
+
+
+The lockedMutex will be returned to the same locked state. This function is provided to allow the atomic transition from the locked state to the wait state.
+
+See also wakeOne() and wakeAll().
+*/
 func (this *QWaitCondition) Wait__(lockedMutex QMutex_ITF /*777 QMutex **/) bool {
 	var convArg0 unsafe.Pointer
 	if lockedMutex != nil && lockedMutex.QMutex_PTR() != nil {
@@ -118,6 +155,19 @@ func (this *QWaitCondition) Wait__(lockedMutex QMutex_ITF /*777 QMutex **/) bool
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool wait(QReadWriteLock *, unsigned long)
+
+/*
+Releases the lockedMutex and waits on the wait condition. The lockedMutex must be initially locked by the calling thread. If lockedMutex is not in a locked state, the behavior is undefined. If lockedMutex is a recursive mutex, this function returns immediately. The lockedMutex will be unlocked, and the calling thread will block until either of these conditions is met:
+
+
+Another thread signals it using wakeOne() or wakeAll(). This function will return true in this case.
+time milliseconds has elapsed. If time is ULONG_MAX (the default), then the wait will never timeout (the event must be signalled). This function will return false if the wait timed out.
+
+
+The lockedMutex will be returned to the same locked state. This function is provided to allow the atomic transition from the locked state to the wait state.
+
+See also wakeOne() and wakeAll().
+*/
 func (this *QWaitCondition) Wait_1(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/, time uint) bool {
 	var convArg0 unsafe.Pointer
 	if lockedReadWriteLock != nil && lockedReadWriteLock.QReadWriteLock_PTR() != nil {
@@ -132,6 +182,19 @@ func (this *QWaitCondition) Wait_1(lockedReadWriteLock QReadWriteLock_ITF /*777 
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool wait(QReadWriteLock *, unsigned long)
+
+/*
+Releases the lockedMutex and waits on the wait condition. The lockedMutex must be initially locked by the calling thread. If lockedMutex is not in a locked state, the behavior is undefined. If lockedMutex is a recursive mutex, this function returns immediately. The lockedMutex will be unlocked, and the calling thread will block until either of these conditions is met:
+
+
+Another thread signals it using wakeOne() or wakeAll(). This function will return true in this case.
+time milliseconds has elapsed. If time is ULONG_MAX (the default), then the wait will never timeout (the event must be signalled). This function will return false if the wait timed out.
+
+
+The lockedMutex will be returned to the same locked state. This function is provided to allow the atomic transition from the locked state to the wait state.
+
+See also wakeOne() and wakeAll().
+*/
 func (this *QWaitCondition) Wait_1_(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) bool {
 	var convArg0 unsafe.Pointer
 	if lockedReadWriteLock != nil && lockedReadWriteLock.QReadWriteLock_PTR() != nil {
@@ -148,6 +211,14 @@ func (this *QWaitCondition) Wait_1_(lockedReadWriteLock QReadWriteLock_ITF /*777
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void wakeOne()
+
+/*
+Wakes one thread waiting on the wait condition. The thread that is woken up depends on the operating system's scheduling policies, and cannot be controlled or predicted.
+
+If you want to wake up a specific thread, the solution is typically to use different wait conditions and have different threads wait on different conditions.
+
+See also wakeAll().
+*/
 func (this *QWaitCondition) WakeOne() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition7wakeOneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,6 +228,12 @@ func (this *QWaitCondition) WakeOne() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void wakeAll()
+
+/*
+Wakes all threads waiting on the wait condition. The order in which the threads are woken up depends on the operating system's scheduling policies and cannot be controlled or predicted.
+
+See also wakeOne().
+*/
 func (this *QWaitCondition) WakeAll() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition7wakeAllEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +243,12 @@ func (this *QWaitCondition) WakeAll() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void notify_one()
+
+/*
+This function is provided for STL compatibility. It is equivalent to wakeOne().
+
+This function was introduced in  Qt 5.8.
+*/
 func (this *QWaitCondition) Notify_one() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition10notify_oneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +258,12 @@ func (this *QWaitCondition) Notify_one() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void notify_all()
+
+/*
+This function is provided for STL compatibility. It is equivalent to wakeAll().
+
+This function was introduced in  Qt 5.8.
+*/
 func (this *QWaitCondition) Notify_all() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition10notify_allEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

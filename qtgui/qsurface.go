@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QSurface struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QSurface) NewFromPointer(cthis unsafe.Pointer) *QSurface {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSurface()
+
+/*
+
+ */
 func DeleteQSurface(this *QSurface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSurfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -77,6 +84,10 @@ func DeleteQSurface(this *QSurface) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSurface::SurfaceClass surfaceClass() const
+
+/*
+Returns the surface class of this surface.
+*/
 func (this *QSurface) SurfaceClass() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface12surfaceClassEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +98,10 @@ func (this *QSurface) SurfaceClass() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSurfaceFormat format() const
+
+/*
+Returns the format of the surface.
+*/
 func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +114,10 @@ func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSurface::SurfaceType surfaceType() const
+
+/*
+Returns the type of the surface.
+*/
 func (this *QSurface) SurfaceType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface11surfaceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,6 +128,12 @@ func (this *QSurface) SurfaceType() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool supportsOpenGL() const
+
+/*
+Returns true if the surface is OpenGL compatible and can be used in conjunction with QOpenGLContext; otherwise returns false.
+
+This function was introduced in  Qt 5.3.
+*/
 func (this *QSurface) SupportsOpenGL() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface14supportsOpenGLEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +144,10 @@ func (this *QSurface) SupportsOpenGL() bool {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSize size() const
+
+/*
+Returns the size of the surface in pixels.
+*/
 func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +160,10 @@ func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QSurface(enum QSurface::SurfaceClass)
+
+/*
+Creates a surface with the given type.
+*/
 func NewQSurface(type_ int) *QSurface {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSurfaceC2ENS_12SurfaceClassE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -139,17 +172,39 @@ func NewQSurface(type_ int) *QSurface {
 	return gothis
 }
 
+/*
+The SurfaceClass enum describes the actual subclass of the surface.
+
+
+*/
 type QSurface__SurfaceClass = int
 
+// The surface is an instance of QWindow.
 const QSurface__Window QSurface__SurfaceClass = 0
+
+// The surface is an instance of QOffscreenSurface.
 const QSurface__Offscreen QSurface__SurfaceClass = 1
 
+/*
+The SurfaceType enum describes what type of surface this is.
+
+
+*/
 type QSurface__SurfaceType = int
 
+// The surface is is composed of pixels and can be rendered to using a software rasterizer like Qt's raster paint engine.
 const QSurface__RasterSurface QSurface__SurfaceType = 0
+
+// The surface is an OpenGL compatible surface and can be used in conjunction with QOpenGLContext.
 const QSurface__OpenGLSurface QSurface__SurfaceType = 1
+
+// The surface can be rendered to using a software rasterizer, and also supports OpenGL. This surface type is intended for internal Qt use, and requires the use of private API.
 const QSurface__RasterGLSurface QSurface__SurfaceType = 2
+
+// The surface is an OpenVG compatible surface and can be used in conjunction with OpenVG contexts.
 const QSurface__OpenVGSurface QSurface__SurfaceType = 3
+
+// The surface is a Vulkan compatible surface and can be used in conjunction with the Vulkan graphics API.
 const QSurface__VulkanSurface QSurface__SurfaceType = 4
 
 //  body block end

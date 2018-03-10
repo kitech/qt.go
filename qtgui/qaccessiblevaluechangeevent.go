@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleValueChangeEvent struct {
 	*QAccessibleEvent
 }
@@ -66,6 +69,10 @@ func (*QAccessibleValueChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAcces
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleValueChangeEvent(QObject *, const QVariant &)
+
+/*
+
+ */
 func NewQAccessibleValueChangeEvent(obj qtcore.QObject_ITF /*777 QObject **/, val qtcore.QVariant_ITF) *QAccessibleValueChangeEvent {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -86,6 +93,10 @@ func NewQAccessibleValueChangeEvent(obj qtcore.QObject_ITF /*777 QObject **/, va
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleValueChangeEvent(QAccessibleInterface *, const QVariant &)
+
+/*
+
+ */
 func NewQAccessibleValueChangeEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, val qtcore.QVariant_ITF) *QAccessibleValueChangeEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
@@ -106,6 +117,10 @@ func NewQAccessibleValueChangeEvent_1(iface QAccessibleInterface_ITF /*777 QAcce
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleValueChangeEvent()
+
+/*
+
+ */
 func DeleteQAccessibleValueChangeEvent(this *QAccessibleValueChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -117,6 +132,10 @@ func DeleteQAccessibleValueChangeEvent(this *QAccessibleValueChangeEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setValue(const QVariant &)
+
+/*
+
+ */
 func (this *QAccessibleValueChangeEvent) SetValue(val qtcore.QVariant_ITF) {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QVariant_PTR() != nil {
@@ -130,6 +149,10 @@ func (this *QAccessibleValueChangeEvent) SetValue(val qtcore.QVariant_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QVariant value() const
+
+/*
+
+ */
 func (this *QAccessibleValueChangeEvent) Value() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAccessibleValueChangeEvent5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

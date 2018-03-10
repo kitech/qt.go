@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStylePainter struct {
 	*qtgui.QPainter
 }
@@ -65,6 +68,10 @@ func (*QStylePainter) NewFromPointer(cthis unsafe.Pointer) *QStylePainter {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStylePainter()
+
+/*
+Constructs a QStylePainter.
+*/
 func NewQStylePainter() *QStylePainter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainterC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStylePainter() *QStylePainter {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStylePainter(QWidget *)
+
+/*
+Constructs a QStylePainter.
+*/
 func NewQStylePainter_1(w QWidget_ITF /*777 QWidget **/) *QStylePainter {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQStylePainter_1(w QWidget_ITF /*777 QWidget **/) *QStylePainter {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStylePainter(QPaintDevice *, QWidget *)
+
+/*
+Constructs a QStylePainter.
+*/
 func NewQStylePainter_2(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWidget_ITF /*777 QWidget **/) *QStylePainter {
 	var convArg0 unsafe.Pointer
 	if pd != nil && pd.QPaintDevice_PTR() != nil {
@@ -113,6 +128,12 @@ func NewQStylePainter_2(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWid
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool begin(QWidget *)
+
+/*
+Begin painting operations on the specified widget. Returns true if the painter is ready to use; otherwise returns false.
+
+This is automatically called by the constructor that takes a QWidget.
+*/
 func (this *QStylePainter) Begin(w QWidget_ITF /*777 QWidget **/) bool {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -127,6 +148,12 @@ func (this *QStylePainter) Begin(w QWidget_ITF /*777 QWidget **/) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool begin(QPaintDevice *, QWidget *)
+
+/*
+Begin painting operations on the specified widget. Returns true if the painter is ready to use; otherwise returns false.
+
+This is automatically called by the constructor that takes a QWidget.
+*/
 func (this *QStylePainter) Begin_1(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWidget_ITF /*777 QWidget **/) bool {
 	var convArg0 unsafe.Pointer
 	if pd != nil && pd.QPaintDevice_PTR() != nil {
@@ -145,6 +172,12 @@ func (this *QStylePainter) Begin_1(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption &)
+
+/*
+Use the widget's style to draw a primitive element pe specified by QStyleOption option.
+
+See also QStyle::drawPrimitive().
+*/
 func (this *QStylePainter) DrawPrimitive(pe int, opt QStyleOption_ITF) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -158,6 +191,12 @@ func (this *QStylePainter) DrawPrimitive(pe int, opt QStyleOption_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void drawControl(QStyle::ControlElement, const QStyleOption &)
+
+/*
+Use the widget's style to draw a control element ce specified by QStyleOption option.
+
+See also QStyle::drawControl().
+*/
 func (this *QStylePainter) DrawControl(ce int, opt QStyleOption_ITF) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
@@ -171,6 +210,12 @@ func (this *QStylePainter) DrawControl(ce int, opt QStyleOption_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex &)
+
+/*
+Use the widget's style to draw a complex control cc specified by the QStyleOptionComplex option.
+
+See also QStyle::drawComplexControl().
+*/
 func (this *QStylePainter) DrawComplexControl(cc int, opt QStyleOptionComplex_ITF) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
@@ -184,6 +229,14 @@ func (this *QStylePainter) DrawComplexControl(cc int, opt QStyleOptionComplex_IT
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void drawItemText(const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole)
+
+/*
+Draws the text in rectangle rect and palette pal. The text is aligned and wrapped according to flags.
+
+The pen color is specified with textRole. The enabled bool indicates whether or not the item is enabled; when reimplementing this bool should influence how the item is drawn.
+
+See also QStyle::drawItemText() and Qt::Alignment.
+*/
 func (this *QStylePainter) DrawItemText(r qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string, textRole int) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -203,6 +256,14 @@ func (this *QStylePainter) DrawItemText(r qtcore.QRect_ITF, flags int, pal qtgui
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void drawItemText(const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole)
+
+/*
+Draws the text in rectangle rect and palette pal. The text is aligned and wrapped according to flags.
+
+The pen color is specified with textRole. The enabled bool indicates whether or not the item is enabled; when reimplementing this bool should influence how the item is drawn.
+
+See also QStyle::drawItemText() and Qt::Alignment.
+*/
 func (this *QStylePainter) DrawItemText__(r qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -224,6 +285,12 @@ func (this *QStylePainter) DrawItemText__(r qtcore.QRect_ITF, flags int, pal qtg
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void drawItemPixmap(const QRect &, int, const QPixmap &)
+
+/*
+Draws the pixmap in rectangle rect. The pixmap is aligned according to flags.
+
+See also QStyle::drawItemPixmap() and Qt::Alignment.
+*/
 func (this *QStylePainter) DrawItemPixmap(r qtcore.QRect_ITF, flags int, pixmap qtgui.QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -241,6 +308,10 @@ func (this *QStylePainter) DrawItemPixmap(r qtcore.QRect_ITF, flags int, pixmap 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStyle * style() const
+
+/*
+Return the current style used by the QStylePainter.
+*/
 func (this *QStylePainter) Style() *QStyle /*777 QStyle **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStylePainter5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QPolygon struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,12 @@ func (*QPolygon) NewFromPointer(cthis unsafe.Pointer) *QPolygon {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPolygon()
+
+/*
+Constructs a polygon with no points.
+
+See also QVector::isEmpty().
+*/
 func NewQPolygon() *QPolygon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +87,12 @@ func NewQPolygon() *QPolygon {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPolygon(int)
+
+/*
+Constructs a polygon with no points.
+
+See also QVector::isEmpty().
+*/
 func NewQPolygon_1(size int) *QPolygon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonC2Ei", qtrt.FFI_TYPE_POINTER, size)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +105,12 @@ func NewQPolygon_1(size int) *QPolygon {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QPolygon(const QRect &, _Bool)
+
+/*
+Constructs a polygon with no points.
+
+See also QVector::isEmpty().
+*/
 func NewQPolygon_2(r qtcore.QRect_ITF, closed bool) *QPolygon {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -106,6 +127,12 @@ func NewQPolygon_2(r qtcore.QRect_ITF, closed bool) *QPolygon {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QPolygon(const QRect &, _Bool)
+
+/*
+Constructs a polygon with no points.
+
+See also QVector::isEmpty().
+*/
 func NewQPolygon_2_(r qtcore.QRect_ITF) *QPolygon {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -124,6 +151,12 @@ func NewQPolygon_2_(r qtcore.QRect_ITF) *QPolygon {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QPolygon(int, const int *)
+
+/*
+Constructs a polygon with no points.
+
+See also QVector::isEmpty().
+*/
 func NewQPolygon_3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonC2EiPKi", qtrt.FFI_TYPE_POINTER, nPoints, points)
 	qtrt.ErrPrint(err, rv)
@@ -136,6 +169,10 @@ func NewQPolygon_3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QPolygon()
+
+/*
+
+ */
 func DeleteQPolygon(this *QPolygon) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -147,6 +184,10 @@ func DeleteQPolygon(this *QPolygon) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygon & operator=(QPolygon &&)
+
+/*
+
+ */
 func (this *QPolygon) Operator_equal(other unsafe.Pointer /*333*/) *QPolygon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -159,6 +200,10 @@ func (this *QPolygon) Operator_equal(other unsafe.Pointer /*333*/) *QPolygon {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygon & operator=(const QPolygon &)
+
+/*
+
+ */
 func (this *QPolygon) Operator_equal_1(other QPolygon_ITF) *QPolygon {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPolygon_PTR() != nil {
@@ -175,6 +220,12 @@ func (this *QPolygon) Operator_equal_1(other QPolygon_ITF) *QPolygon {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPolygon &)
+
+/*
+Swaps polygon other with this polygon. This operation is very fast and never fails.
+
+This function was introduced in  Qt 4.8.
+*/
 func (this *QPolygon) Swap(other QPolygon_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPolygon_PTR() != nil {
@@ -188,6 +239,12 @@ func (this *QPolygon) Swap(other QPolygon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void translate(int, int)
+
+/*
+Translates all points in the polygon by (dx, dy).
+
+See also translated().
+*/
 func (this *QPolygon) Translate(dx int, dy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygon9translateEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -197,6 +254,12 @@ func (this *QPolygon) Translate(dx int, dy int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void translate(const QPoint &)
+
+/*
+Translates all points in the polygon by (dx, dy).
+
+See also translated().
+*/
 func (this *QPolygon) Translate_1(offset qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
@@ -210,6 +273,14 @@ func (this *QPolygon) Translate_1(offset qtcore.QPoint_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygon translated(int, int) const
+
+/*
+Returns a copy of the polygon that is translated by (dx, dy).
+
+This function was introduced in  Qt 4.6.
+
+See also translate().
+*/
 func (this *QPolygon) Translated(dx int, dy int) *QPolygon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPolygon10translatedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -222,6 +293,14 @@ func (this *QPolygon) Translated(dx int, dy int) *QPolygon /*123*/ {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygon translated(const QPoint &) const
+
+/*
+Returns a copy of the polygon that is translated by (dx, dy).
+
+This function was introduced in  Qt 4.6.
+
+See also translate().
+*/
 func (this *QPolygon) Translated_1(offset qtcore.QPoint_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
@@ -238,6 +317,12 @@ func (this *QPolygon) Translated_1(offset qtcore.QPoint_ITF) *QPolygon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect() const
+
+/*
+Returns the bounding rectangle of the polygon, or QRect(0, 0, 0, 0) if the polygon is empty.
+
+See also QVector::isEmpty().
+*/
 func (this *QPolygon) BoundingRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPolygon12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -250,6 +335,12 @@ func (this *QPolygon) BoundingRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void point(int, int *, int *) const
+
+/*
+Extracts the coordinates of the point at the given index to *x and *y (if they are valid pointers).
+
+See also setPoint().
+*/
 func (this *QPolygon) Point(i int, x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPolygon5pointEiPiS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, x, y)
 	qtrt.ErrPrint(err, rv)
@@ -259,6 +350,12 @@ func (this *QPolygon) Point(i int, x unsafe.Pointer /*666*/, y unsafe.Pointer /*
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPoint point(int) const
+
+/*
+Extracts the coordinates of the point at the given index to *x and *y (if they are valid pointers).
+
+See also setPoint().
+*/
 func (this *QPolygon) Point_1(i int) *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPolygon5pointEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -271,6 +368,12 @@ func (this *QPolygon) Point_1(i int) *qtcore.QPoint /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPoint(int, int, int)
+
+/*
+Sets the point at the given index to the point specified by (x, y).
+
+See also point(), putPoints(), and setPoints().
+*/
 func (this *QPolygon) SetPoint(index int, x int, y int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygon8setPointEiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, x, y)
 	qtrt.ErrPrint(err, rv)
@@ -280,6 +383,12 @@ func (this *QPolygon) SetPoint(index int, x int, y int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setPoint(int, const QPoint &)
+
+/*
+Sets the point at the given index to the point specified by (x, y).
+
+See also point(), putPoints(), and setPoints().
+*/
 func (this *QPolygon) SetPoint_1(index int, p qtcore.QPoint_ITF) {
 	var convArg1 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -293,6 +402,21 @@ func (this *QPolygon) SetPoint_1(index int, p qtcore.QPoint_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPoints(int, const int *)
+
+/*
+Resizes the polygon to nPoints and populates it with the given points.
+
+The example code creates a polygon with two points (10, 20) and (30, 40):
+
+
+          static const int points[] = { 10, 20, 30, 40 };
+          QPolygon polygon;
+          polygon.setPoints(2, points);
+
+
+
+See also setPoint() and putPoints().
+*/
 func (this *QPolygon) SetPoints(nPoints int, points unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygon9setPointsEiPKi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nPoints, points)
 	qtrt.ErrPrint(err, rv)
@@ -302,6 +426,32 @@ func (this *QPolygon) SetPoints(nPoints int, points unsafe.Pointer /*666*/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void putPoints(int, int, const int *)
+
+/*
+Copies nPoints points from the variable argument list into this polygon from the given index.
+
+The points are given as a sequence of integers, starting with firstx then firsty, and so on. The polygon is resized if index+nPoints exceeds its current size.
+
+The example code creates a polygon with three points (4,5), (6,7) and (8,9), by expanding the polygon from 1 to 3 points:
+
+
+          QPolygon polygon(1);
+          polygon[0] = QPoint(4, 5);
+          polygon.putPoints(1, 2, 6,7, 8,9);
+
+
+
+The following code has the same result, but here the putPoints() function overwrites rather than extends:
+
+
+          QPolygon polygon(3);
+          polygon.putPoints(0, 3, 4,5, 0,0, 8,9);
+          polygon.putPoints(1, 1, 6,7);
+
+
+
+See also setPoints().
+*/
 func (this *QPolygon) PutPoints(index int, nPoints int, points unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygon9putPointsEiiPKi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, nPoints, points)
 	qtrt.ErrPrint(err, rv)
@@ -311,6 +461,32 @@ func (this *QPolygon) PutPoints(index int, nPoints int, points unsafe.Pointer /*
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void putPoints(int, int, const QPolygon &, int)
+
+/*
+Copies nPoints points from the variable argument list into this polygon from the given index.
+
+The points are given as a sequence of integers, starting with firstx then firsty, and so on. The polygon is resized if index+nPoints exceeds its current size.
+
+The example code creates a polygon with three points (4,5), (6,7) and (8,9), by expanding the polygon from 1 to 3 points:
+
+
+          QPolygon polygon(1);
+          polygon[0] = QPoint(4, 5);
+          polygon.putPoints(1, 2, 6,7, 8,9);
+
+
+
+The following code has the same result, but here the putPoints() function overwrites rather than extends:
+
+
+          QPolygon polygon(3);
+          polygon.putPoints(0, 3, 4,5, 0,0, 8,9);
+          polygon.putPoints(1, 1, 6,7);
+
+
+
+See also setPoints().
+*/
 func (this *QPolygon) PutPoints_1(index int, nPoints int, from QPolygon_ITF, fromIndex int) {
 	var convArg2 unsafe.Pointer
 	if from != nil && from.QPolygon_PTR() != nil {
@@ -324,6 +500,32 @@ func (this *QPolygon) PutPoints_1(index int, nPoints int, from QPolygon_ITF, fro
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void putPoints(int, int, const QPolygon &, int)
+
+/*
+Copies nPoints points from the variable argument list into this polygon from the given index.
+
+The points are given as a sequence of integers, starting with firstx then firsty, and so on. The polygon is resized if index+nPoints exceeds its current size.
+
+The example code creates a polygon with three points (4,5), (6,7) and (8,9), by expanding the polygon from 1 to 3 points:
+
+
+          QPolygon polygon(1);
+          polygon[0] = QPoint(4, 5);
+          polygon.putPoints(1, 2, 6,7, 8,9);
+
+
+
+The following code has the same result, but here the putPoints() function overwrites rather than extends:
+
+
+          QPolygon polygon(3);
+          polygon.putPoints(0, 3, 4,5, 0,0, 8,9);
+          polygon.putPoints(1, 1, 6,7);
+
+
+
+See also setPoints().
+*/
 func (this *QPolygon) PutPoints_1_(index int, nPoints int, from QPolygon_ITF) {
 	var convArg2 unsafe.Pointer
 	if from != nil && from.QPolygon_PTR() != nil {
@@ -339,6 +541,12 @@ func (this *QPolygon) PutPoints_1_(index int, nPoints int, from QPolygon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool containsPoint(const QPoint &, Qt::FillRule) const
+
+/*
+Returns true if the given point is inside the polygon according to the specified fillRule; otherwise returns false.
+
+This function was introduced in  Qt 4.3.
+*/
 func (this *QPolygon) ContainsPoint(pt qtcore.QPoint_ITF, fillRule int) bool {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPoint_PTR() != nil {
@@ -353,6 +561,16 @@ func (this *QPolygon) ContainsPoint(pt qtcore.QPoint_ITF, fillRule int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygon united(const QPolygon &) const
+
+/*
+Returns a polygon which is the union of this polygon and r.
+
+Set operations on polygons, will treat the polygons as areas, and implicitly close the polygon.
+
+This function was introduced in  Qt 4.3.
+
+See also intersected() and subtracted().
+*/
 func (this *QPolygon) United(r QPolygon_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygon_PTR() != nil {
@@ -369,6 +587,16 @@ func (this *QPolygon) United(r QPolygon_ITF) *QPolygon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygon intersected(const QPolygon &) const
+
+/*
+Returns a polygon which is the intersection of this polygon and r.
+
+Set operations on polygons will treat the polygons as areas. Non-closed polygons will be treated as implicitly closed.
+
+This function was introduced in  Qt 4.3.
+
+See also intersects().
+*/
 func (this *QPolygon) Intersected(r QPolygon_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygon_PTR() != nil {
@@ -385,6 +613,14 @@ func (this *QPolygon) Intersected(r QPolygon_ITF) *QPolygon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygon subtracted(const QPolygon &) const
+
+/*
+Returns a polygon which is r subtracted from this polygon.
+
+Set operations on polygons will treat the polygons as areas. Non-closed polygons will be treated as implicitly closed.
+
+This function was introduced in  Qt 4.3.
+*/
 func (this *QPolygon) Subtracted(r QPolygon_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygon_PTR() != nil {
@@ -401,6 +637,16 @@ func (this *QPolygon) Subtracted(r QPolygon_ITF) *QPolygon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool intersects(const QPolygon &) const
+
+/*
+Returns true if the current polygon intersects at any point the given polygon p. Also returns true if the current polygon contains or is contained by any part of p.
+
+Set operations on polygons will treat the polygons as areas. Non-closed polygons will be treated as implicitly closed.
+
+This function was introduced in  Qt 5.10.
+
+See also intersected().
+*/
 func (this *QPolygon) Intersects(r QPolygon_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QPolygon_PTR() != nil {

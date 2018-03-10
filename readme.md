@@ -16,6 +16,8 @@ Qt5 binding for Go (Golang) without CGO that aims to achieve Go's native compile
 * full signal/slot support
 * protected method override support
 * default arguments and value wrapper functions
+* Class/Method/Function/Enum comment for godoc
+
 
 ### Multiple platforms support
 All platforms should be supported, for now some of them are tested:

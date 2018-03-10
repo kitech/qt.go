@@ -1,8 +1,8 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h
 // #include <qandroidjnienvironment.h>
-// #include <Qtjni>
+// #include <QtAndroidExtras>
 
 //  header block end
 
@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAndroidJniEnvironment struct {
 	*qtrt.CObject
 }
@@ -62,10 +65,25 @@ func (*QAndroidJniEnvironment) NewFromPointer(cthis unsafe.Pointer) *QAndroidJni
 	return NewQAndroidJniEnvironmentFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:55
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:55
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidJniEnvironment()
+
+/*
+Constructs a new QAndroidJniEnvironment object and attach the current thread to the Java VM.
+
+
+  bool exceptionCheck()
+  {
+      \/*
+        The QAndroidJniEnvironment attaches the current thread to the JavaVM on
+        creation and detach when it goes out of scope.
+       *\/
+      QAndroidJniEnvironment qjniEnv;
+      return qjniEnv->ExceptionCheck();
+  }
+*/
 func NewQAndroidJniEnvironment() *QAndroidJniEnvironment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironmentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -74,21 +92,29 @@ func NewQAndroidJniEnvironment() *QAndroidJniEnvironment {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:56
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:56
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QAndroidJniEnvironment()
+
+/*
+
+ */
 func DeleteQAndroidJniEnvironment(this *QAndroidJniEnvironment) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironmentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 1)
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:57
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:57
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] int * javaVM()
+// [8] JavaVM * javaVM()
+
+/*
+Returns the Java VM interface.
+*/
 func (this *QAndroidJniEnvironment) JavaVM() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironment6javaVMEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -100,10 +126,14 @@ func QAndroidJniEnvironment_JavaVM() unsafe.Pointer /*666*/ {
 	return rv
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:58
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:58
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] int * operator->()
+// [8] JNIEnv * operator->()
+
+/*
+
+ */
 func (this *QAndroidJniEnvironment) Operator_minus_greater() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironmentptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

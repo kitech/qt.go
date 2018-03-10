@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlError struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QQmlError) NewFromPointer(cthis unsafe.Pointer) *QQmlError {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlError()
+
+/*
+Creates an empty error object.
+*/
 func NewQQmlError() *QQmlError {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlErrorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQQmlError() *QQmlError {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlError & operator=(const QQmlError &)
+
+/*
+
+ */
 func (this *QQmlError) Operator_equal(arg0 QQmlError_ITF) *QQmlError {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlError_PTR() != nil {
@@ -95,6 +106,10 @@ func (this *QQmlError) Operator_equal(arg0 QQmlError_ITF) *QQmlError {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QQmlError()
+
+/*
+
+ */
 func DeleteQQmlError(this *QQmlError) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlErrorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -106,6 +121,10 @@ func DeleteQQmlError(this *QQmlError) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if this error is valid, otherwise false.
+*/
 func (this *QQmlError) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,6 +135,12 @@ func (this *QQmlError) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl url() const
+
+/*
+Returns the url for the file that caused this error.
+
+See also setUrl().
+*/
 func (this *QQmlError) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +153,12 @@ func (this *QQmlError) Url() *qtcore.QUrl /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUrl(const QUrl &)
+
+/*
+Sets the url for the file that caused this error.
+
+See also url().
+*/
 func (this *QQmlError) SetUrl(arg0 qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QUrl_PTR() != nil {
@@ -141,6 +172,12 @@ func (this *QQmlError) SetUrl(arg0 qtcore.QUrl_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString description() const
+
+/*
+Returns the error description.
+
+See also setDescription().
+*/
 func (this *QQmlError) Description() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +191,12 @@ func (this *QQmlError) Description() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDescription(const QString &)
+
+/*
+Sets the error description.
+
+See also description().
+*/
 func (this *QQmlError) SetDescription(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -165,6 +208,12 @@ func (this *QQmlError) SetDescription(arg0 string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int line() const
+
+/*
+Returns the error line number.
+
+See also setLine().
+*/
 func (this *QQmlError) Line() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError4lineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +224,12 @@ func (this *QQmlError) Line() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLine(int)
+
+/*
+Sets the error line number.
+
+See also line().
+*/
 func (this *QQmlError) SetLine(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError7setLineEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -184,6 +239,12 @@ func (this *QQmlError) SetLine(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int column() const
+
+/*
+Returns the error column number.
+
+See also setColumn().
+*/
 func (this *QQmlError) Column() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError6columnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -194,6 +255,12 @@ func (this *QQmlError) Column() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumn(int)
+
+/*
+Sets the error column number.
+
+See also column().
+*/
 func (this *QQmlError) SetColumn(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError9setColumnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -203,6 +270,12 @@ func (this *QQmlError) SetColumn(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * object() const
+
+/*
+Returns the nearest object where this error occurred. Exceptions in bound property expressions set this to the object to which the property belongs. It will be 0 for all other exceptions.
+
+See also setObject().
+*/
 func (this *QQmlError) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -213,6 +286,12 @@ func (this *QQmlError) Object() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setObject(QObject *)
+
+/*
+Sets the nearest object where this error occurred.
+
+See also object().
+*/
 func (this *QQmlError) SetObject(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -226,6 +305,14 @@ func (this *QQmlError) SetObject(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QtMsgType messageType() const
+
+/*
+Returns the message type.
+
+This function was introduced in  Qt 5.9.
+
+See also setMessageType().
+*/
 func (this *QQmlError) MessageType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError11messageTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -236,6 +323,14 @@ func (this *QQmlError) MessageType() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMessageType(enum QtMsgType)
+
+/*
+Sets the messageType for this message. The message type determines which QDebug handlers are responsible for recieving the message.
+
+This function was introduced in  Qt 5.9.
+
+See also messageType().
+*/
 func (this *QQmlError) SetMessageType(messageType int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlError14setMessageTypeE9QtMsgType", qtrt.FFI_TYPE_POINTER, this.GetCthis(), messageType)
 	qtrt.ErrPrint(err, rv)
@@ -245,6 +340,10 @@ func (this *QQmlError) SetMessageType(messageType int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
+
+/*
+Returns the error as a human readable string.
+*/
 func (this *QQmlError) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QQmlError8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

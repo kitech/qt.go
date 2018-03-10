@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QStatusTipEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QStatusTipEvent) NewFromPointer(cthis unsafe.Pointer) *QStatusTipEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStatusTipEvent(const QString &)
+
+/*
+
+ */
 func NewQStatusTipEvent(tip string) *QStatusTipEvent {
 	var tmpArg0 = qtcore.NewQString_5(tip)
 	var convArg0 = tmpArg0.GetCthis()
@@ -78,6 +85,10 @@ func NewQStatusTipEvent(tip string) *QStatusTipEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStatusTipEvent()
+
+/*
+
+ */
 func DeleteQStatusTipEvent(this *QStatusTipEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QStatusTipEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -89,6 +100,10 @@ func DeleteQStatusTipEvent(this *QStatusTipEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString tip() const
+
+/*
+
+ */
 func (this *QStatusTipEvent) Tip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QStatusTipEvent3tipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

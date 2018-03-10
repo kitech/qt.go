@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QPictureFormatPlugin struct {
 	*qtcore.QObject
 }
@@ -64,6 +67,10 @@ func (*QPictureFormatPlugin) NewFromPointer(cthis unsafe.Pointer) *QPictureForma
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QPictureFormatPlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*777 const Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPictureFormatPlugin(QObject *)
+
+/*
+Constructs an picture format plugin with the given parent. This is invoked automatically by the moc generated code that exports the plugin.
+*/
 func NewQPictureFormatPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QPictureFormatPlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQPictureFormatPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QPict
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPictureFormatPlugin(QObject *)
+
+/*
+Constructs an picture format plugin with the given parent. This is invoked automatically by the moc generated code that exports the plugin.
+*/
 func NewQPictureFormatPlugin__() *QPictureFormatPlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +119,10 @@ func NewQPictureFormatPlugin__() *QPictureFormatPlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPictureFormatPlugin()
+
+/*
+
+ */
 func DeleteQPictureFormatPlugin(this *QPictureFormatPlugin) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPluginD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -115,6 +134,12 @@ func DeleteQPictureFormatPlugin(this *QPictureFormatPlugin) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool loadPicture(const QString &, const QString &, QPicture *)
+
+/*
+Loads the picture stored in the file called fileName, with the given format, into *picture. Returns true on success; otherwise returns false.
+
+See also savePicture().
+*/
 func (this *QPictureFormatPlugin) LoadPicture(format string, filename string, pic QPicture_ITF /*777 QPicture **/) bool {
 	var tmpArg0 = qtcore.NewQString_5(format)
 	var convArg0 = tmpArg0.GetCthis()
@@ -133,6 +158,12 @@ func (this *QPictureFormatPlugin) LoadPicture(format string, filename string, pi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool savePicture(const QString &, const QString &, const QPicture &)
+
+/*
+Saves the given picture into the file called fileName, using the specified format. Returns true on success; otherwise returns false.
+
+See also loadPicture().
+*/
 func (this *QPictureFormatPlugin) SavePicture(format string, filename string, pic QPicture_ITF) bool {
 	var tmpArg0 = qtcore.NewQString_5(format)
 	var convArg0 = tmpArg0.GetCthis()
@@ -151,6 +182,10 @@ func (this *QPictureFormatPlugin) SavePicture(format string, filename string, pi
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool installIOHandler(const QString &)
+
+/*
+Installs a QPictureIO picture I/O handler for the picture format format. Returns true on success.
+*/
 func (this *QPictureFormatPlugin) InstallIOHandler(format string) bool {
 	var tmpArg0 = qtcore.NewQString_5(format)
 	var convArg0 = tmpArg0.GetCthis()

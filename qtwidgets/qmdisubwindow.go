@@ -133,6 +133,9 @@ func (this *QMdiSubWindow) InheritChildEvent(f func(childEvent *qtcore.QChildEve
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
 
+/*
+
+ */
 type QMdiSubWindow struct {
 	*QWidget
 }
@@ -165,6 +168,10 @@ func (*QMdiSubWindow) NewFromPointer(cthis unsafe.Pointer) *QMdiSubWindow {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QMdiSubWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +182,23 @@ func (this *QMdiSubWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMdiSubWindow(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a new QMdiSubWindow widget. The parent and flags arguments are passed to QWidget's constructor.
+
+Instead of using addSubWindow(), it is also simply possible to use setParent() when you add the subwindow to a QMdiArea.
+
+Note that only QMdiSubWindows can be set as children of QMdiArea; you cannot, for instance, write:
+
+
+  //bad code
+  QMdiArea mdiArea;
+  QTextEdit editor(&mdiArea); // invalid child widget
+
+
+
+See also QMdiArea::addSubWindow().
+*/
 func NewQMdiSubWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMdiSubWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -191,6 +215,23 @@ func NewQMdiSubWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMdiSubW
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMdiSubWindow(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a new QMdiSubWindow widget. The parent and flags arguments are passed to QWidget's constructor.
+
+Instead of using addSubWindow(), it is also simply possible to use setParent() when you add the subwindow to a QMdiArea.
+
+Note that only QMdiSubWindows can be set as children of QMdiArea; you cannot, for instance, write:
+
+
+  //bad code
+  QMdiArea mdiArea;
+  QTextEdit editor(&mdiArea); // invalid child widget
+
+
+
+See also QMdiArea::addSubWindow().
+*/
 func NewQMdiSubWindow__() *QMdiSubWindow {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -207,6 +248,23 @@ func NewQMdiSubWindow__() *QMdiSubWindow {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMdiSubWindow(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a new QMdiSubWindow widget. The parent and flags arguments are passed to QWidget's constructor.
+
+Instead of using addSubWindow(), it is also simply possible to use setParent() when you add the subwindow to a QMdiArea.
+
+Note that only QMdiSubWindows can be set as children of QMdiArea; you cannot, for instance, write:
+
+
+  //bad code
+  QMdiArea mdiArea;
+  QTextEdit editor(&mdiArea); // invalid child widget
+
+
+
+See also QMdiArea::addSubWindow().
+*/
 func NewQMdiSubWindow__1(parent QWidget_ITF /*777 QWidget **/) *QMdiSubWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -225,6 +283,10 @@ func NewQMdiSubWindow__1(parent QWidget_ITF /*777 QWidget **/) *QMdiSubWindow {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMdiSubWindow()
+
+/*
+
+ */
 func DeleteQMdiSubWindow(this *QMdiSubWindow) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindowD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -236,6 +298,10 @@ func DeleteQMdiSubWindow(this *QMdiSubWindow) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QMdiSubWindow) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -248,6 +314,10 @@ func (this *QMdiSubWindow) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QMdiSubWindow) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -260,6 +330,14 @@ func (this *QMdiSubWindow) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
+
+/*
+Sets widget as the internal widget of this subwindow. The internal widget is displayed in the center of the subwindow beneath the title bar.
+
+QMdiSubWindow takes temporary ownership of widget; you do not have to delete it. Any existing internal widget will be removed and reparented to the root window.
+
+See also widget().
+*/
 func (this *QMdiSubWindow) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -273,6 +351,12 @@ func (this *QMdiSubWindow) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget() const
+
+/*
+Returns the current internal widget.
+
+See also setWidget().
+*/
 func (this *QMdiSubWindow) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -283,6 +367,10 @@ func (this *QMdiSubWindow) Widget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * maximizedButtonsWidget() const
+
+/*
+
+ */
 func (this *QMdiSubWindow) MaximizedButtonsWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -293,6 +381,10 @@ func (this *QMdiSubWindow) MaximizedButtonsWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * maximizedSystemMenuIconWidget() const
+
+/*
+
+ */
 func (this *QMdiSubWindow) MaximizedSystemMenuIconWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -303,6 +395,12 @@ func (this *QMdiSubWindow) MaximizedSystemMenuIconWidget() *QWidget /*777 QWidge
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isShaded() const
+
+/*
+Returns true if this window is shaded; otherwise returns false.
+
+A window is shaded if it is collapsed so that only the title bar is visible.
+*/
 func (this *QMdiSubWindow) IsShaded() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow8isShadedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -313,6 +411,12 @@ func (this *QMdiSubWindow) IsShaded() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(enum QMdiSubWindow::SubWindowOption, _Bool)
+
+/*
+If on is true, option is enabled on the subwindow; otherwise it is disabled. See SubWindowOption for the effect of each option.
+
+See also SubWindowOption and testOption().
+*/
 func (this *QMdiSubWindow) SetOption(option int, on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow9setOptionENS_15SubWindowOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	qtrt.ErrPrint(err, rv)
@@ -322,6 +426,12 @@ func (this *QMdiSubWindow) SetOption(option int, on bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(enum QMdiSubWindow::SubWindowOption, _Bool)
+
+/*
+If on is true, option is enabled on the subwindow; otherwise it is disabled. See SubWindowOption for the effect of each option.
+
+See also SubWindowOption and testOption().
+*/
 func (this *QMdiSubWindow) SetOption__(option int) {
 	// arg: 1, bool=Bool, =Invalid,
 	on := true
@@ -333,6 +443,12 @@ func (this *QMdiSubWindow) SetOption__(option int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(enum QMdiSubWindow::SubWindowOption) const
+
+/*
+Returns true if option is enabled; otherwise returns false.
+
+See also SubWindowOption and setOption().
+*/
 func (this *QMdiSubWindow) TestOption(arg0 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow10testOptionENS_15SubWindowOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -343,6 +459,10 @@ func (this *QMdiSubWindow) TestOption(arg0 int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeyboardSingleStep(int)
+
+/*
+
+ */
 func (this *QMdiSubWindow) SetKeyboardSingleStep(step int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow21setKeyboardSingleStepEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -352,6 +472,10 @@ func (this *QMdiSubWindow) SetKeyboardSingleStep(step int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyboardSingleStep() const
+
+/*
+
+ */
 func (this *QMdiSubWindow) KeyboardSingleStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow18keyboardSingleStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -362,6 +486,10 @@ func (this *QMdiSubWindow) KeyboardSingleStep() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeyboardPageStep(int)
+
+/*
+
+ */
 func (this *QMdiSubWindow) SetKeyboardPageStep(step int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow19setKeyboardPageStepEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	qtrt.ErrPrint(err, rv)
@@ -371,6 +499,10 @@ func (this *QMdiSubWindow) SetKeyboardPageStep(step int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyboardPageStep() const
+
+/*
+
+ */
 func (this *QMdiSubWindow) KeyboardPageStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow16keyboardPageStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -381,6 +513,20 @@ func (this *QMdiSubWindow) KeyboardPageStep() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSystemMenu(QMenu *)
+
+/*
+Sets systemMenu as the current system menu for this subwindow.
+
+By default, each QMdiSubWindow has a standard system menu.
+
+QActions for the system menu created by QMdiSubWindow will automatically be updated depending on the current window state; e.g., the minimize action will be disabled after the window is minimized.
+
+QActions added by the user are not updated by QMdiSubWindow.
+
+QMdiSubWindow takes ownership of systemMenu; you do not have to delete it. Any existing menus will be deleted.
+
+See also systemMenu() and showSystemMenu().
+*/
 func (this *QMdiSubWindow) SetSystemMenu(systemMenu QMenu_ITF /*777 QMenu **/) {
 	var convArg0 unsafe.Pointer
 	if systemMenu != nil && systemMenu.QMenu_PTR() != nil {
@@ -394,6 +540,12 @@ func (this *QMdiSubWindow) SetSystemMenu(systemMenu QMenu_ITF /*777 QMenu **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMenu * systemMenu() const
+
+/*
+Returns a pointer to the current system menu, or zero if no system menu is set. QMdiSubWindow provides a default system menu, but you can also set the menu with setSystemMenu().
+
+See also setSystemMenu() and showSystemMenu().
+*/
 func (this *QMdiSubWindow) SystemMenu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow10systemMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -404,6 +556,14 @@ func (this *QMdiSubWindow) SystemMenu() *QMenu /*777 QMenu **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMdiArea * mdiArea() const
+
+/*
+Returns the area containing this sub-window, or 0 if there is none.
+
+This function was introduced in  Qt 4.4.
+
+See also QMdiArea::addSubWindow().
+*/
 func (this *QMdiSubWindow) MdiArea() *QMdiArea /*777 QMdiArea **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMdiSubWindow7mdiAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -414,6 +574,10 @@ func (this *QMdiSubWindow) MdiArea() *QMdiArea /*777 QMdiArea **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void windowStateChanged(Qt::WindowStates, Qt::WindowStates)
+
+/*
+QMdiSubWindow emits this signal after the window state changes. oldState is the window state before it changed, and newState is the new, current state.
+*/
 func (this *QMdiSubWindow) WindowStateChanged(oldState int, newState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow18windowStateChangedE6QFlagsIN2Qt11WindowStateEES3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), oldState, newState)
 	qtrt.ErrPrint(err, rv)
@@ -423,6 +587,12 @@ func (this *QMdiSubWindow) WindowStateChanged(oldState int, newState int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void aboutToActivate()
+
+/*
+QMdiSubWindow emits this signal immediately before it is activated. After the subwindow has been activated, the QMdiArea that manages the subwindow will also emit the subWindowActivated() signal.
+
+See also QMdiArea::subWindowActivated().
+*/
 func (this *QMdiSubWindow) AboutToActivate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow15aboutToActivateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -432,6 +602,12 @@ func (this *QMdiSubWindow) AboutToActivate() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showSystemMenu()
+
+/*
+Shows the system menu below the system menu icon in the title bar.
+
+See also setSystemMenu() and systemMenu().
+*/
 func (this *QMdiSubWindow) ShowSystemMenu() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow14showSystemMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -441,6 +617,14 @@ func (this *QMdiSubWindow) ShowSystemMenu() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showShaded()
+
+/*
+Calling this function makes the subwindow enter the shaded mode. When the subwindow is shaded, only the title bar is visible.
+
+Although shading is not supported by all styles, this function will still show the subwindow as shaded, regardless of whether support for shading is available. However, when used with styles without shading support, the user will be unable to return from shaded mode through the user interface (e.g., through a shade button in the title bar).
+
+See also isShaded().
+*/
 func (this *QMdiSubWindow) ShowShaded() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow10showShadedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -450,6 +634,10 @@ func (this *QMdiSubWindow) ShowShaded() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+Reimplemented from QObject::eventFilter().
+*/
 func (this *QMdiSubWindow) EventFilter(object qtcore.QObject_ITF /*777 QObject **/, event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -468,6 +656,10 @@ func (this *QMdiSubWindow) EventFilter(object qtcore.QObject_ITF /*777 QObject *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QMdiSubWindow) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -482,6 +674,10 @@ func (this *QMdiSubWindow) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
+
+/*
+Reimplemented from QWidget::showEvent().
+*/
 func (this *QMdiSubWindow) ShowEvent(showEvent qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	var convArg0 unsafe.Pointer
 	if showEvent != nil && showEvent.QShowEvent_PTR() != nil {
@@ -495,6 +691,10 @@ func (this *QMdiSubWindow) ShowEvent(showEvent qtgui.QShowEvent_ITF /*777 QShowE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
+
+/*
+Reimplemented from QWidget::hideEvent().
+*/
 func (this *QMdiSubWindow) HideEvent(hideEvent qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 	var convArg0 unsafe.Pointer
 	if hideEvent != nil && hideEvent.QHideEvent_PTR() != nil {
@@ -508,6 +708,10 @@ func (this *QMdiSubWindow) HideEvent(hideEvent qtgui.QHideEvent_ITF /*777 QHideE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QMdiSubWindow) ChangeEvent(changeEvent qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if changeEvent != nil && changeEvent.QEvent_PTR() != nil {
@@ -521,6 +725,10 @@ func (this *QMdiSubWindow) ChangeEvent(changeEvent qtcore.QEvent_ITF /*777 QEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
+
+/*
+Reimplemented from QWidget::closeEvent().
+*/
 func (this *QMdiSubWindow) CloseEvent(closeEvent qtgui.QCloseEvent_ITF /*777 QCloseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if closeEvent != nil && closeEvent.QCloseEvent_PTR() != nil {
@@ -534,6 +742,10 @@ func (this *QMdiSubWindow) CloseEvent(closeEvent qtgui.QCloseEvent_ITF /*777 QCl
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void leaveEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::leaveEvent().
+*/
 func (this *QMdiSubWindow) LeaveEvent(leaveEvent qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if leaveEvent != nil && leaveEvent.QEvent_PTR() != nil {
@@ -547,6 +759,12 @@ func (this *QMdiSubWindow) LeaveEvent(leaveEvent qtcore.QEvent_ITF /*777 QEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+
+Warning: When maximizing or restoring a subwindow, the resulting call to this function may have an invalid QResizeEvent::oldSize().
+*/
 func (this *QMdiSubWindow) ResizeEvent(resizeEvent qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if resizeEvent != nil && resizeEvent.QResizeEvent_PTR() != nil {
@@ -560,6 +778,10 @@ func (this *QMdiSubWindow) ResizeEvent(resizeEvent qtgui.QResizeEvent_ITF /*777 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
+
+/*
+Reimplemented from QObject::timerEvent().
+*/
 func (this *QMdiSubWindow) TimerEvent(timerEvent qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
 	var convArg0 unsafe.Pointer
 	if timerEvent != nil && timerEvent.QTimerEvent_PTR() != nil {
@@ -573,6 +795,10 @@ func (this *QMdiSubWindow) TimerEvent(timerEvent qtcore.QTimerEvent_ITF /*777 QT
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void moveEvent(QMoveEvent *)
+
+/*
+Reimplemented from QWidget::moveEvent().
+*/
 func (this *QMdiSubWindow) MoveEvent(moveEvent qtgui.QMoveEvent_ITF /*777 QMoveEvent **/) {
 	var convArg0 unsafe.Pointer
 	if moveEvent != nil && moveEvent.QMoveEvent_PTR() != nil {
@@ -586,6 +812,10 @@ func (this *QMdiSubWindow) MoveEvent(moveEvent qtgui.QMoveEvent_ITF /*777 QMoveE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QMdiSubWindow) PaintEvent(paintEvent qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if paintEvent != nil && paintEvent.QPaintEvent_PTR() != nil {
@@ -599,6 +829,10 @@ func (this *QMdiSubWindow) PaintEvent(paintEvent qtgui.QPaintEvent_ITF /*777 QPa
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mousePressEvent().
+*/
 func (this *QMdiSubWindow) MousePressEvent(mouseEvent qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if mouseEvent != nil && mouseEvent.QMouseEvent_PTR() != nil {
@@ -612,6 +846,10 @@ func (this *QMdiSubWindow) MousePressEvent(mouseEvent qtgui.QMouseEvent_ITF /*77
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseDoubleClickEvent().
+*/
 func (this *QMdiSubWindow) MouseDoubleClickEvent(mouseEvent qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if mouseEvent != nil && mouseEvent.QMouseEvent_PTR() != nil {
@@ -625,6 +863,10 @@ func (this *QMdiSubWindow) MouseDoubleClickEvent(mouseEvent qtgui.QMouseEvent_IT
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseReleaseEvent().
+*/
 func (this *QMdiSubWindow) MouseReleaseEvent(mouseEvent qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if mouseEvent != nil && mouseEvent.QMouseEvent_PTR() != nil {
@@ -638,6 +880,10 @@ func (this *QMdiSubWindow) MouseReleaseEvent(mouseEvent qtgui.QMouseEvent_ITF /*
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseMoveEvent().
+*/
 func (this *QMdiSubWindow) MouseMoveEvent(mouseEvent qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if mouseEvent != nil && mouseEvent.QMouseEvent_PTR() != nil {
@@ -651,6 +897,10 @@ func (this *QMdiSubWindow) MouseMoveEvent(mouseEvent qtgui.QMouseEvent_ITF /*777
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWidget::keyPressEvent().
+*/
 func (this *QMdiSubWindow) KeyPressEvent(keyEvent qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if keyEvent != nil && keyEvent.QKeyEvent_PTR() != nil {
@@ -664,6 +914,10 @@ func (this *QMdiSubWindow) KeyPressEvent(keyEvent qtgui.QKeyEvent_ITF /*777 QKey
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
+
+/*
+Reimplemented from QWidget::contextMenuEvent().
+*/
 func (this *QMdiSubWindow) ContextMenuEvent(contextMenuEvent qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
 	var convArg0 unsafe.Pointer
 	if contextMenuEvent != nil && contextMenuEvent.QContextMenuEvent_PTR() != nil {
@@ -677,6 +931,10 @@ func (this *QMdiSubWindow) ContextMenuEvent(contextMenuEvent qtgui.QContextMenuE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
+
+/*
+Reimplemented from QWidget::focusInEvent().
+*/
 func (this *QMdiSubWindow) FocusInEvent(focusInEvent qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
 	if focusInEvent != nil && focusInEvent.QFocusEvent_PTR() != nil {
@@ -690,6 +948,10 @@ func (this *QMdiSubWindow) FocusInEvent(focusInEvent qtgui.QFocusEvent_ITF /*777
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
+
+/*
+Reimplemented from QWidget::focusOutEvent().
+*/
 func (this *QMdiSubWindow) FocusOutEvent(focusOutEvent qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
 	if focusOutEvent != nil && focusOutEvent.QFocusEvent_PTR() != nil {
@@ -703,6 +965,10 @@ func (this *QMdiSubWindow) FocusOutEvent(focusOutEvent qtgui.QFocusEvent_ITF /*7
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void childEvent(QChildEvent *)
+
+/*
+Reimplemented from QObject::childEvent().
+*/
 func (this *QMdiSubWindow) ChildEvent(childEvent qtcore.QChildEvent_ITF /*777 QChildEvent **/) {
 	var convArg0 unsafe.Pointer
 	if childEvent != nil && childEvent.QChildEvent_PTR() != nil {
@@ -712,11 +978,22 @@ func (this *QMdiSubWindow) ChildEvent(childEvent qtcore.QChildEvent_ITF /*777 QC
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QMdiSubWindow__SubWindowOption = int
 
+//
 const QMdiSubWindow__AllowOutsideAreaHorizontally QMdiSubWindow__SubWindowOption = 1
+
+//
 const QMdiSubWindow__AllowOutsideAreaVertically QMdiSubWindow__SubWindowOption = 2
+
+//
 const QMdiSubWindow__RubberBandResize QMdiSubWindow__SubWindowOption = 4
+
+//
 const QMdiSubWindow__RubberBandMove QMdiSubWindow__SubWindowOption = 8
 
 //  body block end

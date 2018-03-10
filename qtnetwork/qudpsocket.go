@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QUdpSocket struct {
 	*QAbstractSocket
 }
@@ -64,6 +67,10 @@ func (*QUdpSocket) NewFromPointer(cthis unsafe.Pointer) *QUdpSocket {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QUdpSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUdpSocket10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,14 @@ func (this *QUdpSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUdpSocket(QObject *)
+
+/*
+Creates a QUdpSocket object.
+
+parent is passed to the QObject constructor.
+
+See also socketType().
+*/
 func NewQUdpSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QUdpSocket {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +105,14 @@ func NewQUdpSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QUdpSocket {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUdpSocket(QObject *)
+
+/*
+Creates a QUdpSocket object.
+
+parent is passed to the QObject constructor.
+
+See also socketType().
+*/
 func NewQUdpSocket__() *QUdpSocket {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +127,10 @@ func NewQUdpSocket__() *QUdpSocket {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QUdpSocket()
+
+/*
+
+ */
 func DeleteQUdpSocket(this *QUdpSocket) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocketD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -115,6 +142,20 @@ func DeleteQUdpSocket(this *QUdpSocket) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool joinMulticastGroup(const QHostAddress &)
+
+/*
+Joins the multicast group specified by groupAddress on the default interface chosen by the operating system. The socket must be in BoundState, otherwise an error occurs.
+
+Note that if you are attempting to join an IPv4 group, your socket must not be bound using IPv6 (or in dual mode, using QHostAddress::Any). You must use QHostAddress::AnyIPv4 instead.
+
+This function returns true if successful; otherwise it returns false and sets the socket error accordingly.
+
+Note: Joining IPv6 multicast groups without an interface selection is not supported in all operating systems. Consider using the overload where the interface is specified.
+
+This function was introduced in  Qt 4.8.
+
+See also leaveMulticastGroup().
+*/
 func (this *QUdpSocket) JoinMulticastGroup(groupAddress QHostAddress_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if groupAddress != nil && groupAddress.QHostAddress_PTR() != nil {
@@ -129,6 +170,20 @@ func (this *QUdpSocket) JoinMulticastGroup(groupAddress QHostAddress_ITF) bool {
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool joinMulticastGroup(const QHostAddress &, const QNetworkInterface &)
+
+/*
+Joins the multicast group specified by groupAddress on the default interface chosen by the operating system. The socket must be in BoundState, otherwise an error occurs.
+
+Note that if you are attempting to join an IPv4 group, your socket must not be bound using IPv6 (or in dual mode, using QHostAddress::Any). You must use QHostAddress::AnyIPv4 instead.
+
+This function returns true if successful; otherwise it returns false and sets the socket error accordingly.
+
+Note: Joining IPv6 multicast groups without an interface selection is not supported in all operating systems. Consider using the overload where the interface is specified.
+
+This function was introduced in  Qt 4.8.
+
+See also leaveMulticastGroup().
+*/
 func (this *QUdpSocket) JoinMulticastGroup_1(groupAddress QHostAddress_ITF, iface QNetworkInterface_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if groupAddress != nil && groupAddress.QHostAddress_PTR() != nil {
@@ -147,6 +202,18 @@ func (this *QUdpSocket) JoinMulticastGroup_1(groupAddress QHostAddress_ITF, ifac
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool leaveMulticastGroup(const QHostAddress &)
+
+/*
+Leaves the multicast group specified by groupAddress on the default interface chosen by the operating system. The socket must be in BoundState, otherwise an error occurs.
+
+This function returns true if successful; otherwise it returns false and sets the socket error accordingly.
+
+Note: This function should be called with the same arguments as were passed to joinMulticastGroup().
+
+This function was introduced in  Qt 4.8.
+
+See also joinMulticastGroup().
+*/
 func (this *QUdpSocket) LeaveMulticastGroup(groupAddress QHostAddress_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if groupAddress != nil && groupAddress.QHostAddress_PTR() != nil {
@@ -161,6 +228,18 @@ func (this *QUdpSocket) LeaveMulticastGroup(groupAddress QHostAddress_ITF) bool 
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool leaveMulticastGroup(const QHostAddress &, const QNetworkInterface &)
+
+/*
+Leaves the multicast group specified by groupAddress on the default interface chosen by the operating system. The socket must be in BoundState, otherwise an error occurs.
+
+This function returns true if successful; otherwise it returns false and sets the socket error accordingly.
+
+Note: This function should be called with the same arguments as were passed to joinMulticastGroup().
+
+This function was introduced in  Qt 4.8.
+
+See also joinMulticastGroup().
+*/
 func (this *QUdpSocket) LeaveMulticastGroup_1(groupAddress QHostAddress_ITF, iface QNetworkInterface_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if groupAddress != nil && groupAddress.QHostAddress_PTR() != nil {
@@ -179,6 +258,14 @@ func (this *QUdpSocket) LeaveMulticastGroup_1(groupAddress QHostAddress_ITF, ifa
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkInterface multicastInterface() const
+
+/*
+Returns the interface for the outgoing interface for multicast datagrams. This corresponds to the IP_MULTICAST_IF socket option for IPv4 sockets and the IPV6_MULTICAST_IF socket option for IPv6 sockets. If no interface has been previously set, this function returns an invalid QNetworkInterface. The socket must be in BoundState, otherwise an invalid QNetworkInterface is returned.
+
+This function was introduced in  Qt 4.8.
+
+See also setMulticastInterface().
+*/
 func (this *QUdpSocket) MulticastInterface() *QNetworkInterface /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUdpSocket18multicastInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -191,6 +278,14 @@ func (this *QUdpSocket) MulticastInterface() *QNetworkInterface /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMulticastInterface(const QNetworkInterface &)
+
+/*
+Sets the outgoing interface for multicast datagrams to the interface iface. This corresponds to the IP_MULTICAST_IF socket option for IPv4 sockets and the IPV6_MULTICAST_IF socket option for IPv6 sockets. The socket must be in BoundState, otherwise this function does nothing.
+
+This function was introduced in  Qt 4.8.
+
+See also multicastInterface(), joinMulticastGroup(), and leaveMulticastGroup().
+*/
 func (this *QUdpSocket) SetMulticastInterface(iface QNetworkInterface_ITF) {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QNetworkInterface_PTR() != nil {
@@ -204,6 +299,12 @@ func (this *QUdpSocket) SetMulticastInterface(iface QNetworkInterface_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasPendingDatagrams() const
+
+/*
+Returns true if at least one datagram is waiting to be read; otherwise returns false.
+
+See also pendingDatagramSize() and readDatagram().
+*/
 func (this *QUdpSocket) HasPendingDatagrams() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUdpSocket19hasPendingDatagramsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,16 +315,33 @@ func (this *QUdpSocket) HasPendingDatagrams() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 pendingDatagramSize() const
+
+/*
+Returns the size of the first pending UDP datagram. If there is no datagram available, this function returns -1.
+
+See also hasPendingDatagrams() and readDatagram().
+*/
 func (this *QUdpSocket) PendingDatagramSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUdpSocket19pendingDatagramSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkDatagram receiveDatagram(qint64)
+
+/*
+Receives a datagram no larger than maxSize bytes and returns it in the QNetworkDatagram object, along with the sender's host address and port. If possible, this function will also try to determine the datagram's destination address, port, and the number of hop counts at reception time.
+
+On failure, returns a QNetworkDatagram that reports not valid.
+
+If maxSize is too small, the rest of the datagram will be lost. If maxSize is 0, the datagram will be discarded. If maxSize is -1 (the default), this function will attempt to read the entire datagram.
+
+See also writeDatagram(), hasPendingDatagrams(), and pendingDatagramSize().
+*/
 func (this *QUdpSocket) ReceiveDatagram(maxSize int64) *QNetworkDatagram /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket15receiveDatagramEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxSize)
 	qtrt.ErrPrint(err, rv)
@@ -236,6 +354,16 @@ func (this *QUdpSocket) ReceiveDatagram(maxSize int64) *QNetworkDatagram /*123*/
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkDatagram receiveDatagram(qint64)
+
+/*
+Receives a datagram no larger than maxSize bytes and returns it in the QNetworkDatagram object, along with the sender's host address and port. If possible, this function will also try to determine the datagram's destination address, port, and the number of hop counts at reception time.
+
+On failure, returns a QNetworkDatagram that reports not valid.
+
+If maxSize is too small, the rest of the datagram will be lost. If maxSize is 0, the datagram will be discarded. If maxSize is -1 (the default), this function will attempt to read the entire datagram.
+
+See also writeDatagram(), hasPendingDatagrams(), and pendingDatagramSize().
+*/
 func (this *QUdpSocket) ReceiveDatagram__() *QNetworkDatagram /*123*/ {
 	// arg: 0, qint64=Typedef, qint64=Typedef, long long
 	maxSize := int64(-1)
@@ -250,6 +378,16 @@ func (this *QUdpSocket) ReceiveDatagram__() *QNetworkDatagram /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 readDatagram(char *, qint64, QHostAddress *, quint16 *)
+
+/*
+Receives a datagram no larger than maxSize bytes and stores it in data. The sender's host address and port is stored in *address and *port (unless the pointers are 0).
+
+Returns the size of the datagram on success; otherwise returns -1.
+
+If maxSize is too small, the rest of the datagram will be lost. To avoid loss of data, call pendingDatagramSize() to determine the size of the pending datagram before attempting to read it. If maxSize is 0, the datagram will be discarded.
+
+See also writeDatagram(), hasPendingDatagrams(), and pendingDatagramSize().
+*/
 func (this *QUdpSocket) ReadDatagram(data string, maxlen int64, host QHostAddress_ITF /*777 QHostAddress **/, port unsafe.Pointer /*666*/) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -260,12 +398,23 @@ func (this *QUdpSocket) ReadDatagram(data string, maxlen int64, host QHostAddres
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 readDatagram(char *, qint64, QHostAddress *, quint16 *)
+
+/*
+Receives a datagram no larger than maxSize bytes and stores it in data. The sender's host address and port is stored in *address and *port (unless the pointers are 0).
+
+Returns the size of the datagram on success; otherwise returns -1.
+
+If maxSize is too small, the rest of the datagram will be lost. To avoid loss of data, call pendingDatagramSize() to determine the size of the pending datagram before attempting to read it. If maxSize is 0, the datagram will be discarded.
+
+See also writeDatagram(), hasPendingDatagrams(), and pendingDatagramSize().
+*/
 func (this *QUdpSocket) ReadDatagram__(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -276,12 +425,23 @@ func (this *QUdpSocket) ReadDatagram__(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 readDatagram(char *, qint64, QHostAddress *, quint16 *)
+
+/*
+Receives a datagram no larger than maxSize bytes and stores it in data. The sender's host address and port is stored in *address and *port (unless the pointers are 0).
+
+Returns the size of the datagram on success; otherwise returns -1.
+
+If maxSize is too small, the rest of the datagram will be lost. To avoid loss of data, call pendingDatagramSize() to determine the size of the pending datagram before attempting to read it. If maxSize is 0, the datagram will be discarded.
+
+See also writeDatagram(), hasPendingDatagrams(), and pendingDatagramSize().
+*/
 func (this *QUdpSocket) ReadDatagram__1(data string, maxlen int64, host QHostAddress_ITF /*777 QHostAddress **/) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -294,12 +454,25 @@ func (this *QUdpSocket) ReadDatagram__1(data string, maxlen int64, host QHostAdd
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 writeDatagram(const QNetworkDatagram &)
+
+/*
+Sends the datagram at data of size size to the host address address at port port. Returns the number of bytes sent on success; otherwise returns -1.
+
+Datagrams are always written as one block. The maximum size of a datagram is highly platform-dependent, but can be as low as 8192 bytes. If the datagram is too large, this function will return -1 and error() will return DatagramTooLargeError.
+
+Sending datagrams larger than 512 bytes is in general disadvised, as even if they are sent successfully, they are likely to be fragmented by the IP layer before arriving at their final destination.
+
+Warning: Calling this function on a connected UDP socket may result in an error and no packet being sent. If you are using a connected socket, use write() to send datagrams.
+
+See also readDatagram() and write().
+*/
 func (this *QUdpSocket) WriteDatagram(datagram QNetworkDatagram_ITF) int64 {
 	var convArg0 unsafe.Pointer
 	if datagram != nil && datagram.QNetworkDatagram_PTR() != nil {
@@ -308,12 +481,25 @@ func (this *QUdpSocket) WriteDatagram(datagram QNetworkDatagram_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramERK16QNetworkDatagram", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:81
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] qint64 writeDatagram(const char *, qint64, const QHostAddress &, quint16)
+
+/*
+Sends the datagram at data of size size to the host address address at port port. Returns the number of bytes sent on success; otherwise returns -1.
+
+Datagrams are always written as one block. The maximum size of a datagram is highly platform-dependent, but can be as low as 8192 bytes. If the datagram is too large, this function will return -1 and error() will return DatagramTooLargeError.
+
+Sending datagrams larger than 512 bytes is in general disadvised, as even if they are sent successfully, they are likely to be fragmented by the IP layer before arriving at their final destination.
+
+Warning: Calling this function on a connected UDP socket may result in an error and no packet being sent. If you are using a connected socket, use write() to send datagrams.
+
+See also readDatagram() and write().
+*/
 func (this *QUdpSocket) WriteDatagram_1(data string, len_ int64, host QHostAddress_ITF, port uint16) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -324,12 +510,25 @@ func (this *QUdpSocket) WriteDatagram_1(data string, len_ int64, host QHostAddre
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramEPKcxRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_, convArg2, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:82
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] qint64 writeDatagram(const QByteArray &, const QHostAddress &, quint16)
+
+/*
+Sends the datagram at data of size size to the host address address at port port. Returns the number of bytes sent on success; otherwise returns -1.
+
+Datagrams are always written as one block. The maximum size of a datagram is highly platform-dependent, but can be as low as 8192 bytes. If the datagram is too large, this function will return -1 and error() will return DatagramTooLargeError.
+
+Sending datagrams larger than 512 bytes is in general disadvised, as even if they are sent successfully, they are likely to be fragmented by the IP layer before arriving at their final destination.
+
+Warning: Calling this function on a connected UDP socket may result in an error and no packet being sent. If you are using a connected socket, use write() to send datagrams.
+
+See also readDatagram() and write().
+*/
 func (this *QUdpSocket) WriteDatagram_2(datagram qtcore.QByteArray_ITF, host QHostAddress_ITF, port uint16) int64 {
 	var convArg0 unsafe.Pointer
 	if datagram != nil && datagram.QByteArray_PTR() != nil {
@@ -342,6 +541,7 @@ func (this *QUdpSocket) WriteDatagram_2(datagram qtcore.QByteArray_ITF, host QHo
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramERK10QByteArrayRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 //  body block end

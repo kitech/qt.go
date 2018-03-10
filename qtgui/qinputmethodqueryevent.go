@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QInputMethodQueryEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QInputMethodQueryEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMetho
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QInputMethodQueryEvent(Qt::InputMethodQueries)
+
+/*
+
+ */
 func NewQInputMethodQueryEvent(queries int) *QInputMethodQueryEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QInputMethodQueryEventC2E6QFlagsIN2Qt16InputMethodQueryEE", qtrt.FFI_TYPE_POINTER, queries)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQInputMethodQueryEvent(queries int) *QInputMethodQueryEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QInputMethodQueryEvent()
+
+/*
+
+ */
 func DeleteQInputMethodQueryEvent(this *QInputMethodQueryEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QInputMethodQueryEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -87,6 +98,10 @@ func DeleteQInputMethodQueryEvent(this *QInputMethodQueryEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::InputMethodQueries queries() const
+
+/*
+
+ */
 func (this *QInputMethodQueryEvent) Queries() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent7queriesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +112,10 @@ func (this *QInputMethodQueryEvent) Queries() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(Qt::InputMethodQuery, const QVariant &)
+
+/*
+
+ */
 func (this *QInputMethodQueryEvent) SetValue(query int, value qtcore.QVariant_ITF) {
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -110,6 +129,10 @@ func (this *QInputMethodQueryEvent) SetValue(query int, value qtcore.QVariant_IT
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant value(Qt::InputMethodQuery) const
+
+/*
+
+ */
 func (this *QInputMethodQueryEvent) Value(query int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent5valueEN2Qt16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), query)
 	qtrt.ErrPrint(err, rv)

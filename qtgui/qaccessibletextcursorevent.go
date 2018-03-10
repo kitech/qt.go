@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleTextCursorEvent struct {
 	*QAccessibleEvent
 }
@@ -66,6 +69,10 @@ func (*QAccessibleTextCursorEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextCursorEvent(QObject *, int)
+
+/*
+
+ */
 func NewQAccessibleTextCursorEvent(obj qtcore.QObject_ITF /*777 QObject **/, cursorPos int) *QAccessibleTextCursorEvent {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -82,6 +89,10 @@ func NewQAccessibleTextCursorEvent(obj qtcore.QObject_ITF /*777 QObject **/, cur
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextCursorEvent(QAccessibleInterface *, int)
+
+/*
+
+ */
 func NewQAccessibleTextCursorEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
@@ -98,6 +109,10 @@ func NewQAccessibleTextCursorEvent_1(iface QAccessibleInterface_ITF /*777 QAcces
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTextCursorEvent()
+
+/*
+
+ */
 func DeleteQAccessibleTextCursorEvent(this *QAccessibleTextCursorEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -109,6 +124,10 @@ func DeleteQAccessibleTextCursorEvent(this *QAccessibleTextCursorEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCursorPosition(int)
+
+/*
+
+ */
 func (this *QAccessibleTextCursorEvent) SetCursorPosition(position int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEvent17setCursorPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	qtrt.ErrPrint(err, rv)
@@ -118,6 +137,10 @@ func (this *QAccessibleTextCursorEvent) SetCursorPosition(position int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int cursorPosition() const
+
+/*
+
+ */
 func (this *QAccessibleTextCursorEvent) CursorPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextCursorEvent14cursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

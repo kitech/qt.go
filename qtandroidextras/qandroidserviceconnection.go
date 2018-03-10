@@ -1,6 +1,6 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidserviceconnection.h
+// /usr/include/qt/QtAndroidExtras/qandroidserviceconnection.h
 // #include <qandroidserviceconnection.h>
 // #include <QtAndroidExtras>
 
@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAndroidServiceConnection struct {
 	*qtrt.CObject
 }
@@ -64,10 +67,14 @@ func (*QAndroidServiceConnection) NewFromPointer(cthis unsafe.Pointer) *QAndroid
 	return NewQAndroidServiceConnectionFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidserviceconnection.h:51
+// /usr/include/qt/QtAndroidExtras/qandroidserviceconnection.h:51
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidServiceConnection()
+
+/*
+Creates a new object
+*/
 func NewQAndroidServiceConnection() *QAndroidServiceConnection {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnectionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,10 +83,14 @@ func NewQAndroidServiceConnection() *QAndroidServiceConnection {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidserviceconnection.h:52
+// /usr/include/qt/QtAndroidExtras/qandroidserviceconnection.h:52
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidServiceConnection(const QAndroidJniObject &)
+
+/*
+Creates a new object
+*/
 func NewQAndroidServiceConnection_1(serviceConnection QAndroidJniObject_ITF) *QAndroidServiceConnection {
 	var convArg0 unsafe.Pointer
 	if serviceConnection != nil && serviceConnection.QAndroidJniObject_PTR() != nil {
@@ -92,21 +103,33 @@ func NewQAndroidServiceConnection_1(serviceConnection QAndroidJniObject_ITF) *QA
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidserviceconnection.h:53
+// /usr/include/qt/QtAndroidExtras/qandroidserviceconnection.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAndroidServiceConnection()
+
+/*
+
+ */
 func DeleteQAndroidServiceConnection(this *QAndroidServiceConnection) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnectionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 1)
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidserviceconnection.h:55
+// /usr/include/qt/QtAndroidExtras/qandroidserviceconnection.h:55
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void onServiceConnected(const QString &, const QAndroidBinder &)
+
+/*
+This notification is called when the client managed to connect to the service. The name contains the server name, the serviceBinder is the binder that the client uses to perform IPC operations.
+
+Warning: This method is called from Binder's thread which is different from the thread that this object was created.
+
+returns the underline QAndroidJniObject
+*/
 func (this *QAndroidServiceConnection) OnServiceConnected(name string, serviceBinder QAndroidBinder_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -118,10 +141,18 @@ func (this *QAndroidServiceConnection) OnServiceConnected(name string, serviceBi
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidserviceconnection.h:56
+// /usr/include/qt/QtAndroidExtras/qandroidserviceconnection.h:56
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void onServiceDisconnected(const QString &)
+
+/*
+Called when a connection to the Service has been lost. The name parameter specifies which connectioen was lost.
+
+Warning: This method is called from Binder's thread which is different from the thread that this object was created.
+
+returns the underline QAndroidJniObject
+*/
 func (this *QAndroidServiceConnection) OnServiceDisconnected(name string) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -129,10 +160,14 @@ func (this *QAndroidServiceConnection) OnServiceDisconnected(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidserviceconnection.h:58
+// /usr/include/qt/QtAndroidExtras/qandroidserviceconnection.h:58
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] QAndroidJniObject handle() const
+// [16] QAndroidJniObject handle() const
+
+/*
+returns the underline QAndroidJniObject
+*/
 func (this *QAndroidServiceConnection) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAndroidServiceConnection6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

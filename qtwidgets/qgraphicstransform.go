@@ -38,6 +38,9 @@ func (this *QGraphicsTransform) InheritUpdate(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "update", f)
 }
 
+/*
+
+ */
 type QGraphicsTransform struct {
 	*qtcore.QObject
 }
@@ -70,6 +73,10 @@ func (*QGraphicsTransform) NewFromPointer(cthis unsafe.Pointer) *QGraphicsTransf
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGraphicsTransform) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsTransform10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +87,10 @@ func (this *QGraphicsTransform) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsTransform(QObject *)
+
+/*
+Constructs a new QGraphicsTransform with the given parent.
+*/
 func NewQGraphicsTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsTransform {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -96,6 +107,10 @@ func NewQGraphicsTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsTransform(QObject *)
+
+/*
+Constructs a new QGraphicsTransform with the given parent.
+*/
 func NewQGraphicsTransform__() *QGraphicsTransform {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -110,6 +125,10 @@ func NewQGraphicsTransform__() *QGraphicsTransform {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsTransform()
+
+/*
+
+ */
 func DeleteQGraphicsTransform(this *QGraphicsTransform) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsTransformD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -121,6 +140,14 @@ func DeleteQGraphicsTransform(this *QGraphicsTransform) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void applyTo(QMatrix4x4 *) const
+
+/*
+This pure virtual method has to be reimplemented in derived classes.
+
+It applies this transformation to matrix.
+
+See also QGraphicsItem::transform() and QMatrix4x4::toTransform().
+*/
 func (this *QGraphicsTransform) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x4 **/) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {
@@ -134,6 +161,14 @@ func (this *QGraphicsTransform) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatri
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void update()
+
+/*
+Notifies that this transform operation has changed its parameters in such a way that applyTo() will return a different result than before.
+
+When implementing you own custom graphics transform, you must call this function every time you change a parameter, to let QGraphicsItem know that its transformation needs to be updated.
+
+See also applyTo().
+*/
 func (this *QGraphicsTransform) Update() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsTransform6updateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

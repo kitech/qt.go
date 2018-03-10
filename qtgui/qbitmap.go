@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QBitmap struct {
 	*QPixmap
 }
@@ -64,6 +67,12 @@ func (*QBitmap) NewFromPointer(cthis unsafe.Pointer) *QBitmap {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QBitmap()
+
+/*
+Constructs a null bitmap.
+
+See also QPixmap::isNull().
+*/
 func NewQBitmap() *QBitmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +85,12 @@ func NewQBitmap() *QBitmap {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QBitmap(const QPixmap &)
+
+/*
+Constructs a null bitmap.
+
+See also QPixmap::isNull().
+*/
 func NewQBitmap_1(arg0 QPixmap_ITF) *QBitmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
@@ -92,6 +107,12 @@ func NewQBitmap_1(arg0 QPixmap_ITF) *QBitmap {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QBitmap(int, int)
+
+/*
+Constructs a null bitmap.
+
+See also QPixmap::isNull().
+*/
 func NewQBitmap_2(w int, h int) *QBitmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2Eii", qtrt.FFI_TYPE_POINTER, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -104,6 +125,12 @@ func NewQBitmap_2(w int, h int) *QBitmap {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QBitmap(const QSize &)
+
+/*
+Constructs a null bitmap.
+
+See also QPixmap::isNull().
+*/
 func NewQBitmap_3(arg0 qtcore.QSize_ITF) *QBitmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSize_PTR() != nil {
@@ -120,6 +147,12 @@ func NewQBitmap_3(arg0 qtcore.QSize_ITF) *QBitmap {
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QBitmap(const QString &, const char *)
+
+/*
+Constructs a null bitmap.
+
+See also QPixmap::isNull().
+*/
 func NewQBitmap_4(fileName string, format string) *QBitmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -136,6 +169,12 @@ func NewQBitmap_4(fileName string, format string) *QBitmap {
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QBitmap(const QString &, const char *)
+
+/*
+Constructs a null bitmap.
+
+See also QPixmap::isNull().
+*/
 func NewQBitmap_4_(fileName string) *QBitmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -152,6 +191,10 @@ func NewQBitmap_4_(fileName string) *QBitmap {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QBitmap & operator=(const QBitmap &)
+
+/*
+
+ */
 func (this *QBitmap) Operator_equal(other QBitmap_ITF) *QBitmap {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QBitmap_PTR() != nil {
@@ -168,6 +211,10 @@ func (this *QBitmap) Operator_equal(other QBitmap_ITF) *QBitmap {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QBitmap & operator=(QBitmap &&)
+
+/*
+
+ */
 func (this *QBitmap) Operator_equal_1(other unsafe.Pointer /*333*/) *QBitmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -180,6 +227,10 @@ func (this *QBitmap) Operator_equal_1(other unsafe.Pointer /*333*/) *QBitmap {
 // index:2
 // Public Visibility=Default Availability=Available
 // [32] QBitmap & operator=(const QPixmap &)
+
+/*
+
+ */
 func (this *QBitmap) Operator_equal_2(arg0 QPixmap_ITF) *QBitmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
@@ -196,6 +247,10 @@ func (this *QBitmap) Operator_equal_2(arg0 QPixmap_ITF) *QBitmap {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QBitmap()
+
+/*
+
+ */
 func DeleteQBitmap(this *QBitmap) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -207,6 +262,12 @@ func DeleteQBitmap(this *QBitmap) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QBitmap &)
+
+/*
+Swaps bitmap other with this bitmap. This operation is very fast and never fails.
+
+This function was introduced in  Qt 4.8.
+*/
 func (this *QBitmap) Swap(other QBitmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QBitmap_PTR() != nil {
@@ -220,6 +281,10 @@ func (this *QBitmap) Swap(other QBitmap_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the bitmap, setting all its bits to Qt::color0.
+*/
 func (this *QBitmap) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -229,6 +294,12 @@ func (this *QBitmap) Clear() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QBitmap fromImage(const QImage &, Qt::ImageConversionFlags)
+
+/*
+Returns a copy of the given image converted to a bitmap using the specified image conversion flags.
+
+See also fromData().
+*/
 func (this *QBitmap) FromImage(image QImage_ITF, flags int) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
@@ -250,6 +321,12 @@ func QBitmap_FromImage(image QImage_ITF, flags int) *QBitmap /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QBitmap fromImage(const QImage &, Qt::ImageConversionFlags)
+
+/*
+Returns a copy of the given image converted to a bitmap using the specified image conversion flags.
+
+See also fromData().
+*/
 func (this *QBitmap) FromImage__(image QImage_ITF) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
@@ -268,6 +345,14 @@ func (this *QBitmap) FromImage__(image QImage_ITF) *QBitmap /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QBitmap fromData(const QSize &, const uchar *, QImage::Format)
+
+/*
+Constructs a bitmap with the given size, and sets the contents to the bits supplied.
+
+The bitmap data has to be byte aligned and provided in in the bit order specified by monoFormat. The mono format must be either QImage::Format_Mono or QImage::Format_MonoLSB. Use QImage::Format_Mono to specify data on the XBM format.
+
+See also fromImage().
+*/
 func (this *QBitmap) FromData(size qtcore.QSize_ITF, bits unsafe.Pointer /*666*/, monoFormat int) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -289,6 +374,14 @@ func QBitmap_FromData(size qtcore.QSize_ITF, bits unsafe.Pointer /*666*/, monoFo
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QBitmap fromData(const QSize &, const uchar *, QImage::Format)
+
+/*
+Constructs a bitmap with the given size, and sets the contents to the bits supplied.
+
+The bitmap data has to be byte aligned and provided in in the bit order specified by monoFormat. The mono format must be either QImage::Format_Mono or QImage::Format_MonoLSB. Use QImage::Format_Mono to specify data on the XBM format.
+
+See also fromImage().
+*/
 func (this *QBitmap) FromData__(size qtcore.QSize_ITF, bits unsafe.Pointer /*666*/) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -307,6 +400,12 @@ func (this *QBitmap) FromData__(size qtcore.QSize_ITF, bits unsafe.Pointer /*666
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QBitmap transformed(const QMatrix &) const
+
+/*
+Returns a copy of this bitmap, transformed according to the given matrix.
+
+See also QPixmap::transformed().
+*/
 func (this *QBitmap) Transformed(arg0 QMatrix_ITF) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMatrix_PTR() != nil {
@@ -323,6 +422,12 @@ func (this *QBitmap) Transformed(arg0 QMatrix_ITF) *QBitmap /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QBitmap transformed(const QTransform &) const
+
+/*
+Returns a copy of this bitmap, transformed according to the given matrix.
+
+See also QPixmap::transformed().
+*/
 func (this *QBitmap) Transformed_1(matrix QTransform_ITF) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {

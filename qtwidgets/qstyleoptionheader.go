@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionHeader struct {
 	*QStyleOption
 }
@@ -65,6 +68,10 @@ func (*QStyleOptionHeader) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionHea
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionHeader()
+
+/*
+
+ */
 func NewQStyleOptionHeader() *QStyleOptionHeader {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleOptionHeader() *QStyleOptionHeader {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionHeader(int)
+
+/*
+
+ */
 func NewQStyleOptionHeader_1(version int) *QStyleOptionHeader {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,32 +102,86 @@ func DeleteQStyleOptionHeader(this *QStyleOptionHeader) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionHeader__StyleOptionType = int
 
+//
 const QStyleOptionHeader__Type QStyleOptionHeader__StyleOptionType = 8
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionHeader__StyleOptionVersion = int
 
+// 1
 const QStyleOptionHeader__Version QStyleOptionHeader__StyleOptionVersion = 1
 
+/*
+
+
+ */
 type QStyleOptionHeader__SectionPosition = int
 
+//
 const QStyleOptionHeader__Beginning QStyleOptionHeader__SectionPosition = 0
+
+//
 const QStyleOptionHeader__Middle QStyleOptionHeader__SectionPosition = 1
+
+//
 const QStyleOptionHeader__End QStyleOptionHeader__SectionPosition = 2
+
+//
 const QStyleOptionHeader__OnlyOneSection QStyleOptionHeader__SectionPosition = 3
 
+/*
+
+
+ */
 type QStyleOptionHeader__SelectedPosition = int
 
+//
 const QStyleOptionHeader__NotAdjacent QStyleOptionHeader__SelectedPosition = 0
+
+//
 const QStyleOptionHeader__NextIsSelected QStyleOptionHeader__SelectedPosition = 1
+
+//
 const QStyleOptionHeader__PreviousIsSelected QStyleOptionHeader__SelectedPosition = 2
+
+//
 const QStyleOptionHeader__NextAndPreviousAreSelected QStyleOptionHeader__SelectedPosition = 3
 
+/*
+
+
+ */
 type QStyleOptionHeader__SortIndicator = int
 
+//
 const QStyleOptionHeader__None QStyleOptionHeader__SortIndicator = 0
+
+//
 const QStyleOptionHeader__SortUp QStyleOptionHeader__SortIndicator = 1
+
+//
 const QStyleOptionHeader__SortDown QStyleOptionHeader__SortIndicator = 2
 
 //  body block end

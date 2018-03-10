@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessiblePlugin struct {
 	*qtcore.QObject
 }
@@ -64,6 +67,10 @@ func (*QAccessiblePlugin) NewFromPointer(cthis unsafe.Pointer) *QAccessiblePlugi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessiblePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAccessiblePlugin(QObject *)
+
+/*
+Constructs an accessibility plugin with the given parent. This is invoked automatically by the plugin loader.
+*/
 func NewQAccessiblePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessiblePlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQAccessiblePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAccessiblePlugin(QObject *)
+
+/*
+Constructs an accessibility plugin with the given parent. This is invoked automatically by the plugin loader.
+*/
 func NewQAccessiblePlugin__() *QAccessiblePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +119,10 @@ func NewQAccessiblePlugin__() *QAccessiblePlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessiblePlugin()
+
+/*
+
+ */
 func DeleteQAccessiblePlugin(this *QAccessiblePlugin) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessiblePluginD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -115,6 +134,10 @@ func DeleteQAccessiblePlugin(this *QAccessiblePlugin) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * create(const QString &, QObject *)
+
+/*
+Creates and returns a QAccessibleInterface implementation for the class key and the object object. Keys are case sensitive.
+*/
 func (this *QAccessiblePlugin) Create(key string, object qtcore.QObject_ITF /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()

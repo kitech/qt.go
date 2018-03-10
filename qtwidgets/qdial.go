@@ -73,6 +73,9 @@ func (this *QDial) InheritInitStyleOption(f func(option *QStyleOptionSlider /*77
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
+/*
+
+ */
 type QDial struct {
 	*QAbstractSlider
 }
@@ -105,6 +108,10 @@ func (*QDial) NewFromPointer(cthis unsafe.Pointer) *QDial {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QDial) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,6 +122,12 @@ func (this *QDial) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDial(QWidget *)
+
+/*
+Constructs a dial.
+
+The parent argument is sent to the QAbstractSlider constructor.
+*/
 func NewQDial(parent QWidget_ITF /*777 QWidget **/) *QDial {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -131,6 +144,12 @@ func NewQDial(parent QWidget_ITF /*777 QWidget **/) *QDial {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDial(QWidget *)
+
+/*
+Constructs a dial.
+
+The parent argument is sent to the QAbstractSlider constructor.
+*/
 func NewQDial__() *QDial {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -145,6 +164,10 @@ func NewQDial__() *QDial {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDial()
+
+/*
+
+ */
 func DeleteQDial(this *QDial) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDialD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -156,6 +179,10 @@ func DeleteQDial(this *QDial) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wrapping() const
+
+/*
+
+ */
 func (this *QDial) Wrapping() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial8wrappingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +193,10 @@ func (this *QDial) Wrapping() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int notchSize() const
+
+/*
+
+ */
 func (this *QDial) NotchSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial9notchSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,6 +207,10 @@ func (this *QDial) NotchSize() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNotchTarget(double)
+
+/*
+
+ */
 func (this *QDial) SetNotchTarget(target float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial14setNotchTargetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), target)
 	qtrt.ErrPrint(err, rv)
@@ -185,6 +220,10 @@ func (this *QDial) SetNotchTarget(target float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal notchTarget() const
+
+/*
+
+ */
 func (this *QDial) NotchTarget() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial11notchTargetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,6 +234,10 @@ func (this *QDial) NotchTarget() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool notchesVisible() const
+
+/*
+
+ */
 func (this *QDial) NotchesVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial14notchesVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -205,6 +248,10 @@ func (this *QDial) NotchesVisible() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QDial) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,6 +264,10 @@ func (this *QDial) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QDial) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDial15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -229,6 +280,10 @@ func (this *QDial) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNotchesVisible(_Bool)
+
+/*
+
+ */
 func (this *QDial) SetNotchesVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial17setNotchesVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	qtrt.ErrPrint(err, rv)
@@ -238,6 +293,10 @@ func (this *QDial) SetNotchesVisible(visible bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWrapping(_Bool)
+
+/*
+
+ */
 func (this *QDial) SetWrapping(on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial11setWrappingEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	qtrt.ErrPrint(err, rv)
@@ -247,6 +306,10 @@ func (this *QDial) SetWrapping(on bool) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QDial) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -261,6 +324,10 @@ func (this *QDial) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+*/
 func (this *QDial) ResizeEvent(re qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QResizeEvent_PTR() != nil {
@@ -274,6 +341,10 @@ func (this *QDial) ResizeEvent(re qtgui.QResizeEvent_ITF /*777 QResizeEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QDial) PaintEvent(pe qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if pe != nil && pe.QPaintEvent_PTR() != nil {
@@ -287,6 +358,10 @@ func (this *QDial) PaintEvent(pe qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mousePressEvent().
+*/
 func (this *QDial) MousePressEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QMouseEvent_PTR() != nil {
@@ -300,6 +375,10 @@ func (this *QDial) MousePressEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseReleaseEvent().
+*/
 func (this *QDial) MouseReleaseEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QMouseEvent_PTR() != nil {
@@ -313,6 +392,10 @@ func (this *QDial) MouseReleaseEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseMoveEvent().
+*/
 func (this *QDial) MouseMoveEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QMouseEvent_PTR() != nil {
@@ -326,6 +409,10 @@ func (this *QDial) MouseMoveEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void sliderChange(enum QAbstractSlider::SliderChange)
+
+/*
+Reimplemented from QAbstractSlider::sliderChange().
+*/
 func (this *QDial) SliderChange(change int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDial12sliderChangeEN15QAbstractSlider12SliderChangeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), change)
 	qtrt.ErrPrint(err, rv)
@@ -335,6 +422,12 @@ func (this *QDial) SliderChange(change int) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSlider *) const
+
+/*
+Initialize option with the values from this QDial. This method is useful for subclasses when they need a QStyleOptionSlider, but don't want to fill in all the information themselves.
+
+See also QStyleOption::initFrom().
+*/
 func (this *QDial) InitStyleOption(option QStyleOptionSlider_ITF /*777 QStyleOptionSlider **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionSlider_PTR() != nil {

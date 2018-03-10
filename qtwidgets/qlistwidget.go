@@ -63,6 +63,9 @@ func (this *QListWidget) InheritItemFromIndex(f func(index *qtcore.QModelIndex) 
 	qtrt.SetAllInheritCallback(this, "itemFromIndex", f)
 }
 
+/*
+
+ */
 type QListWidget struct {
 	*QListView
 }
@@ -95,6 +98,10 @@ func (*QListWidget) NewFromPointer(cthis unsafe.Pointer) *QListWidget {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QListWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +112,10 @@ func (this *QListWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidget(QWidget *)
+
+/*
+Constructs an empty QListWidget with the given parent.
+*/
 func NewQListWidget(parent QWidget_ITF /*777 QWidget **/) *QListWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -121,6 +132,10 @@ func NewQListWidget(parent QWidget_ITF /*777 QWidget **/) *QListWidget {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidget(QWidget *)
+
+/*
+Constructs an empty QListWidget with the given parent.
+*/
 func NewQListWidget__() *QListWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -135,6 +150,10 @@ func NewQListWidget__() *QListWidget {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QListWidget()
+
+/*
+
+ */
 func DeleteQListWidget(this *QListWidget) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidgetD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -146,6 +165,10 @@ func DeleteQListWidget(this *QListWidget) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSelectionModel(QItemSelectionModel *)
+
+/*
+Reimplemented from QAbstractItemView::setSelectionModel().
+*/
 func (this *QListWidget) SetSelectionModel(selectionModel qtcore.QItemSelectionModel_ITF /*777 QItemSelectionModel **/) {
 	var convArg0 unsafe.Pointer
 	if selectionModel != nil && selectionModel.QItemSelectionModel_PTR() != nil {
@@ -159,6 +182,12 @@ func (this *QListWidget) SetSelectionModel(selectionModel qtcore.QItemSelectionM
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QListWidgetItem * item(int) const
+
+/*
+Returns the item that occupies the given row in the list if one has been set; otherwise returns 0.
+
+See also row().
+*/
 func (this *QListWidget) Item(row int) *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget4itemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -169,6 +198,12 @@ func (this *QListWidget) Item(row int) *QListWidgetItem /*777 QListWidgetItem **
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int row(const QListWidgetItem *) const
+
+/*
+Returns the row containing the given item.
+
+See also item().
+*/
 func (this *QListWidget) Row(item QListWidgetItem_ITF /*777 const QListWidgetItem **/) int {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -183,6 +218,12 @@ func (this *QListWidget) Row(item QListWidgetItem_ITF /*777 const QListWidgetIte
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertItem(int, QListWidgetItem *)
+
+/*
+Inserts the item at the position in the list given by row.
+
+See also addItem().
+*/
 func (this *QListWidget) InsertItem(row int, item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg1 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -196,6 +237,12 @@ func (this *QListWidget) InsertItem(row int, item QListWidgetItem_ITF /*777 QLis
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void insertItem(int, const QString &)
+
+/*
+Inserts the item at the position in the list given by row.
+
+See also addItem().
+*/
 func (this *QListWidget) InsertItem_1(row int, label string) {
 	var tmpArg1 = qtcore.NewQString_5(label)
 	var convArg1 = tmpArg1.GetCthis()
@@ -207,6 +254,12 @@ func (this *QListWidget) InsertItem_1(row int, label string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertItems(int, const QStringList &)
+
+/*
+Inserts items from the list of labels into the list, starting at the given row.
+
+See also insertItem() and addItem().
+*/
 func (this *QListWidget) InsertItems(row int, labels qtcore.QStringList_ITF) {
 	var convArg1 unsafe.Pointer
 	if labels != nil && labels.QStringList_PTR() != nil {
@@ -220,6 +273,10 @@ func (this *QListWidget) InsertItems(row int, labels qtcore.QStringList_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(const QString &)
+
+/*
+Inserts an item with the text label at the end of the list widget.
+*/
 func (this *QListWidget) AddItem(label string) {
 	var tmpArg0 = qtcore.NewQString_5(label)
 	var convArg0 = tmpArg0.GetCthis()
@@ -231,6 +288,10 @@ func (this *QListWidget) AddItem(label string) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(QListWidgetItem *)
+
+/*
+Inserts an item with the text label at the end of the list widget.
+*/
 func (this *QListWidget) AddItem_1(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -244,6 +305,12 @@ func (this *QListWidget) AddItem_1(item QListWidgetItem_ITF /*777 QListWidgetIte
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItems(const QStringList &)
+
+/*
+Inserts items with the text labels at the end of the list widget.
+
+See also insertItems().
+*/
 func (this *QListWidget) AddItems(labels qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if labels != nil && labels.QStringList_PTR() != nil {
@@ -257,6 +324,14 @@ func (this *QListWidget) AddItems(labels qtcore.QStringList_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QListWidgetItem * takeItem(int)
+
+/*
+Removes and returns the item from the given row in the list widget; otherwise returns 0.
+
+Items removed from a list widget will not be managed by Qt, and will need to be deleted manually.
+
+See also insertItem() and addItem().
+*/
 func (this *QListWidget) TakeItem(row int) *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget8takeItemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -267,6 +342,10 @@ func (this *QListWidget) TakeItem(row int) *QListWidgetItem /*777 QListWidgetIte
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
+
+/*
+
+ */
 func (this *QListWidget) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -277,6 +356,12 @@ func (this *QListWidget) Count() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QListWidgetItem * currentItem() const
+
+/*
+Returns the current item.
+
+See also setCurrentItem().
+*/
 func (this *QListWidget) CurrentItem() *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget11currentItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -287,6 +372,14 @@ func (this *QListWidget) CurrentItem() *QListWidgetItem /*777 QListWidgetItem **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QListWidgetItem *)
+
+/*
+Sets the current item to item.
+
+Unless the selection mode is NoSelection, the item is also selected.
+
+See also currentItem().
+*/
 func (this *QListWidget) SetCurrentItem(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -300,6 +393,14 @@ func (this *QListWidget) SetCurrentItem(item QListWidgetItem_ITF /*777 QListWidg
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QListWidgetItem *, QItemSelectionModel::SelectionFlags)
+
+/*
+Sets the current item to item.
+
+Unless the selection mode is NoSelection, the item is also selected.
+
+See also currentItem().
+*/
 func (this *QListWidget) SetCurrentItem_1(item QListWidgetItem_ITF /*777 QListWidgetItem **/, command int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -313,6 +414,10 @@ func (this *QListWidget) SetCurrentItem_1(item QListWidgetItem_ITF /*777 QListWi
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentRow() const
+
+/*
+
+ */
 func (this *QListWidget) CurrentRow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget10currentRowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -323,6 +428,10 @@ func (this *QListWidget) CurrentRow() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentRow(int)
+
+/*
+
+ */
 func (this *QListWidget) SetCurrentRow(row int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget13setCurrentRowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -332,6 +441,10 @@ func (this *QListWidget) SetCurrentRow(row int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentRow(int, QItemSelectionModel::SelectionFlags)
+
+/*
+
+ */
 func (this *QListWidget) SetCurrentRow_1(row int, command int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget13setCurrentRowEi6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, command)
 	qtrt.ErrPrint(err, rv)
@@ -341,6 +454,10 @@ func (this *QListWidget) SetCurrentRow_1(row int, command int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QListWidgetItem * itemAt(const QPoint &) const
+
+/*
+Returns a pointer to the item at the coordinates p. The coordinates are relative to the list widget's viewport().
+*/
 func (this *QListWidget) ItemAt(p qtcore.QPoint_ITF) *QListWidgetItem /*777 QListWidgetItem **/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -355,6 +472,10 @@ func (this *QListWidget) ItemAt(p qtcore.QPoint_ITF) *QListWidgetItem /*777 QLis
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QListWidgetItem * itemAt(int, int) const
+
+/*
+Returns a pointer to the item at the coordinates p. The coordinates are relative to the list widget's viewport().
+*/
 func (this *QListWidget) ItemAt_1(x int, y int) *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget6itemAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -365,6 +486,10 @@ func (this *QListWidget) ItemAt_1(x int, y int) *QListWidgetItem /*777 QListWidg
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect visualItemRect(const QListWidgetItem *) const
+
+/*
+Returns the rectangle on the viewport occupied by the item at item.
+*/
 func (this *QListWidget) VisualItemRect(item QListWidgetItem_ITF /*777 const QListWidgetItem **/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -381,6 +506,10 @@ func (this *QListWidget) VisualItemRect(item QListWidgetItem_ITF /*777 const QLi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sortItems(Qt::SortOrder)
+
+/*
+Sorts all the items in the list widget according to the specified order.
+*/
 func (this *QListWidget) SortItems(order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget9sortItemsEN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), order)
 	qtrt.ErrPrint(err, rv)
@@ -390,6 +519,10 @@ func (this *QListWidget) SortItems(order int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sortItems(Qt::SortOrder)
+
+/*
+Sorts all the items in the list widget according to the specified order.
+*/
 func (this *QListWidget) SortItems__() {
 	// arg: 0, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
 	order := 0
@@ -401,6 +534,10 @@ func (this *QListWidget) SortItems__() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSortingEnabled(_Bool)
+
+/*
+
+ */
 func (this *QListWidget) SetSortingEnabled(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget17setSortingEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	qtrt.ErrPrint(err, rv)
@@ -410,6 +547,10 @@ func (this *QListWidget) SetSortingEnabled(enable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSortingEnabled() const
+
+/*
+
+ */
 func (this *QListWidget) IsSortingEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget16isSortingEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -420,6 +561,10 @@ func (this *QListWidget) IsSortingEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editItem(QListWidgetItem *)
+
+/*
+Starts editing the item if it is editable.
+*/
 func (this *QListWidget) EditItem(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -433,6 +578,12 @@ func (this *QListWidget) EditItem(item QListWidgetItem_ITF /*777 QListWidgetItem
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void openPersistentEditor(QListWidgetItem *)
+
+/*
+Opens an editor for the given item. The editor remains open after editing.
+
+See also closePersistentEditor() and isPersistentEditorOpen().
+*/
 func (this *QListWidget) OpenPersistentEditor(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -446,6 +597,12 @@ func (this *QListWidget) OpenPersistentEditor(item QListWidgetItem_ITF /*777 QLi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closePersistentEditor(QListWidgetItem *)
+
+/*
+Closes the persistent editor for the given item.
+
+See also openPersistentEditor() and isPersistentEditorOpen().
+*/
 func (this *QListWidget) ClosePersistentEditor(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -459,6 +616,14 @@ func (this *QListWidget) ClosePersistentEditor(item QListWidgetItem_ITF /*777 QL
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isPersistentEditorOpen(QListWidgetItem *) const
+
+/*
+Returns whether a persistent editor is open for item item.
+
+This function was introduced in  Qt 5.10.
+
+See also openPersistentEditor() and closePersistentEditor().
+*/
 func (this *QListWidget) IsPersistentEditorOpen(item QListWidgetItem_ITF /*777 QListWidgetItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -473,6 +638,14 @@ func (this *QListWidget) IsPersistentEditorOpen(item QListWidgetItem_ITF /*777 Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * itemWidget(QListWidgetItem *) const
+
+/*
+Returns the widget displayed in the given item.
+
+This function was introduced in  Qt 4.1.
+
+See also setItemWidget() and removeItemWidget().
+*/
 func (this *QListWidget) ItemWidget(item QListWidgetItem_ITF /*777 QListWidgetItem **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -487,6 +660,16 @@ func (this *QListWidget) ItemWidget(item QListWidgetItem_ITF /*777 QListWidgetIt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemWidget(QListWidgetItem *, QWidget *)
+
+/*
+Sets the widget to be displayed in the given item.
+
+This function should only be used to display static content in the place of a list widget item. If you want to display custom dynamic content or implement a custom editor widget, use QListView and subclass QItemDelegate instead.
+
+This function was introduced in  Qt 4.1.
+
+See also itemWidget(), removeItemWidget(), and Delegate Classes.
+*/
 func (this *QListWidget) SetItemWidget(item QListWidgetItem_ITF /*777 QListWidgetItem **/, widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -504,6 +687,16 @@ func (this *QListWidget) SetItemWidget(item QListWidgetItem_ITF /*777 QListWidge
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void removeItemWidget(QListWidgetItem *)
+
+/*
+Removes the widget set on the given item.
+
+To remove an item (row) from the list entirely, either delete the item or use takeItem().
+
+This function was introduced in  Qt 4.3.
+
+See also itemWidget() and setItemWidget().
+*/
 func (this *QListWidget) RemoveItemWidget(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -517,6 +710,10 @@ func (this *QListWidget) RemoveItemWidget(item QListWidgetItem_ITF /*777 QListWi
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isItemSelected(const QListWidgetItem *) const
+
+/*
+
+ */
 func (this *QListWidget) IsItemSelected(item QListWidgetItem_ITF /*777 const QListWidgetItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -531,6 +728,10 @@ func (this *QListWidget) IsItemSelected(item QListWidgetItem_ITF /*777 const QLi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemSelected(const QListWidgetItem *, _Bool)
+
+/*
+
+ */
 func (this *QListWidget) SetItemSelected(item QListWidgetItem_ITF /*777 const QListWidgetItem **/, select_ bool) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -544,6 +745,10 @@ func (this *QListWidget) SetItemSelected(item QListWidgetItem_ITF /*777 const QL
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isItemHidden(const QListWidgetItem *) const
+
+/*
+
+ */
 func (this *QListWidget) IsItemHidden(item QListWidgetItem_ITF /*777 const QListWidgetItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -558,6 +763,10 @@ func (this *QListWidget) IsItemHidden(item QListWidgetItem_ITF /*777 const QList
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemHidden(const QListWidgetItem *, _Bool)
+
+/*
+
+ */
 func (this *QListWidget) SetItemHidden(item QListWidgetItem_ITF /*777 const QListWidgetItem **/, hide bool) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -571,6 +780,10 @@ func (this *QListWidget) SetItemHidden(item QListWidgetItem_ITF /*777 const QLis
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
+
+/*
+Reimplemented from QWidget::dropEvent().
+*/
 func (this *QListWidget) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QDropEvent_PTR() != nil {
@@ -584,6 +797,12 @@ func (this *QListWidget) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scrollToItem(const QListWidgetItem *, QAbstractItemView::ScrollHint)
+
+/*
+Scrolls the view if necessary to ensure that the item is visible.
+
+hint specifies where the item should be located after the operation.
+*/
 func (this *QListWidget) ScrollToItem(item QListWidgetItem_ITF /*777 const QListWidgetItem **/, hint int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -597,6 +816,12 @@ func (this *QListWidget) ScrollToItem(item QListWidgetItem_ITF /*777 const QList
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scrollToItem(const QListWidgetItem *, QAbstractItemView::ScrollHint)
+
+/*
+Scrolls the view if necessary to ensure that the item is visible.
+
+hint specifies where the item should be located after the operation.
+*/
 func (this *QListWidget) ScrollToItem__(item QListWidgetItem_ITF /*777 const QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -612,6 +837,12 @@ func (this *QListWidget) ScrollToItem__(item QListWidgetItem_ITF /*777 const QLi
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Removes all items and selections in the view.
+
+Warning: All items will be permanently deleted.
+*/
 func (this *QListWidget) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -621,6 +852,12 @@ func (this *QListWidget) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemPressed(QListWidgetItem *)
+
+/*
+This signal is emitted with the specified item when a mouse button is pressed on an item in the widget.
+
+See also itemClicked() and itemDoubleClicked().
+*/
 func (this *QListWidget) ItemPressed(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -634,6 +871,12 @@ func (this *QListWidget) ItemPressed(item QListWidgetItem_ITF /*777 QListWidgetI
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemClicked(QListWidgetItem *)
+
+/*
+This signal is emitted with the specified item when a mouse button is clicked on an item in the widget.
+
+See also itemPressed() and itemDoubleClicked().
+*/
 func (this *QListWidget) ItemClicked(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -647,6 +890,12 @@ func (this *QListWidget) ItemClicked(item QListWidgetItem_ITF /*777 QListWidgetI
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemDoubleClicked(QListWidgetItem *)
+
+/*
+This signal is emitted with the specified item when a mouse button is double clicked on an item in the widget.
+
+See also itemClicked() and itemPressed().
+*/
 func (this *QListWidget) ItemDoubleClicked(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -660,6 +909,10 @@ func (this *QListWidget) ItemDoubleClicked(item QListWidgetItem_ITF /*777 QListW
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemActivated(QListWidgetItem *)
+
+/*
+This signal is emitted when the item is activated. The item is activated when the user clicks or double clicks on it, depending on the system configuration. It is also activated when the user presses the activation key (on Windows and X11 this is the Return key, on Mac OS X it is Command+O).
+*/
 func (this *QListWidget) ItemActivated(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -673,6 +926,12 @@ func (this *QListWidget) ItemActivated(item QListWidgetItem_ITF /*777 QListWidge
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemEntered(QListWidgetItem *)
+
+/*
+This signal is emitted when the mouse cursor enters an item. The item is the item entered. This signal is only emitted when mouseTracking is turned on, or when a mouse button is pressed while moving into an item.
+
+See also QWidget::setMouseTracking().
+*/
 func (this *QListWidget) ItemEntered(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -686,6 +945,10 @@ func (this *QListWidget) ItemEntered(item QListWidgetItem_ITF /*777 QListWidgetI
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemChanged(QListWidgetItem *)
+
+/*
+This signal is emitted whenever the data of item has changed.
+*/
 func (this *QListWidget) ItemChanged(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -699,6 +962,12 @@ func (this *QListWidget) ItemChanged(item QListWidgetItem_ITF /*777 QListWidgetI
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentItemChanged(QListWidgetItem *, QListWidgetItem *)
+
+/*
+This signal is emitted whenever the current item changes.
+
+previous is the item that previously had the focus; current is the new current item.
+*/
 func (this *QListWidget) CurrentItemChanged(current QListWidgetItem_ITF /*777 QListWidgetItem **/, previous QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if current != nil && current.QListWidgetItem_PTR() != nil {
@@ -716,6 +985,12 @@ func (this *QListWidget) CurrentItemChanged(current QListWidgetItem_ITF /*777 QL
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentTextChanged(const QString &)
+
+/*
+This signal is emitted whenever the current item changes.
+
+currentText is the text data in the current item. If there is no current item, the currentText is invalid.
+*/
 func (this *QListWidget) CurrentTextChanged(currentText string) {
 	var tmpArg0 = qtcore.NewQString_5(currentText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -727,6 +1002,14 @@ func (this *QListWidget) CurrentTextChanged(currentText string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentRowChanged(int)
+
+/*
+This signal is emitted whenever the current item changes.
+
+currentRow is the row of the current item. If there is no current item, the currentRow is -1.
+
+Note: Notifier signal for property currentRow.
+*/
 func (this *QListWidget) CurrentRowChanged(currentRow int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget17currentRowChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), currentRow)
 	qtrt.ErrPrint(err, rv)
@@ -736,6 +1019,12 @@ func (this *QListWidget) CurrentRowChanged(currentRow int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemSelectionChanged()
+
+/*
+This signal is emitted whenever the selection changes.
+
+See also selectedItems(), QListWidgetItem::isSelected(), and currentItemChanged().
+*/
 func (this *QListWidget) ItemSelectionChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget20itemSelectionChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -745,6 +1034,10 @@ func (this *QListWidget) ItemSelectionChanged() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QListWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -759,6 +1052,12 @@ func (this *QListWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
+
+/*
+Returns a list of MIME types that can be used to describe a list of listwidget items.
+
+See also mimeData().
+*/
 func (this *QListWidget) MimeTypes() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -771,6 +1070,12 @@ func (this *QListWidget) MimeTypes() *qtcore.QStringList /*123*/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(int, const QMimeData *, Qt::DropAction)
+
+/*
+Handles data supplied by an external drag and drop operation that ended with the given action in the given index. Returns true if data and action can be handled by the model; otherwise returns false.
+
+See also supportedDropActions().
+*/
 func (this *QListWidget) DropMimeData(index int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, action int) bool {
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QMimeData_PTR() != nil {
@@ -785,6 +1090,12 @@ func (this *QListWidget) DropMimeData(index int, data qtcore.QMimeData_ITF /*777
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
+
+/*
+Returns the drop actions supported by this view.
+
+See also Qt::DropActions.
+*/
 func (this *QListWidget) SupportedDropActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget20supportedDropActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -795,6 +1106,10 @@ func (this *QListWidget) SupportedDropActions() int {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(QListWidgetItem *) const
+
+/*
+Returns the QModelIndex associated with the given item.
+*/
 func (this *QListWidget) IndexFromItem(item QListWidgetItem_ITF /*777 QListWidgetItem **/) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
@@ -811,6 +1126,10 @@ func (this *QListWidget) IndexFromItem(item QListWidgetItem_ITF /*777 QListWidge
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QListWidgetItem * itemFromIndex(const QModelIndex &) const
+
+/*
+Returns a pointer to the QListWidgetItem associated with the given index.
+*/
 func (this *QListWidget) ItemFromIndex(index qtcore.QModelIndex_ITF) *QListWidgetItem /*777 QListWidgetItem **/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {

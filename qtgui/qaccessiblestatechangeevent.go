@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleStateChangeEvent struct {
 	*QAccessibleEvent
 }
@@ -66,6 +69,10 @@ func (*QAccessibleStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAcces
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleStateChangeEvent()
+
+/*
+
+ */
 func DeleteQAccessibleStateChangeEvent(this *QAccessibleStateChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAccessibleStateChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -77,6 +84,10 @@ func DeleteQAccessibleStateChangeEvent(this *QAccessibleStateChangeEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAccessible::State changedStates() const
+
+/*
+
+ */
 func (this *QAccessibleStateChangeEvent) ChangedStates() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAccessibleStateChangeEvent13changedStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

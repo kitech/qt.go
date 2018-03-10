@@ -46,6 +46,9 @@ func (this *QSignalTransition) InheritEvent(f func(e *QEvent /*777 QEvent **/) b
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QSignalTransition struct {
 	*QAbstractTransition
 }
@@ -78,6 +81,10 @@ func (*QSignalTransition) NewFromPointer(cthis unsafe.Pointer) *QSignalTransitio
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSignalTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSignalTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +95,10 @@ func (this *QSignalTransition) MetaObject() *QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSignalTransition(QState *)
+
+/*
+Constructs a new signal transition with the given sourceState.
+*/
 func NewQSignalTransition(sourceState QState_ITF /*777 QState **/) *QSignalTransition {
 	var convArg0 unsafe.Pointer
 	if sourceState != nil && sourceState.QState_PTR() != nil {
@@ -104,6 +115,10 @@ func NewQSignalTransition(sourceState QState_ITF /*777 QState **/) *QSignalTrans
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSignalTransition(QState *)
+
+/*
+Constructs a new signal transition with the given sourceState.
+*/
 func NewQSignalTransition__() *QSignalTransition {
 	// arg: 0, QState *=Pointer, QState=Record,
 	var convArg0 unsafe.Pointer
@@ -118,6 +133,10 @@ func NewQSignalTransition__() *QSignalTransition {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSignalTransition(const QObject *, const char *, QState *)
+
+/*
+Constructs a new signal transition with the given sourceState.
+*/
 func NewQSignalTransition_1(sender QObject_ITF /*777 const QObject **/, signal string, sourceState QState_ITF /*777 QState **/) *QSignalTransition {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -140,6 +159,10 @@ func NewQSignalTransition_1(sender QObject_ITF /*777 const QObject **/, signal s
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSignalTransition(const QObject *, const char *, QState *)
+
+/*
+Constructs a new signal transition with the given sourceState.
+*/
 func NewQSignalTransition_1_(sender QObject_ITF /*777 const QObject **/, signal string) *QSignalTransition {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -160,6 +183,10 @@ func NewQSignalTransition_1_(sender QObject_ITF /*777 const QObject **/, signal 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSignalTransition()
+
+/*
+
+ */
 func DeleteQSignalTransition(this *QSignalTransition) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -171,6 +198,14 @@ func DeleteQSignalTransition(this *QSignalTransition) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * senderObject() const
+
+/*
+Returns the sender object associated with this signal transition.
+
+Note: Getter function for property senderObject.
+
+See also setSenderObject().
+*/
 func (this *QSignalTransition) SenderObject() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSignalTransition12senderObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -181,6 +216,14 @@ func (this *QSignalTransition) SenderObject() *QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSenderObject(const QObject *)
+
+/*
+Sets the sender object associated with this signal transition.
+
+Note: Setter function for property senderObject.
+
+See also senderObject().
+*/
 func (this *QSignalTransition) SetSenderObject(sender QObject_ITF /*777 const QObject **/) {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -194,6 +237,14 @@ func (this *QSignalTransition) SetSenderObject(sender QObject_ITF /*777 const QO
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray signal() const
+
+/*
+Returns the signal associated with this signal transition.
+
+Note: Getter function for property signal.
+
+See also setSignal().
+*/
 func (this *QSignalTransition) Signal() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSignalTransition6signalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -206,6 +257,14 @@ func (this *QSignalTransition) Signal() *QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSignal(const QByteArray &)
+
+/*
+Sets the signal associated with this signal transition.
+
+Note: Setter function for property signal.
+
+See also signal().
+*/
 func (this *QSignalTransition) SetSignal(signal QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if signal != nil && signal.QByteArray_PTR() != nil {
@@ -219,6 +278,12 @@ func (this *QSignalTransition) SetSignal(signal QByteArray_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventTest(QEvent *)
+
+/*
+Reimplemented from QAbstractTransition::eventTest().
+
+The default implementation returns true if the event is a QStateMachine::SignalEvent object and the event's sender and signal index match this transition, and returns false otherwise.
+*/
 func (this *QSignalTransition) EventTest(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -233,6 +298,10 @@ func (this *QSignalTransition) EventTest(event QEvent_ITF /*777 QEvent **/) bool
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void onTransition(QEvent *)
+
+/*
+Reimplemented from QAbstractTransition::onTransition().
+*/
 func (this *QSignalTransition) OnTransition(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -246,6 +315,10 @@ func (this *QSignalTransition) OnTransition(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QSignalTransition) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {

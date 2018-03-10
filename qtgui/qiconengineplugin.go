@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QIconEnginePlugin struct {
 	*qtcore.QObject
 }
@@ -64,6 +67,10 @@ func (*QIconEnginePlugin) NewFromPointer(cthis unsafe.Pointer) *QIconEnginePlugi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QIconEnginePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIconEnginePlugin(QObject *)
+
+/*
+Constructs a icon engine plugin with the given parent. This is invoked automatically by the plugin loader.
+*/
 func NewQIconEnginePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QIconEnginePlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQIconEnginePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QIconEng
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIconEnginePlugin(QObject *)
+
+/*
+Constructs a icon engine plugin with the given parent. This is invoked automatically by the plugin loader.
+*/
 func NewQIconEnginePlugin__() *QIconEnginePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +119,10 @@ func NewQIconEnginePlugin__() *QIconEnginePlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIconEnginePlugin()
+
+/*
+
+ */
 func DeleteQIconEnginePlugin(this *QIconEnginePlugin) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePluginD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -115,6 +134,10 @@ func DeleteQIconEnginePlugin(this *QIconEnginePlugin) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIconEngine * create(const QString &)
+
+/*
+Creates and returns a QIconEngine object for the icon with the given filename.
+*/
 func (this *QIconEnginePlugin) Create(filename string) *QIconEngine /*777 QIconEngine **/ {
 	var tmpArg0 = qtcore.NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
@@ -127,6 +150,10 @@ func (this *QIconEnginePlugin) Create(filename string) *QIconEngine /*777 QIconE
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIconEngine * create(const QString &)
+
+/*
+Creates and returns a QIconEngine object for the icon with the given filename.
+*/
 func (this *QIconEnginePlugin) Create__() *QIconEngine /*777 QIconEngine **/ {
 	// arg: 0, const QString &=LValueReference, QString=Record,
 	var convArg0 = qtcore.NewQString()

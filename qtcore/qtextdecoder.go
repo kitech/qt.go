@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QTextDecoder struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QTextDecoder) NewFromPointer(cthis unsafe.Pointer) *QTextDecoder {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextDecoder(const QTextCodec *)
+
+/*
+
+ */
 func NewQTextDecoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextDecoder {
 	var convArg0 unsafe.Pointer
 	if codec != nil && codec.QTextCodec_PTR() != nil {
@@ -81,6 +88,10 @@ func NewQTextDecoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextDeco
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDecoder(const QTextCodec *, QTextCodec::ConversionFlags)
+
+/*
+
+ */
 func NewQTextDecoder_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextDecoder {
 	var convArg0 unsafe.Pointer
 	if codec != nil && codec.QTextCodec_PTR() != nil {
@@ -97,6 +108,10 @@ func NewQTextDecoder_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags in
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextDecoder()
+
+/*
+
+ */
 func DeleteQTextDecoder(this *QTextDecoder) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -108,6 +123,10 @@ func DeleteQTextDecoder(this *QTextDecoder) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const char *, int)
+
+/*
+Converts a from the encoding of this codec to Unicode, and returns the result in a QString.
+*/
 func (this *QTextDecoder) ToUnicode(chars string, len_ int) string {
 	var convArg0 = qtrt.CString(chars)
 	defer qtrt.FreeMem(convArg0)
@@ -123,6 +142,10 @@ func (this *QTextDecoder) ToUnicode(chars string, len_ int) string {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const QByteArray &)
+
+/*
+Converts a from the encoding of this codec to Unicode, and returns the result in a QString.
+*/
 func (this *QTextDecoder) ToUnicode_1(ba QByteArray_ITF) string {
 	var convArg0 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
@@ -140,6 +163,10 @@ func (this *QTextDecoder) ToUnicode_1(ba QByteArray_ITF) string {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void toUnicode(QString *, const char *, int)
+
+/*
+Converts a from the encoding of this codec to Unicode, and returns the result in a QString.
+*/
 func (this *QTextDecoder) ToUnicode_2(target string, chars string, len_ int) {
 	var tmpArg0 = NewQString_5(target)
 	var convArg0 = tmpArg0.GetCthis()
@@ -153,6 +180,10 @@ func (this *QTextDecoder) ToUnicode_2(target string, chars string, len_ int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFailure() const
+
+/*
+
+ */
 func (this *QTextDecoder) HasFailure() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextDecoder10hasFailureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

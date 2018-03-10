@@ -38,6 +38,9 @@ func (this *QShortcut) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bo
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QShortcut struct {
 	*qtcore.QObject
 }
@@ -70,6 +73,10 @@ func (*QShortcut) NewFromPointer(cthis unsafe.Pointer) *QShortcut {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QShortcut) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +87,12 @@ func (this *QShortcut) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcut(QWidget *)
+
+/*
+Constructs a QShortcut object for the parent widget. Since no shortcut key sequence is specified, the shortcut will not emit any signals.
+
+See also setKey().
+*/
 func NewQShortcut(parent QWidget_ITF /*777 QWidget **/) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -96,6 +109,12 @@ func NewQShortcut(parent QWidget_ITF /*777 QWidget **/) *QShortcut {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcut(const QKeySequence &, QWidget *, const char *, const char *, Qt::ShortcutContext)
+
+/*
+Constructs a QShortcut object for the parent widget. Since no shortcut key sequence is specified, the shortcut will not emit any signals.
+
+See also setKey().
+*/
 func NewQShortcut_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
@@ -120,6 +139,12 @@ func NewQShortcut_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcut(const QKeySequence &, QWidget *, const char *, const char *, Qt::ShortcutContext)
+
+/*
+Constructs a QShortcut object for the parent widget. Since no shortcut key sequence is specified, the shortcut will not emit any signals.
+
+See also setKey().
+*/
 func NewQShortcut_1_(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
@@ -146,6 +171,12 @@ func NewQShortcut_1_(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidge
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcut(const QKeySequence &, QWidget *, const char *, const char *, Qt::ShortcutContext)
+
+/*
+Constructs a QShortcut object for the parent widget. Since no shortcut key sequence is specified, the shortcut will not emit any signals.
+
+See also setKey().
+*/
 func NewQShortcut_1_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
@@ -172,6 +203,12 @@ func NewQShortcut_1_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidg
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcut(const QKeySequence &, QWidget *, const char *, const char *, Qt::ShortcutContext)
+
+/*
+Constructs a QShortcut object for the parent widget. Since no shortcut key sequence is specified, the shortcut will not emit any signals.
+
+See also setKey().
+*/
 func NewQShortcut_1_2(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
@@ -198,6 +235,10 @@ func NewQShortcut_1_2(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidg
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QShortcut()
+
+/*
+
+ */
 func DeleteQShortcut(this *QShortcut) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcutD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -209,6 +250,10 @@ func DeleteQShortcut(this *QShortcut) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKey(const QKeySequence &)
+
+/*
+
+ */
 func (this *QShortcut) SetKey(key qtgui.QKeySequence_ITF) {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
@@ -222,6 +267,10 @@ func (this *QShortcut) SetKey(key qtgui.QKeySequence_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QKeySequence key() const
+
+/*
+
+ */
 func (this *QShortcut) Key() *qtgui.QKeySequence /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -234,6 +283,10 @@ func (this *QShortcut) Key() *qtgui.QKeySequence /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(_Bool)
+
+/*
+
+ */
 func (this *QShortcut) SetEnabled(enable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut10setEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	qtrt.ErrPrint(err, rv)
@@ -243,6 +296,10 @@ func (this *QShortcut) SetEnabled(enable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled() const
+
+/*
+
+ */
 func (this *QShortcut) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -253,6 +310,10 @@ func (this *QShortcut) IsEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContext(Qt::ShortcutContext)
+
+/*
+
+ */
 func (this *QShortcut) SetContext(context int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut10setContextEN2Qt15ShortcutContextE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), context)
 	qtrt.ErrPrint(err, rv)
@@ -262,6 +323,10 @@ func (this *QShortcut) SetContext(context int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ShortcutContext context() const
+
+/*
+
+ */
 func (this *QShortcut) Context() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut7contextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -272,6 +337,10 @@ func (this *QShortcut) Context() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWhatsThis(const QString &)
+
+/*
+
+ */
 func (this *QShortcut) SetWhatsThis(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -283,6 +352,10 @@ func (this *QShortcut) SetWhatsThis(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString whatsThis() const
+
+/*
+
+ */
 func (this *QShortcut) WhatsThis() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut9whatsThisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -296,6 +369,10 @@ func (this *QShortcut) WhatsThis() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoRepeat(_Bool)
+
+/*
+
+ */
 func (this *QShortcut) SetAutoRepeat(on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut13setAutoRepeatEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	qtrt.ErrPrint(err, rv)
@@ -305,6 +382,10 @@ func (this *QShortcut) SetAutoRepeat(on bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoRepeat() const
+
+/*
+
+ */
 func (this *QShortcut) AutoRepeat() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut10autoRepeatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -315,6 +396,12 @@ func (this *QShortcut) AutoRepeat() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int id() const
+
+/*
+Returns the shortcut's ID.
+
+See also QShortcutEvent::shortcutId().
+*/
 func (this *QShortcut) Id() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut2idEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -325,6 +412,10 @@ func (this *QShortcut) Id() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QWidget * parentWidget() const
+
+/*
+Returns the shortcut's parent widget.
+*/
 func (this *QShortcut) ParentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QShortcut12parentWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -335,6 +426,12 @@ func (this *QShortcut) ParentWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activated()
+
+/*
+This signal is emitted when the user types the shortcut's key sequence.
+
+See also activatedAmbiguously().
+*/
 func (this *QShortcut) Activated() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut9activatedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,6 +441,14 @@ func (this *QShortcut) Activated() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activatedAmbiguously()
+
+/*
+When a key sequence is being typed at the keyboard, it is said to be ambiguous as long as it matches the start of more than one shortcut.
+
+When a shortcut's key sequence is completed, activatedAmbiguously() is emitted if the key sequence is still ambiguous (i.e., it is the start of one or more other shortcuts). The activated() signal is not emitted in this case.
+
+See also activated().
+*/
 func (this *QShortcut) ActivatedAmbiguously() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut20activatedAmbiguouslyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -353,6 +458,10 @@ func (this *QShortcut) ActivatedAmbiguously() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+
+ */
 func (this *QShortcut) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {

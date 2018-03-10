@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QWinJumpListCategory struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QWinJumpListCategory) NewFromPointer(cthis unsafe.Pointer) *QWinJumpListC
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinJumpListCategory(const QString &)
+
+/*
+Constructs a custom QWinJumpListCategory with the specified title.
+*/
 func NewQWinJumpListCategory(title string) *QWinJumpListCategory {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -81,6 +88,10 @@ func NewQWinJumpListCategory(title string) *QWinJumpListCategory {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinJumpListCategory(const QString &)
+
+/*
+Constructs a custom QWinJumpListCategory with the specified title.
+*/
 func NewQWinJumpListCategory__() *QWinJumpListCategory {
 	// arg: 0, const QString &=LValueReference, QString=Record,
 	var convArg0 = qtcore.NewQString()
@@ -95,6 +106,10 @@ func NewQWinJumpListCategory__() *QWinJumpListCategory {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QWinJumpListCategory()
+
+/*
+
+ */
 func DeleteQWinJumpListCategory(this *QWinJumpListCategory) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -106,6 +121,10 @@ func DeleteQWinJumpListCategory(this *QWinJumpListCategory) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QWinJumpListCategory::Type type() const
+
+/*
+Returns the category type.
+*/
 func (this *QWinJumpListCategory) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinJumpListCategory4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,6 +135,10 @@ func (this *QWinJumpListCategory) Type() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible() const
+
+/*
+Returns whether the category is visible.
+*/
 func (this *QWinJumpListCategory) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinJumpListCategory9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -126,6 +149,12 @@ func (this *QWinJumpListCategory) IsVisible() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(_Bool)
+
+/*
+Sets the category visible.
+
+See also isVisible().
+*/
 func (this *QWinJumpListCategory) SetVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategory10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +164,12 @@ func (this *QWinJumpListCategory) SetVisible(visible bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString title() const
+
+/*
+Returns the category title.
+
+See also setTitle().
+*/
 func (this *QWinJumpListCategory) Title() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinJumpListCategory5titleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,6 +183,12 @@ func (this *QWinJumpListCategory) Title() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitle(const QString &)
+
+/*
+Sets the category title.
+
+See also title().
+*/
 func (this *QWinJumpListCategory) SetTitle(title string) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -159,6 +200,10 @@ func (this *QWinJumpListCategory) SetTitle(title string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
+
+/*
+Returns the amount of items in the category.
+*/
 func (this *QWinJumpListCategory) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinJumpListCategory5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -169,6 +214,10 @@ func (this *QWinJumpListCategory) Count() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns whether the category is empty.
+*/
 func (this *QWinJumpListCategory) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QWinJumpListCategory7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +228,10 @@ func (this *QWinJumpListCategory) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addItem(QWinJumpListItem *)
+
+/*
+Adds an item to the category.
+*/
 func (this *QWinJumpListCategory) AddItem(item QWinJumpListItem_ITF /*777 QWinJumpListItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QWinJumpListItem_PTR() != nil {
@@ -192,6 +245,10 @@ func (this *QWinJumpListCategory) AddItem(item QWinJumpListItem_ITF /*777 QWinJu
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWinJumpListItem * addDestination(const QString &)
+
+/*
+Adds a destination to the category pointing to filePath.
+*/
 func (this *QWinJumpListCategory) AddDestination(filePath string) *QWinJumpListItem /*777 QWinJumpListItem **/ {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
@@ -204,6 +261,10 @@ func (this *QWinJumpListCategory) AddDestination(filePath string) *QWinJumpListI
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWinJumpListItem * addLink(const QString &, const QString &, const QStringList &)
+
+/*
+Adds a link to the category using title, executablePath, and optionally arguments.
+*/
 func (this *QWinJumpListCategory) AddLink(title string, executablePath string, arguments qtcore.QStringList_ITF) *QWinJumpListItem /*777 QWinJumpListItem **/ {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -222,6 +283,10 @@ func (this *QWinJumpListCategory) AddLink(title string, executablePath string, a
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWinJumpListItem * addLink(const QString &, const QString &, const QStringList &)
+
+/*
+Adds a link to the category using title, executablePath, and optionally arguments.
+*/
 func (this *QWinJumpListCategory) AddLink__(title string, executablePath string) *QWinJumpListItem /*777 QWinJumpListItem **/ {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -238,6 +303,10 @@ func (this *QWinJumpListCategory) AddLink__(title string, executablePath string)
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QWinJumpListItem * addLink(const QIcon &, const QString &, const QString &, const QStringList &)
+
+/*
+Adds a link to the category using title, executablePath, and optionally arguments.
+*/
 func (this *QWinJumpListCategory) AddLink_1(icon qtgui.QIcon_ITF, title string, executablePath string, arguments qtcore.QStringList_ITF) *QWinJumpListItem /*777 QWinJumpListItem **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -260,6 +329,10 @@ func (this *QWinJumpListCategory) AddLink_1(icon qtgui.QIcon_ITF, title string, 
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QWinJumpListItem * addLink(const QIcon &, const QString &, const QString &, const QStringList &)
+
+/*
+Adds a link to the category using title, executablePath, and optionally arguments.
+*/
 func (this *QWinJumpListCategory) AddLink_1_(icon qtgui.QIcon_ITF, title string, executablePath string) *QWinJumpListItem /*777 QWinJumpListItem **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -280,6 +353,12 @@ func (this *QWinJumpListCategory) AddLink_1_(icon qtgui.QIcon_ITF, title string,
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWinJumpListItem * addSeparator()
+
+/*
+Adds a separator to the category.
+
+Note: Only tasks category supports separators.
+*/
 func (this *QWinJumpListCategory) AddSeparator() *QWinJumpListItem /*777 QWinJumpListItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategory12addSeparatorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -290,16 +369,32 @@ func (this *QWinJumpListCategory) AddSeparator() *QWinJumpListItem /*777 QWinJum
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the category.
+*/
 func (this *QWinJumpListCategory) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategory5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+This enum describes the available QWinJumpListCategory types.
+
+
+*/
 type QWinJumpListCategory__Type = int
 
+// A custom jump list category.
 const QWinJumpListCategory__Custom QWinJumpListCategory__Type = 0
+
+// A jump list category of "recent" items.
 const QWinJumpListCategory__Recent QWinJumpListCategory__Type = 1
+
+// A jump list category of "frequent" items.
 const QWinJumpListCategory__Frequent QWinJumpListCategory__Type = 2
+
+// A jump list category of tasks.
 const QWinJumpListCategory__Tasks QWinJumpListCategory__Type = 3
 
 //  body block end

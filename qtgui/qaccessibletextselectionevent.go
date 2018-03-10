@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleTextSelectionEvent struct {
 	*QAccessibleTextCursorEvent
 }
@@ -66,6 +69,10 @@ func (*QAccessibleTextSelectionEvent) NewFromPointer(cthis unsafe.Pointer) *QAcc
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextSelectionEvent(QObject *, int, int)
+
+/*
+
+ */
 func NewQAccessibleTextSelectionEvent(obj qtcore.QObject_ITF /*777 QObject **/, start int, end int) *QAccessibleTextSelectionEvent {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -82,6 +89,10 @@ func NewQAccessibleTextSelectionEvent(obj qtcore.QObject_ITF /*777 QObject **/, 
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextSelectionEvent(QAccessibleInterface *, int, int)
+
+/*
+
+ */
 func NewQAccessibleTextSelectionEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, start int, end int) *QAccessibleTextSelectionEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
@@ -98,6 +109,10 @@ func NewQAccessibleTextSelectionEvent_1(iface QAccessibleInterface_ITF /*777 QAc
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTextSelectionEvent()
+
+/*
+
+ */
 func DeleteQAccessibleTextSelectionEvent(this *QAccessibleTextSelectionEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -109,6 +124,10 @@ func DeleteQAccessibleTextSelectionEvent(this *QAccessibleTextSelectionEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSelection(int, int)
+
+/*
+
+ */
 func (this *QAccessibleTextSelectionEvent) SetSelection(start int, end int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEvent12setSelectionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
 	qtrt.ErrPrint(err, rv)
@@ -118,6 +137,10 @@ func (this *QAccessibleTextSelectionEvent) SetSelection(start int, end int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int selectionStart() const
+
+/*
+
+ */
 func (this *QAccessibleTextSelectionEvent) SelectionStart() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTextSelectionEvent14selectionStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +151,10 @@ func (this *QAccessibleTextSelectionEvent) SelectionStart() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int selectionEnd() const
+
+/*
+
+ */
 func (this *QAccessibleTextSelectionEvent) SelectionEnd() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTextSelectionEvent12selectionEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QContiguousCacheData struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QContiguousCacheData) NewFromPointer(cthis unsafe.Pointer) *QContiguousCa
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QContiguousCacheData * allocateData(int, int)
+
+/*
+
+ */
 func (this *QContiguousCacheData) AllocateData(size int, alignment int) *QContiguousCacheData /*777 QContiguousCacheData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QContiguousCacheData12allocateDataEii", qtrt.FFI_TYPE_POINTER, size, alignment)
 	qtrt.ErrPrint(err, rv)

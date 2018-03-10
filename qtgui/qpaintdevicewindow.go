@@ -52,6 +52,9 @@ func (this *QPaintDeviceWindow) InheritEvent(f func(event *qtcore.QEvent /*777 Q
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QPaintDeviceWindow struct {
 	*QWindow
 	*QPaintDevice
@@ -88,6 +91,10 @@ func (*QPaintDeviceWindow) NewFromPointer(cthis unsafe.Pointer) *QPaintDeviceWin
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,6 +105,14 @@ func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRect &)
+
+/*
+Marks the rect of the window as dirty and schedules a repaint.
+
+Note: Subsequent calls to this function before the next paint event will get ignored, but rect is added to the region to update.
+
+Note: For non-exposed windows the update is deferred until the window becomes exposed again.
+*/
 func (this *QPaintDeviceWindow) Update(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -111,6 +126,14 @@ func (this *QPaintDeviceWindow) Update(rect qtcore.QRect_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRegion &)
+
+/*
+Marks the rect of the window as dirty and schedules a repaint.
+
+Note: Subsequent calls to this function before the next paint event will get ignored, but rect is added to the region to update.
+
+Note: For non-exposed windows the update is deferred until the window becomes exposed again.
+*/
 func (this *QPaintDeviceWindow) Update_1(region QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if region != nil && region.QRegion_PTR() != nil {
@@ -124,6 +147,14 @@ func (this *QPaintDeviceWindow) Update_1(region QRegion_ITF) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void update()
+
+/*
+Marks the rect of the window as dirty and schedules a repaint.
+
+Note: Subsequent calls to this function before the next paint event will get ignored, but rect is added to the region to update.
+
+Note: For non-exposed windows the update is deferred until the window becomes exposed again.
+*/
 func (this *QPaintDeviceWindow) Update_2() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +164,12 @@ func (this *QPaintDeviceWindow) Update_2() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Handles paint events passed in the event parameter.
+
+The default implementation does nothing. Reimplement this function to perform painting. If necessary, the dirty area is retrievable from the event.
+*/
 func (this *QPaintDeviceWindow) PaintEvent(event QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QPaintEvent_PTR() != nil {
@@ -146,6 +183,10 @@ func (this *QPaintDeviceWindow) PaintEvent(event QPaintEvent_ITF /*777 QPaintEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+
+/*
+
+ */
 func (this *QPaintDeviceWindow) Metric(metric int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow6metricEN12QPaintDevice17PaintDeviceMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	qtrt.ErrPrint(err, rv)
@@ -156,6 +197,10 @@ func (this *QPaintDeviceWindow) Metric(metric int) int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void exposeEvent(QExposeEvent *)
+
+/*
+
+ */
 func (this *QPaintDeviceWindow) ExposeEvent(arg0 QExposeEvent_ITF /*777 QExposeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QExposeEvent_PTR() != nil {
@@ -169,6 +214,10 @@ func (this *QPaintDeviceWindow) ExposeEvent(arg0 QExposeEvent_ITF /*777 QExposeE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+
+ */
 func (this *QPaintDeviceWindow) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {

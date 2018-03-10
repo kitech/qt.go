@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionTabWidgetFrame struct {
 	*QStyleOption
 }
@@ -67,6 +70,10 @@ func (*QStyleOptionTabWidgetFrame) NewFromPointer(cthis unsafe.Pointer) *QStyleO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionTabWidgetFrame()
+
+/*
+
+ */
 func NewQStyleOptionTabWidgetFrame() *QStyleOptionTabWidgetFrame {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQStyleOptionTabWidgetFrame() *QStyleOptionTabWidgetFrame {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionTabWidgetFrame(int)
+
+/*
+
+ */
 func NewQStyleOptionTabWidgetFrame_1(version int) *QStyleOptionTabWidgetFrame {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -93,12 +104,35 @@ func DeleteQStyleOptionTabWidgetFrame(this *QStyleOptionTabWidgetFrame) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionTabWidgetFrame__StyleOptionType = int
 
+//
 const QStyleOptionTabWidgetFrame__Type QStyleOptionTabWidgetFrame__StyleOptionType = 11
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionTabWidgetFrame__StyleOptionVersion = int
 
+// 1
 const QStyleOptionTabWidgetFrame__Version QStyleOptionTabWidgetFrame__StyleOptionVersion = 2
 
 //  body block end

@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QDnsLookup struct {
 	*qtcore.QObject
 }
@@ -64,6 +67,10 @@ func (*QDnsLookup) NewFromPointer(cthis unsafe.Pointer) *QDnsLookup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QDnsLookup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,12 @@ func (this *QDnsLookup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(QObject *)
+
+/*
+Constructs a QDnsLookup object and sets parent as the parent object.
+
+The type property will default to QDnsLookup::A.
+*/
 func NewQDnsLookup(parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +103,12 @@ func NewQDnsLookup(parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(QObject *)
+
+/*
+Constructs a QDnsLookup object and sets parent as the parent object.
+
+The type property will default to QDnsLookup::A.
+*/
 func NewQDnsLookup__() *QDnsLookup {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +123,12 @@ func NewQDnsLookup__() *QDnsLookup {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, QObject *)
+
+/*
+Constructs a QDnsLookup object and sets parent as the parent object.
+
+The type property will default to QDnsLookup::A.
+*/
 func NewQDnsLookup_1(type_ int, name string, parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
@@ -122,6 +147,12 @@ func NewQDnsLookup_1(type_ int, name string, parent qtcore.QObject_ITF /*777 QOb
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, QObject *)
+
+/*
+Constructs a QDnsLookup object and sets parent as the parent object.
+
+The type property will default to QDnsLookup::A.
+*/
 func NewQDnsLookup_1_(type_ int, name string) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
@@ -138,6 +169,12 @@ func NewQDnsLookup_1_(type_ int, name string) *QDnsLookup {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
+
+/*
+Constructs a QDnsLookup object and sets parent as the parent object.
+
+The type property will default to QDnsLookup::A.
+*/
 func NewQDnsLookup_2(type_ int, name string, nameserver QHostAddress_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
@@ -160,6 +197,12 @@ func NewQDnsLookup_2(type_ int, name string, nameserver QHostAddress_ITF, parent
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
+
+/*
+Constructs a QDnsLookup object and sets parent as the parent object.
+
+The type property will default to QDnsLookup::A.
+*/
 func NewQDnsLookup_2_(type_ int, name string, nameserver QHostAddress_ITF) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
@@ -180,6 +223,10 @@ func NewQDnsLookup_2_(type_ int, name string, nameserver QHostAddress_ITF) *QDns
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDnsLookup()
+
+/*
+
+ */
 func DeleteQDnsLookup(this *QDnsLookup) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -191,6 +238,10 @@ func DeleteQDnsLookup(this *QDnsLookup) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDnsLookup::Error error() const
+
+/*
+
+ */
 func (this *QDnsLookup) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -201,6 +252,10 @@ func (this *QDnsLookup) Error() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
+
+/*
+
+ */
 func (this *QDnsLookup) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,6 +269,10 @@ func (this *QDnsLookup) ErrorString() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFinished() const
+
+/*
+Returns whether the reply has finished or was aborted.
+*/
 func (this *QDnsLookup) IsFinished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup10isFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +283,10 @@ func (this *QDnsLookup) IsFinished() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
+
+/*
+
+ */
 func (this *QDnsLookup) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -237,6 +300,10 @@ func (this *QDnsLookup) Name() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setName(const QString &)
+
+/*
+
+ */
 func (this *QDnsLookup) SetName(name string) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -248,6 +315,10 @@ func (this *QDnsLookup) SetName(name string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDnsLookup::Type type() const
+
+/*
+
+ */
 func (this *QDnsLookup) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,6 +329,10 @@ func (this *QDnsLookup) Type() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setType(QDnsLookup::Type)
+
+/*
+
+ */
 func (this *QDnsLookup) SetType(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup7setTypeENS_4TypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -267,6 +342,10 @@ func (this *QDnsLookup) SetType(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QHostAddress nameserver() const
+
+/*
+
+ */
 func (this *QDnsLookup) Nameserver() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QDnsLookup10nameserverEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -279,6 +358,10 @@ func (this *QDnsLookup) Nameserver() *QHostAddress /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNameserver(const QHostAddress &)
+
+/*
+
+ */
 func (this *QDnsLookup) SetNameserver(nameserver QHostAddress_ITF) {
 	var convArg0 unsafe.Pointer
 	if nameserver != nil && nameserver.QHostAddress_PTR() != nil {
@@ -292,6 +375,12 @@ func (this *QDnsLookup) SetNameserver(nameserver QHostAddress_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void abort()
+
+/*
+Aborts the DNS lookup operation.
+
+If the lookup is already finished, does nothing.
+*/
 func (this *QDnsLookup) Abort() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup5abortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -301,6 +390,12 @@ func (this *QDnsLookup) Abort() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void lookup()
+
+/*
+Performs the DNS lookup.
+
+The finished() signal is emitted upon completion.
+*/
 func (this *QDnsLookup) Lookup() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup6lookupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -310,6 +405,12 @@ func (this *QDnsLookup) Lookup() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finished()
+
+/*
+This signal is emitted when the reply has finished processing.
+
+Note: Notifier signal for property error. Notifier signal for property errorString.
+*/
 func (this *QDnsLookup) Finished() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup8finishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -319,6 +420,12 @@ func (this *QDnsLookup) Finished() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void nameChanged(const QString &)
+
+/*
+This signal is emitted when the lookup name changes. name is the new lookup name.
+
+Note: Notifier signal for property name.
+*/
 func (this *QDnsLookup) NameChanged(name string) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -330,6 +437,12 @@ func (this *QDnsLookup) NameChanged(name string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void typeChanged(enum QDnsLookup::Type)
+
+/*
+This signal is emitted when the lookup type changes. type is the new lookup type.
+
+Note: Notifier signal for property type.
+*/
 func (this *QDnsLookup) TypeChanged(type_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookup11typeChangedENS_4TypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	qtrt.ErrPrint(err, rv)
@@ -339,6 +452,10 @@ func (this *QDnsLookup) TypeChanged(type_ int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void nameserverChanged(const QHostAddress &)
+
+/*
+
+ */
 func (this *QDnsLookup) NameserverChanged(nameserver QHostAddress_ITF) {
 	var convArg0 unsafe.Pointer
 	if nameserver != nil && nameserver.QHostAddress_PTR() != nil {
@@ -348,27 +465,69 @@ func (this *QDnsLookup) NameserverChanged(nameserver QHostAddress_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+Indicates all possible error conditions found during the processing of the DNS lookup.
+
+
+*/
 type QDnsLookup__Error = int
 
+// no error condition.
 const QDnsLookup__NoError QDnsLookup__Error = 0
+
+// there was an error initializing the system's DNS resolver.
 const QDnsLookup__ResolverError QDnsLookup__Error = 1
+
+// the lookup was aborted using the abort() method.
 const QDnsLookup__OperationCancelledError QDnsLookup__Error = 2
+
+// the requested DNS lookup was invalid.
 const QDnsLookup__InvalidRequestError QDnsLookup__Error = 3
+
+// the reply returned by the server was invalid.
 const QDnsLookup__InvalidReplyError QDnsLookup__Error = 4
+
+// the server encountered an internal failure while processing the request (SERVFAIL).
 const QDnsLookup__ServerFailureError QDnsLookup__Error = 5
+
+// the server refused to process the request for security or policy reasons (REFUSED).
 const QDnsLookup__ServerRefusedError QDnsLookup__Error = 6
+
+// the requested domain name does not exist (NXDOMAIN).
 const QDnsLookup__NotFoundError QDnsLookup__Error = 7
 
+/*
+Indicates the type of DNS lookup that was performed.
+
+
+*/
 type QDnsLookup__Type = int
 
+//
 const QDnsLookup__A QDnsLookup__Type = 1
+
+//
 const QDnsLookup__AAAA QDnsLookup__Type = 28
+
+//
 const QDnsLookup__ANY QDnsLookup__Type = 255
+
+// canonical name records.
 const QDnsLookup__CNAME QDnsLookup__Type = 5
+
+//
 const QDnsLookup__MX QDnsLookup__Type = 15
+
+// name server records.
 const QDnsLookup__NS QDnsLookup__Type = 2
+
+//
 const QDnsLookup__PTR QDnsLookup__Type = 12
+
+//
 const QDnsLookup__SRV QDnsLookup__Type = 33
+
+//
 const QDnsLookup__TXT QDnsLookup__Type = 16
 
 //  body block end

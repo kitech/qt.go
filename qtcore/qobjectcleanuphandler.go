@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QObjectCleanupHandler struct {
 	*QObject
 }
@@ -63,6 +66,10 @@ func (*QObjectCleanupHandler) NewFromPointer(cthis unsafe.Pointer) *QObjectClean
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -73,6 +80,10 @@ func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QObjectCleanupHandler()
+
+/*
+Constructs an empty QObjectCleanupHandler.
+*/
 func NewQObjectCleanupHandler() *QObjectCleanupHandler {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +96,10 @@ func NewQObjectCleanupHandler() *QObjectCleanupHandler {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QObjectCleanupHandler()
+
+/*
+
+ */
 func DeleteQObjectCleanupHandler(this *QObjectCleanupHandler) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -96,6 +111,12 @@ func DeleteQObjectCleanupHandler(this *QObjectCleanupHandler) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * add(QObject *)
+
+/*
+Adds object to this cleanup handler and returns the pointer to the object.
+
+See also remove().
+*/
 func (this *QObjectCleanupHandler) Add(object QObject_ITF /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -110,6 +131,12 @@ func (this *QObjectCleanupHandler) Add(object QObject_ITF /*777 QObject **/) *QO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void remove(QObject *)
+
+/*
+Removes the object from this cleanup handler. The object will not be destroyed.
+
+See also add().
+*/
 func (this *QObjectCleanupHandler) Remove(object QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -123,6 +150,12 @@ func (this *QObjectCleanupHandler) Remove(object QObject_ITF /*777 QObject **/) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns true if this cleanup handler is empty or if all objects in this cleanup handler have been destroyed; otherwise return false.
+
+See also add(), remove(), and clear().
+*/
 func (this *QObjectCleanupHandler) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +166,12 @@ func (this *QObjectCleanupHandler) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Deletes all objects in this cleanup handler. The cleanup handler becomes empty.
+
+See also isEmpty().
+*/
 func (this *QObjectCleanupHandler) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

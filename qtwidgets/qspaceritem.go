@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QSpacerItem struct {
 	*QLayoutItem
 }
@@ -65,6 +68,10 @@ func (*QSpacerItem) NewFromPointer(cthis unsafe.Pointer) *QSpacerItem {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSpacerItem(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
+
+/*
+
+ */
 func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, w, h, hData, vData)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSpacerItem(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
+
+/*
+
+ */
 func NewQSpacerItem__(w int, h int) *QSpacerItem {
 	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
 	hData := 0
@@ -93,6 +104,10 @@ func NewQSpacerItem__(w int, h int) *QSpacerItem {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSpacerItem(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
+
+/*
+
+ */
 func NewQSpacerItem__1(w int, h int, hData int) *QSpacerItem {
 	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
 	vData := 0
@@ -107,6 +122,10 @@ func NewQSpacerItem__1(w int, h int, hData int) *QSpacerItem {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSpacerItem()
+
+/*
+
+ */
 func DeleteQSpacerItem(this *QSpacerItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -118,6 +137,10 @@ func DeleteQSpacerItem(this *QSpacerItem) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void changeSize(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
+
+/*
+
+ */
 func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, hData, vData)
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +150,10 @@ func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void changeSize(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
+
+/*
+
+ */
 func (this *QSpacerItem) ChangeSize__(w int, h int) {
 	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
 	hData := 0
@@ -140,6 +167,10 @@ func (this *QSpacerItem) ChangeSize__(w int, h int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void changeSize(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
+
+/*
+
+ */
 func (this *QSpacerItem) ChangeSize__1(w int, h int, hData int) {
 	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
 	vData := 0
@@ -151,6 +182,10 @@ func (this *QSpacerItem) ChangeSize__1(w int, h int, hData int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Implemented in subclasses to return the preferred size of this item.
+*/
 func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,6 +198,10 @@ func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSize() const
+
+/*
+Implemented in subclasses to return the minimum size of this item.
+*/
 func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +214,10 @@ func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize maximumSize() const
+
+/*
+Implemented in subclasses to return the maximum size of this item.
+*/
 func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,6 +230,10 @@ func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::Orientations expandingDirections() const
+
+/*
+Returns whether this layout item can make use of more space than sizeHint(). A value of Qt::Vertical or Qt::Horizontal means that it wants to grow in only one dimension, whereas Qt::Vertical | Qt::Horizontal means that it wants to grow in both dimensions.
+*/
 func (this *QSpacerItem) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,6 +244,10 @@ func (this *QSpacerItem) ExpandingDirections() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Implemented in subclasses to return whether this item is empty, i.e. whether it contains any widgets.
+*/
 func (this *QSpacerItem) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,6 +258,12 @@ func (this *QSpacerItem) IsEmpty() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
+
+/*
+Implemented in subclasses to set this item's geometry to r.
+
+See also geometry().
+*/
 func (this *QSpacerItem) SetGeometry(arg0 qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
@@ -220,6 +277,12 @@ func (this *QSpacerItem) SetGeometry(arg0 qtcore.QRect_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect geometry() const
+
+/*
+Returns the rectangle covered by this layout item.
+
+See also setGeometry().
+*/
 func (this *QSpacerItem) Geometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -232,6 +295,12 @@ func (this *QSpacerItem) Geometry() *qtcore.QRect /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSpacerItem * spacerItem()
+
+/*
+If this item is a QSpacerItem, it is returned as a QSpacerItem; otherwise 0 is returned. This function provides type-safe casting.
+
+See also layout() and widget().
+*/
 func (this *QSpacerItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10spacerItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,6 +311,10 @@ func (this *QSpacerItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QSizePolicy sizePolicy() const
+
+/*
+
+ */
 func (this *QSpacerItem) SizePolicy() *QSizePolicy /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem10sizePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

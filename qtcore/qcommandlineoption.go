@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QCommandLineOption struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,14 @@ func (*QCommandLineOption) NewFromPointer(cthis unsafe.Pointer) *QCommandLineOpt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QString &)
+
+/*
+Constructs a command line option object with the name name.
+
+The name can be either short or long. If the name is one character in length, it is considered a short name. Option names must not be empty, must not start with a dash or a slash character, must not contain a = and cannot be repeated.
+
+See also setDescription(), setValueName(), and setDefaultValues().
+*/
 func NewQCommandLineOption(name string) *QCommandLineOption {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -79,6 +90,14 @@ func NewQCommandLineOption(name string) *QCommandLineOption {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QStringList &)
+
+/*
+Constructs a command line option object with the name name.
+
+The name can be either short or long. If the name is one character in length, it is considered a short name. Option names must not be empty, must not start with a dash or a slash character, must not contain a = and cannot be repeated.
+
+See also setDescription(), setValueName(), and setDefaultValues().
+*/
 func NewQCommandLineOption_1(names QStringList_ITF) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
@@ -95,6 +114,14 @@ func NewQCommandLineOption_1(names QStringList_ITF) *QCommandLineOption {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QString &, const QString &, const QString &, const QString &)
+
+/*
+Constructs a command line option object with the name name.
+
+The name can be either short or long. If the name is one character in length, it is considered a short name. Option names must not be empty, must not start with a dash or a slash character, must not contain a = and cannot be repeated.
+
+See also setDescription(), setValueName(), and setDefaultValues().
+*/
 func NewQCommandLineOption_2(name string, description string, valueName string, defaultValue string) *QCommandLineOption {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -115,6 +142,14 @@ func NewQCommandLineOption_2(name string, description string, valueName string, 
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QString &, const QString &, const QString &, const QString &)
+
+/*
+Constructs a command line option object with the name name.
+
+The name can be either short or long. If the name is one character in length, it is considered a short name. Option names must not be empty, must not start with a dash or a slash character, must not contain a = and cannot be repeated.
+
+See also setDescription(), setValueName(), and setDefaultValues().
+*/
 func NewQCommandLineOption_2_(name string, description string) *QCommandLineOption {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -135,6 +170,14 @@ func NewQCommandLineOption_2_(name string, description string) *QCommandLineOpti
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QString &, const QString &, const QString &, const QString &)
+
+/*
+Constructs a command line option object with the name name.
+
+The name can be either short or long. If the name is one character in length, it is considered a short name. Option names must not be empty, must not start with a dash or a slash character, must not contain a = and cannot be repeated.
+
+See also setDescription(), setValueName(), and setDefaultValues().
+*/
 func NewQCommandLineOption_2_1(name string, description string, valueName string) *QCommandLineOption {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -155,6 +198,14 @@ func NewQCommandLineOption_2_1(name string, description string, valueName string
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QStringList &, const QString &, const QString &, const QString &)
+
+/*
+Constructs a command line option object with the name name.
+
+The name can be either short or long. If the name is one character in length, it is considered a short name. Option names must not be empty, must not start with a dash or a slash character, must not contain a = and cannot be repeated.
+
+See also setDescription(), setValueName(), and setDefaultValues().
+*/
 func NewQCommandLineOption_3(names QStringList_ITF, description string, valueName string, defaultValue string) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
@@ -177,6 +228,14 @@ func NewQCommandLineOption_3(names QStringList_ITF, description string, valueNam
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QStringList &, const QString &, const QString &, const QString &)
+
+/*
+Constructs a command line option object with the name name.
+
+The name can be either short or long. If the name is one character in length, it is considered a short name. Option names must not be empty, must not start with a dash or a slash character, must not contain a = and cannot be repeated.
+
+See also setDescription(), setValueName(), and setDefaultValues().
+*/
 func NewQCommandLineOption_3_(names QStringList_ITF, description string) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
@@ -199,6 +258,14 @@ func NewQCommandLineOption_3_(names QStringList_ITF, description string) *QComma
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLineOption(const QStringList &, const QString &, const QString &, const QString &)
+
+/*
+Constructs a command line option object with the name name.
+
+The name can be either short or long. If the name is one character in length, it is considered a short name. Option names must not be empty, must not start with a dash or a slash character, must not contain a = and cannot be repeated.
+
+See also setDescription(), setValueName(), and setDefaultValues().
+*/
 func NewQCommandLineOption_3_1(names QStringList_ITF, description string, valueName string) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
@@ -221,6 +288,10 @@ func NewQCommandLineOption_3_1(names QStringList_ITF, description string, valueN
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QCommandLineOption()
+
+/*
+
+ */
 func DeleteQCommandLineOption(this *QCommandLineOption) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -232,6 +303,10 @@ func DeleteQCommandLineOption(this *QCommandLineOption) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCommandLineOption & operator=(const QCommandLineOption &)
+
+/*
+
+ */
 func (this *QCommandLineOption) Operator_equal(other QCommandLineOption_ITF) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QCommandLineOption_PTR() != nil {
@@ -248,6 +323,10 @@ func (this *QCommandLineOption) Operator_equal(other QCommandLineOption_ITF) *QC
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QCommandLineOption & operator=(QCommandLineOption &&)
+
+/*
+
+ */
 func (this *QCommandLineOption) Operator_equal_1(other unsafe.Pointer /*333*/) *QCommandLineOption {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -260,6 +339,10 @@ func (this *QCommandLineOption) Operator_equal_1(other unsafe.Pointer /*333*/) *
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QCommandLineOption &)
+
+/*
+Swaps option other with this option. This operation is very fast and never fails.
+*/
 func (this *QCommandLineOption) Swap(other QCommandLineOption_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QCommandLineOption_PTR() != nil {
@@ -273,6 +356,10 @@ func (this *QCommandLineOption) Swap(other QCommandLineOption_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList names() const
+
+/*
+Returns the names set for this option.
+*/
 func (this *QCommandLineOption) Names() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineOption5namesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -285,6 +372,18 @@ func (this *QCommandLineOption) Names() *QStringList /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValueName(const QString &)
+
+/*
+Sets the name of the expected value, for the documentation, to valueName.
+
+Options without a value assigned have a boolean-like behavior: either the user specifies --option or they don't.
+
+Options with a value assigned need to set a name for the expected value, for the documentation of the option in the help output. An option with names o and output, and a value name of file will appear as -o, --output <file>.
+
+Call QCommandLineParser::value() if you expect the option to be present only once, and QCommandLineParser::values() if you expect that option to be present multiple times.
+
+See also valueName().
+*/
 func (this *QCommandLineOption) SetValueName(name string) {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -296,6 +395,14 @@ func (this *QCommandLineOption) SetValueName(name string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString valueName() const
+
+/*
+Returns the name of the expected value.
+
+If empty, the option doesn't take a value.
+
+See also setValueName().
+*/
 func (this *QCommandLineOption) ValueName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineOption9valueNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -309,6 +416,16 @@ func (this *QCommandLineOption) ValueName() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDescription(const QString &)
+
+/*
+Sets the description used for this option to description.
+
+It is customary to add a "." at the end of the description.
+
+The description is used by QCommandLineParser::showHelp().
+
+See also description().
+*/
 func (this *QCommandLineOption) SetDescription(description string) {
 	var tmpArg0 = NewQString_5(description)
 	var convArg0 = tmpArg0.GetCthis()
@@ -320,6 +437,12 @@ func (this *QCommandLineOption) SetDescription(description string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString description() const
+
+/*
+Returns the description set for this option.
+
+See also setDescription().
+*/
 func (this *QCommandLineOption) Description() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineOption11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -333,6 +456,16 @@ func (this *QCommandLineOption) Description() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultValue(const QString &)
+
+/*
+Sets the default value used for this option to defaultValue.
+
+The default value is used if the user of the application does not specify the option on the command line.
+
+If defaultValue is empty, the option has no default values.
+
+See also defaultValues() and setDefaultValues().
+*/
 func (this *QCommandLineOption) SetDefaultValue(defaultValue string) {
 	var tmpArg0 = NewQString_5(defaultValue)
 	var convArg0 = tmpArg0.GetCthis()
@@ -344,6 +477,14 @@ func (this *QCommandLineOption) SetDefaultValue(defaultValue string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultValues(const QStringList &)
+
+/*
+Sets the list of default values used for this option to defaultValues.
+
+The default values are used if the user of the application does not specify the option on the command line.
+
+See also defaultValues() and setDefaultValue().
+*/
 func (this *QCommandLineOption) SetDefaultValues(defaultValues QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if defaultValues != nil && defaultValues.QStringList_PTR() != nil {
@@ -357,6 +498,12 @@ func (this *QCommandLineOption) SetDefaultValues(defaultValues QStringList_ITF) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList defaultValues() const
+
+/*
+Returns the default values set for this option.
+
+See also setDefaultValues().
+*/
 func (this *QCommandLineOption) DefaultValues() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineOption13defaultValuesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -369,6 +516,14 @@ func (this *QCommandLineOption) DefaultValues() *QStringList /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QCommandLineOption::Flags flags() const
+
+/*
+Returns a set of flags that affect this command-line option.
+
+This function was introduced in  Qt 5.8.
+
+See also setFlags() and QCommandLineOption::Flags.
+*/
 func (this *QCommandLineOption) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineOption5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -379,6 +534,14 @@ func (this *QCommandLineOption) Flags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(QCommandLineOption::Flags)
+
+/*
+Set the set of flags that affect this command-line option to flags.
+
+This function was introduced in  Qt 5.8.
+
+See also flags() and QCommandLineOption::Flags.
+*/
 func (this *QCommandLineOption) SetFlags(aflags int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOption8setFlagsE6QFlagsINS_4FlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), aflags)
 	qtrt.ErrPrint(err, rv)
@@ -388,6 +551,10 @@ func (this *QCommandLineOption) SetFlags(aflags int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHidden(_Bool)
+
+/*
+
+ */
 func (this *QCommandLineOption) SetHidden(hidden bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOption9setHiddenEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hidden)
 	qtrt.ErrPrint(err, rv)
@@ -397,15 +564,26 @@ func (this *QCommandLineOption) SetHidden(hidden bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isHidden() const
+
+/*
+
+ */
 func (this *QCommandLineOption) IsHidden() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineOption8isHiddenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
+/*
+
+
+ */
 type QCommandLineOption__Flag = int
 
+//
 const QCommandLineOption__HiddenFromHelp QCommandLineOption__Flag = 1
+
+//
 const QCommandLineOption__ShortOptionStyle QCommandLineOption__Flag = 2
 
 //  body block end

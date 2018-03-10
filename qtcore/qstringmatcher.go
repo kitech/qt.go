@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QStringMatcher struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QStringMatcher) NewFromPointer(cthis unsafe.Pointer) *QStringMatcher {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStringMatcher()
+
+/*
+Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
+*/
 func NewQStringMatcher() *QStringMatcher {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStringMatcher() *QStringMatcher {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStringMatcher(const QString &, Qt::CaseSensitivity)
+
+/*
+Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
+*/
 func NewQStringMatcher_1(pattern string, cs int) *QStringMatcher {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -91,6 +102,10 @@ func NewQStringMatcher_1(pattern string, cs int) *QStringMatcher {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStringMatcher(const QString &, Qt::CaseSensitivity)
+
+/*
+Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
+*/
 func NewQStringMatcher_1_(pattern string) *QStringMatcher {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -107,6 +122,10 @@ func NewQStringMatcher_1_(pattern string) *QStringMatcher {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QStringMatcher(const QChar *, int, Qt::CaseSensitivity)
+
+/*
+Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
+*/
 func NewQStringMatcher_2(uc QChar_ITF /*777 const QChar **/, len_ int, cs int) *QStringMatcher {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QChar_PTR() != nil {
@@ -123,6 +142,10 @@ func NewQStringMatcher_2(uc QChar_ITF /*777 const QChar **/, len_ int, cs int) *
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QStringMatcher(const QChar *, int, Qt::CaseSensitivity)
+
+/*
+Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
+*/
 func NewQStringMatcher_2_(uc QChar_ITF /*777 const QChar **/, len_ int) *QStringMatcher {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QChar_PTR() != nil {
@@ -141,6 +164,10 @@ func NewQStringMatcher_2_(uc QChar_ITF /*777 const QChar **/, len_ int) *QString
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStringMatcher()
+
+/*
+
+ */
 func DeleteQStringMatcher(this *QStringMatcher) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 1048)
@@ -152,6 +179,10 @@ func DeleteQStringMatcher(this *QStringMatcher) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1048] QStringMatcher & operator=(const QStringMatcher &)
+
+/*
+
+ */
 func (this *QStringMatcher) Operator_equal(other QStringMatcher_ITF) *QStringMatcher {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QStringMatcher_PTR() != nil {
@@ -168,6 +199,12 @@ func (this *QStringMatcher) Operator_equal(other QStringMatcher_ITF) *QStringMat
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPattern(const QString &)
+
+/*
+Sets the string that this string matcher will search for to pattern.
+
+See also pattern(), setCaseSensitivity(), and indexIn().
+*/
 func (this *QStringMatcher) SetPattern(pattern string) {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -179,6 +216,12 @@ func (this *QStringMatcher) SetPattern(pattern string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCaseSensitivity(Qt::CaseSensitivity)
+
+/*
+Sets the case sensitivity setting of this string matcher to cs.
+
+See also caseSensitivity(), setPattern(), and indexIn().
+*/
 func (this *QStringMatcher) SetCaseSensitivity(cs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcher18setCaseSensitivityEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cs)
 	qtrt.ErrPrint(err, rv)
@@ -188,6 +231,12 @@ func (this *QStringMatcher) SetCaseSensitivity(cs int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const QString &, int) const
+
+/*
+Searches the string str from character position from (default 0, i.e. from the first character), for the string pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in str, or -1 if no match was found.
+
+See also setPattern() and setCaseSensitivity().
+*/
 func (this *QStringMatcher) IndexIn(str string, from int) int {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
@@ -200,6 +249,12 @@ func (this *QStringMatcher) IndexIn(str string, from int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const QString &, int) const
+
+/*
+Searches the string str from character position from (default 0, i.e. from the first character), for the string pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in str, or -1 if no match was found.
+
+See also setPattern() and setCaseSensitivity().
+*/
 func (this *QStringMatcher) IndexIn__(str string) int {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
@@ -214,6 +269,12 @@ func (this *QStringMatcher) IndexIn__(str string) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const QChar *, int, int) const
+
+/*
+Searches the string str from character position from (default 0, i.e. from the first character), for the string pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in str, or -1 if no match was found.
+
+See also setPattern() and setCaseSensitivity().
+*/
 func (this *QStringMatcher) IndexIn_1(str QChar_ITF /*777 const QChar **/, length int, from int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QChar_PTR() != nil {
@@ -228,6 +289,12 @@ func (this *QStringMatcher) IndexIn_1(str QChar_ITF /*777 const QChar **/, lengt
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const QChar *, int, int) const
+
+/*
+Searches the string str from character position from (default 0, i.e. from the first character), for the string pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in str, or -1 if no match was found.
+
+See also setPattern() and setCaseSensitivity().
+*/
 func (this *QStringMatcher) IndexIn_1_(str QChar_ITF /*777 const QChar **/, length int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QChar_PTR() != nil {
@@ -244,6 +311,12 @@ func (this *QStringMatcher) IndexIn_1_(str QChar_ITF /*777 const QChar **/, leng
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString pattern() const
+
+/*
+Returns the string pattern that this string matcher will search for.
+
+See also setPattern().
+*/
 func (this *QStringMatcher) Pattern() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher7patternEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,6 +330,12 @@ func (this *QStringMatcher) Pattern() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::CaseSensitivity caseSensitivity() const
+
+/*
+Returns the case sensitivity setting for this string matcher.
+
+See also setCaseSensitivity().
+*/
 func (this *QStringMatcher) CaseSensitivity() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher15caseSensitivityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

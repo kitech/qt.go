@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTouchEvent struct {
 	*QInputEvent
 }
@@ -64,6 +67,10 @@ func (*QTouchEvent) NewFromPointer(cthis unsafe.Pointer) *QTouchEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTouchEvent()
+
+/*
+
+ */
 func DeleteQTouchEvent(this *QTouchEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 72)
@@ -75,6 +82,10 @@ func DeleteQTouchEvent(this *QTouchEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QWindow * window() const
+
+/*
+
+ */
 func (this *QTouchEvent) Window() *QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +96,10 @@ func (this *QTouchEvent) Window() *QWindow /*777 QWindow **/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QObject * target() const
+
+/*
+
+ */
 func (this *QTouchEvent) Target() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent6targetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -95,6 +110,10 @@ func (this *QTouchEvent) Target() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::TouchPointStates touchPointStates() const
+
+/*
+
+ */
 func (this *QTouchEvent) TouchPointStates() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent16touchPointStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +124,10 @@ func (this *QTouchEvent) TouchPointStates() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QList<QTouchEvent::TouchPoint> & touchPoints() const
+
+/*
+
+ */
 func (this *QTouchEvent) TouchPoints() unsafe.Pointer /*555*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent11touchPointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,6 +138,10 @@ func (this *QTouchEvent) TouchPoints() unsafe.Pointer /*555*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QTouchDevice * device() const
+
+/*
+
+ */
 func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,6 +152,10 @@ func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWindow(QWindow *)
+
+/*
+
+ */
 func (this *QTouchEvent) SetWindow(awindow QWindow_ITF /*777 QWindow **/) {
 	var convArg0 unsafe.Pointer
 	if awindow != nil && awindow.QWindow_PTR() != nil {
@@ -138,6 +169,10 @@ func (this *QTouchEvent) SetWindow(awindow QWindow_ITF /*777 QWindow **/) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTarget(QObject *)
+
+/*
+
+ */
 func (this *QTouchEvent) SetTarget(atarget qtcore.QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if atarget != nil && atarget.QObject_PTR() != nil {
@@ -151,6 +186,10 @@ func (this *QTouchEvent) SetTarget(atarget qtcore.QObject_ITF /*777 QObject **/)
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTouchPointStates(Qt::TouchPointStates)
+
+/*
+
+ */
 func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent19setTouchPointStatesE6QFlagsIN2Qt15TouchPointStateEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), aTouchPointStates)
 	qtrt.ErrPrint(err, rv)
@@ -160,6 +199,10 @@ func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDevice(QTouchDevice *)
+
+/*
+
+ */
 func (this *QTouchEvent) SetDevice(adevice QTouchDevice_ITF /*777 QTouchDevice **/) {
 	var convArg0 unsafe.Pointer
 	if adevice != nil && adevice.QTouchDevice_PTR() != nil {

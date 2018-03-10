@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextBlockUserData struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QTextBlockUserData) NewFromPointer(cthis unsafe.Pointer) *QTextBlockUserD
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextBlockUserData()
+
+/*
+
+ */
 func DeleteQTextBlockUserData(this *QTextBlockUserData) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QTextBlockUserDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)

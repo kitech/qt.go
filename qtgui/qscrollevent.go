@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QScrollEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QScrollEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollEvent(const QPointF &, const QPointF &, enum QScrollEvent::ScrollState)
+
+/*
+
+ */
 func NewQScrollEvent(contentPos qtcore.QPointF_ITF, overshoot qtcore.QPointF_ITF, scrollState int) *QScrollEvent {
 	var convArg0 unsafe.Pointer
 	if contentPos != nil && contentPos.QPointF_PTR() != nil {
@@ -84,6 +91,10 @@ func NewQScrollEvent(contentPos qtcore.QPointF_ITF, overshoot qtcore.QPointF_ITF
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScrollEvent()
+
+/*
+
+ */
 func DeleteQScrollEvent(this *QScrollEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QScrollEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 64)
@@ -95,6 +106,10 @@ func DeleteQScrollEvent(this *QScrollEvent) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF contentPos() const
+
+/*
+
+ */
 func (this *QScrollEvent) ContentPos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QScrollEvent10contentPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -107,6 +122,10 @@ func (this *QScrollEvent) ContentPos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF overshootDistance() const
+
+/*
+
+ */
 func (this *QScrollEvent) OvershootDistance() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QScrollEvent17overshootDistanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,16 +138,29 @@ func (this *QScrollEvent) OvershootDistance() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QScrollEvent::ScrollState scrollState() const
+
+/*
+
+ */
 func (this *QScrollEvent) ScrollState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QScrollEvent11scrollStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
+/*
+
+
+ */
 type QScrollEvent__ScrollState = int
 
+//
 const QScrollEvent__ScrollStarted QScrollEvent__ScrollState = 0
+
+//
 const QScrollEvent__ScrollUpdated QScrollEvent__ScrollState = 1
+
+//
 const QScrollEvent__ScrollFinished QScrollEvent__ScrollState = 2
 
 //  body block end

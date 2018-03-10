@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QEnterEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QEnterEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QEnterEvent(const QPointF &, const QPointF &, const QPointF &)
+
+/*
+
+ */
 func NewQEnterEvent(localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF) *QEnterEvent {
 	var convArg0 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {
@@ -88,6 +95,10 @@ func NewQEnterEvent(localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, s
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QEnterEvent()
+
+/*
+
+ */
 func DeleteQEnterEvent(this *QEnterEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QEnterEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 72)
@@ -99,6 +110,10 @@ func DeleteQEnterEvent(this *QEnterEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint pos() const
+
+/*
+
+ */
 func (this *QEnterEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +126,10 @@ func (this *QEnterEvent) Pos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint globalPos() const
+
+/*
+
+ */
 func (this *QEnterEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent9globalPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -123,6 +142,10 @@ func (this *QEnterEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int x() const
+
+/*
+
+ */
 func (this *QEnterEvent) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +156,10 @@ func (this *QEnterEvent) X() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int y() const
+
+/*
+
+ */
 func (this *QEnterEvent) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +170,10 @@ func (this *QEnterEvent) Y() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalX() const
+
+/*
+
+ */
 func (this *QEnterEvent) GlobalX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent7globalXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,6 +184,10 @@ func (this *QEnterEvent) GlobalX() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalY() const
+
+/*
+
+ */
 func (this *QEnterEvent) GlobalY() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent7globalYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,6 +198,10 @@ func (this *QEnterEvent) GlobalY() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & localPos() const
+
+/*
+
+ */
 func (this *QEnterEvent) LocalPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent8localPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +214,10 @@ func (this *QEnterEvent) LocalPos() *qtcore.QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & windowPos() const
+
+/*
+
+ */
 func (this *QEnterEvent) WindowPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent9windowPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,6 +230,10 @@ func (this *QEnterEvent) WindowPos() *qtcore.QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & screenPos() const
+
+/*
+
+ */
 func (this *QEnterEvent) ScreenPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QEnterEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

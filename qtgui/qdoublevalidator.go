@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QDoubleValidator struct {
 	*QValidator
 }
@@ -64,6 +67,10 @@ func (*QDoubleValidator) NewFromPointer(cthis unsafe.Pointer) *QDoubleValidator 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QDoubleValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDoubleValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QDoubleValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(QObject *)
+
+/*
+
+ */
 func NewQDoubleValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleValidator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQDoubleValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleVa
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(QObject *)
+
+/*
+
+ */
 func NewQDoubleValidator__() *QDoubleValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +119,10 @@ func NewQDoubleValidator__() *QDoubleValidator {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(double, double, int, QObject *)
+
+/*
+
+ */
 func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleValidator {
 	var convArg3 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -120,6 +139,10 @@ func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent qtc
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(double, double, int, QObject *)
+
+/*
+
+ */
 func NewQDoubleValidator_1_(bottom float64, top float64, decimals int) *QDoubleValidator {
 	// arg: 3, QObject *=Pointer, QObject=Record,
 	var convArg3 unsafe.Pointer
@@ -134,6 +157,10 @@ func NewQDoubleValidator_1_(bottom float64, top float64, decimals int) *QDoubleV
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDoubleValidator()
+
+/*
+
+ */
 func DeleteQDoubleValidator(this *QDoubleValidator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -145,6 +172,12 @@ func DeleteQDoubleValidator(this *QDoubleValidator) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
+
+/*
+This virtual function returns Invalid if input is invalid according to this validator's rules, Intermediate if it is likely that a little more editing will make the input acceptable (e.g. the user types "4" into a widget which accepts integers between 10 and 99), and Acceptable if the input is valid.
+
+The function can change both input and pos (the cursor position) if required.
+*/
 func (this *QDoubleValidator) Validate(arg0 string, arg1 int) int {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -157,6 +190,10 @@ func (this *QDoubleValidator) Validate(arg0 string, arg1 int) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRange(double, double, int)
+
+/*
+
+ */
 func (this *QDoubleValidator) SetRange(bottom float64, top float64, decimals int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator8setRangeEddi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bottom, top, decimals)
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +203,10 @@ func (this *QDoubleValidator) SetRange(bottom float64, top float64, decimals int
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRange(double, double, int)
+
+/*
+
+ */
 func (this *QDoubleValidator) SetRange__(bottom float64, top float64) {
 	// arg: 2, int=Int, =Invalid,
 	decimals := int(0)
@@ -177,6 +218,10 @@ func (this *QDoubleValidator) SetRange__(bottom float64, top float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBottom(double)
+
+/*
+
+ */
 func (this *QDoubleValidator) SetBottom(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator9setBottomEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -186,6 +231,10 @@ func (this *QDoubleValidator) SetBottom(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTop(double)
+
+/*
+
+ */
 func (this *QDoubleValidator) SetTop(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator6setTopEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -195,6 +244,10 @@ func (this *QDoubleValidator) SetTop(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDecimals(int)
+
+/*
+
+ */
 func (this *QDoubleValidator) SetDecimals(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator11setDecimalsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -204,6 +257,10 @@ func (this *QDoubleValidator) SetDecimals(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNotation(enum QDoubleValidator::Notation)
+
+/*
+
+ */
 func (this *QDoubleValidator) SetNotation(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator11setNotationENS_8NotationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -213,6 +270,10 @@ func (this *QDoubleValidator) SetNotation(arg0 int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] double bottom() const
+
+/*
+
+ */
 func (this *QDoubleValidator) Bottom() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDoubleValidator6bottomEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,6 +284,10 @@ func (this *QDoubleValidator) Bottom() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] double top() const
+
+/*
+
+ */
 func (this *QDoubleValidator) Top() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDoubleValidator3topEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -233,6 +298,10 @@ func (this *QDoubleValidator) Top() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int decimals() const
+
+/*
+
+ */
 func (this *QDoubleValidator) Decimals() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDoubleValidator8decimalsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -243,6 +312,10 @@ func (this *QDoubleValidator) Decimals() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDoubleValidator::Notation notation() const
+
+/*
+
+ */
 func (this *QDoubleValidator) Notation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDoubleValidator8notationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -253,6 +326,10 @@ func (this *QDoubleValidator) Notation() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void bottomChanged(double)
+
+/*
+
+ */
 func (this *QDoubleValidator) BottomChanged(bottom float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator13bottomChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bottom)
 	qtrt.ErrPrint(err, rv)
@@ -262,6 +339,10 @@ func (this *QDoubleValidator) BottomChanged(bottom float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void topChanged(double)
+
+/*
+
+ */
 func (this *QDoubleValidator) TopChanged(top float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator10topChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), top)
 	qtrt.ErrPrint(err, rv)
@@ -271,6 +352,10 @@ func (this *QDoubleValidator) TopChanged(top float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void decimalsChanged(int)
+
+/*
+
+ */
 func (this *QDoubleValidator) DecimalsChanged(decimals int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator15decimalsChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), decimals)
 	qtrt.ErrPrint(err, rv)
@@ -280,14 +365,25 @@ func (this *QDoubleValidator) DecimalsChanged(decimals int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void notationChanged(QDoubleValidator::Notation)
+
+/*
+
+ */
 func (this *QDoubleValidator) NotationChanged(notation int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator15notationChangedENS_8NotationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), notation)
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QDoubleValidator__Notation = int
 
+//
 const QDoubleValidator__StandardNotation QDoubleValidator__Notation = 0
+
+//
 const QDoubleValidator__ScientificNotation QDoubleValidator__Notation = 1
 
 //  body block end

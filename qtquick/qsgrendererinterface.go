@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGRendererInterface struct {
 	*qtrt.CObject
 }
@@ -69,6 +72,10 @@ func (*QSGRendererInterface) NewFromPointer(cthis unsafe.Pointer) *QSGRendererIn
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGRendererInterface()
+
+/*
+
+ */
 func DeleteQSGRendererInterface(this *QSGRendererInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGRendererInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -80,6 +87,12 @@ func DeleteQSGRendererInterface(this *QSGRendererInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGRendererInterface::GraphicsApi graphicsApi() const
+
+/*
+Returns the graphics API that is in use by the Qt Quick scenegraph.
+
+Note: This function can be called on any thread.
+*/
 func (this *QSGRendererInterface) GraphicsApi() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11graphicsApiEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +103,16 @@ func (this *QSGRendererInterface) GraphicsApi() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] void * getResource(QQuickWindow *, enum QSGRendererInterface::Resource) const
+
+/*
+Queries a graphics resource in window. Returns null when the resource in question is not supported or not available.
+
+When successful, the returned pointer is either a direct pointer to an interface (and can be cast, for example, to ID3D12Device *) or a pointer to an opaque handle that needs to be dereferenced first (for example, VkDevice dev = *static_cast<VkDevice *>(result)). The latter is necessary since such handles may have sizes different from a pointer.
+
+Note: The ownership of the returned pointer is never transferred to the caller.
+
+Note: This function must only be called on the render thread.
+*/
 func (this *QSGRendererInterface) GetResource(window QQuickWindow_ITF /*777 QQuickWindow **/, resource int) unsafe.Pointer /*666*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QQuickWindow_PTR() != nil {
@@ -104,6 +127,16 @@ func (this *QSGRendererInterface) GetResource(window QQuickWindow_ITF /*777 QQui
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [8] void * getResource(QQuickWindow *, const char *) const
+
+/*
+Queries a graphics resource in window. Returns null when the resource in question is not supported or not available.
+
+When successful, the returned pointer is either a direct pointer to an interface (and can be cast, for example, to ID3D12Device *) or a pointer to an opaque handle that needs to be dereferenced first (for example, VkDevice dev = *static_cast<VkDevice *>(result)). The latter is necessary since such handles may have sizes different from a pointer.
+
+Note: The ownership of the returned pointer is never transferred to the caller.
+
+Note: This function must only be called on the render thread.
+*/
 func (this *QSGRendererInterface) GetResource_1(window QQuickWindow_ITF /*777 QQuickWindow **/, resource string) unsafe.Pointer /*666*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QQuickWindow_PTR() != nil {
@@ -120,6 +153,14 @@ func (this *QSGRendererInterface) GetResource_1(window QQuickWindow_ITF /*777 QQ
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGRendererInterface::ShaderType shaderType() const
+
+/*
+Returns the shading language supported by the Qt Quick backend the application is using.
+
+Note: This function can be called on any thread.
+
+See also QtQuick::GraphicsInfo.
+*/
 func (this *QSGRendererInterface) ShaderType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface10shaderTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +171,14 @@ func (this *QSGRendererInterface) ShaderType() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGRendererInterface::ShaderCompilationTypes shaderCompilationType() const
+
+/*
+Returns a bitmask of the shader compilation approaches supported by the Qt Quick backend the application is using.
+
+Note: This function can be called on any thread.
+
+See also QtQuick::GraphicsInfo.
+*/
 func (this *QSGRendererInterface) ShaderCompilationType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface21shaderCompilationTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,42 +189,96 @@ func (this *QSGRendererInterface) ShaderCompilationType() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGRendererInterface::ShaderSourceTypes shaderSourceType() const
+
+/*
+Returns a bitmask of the supported ways of providing shader sources in ShaderEffect items.
+
+Note: This function can be called on any thread.
+
+See also QtQuick::GraphicsInfo.
+*/
 func (this *QSGRendererInterface) ShaderSourceType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface16shaderSourceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
+/*
+
+ */
 type QSGRendererInterface__GraphicsApi = int
 
+// An unknown graphics API is in use
 const QSGRendererInterface__Unknown QSGRendererInterface__GraphicsApi = 0
+
+//
 const QSGRendererInterface__Software QSGRendererInterface__GraphicsApi = 1
+
+//
 const QSGRendererInterface__OpenGL QSGRendererInterface__GraphicsApi = 2
+
+//
 const QSGRendererInterface__Direct3D12 QSGRendererInterface__GraphicsApi = 3
+
+// OpenVG via EGL
 const QSGRendererInterface__OpenVG QSGRendererInterface__GraphicsApi = 4
 
+/*
+
+ */
 type QSGRendererInterface__Resource = int
 
+// The graphics device, when applicable.
 const QSGRendererInterface__DeviceResource QSGRendererInterface__Resource = 0
+
+// The graphics command queue used by the scenegraph, when applicable.
 const QSGRendererInterface__CommandQueueResource QSGRendererInterface__Resource = 1
+
+// The command list or buffer used by the scenegraph, when applicable.
 const QSGRendererInterface__CommandListResource QSGRendererInterface__Resource = 2
+
+// The active QPainter used by the scenegraph, when running with the software backend.
 const QSGRendererInterface__PainterResource QSGRendererInterface__Resource = 3
 
+/*
+
+ */
 type QSGRendererInterface__ShaderType = int
 
+// Not yet known due to no window and scenegraph associated
 const QSGRendererInterface__UnknownShadingLanguage QSGRendererInterface__ShaderType = 0
+
+// GLSL or GLSL ES
 const QSGRendererInterface__GLSL QSGRendererInterface__ShaderType = 1
+
+// HLSL
 const QSGRendererInterface__HLSL QSGRendererInterface__ShaderType = 2
 
+/*
+
+
+ */
 type QSGRendererInterface__ShaderCompilationType = int
 
+//
 const QSGRendererInterface__RuntimeCompilation QSGRendererInterface__ShaderCompilationType = 1
+
+//
 const QSGRendererInterface__OfflineCompilation QSGRendererInterface__ShaderCompilationType = 2
 
+/*
+
+
+ */
 type QSGRendererInterface__ShaderSourceType = int
 
+//
 const QSGRendererInterface__ShaderSourceString QSGRendererInterface__ShaderSourceType = 1
+
+//
 const QSGRendererInterface__ShaderSourceFile QSGRendererInterface__ShaderSourceType = 2
+
+//
 const QSGRendererInterface__ShaderByteCode QSGRendererInterface__ShaderSourceType = 4
 
 //  body block end

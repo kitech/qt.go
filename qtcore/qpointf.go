@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QPointF struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QPointF) NewFromPointer(cthis unsafe.Pointer) *QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPointF()
+
+/*
+
+ */
 func NewQPointF() *QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointFC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQPointF() *QPointF {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPointF(const QPoint &)
+
+/*
+
+ */
 func NewQPointF_1(p QPoint_ITF) *QPointF {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQPointF_1(p QPoint_ITF) *QPointF {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPointF(qreal, qreal)
+
+/*
+
+ */
 func NewQPointF_2(xpos float64, ypos float64) *QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointFC2Edd", qtrt.FFI_TYPE_POINTER, xpos, ypos)
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +120,31 @@ func NewQPointF_2(xpos float64, ypos float64) *QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal manhattanLength() const
+
+/*
+Returns the sum of the absolute values of x() and y(), traditionally known as the "Manhattan length" of the vector from the origin to the point. For example:
+
+
+  QPoint oldPosition;
+
+  MyWidget::mouseMoveEvent(QMouseEvent *event)
+  {
+      QPoint point = event->pos() - oldPosition;
+      if (point.manhattanLength() > 3)
+          // the mouse has moved more than 3 pixels since the oldPosition
+  }
+
+
+
+This is a useful, and quick to calculate, approximation to the true length:
+
+
+  double trueLength = std::sqrt(std::pow(x(), 2) + std::pow(y(), 2));
+
+
+
+The tradition of "Manhattan length" arises because such distances apply to travelers who can only travel on a rectangular grid, like the streets of Manhattan.
+*/
 func (this *QPointF) ManhattanLength() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPointF15manhattanLengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,6 +155,10 @@ func (this *QPointF) ManhattanLength() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if both the x and y coordinates are set to 0, otherwise returns false.
+*/
 func (this *QPointF) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPointF6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,6 +169,12 @@ func (this *QPointF) IsNull() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal x() const
+
+/*
+Returns the x coordinate of this point.
+
+See also setX() and rx().
+*/
 func (this *QPointF) X() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPointF1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +185,12 @@ func (this *QPointF) X() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal y() const
+
+/*
+Returns the y coordinate of this point.
+
+See also setY() and ry().
+*/
 func (this *QPointF) Y() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPointF1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,6 +201,12 @@ func (this *QPointF) Y() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setX(qreal)
+
+/*
+Sets the x coordinate of this point to the given x coordinate.
+
+See also x() and setY().
+*/
 func (this *QPointF) SetX(x float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointF4setXEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +216,12 @@ func (this *QPointF) SetX(x float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setY(qreal)
+
+/*
+Sets the y coordinate of this point to the given y coordinate.
+
+See also y() and setX().
+*/
 func (this *QPointF) SetY(y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointF4setYEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	qtrt.ErrPrint(err, rv)
@@ -163,6 +231,20 @@ func (this *QPointF) SetY(y float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal & rx()
+
+/*
+Returns a reference to the x coordinate of this point.
+
+Using a reference makes it possible to directly manipulate x. For example:
+
+
+  QPoint p(1, 2);
+  p.rx()--;   // p becomes (0, 2)
+
+
+
+See also x() and setX().
+*/
 func (this *QPointF) Rx() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointF2rxEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,6 +255,20 @@ func (this *QPointF) Rx() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal & ry()
+
+/*
+Returns a reference to the y coordinate of this point.
+
+Using a reference makes it possible to directly manipulate y. For example:
+
+
+  QPoint p(1, 2);
+  p.ry()++;   // p becomes (1, 3)
+
+
+
+See also y() and setY().
+*/
 func (this *QPointF) Ry() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointF2ryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,6 +279,10 @@ func (this *QPointF) Ry() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF & operator+=(const QPointF &)
+
+/*
+
+ */
 func (this *QPointF) Operator_add_equal(p QPointF_ITF) *QPointF {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
@@ -199,6 +299,10 @@ func (this *QPointF) Operator_add_equal(p QPointF_ITF) *QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF & operator-=(const QPointF &)
+
+/*
+
+ */
 func (this *QPointF) Operator_minus_equal(p QPointF_ITF) *QPointF {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
@@ -215,6 +319,10 @@ func (this *QPointF) Operator_minus_equal(p QPointF_ITF) *QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF & operator*=(qreal)
+
+/*
+
+ */
 func (this *QPointF) Operator_mul_equal(c float64) *QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointFmLEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -227,6 +335,10 @@ func (this *QPointF) Operator_mul_equal(c float64) *QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF & operator/=(qreal)
+
+/*
+
+ */
 func (this *QPointF) Operator_div_equal(c float64) *QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointFdVEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -239,6 +351,18 @@ func (this *QPointF) Operator_div_equal(c float64) *QPointF {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] qreal dotProduct(const QPointF &, const QPointF &)
+
+/*
+QPoint p( 3, 7);
+  QPoint q(-1, 4);
+  int lengthSquared = QPoint::dotProduct(p, q);   // lengthSquared becomes 25
+
+
+
+Returns the dot product of p1 and p2.
+
+This function was introduced in  Qt 5.1.
+*/
 func (this *QPointF) DotProduct(p1 QPointF_ITF, p2 QPointF_ITF) float64 {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPointF_PTR() != nil {
@@ -262,6 +386,10 @@ func QPointF_DotProduct(p1 QPointF_ITF, p2 QPointF_ITF) float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint toPoint() const
+
+/*
+
+ */
 func (this *QPointF) ToPoint() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPointF7toPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

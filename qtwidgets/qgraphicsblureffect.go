@@ -38,6 +38,9 @@ func (this *QGraphicsBlurEffect) InheritDraw(f func(painter *qtgui.QPainter /*77
 	qtrt.SetAllInheritCallback(this, "draw", f)
 }
 
+/*
+
+ */
 type QGraphicsBlurEffect struct {
 	*QGraphicsEffect
 }
@@ -70,6 +73,10 @@ func (*QGraphicsBlurEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsBlurE
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +87,10 @@ func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*777 const QM
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsBlurEffect(QObject *)
+
+/*
+
+ */
 func NewQGraphicsBlurEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsBlurEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -96,6 +107,10 @@ func NewQGraphicsBlurEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraph
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsBlurEffect(QObject *)
+
+/*
+
+ */
 func NewQGraphicsBlurEffect__() *QGraphicsBlurEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -110,6 +125,10 @@ func NewQGraphicsBlurEffect__() *QGraphicsBlurEffect {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsBlurEffect()
+
+/*
+
+ */
 func DeleteQGraphicsBlurEffect(this *QGraphicsBlurEffect) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -121,6 +140,12 @@ func DeleteQGraphicsBlurEffect(this *QGraphicsBlurEffect) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRectFor(const QRectF &) const
+
+/*
+Returns the effective bounding rectangle for this effect, given the provided rect in the device coordinates. When writing you own custom effect, you must call updateBoundingRect() whenever any parameters are changed that may cause this this function to return a different value.
+
+See also sourceBoundingRect().
+*/
 func (this *QGraphicsBlurEffect) BoundingRectFor(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -137,6 +162,10 @@ func (this *QGraphicsBlurEffect) BoundingRectFor(rect qtcore.QRectF_ITF) *qtcore
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal blurRadius() const
+
+/*
+
+ */
 func (this *QGraphicsBlurEffect) BlurRadius() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10blurRadiusEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,6 +176,10 @@ func (this *QGraphicsBlurEffect) BlurRadius() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QGraphicsBlurEffect::BlurHints blurHints() const
+
+/*
+
+ */
 func (this *QGraphicsBlurEffect) BlurHints() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect9blurHintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,6 +190,10 @@ func (this *QGraphicsBlurEffect) BlurHints() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBlurRadius(qreal)
+
+/*
+
+ */
 func (this *QGraphicsBlurEffect) SetBlurRadius(blurRadius float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect13setBlurRadiusEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), blurRadius)
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +203,10 @@ func (this *QGraphicsBlurEffect) SetBlurRadius(blurRadius float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBlurHints(QGraphicsBlurEffect::BlurHints)
+
+/*
+
+ */
 func (this *QGraphicsBlurEffect) SetBlurHints(hints int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect12setBlurHintsE6QFlagsINS_8BlurHintEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hints)
 	qtrt.ErrPrint(err, rv)
@@ -175,6 +216,10 @@ func (this *QGraphicsBlurEffect) SetBlurHints(hints int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void blurRadiusChanged(qreal)
+
+/*
+
+ */
 func (this *QGraphicsBlurEffect) BlurRadiusChanged(blurRadius float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect17blurRadiusChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), blurRadius)
 	qtrt.ErrPrint(err, rv)
@@ -184,6 +229,10 @@ func (this *QGraphicsBlurEffect) BlurRadiusChanged(blurRadius float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void blurHintsChanged(QGraphicsBlurEffect::BlurHints)
+
+/*
+
+ */
 func (this *QGraphicsBlurEffect) BlurHintsChanged(hints int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect16blurHintsChangedE6QFlagsINS_8BlurHintEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hints)
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +242,38 @@ func (this *QGraphicsBlurEffect) BlurHintsChanged(hints int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
+
+/*
+This pure virtual function draws the effect and is called whenever the source needs to be drawn.
+
+Reimplement this function in a QGraphicsEffect subclass to provide the effect's drawing implementation, using painter.
+
+For example:
+
+
+  MyGraphicsEffect::draw(QPainter *painter)
+  {
+      ...
+      QPoint offset;
+      if (sourceIsPixmap()) {
+          // No point in drawing in device coordinates (pixmap will be scaled anyways).
+          const QPixmap pixmap = sourcePixmap(Qt::LogicalCoordinates, &offset);
+          ...
+          painter->drawPixmap(offset, pixmap);
+      } else {
+          // Draw pixmap in device coordinates to avoid pixmap scaling;
+          const QPixmap pixmap = sourcePixmap(Qt::DeviceCoordinates, &offset);
+          painter->setWorldTransform(QTransform());
+          ...
+          painter->drawPixmap(offset, pixmap);
+      }
+      ...
+  }
+
+
+
+This function should not be called explicitly by the user, since it is meant for reimplementation purposes only.
+*/
 func (this *QGraphicsBlurEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -202,10 +283,19 @@ func (this *QGraphicsBlurEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter 
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QGraphicsBlurEffect__BlurHint = int
 
+//
 const QGraphicsBlurEffect__PerformanceHint QGraphicsBlurEffect__BlurHint = 0
+
+//
 const QGraphicsBlurEffect__QualityHint QGraphicsBlurEffect__BlurHint = 1
+
+//
 const QGraphicsBlurEffect__AnimationHint QGraphicsBlurEffect__BlurHint = 2
 
 //  body block end

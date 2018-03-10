@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlTypesExtensionInterface struct {
 	*qtrt.CObject
 }
@@ -69,6 +72,10 @@ func (*QQmlTypesExtensionInterface) NewFromPointer(cthis unsafe.Pointer) *QQmlTy
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlTypesExtensionInterface()
+
+/*
+
+ */
 func DeleteQQmlTypesExtensionInterface(this *QQmlTypesExtensionInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QQmlTypesExtensionInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -80,6 +87,10 @@ func DeleteQQmlTypesExtensionInterface(this *QQmlTypesExtensionInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void registerTypes(const char *)
+
+/*
+
+ */
 func (this *QQmlTypesExtensionInterface) RegisterTypes(uri string) {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)

@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAbstractUndoItem struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QAbstractUndoItem) NewFromPointer(cthis unsafe.Pointer) *QAbstractUndoIte
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractUndoItem()
+
+/*
+
+ */
 func DeleteQAbstractUndoItem(this *QAbstractUndoItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractUndoItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -77,6 +84,16 @@ func DeleteQAbstractUndoItem(this *QAbstractUndoItem) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void undo()
+
+/*
+Undoes the last editing operation on the document if undo is available. The provided cursor is positioned at the end of the location where the edition operation was undone.
+
+See the Qt Undo Framework documentation for details.
+
+This function was introduced in  Qt 4.2.
+
+See also undoAvailable() and isUndoRedoEnabled().
+*/
 func (this *QAbstractUndoItem) Undo() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractUndoItem4undoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -86,6 +103,14 @@ func (this *QAbstractUndoItem) Undo() {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void redo()
+
+/*
+Redoes the last editing operation on the document if redo is available.
+
+The provided cursor is positioned at the end of the location where the edition operation was redone.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QAbstractUndoItem) Redo() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractUndoItem4redoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

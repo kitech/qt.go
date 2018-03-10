@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QIcon struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QIcon) NewFromPointer(cthis unsafe.Pointer) *QIcon {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIcon()
+
+/*
+Constructs a null icon.
+*/
 func NewQIcon() *QIcon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIconC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQIcon() *QIcon {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QIcon(const QPixmap &)
+
+/*
+Constructs a null icon.
+*/
 func NewQIcon_1(pixmap QPixmap_ITF) *QIcon {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -94,6 +105,10 @@ func NewQIcon_1(pixmap QPixmap_ITF) *QIcon {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QIcon(const QString &)
+
+/*
+Constructs a null icon.
+*/
 func NewQIcon_2(fileName string) *QIcon {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -108,6 +123,10 @@ func NewQIcon_2(fileName string) *QIcon {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QIcon(QIconEngine *)
+
+/*
+Constructs a null icon.
+*/
 func NewQIcon_3(engine QIconEngine_ITF /*777 QIconEngine **/) *QIcon {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QIconEngine_PTR() != nil {
@@ -124,6 +143,10 @@ func NewQIcon_3(engine QIconEngine_ITF /*777 QIconEngine **/) *QIcon {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QIcon()
+
+/*
+
+ */
 func DeleteQIcon(this *QIcon) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIconD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -135,6 +158,10 @@ func DeleteQIcon(this *QIcon) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon & operator=(const QIcon &)
+
+/*
+
+ */
 func (this *QIcon) Operator_equal(other QIcon_ITF) *QIcon {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QIcon_PTR() != nil {
@@ -151,6 +178,10 @@ func (this *QIcon) Operator_equal(other QIcon_ITF) *QIcon {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QIcon & operator=(QIcon &&)
+
+/*
+
+ */
 func (this *QIcon) Operator_equal_1(other unsafe.Pointer /*333*/) *QIcon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIconaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -163,6 +194,12 @@ func (this *QIcon) Operator_equal_1(other unsafe.Pointer /*333*/) *QIcon {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QIcon &)
+
+/*
+Swaps icon other with this icon. This operation is very fast and never fails.
+
+This function was introduced in  Qt 4.8.
+*/
 func (this *QIcon) Swap(other QIcon_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QIcon_PTR() != nil {
@@ -176,6 +213,14 @@ func (this *QIcon) Swap(other QIcon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap pixmap(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap(size qtcore.QSize_ITF, mode int, state int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -192,6 +237,14 @@ func (this *QIcon) Pixmap(size qtcore.QSize_ITF, mode int, state int) *QPixmap /
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap pixmap(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap__(size qtcore.QSize_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -212,6 +265,14 @@ func (this *QIcon) Pixmap__(size qtcore.QSize_ITF) *QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap pixmap(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap__1(size qtcore.QSize_ITF, mode int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -230,6 +291,14 @@ func (this *QIcon) Pixmap__1(size qtcore.QSize_ITF, mode int) *QPixmap /*123*/ {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap_1(w int, h int, mode int, state int) *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiiNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -242,6 +311,14 @@ func (this *QIcon) Pixmap_1(w int, h int, mode int, state int) *QPixmap /*123*/ 
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap_1_(w int, h int) *QPixmap /*123*/ {
 	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum,
 	mode := 0
@@ -258,6 +335,14 @@ func (this *QIcon) Pixmap_1_(w int, h int) *QPixmap /*123*/ {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap_1_1(w int, h int, mode int) *QPixmap /*123*/ {
 	// arg: 3, QIcon::State=Enum, QIcon::State=Enum,
 	state := 0
@@ -272,6 +357,14 @@ func (this *QIcon) Pixmap_1_1(w int, h int, mode int) *QPixmap /*123*/ {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap_2(extent int, mode int, state int) *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extent, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -284,6 +377,14 @@ func (this *QIcon) Pixmap_2(extent int, mode int, state int) *QPixmap /*123*/ {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap_2_(extent int) *QPixmap /*123*/ {
 	// arg: 1, QIcon::Mode=Enum, QIcon::Mode=Enum,
 	mode := 0
@@ -300,6 +401,14 @@ func (this *QIcon) Pixmap_2_(extent int) *QPixmap /*123*/ {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [32] QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap_2_1(extent int, mode int) *QPixmap /*123*/ {
 	// arg: 2, QIcon::State=Enum, QIcon::State=Enum,
 	state := 0
@@ -314,6 +423,14 @@ func (this *QIcon) Pixmap_2_1(extent int, mode int) *QPixmap /*123*/ {
 // index:3
 // Public Visibility=Default Availability=Available
 // [32] QPixmap pixmap(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap_3(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int, state int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -334,6 +451,14 @@ func (this *QIcon) Pixmap_3(window QWindow_ITF /*777 QWindow **/, size qtcore.QS
 // index:3
 // Public Visibility=Default Availability=Available
 // [32] QPixmap pixmap(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap_3_(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -358,6 +483,14 @@ func (this *QIcon) Pixmap_3_(window QWindow_ITF /*777 QWindow **/, size qtcore.Q
 // index:3
 // Public Visibility=Default Availability=Available
 // [32] QPixmap pixmap(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
+
+Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function to return pixmaps that are larger than the requested size. Such images will have a devicePixelRatio larger than 1.
+
+See also actualSize() and paint().
+*/
 func (this *QIcon) Pixmap_3_1(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -380,6 +513,12 @@ func (this *QIcon) Pixmap_3_1(window QWindow_ITF /*777 QWindow **/, size qtcore.
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize actualSize(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
+
+See also pixmap() and paint().
+*/
 func (this *QIcon) ActualSize(size qtcore.QSize_ITF, mode int, state int) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -396,6 +535,12 @@ func (this *QIcon) ActualSize(size qtcore.QSize_ITF, mode int, state int) *qtcor
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize actualSize(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
+
+See also pixmap() and paint().
+*/
 func (this *QIcon) ActualSize__(size qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -416,6 +561,12 @@ func (this *QIcon) ActualSize__(size qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize actualSize(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
+
+See also pixmap() and paint().
+*/
 func (this *QIcon) ActualSize__1(size qtcore.QSize_ITF, mode int) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -434,6 +585,12 @@ func (this *QIcon) ActualSize__1(size qtcore.QSize_ITF, mode int) *qtcore.QSize 
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QSize actualSize(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
+
+See also pixmap() and paint().
+*/
 func (this *QIcon) ActualSize_1(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int, state int) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -454,6 +611,12 @@ func (this *QIcon) ActualSize_1(window QWindow_ITF /*777 QWindow **/, size qtcor
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QSize actualSize(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
+
+See also pixmap() and paint().
+*/
 func (this *QIcon) ActualSize_1_(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -478,6 +641,12 @@ func (this *QIcon) ActualSize_1_(window QWindow_ITF /*777 QWindow **/, size qtco
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QSize actualSize(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
+
+See also pixmap() and paint().
+*/
 func (this *QIcon) ActualSize_1_1(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -500,6 +669,16 @@ func (this *QIcon) ActualSize_1_1(window QWindow_ITF /*777 QWindow **/, size qtc
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
+
+/*
+Returns the name used to create the icon, if available.
+
+Depending on the way the icon was created, it may have an associated name. This is the case for icons created with fromTheme() or icons using a QIconEngine which supports the QIconEngine::IconNameHook.
+
+This function was introduced in  Qt 4.7.
+
+See also fromTheme() and QIconEngine.
+*/
 func (this *QIcon) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -513,6 +692,12 @@ func (this *QIcon) Name() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QRect &, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
+
+See also actualSize() and pixmap().
+*/
 func (this *QIcon) Paint(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, alignment int, mode int, state int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -530,6 +715,12 @@ func (this *QIcon) Paint(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QR
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QRect &, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
+
+See also actualSize() and pixmap().
+*/
 func (this *QIcon) Paint__(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -553,6 +744,12 @@ func (this *QIcon) Paint__(painter QPainter_ITF /*777 QPainter **/, rect qtcore.
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QRect &, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
+
+See also actualSize() and pixmap().
+*/
 func (this *QIcon) Paint__1(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, alignment int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -574,6 +771,12 @@ func (this *QIcon) Paint__1(painter QPainter_ITF /*777 QPainter **/, rect qtcore
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QRect &, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
+
+See also actualSize() and pixmap().
+*/
 func (this *QIcon) Paint__2(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, alignment int, mode int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -593,6 +796,12 @@ func (this *QIcon) Paint__2(painter QPainter_ITF /*777 QPainter **/, rect qtcore
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
+
+See also actualSize() and pixmap().
+*/
 func (this *QIcon) Paint_1(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, alignment int, mode int, state int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -606,6 +815,12 @@ func (this *QIcon) Paint_1(painter QPainter_ITF /*777 QPainter **/, x int, y int
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
+
+See also actualSize() and pixmap().
+*/
 func (this *QIcon) Paint_1_(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -625,6 +840,12 @@ func (this *QIcon) Paint_1_(painter QPainter_ITF /*777 QPainter **/, x int, y in
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
+
+See also actualSize() and pixmap().
+*/
 func (this *QIcon) Paint_1_1(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, alignment int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -642,6 +863,12 @@ func (this *QIcon) Paint_1_1(painter QPainter_ITF /*777 QPainter **/, x int, y i
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+
+/*
+Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
+
+See also actualSize() and pixmap().
+*/
 func (this *QIcon) Paint_1_2(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, alignment int, mode int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -657,6 +884,14 @@ func (this *QIcon) Paint_1_2(painter QPainter_ITF /*777 QPainter **/, x int, y i
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if the icon is empty; otherwise returns false.
+
+An icon is empty if it has neither a pixmap nor a filename.
+
+Note: Even a non-null icon might not be able to create valid pixmaps, eg. if the file does not exist or cannot be read.
+*/
 func (this *QIcon) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -667,6 +902,10 @@ func (this *QIcon) IsNull() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDetached() const
+
+/*
+
+ */
 func (this *QIcon) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -677,6 +916,10 @@ func (this *QIcon) IsDetached() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void detach()
+
+/*
+
+ */
 func (this *QIcon) Detach() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon6detachEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -686,16 +929,37 @@ func (this *QIcon) Detach() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 cacheKey() const
+
+/*
+Returns a number that identifies the contents of this QIcon object. Distinct QIcon objects can have the same key if they refer to the same contents.
+
+The cacheKey() will change when the icon is altered via addPixmap() or addFile().
+
+Cache keys are mostly useful in conjunction with caching.
+
+This function was introduced in  Qt 4.3.
+
+See also QPixmap::cacheKey().
+*/
 func (this *QIcon) CacheKey() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon8cacheKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtGui/qicon.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addPixmap(const QPixmap &, enum QIcon::Mode, enum QIcon::State)
+
+/*
+Adds pixmap to the icon, as a specialization for mode and state.
+
+Custom icon engines are free to ignore additionally added pixmaps.
+
+See also addFile().
+*/
 func (this *QIcon) AddPixmap(pixmap QPixmap_ITF, mode int, state int) {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -709,6 +973,14 @@ func (this *QIcon) AddPixmap(pixmap QPixmap_ITF, mode int, state int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addPixmap(const QPixmap &, enum QIcon::Mode, enum QIcon::State)
+
+/*
+Adds pixmap to the icon, as a specialization for mode and state.
+
+Custom icon engines are free to ignore additionally added pixmaps.
+
+See also addFile().
+*/
 func (this *QIcon) AddPixmap__(pixmap QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -726,6 +998,14 @@ func (this *QIcon) AddPixmap__(pixmap QPixmap_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addPixmap(const QPixmap &, enum QIcon::Mode, enum QIcon::State)
+
+/*
+Adds pixmap to the icon, as a specialization for mode and state.
+
+Custom icon engines are free to ignore additionally added pixmaps.
+
+See also addFile().
+*/
 func (this *QIcon) AddPixmap__1(pixmap QPixmap_ITF, mode int) {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -741,6 +1021,22 @@ func (this *QIcon) AddPixmap__1(pixmap QPixmap_ITF, mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
+
+/*
+Adds an image from the file with the given fileName to the icon, as a specialization for size, mode and state. The file will be loaded on demand. Note: custom icon engines are free to ignore additionally added pixmaps.
+
+If fileName contains a relative path (e.g. the filename only) the relevant file must be found relative to the runtime working directory.
+
+The file name can refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed images and other resource files in the application's executable.
+
+Use the QImageReader::supportedImageFormats() and QImageWriter::supportedImageFormats() functions to retrieve a complete list of the supported file formats.
+
+If a high resolution version of the image exists (identified by the suffix @2x on the base name), it is automatically loaded and added with the device pixel ratio set to a value of 2. This can be disabled by setting the environment variable QT_HIGHDPI_DISABLE_2X_IMAGE_LOADING (see QImageReader).
+
+Note: When you add a non-empty filename to a QIcon, the icon becomes non-null, even if the file doesn't exist or points to a corrupt file.
+
+See also addPixmap() and QPixmap::devicePixelRatio().
+*/
 func (this *QIcon) AddFile(fileName string, size qtcore.QSize_ITF, mode int, state int) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -756,6 +1052,22 @@ func (this *QIcon) AddFile(fileName string, size qtcore.QSize_ITF, mode int, sta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
+
+/*
+Adds an image from the file with the given fileName to the icon, as a specialization for size, mode and state. The file will be loaded on demand. Note: custom icon engines are free to ignore additionally added pixmaps.
+
+If fileName contains a relative path (e.g. the filename only) the relevant file must be found relative to the runtime working directory.
+
+The file name can refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed images and other resource files in the application's executable.
+
+Use the QImageReader::supportedImageFormats() and QImageWriter::supportedImageFormats() functions to retrieve a complete list of the supported file formats.
+
+If a high resolution version of the image exists (identified by the suffix @2x on the base name), it is automatically loaded and added with the device pixel ratio set to a value of 2. This can be disabled by setting the environment variable QT_HIGHDPI_DISABLE_2X_IMAGE_LOADING (see QImageReader).
+
+Note: When you add a non-empty filename to a QIcon, the icon becomes non-null, even if the file doesn't exist or points to a corrupt file.
+
+See also addPixmap() and QPixmap::devicePixelRatio().
+*/
 func (this *QIcon) AddFile__(fileName string) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -773,6 +1085,22 @@ func (this *QIcon) AddFile__(fileName string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
+
+/*
+Adds an image from the file with the given fileName to the icon, as a specialization for size, mode and state. The file will be loaded on demand. Note: custom icon engines are free to ignore additionally added pixmaps.
+
+If fileName contains a relative path (e.g. the filename only) the relevant file must be found relative to the runtime working directory.
+
+The file name can refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed images and other resource files in the application's executable.
+
+Use the QImageReader::supportedImageFormats() and QImageWriter::supportedImageFormats() functions to retrieve a complete list of the supported file formats.
+
+If a high resolution version of the image exists (identified by the suffix @2x on the base name), it is automatically loaded and added with the device pixel ratio set to a value of 2. This can be disabled by setting the environment variable QT_HIGHDPI_DISABLE_2X_IMAGE_LOADING (see QImageReader).
+
+Note: When you add a non-empty filename to a QIcon, the icon becomes non-null, even if the file doesn't exist or points to a corrupt file.
+
+See also addPixmap() and QPixmap::devicePixelRatio().
+*/
 func (this *QIcon) AddFile__1(fileName string, size qtcore.QSize_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -792,6 +1120,22 @@ func (this *QIcon) AddFile__1(fileName string, size qtcore.QSize_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
+
+/*
+Adds an image from the file with the given fileName to the icon, as a specialization for size, mode and state. The file will be loaded on demand. Note: custom icon engines are free to ignore additionally added pixmaps.
+
+If fileName contains a relative path (e.g. the filename only) the relevant file must be found relative to the runtime working directory.
+
+The file name can refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed images and other resource files in the application's executable.
+
+Use the QImageReader::supportedImageFormats() and QImageWriter::supportedImageFormats() functions to retrieve a complete list of the supported file formats.
+
+If a high resolution version of the image exists (identified by the suffix @2x on the base name), it is automatically loaded and added with the device pixel ratio set to a value of 2. This can be disabled by setting the environment variable QT_HIGHDPI_DISABLE_2X_IMAGE_LOADING (see QImageReader).
+
+Note: When you add a non-empty filename to a QIcon, the icon becomes non-null, even if the file doesn't exist or points to a corrupt file.
+
+See also addPixmap() and QPixmap::devicePixelRatio().
+*/
 func (this *QIcon) AddFile__2(fileName string, size qtcore.QSize_ITF, mode int) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -809,6 +1153,14 @@ func (this *QIcon) AddFile__2(fileName string, size qtcore.QSize_ITF, mode int) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIsMask(_Bool)
+
+/*
+Indicate that this icon is a mask image(boolean isMask), and hence can potentially be modified based on where it's displayed.
+
+This function was introduced in  Qt 5.6.
+
+See also isMask().
+*/
 func (this *QIcon) SetIsMask(isMask bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon9setIsMaskEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), isMask)
 	qtrt.ErrPrint(err, rv)
@@ -818,6 +1170,14 @@ func (this *QIcon) SetIsMask(isMask bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isMask() const
+
+/*
+Returns true if this icon has been marked as a mask image. Certain platforms render mask icons differently (for example, menu icons on macOS).
+
+This function was introduced in  Qt 5.6.
+
+See also setIsMask().
+*/
 func (this *QIcon) IsMask() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6isMaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -828,6 +1188,32 @@ func (this *QIcon) IsMask() bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QIcon fromTheme(const QString &)
+
+/*
+Returns the QIcon corresponding to name in the current icon theme.
+
+The latest version of the freedesktop icon specification and naming specification can be obtained here:
+
+
+http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
+http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
+
+
+To fetch an icon from the current icon theme:
+
+
+      QIcon undoicon = QIcon::fromTheme("edit-undo");
+
+
+
+Note: By default, only X11 will support themed icons. In order to use themed icons on Mac and Windows, you will have to bundle a compliant theme in one of your themeSearchPaths() and set the appropriate themeName().
+
+Note: Qt will make use of GTK's icon-theme.cache if present to speed up the lookup. These caches can be generated using gtk-update-icon-cache: https://developer.gnome.org/gtk3/stable/gtk-update-icon-cache.html.
+
+This function was introduced in  Qt 4.6.
+
+See also themeName(), setThemeName(), and themeSearchPaths().
+*/
 func (this *QIcon) FromTheme(name string) *QIcon /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -847,6 +1233,32 @@ func QIcon_FromTheme(name string) *QIcon /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QIcon fromTheme(const QString &, const QIcon &)
+
+/*
+Returns the QIcon corresponding to name in the current icon theme.
+
+The latest version of the freedesktop icon specification and naming specification can be obtained here:
+
+
+http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
+http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
+
+
+To fetch an icon from the current icon theme:
+
+
+      QIcon undoicon = QIcon::fromTheme("edit-undo");
+
+
+
+Note: By default, only X11 will support themed icons. In order to use themed icons on Mac and Windows, you will have to bundle a compliant theme in one of your themeSearchPaths() and set the appropriate themeName().
+
+Note: Qt will make use of GTK's icon-theme.cache if present to speed up the lookup. These caches can be generated using gtk-update-icon-cache: https://developer.gnome.org/gtk3/stable/gtk-update-icon-cache.html.
+
+This function was introduced in  Qt 4.6.
+
+See also themeName(), setThemeName(), and themeSearchPaths().
+*/
 func (this *QIcon) FromTheme_1(name string, fallback QIcon_ITF) *QIcon /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -870,6 +1282,14 @@ func QIcon_FromTheme_1(name string, fallback QIcon_ITF) *QIcon /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool hasThemeIcon(const QString &)
+
+/*
+Returns true if there is an icon available for name in the current icon theme, otherwise returns false.
+
+This function was introduced in  Qt 4.6.
+
+See also themeSearchPaths(), fromTheme(), and setThemeName().
+*/
 func (this *QIcon) HasThemeIcon(name string) bool {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -887,6 +1307,20 @@ func QIcon_HasThemeIcon(name string) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList themeSearchPaths()
+
+/*
+Returns the search paths for icon themes.
+
+The default value will depend on the platform:
+
+On X11, the search path will use the XDG_DATA_DIRS environment variable if available.
+
+By default all platforms will have the resource directory :\icons as a fallback. You can use "rcc -project" to generate a resource file from your icon theme.
+
+This function was introduced in  Qt 4.6.
+
+See also setThemeSearchPaths(), fromTheme(), and setThemeName().
+*/
 func (this *QIcon) ThemeSearchPaths() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon16themeSearchPathsEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -904,6 +1338,14 @@ func QIcon_ThemeSearchPaths() *qtcore.QStringList /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setThemeSearchPaths(const QStringList &)
+
+/*
+Sets the search paths for icon themes to paths.
+
+This function was introduced in  Qt 4.6.
+
+See also themeSearchPaths(), fromTheme(), and setThemeName().
+*/
 func (this *QIcon) SetThemeSearchPaths(searchpath qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if searchpath != nil && searchpath.QStringList_PTR() != nil {
@@ -921,6 +1363,16 @@ func QIcon_SetThemeSearchPaths(searchpath qtcore.QStringList_ITF) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString themeName()
+
+/*
+Returns the name of the current icon theme.
+
+On X11, the current icon theme depends on your desktop settings. On other platforms it is not set by default.
+
+This function was introduced in  Qt 4.6.
+
+See also setThemeName(), themeSearchPaths(), fromTheme(), and hasThemeIcon().
+*/
 func (this *QIcon) ThemeName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon9themeNameEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -939,6 +1391,16 @@ func QIcon_ThemeName() string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setThemeName(const QString &)
+
+/*
+Sets the current icon theme to name.
+
+The name should correspond to a directory name in the themeSearchPath() containing an index.theme file describing it's contents.
+
+This function was introduced in  Qt 4.6.
+
+See also themeSearchPaths() and themeName().
+*/
 func (this *QIcon) SetThemeName(path string) {
 	var tmpArg0 = qtcore.NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -950,16 +1412,36 @@ func QIcon_SetThemeName(path string) {
 	nilthis.SetThemeName(path)
 }
 
+/*
+This enum type describes the mode for which a pixmap is intended to be used. The currently defined modes are:
+
+
+*/
 type QIcon__Mode = int
 
+// Display the pixmap when the user is not interacting with the icon, but the functionality represented by the icon is available.
 const QIcon__Normal QIcon__Mode = 0
+
+// Display the pixmap when the functionality represented by the icon is not available.
 const QIcon__Disabled QIcon__Mode = 1
+
+// Display the pixmap when the functionality represented by the icon is available and the user is interacting with the icon, for example, moving the mouse over it or clicking it.
 const QIcon__Active QIcon__Mode = 2
+
+// Display the pixmap when the item represented by the icon is selected.
 const QIcon__Selected QIcon__Mode = 3
 
+/*
+This enum describes the state for which a pixmap is intended to be used. The state can be:
+
+
+*/
 type QIcon__State = int
 
+// Display the pixmap when the widget is in an "on" state
 const QIcon__On QIcon__State = 0
+
+// Display the pixmap when the widget is in an "off" state
 const QIcon__Off QIcon__State = 1
 
 //  body block end

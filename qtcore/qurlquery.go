@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QUrlQuery struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,12 @@ func (*QUrlQuery) NewFromPointer(cthis unsafe.Pointer) *QUrlQuery {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUrlQuery()
+
+/*
+Constructs an empty QUrlQuery object. A query can be set afterwards by calling setQuery() or items can be added by using addQueryItem().
+
+See also setQuery() and addQueryItem().
+*/
 func NewQUrlQuery() *QUrlQuery {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +86,12 @@ func NewQUrlQuery() *QUrlQuery {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QUrlQuery(const QUrl &)
+
+/*
+Constructs an empty QUrlQuery object. A query can be set afterwards by calling setQuery() or items can be added by using addQueryItem().
+
+See also setQuery() and addQueryItem().
+*/
 func NewQUrlQuery_1(url QUrl_ITF) *QUrlQuery {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -93,6 +108,12 @@ func NewQUrlQuery_1(url QUrl_ITF) *QUrlQuery {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QUrlQuery(const QString &)
+
+/*
+Constructs an empty QUrlQuery object. A query can be set afterwards by calling setQuery() or items can be added by using addQueryItem().
+
+See also setQuery() and addQueryItem().
+*/
 func NewQUrlQuery_2(queryString string) *QUrlQuery {
 	var tmpArg0 = NewQString_5(queryString)
 	var convArg0 = tmpArg0.GetCthis()
@@ -107,6 +128,10 @@ func NewQUrlQuery_2(queryString string) *QUrlQuery {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrlQuery & operator=(const QUrlQuery &)
+
+/*
+
+ */
 func (this *QUrlQuery) Operator_equal(other QUrlQuery_ITF) *QUrlQuery {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUrlQuery_PTR() != nil {
@@ -123,6 +148,10 @@ func (this *QUrlQuery) Operator_equal(other QUrlQuery_ITF) *QUrlQuery {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QUrlQuery & operator=(QUrlQuery &&)
+
+/*
+
+ */
 func (this *QUrlQuery) Operator_equal_1(other unsafe.Pointer /*333*/) *QUrlQuery {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +164,10 @@ func (this *QUrlQuery) Operator_equal_1(other unsafe.Pointer /*333*/) *QUrlQuery
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QUrlQuery()
+
+/*
+
+ */
 func DeleteQUrlQuery(this *QUrlQuery) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -146,6 +179,10 @@ func DeleteQUrlQuery(this *QUrlQuery) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QUrlQuery &) const
+
+/*
+
+ */
 func (this *QUrlQuery) Operator_equal_equal(other QUrlQuery_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUrlQuery_PTR() != nil {
@@ -160,6 +197,10 @@ func (this *QUrlQuery) Operator_equal_equal(other QUrlQuery_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QUrlQuery &) const
+
+/*
+
+ */
 func (this *QUrlQuery) Operator_not_equal(other QUrlQuery_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUrlQuery_PTR() != nil {
@@ -174,6 +215,10 @@ func (this *QUrlQuery) Operator_not_equal(other QUrlQuery_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QUrlQuery &)
+
+/*
+Swaps this URL query instance with other. This function is very fast and never fails.
+*/
 func (this *QUrlQuery) Swap(other QUrlQuery_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUrlQuery_PTR() != nil {
@@ -187,6 +232,12 @@ func (this *QUrlQuery) Swap(other QUrlQuery_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns true if this QUrlQuery object contains no key-value pairs, such as after being default-constructed or after parsing an empty query string.
+
+See also setQuery() and clear().
+*/
 func (this *QUrlQuery) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,6 +248,10 @@ func (this *QUrlQuery) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDetached() const
+
+/*
+
+ */
 func (this *QUrlQuery) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,6 +262,12 @@ func (this *QUrlQuery) IsDetached() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears this QUrlQuery object by removing all of the key-value pairs currently stored. If the query delimiters have been changed, this function will leave them with their changed values.
+
+See also isEmpty() and setQueryDelimiters().
+*/
 func (this *QUrlQuery) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,6 +277,12 @@ func (this *QUrlQuery) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setQuery(const QString &)
+
+/*
+Parses the query string in queryString and sets the internal items to the values found there. If any delimiters have been specified with setQueryDelimiters(), this function will use them instead of the default delimiters to parse the string.
+
+See also query().
+*/
 func (this *QUrlQuery) SetQuery(queryString string) {
 	var tmpArg0 = NewQString_5(queryString)
 	var convArg0 = tmpArg0.GetCthis()
@@ -227,6 +294,33 @@ func (this *QUrlQuery) SetQuery(queryString string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setQueryDelimiters(QChar, QChar)
+
+/*
+Sets the characters used for delimiting between keys and values, and between key-value pairs in the URL's query string. The default value delimiter is '=' and the default pair delimiter is '&'.
+
+
+
+valueDelimiter will be used for separating keys from values, and pairDelimiter will be used to separate key-value pairs. Any occurrences of these delimiting characters in the encoded representation of the keys and values of the query string are percent encoded when returned in query().
+
+If valueDelimiter is set to '(' and pairDelimiter is ')', the above query string would instead be represented like this:
+
+
+  http://www.example.com/cgi-bin/drawgraph.cgi?type(pie)color(green)
+
+
+
+Note: Non-standard delimiters should be chosen from among what RFC 3986 calls "sub-delimiters". They are:
+
+
+  sub-delims    = "!" / "$" / "&" / "'" / "(" / ")"
+                / "*" / "+" / "," / ";" / "="
+
+
+
+Use of other characters is not supported and may result in unexpected behaviour. This method does not verify that you passed a valid delimiter.
+
+See also queryValueDelimiter() and queryPairDelimiter().
+*/
 func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter QChar_ITF /*123*/, pairDelimiter QChar_ITF /*123*/) {
 	var convArg0 unsafe.Pointer
 	if valueDelimiter != nil && valueDelimiter.QChar_PTR() != nil {
@@ -244,6 +338,12 @@ func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter QChar_ITF /*123*/, pair
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar queryValueDelimiter() const
+
+/*
+Returns the character used to delimit between keys and values when reconstructing the query string in query() or when parsing in setQuery().
+
+See also setQueryDelimiters() and queryPairDelimiter().
+*/
 func (this *QUrlQuery) QueryValueDelimiter() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery19queryValueDelimiterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -256,6 +356,12 @@ func (this *QUrlQuery) QueryValueDelimiter() *QChar /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar queryPairDelimiter() const
+
+/*
+Returns the character used to delimit between keys-value pairs when reconstructing the query string in query() or when parsing in setQuery().
+
+See also setQueryDelimiters() and queryValueDelimiter().
+*/
 func (this *QUrlQuery) QueryPairDelimiter() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery18queryPairDelimiterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,6 +374,12 @@ func (this *QUrlQuery) QueryPairDelimiter() *QChar /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasQueryItem(const QString &) const
+
+/*
+Returns true if there is a query string pair whose key is equal to key from the URL.
+
+See also addQueryItem() and queryItemValue().
+*/
 func (this *QUrlQuery) HasQueryItem(key string) bool {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -280,6 +392,14 @@ func (this *QUrlQuery) HasQueryItem(key string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addQueryItem(const QString &, const QString &)
+
+/*
+Appends the pair key = value to the end of the query string of the URL. This method does not overwrite existing items that might exist with the same key.
+
+Note: This method does not treat spaces (ASCII 0x20) and plus ("+") signs as the same, like HTML forms do. If you need spaces to be represented as plus signs, use actual plus signs.
+
+See also hasQueryItem() and queryItemValue().
+*/
 func (this *QUrlQuery) AddQueryItem(key string, value string) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -293,6 +413,12 @@ func (this *QUrlQuery) AddQueryItem(key string, value string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeQueryItem(const QString &)
+
+/*
+Removes the query string pair whose key is equal to key from the URL. If there are multiple items with a key equal to key, it removes the first item in the order they were present in the query string or added with addQueryItem().
+
+See also removeAllQueryItems().
+*/
 func (this *QUrlQuery) RemoveQueryItem(key string) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -304,6 +430,12 @@ func (this *QUrlQuery) RemoveQueryItem(key string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAllQueryItems(const QString &)
+
+/*
+Removes all the query string pairs whose key is equal to key from the URL.
+
+See also removeQueryItem().
+*/
 func (this *QUrlQuery) RemoveAllQueryItems(key string) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -315,6 +447,12 @@ func (this *QUrlQuery) RemoveAllQueryItems(key string) {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [2] QChar defaultQueryValueDelimiter()
+
+/*
+Returns the default character for separating keys from values in the query, an equal sign ("=").
+
+See also setQueryDelimiters(), queryValueDelimiter(), and defaultQueryPairDelimiter().
+*/
 func (this *QUrlQuery) DefaultQueryValueDelimiter() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery26defaultQueryValueDelimiterEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -332,6 +470,12 @@ func QUrlQuery_DefaultQueryValueDelimiter() *QChar /*123*/ {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [2] QChar defaultQueryPairDelimiter()
+
+/*
+Returns the default character for separating keys-value pairs from each other, an ampersand ("&").
+
+See also setQueryDelimiters(), queryPairDelimiter(), and defaultQueryValueDelimiter().
+*/
 func (this *QUrlQuery) DefaultQueryPairDelimiter() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery25defaultQueryPairDelimiterEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

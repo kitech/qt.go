@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGRootNode struct {
 	*QSGNode
 }
@@ -67,6 +70,10 @@ func (*QSGRootNode) NewFromPointer(cthis unsafe.Pointer) *QSGRootNode {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGRootNode()
+
+/*
+
+ */
 func NewQSGRootNode() *QSGRootNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGRootNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQSGRootNode() *QSGRootNode {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGRootNode()
+
+/*
+
+ */
 func DeleteQSGRootNode(this *QSGRootNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGRootNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 88)

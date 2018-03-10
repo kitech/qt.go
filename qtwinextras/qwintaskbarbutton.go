@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QWinTaskbarButton struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QWinTaskbarButton) NewFromPointer(cthis unsafe.Pointer) *QWinTaskbarButto
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QWinTaskbarButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,12 @@ func (this *QWinTaskbarButton) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinTaskbarButton(QObject *)
+
+/*
+Constructs a QWinTaskbarButton with the specified parent.
+
+If parent is an instance of QWindow, it is automatically assigned as the taskbar button's window.
+*/
 func NewQWinTaskbarButton(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTaskbarButton {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +104,12 @@ func NewQWinTaskbarButton(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTask
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinTaskbarButton(QObject *)
+
+/*
+Constructs a QWinTaskbarButton with the specified parent.
+
+If parent is an instance of QWindow, it is automatically assigned as the taskbar button's window.
+*/
 func NewQWinTaskbarButton__() *QWinTaskbarButton {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +124,10 @@ func NewQWinTaskbarButton__() *QWinTaskbarButton {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWinTaskbarButton()
+
+/*
+
+ */
 func DeleteQWinTaskbarButton(this *QWinTaskbarButton) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButtonD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -116,6 +139,10 @@ func DeleteQWinTaskbarButton(this *QWinTaskbarButton) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWindow(QWindow *)
+
+/*
+
+ */
 func (this *QWinTaskbarButton) SetWindow(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -129,6 +156,10 @@ func (this *QWinTaskbarButton) SetWindow(window qtgui.QWindow_ITF /*777 QWindow 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWindow * window() const
+
+/*
+
+ */
 func (this *QWinTaskbarButton) Window() *qtgui.QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,6 +170,10 @@ func (this *QWinTaskbarButton) Window() *qtgui.QWindow /*777 QWindow **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon overlayIcon() const
+
+/*
+
+ */
 func (this *QWinTaskbarButton) OverlayIcon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton11overlayIconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +186,10 @@ func (this *QWinTaskbarButton) OverlayIcon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString overlayAccessibleDescription() const
+
+/*
+
+ */
 func (this *QWinTaskbarButton) OverlayAccessibleDescription() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton28overlayAccessibleDescriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,6 +203,10 @@ func (this *QWinTaskbarButton) OverlayAccessibleDescription() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWinTaskbarProgress * progress() const
+
+/*
+
+ */
 func (this *QWinTaskbarButton) Progress() *QWinTaskbarProgress /*777 QWinTaskbarProgress **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton8progressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +217,10 @@ func (this *QWinTaskbarButton) Progress() *QWinTaskbarProgress /*777 QWinTaskbar
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+
+ */
 func (this *QWinTaskbarButton) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -192,6 +239,10 @@ func (this *QWinTaskbarButton) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOverlayIcon(const QIcon &)
+
+/*
+
+ */
 func (this *QWinTaskbarButton) SetOverlayIcon(icon qtgui.QIcon_ITF) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -205,6 +256,10 @@ func (this *QWinTaskbarButton) SetOverlayIcon(icon qtgui.QIcon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOverlayAccessibleDescription(const QString &)
+
+/*
+
+ */
 func (this *QWinTaskbarButton) SetOverlayAccessibleDescription(description string) {
 	var tmpArg0 = qtcore.NewQString_5(description)
 	var convArg0 = tmpArg0.GetCthis()
@@ -216,6 +271,10 @@ func (this *QWinTaskbarButton) SetOverlayAccessibleDescription(description strin
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearOverlayIcon()
+
+/*
+
+ */
 func (this *QWinTaskbarButton) ClearOverlayIcon() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton16clearOverlayIconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

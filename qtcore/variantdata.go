@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type VariantData struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*VariantData) NewFromPointer(cthis unsafe.Pointer) *VariantData {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void VariantData(const int, const void *, const uint)
+
+/*
+
+ */
 func NewVariantData(metaTypeId_ int, data_ unsafe.Pointer /*666*/, flags_ uint) *VariantData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QtMetaTypePrivate11VariantDataC2EiPKvj", qtrt.FFI_TYPE_POINTER, metaTypeId_, data_, flags_)
 	qtrt.ErrPrint(err, rv)

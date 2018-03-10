@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QGenericArgument struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QGenericArgument) NewFromPointer(cthis unsafe.Pointer) *QGenericArgument 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericArgument(const char *, const void *)
+
+/*
+
+ */
 func NewQGenericArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericArgument {
 	var convArg0 = qtrt.CString(aName)
 	defer qtrt.FreeMem(convArg0)
@@ -79,6 +86,10 @@ func NewQGenericArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericAr
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericArgument(const char *, const void *)
+
+/*
+
+ */
 func NewQGenericArgument__() *QGenericArgument {
 	// arg: 0, const char *=Pointer, =Invalid,
 	var convArg0 unsafe.Pointer
@@ -95,6 +106,10 @@ func NewQGenericArgument__() *QGenericArgument {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericArgument(const char *, const void *)
+
+/*
+
+ */
 func NewQGenericArgument__1(aName string) *QGenericArgument {
 	var convArg0 = qtrt.CString(aName)
 	defer qtrt.FreeMem(convArg0)
@@ -111,6 +126,10 @@ func NewQGenericArgument__1(aName string) *QGenericArgument {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] void * data() const
+
+/*
+
+ */
 func (this *QGenericArgument) Data() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QGenericArgument4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +140,10 @@ func (this *QGenericArgument) Data() unsafe.Pointer /*666*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const char * name() const
+
+/*
+
+ */
 func (this *QGenericArgument) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QGenericArgument4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

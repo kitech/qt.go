@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QMouseEvent struct {
 	*QInputEvent
 }
@@ -64,6 +67,10 @@ func (*QMouseEvent) NewFromPointer(cthis unsafe.Pointer) *QMouseEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMouseEvent(enum QEvent::Type, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers)
+
+/*
+
+ */
 func NewQMouseEvent(type_ int, localPos qtcore.QPointF_ITF, button int, buttons int, modifiers int) *QMouseEvent {
 	var convArg1 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {
@@ -80,6 +87,10 @@ func NewQMouseEvent(type_ int, localPos qtcore.QPointF_ITF, button int, buttons 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMouseEvent(enum QEvent::Type, const QPointF &, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers)
+
+/*
+
+ */
 func NewQMouseEvent_1(type_ int, localPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, button int, buttons int, modifiers int) *QMouseEvent {
 	var convArg1 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {
@@ -100,6 +111,10 @@ func NewQMouseEvent_1(type_ int, localPos qtcore.QPointF_ITF, screenPos qtcore.Q
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QMouseEvent(enum QEvent::Type, const QPointF &, const QPointF &, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers)
+
+/*
+
+ */
 func NewQMouseEvent_2(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, button int, buttons int, modifiers int) *QMouseEvent {
 	var convArg1 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {
@@ -124,6 +139,10 @@ func NewQMouseEvent_2(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.Q
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QMouseEvent(enum QEvent::Type, const QPointF &, const QPointF &, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::MouseEventSource)
+
+/*
+
+ */
 func NewQMouseEvent_3(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, button int, buttons int, modifiers int, source int) *QMouseEvent {
 	var convArg1 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {
@@ -148,6 +167,10 @@ func NewQMouseEvent_3(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.Q
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMouseEvent()
+
+/*
+
+ */
 func DeleteQMouseEvent(this *QMouseEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMouseEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 104)
@@ -159,6 +182,10 @@ func DeleteQMouseEvent(this *QMouseEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint pos() const
+
+/*
+
+ */
 func (this *QMouseEvent) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,6 +198,10 @@ func (this *QMouseEvent) Pos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint globalPos() const
+
+/*
+
+ */
 func (this *QMouseEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent9globalPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,6 +214,10 @@ func (this *QMouseEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int x() const
+
+/*
+
+ */
 func (this *QMouseEvent) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +228,10 @@ func (this *QMouseEvent) X() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int y() const
+
+/*
+
+ */
 func (this *QMouseEvent) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,6 +242,10 @@ func (this *QMouseEvent) Y() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalX() const
+
+/*
+
+ */
 func (this *QMouseEvent) GlobalX() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent7globalXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -213,6 +256,10 @@ func (this *QMouseEvent) GlobalX() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalY() const
+
+/*
+
+ */
 func (this *QMouseEvent) GlobalY() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent7globalYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,6 +270,10 @@ func (this *QMouseEvent) GlobalY() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & localPos() const
+
+/*
+
+ */
 func (this *QMouseEvent) LocalPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent8localPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -235,6 +286,10 @@ func (this *QMouseEvent) LocalPos() *qtcore.QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & windowPos() const
+
+/*
+
+ */
 func (this *QMouseEvent) WindowPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent9windowPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -247,6 +302,10 @@ func (this *QMouseEvent) WindowPos() *qtcore.QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & screenPos() const
+
+/*
+
+ */
 func (this *QMouseEvent) ScreenPos() *qtcore.QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -259,6 +318,10 @@ func (this *QMouseEvent) ScreenPos() *qtcore.QPointF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::MouseButton button() const
+
+/*
+
+ */
 func (this *QMouseEvent) Button() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent6buttonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -269,6 +332,10 @@ func (this *QMouseEvent) Button() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::MouseButtons buttons() const
+
+/*
+
+ */
 func (this *QMouseEvent) Buttons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent7buttonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -279,6 +346,10 @@ func (this *QMouseEvent) Buttons() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setLocalPos(const QPointF &)
+
+/*
+
+ */
 func (this *QMouseEvent) SetLocalPos(localPosition qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if localPosition != nil && localPosition.QPointF_PTR() != nil {
@@ -292,6 +363,10 @@ func (this *QMouseEvent) SetLocalPos(localPosition qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseEventSource source() const
+
+/*
+
+ */
 func (this *QMouseEvent) Source() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -302,6 +377,10 @@ func (this *QMouseEvent) Source() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseEventFlags flags() const
+
+/*
+
+ */
 func (this *QMouseEvent) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMouseEvent5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

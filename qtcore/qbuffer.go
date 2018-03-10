@@ -51,6 +51,9 @@ func (this *QBuffer) InheritWriteData(f func(data string, len_ int64) int64) {
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
 
+/*
+
+ */
 type QBuffer struct {
 	*QIODevice
 }
@@ -83,6 +86,10 @@ func (*QBuffer) NewFromPointer(cthis unsafe.Pointer) *QBuffer {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QBuffer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +100,12 @@ func (this *QBuffer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QBuffer(QObject *)
+
+/*
+Constructs an empty buffer with the given parent. You can call setData() to fill the buffer with data, or you can open it in write mode and use write().
+
+See also open().
+*/
 func NewQBuffer(parent QObject_ITF /*777 QObject **/) *QBuffer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +122,12 @@ func NewQBuffer(parent QObject_ITF /*777 QObject **/) *QBuffer {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QBuffer(QObject *)
+
+/*
+Constructs an empty buffer with the given parent. You can call setData() to fill the buffer with data, or you can open it in write mode and use write().
+
+See also open().
+*/
 func NewQBuffer__() *QBuffer {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -123,6 +142,12 @@ func NewQBuffer__() *QBuffer {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QBuffer(QByteArray *, QObject *)
+
+/*
+Constructs an empty buffer with the given parent. You can call setData() to fill the buffer with data, or you can open it in write mode and use write().
+
+See also open().
+*/
 func NewQBuffer_1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*777 QObject **/) *QBuffer {
 	var convArg0 unsafe.Pointer
 	if buf != nil && buf.QByteArray_PTR() != nil {
@@ -143,6 +168,12 @@ func NewQBuffer_1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QBuffer(QByteArray *, QObject *)
+
+/*
+Constructs an empty buffer with the given parent. You can call setData() to fill the buffer with data, or you can open it in write mode and use write().
+
+See also open().
+*/
 func NewQBuffer_1_(buf QByteArray_ITF /*777 QByteArray **/) *QBuffer {
 	var convArg0 unsafe.Pointer
 	if buf != nil && buf.QByteArray_PTR() != nil {
@@ -161,6 +192,10 @@ func NewQBuffer_1_(buf QByteArray_ITF /*777 QByteArray **/) *QBuffer {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QBuffer()
+
+/*
+
+ */
 func DeleteQBuffer(this *QBuffer) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -172,6 +207,12 @@ func DeleteQBuffer(this *QBuffer) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & buffer()
+
+/*
+Returns a reference to the QBuffer's internal buffer. You can use it to modify the QByteArray behind the QBuffer's back.
+
+See also setBuffer() and data().
+*/
 func (this *QBuffer) Buffer() *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer6bufferEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -184,6 +225,12 @@ func (this *QBuffer) Buffer() *QByteArray {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] const QByteArray & buffer() const
+
+/*
+Returns a reference to the QBuffer's internal buffer. You can use it to modify the QByteArray behind the QBuffer's back.
+
+See also setBuffer() and data().
+*/
 func (this *QBuffer) Buffer_1() *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer6bufferEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -196,6 +243,32 @@ func (this *QBuffer) Buffer_1() *QByteArray {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBuffer(QByteArray *)
+
+/*
+Makes QBuffer uses the QByteArray pointed to by byteArray as its internal buffer. The caller is responsible for ensuring that byteArray remains valid until the QBuffer is destroyed, or until setBuffer() is called to change the buffer. QBuffer doesn't take ownership of the QByteArray.
+
+Does nothing if isOpen() is true.
+
+If you open the buffer in write-only mode or read-write mode and write something into the QBuffer, byteArray will be modified.
+
+Example:
+
+
+      QByteArray byteArray("abc");
+      QBuffer buffer;
+      buffer.setBuffer(&byteArray);
+      buffer.open(QIODevice::WriteOnly);
+      buffer.seek(3);
+      buffer.write("def", 3);
+      buffer.close();
+      // byteArray == "abcdef"
+
+
+
+If byteArray is 0, the buffer creates its own internal QByteArray to work on. This byte array is initially empty.
+
+See also buffer(), setData(), and open().
+*/
 func (this *QBuffer) SetBuffer(a QByteArray_ITF /*777 QByteArray **/) {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
@@ -209,6 +282,14 @@ func (this *QBuffer) SetBuffer(a QByteArray_ITF /*777 QByteArray **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QByteArray &)
+
+/*
+Sets the contents of the internal buffer to be data. This is the same as assigning data to buffer().
+
+Does nothing if isOpen() is true.
+
+See also data() and setBuffer().
+*/
 func (this *QBuffer) SetData(data QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -222,6 +303,14 @@ func (this *QBuffer) SetData(data QByteArray_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setData(const char *, int)
+
+/*
+Sets the contents of the internal buffer to be data. This is the same as assigning data to buffer().
+
+Does nothing if isOpen() is true.
+
+See also data() and setBuffer().
+*/
 func (this *QBuffer) SetData_1(data string, len_ int) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -233,6 +322,14 @@ func (this *QBuffer) SetData_1(data string, len_ int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QByteArray & data() const
+
+/*
+Returns the data contained in the buffer.
+
+This is the same as buffer().
+
+See also setData() and setBuffer().
+*/
 func (this *QBuffer) Data() *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -245,6 +342,10 @@ func (this *QBuffer) Data() *QByteArray {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool open(QIODevice::OpenMode)
+
+/*
+Reimplemented from QIODevice::open().
+*/
 func (this *QBuffer) Open(openMode int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer4openE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), openMode)
 	qtrt.ErrPrint(err, rv)
@@ -255,6 +356,10 @@ func (this *QBuffer) Open(openMode int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void close()
+
+/*
+Reimplemented from QIODevice::close().
+*/
 func (this *QBuffer) Close() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer5closeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -264,26 +369,40 @@ func (this *QBuffer) Close() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 size() const
+
+/*
+Reimplemented from QIODevice::size().
+*/
 func (this *QBuffer) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 pos() const
+
+/*
+Reimplemented from QIODevice::pos().
+*/
 func (this *QBuffer) Pos() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:81
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool seek(qint64)
+
+/*
+Reimplemented from QIODevice::seek().
+*/
 func (this *QBuffer) Seek(off int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer4seekEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), off)
 	qtrt.ErrPrint(err, rv)
@@ -294,6 +413,10 @@ func (this *QBuffer) Seek(off int64) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool atEnd() const
+
+/*
+Reimplemented from QIODevice::atEnd().
+*/
 func (this *QBuffer) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -304,6 +427,10 @@ func (this *QBuffer) AtEnd() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canReadLine() const
+
+/*
+Reimplemented from QIODevice::canReadLine().
+*/
 func (this *QBuffer) CanReadLine() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer11canReadLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -314,6 +441,10 @@ func (this *QBuffer) CanReadLine() bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void connectNotify(const QMetaMethod &)
+
+/*
+
+ */
 func (this *QBuffer) ConnectNotify(arg0 QMetaMethod_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMetaMethod_PTR() != nil {
@@ -327,6 +458,10 @@ func (this *QBuffer) ConnectNotify(arg0 QMetaMethod_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void disconnectNotify(const QMetaMethod &)
+
+/*
+
+ */
 func (this *QBuffer) DisconnectNotify(arg0 QMetaMethod_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMetaMethod_PTR() != nil {
@@ -340,24 +475,34 @@ func (this *QBuffer) DisconnectNotify(arg0 QMetaMethod_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 readData(char *, qint64)
+
+/*
+Reimplemented from QIODevice::readData().
+*/
 func (this *QBuffer) ReadData(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer8readDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:91
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)
+
+/*
+Reimplemented from QIODevice::writeData().
+*/
 func (this *QBuffer) WriteData(data string, len_ int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 //  body block end

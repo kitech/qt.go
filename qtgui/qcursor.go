@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QCursor struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QCursor) NewFromPointer(cthis unsafe.Pointer) *QCursor {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCursor()
+
+/*
+Constructs a cursor with the default arrow shape.
+*/
 func NewQCursor() *QCursor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQCursor() *QCursor {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCursor(Qt::CursorShape)
+
+/*
+Constructs a cursor with the default arrow shape.
+*/
 func NewQCursor_1(shape int) *QCursor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2EN2Qt11CursorShapeE", qtrt.FFI_TYPE_POINTER, shape)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +101,10 @@ func NewQCursor_1(shape int) *QCursor {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCursor(const QBitmap &, const QBitmap &, int, int)
+
+/*
+Constructs a cursor with the default arrow shape.
+*/
 func NewQCursor_2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
@@ -110,6 +125,10 @@ func NewQCursor_2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCu
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCursor(const QBitmap &, const QBitmap &, int, int)
+
+/*
+Constructs a cursor with the default arrow shape.
+*/
 func NewQCursor_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
@@ -134,6 +153,10 @@ func NewQCursor_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCursor(const QBitmap &, const QBitmap &, int, int)
+
+/*
+Constructs a cursor with the default arrow shape.
+*/
 func NewQCursor_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
@@ -156,6 +179,10 @@ func NewQCursor_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QCursor(const QPixmap &, int, int)
+
+/*
+Constructs a cursor with the default arrow shape.
+*/
 func NewQCursor_3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -172,6 +199,10 @@ func NewQCursor_3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QCursor(const QPixmap &, int, int)
+
+/*
+Constructs a cursor with the default arrow shape.
+*/
 func NewQCursor_3_(pixmap QPixmap_ITF) *QCursor {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -192,6 +223,10 @@ func NewQCursor_3_(pixmap QPixmap_ITF) *QCursor {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QCursor(const QPixmap &, int, int)
+
+/*
+Constructs a cursor with the default arrow shape.
+*/
 func NewQCursor_3_1(pixmap QPixmap_ITF, hotX int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -210,6 +245,10 @@ func NewQCursor_3_1(pixmap QPixmap_ITF, hotX int) *QCursor {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QCursor()
+
+/*
+
+ */
 func DeleteQCursor(this *QCursor) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -221,6 +260,10 @@ func DeleteQCursor(this *QCursor) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCursor & operator=(const QCursor &)
+
+/*
+
+ */
 func (this *QCursor) Operator_equal(cursor QCursor_ITF) *QCursor {
 	var convArg0 unsafe.Pointer
 	if cursor != nil && cursor.QCursor_PTR() != nil {
@@ -237,6 +280,10 @@ func (this *QCursor) Operator_equal(cursor QCursor_ITF) *QCursor {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QCursor & operator=(QCursor &&)
+
+/*
+
+ */
 func (this *QCursor) Operator_equal_1(other unsafe.Pointer /*333*/) *QCursor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursoraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -249,6 +296,10 @@ func (this *QCursor) Operator_equal_1(other unsafe.Pointer /*333*/) *QCursor {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QCursor &)
+
+/*
+
+ */
 func (this *QCursor) Swap(other QCursor_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QCursor_PTR() != nil {
@@ -262,6 +313,12 @@ func (this *QCursor) Swap(other QCursor_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::CursorShape shape() const
+
+/*
+Returns the cursor shape identifier. The return value is one of the Qt::CursorShape enum values (cast to an int).
+
+See also setShape().
+*/
 func (this *QCursor) Shape() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCursor5shapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -272,6 +329,14 @@ func (this *QCursor) Shape() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShape(Qt::CursorShape)
+
+/*
+Sets the cursor to the shape identified by shape.
+
+See Qt::CursorShape for the list of cursor shapes.
+
+See also shape().
+*/
 func (this *QCursor) SetShape(newShape int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursor8setShapeEN2Qt11CursorShapeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newShape)
 	qtrt.ErrPrint(err, rv)
@@ -281,6 +346,10 @@ func (this *QCursor) SetShape(newShape int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QBitmap * bitmap() const
+
+/*
+Returns the cursor bitmap, or 0 if it is one of the standard cursors.
+*/
 func (this *QCursor) Bitmap() *QBitmap /*777 const QBitmap **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCursor6bitmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -291,6 +360,10 @@ func (this *QCursor) Bitmap() *QBitmap /*777 const QBitmap **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QBitmap * mask() const
+
+/*
+Returns the cursor bitmap mask, or 0 if it is one of the standard cursors.
+*/
 func (this *QCursor) Mask() *QBitmap /*777 const QBitmap **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCursor4maskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -301,6 +374,10 @@ func (this *QCursor) Mask() *QBitmap /*777 const QBitmap **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap pixmap() const
+
+/*
+Returns the cursor pixmap. This is only valid if the cursor is a pixmap cursor.
+*/
 func (this *QCursor) Pixmap() *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCursor6pixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -313,6 +390,10 @@ func (this *QCursor) Pixmap() *QPixmap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint hotSpot() const
+
+/*
+Returns the cursor hot spot, or (0, 0) if it is one of the standard cursors.
+*/
 func (this *QCursor) HotSpot() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCursor7hotSpotEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -325,6 +406,18 @@ func (this *QCursor) HotSpot() *qtcore.QPoint /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QPoint pos()
+
+/*
+Returns the position of the cursor (hot spot) of the primary screen in global screen coordinates.
+
+You can call QWidget::mapFromGlobal() to translate it to widget coordinates.
+
+Note: The position is queried from the windowing system. If mouse events are generated via other means (e.g., via QWindowSystemInterface in a unit test), those fake mouse moves will not be reflected in the returned value.
+
+Note: On platforms where there is no windowing system or cursors are not available, the returned position is based on the mouse move events generated via QWindowSystemInterface.
+
+See also setPos(), QWidget::mapFromGlobal(), QWidget::mapToGlobal(), and QGuiApplication::primaryScreen().
+*/
 func (this *QCursor) Pos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursor3posEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -342,6 +435,18 @@ func QCursor_Pos() *qtcore.QPoint /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QPoint pos(const QScreen *)
+
+/*
+Returns the position of the cursor (hot spot) of the primary screen in global screen coordinates.
+
+You can call QWidget::mapFromGlobal() to translate it to widget coordinates.
+
+Note: The position is queried from the windowing system. If mouse events are generated via other means (e.g., via QWindowSystemInterface in a unit test), those fake mouse moves will not be reflected in the returned value.
+
+Note: On platforms where there is no windowing system or cursors are not available, the returned position is based on the mouse move events generated via QWindowSystemInterface.
+
+See also setPos(), QWidget::mapFromGlobal(), QWidget::mapToGlobal(), and QGuiApplication::primaryScreen().
+*/
 func (this *QCursor) Pos_1(screen QScreen_ITF /*777 const QScreen **/) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {
@@ -363,6 +468,14 @@ func QCursor_Pos_1(screen QScreen_ITF /*777 const QScreen **/) *qtcore.QPoint /*
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setPos(int, int)
+
+/*
+Moves the cursor (hot spot) of the primary screen to the global screen position (x, y).
+
+You can call QWidget::mapToGlobal() to translate widget coordinates to global screen coordinates.
+
+See also pos(), QWidget::mapFromGlobal(), QWidget::mapToGlobal(), and QGuiApplication::primaryScreen().
+*/
 func (this *QCursor) SetPos(x int, y int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursor6setPosEii", qtrt.FFI_TYPE_POINTER, x, y)
 	qtrt.ErrPrint(err, rv)
@@ -376,6 +489,14 @@ func QCursor_SetPos(x int, y int) {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [-2] void setPos(QScreen *, int, int)
+
+/*
+Moves the cursor (hot spot) of the primary screen to the global screen position (x, y).
+
+You can call QWidget::mapToGlobal() to translate widget coordinates to global screen coordinates.
+
+See also pos(), QWidget::mapFromGlobal(), QWidget::mapToGlobal(), and QGuiApplication::primaryScreen().
+*/
 func (this *QCursor) SetPos_1(screen QScreen_ITF /*777 QScreen **/, x int, y int) {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {
@@ -393,6 +514,14 @@ func QCursor_SetPos_1(screen QScreen_ITF /*777 QScreen **/, x int, y int) {
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [-2] void setPos(const QPoint &)
+
+/*
+Moves the cursor (hot spot) of the primary screen to the global screen position (x, y).
+
+You can call QWidget::mapToGlobal() to translate widget coordinates to global screen coordinates.
+
+See also pos(), QWidget::mapFromGlobal(), QWidget::mapToGlobal(), and QGuiApplication::primaryScreen().
+*/
 func (this *QCursor) SetPos_2(p qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -410,6 +539,14 @@ func QCursor_SetPos_2(p qtcore.QPoint_ITF) {
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [-2] void setPos(QScreen *, const QPoint &)
+
+/*
+Moves the cursor (hot spot) of the primary screen to the global screen position (x, y).
+
+You can call QWidget::mapToGlobal() to translate widget coordinates to global screen coordinates.
+
+See also pos(), QWidget::mapFromGlobal(), QWidget::mapToGlobal(), and QGuiApplication::primaryScreen().
+*/
 func (this *QCursor) SetPos_3(screen QScreen_ITF /*777 QScreen **/, p qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {

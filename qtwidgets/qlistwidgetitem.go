@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QListWidgetItem struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QListWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QListWidgetItem {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(QListWidget *, int)
+
+/*
+
+ */
 func NewQListWidgetItem(view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QListWidget_PTR() != nil {
@@ -83,6 +90,10 @@ func NewQListWidgetItem(view QListWidget_ITF /*777 QListWidget **/, type_ int) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(QListWidget *, int)
+
+/*
+
+ */
 func NewQListWidgetItem__() *QListWidgetItem {
 	// arg: 0, QListWidget *=Pointer, QListWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -99,6 +110,10 @@ func NewQListWidgetItem__() *QListWidgetItem {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(QListWidget *, int)
+
+/*
+
+ */
 func NewQListWidgetItem__1(view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QListWidget_PTR() != nil {
@@ -117,6 +132,10 @@ func NewQListWidgetItem__1(view QListWidget_ITF /*777 QListWidget **/) *QListWid
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QString &, QListWidget *, int)
+
+/*
+
+ */
 func NewQListWidgetItem_1(text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -135,6 +154,10 @@ func NewQListWidgetItem_1(text string, view QListWidget_ITF /*777 QListWidget **
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QString &, QListWidget *, int)
+
+/*
+
+ */
 func NewQListWidgetItem_1_(text string) *QListWidgetItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -153,6 +176,10 @@ func NewQListWidgetItem_1_(text string) *QListWidgetItem {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QString &, QListWidget *, int)
+
+/*
+
+ */
 func NewQListWidgetItem_1_1(text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -173,6 +200,10 @@ func NewQListWidgetItem_1_1(text string, view QListWidget_ITF /*777 QListWidget 
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QIcon &, const QString &, QListWidget *, int)
+
+/*
+
+ */
 func NewQListWidgetItem_2(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -195,6 +226,10 @@ func NewQListWidgetItem_2(icon qtgui.QIcon_ITF, text string, view QListWidget_IT
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QIcon &, const QString &, QListWidget *, int)
+
+/*
+
+ */
 func NewQListWidgetItem_2_(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -217,6 +252,10 @@ func NewQListWidgetItem_2_(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QIcon &, const QString &, QListWidget *, int)
+
+/*
+
+ */
 func NewQListWidgetItem_2_1(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -241,6 +280,10 @@ func NewQListWidgetItem_2_1(icon qtgui.QIcon_ITF, text string, view QListWidget_
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QListWidgetItem()
+
+/*
+
+ */
 func DeleteQListWidgetItem(this *QListWidgetItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -252,6 +295,10 @@ func DeleteQListWidgetItem(this *QListWidgetItem) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QListWidgetItem * clone() const
+
+/*
+
+ */
 func (this *QListWidgetItem) Clone() *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem5cloneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -262,6 +309,10 @@ func (this *QListWidgetItem) Clone() *QListWidgetItem /*777 QListWidgetItem **/ 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QListWidget * listWidget() const
+
+/*
+
+ */
 func (this *QListWidgetItem) ListWidget() *QListWidget /*777 QListWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem10listWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -272,6 +323,10 @@ func (this *QListWidgetItem) ListWidget() *QListWidget /*777 QListWidget **/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSelected(_Bool)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetSelected(select_ bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem11setSelectedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), select_)
 	qtrt.ErrPrint(err, rv)
@@ -281,6 +336,10 @@ func (this *QListWidgetItem) SetSelected(select_ bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSelected() const
+
+/*
+
+ */
 func (this *QListWidgetItem) IsSelected() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem10isSelectedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -291,6 +350,10 @@ func (this *QListWidgetItem) IsSelected() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHidden(_Bool)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetHidden(hide bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem9setHiddenEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hide)
 	qtrt.ErrPrint(err, rv)
@@ -300,6 +363,10 @@ func (this *QListWidgetItem) SetHidden(hide bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isHidden() const
+
+/*
+
+ */
 func (this *QListWidgetItem) IsHidden() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem8isHiddenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -310,6 +377,10 @@ func (this *QListWidgetItem) IsHidden() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags() const
+
+/*
+
+ */
 func (this *QListWidgetItem) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -320,6 +391,10 @@ func (this *QListWidgetItem) Flags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(Qt::ItemFlags)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetFlags(flags int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem8setFlagsE6QFlagsIN2Qt8ItemFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
@@ -329,6 +404,10 @@ func (this *QListWidgetItem) SetFlags(flags int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString text() const
+
+/*
+
+ */
 func (this *QListWidgetItem) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -342,6 +421,10 @@ func (this *QListWidgetItem) Text() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -353,6 +436,10 @@ func (this *QListWidgetItem) SetText(text string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QIcon icon() const
+
+/*
+
+ */
 func (this *QListWidgetItem) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -365,6 +452,10 @@ func (this *QListWidgetItem) Icon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetIcon(icon qtgui.QIcon_ITF) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -378,6 +469,10 @@ func (this *QListWidgetItem) SetIcon(icon qtgui.QIcon_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString statusTip() const
+
+/*
+
+ */
 func (this *QListWidgetItem) StatusTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem9statusTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -391,6 +486,10 @@ func (this *QListWidgetItem) StatusTip() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setStatusTip(const QString &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetStatusTip(statusTip string) {
 	var tmpArg0 = qtcore.NewQString_5(statusTip)
 	var convArg0 = tmpArg0.GetCthis()
@@ -402,6 +501,10 @@ func (this *QListWidgetItem) SetStatusTip(statusTip string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toolTip() const
+
+/*
+
+ */
 func (this *QListWidgetItem) ToolTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -415,6 +518,10 @@ func (this *QListWidgetItem) ToolTip() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetToolTip(toolTip string) {
 	var tmpArg0 = qtcore.NewQString_5(toolTip)
 	var convArg0 = tmpArg0.GetCthis()
@@ -426,6 +533,10 @@ func (this *QListWidgetItem) SetToolTip(toolTip string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString whatsThis() const
+
+/*
+
+ */
 func (this *QListWidgetItem) WhatsThis() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem9whatsThisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -439,6 +550,10 @@ func (this *QListWidgetItem) WhatsThis() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWhatsThis(const QString &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetWhatsThis(whatsThis string) {
 	var tmpArg0 = qtcore.NewQString_5(whatsThis)
 	var convArg0 = tmpArg0.GetCthis()
@@ -450,6 +565,10 @@ func (this *QListWidgetItem) SetWhatsThis(whatsThis string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QFont font() const
+
+/*
+
+ */
 func (this *QListWidgetItem) Font() *qtgui.QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -462,6 +581,10 @@ func (this *QListWidgetItem) Font() *qtgui.QFont /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetFont(font qtgui.QFont_ITF) {
 	var convArg0 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -475,6 +598,10 @@ func (this *QListWidgetItem) SetFont(font qtgui.QFont_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int textAlignment() const
+
+/*
+
+ */
 func (this *QListWidgetItem) TextAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem13textAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -485,6 +612,10 @@ func (this *QListWidgetItem) TextAlignment() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextAlignment(int)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetTextAlignment(alignment int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem16setTextAlignmentEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	qtrt.ErrPrint(err, rv)
@@ -494,6 +625,10 @@ func (this *QListWidgetItem) SetTextAlignment(alignment int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QColor backgroundColor() const
+
+/*
+
+ */
 func (this *QListWidgetItem) BackgroundColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem15backgroundColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -506,6 +641,10 @@ func (this *QListWidgetItem) BackgroundColor() *qtgui.QColor /*123*/ {
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void setBackgroundColor(const QColor &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetBackgroundColor(color qtgui.QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -519,6 +658,10 @@ func (this *QListWidgetItem) SetBackgroundColor(color qtgui.QColor_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush background() const
+
+/*
+
+ */
 func (this *QListWidgetItem) Background() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem10backgroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -531,6 +674,10 @@ func (this *QListWidgetItem) Background() *qtgui.QBrush /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetBackground(brush qtgui.QBrush_ITF) {
 	var convArg0 unsafe.Pointer
 	if brush != nil && brush.QBrush_PTR() != nil {
@@ -544,6 +691,10 @@ func (this *QListWidgetItem) SetBackground(brush qtgui.QBrush_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QColor textColor() const
+
+/*
+
+ */
 func (this *QListWidgetItem) TextColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem9textColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -556,6 +707,10 @@ func (this *QListWidgetItem) TextColor() *qtgui.QColor /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextColor(const QColor &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetTextColor(color qtgui.QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -569,6 +724,10 @@ func (this *QListWidgetItem) SetTextColor(color qtgui.QColor_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush foreground() const
+
+/*
+
+ */
 func (this *QListWidgetItem) Foreground() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem10foregroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -581,6 +740,10 @@ func (this *QListWidgetItem) Foreground() *qtgui.QBrush /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setForeground(const QBrush &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetForeground(brush qtgui.QBrush_ITF) {
 	var convArg0 unsafe.Pointer
 	if brush != nil && brush.QBrush_PTR() != nil {
@@ -594,6 +757,10 @@ func (this *QListWidgetItem) SetForeground(brush qtgui.QBrush_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::CheckState checkState() const
+
+/*
+
+ */
 func (this *QListWidgetItem) CheckState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem10checkStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -604,6 +771,10 @@ func (this *QListWidgetItem) CheckState() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCheckState(Qt::CheckState)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetCheckState(state int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem13setCheckStateEN2Qt10CheckStateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	qtrt.ErrPrint(err, rv)
@@ -613,6 +784,10 @@ func (this *QListWidgetItem) SetCheckState(state int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+
+ */
 func (this *QListWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -625,6 +800,10 @@ func (this *QListWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSizeHint(const QSize &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetSizeHint(size qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -638,6 +817,10 @@ func (this *QListWidgetItem) SetSizeHint(size qtcore.QSize_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(int) const
+
+/*
+
+ */
 func (this *QListWidgetItem) Data(role int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
@@ -650,6 +833,10 @@ func (this *QListWidgetItem) Data(role int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setData(int, const QVariant &)
+
+/*
+
+ */
 func (this *QListWidgetItem) SetData(role int, value qtcore.QVariant_ITF) {
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -663,6 +850,10 @@ func (this *QListWidgetItem) SetData(role int, value qtcore.QVariant_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool operator<(const QListWidgetItem &) const
+
+/*
+
+ */
 func (this *QListWidgetItem) Operator_less_than(other QListWidgetItem_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QListWidgetItem_PTR() != nil {
@@ -677,6 +868,10 @@ func (this *QListWidgetItem) Operator_less_than(other QListWidgetItem_ITF) bool 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void read(QDataStream &)
+
+/*
+
+ */
 func (this *QListWidgetItem) Read(in qtcore.QDataStream_ITF) {
 	var convArg0 unsafe.Pointer
 	if in != nil && in.QDataStream_PTR() != nil {
@@ -690,6 +885,10 @@ func (this *QListWidgetItem) Read(in qtcore.QDataStream_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void write(QDataStream &) const
+
+/*
+
+ */
 func (this *QListWidgetItem) Write(out qtcore.QDataStream_ITF) {
 	var convArg0 unsafe.Pointer
 	if out != nil && out.QDataStream_PTR() != nil {
@@ -703,6 +902,10 @@ func (this *QListWidgetItem) Write(out qtcore.QDataStream_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QListWidgetItem & operator=(const QListWidgetItem &)
+
+/*
+
+ */
 func (this *QListWidgetItem) Operator_equal(other QListWidgetItem_ITF) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QListWidgetItem_PTR() != nil {
@@ -719,15 +922,26 @@ func (this *QListWidgetItem) Operator_equal(other QListWidgetItem_ITF) *QListWid
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int type() const
+
+/*
+
+ */
 func (this *QListWidgetItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+/*
+
+
+ */
 type QListWidgetItem__ItemType = int
 
+//
 const QListWidgetItem__Type QListWidgetItem__ItemType = 0
+
+//
 const QListWidgetItem__UserType QListWidgetItem__ItemType = 1000
 
 //  body block end

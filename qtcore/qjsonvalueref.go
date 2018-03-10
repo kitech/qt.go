@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QJsonValueRef struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QJsonValueRef) NewFromPointer(cthis unsafe.Pointer) *QJsonValueRef {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QJsonValueRef(QJsonArray *, int)
+
+/*
+
+ */
 func NewQJsonValueRef(array QJsonArray_ITF /*777 QJsonArray **/, idx int) *QJsonValueRef {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QJsonArray_PTR() != nil {
@@ -81,6 +88,10 @@ func NewQJsonValueRef(array QJsonArray_ITF /*777 QJsonArray **/, idx int) *QJson
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QJsonValueRef(QJsonObject *, int)
+
+/*
+
+ */
 func NewQJsonValueRef_1(object QJsonObject_ITF /*777 QJsonObject **/, idx int) *QJsonValueRef {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QJsonObject_PTR() != nil {
@@ -97,6 +108,10 @@ func NewQJsonValueRef_1(object QJsonObject_ITF /*777 QJsonObject **/, idx int) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonValueRef & operator=(const QJsonValue &)
+
+/*
+
+ */
 func (this *QJsonValueRef) Operator_equal(val QJsonValue_ITF) *QJsonValueRef {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QJsonValue_PTR() != nil {
@@ -113,6 +128,10 @@ func (this *QJsonValueRef) Operator_equal(val QJsonValue_ITF) *QJsonValueRef {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QJsonValueRef & operator=(const QJsonValueRef &)
+
+/*
+
+ */
 func (this *QJsonValueRef) Operator_equal_1(val QJsonValueRef_ITF) *QJsonValueRef {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QJsonValueRef_PTR() != nil {
@@ -129,6 +148,24 @@ func (this *QJsonValueRef) Operator_equal_1(val QJsonValueRef_ITF) *QJsonValueRe
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant toVariant() const
+
+/*
+Converts the value to a QVariant().
+
+The QJsonValue types will be converted as follows:
+
+ConstantDescription
+NullQMetaType::Nullptr
+BoolQMetaType::Bool
+DoubleQMetaType::Double
+StringQString
+ArrayQVariantList
+ObjectQVariantMap
+UndefinedQVariant()
+
+
+See also fromVariant().
+*/
 func (this *QJsonValueRef) ToVariant() *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef9toVariantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -141,6 +178,12 @@ func (this *QJsonValueRef) ToVariant() *QVariant /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QJsonValue::Type type() const
+
+/*
+Returns the type of the value.
+
+See also QJsonValue::Type.
+*/
 func (this *QJsonValueRef) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +194,10 @@ func (this *QJsonValueRef) Type() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if the value is null.
+*/
 func (this *QJsonValueRef) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -161,6 +208,12 @@ func (this *QJsonValueRef) IsNull() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isBool() const
+
+/*
+Returns true if the value contains a boolean.
+
+See also toBool().
+*/
 func (this *QJsonValueRef) IsBool() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef6isBoolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -171,6 +224,12 @@ func (this *QJsonValueRef) IsBool() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDouble() const
+
+/*
+Returns true if the value contains a double.
+
+See also toDouble().
+*/
 func (this *QJsonValueRef) IsDouble() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8isDoubleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -181,6 +240,12 @@ func (this *QJsonValueRef) IsDouble() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isString() const
+
+/*
+Returns true if the value contains a string.
+
+See also toString().
+*/
 func (this *QJsonValueRef) IsString() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8isStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -191,6 +256,12 @@ func (this *QJsonValueRef) IsString() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isArray() const
+
+/*
+Returns true if the value contains an array.
+
+See also toArray().
+*/
 func (this *QJsonValueRef) IsArray() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef7isArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -201,6 +272,12 @@ func (this *QJsonValueRef) IsArray() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isObject() const
+
+/*
+Returns true if the value contains an object.
+
+See also toObject().
+*/
 func (this *QJsonValueRef) IsObject() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8isObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -211,6 +288,10 @@ func (this *QJsonValueRef) IsObject() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isUndefined() const
+
+/*
+Returns true if the value is undefined. This can happen in certain error cases as e.g. accessing a non existing key in a QJsonObject.
+*/
 func (this *QJsonValueRef) IsUndefined() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef11isUndefinedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -221,6 +302,12 @@ func (this *QJsonValueRef) IsUndefined() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool toBool() const
+
+/*
+Converts the value to a bool and returns it.
+
+If type() is not bool, the defaultValue will be returned.
+*/
 func (this *QJsonValueRef) ToBool() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -231,6 +318,12 @@ func (this *QJsonValueRef) ToBool() bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool toBool(_Bool) const
+
+/*
+Converts the value to a bool and returns it.
+
+If type() is not bool, the defaultValue will be returned.
+*/
 func (this *QJsonValueRef) ToBool_1(defaultValue bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)
@@ -241,6 +334,12 @@ func (this *QJsonValueRef) ToBool_1(defaultValue bool) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int toInt() const
+
+/*
+Converts the value to an int and returns it.
+
+If type() is not Double or the value is not a whole number, the defaultValue will be returned.
+*/
 func (this *QJsonValueRef) ToInt() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -251,6 +350,12 @@ func (this *QJsonValueRef) ToInt() int {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int toInt(int) const
+
+/*
+Converts the value to an int and returns it.
+
+If type() is not Double or the value is not a whole number, the defaultValue will be returned.
+*/
 func (this *QJsonValueRef) ToInt_1(defaultValue int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)
@@ -261,6 +366,12 @@ func (this *QJsonValueRef) ToInt_1(defaultValue int) int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] double toDouble() const
+
+/*
+Converts the value to a double and returns it.
+
+If type() is not Double, the defaultValue will be returned.
+*/
 func (this *QJsonValueRef) ToDouble() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -271,6 +382,12 @@ func (this *QJsonValueRef) ToDouble() float64 {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] double toDouble(double) const
+
+/*
+Converts the value to a double and returns it.
+
+If type() is not Double, the defaultValue will be returned.
+*/
 func (this *QJsonValueRef) ToDouble_1(defaultValue float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)
@@ -281,6 +398,14 @@ func (this *QJsonValueRef) ToDouble_1(defaultValue float64) float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString() const
+
+/*
+Converts the value to a QString and returns it.
+
+If type() is not String, a null QString will be returned.
+
+See also QString::isNull().
+*/
 func (this *QJsonValueRef) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -294,6 +419,14 @@ func (this *QJsonValueRef) ToString() string {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(const QString &) const
+
+/*
+Converts the value to a QString and returns it.
+
+If type() is not String, a null QString will be returned.
+
+See also QString::isNull().
+*/
 func (this *QJsonValueRef) ToString_1(defaultValue string) string {
 	var tmpArg0 = NewQString_5(defaultValue)
 	var convArg0 = tmpArg0.GetCthis()
@@ -309,6 +442,12 @@ func (this *QJsonValueRef) ToString_1(defaultValue string) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonArray toArray() const
+
+/*
+Converts the value to an array and returns it.
+
+If type() is not Array, the defaultValue will be returned.
+*/
 func (this *QJsonValueRef) ToArray() *QJsonArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef7toArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -321,6 +460,12 @@ func (this *QJsonValueRef) ToArray() *QJsonArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject toObject() const
+
+/*
+Converts the value to an object and returns it.
+
+If type() is not Object, the defaultValue will be returned.
+*/
 func (this *QJsonValueRef) ToObject() *QJsonObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -333,6 +478,10 @@ func (this *QJsonValueRef) ToObject() *QJsonObject /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QJsonValue &) const
+
+/*
+
+ */
 func (this *QJsonValueRef) Operator_equal_equal(other QJsonValue_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJsonValue_PTR() != nil {
@@ -347,6 +496,10 @@ func (this *QJsonValueRef) Operator_equal_equal(other QJsonValue_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QJsonValue &) const
+
+/*
+
+ */
 func (this *QJsonValueRef) Operator_not_equal(other QJsonValue_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJsonValue_PTR() != nil {

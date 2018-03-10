@@ -58,6 +58,9 @@ func (this *QSlider) InheritInitStyleOption(f func(option *QStyleOptionSlider /*
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
+/*
+
+ */
 type QSlider struct {
 	*QAbstractSlider
 }
@@ -90,6 +93,10 @@ func (*QSlider) NewFromPointer(cthis unsafe.Pointer) *QSlider {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +107,10 @@ func (this *QSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSlider(QWidget *)
+
+/*
+Constructs a vertical slider with the given parent.
+*/
 func NewQSlider(parent QWidget_ITF /*777 QWidget **/) *QSlider {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -116,6 +127,10 @@ func NewQSlider(parent QWidget_ITF /*777 QWidget **/) *QSlider {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSlider(QWidget *)
+
+/*
+Constructs a vertical slider with the given parent.
+*/
 func NewQSlider__() *QSlider {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -130,6 +145,10 @@ func NewQSlider__() *QSlider {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSlider(Qt::Orientation, QWidget *)
+
+/*
+Constructs a vertical slider with the given parent.
+*/
 func NewQSlider_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlider {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -146,6 +165,10 @@ func NewQSlider_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlide
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSlider(Qt::Orientation, QWidget *)
+
+/*
+Constructs a vertical slider with the given parent.
+*/
 func NewQSlider_1_(orientation int) *QSlider {
 	// arg: 1, QWidget *=Pointer, QWidget=Record,
 	var convArg1 unsafe.Pointer
@@ -160,6 +183,10 @@ func NewQSlider_1_(orientation int) *QSlider {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSlider()
+
+/*
+
+ */
 func DeleteQSlider(this *QSlider) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -171,6 +198,10 @@ func DeleteQSlider(this *QSlider) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QSlider) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,6 +214,10 @@ func (this *QSlider) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QSlider) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,6 +230,10 @@ func (this *QSlider) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTickPosition(enum QSlider::TickPosition)
+
+/*
+
+ */
 func (this *QSlider) SetTickPosition(position int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSlider15setTickPositionENS_12TickPositionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	qtrt.ErrPrint(err, rv)
@@ -204,6 +243,10 @@ func (this *QSlider) SetTickPosition(position int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSlider::TickPosition tickPosition() const
+
+/*
+
+ */
 func (this *QSlider) TickPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider12tickPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,6 +257,10 @@ func (this *QSlider) TickPosition() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTickInterval(int)
+
+/*
+
+ */
 func (this *QSlider) SetTickInterval(ti int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSlider15setTickIntervalEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ti)
 	qtrt.ErrPrint(err, rv)
@@ -223,6 +270,10 @@ func (this *QSlider) SetTickInterval(ti int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int tickInterval() const
+
+/*
+
+ */
 func (this *QSlider) TickInterval() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSlider12tickIntervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -233,6 +284,10 @@ func (this *QSlider) TickInterval() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QSlider) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -247,6 +302,10 @@ func (this *QSlider) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QSlider) PaintEvent(ev qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if ev != nil && ev.QPaintEvent_PTR() != nil {
@@ -260,6 +319,10 @@ func (this *QSlider) PaintEvent(ev qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mousePressEvent().
+*/
 func (this *QSlider) MousePressEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if ev != nil && ev.QMouseEvent_PTR() != nil {
@@ -273,6 +336,10 @@ func (this *QSlider) MousePressEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseReleaseEvent().
+*/
 func (this *QSlider) MouseReleaseEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if ev != nil && ev.QMouseEvent_PTR() != nil {
@@ -286,6 +353,10 @@ func (this *QSlider) MouseReleaseEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseMoveEvent().
+*/
 func (this *QSlider) MouseMoveEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if ev != nil && ev.QMouseEvent_PTR() != nil {
@@ -299,6 +370,12 @@ func (this *QSlider) MouseMoveEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent *
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSlider *) const
+
+/*
+Initialize option with the values from this QSlider. This method is useful for subclasses when they need a QStyleOptionSlider, but don't want to fill in all the information themselves.
+
+See also QStyleOption::initFrom().
+*/
 func (this *QSlider) InitStyleOption(option QStyleOptionSlider_ITF /*777 QStyleOptionSlider **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionSlider_PTR() != nil {
@@ -308,13 +385,31 @@ func (this *QSlider) InitStyleOption(option QStyleOptionSlider_ITF /*777 QStyleO
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+This enum specifies where the tick marks are to be drawn relative to the slider's groove and the handle the user moves.
+
+QSlider::TicksLeftTicksAboveDraw tick marks to the left of the (vertical) slider
+QSlider::TicksRightTicksBelowDraw tick marks to the right of the (vertical) slider
+
+*/
 type QSlider__TickPosition = int
 
+// Do not draw any tick marks.
 const QSlider__NoTicks QSlider__TickPosition = 0
+
+// Draw tick marks above the (horizontal) slider
 const QSlider__TicksAbove QSlider__TickPosition = 1
+
+//
 const QSlider__TicksLeft QSlider__TickPosition = 1
+
+// Draw tick marks below the (horizontal) slider
 const QSlider__TicksBelow QSlider__TickPosition = 2
+
+//
 const QSlider__TicksRight QSlider__TickPosition = 2
+
+// Draw tick marks on both sides of the groove.
 const QSlider__TicksBothSides QSlider__TickPosition = 3
 
 //  body block end

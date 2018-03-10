@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QLatin1Char struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QLatin1Char) NewFromPointer(cthis unsafe.Pointer) *QLatin1Char {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLatin1Char(char)
+
+/*
+
+ */
 func NewQLatin1Char(c byte) *QLatin1Char {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QLatin1CharC2Ec", qtrt.FFI_TYPE_POINTER, c)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,14 @@ func NewQLatin1Char(c byte) *QLatin1Char {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] char toLatin1() const
+
+/*
+Returns the Latin-1 character equivalent to the QChar, or 0. This is mainly useful for non-internationalized software.
+
+Note: It is not possible to distinguish a non-Latin-1 character from a Latin-1 0 (NUL) character. Prefer to use unicode(), which does not have this ambiguity.
+
+See also unicode().
+*/
 func (this *QLatin1Char) ToLatin1() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,10 +102,15 @@ func (this *QLatin1Char) ToLatin1() byte {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] ushort unicode() const
+
+/*
+Returns the numeric Unicode value of the QChar.
+*/
 func (this *QLatin1Char) Unicode() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
+	// unsigned short // 222
 }
 
 func DeleteQLatin1Char(this *QLatin1Char) {

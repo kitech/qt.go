@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QWhatsThis struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,14 @@ func (*QWhatsThis) NewFromPointer(cthis unsafe.Pointer) *QWhatsThis {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void enterWhatsThisMode()
+
+/*
+This function switches the user interface into "What's This?" mode. The user interface can be switched back into normal mode by the user (e.g. by them clicking or pressing Esc), or programmatically by calling leaveWhatsThisMode().
+
+When entering "What's This?" mode, a QEvent of type Qt::EnterWhatsThisMode is sent to all toplevel widgets.
+
+See also inWhatsThisMode() and leaveWhatsThisMode().
+*/
 func (this *QWhatsThis) EnterWhatsThisMode() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis18enterWhatsThisModeEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +91,12 @@ func QWhatsThis_EnterWhatsThisMode() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool inWhatsThisMode()
+
+/*
+Returns true if the user interface is in "What's This?" mode; otherwise returns false.
+
+See also enterWhatsThisMode().
+*/
 func (this *QWhatsThis) InWhatsThisMode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis15inWhatsThisModeEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -95,6 +112,14 @@ func QWhatsThis_InWhatsThisMode() bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void leaveWhatsThisMode()
+
+/*
+If the user interface is in "What's This?" mode, this function switches back to normal mode; otherwise it does nothing.
+
+When leaving "What's This?" mode, a QEvent of type Qt::LeaveWhatsThisMode is sent to all toplevel widgets.
+
+See also enterWhatsThisMode() and inWhatsThisMode().
+*/
 func (this *QWhatsThis) LeaveWhatsThisMode() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis18leaveWhatsThisModeEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -108,6 +133,12 @@ func QWhatsThis_LeaveWhatsThisMode() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *)
+
+/*
+Shows text as a "What's This?" window, at global position pos. The optional widget argument, w, is used to determine the appropriate screen on multi-head systems.
+
+See also hideText().
+*/
 func (this *QWhatsThis) ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -131,6 +162,12 @@ func QWhatsThis_ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *)
+
+/*
+Shows text as a "What's This?" window, at global position pos. The optional widget argument, w, is used to determine the appropriate screen on multi-head systems.
+
+See also hideText().
+*/
 func (this *QWhatsThis) ShowText__(pos qtcore.QPoint_ITF, text string) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -148,6 +185,12 @@ func (this *QWhatsThis) ShowText__(pos qtcore.QPoint_ITF, text string) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void hideText()
+
+/*
+If a "What's This?" window is showing, this destroys it.
+
+See also showText().
+*/
 func (this *QWhatsThis) HideText() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis8hideTextEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -161,6 +204,12 @@ func QWhatsThis_HideText() {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QAction * createAction(QObject *)
+
+/*
+Returns a ready-made QAction, used to invoke "What's This?" context help, with the given parent.
+
+The returned QAction provides a convenient way to let users enter "What's This?" mode.
+*/
 func (this *QWhatsThis) CreateAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -180,6 +229,12 @@ func QWhatsThis_CreateAction(parent qtcore.QObject_ITF /*777 QObject **/) *QActi
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QAction * createAction(QObject *)
+
+/*
+Returns a ready-made QAction, used to invoke "What's This?" context help, with the given parent.
+
+The returned QAction provides a convenient way to let users enter "What's This?" mode.
+*/
 func (this *QWhatsThis) CreateAction__() *QAction /*777 QAction **/ {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer

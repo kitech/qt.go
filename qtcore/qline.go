@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QLine struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QLine) NewFromPointer(cthis unsafe.Pointer) *QLine {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLine()
+
+/*
+Constructs a null line.
+*/
 func NewQLine() *QLine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLineC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQLine() *QLine {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLine(const QPoint &, const QPoint &)
+
+/*
+Constructs a null line.
+*/
 func NewQLine_1(pt1 QPoint_ITF, pt2 QPoint_ITF) *QLine {
 	var convArg0 unsafe.Pointer
 	if pt1 != nil && pt1.QPoint_PTR() != nil {
@@ -97,6 +108,10 @@ func NewQLine_1(pt1 QPoint_ITF, pt2 QPoint_ITF) *QLine {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLine(int, int, int, int)
+
+/*
+Constructs a null line.
+*/
 func NewQLine_2(x1 int, y1 int, x2 int, y2 int) *QLine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLineC2Eiiii", qtrt.FFI_TYPE_POINTER, x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
@@ -109,6 +124,10 @@ func NewQLine_2(x1 int, y1 int, x2 int, y2 int) *QLine {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+Returns true if the line is not set up with valid start and end point; otherwise returns false.
+*/
 func (this *QLine) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +138,12 @@ func (this *QLine) IsNull() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint p1() const
+
+/*
+Returns the line's start point.
+
+See also setP1(), x1(), y1(), and p2().
+*/
 func (this *QLine) P1() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2p1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +156,12 @@ func (this *QLine) P1() *QPoint /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint p2() const
+
+/*
+Returns the line's end point.
+
+See also setP2(), x2(), y2(), and p1().
+*/
 func (this *QLine) P2() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2p2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +174,12 @@ func (this *QLine) P2() *QPoint /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int x1() const
+
+/*
+Returns the x-coordinate of the line's start point.
+
+See also p1().
+*/
 func (this *QLine) X1() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2x1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,6 +190,12 @@ func (this *QLine) X1() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int y1() const
+
+/*
+Returns the y-coordinate of the line's start point.
+
+See also p1().
+*/
 func (this *QLine) Y1() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2y1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,6 +206,12 @@ func (this *QLine) Y1() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int x2() const
+
+/*
+Returns the x-coordinate of the line's end point.
+
+See also p2().
+*/
 func (this *QLine) X2() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2x2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,6 +222,12 @@ func (this *QLine) X2() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int y2() const
+
+/*
+Returns the y-coordinate of the line's end point.
+
+See also p2().
+*/
 func (this *QLine) Y2() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2y2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -183,6 +238,12 @@ func (this *QLine) Y2() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int dx() const
+
+/*
+Returns the horizontal component of the line's vector.
+
+See also dy().
+*/
 func (this *QLine) Dx() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2dxEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -193,6 +254,12 @@ func (this *QLine) Dx() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int dy() const
+
+/*
+Returns the vertical component of the line's vector.
+
+See also dx().
+*/
 func (this *QLine) Dy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine2dyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,6 +270,10 @@ func (this *QLine) Dy() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void translate(const QPoint &)
+
+/*
+Translates this line by the given offset.
+*/
 func (this *QLine) Translate(p QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -216,6 +287,10 @@ func (this *QLine) Translate(p QPoint_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void translate(int, int)
+
+/*
+Translates this line by the given offset.
+*/
 func (this *QLine) Translate_1(dx int, dy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLine9translateEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -225,6 +300,12 @@ func (this *QLine) Translate_1(dx int, dy int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QLine translated(const QPoint &) const
+
+/*
+Returns this line translated by the given offset.
+
+This function was introduced in  Qt 4.4.
+*/
 func (this *QLine) Translated(p QPoint_ITF) *QLine /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -241,6 +322,12 @@ func (this *QLine) Translated(p QPoint_ITF) *QLine /*123*/ {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QLine translated(int, int) const
+
+/*
+Returns this line translated by the given offset.
+
+This function was introduced in  Qt 4.4.
+*/
 func (this *QLine) Translated_1(dx int, dy int) *QLine /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine10translatedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -253,6 +340,12 @@ func (this *QLine) Translated_1(dx int, dy int) *QLine /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint center() const
+
+/*
+Returns the center point of this line. This is equivalent to (p1() + p2()) / 2, except it will never overflow.
+
+This function was introduced in  Qt 5.8.
+*/
 func (this *QLine) Center() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine6centerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -265,6 +358,14 @@ func (this *QLine) Center() *QPoint /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setP1(const QPoint &)
+
+/*
+Sets the starting point of this line to p1.
+
+This function was introduced in  Qt 4.4.
+
+See also setP2() and p1().
+*/
 func (this *QLine) SetP1(p1 QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
@@ -278,6 +379,14 @@ func (this *QLine) SetP1(p1 QPoint_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setP2(const QPoint &)
+
+/*
+Sets the end point of this line to p2.
+
+This function was introduced in  Qt 4.4.
+
+See also setP1() and p2().
+*/
 func (this *QLine) SetP2(p2 QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p2 != nil && p2.QPoint_PTR() != nil {
@@ -291,6 +400,14 @@ func (this *QLine) SetP2(p2 QPoint_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPoints(const QPoint &, const QPoint &)
+
+/*
+Sets the start point of this line to p1 and the end point of this line to p2.
+
+This function was introduced in  Qt 4.4.
+
+See also setP1(), setP2(), p1(), and p2().
+*/
 func (this *QLine) SetPoints(p1 QPoint_ITF, p2 QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
@@ -308,6 +425,14 @@ func (this *QLine) SetPoints(p1 QPoint_ITF, p2 QPoint_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setLine(int, int, int, int)
+
+/*
+Sets this line to the start in x1, y1 and end in x2, y2.
+
+This function was introduced in  Qt 4.4.
+
+See also setP1(), setP2(), p1(), and p2().
+*/
 func (this *QLine) SetLine(x1 int, y1 int, x2 int, y2 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLine7setLineEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
@@ -317,6 +442,10 @@ func (this *QLine) SetLine(x1 int, y1 int, x2 int, y2 int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QLine &) const
+
+/*
+
+ */
 func (this *QLine) Operator_equal_equal(d QLine_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if d != nil && d.QLine_PTR() != nil {
@@ -331,6 +460,10 @@ func (this *QLine) Operator_equal_equal(d QLine_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QLine &) const
+
+/*
+
+ */
 func (this *QLine) Operator_not_equal(d QLine_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if d != nil && d.QLine_PTR() != nil {

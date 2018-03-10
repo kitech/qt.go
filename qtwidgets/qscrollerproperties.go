@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QScrollerProperties struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QScrollerProperties) NewFromPointer(cthis unsafe.Pointer) *QScrollerPrope
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollerProperties()
+
+/*
+Constructs new scroller properties.
+*/
 func NewQScrollerProperties() *QScrollerProperties {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerPropertiesC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQScrollerProperties() *QScrollerProperties {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QScrollerProperties & operator=(const QScrollerProperties &)
+
+/*
+
+ */
 func (this *QScrollerProperties) Operator_equal(sp QScrollerProperties_ITF) *QScrollerProperties {
 	var convArg0 unsafe.Pointer
 	if sp != nil && sp.QScrollerProperties_PTR() != nil {
@@ -95,6 +106,10 @@ func (this *QScrollerProperties) Operator_equal(sp QScrollerProperties_ITF) *QSc
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScrollerProperties()
+
+/*
+
+ */
 func DeleteQScrollerProperties(this *QScrollerProperties) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerPropertiesD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -106,6 +121,10 @@ func DeleteQScrollerProperties(this *QScrollerProperties) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QScrollerProperties &) const
+
+/*
+
+ */
 func (this *QScrollerProperties) Operator_equal_equal(sp QScrollerProperties_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if sp != nil && sp.QScrollerProperties_PTR() != nil {
@@ -120,6 +139,10 @@ func (this *QScrollerProperties) Operator_equal_equal(sp QScrollerProperties_ITF
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QScrollerProperties &) const
+
+/*
+
+ */
 func (this *QScrollerProperties) Operator_not_equal(sp QScrollerProperties_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if sp != nil && sp.QScrollerProperties_PTR() != nil {
@@ -134,6 +157,16 @@ func (this *QScrollerProperties) Operator_not_equal(sp QScrollerProperties_ITF) 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultScrollerProperties(const QScrollerProperties &)
+
+/*
+Sets the scroller properties for all new QScrollerProperties objects to sp.
+
+Use this function to override the platform default properties returned by the default constructor. If you only want to change the scroller properties of a single scroller, use QScroller::setScrollerProperties()
+
+Note: Calling this function will not change the content of already existing QScrollerProperties objects.
+
+See also unsetDefaultScrollerProperties().
+*/
 func (this *QScrollerProperties) SetDefaultScrollerProperties(sp QScrollerProperties_ITF) {
 	var convArg0 unsafe.Pointer
 	if sp != nil && sp.QScrollerProperties_PTR() != nil {
@@ -151,6 +184,12 @@ func QScrollerProperties_SetDefaultScrollerProperties(sp QScrollerProperties_ITF
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void unsetDefaultScrollerProperties()
+
+/*
+Sets the scroller properties returned by the default constructor back to the platform default properties.
+
+See also setDefaultScrollerProperties().
+*/
 func (this *QScrollerProperties) UnsetDefaultScrollerProperties() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -164,6 +203,12 @@ func QScrollerProperties_UnsetDefaultScrollerProperties() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant scrollMetric(enum QScrollerProperties::ScrollMetric) const
+
+/*
+Query the metric value of the scroller properties.
+
+See also setScrollMetric() and ScrollMetric.
+*/
 func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	qtrt.ErrPrint(err, rv)
@@ -176,6 +221,12 @@ func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScrollMetric(enum QScrollerProperties::ScrollMetric, const QVariant &)
+
+/*
+Set a specific value of the metric ScrollerMetric to value.
+
+See also scrollMetric() and ScrollMetric.
+*/
 func (this *QScrollerProperties) SetScrollMetric(metric int, value qtcore.QVariant_ITF) {
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -185,41 +236,111 @@ func (this *QScrollerProperties) SetScrollMetric(metric int, value qtcore.QVaria
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+This enum describes the various modes of overshooting.
+
+
+*/
 type QScrollerProperties__OvershootPolicy = int
 
+// Overshooting is possible when the content is scrollable. This is the default.
 const QScrollerProperties__OvershootWhenScrollable QScrollerProperties__OvershootPolicy = 0
+
+// Overshooting is never enabled, even when the content is scrollable.
 const QScrollerProperties__OvershootAlwaysOff QScrollerProperties__OvershootPolicy = 1
+
+// Overshooting is always enabled, even when the content is not scrollable.
 const QScrollerProperties__OvershootAlwaysOn QScrollerProperties__OvershootPolicy = 2
 
+/*
+This enum describes the available frame rates used while dragging or scrolling.
+
+
+*/
 type QScrollerProperties__FrameRates = int
 
+//
 const QScrollerProperties__Standard QScrollerProperties__FrameRates = 0
+
+//
 const QScrollerProperties__Fps60 QScrollerProperties__FrameRates = 1
+
+//
 const QScrollerProperties__Fps30 QScrollerProperties__FrameRates = 2
+
+//
 const QScrollerProperties__Fps20 QScrollerProperties__FrameRates = 3
 
+/*
+This enum contains the different scroll metric types. When not indicated otherwise the setScrollMetric function expects a QVariant of type qreal.
+
+See the QScroller documentation for further details of the concepts behind the different values.
+
+
+*/
 type QScrollerProperties__ScrollMetric = int
 
+// This is the time a mouse press event is delayed when starting a flick gesture in [s]. If the gesture is triggered within that time, no mouse press or release is sent to the scrolled object. If it triggers after that delay the delayed mouse press plus a faked release event at global position QPoint(-QWIDGETSIZE_MAX, -QWIDGETSIZE_MAX) is sent. If the gesture is canceled, then both the delayed mouse press plus the real release event are delivered.
 const QScrollerProperties__MousePressEventDelay QScrollerProperties__ScrollMetric = 0
+
+// This is the minimum distance the touch or mouse point needs to be moved before the flick gesture is triggered in m.
 const QScrollerProperties__DragStartDistance QScrollerProperties__ScrollMetric = 1
+
+//
 const QScrollerProperties__DragVelocitySmoothingFactor QScrollerProperties__ScrollMetric = 2
+
+//
 const QScrollerProperties__AxisLockThreshold QScrollerProperties__ScrollMetric = 3
+
+//
 const QScrollerProperties__ScrollingCurve QScrollerProperties__ScrollMetric = 4
+
+//
 const QScrollerProperties__DecelerationFactor QScrollerProperties__ScrollMetric = 5
+
+// The minimum velocity that is needed after ending the touch or releasing the mouse to start scrolling in m/s.
 const QScrollerProperties__MinimumVelocity QScrollerProperties__ScrollMetric = 6
+
+// This is the maximum velocity that can be reached in m/s.
 const QScrollerProperties__MaximumVelocity QScrollerProperties__ScrollMetric = 7
+
+// This is the maximum allowed scroll speed for a click-through in m/s. This means that a click on a currently (slowly) scrolling object will not only stop the scrolling but the click event will also be delivered to the UI control. This is useful when using exponential-type scrolling curves.
 const QScrollerProperties__MaximumClickThroughVelocity QScrollerProperties__ScrollMetric = 8
+
+// This is the maximum time in seconds that a flick gesture can take to be recognized as an accelerating flick. If set to zero no such gesture is detected. An "accelerating flick" is a flick gesture executed on an already scrolling object. In such cases the scrolling speed is multiplied by AcceleratingFlickSpeedupFactor in order to accelerate it.
 const QScrollerProperties__AcceleratingFlickMaximumTime QScrollerProperties__ScrollMetric = 9
+
+//
 const QScrollerProperties__AcceleratingFlickSpeedupFactor QScrollerProperties__ScrollMetric = 10
+
+//
 const QScrollerProperties__SnapPositionRatio QScrollerProperties__ScrollMetric = 11
+
+//
 const QScrollerProperties__SnapTime QScrollerProperties__ScrollMetric = 12
+
+//
 const QScrollerProperties__OvershootDragResistanceFactor QScrollerProperties__ScrollMetric = 13
+
+//
 const QScrollerProperties__OvershootDragDistanceFactor QScrollerProperties__ScrollMetric = 14
+
+//
 const QScrollerProperties__OvershootScrollDistanceFactor QScrollerProperties__ScrollMetric = 15
+
+//
 const QScrollerProperties__OvershootScrollTime QScrollerProperties__ScrollMetric = 16
+
+//
 const QScrollerProperties__HorizontalOvershootPolicy QScrollerProperties__ScrollMetric = 17
+
+//
 const QScrollerProperties__VerticalOvershootPolicy QScrollerProperties__ScrollMetric = 18
+
+//
 const QScrollerProperties__FrameRate QScrollerProperties__ScrollMetric = 19
+
+//
 const QScrollerProperties__ScrollMetricCount QScrollerProperties__ScrollMetric = 20
 
 //  body block end

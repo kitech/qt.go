@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QInputMethodEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QInputMethodEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMethodEven
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QInputMethodEvent()
+
+/*
+
+ */
 func NewQInputMethodEvent() *QInputMethodEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QInputMethodEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQInputMethodEvent() *QInputMethodEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QInputMethodEvent()
+
+/*
+
+ */
 func DeleteQInputMethodEvent(this *QInputMethodEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QInputMethodEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
@@ -87,6 +98,10 @@ func DeleteQInputMethodEvent(this *QInputMethodEvent) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCommitString(const QString &, int, int)
+
+/*
+
+ */
 func (this *QInputMethodEvent) SetCommitString(commitString string, replaceFrom int, replaceLength int) {
 	var tmpArg0 = qtcore.NewQString_5(commitString)
 	var convArg0 = tmpArg0.GetCthis()
@@ -98,6 +113,10 @@ func (this *QInputMethodEvent) SetCommitString(commitString string, replaceFrom 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCommitString(const QString &, int, int)
+
+/*
+
+ */
 func (this *QInputMethodEvent) SetCommitString__(commitString string) {
 	var tmpArg0 = qtcore.NewQString_5(commitString)
 	var convArg0 = tmpArg0.GetCthis()
@@ -113,6 +132,10 @@ func (this *QInputMethodEvent) SetCommitString__(commitString string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCommitString(const QString &, int, int)
+
+/*
+
+ */
 func (this *QInputMethodEvent) SetCommitString__1(commitString string, replaceFrom int) {
 	var tmpArg0 = qtcore.NewQString_5(commitString)
 	var convArg0 = tmpArg0.GetCthis()
@@ -126,6 +149,10 @@ func (this *QInputMethodEvent) SetCommitString__1(commitString string, replaceFr
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QList<QInputMethodEvent::Attribute> & attributes() const
+
+/*
+
+ */
 func (this *QInputMethodEvent) Attributes() unsafe.Pointer /*555*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QInputMethodEvent10attributesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,6 +163,10 @@ func (this *QInputMethodEvent) Attributes() unsafe.Pointer /*555*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QString & preeditString() const
+
+/*
+
+ */
 func (this *QInputMethodEvent) PreeditString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QInputMethodEvent13preeditStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -149,6 +180,10 @@ func (this *QInputMethodEvent) PreeditString() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QString & commitString() const
+
+/*
+
+ */
 func (this *QInputMethodEvent) CommitString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QInputMethodEvent12commitStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -162,6 +197,10 @@ func (this *QInputMethodEvent) CommitString() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int replacementStart() const
+
+/*
+
+ */
 func (this *QInputMethodEvent) ReplacementStart() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QInputMethodEvent16replacementStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -172,18 +211,35 @@ func (this *QInputMethodEvent) ReplacementStart() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int replacementLength() const
+
+/*
+
+ */
 func (this *QInputMethodEvent) ReplacementLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QInputMethodEvent17replacementLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+/*
+
+
+ */
 type QInputMethodEvent__AttributeType = int
 
+//
 const QInputMethodEvent__TextFormat QInputMethodEvent__AttributeType = 0
+
+//
 const QInputMethodEvent__Cursor QInputMethodEvent__AttributeType = 1
+
+//
 const QInputMethodEvent__Language QInputMethodEvent__AttributeType = 2
+
+//
 const QInputMethodEvent__Ruby QInputMethodEvent__AttributeType = 3
+
+//
 const QInputMethodEvent__Selection QInputMethodEvent__AttributeType = 4
 
 //  body block end

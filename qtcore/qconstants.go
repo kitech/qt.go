@@ -17,6 +17,7 @@ package qtcore
 //  body block begin
 
 const QT_FEATURE_shared = 1                                                                         // num10 @ core
+const QT_FEATURE_rpath = 1                                                                          // num10 @ core
 const QT_COMPILER_SUPPORTS_SSE2 = 1                                                                 // num10 @ core
 const QT_COMPILER_SUPPORTS_AES = 1                                                                  // num10 @ core
 const QT_COMPILER_SUPPORTS_SSE3 = 1                                                                 // num10 @ core
@@ -122,7 +123,6 @@ const QT_FEATURE_tabletevent = 1                                                
 const QT_FEATURE_texthtmlparser = 1                                                                 // num10 @ gui
 const QT_FEATURE_textodfwriter = 1                                                                  // num10 @ gui
 const QT_FEATURE_validator = 1                                                                      // num10 @ gui
-const QT_FEATURE_vulkan = 1                                                                         // num10 @ gui
 const QT_FEATURE_whatsthis = 1                                                                      // num10 @ gui
 const QT_FEATURE_wheelevent = 1                                                                     // num10 @ gui
 const QAccessibleInterface_iid = "org.qt-project.Qt.QAccessibleInterface"                           // str @ gui
@@ -1491,7 +1491,6 @@ const QT_FEATURE_http = 1                                                       
 const QT_FEATURE_localserver = 1                                                                    // num10 @ network
 const QT_FEATURE_networkdiskcache = 1                                                               // num10 @ network
 const QT_FEATURE_networkproxy = 1                                                                   // num10 @ network
-const QT_FEATURE_opensslv11 = 1                                                                     // num10 @ network
 const QT_FEATURE_socks5 = 1                                                                         // num10 @ network
 const QT_FEATURE_ssl = 1                                                                            // num10 @ network
 const QT_FEATURE_udpsocket = 1                                                                      // num10 @ network
@@ -1516,12 +1515,12 @@ const QTQUICKWIDGETS_VERSION_STR = "5.10.1"                                     
 const QTQUICKWIDGETS_VERSION = 0x050A01                                                             // num16 @ quickwidgets
 const QTX11EXTRAS_VERSION_STR = "5.10.1"                                                            // str @ x11extras
 const QTX11EXTRAS_VERSION = 0x050A01                                                                // num16 @ x11extras
-const QTWINEXTRAS_VERSION_STR = "5.10.0"                                                            // str @ winextras
-const QTWINEXTRAS_VERSION = 0x050A00                                                                // num16 @ winextras
-const QTMACEXTRAS_VERSION_STR = "5.10.0"                                                            // str @ macextras
-const QTMACEXTRAS_VERSION = 0x050A00                                                                // num16 @ macextras
-const QTANDROIDEXTRAS_VERSION_STR = "5.10.0"                                                        // str @ androidextras
-const QTANDROIDEXTRAS_VERSION = 0x050A00                                                            // num16 @ androidextras
+const QTWINEXTRAS_VERSION_STR = "5.10.1"                                                            // str @ winextras
+const QTWINEXTRAS_VERSION = 0x050A01                                                                // num16 @ winextras
+const QTMACEXTRAS_VERSION_STR = "5.10.1"                                                            // str @ macextras
+const QTMACEXTRAS_VERSION = 0x050A01                                                                // num16 @ macextras
+const QTANDROIDEXTRAS_VERSION_STR = "5.10.1"                                                        // str @ androidextras
+const QTANDROIDEXTRAS_VERSION = 0x050A01                                                            // num16 @ androidextras
 //  body block end
 
 //  keep block begin

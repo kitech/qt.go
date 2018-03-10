@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QTemporaryDir struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,12 @@ func (*QTemporaryDir) NewFromPointer(cthis unsafe.Pointer) *QTemporaryDir {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTemporaryDir()
+
+/*
+Constructs a QTemporaryDir using as template the application name returned by QCoreApplication::applicationName() (otherwise qt_temp). The directory is stored in the system's temporary directory, QDir::tempPath().
+
+See also QDir::tempPath().
+*/
 func NewQTemporaryDir() *QTemporaryDir {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDirC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +86,12 @@ func NewQTemporaryDir() *QTemporaryDir {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTemporaryDir(const QString &)
+
+/*
+Constructs a QTemporaryDir using as template the application name returned by QCoreApplication::applicationName() (otherwise qt_temp). The directory is stored in the system's temporary directory, QDir::tempPath().
+
+See also QDir::tempPath().
+*/
 func NewQTemporaryDir_1(templateName string) *QTemporaryDir {
 	var tmpArg0 = NewQString_5(templateName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -91,6 +106,10 @@ func NewQTemporaryDir_1(templateName string) *QTemporaryDir {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTemporaryDir()
+
+/*
+
+ */
 func DeleteQTemporaryDir(this *QTemporaryDir) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDirD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -102,6 +121,10 @@ func DeleteQTemporaryDir(this *QTemporaryDir) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if the QTemporaryDir was created successfully.
+*/
 func (this *QTemporaryDir) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +135,12 @@ func (this *QTemporaryDir) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
+
+/*
+If isValid() returns false, this function returns the error string that explains why the creation of the temporary directory failed. Otherwise, this function return an empty string.
+
+This function was introduced in  Qt 5.6.
+*/
 func (this *QTemporaryDir) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,6 +154,14 @@ func (this *QTemporaryDir) ErrorString() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoRemove() const
+
+/*
+Returns true if the QTemporaryDir is in auto remove mode. Auto-remove mode will automatically delete the directory from disk upon destruction. This makes it very easy to create your QTemporaryDir object on the stack, fill it with files, do something with the files, and finally on function return it will automatically clean up after itself.
+
+Auto-remove is on by default.
+
+See also setAutoRemove() and remove().
+*/
 func (this *QTemporaryDir) AutoRemove() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir10autoRemoveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +172,14 @@ func (this *QTemporaryDir) AutoRemove() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoRemove(_Bool)
+
+/*
+Sets the QTemporaryDir into auto-remove mode if b is true.
+
+Auto-remove is on by default.
+
+See also autoRemove() and remove().
+*/
 func (this *QTemporaryDir) SetAutoRemove(b bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDir13setAutoRemoveEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	qtrt.ErrPrint(err, rv)
@@ -144,6 +189,12 @@ func (this *QTemporaryDir) SetAutoRemove(b bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool remove()
+
+/*
+Removes the temporary directory, including all its contents.
+
+Returns true if removing was successful.
+*/
 func (this *QTemporaryDir) Remove() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDir6removeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +205,10 @@ func (this *QTemporaryDir) Remove() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString path() const
+
+/*
+Returns the path to the temporary directory. Empty if the QTemporaryDir could not be created.
+*/
 func (this *QTemporaryDir) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir4pathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,6 +222,12 @@ func (this *QTemporaryDir) Path() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString filePath(const QString &) const
+
+/*
+Returns the path name of a file in the temporary directory. Does not check if the file actually exists in the directory. Redundant multiple separators or "." and ".." directories in fileName are not removed (see QDir::cleanPath()). Absolute paths are not allowed.
+
+This function was introduced in  Qt 5.9.
+*/
 func (this *QTemporaryDir) FilePath(fileName string) string {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

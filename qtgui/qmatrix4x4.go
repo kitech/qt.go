@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QMatrix4x4 struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QMatrix4x4) NewFromPointer(cthis unsafe.Pointer) *QMatrix4x4 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMatrix4x4()
+
+/*
+Constructs an identity matrix.
+*/
 func NewQMatrix4x4() *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQMatrix4x4() *QMatrix4x4 {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMatrix4x4(Qt::Initialization)
+
+/*
+Constructs an identity matrix.
+*/
 func NewQMatrix4x4_1(arg0 int) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +101,10 @@ func NewQMatrix4x4_1(arg0 int) *QMatrix4x4 {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QMatrix4x4(const float *)
+
+/*
+Constructs an identity matrix.
+*/
 func NewQMatrix4x4_2(values unsafe.Pointer /*666*/) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2EPKf", qtrt.FFI_TYPE_POINTER, values)
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +117,10 @@ func NewQMatrix4x4_2(values unsafe.Pointer /*666*/) *QMatrix4x4 {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMatrix4x4(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
+
+/*
+Constructs an identity matrix.
+*/
 func NewQMatrix4x4_3(m11 float32, m12 float32, m13 float32, m14 float32, m21 float32, m22 float32, m23 float32, m24 float32, m31 float32, m32 float32, m33 float32, m34 float32, m41 float32, m42 float32, m43 float32, m44 float32) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2Effffffffffffffff", qtrt.FFI_TYPE_POINTER, m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44)
 	qtrt.ErrPrint(err, rv)
@@ -114,6 +133,10 @@ func NewQMatrix4x4_3(m11 float32, m12 float32, m13 float32, m14 float32, m21 flo
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QMatrix4x4(const float *, int, int)
+
+/*
+Constructs an identity matrix.
+*/
 func NewQMatrix4x4_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2EPKfii", qtrt.FFI_TYPE_POINTER, values, cols, rows)
 	qtrt.ErrPrint(err, rv)
@@ -126,6 +149,10 @@ func NewQMatrix4x4_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QMatrix4x4(const QTransform &)
+
+/*
+Constructs an identity matrix.
+*/
 func NewQMatrix4x4_5(transform QTransform_ITF) *QMatrix4x4 {
 	var convArg0 unsafe.Pointer
 	if transform != nil && transform.QTransform_PTR() != nil {
@@ -142,6 +169,10 @@ func NewQMatrix4x4_5(transform QTransform_ITF) *QMatrix4x4 {
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QMatrix4x4(const QMatrix &)
+
+/*
+Constructs an identity matrix.
+*/
 func NewQMatrix4x4_6(matrix QMatrix_ITF) *QMatrix4x4 {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
@@ -158,6 +189,10 @@ func NewQMatrix4x4_6(matrix QMatrix_ITF) *QMatrix4x4 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] const float & operator()(int, int) const
+
+/*
+
+ */
 func (this *QMatrix4x4) Operator_fncall(row int, column int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x4clEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -168,6 +203,10 @@ func (this *QMatrix4x4) Operator_fncall(row int, column int) float32 {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] float & operator()(int, int)
+
+/*
+
+ */
 func (this *QMatrix4x4) Operator_fncall_1(row int, column int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4clEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -178,6 +217,12 @@ func (this *QMatrix4x4) Operator_fncall_1(row int, column int) float32 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QVector4D column(int) const
+
+/*
+Returns the elements of column index as a 4D vector.
+
+See also setColumn() and row().
+*/
 func (this *QMatrix4x4) Column(index int) *QVector4D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x46columnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -190,6 +235,12 @@ func (this *QMatrix4x4) Column(index int) *QVector4D /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColumn(int, const QVector4D &)
+
+/*
+Sets the elements of column index to the components of value.
+
+See also column() and setRow().
+*/
 func (this *QMatrix4x4) SetColumn(index int, value QVector4D_ITF) {
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVector4D_PTR() != nil {
@@ -203,6 +254,12 @@ func (this *QMatrix4x4) SetColumn(index int, value QVector4D_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QVector4D row(int) const
+
+/*
+Returns the elements of row index as a 4D vector.
+
+See also setRow() and column().
+*/
 func (this *QMatrix4x4) Row(index int) *QVector4D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x43rowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -215,6 +272,12 @@ func (this *QMatrix4x4) Row(index int) *QVector4D /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRow(int, const QVector4D &)
+
+/*
+Sets the elements of row index to the components of value.
+
+See also row() and setColumn().
+*/
 func (this *QMatrix4x4) SetRow(index int, value QVector4D_ITF) {
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVector4D_PTR() != nil {
@@ -228,6 +291,16 @@ func (this *QMatrix4x4) SetRow(index int, value QVector4D_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isAffine() const
+
+/*
+Returns true if this matrix is affine matrix; false otherwise.
+
+An affine matrix is a 4x4 matrix with row 3 equal to (0, 0, 0, 1), e.g. no projective coefficients.
+
+This function was introduced in  Qt 5.5.
+
+See also isIdentity().
+*/
 func (this *QMatrix4x4) IsAffine() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x48isAffineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -238,6 +311,12 @@ func (this *QMatrix4x4) IsAffine() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isIdentity() const
+
+/*
+Returns true if this matrix is the identity; false otherwise.
+
+See also setToIdentity().
+*/
 func (this *QMatrix4x4) IsIdentity() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x410isIdentityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -248,6 +327,12 @@ func (this *QMatrix4x4) IsIdentity() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setToIdentity()
+
+/*
+Sets this matrix to the identity.
+
+See also isIdentity().
+*/
 func (this *QMatrix4x4) SetToIdentity() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x413setToIdentityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,6 +342,10 @@ func (this *QMatrix4x4) SetToIdentity() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void fill(float)
+
+/*
+Fills all elements of this matrx with value.
+*/
 func (this *QMatrix4x4) Fill(value float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x44fillEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	qtrt.ErrPrint(err, rv)
@@ -266,6 +355,10 @@ func (this *QMatrix4x4) Fill(value float32) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double determinant() const
+
+/*
+Returns the determinant of this matrix.
+*/
 func (this *QMatrix4x4) Determinant() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x411determinantEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -276,6 +369,14 @@ func (this *QMatrix4x4) Determinant() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [68] QMatrix4x4 inverted(_Bool *) const
+
+/*
+Returns the inverse of this matrix. Returns the identity if this matrix cannot be inverted; i.e. determinant() is zero. If invertible is not null, then true will be written to that location if the matrix can be inverted; false otherwise.
+
+If the matrix is recognized as the identity or an orthonormal matrix, then this function will quickly invert the matrix using optimized routines.
+
+See also determinant() and normalMatrix().
+*/
 func (this *QMatrix4x4) Inverted(invertible *bool) *QMatrix4x4 /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x48invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
 	qtrt.ErrPrint(err, rv)
@@ -288,6 +389,14 @@ func (this *QMatrix4x4) Inverted(invertible *bool) *QMatrix4x4 /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [68] QMatrix4x4 inverted(_Bool *) const
+
+/*
+Returns the inverse of this matrix. Returns the identity if this matrix cannot be inverted; i.e. determinant() is zero. If invertible is not null, then true will be written to that location if the matrix can be inverted; false otherwise.
+
+If the matrix is recognized as the identity or an orthonormal matrix, then this function will quickly invert the matrix using optimized routines.
+
+See also determinant() and normalMatrix().
+*/
 func (this *QMatrix4x4) Inverted__() *QMatrix4x4 /*123*/ {
 	// arg: 0, bool *=Pointer, =Invalid,
 	var invertible unsafe.Pointer
@@ -302,6 +411,10 @@ func (this *QMatrix4x4) Inverted__() *QMatrix4x4 /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [68] QMatrix4x4 transposed() const
+
+/*
+Returns this matrix, transposed about its diagonal.
+*/
 func (this *QMatrix4x4) Transposed() *QMatrix4x4 /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x410transposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -314,6 +427,10 @@ func (this *QMatrix4x4) Transposed() *QMatrix4x4 /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [68] QMatrix4x4 & operator+=(const QMatrix4x4 &)
+
+/*
+
+ */
 func (this *QMatrix4x4) Operator_add_equal(other QMatrix4x4_ITF) *QMatrix4x4 {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QMatrix4x4_PTR() != nil {
@@ -330,6 +447,10 @@ func (this *QMatrix4x4) Operator_add_equal(other QMatrix4x4_ITF) *QMatrix4x4 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [68] QMatrix4x4 & operator-=(const QMatrix4x4 &)
+
+/*
+
+ */
 func (this *QMatrix4x4) Operator_minus_equal(other QMatrix4x4_ITF) *QMatrix4x4 {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QMatrix4x4_PTR() != nil {
@@ -346,6 +467,10 @@ func (this *QMatrix4x4) Operator_minus_equal(other QMatrix4x4_ITF) *QMatrix4x4 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [68] QMatrix4x4 & operator*=(const QMatrix4x4 &)
+
+/*
+
+ */
 func (this *QMatrix4x4) Operator_mul_equal(other QMatrix4x4_ITF) *QMatrix4x4 {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QMatrix4x4_PTR() != nil {
@@ -362,6 +487,10 @@ func (this *QMatrix4x4) Operator_mul_equal(other QMatrix4x4_ITF) *QMatrix4x4 {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [68] QMatrix4x4 & operator*=(float)
+
+/*
+
+ */
 func (this *QMatrix4x4) Operator_mul_equal_1(factor float32) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4mLEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
 	qtrt.ErrPrint(err, rv)
@@ -374,6 +503,10 @@ func (this *QMatrix4x4) Operator_mul_equal_1(factor float32) *QMatrix4x4 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [68] QMatrix4x4 & operator/=(float)
+
+/*
+
+ */
 func (this *QMatrix4x4) Operator_div_equal(divisor float32) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4dVEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), divisor)
 	qtrt.ErrPrint(err, rv)
@@ -386,6 +519,10 @@ func (this *QMatrix4x4) Operator_div_equal(divisor float32) *QMatrix4x4 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QMatrix4x4 &) const
+
+/*
+
+ */
 func (this *QMatrix4x4) Operator_equal_equal(other QMatrix4x4_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QMatrix4x4_PTR() != nil {
@@ -400,6 +537,10 @@ func (this *QMatrix4x4) Operator_equal_equal(other QMatrix4x4_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QMatrix4x4 &) const
+
+/*
+
+ */
 func (this *QMatrix4x4) Operator_not_equal(other QMatrix4x4_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QMatrix4x4_PTR() != nil {
@@ -414,6 +555,12 @@ func (this *QMatrix4x4) Operator_not_equal(other QMatrix4x4_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scale(const QVector3D &)
+
+/*
+Multiplies this matrix by another that scales coordinates by the components of vector.
+
+See also translate() and rotate().
+*/
 func (this *QMatrix4x4) Scale(vector QVector3D_ITF) {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
@@ -427,6 +574,12 @@ func (this *QMatrix4x4) Scale(vector QVector3D_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void scale(float, float)
+
+/*
+Multiplies this matrix by another that scales coordinates by the components of vector.
+
+See also translate() and rotate().
+*/
 func (this *QMatrix4x4) Scale_1(x float32, y float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45scaleEff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -436,6 +589,12 @@ func (this *QMatrix4x4) Scale_1(x float32, y float32) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void scale(float, float, float)
+
+/*
+Multiplies this matrix by another that scales coordinates by the components of vector.
+
+See also translate() and rotate().
+*/
 func (this *QMatrix4x4) Scale_2(x float32, y float32, z float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45scaleEfff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, z)
 	qtrt.ErrPrint(err, rv)
@@ -445,6 +604,12 @@ func (this *QMatrix4x4) Scale_2(x float32, y float32, z float32) {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void scale(float)
+
+/*
+Multiplies this matrix by another that scales coordinates by the components of vector.
+
+See also translate() and rotate().
+*/
 func (this *QMatrix4x4) Scale_3(factor float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45scaleEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
 	qtrt.ErrPrint(err, rv)
@@ -454,6 +619,12 @@ func (this *QMatrix4x4) Scale_3(factor float32) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void translate(const QVector3D &)
+
+/*
+Multiplies this matrix by another that translates coordinates by the components of vector.
+
+See also scale() and rotate().
+*/
 func (this *QMatrix4x4) Translate(vector QVector3D_ITF) {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
@@ -467,6 +638,12 @@ func (this *QMatrix4x4) Translate(vector QVector3D_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void translate(float, float)
+
+/*
+Multiplies this matrix by another that translates coordinates by the components of vector.
+
+See also scale() and rotate().
+*/
 func (this *QMatrix4x4) Translate_1(x float32, y float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x49translateEff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -476,6 +653,12 @@ func (this *QMatrix4x4) Translate_1(x float32, y float32) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void translate(float, float, float)
+
+/*
+Multiplies this matrix by another that translates coordinates by the components of vector.
+
+See also scale() and rotate().
+*/
 func (this *QMatrix4x4) Translate_2(x float32, y float32, z float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x49translateEfff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, z)
 	qtrt.ErrPrint(err, rv)
@@ -485,6 +668,12 @@ func (this *QMatrix4x4) Translate_2(x float32, y float32, z float32) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rotate(float, const QVector3D &)
+
+/*
+Multiples this matrix by another that rotates coordinates through angle degrees about vector.
+
+See also scale() and translate().
+*/
 func (this *QMatrix4x4) Rotate(angle float32, vector QVector3D_ITF) {
 	var convArg1 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
@@ -498,6 +687,12 @@ func (this *QMatrix4x4) Rotate(angle float32, vector QVector3D_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void rotate(float, float, float, float)
+
+/*
+Multiples this matrix by another that rotates coordinates through angle degrees about vector.
+
+See also scale() and translate().
+*/
 func (this *QMatrix4x4) Rotate_1(angle float32, x float32, y float32, z float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), angle, x, y, z)
 	qtrt.ErrPrint(err, rv)
@@ -507,6 +702,12 @@ func (this *QMatrix4x4) Rotate_1(angle float32, x float32, y float32, z float32)
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void rotate(float, float, float, float)
+
+/*
+Multiples this matrix by another that rotates coordinates through angle degrees about vector.
+
+See also scale() and translate().
+*/
 func (this *QMatrix4x4) Rotate_1_(angle float32, x float32, y float32) {
 	// arg: 3, float=Float, =Invalid,
 	z := float32(0.0)
@@ -518,6 +719,12 @@ func (this *QMatrix4x4) Rotate_1_(angle float32, x float32, y float32) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void rotate(const QQuaternion &)
+
+/*
+Multiples this matrix by another that rotates coordinates through angle degrees about vector.
+
+See also scale() and translate().
+*/
 func (this *QMatrix4x4) Rotate_2(quaternion QQuaternion_ITF) {
 	var convArg0 unsafe.Pointer
 	if quaternion != nil && quaternion.QQuaternion_PTR() != nil {
@@ -531,6 +738,12 @@ func (this *QMatrix4x4) Rotate_2(quaternion QQuaternion_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ortho(const QRect &)
+
+/*
+Multiplies this matrix by another that applies an orthographic projection for a window with lower-left corner (left, bottom), upper-right corner (right, top), and the specified nearPlane and farPlane clipping planes.
+
+See also frustum() and perspective().
+*/
 func (this *QMatrix4x4) Ortho(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -544,6 +757,12 @@ func (this *QMatrix4x4) Ortho(rect qtcore.QRect_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void ortho(const QRectF &)
+
+/*
+Multiplies this matrix by another that applies an orthographic projection for a window with lower-left corner (left, bottom), upper-right corner (right, top), and the specified nearPlane and farPlane clipping planes.
+
+See also frustum() and perspective().
+*/
 func (this *QMatrix4x4) Ortho_1(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -557,6 +776,12 @@ func (this *QMatrix4x4) Ortho_1(rect qtcore.QRectF_ITF) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void ortho(float, float, float, float, float, float)
+
+/*
+Multiplies this matrix by another that applies an orthographic projection for a window with lower-left corner (left, bottom), upper-right corner (right, top), and the specified nearPlane and farPlane clipping planes.
+
+See also frustum() and perspective().
+*/
 func (this *QMatrix4x4) Ortho_2(left float32, right float32, bottom float32, top float32, nearPlane float32, farPlane float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45orthoEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, right, bottom, top, nearPlane, farPlane)
 	qtrt.ErrPrint(err, rv)
@@ -566,6 +791,12 @@ func (this *QMatrix4x4) Ortho_2(left float32, right float32, bottom float32, top
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void frustum(float, float, float, float, float, float)
+
+/*
+Multiplies this matrix by another that applies a perspective frustum projection for a window with lower-left corner (left, bottom), upper-right corner (right, top), and the specified nearPlane and farPlane clipping planes.
+
+See also ortho() and perspective().
+*/
 func (this *QMatrix4x4) Frustum(left float32, right float32, bottom float32, top float32, nearPlane float32, farPlane float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x47frustumEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, right, bottom, top, nearPlane, farPlane)
 	qtrt.ErrPrint(err, rv)
@@ -575,6 +806,12 @@ func (this *QMatrix4x4) Frustum(left float32, right float32, bottom float32, top
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void perspective(float, float, float, float)
+
+/*
+Multiplies this matrix by another that applies a perspective projection. The vertical field of view will be verticalAngle degrees within a window with a given aspectRatio that determines the horizontal field of view. The projection will have the specified nearPlane and farPlane clipping planes which are the distances from the viewer to the corresponding planes.
+
+See also ortho() and frustum().
+*/
 func (this *QMatrix4x4) Perspective(verticalAngle float32, aspectRatio float32, nearPlane float32, farPlane float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x411perspectiveEffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), verticalAngle, aspectRatio, nearPlane, farPlane)
 	qtrt.ErrPrint(err, rv)
@@ -584,6 +821,12 @@ func (this *QMatrix4x4) Perspective(verticalAngle float32, aspectRatio float32, 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void lookAt(const QVector3D &, const QVector3D &, const QVector3D &)
+
+/*
+Multiplies this matrix by a viewing matrix derived from an eye point. The center value indicates the center of the view that the eye is looking at. The up value indicates which direction should be considered up with respect to the eye.
+
+Note: The up vector must not be parallel to the line of sight from eye to center.
+*/
 func (this *QMatrix4x4) LookAt(eye QVector3D_ITF, center QVector3D_ITF, up QVector3D_ITF) {
 	var convArg0 unsafe.Pointer
 	if eye != nil && eye.QVector3D_PTR() != nil {
@@ -605,6 +848,12 @@ func (this *QMatrix4x4) LookAt(eye QVector3D_ITF, center QVector3D_ITF, up QVect
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void viewport(const QRectF &)
+
+/*
+Multiplies this matrix by another that performs the scale and bias transformation used by OpenGL to transform from normalized device coordinates (NDC) to viewport (window) coordinates. That is it maps points from the cube ranging over [-1, 1] in each dimension to the viewport with it's near-lower-left corner at (left, bottom, nearPlane) and with size (width, height, farPlane - nearPlane).
+
+This matches the transform used by the fixed function OpenGL viewport transform controlled by the functions glViewport() and glDepthRange().
+*/
 func (this *QMatrix4x4) Viewport(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -618,6 +867,12 @@ func (this *QMatrix4x4) Viewport(rect qtcore.QRectF_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void viewport(float, float, float, float, float, float)
+
+/*
+Multiplies this matrix by another that performs the scale and bias transformation used by OpenGL to transform from normalized device coordinates (NDC) to viewport (window) coordinates. That is it maps points from the cube ranging over [-1, 1] in each dimension to the viewport with it's near-lower-left corner at (left, bottom, nearPlane) and with size (width, height, farPlane - nearPlane).
+
+This matches the transform used by the fixed function OpenGL viewport transform controlled by the functions glViewport() and glDepthRange().
+*/
 func (this *QMatrix4x4) Viewport_1(left float32, bottom float32, width float32, height float32, nearPlane float32, farPlane float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48viewportEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, bottom, width, height, nearPlane, farPlane)
 	qtrt.ErrPrint(err, rv)
@@ -627,6 +882,12 @@ func (this *QMatrix4x4) Viewport_1(left float32, bottom float32, width float32, 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void viewport(float, float, float, float, float, float)
+
+/*
+Multiplies this matrix by another that performs the scale and bias transformation used by OpenGL to transform from normalized device coordinates (NDC) to viewport (window) coordinates. That is it maps points from the cube ranging over [-1, 1] in each dimension to the viewport with it's near-lower-left corner at (left, bottom, nearPlane) and with size (width, height, farPlane - nearPlane).
+
+This matches the transform used by the fixed function OpenGL viewport transform controlled by the functions glViewport() and glDepthRange().
+*/
 func (this *QMatrix4x4) Viewport_1_(left float32, bottom float32, width float32, height float32) {
 	// arg: 4, float=Float, =Invalid,
 	nearPlane := float32(0.0)
@@ -640,6 +901,12 @@ func (this *QMatrix4x4) Viewport_1_(left float32, bottom float32, width float32,
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void viewport(float, float, float, float, float, float)
+
+/*
+Multiplies this matrix by another that performs the scale and bias transformation used by OpenGL to transform from normalized device coordinates (NDC) to viewport (window) coordinates. That is it maps points from the cube ranging over [-1, 1] in each dimension to the viewport with it's near-lower-left corner at (left, bottom, nearPlane) and with size (width, height, farPlane - nearPlane).
+
+This matches the transform used by the fixed function OpenGL viewport transform controlled by the functions glViewport() and glDepthRange().
+*/
 func (this *QMatrix4x4) Viewport_1_1(left float32, bottom float32, width float32, height float32, nearPlane float32) {
 	// arg: 5, float=Float, =Invalid,
 	farPlane := float32(1.0)
@@ -651,6 +918,10 @@ func (this *QMatrix4x4) Viewport_1_1(left float32, bottom float32, width float32
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void flipCoordinates()
+
+/*
+
+ */
 func (this *QMatrix4x4) FlipCoordinates() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x415flipCoordinatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -660,6 +931,10 @@ func (this *QMatrix4x4) FlipCoordinates() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void copyDataTo(float *) const
+
+/*
+Retrieves the 16 items in this matrix and copies them to values in row-major order.
+*/
 func (this *QMatrix4x4) CopyDataTo(values unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x410copyDataToEPf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), values)
 	qtrt.ErrPrint(err, rv)
@@ -669,6 +944,12 @@ func (this *QMatrix4x4) CopyDataTo(values unsafe.Pointer /*666*/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QMatrix toAffine() const
+
+/*
+Returns the conventional Qt 2D affine transformation matrix that corresponds to this matrix. It is assumed that this matrix only contains 2D affine transformation elements.
+
+See also toTransform().
+*/
 func (this *QMatrix4x4) ToAffine() *QMatrix /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x48toAffineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -681,6 +962,14 @@ func (this *QMatrix4x4) ToAffine() *QMatrix /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform toTransform() const
+
+/*
+Returns the conventional Qt 2D transformation matrix that corresponds to this matrix.
+
+The returned QTransform is formed by simply dropping the third row and third column of the QMatrix4x4. This is suitable for implementing orthographic projections where the z co-ordinate should be dropped rather than projected.
+
+See also toAffine().
+*/
 func (this *QMatrix4x4) ToTransform() *QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x411toTransformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -693,6 +982,14 @@ func (this *QMatrix4x4) ToTransform() *QTransform /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [88] QTransform toTransform(float) const
+
+/*
+Returns the conventional Qt 2D transformation matrix that corresponds to this matrix.
+
+The returned QTransform is formed by simply dropping the third row and third column of the QMatrix4x4. This is suitable for implementing orthographic projections where the z co-ordinate should be dropped rather than projected.
+
+See also toAffine().
+*/
 func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) *QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x411toTransformEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), distanceToPlane)
 	qtrt.ErrPrint(err, rv)
@@ -705,6 +1002,12 @@ func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) *QTransform /*123
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint map(const QPoint &) const
+
+/*
+Maps point by multiplying this matrix by point.
+
+See also mapRect().
+*/
 func (this *QMatrix4x4) Map(point qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
@@ -721,6 +1024,12 @@ func (this *QMatrix4x4) Map(point qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QPointF map(const QPointF &) const
+
+/*
+Maps point by multiplying this matrix by point.
+
+See also mapRect().
+*/
 func (this *QMatrix4x4) Map_1(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -737,6 +1046,12 @@ func (this *QMatrix4x4) Map_1(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ 
 // index:2
 // Public Visibility=Default Availability=Available
 // [12] QVector3D map(const QVector3D &) const
+
+/*
+Maps point by multiplying this matrix by point.
+
+See also mapRect().
+*/
 func (this *QMatrix4x4) Map_2(point QVector3D_ITF) *QVector3D /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector3D_PTR() != nil {
@@ -753,6 +1068,12 @@ func (this *QMatrix4x4) Map_2(point QVector3D_ITF) *QVector3D /*123*/ {
 // index:3
 // Public Visibility=Default Availability=Available
 // [16] QVector4D map(const QVector4D &) const
+
+/*
+Maps point by multiplying this matrix by point.
+
+See also mapRect().
+*/
 func (this *QMatrix4x4) Map_3(point QVector4D_ITF) *QVector4D /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector4D_PTR() != nil {
@@ -769,6 +1090,12 @@ func (this *QMatrix4x4) Map_3(point QVector4D_ITF) *QVector4D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [12] QVector3D mapVector(const QVector3D &) const
+
+/*
+Maps vector by multiplying the top 3x3 portion of this matrix by vector. The translation and projection components of this matrix are ignored.
+
+See also map().
+*/
 func (this *QMatrix4x4) MapVector(vector QVector3D_ITF) *QVector3D /*123*/ {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
@@ -785,6 +1112,12 @@ func (this *QMatrix4x4) MapVector(vector QVector3D_ITF) *QVector3D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect mapRect(const QRect &) const
+
+/*
+Maps rect by multiplying this matrix by the corners of rect and then forming a new rectangle from the results. The returned rectangle will be an ordinary 2D rectangle with sides parallel to the horizontal and vertical axes.
+
+See also map().
+*/
 func (this *QMatrix4x4) MapRect(rect qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -801,6 +1134,12 @@ func (this *QMatrix4x4) MapRect(rect qtcore.QRect_ITF) *qtcore.QRect /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRect(const QRectF &) const
+
+/*
+Maps rect by multiplying this matrix by the corners of rect and then forming a new rectangle from the results. The returned rectangle will be an ordinary 2D rectangle with sides parallel to the horizontal and vertical axes.
+
+See also map().
+*/
 func (this *QMatrix4x4) MapRect_1(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -817,6 +1156,12 @@ func (this *QMatrix4x4) MapRect_1(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] float * data()
+
+/*
+Returns a pointer to the raw data of this matrix.
+
+See also constData() and optimize().
+*/
 func (this *QMatrix4x4) Data() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x44dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -827,6 +1172,12 @@ func (this *QMatrix4x4) Data() unsafe.Pointer /*666*/ {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] const float * data() const
+
+/*
+Returns a pointer to the raw data of this matrix.
+
+See also constData() and optimize().
+*/
 func (this *QMatrix4x4) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x44dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -837,6 +1188,12 @@ func (this *QMatrix4x4) Data_1() unsafe.Pointer /*666*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const float * constData() const
+
+/*
+Returns a constant pointer to the raw data of this matrix. This raw data is stored in column-major format.
+
+See also data().
+*/
 func (this *QMatrix4x4) ConstData() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x49constDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -847,6 +1204,18 @@ func (this *QMatrix4x4) ConstData() unsafe.Pointer /*666*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void optimize()
+
+/*
+Optimize the usage of this matrix from its current elements.
+
+Some operations such as translate(), scale(), and rotate() can be performed more efficiently if the matrix being modified is already known to be the identity, a previous translate(), a previous scale(), etc.
+
+Normally the QMatrix4x4 class keeps track of this special type internally as operations are performed. However, if the matrix is modified directly with {QLoggingCategory::operator()}{operator()()} or data(), then QMatrix4x4 will lose track of the special type and will revert to the safest but least efficient operations thereafter.
+
+By calling optimize() after directly modifying the matrix, the programmer can force QMatrix4x4 to recover the special type if the elements appear to conform to one of the known optimized types.
+
+See also operator()(), data(), and translate().
+*/
 func (this *QMatrix4x4) Optimize() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48optimizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -858,14 +1227,31 @@ func DeleteQMatrix4x4(this *QMatrix4x4) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QMatrix4x4__ = int
 
+//
 const QMatrix4x4__Identity QMatrix4x4__ = 0
+
+//
 const QMatrix4x4__Translation QMatrix4x4__ = 1
+
+//
 const QMatrix4x4__Scale QMatrix4x4__ = 2
+
+//
 const QMatrix4x4__Rotation2D QMatrix4x4__ = 4
+
+//
 const QMatrix4x4__Rotation QMatrix4x4__ = 8
+
+//
 const QMatrix4x4__Perspective QMatrix4x4__ = 16
+
+//
 const QMatrix4x4__General QMatrix4x4__ = 31
 
 //  body block end

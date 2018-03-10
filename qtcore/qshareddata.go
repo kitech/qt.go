@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QSharedData struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QSharedData) NewFromPointer(cthis unsafe.Pointer) *QSharedData {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSharedData()
+
+/*
+Constructs a QSharedData object with a reference count of 0.
+*/
 func NewQSharedData() *QSharedData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSharedDataC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

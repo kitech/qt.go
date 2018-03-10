@@ -46,6 +46,9 @@ func (this *QAbstractState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QAbstractState struct {
 	*QObject
 }
@@ -78,6 +81,10 @@ func (*QAbstractState) NewFromPointer(cthis unsafe.Pointer) *QAbstractState {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAbstractState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAbstractState10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +95,10 @@ func (this *QAbstractState) MetaObject() *QMetaObject /*777 const QMetaObject **
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractState()
+
+/*
+
+ */
 func DeleteQAbstractState(this *QAbstractState) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractStateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -99,6 +110,10 @@ func DeleteQAbstractState(this *QAbstractState) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QState * parentState() const
+
+/*
+Returns this state's parent state, or 0 if the state has no parent state.
+*/
 func (this *QAbstractState) ParentState() *QState /*777 QState **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAbstractState11parentStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,6 +124,10 @@ func (this *QAbstractState) ParentState() *QState /*777 QState **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStateMachine * machine() const
+
+/*
+Returns the state machine that this state is part of, or 0 if the state is not part of a state machine.
+*/
 func (this *QAbstractState) Machine() *QStateMachine /*777 QStateMachine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAbstractState7machineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +138,14 @@ func (this *QAbstractState) Machine() *QStateMachine /*777 QStateMachine **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool active() const
+
+/*
+Returns whether this state is active.
+
+Note: Getter function for property active.
+
+See also activeChanged(bool), entered(), and exited().
+*/
 func (this *QAbstractState) Active() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAbstractState6activeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,6 +156,16 @@ func (this *QAbstractState) Active() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activeChanged(_Bool)
+
+/*
+This signal is emitted when the active property is changed with active as argument.
+
+This function was introduced in  Qt 5.4.
+
+Note: Notifier signal for property active.
+
+See also QAbstractState::active, entered(), and exited().
+*/
 func (this *QAbstractState) ActiveChanged(active bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractState13activeChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), active)
 	qtrt.ErrPrint(err, rv)
@@ -138,6 +175,10 @@ func (this *QAbstractState) ActiveChanged(active bool) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QAbstractState(QState *)
+
+/*
+Constructs a new state with the given parent state.
+*/
 func NewQAbstractState(parent QState_ITF /*777 QState **/) *QAbstractState {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QState_PTR() != nil {
@@ -154,6 +195,10 @@ func NewQAbstractState(parent QState_ITF /*777 QState **/) *QAbstractState {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QAbstractState(QState *)
+
+/*
+Constructs a new state with the given parent state.
+*/
 func NewQAbstractState__() *QAbstractState {
 	// arg: 0, QState *=Pointer, QState=Record,
 	var convArg0 unsafe.Pointer
@@ -168,6 +213,10 @@ func NewQAbstractState__() *QAbstractState {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void onEntry(QEvent *)
+
+/*
+This function is called when the state is entered. The given event is what caused the state to be entered. Reimplement this function to perform custom processing when the state is entered.
+*/
 func (this *QAbstractState) OnEntry(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -181,6 +230,10 @@ func (this *QAbstractState) OnEntry(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void onExit(QEvent *)
+
+/*
+This function is called when the state is exited. The given event is what caused the state to be exited. Reimplement this function to perform custom processing when the state is exited.
+*/
 func (this *QAbstractState) OnExit(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -194,6 +247,10 @@ func (this *QAbstractState) OnExit(event QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QAbstractState) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {

@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QAbstractItemDelegate struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QAbstractItemDelegate) NewFromPointer(cthis unsafe.Pointer) *QAbstractIte
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAbstractItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QAbstractItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractItemDelegate(QObject *)
+
+/*
+Creates a new abstract item delegate with the given parent.
+*/
 func NewQAbstractItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractItemDelegate {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQAbstractItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractItemDelegate(QObject *)
+
+/*
+Creates a new abstract item delegate with the given parent.
+*/
 func NewQAbstractItemDelegate__() *QAbstractItemDelegate {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQAbstractItemDelegate__() *QAbstractItemDelegate {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractItemDelegate()
+
+/*
+
+ */
 func DeleteQAbstractItemDelegate(this *QAbstractItemDelegate) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -116,6 +135,12 @@ func DeleteQAbstractItemDelegate(this *QAbstractItemDelegate) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionViewItem &, const QModelIndex &) const
+
+/*
+This pure abstract function must be reimplemented if you want to provide custom rendering. Use the painter and style option to render the item specified by the item index.
+
+If you reimplement this you must also reimplement sizeHint().
+*/
 func (this *QAbstractItemDelegate) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -137,6 +162,12 @@ func (this *QAbstractItemDelegate) Paint(painter qtgui.QPainter_ITF /*777 QPaint
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &) const
+
+/*
+This pure abstract function must be reimplemented if you want to provide custom rendering. The options are specified by option and the model item by index.
+
+If you reimplement this you must also reimplement paint().
+*/
 func (this *QAbstractItemDelegate) SizeHint(option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionViewItem_PTR() != nil {
@@ -157,6 +188,16 @@ func (this *QAbstractItemDelegate) SizeHint(option QStyleOptionViewItem_ITF, ind
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QWidget * createEditor(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
+
+/*
+Returns the editor to be used for editing the data item with the given index. Note that the index contains information about the model being used. The editor's parent widget is specified by parent, and the item options by option.
+
+The base implementation returns 0. If you want custom editing you will need to reimplement this function.
+
+The returned editor widget should have Qt::StrongFocus; otherwise, QMouseEvents received by the widget will propagate to the view. The view's background will shine through unless the editor paints its own background (e.g., with setAutoFillBackground()).
+
+See also destroyEditor(), setModelData(), and setEditorData().
+*/
 func (this *QAbstractItemDelegate) CreateEditor(parent QWidget_ITF /*777 QWidget **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -179,6 +220,14 @@ func (this *QAbstractItemDelegate) CreateEditor(parent QWidget_ITF /*777 QWidget
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void destroyEditor(QWidget *, const QModelIndex &) const
+
+/*
+Called when the editor is no longer needed for editing the data item with the given index and should be destroyed. The default behavior is a call to deleteLater on the editor. It is possible e.g. to avoid this delete by reimplementing this function.
+
+This function was introduced in  Qt 5.0.
+
+See also createEditor().
+*/
 func (this *QAbstractItemDelegate) DestroyEditor(editor QWidget_ITF /*777 QWidget **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -196,6 +245,14 @@ func (this *QAbstractItemDelegate) DestroyEditor(editor QWidget_ITF /*777 QWidge
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setEditorData(QWidget *, const QModelIndex &) const
+
+/*
+Sets the contents of the given editor to the data for the item at the given index. Note that the index contains information about the model being used.
+
+The base implementation does nothing. If you want custom editing you will need to reimplement this function.
+
+See also setModelData().
+*/
 func (this *QAbstractItemDelegate) SetEditorData(editor QWidget_ITF /*777 QWidget **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -213,6 +270,14 @@ func (this *QAbstractItemDelegate) SetEditorData(editor QWidget_ITF /*777 QWidge
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setModelData(QWidget *, QAbstractItemModel *, const QModelIndex &) const
+
+/*
+Sets the data for the item at the given index in the model to the contents of the given editor.
+
+The base implementation does nothing. If you want custom editing you will need to reimplement this function.
+
+See also setEditorData().
+*/
 func (this *QAbstractItemDelegate) SetModelData(editor QWidget_ITF /*777 QWidget **/, model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -234,6 +299,12 @@ func (this *QAbstractItemDelegate) SetModelData(editor QWidget_ITF /*777 QWidget
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void updateEditorGeometry(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
+
+/*
+Updates the geometry of the editor for the item with the given index, according to the rectangle specified in the option. If the item has an internal layout, the editor will be laid out accordingly. Note that the index contains information about the model being used.
+
+The base implementation does nothing. If you want custom editing you must reimplement this function.
+*/
 func (this *QAbstractItemDelegate) UpdateEditorGeometry(editor QWidget_ITF /*777 QWidget **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -255,6 +326,14 @@ func (this *QAbstractItemDelegate) UpdateEditorGeometry(editor QWidget_ITF /*777
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool editorEvent(QEvent *, QAbstractItemModel *, const QStyleOptionViewItem &, const QModelIndex &)
+
+/*
+When editing of an item starts, this function is called with the event that triggered the editing, the model, the index of the item, and the option used for rendering the item.
+
+Mouse events are sent to editorEvent() even if they don't start editing of the item. This can, for instance, be useful if you wish to open a context menu when the right mouse button is pressed on an item.
+
+The base implementation returns false (indicating that it has not handled the event).
+*/
 func (this *QAbstractItemDelegate) EditorEvent(event qtcore.QEvent_ITF /*777 QEvent **/, model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -281,6 +360,10 @@ func (this *QAbstractItemDelegate) EditorEvent(event qtcore.QEvent_ITF /*777 QEv
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString elidedText(const QFontMetrics &, int, Qt::TextElideMode, const QString &)
+
+/*
+
+ */
 func (this *QAbstractItemDelegate) ElidedText(fontMetrics qtgui.QFontMetrics_ITF, width int, mode int, text string) string {
 	var convArg0 unsafe.Pointer
 	if fontMetrics != nil && fontMetrics.QFontMetrics_PTR() != nil {
@@ -305,6 +388,18 @@ func QAbstractItemDelegate_ElidedText(fontMetrics qtgui.QFontMetrics_ITF, width 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool helpEvent(QHelpEvent *, QAbstractItemView *, const QStyleOptionViewItem &, const QModelIndex &)
+
+/*
+Whenever a help event occurs, this function is called with the event view option and the index that corresponds to the item where the event occurs.
+
+Returns true if the delegate can handle the event; otherwise returns false. A return value of true indicates that the data obtained using the index had the required role.
+
+For QEvent::ToolTip and QEvent::WhatsThis events that were handled successfully, the relevant popup may be shown depending on the user's system configuration.
+
+This function was introduced in  Qt 4.3.
+
+See also QHelpEvent.
+*/
 func (this *QAbstractItemDelegate) HelpEvent(event qtgui.QHelpEvent_ITF /*777 QHelpEvent **/, view QAbstractItemView_ITF /*777 QAbstractItemView **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QHelpEvent_PTR() != nil {
@@ -331,6 +426,10 @@ func (this *QAbstractItemDelegate) HelpEvent(event qtgui.QHelpEvent_ITF /*777 QH
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void commitData(QWidget *)
+
+/*
+This signal must be emitted when the editor widget has completed editing the data, and wants to write it back into the model.
+*/
 func (this *QAbstractItemDelegate) CommitData(editor QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -344,6 +443,14 @@ func (this *QAbstractItemDelegate) CommitData(editor QWidget_ITF /*777 QWidget *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closeEditor(QWidget *, QAbstractItemDelegate::EndEditHint)
+
+/*
+This signal is emitted when the user has finished editing an item using the specified editor.
+
+The hint provides a way for the delegate to influence how the model and view behave after editing is completed. It indicates to these components what action should be performed next to provide a comfortable editing experience for the user. For example, if EditNextItem is specified, the view should use a delegate to open an editor on the next item in the model.
+
+See also EndEditHint.
+*/
 func (this *QAbstractItemDelegate) CloseEditor(editor QWidget_ITF /*777 QWidget **/, hint int) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -357,6 +464,14 @@ func (this *QAbstractItemDelegate) CloseEditor(editor QWidget_ITF /*777 QWidget 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closeEditor(QWidget *, QAbstractItemDelegate::EndEditHint)
+
+/*
+This signal is emitted when the user has finished editing an item using the specified editor.
+
+The hint provides a way for the delegate to influence how the model and view behave after editing is completed. It indicates to these components what action should be performed next to provide a comfortable editing experience for the user. For example, if EditNextItem is specified, the view should use a delegate to open an editor on the next item in the model.
+
+See also EndEditHint.
+*/
 func (this *QAbstractItemDelegate) CloseEditor__(editor QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -372,6 +487,14 @@ func (this *QAbstractItemDelegate) CloseEditor__(editor QWidget_ITF /*777 QWidge
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sizeHintChanged(const QModelIndex &)
+
+/*
+This signal must be emitted when the sizeHint() of index changed.
+
+Views automatically connect to this signal and relayout items as necessary.
+
+This function was introduced in  Qt 4.4.
+*/
 func (this *QAbstractItemDelegate) SizeHintChanged(arg0 qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QModelIndex_PTR() != nil {
@@ -381,12 +504,39 @@ func (this *QAbstractItemDelegate) SizeHintChanged(arg0 qtcore.QModelIndex_ITF) 
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+This enum describes the different hints that the delegate can give to the model and view components to make editing data in a model a comfortable experience for the user.
+
+
+
+These hints let the delegate influence the behavior of the view:
+
+
+
+Note that custom views may interpret the concepts of next and previous differently.
+
+The following hints are most useful when models are used that cache data, such as those that manipulate data locally in order to increase performance or conserve network bandwidth.
+
+
+
+Although models and views should respond to these hints in appropriate ways, custom components may ignore any or all of them if they are not relevant.
+
+*/
 type QAbstractItemDelegate__EndEditHint = int
 
+// There is no recommended action to be performed.
 const QAbstractItemDelegate__NoHint QAbstractItemDelegate__EndEditHint = 0
+
+// The view should use the delegate to open an editor on the next item in the view.
 const QAbstractItemDelegate__EditNextItem QAbstractItemDelegate__EndEditHint = 1
+
+// The view should use the delegate to open an editor on the previous item in the view.
 const QAbstractItemDelegate__EditPreviousItem QAbstractItemDelegate__EndEditHint = 2
+
+// If the model caches data, it should write out cached data to the underlying data store.
 const QAbstractItemDelegate__SubmitModelCache QAbstractItemDelegate__EndEditHint = 3
+
+// If the model caches data, it should discard cached data and replace it with data from the underlying data store.
 const QAbstractItemDelegate__RevertModelCache QAbstractItemDelegate__EndEditHint = 4
 
 //  body block end

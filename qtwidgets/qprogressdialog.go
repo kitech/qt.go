@@ -58,6 +58,9 @@ func (this *QProgressDialog) InheritForceShow(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "forceShow", f)
 }
 
+/*
+
+ */
 type QProgressDialog struct {
 	*QDialog
 }
@@ -90,6 +93,10 @@ func (*QProgressDialog) NewFromPointer(cthis unsafe.Pointer) *QProgressDialog {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QProgressDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +107,23 @@ func (this *QProgressDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a progress dialog.
+
+Default settings:
+
+
+The label text is empty.
+The cancel button text is (translated) "Cancel".
+minimum is 0;
+maximum is 100
+
+
+The parent argument is dialog's parent widget. The widget flags, f, are passed to the QDialog::QDialog() constructor.
+
+See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
+*/
 func NewQProgressDialog(parent QWidget_ITF /*777 QWidget **/, flags int) *QProgressDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -116,6 +140,23 @@ func NewQProgressDialog(parent QWidget_ITF /*777 QWidget **/, flags int) *QProgr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a progress dialog.
+
+Default settings:
+
+
+The label text is empty.
+The cancel button text is (translated) "Cancel".
+minimum is 0;
+maximum is 100
+
+
+The parent argument is dialog's parent widget. The widget flags, f, are passed to the QDialog::QDialog() constructor.
+
+See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
+*/
 func NewQProgressDialog__() *QProgressDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -132,6 +173,23 @@ func NewQProgressDialog__() *QProgressDialog {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a progress dialog.
+
+Default settings:
+
+
+The label text is empty.
+The cancel button text is (translated) "Cancel".
+minimum is 0;
+maximum is 100
+
+
+The parent argument is dialog's parent widget. The widget flags, f, are passed to the QDialog::QDialog() constructor.
+
+See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
+*/
 func NewQProgressDialog__1(parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -150,6 +208,23 @@ func NewQProgressDialog__1(parent QWidget_ITF /*777 QWidget **/) *QProgressDialo
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(const QString &, const QString &, int, int, QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a progress dialog.
+
+Default settings:
+
+
+The label text is empty.
+The cancel button text is (translated) "Cancel".
+minimum is 0;
+maximum is 100
+
+
+The parent argument is dialog's parent widget. The widget flags, f, are passed to the QDialog::QDialog() constructor.
+
+See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
+*/
 func NewQProgressDialog_1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/, flags int) *QProgressDialog {
 	var tmpArg0 = qtcore.NewQString_5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -170,6 +245,23 @@ func NewQProgressDialog_1(labelText string, cancelButtonText string, minimum int
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(const QString &, const QString &, int, int, QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a progress dialog.
+
+Default settings:
+
+
+The label text is empty.
+The cancel button text is (translated) "Cancel".
+minimum is 0;
+maximum is 100
+
+
+The parent argument is dialog's parent widget. The widget flags, f, are passed to the QDialog::QDialog() constructor.
+
+See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
+*/
 func NewQProgressDialog_1_(labelText string, cancelButtonText string, minimum int, maximum int) *QProgressDialog {
 	var tmpArg0 = qtcore.NewQString_5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -190,6 +282,23 @@ func NewQProgressDialog_1_(labelText string, cancelButtonText string, minimum in
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(const QString &, const QString &, int, int, QWidget *, Qt::WindowFlags)
+
+/*
+Constructs a progress dialog.
+
+Default settings:
+
+
+The label text is empty.
+The cancel button text is (translated) "Cancel".
+minimum is 0;
+maximum is 100
+
+
+The parent argument is dialog's parent widget. The widget flags, f, are passed to the QDialog::QDialog() constructor.
+
+See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
+*/
 func NewQProgressDialog_1_1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
 	var tmpArg0 = qtcore.NewQString_5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -212,6 +321,10 @@ func NewQProgressDialog_1_1(labelText string, cancelButtonText string, minimum i
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QProgressDialog()
+
+/*
+
+ */
 func DeleteQProgressDialog(this *QProgressDialog) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialogD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -223,6 +336,12 @@ func DeleteQProgressDialog(this *QProgressDialog) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLabel(QLabel *)
+
+/*
+Sets the label to label. The progress dialog resizes to fit. The label becomes owned by the progress dialog and will be deleted when necessary, so do not pass the address of an object on the stack.
+
+See also setLabelText().
+*/
 func (this *QProgressDialog) SetLabel(label QLabel_ITF /*777 QLabel **/) {
 	var convArg0 unsafe.Pointer
 	if label != nil && label.QLabel_PTR() != nil {
@@ -236,6 +355,12 @@ func (this *QProgressDialog) SetLabel(label QLabel_ITF /*777 QLabel **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCancelButton(QPushButton *)
+
+/*
+Sets the cancel button to the push button, cancelButton. The progress dialog takes ownership of this button which will be deleted when necessary, so do not pass the address of an object that is on the stack, i.e. use new() to create the button. If 0 is passed then no cancel button will be shown.
+
+See also setCancelButtonText().
+*/
 func (this *QProgressDialog) SetCancelButton(button QPushButton_ITF /*777 QPushButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QPushButton_PTR() != nil {
@@ -249,6 +374,10 @@ func (this *QProgressDialog) SetCancelButton(button QPushButton_ITF /*777 QPushB
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBar(QProgressBar *)
+
+/*
+Sets the progress bar widget to bar. The progress dialog resizes to fit. The progress dialog takes ownership of the progress bar which will be deleted when necessary, so do not use a progress bar allocated on the stack.
+*/
 func (this *QProgressDialog) SetBar(bar QProgressBar_ITF /*777 QProgressBar **/) {
 	var convArg0 unsafe.Pointer
 	if bar != nil && bar.QProgressBar_PTR() != nil {
@@ -262,6 +391,10 @@ func (this *QProgressDialog) SetBar(bar QProgressBar_ITF /*777 QProgressBar **/)
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wasCanceled() const
+
+/*
+
+ */
 func (this *QProgressDialog) WasCanceled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog11wasCanceledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -272,6 +405,10 @@ func (this *QProgressDialog) WasCanceled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minimum() const
+
+/*
+
+ */
 func (this *QProgressDialog) Minimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog7minimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -282,6 +419,10 @@ func (this *QProgressDialog) Minimum() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maximum() const
+
+/*
+
+ */
 func (this *QProgressDialog) Maximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog7maximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -292,6 +433,10 @@ func (this *QProgressDialog) Maximum() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int value() const
+
+/*
+
+ */
 func (this *QProgressDialog) Value() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -302,6 +447,12 @@ func (this *QProgressDialog) Value() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+
+Returns a size that fits the contents of the progress dialog. The progress dialog resizes itself as required, so you should not need to call this yourself.
+*/
 func (this *QProgressDialog) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -314,6 +465,10 @@ func (this *QProgressDialog) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString labelText() const
+
+/*
+
+ */
 func (this *QProgressDialog) LabelText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog9labelTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -327,6 +482,10 @@ func (this *QProgressDialog) LabelText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minimumDuration() const
+
+/*
+
+ */
 func (this *QProgressDialog) MinimumDuration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog15minimumDurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -337,6 +496,10 @@ func (this *QProgressDialog) MinimumDuration() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoReset(_Bool)
+
+/*
+
+ */
 func (this *QProgressDialog) SetAutoReset(reset bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog12setAutoResetEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), reset)
 	qtrt.ErrPrint(err, rv)
@@ -346,6 +509,10 @@ func (this *QProgressDialog) SetAutoReset(reset bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoReset() const
+
+/*
+
+ */
 func (this *QProgressDialog) AutoReset() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog9autoResetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -356,6 +523,10 @@ func (this *QProgressDialog) AutoReset() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoClose(_Bool)
+
+/*
+
+ */
 func (this *QProgressDialog) SetAutoClose(close bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog12setAutoCloseEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), close)
 	qtrt.ErrPrint(err, rv)
@@ -365,6 +536,10 @@ func (this *QProgressDialog) SetAutoClose(close bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoClose() const
+
+/*
+
+ */
 func (this *QProgressDialog) AutoClose() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog9autoCloseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -375,6 +550,16 @@ func (this *QProgressDialog) AutoClose() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void open(QObject *, const char *)
+
+/*
+This is an overloaded function.
+
+Opens the dialog and connects its canceled() signal to the slot specified by receiver and member.
+
+The signal will be disconnected from the slot when the dialog is closed.
+
+This function was introduced in  Qt 4.5.
+*/
 func (this *QProgressDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, member string) {
 	var convArg0 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -390,6 +575,10 @@ func (this *QProgressDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/,
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cancel()
+
+/*
+Resets the progress dialog. wasCanceled() becomes true until the progress dialog is reset. The progress dialog becomes hidden.
+*/
 func (this *QProgressDialog) Cancel() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog6cancelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -399,6 +588,12 @@ func (this *QProgressDialog) Cancel() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reset()
+
+/*
+Resets the progress dialog. The progress dialog becomes hidden if autoClose() is true.
+
+See also setAutoClose() and setAutoReset().
+*/
 func (this *QProgressDialog) Reset() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -408,6 +603,10 @@ func (this *QProgressDialog) Reset() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximum(int)
+
+/*
+
+ */
 func (this *QProgressDialog) SetMaximum(maximum int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog10setMaximumEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maximum)
 	qtrt.ErrPrint(err, rv)
@@ -417,6 +616,10 @@ func (this *QProgressDialog) SetMaximum(maximum int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimum(int)
+
+/*
+
+ */
 func (this *QProgressDialog) SetMinimum(minimum int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog10setMinimumEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), minimum)
 	qtrt.ErrPrint(err, rv)
@@ -426,6 +629,16 @@ func (this *QProgressDialog) SetMinimum(minimum int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRange(int, int)
+
+/*
+Sets the progress dialog's minimum and maximum values to minimum and maximum, respectively.
+
+If maximum is smaller than minimum, minimum becomes the only legal value.
+
+If the current value falls outside the new range, the progress dialog is reset with reset().
+
+See also minimum and maximum.
+*/
 func (this *QProgressDialog) SetRange(minimum int, maximum int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog8setRangeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), minimum, maximum)
 	qtrt.ErrPrint(err, rv)
@@ -435,6 +648,10 @@ func (this *QProgressDialog) SetRange(minimum int, maximum int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(int)
+
+/*
+
+ */
 func (this *QProgressDialog) SetValue(progress int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog8setValueEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), progress)
 	qtrt.ErrPrint(err, rv)
@@ -444,6 +661,10 @@ func (this *QProgressDialog) SetValue(progress int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLabelText(const QString &)
+
+/*
+
+ */
 func (this *QProgressDialog) SetLabelText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -455,6 +676,12 @@ func (this *QProgressDialog) SetLabelText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCancelButtonText(const QString &)
+
+/*
+Sets the cancel button's text to cancelButtonText. If the text is set to QString() then it will cause the cancel button to be hidden and deleted.
+
+See also setCancelButton().
+*/
 func (this *QProgressDialog) SetCancelButtonText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -466,6 +693,10 @@ func (this *QProgressDialog) SetCancelButtonText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumDuration(int)
+
+/*
+
+ */
 func (this *QProgressDialog) SetMinimumDuration(ms int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog18setMinimumDurationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ms)
 	qtrt.ErrPrint(err, rv)
@@ -475,6 +706,12 @@ func (this *QProgressDialog) SetMinimumDuration(ms int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void canceled()
+
+/*
+This signal is emitted when the cancel button is clicked. It is connected to the cancel() slot by default.
+
+See also wasCanceled().
+*/
 func (this *QProgressDialog) Canceled() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog8canceledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -484,6 +721,10 @@ func (this *QProgressDialog) Canceled() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+Reimplemented from QWidget::resizeEvent().
+*/
 func (this *QProgressDialog) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QResizeEvent_PTR() != nil {
@@ -497,6 +738,10 @@ func (this *QProgressDialog) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QRes
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
+
+/*
+Reimplemented from QWidget::closeEvent().
+*/
 func (this *QProgressDialog) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QCloseEvent_PTR() != nil {
@@ -510,6 +755,10 @@ func (this *QProgressDialog) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QClose
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QProgressDialog) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -523,6 +772,10 @@ func (this *QProgressDialog) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
+
+/*
+Reimplemented from QWidget::showEvent().
+*/
 func (this *QProgressDialog) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QShowEvent_PTR() != nil {
@@ -536,6 +789,12 @@ func (this *QProgressDialog) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEve
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void forceShow()
+
+/*
+Shows the dialog if it is still hidden after the algorithm has been started and minimumDuration milliseconds have passed.
+
+See also setMinimumDuration().
+*/
 func (this *QProgressDialog) ForceShow() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog9forceShowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

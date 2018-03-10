@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QXmlStreamAttributes struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QXmlStreamAttributes) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamAtt
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QXmlStreamAttributes()
+
+/*
+
+ */
 func NewQXmlStreamAttributes() *QXmlStreamAttributes {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QXmlStreamAttributesC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQXmlStreamAttributes() *QXmlStreamAttributes {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef value(const QString &, const QString &) const
+
+/*
+
+ */
 func (this *QXmlStreamAttributes) Value(namespaceUri string, name string) *QStringRef /*123*/ {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -93,6 +104,10 @@ func (this *QXmlStreamAttributes) Value(namespaceUri string, name string) *QStri
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QStringRef value(const QString &, QLatin1String) const
+
+/*
+
+ */
 func (this *QXmlStreamAttributes) Value_1(namespaceUri string, name QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -111,6 +126,10 @@ func (this *QXmlStreamAttributes) Value_1(namespaceUri string, name QLatin1Strin
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QStringRef value(QLatin1String, QLatin1String) const
+
+/*
+
+ */
 func (this *QXmlStreamAttributes) Value_2(namespaceUri QLatin1String_ITF /*123*/, name QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
 	var convArg0 unsafe.Pointer
 	if namespaceUri != nil && namespaceUri.QLatin1String_PTR() != nil {
@@ -131,6 +150,10 @@ func (this *QXmlStreamAttributes) Value_2(namespaceUri QLatin1String_ITF /*123*/
 // index:3
 // Public Visibility=Default Availability=Available
 // [16] QStringRef value(const QString &) const
+
+/*
+
+ */
 func (this *QXmlStreamAttributes) Value_3(qualifiedName string) *QStringRef /*123*/ {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -145,6 +168,10 @@ func (this *QXmlStreamAttributes) Value_3(qualifiedName string) *QStringRef /*12
 // index:4
 // Public Visibility=Default Availability=Available
 // [16] QStringRef value(QLatin1String) const
+
+/*
+
+ */
 func (this *QXmlStreamAttributes) Value_4(qualifiedName QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
 	var convArg0 unsafe.Pointer
 	if qualifiedName != nil && qualifiedName.QLatin1String_PTR() != nil {
@@ -161,6 +188,10 @@ func (this *QXmlStreamAttributes) Value_4(qualifiedName QLatin1String_ITF /*123*
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool hasAttribute(const QString &) const
+
+/*
+
+ */
 func (this *QXmlStreamAttributes) HasAttribute(qualifiedName string) bool {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -173,6 +204,10 @@ func (this *QXmlStreamAttributes) HasAttribute(qualifiedName string) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool hasAttribute(QLatin1String) const
+
+/*
+
+ */
 func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if qualifiedName != nil && qualifiedName.QLatin1String_PTR() != nil {
@@ -187,6 +222,10 @@ func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName QLatin1String_ITF
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool hasAttribute(const QString &, const QString &) const
+
+/*
+
+ */
 func (this *QXmlStreamAttributes) HasAttribute_2(namespaceUri string, name string) bool {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()

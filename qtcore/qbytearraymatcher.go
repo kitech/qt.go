@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QByteArrayMatcher struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QByteArrayMatcher) NewFromPointer(cthis unsafe.Pointer) *QByteArrayMatche
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QByteArrayMatcher()
+
+/*
+Constructs an empty byte array matcher that won't match anything. Call setPattern() to give it a pattern to match.
+*/
 func NewQByteArrayMatcher() *QByteArrayMatcher {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQByteArrayMatcher() *QByteArrayMatcher {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QByteArrayMatcher(const QByteArray &)
+
+/*
+Constructs an empty byte array matcher that won't match anything. Call setPattern() to give it a pattern to match.
+*/
 func NewQByteArrayMatcher_1(pattern QByteArray_ITF) *QByteArrayMatcher {
 	var convArg0 unsafe.Pointer
 	if pattern != nil && pattern.QByteArray_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQByteArrayMatcher_1(pattern QByteArray_ITF) *QByteArrayMatcher {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QByteArrayMatcher(const char *, int)
+
+/*
+Constructs an empty byte array matcher that won't match anything. Call setPattern() to give it a pattern to match.
+*/
 func NewQByteArrayMatcher_2(pattern string, length int) *QByteArrayMatcher {
 	var convArg0 = qtrt.CString(pattern)
 	defer qtrt.FreeMem(convArg0)
@@ -107,6 +122,10 @@ func NewQByteArrayMatcher_2(pattern string, length int) *QByteArrayMatcher {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QByteArrayMatcher()
+
+/*
+
+ */
 func DeleteQByteArrayMatcher(this *QByteArrayMatcher) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QByteArrayMatcherD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 1040)
@@ -118,6 +137,10 @@ func DeleteQByteArrayMatcher(this *QByteArrayMatcher) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1040] QByteArrayMatcher & operator=(const QByteArrayMatcher &)
+
+/*
+
+ */
 func (this *QByteArrayMatcher) Operator_equal(other QByteArrayMatcher_ITF) *QByteArrayMatcher {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QByteArrayMatcher_PTR() != nil {
@@ -134,6 +157,12 @@ func (this *QByteArrayMatcher) Operator_equal(other QByteArrayMatcher_ITF) *QByt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPattern(const QByteArray &)
+
+/*
+Sets the byte array that this byte array matcher will search for to pattern.
+
+See also pattern() and indexIn().
+*/
 func (this *QByteArrayMatcher) SetPattern(pattern QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if pattern != nil && pattern.QByteArray_PTR() != nil {
@@ -147,6 +176,10 @@ func (this *QByteArrayMatcher) SetPattern(pattern QByteArray_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const QByteArray &, int) const
+
+/*
+Searches the byte array ba, from byte position from (default 0, i.e. from the first byte), for the byte array pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in ba, or -1 if no match was found.
+*/
 func (this *QByteArrayMatcher) IndexIn(ba QByteArray_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
@@ -161,6 +194,10 @@ func (this *QByteArrayMatcher) IndexIn(ba QByteArray_ITF, from int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const QByteArray &, int) const
+
+/*
+Searches the byte array ba, from byte position from (default 0, i.e. from the first byte), for the byte array pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in ba, or -1 if no match was found.
+*/
 func (this *QByteArrayMatcher) IndexIn__(ba QByteArray_ITF) int {
 	var convArg0 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
@@ -177,6 +214,10 @@ func (this *QByteArrayMatcher) IndexIn__(ba QByteArray_ITF) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const char *, int, int) const
+
+/*
+Searches the byte array ba, from byte position from (default 0, i.e. from the first byte), for the byte array pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in ba, or -1 if no match was found.
+*/
 func (this *QByteArrayMatcher) IndexIn_1(str string, len_ int, from int) int {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
@@ -189,6 +230,10 @@ func (this *QByteArrayMatcher) IndexIn_1(str string, len_ int, from int) int {
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexIn(const char *, int, int) const
+
+/*
+Searches the byte array ba, from byte position from (default 0, i.e. from the first byte), for the byte array pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in ba, or -1 if no match was found.
+*/
 func (this *QByteArrayMatcher) IndexIn_1_(str string, len_ int) int {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
@@ -203,6 +248,12 @@ func (this *QByteArrayMatcher) IndexIn_1_(str string, len_ int) int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray pattern() const
+
+/*
+Returns the byte array pattern that this byte array matcher will search for.
+
+See also setPattern().
+*/
 func (this *QByteArrayMatcher) Pattern() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7patternEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -38,6 +38,9 @@ func (this *QGraphicsOpacityEffect) InheritDraw(f func(painter *qtgui.QPainter /
 	qtrt.SetAllInheritCallback(this, "draw", f)
 }
 
+/*
+
+ */
 type QGraphicsOpacityEffect struct {
 	*QGraphicsEffect
 }
@@ -70,6 +73,10 @@ func (*QGraphicsOpacityEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsOp
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGraphicsOpacityEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsOpacityEffect10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +87,10 @@ func (this *QGraphicsOpacityEffect) MetaObject() *qtcore.QMetaObject /*777 const
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsOpacityEffect(QObject *)
+
+/*
+
+ */
 func NewQGraphicsOpacityEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsOpacityEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -96,6 +107,10 @@ func NewQGraphicsOpacityEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsOpacityEffect(QObject *)
+
+/*
+
+ */
 func NewQGraphicsOpacityEffect__() *QGraphicsOpacityEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -110,6 +125,10 @@ func NewQGraphicsOpacityEffect__() *QGraphicsOpacityEffect {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsOpacityEffect()
+
+/*
+
+ */
 func DeleteQGraphicsOpacityEffect(this *QGraphicsOpacityEffect) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -121,6 +140,10 @@ func DeleteQGraphicsOpacityEffect(this *QGraphicsOpacityEffect) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal opacity() const
+
+/*
+
+ */
 func (this *QGraphicsOpacityEffect) Opacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsOpacityEffect7opacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +154,10 @@ func (this *QGraphicsOpacityEffect) Opacity() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QBrush opacityMask() const
+
+/*
+
+ */
 func (this *QGraphicsOpacityEffect) OpacityMask() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGraphicsOpacityEffect11opacityMaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +170,10 @@ func (this *QGraphicsOpacityEffect) OpacityMask() *qtgui.QBrush /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacity(qreal)
+
+/*
+
+ */
 func (this *QGraphicsOpacityEffect) SetOpacity(opacity float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect10setOpacityEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	qtrt.ErrPrint(err, rv)
@@ -152,6 +183,10 @@ func (this *QGraphicsOpacityEffect) SetOpacity(opacity float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacityMask(const QBrush &)
+
+/*
+
+ */
 func (this *QGraphicsOpacityEffect) SetOpacityMask(mask qtgui.QBrush_ITF) {
 	var convArg0 unsafe.Pointer
 	if mask != nil && mask.QBrush_PTR() != nil {
@@ -165,6 +200,10 @@ func (this *QGraphicsOpacityEffect) SetOpacityMask(mask qtgui.QBrush_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void opacityChanged(qreal)
+
+/*
+
+ */
 func (this *QGraphicsOpacityEffect) OpacityChanged(opacity float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect14opacityChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	qtrt.ErrPrint(err, rv)
@@ -174,6 +213,10 @@ func (this *QGraphicsOpacityEffect) OpacityChanged(opacity float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void opacityMaskChanged(const QBrush &)
+
+/*
+
+ */
 func (this *QGraphicsOpacityEffect) OpacityMaskChanged(mask qtgui.QBrush_ITF) {
 	var convArg0 unsafe.Pointer
 	if mask != nil && mask.QBrush_PTR() != nil {
@@ -187,6 +230,38 @@ func (this *QGraphicsOpacityEffect) OpacityMaskChanged(mask qtgui.QBrush_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void draw(QPainter *)
+
+/*
+This pure virtual function draws the effect and is called whenever the source needs to be drawn.
+
+Reimplement this function in a QGraphicsEffect subclass to provide the effect's drawing implementation, using painter.
+
+For example:
+
+
+  MyGraphicsEffect::draw(QPainter *painter)
+  {
+      ...
+      QPoint offset;
+      if (sourceIsPixmap()) {
+          // No point in drawing in device coordinates (pixmap will be scaled anyways).
+          const QPixmap pixmap = sourcePixmap(Qt::LogicalCoordinates, &offset);
+          ...
+          painter->drawPixmap(offset, pixmap);
+      } else {
+          // Draw pixmap in device coordinates to avoid pixmap scaling;
+          const QPixmap pixmap = sourcePixmap(Qt::DeviceCoordinates, &offset);
+          painter->setWorldTransform(QTransform());
+          ...
+          painter->drawPixmap(offset, pixmap);
+      }
+      ...
+  }
+
+
+
+This function should not be called explicitly by the user, since it is meant for reimplementation purposes only.
+*/
 func (this *QGraphicsOpacityEffect) Draw(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QStringList struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QStringList) NewFromPointer(cthis unsafe.Pointer) *QStringList {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStringList()
+
+/*
+Constructs an empty string list.
+*/
 func NewQStringList() *QStringList {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStringList() *QStringList {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStringList(const QString &)
+
+/*
+Constructs an empty string list.
+*/
 func NewQStringList_1(i string) *QStringList {
 	var tmpArg0 = NewQString_5(i)
 	var convArg0 = tmpArg0.GetCthis()
@@ -91,6 +102,12 @@ func NewQStringList_1(i string) *QStringList {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QString &, Qt::CaseSensitivity) const
+
+/*
+Returns true if the list contains the string str; otherwise returns false. The search is case insensitive if cs is Qt::CaseInsensitive; the search is case sensitive by default.
+
+See also indexOf(), lastIndexOf(), and QString::contains().
+*/
 func (this *QStringList) Contains(str string, cs int) bool {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
@@ -103,6 +120,12 @@ func (this *QStringList) Contains(str string, cs int) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QString &, Qt::CaseSensitivity) const
+
+/*
+Returns true if the list contains the string str; otherwise returns false. The search is case insensitive if cs is Qt::CaseInsensitive; the search is case sensitive by default.
+
+See also indexOf(), lastIndexOf(), and QString::contains().
+*/
 func (this *QStringList) Contains__(str string) bool {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
@@ -117,6 +140,12 @@ func (this *QStringList) Contains__(str string) bool {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Returns true if the list contains the string str; otherwise returns false. The search is case insensitive if cs is Qt::CaseInsensitive; the search is case sensitive by default.
+
+See also indexOf(), lastIndexOf(), and QString::contains().
+*/
 func (this *QStringList) Contains_1(str QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
@@ -131,6 +160,12 @@ func (this *QStringList) Contains_1(str QLatin1String_ITF /*123*/, cs int) bool 
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Returns true if the list contains the string str; otherwise returns false. The search is case insensitive if cs is Qt::CaseInsensitive; the search is case sensitive by default.
+
+See also indexOf(), lastIndexOf(), and QString::contains().
+*/
 func (this *QStringList) Contains_1_(str QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
@@ -147,6 +182,10 @@ func (this *QStringList) Contains_1_(str QLatin1String_ITF /*123*/) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringList operator+(const QStringList &) const
+
+/*
+
+ */
 func (this *QStringList) Operator_add(other QStringList_ITF) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QStringList_PTR() != nil {
@@ -163,6 +202,10 @@ func (this *QStringList) Operator_add(other QStringList_ITF) *QStringList /*123*
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringList & operator<<(const QString &)
+
+/*
+
+ */
 func (this *QStringList) Operator_left_shift(str string) *QStringList {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
@@ -177,6 +220,10 @@ func (this *QStringList) Operator_left_shift(str string) *QStringList {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QStringList & operator<<(const QStringList &)
+
+/*
+
+ */
 func (this *QStringList) Operator_left_shift_1(l QStringList_ITF) *QStringList {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QStringList_PTR() != nil {
@@ -193,6 +240,14 @@ func (this *QStringList) Operator_left_shift_1(l QStringList_ITF) *QStringList {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(const QRegExp &, int) const
+
+/*
+Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also lastIndexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) IndexOf(rx QRegExp_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -207,6 +262,14 @@ func (this *QStringList) IndexOf(rx QRegExp_ITF, from int) int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(const QRegExp &, int) const
+
+/*
+Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also lastIndexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) IndexOf__(rx QRegExp_ITF) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -223,6 +286,14 @@ func (this *QStringList) IndexOf__(rx QRegExp_ITF) int {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(QRegExp &, int) const
+
+/*
+Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also lastIndexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) IndexOf_1(rx QRegExp_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -237,6 +308,14 @@ func (this *QStringList) IndexOf_1(rx QRegExp_ITF, from int) int {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(QRegExp &, int) const
+
+/*
+Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also lastIndexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) IndexOf_1_(rx QRegExp_ITF) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -253,6 +332,14 @@ func (this *QStringList) IndexOf_1_(rx QRegExp_ITF) int {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(const QRegularExpression &, int) const
+
+/*
+Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also lastIndexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) IndexOf_2(re QRegularExpression_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
@@ -267,6 +354,14 @@ func (this *QStringList) IndexOf_2(re QRegularExpression_ITF, from int) int {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(const QRegularExpression &, int) const
+
+/*
+Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also lastIndexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) IndexOf_2_(re QRegularExpression_ITF) int {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
@@ -283,6 +378,14 @@ func (this *QStringList) IndexOf_2_(re QRegularExpression_ITF) int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegExp &, int) const
+
+/*
+Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also indexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) LastIndexOf(rx QRegExp_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -297,6 +400,14 @@ func (this *QStringList) LastIndexOf(rx QRegExp_ITF, from int) int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegExp &, int) const
+
+/*
+Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also indexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) LastIndexOf__(rx QRegExp_ITF) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -313,6 +424,14 @@ func (this *QStringList) LastIndexOf__(rx QRegExp_ITF) int {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(QRegExp &, int) const
+
+/*
+Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also indexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) LastIndexOf_1(rx QRegExp_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -327,6 +446,14 @@ func (this *QStringList) LastIndexOf_1(rx QRegExp_ITF, from int) int {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(QRegExp &, int) const
+
+/*
+Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also indexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) LastIndexOf_1_(rx QRegExp_ITF) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -343,6 +470,14 @@ func (this *QStringList) LastIndexOf_1_(rx QRegExp_ITF) int {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegularExpression &, int) const
+
+/*
+Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also indexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) LastIndexOf_2(re QRegularExpression_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
@@ -357,6 +492,14 @@ func (this *QStringList) LastIndexOf_2(re QRegularExpression_ITF, from int) int 
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegularExpression &, int) const
+
+/*
+Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also indexOf(), contains(), and QRegExp::exactMatch().
+*/
 func (this *QStringList) LastIndexOf_2_(re QRegularExpression_ITF) int {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {

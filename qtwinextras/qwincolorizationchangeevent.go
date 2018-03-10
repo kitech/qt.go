@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QWinColorizationChangeEvent struct {
 	*QWinEvent
 }
@@ -67,6 +70,10 @@ func (*QWinColorizationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWinCo
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinColorizationChangeEvent(QRgb, _Bool)
+
+/*
+
+ */
 func NewQWinColorizationChangeEvent(color uint, opaque bool) *QWinColorizationChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QWinColorizationChangeEventC2Ejb", qtrt.FFI_TYPE_POINTER, color, opaque)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQWinColorizationChangeEvent(color uint, opaque bool) *QWinColorizationCh
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWinColorizationChangeEvent()
+
+/*
+
+ */
 func DeleteQWinColorizationChangeEvent(this *QWinColorizationChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QWinColorizationChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -90,16 +101,25 @@ func DeleteQWinColorizationChangeEvent(this *QWinColorizationChangeEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QRgb color() const
+
+/*
+
+ */
 func (this *QWinColorizationChangeEvent) Color() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QWinColorizationChangeEvent5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinevent.h:69
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool opaqueBlend() const
+
+/*
+
+ */
 func (this *QWinColorizationChangeEvent) OpaqueBlend() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QWinColorizationChangeEvent11opaqueBlendEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

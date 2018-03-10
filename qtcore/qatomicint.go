@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QAtomicInt struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QAtomicInt) NewFromPointer(cthis unsafe.Pointer) *QAtomicInt {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAtomicInt(int)
+
+/*
+
+ */
 func NewQAtomicInt(value int) *QAtomicInt {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QAtomicIntC2Ei", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQAtomicInt(value int) *QAtomicInt {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAtomicInt(int)
+
+/*
+
+ */
 func NewQAtomicInt__() *QAtomicInt {
 	// arg: 0, int=Int, =Invalid,
 	value := int(0)

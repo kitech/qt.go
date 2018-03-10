@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QDnsTextRecord struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QDnsTextRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsTextRecord {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsTextRecord()
+
+/*
+
+ */
 func NewQDnsTextRecord() *QDnsTextRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDnsTextRecordC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQDnsTextRecord() *QDnsTextRecord {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDnsTextRecord & operator=(QDnsTextRecord &&)
+
+/*
+
+ */
 func (this *QDnsTextRecord) Operator_equal(other unsafe.Pointer /*333*/) *QDnsTextRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDnsTextRecordaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +101,10 @@ func (this *QDnsTextRecord) Operator_equal(other unsafe.Pointer /*333*/) *QDnsTe
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDnsTextRecord & operator=(const QDnsTextRecord &)
+
+/*
+
+ */
 func (this *QDnsTextRecord) Operator_equal_1(other QDnsTextRecord_ITF) *QDnsTextRecord {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDnsTextRecord_PTR() != nil {
@@ -106,6 +121,10 @@ func (this *QDnsTextRecord) Operator_equal_1(other QDnsTextRecord_ITF) *QDnsText
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDnsTextRecord()
+
+/*
+
+ */
 func DeleteQDnsTextRecord(this *QDnsTextRecord) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDnsTextRecordD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -117,6 +136,10 @@ func DeleteQDnsTextRecord(this *QDnsTextRecord) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsTextRecord &)
+
+/*
+
+ */
 func (this *QDnsTextRecord) Swap(other QDnsTextRecord_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDnsTextRecord_PTR() != nil {
@@ -130,6 +153,10 @@ func (this *QDnsTextRecord) Swap(other QDnsTextRecord_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
+
+/*
+
+ */
 func (this *QDnsTextRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDnsTextRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,10 +170,15 @@ func (this *QDnsTextRecord) Name() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] quint32 timeToLive() const
+
+/*
+
+ */
 func (this *QDnsTextRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDnsTextRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 //  body block end

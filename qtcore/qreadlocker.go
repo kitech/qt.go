@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QReadLocker struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QReadLocker) NewFromPointer(cthis unsafe.Pointer) *QReadLocker {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QReadLocker(QReadWriteLock *)
+
+/*
+
+ */
 func NewQReadLocker(readWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) *QReadLocker {
 	var convArg0 unsafe.Pointer
 	if readWriteLock != nil && readWriteLock.QReadWriteLock_PTR() != nil {
@@ -81,6 +88,10 @@ func NewQReadLocker(readWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) *
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QReadLocker()
+
+/*
+
+ */
 func DeleteQReadLocker(this *QReadLocker) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QReadLockerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -92,6 +103,14 @@ func DeleteQReadLocker(this *QReadLocker) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void unlock()
+
+/*
+Unlocks the lock.
+
+Attempting to unlock a lock that is not locked is an error, and will result in program termination.
+
+See also lockForRead(), lockForWrite(), tryLockForRead(), and tryLockForWrite().
+*/
 func (this *QReadLocker) Unlock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QReadLocker6unlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -101,6 +120,10 @@ func (this *QReadLocker) Unlock() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void relock()
+
+/*
+
+ */
 func (this *QReadLocker) Relock() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QReadLocker6relockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +133,10 @@ func (this *QReadLocker) Relock() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QReadWriteLock * readWriteLock() const
+
+/*
+
+ */
 func (this *QReadLocker) ReadWriteLock() *QReadWriteLock /*777 QReadWriteLock **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QReadLocker13readWriteLockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

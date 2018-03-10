@@ -46,6 +46,9 @@ func (this *QPropertyAnimation) InheritUpdateState(f func(newState int, oldState
 	qtrt.SetAllInheritCallback(this, "updateState", f)
 }
 
+/*
+
+ */
 type QPropertyAnimation struct {
 	*QVariantAnimation
 }
@@ -78,6 +81,10 @@ func (*QPropertyAnimation) NewFromPointer(cthis unsafe.Pointer) *QPropertyAnimat
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +95,10 @@ func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *)
+
+/*
+Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
+*/
 func NewQPropertyAnimation(parent QObject_ITF /*777 QObject **/) *QPropertyAnimation {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +115,10 @@ func NewQPropertyAnimation(parent QObject_ITF /*777 QObject **/) *QPropertyAnima
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *)
+
+/*
+Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
+*/
 func NewQPropertyAnimation__() *QPropertyAnimation {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -118,6 +133,10 @@ func NewQPropertyAnimation__() *QPropertyAnimation {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *, const QByteArray &, QObject *)
+
+/*
+Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
+*/
 func NewQPropertyAnimation_1(target QObject_ITF /*777 QObject **/, propertyName QByteArray_ITF, parent QObject_ITF /*777 QObject **/) *QPropertyAnimation {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QObject_PTR() != nil {
@@ -142,6 +161,10 @@ func NewQPropertyAnimation_1(target QObject_ITF /*777 QObject **/, propertyName 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *, const QByteArray &, QObject *)
+
+/*
+Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
+*/
 func NewQPropertyAnimation_1_(target QObject_ITF /*777 QObject **/, propertyName QByteArray_ITF) *QPropertyAnimation {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QObject_PTR() != nil {
@@ -164,6 +187,10 @@ func NewQPropertyAnimation_1_(target QObject_ITF /*777 QObject **/, propertyName
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPropertyAnimation()
+
+/*
+
+ */
 func DeleteQPropertyAnimation(this *QPropertyAnimation) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -175,6 +202,10 @@ func DeleteQPropertyAnimation(this *QPropertyAnimation) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * targetObject() const
+
+/*
+
+ */
 func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation12targetObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -185,6 +216,10 @@ func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTargetObject(QObject *)
+
+/*
+
+ */
 func (this *QPropertyAnimation) SetTargetObject(target QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QObject_PTR() != nil {
@@ -198,6 +233,10 @@ func (this *QPropertyAnimation) SetTargetObject(target QObject_ITF /*777 QObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray propertyName() const
+
+/*
+
+ */
 func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation12propertyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -210,6 +249,10 @@ func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPropertyName(const QByteArray &)
+
+/*
+
+ */
 func (this *QPropertyAnimation) SetPropertyName(propertyName QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if propertyName != nil && propertyName.QByteArray_PTR() != nil {
@@ -223,6 +266,10 @@ func (this *QPropertyAnimation) SetPropertyName(propertyName QByteArray_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QPropertyAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -237,6 +284,14 @@ func (this *QPropertyAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentValue(const QVariant &)
+
+/*
+Reimplemented from QVariantAnimation::updateCurrentValue().
+
+This virtual function is called by QVariantAnimation whenever the current value changes. value is the new, updated value. It updates the current value of the property on the target object.
+
+See also currentValue and currentTime.
+*/
 func (this *QPropertyAnimation) UpdateCurrentValue(value QVariant_ITF) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -250,6 +305,12 @@ func (this *QPropertyAnimation) UpdateCurrentValue(value QVariant_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
+
+/*
+Reimplemented from QAbstractAnimation::updateState().
+
+If the startValue is not defined when the state of the animation changes from Stopped to Running, the current property value is used as the initial value for the animation.
+*/
 func (this *QPropertyAnimation) UpdateState(newState int, oldState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation11updateStateEN18QAbstractAnimation5StateES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	qtrt.ErrPrint(err, rv)

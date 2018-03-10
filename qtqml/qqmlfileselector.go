@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlFileSelector struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QQmlFileSelector) NewFromPointer(cthis unsafe.Pointer) *QQmlFileSelector 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQmlFileSelector) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlFileSelector10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QQmlFileSelector) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlFileSelector(QQmlEngine *, QObject *)
+
+/*
+Creates a new QQmlFileSelector with parent object parent, which includes its own QFileSelector. engine is the QQmlEngine you wish to apply file selectors to. It will also take ownership of the QQmlFileSelector.
+*/
 func NewQQmlFileSelector(engine QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlFileSelector {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QQmlEngine_PTR() != nil {
@@ -95,6 +106,10 @@ func NewQQmlFileSelector(engine QQmlEngine_ITF /*777 QQmlEngine **/, parent qtco
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlFileSelector(QQmlEngine *, QObject *)
+
+/*
+Creates a new QQmlFileSelector with parent object parent, which includes its own QFileSelector. engine is the QQmlEngine you wish to apply file selectors to. It will also take ownership of the QQmlFileSelector.
+*/
 func NewQQmlFileSelector__(engine QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFileSelector {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QQmlEngine_PTR() != nil {
@@ -113,6 +128,10 @@ func NewQQmlFileSelector__(engine QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFile
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlFileSelector()
+
+/*
+
+ */
 func DeleteQQmlFileSelector(this *QQmlFileSelector) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlFileSelectorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -124,6 +143,14 @@ func DeleteQQmlFileSelector(this *QQmlFileSelector) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QFileSelector * selector() const
+
+/*
+Returns the QFileSelector instance used by the QQmlFileSelector.
+
+This function was introduced in  Qt 5.7.
+
+See also setSelector().
+*/
 func (this *QQmlFileSelector) Selector() *qtcore.QFileSelector /*777 QFileSelector **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlFileSelector8selectorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -134,6 +161,12 @@ func (this *QQmlFileSelector) Selector() *qtcore.QFileSelector /*777 QFileSelect
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSelector(QFileSelector *)
+
+/*
+Sets the QFileSelector instance for use by the QQmlFileSelector to selector. QQmlFileSelector does not take ownership of the new QFileSelector. To reset QQmlFileSelector to use its internal QFileSelector instance, call setSelector(0).
+
+See also selector().
+*/
 func (this *QQmlFileSelector) SetSelector(selector qtcore.QFileSelector_ITF /*777 QFileSelector **/) {
 	var convArg0 unsafe.Pointer
 	if selector != nil && selector.QFileSelector_PTR() != nil {
@@ -147,6 +180,10 @@ func (this *QQmlFileSelector) SetSelector(selector qtcore.QFileSelector_ITF /*77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExtraSelectors(QStringList &)
+
+/*
+Adds extra selectors contained in strings to the current QFileSelector being used. Use this when extra selectors are all you need to avoid having to create your own QFileSelector instance.
+*/
 func (this *QQmlFileSelector) SetExtraSelectors(strings qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
@@ -160,6 +197,10 @@ func (this *QQmlFileSelector) SetExtraSelectors(strings qtcore.QStringList_ITF) 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setExtraSelectors(const QStringList &)
+
+/*
+Adds extra selectors contained in strings to the current QFileSelector being used. Use this when extra selectors are all you need to avoid having to create your own QFileSelector instance.
+*/
 func (this *QQmlFileSelector) SetExtraSelectors_1(strings qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
@@ -173,6 +214,10 @@ func (this *QQmlFileSelector) SetExtraSelectors_1(strings qtcore.QStringList_ITF
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QQmlFileSelector * get(QQmlEngine *)
+
+/*
+Gets the QQmlFileSelector currently active on the target engine.
+*/
 func (this *QQmlFileSelector) Get(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFileSelector /*777 QQmlFileSelector **/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {

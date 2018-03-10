@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleEditableTextInterface struct {
 	*qtrt.CObject
 }
@@ -68,6 +71,10 @@ func (*QAccessibleEditableTextInterface) NewFromPointer(cthis unsafe.Pointer) *Q
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleEditableTextInterface()
+
+/*
+
+ */
 func DeleteQAccessibleEditableTextInterface(this *QAccessibleEditableTextInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -79,6 +86,10 @@ func DeleteQAccessibleEditableTextInterface(this *QAccessibleEditableTextInterfa
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void deleteText(int, int)
+
+/*
+
+ */
 func (this *QAccessibleEditableTextInterface) DeleteText(startOffset int, endOffset int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface10deleteTextEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startOffset, endOffset)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +99,10 @@ func (this *QAccessibleEditableTextInterface) DeleteText(startOffset int, endOff
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void insertText(int, const QString &)
+
+/*
+
+ */
 func (this *QAccessibleEditableTextInterface) InsertText(offset int, text string) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
@@ -99,6 +114,10 @@ func (this *QAccessibleEditableTextInterface) InsertText(offset int, text string
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void replaceText(int, int, const QString &)
+
+/*
+
+ */
 func (this *QAccessibleEditableTextInterface) ReplaceText(startOffset int, endOffset int, text string) {
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()

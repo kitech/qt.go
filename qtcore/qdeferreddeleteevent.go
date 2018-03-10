@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QDeferredDeleteEvent struct {
 	*QEvent
 }
@@ -63,6 +66,10 @@ func (*QDeferredDeleteEvent) NewFromPointer(cthis unsafe.Pointer) *QDeferredDele
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDeferredDeleteEvent()
+
+/*
+
+ */
 func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDeferredDeleteEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDeferredDeleteEvent()
+
+/*
+
+ */
 func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDeferredDeleteEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -86,6 +97,10 @@ func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int loopLevel() const
+
+/*
+
+ */
 func (this *QDeferredDeleteEvent) LoopLevel() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

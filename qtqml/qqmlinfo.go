@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlInfo struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QQmlInfo) NewFromPointer(cthis unsafe.Pointer) *QQmlInfo {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QQmlInfo()
+
+/*
+
+ */
 func DeleteQQmlInfo(this *QQmlInfo) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfoD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -78,6 +85,10 @@ func DeleteQQmlInfo(this *QQmlInfo) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(QChar)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift(t qtcore.QChar_ITF /*123*/) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QChar_PTR() != nil {
@@ -94,6 +105,10 @@ func (this *QQmlInfo) Operator_left_shift(t qtcore.QChar_ITF /*123*/) *QQmlInfo 
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(_Bool)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_1(t bool) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -106,6 +121,10 @@ func (this *QQmlInfo) Operator_left_shift_1(t bool) *QQmlInfo {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(char)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_2(t byte) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -118,6 +137,10 @@ func (this *QQmlInfo) Operator_left_shift_2(t byte) *QQmlInfo {
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(short)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_3(t int16) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +153,10 @@ func (this *QQmlInfo) Operator_left_shift_3(t int16) *QQmlInfo {
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(unsigned short)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_4(t uint16) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -142,6 +169,10 @@ func (this *QQmlInfo) Operator_left_shift_4(t uint16) *QQmlInfo {
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(int)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_5(t int) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +185,10 @@ func (this *QQmlInfo) Operator_left_shift_5(t int) *QQmlInfo {
 // index:6
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(unsigned int)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_6(t uint) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +201,10 @@ func (this *QQmlInfo) Operator_left_shift_6(t uint) *QQmlInfo {
 // index:7
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(long)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_7(t int) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -178,6 +217,10 @@ func (this *QQmlInfo) Operator_left_shift_7(t int) *QQmlInfo {
 // index:8
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(unsigned long)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_8(t uint) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -190,6 +233,10 @@ func (this *QQmlInfo) Operator_left_shift_8(t uint) *QQmlInfo {
 // index:9
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(qint64)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_9(t int64) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -202,6 +249,10 @@ func (this *QQmlInfo) Operator_left_shift_9(t int64) *QQmlInfo {
 // index:10
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(quint64)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_10(t uint64) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -214,6 +265,10 @@ func (this *QQmlInfo) Operator_left_shift_10(t uint64) *QQmlInfo {
 // index:11
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(float)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_11(t float32) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -226,6 +281,10 @@ func (this *QQmlInfo) Operator_left_shift_11(t float32) *QQmlInfo {
 // index:12
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(double)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_12(t float64) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -238,6 +297,10 @@ func (this *QQmlInfo) Operator_left_shift_12(t float64) *QQmlInfo {
 // index:13
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(const char *)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_13(t string) *QQmlInfo {
 	var convArg0 = qtrt.CString(t)
 	defer qtrt.FreeMem(convArg0)
@@ -252,6 +315,10 @@ func (this *QQmlInfo) Operator_left_shift_13(t string) *QQmlInfo {
 // index:14
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(const QString &)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_14(t string) *QQmlInfo {
 	var tmpArg0 = qtcore.NewQString_5(t)
 	var convArg0 = tmpArg0.GetCthis()
@@ -266,6 +333,10 @@ func (this *QQmlInfo) Operator_left_shift_14(t string) *QQmlInfo {
 // index:15
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(const QStringRef &)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_15(t qtcore.QStringRef_ITF) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QStringRef_PTR() != nil {
@@ -282,6 +353,10 @@ func (this *QQmlInfo) Operator_left_shift_15(t qtcore.QStringRef_ITF) *QQmlInfo 
 // index:16
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(const QLatin1String &)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_16(t qtcore.QLatin1String_ITF) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QLatin1String_PTR() != nil {
@@ -298,6 +373,10 @@ func (this *QQmlInfo) Operator_left_shift_16(t qtcore.QLatin1String_ITF) *QQmlIn
 // index:17
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(const QByteArray &)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_17(t qtcore.QByteArray_ITF) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QByteArray_PTR() != nil {
@@ -314,6 +393,10 @@ func (this *QQmlInfo) Operator_left_shift_17(t qtcore.QByteArray_ITF) *QQmlInfo 
 // index:18
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(const void *)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_18(t unsafe.Pointer /*666*/) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEPKv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -326,6 +409,10 @@ func (this *QQmlInfo) Operator_left_shift_18(t unsafe.Pointer /*666*/) *QQmlInfo
 // index:19
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(QTextStreamManipulator)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_19(m qtcore.QTextStreamManipulator_ITF /*123*/) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if m != nil && m.QTextStreamManipulator_PTR() != nil {
@@ -342,6 +429,10 @@ func (this *QQmlInfo) Operator_left_shift_19(m qtcore.QTextStreamManipulator_ITF
 // index:20
 // Public inline Visibility=Default Availability=Available
 // [16] QQmlInfo & operator<<(const QUrl &)
+
+/*
+
+ */
 func (this *QQmlInfo) Operator_left_shift_20(t qtcore.QUrl_ITF) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QUrl_PTR() != nil {

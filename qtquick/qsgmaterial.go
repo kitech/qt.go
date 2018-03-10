@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGMaterial struct {
 	*qtrt.CObject
 }
@@ -69,6 +72,10 @@ func (*QSGMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGMaterial {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGMaterial()
+
+/*
+
+ */
 func NewQSGMaterial() *QSGMaterial {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGMaterialC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -81,6 +88,10 @@ func NewQSGMaterial() *QSGMaterial {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGMaterial()
+
+/*
+
+ */
 func DeleteQSGMaterial(this *QSGMaterial) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGMaterialD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -92,6 +103,10 @@ func DeleteQSGMaterial(this *QSGMaterial) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSGMaterialType * type() const
+
+/*
+This function is called by the scene graph to return a unique instance per subclass.
+*/
 func (this *QSGMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +117,12 @@ func (this *QSGMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSGMaterialShader * createShader() const
+
+/*
+This function returns a new instance of a the QSGMaterialShader implementatation used to render geometry for a specific implementation of QSGMaterial.
+
+The function will be called only once for each material type that exists in the scene graph and will be cached internally.
+*/
 func (this *QSGMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +133,14 @@ func (this *QSGMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShad
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int compare(const QSGMaterial *) const
+
+/*
+Compares this material to other and returns 0 if they are equal; -1 if this material should sort before other and 1 if other should sort before.
+
+The scene graph can reorder geometry nodes to minimize state changes. The compare function is called during the sorting process so that the materials can be sorted to minimize state changes in each call to QSGMaterialShader::updateState().
+
+The this pointer and other is guaranteed to have the same type().
+*/
 func (this *QSGMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSGMaterial_PTR() != nil {
@@ -126,6 +155,10 @@ func (this *QSGMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial *
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QSGMaterial::Flags flags() const
+
+/*
+Returns the material's flags.
+*/
 func (this *QSGMaterial) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,6 +169,10 @@ func (this *QSGMaterial) Flags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(QSGMaterial::Flags, _Bool)
+
+/*
+Sets the flags flags on this material if on is true; otherwise clears the attribute.
+*/
 func (this *QSGMaterial) SetFlag(flags int, on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGMaterial7setFlagE6QFlagsINS_4FlagEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, on)
 	qtrt.ErrPrint(err, rv)
@@ -145,6 +182,10 @@ func (this *QSGMaterial) SetFlag(flags int, on bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(QSGMaterial::Flags, _Bool)
+
+/*
+Sets the flags flags on this material if on is true; otherwise clears the attribute.
+*/
 func (this *QSGMaterial) SetFlag__(flags int) {
 	// arg: 1, bool=Bool, =Invalid,
 	on := true
@@ -152,12 +193,25 @@ func (this *QSGMaterial) SetFlag__(flags int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QSGMaterial__Flag = int
 
+//
 const QSGMaterial__Blending QSGMaterial__Flag = 1
+
+//
 const QSGMaterial__RequiresDeterminant QSGMaterial__Flag = 2
+
+//
 const QSGMaterial__RequiresFullMatrixExceptTranslate QSGMaterial__Flag = 6
+
+//
 const QSGMaterial__RequiresFullMatrix QSGMaterial__Flag = 14
+
+//
 const QSGMaterial__CustomCompileStep QSGMaterial__Flag = 16
 
 //  body block end

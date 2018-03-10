@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleInterface struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QAccessibleInterface) NewFromPointer(cthis unsafe.Pointer) *QAccessibleIn
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleInterface()
+
+/*
+
+ */
 func DeleteQAccessibleInterface(this *QAccessibleInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAccessibleInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -77,6 +84,10 @@ func DeleteQAccessibleInterface(this *QAccessibleInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +98,10 @@ func (this *QAccessibleInterface) IsValid() bool {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QObject * object() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +112,10 @@ func (this *QAccessibleInterface) Object() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QWindow * window() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) Window() *QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -107,6 +126,10 @@ func (this *QAccessibleInterface) Window() *QWindow /*777 QWindow **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * focusChild() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) FocusChild() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface10focusChildEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -117,6 +140,10 @@ func (this *QAccessibleInterface) FocusChild() *QAccessibleInterface /*777 QAcce
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * childAt(int, int) const
+
+/*
+
+ */
 func (this *QAccessibleInterface) ChildAt(x int, y int) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface7childAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +154,10 @@ func (this *QAccessibleInterface) ChildAt(x int, y int) *QAccessibleInterface /*
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * parent() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) Parent() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -137,6 +168,10 @@ func (this *QAccessibleInterface) Parent() *QAccessibleInterface /*777 QAccessib
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * child(int) const
+
+/*
+
+ */
 func (this *QAccessibleInterface) Child(index int) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface5childEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -147,6 +182,10 @@ func (this *QAccessibleInterface) Child(index int) *QAccessibleInterface /*777 Q
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int childCount() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) ChildCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface10childCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,6 +196,10 @@ func (this *QAccessibleInterface) ChildCount() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int indexOfChild(const QAccessibleInterface *) const
+
+/*
+
+ */
 func (this *QAccessibleInterface) IndexOfChild(arg0 QAccessibleInterface_ITF /*777 const QAccessibleInterface **/) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QAccessibleInterface_PTR() != nil {
@@ -171,6 +214,10 @@ func (this *QAccessibleInterface) IndexOfChild(arg0 QAccessibleInterface_ITF /*7
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QString text(QAccessible::Text) const
+
+/*
+
+ */
 func (this *QAccessibleInterface) Text(t int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface4textEN11QAccessible4TextE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
@@ -184,6 +231,10 @@ func (this *QAccessibleInterface) Text(t int) string {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setText(QAccessible::Text, const QString &)
+
+/*
+
+ */
 func (this *QAccessibleInterface) SetText(t int, text string) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
@@ -195,6 +246,10 @@ func (this *QAccessibleInterface) SetText(t int, text string) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QRect rect() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) Rect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,6 +262,10 @@ func (this *QAccessibleInterface) Rect() *qtcore.QRect /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QAccessible::Role role() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) Role() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface4roleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -217,6 +276,10 @@ func (this *QAccessibleInterface) Role() int {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAccessible::State state() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -227,6 +290,10 @@ func (this *QAccessibleInterface) State() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QColor foregroundColor() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) ForegroundColor() *QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface15foregroundColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -239,6 +306,10 @@ func (this *QAccessibleInterface) ForegroundColor() *QColor /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QColor backgroundColor() const
+
+/*
+
+ */
 func (this *QAccessibleInterface) BackgroundColor() *QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAccessibleInterface15backgroundColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -251,6 +322,10 @@ func (this *QAccessibleInterface) BackgroundColor() *QColor /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAccessibleTextInterface * textInterface()
+
+/*
+
+ */
 func (this *QAccessibleInterface) TextInterface() *QAccessibleTextInterface /*777 QAccessibleTextInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAccessibleInterface13textInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -261,6 +336,10 @@ func (this *QAccessibleInterface) TextInterface() *QAccessibleTextInterface /*77
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAccessibleEditableTextInterface * editableTextInterface()
+
+/*
+
+ */
 func (this *QAccessibleInterface) EditableTextInterface() *QAccessibleEditableTextInterface /*777 QAccessibleEditableTextInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAccessibleInterface21editableTextInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -271,6 +350,10 @@ func (this *QAccessibleInterface) EditableTextInterface() *QAccessibleEditableTe
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAccessibleValueInterface * valueInterface()
+
+/*
+
+ */
 func (this *QAccessibleInterface) ValueInterface() *QAccessibleValueInterface /*777 QAccessibleValueInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAccessibleInterface14valueInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -281,6 +364,10 @@ func (this *QAccessibleInterface) ValueInterface() *QAccessibleValueInterface /*
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAccessibleImageInterface * imageInterface()
+
+/*
+
+ */
 func (this *QAccessibleInterface) ImageInterface() *QAccessibleImageInterface /*777 QAccessibleImageInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAccessibleInterface14imageInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -291,6 +378,10 @@ func (this *QAccessibleInterface) ImageInterface() *QAccessibleImageInterface /*
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAccessibleTableInterface * tableInterface()
+
+/*
+
+ */
 func (this *QAccessibleInterface) TableInterface() *QAccessibleTableInterface /*777 QAccessibleTableInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAccessibleInterface14tableInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -301,6 +392,10 @@ func (this *QAccessibleInterface) TableInterface() *QAccessibleTableInterface /*
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAccessibleTableCellInterface * tableCellInterface()
+
+/*
+
+ */
 func (this *QAccessibleInterface) TableCellInterface() *QAccessibleTableCellInterface /*777 QAccessibleTableCellInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAccessibleInterface18tableCellInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -311,6 +406,10 @@ func (this *QAccessibleInterface) TableCellInterface() *QAccessibleTableCellInte
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void virtual_hook(int, void *)
+
+/*
+
+ */
 func (this *QAccessibleInterface) Virtual_hook(id int, data unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAccessibleInterface12virtual_hookEiPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, data)
 	qtrt.ErrPrint(err, rv)
@@ -320,6 +419,10 @@ func (this *QAccessibleInterface) Virtual_hook(id int, data unsafe.Pointer /*666
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [8] void * interface_cast(QAccessible::InterfaceType)
+
+/*
+
+ */
 func (this *QAccessibleInterface) Interface_cast(arg0 int) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAccessibleInterface14interface_castEN11QAccessible13InterfaceTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)

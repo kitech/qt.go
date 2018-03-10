@@ -58,6 +58,9 @@ func (this *QCommandLinkButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
+/*
+
+ */
 type QCommandLinkButton struct {
 	*QPushButton
 }
@@ -90,6 +93,10 @@ func (*QCommandLinkButton) NewFromPointer(cthis unsafe.Pointer) *QCommandLinkBut
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QCommandLinkButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +107,10 @@ func (this *QCommandLinkButton) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLinkButton(QWidget *)
+
+/*
+Constructs a command link with no text and a parent.
+*/
 func NewQCommandLinkButton(parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -116,6 +127,10 @@ func NewQCommandLinkButton(parent QWidget_ITF /*777 QWidget **/) *QCommandLinkBu
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLinkButton(QWidget *)
+
+/*
+Constructs a command link with no text and a parent.
+*/
 func NewQCommandLinkButton__() *QCommandLinkButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -130,6 +145,10 @@ func NewQCommandLinkButton__() *QCommandLinkButton {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLinkButton(const QString &, QWidget *)
+
+/*
+Constructs a command link with no text and a parent.
+*/
 func NewQCommandLinkButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -148,6 +167,10 @@ func NewQCommandLinkButton_1(text string, parent QWidget_ITF /*777 QWidget **/) 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLinkButton(const QString &, QWidget *)
+
+/*
+Constructs a command link with no text and a parent.
+*/
 func NewQCommandLinkButton_1_(text string) *QCommandLinkButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -164,6 +187,10 @@ func NewQCommandLinkButton_1_(text string) *QCommandLinkButton {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLinkButton(const QString &, const QString &, QWidget *)
+
+/*
+Constructs a command link with no text and a parent.
+*/
 func NewQCommandLinkButton_2(text string, description string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -184,6 +211,10 @@ func NewQCommandLinkButton_2(text string, description string, parent QWidget_ITF
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCommandLinkButton(const QString &, const QString &, QWidget *)
+
+/*
+Constructs a command link with no text and a parent.
+*/
 func NewQCommandLinkButton_2_(text string, description string) *QCommandLinkButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -202,6 +233,10 @@ func NewQCommandLinkButton_2_(text string, description string) *QCommandLinkButt
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCommandLinkButton()
+
+/*
+
+ */
 func DeleteQCommandLinkButton(this *QCommandLinkButton) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButtonD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -213,6 +248,10 @@ func DeleteQCommandLinkButton(this *QCommandLinkButton) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString description() const
+
+/*
+
+ */
 func (this *QCommandLinkButton) Description() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -226,6 +265,10 @@ func (this *QCommandLinkButton) Description() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDescription(const QString &)
+
+/*
+
+ */
 func (this *QCommandLinkButton) SetDescription(description string) {
 	var tmpArg0 = qtcore.NewQString_5(description)
 	var convArg0 = tmpArg0.GetCthis()
@@ -237,6 +280,10 @@ func (this *QCommandLinkButton) SetDescription(description string) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QCommandLinkButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -249,6 +296,10 @@ func (this *QCommandLinkButton) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int heightForWidth(int) const
+
+/*
+Reimplemented from QWidget::heightForWidth().
+*/
 func (this *QCommandLinkButton) HeightForWidth(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -259,6 +310,10 @@ func (this *QCommandLinkButton) HeightForWidth(arg0 int) int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QCommandLinkButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -271,6 +326,10 @@ func (this *QCommandLinkButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QCommandLinkButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -285,6 +344,10 @@ func (this *QCommandLinkButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QCommandLinkButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {

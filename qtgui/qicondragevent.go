@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QIconDragEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QIconDragEvent) NewFromPointer(cthis unsafe.Pointer) *QIconDragEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIconDragEvent()
+
+/*
+
+ */
 func NewQIconDragEvent() *QIconDragEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QIconDragEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQIconDragEvent() *QIconDragEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIconDragEvent()
+
+/*
+
+ */
 func DeleteQIconDragEvent(this *QIconDragEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QIconDragEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)

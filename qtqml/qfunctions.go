@@ -30,6 +30,10 @@ func init() {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QQmlEngine * qmlEngine(const QObject *)
+
+/*
+
+ */
 func QmlEngine(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QQmlEngine /*777 QQmlEngine **/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -44,6 +48,10 @@ func QmlEngine(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QQmlEngine /*77
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlDebug(const QObject *, const QQmlError &)
+
+/*
+
+ */
 func QmlDebug(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_ITF) *QQmlInfo /*123*/ {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QObject_PTR() != nil {
@@ -64,6 +72,10 @@ func QmlDebug(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_ITF
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlDebug(const QObject *)
+
+/*
+
+ */
 func QmlDebug_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QObject_PTR() != nil {
@@ -80,6 +92,10 @@ func QmlDebug_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlInfo(const QObject *, const QQmlError &)
+
+/*
+
+ */
 func QmlInfo(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_ITF) *QQmlInfo /*123*/ {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QObject_PTR() != nil {
@@ -100,6 +116,10 @@ func QmlInfo(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_ITF)
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlInfo(const QObject *)
+
+/*
+
+ */
 func QmlInfo_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QObject_PTR() != nil {
@@ -116,6 +136,10 @@ func QmlInfo_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ 
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QObject * qmlAttachedPropertiesObjectById(int, const QObject *, _Bool)
+
+/*
+
+ */
 func QmlAttachedPropertiesObjectById(arg0 int, arg1 qtcore.QObject_ITF /*777 const QObject **/, create bool) *qtcore.QObject /*777 QObject **/ {
 	var convArg1 unsafe.Pointer
 	if arg1 != nil && arg1.QObject_PTR() != nil {
@@ -130,6 +154,10 @@ func QmlAttachedPropertiesObjectById(arg0 int, arg1 qtcore.QObject_ITF /*777 con
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QObject * qmlAttachedPropertiesObject(int *, const QObject *, const struct QMetaObject *, _Bool)
+
+/*
+
+ */
 func QmlAttachedPropertiesObject(arg0 unsafe.Pointer /*666*/, arg1 qtcore.QObject_ITF /*777 const QObject **/, arg2 qtcore.QMetaObject_ITF /*777 const QMetaObject **/, create bool) *qtcore.QObject /*777 QObject **/ {
 	var convArg1 unsafe.Pointer
 	if arg1 != nil && arg1.QObject_PTR() != nil {
@@ -148,6 +176,10 @@ func QmlAttachedPropertiesObject(arg0 unsafe.Pointer /*666*/, arg1 qtcore.QObjec
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qmlExecuteDeferred(QObject *)
+
+/*
+
+ */
 func QmlExecuteDeferred(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -161,6 +193,10 @@ func QmlExecuteDeferred(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlWarning(const QObject *, const QQmlError &)
+
+/*
+
+ */
 func QmlWarning(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_ITF) *QQmlInfo /*123*/ {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QObject_PTR() != nil {
@@ -181,6 +217,10 @@ func QmlWarning(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_I
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [16] QQmlInfo qmlWarning(const QObject *)
+
+/*
+
+ */
 func QmlWarning_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QObject_PTR() != nil {
@@ -197,6 +237,10 @@ func QmlWarning_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QQmlContext * qmlContext(const QObject *)
+
+/*
+
+ */
 func QmlContext(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QQmlContext /*777 QQmlContext **/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -211,6 +255,10 @@ func QmlContext(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QQmlContext /*
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qmlregister(enum QQmlPrivate::RegistrationType, void *)
+
+/*
+
+ */
 func Qmlregister(arg0 int, arg1 unsafe.Pointer /*666*/) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlPrivate11qmlregisterENS_16RegistrationTypeEPv", qtrt.FFI_TYPE_POINTER, arg0, arg1)
 	qtrt.ErrPrint(err, rv)
@@ -221,6 +269,10 @@ func Qmlregister(arg0 int, arg1 unsafe.Pointer /*666*/) int {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QJSEngine * qjsEngine(const QObject *)
+
+/*
+
+ */
 func QjsEngine(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QJSEngine /*777 QJSEngine **/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -235,6 +287,10 @@ func QjsEngine(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QJSEngine /*777
 // index:42
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QQmlProperty &)
+
+/*
+
+ */
 func QHash_42(key QQmlProperty_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QQmlProperty_PTR() != nil {
@@ -243,12 +299,17 @@ func QHash_42(key QQmlProperty_ITF) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK12QQmlProperty", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 // /usr/include/qt/QtQml/qqml.h:280
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qmlRegisterUncreatableMetaObject(const struct QMetaObject &, const char *, int, int, const char *, const QString &)
+
+/*
+
+ */
 func QmlRegisterUncreatableMetaObject(staticMetaObject qtcore.QMetaObject_ITF, uri string, versionMajor int, versionMinor int, qmlName string, reason string) int {
 	var convArg0 unsafe.Pointer
 	if staticMetaObject != nil && staticMetaObject.QMetaObject_PTR() != nil {
@@ -269,6 +330,10 @@ func QmlRegisterUncreatableMetaObject(staticMetaObject qtcore.QMetaObject_ITF, u
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qmlRegisterTypeNotAvailable(const char *, int, int, const char *, const QString &)
+
+/*
+
+ */
 func QmlRegisterTypeNotAvailable(uri string, versionMajor int, versionMinor int, qmlName string, message string) int {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
@@ -285,6 +350,10 @@ func QmlRegisterTypeNotAvailable(uri string, versionMajor int, versionMinor int,
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qmlClearTypeRegistrations()
+
+/*
+
+ */
 func QmlClearTypeRegistrations() {
 	rv, err := qtrt.InvokeQtFunc6("_Z25qmlClearTypeRegistrationsv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -294,6 +363,10 @@ func QmlClearTypeRegistrations() {
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qmlRegisterSingletonType(const QUrl &, const char *, int, int, const char *)
+
+/*
+
+ */
 func QmlRegisterSingletonType(url qtcore.QUrl_ITF, uri string, versionMajor int, versionMinor int, qmlName string) int {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -312,6 +385,10 @@ func QmlRegisterSingletonType(url qtcore.QUrl_ITF, uri string, versionMajor int,
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qmlRegisterSingletonType(const char *, int, int, const char *, QJSValue (*)(QQmlEngine *, QJSEngine *))
+
+/*
+
+ */
 func QmlRegisterSingletonType_1(uri string, versionMajor int, versionMinor int, typeName string, callback unsafe.Pointer /*666*/) int {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
@@ -326,6 +403,10 @@ func QmlRegisterSingletonType_1(uri string, versionMajor int, versionMinor int, 
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qmlRegisterBaseTypes(const char *, int, int)
+
+/*
+
+ */
 func QmlRegisterBaseTypes(uri string, versionMajor int, versionMinor int) {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
@@ -337,6 +418,10 @@ func QmlRegisterBaseTypes(uri string, versionMajor int, versionMinor int) {
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qjsvalue_cast_helper(const QJSValue &, int, void *)
+
+/*
+
+ */
 func Qjsvalue_cast_helper(value QJSValue_ITF, type_ int, ptr unsafe.Pointer /*666*/) bool {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QJSValue_PTR() != nil {
@@ -351,6 +436,10 @@ func Qjsvalue_cast_helper(value QJSValue_ITF, type_ int, ptr unsafe.Pointer /*66
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qmlRegisterModule(const char *, int, int)
+
+/*
+
+ */
 func QmlRegisterModule(uri string, versionMajor int, versionMinor int) {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
@@ -362,6 +451,10 @@ func QmlRegisterModule(uri string, versionMajor int, versionMinor int) {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qmlProtectModule(const char *, int)
+
+/*
+
+ */
 func QmlProtectModule(uri string, majVersion int) bool {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
@@ -374,6 +467,10 @@ func QmlProtectModule(uri string, majVersion int) bool {
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qmlRegisterType(const QUrl &, const char *, int, int, const char *)
+
+/*
+
+ */
 func QmlRegisterType(url qtcore.QUrl_ITF, uri string, versionMajor int, versionMinor int, qmlName string) int {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {

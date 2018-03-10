@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextListFormat struct {
 	*QTextFormat
 }
@@ -64,6 +67,10 @@ func (*QTextListFormat) NewFromPointer(cthis unsafe.Pointer) *QTextListFormat {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextListFormat()
+
+/*
+
+ */
 func NewQTextListFormat() *QTextListFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQTextListFormat() *QTextListFormat {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextListFormat(const QTextFormat &)
+
+/*
+
+ */
 func NewQTextListFormat_1(fmt_ QTextFormat_ITF) *QTextListFormat {
 	var convArg0 unsafe.Pointer
 	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {
@@ -92,6 +103,10 @@ func NewQTextListFormat_1(fmt_ QTextFormat_ITF) *QTextListFormat {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if the format is valid (i.e. is not InvalidFormat); otherwise returns false.
+*/
 func (this *QTextListFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextListFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +117,10 @@ func (this *QTextListFormat) IsValid() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setStyle(enum QTextListFormat::Style)
+
+/*
+
+ */
 func (this *QTextListFormat) SetStyle(style int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormat8setStyleENS_5StyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +130,10 @@ func (this *QTextListFormat) SetStyle(style int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTextListFormat::Style style() const
+
+/*
+
+ */
 func (this *QTextListFormat) Style() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextListFormat5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +144,10 @@ func (this *QTextListFormat) Style() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setIndent(int)
+
+/*
+
+ */
 func (this *QTextListFormat) SetIndent(indent int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormat9setIndentEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), indent)
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +157,10 @@ func (this *QTextListFormat) SetIndent(indent int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int indent() const
+
+/*
+
+ */
 func (this *QTextListFormat) Indent() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextListFormat6indentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +171,10 @@ func (this *QTextListFormat) Indent() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setNumberPrefix(const QString &)
+
+/*
+
+ */
 func (this *QTextListFormat) SetNumberPrefix(numberPrefix string) {
 	var tmpArg0 = qtcore.NewQString_5(numberPrefix)
 	var convArg0 = tmpArg0.GetCthis()
@@ -151,6 +186,10 @@ func (this *QTextListFormat) SetNumberPrefix(numberPrefix string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString numberPrefix() const
+
+/*
+
+ */
 func (this *QTextListFormat) NumberPrefix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextListFormat12numberPrefixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,6 +203,10 @@ func (this *QTextListFormat) NumberPrefix() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setNumberSuffix(const QString &)
+
+/*
+
+ */
 func (this *QTextListFormat) SetNumberSuffix(numberSuffix string) {
 	var tmpArg0 = qtcore.NewQString_5(numberSuffix)
 	var convArg0 = tmpArg0.GetCthis()
@@ -175,6 +218,10 @@ func (this *QTextListFormat) SetNumberSuffix(numberSuffix string) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString numberSuffix() const
+
+/*
+
+ */
 func (this *QTextListFormat) NumberSuffix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextListFormat12numberSuffixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,16 +237,37 @@ func DeleteQTextListFormat(this *QTextListFormat) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QTextListFormat__Style = int
 
+//
 const QTextListFormat__ListDisc QTextListFormat__Style = -1
+
+//
 const QTextListFormat__ListCircle QTextListFormat__Style = -2
+
+//
 const QTextListFormat__ListSquare QTextListFormat__Style = -3
+
+//
 const QTextListFormat__ListDecimal QTextListFormat__Style = -4
+
+//
 const QTextListFormat__ListLowerAlpha QTextListFormat__Style = -5
+
+//
 const QTextListFormat__ListUpperAlpha QTextListFormat__Style = -6
+
+//
 const QTextListFormat__ListLowerRoman QTextListFormat__Style = -7
+
+//
 const QTextListFormat__ListUpperRoman QTextListFormat__Style = -8
+
+//
 const QTextListFormat__ListStyleUndefined QTextListFormat__Style = 0
 
 //  body block end

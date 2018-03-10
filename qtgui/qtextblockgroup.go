@@ -47,6 +47,9 @@ func (this *QTextBlockGroup) InheritBlockFormatChanged(f func(block *QTextBlock)
 	qtrt.SetAllInheritCallback(this, "blockFormatChanged", f)
 }
 
+/*
+
+ */
 type QTextBlockGroup struct {
 	*QTextObject
 }
@@ -79,6 +82,10 @@ func (*QTextBlockGroup) NewFromPointer(cthis unsafe.Pointer) *QTextBlockGroup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QTextBlockGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextBlockGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +96,10 @@ func (this *QTextBlockGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextBlockGroup(QTextDocument *)
+
+/*
+
+ */
 func NewQTextBlockGroup(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextBlockGroup {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {
@@ -105,6 +116,10 @@ func NewQTextBlockGroup(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextBlo
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ~QTextBlockGroup()
+
+/*
+
+ */
 func DeleteQTextBlockGroup(this *QTextBlockGroup) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextBlockGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -116,6 +131,10 @@ func DeleteQTextBlockGroup(this *QTextBlockGroup) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void blockInserted(const QTextBlock &)
+
+/*
+
+ */
 func (this *QTextBlockGroup) BlockInserted(block QTextBlock_ITF) {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {
@@ -129,6 +148,10 @@ func (this *QTextBlockGroup) BlockInserted(block QTextBlock_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void blockRemoved(const QTextBlock &)
+
+/*
+
+ */
 func (this *QTextBlockGroup) BlockRemoved(block QTextBlock_ITF) {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {
@@ -142,6 +165,10 @@ func (this *QTextBlockGroup) BlockRemoved(block QTextBlock_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void blockFormatChanged(const QTextBlock &)
+
+/*
+
+ */
 func (this *QTextBlockGroup) BlockFormatChanged(block QTextBlock_ITF) {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {

@@ -68,6 +68,9 @@ func (this *QCheckBox) InheritInitStyleOption(f func(option *QStyleOptionButton 
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
+/*
+
+ */
 type QCheckBox struct {
 	*QAbstractButton
 }
@@ -100,6 +103,10 @@ func (*QCheckBox) NewFromPointer(cthis unsafe.Pointer) *QCheckBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QCheckBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +117,12 @@ func (this *QCheckBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCheckBox(QWidget *)
+
+/*
+Constructs a checkbox with the given parent, but with no text.
+
+parent is passed on to the QAbstractButton constructor.
+*/
 func NewQCheckBox(parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -126,6 +139,12 @@ func NewQCheckBox(parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCheckBox(QWidget *)
+
+/*
+Constructs a checkbox with the given parent, but with no text.
+
+parent is passed on to the QAbstractButton constructor.
+*/
 func NewQCheckBox__() *QCheckBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -140,6 +159,12 @@ func NewQCheckBox__() *QCheckBox {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCheckBox(const QString &, QWidget *)
+
+/*
+Constructs a checkbox with the given parent, but with no text.
+
+parent is passed on to the QAbstractButton constructor.
+*/
 func NewQCheckBox_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -158,6 +183,12 @@ func NewQCheckBox_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBo
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCheckBox(const QString &, QWidget *)
+
+/*
+Constructs a checkbox with the given parent, but with no text.
+
+parent is passed on to the QAbstractButton constructor.
+*/
 func NewQCheckBox_1_(text string) *QCheckBox {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -174,6 +205,10 @@ func NewQCheckBox_1_(text string) *QCheckBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCheckBox()
+
+/*
+
+ */
 func DeleteQCheckBox(this *QCheckBox) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -185,6 +220,10 @@ func DeleteQCheckBox(this *QCheckBox) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -197,6 +236,10 @@ func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
+
+/*
+Reimplemented from QWidget::minimumSizeHint().
+*/
 func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -209,6 +252,10 @@ func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTristate(_Bool)
+
+/*
+
+ */
 func (this *QCheckBox) SetTristate(y bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox11setTristateEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	qtrt.ErrPrint(err, rv)
@@ -218,6 +265,10 @@ func (this *QCheckBox) SetTristate(y bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTristate(_Bool)
+
+/*
+
+ */
 func (this *QCheckBox) SetTristate__() {
 	// arg: 0, bool=Bool, =Invalid,
 	y := true
@@ -229,6 +280,10 @@ func (this *QCheckBox) SetTristate__() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTristate() const
+
+/*
+
+ */
 func (this *QCheckBox) IsTristate() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox10isTristateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -239,6 +294,12 @@ func (this *QCheckBox) IsTristate() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::CheckState checkState() const
+
+/*
+Returns the checkbox's check state. If you do not need tristate support, you can also use QAbstractButton::isChecked(), which returns a boolean.
+
+See also setCheckState() and Qt::CheckState.
+*/
 func (this *QCheckBox) CheckState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCheckBox10checkStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -249,6 +310,12 @@ func (this *QCheckBox) CheckState() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCheckState(Qt::CheckState)
+
+/*
+Sets the checkbox's check state to state. If you do not need tristate support, you can also use QAbstractButton::setChecked(), which takes a boolean.
+
+See also checkState() and Qt::CheckState.
+*/
 func (this *QCheckBox) SetCheckState(state int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox13setCheckStateEN2Qt10CheckStateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	qtrt.ErrPrint(err, rv)
@@ -258,6 +325,12 @@ func (this *QCheckBox) SetCheckState(state int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stateChanged(int)
+
+/*
+This signal is emitted whenever the checkbox's state changes, i.e., whenever the user checks or unchecks it.
+
+state contains the checkbox's new Qt::CheckState.
+*/
 func (this *QCheckBox) StateChanged(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox12stateChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -267,6 +340,10 @@ func (this *QCheckBox) StateChanged(arg0 int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QCheckBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -281,6 +358,10 @@ func (this *QCheckBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool hitButton(const QPoint &) const
+
+/*
+Reimplemented from QAbstractButton::hitButton().
+*/
 func (this *QCheckBox) HitButton(pos qtcore.QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -295,6 +376,10 @@ func (this *QCheckBox) HitButton(pos qtcore.QPoint_ITF) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void checkStateSet()
+
+/*
+Reimplemented from QAbstractButton::checkStateSet().
+*/
 func (this *QCheckBox) CheckStateSet() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox13checkStateSetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -304,6 +389,10 @@ func (this *QCheckBox) CheckStateSet() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void nextCheckState()
+
+/*
+Reimplemented from QAbstractButton::nextCheckState().
+*/
 func (this *QCheckBox) NextCheckState() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox14nextCheckStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -313,6 +402,10 @@ func (this *QCheckBox) NextCheckState() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QCheckBox) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
@@ -326,6 +419,10 @@ func (this *QCheckBox) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseMoveEvent().
+*/
 func (this *QCheckBox) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -339,6 +436,12 @@ func (this *QCheckBox) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEve
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionButton *) const
+
+/*
+Initializes option with the values from this QCheckBox. This method is useful for subclasses that require a QStyleOptionButton, but do not want to fill in all the information themselves.
+
+See also QStyleOption::initFrom().
+*/
 func (this *QCheckBox) InitStyleOption(option QStyleOptionButton_ITF /*777 QStyleOptionButton **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionButton_PTR() != nil {

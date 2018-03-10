@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleBridge struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QAccessibleBridge) NewFromPointer(cthis unsafe.Pointer) *QAccessibleBridg
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleBridge()
+
+/*
+
+ */
 func DeleteQAccessibleBridge(this *QAccessibleBridge) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleBridgeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -77,6 +84,10 @@ func DeleteQAccessibleBridge(this *QAccessibleBridge) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setRootObject(QAccessibleInterface *)
+
+/*
+
+ */
 func (this *QAccessibleBridge) SetRootObject(arg0 QAccessibleInterface_ITF /*777 QAccessibleInterface **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QAccessibleInterface_PTR() != nil {
@@ -90,6 +101,10 @@ func (this *QAccessibleBridge) SetRootObject(arg0 QAccessibleInterface_ITF /*777
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void notifyAccessibilityUpdate(QAccessibleEvent *)
+
+/*
+
+ */
 func (this *QAccessibleBridge) NotifyAccessibilityUpdate(event QAccessibleEvent_ITF /*777 QAccessibleEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QAccessibleEvent_PTR() != nil {

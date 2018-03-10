@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QGenericPlugin struct {
 	*qtcore.QObject
 }
@@ -64,6 +67,10 @@ func (*QGenericPlugin) NewFromPointer(cthis unsafe.Pointer) *QGenericPlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGenericPlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,12 @@ func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGenericPlugin(QObject *)
+
+/*
+Constructs a plugin with the given parent.
+
+Note that this constructor is invoked automatically by the moc generated code that exports the plugin, so there is no need for calling it explicitly.
+*/
 func NewQGenericPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QGenericPlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +103,12 @@ func NewQGenericPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QGenericPlu
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGenericPlugin(QObject *)
+
+/*
+Constructs a plugin with the given parent.
+
+Note that this constructor is invoked automatically by the moc generated code that exports the plugin, so there is no need for calling it explicitly.
+*/
 func NewQGenericPlugin__() *QGenericPlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +123,10 @@ func NewQGenericPlugin__() *QGenericPlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGenericPlugin()
+
+/*
+
+ */
 func DeleteQGenericPlugin(this *QGenericPlugin) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGenericPluginD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -115,6 +138,10 @@ func DeleteQGenericPlugin(this *QGenericPlugin) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QObject * create(const QString &, const QString &)
+
+/*
+Implement this function to create a driver matching the type specified by the given key and specification parameters. Note that keys are case-insensitive.
+*/
 func (this *QGenericPlugin) Create(name string, spec string) *qtcore.QObject /*777 QObject **/ {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()

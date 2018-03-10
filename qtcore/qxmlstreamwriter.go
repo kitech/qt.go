@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QXmlStreamWriter struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QXmlStreamWriter) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamWriter 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamWriter()
+
+/*
+
+ */
 func NewQXmlStreamWriter() *QXmlStreamWriter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQXmlStreamWriter() *QXmlStreamWriter {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamWriter(QIODevice *)
+
+/*
+
+ */
 func NewQXmlStreamWriter_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamWriter {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQXmlStreamWriter_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStream
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamWriter(QByteArray *)
+
+/*
+
+ */
 func NewQXmlStreamWriter_2(array QByteArray_ITF /*777 QByteArray **/) *QXmlStreamWriter {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -109,6 +124,10 @@ func NewQXmlStreamWriter_2(array QByteArray_ITF /*777 QByteArray **/) *QXmlStrea
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamWriter(QString *)
+
+/*
+
+ */
 func NewQXmlStreamWriter_3(string string) *QXmlStreamWriter {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
@@ -123,6 +142,10 @@ func NewQXmlStreamWriter_3(string string) *QXmlStreamWriter {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamWriter()
+
+/*
+
+ */
 func DeleteQXmlStreamWriter(this *QXmlStreamWriter) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriterD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -134,6 +157,10 @@ func DeleteQXmlStreamWriter(this *QXmlStreamWriter) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) SetDevice(device QIODevice_ITF /*777 QIODevice **/) {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -147,6 +174,10 @@ func (this *QXmlStreamWriter) SetDevice(device QIODevice_ITF /*777 QIODevice **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIODevice * device() const
+
+/*
+
+ */
 func (this *QXmlStreamWriter) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,6 +188,10 @@ func (this *QXmlStreamWriter) Device() *QIODevice /*777 QIODevice **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCodec(QTextCodec *)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) SetCodec(codec QTextCodec_ITF /*777 QTextCodec **/) {
 	var convArg0 unsafe.Pointer
 	if codec != nil && codec.QTextCodec_PTR() != nil {
@@ -170,6 +205,10 @@ func (this *QXmlStreamWriter) SetCodec(codec QTextCodec_ITF /*777 QTextCodec **/
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setCodec(const char *)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) SetCodec_1(codecName string) {
 	var convArg0 = qtrt.CString(codecName)
 	defer qtrt.FreeMem(convArg0)
@@ -181,6 +220,10 @@ func (this *QXmlStreamWriter) SetCodec_1(codecName string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextCodec * codec() const
+
+/*
+
+ */
 func (this *QXmlStreamWriter) Codec() *QTextCodec /*777 QTextCodec **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter5codecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -191,6 +234,10 @@ func (this *QXmlStreamWriter) Codec() *QTextCodec /*777 QTextCodec **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoFormatting(_Bool)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) SetAutoFormatting(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter17setAutoFormattingEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -200,6 +247,10 @@ func (this *QXmlStreamWriter) SetAutoFormatting(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoFormatting() const
+
+/*
+
+ */
 func (this *QXmlStreamWriter) AutoFormatting() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter14autoFormattingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -210,6 +261,10 @@ func (this *QXmlStreamWriter) AutoFormatting() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoFormattingIndent(int)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) SetAutoFormattingIndent(spacesOrTabs int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter23setAutoFormattingIndentEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spacesOrTabs)
 	qtrt.ErrPrint(err, rv)
@@ -219,6 +274,10 @@ func (this *QXmlStreamWriter) SetAutoFormattingIndent(spacesOrTabs int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int autoFormattingIndent() const
+
+/*
+
+ */
 func (this *QXmlStreamWriter) AutoFormattingIndent() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter20autoFormattingIndentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -229,6 +288,10 @@ func (this *QXmlStreamWriter) AutoFormattingIndent() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeAttribute(const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteAttribute(qualifiedName string, value string) {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -242,6 +305,10 @@ func (this *QXmlStreamWriter) WriteAttribute(qualifiedName string, value string)
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void writeAttribute(const QString &, const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteAttribute_1(namespaceUri string, name string, value string) {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -257,6 +324,10 @@ func (this *QXmlStreamWriter) WriteAttribute_1(namespaceUri string, name string,
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void writeAttribute(const QXmlStreamAttribute &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteAttribute_2(attribute QXmlStreamAttribute_ITF) {
 	var convArg0 unsafe.Pointer
 	if attribute != nil && attribute.QXmlStreamAttribute_PTR() != nil {
@@ -270,6 +341,10 @@ func (this *QXmlStreamWriter) WriteAttribute_2(attribute QXmlStreamAttribute_ITF
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeAttributes(const QXmlStreamAttributes &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteAttributes(attributes QXmlStreamAttributes_ITF) {
 	var convArg0 unsafe.Pointer
 	if attributes != nil && attributes.QXmlStreamAttributes_PTR() != nil {
@@ -283,6 +358,10 @@ func (this *QXmlStreamWriter) WriteAttributes(attributes QXmlStreamAttributes_IT
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeCDATA(const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteCDATA(text string) {
 	var tmpArg0 = NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -294,6 +373,10 @@ func (this *QXmlStreamWriter) WriteCDATA(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeCharacters(const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteCharacters(text string) {
 	var tmpArg0 = NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -305,6 +388,10 @@ func (this *QXmlStreamWriter) WriteCharacters(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeComment(const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteComment(text string) {
 	var tmpArg0 = NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -316,6 +403,10 @@ func (this *QXmlStreamWriter) WriteComment(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeDTD(const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteDTD(dtd string) {
 	var tmpArg0 = NewQString_5(dtd)
 	var convArg0 = tmpArg0.GetCthis()
@@ -327,6 +418,10 @@ func (this *QXmlStreamWriter) WriteDTD(dtd string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeEmptyElement(const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteEmptyElement(qualifiedName string) {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -338,6 +433,10 @@ func (this *QXmlStreamWriter) WriteEmptyElement(qualifiedName string) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void writeEmptyElement(const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteEmptyElement_1(namespaceUri string, name string) {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -351,6 +450,10 @@ func (this *QXmlStreamWriter) WriteEmptyElement_1(namespaceUri string, name stri
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeTextElement(const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteTextElement(qualifiedName string, text string) {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -364,6 +467,10 @@ func (this *QXmlStreamWriter) WriteTextElement(qualifiedName string, text string
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void writeTextElement(const QString &, const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteTextElement_1(namespaceUri string, name string, text string) {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -379,6 +486,10 @@ func (this *QXmlStreamWriter) WriteTextElement_1(namespaceUri string, name strin
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeEndDocument()
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteEndDocument() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter16writeEndDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -388,6 +499,10 @@ func (this *QXmlStreamWriter) WriteEndDocument() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeEndElement()
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteEndElement() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter15writeEndElementEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -397,6 +512,10 @@ func (this *QXmlStreamWriter) WriteEndElement() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeEntityReference(const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteEntityReference(name string) {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -408,6 +527,10 @@ func (this *QXmlStreamWriter) WriteEntityReference(name string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeNamespace(const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteNamespace(namespaceUri string, prefix string) {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -421,6 +544,10 @@ func (this *QXmlStreamWriter) WriteNamespace(namespaceUri string, prefix string)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeNamespace(const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteNamespace__(namespaceUri string) {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -434,6 +561,10 @@ func (this *QXmlStreamWriter) WriteNamespace__(namespaceUri string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeDefaultNamespace(const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteDefaultNamespace(namespaceUri string) {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -445,6 +576,10 @@ func (this *QXmlStreamWriter) WriteDefaultNamespace(namespaceUri string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeProcessingInstruction(const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteProcessingInstruction(target string, data string) {
 	var tmpArg0 = NewQString_5(target)
 	var convArg0 = tmpArg0.GetCthis()
@@ -458,6 +593,10 @@ func (this *QXmlStreamWriter) WriteProcessingInstruction(target string, data str
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeProcessingInstruction(const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteProcessingInstruction__(target string) {
 	var tmpArg0 = NewQString_5(target)
 	var convArg0 = tmpArg0.GetCthis()
@@ -471,6 +610,10 @@ func (this *QXmlStreamWriter) WriteProcessingInstruction__(target string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeStartDocument()
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteStartDocument() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter18writeStartDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -480,6 +623,10 @@ func (this *QXmlStreamWriter) WriteStartDocument() {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void writeStartDocument(const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteStartDocument_1(version string) {
 	var tmpArg0 = NewQString_5(version)
 	var convArg0 = tmpArg0.GetCthis()
@@ -491,6 +638,10 @@ func (this *QXmlStreamWriter) WriteStartDocument_1(version string) {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void writeStartDocument(const QString &, _Bool)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteStartDocument_2(version string, standalone bool) {
 	var tmpArg0 = NewQString_5(version)
 	var convArg0 = tmpArg0.GetCthis()
@@ -502,6 +653,10 @@ func (this *QXmlStreamWriter) WriteStartDocument_2(version string, standalone bo
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeStartElement(const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteStartElement(qualifiedName string) {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -513,6 +668,10 @@ func (this *QXmlStreamWriter) WriteStartElement(qualifiedName string) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void writeStartElement(const QString &, const QString &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteStartElement_1(namespaceUri string, name string) {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
@@ -526,6 +685,10 @@ func (this *QXmlStreamWriter) WriteStartElement_1(namespaceUri string, name stri
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void writeCurrentToken(const QXmlStreamReader &)
+
+/*
+
+ */
 func (this *QXmlStreamWriter) WriteCurrentToken(reader QXmlStreamReader_ITF) {
 	var convArg0 unsafe.Pointer
 	if reader != nil && reader.QXmlStreamReader_PTR() != nil {
@@ -539,6 +702,10 @@ func (this *QXmlStreamWriter) WriteCurrentToken(reader QXmlStreamReader_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasError() const
+
+/*
+
+ */
 func (this *QXmlStreamWriter) HasError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamWriter8hasErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

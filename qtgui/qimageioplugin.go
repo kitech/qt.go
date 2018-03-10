@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QImageIOPlugin struct {
 	*qtcore.QObject
 }
@@ -64,6 +67,10 @@ func (*QImageIOPlugin) NewFromPointer(cthis unsafe.Pointer) *QImageIOPlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QImageIOPlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QImageIOPlugin(QObject *)
+
+/*
+
+ */
 func NewQImageIOPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QImageIOPlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQImageIOPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QImageIOPlu
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QImageIOPlugin(QObject *)
+
+/*
+
+ */
 func NewQImageIOPlugin__() *QImageIOPlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +119,10 @@ func NewQImageIOPlugin__() *QImageIOPlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QImageIOPlugin()
+
+/*
+
+ */
 func DeleteQImageIOPlugin(this *QImageIOPlugin) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QImageIOPluginD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -115,6 +134,10 @@ func DeleteQImageIOPlugin(this *QImageIOPlugin) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QImageIOPlugin::Capabilities capabilities(QIODevice *, const QByteArray &) const
+
+/*
+
+ */
 func (this *QImageIOPlugin) Capabilities(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) int {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -133,6 +156,10 @@ func (this *QImageIOPlugin) Capabilities(device qtcore.QIODevice_ITF /*777 QIODe
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QImageIOHandler * create(QIODevice *, const QByteArray &) const
+
+/*
+
+ */
 func (this *QImageIOPlugin) Create(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageIOHandler /*777 QImageIOHandler **/ {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -151,6 +178,10 @@ func (this *QImageIOPlugin) Create(device qtcore.QIODevice_ITF /*777 QIODevice *
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QImageIOHandler * create(QIODevice *, const QByteArray &) const
+
+/*
+
+ */
 func (this *QImageIOPlugin) Create__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImageIOHandler /*777 QImageIOHandler **/ {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -163,10 +194,19 @@ func (this *QImageIOPlugin) Create__(device qtcore.QIODevice_ITF /*777 QIODevice
 	return /*==*/ NewQImageIOHandlerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
+/*
+
+
+ */
 type QImageIOPlugin__Capability = int
 
+//
 const QImageIOPlugin__CanRead QImageIOPlugin__Capability = 1
+
+//
 const QImageIOPlugin__CanWrite QImageIOPlugin__Capability = 2
+
+//
 const QImageIOPlugin__CanReadIncremental QImageIOPlugin__Capability = 4
 
 //  body block end

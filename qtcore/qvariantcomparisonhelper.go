@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QVariantComparisonHelper struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QVariantComparisonHelper) NewFromPointer(cthis unsafe.Pointer) *QVariantC
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVariantComparisonHelper(const QVariant &)
+
+/*
+
+ */
 func NewQVariantComparisonHelper(var_ QVariant_ITF) *QVariantComparisonHelper {
 	var convArg0 unsafe.Pointer
 	if var_ != nil && var_.QVariant_PTR() != nil {

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QStringListModel struct {
 	*QAbstractListModel
 }
@@ -63,6 +66,10 @@ func (*QStringListModel) NewFromPointer(cthis unsafe.Pointer) *QStringListModel 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QStringListModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QStringListModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -73,6 +80,10 @@ func (this *QStringListModel) MetaObject() *QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStringListModel(QObject *)
+
+/*
+Constructs a string list model with the given parent.
+*/
 func NewQStringListModel(parent QObject_ITF /*777 QObject **/) *QStringListModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -89,6 +100,10 @@ func NewQStringListModel(parent QObject_ITF /*777 QObject **/) *QStringListModel
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStringListModel(QObject *)
+
+/*
+Constructs a string list model with the given parent.
+*/
 func NewQStringListModel__() *QStringListModel {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -103,6 +118,10 @@ func NewQStringListModel__() *QStringListModel {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStringListModel(const QStringList &, QObject *)
+
+/*
+Constructs a string list model with the given parent.
+*/
 func NewQStringListModel_1(strings QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QStringListModel {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
@@ -123,6 +142,10 @@ func NewQStringListModel_1(strings QStringList_ITF, parent QObject_ITF /*777 QOb
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStringListModel(const QStringList &, QObject *)
+
+/*
+Constructs a string list model with the given parent.
+*/
 func NewQStringListModel_1_(strings QStringList_ITF) *QStringListModel {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
@@ -141,6 +164,16 @@ func NewQStringListModel_1_(strings QStringList_ITF) *QStringListModel {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::rowCount().
+
+Returns the number of rows in the model. This value corresponds to the number of items in the model's internal string list.
+
+The optional parent argument is in most models used to specify the parent of the rows to be counted. Because this is a list if a valid parent is specified, the result will always be 0.
+
+See also insertRows(), removeRows(), and QAbstractItemModel::rowCount().
+*/
 func (this *QStringListModel) RowCount(parent QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -155,6 +188,16 @@ func (this *QStringListModel) RowCount(parent QModelIndex_ITF) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::rowCount().
+
+Returns the number of rows in the model. This value corresponds to the number of items in the model's internal string list.
+
+The optional parent argument is in most models used to specify the parent of the rows to be counted. Because this is a list if a valid parent is specified, the result will always be 0.
+
+See also insertRows(), removeRows(), and QAbstractItemModel::rowCount().
+*/
 func (this *QStringListModel) RowCount__() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg0 = NewQModelIndex()
@@ -167,6 +210,10 @@ func (this *QStringListModel) RowCount__() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::sibling().
+*/
 func (this *QStringListModel) Sibling(row int, column int, idx QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
 	if idx != nil && idx.QModelIndex_PTR() != nil {
@@ -183,6 +230,16 @@ func (this *QStringListModel) Sibling(row int, column int, idx QModelIndex_ITF) 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
+
+/*
+Reimplemented from QAbstractItemModel::data().
+
+Returns data for the specified role, from the item with the given index.
+
+If the view requests an invalid index, an invalid variant is returned.
+
+See also setData().
+*/
 func (this *QStringListModel) Data(index QModelIndex_ITF, role int) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -199,6 +256,16 @@ func (this *QStringListModel) Data(index QModelIndex_ITF, role int) *QVariant /*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
+
+/*
+Reimplemented from QAbstractItemModel::data().
+
+Returns data for the specified role, from the item with the given index.
+
+If the view requests an invalid index, an invalid variant is returned.
+
+See also setData().
+*/
 func (this *QStringListModel) Data__(index QModelIndex_ITF) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -217,6 +284,16 @@ func (this *QStringListModel) Data__(index QModelIndex_ITF) *QVariant /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setData().
+
+Sets the data for the specified role in the item with the given index in the model, to the provided value.
+
+The dataChanged() signal is emitted if the item is changed.
+
+See also Qt::ItemDataRole and data().
+*/
 func (this *QStringListModel) SetData(index QModelIndex_ITF, value QVariant_ITF, role int) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -235,6 +312,16 @@ func (this *QStringListModel) SetData(index QModelIndex_ITF, value QVariant_ITF,
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setData().
+
+Sets the data for the specified role in the item with the given index in the model, to the provided value.
+
+The dataChanged() signal is emitted if the item is changed.
+
+See also Qt::ItemDataRole and data().
+*/
 func (this *QStringListModel) SetData__(index QModelIndex_ITF, value QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -255,6 +342,16 @@ func (this *QStringListModel) SetData__(index QModelIndex_ITF, value QVariant_IT
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::flags().
+
+Returns the flags for the item with the given index.
+
+Valid items are enabled, selectable, editable, drag enabled and drop enabled.
+
+See also QAbstractItemModel::flags().
+*/
 func (this *QStringListModel) Flags(index QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -269,6 +366,16 @@ func (this *QStringListModel) Flags(index QModelIndex_ITF) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::insertRows().
+
+Inserts count rows into the model, beginning at the given row.
+
+The parent index of the rows is optional and is only used for consistency with QAbstractItemModel. By default, a null index is specified, indicating that the rows are inserted in the top level of the model.
+
+See also QAbstractItemModel::insertRows().
+*/
 func (this *QStringListModel) InsertRows(row int, count int, parent QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -283,6 +390,16 @@ func (this *QStringListModel) InsertRows(row int, count int, parent QModelIndex_
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::insertRows().
+
+Inserts count rows into the model, beginning at the given row.
+
+The parent index of the rows is optional and is only used for consistency with QAbstractItemModel. By default, a null index is specified, indicating that the rows are inserted in the top level of the model.
+
+See also QAbstractItemModel::insertRows().
+*/
 func (this *QStringListModel) InsertRows__(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = NewQModelIndex()
@@ -295,6 +412,16 @@ func (this *QStringListModel) InsertRows__(row int, count int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::removeRows().
+
+Removes count rows from the model, beginning at the given row.
+
+The parent index of the rows is optional and is only used for consistency with QAbstractItemModel. By default, a null index is specified, indicating that the rows are removed in the top level of the model.
+
+See also QAbstractItemModel::removeRows().
+*/
 func (this *QStringListModel) RemoveRows(row int, count int, parent QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -309,6 +436,16 @@ func (this *QStringListModel) RemoveRows(row int, count int, parent QModelIndex_
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::removeRows().
+
+Removes count rows from the model, beginning at the given row.
+
+The parent index of the rows is optional and is only used for consistency with QAbstractItemModel. By default, a null index is specified, indicating that the rows are removed in the top level of the model.
+
+See also QAbstractItemModel::removeRows().
+*/
 func (this *QStringListModel) RemoveRows__(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = NewQModelIndex()
@@ -321,6 +458,10 @@ func (this *QStringListModel) RemoveRows__(row int, count int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
+
+/*
+Reimplemented from QAbstractItemModel::sort().
+*/
 func (this *QStringListModel) Sort(column int, order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	qtrt.ErrPrint(err, rv)
@@ -330,6 +471,10 @@ func (this *QStringListModel) Sort(column int, order int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
+
+/*
+Reimplemented from QAbstractItemModel::sort().
+*/
 func (this *QStringListModel) Sort__(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
 	order := 0
@@ -341,6 +486,12 @@ func (this *QStringListModel) Sort__(column int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList stringList() const
+
+/*
+Returns the string list used by the model to store data.
+
+See also setStringList().
+*/
 func (this *QStringListModel) StringList() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QStringListModel10stringListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -353,6 +504,12 @@ func (this *QStringListModel) StringList() *QStringList /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStringList(const QStringList &)
+
+/*
+Sets the model's internal string list to strings. The model will notify any attached views that its underlying data has changed.
+
+See also stringList() and dataChanged().
+*/
 func (this *QStringListModel) SetStringList(strings QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
@@ -366,6 +523,10 @@ func (this *QStringListModel) SetStringList(strings QStringList_ITF) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
+
+/*
+Reimplemented from QAbstractItemModel::supportedDropActions().
+*/
 func (this *QStringListModel) SupportedDropActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QStringListModel20supportedDropActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

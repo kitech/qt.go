@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextDocumentFragment struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,12 @@ func (*QTextDocumentFragment) NewFromPointer(cthis unsafe.Pointer) *QTextDocumen
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDocumentFragment()
+
+/*
+Constructs an empty QTextDocumentFragment.
+
+See also isEmpty().
+*/
 func NewQTextDocumentFragment() *QTextDocumentFragment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +87,12 @@ func NewQTextDocumentFragment() *QTextDocumentFragment {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDocumentFragment(const QTextDocument *)
+
+/*
+Constructs an empty QTextDocumentFragment.
+
+See also isEmpty().
+*/
 func NewQTextDocumentFragment_1(document QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment {
 	var convArg0 unsafe.Pointer
 	if document != nil && document.QTextDocument_PTR() != nil {
@@ -94,6 +109,12 @@ func NewQTextDocumentFragment_1(document QTextDocument_ITF /*777 const QTextDocu
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDocumentFragment(const QTextCursor &)
+
+/*
+Constructs an empty QTextDocumentFragment.
+
+See also isEmpty().
+*/
 func NewQTextDocumentFragment_2(range_ QTextCursor_ITF) *QTextDocumentFragment {
 	var convArg0 unsafe.Pointer
 	if range_ != nil && range_.QTextCursor_PTR() != nil {
@@ -110,6 +131,10 @@ func NewQTextDocumentFragment_2(range_ QTextCursor_ITF) *QTextDocumentFragment {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextDocumentFragment & operator=(const QTextDocumentFragment &)
+
+/*
+
+ */
 func (this *QTextDocumentFragment) Operator_equal(rhs QTextDocumentFragment_ITF) *QTextDocumentFragment {
 	var convArg0 unsafe.Pointer
 	if rhs != nil && rhs.QTextDocumentFragment_PTR() != nil {
@@ -126,6 +151,10 @@ func (this *QTextDocumentFragment) Operator_equal(rhs QTextDocumentFragment_ITF)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextDocumentFragment()
+
+/*
+
+ */
 func DeleteQTextDocumentFragment(this *QTextDocumentFragment) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QTextDocumentFragmentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -137,6 +166,10 @@ func DeleteQTextDocumentFragment(this *QTextDocumentFragment) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns true if the fragment is empty; otherwise returns false.
+*/
 func (this *QTextDocumentFragment) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QTextDocumentFragment7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -147,6 +180,12 @@ func (this *QTextDocumentFragment) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toPlainText() const
+
+/*
+Returns the document fragment's text as plain text (i.e. with no formatting information).
+
+See also toHtml().
+*/
 func (this *QTextDocumentFragment) ToPlainText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QTextDocumentFragment11toPlainTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,6 +199,14 @@ func (this *QTextDocumentFragment) ToPlainText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toHtml(const QByteArray &) const
+
+/*
+Returns the contents of the document fragment as HTML, using the specified encoding (e.g., "UTF-8", "ISO 8859-1").
+
+This function was introduced in  Qt 4.2.
+
+See also toPlainText(), QTextDocument::toHtml(), and QTextCodec.
+*/
 func (this *QTextDocumentFragment) ToHtml(encoding qtcore.QByteArray_ITF) string {
 	var convArg0 unsafe.Pointer
 	if encoding != nil && encoding.QByteArray_PTR() != nil {
@@ -177,6 +224,14 @@ func (this *QTextDocumentFragment) ToHtml(encoding qtcore.QByteArray_ITF) string
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toHtml(const QByteArray &) const
+
+/*
+Returns the contents of the document fragment as HTML, using the specified encoding (e.g., "UTF-8", "ISO 8859-1").
+
+This function was introduced in  Qt 4.2.
+
+See also toPlainText(), QTextDocument::toHtml(), and QTextCodec.
+*/
 func (this *QTextDocumentFragment) ToHtml__() string {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
 	var convArg0 = qtcore.NewQByteArray()
@@ -192,6 +247,12 @@ func (this *QTextDocumentFragment) ToHtml__() string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTextDocumentFragment fromPlainText(const QString &)
+
+/*
+Returns a document fragment that contains the given plainText.
+
+When inserting such a fragment into a QTextDocument the current char format of the QTextCursor used for insertion is used as format for the text.
+*/
 func (this *QTextDocumentFragment) FromPlainText(plainText string) *QTextDocumentFragment /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(plainText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -211,6 +272,10 @@ func QTextDocumentFragment_FromPlainText(plainText string) *QTextDocumentFragmen
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTextDocumentFragment fromHtml(const QString &)
+
+/*
+Returns a QTextDocumentFragment based on the arbitrary piece of HTML in the given text. The formatting is preserved as much as possible; for example, "<b>bold</b>" will become a document fragment with the text "bold" with a bold character format.
+*/
 func (this *QTextDocumentFragment) FromHtml(html string) *QTextDocumentFragment /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(html)
 	var convArg0 = tmpArg0.GetCthis()
@@ -230,6 +295,10 @@ func QTextDocumentFragment_FromHtml(html string) *QTextDocumentFragment /*123*/ 
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QTextDocumentFragment fromHtml(const QString &, const QTextDocument *)
+
+/*
+Returns a QTextDocumentFragment based on the arbitrary piece of HTML in the given text. The formatting is preserved as much as possible; for example, "<b>bold</b>" will become a document fragment with the text "bold" with a bold character format.
+*/
 func (this *QTextDocumentFragment) FromHtml_1(html string, resourceProvider QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(html)
 	var convArg0 = tmpArg0.GetCthis()

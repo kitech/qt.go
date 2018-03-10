@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QPlatformSurfaceEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QPlatformSurfaceEvent) NewFromPointer(cthis unsafe.Pointer) *QPlatformSur
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPlatformSurfaceEvent(enum QPlatformSurfaceEvent::SurfaceEventType)
+
+/*
+
+ */
 func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", qtrt.FFI_TYPE_POINTER, surfaceEventType)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPlatformSurfaceEvent()
+
+/*
+
+ */
 func DeleteQPlatformSurfaceEvent(this *QPlatformSurfaceEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
@@ -87,15 +98,26 @@ func DeleteQPlatformSurfaceEvent(this *QPlatformSurfaceEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QPlatformSurfaceEvent::SurfaceEventType surfaceEventType() const
+
+/*
+
+ */
 func (this *QPlatformSurfaceEvent) SurfaceEventType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
+/*
+
+
+ */
 type QPlatformSurfaceEvent__SurfaceEventType = int
 
+//
 const QPlatformSurfaceEvent__SurfaceCreated QPlatformSurfaceEvent__SurfaceEventType = 0
+
+//
 const QPlatformSurfaceEvent__SurfaceAboutToBeDestroyed QPlatformSurfaceEvent__SurfaceEventType = 1
 
 //  body block end

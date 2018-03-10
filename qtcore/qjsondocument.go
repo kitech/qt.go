@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QJsonDocument struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QJsonDocument) NewFromPointer(cthis unsafe.Pointer) *QJsonDocument {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QJsonDocument()
+
+/*
+Constructs an empty and invalid document.
+*/
 func NewQJsonDocument() *QJsonDocument {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocumentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQJsonDocument() *QJsonDocument {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QJsonDocument(const QJsonObject &)
+
+/*
+Constructs an empty and invalid document.
+*/
 func NewQJsonDocument_1(object QJsonObject_ITF) *QJsonDocument {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QJsonObject_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQJsonDocument_1(object QJsonObject_ITF) *QJsonDocument {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QJsonDocument(const QJsonArray &)
+
+/*
+Constructs an empty and invalid document.
+*/
 func NewQJsonDocument_2(array QJsonArray_ITF) *QJsonDocument {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QJsonArray_PTR() != nil {
@@ -109,6 +124,10 @@ func NewQJsonDocument_2(array QJsonArray_ITF) *QJsonDocument {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QJsonDocument()
+
+/*
+
+ */
 func DeleteQJsonDocument(this *QJsonDocument) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocumentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -120,6 +139,10 @@ func DeleteQJsonDocument(this *QJsonDocument) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJsonDocument & operator=(const QJsonDocument &)
+
+/*
+
+ */
 func (this *QJsonDocument) Operator_equal(other QJsonDocument_ITF) *QJsonDocument {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJsonDocument_PTR() != nil {
@@ -136,6 +159,10 @@ func (this *QJsonDocument) Operator_equal(other QJsonDocument_ITF) *QJsonDocumen
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QJsonDocument & operator=(QJsonDocument &&)
+
+/*
+
+ */
 func (this *QJsonDocument) Operator_equal_1(other unsafe.Pointer /*333*/) *QJsonDocument {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocumentaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -148,6 +175,12 @@ func (this *QJsonDocument) Operator_equal_1(other unsafe.Pointer /*333*/) *QJson
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QJsonDocument &)
+
+/*
+Swaps the document other with this. This operation is very fast and never fails.
+
+This function was introduced in  Qt 5.10.
+*/
 func (this *QJsonDocument) Swap(other QJsonDocument_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJsonDocument_PTR() != nil {
@@ -161,6 +194,18 @@ func (this *QJsonDocument) Swap(other QJsonDocument_ITF) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QJsonDocument fromRawData(const char *, int, enum QJsonDocument::DataValidation)
+
+/*
+Creates a QJsonDocument that uses the first size bytes from data. It assumes data contains a binary encoded JSON document. The created document does not take ownership of data and the caller has to guarantee that data will not be deleted or modified as long as any QJsonDocument, QJsonObject or QJsonArray still references the data.
+
+data has to be aligned to a 4 byte boundary.
+
+validation decides whether the data is checked for validity before being used. By default the data is validated. If the data is not valid, the method returns a null document.
+
+Returns a QJsonDocument representing the data.
+
+See also rawData(), fromBinaryData(), isNull(), and DataValidation.
+*/
 func (this *QJsonDocument) FromRawData(data string, size int, validation int) *QJsonDocument /*123*/ {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -180,6 +225,18 @@ func QJsonDocument_FromRawData(data string, size int, validation int) *QJsonDocu
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QJsonDocument fromRawData(const char *, int, enum QJsonDocument::DataValidation)
+
+/*
+Creates a QJsonDocument that uses the first size bytes from data. It assumes data contains a binary encoded JSON document. The created document does not take ownership of data and the caller has to guarantee that data will not be deleted or modified as long as any QJsonDocument, QJsonObject or QJsonArray still references the data.
+
+data has to be aligned to a 4 byte boundary.
+
+validation decides whether the data is checked for validity before being used. By default the data is validated. If the data is not valid, the method returns a null document.
+
+Returns a QJsonDocument representing the data.
+
+See also rawData(), fromBinaryData(), isNull(), and DataValidation.
+*/
 func (this *QJsonDocument) FromRawData__(data string, size int) *QJsonDocument /*123*/ {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -196,6 +253,12 @@ func (this *QJsonDocument) FromRawData__(data string, size int) *QJsonDocument /
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * rawData(int *) const
+
+/*
+Returns the raw binary representation of the data size will contain the size of the returned data.
+
+This method is useful to e.g. stream the JSON document in it's binary form to a file.
+*/
 func (this *QJsonDocument) RawData(size unsafe.Pointer /*666*/) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument7rawDataEPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	qtrt.ErrPrint(err, rv)
@@ -206,6 +269,14 @@ func (this *QJsonDocument) RawData(size unsafe.Pointer /*666*/) string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QJsonDocument fromBinaryData(const QByteArray &, enum QJsonDocument::DataValidation)
+
+/*
+Creates a QJsonDocument from data.
+
+validation decides whether the data is checked for validity before being used. By default the data is validated. If the data is not valid, the method returns a null document.
+
+See also toBinaryData(), fromRawData(), isNull(), and DataValidation.
+*/
 func (this *QJsonDocument) FromBinaryData(data QByteArray_ITF, validation int) *QJsonDocument /*123*/ {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -227,6 +298,14 @@ func QJsonDocument_FromBinaryData(data QByteArray_ITF, validation int) *QJsonDoc
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QJsonDocument fromBinaryData(const QByteArray &, enum QJsonDocument::DataValidation)
+
+/*
+Creates a QJsonDocument from data.
+
+validation decides whether the data is checked for validity before being used. By default the data is validated. If the data is not valid, the method returns a null document.
+
+See also toBinaryData(), fromRawData(), isNull(), and DataValidation.
+*/
 func (this *QJsonDocument) FromBinaryData__(data QByteArray_ITF) *QJsonDocument /*123*/ {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -245,6 +324,16 @@ func (this *QJsonDocument) FromBinaryData__(data QByteArray_ITF) *QJsonDocument 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toBinaryData() const
+
+/*
+Returns a binary representation of the document.
+
+The binary representation is also the native format used internally in Qt, and is very efficient and fast to convert to and from.
+
+The binary format can be stored on disk and interchanged with other applications or computers. fromBinaryData() can be used to convert it back into a JSON document.
+
+See also fromBinaryData().
+*/
 func (this *QJsonDocument) ToBinaryData() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument12toBinaryDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,6 +346,14 @@ func (this *QJsonDocument) ToBinaryData() *QByteArray /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QJsonDocument fromVariant(const QVariant &)
+
+/*
+Creates a QJsonDocument from the QVariant variant.
+
+If the variant contains any other type than a QVariantMap, QVariantHash, QVariantList or QStringList, the returned document is invalid.
+
+See also toVariant().
+*/
 func (this *QJsonDocument) FromVariant(variant QVariant_ITF) *QJsonDocument /*123*/ {
 	var convArg0 unsafe.Pointer
 	if variant != nil && variant.QVariant_PTR() != nil {
@@ -278,6 +375,14 @@ func QJsonDocument_FromVariant(variant QVariant_ITF) *QJsonDocument /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant toVariant() const
+
+/*
+Returns a QVariant representing the Json document.
+
+The returned variant will be a QVariantList if the document is a QJsonArray and a QVariantMap if the document is a QJsonObject.
+
+See also fromVariant() and QJsonValue::toVariant().
+*/
 func (this *QJsonDocument) ToVariant() *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument9toVariantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -290,6 +395,12 @@ func (this *QJsonDocument) ToVariant() *QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toJson() const
+
+/*
+Converts the QJsonDocument to a UTF-8 encoded JSON document in the provided format.
+
+See also fromJson() and JsonFormat.
+*/
 func (this *QJsonDocument) ToJson() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -302,6 +413,12 @@ func (this *QJsonDocument) ToJson() *QByteArray /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toJson(enum QJsonDocument::JsonFormat) const
+
+/*
+Converts the QJsonDocument to a UTF-8 encoded JSON document in the provided format.
+
+See also fromJson() and JsonFormat.
+*/
 func (this *QJsonDocument) ToJson_1(format int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonENS_10JsonFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
@@ -314,6 +431,10 @@ func (this *QJsonDocument) ToJson_1(format int) *QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns true if the document doesn't contain any data.
+*/
 func (this *QJsonDocument) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -324,6 +445,12 @@ func (this *QJsonDocument) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isArray() const
+
+/*
+Returns true if the document contains an array.
+
+See also array() and isObject().
+*/
 func (this *QJsonDocument) IsArray() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument7isArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -334,6 +461,12 @@ func (this *QJsonDocument) IsArray() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isObject() const
+
+/*
+Returns true if the document contains an object.
+
+See also object() and isArray().
+*/
 func (this *QJsonDocument) IsObject() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument8isObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -344,6 +477,14 @@ func (this *QJsonDocument) IsObject() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject object() const
+
+/*
+Returns the QJsonObject contained in the document.
+
+Returns an empty object if the document contains an array.
+
+See also isObject(), array(), and setObject().
+*/
 func (this *QJsonDocument) Object() *QJsonObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -356,6 +497,14 @@ func (this *QJsonDocument) Object() *QJsonObject /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonArray array() const
+
+/*
+Returns the QJsonArray contained in the document.
+
+Returns an empty array if the document contains an object.
+
+See also isArray(), object(), and setArray().
+*/
 func (this *QJsonDocument) Array() *QJsonArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument5arrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -368,6 +517,12 @@ func (this *QJsonDocument) Array() *QJsonArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setObject(const QJsonObject &)
+
+/*
+Sets object as the main object of this document.
+
+See also setArray() and object().
+*/
 func (this *QJsonDocument) SetObject(object QJsonObject_ITF) {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QJsonObject_PTR() != nil {
@@ -381,6 +536,12 @@ func (this *QJsonDocument) SetObject(object QJsonObject_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setArray(const QJsonArray &)
+
+/*
+Sets array as the main object of this document.
+
+See also setObject() and array().
+*/
 func (this *QJsonDocument) SetArray(array QJsonArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QJsonArray_PTR() != nil {
@@ -394,6 +555,10 @@ func (this *QJsonDocument) SetArray(array QJsonArray_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] const QJsonValue operator[](const QString &) const
+
+/*
+
+ */
 func (this *QJsonDocument) Operator_get_index(key string) *QJsonValue /*123*/ {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -408,6 +573,10 @@ func (this *QJsonDocument) Operator_get_index(key string) *QJsonValue /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [24] const QJsonValue operator[](QLatin1String) const
+
+/*
+
+ */
 func (this *QJsonDocument) Operator_get_index_1(key QLatin1String_ITF /*123*/) *QJsonValue /*123*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
@@ -424,6 +593,10 @@ func (this *QJsonDocument) Operator_get_index_1(key QLatin1String_ITF /*123*/) *
 // index:2
 // Public Visibility=Default Availability=Available
 // [24] const QJsonValue operator[](int) const
+
+/*
+
+ */
 func (this *QJsonDocument) Operator_get_index_2(i int) *QJsonValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocumentixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
@@ -436,6 +609,10 @@ func (this *QJsonDocument) Operator_get_index_2(i int) *QJsonValue /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QJsonDocument &) const
+
+/*
+
+ */
 func (this *QJsonDocument) Operator_equal_equal(other QJsonDocument_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJsonDocument_PTR() != nil {
@@ -450,6 +627,10 @@ func (this *QJsonDocument) Operator_equal_equal(other QJsonDocument_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QJsonDocument &) const
+
+/*
+
+ */
 func (this *QJsonDocument) Operator_not_equal(other QJsonDocument_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJsonDocument_PTR() != nil {
@@ -464,20 +645,57 @@ func (this *QJsonDocument) Operator_not_equal(other QJsonDocument_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+returns true if this document is null.
+
+Null documents are documents created through the default constructor.
+
+Documents created from UTF-8 encoded text or the binary format are validated during parsing. If validation fails, the returned document will also be null.
+*/
 func (this *QJsonDocument) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
+/*
+This value is used to tell QJsonDocument whether to validate the binary data when converting to a QJsonDocument using fromBinaryData() or fromRawData().
+
+
+*/
 type QJsonDocument__DataValidation = int
 
+// Validate the data before using it. This is the default.
 const QJsonDocument__Validate QJsonDocument__DataValidation = 0
+
+// Bypasses data validation. Only use if you received the data from a trusted place and know it's valid, as using of invalid data can crash the application.
 const QJsonDocument__BypassValidation QJsonDocument__DataValidation = 1
 
+/*
+This value defines the format of the JSON byte array produced when converting to a QJsonDocument using toJson().
+
+  {
+      "Array": [
+          true,
+          999,
+          "string"
+      ],
+      "Key": "Value",
+      "null": null
+  }
+
+
+
+  {"Array":[true,999,"string"],"Key":"Value","null":null}
+
+*/
 type QJsonDocument__JsonFormat = int
 
+// Defines human readable output as follows:
 const QJsonDocument__Indented QJsonDocument__JsonFormat = 0
+
+// Defines a compact output as follows:
 const QJsonDocument__Compact QJsonDocument__JsonFormat = 1
 
 //  body block end

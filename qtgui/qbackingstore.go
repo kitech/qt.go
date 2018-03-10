@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QBackingStore struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QBackingStore) NewFromPointer(cthis unsafe.Pointer) *QBackingStore {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QBackingStore(QWindow *)
+
+/*
+Constructs an empty surface for the given top-level window.
+*/
 func NewQBackingStore(window QWindow_ITF /*777 QWindow **/) *QBackingStore {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -82,6 +89,10 @@ func NewQBackingStore(window QWindow_ITF /*777 QWindow **/) *QBackingStore {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QBackingStore()
+
+/*
+
+ */
 func DeleteQBackingStore(this *QBackingStore) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStoreD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -93,6 +104,10 @@ func DeleteQBackingStore(this *QBackingStore) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWindow * window() const
+
+/*
+Returns a pointer to the top-level window associated with this surface.
+*/
 func (this *QBackingStore) Window() *QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -103,6 +118,12 @@ func (this *QBackingStore) Window() *QWindow /*777 QWindow **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPaintDevice * paintDevice()
+
+/*
+Returns the paint device for this surface.
+
+Warning: The device is only valid between calls to beginPaint() and endPaint(). You should not cache the returned value.
+*/
 func (this *QBackingStore) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore11paintDeviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -113,6 +134,18 @@ func (this *QBackingStore) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void flush(const QRegion &, QWindow *, const QPoint &)
+
+/*
+Flushes the given region from the specified window onto the screen.
+
+The window must either be the top level window represented by this backingstore, or a non-transient child of that window. Passing nullptr falls back to using the backingstore's top level window.
+
+If the window is a child window, the region should be in child window coordinates, and the offset should be the child window's offset in relation to the backingstore's top level window.
+
+You should call this function after ending painting with endPaint().
+
+See also QWindow::transientParent().
+*/
 func (this *QBackingStore) Flush(region QRegion_ITF, window QWindow_ITF /*777 QWindow **/, offset qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if region != nil && region.QRegion_PTR() != nil {
@@ -134,6 +167,18 @@ func (this *QBackingStore) Flush(region QRegion_ITF, window QWindow_ITF /*777 QW
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void flush(const QRegion &, QWindow *, const QPoint &)
+
+/*
+Flushes the given region from the specified window onto the screen.
+
+The window must either be the top level window represented by this backingstore, or a non-transient child of that window. Passing nullptr falls back to using the backingstore's top level window.
+
+If the window is a child window, the region should be in child window coordinates, and the offset should be the child window's offset in relation to the backingstore's top level window.
+
+You should call this function after ending painting with endPaint().
+
+See also QWindow::transientParent().
+*/
 func (this *QBackingStore) Flush__(region QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if region != nil && region.QRegion_PTR() != nil {
@@ -151,6 +196,18 @@ func (this *QBackingStore) Flush__(region QRegion_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void flush(const QRegion &, QWindow *, const QPoint &)
+
+/*
+Flushes the given region from the specified window onto the screen.
+
+The window must either be the top level window represented by this backingstore, or a non-transient child of that window. Passing nullptr falls back to using the backingstore's top level window.
+
+If the window is a child window, the region should be in child window coordinates, and the offset should be the child window's offset in relation to the backingstore's top level window.
+
+You should call this function after ending painting with endPaint().
+
+See also QWindow::transientParent().
+*/
 func (this *QBackingStore) Flush__1(region QRegion_ITF, window QWindow_ITF /*777 QWindow **/) {
 	var convArg0 unsafe.Pointer
 	if region != nil && region.QRegion_PTR() != nil {
@@ -170,6 +227,12 @@ func (this *QBackingStore) Flush__1(region QRegion_ITF, window QWindow_ITF /*777
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resize(const QSize &)
+
+/*
+Sets the size of the window surface to size.
+
+See also size().
+*/
 func (this *QBackingStore) Resize(size qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -183,6 +246,10 @@ func (this *QBackingStore) Resize(size qtcore.QSize_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize size() const
+
+/*
+Returns the current size of the window surface.
+*/
 func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,6 +262,12 @@ func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool scroll(const QRegion &, int, int)
+
+/*
+Scrolls the given area dx pixels to the right and dy downward; both dx and dy may be negative.
+
+Returns true if the area was scrolled successfully; false otherwise.
+*/
 func (this *QBackingStore) Scroll(area QRegion_ITF, dx int, dy int) bool {
 	var convArg0 unsafe.Pointer
 	if area != nil && area.QRegion_PTR() != nil {
@@ -209,6 +282,14 @@ func (this *QBackingStore) Scroll(area QRegion_ITF, dx int, dy int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void beginPaint(const QRegion &)
+
+/*
+Begins painting on the backing store surface in the given region.
+
+You should call this function before using the paintDevice() to paint.
+
+See also endPaint() and paintDevice().
+*/
 func (this *QBackingStore) BeginPaint(arg0 QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRegion_PTR() != nil {
@@ -222,6 +303,14 @@ func (this *QBackingStore) BeginPaint(arg0 QRegion_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void endPaint()
+
+/*
+Ends painting.
+
+You should call this function after painting with the paintDevice() has ended.
+
+See also beginPaint() and paintDevice().
+*/
 func (this *QBackingStore) EndPaint() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore8endPaintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -231,6 +320,12 @@ func (this *QBackingStore) EndPaint() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStaticContents(const QRegion &)
+
+/*
+Set region as the static contents of this window.
+
+See also staticContents().
+*/
 func (this *QBackingStore) SetStaticContents(region QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if region != nil && region.QRegion_PTR() != nil {
@@ -244,6 +339,12 @@ func (this *QBackingStore) SetStaticContents(region QRegion_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion staticContents() const
+
+/*
+Returns a QRegion representing the area of the window that has static contents.
+
+See also setStaticContents().
+*/
 func (this *QBackingStore) StaticContents() *QRegion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore14staticContentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -256,6 +357,10 @@ func (this *QBackingStore) StaticContents() *QRegion /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasStaticContents() const
+
+/*
+Returns a boolean indicating if this window has static contents or not.
+*/
 func (this *QBackingStore) HasStaticContents() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore17hasStaticContentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

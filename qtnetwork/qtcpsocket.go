@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTcpSocket struct {
 	*QAbstractSocket
 }
@@ -64,6 +67,10 @@ func (*QTcpSocket) NewFromPointer(cthis unsafe.Pointer) *QTcpSocket {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QTcpSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpSocket10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,14 @@ func (this *QTcpSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTcpSocket(QObject *)
+
+/*
+Creates a QTcpSocket object in state UnconnectedState.
+
+parent is passed on to the QObject constructor.
+
+See also socketType().
+*/
 func NewQTcpSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QTcpSocket {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +105,14 @@ func NewQTcpSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QTcpSocket {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTcpSocket(QObject *)
+
+/*
+Creates a QTcpSocket object in state UnconnectedState.
+
+parent is passed on to the QObject constructor.
+
+See also socketType().
+*/
 func NewQTcpSocket__() *QTcpSocket {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +127,10 @@ func NewQTcpSocket__() *QTcpSocket {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTcpSocket()
+
+/*
+
+ */
 func DeleteQTcpSocket(this *QTcpSocket) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpSocketD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QMapNodeBase struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QMapNodeBase) NewFromPointer(cthis unsafe.Pointer) *QMapNodeBase {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QMapNodeBase * nextNode() const
+
+/*
+
+ */
 func (this *QMapNodeBase) NextNode() *QMapNodeBase /*777 const QMapNodeBase **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMapNodeBase8nextNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QMapNodeBase) NextNode() *QMapNodeBase /*777 const QMapNodeBase **/ 
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QMapNodeBase * nextNode()
+
+/*
+
+ */
 func (this *QMapNodeBase) NextNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapNodeBase8nextNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +96,10 @@ func (this *QMapNodeBase) NextNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QMapNodeBase * previousNode() const
+
+/*
+
+ */
 func (this *QMapNodeBase) PreviousNode() *QMapNodeBase /*777 const QMapNodeBase **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMapNodeBase12previousNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -95,6 +110,10 @@ func (this *QMapNodeBase) PreviousNode() *QMapNodeBase /*777 const QMapNodeBase 
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QMapNodeBase * previousNode()
+
+/*
+
+ */
 func (this *QMapNodeBase) PreviousNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapNodeBase12previousNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +124,10 @@ func (this *QMapNodeBase) PreviousNode_1() *QMapNodeBase /*777 QMapNodeBase **/ 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QMapNodeBase::Color color() const
+
+/*
+
+ */
 func (this *QMapNodeBase) Color() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMapNodeBase5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -115,6 +138,10 @@ func (this *QMapNodeBase) Color() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColor(enum QMapNodeBase::Color)
+
+/*
+
+ */
 func (this *QMapNodeBase) SetColor(c int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapNodeBase8setColorENS_5ColorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -124,6 +151,10 @@ func (this *QMapNodeBase) SetColor(c int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QMapNodeBase * parent() const
+
+/*
+
+ */
 func (this *QMapNodeBase) Parent() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMapNodeBase6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -136,13 +167,25 @@ func DeleteQMapNodeBase(this *QMapNodeBase) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QMapNodeBase__Color = int
 
+//
 const QMapNodeBase__Red QMapNodeBase__Color = 0
+
+//
 const QMapNodeBase__Black QMapNodeBase__Color = 1
 
+/*
+
+
+ */
 type QMapNodeBase__ = int
 
+//
 const QMapNodeBase__Mask QMapNodeBase__ = 3
 
 //  body block end

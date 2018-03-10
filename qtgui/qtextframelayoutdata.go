@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextFrameLayoutData struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QTextFrameLayoutData) NewFromPointer(cthis unsafe.Pointer) *QTextFrameLay
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextFrameLayoutData()
+
+/*
+
+ */
 func DeleteQTextFrameLayoutData(this *QTextFrameLayoutData) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextFrameLayoutDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)

@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QDateEdit struct {
 	*QDateTimeEdit
 }
@@ -65,6 +68,10 @@ func (*QDateEdit) NewFromPointer(cthis unsafe.Pointer) *QDateEdit {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateEdit10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDateEdit(QWidget *)
+
+/*
+
+ */
 func NewQDateEdit(parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQDateEdit(parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDateEdit(QWidget *)
+
+/*
+
+ */
 func NewQDateEdit__() *QDateEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQDateEdit__() *QDateEdit {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDateEdit(const QDate &, QWidget *)
+
+/*
+
+ */
 func NewQDateEdit_1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
@@ -125,6 +144,10 @@ func NewQDateEdit_1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/)
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDateEdit(const QDate &, QWidget *)
+
+/*
+
+ */
 func NewQDateEdit_1_(date qtcore.QDate_ITF) *QDateEdit {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
@@ -143,6 +166,10 @@ func NewQDateEdit_1_(date qtcore.QDate_ITF) *QDateEdit {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDateEdit()
+
+/*
+
+ */
 func DeleteQDateEdit(this *QDateEdit) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateEditD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -154,6 +181,10 @@ func DeleteQDateEdit(this *QDateEdit) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void userDateChanged(const QDate &)
+
+/*
+
+ */
 func (this *QDateEdit) UserDateChanged(date qtcore.QDate_ITF) {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QByteRef struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QByteRef) NewFromPointer(cthis unsafe.Pointer) *QByteRef {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QByteRef & operator=(char)
+
+/*
+
+ */
 func (this *QByteRef) Operator_equal(c byte) *QByteRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QByteRefaSEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func (this *QByteRef) Operator_equal(c byte) *QByteRef {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QByteRef & operator=(const QByteRef &)
+
+/*
+
+ */
 func (this *QByteRef) Operator_equal_1(c QByteRef_ITF) *QByteRef {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QByteRef_PTR() != nil {
@@ -93,6 +104,10 @@ func (this *QByteRef) Operator_equal_1(c QByteRef_ITF) *QByteRef {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(char) const
+
+/*
+
+ */
 func (this *QByteRef) Operator_equal_equal(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefeqEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -103,6 +118,10 @@ func (this *QByteRef) Operator_equal_equal(c byte) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(char) const
+
+/*
+
+ */
 func (this *QByteRef) Operator_not_equal(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefneEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -113,6 +132,10 @@ func (this *QByteRef) Operator_not_equal(c byte) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(char) const
+
+/*
+
+ */
 func (this *QByteRef) Operator_greater_than(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefgtEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -123,6 +146,10 @@ func (this *QByteRef) Operator_greater_than(c byte) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(char) const
+
+/*
+
+ */
 func (this *QByteRef) Operator_greater_than_equal(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefgeEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +160,10 @@ func (this *QByteRef) Operator_greater_than_equal(c byte) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(char) const
+
+/*
+
+ */
 func (this *QByteRef) Operator_less_than(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefltEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +174,10 @@ func (this *QByteRef) Operator_less_than(c byte) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(char) const
+
+/*
+
+ */
 func (this *QByteRef) Operator_less_than_equal(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QByteRefleEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)

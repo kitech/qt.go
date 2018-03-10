@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QNetworkProxyQuery struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QNetworkProxyQuery) NewFromPointer(cthis unsafe.Pointer) *QNetworkProxyQu
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery()
+
+/*
+
+ */
 func NewQNetworkProxyQuery() *QNetworkProxyQuery {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQNetworkProxyQuery() *QNetworkProxyQuery {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QUrl &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_1(requestUrl qtcore.QUrl_ITF, queryType int) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if requestUrl != nil && requestUrl.QUrl_PTR() != nil {
@@ -94,6 +105,10 @@ func NewQNetworkProxyQuery_1(requestUrl qtcore.QUrl_ITF, queryType int) *QNetwor
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QUrl &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_1_(requestUrl qtcore.QUrl_ITF) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if requestUrl != nil && requestUrl.QUrl_PTR() != nil {
@@ -112,6 +127,10 @@ func NewQNetworkProxyQuery_1_(requestUrl qtcore.QUrl_ITF) *QNetworkProxyQuery {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_2(hostname string, port int, protocolTag string, queryType int) *QNetworkProxyQuery {
 	var tmpArg0 = qtcore.NewQString_5(hostname)
 	var convArg0 = tmpArg0.GetCthis()
@@ -128,6 +147,10 @@ func NewQNetworkProxyQuery_2(hostname string, port int, protocolTag string, quer
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_2_(hostname string, port int) *QNetworkProxyQuery {
 	var tmpArg0 = qtcore.NewQString_5(hostname)
 	var convArg0 = tmpArg0.GetCthis()
@@ -146,6 +169,10 @@ func NewQNetworkProxyQuery_2_(hostname string, port int) *QNetworkProxyQuery {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_2_1(hostname string, port int, protocolTag string) *QNetworkProxyQuery {
 	var tmpArg0 = qtcore.NewQString_5(hostname)
 	var convArg0 = tmpArg0.GetCthis()
@@ -164,6 +191,10 @@ func NewQNetworkProxyQuery_2_1(hostname string, port int, protocolTag string) *Q
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_3(bindPort uint16, protocolTag string, queryType int) *QNetworkProxyQuery {
 	var tmpArg1 = qtcore.NewQString_5(protocolTag)
 	var convArg1 = tmpArg1.GetCthis()
@@ -178,6 +209,10 @@ func NewQNetworkProxyQuery_3(bindPort uint16, protocolTag string, queryType int)
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_3_(bindPort uint16) *QNetworkProxyQuery {
 	// arg: 1, const QString &=LValueReference, QString=Record,
 	var convArg1 = qtcore.NewQString()
@@ -194,6 +229,10 @@ func NewQNetworkProxyQuery_3_(bindPort uint16) *QNetworkProxyQuery {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_3_1(bindPort uint16, protocolTag string) *QNetworkProxyQuery {
 	var tmpArg1 = qtcore.NewQString_5(protocolTag)
 	var convArg1 = tmpArg1.GetCthis()
@@ -210,6 +249,10 @@ func NewQNetworkProxyQuery_3_1(bindPort uint16, protocolTag string) *QNetworkPro
 // index:4
 // Public Visibility=Default Availability=Deprecated
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_4(networkConfiguration QNetworkConfiguration_ITF, requestUrl qtcore.QUrl_ITF, queryType int) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -230,6 +273,10 @@ func NewQNetworkProxyQuery_4(networkConfiguration QNetworkConfiguration_ITF, req
 // index:4
 // Public Visibility=Default Availability=Deprecated
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_4_(networkConfiguration QNetworkConfiguration_ITF, requestUrl qtcore.QUrl_ITF) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -252,6 +299,10 @@ func NewQNetworkProxyQuery_4_(networkConfiguration QNetworkConfiguration_ITF, re
 // index:5
 // Public Visibility=Default Availability=Deprecated
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_5(networkConfiguration QNetworkConfiguration_ITF, hostname string, port int, protocolTag string, queryType int) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -272,6 +323,10 @@ func NewQNetworkProxyQuery_5(networkConfiguration QNetworkConfiguration_ITF, hos
 // index:5
 // Public Visibility=Default Availability=Deprecated
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_5_(networkConfiguration QNetworkConfiguration_ITF, hostname string, port int) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -294,6 +349,10 @@ func NewQNetworkProxyQuery_5_(networkConfiguration QNetworkConfiguration_ITF, ho
 // index:5
 // Public Visibility=Default Availability=Deprecated
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_5_1(networkConfiguration QNetworkConfiguration_ITF, hostname string, port int, protocolTag string) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -316,6 +375,10 @@ func NewQNetworkProxyQuery_5_1(networkConfiguration QNetworkConfiguration_ITF, h
 // index:6
 // Public Visibility=Default Availability=Deprecated
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_6(networkConfiguration QNetworkConfiguration_ITF, bindPort uint16, protocolTag string, queryType int) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -334,6 +397,10 @@ func NewQNetworkProxyQuery_6(networkConfiguration QNetworkConfiguration_ITF, bin
 // index:6
 // Public Visibility=Default Availability=Deprecated
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_6_(networkConfiguration QNetworkConfiguration_ITF, bindPort uint16) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -354,6 +421,10 @@ func NewQNetworkProxyQuery_6_(networkConfiguration QNetworkConfiguration_ITF, bi
 // index:6
 // Public Visibility=Default Availability=Deprecated
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func NewQNetworkProxyQuery_6_1(networkConfiguration QNetworkConfiguration_ITF, bindPort uint16, protocolTag string) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -374,6 +445,10 @@ func NewQNetworkProxyQuery_6_1(networkConfiguration QNetworkConfiguration_ITF, b
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QNetworkProxyQuery & operator=(QNetworkProxyQuery &&)
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) Operator_equal(other unsafe.Pointer /*333*/) *QNetworkProxyQuery {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -386,6 +461,10 @@ func (this *QNetworkProxyQuery) Operator_equal(other unsafe.Pointer /*333*/) *QN
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QNetworkProxyQuery & operator=(const QNetworkProxyQuery &)
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) Operator_equal_1(other QNetworkProxyQuery_ITF) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkProxyQuery_PTR() != nil {
@@ -402,6 +481,10 @@ func (this *QNetworkProxyQuery) Operator_equal_1(other QNetworkProxyQuery_ITF) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QNetworkProxyQuery()
+
+/*
+
+ */
 func DeleteQNetworkProxyQuery(this *QNetworkProxyQuery) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -413,6 +496,12 @@ func DeleteQNetworkProxyQuery(this *QNetworkProxyQuery) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkProxyQuery &)
+
+/*
+Swaps this network proxy instance with other. This function is very fast and never fails.
+
+This function was introduced in  Qt 5.0.
+*/
 func (this *QNetworkProxyQuery) Swap(other QNetworkProxyQuery_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkProxyQuery_PTR() != nil {
@@ -426,6 +515,10 @@ func (this *QNetworkProxyQuery) Swap(other QNetworkProxyQuery_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QNetworkProxyQuery &) const
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) Operator_equal_equal(other QNetworkProxyQuery_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkProxyQuery_PTR() != nil {
@@ -440,6 +533,10 @@ func (this *QNetworkProxyQuery) Operator_equal_equal(other QNetworkProxyQuery_IT
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QNetworkProxyQuery &) const
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) Operator_not_equal(other QNetworkProxyQuery_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkProxyQuery_PTR() != nil {
@@ -454,6 +551,10 @@ func (this *QNetworkProxyQuery) Operator_not_equal(other QNetworkProxyQuery_ITF)
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QNetworkProxyQuery::QueryType queryType() const
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) QueryType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QNetworkProxyQuery9queryTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -464,6 +565,10 @@ func (this *QNetworkProxyQuery) QueryType() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setQueryType(enum QNetworkProxyQuery::QueryType)
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) SetQueryType(type_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQuery12setQueryTypeENS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	qtrt.ErrPrint(err, rv)
@@ -473,6 +578,10 @@ func (this *QNetworkProxyQuery) SetQueryType(type_ int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int peerPort() const
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) PeerPort() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QNetworkProxyQuery8peerPortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -483,6 +592,10 @@ func (this *QNetworkProxyQuery) PeerPort() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPeerPort(int)
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) SetPeerPort(port int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQuery11setPeerPortEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), port)
 	qtrt.ErrPrint(err, rv)
@@ -492,6 +605,10 @@ func (this *QNetworkProxyQuery) SetPeerPort(port int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString peerHostName() const
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) PeerHostName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QNetworkProxyQuery12peerHostNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -505,6 +622,10 @@ func (this *QNetworkProxyQuery) PeerHostName() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPeerHostName(const QString &)
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) SetPeerHostName(hostname string) {
 	var tmpArg0 = qtcore.NewQString_5(hostname)
 	var convArg0 = tmpArg0.GetCthis()
@@ -516,6 +637,10 @@ func (this *QNetworkProxyQuery) SetPeerHostName(hostname string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int localPort() const
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) LocalPort() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QNetworkProxyQuery9localPortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -526,6 +651,10 @@ func (this *QNetworkProxyQuery) LocalPort() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLocalPort(int)
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) SetLocalPort(port int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQuery12setLocalPortEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), port)
 	qtrt.ErrPrint(err, rv)
@@ -535,6 +664,10 @@ func (this *QNetworkProxyQuery) SetLocalPort(port int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString protocolTag() const
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) ProtocolTag() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QNetworkProxyQuery11protocolTagEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -548,6 +681,10 @@ func (this *QNetworkProxyQuery) ProtocolTag() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProtocolTag(const QString &)
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) SetProtocolTag(protocolTag string) {
 	var tmpArg0 = qtcore.NewQString_5(protocolTag)
 	var convArg0 = tmpArg0.GetCthis()
@@ -559,6 +696,10 @@ func (this *QNetworkProxyQuery) SetProtocolTag(protocolTag string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl url() const
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QNetworkProxyQuery3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -571,6 +712,10 @@ func (this *QNetworkProxyQuery) Url() *qtcore.QUrl /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUrl(const QUrl &)
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) SetUrl(url qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -584,6 +729,10 @@ func (this *QNetworkProxyQuery) SetUrl(url qtcore.QUrl_ITF) {
 // index:0
 // Public Visibility=Default Availability=Deprecated
 // [8] QNetworkConfiguration networkConfiguration() const
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) NetworkConfiguration() *QNetworkConfiguration /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QNetworkProxyQuery20networkConfigurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -596,6 +745,10 @@ func (this *QNetworkProxyQuery) NetworkConfiguration() *QNetworkConfiguration /*
 // index:0
 // Public Visibility=Default Availability=Deprecated
 // [-2] void setNetworkConfiguration(const QNetworkConfiguration &)
+
+/*
+
+ */
 func (this *QNetworkProxyQuery) SetNetworkConfiguration(networkConfiguration QNetworkConfiguration_ITF) {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -605,13 +758,28 @@ func (this *QNetworkProxyQuery) SetNetworkConfiguration(networkConfiguration QNe
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QNetworkProxyQuery__QueryType = int
 
+//
 const QNetworkProxyQuery__TcpSocket QNetworkProxyQuery__QueryType = 0
+
+//
 const QNetworkProxyQuery__UdpSocket QNetworkProxyQuery__QueryType = 1
+
+//
 const QNetworkProxyQuery__SctpSocket QNetworkProxyQuery__QueryType = 2
+
+//
 const QNetworkProxyQuery__TcpServer QNetworkProxyQuery__QueryType = 100
+
+//
 const QNetworkProxyQuery__UrlRequest QNetworkProxyQuery__QueryType = 101
+
+//
 const QNetworkProxyQuery__SctpServer QNetworkProxyQuery__QueryType = 102
 
 //  body block end

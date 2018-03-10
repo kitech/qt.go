@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QItemEditorFactory struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QItemEditorFactory) NewFromPointer(cthis unsafe.Pointer) *QItemEditorFact
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QItemEditorFactory()
+
+/*
+Constructs a new item editor factory.
+*/
 func NewQItemEditorFactory() *QItemEditorFactory {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QItemEditorFactoryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQItemEditorFactory() *QItemEditorFactory {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QItemEditorFactory()
+
+/*
+
+ */
 func DeleteQItemEditorFactory(this *QItemEditorFactory) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QItemEditorFactoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -90,6 +101,12 @@ func DeleteQItemEditorFactory(this *QItemEditorFactory) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QWidget * createEditor(int, QWidget *) const
+
+/*
+Creates an editor widget with the given parent for the specified userType of data, and returns it as a QWidget.
+
+See also registerEditor().
+*/
 func (this *QItemEditorFactory) CreateEditor(userType int, parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -104,6 +121,10 @@ func (this *QItemEditorFactory) CreateEditor(userType int, parent QWidget_ITF /*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QByteArray valuePropertyName(int) const
+
+/*
+Returns the property name used to access data for the given userType of data.
+*/
 func (this *QItemEditorFactory) ValuePropertyName(userType int) *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QItemEditorFactory17valuePropertyNameEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), userType)
 	qtrt.ErrPrint(err, rv)
@@ -116,6 +137,14 @@ func (this *QItemEditorFactory) ValuePropertyName(userType int) *qtcore.QByteArr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void registerEditor(int, QItemEditorCreatorBase *)
+
+/*
+Registers an item editor creator specified by creator for the given userType of data.
+
+Note: The factory takes ownership of the item editor creator and will destroy it if a new creator for the same type is registered later.
+
+See also createEditor().
+*/
 func (this *QItemEditorFactory) RegisterEditor(userType int, creator QItemEditorCreatorBase_ITF /*777 QItemEditorCreatorBase **/) {
 	var convArg1 unsafe.Pointer
 	if creator != nil && creator.QItemEditorCreatorBase_PTR() != nil {
@@ -129,6 +158,12 @@ func (this *QItemEditorFactory) RegisterEditor(userType int, creator QItemEditor
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] const QItemEditorFactory * defaultFactory()
+
+/*
+Returns the default item editor factory.
+
+See also setDefaultFactory().
+*/
 func (this *QItemEditorFactory) DefaultFactory() *QItemEditorFactory /*777 const QItemEditorFactory **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QItemEditorFactory14defaultFactoryEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -144,6 +179,12 @@ func QItemEditorFactory_DefaultFactory() *QItemEditorFactory /*777 const QItemEd
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultFactory(QItemEditorFactory *)
+
+/*
+Sets the default item editor factory to the given factory. Both new and existing delegates will use the new factory.
+
+See also defaultFactory().
+*/
 func (this *QItemEditorFactory) SetDefaultFactory(factory QItemEditorFactory_ITF /*777 QItemEditorFactory **/) {
 	var convArg0 unsafe.Pointer
 	if factory != nil && factory.QItemEditorFactory_PTR() != nil {

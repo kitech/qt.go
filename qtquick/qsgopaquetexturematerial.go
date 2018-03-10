@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGOpaqueTextureMaterial struct {
 	*QSGMaterial
 }
@@ -69,6 +72,10 @@ func (*QSGOpaqueTextureMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGOpaque
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGOpaqueTextureMaterial()
+
+/*
+
+ */
 func NewQSGOpaqueTextureMaterial() *QSGOpaqueTextureMaterial {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSGOpaqueTextureMaterialC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -81,6 +88,10 @@ func NewQSGOpaqueTextureMaterial() *QSGOpaqueTextureMaterial {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGMaterialType * type() const
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSGOpaqueTextureMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +102,10 @@ func (this *QSGOpaqueTextureMaterial) Type() *QSGMaterialType /*777 QSGMaterialT
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGMaterialShader * createShader() const
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSGOpaqueTextureMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -101,6 +116,10 @@ func (this *QSGOpaqueTextureMaterial) CreateShader() *QSGMaterialShader /*777 QS
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int compare(const QSGMaterial *) const
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) Compare(other QSGMaterial_ITF /*777 const QSGMaterial **/) int {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSGMaterial_PTR() != nil {
@@ -115,6 +134,10 @@ func (this *QSGOpaqueTextureMaterial) Compare(other QSGMaterial_ITF /*777 const 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTexture(QSGTexture *)
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) SetTexture(texture QSGTexture_ITF /*777 QSGTexture **/) {
 	var convArg0 unsafe.Pointer
 	if texture != nil && texture.QSGTexture_PTR() != nil {
@@ -128,6 +151,10 @@ func (this *QSGOpaqueTextureMaterial) SetTexture(texture QSGTexture_ITF /*777 QS
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSGTexture * texture() const
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) Texture() *QSGTexture /*777 QSGTexture **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSGOpaqueTextureMaterial7textureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -138,6 +165,10 @@ func (this *QSGOpaqueTextureMaterial) Texture() *QSGTexture /*777 QSGTexture **/
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setMipmapFiltering(QSGTexture::Filtering)
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) SetMipmapFiltering(filteringType int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSGOpaqueTextureMaterial18setMipmapFilteringEN10QSGTexture9FilteringE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filteringType)
 	qtrt.ErrPrint(err, rv)
@@ -147,6 +178,10 @@ func (this *QSGOpaqueTextureMaterial) SetMipmapFiltering(filteringType int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QSGTexture::Filtering mipmapFiltering() const
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) MipmapFiltering() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSGOpaqueTextureMaterial15mipmapFilteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -157,6 +192,10 @@ func (this *QSGOpaqueTextureMaterial) MipmapFiltering() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFiltering(QSGTexture::Filtering)
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) SetFiltering(filteringType int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSGOpaqueTextureMaterial12setFilteringEN10QSGTexture9FilteringE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filteringType)
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +205,10 @@ func (this *QSGOpaqueTextureMaterial) SetFiltering(filteringType int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QSGTexture::Filtering filtering() const
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) Filtering() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSGOpaqueTextureMaterial9filteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,6 +219,10 @@ func (this *QSGOpaqueTextureMaterial) Filtering() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHorizontalWrapMode(QSGTexture::WrapMode)
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) SetHorizontalWrapMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSGOpaqueTextureMaterial21setHorizontalWrapModeEN10QSGTexture8WrapModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -185,6 +232,10 @@ func (this *QSGOpaqueTextureMaterial) SetHorizontalWrapMode(mode int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QSGTexture::WrapMode horizontalWrapMode() const
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) HorizontalWrapMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSGOpaqueTextureMaterial18horizontalWrapModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -195,6 +246,10 @@ func (this *QSGOpaqueTextureMaterial) HorizontalWrapMode() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setVerticalWrapMode(QSGTexture::WrapMode)
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) SetVerticalWrapMode(mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSGOpaqueTextureMaterial19setVerticalWrapModeEN10QSGTexture8WrapModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -204,6 +259,10 @@ func (this *QSGOpaqueTextureMaterial) SetVerticalWrapMode(mode int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QSGTexture::WrapMode verticalWrapMode() const
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) VerticalWrapMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSGOpaqueTextureMaterial16verticalWrapModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -214,6 +273,10 @@ func (this *QSGOpaqueTextureMaterial) VerticalWrapMode() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAnisotropyLevel(QSGTexture::AnisotropyLevel)
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) SetAnisotropyLevel(level int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSGOpaqueTextureMaterial18setAnisotropyLevelEN10QSGTexture15AnisotropyLevelE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), level)
 	qtrt.ErrPrint(err, rv)
@@ -223,6 +286,10 @@ func (this *QSGOpaqueTextureMaterial) SetAnisotropyLevel(level int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QSGTexture::AnisotropyLevel anisotropyLevel() const
+
+/*
+
+ */
 func (this *QSGOpaqueTextureMaterial) AnisotropyLevel() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QSGOpaqueTextureMaterial15anisotropyLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

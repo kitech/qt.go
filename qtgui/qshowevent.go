@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QShowEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QShowEvent) NewFromPointer(cthis unsafe.Pointer) *QShowEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QShowEvent()
+
+/*
+
+ */
 func NewQShowEvent() *QShowEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QShowEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQShowEvent() *QShowEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QShowEvent()
+
+/*
+
+ */
 func DeleteQShowEvent(this *QShowEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QShowEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)

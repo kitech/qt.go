@@ -38,6 +38,9 @@ func (this *QAction) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) b
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QAction struct {
 	*qtcore.QObject
 }
@@ -70,6 +73,10 @@ func (*QAction) NewFromPointer(cthis unsafe.Pointer) *QAction {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -80,6 +87,12 @@ func (this *QAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(QObject *)
+
+/*
+Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
+
+Note: The parent argument is optional since Qt 5.7.
+*/
 func NewQAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -96,6 +109,12 @@ func NewQAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(QObject *)
+
+/*
+Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
+
+Note: The parent argument is optional since Qt 5.7.
+*/
 func NewQAction__() *QAction {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -110,6 +129,12 @@ func NewQAction__() *QAction {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QString &, QObject *)
+
+/*
+Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
+
+Note: The parent argument is optional since Qt 5.7.
+*/
 func NewQAction_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -128,6 +153,12 @@ func NewQAction_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAc
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QString &, QObject *)
+
+/*
+Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
+
+Note: The parent argument is optional since Qt 5.7.
+*/
 func NewQAction_1_(text string) *QAction {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -144,6 +175,12 @@ func NewQAction_1_(text string) *QAction {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QIcon &, const QString &, QObject *)
+
+/*
+Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
+
+Note: The parent argument is optional since Qt 5.7.
+*/
 func NewQAction_2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -166,6 +203,12 @@ func NewQAction_2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QIcon &, const QString &, QObject *)
+
+/*
+Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
+
+Note: The parent argument is optional since Qt 5.7.
+*/
 func NewQAction_2_(icon qtgui.QIcon_ITF, text string) *QAction {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -186,6 +229,10 @@ func NewQAction_2_(icon qtgui.QIcon_ITF, text string) *QAction {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAction()
+
+/*
+
+ */
 func DeleteQAction(this *QAction) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -197,6 +244,14 @@ func DeleteQAction(this *QAction) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActionGroup(QActionGroup *)
+
+/*
+Sets this action group to group. The action will be automatically added to the group's list of actions.
+
+Actions within the group will be mutually exclusive.
+
+See also QActionGroup and QAction::actionGroup().
+*/
 func (this *QAction) SetActionGroup(group QActionGroup_ITF /*777 QActionGroup **/) {
 	var convArg0 unsafe.Pointer
 	if group != nil && group.QActionGroup_PTR() != nil {
@@ -210,6 +265,12 @@ func (this *QAction) SetActionGroup(group QActionGroup_ITF /*777 QActionGroup **
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QActionGroup * actionGroup() const
+
+/*
+Returns the action group for this action. If no action group manages this action then 0 will be returned.
+
+See also QActionGroup and QAction::setActionGroup().
+*/
 func (this *QAction) ActionGroup() *QActionGroup /*777 QActionGroup **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction11actionGroupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -220,6 +281,10 @@ func (this *QAction) ActionGroup() *QActionGroup /*777 QActionGroup **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
+
+/*
+
+ */
 func (this *QAction) SetIcon(icon qtgui.QIcon_ITF) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -233,6 +298,10 @@ func (this *QAction) SetIcon(icon qtgui.QIcon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon icon() const
+
+/*
+
+ */
 func (this *QAction) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -245,6 +314,10 @@ func (this *QAction) Icon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
+
+/*
+
+ */
 func (this *QAction) SetText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -256,6 +329,10 @@ func (this *QAction) SetText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
+
+/*
+
+ */
 func (this *QAction) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -269,6 +346,10 @@ func (this *QAction) Text() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconText(const QString &)
+
+/*
+
+ */
 func (this *QAction) SetIconText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -280,6 +361,10 @@ func (this *QAction) SetIconText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString iconText() const
+
+/*
+
+ */
 func (this *QAction) IconText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction8iconTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -293,6 +378,10 @@ func (this *QAction) IconText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
+
+/*
+
+ */
 func (this *QAction) SetToolTip(tip string) {
 	var tmpArg0 = qtcore.NewQString_5(tip)
 	var convArg0 = tmpArg0.GetCthis()
@@ -304,6 +393,10 @@ func (this *QAction) SetToolTip(tip string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toolTip() const
+
+/*
+
+ */
 func (this *QAction) ToolTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -317,6 +410,10 @@ func (this *QAction) ToolTip() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStatusTip(const QString &)
+
+/*
+
+ */
 func (this *QAction) SetStatusTip(statusTip string) {
 	var tmpArg0 = qtcore.NewQString_5(statusTip)
 	var convArg0 = tmpArg0.GetCthis()
@@ -328,6 +425,10 @@ func (this *QAction) SetStatusTip(statusTip string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString statusTip() const
+
+/*
+
+ */
 func (this *QAction) StatusTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction9statusTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -341,6 +442,10 @@ func (this *QAction) StatusTip() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWhatsThis(const QString &)
+
+/*
+
+ */
 func (this *QAction) SetWhatsThis(what string) {
 	var tmpArg0 = qtcore.NewQString_5(what)
 	var convArg0 = tmpArg0.GetCthis()
@@ -352,6 +457,10 @@ func (this *QAction) SetWhatsThis(what string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString whatsThis() const
+
+/*
+
+ */
 func (this *QAction) WhatsThis() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction9whatsThisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -365,6 +474,10 @@ func (this *QAction) WhatsThis() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPriority(enum QAction::Priority)
+
+/*
+
+ */
 func (this *QAction) SetPriority(priority int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction11setPriorityENS_8PriorityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), priority)
 	qtrt.ErrPrint(err, rv)
@@ -374,6 +487,10 @@ func (this *QAction) SetPriority(priority int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAction::Priority priority() const
+
+/*
+
+ */
 func (this *QAction) Priority() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction8priorityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -384,6 +501,12 @@ func (this *QAction) Priority() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMenu * menu() const
+
+/*
+Returns the menu contained by this action. Actions that contain menus can be used to create menu items with submenus, or inserted into toolbars to create buttons with popup menus.
+
+See also setMenu() and QMenu::addAction().
+*/
 func (this *QAction) Menu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction4menuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -394,6 +517,12 @@ func (this *QAction) Menu() *QMenu /*777 QMenu **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenu(QMenu *)
+
+/*
+Sets the menu contained by this action to the specified menu.
+
+See also menu().
+*/
 func (this *QAction) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
 	var convArg0 unsafe.Pointer
 	if menu != nil && menu.QMenu_PTR() != nil {
@@ -407,6 +536,14 @@ func (this *QAction) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSeparator(_Bool)
+
+/*
+If b is true then this action will be considered a separator.
+
+How a separator is represented depends on the widget it is inserted into. Under most circumstances the text, submenu, and icon will be ignored for separator actions.
+
+See also QAction::isSeparator().
+*/
 func (this *QAction) SetSeparator(b bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction12setSeparatorEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	qtrt.ErrPrint(err, rv)
@@ -416,6 +553,12 @@ func (this *QAction) SetSeparator(b bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSeparator() const
+
+/*
+Returns true if this action is a separator action; otherwise it returns false.
+
+See also QAction::setSeparator().
+*/
 func (this *QAction) IsSeparator() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction11isSeparatorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -426,6 +569,10 @@ func (this *QAction) IsSeparator() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcut(const QKeySequence &)
+
+/*
+
+ */
 func (this *QAction) SetShortcut(shortcut qtgui.QKeySequence_ITF) {
 	var convArg0 unsafe.Pointer
 	if shortcut != nil && shortcut.QKeySequence_PTR() != nil {
@@ -439,6 +586,14 @@ func (this *QAction) SetShortcut(shortcut qtgui.QKeySequence_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QKeySequence shortcut() const
+
+/*
+Returns the primary shortcut.
+
+Note: Getter function for property shortcut.
+
+See also setShortcuts().
+*/
 func (this *QAction) Shortcut() *qtgui.QKeySequence /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction8shortcutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -451,6 +606,14 @@ func (this *QAction) Shortcut() *qtgui.QKeySequence /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcuts(QKeySequence::StandardKey)
+
+/*
+Sets shortcuts as the list of shortcuts that trigger the action. The first element of the list is the primary shortcut.
+
+This function was introduced in  Qt 4.2.
+
+See also shortcuts() and shortcut.
+*/
 func (this *QAction) SetShortcuts(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction12setShortcutsEN12QKeySequence11StandardKeyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -460,6 +623,10 @@ func (this *QAction) SetShortcuts(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcutContext(Qt::ShortcutContext)
+
+/*
+
+ */
 func (this *QAction) SetShortcutContext(context int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction18setShortcutContextEN2Qt15ShortcutContextE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), context)
 	qtrt.ErrPrint(err, rv)
@@ -469,6 +636,10 @@ func (this *QAction) SetShortcutContext(context int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ShortcutContext shortcutContext() const
+
+/*
+
+ */
 func (this *QAction) ShortcutContext() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction15shortcutContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -479,6 +650,10 @@ func (this *QAction) ShortcutContext() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoRepeat(_Bool)
+
+/*
+
+ */
 func (this *QAction) SetAutoRepeat(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction13setAutoRepeatEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -488,6 +663,10 @@ func (this *QAction) SetAutoRepeat(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoRepeat() const
+
+/*
+
+ */
 func (this *QAction) AutoRepeat() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction10autoRepeatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -498,6 +677,10 @@ func (this *QAction) AutoRepeat() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
+
+/*
+
+ */
 func (this *QAction) SetFont(font qtgui.QFont_ITF) {
 	var convArg0 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -511,6 +694,10 @@ func (this *QAction) SetFont(font qtgui.QFont_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont font() const
+
+/*
+
+ */
 func (this *QAction) Font() *qtgui.QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -523,6 +710,10 @@ func (this *QAction) Font() *qtgui.QFont /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCheckable(_Bool)
+
+/*
+
+ */
 func (this *QAction) SetCheckable(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction12setCheckableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -532,6 +723,10 @@ func (this *QAction) SetCheckable(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCheckable() const
+
+/*
+
+ */
 func (this *QAction) IsCheckable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction11isCheckableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -542,6 +737,12 @@ func (this *QAction) IsCheckable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant data() const
+
+/*
+Returns the user data as set in QAction::setData.
+
+See also setData().
+*/
 func (this *QAction) Data() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -554,6 +755,12 @@ func (this *QAction) Data() *qtcore.QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QVariant &)
+
+/*
+Sets the action's internal data to the given userData.
+
+See also data().
+*/
 func (this *QAction) SetData(var_ qtcore.QVariant_ITF) {
 	var convArg0 unsafe.Pointer
 	if var_ != nil && var_.QVariant_PTR() != nil {
@@ -567,6 +774,10 @@ func (this *QAction) SetData(var_ qtcore.QVariant_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isChecked() const
+
+/*
+
+ */
 func (this *QAction) IsChecked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction9isCheckedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -577,6 +788,10 @@ func (this *QAction) IsChecked() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled() const
+
+/*
+
+ */
 func (this *QAction) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -587,6 +802,10 @@ func (this *QAction) IsEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible() const
+
+/*
+
+ */
 func (this *QAction) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -597,6 +816,12 @@ func (this *QAction) IsVisible() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activate(enum QAction::ActionEvent)
+
+/*
+Sends the relevant signals for ActionEvent event.
+
+Action based widgets use this API to cause the QAction to emit signals as well as emitting their own.
+*/
 func (this *QAction) Activate(event int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction8activateENS_11ActionEventE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), event)
 	qtrt.ErrPrint(err, rv)
@@ -606,6 +831,14 @@ func (this *QAction) Activate(event int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showStatusText(QWidget *)
+
+/*
+Updates the relevant status bar for the widget specified by sending a QStatusTipEvent to its parent widget. Returns true if an event was sent; otherwise returns false.
+
+If a null widget is specified, the event is sent to the action's parent.
+
+See also statusTip.
+*/
 func (this *QAction) ShowStatusText(widget QWidget_ITF /*777 QWidget **/) bool {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -620,6 +853,14 @@ func (this *QAction) ShowStatusText(widget QWidget_ITF /*777 QWidget **/) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showStatusText(QWidget *)
+
+/*
+Updates the relevant status bar for the widget specified by sending a QStatusTipEvent to its parent widget. Returns true if an event was sent; otherwise returns false.
+
+If a null widget is specified, the event is sent to the action's parent.
+
+See also statusTip.
+*/
 func (this *QAction) ShowStatusText__() bool {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -632,6 +873,10 @@ func (this *QAction) ShowStatusText__() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenuRole(enum QAction::MenuRole)
+
+/*
+
+ */
 func (this *QAction) SetMenuRole(menuRole int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction11setMenuRoleENS_8MenuRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), menuRole)
 	qtrt.ErrPrint(err, rv)
@@ -641,6 +886,10 @@ func (this *QAction) SetMenuRole(menuRole int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAction::MenuRole menuRole() const
+
+/*
+
+ */
 func (this *QAction) MenuRole() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction8menuRoleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -651,6 +900,10 @@ func (this *QAction) MenuRole() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconVisibleInMenu(_Bool)
+
+/*
+
+ */
 func (this *QAction) SetIconVisibleInMenu(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction20setIconVisibleInMenuEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	qtrt.ErrPrint(err, rv)
@@ -660,6 +913,10 @@ func (this *QAction) SetIconVisibleInMenu(visible bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isIconVisibleInMenu() const
+
+/*
+
+ */
 func (this *QAction) IsIconVisibleInMenu() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction19isIconVisibleInMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -670,6 +927,10 @@ func (this *QAction) IsIconVisibleInMenu() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcutVisibleInContextMenu(_Bool)
+
+/*
+
+ */
 func (this *QAction) SetShortcutVisibleInContextMenu(show bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction31setShortcutVisibleInContextMenuEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), show)
 	qtrt.ErrPrint(err, rv)
@@ -679,6 +940,10 @@ func (this *QAction) SetShortcutVisibleInContextMenu(show bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isShortcutVisibleInContextMenu() const
+
+/*
+
+ */
 func (this *QAction) IsShortcutVisibleInContextMenu() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction30isShortcutVisibleInContextMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -689,6 +954,10 @@ func (this *QAction) IsShortcutVisibleInContextMenu() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * parentWidget() const
+
+/*
+Returns the parent widget.
+*/
 func (this *QAction) ParentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction12parentWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -699,6 +968,10 @@ func (this *QAction) ParentWidget() *QWidget /*777 QWidget **/ {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QAction) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -713,6 +986,10 @@ func (this *QAction) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void trigger()
+
+/*
+This is a convenience slot that calls activate(Trigger).
+*/
 func (this *QAction) Trigger() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7triggerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -722,6 +999,10 @@ func (this *QAction) Trigger() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void hover()
+
+/*
+This is a convenience slot that calls activate(Hover).
+*/
 func (this *QAction) Hover() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction5hoverEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -731,6 +1012,10 @@ func (this *QAction) Hover() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setChecked(_Bool)
+
+/*
+
+ */
 func (this *QAction) SetChecked(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction10setCheckedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -740,6 +1025,10 @@ func (this *QAction) SetChecked(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toggle()
+
+/*
+This is a convenience function for the checked property. Connect to it to change the checked state to its opposite state.
+*/
 func (this *QAction) Toggle() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction6toggleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -749,6 +1038,10 @@ func (this *QAction) Toggle() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(_Bool)
+
+/*
+
+ */
 func (this *QAction) SetEnabled(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction10setEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -758,6 +1051,10 @@ func (this *QAction) SetEnabled(arg0 bool) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDisabled(_Bool)
+
+/*
+This is a convenience function for the enabled property, that is useful for signals--slots connections. If b is true the action is disabled; otherwise it is enabled.
+*/
 func (this *QAction) SetDisabled(b bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction11setDisabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	qtrt.ErrPrint(err, rv)
@@ -767,6 +1064,10 @@ func (this *QAction) SetDisabled(b bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(_Bool)
+
+/*
+
+ */
 func (this *QAction) SetVisible(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -776,6 +1077,14 @@ func (this *QAction) SetVisible(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void changed()
+
+/*
+This signal is emitted when an action has changed. If you are only interested in actions in a given widget, you can watch for QWidget::actionEvent() sent with an QEvent::ActionChanged.
+
+Note: Notifier signal for property autoRepeat. Notifier signal for property checkable. Notifier signal for property enabled. Notifier signal for property font. Notifier signal for property icon. Notifier signal for property iconText. Notifier signal for property iconVisibleInMenu. Notifier signal for property menuRole. Notifier signal for property shortcut. Notifier signal for property shortcutContext. Notifier signal for property shortcutVisibleInContextMenu. Notifier signal for property statusTip. Notifier signal for property text. Notifier signal for property toolTip. Notifier signal for property visible. Notifier signal for property whatsThis.
+
+See also QWidget::actionEvent().
+*/
 func (this *QAction) Changed() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7changedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -785,6 +1094,14 @@ func (this *QAction) Changed() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(_Bool)
+
+/*
+This signal is emitted when an action is activated by the user; for example, when the user clicks a menu option, toolbar button, or presses an action's shortcut key combination, or when trigger() was called. Notably, it is not emitted when setChecked() or toggle() is called.
+
+If the action is checkable, checked is true if the action is checked, or false if the action is unchecked.
+
+See also QAction::activate(), QAction::toggled(), and checked.
+*/
 func (this *QAction) Triggered(checked bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction9triggeredEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	qtrt.ErrPrint(err, rv)
@@ -794,6 +1111,14 @@ func (this *QAction) Triggered(checked bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(_Bool)
+
+/*
+This signal is emitted when an action is activated by the user; for example, when the user clicks a menu option, toolbar button, or presses an action's shortcut key combination, or when trigger() was called. Notably, it is not emitted when setChecked() or toggle() is called.
+
+If the action is checkable, checked is true if the action is checked, or false if the action is unchecked.
+
+See also QAction::activate(), QAction::toggled(), and checked.
+*/
 func (this *QAction) Triggered__() {
 	// arg: 0, bool=Bool, =Invalid,
 	checked := false
@@ -805,6 +1130,12 @@ func (this *QAction) Triggered__() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hovered()
+
+/*
+This signal is emitted when an action is highlighted by the user; for example, when the user pauses with the cursor over a menu option, toolbar button, or presses an action's shortcut key combination.
+
+See also QAction::activate().
+*/
 func (this *QAction) Hovered() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7hoveredEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -814,30 +1145,84 @@ func (this *QAction) Hovered() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toggled(_Bool)
+
+/*
+This signal is emitted whenever a checkable action changes its isChecked() status. This can be the result of a user interaction, or because setChecked() was called.
+
+checked is true if the action is checked, or false if the action is unchecked.
+
+Note: Notifier signal for property checked.
+
+See also QAction::activate(), QAction::triggered(), and checked.
+*/
 func (this *QAction) Toggled(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7toggledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+This enum describes how an action should be moved into the application menu on macOS.
+
+
+
+Setting this value only has effect on items that are in the immediate menus of the menubar, not the submenus of those menus. For example, if you have File menu in your menubar and the File menu has a submenu, setting the MenuRole for the actions in that submenu have no effect. They will never be moved.
+
+*/
 type QAction__MenuRole = int
 
+// This action should not be put into the application menu
 const QAction__NoRole QAction__MenuRole = 0
+
+// This action should be put in the application menu based on the action's text as described in the QMenuBar documentation.
 const QAction__TextHeuristicRole QAction__MenuRole = 1
+
+// This action should be put in the application menu with an application specific role
 const QAction__ApplicationSpecificRole QAction__MenuRole = 2
+
+// This action handles the "About Qt" menu item.
 const QAction__AboutQtRole QAction__MenuRole = 3
+
+// This action should be placed where the "About" menu item is in the application menu. The text of the menu item will be set to "About <application name>". The application name is fetched from the Info.plist file in the application's bundle (See Qt for macOS - Deployment).
 const QAction__AboutRole QAction__MenuRole = 4
+
+// This action should be placed where the "Preferences..." menu item is in the application menu.
 const QAction__PreferencesRole QAction__MenuRole = 5
+
+// This action should be placed where the Quit menu item is in the application menu.
 const QAction__QuitRole QAction__MenuRole = 6
 
+/*
+This enum defines priorities for actions in user interface.
+
+
+
+This enum was introduced or modified in  Qt 4.6.
+
+See also priority.
+
+*/
 type QAction__Priority = int
 
+// The action should not be prioritized in the user interface.
 const QAction__LowPriority QAction__Priority = 0
+
+//
 const QAction__NormalPriority QAction__Priority = 128
+
+//
 const QAction__HighPriority QAction__Priority = 256
 
+/*
+This enum type is used when calling QAction::activate()
+
+
+*/
 type QAction__ActionEvent = int
 
+// this will cause the QAction::triggered() signal to be emitted.
 const QAction__Trigger QAction__ActionEvent = 0
+
+// this will cause the QAction::hovered() signal to be emitted.
 const QAction__Hover QAction__ActionEvent = 1
 
 //  body block end

@@ -85,6 +85,9 @@ func (this *QSGNodeVisitor) InheritVisitChildren(f func(n *QSGNode /*777 QSGNode
 	qtrt.SetAllInheritCallback(this, "visitChildren", f)
 }
 
+/*
+
+ */
 type QSGNodeVisitor struct {
 	*qtrt.CObject
 }
@@ -119,6 +122,10 @@ func (*QSGNodeVisitor) NewFromPointer(cthis unsafe.Pointer) *QSGNodeVisitor {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGNodeVisitor()
+
+/*
+
+ */
 func DeleteQSGNodeVisitor(this *QSGNodeVisitor) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGNodeVisitorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -130,6 +137,10 @@ func DeleteQSGNodeVisitor(this *QSGNodeVisitor) {
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterTransformNode(QSGTransformNode *)
+
+/*
+
+ */
 func (this *QSGNodeVisitor) EnterTransformNode(arg0 QSGTransformNode_ITF /*777 QSGTransformNode **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSGTransformNode_PTR() != nil {
@@ -143,6 +154,10 @@ func (this *QSGNodeVisitor) EnterTransformNode(arg0 QSGTransformNode_ITF /*777 Q
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveTransformNode(QSGTransformNode *)
+
+/*
+
+ */
 func (this *QSGNodeVisitor) LeaveTransformNode(arg0 QSGTransformNode_ITF /*777 QSGTransformNode **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSGTransformNode_PTR() != nil {
@@ -156,6 +171,10 @@ func (this *QSGNodeVisitor) LeaveTransformNode(arg0 QSGTransformNode_ITF /*777 Q
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterClipNode(QSGClipNode *)
+
+/*
+
+ */
 func (this *QSGNodeVisitor) EnterClipNode(arg0 QSGClipNode_ITF /*777 QSGClipNode **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSGClipNode_PTR() != nil {
@@ -169,6 +188,10 @@ func (this *QSGNodeVisitor) EnterClipNode(arg0 QSGClipNode_ITF /*777 QSGClipNode
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveClipNode(QSGClipNode *)
+
+/*
+
+ */
 func (this *QSGNodeVisitor) LeaveClipNode(arg0 QSGClipNode_ITF /*777 QSGClipNode **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSGClipNode_PTR() != nil {
@@ -182,6 +205,10 @@ func (this *QSGNodeVisitor) LeaveClipNode(arg0 QSGClipNode_ITF /*777 QSGClipNode
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterGeometryNode(QSGGeometryNode *)
+
+/*
+
+ */
 func (this *QSGNodeVisitor) EnterGeometryNode(arg0 QSGGeometryNode_ITF /*777 QSGGeometryNode **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSGGeometryNode_PTR() != nil {
@@ -195,6 +222,10 @@ func (this *QSGNodeVisitor) EnterGeometryNode(arg0 QSGGeometryNode_ITF /*777 QSG
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveGeometryNode(QSGGeometryNode *)
+
+/*
+
+ */
 func (this *QSGNodeVisitor) LeaveGeometryNode(arg0 QSGGeometryNode_ITF /*777 QSGGeometryNode **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSGGeometryNode_PTR() != nil {
@@ -208,6 +239,10 @@ func (this *QSGNodeVisitor) LeaveGeometryNode(arg0 QSGGeometryNode_ITF /*777 QSG
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterOpacityNode(QSGOpacityNode *)
+
+/*
+
+ */
 func (this *QSGNodeVisitor) EnterOpacityNode(arg0 QSGOpacityNode_ITF /*777 QSGOpacityNode **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSGOpacityNode_PTR() != nil {
@@ -221,6 +256,10 @@ func (this *QSGNodeVisitor) EnterOpacityNode(arg0 QSGOpacityNode_ITF /*777 QSGOp
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveOpacityNode(QSGOpacityNode *)
+
+/*
+
+ */
 func (this *QSGNodeVisitor) LeaveOpacityNode(arg0 QSGOpacityNode_ITF /*777 QSGOpacityNode **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSGOpacityNode_PTR() != nil {
@@ -234,6 +273,10 @@ func (this *QSGNodeVisitor) LeaveOpacityNode(arg0 QSGOpacityNode_ITF /*777 QSGOp
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void visitNode(QSGNode *)
+
+/*
+
+ */
 func (this *QSGNodeVisitor) VisitNode(n QSGNode_ITF /*777 QSGNode **/) {
 	var convArg0 unsafe.Pointer
 	if n != nil && n.QSGNode_PTR() != nil {
@@ -247,6 +290,10 @@ func (this *QSGNodeVisitor) VisitNode(n QSGNode_ITF /*777 QSGNode **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void visitChildren(QSGNode *)
+
+/*
+
+ */
 func (this *QSGNodeVisitor) VisitChildren(n QSGNode_ITF /*777 QSGNode **/) {
 	var convArg0 unsafe.Pointer
 	if n != nil && n.QSGNode_PTR() != nil {

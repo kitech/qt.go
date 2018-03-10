@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QFileOpenEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QFileOpenEvent) NewFromPointer(cthis unsafe.Pointer) *QFileOpenEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileOpenEvent(const QString &)
+
+/*
+
+ */
 func NewQFileOpenEvent(file string) *QFileOpenEvent {
 	var tmpArg0 = qtcore.NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
@@ -78,6 +85,10 @@ func NewQFileOpenEvent(file string) *QFileOpenEvent {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFileOpenEvent(const QUrl &)
+
+/*
+
+ */
 func NewQFileOpenEvent_1(url qtcore.QUrl_ITF) *QFileOpenEvent {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -94,6 +105,10 @@ func NewQFileOpenEvent_1(url qtcore.QUrl_ITF) *QFileOpenEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileOpenEvent()
+
+/*
+
+ */
 func DeleteQFileOpenEvent(this *QFileOpenEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QFileOpenEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -105,6 +120,10 @@ func DeleteQFileOpenEvent(this *QFileOpenEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString file() const
+
+/*
+
+ */
 func (this *QFileOpenEvent) File() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QFileOpenEvent4fileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -118,6 +137,10 @@ func (this *QFileOpenEvent) File() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QUrl url() const
+
+/*
+
+ */
 func (this *QFileOpenEvent) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QFileOpenEvent3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +153,10 @@ func (this *QFileOpenEvent) Url() *qtcore.QUrl /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool openFile(QFile &, QIODevice::OpenMode) const
+
+/*
+
+ */
 func (this *QFileOpenEvent) OpenFile(file qtcore.QFile_ITF, flags int) bool {
 	var convArg0 unsafe.Pointer
 	if file != nil && file.QFile_PTR() != nil {

@@ -36,6 +36,9 @@ func (this *QItemSelectionModel) InheritEmitSelectionChanged(f func(newSelection
 	qtrt.SetAllInheritCallback(this, "emitSelectionChanged", f)
 }
 
+/*
+
+ */
 type QItemSelectionModel struct {
 	*QObject
 }
@@ -68,6 +71,10 @@ func (*QItemSelectionModel) NewFromPointer(cthis unsafe.Pointer) *QItemSelection
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QItemSelectionModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func (this *QItemSelectionModel) MetaObject() *QMetaObject /*777 const QMetaObje
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QItemSelectionModel(QAbstractItemModel *)
+
+/*
+Constructs a selection model that operates on the specified item model.
+*/
 func NewQItemSelectionModel(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/) *QItemSelectionModel {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
@@ -94,6 +105,10 @@ func NewQItemSelectionModel(model QAbstractItemModel_ITF /*777 QAbstractItemMode
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QItemSelectionModel(QAbstractItemModel *)
+
+/*
+Constructs a selection model that operates on the specified item model.
+*/
 func NewQItemSelectionModel__() *QItemSelectionModel {
 	// arg: 0, QAbstractItemModel *=Pointer, QAbstractItemModel=Record,
 	var convArg0 unsafe.Pointer
@@ -108,6 +123,10 @@ func NewQItemSelectionModel__() *QItemSelectionModel {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QItemSelectionModel(QAbstractItemModel *, QObject *)
+
+/*
+Constructs a selection model that operates on the specified item model.
+*/
 func NewQItemSelectionModel_1(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent QObject_ITF /*777 QObject **/) *QItemSelectionModel {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
@@ -128,6 +147,10 @@ func NewQItemSelectionModel_1(model QAbstractItemModel_ITF /*777 QAbstractItemMo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QItemSelectionModel()
+
+/*
+
+ */
 func DeleteQItemSelectionModel(this *QItemSelectionModel) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModelD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -139,6 +162,12 @@ func DeleteQItemSelectionModel(this *QItemSelectionModel) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex currentIndex() const
+
+/*
+Returns the model item index for the current item, or an invalid index if there is no current item.
+
+See also setCurrentIndex().
+*/
 func (this *QItemSelectionModel) CurrentIndex() *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12currentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +180,10 @@ func (this *QItemSelectionModel) CurrentIndex() *QModelIndex /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSelected(const QModelIndex &) const
+
+/*
+Returns true if the given model item index is selected.
+*/
 func (this *QItemSelectionModel) IsSelected(index QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -165,6 +198,12 @@ func (this *QItemSelectionModel) IsSelected(index QModelIndex_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRowSelected(int, const QModelIndex &) const
+
+/*
+Returns true if all items are selected in the row with the given parent.
+
+Note that this function is usually faster than calling isSelected() on all items in the same row and that unselectable items are ignored.
+*/
 func (this *QItemSelectionModel) IsRowSelected(row int, parent QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -179,6 +218,12 @@ func (this *QItemSelectionModel) IsRowSelected(row int, parent QModelIndex_ITF) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isColumnSelected(int, const QModelIndex &) const
+
+/*
+Returns true if all items are selected in the column with the given parent.
+
+Note that this function is usually faster than calling isSelected() on all items in the same column and that unselectable items are ignored.
+*/
 func (this *QItemSelectionModel) IsColumnSelected(column int, parent QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -193,6 +238,10 @@ func (this *QItemSelectionModel) IsColumnSelected(column int, parent QModelIndex
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool rowIntersectsSelection(int, const QModelIndex &) const
+
+/*
+Returns true if there are any items selected in the row with the given parent.
+*/
 func (this *QItemSelectionModel) RowIntersectsSelection(row int, parent QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -207,6 +256,10 @@ func (this *QItemSelectionModel) RowIntersectsSelection(row int, parent QModelIn
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool columnIntersectsSelection(int, const QModelIndex &) const
+
+/*
+Returns true if there are any items selected in the column with the given parent.
+*/
 func (this *QItemSelectionModel) ColumnIntersectsSelection(column int, parent QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -221,6 +274,12 @@ func (this *QItemSelectionModel) ColumnIntersectsSelection(column int, parent QM
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasSelection() const
+
+/*
+Returns true if the selection model contains any selection ranges; otherwise returns false.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QItemSelectionModel) HasSelection() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12hasSelectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -231,6 +290,12 @@ func (this *QItemSelectionModel) HasSelection() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList selectedIndexes() const
+
+/*
+Returns a list of all selected model item indexes. The list contains no duplicates, and is not sorted.
+
+Note: Getter function for property selectedIndexes.
+*/
 func (this *QItemSelectionModel) SelectedIndexes() *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedIndexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -242,6 +307,14 @@ func (this *QItemSelectionModel) SelectedIndexes() *QModelIndexList /*667*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList selectedRows(int) const
+
+/*
+Returns the indexes in the given column for the rows where all columns are selected.
+
+This function was introduced in  Qt 4.2.
+
+See also selectedIndexes() and selectedColumns().
+*/
 func (this *QItemSelectionModel) SelectedRows(column int) *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12selectedRowsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -253,6 +326,14 @@ func (this *QItemSelectionModel) SelectedRows(column int) *QModelIndexList /*667
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList selectedRows(int) const
+
+/*
+Returns the indexes in the given column for the rows where all columns are selected.
+
+This function was introduced in  Qt 4.2.
+
+See also selectedIndexes() and selectedColumns().
+*/
 func (this *QItemSelectionModel) SelectedRows__() *QModelIndexList /*667*/ {
 	// arg: 0, int=Int, =Invalid,
 	column := int(0)
@@ -266,6 +347,14 @@ func (this *QItemSelectionModel) SelectedRows__() *QModelIndexList /*667*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList selectedColumns(int) const
+
+/*
+Returns the indexes in the given row for columns where all rows are selected.
+
+This function was introduced in  Qt 4.2.
+
+See also selectedIndexes() and selectedRows().
+*/
 func (this *QItemSelectionModel) SelectedColumns(row int) *QModelIndexList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedColumnsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -277,6 +366,14 @@ func (this *QItemSelectionModel) SelectedColumns(row int) *QModelIndexList /*667
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList selectedColumns(int) const
+
+/*
+Returns the indexes in the given row for columns where all rows are selected.
+
+This function was introduced in  Qt 4.2.
+
+See also selectedIndexes() and selectedRows().
+*/
 func (this *QItemSelectionModel) SelectedColumns__() *QModelIndexList /*667*/ {
 	// arg: 0, int=Int, =Invalid,
 	row := int(0)
@@ -290,6 +387,10 @@ func (this *QItemSelectionModel) SelectedColumns__() *QModelIndexList /*667*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QItemSelection selection() const
+
+/*
+Returns the selection ranges stored in the selection model.
+*/
 func (this *QItemSelectionModel) Selection() *QItemSelection /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel9selectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -302,6 +403,12 @@ func (this *QItemSelectionModel) Selection() *QItemSelection /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QAbstractItemModel * model() const
+
+/*
+Returns the item model operated on by the selection model.
+
+See also setModel().
+*/
 func (this *QItemSelectionModel) Model() *QAbstractItemModel /*777 const QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -312,6 +419,12 @@ func (this *QItemSelectionModel) Model() *QAbstractItemModel /*777 const QAbstra
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemModel * model()
+
+/*
+Returns the item model operated on by the selection model.
+
+See also setModel().
+*/
 func (this *QItemSelectionModel) Model_1() *QAbstractItemModel /*777 QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -322,6 +435,14 @@ func (this *QItemSelectionModel) Model_1() *QAbstractItemModel /*777 QAbstractIt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
+
+/*
+Sets the model to model. The modelChanged() signal will be emitted.
+
+This function was introduced in  Qt 5.5.
+
+See also model() and modelChanged().
+*/
 func (this *QItemSelectionModel) SetModel(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
@@ -335,6 +456,14 @@ func (this *QItemSelectionModel) SetModel(model QAbstractItemModel_ITF /*777 QAb
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setCurrentIndex(const QModelIndex &, QItemSelectionModel::SelectionFlags)
+
+/*
+Sets the model item index to be the current item, and emits currentChanged(). The current item is used for keyboard navigation and focus indication; it is independent of any selected items, although a selected item can also be the current item.
+
+Depending on the specified command, the index can also become part of the current selection.
+
+See also currentIndex() and select().
+*/
 func (this *QItemSelectionModel) SetCurrentIndex(index QModelIndex_ITF, command int) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -348,6 +477,12 @@ func (this *QItemSelectionModel) SetCurrentIndex(index QModelIndex_ITF, command 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void select(const QModelIndex &, QItemSelectionModel::SelectionFlags)
+
+/*
+Selects the model item index using the specified command, and emits selectionChanged().
+
+See also QItemSelectionModel::SelectionFlags.
+*/
 func (this *QItemSelectionModel) Select(index QModelIndex_ITF, command int) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -361,6 +496,12 @@ func (this *QItemSelectionModel) Select(index QModelIndex_ITF, command int) {
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void select(const QItemSelection &, QItemSelectionModel::SelectionFlags)
+
+/*
+Selects the model item index using the specified command, and emits selectionChanged().
+
+See also QItemSelectionModel::SelectionFlags.
+*/
 func (this *QItemSelectionModel) Select_1(selection QItemSelection_ITF, command int) {
 	var convArg0 unsafe.Pointer
 	if selection != nil && selection.QItemSelection_PTR() != nil {
@@ -374,6 +515,10 @@ func (this *QItemSelectionModel) Select_1(selection QItemSelection_ITF, command 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the selection model. Emits selectionChanged() and currentChanged().
+*/
 func (this *QItemSelectionModel) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -383,6 +528,10 @@ func (this *QItemSelectionModel) Clear() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void reset()
+
+/*
+Clears the selection model. Does not emit any signals.
+*/
 func (this *QItemSelectionModel) Reset() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -392,6 +541,12 @@ func (this *QItemSelectionModel) Reset() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearSelection()
+
+/*
+Clears the selection in the selection model. Emits selectionChanged().
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QItemSelectionModel) ClearSelection() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel14clearSelectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -401,6 +556,10 @@ func (this *QItemSelectionModel) ClearSelection() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void clearCurrentIndex()
+
+/*
+Clears the current index. Emits currentChanged().
+*/
 func (this *QItemSelectionModel) ClearCurrentIndex() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel17clearCurrentIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -410,6 +569,16 @@ func (this *QItemSelectionModel) ClearCurrentIndex() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectionChanged(const QItemSelection &, const QItemSelection &)
+
+/*
+This signal is emitted whenever the selection changes. The change in the selection is represented as an item selection of deselected items and an item selection of selected items.
+
+Note the that the current index changes independently from the selection. Also note that this signal will not be emitted when the item model is reset.
+
+Note: Notifier signal for property selectedIndexes.
+
+See also select() and currentChanged().
+*/
 func (this *QItemSelectionModel) SelectionChanged(selected QItemSelection_ITF, deselected QItemSelection_ITF) {
 	var convArg0 unsafe.Pointer
 	if selected != nil && selected.QItemSelection_PTR() != nil {
@@ -427,6 +596,14 @@ func (this *QItemSelectionModel) SelectionChanged(selected QItemSelection_ITF, d
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentChanged(const QModelIndex &, const QModelIndex &)
+
+/*
+This signal is emitted whenever the current item changes. The previous model item index is replaced by the current index as the selection's current item.
+
+Note that this signal will not be emitted when the item model is reset.
+
+See also currentIndex(), setCurrentIndex(), and selectionChanged().
+*/
 func (this *QItemSelectionModel) CurrentChanged(current QModelIndex_ITF, previous QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if current != nil && current.QModelIndex_PTR() != nil {
@@ -444,6 +621,14 @@ func (this *QItemSelectionModel) CurrentChanged(current QModelIndex_ITF, previou
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentRowChanged(const QModelIndex &, const QModelIndex &)
+
+/*
+This signal is emitted if the current item changes and its row is different to the row of the previous current item.
+
+Note that this signal will not be emitted when the item model is reset.
+
+See also currentChanged(), currentColumnChanged(), currentIndex(), and setCurrentIndex().
+*/
 func (this *QItemSelectionModel) CurrentRowChanged(current QModelIndex_ITF, previous QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if current != nil && current.QModelIndex_PTR() != nil {
@@ -461,6 +646,14 @@ func (this *QItemSelectionModel) CurrentRowChanged(current QModelIndex_ITF, prev
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentColumnChanged(const QModelIndex &, const QModelIndex &)
+
+/*
+This signal is emitted if the current item changes and its column is different to the column of the previous current item.
+
+Note that this signal will not be emitted when the item model is reset.
+
+See also currentChanged(), currentRowChanged(), currentIndex(), and setCurrentIndex().
+*/
 func (this *QItemSelectionModel) CurrentColumnChanged(current QModelIndex_ITF, previous QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if current != nil && current.QModelIndex_PTR() != nil {
@@ -478,6 +671,14 @@ func (this *QItemSelectionModel) CurrentColumnChanged(current QModelIndex_ITF, p
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void modelChanged(QAbstractItemModel *)
+
+/*
+This signal is emitted when the model is successfully set with setModel().
+
+This function was introduced in  Qt 5.5.
+
+See also model() and setModel().
+*/
 func (this *QItemSelectionModel) ModelChanged(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
@@ -491,6 +692,10 @@ func (this *QItemSelectionModel) ModelChanged(model QAbstractItemModel_ITF /*777
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void emitSelectionChanged(const QItemSelection &, const QItemSelection &)
+
+/*
+Compares the two selections newSelection and oldSelection and emits selectionChanged() with the deselected and selected items.
+*/
 func (this *QItemSelectionModel) EmitSelectionChanged(newSelection QItemSelection_ITF, oldSelection QItemSelection_ITF) {
 	var convArg0 unsafe.Pointer
 	if newSelection != nil && newSelection.QItemSelection_PTR() != nil {
@@ -504,18 +709,43 @@ func (this *QItemSelectionModel) EmitSelectionChanged(newSelection QItemSelectio
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QItemSelectionModel__SelectionFlag = int
 
+//
 const QItemSelectionModel__NoUpdate QItemSelectionModel__SelectionFlag = 0
+
+//
 const QItemSelectionModel__Clear QItemSelectionModel__SelectionFlag = 1
+
+//
 const QItemSelectionModel__Select QItemSelectionModel__SelectionFlag = 2
+
+//
 const QItemSelectionModel__Deselect QItemSelectionModel__SelectionFlag = 4
+
+//
 const QItemSelectionModel__Toggle QItemSelectionModel__SelectionFlag = 8
+
+//
 const QItemSelectionModel__Current QItemSelectionModel__SelectionFlag = 16
+
+//
 const QItemSelectionModel__Rows QItemSelectionModel__SelectionFlag = 32
+
+//
 const QItemSelectionModel__Columns QItemSelectionModel__SelectionFlag = 64
+
+//
 const QItemSelectionModel__SelectCurrent QItemSelectionModel__SelectionFlag = 18
+
+//
 const QItemSelectionModel__ToggleCurrent QItemSelectionModel__SelectionFlag = 24
+
+//
 const QItemSelectionModel__ClearAndSelect QItemSelectionModel__SelectionFlag = 3
 
 //  body block end

@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QGraphicsRotation struct {
 	*QGraphicsTransform
 }
@@ -65,6 +68,10 @@ func (*QGraphicsRotation) NewFromPointer(cthis unsafe.Pointer) *QGraphicsRotatio
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QGraphicsRotation) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRotation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QGraphicsRotation) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsRotation(QObject *)
+
+/*
+
+ */
 func NewQGraphicsRotation(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsRotation {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQGraphicsRotation(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphic
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsRotation(QObject *)
+
+/*
+
+ */
 func NewQGraphicsRotation__() *QGraphicsRotation {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQGraphicsRotation__() *QGraphicsRotation {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsRotation()
+
+/*
+
+ */
 func DeleteQGraphicsRotation(this *QGraphicsRotation) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -116,6 +135,10 @@ func DeleteQGraphicsRotation(this *QGraphicsRotation) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [12] QVector3D origin() const
+
+/*
+
+ */
 func (this *QGraphicsRotation) Origin() *qtgui.QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRotation6originEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +151,10 @@ func (this *QGraphicsRotation) Origin() *qtgui.QVector3D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrigin(const QVector3D &)
+
+/*
+
+ */
 func (this *QGraphicsRotation) SetOrigin(point qtgui.QVector3D_ITF) {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector3D_PTR() != nil {
@@ -141,6 +168,10 @@ func (this *QGraphicsRotation) SetOrigin(point qtgui.QVector3D_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal angle() const
+
+/*
+
+ */
 func (this *QGraphicsRotation) Angle() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRotation5angleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +182,10 @@ func (this *QGraphicsRotation) Angle() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAngle(qreal)
+
+/*
+
+ */
 func (this *QGraphicsRotation) SetAngle(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotation8setAngleEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -160,6 +195,10 @@ func (this *QGraphicsRotation) SetAngle(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [12] QVector3D axis() const
+
+/*
+
+ */
 func (this *QGraphicsRotation) Axis() *qtgui.QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRotation4axisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -172,6 +211,10 @@ func (this *QGraphicsRotation) Axis() *qtgui.QVector3D /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAxis(const QVector3D &)
+
+/*
+
+ */
 func (this *QGraphicsRotation) SetAxis(axis qtgui.QVector3D_ITF) {
 	var convArg0 unsafe.Pointer
 	if axis != nil && axis.QVector3D_PTR() != nil {
@@ -185,6 +228,10 @@ func (this *QGraphicsRotation) SetAxis(axis qtgui.QVector3D_ITF) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setAxis(Qt::Axis)
+
+/*
+
+ */
 func (this *QGraphicsRotation) SetAxis_1(axis int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotation7setAxisEN2Qt4AxisE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), axis)
 	qtrt.ErrPrint(err, rv)
@@ -194,6 +241,14 @@ func (this *QGraphicsRotation) SetAxis_1(axis int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void applyTo(QMatrix4x4 *) const
+
+/*
+This pure virtual method has to be reimplemented in derived classes.
+
+It applies this transformation to matrix.
+
+See also QGraphicsItem::transform() and QMatrix4x4::toTransform().
+*/
 func (this *QGraphicsRotation) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix4x4 **/) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix4x4_PTR() != nil {
@@ -207,6 +262,10 @@ func (this *QGraphicsRotation) ApplyTo(matrix qtgui.QMatrix4x4_ITF /*777 QMatrix
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void originChanged()
+
+/*
+
+ */
 func (this *QGraphicsRotation) OriginChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotation13originChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,6 +275,10 @@ func (this *QGraphicsRotation) OriginChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void angleChanged()
+
+/*
+
+ */
 func (this *QGraphicsRotation) AngleChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotation12angleChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -225,6 +288,10 @@ func (this *QGraphicsRotation) AngleChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void axisChanged()
+
+/*
+
+ */
 func (this *QGraphicsRotation) AxisChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotation11axisChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

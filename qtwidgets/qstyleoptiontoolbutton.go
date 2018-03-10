@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionToolButton struct {
 	*QStyleOptionComplex
 }
@@ -65,6 +68,10 @@ func (*QStyleOptionToolButton) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionToolButton()
+
+/*
+
+ */
 func NewQStyleOptionToolButton() *QStyleOptionToolButton {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionToolButtonC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleOptionToolButton() *QStyleOptionToolButton {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionToolButton(int)
+
+/*
+
+ */
 func NewQStyleOptionToolButton_1(version int) *QStyleOptionToolButton {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionToolButtonC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,21 +102,59 @@ func DeleteQStyleOptionToolButton(this *QStyleOptionToolButton) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionToolButton__StyleOptionType = int
 
+//
 const QStyleOptionToolButton__Type QStyleOptionToolButton__StyleOptionType = 983043
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionToolButton__StyleOptionVersion = int
 
+// 1
 const QStyleOptionToolButton__Version QStyleOptionToolButton__StyleOptionVersion = 1
 
+/*
+
+
+ */
 type QStyleOptionToolButton__ToolButtonFeature = int
 
+//
 const QStyleOptionToolButton__None QStyleOptionToolButton__ToolButtonFeature = 0
+
+//
 const QStyleOptionToolButton__Arrow QStyleOptionToolButton__ToolButtonFeature = 1
+
+//
 const QStyleOptionToolButton__Menu QStyleOptionToolButton__ToolButtonFeature = 4
+
+//
 const QStyleOptionToolButton__MenuButtonPopup QStyleOptionToolButton__ToolButtonFeature = 4
+
+//
 const QStyleOptionToolButton__PopupDelay QStyleOptionToolButton__ToolButtonFeature = 8
+
+//
 const QStyleOptionToolButton__HasMenu QStyleOptionToolButton__ToolButtonFeature = 16
 
 //  body block end

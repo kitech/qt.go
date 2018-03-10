@@ -51,6 +51,9 @@ func (this *QFutureWatcherBase) InheritDisconnectOutputInterface(f func(pendingA
 	qtrt.SetAllInheritCallback(this, "disconnectOutputInterface", f)
 }
 
+/*
+
+ */
 type QFutureWatcherBase struct {
 	*QObject
 }
@@ -83,6 +86,10 @@ func (*QFutureWatcherBase) NewFromPointer(cthis unsafe.Pointer) *QFutureWatcherB
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +100,10 @@ func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObjec
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFutureWatcherBase(QObject *)
+
+/*
+
+ */
 func NewQFutureWatcherBase(parent QObject_ITF /*777 QObject **/) *QFutureWatcherBase {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +120,10 @@ func NewQFutureWatcherBase(parent QObject_ITF /*777 QObject **/) *QFutureWatcher
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFutureWatcherBase(QObject *)
+
+/*
+
+ */
 func NewQFutureWatcherBase__() *QFutureWatcherBase {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -123,6 +138,12 @@ func NewQFutureWatcherBase__() *QFutureWatcherBase {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int progressValue() const
+
+/*
+Returns the current progress value, which is between the progressMinimum() and progressMaximum().
+
+See also progressMinimum() and progressMaximum().
+*/
 func (this *QFutureWatcherBase) ProgressValue() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase13progressValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +154,12 @@ func (this *QFutureWatcherBase) ProgressValue() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int progressMinimum() const
+
+/*
+Returns the minimum progressValue().
+
+See also progressValue() and progressMaximum().
+*/
 func (this *QFutureWatcherBase) ProgressMinimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMinimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +170,12 @@ func (this *QFutureWatcherBase) ProgressMinimum() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int progressMaximum() const
+
+/*
+Returns the maximum progressValue().
+
+See also progressValue() and progressMinimum().
+*/
 func (this *QFutureWatcherBase) ProgressMaximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMaximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -153,6 +186,12 @@ func (this *QFutureWatcherBase) ProgressMaximum() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString progressText() const
+
+/*
+Returns the (optional) textual representation of the progress as reported by the asynchronous computation.
+
+Be aware that not all computations provide a textual representation of the progress, and as such, this function may return an empty string.
+*/
 func (this *QFutureWatcherBase) ProgressText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase12progressTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +205,10 @@ func (this *QFutureWatcherBase) ProgressText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isStarted() const
+
+/*
+Returns true if the asynchronous computation represented by the future() has been started; otherwise returns false.
+*/
 func (this *QFutureWatcherBase) IsStarted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase9isStartedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,6 +219,10 @@ func (this *QFutureWatcherBase) IsStarted() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFinished() const
+
+/*
+Returns true if the asynchronous computation represented by the future() has finished, or if no future has been set; otherwise returns false.
+*/
 func (this *QFutureWatcherBase) IsFinished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10isFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,6 +233,10 @@ func (this *QFutureWatcherBase) IsFinished() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRunning() const
+
+/*
+Returns true if the asynchronous computation represented by the future() is currently running; otherwise returns false.
+*/
 func (this *QFutureWatcherBase) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -196,6 +247,12 @@ func (this *QFutureWatcherBase) IsRunning() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCanceled() const
+
+/*
+Returns true if the asynchronous computation has been canceled with the cancel() function; otherwise returns false.
+
+Be aware that the computation may still be running even though this function returns true. See cancel() for more details.
+*/
 func (this *QFutureWatcherBase) IsCanceled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10isCanceledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -206,6 +263,14 @@ func (this *QFutureWatcherBase) IsCanceled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isPaused() const
+
+/*
+Returns true if the asynchronous computation has been paused with the pause() function; otherwise returns false.
+
+Be aware that the computation may still be running even though this function returns true. See setPaused() for more details.
+
+See also setPaused() and togglePaused().
+*/
 func (this *QFutureWatcherBase) IsPaused() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase8isPausedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -216,6 +281,10 @@ func (this *QFutureWatcherBase) IsPaused() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void waitForFinished()
+
+/*
+Waits for the asynchronous computation to finish (including cancel()ed computations).
+*/
 func (this *QFutureWatcherBase) WaitForFinished() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase15waitForFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -225,6 +294,10 @@ func (this *QFutureWatcherBase) WaitForFinished() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPendingResultsLimit(int)
+
+/*
+The setPendingResultsLimit() provides throttling control. When the number of pending resultReadyAt() or resultsReadyAt() signals exceeds the limit, the computation represented by the future will be throttled automatically. The computation will resume once the number of pending signals drops below the limit.
+*/
 func (this *QFutureWatcherBase) SetPendingResultsLimit(limit int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase22setPendingResultsLimitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), limit)
 	qtrt.ErrPrint(err, rv)
@@ -234,6 +307,10 @@ func (this *QFutureWatcherBase) SetPendingResultsLimit(limit int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+
+ */
 func (this *QFutureWatcherBase) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -248,6 +325,10 @@ func (this *QFutureWatcherBase) Event(event QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void started()
+
+/*
+This signal is emitted when this QFutureWatcher starts watching the future set with setFuture().
+*/
 func (this *QFutureWatcherBase) Started() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase7startedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,6 +338,10 @@ func (this *QFutureWatcherBase) Started() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finished()
+
+/*
+This signal is emitted when the watched future finishes.
+*/
 func (this *QFutureWatcherBase) Finished() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase8finishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -266,6 +351,10 @@ func (this *QFutureWatcherBase) Finished() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void canceled()
+
+/*
+This signal is emitted if the watched future is canceled.
+*/
 func (this *QFutureWatcherBase) Canceled() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase8canceledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -275,6 +364,12 @@ func (this *QFutureWatcherBase) Canceled() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void paused()
+
+/*
+This signal is emitted when the watched future is paused.
+
+See also setPaused().
+*/
 func (this *QFutureWatcherBase) Paused() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase6pausedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -284,6 +379,10 @@ func (this *QFutureWatcherBase) Paused() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resumed()
+
+/*
+This signal is emitted when the watched future is resumed.
+*/
 func (this *QFutureWatcherBase) Resumed() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase7resumedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -293,6 +392,10 @@ func (this *QFutureWatcherBase) Resumed() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resultReadyAt(int)
+
+/*
+This signal is emitted when the watched future reports a ready result at index. If the future reports multiple results, the index will indicate which one it is. Results can be reported out-of-order. To get the result, call future().result(index);
+*/
 func (this *QFutureWatcherBase) ResultReadyAt(resultIndex int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase13resultReadyAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), resultIndex)
 	qtrt.ErrPrint(err, rv)
@@ -302,6 +405,10 @@ func (this *QFutureWatcherBase) ResultReadyAt(resultIndex int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resultsReadyAt(int, int)
+
+/*
+This signal is emitted when the watched future reports ready results. The results are indexed from beginIndex to endIndex.
+*/
 func (this *QFutureWatcherBase) ResultsReadyAt(beginIndex int, endIndex int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase14resultsReadyAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), beginIndex, endIndex)
 	qtrt.ErrPrint(err, rv)
@@ -311,6 +418,10 @@ func (this *QFutureWatcherBase) ResultsReadyAt(beginIndex int, endIndex int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void progressRangeChanged(int, int)
+
+/*
+The progress range for the watched future has changed to minimum and maximum
+*/
 func (this *QFutureWatcherBase) ProgressRangeChanged(minimum int, maximum int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase20progressRangeChangedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), minimum, maximum)
 	qtrt.ErrPrint(err, rv)
@@ -320,6 +431,10 @@ func (this *QFutureWatcherBase) ProgressRangeChanged(minimum int, maximum int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void progressValueChanged(int)
+
+/*
+This signal is emitted when the watched future reports progress, progressValue gives the current progress. In order to avoid overloading the GUI event loop, QFutureWatcher limits the progress signal emission rate. This means that listeners connected to this slot might not get all progress reports the future makes. The last progress update (where progressValue equals the maximum value) will always be delivered.
+*/
 func (this *QFutureWatcherBase) ProgressValueChanged(progressValue int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase20progressValueChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), progressValue)
 	qtrt.ErrPrint(err, rv)
@@ -329,6 +444,10 @@ func (this *QFutureWatcherBase) ProgressValueChanged(progressValue int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void progressTextChanged(const QString &)
+
+/*
+This signal is emitted when the watched future reports textual progress information, progressText.
+*/
 func (this *QFutureWatcherBase) ProgressTextChanged(progressText string) {
 	var tmpArg0 = NewQString_5(progressText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -340,6 +459,14 @@ func (this *QFutureWatcherBase) ProgressTextChanged(progressText string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cancel()
+
+/*
+Cancels the asynchronous computation represented by the future(). Note that the cancelation is asynchronous. Use waitForFinished() after calling cancel() when you need synchronous cancelation.
+
+Currently available results may still be accessed on a canceled QFuture, but new results will not become available after calling this function. Also, this QFutureWatcher will not deliver progress and result ready signals once canceled. This includes the progressValueChanged(), progressRangeChanged(), progressTextChanged(), resultReadyAt(), and resultsReadyAt() signals.
+
+Be aware that not all asynchronous computations can be canceled. For example, the QFuture returned by QtConcurrent::run() cannot be canceled; but the QFuture returned by QtConcurrent::mappedReduced() can.
+*/
 func (this *QFutureWatcherBase) Cancel() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase6cancelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -349,6 +476,16 @@ func (this *QFutureWatcherBase) Cancel() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPaused(_Bool)
+
+/*
+If paused is true, this function pauses the asynchronous computation represented by the future(). If the computation is already paused, this function does nothing. This QFutureWatcher will stop delivering progress and result ready signals while the future is paused. Signal delivery will continue once the computation is resumed.
+
+If paused is false, this function resumes the asynchronous computation. If the computation was not previously paused, this function does nothing.
+
+Be aware that not all computations can be paused. For example, the QFuture returned by QtConcurrent::run() cannot be paused; but the QFuture returned by QtConcurrent::mappedReduced() can.
+
+See also paused(), pause(), resume(), and togglePaused().
+*/
 func (this *QFutureWatcherBase) SetPaused(paused bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase9setPausedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	qtrt.ErrPrint(err, rv)
@@ -358,6 +495,12 @@ func (this *QFutureWatcherBase) SetPaused(paused bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void pause()
+
+/*
+Pauses the asynchronous computation represented by the future(). This is a convenience method that simply calls setPaused(true).
+
+See also resume().
+*/
 func (this *QFutureWatcherBase) Pause() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase5pauseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -367,6 +510,12 @@ func (this *QFutureWatcherBase) Pause() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resume()
+
+/*
+Resumes the asynchronous computation represented by the future(). This is a convenience method that simply calls setPaused(false).
+
+See also pause().
+*/
 func (this *QFutureWatcherBase) Resume() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase6resumeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -376,6 +525,12 @@ func (this *QFutureWatcherBase) Resume() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void togglePaused()
+
+/*
+Toggles the paused state of the asynchronous computation. In other words, if the computation is currently paused, calling this function resumes it; if the computation is running, it becomes paused. This is a convenience method for calling setPaused(!isPaused()).
+
+See also setPaused(), pause(), and resume().
+*/
 func (this *QFutureWatcherBase) TogglePaused() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase12togglePausedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -385,6 +540,10 @@ func (this *QFutureWatcherBase) TogglePaused() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void connectNotify(const QMetaMethod &)
+
+/*
+
+ */
 func (this *QFutureWatcherBase) ConnectNotify(signal QMetaMethod_ITF) {
 	var convArg0 unsafe.Pointer
 	if signal != nil && signal.QMetaMethod_PTR() != nil {
@@ -398,6 +557,10 @@ func (this *QFutureWatcherBase) ConnectNotify(signal QMetaMethod_ITF) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void disconnectNotify(const QMetaMethod &)
+
+/*
+
+ */
 func (this *QFutureWatcherBase) DisconnectNotify(signal QMetaMethod_ITF) {
 	var convArg0 unsafe.Pointer
 	if signal != nil && signal.QMetaMethod_PTR() != nil {
@@ -411,6 +574,10 @@ func (this *QFutureWatcherBase) DisconnectNotify(signal QMetaMethod_ITF) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void connectOutputInterface()
+
+/*
+
+ */
 func (this *QFutureWatcherBase) ConnectOutputInterface() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase22connectOutputInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -420,6 +587,10 @@ func (this *QFutureWatcherBase) ConnectOutputInterface() {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void disconnectOutputInterface(_Bool)
+
+/*
+
+ */
 func (this *QFutureWatcherBase) DisconnectOutputInterface(pendingAssignment bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pendingAssignment)
 	qtrt.ErrPrint(err, rv)
@@ -429,6 +600,10 @@ func (this *QFutureWatcherBase) DisconnectOutputInterface(pendingAssignment bool
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void disconnectOutputInterface(_Bool)
+
+/*
+
+ */
 func (this *QFutureWatcherBase) DisconnectOutputInterface__() {
 	// arg: 0, bool=Bool, =Invalid,
 	pendingAssignment := false

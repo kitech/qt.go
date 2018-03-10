@@ -200,6 +200,9 @@ func (this *QQuickItem) InheritUpdatePolish(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updatePolish", f)
 }
 
+/*
+
+ */
 type QQuickItem struct {
 	*qtcore.QObject
 	*qtqml.QQmlParserStatus
@@ -236,6 +239,10 @@ func (*QQuickItem) NewFromPointer(cthis unsafe.Pointer) *QQuickItem {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQuickItem) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -246,6 +253,10 @@ func (this *QQuickItem) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickItem(QQuickItem *)
+
+/*
+Constructs a QQuickItem with the given parent.
+*/
 func NewQQuickItem(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQuickItem_PTR() != nil {
@@ -262,6 +273,10 @@ func NewQQuickItem(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickItem {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickItem(QQuickItem *)
+
+/*
+Constructs a QQuickItem with the given parent.
+*/
 func NewQQuickItem__() *QQuickItem {
 	// arg: 0, QQuickItem *=Pointer, QQuickItem=Record,
 	var convArg0 unsafe.Pointer
@@ -276,6 +291,10 @@ func NewQQuickItem__() *QQuickItem {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickItem()
+
+/*
+
+ */
 func DeleteQQuickItem(this *QQuickItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -287,6 +306,12 @@ func DeleteQQuickItem(this *QQuickItem) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickWindow * window() const
+
+/*
+Returns the window in which this item is rendered.
+
+The item does not have a window until it has been assigned into a scene. The windowChanged() signal provides a notification both when the item is entered into a scene and when it is removed from a scene.
+*/
 func (this *QQuickItem) Window() *QQuickWindow /*777 QQuickWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -297,6 +322,10 @@ func (this *QQuickItem) Window() *QQuickWindow /*777 QQuickWindow **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * parentItem() const
+
+/*
+
+ */
 func (this *QQuickItem) ParentItem() *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem10parentItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -307,6 +336,10 @@ func (this *QQuickItem) ParentItem() *QQuickItem /*777 QQuickItem **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setParentItem(QQuickItem *)
+
+/*
+
+ */
 func (this *QQuickItem) SetParentItem(parent QQuickItem_ITF /*777 QQuickItem **/) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQuickItem_PTR() != nil {
@@ -320,6 +353,18 @@ func (this *QQuickItem) SetParentItem(parent QQuickItem_ITF /*777 QQuickItem **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stackBefore(const QQuickItem *)
+
+/*
+Moves the specified sibling item to the index before this item within the list of children. The order of children affects both the visual stacking order and tab focus navigation order.
+
+Assuming the z values of both items are the same, this will cause sibling to be rendered above this item.
+
+If both items have activeFocusOnTab set to true, this will also cause the tab focus order to change, with sibling receiving focus after this item.
+
+The given sibling must be a sibling of this item; that is, they must have the same immediate parent.
+
+See also Concepts - Visual Parent in Qt Quick.
+*/
 func (this *QQuickItem) StackBefore(arg0 QQuickItem_ITF /*777 const QQuickItem **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQuickItem_PTR() != nil {
@@ -333,6 +378,18 @@ func (this *QQuickItem) StackBefore(arg0 QQuickItem_ITF /*777 const QQuickItem *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stackAfter(const QQuickItem *)
+
+/*
+Moves the specified sibling item to the index after this item within the list of children. The order of children affects both the visual stacking order and tab focus navigation order.
+
+Assuming the z values of both items are the same, this will cause sibling to be rendered below this item.
+
+If both items have activeFocusOnTab set to true, this will also cause the tab focus order to change, with sibling receiving focus before this item.
+
+The given sibling must be a sibling of this item; that is, they must have the same immediate parent.
+
+See also Concepts - Visual Parent in Qt Quick.
+*/
 func (this *QQuickItem) StackAfter(arg0 QQuickItem_ITF /*777 const QQuickItem **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQuickItem_PTR() != nil {
@@ -346,6 +403,10 @@ func (this *QQuickItem) StackAfter(arg0 QQuickItem_ITF /*777 const QQuickItem **
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF childrenRect()
+
+/*
+
+ */
 func (this *QQuickItem) ChildrenRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem12childrenRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -358,6 +419,10 @@ func (this *QQuickItem) ChildrenRect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool clip() const
+
+/*
+
+ */
 func (this *QQuickItem) Clip() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem4clipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -368,6 +433,10 @@ func (this *QQuickItem) Clip() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClip(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) SetClip(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem7setClipEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -377,6 +446,10 @@ func (this *QQuickItem) SetClip(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString state() const
+
+/*
+
+ */
 func (this *QQuickItem) State() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -390,6 +463,10 @@ func (this *QQuickItem) State() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setState(const QString &)
+
+/*
+
+ */
 func (this *QQuickItem) SetState(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -401,6 +478,10 @@ func (this *QQuickItem) SetState(arg0 string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal baselineOffset() const
+
+/*
+
+ */
 func (this *QQuickItem) BaselineOffset() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem14baselineOffsetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -411,6 +492,10 @@ func (this *QQuickItem) BaselineOffset() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBaselineOffset(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetBaselineOffset(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem17setBaselineOffsetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -420,6 +505,10 @@ func (this *QQuickItem) SetBaselineOffset(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal x() const
+
+/*
+
+ */
 func (this *QQuickItem) X() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -430,6 +519,10 @@ func (this *QQuickItem) X() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal y() const
+
+/*
+
+ */
 func (this *QQuickItem) Y() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -440,6 +533,10 @@ func (this *QQuickItem) Y() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF position() const
+
+/*
+
+ */
 func (this *QQuickItem) Position() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -452,6 +549,10 @@ func (this *QQuickItem) Position() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setX(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetX(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem4setXEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -461,6 +562,10 @@ func (this *QQuickItem) SetX(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setY(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetY(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem4setYEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -470,6 +575,10 @@ func (this *QQuickItem) SetY(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(const QPointF &)
+
+/*
+
+ */
 func (this *QQuickItem) SetPosition(arg0 qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPointF_PTR() != nil {
@@ -483,6 +592,10 @@ func (this *QQuickItem) SetPosition(arg0 qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal width() const
+
+/*
+
+ */
 func (this *QQuickItem) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -493,6 +606,10 @@ func (this *QQuickItem) Width() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidth(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetWidth(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem8setWidthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -502,6 +619,10 @@ func (this *QQuickItem) SetWidth(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetWidth()
+
+/*
+
+ */
 func (this *QQuickItem) ResetWidth() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem10resetWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -511,6 +632,10 @@ func (this *QQuickItem) ResetWidth() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setImplicitWidth(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetImplicitWidth(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem16setImplicitWidthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -520,6 +645,14 @@ func (this *QQuickItem) SetImplicitWidth(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal implicitWidth() const
+
+/*
+Returns the width of the item that is implied by other properties that determine the content.
+
+Note: Getter function for property implicitWidth.
+
+See also setImplicitWidth().
+*/
 func (this *QQuickItem) ImplicitWidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem13implicitWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -530,6 +663,10 @@ func (this *QQuickItem) ImplicitWidth() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal height() const
+
+/*
+
+ */
 func (this *QQuickItem) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -540,6 +677,10 @@ func (this *QQuickItem) Height() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeight(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetHeight(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem9setHeightEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -549,6 +690,10 @@ func (this *QQuickItem) SetHeight(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetHeight()
+
+/*
+
+ */
 func (this *QQuickItem) ResetHeight() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem11resetHeightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -558,6 +703,10 @@ func (this *QQuickItem) ResetHeight() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setImplicitHeight(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetImplicitHeight(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem17setImplicitHeightEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -567,6 +716,10 @@ func (this *QQuickItem) SetImplicitHeight(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal implicitHeight() const
+
+/*
+
+ */
 func (this *QQuickItem) ImplicitHeight() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem14implicitHeightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -577,6 +730,14 @@ func (this *QQuickItem) ImplicitHeight() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF size() const
+
+/*
+Returns the size of the item.
+
+This function was introduced in  Qt 5.10.
+
+See also setSize, width, and height.
+*/
 func (this *QQuickItem) Size() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -589,6 +750,14 @@ func (this *QQuickItem) Size() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSize(const QSizeF &)
+
+/*
+Sets the size of the item to size.
+
+This function was introduced in  Qt 5.10.
+
+See also size, setWidth, and setHeight.
+*/
 func (this *QQuickItem) SetSize(size qtcore.QSizeF_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
@@ -602,6 +771,10 @@ func (this *QQuickItem) SetSize(size qtcore.QSizeF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickItem::TransformOrigin transformOrigin() const
+
+/*
+
+ */
 func (this *QQuickItem) TransformOrigin() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem15transformOriginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -612,6 +785,10 @@ func (this *QQuickItem) TransformOrigin() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransformOrigin(enum QQuickItem::TransformOrigin)
+
+/*
+
+ */
 func (this *QQuickItem) SetTransformOrigin(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem18setTransformOriginENS_15TransformOriginE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -621,6 +798,10 @@ func (this *QQuickItem) SetTransformOrigin(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF transformOriginPoint() const
+
+/*
+
+ */
 func (this *QQuickItem) TransformOriginPoint() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem20transformOriginPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -633,6 +814,10 @@ func (this *QQuickItem) TransformOriginPoint() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransformOriginPoint(const QPointF &)
+
+/*
+
+ */
 func (this *QQuickItem) SetTransformOriginPoint(arg0 qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPointF_PTR() != nil {
@@ -646,6 +831,10 @@ func (this *QQuickItem) SetTransformOriginPoint(arg0 qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal z() const
+
+/*
+
+ */
 func (this *QQuickItem) Z() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem1zEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -656,6 +845,10 @@ func (this *QQuickItem) Z() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setZ(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetZ(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem4setZEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -665,6 +858,10 @@ func (this *QQuickItem) SetZ(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rotation() const
+
+/*
+
+ */
 func (this *QQuickItem) Rotation() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem8rotationEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -675,6 +872,10 @@ func (this *QQuickItem) Rotation() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRotation(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetRotation(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem11setRotationEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -684,6 +885,10 @@ func (this *QQuickItem) SetRotation(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal scale() const
+
+/*
+
+ */
 func (this *QQuickItem) Scale() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem5scaleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -694,6 +899,10 @@ func (this *QQuickItem) Scale() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScale(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetScale(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem8setScaleEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -703,6 +912,10 @@ func (this *QQuickItem) SetScale(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal opacity() const
+
+/*
+
+ */
 func (this *QQuickItem) Opacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem7opacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -713,6 +926,10 @@ func (this *QQuickItem) Opacity() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacity(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetOpacity(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem10setOpacityEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -722,6 +939,10 @@ func (this *QQuickItem) SetOpacity(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible() const
+
+/*
+
+ */
 func (this *QQuickItem) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -732,6 +953,10 @@ func (this *QQuickItem) IsVisible() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) SetVisible(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -741,6 +966,10 @@ func (this *QQuickItem) SetVisible(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled() const
+
+/*
+
+ */
 func (this *QQuickItem) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -751,6 +980,10 @@ func (this *QQuickItem) IsEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) SetEnabled(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem10setEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -760,6 +993,10 @@ func (this *QQuickItem) SetEnabled(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool smooth() const
+
+/*
+
+ */
 func (this *QQuickItem) Smooth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem6smoothEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -770,6 +1007,10 @@ func (this *QQuickItem) Smooth() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSmooth(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) SetSmooth(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem9setSmoothEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -779,6 +1020,10 @@ func (this *QQuickItem) SetSmooth(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool activeFocusOnTab() const
+
+/*
+
+ */
 func (this *QQuickItem) ActiveFocusOnTab() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem16activeFocusOnTabEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -789,6 +1034,10 @@ func (this *QQuickItem) ActiveFocusOnTab() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActiveFocusOnTab(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) SetActiveFocusOnTab(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem19setActiveFocusOnTabEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -798,6 +1047,10 @@ func (this *QQuickItem) SetActiveFocusOnTab(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool antialiasing() const
+
+/*
+
+ */
 func (this *QQuickItem) Antialiasing() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem12antialiasingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -808,6 +1061,10 @@ func (this *QQuickItem) Antialiasing() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAntialiasing(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) SetAntialiasing(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem15setAntialiasingEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -817,6 +1074,10 @@ func (this *QQuickItem) SetAntialiasing(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetAntialiasing()
+
+/*
+
+ */
 func (this *QQuickItem) ResetAntialiasing() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem17resetAntialiasingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -826,6 +1087,12 @@ func (this *QQuickItem) ResetAntialiasing() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickItem::Flags flags() const
+
+/*
+Returns the item flags for this item.
+
+See also setFlags() and setFlag().
+*/
 func (this *QQuickItem) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -836,6 +1103,12 @@ func (this *QQuickItem) Flags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(enum QQuickItem::Flag, _Bool)
+
+/*
+Enables the specified flag for this item if enabled is true; if enabled is false, the flag is disabled.
+
+These provide various hints for the item; for example, the ItemClipsChildrenToShape flag indicates that all children of this item should be clipped to fit within the item area.
+*/
 func (this *QQuickItem) SetFlag(flag int, enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem7setFlagENS_4FlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
 	qtrt.ErrPrint(err, rv)
@@ -845,6 +1118,12 @@ func (this *QQuickItem) SetFlag(flag int, enabled bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(enum QQuickItem::Flag, _Bool)
+
+/*
+Enables the specified flag for this item if enabled is true; if enabled is false, the flag is disabled.
+
+These provide various hints for the item; for example, the ItemClipsChildrenToShape flag indicates that all children of this item should be clipped to fit within the item area.
+*/
 func (this *QQuickItem) SetFlag__(flag int) {
 	// arg: 1, bool=Bool, =Invalid,
 	enabled := true
@@ -856,6 +1135,12 @@ func (this *QQuickItem) SetFlag__(flag int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(QQuickItem::Flags)
+
+/*
+Enables the specified flags for this item.
+
+See also flags() and setFlag().
+*/
 func (this *QQuickItem) SetFlags(flags int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem8setFlagsE6QFlagsINS_4FlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
@@ -865,6 +1150,10 @@ func (this *QQuickItem) SetFlags(flags int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
+
+/*
+
+ */
 func (this *QQuickItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -877,6 +1166,10 @@ func (this *QQuickItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF clipRect() const
+
+/*
+
+ */
 func (this *QQuickItem) ClipRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem8clipRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -889,6 +1182,10 @@ func (this *QQuickItem) ClipRect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasActiveFocus() const
+
+/*
+
+ */
 func (this *QQuickItem) HasActiveFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem14hasActiveFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -899,6 +1196,10 @@ func (this *QQuickItem) HasActiveFocus() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFocus() const
+
+/*
+
+ */
 func (this *QQuickItem) HasFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem8hasFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -909,6 +1210,10 @@ func (this *QQuickItem) HasFocus() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFocus(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) SetFocus(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem8setFocusEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -918,6 +1223,10 @@ func (this *QQuickItem) SetFocus(arg0 bool) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setFocus(_Bool, Qt::FocusReason)
+
+/*
+
+ */
 func (this *QQuickItem) SetFocus_1(focus bool, reason int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem8setFocusEbN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), focus, reason)
 	qtrt.ErrPrint(err, rv)
@@ -927,6 +1236,10 @@ func (this *QQuickItem) SetFocus_1(focus bool, reason int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFocusScope() const
+
+/*
+Returns true if this item is a focus scope, and false otherwise.
+*/
 func (this *QQuickItem) IsFocusScope() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem12isFocusScopeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -937,6 +1250,12 @@ func (this *QQuickItem) IsFocusScope() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * scopedFocusItem() const
+
+/*
+If this item is a focus scope, this returns the item in its focus chain that currently has focus.
+
+Returns 0 if this item is not a focus scope.
+*/
 func (this *QQuickItem) ScopedFocusItem() *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem15scopedFocusItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -947,6 +1266,14 @@ func (this *QQuickItem) ScopedFocusItem() *QQuickItem /*777 QQuickItem **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAncestorOf(const QQuickItem *) const
+
+/*
+Returns true if this item is an ancestor of child (i.e., if this item is child's parent, or one of child's parent's ancestors).
+
+This function was introduced in  Qt 5.7.
+
+See also parentItem().
+*/
 func (this *QQuickItem) IsAncestorOf(child QQuickItem_ITF /*777 const QQuickItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if child != nil && child.QQuickItem_PTR() != nil {
@@ -961,6 +1288,16 @@ func (this *QQuickItem) IsAncestorOf(child QQuickItem_ITF /*777 const QQuickItem
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButtons acceptedMouseButtons() const
+
+/*
+Returns the mouse buttons accepted by this item.
+
+The default value is Qt::NoButton; that is, no mouse buttons are accepted.
+
+If an item does not accept the mouse button for a particular mouse event, the mouse event will not be delivered to the item and will be delivered to the next item in the item hierarchy instead.
+
+See also setAcceptedMouseButtons().
+*/
 func (this *QQuickItem) AcceptedMouseButtons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem20acceptedMouseButtonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -971,6 +1308,12 @@ func (this *QQuickItem) AcceptedMouseButtons() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptedMouseButtons(Qt::MouseButtons)
+
+/*
+Sets the mouse buttons accepted by this item to buttons.
+
+See also acceptedMouseButtons().
+*/
 func (this *QQuickItem) SetAcceptedMouseButtons(buttons int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem23setAcceptedMouseButtonsE6QFlagsIN2Qt11MouseButtonEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
 	qtrt.ErrPrint(err, rv)
@@ -980,6 +1323,16 @@ func (this *QQuickItem) SetAcceptedMouseButtons(buttons int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool acceptHoverEvents() const
+
+/*
+Returns whether hover events are accepted by this item.
+
+The default value is false.
+
+If this is false, then the item will not receive any hover events through the hoverEnterEvent(), hoverMoveEvent() and hoverLeaveEvent() functions.
+
+See also setAcceptHoverEvents().
+*/
 func (this *QQuickItem) AcceptHoverEvents() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem17acceptHoverEventsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -990,6 +1343,12 @@ func (this *QQuickItem) AcceptHoverEvents() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptHoverEvents(_Bool)
+
+/*
+If enabled is true, this sets the item to accept hover events; otherwise, hover events are not accepted by this item.
+
+See also acceptHoverEvents().
+*/
 func (this *QQuickItem) SetAcceptHoverEvents(enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem20setAcceptHoverEventsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	qtrt.ErrPrint(err, rv)
@@ -999,6 +1358,18 @@ func (this *QQuickItem) SetAcceptHoverEvents(enabled bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool acceptTouchEvents() const
+
+/*
+Returns whether touch events are accepted by this item.
+
+The default value is false.
+
+If this is false, then the item will not receive any touch events through the touchEvent() function.
+
+This function was introduced in  Qt 5.10.
+
+See also setAcceptTouchEvents().
+*/
 func (this *QQuickItem) AcceptTouchEvents() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem17acceptTouchEventsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1009,6 +1380,14 @@ func (this *QQuickItem) AcceptTouchEvents() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptTouchEvents(_Bool)
+
+/*
+If enabled is true, this sets the item to accept touch events; otherwise, touch events are not accepted by this item.
+
+This function was introduced in  Qt 5.10.
+
+See also acceptTouchEvents().
+*/
 func (this *QQuickItem) SetAcceptTouchEvents(accept bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem20setAcceptTouchEventsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), accept)
 	qtrt.ErrPrint(err, rv)
@@ -1018,6 +1397,16 @@ func (this *QQuickItem) SetAcceptTouchEvents(accept bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCursor cursor() const
+
+/*
+Returns the cursor shape for this item.
+
+The mouse cursor will assume this shape when it is over this item, unless an override cursor is set. See the list of predefined cursor objects for a range of useful shapes.
+
+If no cursor shape has been set this returns a cursor with the Qt::ArrowCursor shape, however another cursor shape may be displayed if an overlapping item has a valid cursor.
+
+See also setCursor() and unsetCursor().
+*/
 func (this *QQuickItem) Cursor() *qtgui.QCursor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem6cursorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1030,6 +1419,12 @@ func (this *QQuickItem) Cursor() *qtgui.QCursor /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCursor(const QCursor &)
+
+/*
+Sets the cursor shape for this item.
+
+See also cursor() and unsetCursor().
+*/
 func (this *QQuickItem) SetCursor(cursor qtgui.QCursor_ITF) {
 	var convArg0 unsafe.Pointer
 	if cursor != nil && cursor.QCursor_PTR() != nil {
@@ -1043,6 +1438,12 @@ func (this *QQuickItem) SetCursor(cursor qtgui.QCursor_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unsetCursor()
+
+/*
+Clears the cursor shape for this item.
+
+See also cursor() and setCursor().
+*/
 func (this *QQuickItem) UnsetCursor() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem11unsetCursorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1052,6 +1453,10 @@ func (this *QQuickItem) UnsetCursor() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isUnderMouse() const
+
+/*
+
+ */
 func (this *QQuickItem) IsUnderMouse() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem12isUnderMouseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1062,6 +1467,14 @@ func (this *QQuickItem) IsUnderMouse() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void grabMouse()
+
+/*
+Grabs the mouse input.
+
+This item will receive all mouse events until ungrabMouse() is called. Usually this function should not be called, since accepting for example a mouse press event makes sure that the following events are delivered to the item. If an item wants to take over mouse events from the current receiver, it needs to call this function.
+
+Warning: This function should be used with caution.
+*/
 func (this *QQuickItem) GrabMouse() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem9grabMouseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1071,6 +1484,12 @@ func (this *QQuickItem) GrabMouse() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ungrabMouse()
+
+/*
+Releases the mouse grab following a call to grabMouse().
+
+Note that this function should only be called when the item wants to stop handling further events. There is no need to call this function after a release or cancel event since no future events will be received in any case. No move or release events will be delivered after this function was called.
+*/
 func (this *QQuickItem) UngrabMouse() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem11ungrabMouseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1080,6 +1499,12 @@ func (this *QQuickItem) UngrabMouse() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool keepMouseGrab() const
+
+/*
+Returns whether mouse input should exclusively remain with this item.
+
+See also setKeepMouseGrab().
+*/
 func (this *QQuickItem) KeepMouseGrab() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem13keepMouseGrabEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1090,6 +1515,16 @@ func (this *QQuickItem) KeepMouseGrab() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeepMouseGrab(_Bool)
+
+/*
+Sets whether the mouse input should remain exclusively with this item.
+
+This is useful for items that wish to grab and keep mouse interaction following a predefined gesture. For example, an item that is interested in horizontal mouse movement may set keepMouseGrab to true once a threshold has been exceeded. Once keepMouseGrab has been set to true, filtering items will not react to mouse events.
+
+If keep is false, a filtering item may steal the grab. For example, Flickable may attempt to steal a mouse grab if it detects that the user has begun to move the viewport.
+
+See also keepMouseGrab().
+*/
 func (this *QQuickItem) SetKeepMouseGrab(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem16setKeepMouseGrabEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1099,6 +1534,12 @@ func (this *QQuickItem) SetKeepMouseGrab(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool filtersChildMouseEvents() const
+
+/*
+Returns whether mouse and touch events of this item's children should be filtered through this item.
+
+See also setFiltersChildMouseEvents() and childMouseEventFilter().
+*/
 func (this *QQuickItem) FiltersChildMouseEvents() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem23filtersChildMouseEventsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1109,6 +1550,14 @@ func (this *QQuickItem) FiltersChildMouseEvents() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFiltersChildMouseEvents(_Bool)
+
+/*
+Sets whether mouse and touch events of this item's children should be filtered through this item.
+
+If filter is true, childMouseEventFilter() will be called when a mouse event is triggered for a child item.
+
+See also filtersChildMouseEvents().
+*/
 func (this *QQuickItem) SetFiltersChildMouseEvents(filter bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem26setFiltersChildMouseEventsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filter)
 	qtrt.ErrPrint(err, rv)
@@ -1118,6 +1567,14 @@ func (this *QQuickItem) SetFiltersChildMouseEvents(filter bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ungrabTouchPoints()
+
+/*
+Ungrabs the touch points owned by this item.
+
+Note: there is hardly any reason to call this function. It should only be called when an item does not want to receive any further events, so no move or release events will be delivered after calling this function.
+
+See also grabTouchPoints().
+*/
 func (this *QQuickItem) UngrabTouchPoints() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem17ungrabTouchPointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1127,6 +1584,12 @@ func (this *QQuickItem) UngrabTouchPoints() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool keepTouchGrab() const
+
+/*
+Returns whether the touch points grabbed by this item should exclusively remain with this item.
+
+See also setKeepTouchGrab() and keepMouseGrab().
+*/
 func (this *QQuickItem) KeepTouchGrab() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem13keepTouchGrabEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1137,6 +1600,16 @@ func (this *QQuickItem) KeepTouchGrab() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeepTouchGrab(_Bool)
+
+/*
+Sets whether the touch points grabbed by this item should remain exclusively with this item.
+
+This is useful for items that wish to grab and keep specific touch points following a predefined gesture. For example, an item that is interested in horizontal touch point movement may set setKeepTouchGrab to true once a threshold has been exceeded. Once setKeepTouchGrab has been set to true, filtering items will not react to the relevant touch points.
+
+If keep is false, a filtering item may steal the grab. For example, Flickable may attempt to steal a touch point grab if it detects that the user has begun to move the viewport.
+
+See also keepTouchGrab() and setKeepMouseGrab().
+*/
 func (this *QQuickItem) SetKeepTouchGrab(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem16setKeepTouchGrabEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1146,6 +1619,20 @@ func (this *QQuickItem) SetKeepTouchGrab(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool grabToImage(const QJSValue &, const QSize &)
+
+/*
+Grabs the item into an in-memory image.
+
+The grab happens asynchronously and the signal QQuickItemGrabResult::ready() is emitted when the grab has been completed.
+
+Use targetSize to specify the size of the target image. By default, the result will have the same size as item.
+
+If the grab could not be initiated, the function returns null.
+
+Note: This function will render the item to an offscreen surface and copy that surface from the GPU's memory into the CPU's memory, which can be quite costly. For "live" preview, use layers or ShaderEffectSource.
+
+See also QQuickWindow::grabWindow().
+*/
 func (this *QQuickItem) GrabToImage(callback qtqml.QJSValue_ITF, targetSize qtcore.QSize_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if callback != nil && callback.QJSValue_PTR() != nil {
@@ -1164,6 +1651,20 @@ func (this *QQuickItem) GrabToImage(callback qtqml.QJSValue_ITF, targetSize qtco
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool grabToImage(const QJSValue &, const QSize &)
+
+/*
+Grabs the item into an in-memory image.
+
+The grab happens asynchronously and the signal QQuickItemGrabResult::ready() is emitted when the grab has been completed.
+
+Use targetSize to specify the size of the target image. By default, the result will have the same size as item.
+
+If the grab could not be initiated, the function returns null.
+
+Note: This function will render the item to an offscreen surface and copy that surface from the GPU's memory into the CPU's memory, which can be quite costly. For "live" preview, use layers or ShaderEffectSource.
+
+See also QQuickWindow::grabWindow().
+*/
 func (this *QQuickItem) GrabToImage__(callback qtqml.QJSValue_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if callback != nil && callback.QJSValue_PTR() != nil {
@@ -1180,6 +1681,14 @@ func (this *QQuickItem) GrabToImage__(callback qtqml.QJSValue_ITF) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &) const
+
+/*
+Returns true if this item contains point, which is in local coordinates; returns false otherwise.
+
+This function can be overwritten in order to handle point collisions in items with custom shapes. The default implementation checks if the point is inside the item's bounding rect.
+
+Note that this method is generally used to check whether the item is under the mouse cursor, and for that reason, the implementation of this function should be as light-weight as possible.
+*/
 func (this *QQuickItem) Contains(point qtcore.QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -1194,6 +1703,10 @@ func (this *QQuickItem) Contains(point qtcore.QPointF_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform itemTransform(QQuickItem *, _Bool *) const
+
+/*
+
+ */
 func (this *QQuickItem) ItemTransform(arg0 QQuickItem_ITF /*777 QQuickItem **/, arg1 *bool) *qtgui.QTransform /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQuickItem_PTR() != nil {
@@ -1210,6 +1723,14 @@ func (this *QQuickItem) ItemTransform(arg0 QQuickItem_ITF /*777 QQuickItem **/, 
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapToItem(const QQuickItem *, const QPointF &) const
+
+/*
+Maps the given point in this item's coordinate system to the equivalent point within item's coordinate system, and returns the mapped coordinate.
+
+If item is 0, this maps point to the coordinate system of the scene.
+
+See also Concepts - Visual Coordinates in Qt Quick.
+*/
 func (this *QQuickItem) MapToItem(item QQuickItem_ITF /*777 const QQuickItem **/, point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QQuickItem_PTR() != nil {
@@ -1230,6 +1751,12 @@ func (this *QQuickItem) MapToItem(item QQuickItem_ITF /*777 const QQuickItem **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapToScene(const QPointF &) const
+
+/*
+Maps the given point in this item's coordinate system to the equivalent point within the scene's coordinate system, and returns the mapped coordinate.
+
+See also Concepts - Visual Coordinates in Qt Quick.
+*/
 func (this *QQuickItem) MapToScene(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -1246,6 +1773,18 @@ func (this *QQuickItem) MapToScene(point qtcore.QPointF_ITF) *qtcore.QPointF /*1
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapToGlobal(const QPointF &) const
+
+/*
+Maps the given point in this item's coordinate system to the equivalent point within global screen coordinate system, and returns the mapped coordinate.
+
+For example, this may be helpful to add a popup to a Qt Quick component.
+
+Note: Window positioning is done by the window manager and this value is treated only as a hint. So, the resulting window position may differ from what is expected.
+
+This function was introduced in  Qt 5.7.
+
+See also Concepts - Visual Coordinates in Qt Quick.
+*/
 func (this *QQuickItem) MapToGlobal(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -1262,6 +1801,14 @@ func (this *QQuickItem) MapToGlobal(point qtcore.QPointF_ITF) *qtcore.QPointF /*
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectToItem(const QQuickItem *, const QRectF &) const
+
+/*
+Maps the given rect in this item's coordinate system to the equivalent rectangular area within item's coordinate system, and returns the mapped rectangle value.
+
+If item is 0, this maps rect to the coordinate system of the scene.
+
+See also Concepts - Visual Coordinates in Qt Quick.
+*/
 func (this *QQuickItem) MapRectToItem(item QQuickItem_ITF /*777 const QQuickItem **/, rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QQuickItem_PTR() != nil {
@@ -1282,6 +1829,12 @@ func (this *QQuickItem) MapRectToItem(item QQuickItem_ITF /*777 const QQuickItem
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectToScene(const QRectF &) const
+
+/*
+Maps the given rect in this item's coordinate system to the equivalent rectangular area within the scene's coordinate system, and returns the mapped rectangle value.
+
+See also Concepts - Visual Coordinates in Qt Quick.
+*/
 func (this *QQuickItem) MapRectToScene(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -1298,6 +1851,14 @@ func (this *QQuickItem) MapRectToScene(rect qtcore.QRectF_ITF) *qtcore.QRectF /*
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapFromItem(const QQuickItem *, const QPointF &) const
+
+/*
+Maps the given point in item's coordinate system to the equivalent point within this item's coordinate system, and returns the mapped coordinate.
+
+If item is 0, this maps point from the coordinate system of the scene.
+
+See also Concepts - Visual Coordinates in Qt Quick.
+*/
 func (this *QQuickItem) MapFromItem(item QQuickItem_ITF /*777 const QQuickItem **/, point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QQuickItem_PTR() != nil {
@@ -1318,6 +1879,12 @@ func (this *QQuickItem) MapFromItem(item QQuickItem_ITF /*777 const QQuickItem *
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapFromScene(const QPointF &) const
+
+/*
+Maps the given point in the scene's coordinate system to the equivalent point within this item's coordinate system, and returns the mapped coordinate.
+
+See also Concepts - Visual Coordinates in Qt Quick.
+*/
 func (this *QQuickItem) MapFromScene(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -1334,6 +1901,18 @@ func (this *QQuickItem) MapFromScene(point qtcore.QPointF_ITF) *qtcore.QPointF /
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapFromGlobal(const QPointF &) const
+
+/*
+Maps the given point in the global screen coordinate system to the equivalent point within this item's coordinate system, and returns the mapped coordinate.
+
+For example, this may be helpful to add a popup to a Qt Quick component.
+
+Note: Window positioning is done by the window manager and this value is treated only as a hint. So, the resulting window position may differ from what is expected.
+
+This function was introduced in  Qt 5.7.
+
+See also Concepts - Visual Coordinates in Qt Quick.
+*/
 func (this *QQuickItem) MapFromGlobal(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -1350,6 +1929,14 @@ func (this *QQuickItem) MapFromGlobal(point qtcore.QPointF_ITF) *qtcore.QPointF 
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectFromItem(const QQuickItem *, const QRectF &) const
+
+/*
+Maps the given rect in item's coordinate system to the equivalent rectangular area within this item's coordinate system, and returns the mapped rectangle value.
+
+If item is 0, this maps rect from the coordinate system of the scene.
+
+See also Concepts - Visual Coordinates in Qt Quick.
+*/
 func (this *QQuickItem) MapRectFromItem(item QQuickItem_ITF /*777 const QQuickItem **/, rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QQuickItem_PTR() != nil {
@@ -1370,6 +1957,12 @@ func (this *QQuickItem) MapRectFromItem(item QQuickItem_ITF /*777 const QQuickIt
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectFromScene(const QRectF &) const
+
+/*
+Maps the given rect in the scene's coordinate system to the equivalent rectangular area within this item's coordinate system, and returns the mapped rectangle value.
+
+See also Concepts - Visual Coordinates in Qt Quick.
+*/
 func (this *QQuickItem) MapRectFromScene(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -1386,6 +1979,12 @@ func (this *QQuickItem) MapRectFromScene(rect qtcore.QRectF_ITF) *qtcore.QRectF 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void polish()
+
+/*
+Schedules a polish event for this item.
+
+When the scene graph processes the request, it will call updatePolish() on this item.
+*/
 func (this *QQuickItem) Polish() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem6polishEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1395,6 +1994,16 @@ func (this *QQuickItem) Polish() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void forceActiveFocus()
+
+/*
+Forces active focus on the item.
+
+This method sets focus on the item and ensures that all ancestor FocusScope objects in the object hierarchy are also given focus.
+
+The reason for the focus change will be Qt::OtherFocusReason. Use the overloaded method to specify the focus reason to enable better handling of the focus change.
+
+See also activeFocus.
+*/
 func (this *QQuickItem) ForceActiveFocus() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem16forceActiveFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1404,6 +2013,16 @@ func (this *QQuickItem) ForceActiveFocus() {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void forceActiveFocus(Qt::FocusReason)
+
+/*
+Forces active focus on the item.
+
+This method sets focus on the item and ensures that all ancestor FocusScope objects in the object hierarchy are also given focus.
+
+The reason for the focus change will be Qt::OtherFocusReason. Use the overloaded method to specify the focus reason to enable better handling of the focus change.
+
+See also activeFocus.
+*/
 func (this *QQuickItem) ForceActiveFocus_1(reason int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem16forceActiveFocusEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), reason)
 	qtrt.ErrPrint(err, rv)
@@ -1413,6 +2032,10 @@ func (this *QQuickItem) ForceActiveFocus_1(reason int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * nextItemInFocusChain(_Bool)
+
+/*
+Returns the item in the focus chain which is next to this item. If forward is true, or not supplied, it is the next item in the forwards direction. If forward is false, it is the next item in the backwards direction.
+*/
 func (this *QQuickItem) NextItemInFocusChain(forward bool) *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem20nextItemInFocusChainEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), forward)
 	qtrt.ErrPrint(err, rv)
@@ -1423,6 +2046,10 @@ func (this *QQuickItem) NextItemInFocusChain(forward bool) *QQuickItem /*777 QQu
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * nextItemInFocusChain(_Bool)
+
+/*
+Returns the item in the focus chain which is next to this item. If forward is true, or not supplied, it is the next item in the forwards direction. If forward is false, it is the next item in the backwards direction.
+*/
 func (this *QQuickItem) NextItemInFocusChain__() *QQuickItem /*777 QQuickItem **/ {
 	// arg: 0, bool=Bool, =Invalid,
 	forward := true
@@ -1435,6 +2062,12 @@ func (this *QQuickItem) NextItemInFocusChain__() *QQuickItem /*777 QQuickItem **
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * childAt(qreal, qreal) const
+
+/*
+Returns the first visible child item found at point (x, y) within the coordinate system of this item.
+
+Returns 0 if there is no such item.
+*/
 func (this *QQuickItem) ChildAt(x float64, y float64) *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem7childAtEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -1445,6 +2078,14 @@ func (this *QQuickItem) ChildAt(x float64, y float64) *QQuickItem /*777 QQuickIt
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
+
+/*
+This method is only relevant for input items.
+
+If this item is an input item, this method should be reimplemented to return the relevant input method flags for the given query.
+
+See also QWidget::inputMethodQuery().
+*/
 func (this *QQuickItem) InputMethodQuery(query int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem16inputMethodQueryEN2Qt16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), query)
 	qtrt.ErrPrint(err, rv)
@@ -1457,6 +2098,12 @@ func (this *QQuickItem) InputMethodQuery(query int) *qtcore.QVariant /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isTextureProvider() const
+
+/*
+Returns true if this item is a texture provider. The default implementation returns false.
+
+This function can be called from any thread.
+*/
 func (this *QQuickItem) IsTextureProvider() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem17isTextureProviderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1467,6 +2114,12 @@ func (this *QQuickItem) IsTextureProvider() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGTextureProvider * textureProvider() const
+
+/*
+Returns the texture provider for an item. The default implementation returns 0.
+
+This function may only be called on the rendering thread.
+*/
 func (this *QQuickItem) TextureProvider() *QSGTextureProvider /*777 QSGTextureProvider **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem15textureProviderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1477,6 +2130,14 @@ func (this *QQuickItem) TextureProvider() *QSGTextureProvider /*777 QSGTexturePr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update()
+
+/*
+Schedules a call to updatePaintNode() for this item.
+
+The call to QQuickItem::updatePaintNode() will always happen if the item is showing in a QQuickWindow.
+
+Only items which specify QQuickItem::ItemHasContents are allowed to call QQuickItem::update().
+*/
 func (this *QQuickItem) Update() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem6updateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1486,6 +2147,10 @@ func (this *QQuickItem) Update() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void childrenRectChanged(const QRectF &)
+
+/*
+
+ */
 func (this *QQuickItem) ChildrenRectChanged(arg0 qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRectF_PTR() != nil {
@@ -1499,6 +2164,10 @@ func (this *QQuickItem) ChildrenRectChanged(arg0 qtcore.QRectF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void baselineOffsetChanged(qreal)
+
+/*
+
+ */
 func (this *QQuickItem) BaselineOffsetChanged(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem21baselineOffsetChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1508,6 +2177,10 @@ func (this *QQuickItem) BaselineOffsetChanged(arg0 float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stateChanged(const QString &)
+
+/*
+
+ */
 func (this *QQuickItem) StateChanged(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -1519,6 +2192,10 @@ func (this *QQuickItem) StateChanged(arg0 string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void focusChanged(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) FocusChanged(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem12focusChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1528,6 +2205,10 @@ func (this *QQuickItem) FocusChanged(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activeFocusChanged(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) ActiveFocusChanged(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem18activeFocusChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1537,6 +2218,10 @@ func (this *QQuickItem) ActiveFocusChanged(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activeFocusOnTabChanged(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) ActiveFocusOnTabChanged(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem23activeFocusOnTabChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1546,6 +2231,10 @@ func (this *QQuickItem) ActiveFocusOnTabChanged(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void parentChanged(QQuickItem *)
+
+/*
+
+ */
 func (this *QQuickItem) ParentChanged(arg0 QQuickItem_ITF /*777 QQuickItem **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQuickItem_PTR() != nil {
@@ -1559,6 +2248,10 @@ func (this *QQuickItem) ParentChanged(arg0 QQuickItem_ITF /*777 QQuickItem **/) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void transformOriginChanged(enum QQuickItem::TransformOrigin)
+
+/*
+
+ */
 func (this *QQuickItem) TransformOriginChanged(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem22transformOriginChangedENS_15TransformOriginE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1568,6 +2261,10 @@ func (this *QQuickItem) TransformOriginChanged(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void smoothChanged(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) SmoothChanged(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem13smoothChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1577,6 +2274,10 @@ func (this *QQuickItem) SmoothChanged(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void antialiasingChanged(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) AntialiasingChanged(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem19antialiasingChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1586,6 +2287,10 @@ func (this *QQuickItem) AntialiasingChanged(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clipChanged(_Bool)
+
+/*
+
+ */
 func (this *QQuickItem) ClipChanged(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem11clipChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -1595,6 +2300,10 @@ func (this *QQuickItem) ClipChanged(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void windowChanged(QQuickWindow *)
+
+/*
+This signal is emitted when the item's window changes.
+*/
 func (this *QQuickItem) WindowChanged(window QQuickWindow_ITF /*777 QQuickWindow **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QQuickWindow_PTR() != nil {
@@ -1608,6 +2317,10 @@ func (this *QQuickItem) WindowChanged(window QQuickWindow_ITF /*777 QQuickWindow
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void childrenChanged()
+
+/*
+
+ */
 func (this *QQuickItem) ChildrenChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem15childrenChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1617,6 +2330,10 @@ func (this *QQuickItem) ChildrenChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void opacityChanged()
+
+/*
+
+ */
 func (this *QQuickItem) OpacityChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem14opacityChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1626,6 +2343,10 @@ func (this *QQuickItem) OpacityChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void enabledChanged()
+
+/*
+
+ */
 func (this *QQuickItem) EnabledChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem14enabledChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1635,6 +2356,10 @@ func (this *QQuickItem) EnabledChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void visibleChanged()
+
+/*
+
+ */
 func (this *QQuickItem) VisibleChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem14visibleChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1644,6 +2369,10 @@ func (this *QQuickItem) VisibleChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void visibleChildrenChanged()
+
+/*
+
+ */
 func (this *QQuickItem) VisibleChildrenChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem22visibleChildrenChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1653,6 +2382,10 @@ func (this *QQuickItem) VisibleChildrenChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rotationChanged()
+
+/*
+
+ */
 func (this *QQuickItem) RotationChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem15rotationChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1662,6 +2395,10 @@ func (this *QQuickItem) RotationChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scaleChanged()
+
+/*
+
+ */
 func (this *QQuickItem) ScaleChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem12scaleChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1671,6 +2408,10 @@ func (this *QQuickItem) ScaleChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void xChanged()
+
+/*
+
+ */
 func (this *QQuickItem) XChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem8xChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1680,6 +2421,10 @@ func (this *QQuickItem) XChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void yChanged()
+
+/*
+
+ */
 func (this *QQuickItem) YChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem8yChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1689,6 +2434,10 @@ func (this *QQuickItem) YChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void widthChanged()
+
+/*
+
+ */
 func (this *QQuickItem) WidthChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem12widthChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1698,6 +2447,10 @@ func (this *QQuickItem) WidthChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void heightChanged()
+
+/*
+
+ */
 func (this *QQuickItem) HeightChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem13heightChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1707,6 +2460,10 @@ func (this *QQuickItem) HeightChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void zChanged()
+
+/*
+
+ */
 func (this *QQuickItem) ZChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem8zChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1716,6 +2473,10 @@ func (this *QQuickItem) ZChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void implicitWidthChanged()
+
+/*
+
+ */
 func (this *QQuickItem) ImplicitWidthChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem20implicitWidthChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1725,6 +2486,10 @@ func (this *QQuickItem) ImplicitWidthChanged() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void implicitHeightChanged()
+
+/*
+
+ */
 func (this *QQuickItem) ImplicitHeightChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem21implicitHeightChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1734,6 +2499,10 @@ func (this *QQuickItem) ImplicitHeightChanged() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QQuickItem) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -1748,6 +2517,14 @@ func (this *QQuickItem) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool isComponentComplete() const
+
+/*
+Returns true if construction of the QML component is complete; otherwise returns false.
+
+It is often desirable to delay some processing until the component is completed.
+
+See also componentComplete().
+*/
 func (this *QQuickItem) IsComponentComplete() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem19isComponentCompleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1758,6 +2535,10 @@ func (this *QQuickItem) IsComponentComplete() bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void updateInputMethod(Qt::InputMethodQueries)
+
+/*
+Notify input method on updated query values if needed. queries indicates the changed attributes.
+*/
 func (this *QQuickItem) UpdateInputMethod(queries int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem17updateInputMethodE6QFlagsIN2Qt16InputMethodQueryEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), queries)
 	qtrt.ErrPrint(err, rv)
@@ -1767,6 +2548,10 @@ func (this *QQuickItem) UpdateInputMethod(queries int) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void updateInputMethod(Qt::InputMethodQueries)
+
+/*
+Notify input method on updated query values if needed. queries indicates the changed attributes.
+*/
 func (this *QQuickItem) UpdateInputMethod__() {
 	// arg: 0, Qt::InputMethodQueries=Elaborated, Qt::InputMethodQueries=Typedef, QFlags<Qt::InputMethodQuery>
 	queries := 0
@@ -1778,6 +2563,10 @@ func (this *QQuickItem) UpdateInputMethod__() {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool widthValid() const
+
+/*
+Returns whether the width property has been set explicitly.
+*/
 func (this *QQuickItem) WidthValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem10widthValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1788,6 +2577,10 @@ func (this *QQuickItem) WidthValid() bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool heightValid() const
+
+/*
+Returns whether the height property has been set explicitly.
+*/
 func (this *QQuickItem) HeightValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem11heightValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1798,6 +2591,10 @@ func (this *QQuickItem) HeightValid() bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setImplicitSize(qreal, qreal)
+
+/*
+
+ */
 func (this *QQuickItem) SetImplicitSize(arg0 float64, arg1 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem15setImplicitSizeEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	qtrt.ErrPrint(err, rv)
@@ -1807,6 +2604,12 @@ func (this *QQuickItem) SetImplicitSize(arg0 float64, arg1 float64) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void classBegin()
+
+/*
+Reimplemented from QQmlParserStatus::classBegin().
+
+Derived classes should call the base class method before adding their own action to perform at classBegin.
+*/
 func (this *QQuickItem) ClassBegin() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem10classBeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1816,6 +2619,12 @@ func (this *QQuickItem) ClassBegin() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void componentComplete()
+
+/*
+Reimplemented from QQmlParserStatus::componentComplete().
+
+Derived classes should call the base class method before adding their own actions to perform at componentComplete.
+*/
 func (this *QQuickItem) ComponentComplete() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem17componentCompleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1825,6 +2634,10 @@ func (this *QQuickItem) ComponentComplete() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive key press events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QKeyEvent_PTR() != nil {
@@ -1838,6 +2651,10 @@ func (this *QQuickItem) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive key release events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QKeyEvent_PTR() != nil {
@@ -1851,6 +2668,10 @@ func (this *QQuickItem) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void inputMethodEvent(QInputMethodEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive input method events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) InputMethodEvent(arg0 qtgui.QInputMethodEvent_ITF /*777 QInputMethodEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QInputMethodEvent_PTR() != nil {
@@ -1864,6 +2685,10 @@ func (this *QQuickItem) InputMethodEvent(arg0 qtgui.QInputMethodEvent_ITF /*777 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive focus-in events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) FocusInEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFocusEvent_PTR() != nil {
@@ -1877,6 +2702,10 @@ func (this *QQuickItem) FocusInEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive focus-out events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) FocusOutEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFocusEvent_PTR() != nil {
@@ -1890,6 +2719,10 @@ func (this *QQuickItem) FocusOutEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive mouse press events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QMouseEvent_PTR() != nil {
@@ -1903,6 +2736,10 @@ func (this *QQuickItem) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouse
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive mouse move events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QMouseEvent_PTR() != nil {
@@ -1916,6 +2753,10 @@ func (this *QQuickItem) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive mouse release events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QMouseEvent_PTR() != nil {
@@ -1929,6 +2770,10 @@ func (this *QQuickItem) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMou
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive mouse double-click events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QMouseEvent_PTR() != nil {
@@ -1942,6 +2787,12 @@ func (this *QQuickItem) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*777 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseUngrabEvent()
+
+/*
+This event handler can be reimplemented in a subclass to be notified when a mouse ungrab event has occurred on this item.
+
+See also ungrabMouse().
+*/
 func (this *QQuickItem) MouseUngrabEvent() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem16mouseUngrabEventEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1951,6 +2802,10 @@ func (this *QQuickItem) MouseUngrabEvent() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void touchUngrabEvent()
+
+/*
+This event handler can be reimplemented in a subclass to be notified when a touch ungrab event has occurred on this item.
+*/
 func (this *QQuickItem) TouchUngrabEvent() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem16touchUngrabEventEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1960,6 +2815,10 @@ func (this *QQuickItem) TouchUngrabEvent() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive wheel events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QWheelEvent_PTR() != nil {
@@ -1973,6 +2832,10 @@ func (this *QQuickItem) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void touchEvent(QTouchEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive touch events for an item. The event information is provided by the event parameter.
+*/
 func (this *QQuickItem) TouchEvent(event qtgui.QTouchEvent_ITF /*777 QTouchEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QTouchEvent_PTR() != nil {
@@ -1986,6 +2849,12 @@ func (this *QQuickItem) TouchEvent(event qtgui.QTouchEvent_ITF /*777 QTouchEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverEnterEvent(QHoverEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive hover-enter events for an item. The event information is provided by the event parameter.
+
+Hover events are only provided if acceptHoverEvents() is true.
+*/
 func (this *QQuickItem) HoverEnterEvent(event qtgui.QHoverEvent_ITF /*777 QHoverEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QHoverEvent_PTR() != nil {
@@ -1999,6 +2868,12 @@ func (this *QQuickItem) HoverEnterEvent(event qtgui.QHoverEvent_ITF /*777 QHover
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverMoveEvent(QHoverEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive hover-move events for an item. The event information is provided by the event parameter.
+
+Hover events are only provided if acceptHoverEvents() is true.
+*/
 func (this *QQuickItem) HoverMoveEvent(event qtgui.QHoverEvent_ITF /*777 QHoverEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QHoverEvent_PTR() != nil {
@@ -2012,6 +2887,12 @@ func (this *QQuickItem) HoverMoveEvent(event qtgui.QHoverEvent_ITF /*777 QHoverE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverLeaveEvent(QHoverEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive hover-leave events for an item. The event information is provided by the event parameter.
+
+Hover events are only provided if acceptHoverEvents() is true.
+*/
 func (this *QQuickItem) HoverLeaveEvent(event qtgui.QHoverEvent_ITF /*777 QHoverEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QHoverEvent_PTR() != nil {
@@ -2025,6 +2906,14 @@ func (this *QQuickItem) HoverLeaveEvent(event qtgui.QHoverEvent_ITF /*777 QHover
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QDragEnterEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive drag-enter events for an item. The event information is provided by the event parameter.
+
+Drag and drop events are only provided if the ItemAcceptsDrops flag has been set for this item.
+
+See also Drag and Drag and Drop.
+*/
 func (this *QQuickItem) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /*777 QDragEnterEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDragEnterEvent_PTR() != nil {
@@ -2038,6 +2927,14 @@ func (this *QQuickItem) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /*777 QDra
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive drag-move events for an item. The event information is provided by the event parameter.
+
+Drag and drop events are only provided if the ItemAcceptsDrops flag has been set for this item.
+
+See also Drag and Drag and Drop.
+*/
 func (this *QQuickItem) DragMoveEvent(arg0 qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDragMoveEvent_PTR() != nil {
@@ -2051,6 +2948,14 @@ func (this *QQuickItem) DragMoveEvent(arg0 qtgui.QDragMoveEvent_ITF /*777 QDragM
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive drag-leave events for an item. The event information is provided by the event parameter.
+
+Drag and drop events are only provided if the ItemAcceptsDrops flag has been set for this item.
+
+See also Drag and Drag and Drop.
+*/
 func (this *QQuickItem) DragLeaveEvent(arg0 qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDragLeaveEvent_PTR() != nil {
@@ -2064,6 +2969,14 @@ func (this *QQuickItem) DragLeaveEvent(arg0 qtgui.QDragLeaveEvent_ITF /*777 QDra
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
+
+/*
+This event handler can be reimplemented in a subclass to receive drop events for an item. The event information is provided by the event parameter.
+
+Drag and drop events are only provided if the ItemAcceptsDrops flag has been set for this item.
+
+See also Drag and Drag and Drop.
+*/
 func (this *QQuickItem) DropEvent(arg0 qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDropEvent_PTR() != nil {
@@ -2077,6 +2990,16 @@ func (this *QQuickItem) DropEvent(arg0 qtgui.QDropEvent_ITF /*777 QDropEvent **/
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool childMouseEventFilter(QQuickItem *, QEvent *)
+
+/*
+Reimplement this method to filter the mouse events that are received by this item's children.
+
+This method will only be called if filtersChildMouseEvents() is true.
+
+Return true if the specified event should not be passed onto the specified child item, and false otherwise.
+
+See also setFiltersChildMouseEvents().
+*/
 func (this *QQuickItem) ChildMouseEventFilter(arg0 QQuickItem_ITF /*777 QQuickItem **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQuickItem_PTR() != nil {
@@ -2095,6 +3018,10 @@ func (this *QQuickItem) ChildMouseEventFilter(arg0 QQuickItem_ITF /*777 QQuickIt
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void windowDeactivateEvent()
+
+/*
+
+ */
 func (this *QQuickItem) WindowDeactivateEvent() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem21windowDeactivateEventEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2104,6 +3031,12 @@ func (this *QQuickItem) WindowDeactivateEvent() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void geometryChanged(const QRectF &, const QRectF &)
+
+/*
+This function is called to handle this item's changes in geometry from oldGeometry to newGeometry. If the two geometries are the same, it doesn't do anything.
+
+Derived classes must call the base class method within their implementation.
+*/
 func (this *QQuickItem) GeometryChanged(newGeometry qtcore.QRectF_ITF, oldGeometry qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if newGeometry != nil && newGeometry.QRectF_PTR() != nil {
@@ -2121,6 +3054,16 @@ func (this *QQuickItem) GeometryChanged(newGeometry qtcore.QRectF_ITF, oldGeomet
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void releaseResources()
+
+/*
+This function is called when an item should release graphics resources which are not already managed by the nodes returned from QQuickItem::updatePaintNode().
+
+This happens when the item is about to be removed from the window it was previously rendering to. The item is guaranteed to have a window when the function is called.
+
+The function is called on the GUI thread and the state of the rendering thread, when it is used, is unknown. Objects should not be deleted directly, but instead scheduled for cleanup using QQuickWindow::scheduleRenderJob().
+
+See also Graphics Resource Handling.
+*/
 func (this *QQuickItem) ReleaseResources() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem16releaseResourcesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -2130,43 +3073,113 @@ func (this *QQuickItem) ReleaseResources() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updatePolish()
+
+/*
+This function should perform any layout as required for this item.
+
+When polish() is called, the scene graph schedules a polish event for this item. When the scene graph is ready to render this item, it calls updatePolish() to do any item layout as required before it renders the next frame.
+*/
 func (this *QQuickItem) UpdatePolish() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem12updatePolishEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+
+ */
 type QQuickItem__Flag = int
 
+//
 const QQuickItem__ItemClipsChildrenToShape QQuickItem__Flag = 1
+
+//
 const QQuickItem__ItemAcceptsInputMethod QQuickItem__Flag = 2
+
+//
 const QQuickItem__ItemIsFocusScope QQuickItem__Flag = 4
+
+//
 const QQuickItem__ItemHasContents QQuickItem__Flag = 8
+
+//
 const QQuickItem__ItemAcceptsDrops QQuickItem__Flag = 16
 
+/*
+Used in conjunction with QQuickItem::itemChange() to notify the item about certain types of changes.
+
+
+*/
 type QQuickItem__ItemChange = int
 
+// A child was added. ItemChangeData::item contains the added child.
 const QQuickItem__ItemChildAddedChange QQuickItem__ItemChange = 0
+
+// A child was removed. ItemChangeData::item contains the removed child.
 const QQuickItem__ItemChildRemovedChange QQuickItem__ItemChange = 1
+
+// The item was added to or removed from a scene. The QQuickWindow rendering the scene is specified in using ItemChangeData::window. The window parameter is null when the item is removed from a scene.
 const QQuickItem__ItemSceneChange QQuickItem__ItemChange = 2
+
+// The item's visibility has changed. ItemChangeData::boolValue contains the new visibility.
 const QQuickItem__ItemVisibleHasChanged QQuickItem__ItemChange = 3
+
+// The item's parent has changed. ItemChangeData::item contains the new parent.
 const QQuickItem__ItemParentHasChanged QQuickItem__ItemChange = 4
+
+// The item's opacity has changed. ItemChangeData::realValue contains the new opacity.
 const QQuickItem__ItemOpacityHasChanged QQuickItem__ItemChange = 5
+
+// The item's focus has changed. ItemChangeData::boolValue contains whether the item has focus or not.
 const QQuickItem__ItemActiveFocusHasChanged QQuickItem__ItemChange = 6
+
+// The item's rotation has changed. ItemChangeData::realValue contains the new rotation.
 const QQuickItem__ItemRotationHasChanged QQuickItem__ItemChange = 7
+
+// The antialiasing has changed. The current (boolean) value can be found in QQuickItem::antialiasing.
 const QQuickItem__ItemAntialiasingHasChanged QQuickItem__ItemChange = 8
+
+// The device pixel ratio of the screen the item is on has changed. ItemChangedData::realValue contains the new device pixel ratio.
 const QQuickItem__ItemDevicePixelRatioHasChanged QQuickItem__ItemChange = 9
+
+//
 const QQuickItem__ItemEnabledHasChanged QQuickItem__ItemChange = 10
 
+/*
+Controls the point about which simple transforms like scale apply.
+
+
+
+See also transformOrigin() and setTransformOrigin().
+
+*/
 type QQuickItem__TransformOrigin = int
 
+// The top-left corner of the item.
 const QQuickItem__TopLeft QQuickItem__TransformOrigin = 0
+
+// The center point of the top of the item.
 const QQuickItem__Top QQuickItem__TransformOrigin = 1
+
+// The top-right corner of the item.
 const QQuickItem__TopRight QQuickItem__TransformOrigin = 2
+
+// The left most point of the vertical middle.
 const QQuickItem__Left QQuickItem__TransformOrigin = 3
+
+// The center of the item.
 const QQuickItem__Center QQuickItem__TransformOrigin = 4
+
+// The right most point of the vertical middle.
 const QQuickItem__Right QQuickItem__TransformOrigin = 5
+
+// The bottom-left corner of the item.
 const QQuickItem__BottomLeft QQuickItem__TransformOrigin = 6
+
+// The center point of the bottom of the item.
 const QQuickItem__Bottom QQuickItem__TransformOrigin = 7
+
+// The bottom-right corner of the item.
 const QQuickItem__BottomRight QQuickItem__TransformOrigin = 8
 
 //  body block end

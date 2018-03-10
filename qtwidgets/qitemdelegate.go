@@ -103,6 +103,9 @@ func (this *QItemDelegate) InheritTextRectangle(f func(painter *qtgui.QPainter /
 	qtrt.SetAllInheritCallback(this, "textRectangle", f)
 }
 
+/*
+
+ */
 type QItemDelegate struct {
 	*QAbstractItemDelegate
 }
@@ -135,6 +138,10 @@ func (*QItemDelegate) NewFromPointer(cthis unsafe.Pointer) *QItemDelegate {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QItemDelegate10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,6 +152,10 @@ func (this *QItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QItemDelegate(QObject *)
+
+/*
+Constructs an item delegate with the given parent.
+*/
 func NewQItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QItemDelegate {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -161,6 +172,10 @@ func NewQItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QItemDelegat
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QItemDelegate(QObject *)
+
+/*
+Constructs an item delegate with the given parent.
+*/
 func NewQItemDelegate__() *QItemDelegate {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -175,6 +190,10 @@ func NewQItemDelegate__() *QItemDelegate {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QItemDelegate()
+
+/*
+
+ */
 func DeleteQItemDelegate(this *QItemDelegate) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QItemDelegateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -186,6 +205,10 @@ func DeleteQItemDelegate(this *QItemDelegate) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasClipping() const
+
+/*
+
+ */
 func (this *QItemDelegate) HasClipping() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QItemDelegate11hasClippingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -196,6 +219,10 @@ func (this *QItemDelegate) HasClipping() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClipping(_Bool)
+
+/*
+
+ */
 func (this *QItemDelegate) SetClipping(clip bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QItemDelegate11setClippingEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), clip)
 	qtrt.ErrPrint(err, rv)
@@ -205,6 +232,40 @@ func (this *QItemDelegate) SetClipping(clip bool) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionViewItem &, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemDelegate::paint().
+
+Renders the delegate using the given painter and style option for the item specified by index.
+
+When reimplementing this function in a subclass, you should update the area held by the option's rect variable, using the option's state variable to determine the state of the item to be displayed, and adjust the way it is painted accordingly.
+
+For example, a selected item may need to be displayed differently to unselected items, as shown in the following code:
+
+
+      if (option.state & QStyle::State_Selected)
+          painter->fillRect(option.rect, option.palette.highlight());
+
+      int size = qMin(option.rect.width(), option.rect.height());
+      int brightness = index.model()->data(index, Qt::DisplayRole).toInt();
+      double radius = (size / 2.0) - (brightness / 255.0 * size / 2.0);
+      if (radius == 0.0)
+          return;
+
+      painter->save();
+      painter->setRenderHint(QPainter::Antialiasing, true);
+      painter->setPen(Qt::NoPen);
+      if (option.state & QStyle::State_Selected)
+          painter->setBrush(option.palette.highlightedText());
+      else
+      ...
+
+
+
+After painting, you should ensure that the painter is returned to its the state it was supplied in when this function was called. For example, it may be useful to call QPainter::save() before painting and QPainter::restore() afterwards.
+
+See also QStyle::State.
+*/
 func (this *QItemDelegate) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -226,6 +287,14 @@ func (this *QItemDelegate) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemDelegate::sizeHint().
+
+Returns the size needed by the delegate to display the item specified by index, taking into account the style information provided by option.
+
+When reimplementing this function, note that in case of text items, QItemDelegate adds a margin (i.e. 2 * QStyle::PM_FocusFrameHMargin) to the length of the text.
+*/
 func (this *QItemDelegate) SizeHint(option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionViewItem_PTR() != nil {
@@ -246,6 +315,14 @@ func (this *QItemDelegate) SizeHint(option QStyleOptionViewItem_ITF, index qtcor
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QWidget * createEditor(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemDelegate::createEditor().
+
+Returns the widget used to edit the item specified by index for editing. The parent widget and style option are used to control how the editor widget appears.
+
+See also QAbstractItemDelegate::createEditor().
+*/
 func (this *QItemDelegate) CreateEditor(parent QWidget_ITF /*777 QWidget **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -268,6 +345,16 @@ func (this *QItemDelegate) CreateEditor(parent QWidget_ITF /*777 QWidget **/, op
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setEditorData(QWidget *, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemDelegate::setEditorData().
+
+Sets the data to be displayed and edited by the editor from the data model item specified by the model index.
+
+The default implementation stores the data in the editor widget's user property.
+
+See also QMetaProperty::isUser().
+*/
 func (this *QItemDelegate) SetEditorData(editor QWidget_ITF /*777 QWidget **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -285,6 +372,16 @@ func (this *QItemDelegate) SetEditorData(editor QWidget_ITF /*777 QWidget **/, i
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setModelData(QWidget *, QAbstractItemModel *, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemDelegate::setModelData().
+
+Gets data from the editor widget and stores it in the specified model at the item index.
+
+The default implementation gets the value to be stored in the data model from the editor widget's user property.
+
+See also QMetaProperty::isUser().
+*/
 func (this *QItemDelegate) SetModelData(editor QWidget_ITF /*777 QWidget **/, model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -306,6 +403,12 @@ func (this *QItemDelegate) SetModelData(editor QWidget_ITF /*777 QWidget **/, mo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void updateEditorGeometry(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemDelegate::updateEditorGeometry().
+
+Updates the editor for the item specified by index according to the style option given.
+*/
 func (this *QItemDelegate) UpdateEditorGeometry(editor QWidget_ITF /*777 QWidget **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
@@ -327,6 +430,12 @@ func (this *QItemDelegate) UpdateEditorGeometry(editor QWidget_ITF /*777 QWidget
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QItemEditorFactory * itemEditorFactory() const
+
+/*
+Returns the editor factory used by the item delegate. If no editor factory is set, the function will return null.
+
+See also setItemEditorFactory().
+*/
 func (this *QItemDelegate) ItemEditorFactory() *QItemEditorFactory /*777 QItemEditorFactory **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QItemDelegate17itemEditorFactoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -337,6 +446,12 @@ func (this *QItemDelegate) ItemEditorFactory() *QItemEditorFactory /*777 QItemEd
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemEditorFactory(QItemEditorFactory *)
+
+/*
+Sets the editor factory to be used by the item delegate to be the factory specified. If no editor factory is set, the item delegate will use the default editor factory.
+
+See also itemEditorFactory().
+*/
 func (this *QItemDelegate) SetItemEditorFactory(factory QItemEditorFactory_ITF /*777 QItemEditorFactory **/) {
 	var convArg0 unsafe.Pointer
 	if factory != nil && factory.QItemEditorFactory_PTR() != nil {
@@ -350,6 +465,10 @@ func (this *QItemDelegate) SetItemEditorFactory(factory QItemEditorFactory_ITF /
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void drawDisplay(QPainter *, const QStyleOptionViewItem &, const QRect &, const QString &) const
+
+/*
+Renders the item view text within the rectangle specified by rect using the given painter and style option.
+*/
 func (this *QItemDelegate) DrawDisplay(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionViewItem_ITF, rect qtcore.QRect_ITF, text string) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -373,6 +492,10 @@ func (this *QItemDelegate) DrawDisplay(painter qtgui.QPainter_ITF /*777 QPainter
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void drawDecoration(QPainter *, const QStyleOptionViewItem &, const QRect &, const QPixmap &) const
+
+/*
+Renders the decoration pixmap within the rectangle specified by rect using the given painter and style option.
+*/
 func (this *QItemDelegate) DrawDecoration(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionViewItem_ITF, rect qtcore.QRect_ITF, pixmap qtgui.QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -398,6 +521,10 @@ func (this *QItemDelegate) DrawDecoration(painter qtgui.QPainter_ITF /*777 QPain
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void drawFocus(QPainter *, const QStyleOptionViewItem &, const QRect &) const
+
+/*
+Renders the region within the rectangle specified by rect, indicating that it has the focus, using the given painter and style option.
+*/
 func (this *QItemDelegate) DrawFocus(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionViewItem_ITF, rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -419,6 +546,10 @@ func (this *QItemDelegate) DrawFocus(painter qtgui.QPainter_ITF /*777 QPainter *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void drawCheck(QPainter *, const QStyleOptionViewItem &, const QRect &, Qt::CheckState) const
+
+/*
+Renders a check indicator within the rectangle specified by rect, using the given painter and style option, using the given state.
+*/
 func (this *QItemDelegate) DrawCheck(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionViewItem_ITF, rect qtcore.QRect_ITF, state int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -440,6 +571,12 @@ func (this *QItemDelegate) DrawCheck(painter qtgui.QPainter_ITF /*777 QPainter *
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void drawBackground(QPainter *, const QStyleOptionViewItem &, const QModelIndex &) const
+
+/*
+Renders the item background for the given index, using the given painter and style option.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QItemDelegate) DrawBackground(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -461,6 +598,10 @@ func (this *QItemDelegate) DrawBackground(painter qtgui.QPainter_ITF /*777 QPain
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void doLayout(const QStyleOptionViewItem &, QRect *, QRect *, QRect *, _Bool) const
+
+/*
+
+ */
 func (this *QItemDelegate) DoLayout(option QStyleOptionViewItem_ITF, checkRect qtcore.QRect_ITF /*777 QRect **/, iconRect qtcore.QRect_ITF /*777 QRect **/, textRect qtcore.QRect_ITF /*777 QRect **/, hint bool) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionViewItem_PTR() != nil {
@@ -486,6 +627,10 @@ func (this *QItemDelegate) DoLayout(option QStyleOptionViewItem_ITF, checkRect q
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QRect rect(const QStyleOptionViewItem &, const QModelIndex &, int) const
+
+/*
+
+ */
 func (this *QItemDelegate) Rect(option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF, role int) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionViewItem_PTR() != nil {
@@ -506,6 +651,26 @@ func (this *QItemDelegate) Rect(option QStyleOptionViewItem_ITF, index qtcore.QM
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+Reimplemented from QObject::eventFilter().
+
+Returns true if the given editor is a valid QWidget and the given event is handled; otherwise returns false. The following key press events are handled by default:
+
+
+Tab
+Backtab
+Enter
+Return
+Esc
+
+
+In the case of Tab, Backtab, Enter and Return key press events, the editor's data is comitted to the model and the editor is closed. If the event is a Tab key press the view will open an editor on the next item in the view. Likewise, if the event is a Backtab key press the view will open an editor on the previous item in the view.
+
+If the event is a Esc key press event, the editor is closed without committing its data.
+
+See also commitData() and closeEditor().
+*/
 func (this *QItemDelegate) EventFilter(object qtcore.QObject_ITF /*777 QObject **/, event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -524,6 +689,10 @@ func (this *QItemDelegate) EventFilter(object qtcore.QObject_ITF /*777 QObject *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool editorEvent(QEvent *, QAbstractItemModel *, const QStyleOptionViewItem &, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemDelegate::editorEvent().
+*/
 func (this *QItemDelegate) EditorEvent(event qtcore.QEvent_ITF /*777 QEvent **/, model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, option QStyleOptionViewItem_ITF, index qtcore.QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -550,6 +719,10 @@ func (this *QItemDelegate) EditorEvent(event qtcore.QEvent_ITF /*777 QEvent **/,
 // index:0
 // Protected Visibility=Default Availability=Available
 // [192] QStyleOptionViewItem setOptions(const QModelIndex &, const QStyleOptionViewItem &) const
+
+/*
+
+ */
 func (this *QItemDelegate) SetOptions(index qtcore.QModelIndex_ITF, option QStyleOptionViewItem_ITF) *QStyleOptionViewItem /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -570,6 +743,10 @@ func (this *QItemDelegate) SetOptions(index qtcore.QModelIndex_ITF, option QStyl
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QPixmap decoration(const QStyleOptionViewItem &, const QVariant &) const
+
+/*
+
+ */
 func (this *QItemDelegate) Decoration(option QStyleOptionViewItem_ITF, variant qtcore.QVariant_ITF) *qtgui.QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionViewItem_PTR() != nil {
@@ -590,6 +767,10 @@ func (this *QItemDelegate) Decoration(option QStyleOptionViewItem_ITF, variant q
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QPixmap * selected(const QPixmap &, const QPalette &, _Bool) const
+
+/*
+
+ */
 func (this *QItemDelegate) Selected(pixmap qtgui.QPixmap_ITF, palette qtgui.QPalette_ITF, enabled bool) *qtgui.QPixmap /*777 QPixmap **/ {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -608,6 +789,10 @@ func (this *QItemDelegate) Selected(pixmap qtgui.QPixmap_ITF, palette qtgui.QPal
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QRect doCheck(const QStyleOptionViewItem &, const QRect &, const QVariant &) const
+
+/*
+
+ */
 func (this *QItemDelegate) DoCheck(option QStyleOptionViewItem_ITF, bounding qtcore.QRect_ITF, variant qtcore.QVariant_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionViewItem_PTR() != nil {
@@ -632,6 +817,10 @@ func (this *QItemDelegate) DoCheck(option QStyleOptionViewItem_ITF, bounding qtc
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QRect textRectangle(QPainter *, const QRect &, const QFont &, const QString &) const
+
+/*
+
+ */
 func (this *QItemDelegate) TextRectangle(painter qtgui.QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, font qtgui.QFont_ITF, text string) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {

@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QScopedPointerPodDeleter struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QScopedPointerPodDeleter) NewFromPointer(cthis unsafe.Pointer) *QScopedPo
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [-2] void cleanup(void *)
+
+/*
+
+ */
 func (this *QScopedPointerPodDeleter) Cleanup(pointer unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QScopedPointerPodDeleter7cleanupEPv", qtrt.FFI_TYPE_POINTER, pointer)
 	qtrt.ErrPrint(err, rv)

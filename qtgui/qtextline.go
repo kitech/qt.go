@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextLine struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QTextLine) NewFromPointer(cthis unsafe.Pointer) *QTextLine {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextLine()
+
+/*
+
+ */
 func NewQTextLine() *QTextLine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextLineC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQTextLine() *QTextLine {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+
+ */
 func (this *QTextLine) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +99,10 @@ func (this *QTextLine) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF rect() const
+
+/*
+
+ */
 func (this *QTextLine) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +115,10 @@ func (this *QTextLine) Rect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal x() const
+
+/*
+
+ */
 func (this *QTextLine) X() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +129,10 @@ func (this *QTextLine) X() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal y() const
+
+/*
+
+ */
 func (this *QTextLine) Y() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,6 +143,10 @@ func (this *QTextLine) Y() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal width() const
+
+/*
+
+ */
 func (this *QTextLine) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +157,10 @@ func (this *QTextLine) Width() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal ascent() const
+
+/*
+
+ */
 func (this *QTextLine) Ascent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine6ascentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +171,10 @@ func (this *QTextLine) Ascent() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal descent() const
+
+/*
+
+ */
 func (this *QTextLine) Descent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine7descentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,6 +185,10 @@ func (this *QTextLine) Descent() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal height() const
+
+/*
+
+ */
 func (this *QTextLine) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,6 +199,10 @@ func (this *QTextLine) Height() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal leading() const
+
+/*
+
+ */
 func (this *QTextLine) Leading() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine7leadingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -170,6 +213,10 @@ func (this *QTextLine) Leading() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLeadingIncluded(_Bool)
+
+/*
+
+ */
 func (this *QTextLine) SetLeadingIncluded(included bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextLine18setLeadingIncludedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), included)
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +226,10 @@ func (this *QTextLine) SetLeadingIncluded(included bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool leadingIncluded() const
+
+/*
+
+ */
 func (this *QTextLine) LeadingIncluded() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine15leadingIncludedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -189,6 +240,10 @@ func (this *QTextLine) LeadingIncluded() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal naturalTextWidth() const
+
+/*
+
+ */
 func (this *QTextLine) NaturalTextWidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine16naturalTextWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,6 +254,10 @@ func (this *QTextLine) NaturalTextWidth() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal horizontalAdvance() const
+
+/*
+
+ */
 func (this *QTextLine) HorizontalAdvance() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine17horizontalAdvanceEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -209,6 +268,10 @@ func (this *QTextLine) HorizontalAdvance() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF naturalTextRect() const
+
+/*
+
+ */
 func (this *QTextLine) NaturalTextRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine15naturalTextRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -221,6 +284,10 @@ func (this *QTextLine) NaturalTextRect() *qtcore.QRectF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal cursorToX(int *, enum QTextLine::Edge) const
+
+/*
+
+ */
 func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEPiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), cursorPos, edge)
 	qtrt.ErrPrint(err, rv)
@@ -231,6 +298,10 @@ func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) flo
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal cursorToX(int *, enum QTextLine::Edge) const
+
+/*
+
+ */
 func (this *QTextLine) CursorToX__(cursorPos unsafe.Pointer /*666*/) float64 {
 	// arg: 1, QTextLine::Edge=Enum, QTextLine::Edge=Enum,
 	edge := 0
@@ -243,6 +314,10 @@ func (this *QTextLine) CursorToX__(cursorPos unsafe.Pointer /*666*/) float64 {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] qreal cursorToX(int, enum QTextLine::Edge) const
+
+/*
+
+ */
 func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), cursorPos, edge)
 	qtrt.ErrPrint(err, rv)
@@ -253,6 +328,10 @@ func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] qreal cursorToX(int, enum QTextLine::Edge) const
+
+/*
+
+ */
 func (this *QTextLine) CursorToX_1_(cursorPos int) float64 {
 	// arg: 1, QTextLine::Edge=Enum, QTextLine::Edge=Enum,
 	edge := 0
@@ -265,6 +344,10 @@ func (this *QTextLine) CursorToX_1_(cursorPos int) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int xToCursor(qreal, enum QTextLine::CursorPosition) const
+
+/*
+
+ */
 func (this *QTextLine) XToCursor(x float64, arg1 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9xToCursorEdNS_14CursorPositionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, arg1)
 	qtrt.ErrPrint(err, rv)
@@ -275,6 +358,10 @@ func (this *QTextLine) XToCursor(x float64, arg1 int) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int xToCursor(qreal, enum QTextLine::CursorPosition) const
+
+/*
+
+ */
 func (this *QTextLine) XToCursor__(x float64) int {
 	// arg: 1, QTextLine::CursorPosition=Enum, QTextLine::CursorPosition=Enum,
 	arg1 := 0
@@ -287,6 +374,10 @@ func (this *QTextLine) XToCursor__(x float64) int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLineWidth(qreal)
+
+/*
+
+ */
 func (this *QTextLine) SetLineWidth(width float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextLine12setLineWidthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
@@ -296,6 +387,10 @@ func (this *QTextLine) SetLineWidth(width float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNumColumns(int)
+
+/*
+
+ */
 func (this *QTextLine) SetNumColumns(columns int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextLine13setNumColumnsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), columns)
 	qtrt.ErrPrint(err, rv)
@@ -305,6 +400,10 @@ func (this *QTextLine) SetNumColumns(columns int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setNumColumns(int, qreal)
+
+/*
+
+ */
 func (this *QTextLine) SetNumColumns_1(columns int, alignmentWidth float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextLine13setNumColumnsEid", qtrt.FFI_TYPE_POINTER, this.GetCthis(), columns, alignmentWidth)
 	qtrt.ErrPrint(err, rv)
@@ -314,6 +413,12 @@ func (this *QTextLine) SetNumColumns_1(columns int, alignmentWidth float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(const QPointF &)
+
+/*
+Moves the text layout to point p.
+
+See also position().
+*/
 func (this *QTextLine) SetPosition(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -327,6 +432,14 @@ func (this *QTextLine) SetPosition(pos qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF position() const
+
+/*
+The global position of the layout. This is independent of the bounding rectangle and of the layout process.
+
+This function was introduced in  Qt 4.2.
+
+See also setPosition().
+*/
 func (this *QTextLine) Position() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -339,6 +452,10 @@ func (this *QTextLine) Position() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int textStart() const
+
+/*
+
+ */
 func (this *QTextLine) TextStart() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9textStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -349,6 +466,10 @@ func (this *QTextLine) TextStart() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int textLength() const
+
+/*
+
+ */
 func (this *QTextLine) TextLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine10textLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -359,6 +480,10 @@ func (this *QTextLine) TextLength() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int lineNumber() const
+
+/*
+
+ */
 func (this *QTextLine) LineNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine10lineNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -371,14 +496,28 @@ func DeleteQTextLine(this *QTextLine) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QTextLine__Edge = int
 
+//
 const QTextLine__Leading QTextLine__Edge = 0
+
+//
 const QTextLine__Trailing QTextLine__Edge = 1
 
+/*
+
+
+ */
 type QTextLine__CursorPosition = int
 
+//
 const QTextLine__CursorBetweenCharacters QTextLine__CursorPosition = 0
+
+//
 const QTextLine__CursorOnCharacter QTextLine__CursorPosition = 1
 
 //  body block end

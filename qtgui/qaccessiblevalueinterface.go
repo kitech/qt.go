@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleValueInterface struct {
 	*qtrt.CObject
 }
@@ -68,6 +71,10 @@ func (*QAccessibleValueInterface) NewFromPointer(cthis unsafe.Pointer) *QAccessi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleValueInterface()
+
+/*
+
+ */
 func DeleteQAccessibleValueInterface(this *QAccessibleValueInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAccessibleValueInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -79,6 +86,10 @@ func DeleteQAccessibleValueInterface(this *QAccessibleValueInterface) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QVariant currentValue() const
+
+/*
+
+ */
 func (this *QAccessibleValueInterface) CurrentValue() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface12currentValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +102,10 @@ func (this *QAccessibleValueInterface) CurrentValue() *qtcore.QVariant /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setCurrentValue(const QVariant &)
+
+/*
+
+ */
 func (this *QAccessibleValueInterface) SetCurrentValue(value qtcore.QVariant_ITF) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -104,6 +119,10 @@ func (this *QAccessibleValueInterface) SetCurrentValue(value qtcore.QVariant_ITF
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QVariant maximumValue() const
+
+/*
+
+ */
 func (this *QAccessibleValueInterface) MaximumValue() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface12maximumValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -116,6 +135,10 @@ func (this *QAccessibleValueInterface) MaximumValue() *qtcore.QVariant /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QVariant minimumValue() const
+
+/*
+
+ */
 func (this *QAccessibleValueInterface) MinimumValue() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface12minimumValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +151,10 @@ func (this *QAccessibleValueInterface) MinimumValue() *qtcore.QVariant /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QVariant minimumStepSize() const
+
+/*
+
+ */
 func (this *QAccessibleValueInterface) MinimumStepSize() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface15minimumStepSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

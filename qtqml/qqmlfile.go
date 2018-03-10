@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlFile struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QQmlFile) NewFromPointer(cthis unsafe.Pointer) *QQmlFile {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlFile()
+
+/*
+
+ */
 func NewQQmlFile() *QQmlFile {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFileC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQQmlFile() *QQmlFile {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlFile(QQmlEngine *, const QUrl &)
+
+/*
+
+ */
 func NewQQmlFile_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_ITF) *QQmlFile {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -99,6 +110,10 @@ func NewQQmlFile_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_IT
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlFile(QQmlEngine *, const QString &)
+
+/*
+
+ */
 func NewQQmlFile_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) *QQmlFile {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -117,6 +132,10 @@ func NewQQmlFile_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) *QQmlF
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QQmlFile()
+
+/*
+
+ */
 func DeleteQQmlFile(this *QQmlFile) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFileD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -128,6 +147,10 @@ func DeleteQQmlFile(this *QQmlFile) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
+
+/*
+
+ */
 func (this *QQmlFile) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -138,6 +161,10 @@ func (this *QQmlFile) IsNull() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReady() const
+
+/*
+
+ */
 func (this *QQmlFile) IsReady() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile7isReadyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -148,6 +175,10 @@ func (this *QQmlFile) IsReady() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isError() const
+
+/*
+
+ */
 func (this *QQmlFile) IsError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile7isErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,6 +189,10 @@ func (this *QQmlFile) IsError() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isLoading() const
+
+/*
+
+ */
 func (this *QQmlFile) IsLoading() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile9isLoadingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -168,6 +203,10 @@ func (this *QQmlFile) IsLoading() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl url() const
+
+/*
+
+ */
 func (this *QQmlFile) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,6 +219,10 @@ func (this *QQmlFile) Url() *qtcore.QUrl /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQmlFile::Status status() const
+
+/*
+
+ */
 func (this *QQmlFile) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,6 +233,10 @@ func (this *QQmlFile) Status() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString error() const
+
+/*
+
+ */
 func (this *QQmlFile) Error() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -203,16 +250,25 @@ func (this *QQmlFile) Error() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 size() const
+
+/*
+
+ */
 func (this *QQmlFile) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
+	// long long // 222
 }
 
 // /usr/include/qt/QtQml/qqmlfile.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * data() const
+
+/*
+
+ */
 func (this *QQmlFile) Data() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,6 +279,10 @@ func (this *QQmlFile) Data() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray dataByteArray() const
+
+/*
+
+ */
 func (this *QQmlFile) DataByteArray() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile13dataByteArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -235,6 +295,10 @@ func (this *QQmlFile) DataByteArray() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void load(QQmlEngine *, const QUrl &)
+
+/*
+
+ */
 func (this *QQmlFile) Load(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -252,6 +316,10 @@ func (this *QQmlFile) Load(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void load(QQmlEngine *, const QString &)
+
+/*
+
+ */
 func (this *QQmlFile) Load_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -267,6 +335,10 @@ func (this *QQmlFile) Load_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 stri
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+
+ */
 func (this *QQmlFile) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -276,6 +348,10 @@ func (this *QQmlFile) Clear() {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void clear(QObject *)
+
+/*
+
+ */
 func (this *QQmlFile) Clear_1(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -289,6 +365,10 @@ func (this *QQmlFile) Clear_1(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool connectFinished(QObject *, const char *)
+
+/*
+
+ */
 func (this *QQmlFile) ConnectFinished(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -305,6 +385,10 @@ func (this *QQmlFile) ConnectFinished(arg0 qtcore.QObject_ITF /*777 QObject **/,
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool connectFinished(QObject *, int)
+
+/*
+
+ */
 func (this *QQmlFile) ConnectFinished_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 int) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -319,6 +403,10 @@ func (this *QQmlFile) ConnectFinished_1(arg0 qtcore.QObject_ITF /*777 QObject **
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool connectDownloadProgress(QObject *, const char *)
+
+/*
+
+ */
 func (this *QQmlFile) ConnectDownloadProgress(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -335,6 +423,10 @@ func (this *QQmlFile) ConnectDownloadProgress(arg0 qtcore.QObject_ITF /*777 QObj
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool connectDownloadProgress(QObject *, int)
+
+/*
+
+ */
 func (this *QQmlFile) ConnectDownloadProgress_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 int) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -349,6 +441,10 @@ func (this *QQmlFile) ConnectDownloadProgress_1(arg0 qtcore.QObject_ITF /*777 QO
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool isSynchronous(const QString &)
+
+/*
+
+ */
 func (this *QQmlFile) IsSynchronous(url string) bool {
 	var tmpArg0 = qtcore.NewQString_5(url)
 	var convArg0 = tmpArg0.GetCthis()
@@ -366,6 +462,10 @@ func QQmlFile_IsSynchronous(url string) bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool isSynchronous(const QUrl &)
+
+/*
+
+ */
 func (this *QQmlFile) IsSynchronous_1(url qtcore.QUrl_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -385,6 +485,10 @@ func QQmlFile_IsSynchronous_1(url qtcore.QUrl_ITF) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool isLocalFile(const QString &)
+
+/*
+
+ */
 func (this *QQmlFile) IsLocalFile(url string) bool {
 	var tmpArg0 = qtcore.NewQString_5(url)
 	var convArg0 = tmpArg0.GetCthis()
@@ -402,6 +506,10 @@ func QQmlFile_IsLocalFile(url string) bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool isLocalFile(const QUrl &)
+
+/*
+
+ */
 func (this *QQmlFile) IsLocalFile_1(url qtcore.QUrl_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -421,6 +529,10 @@ func QQmlFile_IsLocalFile_1(url qtcore.QUrl_ITF) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString urlToLocalFileOrQrc(const QString &)
+
+/*
+
+ */
 func (this *QQmlFile) UrlToLocalFileOrQrc(arg0 string) string {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -441,6 +553,10 @@ func QQmlFile_UrlToLocalFileOrQrc(arg0 string) string {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QString urlToLocalFileOrQrc(const QUrl &)
+
+/*
+
+ */
 func (this *QQmlFile) UrlToLocalFileOrQrc_1(arg0 qtcore.QUrl_ITF) string {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QUrl_PTR() != nil {
@@ -459,11 +575,22 @@ func QQmlFile_UrlToLocalFileOrQrc_1(arg0 qtcore.QUrl_ITF) string {
 	return rv
 }
 
+/*
+
+
+ */
 type QQmlFile__Status = int
 
+//
 const QQmlFile__Null QQmlFile__Status = 0
+
+//
 const QQmlFile__Ready QQmlFile__Status = 1
+
+//
 const QQmlFile__Error QQmlFile__Status = 2
+
+//
 const QQmlFile__Loading QQmlFile__Status = 3
 
 //  body block end

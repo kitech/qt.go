@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QTimeEdit struct {
 	*QDateTimeEdit
 }
@@ -65,6 +68,10 @@ func (*QTimeEdit) NewFromPointer(cthis unsafe.Pointer) *QTimeEdit {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeEdit10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeEdit(QWidget *)
+
+/*
+
+ */
 func NewQTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeEdit(QWidget *)
+
+/*
+
+ */
 func NewQTimeEdit__() *QTimeEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQTimeEdit__() *QTimeEdit {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeEdit(const QTime &, QWidget *)
+
+/*
+
+ */
 func NewQTimeEdit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
@@ -125,6 +144,10 @@ func NewQTimeEdit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/)
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeEdit(const QTime &, QWidget *)
+
+/*
+
+ */
 func NewQTimeEdit_1_(time qtcore.QTime_ITF) *QTimeEdit {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
@@ -143,6 +166,10 @@ func NewQTimeEdit_1_(time qtcore.QTime_ITF) *QTimeEdit {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTimeEdit()
+
+/*
+
+ */
 func DeleteQTimeEdit(this *QTimeEdit) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEditD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -154,6 +181,10 @@ func DeleteQTimeEdit(this *QTimeEdit) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void userTimeChanged(const QTime &)
+
+/*
+
+ */
 func (this *QTimeEdit) UserTimeChanged(time qtcore.QTime_ITF) {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {

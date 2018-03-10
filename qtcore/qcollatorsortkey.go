@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QCollatorSortKey struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QCollatorSortKey) NewFromPointer(cthis unsafe.Pointer) *QCollatorSortKey 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QCollatorSortKey()
+
+/*
+
+ */
 func DeleteQCollatorSortKey(this *QCollatorSortKey) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCollatorSortKeyD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -76,6 +83,10 @@ func DeleteQCollatorSortKey(this *QCollatorSortKey) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCollatorSortKey & operator=(const QCollatorSortKey &)
+
+/*
+
+ */
 func (this *QCollatorSortKey) Operator_equal(other QCollatorSortKey_ITF) *QCollatorSortKey {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QCollatorSortKey_PTR() != nil {
@@ -92,6 +103,10 @@ func (this *QCollatorSortKey) Operator_equal(other QCollatorSortKey_ITF) *QColla
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QCollatorSortKey & operator=(QCollatorSortKey &&)
+
+/*
+
+ */
 func (this *QCollatorSortKey) Operator_equal_1(other unsafe.Pointer /*333*/) *QCollatorSortKey {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCollatorSortKeyaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -104,6 +119,10 @@ func (this *QCollatorSortKey) Operator_equal_1(other unsafe.Pointer /*333*/) *QC
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QCollatorSortKey &)
+
+/*
+Swaps this collator with other. This function is very fast and never fails.
+*/
 func (this *QCollatorSortKey) Swap(other QCollatorSortKey_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QCollatorSortKey_PTR() != nil {
@@ -117,6 +136,10 @@ func (this *QCollatorSortKey) Swap(other QCollatorSortKey_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QCollatorSortKey &) const
+
+/*
+Compares s1 with s2. Returns an integer less than, equal to, or greater than zero depending on whether s1 is smaller, equal or larger than s2.
+*/
 func (this *QCollatorSortKey) Compare(key QCollatorSortKey_ITF) int {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QCollatorSortKey_PTR() != nil {

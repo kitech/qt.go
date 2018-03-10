@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QStyleOptionSpinBox struct {
 	*QStyleOptionComplex
 }
@@ -65,6 +68,10 @@ func (*QStyleOptionSpinBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSp
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionSpinBox()
+
+/*
+
+ */
 func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionSpinBox(int)
+
+/*
+
+ */
 func NewQStyleOptionSpinBox_1(version int) *QStyleOptionSpinBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
@@ -91,12 +102,35 @@ func DeleteQStyleOptionSpinBox(this *QStyleOptionSpinBox) {
 	this.SetCthis(nil)
 }
 
+/*
+This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
+
+QStyleOption::TypeSO_DefaultThe type of style option provided (SO_Default for this class).
+
+
+The type is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
+
+See also StyleOptionVersion.
+
+*/
 type QStyleOptionSpinBox__StyleOptionType = int
 
+//
 const QStyleOptionSpinBox__Type QStyleOptionSpinBox__StyleOptionType = 983042
 
+/*
+This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
+
+
+
+The version is used by QStyleOption subclasses to implement extensions without breaking compatibility. If you use qstyleoption_cast(), you normally do not need to check it.
+
+See also StyleOptionType.
+
+*/
 type QStyleOptionSpinBox__StyleOptionVersion = int
 
+// 1
 const QStyleOptionSpinBox__Version QStyleOptionSpinBox__StyleOptionVersion = 1
 
 //  body block end

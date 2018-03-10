@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type AbstractConverterFunction struct {
 	*qtrt.CObject
 }

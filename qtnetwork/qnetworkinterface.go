@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QNetworkInterface struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QNetworkInterface) NewFromPointer(cthis unsafe.Pointer) *QNetworkInterfac
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkInterface()
+
+/*
+Constructs an empty network interface object.
+*/
 func NewQNetworkInterface() *QNetworkInterface {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterfaceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQNetworkInterface() *QNetworkInterface {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QNetworkInterface & operator=(QNetworkInterface &&)
+
+/*
+
+ */
 func (this *QNetworkInterface) Operator_equal(other unsafe.Pointer /*333*/) *QNetworkInterface {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterfaceaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +101,10 @@ func (this *QNetworkInterface) Operator_equal(other unsafe.Pointer /*333*/) *QNe
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QNetworkInterface & operator=(const QNetworkInterface &)
+
+/*
+
+ */
 func (this *QNetworkInterface) Operator_equal_1(other QNetworkInterface_ITF) *QNetworkInterface {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkInterface_PTR() != nil {
@@ -106,6 +121,10 @@ func (this *QNetworkInterface) Operator_equal_1(other QNetworkInterface_ITF) *QN
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QNetworkInterface()
+
+/*
+
+ */
 func DeleteQNetworkInterface(this *QNetworkInterface) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -117,6 +136,12 @@ func DeleteQNetworkInterface(this *QNetworkInterface) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkInterface &)
+
+/*
+Swaps this network interface instance with other. This function is very fast and never fails.
+
+This function was introduced in  Qt 5.0.
+*/
 func (this *QNetworkInterface) Swap(other QNetworkInterface_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkInterface_PTR() != nil {
@@ -130,6 +155,10 @@ func (this *QNetworkInterface) Swap(other QNetworkInterface_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if this QNetworkInterface object contains valid information about a network interface.
+*/
 func (this *QNetworkInterface) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +169,14 @@ func (this *QNetworkInterface) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int index() const
+
+/*
+Returns the interface system index, if known. This is an integer assigned by the operating system to identify this interface and it generally doesn't change. It matches the scope ID field in IPv6 addresses.
+
+If the index isn't known, this function returns 0.
+
+This function was introduced in  Qt 4.5.
+*/
 func (this *QNetworkInterface) Index() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface5indexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -150,6 +187,10 @@ func (this *QNetworkInterface) Index() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
+
+/*
+Returns the name of this network interface. On Unix systems, this is a string containing the type of the interface and optionally a sequence number, such as "eth0", "lo" or "pcn0". On Windows, it's an internal ID that cannot be changed by the user.
+*/
 func (this *QNetworkInterface) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -163,6 +204,14 @@ func (this *QNetworkInterface) Name() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString humanReadableName() const
+
+/*
+Returns the human-readable name of this network interface on Windows, such as "Local Area Connection", if the name could be determined. If it couldn't, this function returns the same as name(). The human-readable name is a name that the user can modify in the Windows Control Panel, so it may change during the execution of the program.
+
+On Unix, this function currently always returns the same as name(), since Unix systems don't store a configuration for human-readable names.
+
+This function was introduced in  Qt 4.5.
+*/
 func (this *QNetworkInterface) HumanReadableName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface17humanReadableNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,6 +225,10 @@ func (this *QNetworkInterface) HumanReadableName() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QNetworkInterface::InterfaceFlags flags() const
+
+/*
+Returns the flags associated with this network interface.
+*/
 func (this *QNetworkInterface) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,6 +239,12 @@ func (this *QNetworkInterface) Flags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString hardwareAddress() const
+
+/*
+Returns the low-level hardware address for this interface. On Ethernet interfaces, this will be a MAC address in string representation, separated by colons.
+
+Other interface types may have other types of hardware addresses. Implementations should not depend on this function returning a valid MAC address.
+*/
 func (this *QNetworkInterface) HardwareAddress() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface15hardwareAddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -199,6 +258,19 @@ func (this *QNetworkInterface) HardwareAddress() string {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int interfaceIndexFromName(const QString &)
+
+/*
+Returns the index of the interface whose name is name or 0 if there is no interface with that name. This function should produce the same result as the following code, but will probably execute faster.
+
+
+  QNetworkInterface::interfaceFromName(name).index()
+
+
+
+This function was introduced in  Qt 5.7.
+
+See also interfaceFromName(), interfaceNameFromIndex(), and QNetworkDatagram::interfaceIndex().
+*/
 func (this *QNetworkInterface) InterfaceIndexFromName(name string) int {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -216,6 +288,14 @@ func QNetworkInterface_InterfaceIndexFromName(name string) int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QNetworkInterface interfaceFromName(const QString &)
+
+/*
+Returns a QNetworkInterface object for the interface named name. If no such interface exists, this function returns an invalid QNetworkInterface object.
+
+The string name may be either an actual interface name (such as "eth0" or "en1") or an interface index in string form ("1", "2", etc.).
+
+See also name() and isValid().
+*/
 func (this *QNetworkInterface) InterfaceFromName(name string) *QNetworkInterface /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -235,6 +315,12 @@ func QNetworkInterface_InterfaceFromName(name string) *QNetworkInterface /*123*/
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QNetworkInterface interfaceFromIndex(int)
+
+/*
+Returns a QNetworkInterface object for the interface whose internal ID is index. Network interfaces have a unique identifier called the "interface index" to distinguish it from other interfaces on the system. Often, this value is assigned progressively and interfaces being removed and then added again get a different value every time.
+
+This index is also found in the IPv6 address' scope ID field.
+*/
 func (this *QNetworkInterface) InterfaceFromIndex(index int) *QNetworkInterface /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterface18interfaceFromIndexEi", qtrt.FFI_TYPE_POINTER, index)
 	qtrt.ErrPrint(err, rv)
@@ -252,6 +338,19 @@ func QNetworkInterface_InterfaceFromIndex(index int) *QNetworkInterface /*123*/ 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString interfaceNameFromIndex(int)
+
+/*
+Returns the name of the interface whose index is index or an empty string if there is no interface with that index. This function should produce the same result as the following code, but will probably execute faster.
+
+
+  QNetworkInterface::interfaceFromIndex(index).name()
+
+
+
+This function was introduced in  Qt 5.7.
+
+See also interfaceFromIndex(), interfaceIndexFromName(), and QNetworkDatagram::interfaceIndex().
+*/
 func (this *QNetworkInterface) InterfaceNameFromIndex(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterface22interfaceNameFromIndexEi", qtrt.FFI_TYPE_POINTER, index)
 	qtrt.ErrPrint(err, rv)
@@ -266,13 +365,28 @@ func QNetworkInterface_InterfaceNameFromIndex(index int) string {
 	return rv
 }
 
+/*
+
+
+ */
 type QNetworkInterface__InterfaceFlag = int
 
+//
 const QNetworkInterface__IsUp QNetworkInterface__InterfaceFlag = 1
+
+//
 const QNetworkInterface__IsRunning QNetworkInterface__InterfaceFlag = 2
+
+//
 const QNetworkInterface__CanBroadcast QNetworkInterface__InterfaceFlag = 4
+
+//
 const QNetworkInterface__IsLoopBack QNetworkInterface__InterfaceFlag = 8
+
+//
 const QNetworkInterface__IsPointToPoint QNetworkInterface__InterfaceFlag = 16
+
+//
 const QNetworkInterface__CanMulticast QNetworkInterface__InterfaceFlag = 32
 
 //  body block end

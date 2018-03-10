@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QPaintEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QPaintEvent) NewFromPointer(cthis unsafe.Pointer) *QPaintEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEvent(const QRegion &)
+
+/*
+
+ */
 func NewQPaintEvent(paintRegion QRegion_ITF) *QPaintEvent {
 	var convArg0 unsafe.Pointer
 	if paintRegion != nil && paintRegion.QRegion_PTR() != nil {
@@ -80,6 +87,10 @@ func NewQPaintEvent(paintRegion QRegion_ITF) *QPaintEvent {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEvent(const QRect &)
+
+/*
+
+ */
 func NewQPaintEvent_1(paintRect qtcore.QRect_ITF) *QPaintEvent {
 	var convArg0 unsafe.Pointer
 	if paintRect != nil && paintRect.QRect_PTR() != nil {
@@ -96,6 +107,10 @@ func NewQPaintEvent_1(paintRect qtcore.QRect_ITF) *QPaintEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPaintEvent()
+
+/*
+
+ */
 func DeleteQPaintEvent(this *QPaintEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
@@ -107,6 +122,10 @@ func DeleteQPaintEvent(this *QPaintEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QRect & rect() const
+
+/*
+
+ */
 func (this *QPaintEvent) Rect() *qtcore.QRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPaintEvent4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +138,10 @@ func (this *QPaintEvent) Rect() *qtcore.QRect {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QRegion & region() const
+
+/*
+
+ */
 func (this *QPaintEvent) Region() *QRegion {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPaintEvent6regionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

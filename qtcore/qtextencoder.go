@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QTextEncoder struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QTextEncoder) NewFromPointer(cthis unsafe.Pointer) *QTextEncoder {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextEncoder(const QTextCodec *)
+
+/*
+
+ */
 func NewQTextEncoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextEncoder {
 	var convArg0 unsafe.Pointer
 	if codec != nil && codec.QTextCodec_PTR() != nil {
@@ -81,6 +88,10 @@ func NewQTextEncoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextEnco
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextEncoder(const QTextCodec *, QTextCodec::ConversionFlags)
+
+/*
+
+ */
 func NewQTextEncoder_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextEncoder {
 	var convArg0 unsafe.Pointer
 	if codec != nil && codec.QTextCodec_PTR() != nil {
@@ -97,6 +108,10 @@ func NewQTextEncoder_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags in
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextEncoder()
+
+/*
+
+ */
 func DeleteQTextEncoder(this *QTextEncoder) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -108,6 +123,10 @@ func DeleteQTextEncoder(this *QTextEncoder) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(const QString &)
+
+/*
+Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
+*/
 func (this *QTextEncoder) FromUnicode(str string) *QByteArray /*123*/ {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
@@ -122,6 +141,10 @@ func (this *QTextEncoder) FromUnicode(str string) *QByteArray /*123*/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(QStringView)
+
+/*
+Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
+*/
 func (this *QTextEncoder) FromUnicode_1(str QStringView_ITF /*123*/) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringView_PTR() != nil {
@@ -138,6 +161,10 @@ func (this *QTextEncoder) FromUnicode_1(str QStringView_ITF /*123*/) *QByteArray
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(const QChar *, int)
+
+/*
+Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
+*/
 func (this *QTextEncoder) FromUnicode_2(uc QChar_ITF /*777 const QChar **/, len_ int) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QChar_PTR() != nil {
@@ -154,6 +181,10 @@ func (this *QTextEncoder) FromUnicode_2(uc QChar_ITF /*777 const QChar **/, len_
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFailure() const
+
+/*
+
+ */
 func (this *QTextEncoder) HasFailure() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextEncoder10hasFailureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

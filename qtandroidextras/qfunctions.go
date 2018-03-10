@@ -22,10 +22,14 @@ func init() {
 //  header block end
 
 //  body block begin
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidfunctions.h:107
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:107
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool shouldShowRequestPermissionRationale(const QString &)
+
+/*
+
+ */
 func ShouldShowRequestPermissionRationale(permission string) bool {
 	var tmpArg0 = qtcore.NewQString_5(permission)
 	var convArg0 = tmpArg0.GetCthis()
@@ -34,10 +38,14 @@ func ShouldShowRequestPermissionRationale(permission string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidfunctions.h:104
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:104
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void requestPermissions(const QStringList &, const QtAndroid::PermissionResultCallback &)
+
+/*
+
+ */
 func RequestPermissions(permissions qtcore.QStringList_ITF, callbackFunc unsafe.Pointer /*555*/) {
 	var convArg0 unsafe.Pointer
 	if permissions != nil && permissions.QStringList_PTR() != nil {

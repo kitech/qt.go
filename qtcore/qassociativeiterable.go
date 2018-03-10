@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QAssociativeIterable struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QAssociativeIterable) NewFromPointer(cthis unsafe.Pointer) *QAssociativeI
 // index:0
 // Public Visibility=Default Availability=Available
 // [120] QAssociativeIterable::const_iterator begin() const
+
+/*
+
+ */
 func (this *QAssociativeIterable) Begin() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAssociativeIterable5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QAssociativeIterable) Begin() unsafe.Pointer /*444*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [120] QAssociativeIterable::const_iterator end() const
+
+/*
+
+ */
 func (this *QAssociativeIterable) End() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAssociativeIterable3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +96,10 @@ func (this *QAssociativeIterable) End() unsafe.Pointer /*444*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [120] QAssociativeIterable::const_iterator find(const QVariant &) const
+
+/*
+
+ */
 func (this *QAssociativeIterable) Find(key QVariant_ITF) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QVariant_PTR() != nil {
@@ -99,6 +114,58 @@ func (this *QAssociativeIterable) Find(key QVariant_ITF) unsafe.Pointer /*444*/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant value(const QVariant &) const
+
+/*
+Returns the stored value converted to the template type T. Call canConvert() to find out whether a type can be converted. If the value cannot be converted, a default-constructed value will be returned.
+
+If the type T is supported by QVariant, this function behaves exactly as toString(), toInt() etc.
+
+Example:
+
+
+  QVariant v;
+
+  MyCustomStruct c;
+  if (v.canConvert<MyCustomStruct>())
+      c = v.value<MyCustomStruct>();
+
+  v = 7;
+  int i = v.value<int>();                        // same as v.toInt()
+  QString s = v.value<QString>();                // same as v.toString(), s is now "7"
+  MyCustomStruct c2 = v.value<MyCustomStruct>(); // conversion failed, c2 is empty
+
+
+
+If the QVariant contains a pointer to a type derived from QObject then T may be any QObject type. If the pointer stored in the QVariant can be qobject_cast to T, then that result is returned. Otherwise a null pointer is returned. Note that this only works for QObject subclasses which use the Q_OBJECT macro.
+
+If the QVariant contains a sequential container and T is QVariantList, the elements of the container will be converted into QVariants and returned as a QVariantList.
+
+
+  QList<int> intList = {7, 11, 42};
+
+  QVariant variant = QVariant::fromValue(intList);
+  if (variant.canConvert<QVariantList>()) {
+      QSequentialIterable iterable = variant.value<QSequentialIterable>();
+      // Can use foreach:
+      foreach (const QVariant &v, iterable) {
+          qDebug() << v;
+      }
+      // Can use C++11 range-for:
+      for (const QVariant &v : iterable) {
+          qDebug() << v;
+      }
+      // Can use iterators:
+      QSequentialIterable::const_iterator it = iterable.begin();
+      const QSequentialIterable::const_iterator end = iterable.end();
+      for ( ; it != end; ++it) {
+          qDebug() << *it;
+      }
+  }
+
+
+
+See also setValue(), fromValue(), canConvert(), and Q_DECLARE_SEQUENTIAL_CONTAINER_METATYPE().
+*/
 func (this *QAssociativeIterable) Value(key QVariant_ITF) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QVariant_PTR() != nil {
@@ -115,6 +182,10 @@ func (this *QAssociativeIterable) Value(key QVariant_ITF) *QVariant /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int size() const
+
+/*
+
+ */
 func (this *QAssociativeIterable) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QAssociativeIterable4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

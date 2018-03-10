@@ -70,6 +70,9 @@ func (this *QQuickView) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*7
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
+/*
+
+ */
 type QQuickView struct {
 	*QQuickWindow
 }
@@ -102,6 +105,10 @@ func (*QQuickView) NewFromPointer(cthis unsafe.Pointer) *QQuickView {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QQuickView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +119,10 @@ func (this *QQuickView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(QWindow *)
+
+/*
+Constructs a QQuickView with the given parent. The default value of parent is 0.
+*/
 func NewQQuickView(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWindow_PTR() != nil {
@@ -128,6 +139,10 @@ func NewQQuickView(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(QWindow *)
+
+/*
+Constructs a QQuickView with the given parent. The default value of parent is 0.
+*/
 func NewQQuickView__() *QQuickView {
 	// arg: 0, QWindow *=Pointer, QWindow=Record,
 	var convArg0 unsafe.Pointer
@@ -142,6 +157,10 @@ func NewQQuickView__() *QQuickView {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(QQmlEngine *, QWindow *)
+
+/*
+Constructs a QQuickView with the given parent. The default value of parent is 0.
+*/
 func NewQQuickView_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QQmlEngine_PTR() != nil {
@@ -162,6 +181,10 @@ func NewQQuickView_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qt
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(const QUrl &, QWindow *)
+
+/*
+Constructs a QQuickView with the given parent. The default value of parent is 0.
+*/
 func NewQQuickView_2(source qtcore.QUrl_ITF, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
 	var convArg0 unsafe.Pointer
 	if source != nil && source.QUrl_PTR() != nil {
@@ -182,6 +205,10 @@ func NewQQuickView_2(source qtcore.QUrl_ITF, parent qtgui.QWindow_ITF /*777 QWin
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(const QUrl &, QWindow *)
+
+/*
+Constructs a QQuickView with the given parent. The default value of parent is 0.
+*/
 func NewQQuickView_2_(source qtcore.QUrl_ITF) *QQuickView {
 	var convArg0 unsafe.Pointer
 	if source != nil && source.QUrl_PTR() != nil {
@@ -200,6 +227,10 @@ func NewQQuickView_2_(source qtcore.QUrl_ITF) *QQuickView {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickView()
+
+/*
+
+ */
 func DeleteQQuickView(this *QQuickView) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
@@ -211,6 +242,14 @@ func DeleteQQuickView(this *QQuickView) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl source() const
+
+/*
+Returns the source URL, if set.
+
+Note: Getter function for property source.
+
+See also setSource().
+*/
 func (this *QQuickView) Source() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -223,6 +262,10 @@ func (this *QQuickView) Source() *qtcore.QUrl /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlEngine * engine() const
+
+/*
+Returns a pointer to the QQmlEngine used for instantiating QML Components.
+*/
 func (this *QQuickView) Engine() *qtqml.QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -233,6 +276,10 @@ func (this *QQuickView) Engine() *qtqml.QQmlEngine /*777 QQmlEngine **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlContext * rootContext() const
+
+/*
+This function returns the root of the context hierarchy. Each QML component is instantiated in a QQmlContext. QQmlContext's are essential for passing data to QML components. In QML, contexts are arranged hierarchically and this hierarchy is managed by the QQmlEngine.
+*/
 func (this *QQuickView) RootContext() *qtqml.QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView11rootContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -243,6 +290,10 @@ func (this *QQuickView) RootContext() *qtqml.QQmlContext /*777 QQmlContext **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * rootObject() const
+
+/*
+Returns the view's root item.
+*/
 func (this *QQuickView) RootObject() *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView10rootObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -253,6 +304,10 @@ func (this *QQuickView) RootObject() *QQuickItem /*777 QQuickItem **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickView::ResizeMode resizeMode() const
+
+/*
+
+ */
 func (this *QQuickView) ResizeMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView10resizeModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -263,6 +318,10 @@ func (this *QQuickView) ResizeMode() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setResizeMode(enum QQuickView::ResizeMode)
+
+/*
+
+ */
 func (this *QQuickView) SetResizeMode(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView13setResizeModeENS_10ResizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -272,6 +331,10 @@ func (this *QQuickView) SetResizeMode(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickView::Status status() const
+
+/*
+
+ */
 func (this *QQuickView) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -282,6 +345,10 @@ func (this *QQuickView) Status() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+
+ */
 func (this *QQuickView) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -294,6 +361,12 @@ func (this *QQuickView) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize initialSize() const
+
+/*
+Returns the initial size of the root object.
+
+If resizeMode is QQuickItem::SizeRootObjectToView the root object will be resized to the size of the view. initialSize contains the size of the root object before it was resized.
+*/
 func (this *QQuickView) InitialSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickView11initialSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -306,6 +379,18 @@ func (this *QQuickView) InitialSize() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSource(const QUrl &)
+
+/*
+Sets the source to the url, loads the QML component and instantiates it.
+
+Ensure that the URL provided is full and correct, in particular, use QUrl::fromLocalFile() when loading a file from the local filesystem.
+
+Calling this method multiple times with the same url will result in the QML component being reinstantiated.
+
+Note: Setter function for property source.
+
+See also source().
+*/
 func (this *QQuickView) SetSource(arg0 qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QUrl_PTR() != nil {
@@ -319,6 +404,10 @@ func (this *QQuickView) SetSource(arg0 qtcore.QUrl_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContent(const QUrl &, QQmlComponent *, QObject *)
+
+/*
+
+ */
 func (this *QQuickView) SetContent(url qtcore.QUrl_ITF, component qtqml.QQmlComponent_ITF /*777 QQmlComponent **/, item qtcore.QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -340,6 +429,12 @@ func (this *QQuickView) SetContent(url qtcore.QUrl_ITF, component qtqml.QQmlComp
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void statusChanged(QQuickView::Status)
+
+/*
+This signal is emitted when the component's current status changes.
+
+Note: Notifier signal for property status.
+*/
 func (this *QQuickView) StatusChanged(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickView13statusChangedENS_6StatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -349,6 +444,10 @@ func (this *QQuickView) StatusChanged(arg0 int) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
+
+/*
+
+ */
 func (this *QQuickView) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QResizeEvent_PTR() != nil {
@@ -362,6 +461,10 @@ func (this *QQuickView) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEve
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
+
+/*
+
+ */
 func (this *QQuickView) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTimerEvent_PTR() != nil {
@@ -375,6 +478,10 @@ func (this *QQuickView) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWindow::keyPressEvent().
+*/
 func (this *QQuickView) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QKeyEvent_PTR() != nil {
@@ -388,6 +495,10 @@ func (this *QQuickView) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWindow::keyReleaseEvent().
+*/
 func (this *QQuickView) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QKeyEvent_PTR() != nil {
@@ -401,6 +512,10 @@ func (this *QQuickView) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWindow::mousePressEvent().
+*/
 func (this *QQuickView) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -414,6 +529,10 @@ func (this *QQuickView) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseE
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWindow::mouseReleaseEvent().
+*/
 func (this *QQuickView) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -427,6 +546,10 @@ func (this *QQuickView) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMous
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWindow::mouseMoveEvent().
+*/
 func (this *QQuickView) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -436,16 +559,36 @@ func (this *QQuickView) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEv
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+This enum specifies how to resize the view.
+
+
+*/
 type QQuickView__ResizeMode = int
 
+// The view resizes with the root item in the QML.
 const QQuickView__SizeViewToRootObject QQuickView__ResizeMode = 0
+
+// The view will automatically resize the root item to the size of the view.
 const QQuickView__SizeRootObjectToView QQuickView__ResizeMode = 1
 
+/*
+Specifies the loading status of the QQuickView.
+
+
+*/
 type QQuickView__Status = int
 
+// This QQuickView has no source set.
 const QQuickView__Null QQuickView__Status = 0
+
+// This QQuickView has loaded and created the QML component.
 const QQuickView__Ready QQuickView__Status = 1
+
+// This QQuickView is loading network data.
 const QQuickView__Loading QQuickView__Status = 2
+
+// One or more errors has occurred. Call errors() to retrieve a list of errors.
 const QQuickView__Error QQuickView__Status = 3
 
 //  body block end

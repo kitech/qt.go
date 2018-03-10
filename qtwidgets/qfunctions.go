@@ -30,6 +30,12 @@ func init() {
 // index:43
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(QSizePolicy, uint)
+
+/*
+Returns the hash value for key, using seed to seed the calculation.
+
+This function was introduced in  Qt 5.6.
+*/
 func QHash_43(key QSizePolicy_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QSizePolicy_PTR() != nil {
@@ -38,12 +44,17 @@ func QHash_43(key QSizePolicy_ITF /*123*/, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash11QSizePolicyj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
+	// unsigned int // 222
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:147
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawBorderPixmap(QPainter *, const QRect &, const QMargins &, const QPixmap &, const QRect &, const QMargins &, const struct QTileRules &, QDrawBorderPixmap::DrawingHints)
+
+/*
+
+ */
 func QDrawBorderPixmap(painter qtgui.QPainter_ITF /*777 QPainter **/, targetRect qtcore.QRect_ITF, targetMargins qtcore.QMargins_ITF, pixmap qtgui.QPixmap_ITF, sourceRect qtcore.QRect_ITF, sourceMargins qtcore.QMargins_ITF, rules QTileRules_ITF, hints int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -81,6 +92,10 @@ func QDrawBorderPixmap(painter qtgui.QPainter_ITF /*777 QPainter **/, targetRect
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void qDrawBorderPixmap(QPainter *, const QRect &, const QMargins &, const QPixmap &)
+
+/*
+
+ */
 func QDrawBorderPixmap_1(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRect_ITF, margins qtcore.QMargins_ITF, pixmap qtgui.QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
@@ -106,6 +121,10 @@ func QDrawBorderPixmap_1(painter qtgui.QPainter_ITF /*777 QPainter **/, target q
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawShadePanel(QPainter *, int, int, int, int, const QPalette &, _Bool, int, const QBrush *)
+
+/*
+
+ */
 func QDrawShadePanel(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -127,6 +146,10 @@ func QDrawShadePanel(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w in
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawShadePanel(QPainter *, const QRect &, const QPalette &, _Bool, int, const QBrush *)
+
+/*
+
+ */
 func QDrawShadePanel_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -152,6 +175,10 @@ func QDrawShadePanel_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_I
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawWinButton(QPainter *, int, int, int, int, const QPalette &, _Bool, const QBrush *)
+
+/*
+
+ */
 func QDrawWinButton(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, pal qtgui.QPalette_ITF, sunken bool, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -173,6 +200,10 @@ func QDrawWinButton(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawWinButton(QPainter *, const QRect &, const QPalette &, _Bool, const QBrush *)
+
+/*
+
+ */
 func QDrawWinButton_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -198,6 +229,10 @@ func QDrawWinButton_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_IT
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawShadeRect(QPainter *, int, int, int, int, const QPalette &, _Bool, int, int, const QBrush *)
+
+/*
+
+ */
 func QDrawShadeRect(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, midLineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -219,6 +254,10 @@ func QDrawShadeRect(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawShadeRect(QPainter *, const QRect &, const QPalette &, _Bool, int, int, const QBrush *)
+
+/*
+
+ */
 func QDrawShadeRect_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, midLineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -244,6 +283,10 @@ func QDrawShadeRect_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_IT
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawShadeLine(QPainter *, int, int, int, int, const QPalette &, _Bool, int, int)
+
+/*
+
+ */
 func QDrawShadeLine(p qtgui.QPainter_ITF /*777 QPainter **/, x1 int, y1 int, x2 int, y2 int, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, midLineWidth int) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -261,6 +304,10 @@ func QDrawShadeLine(p qtgui.QPainter_ITF /*777 QPainter **/, x1 int, y1 int, x2 
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawShadeLine(QPainter *, const QPoint &, const QPoint &, const QPalette &, _Bool, int, int)
+
+/*
+
+ */
 func QDrawShadeLine_1(p qtgui.QPainter_ITF /*777 QPainter **/, p1 qtcore.QPoint_ITF, p2 qtcore.QPoint_ITF, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, midLineWidth int) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -286,6 +333,10 @@ func QDrawShadeLine_1(p qtgui.QPainter_ITF /*777 QPainter **/, p1 qtcore.QPoint_
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawPlainRect(QPainter *, int, int, int, int, const QColor &, int, const QBrush *)
+
+/*
+
+ */
 func QDrawPlainRect(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, arg5 qtgui.QColor_ITF, lineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -307,6 +358,10 @@ func QDrawPlainRect(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawPlainRect(QPainter *, const QRect &, const QColor &, int, const QBrush *)
+
+/*
+
+ */
 func QDrawPlainRect_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, arg2 qtgui.QColor_ITF, lineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -332,6 +387,10 @@ func QDrawPlainRect_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_IT
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawWinPanel(QPainter *, int, int, int, int, const QPalette &, _Bool, const QBrush *)
+
+/*
+
+ */
 func QDrawWinPanel(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, pal qtgui.QPalette_ITF, sunken bool, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
@@ -353,6 +412,10 @@ func QDrawWinPanel(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int,
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [-2] void qDrawWinPanel(QPainter *, const QRect &, const QPalette &, _Bool, const QBrush *)
+
+/*
+
+ */
 func QDrawWinPanel_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {

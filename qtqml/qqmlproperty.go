@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlProperty struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QQmlProperty) NewFromPointer(cthis unsafe.Pointer) *QQmlProperty {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlProperty()
+
+/*
+Create an invalid QQmlProperty.
+*/
 func NewQQmlProperty() *QQmlProperty {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQQmlProperty() *QQmlProperty {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlProperty(QObject *)
+
+/*
+Create an invalid QQmlProperty.
+*/
 func NewQQmlProperty_1(arg0 qtcore.QObject_ITF /*777 QObject **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -95,6 +106,10 @@ func NewQQmlProperty_1(arg0 qtcore.QObject_ITF /*777 QObject **/) *QQmlProperty 
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlProperty(QObject *, QQmlContext *)
+
+/*
+Create an invalid QQmlProperty.
+*/
 func NewQQmlProperty_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -115,6 +130,10 @@ func NewQQmlProperty_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlConte
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlProperty(QObject *, QQmlEngine *)
+
+/*
+Create an invalid QQmlProperty.
+*/
 func NewQQmlProperty_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -135,6 +154,10 @@ func NewQQmlProperty_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlEngin
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlProperty(QObject *, const QString &)
+
+/*
+Create an invalid QQmlProperty.
+*/
 func NewQQmlProperty_4(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -153,6 +176,10 @@ func NewQQmlProperty_4(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) *
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlProperty(QObject *, const QString &, QQmlContext *)
+
+/*
+Create an invalid QQmlProperty.
+*/
 func NewQQmlProperty_5(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -175,6 +202,10 @@ func NewQQmlProperty_5(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, a
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlProperty(QObject *, const QString &, QQmlEngine *)
+
+/*
+Create an invalid QQmlProperty.
+*/
 func NewQQmlProperty_6(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -197,6 +228,10 @@ func NewQQmlProperty_6(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, a
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QQmlProperty()
+
+/*
+
+ */
 func DeleteQQmlProperty(this *QQmlProperty) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -208,6 +243,10 @@ func DeleteQQmlProperty(this *QQmlProperty) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlProperty & operator=(const QQmlProperty &)
+
+/*
+
+ */
 func (this *QQmlProperty) Operator_equal(arg0 QQmlProperty_ITF) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlProperty_PTR() != nil {
@@ -224,6 +263,10 @@ func (this *QQmlProperty) Operator_equal(arg0 QQmlProperty_ITF) *QQmlProperty {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QQmlProperty &) const
+
+/*
+
+ */
 func (this *QQmlProperty) Operator_equal_equal(arg0 QQmlProperty_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlProperty_PTR() != nil {
@@ -238,6 +281,10 @@ func (this *QQmlProperty) Operator_equal_equal(arg0 QQmlProperty_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQmlProperty::Type type() const
+
+/*
+Returns the type of the property.
+*/
 func (this *QQmlProperty) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -248,6 +295,10 @@ func (this *QQmlProperty) Type() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if the QQmlProperty refers to a valid property, otherwise false.
+*/
 func (this *QQmlProperty) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -258,6 +309,10 @@ func (this *QQmlProperty) IsValid() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isProperty() const
+
+/*
+Returns true if this QQmlProperty represents a regular Qt property.
+*/
 func (this *QQmlProperty) IsProperty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty10isPropertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -268,6 +323,10 @@ func (this *QQmlProperty) IsProperty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSignalProperty() const
+
+/*
+Returns true if this QQmlProperty represents a QML signal property.
+*/
 func (this *QQmlProperty) IsSignalProperty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty16isSignalPropertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -278,6 +337,10 @@ func (this *QQmlProperty) IsSignalProperty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int propertyType() const
+
+/*
+Returns the QVariant type of the property, or QVariant::Invalid if the property has no QVariant type.
+*/
 func (this *QQmlProperty) PropertyType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty12propertyTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -288,6 +351,10 @@ func (this *QQmlProperty) PropertyType() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQmlProperty::PropertyTypeCategory propertyTypeCategory() const
+
+/*
+Returns the property category.
+*/
 func (this *QQmlProperty) PropertyTypeCategory() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty20propertyTypeCategoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -298,6 +365,10 @@ func (this *QQmlProperty) PropertyTypeCategory() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * propertyTypeName() const
+
+/*
+Returns the type name of the property, or 0 if the property has no type name.
+*/
 func (this *QQmlProperty) PropertyTypeName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty16propertyTypeNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -308,6 +379,10 @@ func (this *QQmlProperty) PropertyTypeName() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
+
+/*
+Return the name of this QML property.
+*/
 func (this *QQmlProperty) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -321,6 +396,10 @@ func (this *QQmlProperty) Name() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant read() const
+
+/*
+Returns the property value.
+*/
 func (this *QQmlProperty) Read() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty4readEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -333,6 +412,10 @@ func (this *QQmlProperty) Read() *qtcore.QVariant /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QVariant read(const QObject *, const QString &)
+
+/*
+Returns the property value.
+*/
 func (this *QQmlProperty) Read_1(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -356,6 +439,10 @@ func QQmlProperty_Read_1(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 s
 // index:2
 // Public static Visibility=Default Availability=Available
 // [16] QVariant read(const QObject *, const QString &, QQmlContext *)
+
+/*
+Returns the property value.
+*/
 func (this *QQmlProperty) Read_2(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -383,6 +470,10 @@ func QQmlProperty_Read_2(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 s
 // index:3
 // Public static Visibility=Default Availability=Available
 // [16] QVariant read(const QObject *, const QString &, QQmlEngine *)
+
+/*
+Returns the property value.
+*/
 func (this *QQmlProperty) Read_3(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -410,6 +501,10 @@ func QQmlProperty_Read_3(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 s
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool write(const QVariant &) const
+
+/*
+Sets the property value to value. Returns true on success, or false if the property can't be set because the value is the wrong type, for example.
+*/
 func (this *QQmlProperty) Write(arg0 qtcore.QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QVariant_PTR() != nil {
@@ -424,6 +519,10 @@ func (this *QQmlProperty) Write(arg0 qtcore.QVariant_ITF) bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool write(QObject *, const QString &, const QVariant &)
+
+/*
+Sets the property value to value. Returns true on success, or false if the property can't be set because the value is the wrong type, for example.
+*/
 func (this *QQmlProperty) Write_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -449,6 +548,10 @@ func QQmlProperty_Write_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string
 // index:2
 // Public static Visibility=Default Availability=Available
 // [1] bool write(QObject *, const QString &, const QVariant &, QQmlContext *)
+
+/*
+Sets the property value to value. Returns true on success, or false if the property can't be set because the value is the wrong type, for example.
+*/
 func (this *QQmlProperty) Write_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF, arg3 QQmlContext_ITF /*777 QQmlContext **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -478,6 +581,10 @@ func QQmlProperty_Write_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string
 // index:3
 // Public static Visibility=Default Availability=Available
 // [1] bool write(QObject *, const QString &, const QVariant &, QQmlEngine *)
+
+/*
+Sets the property value to value. Returns true on success, or false if the property can't be set because the value is the wrong type, for example.
+*/
 func (this *QQmlProperty) Write_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF, arg3 QQmlEngine_ITF /*777 QQmlEngine **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -507,6 +614,10 @@ func QQmlProperty_Write_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool reset() const
+
+/*
+Resets the property and returns true if the property is resettable. If the property is not resettable, nothing happens and false is returned.
+*/
 func (this *QQmlProperty) Reset() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty5resetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -517,6 +628,10 @@ func (this *QQmlProperty) Reset() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasNotifySignal() const
+
+/*
+Returns true if the property has a change notifier signal, otherwise false.
+*/
 func (this *QQmlProperty) HasNotifySignal() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty15hasNotifySignalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -527,6 +642,12 @@ func (this *QQmlProperty) HasNotifySignal() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool needsNotifySignal() const
+
+/*
+Returns true if the property needs a change notifier signal for bindings to remain upto date, false otherwise.
+
+Some properties, such as attached properties or those whose value never changes, do not require a change notifier.
+*/
 func (this *QQmlProperty) NeedsNotifySignal() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty17needsNotifySignalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -537,6 +658,12 @@ func (this *QQmlProperty) NeedsNotifySignal() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool connectNotifySignal(QObject *, const char *) const
+
+/*
+Connects the property's change notifier signal to the specified slot of the dest object and returns true. Returns false if this metaproperty does not represent a regular Qt property or if it has no change notifier signal, or if the dest object does not have the specified slot.
+
+Note: slot should be passed using the SLOT() macro so it is correctly identified.
+*/
 func (this *QQmlProperty) ConnectNotifySignal(dest qtcore.QObject_ITF /*777 QObject **/, slot string) bool {
 	var convArg0 unsafe.Pointer
 	if dest != nil && dest.QObject_PTR() != nil {
@@ -553,6 +680,12 @@ func (this *QQmlProperty) ConnectNotifySignal(dest qtcore.QObject_ITF /*777 QObj
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool connectNotifySignal(QObject *, int) const
+
+/*
+Connects the property's change notifier signal to the specified slot of the dest object and returns true. Returns false if this metaproperty does not represent a regular Qt property or if it has no change notifier signal, or if the dest object does not have the specified slot.
+
+Note: slot should be passed using the SLOT() macro so it is correctly identified.
+*/
 func (this *QQmlProperty) ConnectNotifySignal_1(dest qtcore.QObject_ITF /*777 QObject **/, method int) bool {
 	var convArg0 unsafe.Pointer
 	if dest != nil && dest.QObject_PTR() != nil {
@@ -567,6 +700,10 @@ func (this *QQmlProperty) ConnectNotifySignal_1(dest qtcore.QObject_ITF /*777 QO
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isWritable() const
+
+/*
+Returns true if the property is writable, otherwise false.
+*/
 func (this *QQmlProperty) IsWritable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty10isWritableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -577,6 +714,10 @@ func (this *QQmlProperty) IsWritable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDesignable() const
+
+/*
+Returns true if the property is designable, otherwise false.
+*/
 func (this *QQmlProperty) IsDesignable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty12isDesignableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -587,6 +728,10 @@ func (this *QQmlProperty) IsDesignable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isResettable() const
+
+/*
+Returns true if the property is resettable, otherwise false.
+*/
 func (this *QQmlProperty) IsResettable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty12isResettableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -597,6 +742,10 @@ func (this *QQmlProperty) IsResettable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * object() const
+
+/*
+Returns the QQmlProperty's QObject.
+*/
 func (this *QQmlProperty) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -607,6 +756,10 @@ func (this *QQmlProperty) Object() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int index() const
+
+/*
+Return the Qt metaobject index of the property.
+*/
 func (this *QQmlProperty) Index() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty5indexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -617,6 +770,10 @@ func (this *QQmlProperty) Index() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QMetaProperty property() const
+
+/*
+Returns the Qt property associated with this QML property.
+*/
 func (this *QQmlProperty) Property() *qtcore.QMetaProperty /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty8propertyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -629,6 +786,10 @@ func (this *QQmlProperty) Property() *qtcore.QMetaProperty /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaMethod method() const
+
+/*
+Return the QMetaMethod for this property if it is a SignalProperty, otherwise returns an invalid QMetaMethod.
+*/
 func (this *QQmlProperty) Method() *qtcore.QMetaMethod /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQmlProperty6methodEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -637,17 +798,39 @@ func (this *QQmlProperty) Method() *qtcore.QMetaMethod /*123*/ {
 	return rv2
 }
 
+/*
+This enum specifies a category of QML property.
+
+
+*/
 type QQmlProperty__PropertyTypeCategory = int
 
+// The property is invalid, or is a signal property.
 const QQmlProperty__InvalidCategory QQmlProperty__PropertyTypeCategory = 0
+
+// The property is a QQmlListProperty list property
 const QQmlProperty__List QQmlProperty__PropertyTypeCategory = 1
+
+// The property is a QObject derived type pointer
 const QQmlProperty__Object QQmlProperty__PropertyTypeCategory = 2
+
+// The property is a normal value property.
 const QQmlProperty__Normal QQmlProperty__PropertyTypeCategory = 3
 
+/*
+This enum specifies a type of QML property.
+
+
+*/
 type QQmlProperty__Type = int
 
+// The property is invalid.
 const QQmlProperty__Invalid QQmlProperty__Type = 0
+
+// The property is a regular Qt property.
 const QQmlProperty__Property QQmlProperty__Type = 1
+
+// The property is a signal property.
 const QQmlProperty__SignalProperty QQmlProperty__Type = 2
 
 //  body block end

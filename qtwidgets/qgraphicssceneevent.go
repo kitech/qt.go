@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QGraphicsSceneEvent struct {
 	*qtcore.QEvent
 }
@@ -65,6 +68,10 @@ func (*QGraphicsSceneEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScene
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneEvent(enum QEvent::Type)
+
+/*
+
+ */
 func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneEvent()
+
+/*
+
+ */
 func DeleteQGraphicsSceneEvent(this *QGraphicsSceneEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsSceneEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -88,6 +99,10 @@ func DeleteQGraphicsSceneEvent(this *QGraphicsSceneEvent) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget() const
+
+/*
+Returns the widget where the event originated, or 0 if the event originates from another application.
+*/
 func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsSceneEvent6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -98,6 +113,10 @@ func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
+
+/*
+
+ */
 func (this *QGraphicsSceneEvent) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {

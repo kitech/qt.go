@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextItem struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QTextItem) NewFromPointer(cthis unsafe.Pointer) *QTextItem {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal descent() const
+
+/*
+
+ */
 func (this *QTextItem) Descent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem7descentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func (this *QTextItem) Descent() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal ascent() const
+
+/*
+
+ */
 func (this *QTextItem) Ascent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem6ascentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -86,6 +97,10 @@ func (this *QTextItem) Ascent() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal width() const
+
+/*
+
+ */
 func (this *QTextItem) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -96,6 +111,10 @@ func (this *QTextItem) Width() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTextItem::RenderFlags renderFlags() const
+
+/*
+
+ */
 func (this *QTextItem) RenderFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem11renderFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -106,6 +125,10 @@ func (this *QTextItem) RenderFlags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
+
+/*
+
+ */
 func (this *QTextItem) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +142,10 @@ func (this *QTextItem) Text() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont font() const
+
+/*
+
+ */
 func (this *QTextItem) Font() *QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -133,12 +160,25 @@ func DeleteQTextItem(this *QTextItem) {
 	this.SetCthis(nil)
 }
 
+/*
+
+
+ */
 type QTextItem__RenderFlag = int
 
+//
 const QTextItem__RightToLeft QTextItem__RenderFlag = 1
+
+//
 const QTextItem__Overline QTextItem__RenderFlag = 16
+
+//
 const QTextItem__Underline QTextItem__RenderFlag = 32
+
+//
 const QTextItem__StrikeOut QTextItem__RenderFlag = 64
+
+//
 const QTextItem__Dummy QTextItem__RenderFlag = -1
 
 //  body block end

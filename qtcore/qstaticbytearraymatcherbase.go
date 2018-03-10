@@ -36,6 +36,9 @@ func (this *QStaticByteArrayMatcherBase) InheritIndexOfIn(f func(needle string, 
 	qtrt.SetAllInheritCallback(this, "indexOfIn", f)
 }
 
+/*
+
+ */
 type QStaticByteArrayMatcherBase struct {
 	*qtrt.CObject
 }
@@ -72,6 +75,10 @@ func (*QStaticByteArrayMatcherBase) NewFromPointer(cthis unsafe.Pointer) *QStati
 // index:0
 // Protected inline Visibility=Default Availability=Available
 // [-2] void QStaticByteArrayMatcherBase(const char *, uint)
+
+/*
+
+ */
 func NewQStaticByteArrayMatcherBase(pattern string, n uint) *QStaticByteArrayMatcherBase {
 	var convArg0 = qtrt.CString(pattern)
 	defer qtrt.FreeMem(convArg0)
@@ -86,6 +93,10 @@ func NewQStaticByteArrayMatcherBase(pattern string, n uint) *QStaticByteArrayMat
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int indexOfIn(const char *, uint, const char *, int, int) const
+
+/*
+
+ */
 func (this *QStaticByteArrayMatcherBase) IndexOfIn(needle string, nlen uint, haystack string, hlen int, from int) int {
 	var convArg0 = qtrt.CString(needle)
 	defer qtrt.FreeMem(convArg0)

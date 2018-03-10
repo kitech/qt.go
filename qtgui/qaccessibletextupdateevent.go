@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleTextUpdateEvent struct {
 	*QAccessibleTextCursorEvent
 }
@@ -66,6 +69,10 @@ func (*QAccessibleTextUpdateEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextUpdateEvent(QObject *, int, const QString &, const QString &)
+
+/*
+
+ */
 func NewQAccessibleTextUpdateEvent(obj qtcore.QObject_ITF /*777 QObject **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -86,6 +93,10 @@ func NewQAccessibleTextUpdateEvent(obj qtcore.QObject_ITF /*777 QObject **/, pos
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextUpdateEvent(QAccessibleInterface *, int, const QString &, const QString &)
+
+/*
+
+ */
 func NewQAccessibleTextUpdateEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
@@ -106,6 +117,10 @@ func NewQAccessibleTextUpdateEvent_1(iface QAccessibleInterface_ITF /*777 QAcces
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTextUpdateEvent()
+
+/*
+
+ */
 func DeleteQAccessibleTextUpdateEvent(this *QAccessibleTextUpdateEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
@@ -117,6 +132,10 @@ func DeleteQAccessibleTextUpdateEvent(this *QAccessibleTextUpdateEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString textRemoved() const
+
+/*
+
+ */
 func (this *QAccessibleTextUpdateEvent) TextRemoved() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent11textRemovedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +149,10 @@ func (this *QAccessibleTextUpdateEvent) TextRemoved() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString textInserted() const
+
+/*
+
+ */
 func (this *QAccessibleTextUpdateEvent) TextInserted() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent12textInsertedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +166,10 @@ func (this *QAccessibleTextUpdateEvent) TextInserted() string {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int changePosition() const
+
+/*
+
+ */
 func (this *QAccessibleTextUpdateEvent) ChangePosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent14changePositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

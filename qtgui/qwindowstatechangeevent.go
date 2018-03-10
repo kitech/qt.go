@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QWindowStateChangeEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QWindowStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWindowSta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWindowStateChangeEvent(Qt::WindowStates, _Bool)
+
+/*
+
+ */
 func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWindowStateChangeEventC2E6QFlagsIN2Qt11WindowStateEEb", qtrt.FFI_TYPE_POINTER, aOldState, isOverride)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateCha
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWindowStateChangeEvent(Qt::WindowStates, _Bool)
+
+/*
+
+ */
 func NewQWindowStateChangeEvent__(aOldState int) *QWindowStateChangeEvent {
 	// arg: 1, bool=Bool, =Invalid,
 	isOverride := false
@@ -90,6 +101,10 @@ func NewQWindowStateChangeEvent__(aOldState int) *QWindowStateChangeEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWindowStateChangeEvent()
+
+/*
+
+ */
 func DeleteQWindowStateChangeEvent(this *QWindowStateChangeEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWindowStateChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -101,6 +116,10 @@ func DeleteQWindowStateChangeEvent(this *QWindowStateChangeEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::WindowStates oldState() const
+
+/*
+
+ */
 func (this *QWindowStateChangeEvent) OldState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent8oldStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +130,10 @@ func (this *QWindowStateChangeEvent) OldState() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isOverride() const
+
+/*
+
+ */
 func (this *QWindowStateChangeEvent) IsOverride() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent10isOverrideEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

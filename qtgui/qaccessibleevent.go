@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleEvent struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QAccessibleEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleEvent 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleEvent(QObject *, QAccessible::Event)
+
+/*
+
+ */
 func NewQAccessibleEvent(obj qtcore.QObject_ITF /*777 QObject **/, typ int) *QAccessibleEvent {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -82,6 +89,10 @@ func NewQAccessibleEvent(obj qtcore.QObject_ITF /*777 QObject **/, typ int) *QAc
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleEvent(QAccessibleInterface *, QAccessible::Event)
+
+/*
+
+ */
 func NewQAccessibleEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
@@ -98,6 +109,10 @@ func NewQAccessibleEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInter
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleEvent()
+
+/*
+
+ */
 func DeleteQAccessibleEvent(this *QAccessibleEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAccessibleEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -109,6 +124,10 @@ func DeleteQAccessibleEvent(this *QAccessibleEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QAccessible::Event type() const
+
+/*
+
+ */
 func (this *QAccessibleEvent) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +138,10 @@ func (this *QAccessibleEvent) Type() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QObject * object() const
+
+/*
+
+ */
 func (this *QAccessibleEvent) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,6 +152,10 @@ func (this *QAccessibleEvent) Object() *qtcore.QObject /*777 QObject **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAccessible::Id uniqueId() const
+
+/*
+Returns the unique ID for the QAccessibleInterface iface.
+*/
 func (this *QAccessibleEvent) UniqueId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent8uniqueIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,6 +166,10 @@ func (this *QAccessibleEvent) UniqueId() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setChild(int)
+
+/*
+
+ */
 func (this *QAccessibleEvent) SetChild(chld int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAccessibleEvent8setChildEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), chld)
 	qtrt.ErrPrint(err, rv)
@@ -148,6 +179,10 @@ func (this *QAccessibleEvent) SetChild(chld int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int child() const
+
+/*
+
+ */
 func (this *QAccessibleEvent) Child() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent5childEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -158,6 +193,12 @@ func (this *QAccessibleEvent) Child() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * accessibleInterface() const
+
+/*
+Returns the QAccessibleInterface belonging to the id.
+
+Returns 0 if the id is invalid.
+*/
 func (this *QAccessibleEvent) AccessibleInterface() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAccessibleEvent19accessibleInterfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QPixmapCache struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,14 @@ func (*QPixmapCache) NewFromPointer(cthis unsafe.Pointer) *QPixmapCache {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int cacheLimit()
+
+/*
+Returns the cache limit (in kilobytes).
+
+The default cache limit is 10240 KB.
+
+See also setCacheLimit().
+*/
 func (this *QPixmapCache) CacheLimit() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache10cacheLimitEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -81,6 +92,14 @@ func QPixmapCache_CacheLimit() int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setCacheLimit(int)
+
+/*
+Sets the cache limit to n kilobytes.
+
+The default setting is 10240 KB.
+
+See also cacheLimit().
+*/
 func (this *QPixmapCache) SetCacheLimit(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache13setCacheLimitEi", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -94,6 +113,24 @@ func QPixmapCache_SetCacheLimit(arg0 int) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QPixmap * find(const QString &)
+
+/*
+Looks for a cached pixmap associated with the given key in the cache. If the pixmap is found, the function sets pixmap to that pixmap and returns true; otherwise it leaves pixmap alone and returns false.
+
+Example:
+
+
+  QPixmap pm;
+  if (!QPixmapCache::find("my_big_image", &pm)) {
+      pm.load("bigimage.png");
+      QPixmapCache::insert("my_big_image", pm);
+  }
+  painter->drawPixmap(0, 0, pm);
+
+
+
+This function was introduced in  Qt 4.6.
+*/
 func (this *QPixmapCache) Find(key string) *QPixmap /*777 QPixmap **/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -111,6 +148,24 @@ func QPixmapCache_Find(key string) *QPixmap /*777 QPixmap **/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool find(const QString &, QPixmap &)
+
+/*
+Looks for a cached pixmap associated with the given key in the cache. If the pixmap is found, the function sets pixmap to that pixmap and returns true; otherwise it leaves pixmap alone and returns false.
+
+Example:
+
+
+  QPixmap pm;
+  if (!QPixmapCache::find("my_big_image", &pm)) {
+      pm.load("bigimage.png");
+      QPixmapCache::insert("my_big_image", pm);
+  }
+  painter->drawPixmap(0, 0, pm);
+
+
+
+This function was introduced in  Qt 4.6.
+*/
 func (this *QPixmapCache) Find_1(key string, pixmap QPixmap_ITF) bool {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -132,6 +187,24 @@ func QPixmapCache_Find_1(key string, pixmap QPixmap_ITF) bool {
 // index:2
 // Public static Visibility=Default Availability=Available
 // [1] bool find(const QString &, QPixmap *)
+
+/*
+Looks for a cached pixmap associated with the given key in the cache. If the pixmap is found, the function sets pixmap to that pixmap and returns true; otherwise it leaves pixmap alone and returns false.
+
+Example:
+
+
+  QPixmap pm;
+  if (!QPixmapCache::find("my_big_image", &pm)) {
+      pm.load("bigimage.png");
+      QPixmapCache::insert("my_big_image", pm);
+  }
+  painter->drawPixmap(0, 0, pm);
+
+
+
+This function was introduced in  Qt 4.6.
+*/
 func (this *QPixmapCache) Find_2(key string, pixmap QPixmap_ITF /*777 QPixmap **/) bool {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -153,6 +226,10 @@ func QPixmapCache_Find_2(key string, pixmap QPixmap_ITF /*777 QPixmap **/) bool 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void remove(const QString &)
+
+/*
+Removes the pixmap associated with key from the cache.
+*/
 func (this *QPixmapCache) Remove(key string) {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -168,6 +245,10 @@ func QPixmapCache_Remove(key string) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Removes all pixmaps from the cache.
+*/
 func (this *QPixmapCache) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache5clearEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

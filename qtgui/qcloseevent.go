@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QCloseEvent struct {
 	*qtcore.QEvent
 }
@@ -64,6 +67,10 @@ func (*QCloseEvent) NewFromPointer(cthis unsafe.Pointer) *QCloseEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCloseEvent()
+
+/*
+
+ */
 func NewQCloseEvent() *QCloseEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QCloseEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQCloseEvent() *QCloseEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCloseEvent()
+
+/*
+
+ */
 func DeleteQCloseEvent(this *QCloseEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QCloseEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)

@@ -35,6 +35,9 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
+/*
+
+ */
 type QSGOpacityNode struct {
 	*QSGNode
 }
@@ -67,6 +70,10 @@ func (*QSGOpacityNode) NewFromPointer(cthis unsafe.Pointer) *QSGOpacityNode {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGOpacityNode()
+
+/*
+
+ */
 func NewQSGOpacityNode() *QSGOpacityNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGOpacityNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQSGOpacityNode() *QSGOpacityNode {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGOpacityNode()
+
+/*
+
+ */
 func DeleteQSGOpacityNode(this *QSGOpacityNode) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGOpacityNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 96)
@@ -90,6 +101,10 @@ func DeleteQSGOpacityNode(this *QSGOpacityNode) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacity(qreal)
+
+/*
+
+ */
 func (this *QSGOpacityNode) SetOpacity(opacity float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGOpacityNode10setOpacityEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +114,10 @@ func (this *QSGOpacityNode) SetOpacity(opacity float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal opacity() const
+
+/*
+
+ */
 func (this *QSGOpacityNode) Opacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode7opacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -109,6 +128,10 @@ func (this *QSGOpacityNode) Opacity() float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCombinedOpacity(qreal)
+
+/*
+
+ */
 func (this *QSGOpacityNode) SetCombinedOpacity(opacity float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGOpacityNode18setCombinedOpacityEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	qtrt.ErrPrint(err, rv)
@@ -118,6 +141,10 @@ func (this *QSGOpacityNode) SetCombinedOpacity(opacity float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal combinedOpacity() const
+
+/*
+
+ */
 func (this *QSGOpacityNode) CombinedOpacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode15combinedOpacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +155,14 @@ func (this *QSGOpacityNode) CombinedOpacity() float64 {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isSubtreeBlocked() const
+
+/*
+Returns whether this node and its subtree is available for use.
+
+Blocked subtrees will not get their dirty states updated and they will not be rendered.
+
+The QSGOpacityNode will return a blocked subtree when accumulated opacity is 0, for instance.
+*/
 func (this *QSGOpacityNode) IsSubtreeBlocked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode16isSubtreeBlockedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

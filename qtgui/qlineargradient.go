@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QLinearGradient struct {
 	*QGradient
 }
@@ -64,6 +67,10 @@ func (*QLinearGradient) NewFromPointer(cthis unsafe.Pointer) *QLinearGradient {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLinearGradient()
+
+/*
+
+ */
 func NewQLinearGradient() *QLinearGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QLinearGradientC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQLinearGradient() *QLinearGradient {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QLinearGradient(const QPointF &, const QPointF &)
+
+/*
+
+ */
 func NewQLinearGradient_1(start qtcore.QPointF_ITF, finalStop qtcore.QPointF_ITF) *QLinearGradient {
 	var convArg0 unsafe.Pointer
 	if start != nil && start.QPointF_PTR() != nil {
@@ -96,6 +107,10 @@ func NewQLinearGradient_1(start qtcore.QPointF_ITF, finalStop qtcore.QPointF_ITF
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QLinearGradient(qreal, qreal, qreal, qreal)
+
+/*
+
+ */
 func NewQLinearGradient_2(xStart float64, yStart float64, xFinalStop float64, yFinalStop float64) *QLinearGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QLinearGradientC2Edddd", qtrt.FFI_TYPE_POINTER, xStart, yStart, xFinalStop, yFinalStop)
 	qtrt.ErrPrint(err, rv)
@@ -108,6 +123,10 @@ func NewQLinearGradient_2(xStart float64, yStart float64, xFinalStop float64, yF
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF start() const
+
+/*
+
+ */
 func (this *QLinearGradient) Start() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QLinearGradient5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -120,6 +139,10 @@ func (this *QLinearGradient) Start() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStart(const QPointF &)
+
+/*
+
+ */
 func (this *QLinearGradient) SetStart(start qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if start != nil && start.QPointF_PTR() != nil {
@@ -133,6 +156,10 @@ func (this *QLinearGradient) SetStart(start qtcore.QPointF_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setStart(qreal, qreal)
+
+/*
+
+ */
 func (this *QLinearGradient) SetStart_1(x float64, y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QLinearGradient8setStartEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
@@ -142,6 +169,10 @@ func (this *QLinearGradient) SetStart_1(x float64, y float64) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF finalStop() const
+
+/*
+
+ */
 func (this *QLinearGradient) FinalStop() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QLinearGradient9finalStopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +185,10 @@ func (this *QLinearGradient) FinalStop() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFinalStop(const QPointF &)
+
+/*
+
+ */
 func (this *QLinearGradient) SetFinalStop(stop qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if stop != nil && stop.QPointF_PTR() != nil {
@@ -167,6 +202,10 @@ func (this *QLinearGradient) SetFinalStop(stop qtcore.QPointF_ITF) {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFinalStop(qreal, qreal)
+
+/*
+
+ */
 func (this *QLinearGradient) SetFinalStop_1(x float64, y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QLinearGradient12setFinalStopEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)

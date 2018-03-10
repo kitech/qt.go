@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QSemaphoreReleaser struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QSemaphoreReleaser) NewFromPointer(cthis unsafe.Pointer) *QSemaphoreRelea
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser()
+
+/*
+
+ */
 func NewQSemaphoreReleaser() *QSemaphoreReleaser {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQSemaphoreReleaser() *QSemaphoreReleaser {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser(QSemaphore &, int)
+
+/*
+
+ */
 func NewQSemaphoreReleaser_1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
@@ -93,6 +104,10 @@ func NewQSemaphoreReleaser_1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser(QSemaphore &, int)
+
+/*
+
+ */
 func NewQSemaphoreReleaser_1_(sem QSemaphore_ITF) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
@@ -111,6 +126,10 @@ func NewQSemaphoreReleaser_1_(sem QSemaphore_ITF) *QSemaphoreReleaser {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser(QSemaphore *, int)
+
+/*
+
+ */
 func NewQSemaphoreReleaser_2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
@@ -127,6 +146,10 @@ func NewQSemaphoreReleaser_2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QS
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser(QSemaphore *, int)
+
+/*
+
+ */
 func NewQSemaphoreReleaser_2_(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
@@ -145,6 +168,10 @@ func NewQSemaphoreReleaser_2_(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemapho
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QSemaphoreReleaser()
+
+/*
+
+ */
 func DeleteQSemaphoreReleaser(this *QSemaphoreReleaser) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaserD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -156,6 +183,10 @@ func DeleteQSemaphoreReleaser(this *QSemaphoreReleaser) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSemaphoreReleaser &)
+
+/*
+
+ */
 func (this *QSemaphoreReleaser) Swap(other QSemaphoreReleaser_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSemaphoreReleaser_PTR() != nil {
@@ -169,6 +200,10 @@ func (this *QSemaphoreReleaser) Swap(other QSemaphoreReleaser_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSemaphore * semaphore() const
+
+/*
+
+ */
 func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*777 QSemaphore **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +214,10 @@ func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*777 QSemaphore **/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSemaphore * cancel()
+
+/*
+
+ */
 func (this *QSemaphoreReleaser) Cancel() *QSemaphore /*777 QSemaphore **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

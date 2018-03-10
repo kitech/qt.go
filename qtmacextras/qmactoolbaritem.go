@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QMacToolBarItem struct {
 	*qtcore.QObject
 }
@@ -65,6 +68,10 @@ func (*QMacToolBarItem) NewFromPointer(cthis unsafe.Pointer) *QMacToolBarItem {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QMacToolBarItem) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QMacToolBarItem10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -75,6 +82,10 @@ func (this *QMacToolBarItem) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMacToolBarItem(QObject *)
+
+/*
+Constructs a QMacToolBarItem with parent.
+*/
 func NewQMacToolBarItem(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBarItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -91,6 +102,10 @@ func NewQMacToolBarItem(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBa
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMacToolBarItem(QObject *)
+
+/*
+Constructs a QMacToolBarItem with parent.
+*/
 func NewQMacToolBarItem__() *QMacToolBarItem {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -105,6 +120,10 @@ func NewQMacToolBarItem__() *QMacToolBarItem {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMacToolBarItem()
+
+/*
+
+ */
 func DeleteQMacToolBarItem(this *QMacToolBarItem) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QMacToolBarItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -116,6 +135,10 @@ func DeleteQMacToolBarItem(this *QMacToolBarItem) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool selectable() const
+
+/*
+
+ */
 func (this *QMacToolBarItem) Selectable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QMacToolBarItem10selectableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -126,6 +149,10 @@ func (this *QMacToolBarItem) Selectable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSelectable(_Bool)
+
+/*
+
+ */
 func (this *QMacToolBarItem) SetSelectable(selectable bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QMacToolBarItem13setSelectableEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), selectable)
 	qtrt.ErrPrint(err, rv)
@@ -135,6 +162,10 @@ func (this *QMacToolBarItem) SetSelectable(selectable bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMacToolBarItem::StandardItem standardItem() const
+
+/*
+
+ */
 func (this *QMacToolBarItem) StandardItem() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QMacToolBarItem12standardItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -145,6 +176,10 @@ func (this *QMacToolBarItem) StandardItem() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardItem(enum QMacToolBarItem::StandardItem)
+
+/*
+
+ */
 func (this *QMacToolBarItem) SetStandardItem(standardItem int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QMacToolBarItem15setStandardItemENS_12StandardItemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardItem)
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +189,10 @@ func (this *QMacToolBarItem) SetStandardItem(standardItem int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
+
+/*
+
+ */
 func (this *QMacToolBarItem) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QMacToolBarItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,6 +206,10 @@ func (this *QMacToolBarItem) Text() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
+
+/*
+
+ */
 func (this *QMacToolBarItem) SetText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -178,6 +221,10 @@ func (this *QMacToolBarItem) SetText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon icon() const
+
+/*
+
+ */
 func (this *QMacToolBarItem) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QMacToolBarItem4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -190,6 +237,10 @@ func (this *QMacToolBarItem) Icon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
+
+/*
+
+ */
 func (this *QMacToolBarItem) SetIcon(icon qtgui.QIcon_ITF) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -203,6 +254,10 @@ func (this *QMacToolBarItem) SetIcon(icon qtgui.QIcon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] NSToolbarItem * nativeToolBarItem() const
+
+/*
+Returns the native NSToolbarItem.
+*/
 func (this *QMacToolBarItem) NativeToolBarItem() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QMacToolBarItem17nativeToolBarItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -213,15 +268,27 @@ func (this *QMacToolBarItem) NativeToolBarItem() unsafe.Pointer /*666*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activated()
+
+/*
+This signal is emitted when the toolbar item is clicked or otherwise activated.
+*/
 func (this *QMacToolBarItem) Activated() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QMacToolBarItem9activatedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
+/*
+
+ */
 type QMacToolBarItem__StandardItem = int
 
+// Don't use a standard item
 const QMacToolBarItem__NoStandardItem QMacToolBarItem__StandardItem = 0
+
+// A spacing item
 const QMacToolBarItem__Space QMacToolBarItem__StandardItem = 1
+
+// A spacing item which grows to fill available space
 const QMacToolBarItem__FlexibleSpace QMacToolBarItem__StandardItem = 2
 
 //  body block end

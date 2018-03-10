@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QQmlScriptString struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QQmlScriptString) NewFromPointer(cthis unsafe.Pointer) *QQmlScriptString 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlScriptString()
+
+/*
+Constructs an empty instance.
+*/
 func NewQQmlScriptString() *QQmlScriptString {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlScriptStringC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -79,6 +86,10 @@ func NewQQmlScriptString() *QQmlScriptString {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QQmlScriptString()
+
+/*
+
+ */
 func DeleteQQmlScriptString(this *QQmlScriptString) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlScriptStringD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -90,6 +101,10 @@ func DeleteQQmlScriptString(this *QQmlScriptString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlScriptString & operator=(const QQmlScriptString &)
+
+/*
+
+ */
 func (this *QQmlScriptString) Operator_equal(arg0 QQmlScriptString_ITF) *QQmlScriptString {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
@@ -106,6 +121,10 @@ func (this *QQmlScriptString) Operator_equal(arg0 QQmlScriptString_ITF) *QQmlScr
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QQmlScriptString &) const
+
+/*
+
+ */
 func (this *QQmlScriptString) Operator_equal_equal(arg0 QQmlScriptString_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
@@ -120,6 +139,10 @@ func (this *QQmlScriptString) Operator_equal_equal(arg0 QQmlScriptString_ITF) bo
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QQmlScriptString &) const
+
+/*
+
+ */
 func (this *QQmlScriptString) Operator_not_equal(arg0 QQmlScriptString_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
@@ -134,6 +157,10 @@ func (this *QQmlScriptString) Operator_not_equal(arg0 QQmlScriptString_ITF) bool
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns whether the QQmlScriptString is empty.
+*/
 func (this *QQmlScriptString) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -144,6 +171,10 @@ func (this *QQmlScriptString) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isUndefinedLiteral() const
+
+/*
+Returns whether the content of the QQmlScriptString is the undefined literal.
+*/
 func (this *QQmlScriptString) IsUndefinedLiteral() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString18isUndefinedLiteralEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -154,6 +185,10 @@ func (this *QQmlScriptString) IsUndefinedLiteral() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNullLiteral() const
+
+/*
+Returns whether the content of the QQmlScriptString is the null literal.
+*/
 func (this *QQmlScriptString) IsNullLiteral() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13isNullLiteralEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -164,6 +199,10 @@ func (this *QQmlScriptString) IsNullLiteral() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString stringLiteral() const
+
+/*
+If the content of the QQmlScriptString is a string literal, returns that string. Otherwise returns a null QString.
+*/
 func (this *QQmlScriptString) StringLiteral() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13stringLiteralEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -177,6 +216,10 @@ func (this *QQmlScriptString) StringLiteral() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal numberLiteral(_Bool *) const
+
+/*
+If the content of the QQmlScriptString is a number literal, returns that number and sets ok to true. Otherwise returns 0.0 and sets ok to false.
+*/
 func (this *QQmlScriptString) NumberLiteral(ok *bool) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13numberLiteralEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
@@ -187,6 +230,10 @@ func (this *QQmlScriptString) NumberLiteral(ok *bool) float64 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool booleanLiteral(_Bool *) const
+
+/*
+If the content of the QQmlScriptString is a boolean literal, returns the boolean value and sets ok to true. Otherwise returns false and sets ok to false.
+*/
 func (this *QQmlScriptString) BooleanLiteral(ok *bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString14booleanLiteralEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)

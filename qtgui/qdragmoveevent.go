@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QDragMoveEvent struct {
 	*QDropEvent
 }
@@ -64,6 +67,10 @@ func (*QDragMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+
+/*
+
+ */
 func NewQDragMoveEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDragMoveEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -84,6 +91,10 @@ func NewQDragMoveEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+
+/*
+
+ */
 func NewQDragMoveEvent__(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragMoveEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -106,6 +117,10 @@ func NewQDragMoveEvent__(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeDa
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragMoveEvent()
+
+/*
+
+ */
 func DeleteQDragMoveEvent(this *QDragMoveEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 88)
@@ -117,6 +132,10 @@ func DeleteQDragMoveEvent(this *QDragMoveEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QRect answerRect() const
+
+/*
+
+ */
 func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -129,6 +148,10 @@ func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void accept()
+
+/*
+
+ */
 func (this *QDragMoveEvent) Accept() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -138,6 +161,10 @@ func (this *QDragMoveEvent) Accept() {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void accept(const QRect &)
+
+/*
+
+ */
 func (this *QDragMoveEvent) Accept_1(r qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -151,6 +178,10 @@ func (this *QDragMoveEvent) Accept_1(r qtcore.QRect_ITF) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ignore()
+
+/*
+
+ */
 func (this *QDragMoveEvent) Ignore() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,6 +191,10 @@ func (this *QDragMoveEvent) Ignore() {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void ignore(const QRect &)
+
+/*
+
+ */
 func (this *QDragMoveEvent) Ignore_1(r qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {

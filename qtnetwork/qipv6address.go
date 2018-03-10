@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QIPv6Address struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QIPv6Address) NewFromPointer(cthis unsafe.Pointer) *QIPv6Address {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] quint8 & operator[](int)
+
+/*
+
+ */
 func (this *QIPv6Address) Operator_get_index(index int) byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QIPv6AddressixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
@@ -76,10 +83,15 @@ func (this *QIPv6Address) Operator_get_index(index int) byte {
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] quint8 operator[](int) const
+
+/*
+
+ */
 func (this *QIPv6Address) Operator_get_index_1(index int) byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QIPv6AddressixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
+	// unsigned char // 222
 }
 
 func DeleteQIPv6Address(this *QIPv6Address) {

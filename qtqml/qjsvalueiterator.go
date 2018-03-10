@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
+/*
+
+ */
 type QJSValueIterator struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QJSValueIterator) NewFromPointer(cthis unsafe.Pointer) *QJSValueIterator 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValueIterator(const QJSValue &)
+
+/*
+Constructs an iterator for traversing object. The iterator is set to be at the front of the sequence of properties (before the first property).
+*/
 func NewQJSValueIterator(value QJSValue_ITF) *QJSValueIterator {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QJSValue_PTR() != nil {
@@ -83,6 +90,10 @@ func NewQJSValueIterator(value QJSValue_ITF) *QJSValueIterator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QJSValueIterator()
+
+/*
+
+ */
 func DeleteQJSValueIterator(this *QJSValueIterator) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QJSValueIteratorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -94,6 +105,12 @@ func DeleteQJSValueIterator(this *QJSValueIterator) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasNext() const
+
+/*
+Returns true if there is at least one item ahead of the iterator (i.e. the iterator is not at the back of the property sequence); otherwise returns false.
+
+See also next().
+*/
 func (this *QJSValueIterator) HasNext() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QJSValueIterator7hasNextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -104,6 +121,12 @@ func (this *QJSValueIterator) HasNext() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool next()
+
+/*
+Advances the iterator by one position. Returns true if there was at least one item ahead of the iterator (i.e. the iterator was not already at the back of the property sequence); otherwise returns false.
+
+See also hasNext() and name().
+*/
 func (this *QJSValueIterator) Next() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QJSValueIterator4nextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -114,6 +137,12 @@ func (this *QJSValueIterator) Next() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
+
+/*
+Returns the name of the last property that was jumped over using next().
+
+See also value().
+*/
 func (this *QJSValueIterator) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QJSValueIterator4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -127,6 +156,12 @@ func (this *QJSValueIterator) Name() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJSValue value() const
+
+/*
+Returns the value of the last property that was jumped over using next().
+
+See also name().
+*/
 func (this *QJSValueIterator) Value() *QJSValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QJSValueIterator5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -139,6 +174,10 @@ func (this *QJSValueIterator) Value() *QJSValue /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJSValueIterator & operator=(QJSValue &)
+
+/*
+
+ */
 func (this *QJSValueIterator) Operator_equal(value QJSValue_ITF) *QJSValueIterator {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QJSValue_PTR() != nil {

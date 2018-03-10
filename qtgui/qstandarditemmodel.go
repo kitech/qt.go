@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QStandardItemModel struct {
 	*qtcore.QAbstractItemModel
 }
@@ -64,6 +67,10 @@ func (*QStandardItemModel) NewFromPointer(cthis unsafe.Pointer) *QStandardItemMo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QStandardItemModel) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QStandardItemModel) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItemModel(QObject *)
+
+/*
+Constructs a new item model with the given parent.
+*/
 func NewQStandardItemModel(parent qtcore.QObject_ITF /*777 QObject **/) *QStandardItemModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQStandardItemModel(parent qtcore.QObject_ITF /*777 QObject **/) *QStanda
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItemModel(QObject *)
+
+/*
+Constructs a new item model with the given parent.
+*/
 func NewQStandardItemModel__() *QStandardItemModel {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +119,10 @@ func NewQStandardItemModel__() *QStandardItemModel {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItemModel(int, int, QObject *)
+
+/*
+Constructs a new item model with the given parent.
+*/
 func NewQStandardItemModel_1(rows int, columns int, parent qtcore.QObject_ITF /*777 QObject **/) *QStandardItemModel {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -120,6 +139,10 @@ func NewQStandardItemModel_1(rows int, columns int, parent qtcore.QObject_ITF /*
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItemModel(int, int, QObject *)
+
+/*
+Constructs a new item model with the given parent.
+*/
 func NewQStandardItemModel_1_(rows int, columns int) *QStandardItemModel {
 	// arg: 2, QObject *=Pointer, QObject=Record,
 	var convArg2 unsafe.Pointer
@@ -134,6 +157,10 @@ func NewQStandardItemModel_1_(rows int, columns int) *QStandardItemModel {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStandardItemModel()
+
+/*
+
+ */
 func DeleteQStandardItemModel(this *QStandardItemModel) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModelD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -145,6 +172,10 @@ func DeleteQStandardItemModel(this *QStandardItemModel) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::index().
+*/
 func (this *QStandardItemModel) Index(row int, column int, parent qtcore.QModelIndex_ITF) *qtcore.QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -161,6 +192,10 @@ func (this *QStandardItemModel) Index(row int, column int, parent qtcore.QModelI
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::index().
+*/
 func (this *QStandardItemModel) Index__(row int, column int) *qtcore.QModelIndex /*123*/ {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = qtcore.NewQModelIndex()
@@ -175,6 +210,10 @@ func (this *QStandardItemModel) Index__(row int, column int) *qtcore.QModelIndex
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex parent(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::parent().
+*/
 func (this *QStandardItemModel) Parent(child qtcore.QModelIndex_ITF) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if child != nil && child.QModelIndex_PTR() != nil {
@@ -191,6 +230,12 @@ func (this *QStandardItemModel) Parent(child qtcore.QModelIndex_ITF) *qtcore.QMo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::rowCount().
+
+See also setRowCount().
+*/
 func (this *QStandardItemModel) RowCount(parent qtcore.QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -205,6 +250,12 @@ func (this *QStandardItemModel) RowCount(parent qtcore.QModelIndex_ITF) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::rowCount().
+
+See also setRowCount().
+*/
 func (this *QStandardItemModel) RowCount__() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg0 = qtcore.NewQModelIndex()
@@ -217,6 +268,12 @@ func (this *QStandardItemModel) RowCount__() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::columnCount().
+
+See also setColumnCount().
+*/
 func (this *QStandardItemModel) ColumnCount(parent qtcore.QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -231,6 +288,12 @@ func (this *QStandardItemModel) ColumnCount(parent qtcore.QModelIndex_ITF) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::columnCount().
+
+See also setColumnCount().
+*/
 func (this *QStandardItemModel) ColumnCount__() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg0 = qtcore.NewQModelIndex()
@@ -243,6 +306,10 @@ func (this *QStandardItemModel) ColumnCount__() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::hasChildren().
+*/
 func (this *QStandardItemModel) HasChildren(parent qtcore.QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -257,6 +324,10 @@ func (this *QStandardItemModel) HasChildren(parent qtcore.QModelIndex_ITF) bool 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::hasChildren().
+*/
 func (this *QStandardItemModel) HasChildren__() bool {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg0 = qtcore.NewQModelIndex()
@@ -269,6 +340,10 @@ func (this *QStandardItemModel) HasChildren__() bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::sibling().
+*/
 func (this *QStandardItemModel) Sibling(row int, column int, idx qtcore.QModelIndex_ITF) *qtcore.QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
 	if idx != nil && idx.QModelIndex_PTR() != nil {
@@ -285,6 +360,12 @@ func (this *QStandardItemModel) Sibling(row int, column int, idx qtcore.QModelIn
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
+
+/*
+Reimplemented from QAbstractItemModel::data().
+
+See also setData().
+*/
 func (this *QStandardItemModel) Data(index qtcore.QModelIndex_ITF, role int) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -301,6 +382,12 @@ func (this *QStandardItemModel) Data(index qtcore.QModelIndex_ITF, role int) *qt
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
+
+/*
+Reimplemented from QAbstractItemModel::data().
+
+See also setData().
+*/
 func (this *QStandardItemModel) Data__(index qtcore.QModelIndex_ITF) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -319,6 +406,12 @@ func (this *QStandardItemModel) Data__(index qtcore.QModelIndex_ITF) *qtcore.QVa
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setData().
+
+See also data().
+*/
 func (this *QStandardItemModel) SetData(index qtcore.QModelIndex_ITF, value qtcore.QVariant_ITF, role int) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -337,6 +430,12 @@ func (this *QStandardItemModel) SetData(index qtcore.QModelIndex_ITF, value qtco
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setData().
+
+See also data().
+*/
 func (this *QStandardItemModel) SetData__(index qtcore.QModelIndex_ITF, value qtcore.QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -357,6 +456,12 @@ func (this *QStandardItemModel) SetData__(index qtcore.QModelIndex_ITF, value qt
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
+
+/*
+Reimplemented from QAbstractItemModel::headerData().
+
+See also setHeaderData().
+*/
 func (this *QStandardItemModel) HeaderData(section int, orientation int, role int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
 	qtrt.ErrPrint(err, rv)
@@ -369,6 +474,12 @@ func (this *QStandardItemModel) HeaderData(section int, orientation int, role in
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
+
+/*
+Reimplemented from QAbstractItemModel::headerData().
+
+See also setHeaderData().
+*/
 func (this *QStandardItemModel) HeaderData__(section int, orientation int) *qtcore.QVariant /*123*/ {
 	// arg: 2, int=Int, =Invalid,
 	role := 0 /*Qt::DisplayRole*/
@@ -383,6 +494,12 @@ func (this *QStandardItemModel) HeaderData__(section int, orientation int) *qtco
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setHeaderData().
+
+See also headerData().
+*/
 func (this *QStandardItemModel) SetHeaderData(section int, orientation int, value qtcore.QVariant_ITF, role int) bool {
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -397,6 +514,12 @@ func (this *QStandardItemModel) SetHeaderData(section int, orientation int, valu
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
+
+/*
+Reimplemented from QAbstractItemModel::setHeaderData().
+
+See also headerData().
+*/
 func (this *QStandardItemModel) SetHeaderData__(section int, orientation int, value qtcore.QVariant_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -413,6 +536,10 @@ func (this *QStandardItemModel) SetHeaderData__(section int, orientation int, va
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::insertRows().
+*/
 func (this *QStandardItemModel) InsertRows(row int, count int, parent qtcore.QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -427,6 +554,10 @@ func (this *QStandardItemModel) InsertRows(row int, count int, parent qtcore.QMo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::insertRows().
+*/
 func (this *QStandardItemModel) InsertRows__(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = qtcore.NewQModelIndex()
@@ -439,6 +570,10 @@ func (this *QStandardItemModel) InsertRows__(row int, count int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertColumns(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::insertColumns().
+*/
 func (this *QStandardItemModel) InsertColumns(column int, count int, parent qtcore.QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -453,6 +588,10 @@ func (this *QStandardItemModel) InsertColumns(column int, count int, parent qtco
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertColumns(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::insertColumns().
+*/
 func (this *QStandardItemModel) InsertColumns__(column int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = qtcore.NewQModelIndex()
@@ -465,6 +604,10 @@ func (this *QStandardItemModel) InsertColumns__(column int, count int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::removeRows().
+*/
 func (this *QStandardItemModel) RemoveRows(row int, count int, parent qtcore.QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -479,6 +622,10 @@ func (this *QStandardItemModel) RemoveRows(row int, count int, parent qtcore.QMo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::removeRows().
+*/
 func (this *QStandardItemModel) RemoveRows__(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = qtcore.NewQModelIndex()
@@ -491,6 +638,10 @@ func (this *QStandardItemModel) RemoveRows__(row int, count int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeColumns(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::removeColumns().
+*/
 func (this *QStandardItemModel) RemoveColumns(column int, count int, parent qtcore.QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -505,6 +656,10 @@ func (this *QStandardItemModel) RemoveColumns(column int, count int, parent qtco
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeColumns(int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::removeColumns().
+*/
 func (this *QStandardItemModel) RemoveColumns__(column int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg2 = qtcore.NewQModelIndex()
@@ -517,6 +672,10 @@ func (this *QStandardItemModel) RemoveColumns__(column int, count int) bool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &) const
+
+/*
+Reimplemented from QAbstractItemModel::flags().
+*/
 func (this *QStandardItemModel) Flags(index qtcore.QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -531,6 +690,12 @@ func (this *QStandardItemModel) Flags(index qtcore.QModelIndex_ITF) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
+
+/*
+Reimplemented from QAbstractItemModel::supportedDropActions().
+
+QStandardItemModel supports both copy and move.
+*/
 func (this *QStandardItemModel) SupportedDropActions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel20supportedDropActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -541,6 +706,12 @@ func (this *QStandardItemModel) SupportedDropActions() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Removes all items (including header items) from the model and sets the number of rows and columns to zero.
+
+See also removeColumns() and removeRows().
+*/
 func (this *QStandardItemModel) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -550,6 +721,10 @@ func (this *QStandardItemModel) Clear() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
+
+/*
+Reimplemented from QAbstractItemModel::sort().
+*/
 func (this *QStandardItemModel) Sort(column int, order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	qtrt.ErrPrint(err, rv)
@@ -559,6 +734,10 @@ func (this *QStandardItemModel) Sort(column int, order int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
+
+/*
+Reimplemented from QAbstractItemModel::sort().
+*/
 func (this *QStandardItemModel) Sort__(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
 	order := 0
@@ -570,6 +749,20 @@ func (this *QStandardItemModel) Sort__(column int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * itemFromIndex(const QModelIndex &) const
+
+/*
+Returns a pointer to the QStandardItem associated with the given index.
+
+Calling this function is typically the initial step when processing QModelIndex-based signals from a view, such as QAbstractItemView::activated(). In your slot, you call itemFromIndex(), with the QModelIndex carried by the signal as argument, to obtain a pointer to the corresponding QStandardItem.
+
+Note that this function will lazily create an item for the index (using itemPrototype()), and set it in the parent item's child table, if no item already exists at that index.
+
+If index is an invalid index, this function returns 0.
+
+This function was introduced in  Qt 4.2.
+
+See also indexFromItem().
+*/
 func (this *QStandardItemModel) ItemFromIndex(index qtcore.QModelIndex_ITF) *QStandardItem /*777 QStandardItem **/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
@@ -584,6 +777,16 @@ func (this *QStandardItemModel) ItemFromIndex(index qtcore.QModelIndex_ITF) *QSt
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(const QStandardItem *) const
+
+/*
+Returns the QModelIndex associated with the given item.
+
+Use this function when you want to perform an operation that requires the QModelIndex of the item, such as QAbstractItemView::scrollTo(). QStandardItem::index() is provided as convenience; it is equivalent to calling this function.
+
+This function was introduced in  Qt 4.2.
+
+See also itemFromIndex() and QStandardItem::index().
+*/
 func (this *QStandardItemModel) IndexFromItem(item QStandardItem_ITF /*777 const QStandardItem **/) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -600,6 +803,14 @@ func (this *QStandardItemModel) IndexFromItem(item QStandardItem_ITF /*777 const
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * item(int, int) const
+
+/*
+Returns the item for the given row and column if one has been set; otherwise returns 0.
+
+This function was introduced in  Qt 4.2.
+
+See also setItem(), takeItem(), and itemFromIndex().
+*/
 func (this *QStandardItemModel) Item(row int, column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel4itemEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -610,6 +821,14 @@ func (this *QStandardItemModel) Item(row int, column int) *QStandardItem /*777 Q
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * item(int, int) const
+
+/*
+Returns the item for the given row and column if one has been set; otherwise returns 0.
+
+This function was introduced in  Qt 4.2.
+
+See also setItem(), takeItem(), and itemFromIndex().
+*/
 func (this *QStandardItemModel) Item__(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid,
 	column := int(0)
@@ -622,6 +841,14 @@ func (this *QStandardItemModel) Item__(row int) *QStandardItem /*777 QStandardIt
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItem(int, int, QStandardItem *)
+
+/*
+Sets the item for the given row and column to item. The model takes ownership of the item. If necessary, the row count and column count are increased to fit the item. The previous item at the given location (if there was one) is deleted.
+
+This function was introduced in  Qt 4.2.
+
+See also item().
+*/
 func (this *QStandardItemModel) SetItem(row int, column int, item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg2 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -635,6 +862,14 @@ func (this *QStandardItemModel) SetItem(row int, column int, item QStandardItem_
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setItem(int, QStandardItem *)
+
+/*
+Sets the item for the given row and column to item. The model takes ownership of the item. If necessary, the row count and column count are increased to fit the item. The previous item at the given location (if there was one) is deleted.
+
+This function was introduced in  Qt 4.2.
+
+See also item().
+*/
 func (this *QStandardItemModel) SetItem_1(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg1 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -648,6 +883,16 @@ func (this *QStandardItemModel) SetItem_1(row int, item QStandardItem_ITF /*777 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * invisibleRootItem() const
+
+/*
+Returns the model's invisible root item.
+
+The invisible root item provides access to the model's top-level items through the QStandardItem API, making it possible to write functions that can treat top-level items and their children in a uniform way; for example, recursive functions involving a tree model.
+
+Note: Calling index() on the QStandardItem object retrieved from this function is not valid.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QStandardItemModel) InvisibleRootItem() *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel17invisibleRootItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -658,6 +903,14 @@ func (this *QStandardItemModel) InvisibleRootItem() *QStandardItem /*777 QStanda
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * horizontalHeaderItem(int) const
+
+/*
+Returns the horizontal header item for column if one has been set; otherwise returns 0.
+
+This function was introduced in  Qt 4.2.
+
+See also setHorizontalHeaderItem() and verticalHeaderItem().
+*/
 func (this *QStandardItemModel) HorizontalHeaderItem(column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel20horizontalHeaderItemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -668,6 +921,14 @@ func (this *QStandardItemModel) HorizontalHeaderItem(column int) *QStandardItem 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalHeaderItem(int, QStandardItem *)
+
+/*
+Sets the horizontal header item for column to item. The model takes ownership of the item. If necessary, the column count is increased to fit the item. The previous header item (if there was one) is deleted.
+
+This function was introduced in  Qt 4.2.
+
+See also horizontalHeaderItem(), setHorizontalHeaderLabels(), and setVerticalHeaderItem().
+*/
 func (this *QStandardItemModel) SetHorizontalHeaderItem(column int, item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg1 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -681,6 +942,14 @@ func (this *QStandardItemModel) SetHorizontalHeaderItem(column int, item QStanda
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * verticalHeaderItem(int) const
+
+/*
+Returns the vertical header item for row row if one has been set; otherwise returns 0.
+
+This function was introduced in  Qt 4.2.
+
+See also setVerticalHeaderItem() and horizontalHeaderItem().
+*/
 func (this *QStandardItemModel) VerticalHeaderItem(row int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel18verticalHeaderItemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -691,6 +960,14 @@ func (this *QStandardItemModel) VerticalHeaderItem(row int) *QStandardItem /*777
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalHeaderItem(int, QStandardItem *)
+
+/*
+Sets the vertical header item for row to item. The model takes ownership of the item. If necessary, the row count is increased to fit the item. The previous header item (if there was one) is deleted.
+
+This function was introduced in  Qt 4.2.
+
+See also verticalHeaderItem(), setVerticalHeaderLabels(), and setHorizontalHeaderItem().
+*/
 func (this *QStandardItemModel) SetVerticalHeaderItem(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg1 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -704,6 +981,14 @@ func (this *QStandardItemModel) SetVerticalHeaderItem(row int, item QStandardIte
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalHeaderLabels(const QStringList &)
+
+/*
+Sets the horizontal header labels using labels. If necessary, the column count is increased to the size of labels.
+
+This function was introduced in  Qt 4.2.
+
+See also setHorizontalHeaderItem().
+*/
 func (this *QStandardItemModel) SetHorizontalHeaderLabels(labels qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if labels != nil && labels.QStringList_PTR() != nil {
@@ -717,6 +1002,14 @@ func (this *QStandardItemModel) SetHorizontalHeaderLabels(labels qtcore.QStringL
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalHeaderLabels(const QStringList &)
+
+/*
+Sets the vertical header labels using labels. If necessary, the row count is increased to the size of labels.
+
+This function was introduced in  Qt 4.2.
+
+See also setVerticalHeaderItem().
+*/
 func (this *QStandardItemModel) SetVerticalHeaderLabels(labels qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if labels != nil && labels.QStringList_PTR() != nil {
@@ -730,6 +1023,14 @@ func (this *QStandardItemModel) SetVerticalHeaderLabels(labels qtcore.QStringLis
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowCount(int)
+
+/*
+Sets the number of rows in this model to rows. If this is less than rowCount(), the data in the unwanted rows is discarded.
+
+This function was introduced in  Qt 4.2.
+
+See also rowCount() and setColumnCount().
+*/
 func (this *QStandardItemModel) SetRowCount(rows int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel11setRowCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rows)
 	qtrt.ErrPrint(err, rv)
@@ -739,6 +1040,14 @@ func (this *QStandardItemModel) SetRowCount(rows int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnCount(int)
+
+/*
+Sets the number of columns in this model to columns. If this is less than columnCount(), the data in the unwanted columns is discarded.
+
+This function was introduced in  Qt 4.2.
+
+See also columnCount() and setRowCount().
+*/
 func (this *QStandardItemModel) SetColumnCount(columns int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel14setColumnCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), columns)
 	qtrt.ErrPrint(err, rv)
@@ -748,6 +1057,14 @@ func (this *QStandardItemModel) SetColumnCount(columns int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void appendRow(QStandardItem *)
+
+/*
+Appends a row containing items. If necessary, the column count is increased to the size of items.
+
+This function was introduced in  Qt 4.2.
+
+See also insertRow() and appendColumn().
+*/
 func (this *QStandardItemModel) AppendRow(item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -761,6 +1078,14 @@ func (this *QStandardItemModel) AppendRow(item QStandardItem_ITF /*777 QStandard
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void insertRow(int, QStandardItem *)
+
+/*
+Inserts a row at row containing items. If necessary, the column count is increased to the size of items.
+
+This function was introduced in  Qt 4.2.
+
+See also takeRow(), appendRow(), and insertColumn().
+*/
 func (this *QStandardItemModel) InsertRow(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg1 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -774,6 +1099,14 @@ func (this *QStandardItemModel) InsertRow(row int, item QStandardItem_ITF /*777 
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool insertRow(int, const QModelIndex &)
+
+/*
+Inserts a row at row containing items. If necessary, the column count is increased to the size of items.
+
+This function was introduced in  Qt 4.2.
+
+See also takeRow(), appendRow(), and insertColumn().
+*/
 func (this *QStandardItemModel) InsertRow_1(row int, parent qtcore.QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -788,6 +1121,14 @@ func (this *QStandardItemModel) InsertRow_1(row int, parent qtcore.QModelIndex_I
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool insertRow(int, const QModelIndex &)
+
+/*
+Inserts a row at row containing items. If necessary, the column count is increased to the size of items.
+
+This function was introduced in  Qt 4.2.
+
+See also takeRow(), appendRow(), and insertColumn().
+*/
 func (this *QStandardItemModel) InsertRow_1_(row int) bool {
 	// arg: 1, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg1 = qtcore.NewQModelIndex()
@@ -800,6 +1141,14 @@ func (this *QStandardItemModel) InsertRow_1_(row int) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool insertColumn(int, const QModelIndex &)
+
+/*
+Inserts a column at column containing items. If necessary, the row count is increased to the size of items.
+
+This function was introduced in  Qt 4.2.
+
+See also takeColumn(), appendColumn(), and insertRow().
+*/
 func (this *QStandardItemModel) InsertColumn(column int, parent qtcore.QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
@@ -814,6 +1163,14 @@ func (this *QStandardItemModel) InsertColumn(column int, parent qtcore.QModelInd
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool insertColumn(int, const QModelIndex &)
+
+/*
+Inserts a column at column containing items. If necessary, the row count is increased to the size of items.
+
+This function was introduced in  Qt 4.2.
+
+See also takeColumn(), appendColumn(), and insertRow().
+*/
 func (this *QStandardItemModel) InsertColumn__(column int) bool {
 	// arg: 1, const QModelIndex &=LValueReference, QModelIndex=Record,
 	var convArg1 = qtcore.NewQModelIndex()
@@ -826,6 +1183,14 @@ func (this *QStandardItemModel) InsertColumn__(column int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * takeItem(int, int)
+
+/*
+Removes the item at (row, column) without deleting it. The model releases ownership of the item.
+
+This function was introduced in  Qt 4.2.
+
+See also item(), takeRow(), and takeColumn().
+*/
 func (this *QStandardItemModel) TakeItem(row int, column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel8takeItemEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -836,6 +1201,14 @@ func (this *QStandardItemModel) TakeItem(row int, column int) *QStandardItem /*7
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * takeItem(int, int)
+
+/*
+Removes the item at (row, column) without deleting it. The model releases ownership of the item.
+
+This function was introduced in  Qt 4.2.
+
+See also item(), takeRow(), and takeColumn().
+*/
 func (this *QStandardItemModel) TakeItem__(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid,
 	column := int(0)
@@ -848,6 +1221,14 @@ func (this *QStandardItemModel) TakeItem__(row int) *QStandardItem /*777 QStanda
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * takeHorizontalHeaderItem(int)
+
+/*
+Removes the horizontal header item at column from the header without deleting it, and returns a pointer to the item. The model releases ownership of the item.
+
+This function was introduced in  Qt 4.2.
+
+See also horizontalHeaderItem() and takeVerticalHeaderItem().
+*/
 func (this *QStandardItemModel) TakeHorizontalHeaderItem(column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel24takeHorizontalHeaderItemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -858,6 +1239,14 @@ func (this *QStandardItemModel) TakeHorizontalHeaderItem(column int) *QStandardI
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStandardItem * takeVerticalHeaderItem(int)
+
+/*
+Removes the vertical header item at row from the header without deleting it, and returns a pointer to the item. The model releases ownership of the item.
+
+This function was introduced in  Qt 4.2.
+
+See also verticalHeaderItem() and takeHorizontalHeaderItem().
+*/
 func (this *QStandardItemModel) TakeVerticalHeaderItem(row int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel22takeVerticalHeaderItemEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
@@ -868,6 +1257,14 @@ func (this *QStandardItemModel) TakeVerticalHeaderItem(row int) *QStandardItem /
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QStandardItem * itemPrototype() const
+
+/*
+Returns the item prototype used by the model. The model uses the item prototype as an item factory when it needs to construct new items on demand (for instance, when a view or item delegate calls setData()).
+
+This function was introduced in  Qt 4.2.
+
+See also setItemPrototype().
+*/
 func (this *QStandardItemModel) ItemPrototype() *QStandardItem /*777 const QStandardItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel13itemPrototypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -878,6 +1275,16 @@ func (this *QStandardItemModel) ItemPrototype() *QStandardItem /*777 const QStan
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemPrototype(const QStandardItem *)
+
+/*
+Sets the item prototype for the model to the specified item. The model takes ownership of the prototype.
+
+The item prototype acts as a QStandardItem factory, by relying on the QStandardItem::clone() function. To provide your own prototype, subclass QStandardItem, reimplement QStandardItem::clone() and set the prototype to be an instance of your custom class. Whenever QStandardItemModel needs to create an item on demand (for instance, when a view or item delegate calls setData())), the new items will be instances of your custom class.
+
+This function was introduced in  Qt 4.2.
+
+See also itemPrototype() and QStandardItem::clone().
+*/
 func (this *QStandardItemModel) SetItemPrototype(item QStandardItem_ITF /*777 const QStandardItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
@@ -891,6 +1298,10 @@ func (this *QStandardItemModel) SetItemPrototype(item QStandardItem_ITF /*777 co
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int sortRole() const
+
+/*
+
+ */
 func (this *QStandardItemModel) SortRole() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel8sortRoleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -901,6 +1312,10 @@ func (this *QStandardItemModel) SortRole() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSortRole(int)
+
+/*
+
+ */
 func (this *QStandardItemModel) SetSortRole(role int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel11setSortRoleEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
@@ -910,6 +1325,10 @@ func (this *QStandardItemModel) SetSortRole(role int) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
+
+/*
+Reimplemented from QAbstractItemModel::mimeTypes().
+*/
 func (this *QStandardItemModel) MimeTypes() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -922,6 +1341,10 @@ func (this *QStandardItemModel) MimeTypes() *qtcore.QStringList /*123*/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
+
+/*
+Reimplemented from QAbstractItemModel::dropMimeData().
+*/
 func (this *QStandardItemModel) DropMimeData(data qtcore.QMimeData_ITF /*777 const QMimeData **/, action int, row int, column int, parent qtcore.QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QMimeData_PTR() != nil {
@@ -940,6 +1363,12 @@ func (this *QStandardItemModel) DropMimeData(data qtcore.QMimeData_ITF /*777 con
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemChanged(QStandardItem *)
+
+/*
+This signal is emitted whenever the data of item has changed.
+
+This function was introduced in  Qt 4.2.
+*/
 func (this *QStandardItemModel) ItemChanged(item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {

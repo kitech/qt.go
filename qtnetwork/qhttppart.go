@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QHttpPart struct {
 	*qtrt.CObject
 }
@@ -66,6 +69,10 @@ func (*QHttpPart) NewFromPointer(cthis unsafe.Pointer) *QHttpPart {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpPart()
+
+/*
+
+ */
 func NewQHttpPart() *QHttpPart {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPartC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQHttpPart() *QHttpPart {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QHttpPart()
+
+/*
+
+ */
 func DeleteQHttpPart(this *QHttpPart) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPartD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -89,6 +100,10 @@ func DeleteQHttpPart(this *QHttpPart) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QHttpPart & operator=(QHttpPart &&)
+
+/*
+
+ */
 func (this *QHttpPart) Operator_equal(other unsafe.Pointer /*333*/) *QHttpPart {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPartaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -101,6 +116,10 @@ func (this *QHttpPart) Operator_equal(other unsafe.Pointer /*333*/) *QHttpPart {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QHttpPart & operator=(const QHttpPart &)
+
+/*
+
+ */
 func (this *QHttpPart) Operator_equal_1(other QHttpPart_ITF) *QHttpPart {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QHttpPart_PTR() != nil {
@@ -117,6 +136,10 @@ func (this *QHttpPart) Operator_equal_1(other QHttpPart_ITF) *QHttpPart {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QHttpPart &)
+
+/*
+
+ */
 func (this *QHttpPart) Swap(other QHttpPart_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QHttpPart_PTR() != nil {
@@ -130,6 +153,10 @@ func (this *QHttpPart) Swap(other QHttpPart_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QHttpPart &) const
+
+/*
+
+ */
 func (this *QHttpPart) Operator_equal_equal(other QHttpPart_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QHttpPart_PTR() != nil {
@@ -144,6 +171,10 @@ func (this *QHttpPart) Operator_equal_equal(other QHttpPart_ITF) bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QHttpPart &) const
+
+/*
+
+ */
 func (this *QHttpPart) Operator_not_equal(other QHttpPart_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QHttpPart_PTR() != nil {
@@ -158,6 +189,10 @@ func (this *QHttpPart) Operator_not_equal(other QHttpPart_ITF) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
+
+/*
+
+ */
 func (this *QHttpPart) SetHeader(header int, value qtcore.QVariant_ITF) {
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -171,6 +206,10 @@ func (this *QHttpPart) SetHeader(header int, value qtcore.QVariant_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRawHeader(const QByteArray &, const QByteArray &)
+
+/*
+
+ */
 func (this *QHttpPart) SetRawHeader(headerName qtcore.QByteArray_ITF, headerValue qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if headerName != nil && headerName.QByteArray_PTR() != nil {
@@ -188,6 +227,10 @@ func (this *QHttpPart) SetRawHeader(headerName qtcore.QByteArray_ITF, headerValu
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBody(const QByteArray &)
+
+/*
+
+ */
 func (this *QHttpPart) SetBody(body qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if body != nil && body.QByteArray_PTR() != nil {
@@ -201,6 +244,10 @@ func (this *QHttpPart) SetBody(body qtcore.QByteArray_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBodyDevice(QIODevice *)
+
+/*
+
+ */
 func (this *QHttpPart) SetBodyDevice(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {

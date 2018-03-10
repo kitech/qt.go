@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QTextTableFormat struct {
 	*QTextFrameFormat
 }
@@ -64,6 +67,10 @@ func (*QTextTableFormat) NewFromPointer(cthis unsafe.Pointer) *QTextTableFormat 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextTableFormat()
+
+/*
+
+ */
 func NewQTextTableFormat() *QTextTableFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextTableFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -76,6 +83,10 @@ func NewQTextTableFormat() *QTextTableFormat {
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextTableFormat(const QTextFormat &)
+
+/*
+
+ */
 func NewQTextTableFormat_1(fmt_ QTextFormat_ITF) *QTextTableFormat {
 	var convArg0 unsafe.Pointer
 	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {
@@ -92,6 +103,10 @@ func NewQTextTableFormat_1(fmt_ QTextFormat_ITF) *QTextTableFormat {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
+
+/*
+Returns true if the format is valid (i.e. is not InvalidFormat); otherwise returns false.
+*/
 func (this *QTextTableFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +117,10 @@ func (this *QTextTableFormat) IsValid() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int columns() const
+
+/*
+
+ */
 func (this *QTextTableFormat) Columns() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat7columnsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,6 +131,10 @@ func (this *QTextTableFormat) Columns() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColumns(int)
+
+/*
+
+ */
 func (this *QTextTableFormat) SetColumns(columns int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextTableFormat10setColumnsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), columns)
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +144,10 @@ func (this *QTextTableFormat) SetColumns(columns int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void clearColumnWidthConstraints()
+
+/*
+
+ */
 func (this *QTextTableFormat) ClearColumnWidthConstraints() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextTableFormat27clearColumnWidthConstraintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +157,10 @@ func (this *QTextTableFormat) ClearColumnWidthConstraints() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal cellSpacing() const
+
+/*
+
+ */
 func (this *QTextTableFormat) CellSpacing() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellSpacingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +171,10 @@ func (this *QTextTableFormat) CellSpacing() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCellSpacing(qreal)
+
+/*
+
+ */
 func (this *QTextTableFormat) SetCellSpacing(spacing float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextTableFormat14setCellSpacingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	qtrt.ErrPrint(err, rv)
@@ -149,6 +184,10 @@ func (this *QTextTableFormat) SetCellSpacing(spacing float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal cellPadding() const
+
+/*
+
+ */
 func (this *QTextTableFormat) CellPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -159,6 +198,10 @@ func (this *QTextTableFormat) CellPadding() float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCellPadding(qreal)
+
+/*
+
+ */
 func (this *QTextTableFormat) SetCellPadding(padding float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextTableFormat14setCellPaddingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), padding)
 	qtrt.ErrPrint(err, rv)
@@ -168,6 +211,10 @@ func (this *QTextTableFormat) SetCellPadding(padding float64) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAlignment(Qt::Alignment)
+
+/*
+
+ */
 func (this *QTextTableFormat) SetAlignment(alignment int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextTableFormat12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	qtrt.ErrPrint(err, rv)
@@ -177,6 +224,10 @@ func (this *QTextTableFormat) SetAlignment(alignment int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment() const
+
+/*
+
+ */
 func (this *QTextTableFormat) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -187,6 +238,10 @@ func (this *QTextTableFormat) Alignment() int {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHeaderRowCount(int)
+
+/*
+
+ */
 func (this *QTextTableFormat) SetHeaderRowCount(count int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextTableFormat17setHeaderRowCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), count)
 	qtrt.ErrPrint(err, rv)
@@ -196,6 +251,10 @@ func (this *QTextTableFormat) SetHeaderRowCount(count int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int headerRowCount() const
+
+/*
+
+ */
 func (this *QTextTableFormat) HeaderRowCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat14headerRowCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

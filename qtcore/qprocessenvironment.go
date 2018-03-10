@@ -31,6 +31,9 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
+/*
+
+ */
 type QProcessEnvironment struct {
 	*qtrt.CObject
 }
@@ -65,6 +68,10 @@ func (*QProcessEnvironment) NewFromPointer(cthis unsafe.Pointer) *QProcessEnviro
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProcessEnvironment()
+
+/*
+
+ */
 func NewQProcessEnvironment() *QProcessEnvironment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironmentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQProcessEnvironment() *QProcessEnvironment {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QProcessEnvironment()
+
+/*
+
+ */
 func DeleteQProcessEnvironment(this *QProcessEnvironment) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironmentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
@@ -88,6 +99,10 @@ func DeleteQProcessEnvironment(this *QProcessEnvironment) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QProcessEnvironment & operator=(QProcessEnvironment &&)
+
+/*
+
+ */
 func (this *QProcessEnvironment) Operator_equal(other unsafe.Pointer /*333*/) *QProcessEnvironment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironmentaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +115,10 @@ func (this *QProcessEnvironment) Operator_equal(other unsafe.Pointer /*333*/) *Q
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QProcessEnvironment & operator=(const QProcessEnvironment &)
+
+/*
+
+ */
 func (this *QProcessEnvironment) Operator_equal_1(other QProcessEnvironment_ITF) *QProcessEnvironment {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QProcessEnvironment_PTR() != nil {
@@ -116,6 +135,10 @@ func (this *QProcessEnvironment) Operator_equal_1(other QProcessEnvironment_ITF)
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QProcessEnvironment &)
+
+/*
+
+ */
 func (this *QProcessEnvironment) Swap(other QProcessEnvironment_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QProcessEnvironment_PTR() != nil {
@@ -129,6 +152,10 @@ func (this *QProcessEnvironment) Swap(other QProcessEnvironment_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QProcessEnvironment &) const
+
+/*
+
+ */
 func (this *QProcessEnvironment) Operator_equal_equal(other QProcessEnvironment_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QProcessEnvironment_PTR() != nil {
@@ -143,6 +170,10 @@ func (this *QProcessEnvironment) Operator_equal_equal(other QProcessEnvironment_
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QProcessEnvironment &) const
+
+/*
+
+ */
 func (this *QProcessEnvironment) Operator_not_equal(other QProcessEnvironment_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QProcessEnvironment_PTR() != nil {
@@ -157,6 +188,10 @@ func (this *QProcessEnvironment) Operator_not_equal(other QProcessEnvironment_IT
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+
+ */
 func (this *QProcessEnvironment) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -167,6 +202,10 @@ func (this *QProcessEnvironment) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+
+ */
 func (this *QProcessEnvironment) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -176,6 +215,10 @@ func (this *QProcessEnvironment) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QString &) const
+
+/*
+
+ */
 func (this *QProcessEnvironment) Contains(name string) bool {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -188,6 +231,10 @@ func (this *QProcessEnvironment) Contains(name string) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void remove(const QString &)
+
+/*
+
+ */
 func (this *QProcessEnvironment) Remove(name string) {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -199,6 +246,10 @@ func (this *QProcessEnvironment) Remove(name string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString value(const QString &, const QString &) const
+
+/*
+
+ */
 func (this *QProcessEnvironment) Value(name string, defaultValue string) string {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -216,6 +267,10 @@ func (this *QProcessEnvironment) Value(name string, defaultValue string) string 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString value(const QString &, const QString &) const
+
+/*
+
+ */
 func (this *QProcessEnvironment) Value__(name string) string {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -233,6 +288,10 @@ func (this *QProcessEnvironment) Value__(name string) string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList toStringList() const
+
+/*
+
+ */
 func (this *QProcessEnvironment) ToStringList() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment12toStringListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -245,6 +304,10 @@ func (this *QProcessEnvironment) ToStringList() *QStringList /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList keys() const
+
+/*
+
+ */
 func (this *QProcessEnvironment) Keys() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment4keysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -257,6 +320,27 @@ func (this *QProcessEnvironment) Keys() *QStringList /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QProcessEnvironment systemEnvironment()
+
+/*
+Returns the environment of the calling process as a list of key=value pairs. Example:
+
+
+  QStringList environment = QProcess::systemEnvironment();
+  // environment = {"PATH=/usr/bin:/usr/local/bin",
+  //                "USER=greg", "HOME=/home/greg"}
+
+
+
+This function does not cache the system environment. Therefore, it's possible to obtain an updated version of the environment if low-level C library functions like setenv or putenv have been called.
+
+However, note that repeated calls to this function will recreate the list of environment variables, which is a non-trivial operation.
+
+Note: For new code, it is recommended to use QProcessEnvironment::systemEnvironment()
+
+This function was introduced in  Qt 4.1.
+
+See also QProcessEnvironment::systemEnvironment() and setProcessEnvironment().
+*/
 func (this *QProcessEnvironment) SystemEnvironment() *QProcessEnvironment /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment17systemEnvironmentEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

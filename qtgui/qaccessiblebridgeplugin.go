@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QAccessibleBridgePlugin struct {
 	*qtcore.QObject
 }
@@ -64,6 +67,10 @@ func (*QAccessibleBridgePlugin) NewFromPointer(cthis unsafe.Pointer) *QAccessibl
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QAccessibleBridgePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QAccessibleBridgePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -74,6 +81,10 @@ func (this *QAccessibleBridgePlugin) MetaObject() *qtcore.QMetaObject /*777 cons
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAccessibleBridgePlugin(QObject *)
+
+/*
+
+ */
 func NewQAccessibleBridgePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessibleBridgePlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -90,6 +101,10 @@ func NewQAccessibleBridgePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QA
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAccessibleBridgePlugin(QObject *)
+
+/*
+
+ */
 func NewQAccessibleBridgePlugin__() *QAccessibleBridgePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record,
 	var convArg0 unsafe.Pointer
@@ -104,6 +119,10 @@ func NewQAccessibleBridgePlugin__() *QAccessibleBridgePlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleBridgePlugin()
+
+/*
+
+ */
 func DeleteQAccessibleBridgePlugin(this *QAccessibleBridgePlugin) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -115,6 +134,10 @@ func DeleteQAccessibleBridgePlugin(this *QAccessibleBridgePlugin) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAccessibleBridge * create(const QString &)
+
+/*
+
+ */
 func (this *QAccessibleBridgePlugin) Create(key string) *QAccessibleBridge /*777 QAccessibleBridge **/ {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()

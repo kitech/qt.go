@@ -30,6 +30,14 @@ func init() {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qRegisterDraggedTypes(const QStringList &)
+
+/*
+Registers the given types as custom pasteboard types.
+
+This function should be called to enable the Drag and Drop events for custom pasteboard types on Cocoa implementations. This is required in addition to a QMacPasteboardMime subclass implementation. By default drag and drop is enabled for all standard pasteboard types.
+
+See also QMacPasteboardMime.
+*/
 func QRegisterDraggedTypes(types qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if types != nil && types.QStringList_PTR() != nil {

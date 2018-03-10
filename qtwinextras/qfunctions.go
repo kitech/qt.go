@@ -30,6 +30,10 @@ func init() {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool isCompositionOpaque()
+
+/*
+
+ */
 func IsCompositionOpaque() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin19isCompositionOpaqueEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

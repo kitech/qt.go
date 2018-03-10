@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QUndoCommand struct {
 	*qtrt.CObject
 }
@@ -67,6 +70,10 @@ func (*QUndoCommand) NewFromPointer(cthis unsafe.Pointer) *QUndoCommand {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoCommand(QUndoCommand *)
+
+/*
+
+ */
 func NewQUndoCommand(parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QUndoCommand_PTR() != nil {
@@ -83,6 +90,10 @@ func NewQUndoCommand(parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoComma
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoCommand(QUndoCommand *)
+
+/*
+
+ */
 func NewQUndoCommand__() *QUndoCommand {
 	// arg: 0, QUndoCommand *=Pointer, QUndoCommand=Record,
 	var convArg0 unsafe.Pointer
@@ -97,6 +108,10 @@ func NewQUndoCommand__() *QUndoCommand {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoCommand(const QString &, QUndoCommand *)
+
+/*
+
+ */
 func NewQUndoCommand_1(text string, parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -115,6 +130,10 @@ func NewQUndoCommand_1(text string, parent QUndoCommand_ITF /*777 QUndoCommand *
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoCommand(const QString &, QUndoCommand *)
+
+/*
+
+ */
 func NewQUndoCommand_1_(text string) *QUndoCommand {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -131,6 +150,10 @@ func NewQUndoCommand_1_(text string) *QUndoCommand {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QUndoCommand()
+
+/*
+
+ */
 func DeleteQUndoCommand(this *QUndoCommand) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
@@ -142,6 +165,16 @@ func DeleteQUndoCommand(this *QUndoCommand) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void undo()
+
+/*
+Undoes the command below the current command by calling QUndoCommand::undo(). Decrements the current command index.
+
+If the stack is empty, or if the bottom command on the stack has already been undone, this function does nothing.
+
+After the command is undone, if QUndoCommand::isObsolete() returns true, then the command will be deleted from the stack. Additionally, if the clean index is greater than or equal to the current command index, then the clean index is reset.
+
+See also redo() and index().
+*/
 func (this *QUndoCommand) Undo() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand4undoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +184,16 @@ func (this *QUndoCommand) Undo() {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void redo()
+
+/*
+Redoes the current command by calling QUndoCommand::redo(). Increments the current command index.
+
+If the stack is empty, or if the top command on the stack has already been redone, this function does nothing.
+
+If QUndoCommand::isObsolete() returns true for the current command, then the command will be deleted from the stack. Additionally, if the clean index is greater than or equal to the current command index, then the clean index is reset.
+
+See also undo() and index().
+*/
 func (this *QUndoCommand) Redo() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand4redoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,6 +203,12 @@ func (this *QUndoCommand) Redo() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
+
+/*
+Returns the text of the command at index idx.
+
+See also beginMacro().
+*/
 func (this *QUndoCommand) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -173,6 +222,10 @@ func (this *QUndoCommand) Text() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString actionText() const
+
+/*
+
+ */
 func (this *QUndoCommand) ActionText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand10actionTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -186,6 +239,10 @@ func (this *QUndoCommand) ActionText() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
+
+/*
+
+ */
 func (this *QUndoCommand) SetText(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -197,6 +254,10 @@ func (this *QUndoCommand) SetText(text string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isObsolete() const
+
+/*
+
+ */
 func (this *QUndoCommand) IsObsolete() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand10isObsoleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -207,6 +268,10 @@ func (this *QUndoCommand) IsObsolete() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setObsolete(_Bool)
+
+/*
+
+ */
 func (this *QUndoCommand) SetObsolete(obsolete bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand11setObsoleteEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), obsolete)
 	qtrt.ErrPrint(err, rv)
@@ -216,6 +281,10 @@ func (this *QUndoCommand) SetObsolete(obsolete bool) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int id() const
+
+/*
+
+ */
 func (this *QUndoCommand) Id() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand2idEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -226,6 +295,10 @@ func (this *QUndoCommand) Id() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool mergeWith(const QUndoCommand *)
+
+/*
+
+ */
 func (this *QUndoCommand) MergeWith(other QUndoCommand_ITF /*777 const QUndoCommand **/) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QUndoCommand_PTR() != nil {
@@ -240,6 +313,10 @@ func (this *QUndoCommand) MergeWith(other QUndoCommand_ITF /*777 const QUndoComm
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int childCount() const
+
+/*
+
+ */
 func (this *QUndoCommand) ChildCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand10childCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -250,6 +327,10 @@ func (this *QUndoCommand) ChildCount() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QUndoCommand * child(int) const
+
+/*
+
+ */
 func (this *QUndoCommand) Child(index int) *QUndoCommand /*777 const QUndoCommand **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand5childEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)

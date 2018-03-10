@@ -113,6 +113,9 @@ func (this *QMenu) InheritInitStyleOption(f func(option *QStyleOptionMenuItem /*
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
+/*
+
+ */
 type QMenu struct {
 	*QWidget
 }
@@ -145,6 +148,10 @@ func (*QMenu) NewFromPointer(cthis unsafe.Pointer) *QMenu {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QMenu) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -155,6 +162,12 @@ func (this *QMenu) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMenu(QWidget *)
+
+/*
+Constructs a menu with parent parent.
+
+Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
+*/
 func NewQMenu(parent QWidget_ITF /*777 QWidget **/) *QMenu {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -171,6 +184,12 @@ func NewQMenu(parent QWidget_ITF /*777 QWidget **/) *QMenu {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMenu(QWidget *)
+
+/*
+Constructs a menu with parent parent.
+
+Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
+*/
 func NewQMenu__() *QMenu {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -185,6 +204,12 @@ func NewQMenu__() *QMenu {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMenu(const QString &, QWidget *)
+
+/*
+Constructs a menu with parent parent.
+
+Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
+*/
 func NewQMenu_1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -203,6 +228,12 @@ func NewQMenu_1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMenu(const QString &, QWidget *)
+
+/*
+Constructs a menu with parent parent.
+
+Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
+*/
 func NewQMenu_1_(title string) *QMenu {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -219,6 +250,10 @@ func NewQMenu_1_(title string) *QMenu {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMenu()
+
+/*
+
+ */
 func DeleteQMenu(this *QMenu) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenuD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -230,6 +265,16 @@ func DeleteQMenu(this *QMenu) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &)
+
+/*
+This is an overloaded function.
+
+This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
+
+QMenu takes ownership of the returned QAction.
+
+See also QWidget::addAction().
+*/
 func (this *QMenu) AddAction(text string) *QAction /*777 QAction **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -242,6 +287,16 @@ func (this *QMenu) AddAction(text string) *QAction /*777 QAction **/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &)
+
+/*
+This is an overloaded function.
+
+This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
+
+QMenu takes ownership of the returned QAction.
+
+See also QWidget::addAction().
+*/
 func (this *QMenu) AddAction_1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -258,6 +313,16 @@ func (this *QMenu) AddAction_1(icon qtgui.QIcon_ITF, text string) *QAction /*777
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &, const QObject *, const char *, const QKeySequence &)
+
+/*
+This is an overloaded function.
+
+This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
+
+QMenu takes ownership of the returned QAction.
+
+See also QWidget::addAction().
+*/
 func (this *QMenu) AddAction_2(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string, shortcut qtgui.QKeySequence_ITF) *QAction /*777 QAction **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -280,6 +345,16 @@ func (this *QMenu) AddAction_2(text string, receiver qtcore.QObject_ITF /*777 co
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &, const QObject *, const char *, const QKeySequence &)
+
+/*
+This is an overloaded function.
+
+This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
+
+QMenu takes ownership of the returned QAction.
+
+See also QWidget::addAction().
+*/
 func (this *QMenu) AddAction_2_(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -300,6 +375,16 @@ func (this *QMenu) AddAction_2_(text string, receiver qtcore.QObject_ITF /*777 c
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &, const QObject *, const char *, const QKeySequence &)
+
+/*
+This is an overloaded function.
+
+This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
+
+QMenu takes ownership of the returned QAction.
+
+See also QWidget::addAction().
+*/
 func (this *QMenu) AddAction_3(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string, shortcut qtgui.QKeySequence_ITF) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -326,6 +411,16 @@ func (this *QMenu) AddAction_3(icon qtgui.QIcon_ITF, text string, receiver qtcor
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &, const QObject *, const char *, const QKeySequence &)
+
+/*
+This is an overloaded function.
+
+This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
+
+QMenu takes ownership of the returned QAction.
+
+See also QWidget::addAction().
+*/
 func (this *QMenu) AddAction_3_(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -350,6 +445,12 @@ func (this *QMenu) AddAction_3_(icon qtgui.QIcon_ITF, text string, receiver qtco
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addMenu(QMenu *)
+
+/*
+This convenience function adds menu as a submenu to this menu. It returns menu's menuAction(). This menu does not take ownership of menu.
+
+See also QWidget::addAction() and QMenu::menuAction().
+*/
 func (this *QMenu) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if menu != nil && menu.QMenu_PTR() != nil {
@@ -364,6 +465,12 @@ func (this *QMenu) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QActio
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QMenu * addMenu(const QString &)
+
+/*
+This convenience function adds menu as a submenu to this menu. It returns menu's menuAction(). This menu does not take ownership of menu.
+
+See also QWidget::addAction() and QMenu::menuAction().
+*/
 func (this *QMenu) AddMenu_1(title string) *QMenu /*777 QMenu **/ {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -376,6 +483,12 @@ func (this *QMenu) AddMenu_1(title string) *QMenu /*777 QMenu **/ {
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QMenu * addMenu(const QIcon &, const QString &)
+
+/*
+This convenience function adds menu as a submenu to this menu. It returns menu's menuAction(). This menu does not take ownership of menu.
+
+See also QWidget::addAction() and QMenu::menuAction().
+*/
 func (this *QMenu) AddMenu_2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 QMenu **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -392,6 +505,14 @@ func (this *QMenu) AddMenu_2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 QM
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addSeparator()
+
+/*
+This convenience function creates a new separator action, i.e. an action with QAction::isSeparator() returning true, and adds the new action to this menu's list of actions. It returns the newly created action.
+
+QMenu takes ownership of the returned QAction.
+
+See also QWidget::addAction().
+*/
 func (this *QMenu) AddSeparator() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu12addSeparatorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -402,6 +523,18 @@ func (this *QMenu) AddSeparator() *QAction /*777 QAction **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addSection(const QString &)
+
+/*
+This convenience function creates a new section action, i.e. an action with QAction::isSeparator() returning true but also having text hint, and adds the new action to this menu's list of actions. It returns the newly created action.
+
+The rendering of the hint is style and platform dependent. Widget styles can use the text information in the rendering for sections, or can choose to ignore it and render sections like simple separators.
+
+QMenu takes ownership of the returned QAction.
+
+This function was introduced in  Qt 5.1.
+
+See also QWidget::addAction().
+*/
 func (this *QMenu) AddSection(text string) *QAction /*777 QAction **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -414,6 +547,18 @@ func (this *QMenu) AddSection(text string) *QAction /*777 QAction **/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * addSection(const QIcon &, const QString &)
+
+/*
+This convenience function creates a new section action, i.e. an action with QAction::isSeparator() returning true but also having text hint, and adds the new action to this menu's list of actions. It returns the newly created action.
+
+The rendering of the hint is style and platform dependent. Widget styles can use the text information in the rendering for sections, or can choose to ignore it and render sections like simple separators.
+
+QMenu takes ownership of the returned QAction.
+
+This function was introduced in  Qt 5.1.
+
+See also QWidget::addAction().
+*/
 func (this *QMenu) AddSection_1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -430,6 +575,12 @@ func (this *QMenu) AddSection_1(icon qtgui.QIcon_ITF, text string) *QAction /*77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertMenu(QAction *, QMenu *)
+
+/*
+This convenience function inserts menu before action before and returns the menus menuAction().
+
+See also QWidget::insertAction() and addMenu().
+*/
 func (this *QMenu) InsertMenu(before QAction_ITF /*777 QAction **/, menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if before != nil && before.QAction_PTR() != nil {
@@ -448,6 +599,14 @@ func (this *QMenu) InsertMenu(before QAction_ITF /*777 QAction **/, menu QMenu_I
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSeparator(QAction *)
+
+/*
+This convenience function creates a new separator action, i.e. an action with QAction::isSeparator() returning true. The function inserts the newly created action into this menu's list of actions before action before and returns it.
+
+QMenu takes ownership of the returned QAction.
+
+See also QWidget::insertAction() and addSeparator().
+*/
 func (this *QMenu) InsertSeparator(before QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if before != nil && before.QAction_PTR() != nil {
@@ -462,6 +621,18 @@ func (this *QMenu) InsertSeparator(before QAction_ITF /*777 QAction **/) *QActio
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSection(QAction *, const QString &)
+
+/*
+This convenience function creates a new title action, i.e. an action with QAction::isSeparator() returning true but also having text hint. The function inserts the newly created action into this menu's list of actions before action before and returns it.
+
+The rendering of the hint is style and platform dependent. Widget styles can use the text information in the rendering for sections, or can choose to ignore it and render sections like simple separators.
+
+QMenu takes ownership of the returned QAction.
+
+This function was introduced in  Qt 5.1.
+
+See also QWidget::insertAction() and addSection().
+*/
 func (this *QMenu) InsertSection(before QAction_ITF /*777 QAction **/, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if before != nil && before.QAction_PTR() != nil {
@@ -478,6 +649,18 @@ func (this *QMenu) InsertSection(before QAction_ITF /*777 QAction **/, text stri
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSection(QAction *, const QIcon &, const QString &)
+
+/*
+This convenience function creates a new title action, i.e. an action with QAction::isSeparator() returning true but also having text hint. The function inserts the newly created action into this menu's list of actions before action before and returns it.
+
+The rendering of the hint is style and platform dependent. Widget styles can use the text information in the rendering for sections, or can choose to ignore it and render sections like simple separators.
+
+QMenu takes ownership of the returned QAction.
+
+This function was introduced in  Qt 5.1.
+
+See also QWidget::insertAction() and addSection().
+*/
 func (this *QMenu) InsertSection_1(before QAction_ITF /*777 QAction **/, icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if before != nil && before.QAction_PTR() != nil {
@@ -498,6 +681,14 @@ func (this *QMenu) InsertSection_1(before QAction_ITF /*777 QAction **/, icon qt
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
+
+/*
+Returns true if there are no visible actions inserted into the menu, false otherwise.
+
+This function was introduced in  Qt 4.2.
+
+See also QWidget::actions().
+*/
 func (this *QMenu) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -508,6 +699,12 @@ func (this *QMenu) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Removes all the menu's actions. Actions owned by the menu and not shown in any other widget are deleted.
+
+See also removeAction().
+*/
 func (this *QMenu) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -517,6 +714,10 @@ func (this *QMenu) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTearOffEnabled(_Bool)
+
+/*
+
+ */
 func (this *QMenu) SetTearOffEnabled(arg0 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu17setTearOffEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -526,6 +727,10 @@ func (this *QMenu) SetTearOffEnabled(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTearOffEnabled() const
+
+/*
+
+ */
 func (this *QMenu) IsTearOffEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu16isTearOffEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -536,6 +741,12 @@ func (this *QMenu) IsTearOffEnabled() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTearOffMenuVisible() const
+
+/*
+When a menu is torn off a second menu is shown to display the menu contents in a new window. When the menu is in this mode and the menu is visible returns true; otherwise false.
+
+See also showTearOffMenu(), hideTearOffMenu(), and isTearOffEnabled().
+*/
 func (this *QMenu) IsTearOffMenuVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu20isTearOffMenuVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -546,6 +757,14 @@ func (this *QMenu) IsTearOffMenuVisible() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showTearOffMenu()
+
+/*
+This function will forcibly show the torn off menu making it appear on the user's desktop at the specified global position pos.
+
+This function was introduced in  Qt 5.7.
+
+See also hideTearOffMenu(), isTearOffMenuVisible(), and isTearOffEnabled().
+*/
 func (this *QMenu) ShowTearOffMenu() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu15showTearOffMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -555,6 +774,14 @@ func (this *QMenu) ShowTearOffMenu() {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void showTearOffMenu(const QPoint &)
+
+/*
+This function will forcibly show the torn off menu making it appear on the user's desktop at the specified global position pos.
+
+This function was introduced in  Qt 5.7.
+
+See also hideTearOffMenu(), isTearOffMenuVisible(), and isTearOffEnabled().
+*/
 func (this *QMenu) ShowTearOffMenu_1(pos qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -568,6 +795,12 @@ func (this *QMenu) ShowTearOffMenu_1(pos qtcore.QPoint_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hideTearOffMenu()
+
+/*
+This function will forcibly hide the torn off menu making it disappear from the user's desktop.
+
+See also showTearOffMenu(), isTearOffMenuVisible(), and isTearOffEnabled().
+*/
 func (this *QMenu) HideTearOffMenu() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu15hideTearOffMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -577,6 +810,12 @@ func (this *QMenu) HideTearOffMenu() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultAction(QAction *)
+
+/*
+This sets the default action to act. The default action may have a visual cue, depending on the current QStyle. A default action usually indicates what will happen by default when a drop occurs.
+
+See also defaultAction().
+*/
 func (this *QMenu) SetDefaultAction(arg0 QAction_ITF /*777 QAction **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QAction_PTR() != nil {
@@ -590,6 +829,12 @@ func (this *QMenu) SetDefaultAction(arg0 QAction_ITF /*777 QAction **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * defaultAction() const
+
+/*
+Returns the current default action.
+
+See also setDefaultAction().
+*/
 func (this *QMenu) DefaultAction() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu13defaultActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -600,6 +845,12 @@ func (this *QMenu) DefaultAction() *QAction /*777 QAction **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActiveAction(QAction *)
+
+/*
+Sets the currently highlighted action to act.
+
+See also activeAction().
+*/
 func (this *QMenu) SetActiveAction(act QAction_ITF /*777 QAction **/) {
 	var convArg0 unsafe.Pointer
 	if act != nil && act.QAction_PTR() != nil {
@@ -613,6 +864,12 @@ func (this *QMenu) SetActiveAction(act QAction_ITF /*777 QAction **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * activeAction() const
+
+/*
+Returns the currently highlighted action, or 0 if no action is currently highlighted.
+
+See also setActiveAction().
+*/
 func (this *QMenu) ActiveAction() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu12activeActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -623,6 +880,14 @@ func (this *QMenu) ActiveAction() *QAction /*777 QAction **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void popup(const QPoint &, QAction *)
+
+/*
+Displays the menu so that the action atAction will be at the specified global position p. To translate a widget's local coordinates into global coordinates, use QWidget::mapToGlobal().
+
+When positioning a menu with exec() or popup(), bear in mind that you cannot rely on the menu's current size(). For performance reasons, the menu adapts its size only when necessary, so in many cases, the size before and after the show is different. Instead, use sizeHint() which calculates the proper size depending on the menu's current contents.
+
+See also QWidget::mapToGlobal() and exec().
+*/
 func (this *QMenu) Popup(pos qtcore.QPoint_ITF, at QAction_ITF /*777 QAction **/) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -640,6 +905,14 @@ func (this *QMenu) Popup(pos qtcore.QPoint_ITF, at QAction_ITF /*777 QAction **/
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void popup(const QPoint &, QAction *)
+
+/*
+Displays the menu so that the action atAction will be at the specified global position p. To translate a widget's local coordinates into global coordinates, use QWidget::mapToGlobal().
+
+When positioning a menu with exec() or popup(), bear in mind that you cannot rely on the menu's current size(). For performance reasons, the menu adapts its size only when necessary, so in many cases, the size before and after the show is different. Instead, use sizeHint() which calculates the proper size depending on the menu's current contents.
+
+See also QWidget::mapToGlobal() and exec().
+*/
 func (this *QMenu) Popup__(pos qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -655,6 +928,33 @@ func (this *QMenu) Popup__(pos qtcore.QPoint_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * exec()
+
+/*
+Executes this menu synchronously.
+
+This is equivalent to exec(pos()).
+
+This returns the triggered QAction in either the popup menu or one of its submenus, or 0 if no item was triggered (normally because the user pressed Esc).
+
+In most situations you'll want to specify the position yourself, for example, the current mouse position:
+
+
+  exec(QCursor::pos());
+
+
+
+or aligned to a widget:
+
+
+  exec(somewidget.mapToGlobal(QPoint(0,0)));
+
+
+
+or in reaction to a QMouseEvent *e:
+
+
+  exec(e->globalPos());
+*/
 func (this *QMenu) Exec() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu4execEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -665,6 +965,33 @@ func (this *QMenu) Exec() *QAction /*777 QAction **/ {
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * exec(const QPoint &, QAction *)
+
+/*
+Executes this menu synchronously.
+
+This is equivalent to exec(pos()).
+
+This returns the triggered QAction in either the popup menu or one of its submenus, or 0 if no item was triggered (normally because the user pressed Esc).
+
+In most situations you'll want to specify the position yourself, for example, the current mouse position:
+
+
+  exec(QCursor::pos());
+
+
+
+or aligned to a widget:
+
+
+  exec(somewidget.mapToGlobal(QPoint(0,0)));
+
+
+
+or in reaction to a QMouseEvent *e:
+
+
+  exec(e->globalPos());
+*/
 func (this *QMenu) Exec_1(pos qtcore.QPoint_ITF, at QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -683,6 +1010,33 @@ func (this *QMenu) Exec_1(pos qtcore.QPoint_ITF, at QAction_ITF /*777 QAction **
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * exec(const QPoint &, QAction *)
+
+/*
+Executes this menu synchronously.
+
+This is equivalent to exec(pos()).
+
+This returns the triggered QAction in either the popup menu or one of its submenus, or 0 if no item was triggered (normally because the user pressed Esc).
+
+In most situations you'll want to specify the position yourself, for example, the current mouse position:
+
+
+  exec(QCursor::pos());
+
+
+
+or aligned to a widget:
+
+
+  exec(somewidget.mapToGlobal(QPoint(0,0)));
+
+
+
+or in reaction to a QMouseEvent *e:
+
+
+  exec(e->globalPos());
+*/
 func (this *QMenu) Exec_1_(pos qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -699,6 +1053,10 @@ func (this *QMenu) Exec_1_(pos qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
+
+/*
+Reimplemented from QWidget::sizeHint().
+*/
 func (this *QMenu) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -711,6 +1069,10 @@ func (this *QMenu) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect actionGeometry(QAction *) const
+
+/*
+Returns the geometry of action act.
+*/
 func (this *QMenu) ActionGeometry(arg0 QAction_ITF /*777 QAction **/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QAction_PTR() != nil {
@@ -727,6 +1089,10 @@ func (this *QMenu) ActionGeometry(arg0 QAction_ITF /*777 QAction **/) *qtcore.QR
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * actionAt(const QPoint &) const
+
+/*
+Returns the item at pt; returns 0 if there is no item there.
+*/
 func (this *QMenu) ActionAt(arg0 qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
@@ -741,6 +1107,10 @@ func (this *QMenu) ActionAt(arg0 qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * menuAction() const
+
+/*
+Returns the action associated with this menu.
+*/
 func (this *QMenu) MenuAction() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu10menuActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -751,6 +1121,10 @@ func (this *QMenu) MenuAction() *QAction /*777 QAction **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString title() const
+
+/*
+
+ */
 func (this *QMenu) Title() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu5titleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -764,6 +1138,10 @@ func (this *QMenu) Title() string {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitle(const QString &)
+
+/*
+
+ */
 func (this *QMenu) SetTitle(title string) {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -775,6 +1153,10 @@ func (this *QMenu) SetTitle(title string) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon icon() const
+
+/*
+
+ */
 func (this *QMenu) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -787,6 +1169,10 @@ func (this *QMenu) Icon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
+
+/*
+
+ */
 func (this *QMenu) SetIcon(icon qtgui.QIcon_ITF) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -800,6 +1186,10 @@ func (this *QMenu) SetIcon(icon qtgui.QIcon_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNoReplayFor(QWidget *)
+
+/*
+
+ */
 func (this *QMenu) SetNoReplayFor(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -813,6 +1203,10 @@ func (this *QMenu) SetNoReplayFor(widget QWidget_ITF /*777 QWidget **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool separatorsCollapsible() const
+
+/*
+
+ */
 func (this *QMenu) SeparatorsCollapsible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu21separatorsCollapsibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -823,6 +1217,10 @@ func (this *QMenu) SeparatorsCollapsible() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSeparatorsCollapsible(_Bool)
+
+/*
+
+ */
 func (this *QMenu) SetSeparatorsCollapsible(collapse bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu24setSeparatorsCollapsibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), collapse)
 	qtrt.ErrPrint(err, rv)
@@ -832,6 +1230,10 @@ func (this *QMenu) SetSeparatorsCollapsible(collapse bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool toolTipsVisible() const
+
+/*
+
+ */
 func (this *QMenu) ToolTipsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu15toolTipsVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -842,6 +1244,10 @@ func (this *QMenu) ToolTipsVisible() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setToolTipsVisible(_Bool)
+
+/*
+
+ */
 func (this *QMenu) SetToolTipsVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu18setToolTipsVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	qtrt.ErrPrint(err, rv)
@@ -851,6 +1257,12 @@ func (this *QMenu) SetToolTipsVisible(visible bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void aboutToShow()
+
+/*
+This signal is emitted just before the menu is shown to the user.
+
+See also aboutToHide() and show().
+*/
 func (this *QMenu) AboutToShow() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu11aboutToShowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -860,6 +1272,14 @@ func (this *QMenu) AboutToShow() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void aboutToHide()
+
+/*
+This signal is emitted just before the menu is hidden from the user.
+
+This function was introduced in  Qt 4.2.
+
+See also aboutToShow() and hide().
+*/
 func (this *QMenu) AboutToHide() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu11aboutToHideEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -869,6 +1289,18 @@ func (this *QMenu) AboutToHide() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(QAction *)
+
+/*
+This signal is emitted when an action in this menu is triggered.
+
+action is the action that caused the signal to be emitted.
+
+Normally, you connect each menu action's triggered() signal to its own custom slot, but sometimes you will want to connect several actions to a single slot, for example, when you have a group of closely related actions, such as "left justify", "center", "right justify".
+
+Note: This signal is emitted for the main parent menu in a hierarchy. Hence, only the parent menu needs to be connected to a slot; sub-menus need not be connected.
+
+See also hovered() and QAction::triggered().
+*/
 func (this *QMenu) Triggered(action QAction_ITF /*777 QAction **/) {
 	var convArg0 unsafe.Pointer
 	if action != nil && action.QAction_PTR() != nil {
@@ -882,6 +1314,14 @@ func (this *QMenu) Triggered(action QAction_ITF /*777 QAction **/) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hovered(QAction *)
+
+/*
+This signal is emitted when a menu action is highlighted; action is the action that caused the signal to be emitted.
+
+Often this is used to update status information.
+
+See also triggered() and QAction::hovered().
+*/
 func (this *QMenu) Hovered(action QAction_ITF /*777 QAction **/) {
 	var convArg0 unsafe.Pointer
 	if action != nil && action.QAction_PTR() != nil {
@@ -895,6 +1335,12 @@ func (this *QMenu) Hovered(action QAction_ITF /*777 QAction **/) {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int columnCount() const
+
+/*
+If a menu does not fit on the screen it lays itself out so that it does fit. It is style dependent what layout means (for example, on Windows it will use multiple columns).
+
+This functions returns the number of columns necessary.
+*/
 func (this *QMenu) ColumnCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QMenu11columnCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -905,6 +1351,10 @@ func (this *QMenu) ColumnCount() int {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QMenu) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -918,6 +1368,10 @@ func (this *QMenu) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
+
+/*
+Reimplemented from QWidget::keyPressEvent().
+*/
 func (this *QMenu) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QKeyEvent_PTR() != nil {
@@ -931,6 +1385,10 @@ func (this *QMenu) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseReleaseEvent().
+*/
 func (this *QMenu) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -944,6 +1402,10 @@ func (this *QMenu) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEven
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mousePressEvent().
+*/
 func (this *QMenu) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -957,6 +1419,10 @@ func (this *QMenu) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
+
+/*
+Reimplemented from QWidget::mouseMoveEvent().
+*/
 func (this *QMenu) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMouseEvent_PTR() != nil {
@@ -970,6 +1436,10 @@ func (this *QMenu) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
+
+/*
+Reimplemented from QWidget::wheelEvent().
+*/
 func (this *QMenu) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWheelEvent_PTR() != nil {
@@ -983,6 +1453,10 @@ func (this *QMenu) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void enterEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::enterEvent().
+*/
 func (this *QMenu) EnterEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -996,6 +1470,10 @@ func (this *QMenu) EnterEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void leaveEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::leaveEvent().
+*/
 func (this *QMenu) LeaveEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -1009,6 +1487,10 @@ func (this *QMenu) LeaveEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
+
+/*
+Reimplemented from QWidget::hideEvent().
+*/
 func (this *QMenu) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QHideEvent_PTR() != nil {
@@ -1022,6 +1504,10 @@ func (this *QMenu) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
+
+/*
+Reimplemented from QWidget::paintEvent().
+*/
 func (this *QMenu) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintEvent_PTR() != nil {
@@ -1035,6 +1521,10 @@ func (this *QMenu) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) 
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void actionEvent(QActionEvent *)
+
+/*
+Reimplemented from QWidget::actionEvent().
+*/
 func (this *QMenu) ActionEvent(arg0 qtgui.QActionEvent_ITF /*777 QActionEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QActionEvent_PTR() != nil {
@@ -1048,6 +1538,10 @@ func (this *QMenu) ActionEvent(arg0 qtgui.QActionEvent_ITF /*777 QActionEvent **
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
+
+/*
+Reimplemented from QObject::timerEvent().
+*/
 func (this *QMenu) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTimerEvent_PTR() != nil {
@@ -1061,6 +1555,10 @@ func (this *QMenu) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/)
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QMenu) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {
@@ -1075,6 +1573,10 @@ func (this *QMenu) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool focusNextPrevChild(_Bool)
+
+/*
+Reimplemented from QWidget::focusNextPrevChild().
+*/
 func (this *QMenu) FocusNextPrevChild(next bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu18focusNextPrevChildEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	qtrt.ErrPrint(err, rv)
@@ -1085,6 +1587,12 @@ func (this *QMenu) FocusNextPrevChild(next bool) bool {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionMenuItem *, const QAction *) const
+
+/*
+Initialize option with the values from this menu and information from action. This method is useful for subclasses when they need a QStyleOptionMenuItem, but don't want to fill in all the information themselves.
+
+See also QStyleOption::initFrom() and QMenuBar::initStyleOption().
+*/
 func (this *QMenu) InitStyleOption(option QStyleOptionMenuItem_ITF /*777 QStyleOptionMenuItem **/, action QAction_ITF /*777 const QAction **/) {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QStyleOptionMenuItem_PTR() != nil {

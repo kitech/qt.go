@@ -33,6 +33,9 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
+/*
+
+ */
 type QGraphicsSceneMoveEvent struct {
 	*QGraphicsSceneEvent
 }
@@ -65,6 +68,10 @@ func (*QGraphicsSceneMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsS
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneMoveEvent()
+
+/*
+
+ */
 func NewQGraphicsSceneMoveEvent() *QGraphicsSceneMoveEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -77,6 +84,10 @@ func NewQGraphicsSceneMoveEvent() *QGraphicsSceneMoveEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneMoveEvent()
+
+/*
+
+ */
 func DeleteQGraphicsSceneMoveEvent(this *QGraphicsSceneMoveEvent) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
@@ -88,6 +99,10 @@ func DeleteQGraphicsSceneMoveEvent(this *QGraphicsSceneMoveEvent) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF oldPos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneMoveEvent) OldPos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6oldPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +115,10 @@ func (this *QGraphicsSceneMoveEvent) OldPos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOldPos(const QPointF &)
+
+/*
+
+ */
 func (this *QGraphicsSceneMoveEvent) SetOldPos(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -113,6 +132,10 @@ func (this *QGraphicsSceneMoveEvent) SetOldPos(pos qtcore.QPointF_ITF) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF newPos() const
+
+/*
+
+ */
 func (this *QGraphicsSceneMoveEvent) NewPos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6newPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -125,6 +148,10 @@ func (this *QGraphicsSceneMoveEvent) NewPos() *qtcore.QPointF /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNewPos(const QPointF &)
+
+/*
+
+ */
 func (this *QGraphicsSceneMoveEvent) SetNewPos(pos qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {

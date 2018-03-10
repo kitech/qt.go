@@ -32,6 +32,9 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
+/*
+
+ */
 type QApplicationStateChangeEvent struct {
 	*qtcore.QEvent
 }
@@ -66,6 +69,10 @@ func (*QApplicationStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAppl
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QApplicationStateChangeEvent(Qt::ApplicationState)
+
+/*
+
+ */
 func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventC2EN2Qt16ApplicationStateE", qtrt.FFI_TYPE_POINTER, state)
 	qtrt.ErrPrint(err, rv)
@@ -78,6 +85,10 @@ func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ApplicationState applicationState() const
+
+/*
+
+ */
 func (this *QApplicationStateChangeEvent) ApplicationState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QApplicationStateChangeEvent16applicationStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

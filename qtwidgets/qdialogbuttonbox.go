@@ -43,6 +43,9 @@ func (this *QDialogButtonBox) InheritEvent(f func(event *qtcore.QEvent /*777 QEv
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+/*
+
+ */
 type QDialogButtonBox struct {
 	*QWidget
 }
@@ -75,6 +78,10 @@ func (*QDialogButtonBox) NewFromPointer(cthis unsafe.Pointer) *QDialogButtonBox 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
+
+/*
+
+ */
 func (this *QDialogButtonBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDialogButtonBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -85,6 +92,12 @@ func (this *QDialogButtonBox) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QWidget *)
+
+/*
+Constructs an empty, horizontal button box with the given parent.
+
+See also orientation and addButton().
+*/
 func NewQDialogButtonBox(parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -101,6 +114,12 @@ func NewQDialogButtonBox(parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QWidget *)
+
+/*
+Constructs an empty, horizontal button box with the given parent.
+
+See also orientation and addButton().
+*/
 func NewQDialogButtonBox__() *QDialogButtonBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record,
 	var convArg0 unsafe.Pointer
@@ -115,6 +134,12 @@ func NewQDialogButtonBox__() *QDialogButtonBox {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(Qt::Orientation, QWidget *)
+
+/*
+Constructs an empty, horizontal button box with the given parent.
+
+See also orientation and addButton().
+*/
 func NewQDialogButtonBox_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -131,6 +156,12 @@ func NewQDialogButtonBox_1(orientation int, parent QWidget_ITF /*777 QWidget **/
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(Qt::Orientation, QWidget *)
+
+/*
+Constructs an empty, horizontal button box with the given parent.
+
+See also orientation and addButton().
+*/
 func NewQDialogButtonBox_1_(orientation int) *QDialogButtonBox {
 	// arg: 1, QWidget *=Pointer, QWidget=Record,
 	var convArg1 unsafe.Pointer
@@ -145,6 +176,12 @@ func NewQDialogButtonBox_1_(orientation int) *QDialogButtonBox {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, QWidget *)
+
+/*
+Constructs an empty, horizontal button box with the given parent.
+
+See also orientation and addButton().
+*/
 func NewQDialogButtonBox_2(buttons int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -161,6 +198,12 @@ func NewQDialogButtonBox_2(buttons int, parent QWidget_ITF /*777 QWidget **/) *Q
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, QWidget *)
+
+/*
+Constructs an empty, horizontal button box with the given parent.
+
+See also orientation and addButton().
+*/
 func NewQDialogButtonBox_2_(buttons int) *QDialogButtonBox {
 	// arg: 1, QWidget *=Pointer, QWidget=Record,
 	var convArg1 unsafe.Pointer
@@ -175,6 +218,12 @@ func NewQDialogButtonBox_2_(buttons int) *QDialogButtonBox {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, Qt::Orientation, QWidget *)
+
+/*
+Constructs an empty, horizontal button box with the given parent.
+
+See also orientation and addButton().
+*/
 func NewQDialogButtonBox_3(buttons int, orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -191,6 +240,12 @@ func NewQDialogButtonBox_3(buttons int, orientation int, parent QWidget_ITF /*77
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, Qt::Orientation, QWidget *)
+
+/*
+Constructs an empty, horizontal button box with the given parent.
+
+See also orientation and addButton().
+*/
 func NewQDialogButtonBox_3_(buttons int, orientation int) *QDialogButtonBox {
 	// arg: 2, QWidget *=Pointer, QWidget=Record,
 	var convArg2 unsafe.Pointer
@@ -205,6 +260,10 @@ func NewQDialogButtonBox_3_(buttons int, orientation int) *QDialogButtonBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDialogButtonBox()
+
+/*
+
+ */
 func DeleteQDialogButtonBox(this *QDialogButtonBox) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
@@ -216,6 +275,10 @@ func DeleteQDialogButtonBox(this *QDialogButtonBox) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
+
+/*
+
+ */
 func (this *QDialogButtonBox) SetOrientation(orientation int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox14setOrientationEN2Qt11OrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	qtrt.ErrPrint(err, rv)
@@ -225,6 +288,10 @@ func (this *QDialogButtonBox) SetOrientation(orientation int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
+
+/*
+
+ */
 func (this *QDialogButtonBox) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDialogButtonBox11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -235,6 +302,16 @@ func (this *QDialogButtonBox) Orientation() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addButton(QAbstractButton *, enum QDialogButtonBox::ButtonRole)
+
+/*
+Adds the given button to the button box with the specified role. If the role is invalid, the button is not added.
+
+If the button has already been added, it is removed and added again with the new role.
+
+Note: The button box takes ownership of the button.
+
+See also removeButton() and clear().
+*/
 func (this *QDialogButtonBox) AddButton(button QAbstractButton_ITF /*777 QAbstractButton **/, role int) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -248,6 +325,16 @@ func (this *QDialogButtonBox) AddButton(button QAbstractButton_ITF /*777 QAbstra
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * addButton(const QString &, enum QDialogButtonBox::ButtonRole)
+
+/*
+Adds the given button to the button box with the specified role. If the role is invalid, the button is not added.
+
+If the button has already been added, it is removed and added again with the new role.
+
+Note: The button box takes ownership of the button.
+
+See also removeButton() and clear().
+*/
 func (this *QDialogButtonBox) AddButton_1(text string, role int) *QPushButton /*777 QPushButton **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -260,6 +347,16 @@ func (this *QDialogButtonBox) AddButton_1(text string, role int) *QPushButton /*
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * addButton(enum QDialogButtonBox::StandardButton)
+
+/*
+Adds the given button to the button box with the specified role. If the role is invalid, the button is not added.
+
+If the button has already been added, it is removed and added again with the new role.
+
+Note: The button box takes ownership of the button.
+
+See also removeButton() and clear().
+*/
 func (this *QDialogButtonBox) AddButton_2(button int) *QPushButton /*777 QPushButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	qtrt.ErrPrint(err, rv)
@@ -270,6 +367,12 @@ func (this *QDialogButtonBox) AddButton_2(button int) *QPushButton /*777 QPushBu
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeButton(QAbstractButton *)
+
+/*
+Removes button from the button box without deleting it and sets its parent to zero.
+
+See also clear(), buttons(), and addButton().
+*/
 func (this *QDialogButtonBox) RemoveButton(button QAbstractButton_ITF /*777 QAbstractButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -283,6 +386,12 @@ func (this *QDialogButtonBox) RemoveButton(button QAbstractButton_ITF /*777 QAbs
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
+
+/*
+Clears the button box, deleting all buttons within it.
+
+See also removeButton() and addButton().
+*/
 func (this *QDialogButtonBox) Clear() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -292,6 +401,12 @@ func (this *QDialogButtonBox) Clear() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDialogButtonBox::ButtonRole buttonRole(QAbstractButton *) const
+
+/*
+Returns the button role for the specified button. This function returns InvalidRole if button is 0 or has not been added to the button box.
+
+See also buttons() and addButton().
+*/
 func (this *QDialogButtonBox) ButtonRole(button QAbstractButton_ITF /*777 QAbstractButton **/) int {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -306,6 +421,10 @@ func (this *QDialogButtonBox) ButtonRole(button QAbstractButton_ITF /*777 QAbstr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardButtons(QDialogButtonBox::StandardButtons)
+
+/*
+
+ */
 func (this *QDialogButtonBox) SetStandardButtons(buttons int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox18setStandardButtonsE6QFlagsINS_14StandardButtonEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
 	qtrt.ErrPrint(err, rv)
@@ -315,6 +434,10 @@ func (this *QDialogButtonBox) SetStandardButtons(buttons int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDialogButtonBox::StandardButtons standardButtons() const
+
+/*
+
+ */
 func (this *QDialogButtonBox) StandardButtons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDialogButtonBox15standardButtonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -325,6 +448,12 @@ func (this *QDialogButtonBox) StandardButtons() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDialogButtonBox::StandardButton standardButton(QAbstractButton *) const
+
+/*
+Returns the standard button enum value corresponding to the given button, or NoButton if the given button isn't a standard button.
+
+See also button(), buttons(), and standardButtons().
+*/
 func (this *QDialogButtonBox) StandardButton(button QAbstractButton_ITF /*777 QAbstractButton **/) int {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -339,6 +468,12 @@ func (this *QDialogButtonBox) StandardButton(button QAbstractButton_ITF /*777 QA
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * button(enum QDialogButtonBox::StandardButton) const
+
+/*
+Returns the QPushButton corresponding to the standard button which, or 0 if the standard button doesn't exist in this button box.
+
+See also standardButton(), standardButtons(), and buttons().
+*/
 func (this *QDialogButtonBox) Button(which int) *QPushButton /*777 QPushButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDialogButtonBox6buttonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	qtrt.ErrPrint(err, rv)
@@ -349,6 +484,10 @@ func (this *QDialogButtonBox) Button(which int) *QPushButton /*777 QPushButton *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCenterButtons(_Bool)
+
+/*
+
+ */
 func (this *QDialogButtonBox) SetCenterButtons(center bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox16setCenterButtonsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), center)
 	qtrt.ErrPrint(err, rv)
@@ -358,6 +497,10 @@ func (this *QDialogButtonBox) SetCenterButtons(center bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool centerButtons() const
+
+/*
+
+ */
 func (this *QDialogButtonBox) CenterButtons() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QDialogButtonBox13centerButtonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -368,6 +511,12 @@ func (this *QDialogButtonBox) CenterButtons() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clicked(QAbstractButton *)
+
+/*
+This signal is emitted when a button inside the button box is clicked. The specific button that was pressed is specified by button.
+
+See also accepted(), rejected(), and helpRequested().
+*/
 func (this *QDialogButtonBox) Clicked(button QAbstractButton_ITF /*777 QAbstractButton **/) {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QAbstractButton_PTR() != nil {
@@ -381,6 +530,12 @@ func (this *QDialogButtonBox) Clicked(button QAbstractButton_ITF /*777 QAbstract
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void accepted()
+
+/*
+This signal is emitted when a button inside the button box is clicked, as long as it was defined with the AcceptRole or YesRole.
+
+See also rejected(), clicked(), and helpRequested().
+*/
 func (this *QDialogButtonBox) Accepted() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox8acceptedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -390,6 +545,12 @@ func (this *QDialogButtonBox) Accepted() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void helpRequested()
+
+/*
+This signal is emitted when a button inside the button box is clicked, as long as it was defined with the HelpRole.
+
+See also accepted(), rejected(), and clicked().
+*/
 func (this *QDialogButtonBox) HelpRequested() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox13helpRequestedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -399,6 +560,12 @@ func (this *QDialogButtonBox) HelpRequested() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rejected()
+
+/*
+This signal is emitted when a button inside the button box is clicked, as long as it was defined with the RejectRole or NoRole.
+
+See also accepted(), helpRequested(), and clicked().
+*/
 func (this *QDialogButtonBox) Rejected() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox8rejectedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -408,6 +575,10 @@ func (this *QDialogButtonBox) Rejected() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
+
+/*
+Reimplemented from QWidget::changeEvent().
+*/
 func (this *QDialogButtonBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -421,6 +592,10 @@ func (this *QDialogButtonBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent *
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
 func (this *QDialogButtonBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
@@ -431,50 +606,141 @@ func (this *QDialogButtonBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bo
 	return rv != 0
 }
 
+/*
+This enum describes the roles that can be used to describe buttons in the button box. Combinations of these roles are as flags used to describe different aspects of their behavior.
+
+
+
+See also StandardButton.
+
+*/
 type QDialogButtonBox__ButtonRole = int
 
+//
 const QDialogButtonBox__InvalidRole QDialogButtonBox__ButtonRole = -1
+
+// Clicking the button causes the dialog to be accepted (e.g. OK).
 const QDialogButtonBox__AcceptRole QDialogButtonBox__ButtonRole = 0
+
+// Clicking the button causes the dialog to be rejected (e.g. Cancel).
 const QDialogButtonBox__RejectRole QDialogButtonBox__ButtonRole = 1
+
+// Clicking the button causes a destructive change (e.g. for Discarding Changes) and closes the dialog.
 const QDialogButtonBox__DestructiveRole QDialogButtonBox__ButtonRole = 2
+
+// Clicking the button causes changes to the elements within the dialog.
 const QDialogButtonBox__ActionRole QDialogButtonBox__ButtonRole = 3
+
+// The button can be clicked to request help.
 const QDialogButtonBox__HelpRole QDialogButtonBox__ButtonRole = 4
+
+// The button is a "Yes"-like button.
 const QDialogButtonBox__YesRole QDialogButtonBox__ButtonRole = 5
+
+// The button is a "No"-like button.
 const QDialogButtonBox__NoRole QDialogButtonBox__ButtonRole = 6
+
+// The button resets the dialog's fields to default values.
 const QDialogButtonBox__ResetRole QDialogButtonBox__ButtonRole = 7
+
+// The button applies current changes.
 const QDialogButtonBox__ApplyRole QDialogButtonBox__ButtonRole = 8
+
+//
 const QDialogButtonBox__NRoles QDialogButtonBox__ButtonRole = 9
 
+/*
+
+
+ */
 type QDialogButtonBox__StandardButton = int
 
+//
 const QDialogButtonBox__NoButton QDialogButtonBox__StandardButton = 0
+
+//
 const QDialogButtonBox__Ok QDialogButtonBox__StandardButton = 1024
+
+//
 const QDialogButtonBox__Save QDialogButtonBox__StandardButton = 2048
+
+//
 const QDialogButtonBox__SaveAll QDialogButtonBox__StandardButton = 4096
+
+//
 const QDialogButtonBox__Open QDialogButtonBox__StandardButton = 8192
+
+//
 const QDialogButtonBox__Yes QDialogButtonBox__StandardButton = 16384
+
+//
 const QDialogButtonBox__YesToAll QDialogButtonBox__StandardButton = 32768
+
+//
 const QDialogButtonBox__No QDialogButtonBox__StandardButton = 65536
+
+//
 const QDialogButtonBox__NoToAll QDialogButtonBox__StandardButton = 131072
+
+//
 const QDialogButtonBox__Abort QDialogButtonBox__StandardButton = 262144
+
+//
 const QDialogButtonBox__Retry QDialogButtonBox__StandardButton = 524288
+
+//
 const QDialogButtonBox__Ignore QDialogButtonBox__StandardButton = 1048576
+
+//
 const QDialogButtonBox__Close QDialogButtonBox__StandardButton = 2097152
+
+//
 const QDialogButtonBox__Cancel QDialogButtonBox__StandardButton = 4194304
+
+//
 const QDialogButtonBox__Discard QDialogButtonBox__StandardButton = 8388608
+
+//
 const QDialogButtonBox__Help QDialogButtonBox__StandardButton = 16777216
+
+//
 const QDialogButtonBox__Apply QDialogButtonBox__StandardButton = 33554432
+
+//
 const QDialogButtonBox__Reset QDialogButtonBox__StandardButton = 67108864
+
+//
 const QDialogButtonBox__RestoreDefaults QDialogButtonBox__StandardButton = 134217728
+
+//
 const QDialogButtonBox__FirstButton QDialogButtonBox__StandardButton = 1024
+
+//
 const QDialogButtonBox__LastButton QDialogButtonBox__StandardButton = 134217728
 
+/*
+This enum describes the layout policy to be used when arranging the buttons contained in the button box.
+
+
+
+The button layout is specified by the current style. However, on the X11 platform, it may be influenced by the desktop environment.
+
+*/
 type QDialogButtonBox__ButtonLayout = int
 
+// Use a policy appropriate for applications on Windows.
 const QDialogButtonBox__WinLayout QDialogButtonBox__ButtonLayout = 0
+
+// Use a policy appropriate for applications on macOS.
 const QDialogButtonBox__MacLayout QDialogButtonBox__ButtonLayout = 1
+
+// Use a policy appropriate for applications on KDE.
 const QDialogButtonBox__KdeLayout QDialogButtonBox__ButtonLayout = 2
+
+// Use a policy appropriate for applications on GNOME.
 const QDialogButtonBox__GnomeLayout QDialogButtonBox__ButtonLayout = 3
+
+//
 const QDialogButtonBox__AndroidLayout QDialogButtonBox__ButtonLayout = 5
 
 //  body block end
