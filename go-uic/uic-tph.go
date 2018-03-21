@@ -55,6 +55,7 @@ func main() {
 	cp.APf("header", "import \"github.com/kitech/qt.go/qtquickwidgets\"")
 	cp.APf("header", "import \"github.com/kitech/qt.go/qtmock\"")
 	cp.APf("header", "func init(){qtcore.KeepMe()}")
+	cp.APf("header", "func init(){qtgui.KeepMe()}")
 	cp.APf("header", "func init(){qtwidgets.KeepMe()}")
 	cp.APf("header", "func init(){qtquickwidgets.KeepMe()}")
 	cp.APf("header", "func init(){qtmock.KeepMe()}")
@@ -187,6 +188,8 @@ func onSetupUi(line string) {
 			cp.APf("setupUi", "qtcore.QMetaObject_ConnectSlotsByName(%s) // 100111", mats[0][1])
 		} else if reg1.MatchString(line) {
 			mats := reg1.FindAllStringSubmatch(line, -1)
+			log.Println(mats)
+			refmtname := strings.Title(mats[0][1])
 			refmtval := strings.Title(mats[0][3])
 			refmtsuf := ""
 			pkgname := "qtwidgets"
@@ -204,8 +207,19 @@ func onSetupUi(line string) {
 					refmtval = fmt.Sprintf("this.%s", refmtval)
 					refmtsuf = "_1"
 				}
+			case "QGridLayout":
+				if refmtval == "" {
+					refmtval = "nil"
+				} else {
+					refmtval = "this." + refmtval
+				}
 			case "QLabel", "QFrame":
 				refmtval = "this." + refmtval + ", 0"
+			case "QTableWidgetItem":
+				parts := strings.Split(refmtname, "*")
+				refmtname = parts[1]
+				refmtval = "0"
+				cp.APf("struct", "  %s *qtwidgets.%s // 215", parts[1], parts[0])
 			case "QQuickWidget":
 				pkgname = "qtquickwidgets"
 				refmtval = "this." + refmtval
@@ -213,7 +227,7 @@ func onSetupUi(line string) {
 				refmtval = "this." + refmtval
 			}
 			cp.APf("setupUi", "this.%s = %s.New%s%s(%s) // 111",
-				strings.Title(mats[0][1]), pkgname, mats[0][2], refmtsuf, refmtval)
+				refmtname, pkgname, mats[0][2], refmtsuf, refmtval)
 		} else if reg2.MatchString(line) {
 			mats := reg2.FindAllStringSubmatch(line, -1)
 			log.Println(mats)
@@ -241,7 +255,7 @@ func onSetupUi(line string) {
 			refmtsuf := ""
 			switch mats[0][2] {
 			case "Spacing", "HorizontalStretch", "VerticalStretch":
-			case "PointSize", "Weight": // do nothing
+			case "PointSize", "Weight", "ColumnCount": // do nothing
 			case "ContentsMargins", "CurrentIndex", "LineWidth":
 			case "Orientation":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
@@ -259,11 +273,15 @@ func onSetupUi(line string) {
 			case "Alignment", "FocusPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 				refmtval = strings.Replace(refmtval, "|", "|qtcore.", -1)
+			case "EditTriggers", "StandardButtons":
+				refmtval = "qtwidgets." + strings.Replace(refmtval, ":", "_", -1)
+				refmtval = strings.Replace(refmtval, "|", "|qtwidgets.", -1)
 			case "Geometry":
 				refmtval = strings.TrimRight(refmtval[6:], ")")
 			case "HorizontalScrollBarPolicy", "ContextMenuPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
-			case "SizeAdjustPolicy", "SizeConstraint", "FrameShape", "FrameShadow":
+			case "SizeAdjustPolicy", "SizeConstraint", "FrameShape", "FrameShadow",
+				"SelectionBehavior":
 				refmtval = "qtwidgets." + strings.Replace(refmtval, ":", "_", -1)
 			case "ResizeMode":
 				refmtval = "qtquickwidgets." + strings.Replace(refmtval, ":", "_", -1)
@@ -280,6 +298,8 @@ func onSetupUi(line string) {
 				refmtval = fmt.Sprintf("qtcore.NewQUrl_1(\"%s\", 0)", strings.Split(refmtval, "\"")[1])
 			case "HeightForWidth":
 				refmtval = "this." + strings.Replace(refmtval, "->", ".", -1)
+			case "HorizontalHeaderItem":
+				refmtval = strings.Replace(refmtval, ",", ", this.", 1)
 				// refmtval = "false" // TODO label_x.SizePolicy().HasHeightForWidth() crash
 			// case "SizePolicy": // TODO 可能值有点问题，过滤掉设置setSizePolicy
 			// break
@@ -326,6 +346,8 @@ func onSetupUi(line string) {
 				alst = append(alst, "qtgui."+colon2uline(parts[3]))
 				refmtval = strings.Join(alst, ", ")
 				refmtname = "AddFile"
+			case "addTab":
+				refmtval = fmt.Sprintf("this.%s, \"\"", strings.Split(refmtval, ",")[0])
 			default:
 				refmtval = "this." + refmtval
 			}
@@ -365,9 +387,13 @@ func onRetranslateUi(line string) {
 	log.Println(line)
 	reg1 := regexp.MustCompile(`(.+)->(.+)\(QApplication::translate\(\"(.+)\", \"(.+)\", nullptr\)\);`)
 	reg2 := regexp.MustCompile(`(.+)->(.+)\(([0-9]+), QApplication::translate\(\"(.+)\", \"(.+)\", nullptr\)\);`)
+	reg3 := regexp.MustCompile(`(.+)->(.+)\((.+)->(.+)\((.+)\), QApplication::translate\(\"(.+)\", \"(.+)\", nullptr\)\);`)
 	if reg1.MatchString(line) {
 		mats := reg1.FindAllStringSubmatch(line, -1)
 		log.Println(mats)
+		if strings.HasPrefix(mats[0][1], "___") {
+			mats[0][1] = mats[0][1][1:]
+		}
 		cp.APf("retranslateUi",
 			"this.%s.%s(qtcore.QCoreApplication_Translate(\"%s\", \"%s\", \"dummy123\", 0))",
 			strings.Title(mats[0][1]), strings.Title(mats[0][2]), mats[0][3], mats[0][4])
@@ -377,8 +403,17 @@ func onRetranslateUi(line string) {
 		cp.APf("retranslateUi",
 			"this.%s.%s(%s, qtcore.QCoreApplication_Translate(\"%s\", \"%s\", \"dummy123\", 0))",
 			strings.Title(mats[0][1]), strings.Title(mats[0][2]), mats[0][3], mats[0][4], mats[0][5])
+	} else if reg3.MatchString(line) {
+		mats := reg3.FindAllStringSubmatch(line, -1)
+		log.Println(mats)
+		cp.APf("retranslateUi",
+			"this.%s.%s(this.%s.%s(this.%s), qtcore.QCoreApplication_Translate(\"%s\", \"%s\", \"dummy123\", 0))",
+			strings.Title(mats[0][1]), strings.Title(mats[0][2]),
+			strings.Title(mats[0][3]), strings.Title(mats[0][4]),
+			strings.Title(mats[0][5]), mats[0][6], mats[0][7])
 	} else {
 		log.Println("what not matched:", line)
+		cp.APf("retranslateUi", "// noimpl: %s", line)
 	}
 	// TODO 多行tooltip的情况
 }

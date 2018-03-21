@@ -153,6 +153,7 @@ var qtlibs = map[string]FFILibrary{}
 
 func SetDebugFFICall(on bool) { debugFFICall = on }
 func init() {
+	log.SetFlags(log.Flags() | log.Lshortfile)
 	init_ffi_invoke()
 
 	// TODO maybe run when first qtcall
@@ -255,8 +256,11 @@ func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, e
 	argtys, argvals, argrefps := convArgs(args...)
 	_ = argrefps
 	var retval C.uint64_t = 0
-	C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(args)),
+	_, cok := C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(args)),
 		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0]))
+	if debugFFICall {
+		ErrPrint(cok, symname, retype, len(args))
+	}
 
 	onCtorAlloc(symname)
 	return uint64(retval), nil
@@ -337,7 +341,6 @@ var tyconvmap = map[reflect.Kind]byte{
 //   for non-addressable primitive type, a temporary var is created and it's address is returned
 // argrefp for hold the temporary created var's address's reference, prevent gc for a while
 func convArg(idx int, argx interface{}) (argty byte, argval uint64, argrefp reflect.Value) {
-
 	av := reflect.ValueOf(argx)
 	aty := av.Type()
 

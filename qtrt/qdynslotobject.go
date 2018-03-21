@@ -142,26 +142,41 @@ func Disconnect(cobj CObjectITF, signame string) {
 // or direct use qtcore.QObject_Connect
 // only for support signal to signal
 func ConnectSignal(sender CObjectITF, signal string, receiver CObjectITF, member string) {
+	signal, member = autoCompleteSignature(sender, signal), autoCompleteSignature(receiver, member)
+
+	connectqq_impl(sender, QSIGNAL(signal), receiver, QSIGNAL(member))
+}
+
+// quickly connect an object's signal to another object's slot
+func ConnectSlot(sender CObjectITF, signal string, receiver CObjectITF, member string) {
+	signal, member = autoCompleteSignature(sender, signal), autoCompleteSignature(receiver, member)
+
+	connectqq_impl(sender, QSIGNAL(signal), receiver, QSLOT(member))
+}
+
+func autoCompleteSignature(sender CObjectITF, signal string) string {
 	if !strings.Contains(signal, "(") {
 		s, err := QObjectGetSignatureByName(sender, signal)
 		ErrPrint(err)
 		signal = IfElseStr(err == nil, s, signal)
 	}
-	if !strings.Contains(member, "(") {
-		s, err := QObjectGetSignatureByName(receiver, member)
-		ErrPrint(err)
-		member = IfElseStr(err == nil, s, member)
-	}
+	return signal
+}
+
+func connectqq_impl(sender CObjectITF, signal string, receiver CObjectITF, member string) {
 
 	var convArg0 = sender.GetCthis()
-	var convArg1 = CString(QSIGNAL(signal))
+	var convArg1 = CString(signal)
 	defer FreeMem(convArg1)
 	var convArg2 = receiver.GetCthis()
-	var convArg3 = CString(QSIGNAL(member))
+	var convArg3 = CString(member)
 	defer FreeMem(convArg3)
 	var arg4 int = 2 // Qt::QueuedConnection	2
 	rv, err := InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
 	ErrPrint(err, rv)
+
+	// manually fix memory leak of return
+	InvokeQtFunc6("_ZN11QMetaObject10ConnectionD2Ev", FFI_TYPE_VOID, unsafe.Pointer(uintptr(rv)))
 	// return int(rv)
 }
 
@@ -186,8 +201,8 @@ func QObjectGetSignatureByName(qobj CObjectITF, name string) (string, error) {
 // 仅供内部使用
 // TODO use only one QDynSlotObject
 var destroyedDynSlot *QDynSlotObject
-var destroyedSingalName = "destroyed(QObject *)"
-var destroyedSingalNamep = QSIGNAL("destroyed(QObject *)")
+var destroyedSingalName = "destroyed(QObject*)"
+var destroyedSingalNamep = QSIGNAL(destroyedSingalName)
 
 func init_destroyedDynSlot() { destroyedDynSlot = NewQDynSlotObject("destroyed(QObject*)", 0) }
 func ConnectDestroyed(senderCobj CObjectITF, className string) {

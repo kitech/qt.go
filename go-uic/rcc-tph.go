@@ -47,24 +47,28 @@ func main() {
 	cp.APf("header", "// import \"github.com/kitech/qt.go/qtcore\"")
 	cp.APf("header", "import \"github.com/kitech/qt.go/qtmock\"")
 
+	hasRccData, hasRccName, hasRccStruct := false, false, false
 	insection := INSEC_NONE
 	for _, line := range lines {
 		line = strings.TrimSpace(line)
 
 		if strings.Contains(line, "qt_resource_data[]") {
 			insection = INSEC_RES_DATA
+			hasRccData = true
 			cp.APf("body", "var qt_resource_data = []byte{")
 			continue
 		}
 
 		if strings.Contains(line, "qt_resource_name[]") {
 			insection = INSEC_RES_NAME
+			hasRccName = true
 			cp.APf("body", "var qt_resource_name = []byte{")
 			continue
 		}
 
 		if strings.Contains(line, "qt_resource_struct[]") {
 			insection = INSEC_RES_STRUCT
+			hasRccStruct = true
 			cp.APf("body", "var qt_resource_struct = []byte{")
 			continue
 		}
@@ -84,6 +88,17 @@ func main() {
 		case INSEC_RES_STRUCT:
 			onRetranslateUi(line)
 		}
+	}
+
+	// fix not exists
+	if !hasRccData {
+		cp.APf("body", "var qt_resource_data = []byte{} // empty")
+	}
+	if !hasRccName {
+		cp.APf("body", "var qt_resource_name = []byte{} // empty")
+	}
+	if !hasRccStruct {
+		cp.APf("body", "var qt_resource_struct = []byte{} // empty")
 	}
 
 	saveCode()
@@ -111,11 +126,15 @@ func saveCode() {
 	// bool qUnregisterResourceData (int, const unsigned char *, const unsigned char *, const unsigned char *)
 	cp.APf("body", "var qt_rcc_version = 0x2 // >= 5.8.0, else 0x1")
 	cp.APf("body", "func qInitResources(){")
+	cp.APf("body", "  if len(qt_resource_name) > 0 {")
 	cp.APf("body", "  qtmock.QRegisterResourceData(qt_rcc_version, unsafe.Pointer(&qt_resource_struct[0]), unsafe.Pointer(&qt_resource_name[0]), unsafe.Pointer(&qt_resource_data[0]))")
+	cp.APf("body", "  }")
 	cp.APf("body", "}")
 
 	cp.APf("body", "func qCleanupResources(){")
+	cp.APf("body", "  if len(qt_resource_name) > 0 {")
 	cp.APf("body", "  qtmock.QUnregisterResourceData(qt_rcc_version, unsafe.Pointer(&qt_resource_struct[0]), unsafe.Pointer(&qt_resource_name[0]), unsafe.Pointer(&qt_resource_data[0]))")
+	cp.APf("body", "  }")
 	cp.APf("body", "}")
 
 	cp.APf("body", "func init(){qInitResources()}")

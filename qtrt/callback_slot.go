@@ -107,13 +107,15 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 				reg := regexp.MustCompile(`^(qt.*\.)?Q[A-Z](.+)`)
 				if reg.MatchString(argd1ty.String()) {
 					if debugDynSlot {
-						log.Println("qt class pointer:")
+						log.Println("qt class pointer:", argd1ty.String())
 					}
 					prmval := reflect.New(argd1ty)
 					prmval.MethodByName("SetCthis").Call([]reflect.Value{reflect.ValueOf(argvals[i+1])})
 					in = append(in, prmval)
 				}
 			}
+		case reflect.UnsafePointer:
+			in = append(in, reflect.ValueOf(argvals[i+1]))
 		default:
 			log.Println("Unsupported:", argty.Kind().String(), argty.String())
 		}

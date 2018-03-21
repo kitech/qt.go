@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdint.h>
 #include "ffi.h"
 
@@ -39,7 +40,7 @@ static ffi_type* itype2stype(int itype){
   argtypes int[20]
   argvals uint64_t[20] it's should be arguments's address but store in uint64_t
  */
-void ffi_call_ex(void*fn, int retype, uint64_t *retval, int argc, uint8_t* argtys, uint64_t* argvals) {
+void ffi_call_ex(void*fn, int retype, uint64_t* retval, int argc, uint8_t* argtys, uint64_t* argvals) {
     ffi_cif cif;
     ffi_type *ffitys[20];
     void *ffivals[20];
