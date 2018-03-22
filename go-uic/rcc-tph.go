@@ -147,7 +147,9 @@ func saveCode() {
 	qtrt.ErrPrint(err, savefile)
 
 	// gofmt the code
-	cmd := exec.Command("/usr/bin/gofmt", []string{"-w", savefile}...)
+	gofmtPath, err := exec.LookPath("gofmt")
+	qtrt.ErrPrint(err)
+	cmd := exec.Command(gofmtPath, "-w", savefile)
 	err = cmd.Run()
 	qtrt.ErrPrint(err, cmd)
 }
