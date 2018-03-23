@@ -10,12 +10,13 @@ import (
 	"strings"
 
 	"github.com/kitech/qt.go/qtrt"
+	"github.com/kitech/qt.go/toolutil"
 )
 
 var file string
 var filep string // file name without externsion
 
-var cp = NewCodePager()
+var cp = toolutil.NewCodePager()
 
 const (
 	INSEC_NONE = iota
@@ -34,7 +35,7 @@ func main() {
 	filep = qtrt.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
 	log.Println(file, filep)
 
-	scc, err := runcmdout("rcc", file)
+	scc, err := toolutil.RunCmdOut("rcc", file)
 	qtrt.ErrPrint(err, "rcc", file)
 	if err != nil {
 		os.Exit(1)

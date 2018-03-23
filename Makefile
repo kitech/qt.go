@@ -57,9 +57,9 @@ eg-:
 	go build -v -x -o bui bigui/*.go
 
 tools:
-	go build -v -x -o bin/go-uic go-uic/uic-tph.go go-uic/codepager.go go-uic/util.go
-	go build -v -x -o bin/go-rcc go-uic/rcc-tph.go go-uic/codepager.go go-uic/util.go
-	go build -v -o bin/go-qmlviewer go-uic/qmlviewer.go
+	go build -v -o bin/go-uic ./cmd/go-uic
+	go build -v -o bin/go-rcc ./cmd/go-rcc
+	go build -v -o bin/go-qmlviewer ./cmd/go-qmlviewer
 
 tst:
 	go test -v -x tests/qstring_test.go

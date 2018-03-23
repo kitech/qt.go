@@ -11,6 +11,7 @@ import (
 	"strings"
 
 	"github.com/kitech/qt.go/qtrt"
+	"github.com/kitech/qt.go/toolutil"
 )
 
 var class string
@@ -19,7 +20,7 @@ var woname string // main widget name
 var file string
 var filep string // file name without externsion
 
-var cp = NewCodePager()
+var cp = toolutil.NewCodePager()
 
 const (
 	INSEC_NONE = iota
@@ -40,7 +41,7 @@ func main() {
 	filep = qtrt.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
 	log.Println(file, filep)
 
-	scc, err := runcmdout("uic", "-g", "cpp", file)
+	scc, err := toolutil.RunCmdOut("uic", "-g", "cpp", file)
 	qtrt.ErrPrint(err)
 	if err != nil {
 		os.Exit(1)
@@ -451,7 +452,9 @@ func saveCode() {
 	qtrt.ErrPrint(err, savefile)
 
 	// gofmt the code
-	cmd := exec.Command("/usr/bin/gofmt", []string{"-w", savefile}...)
+	gofmtPath, err := exec.LookPath("gofmt")
+	qtrt.ErrPrint(err)
+	cmd := exec.Command(gofmtPath, []string{"-w", savefile}...)
 	err = cmd.Run()
 	qtrt.ErrPrint(err, cmd)
 }
