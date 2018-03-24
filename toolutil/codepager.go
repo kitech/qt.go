@@ -1,4 +1,4 @@
-package main
+package toolutil
 
 import (
 	"fmt"
@@ -17,6 +17,7 @@ import (
 # 支持唯一写入
 */
 
+// CodePager helps with writing Go source files.
 type CodePager struct {
 	code          string
 	insert_points []string
